@@ -85,3 +85,41 @@ The creator commentary is what surfaced it. Creators name the Feral Cat for the 
 **Nothing here says the rule is wrong.** The workbook is the published reference and the compendium reports it faithfully; Fazers simply does not rank relics for those classes. What the guild lead has to decide is whether a class-locked relic earns a claimant from its class allowlist rather than from a workbook rank, which is a different rule from the one every other slot uses and would be the first place the two diverge.
 
 **Also found, and NOT the same thing.** Twenty items have a creator naming a spec the page does not list. One is a mis-scoped remark: `Bracers of the Pathfinder` is mail and a creator discussed it for the Combat Rogue. The rest are items the spec could equip and the workbook ranks below the cut, which is the workbook and the creators disagreeing rather than a defect. Disagreement is recorded rather than resolved.
+
+## The per-spec claimant audit, 11 August 2026
+
+Seven specs audited so far by one Opus agent each, comparing the EP ladder against the captured published gear set slot by slot. Two findings need a ruling from the guild lead. The rest are recorded so they are not rediscovered.
+
+### Arena Season 3 sits in the delta baselines, and our own rules bar it everywhere else
+
+Sixteen distinct Season 3 items appear in the generated ladder. `tools/check_capture_availability.py` excludes every one of them from every anchor, because Season 3 opens on 1 September and Phase 3 on 27 August, and several captures record removing a Season 3 item for exactly that reason. The baselines still use them, so a card can measure an item against gear no raider can hold in this phase.
+
+Four independent agents found this without prompting: Balance Druid, Protection Paladin, Feral Cat and Shadow Priest. It is not confined to one slot or one spec.
+
+**This is a contradiction between two of our own rules rather than a mistake.** The guild lead ruled that arena armor is out and arena weapons are in, recorded at `data/judgments/capture-fidelity.yaml`. That ruling did not distinguish Season 2, which is obtainable, from Season 3, which is not obtainable at launch. The shortlists were resolved separately in August by taking obtainable items first; the baselines were not touched.
+
+**Needs a ruling.** Should a delta baseline exclude Season 3 while continuing to admit Season 2 arena weapons? Every agent that examined a weapon slot named a reachable replacement, usually Hammer of Judgement, id 34009, and each stated which direction the Net moves. Nothing is changed until this is decided.
+
+### A class-locked relic can have no claimant, and the cause is not per spec
+
+Confirmed independently three times. Eleven of the twenty-one workbook tabs carry no `Ranged` section: both feral specs, the Balance and Restoration Druid, all three Paladins, all three Shamans and the Priest Healer. Three Phase 3 relics therefore reach the compendium with zero claimants, and they are half of the six pages in `docs/items/` with none.
+
+The effect data settles who the claimants would be, where the ladder cannot:
+
+| Relic | id | Claimant, from `item-effects.csv` |
+|---|---|---|
+| Idol of the White Stag | 32257 | Feral Cat and Feral Bear. Buff 41037 is a Mangle attack power buff, and Mangle is a Feral ability |
+| Totem of Ancestral Guidance | 32330 | Elemental Shaman. Buff 41040 is the Increased Lightning Damage family, the same line as Totem of the Void which its capture wears at entry. Enhancement is arguable and unsupported; Restoration is excluded, its relic line is the healing family |
+| Tome of the Lightbringer | 32368 | A Paladin relic, by the same class lock |
+
+**Needs a ruling.** Should a class-locked relic earn a claimant from its class allowlist rather than from a workbook rank? That is a different rule from the one every other slot uses, and it is the first place the two sources would diverge by design.
+
+### Recorded, needing no ruling
+
+**Wolfshead Helm misses the shortlist by one row.** `Cat.csv` ranks it FIRST in the Head section at 0.00 EPV with the author's note "Yes, its that good", because the item is owned by a mechanic a stat ladder cannot price. Sorting by EPV puts it last of eleven eligible rows and the cut takes ten. It is also phase 0, so it belongs to neither the `phase3` nor the `prephase` cell and can never be a baseline. It is absent from `items.csv` as well, because the simulator database does not hold it, so surfacing it would reach an item with no stat line. Three independent obstacles, not one.
+
+**Three captures are self referential and are not independent checks.** `feral-bear.yaml` cites this repository's own fact files. `feral-cat.yaml` cites the EP workbook, which is the same source the ladder reads. `shadow-priest.yaml` cites Wowhead for its entry anchor but the workbook for both tier anchors, because no Phase 3 guide page could be read. An audit of the ladder against any of those three at a tier anchor compares the workbook with itself.
+
+**A single-candidate `phase3` cell drops that column on the item's own page.** Seen on Balance Druid, Protection Paladin, Shadow Priest, Feral Cat and Elemental Shaman. The two-candidate rule exists so a card never compares an item with itself, and where a tab ranks only one non-tier Phase 3 item in a slot there is no legal second. The card states the absence rather than inventing a comparison. No Net is wrong; a column is missing.
+
+**The Rogue tab has no `Off Hand` section and the Fury tab has no `Two Hand` section.** The first caused the hand-type defect fixed in `50652f1`. The second is consistent with a spec that dual wields.
