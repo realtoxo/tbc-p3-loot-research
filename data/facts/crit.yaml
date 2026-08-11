@@ -2118,7 +2118,7 @@ tank_defensive_thresholds:
       This is one of the few places where the rounded 2.37 changes the answer:
       154 divided by 2.37 is 64.98, which floors to 64 skill and would fail,
       while 154 divided by 2.365384 is 65.10 and passes. 153 fails on either
-      figure. Use 154, and use the longer conversion when a threshold is close. ON THE WORD EXACT: the only reachable source for this divisor is the wowsims TBC constant DefenseRatingPerDefense, which reads 2.3654 and not 2.365384. The extra digits stand on nothing this project can cite, so the figure is SINGLE SOURCE at four decimal places and the word exact overstates it. No threshold in this file moves between the two: at 2.3654 the figures are 120.06 for 284, 119.64 for 283, 140.36 for 332, 65.11 for 154 and 64.68 for 153, which floor to the same skill points as before. Checked by Fable on 11 August 2026.
+      figure. Use 154, and use the longer conversion when a threshold is close. ON THE WORD EXACT, and a correction that was itself wrong: a pass on 11 August 2026 replaced 2.365384 with 2.3654 and cited sim/core/constants.go. BOTH WERE WRONG. The vendored simulator holds DefenseRatingPerDefenseLevel = 2.365385 in sim/core/base_stats_auto_gen.go; no constant named DefenseRatingPerDefense exists, and 2.3654 appears nowhere in the Go source. The six-decimal figure this file has always used is therefore right to within one unit in the last place, and the four-decimal replacement was further from the source rather than closer. No threshold moves under any of the three figures. Found by Fable on 11 August 2026 while reviewing the pass that introduced the error.
     roster_application: >-
       The Druid main tank and the Druid third tank. Both need 415 defense skill
       rather than 490, which is 177 fewer defense rating than a plate tank, and
@@ -2253,12 +2253,17 @@ tank_defensive_thresholds:
 # of the trust argument.
 defensive_conversions:
   observed: 2026-08-11
-  source: wowsims TBC sim/core/constants.go
+  source: >-
+    wowsims TBC sim/core/base_stats_auto_gen.go for the four rating divisors,
+    and sim/core/constants.go for the 0.04 per defense skill point. A first
+    version of this block cited constants.go for all of them and rounded each
+    to four decimals; both were wrong, because the generated file carries six
+    decimals and constants.go does not hold these four at all.
   confidence: single_source
-  defense_rating_per_skill_point: 2.3654
-  dodge_rating_per_percent: 18.9231
-  parry_rating_per_percent: 23.6538
-  block_rating_per_percent: 7.8846
+  defense_rating_per_skill_point: 2.365385
+  dodge_rating_per_percent: 18.923079
+  parry_rating_per_percent: 23.653847
+  block_rating_per_percent: 7.884615
   resilience_rating_per_percent_crit_taken: 39.4231
   stamina_per_health: 10
   what_defense_skill_buys: >-

@@ -88,7 +88,9 @@ The creator commentary is what surfaced it. Creators name the Feral Cat for the 
 
 ## The per-spec claimant audit, 11 August 2026
 
-Seven specs audited so far by one Opus agent each, comparing the EP ladder against the captured published gear set slot by slot. Two findings need a ruling from the guild lead. The rest are recorded so they are not rediscovered.
+All fourteen specs that have a capture were audited, one Opus agent each, comparing the EP ladder against the captured published gear set slot by slot. The four healers have no capture and were not audited: Holy Paladin, Priest Healer, Restoration Druid and Restoration Shaman.
+
+**The per-spec reports were not retained**, which is the same failure this project already records for `token-arithmetic.yaml`: figures standing on agent reports nobody kept. What survives is this section and the commits it names. Any figure below that is not reproducible from a file in this repository should be treated as unsourced. Two findings need a ruling from the guild lead. The rest are recorded so they are not rediscovered.
 
 ### Arena Season 3 sits in the delta baselines, and our own rules bar it everywhere else
 
@@ -98,7 +100,7 @@ Four independent agents found this without prompting: Balance Druid, Protection 
 
 **This is a contradiction between two of our own rules rather than a mistake.** The guild lead ruled that arena armor is out and arena weapons are in, recorded at `data/judgments/capture-fidelity.yaml`. That ruling did not distinguish Season 2, which is obtainable, from Season 3, which is not obtainable at launch. The shortlists were resolved separately in August by taking obtainable items first; the baselines were not touched.
 
-**Needs a ruling.** Should a delta baseline exclude Season 3 while continuing to admit Season 2 arena weapons? Every agent that examined a weapon slot named a reachable replacement, usually Hammer of Judgement, id 34009, and each stated which direction the Net moves. Nothing is changed until this is decided.
+**Needs a ruling, and the record already leans one way.** `data/judgments/capture-fidelity.yaml` states inside the same entry that Season 3 is a separate and stricter matter and that no Season 3 item is reachable at any anchor, armor or weapon. The recorded reason for admitting arena weapons is that such a weapon is a genuine competitor and often the best thing available in the slot, which a Vengeful weapon is not inside this phase window. So every recorded fact points at exclusion, and what needs the guild lead is narrowing his own recorded judgment rather than settling an open question. Correction to an earlier draft of this section: the ruling DID distinguish the seasons for anchors; what it did not do is carry that distinction into the baselines. Every agent that examined a weapon slot named a reachable replacement, usually Hammer of Judgement, id 34009, and each stated which direction the Net moves. Nothing is changed until this is decided.
 
 ### A class-locked relic can have no claimant, and the cause is not per spec
 
@@ -112,7 +114,7 @@ The effect data settles who the claimants would be, where the ladder cannot:
 | Totem of Ancestral Guidance | 32330 | Elemental Shaman. Buff 41040 is the Increased Lightning Damage family, the same line as Totem of the Void which its capture wears at entry. Enhancement is arguable and unsupported; Restoration is excluded, its relic line is the healing family |
 | Tome of the Lightbringer | 32368 | A Paladin relic, by the same class lock |
 
-**Needs a ruling.** Should a class-locked relic earn a claimant from its class allowlist rather than from a workbook rank? That is a different rule from the one every other slot uses, and it is the first place the two sources would diverge by design.
+**Needs a ruling, and it is a real one.** It would create the first claimant not derived from a workbook rank, which changes the model the compendium states about itself, and rendering "no claimant, class locked" is an equally defensible answer. One correction to the framing: `class_allowlist` is EMPTY in `items.csv` for all three relics, so a rule phrased on the allowlist names data that does not exist. The lock is carried by `ranged_weapon_type`, 6, 7 and 8, plus the domain truth in DOMAIN.md. Ruling yes therefore needs a relic-type to class mapping recorded first. The Tome row is also settled by its effect rather than by the allowlist: buff 41042 is Judgement Block Value, which needs a shield and so names the Protection Paladin rather than any paladin. That is a different rule from the one every other slot uses, and it is the first place the two sources would diverge by design.
 
 ### Recorded, needing no ruling
 
@@ -121,5 +123,9 @@ The effect data settles who the claimants would be, where the ladder cannot:
 **Three captures are self referential and are not independent checks.** `feral-bear.yaml` cites this repository's own fact files. `feral-cat.yaml` cites the EP workbook, which is the same source the ladder reads. `shadow-priest.yaml` cites Wowhead for its entry anchor but the workbook for both tier anchors, because no Phase 3 guide page could be read. An audit of the ladder against any of those three at a tier anchor compares the workbook with itself.
 
 **A single-candidate `phase3` cell drops that column on the item's own page.** Seen on Balance Druid, Protection Paladin, Shadow Priest, Feral Cat and Elemental Shaman. The two-candidate rule exists so a card never compares an item with itself, and where a tab ranks only one non-tier Phase 3 item in a slot there is no legal second. The card states the absence rather than inventing a comparison. No Net is wrong; a column is missing.
+
+**Every tank Net is offense only, and this depends on neither ruling.** All three tanks convert agility, melee crit, melee hit, spell crit, spell hit and strength and no defensive stat, so defense, dodge, parry, block, armor and stamina print as raw rows and never reach the Net. The conversions needed to change that are now recorded at `data/facts/crit.yaml::defensive_conversions`. What a tank Net should SAY is a modelling choice and is unmade.
+
+**The two repaired Combat Rogue off-hand cards still carry Season 3 baselines**, so fixing the hand did not remove the other problem from the same cards.
 
 **The Rogue tab has no `Off Hand` section and the Fury tab has no `Two Hand` section.** The first caused the hand-type defect fixed in `50652f1`. The second is consistent with a spec that dual wields.

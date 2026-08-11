@@ -273,10 +273,13 @@ notes:
   shoulder_corrected: >-
     CORRECTED 9 August 2026, after the guild lead questioned a token claim and
     an off-piece audit followed. This capture wore Shoulderpads of the Stranger
-    at all three anchors. The Arms tab ranks it FOURTH at 87.03,
-    CORRECTED 11 August 2026 from FIFTH: the EPV was right and the rank was not,
-    and the three above it are 30979 at 101.87, 30866 at 92.08 and 32377 at
-    88.04.
+    at all three anchors. The Arms tab ranks it FIFTH at 87.03. A correction on 11 August 2026
+    changed this to FOURTH and was WRONG, and is reverted here. The tab ranks
+    Ripfiend Shoulderplates, id 30740, third at 88.08, and that item is a Doom
+    Lord Kazzak drop. tools/extract_ladder.py excludes world boss drops from
+    the shortlist, so the SHORTLIST rank is fourth while the TAB rank is
+    fifth. The note speaks about the tab, so fifth is right. Reading a
+    shortlist position and calling it a tab rank is the mistake.
     IT IS A LEATHER SHOULDER AND ITS VALUE IS AGILITY, which buys a warrior
     nothing in attack power. data/facts/attack-power.yaml records that one
     agility gives a Cat one attack power and gives a warrior none, which is why
