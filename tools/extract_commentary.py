@@ -87,7 +87,34 @@ def main() -> int:
                str(entry.get("timestamp")))
         notes[key] = entry
 
-    stances = yaml.safe_load(STANCES.read_text())["remarks"]
+    stances = list(yaml.safe_load(STANCES.read_text())["remarks"])
+
+    # A CURATED ENTRY WITH NO REMARK BEHIND IT STILL BELONGS ON THE PAGE.
+    # fc-006, Merciless Gladiator's Maul, was read by hand because the item is
+    # Arena Season 3 gear and sat outside the Phase 3 drop table the stance pass
+    # ran over. It matched nothing, so it rendered nowhere, which made the one
+    # entry that needed a human the only entry a reader could not see.
+    seconds = {}
+    for entry in doc.get("entries") or []:
+        stamp_text = str(entry.get("timestamp") or "0:00")
+        minutes, _, secs = stamp_text.partition(":")
+        try:
+            seconds[entry["id"]] = int(minutes) * 60 + int(secs or 0)
+        except ValueError:
+            seconds[entry["id"]] = 0
+    known = {(str(r["item_id"]), r["creator"], r["timestamp"]) for r in stances}
+    for entry in doc.get("entries") or []:
+        key = (str(entry.get("item_id")), str(entry.get("creator")),
+               seconds[entry["id"]])
+        if key in known:
+            continue
+        stances.append({
+            "item_id": entry["item_id"], "item_name": entry.get("item_name"),
+            "creator": entry["creator"], "slug": "", "timestamp": key[2],
+            "stance": entry.get("stance") or "conditional",
+            "claim": entry.get("claim") or "", "specs": entry.get("scope") or [],
+            "confidence": "high", "url": entry.get("url") or "",
+        })
     reach = {}
     if REACH.exists():
         for row in yaml.safe_load(REACH.read_text())["recordings"]:
@@ -120,6 +147,10 @@ def main() -> int:
                     return True
         return False
 
+    def is_curated(remark: dict) -> bool:
+        return (str(remark["item_id"]), str(remark["creator"]),
+                stamp(remark["timestamp"])) in notes
+
     def stamp(seconds: int) -> str:
         return f"{seconds // 60}:{seconds % 60:02d}"
 
@@ -133,12 +164,31 @@ def main() -> int:
         speaking = [r for r in ranked if r["stance"] != LAST_RESORT]
         pool = speaking or ranked
 
+        # WHERE AN ITEM IS CURATED, THE CURATED SET IS THE WHOLE SET. Curation
+        # exists to say "show these", and it was doing nothing twice over. First
+        # the note attached only where the remark also won a place on reach, so
+        # four of seven curated entries rendered nowhere. Then, once they were
+        # pinned, reach filled the remaining slots and put back the very remarks
+        # the curation had excluded: the Warglaive page was designed as one
+        # quantified voice per class plus a creator declining to rule, and reach
+        # added a second rogue remark and a warrior aside, which is the bias the
+        # guild lead asked to avoid on that line.
+        #
+        # An item nobody has curated still selects on stance and reach, which is
+        # every item but the thirteen.
+        pinned = [r for r in pool if is_curated(r)]
+        if pinned:
+            pinned.sort(key=lambda r: -reach.get(r["slug"], 0))
+            return pinned[:PER_ITEM]
+
         # Seed one remark per stance. Within a stance, prefer a creator who is
         # not on the page yet: Sarthe holds both a conditional and a favours
         # view of Cursed Vision and would otherwise take two of the five slots
         # while eight other creators went unheard.
-        picked, seen = [], set()
+        picked, seen = list(pinned), {r["creator"] for r in pinned}
         for stance in sorted({r["stance"] for r in pool}):
+            if any(r["stance"] == stance for r in picked):
+                continue
             same = [r for r in pool if r["stance"] == stance]
             fresh = [r for r in same if r["creator"] not in seen]
             choice = (fresh or same)[0]
