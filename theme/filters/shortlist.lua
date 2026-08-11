@@ -169,7 +169,33 @@ local function item_cell(entry)
       root .. "items/" .. page .. ".html", "",
       pandoc.Attr("", { "shortlist-link" })))
   else
-    inlines:insert(itemdb.ladder_inline(entry, row, held, "shortlist-tip"))
+    -- NO TOOLTIP ON THIS TABLE, ON EITHER BRANCH. The rows we hold a page for
+    -- render a plain link and the rows we do not used to render a bubble, so a
+    -- reader moving down one column got a tooltip on some rows and nothing on
+    -- others. That reads as a broken tooltip rather than as two kinds of item,
+    -- which is how the guild lead reported it on 10 August 2026.
+    --
+    -- The link is kept and only the bubble goes. A row with no page still has
+    -- to reach somewhere, so it points at Wowhead, which is where its stat line
+    -- and its tooltip live anyway. The stat line the bubble carried is not lost
+    -- to the page: the EPV, the phase and the acquisition route are columns of
+    -- this same table.
+    local art = row.icon or entry.icon
+    if art and art ~= "" then
+      inlines:insert(pandoc.Span(
+        { pandoc.Image({}, root .. "icons/" .. art .. ".jpg", "",
+          pandoc.Attr("", { "item-icon" },
+            { loading = "lazy", ["aria-hidden"] = "true" })) },
+        pandoc.Attr("", { "shortlist-icon" })))
+    end
+    local target = row.url or entry.url
+    if target and target ~= "" then
+      inlines:insert(pandoc.Link(pandoc.Str(itemdb.display_name(row)), target, "",
+        pandoc.Attr("", { "shortlist-link" },
+          { target = "_blank", rel = "noopener noreferrer" })))
+    else
+      inlines:insert(pandoc.Str(itemdb.display_name(row)))
+    end
   end
   if entry.tier then
     inlines:insert(pandoc.Space())
