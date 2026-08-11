@@ -1,21 +1,34 @@
 item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
+19288,,Darkmoon Card: Blue Dragon,23684,Aura of the Blue Dragon (23688),15000,
+23835,,Gnomish Poultryizer,30507,Poultryizer (30507),,
+23836,,Goblin Rocket Launcher,46567,Rocket Launch (46567),3000,
 24114,,Braided Eternium Chain,31025,Braided Eternium Chain (31025),1800000,melee_crit=28
 24116,,Eye of the Night,31033,Eye of the Night (31033),1800000,
 24121,,Chain of the Twilight Owl,31035,Chain of the Twilight Owl (31035),1800000,spell_crit=44.153846
+24390,,Auslese's Light Channeler,31794,Focused Mind (31794),10000,
+25620,,Ancient Crystal Talisman,32355,Focused Power (32355),20000,healing_power=104|spell_damage=104
 25634,,Oshu'gun Relic,32367,Power of Prayer (32367),20000,healing_power=213|spell_damage=71
+25937,,Terokkar Tablet of Precision,39200,Heroism (39200),15000,attack_power=140|ranged_attack_power=140
 27484,,Libram of Avengement,34260,Justice (34258),5000,spell_crit=53|melee_crit=53
 27683,,Quagmirran's Eye,33370,Spell Haste (33297),6000,spell_haste=320
 27815,,Totem of the Astral Winds,34244,Increased Windfury Weapon (34244),-1,
+27828,,Warp-Scarab Brooch,33400,Accelerated Mending (33400),20000,healing_power=282|spell_damage=94
 27917,,Libram of the Eternal Rest,34252,Improved Consecration (34252),-1,
 28034,,Hourglass of the Unraveller,33649,Rage of the Unraveller (33648),10000,attack_power=300|ranged_attack_power=300
+28041,,Bladefist's Breadth,33667,Ferocity (33667),15000,attack_power=200|ranged_attack_power=200
 28121,,Icon of Unyielding Courage,34106,Armor Penetration (34106),20000,armor_pen=600
 28190,,Scarab of the Infinite Cycle,33370,Spell Haste (33953),6000,spell_haste=320
+28223,,Arcanist's Stone,34000,The Arcanist's Stone (34000),20000,healing_power=167|spell_damage=167
 28248,,Totem of the Void,34230,Increased Lightning Damage (34230),-1,
 28288,,Abacus of Violent Odds,33807,Haste (33807),10000,melee_haste=260
 28370,,Bangle of Endless Blessings,38346,Meditation (38334),15000,
 28370,,Bangle of Endless Blessings,34210,Endless Blessings (34210),20000,spirit=130
+28418,,Shiffar's Nexus-Horn,34321,Call of the Nexus (34320),10000,healing_power=225|spell_damage=225
+28429,,Lionheart Champion,34514,Fear Resistance 5 (34514),-1,
+28429,,Lionheart Champion,34513,Lionheart (34513),10000,strength=100
 28430,,Lionheart Executioner,34515,Fear Resistance 8 (34515),-1,
 28430,,Lionheart Executioner,34513,Lionheart (34513),10000,strength=100
+28438,,Dragonmaw,21165,Haste (21165),10000,melee_haste=212
 28439,,Dragonstrike,21165,Haste (21165),10000,melee_haste=212
 28484,,Bulwark of Kings,34511,Valor (34511),15000,strength=150|33=1500
 28523,T4,Totem of Healing Rains,38322,Improved Chain Heal (38322),-1,
@@ -35,6 +48,7 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 28823,T4,Eye of Gruul,, (37705),-1,
 28830,T4,Dragonspine Trophy,34775,Haste (34774),10000,melee_haste=325
 29132,,Scryer's Bloodgem,35337,Spell Power (35337),15000,healing_power=280|spell_damage=150
+29179,,Xi'ri's Gift,35337,Spell Power (35337),15000,healing_power=280|spell_damage=150
 29297,,Band of the Eternal Defender,35078,Band of the Eternal Defender (35077),10000,armor=800
 29301,,Band of the Eternal Champion,35081,Band of the Eternal Champion (35080),10000,attack_power=160|ranged_attack_power=160
 29305,,Band of the Eternal Sage,35084,Band of the Eternal Sage (35083),10000,healing_power=95|spell_damage=95
@@ -43,6 +57,7 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 29376,,Essence of the Martyr,35165,Essence of the Martyr (35165),20000,healing_power=297|spell_damage=99
 29383,,Bloodlust Brooch,35166,Lust for Battle (35166),20000,attack_power=278|ranged_attack_power=278
 29387,,Gnomeregan Auto-Blocker 600,35169,Gnome Ingenuity (35169),20000,block_value=200
+29776,,Core of Ar'kelos,35733,Ancient Power (35733),20000,attack_power=200|ranged_attack_power=200
 29962,T5,Heartrazor,36041,Heartrazor (36041),10000,attack_power=270|ranged_attack_power=270
 29996,T5,Rod of the Sun King,36070,Power of the Sun King (36070),,
 30008,T5,Pendant of the Lost Ages,35126,Silence Resistance 20% (35126),-1,
@@ -55,6 +70,7 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 30316,T5,Devastation,36479,Speed Infusion (36479),30000,
 30317,T5,Cosmic Infuser,36483,Infernal Protection (36488),30000,
 30318,T5,Netherstrand Longbow,36413,Mortal Shots (36413),-1,
+30340,,Starkiller's Bauble,36432,Spell Power (36432),15000,spell_damage=125
 30446,T5,Solarian's Sapphire,37536,Improved Battle Shout (37536),-1,
 30447,T5,Tome of Fiery Redemption,37198,Blessing of Righteousness (37197),15000,healing_power=290|spell_damage=290
 30448,T5,Talon of Al'ar,37507,Improved Shots (37507),-1,
@@ -77,9 +93,12 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 30892,T6,Beast-tamer's Shoulders,27043,Increased Pet Crit +2% (27043),-1,
 31109,,Stealther's Helmet of Second Sight,39841,Spectrecles (39841),-1,
 31334,,Staff of Natural Fury,38314,Cheaper Druid Shapeshifting (38314),-1,
+31336,,Blade of Wizardry,38317,Forgotten Knowledge (38319),6000,spell_haste=280
+31617,,Ancient Draenei War Talisman,33667,Ferocity (33667),15000,attack_power=200|ranged_attack_power=200
 31856,,Darkmoon Card: Crusade,39439,Aura of the Crusader (39438),10000,attack_power=6|ranged_attack_power=6
 31856,,Darkmoon Card: Crusade,39441,Aura of the Crusader (39440),10000,spell_damage=8
 31858,,Darkmoon Card: Vengeance,39445,Vengeance (39444),,
+31859,,Darkmoon Card: Madness,39446,Aura of Madness (39446),-1,
 32235,T6,Cursed Vision of Sargeras,47524,Sense Demons (47524),-1,
 32257,T6,Idol of the White Stag,41037,Mangle AP Buff (41037),-1,
 32262,T6,Syphon of the Nathrezim,40293,Siphon Essence (40291),6000,
@@ -129,6 +148,7 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 32501,T6,Shadowmoon Insignia,40464,Protector's Vigor (40464),20000,33=1750
 32505,T6,Madness of the Betrayer,40477,Forceful Strike (40475),10000,armor_pen=300
 32658,,Badge of Tenacity,40729,Heightened Reflexes (40729),20000,agility=150
+32864,,Commander's Badge,40815,Netherwing Ally (40815),40000,
 35514,,Frostscythe of Lord Ahune,46643,Frostscythe (46643),60000,
 37127,,Brightbrew Charm,48041,Summon the Brewmaiden (48041),35000,
 38287,,Empty Mug of Direbrew,51955,Dire Drunkard (51955),20000,attack_power=278|ranged_attack_power=278

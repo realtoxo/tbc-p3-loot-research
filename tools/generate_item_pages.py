@@ -37,7 +37,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_ladder import (  # noqa: E402
-    LEVEL_60, SHORTLIST, SPECS, WEAPON_SECTION_NAMES, WORKBOOK, select,
+    LEVEL_60, SHORTLIST, SPECS, WEAPON_SECTION_NAMES, WIDE_SECTIONS,
+    WIDE_SHORTLIST, WORKBOOK, select,
     WORLD_BOSSES, level_60_locations, read_tab, world_boss_ids,
 )
 
@@ -93,7 +94,9 @@ def claimants(item_ids: set[str]) -> dict[str, list[str]]:
             eligible.sort(key=lambda row: row["epv"], reverse=True)
             # THE SAME SELECTION THE LADDER APPLIES, or this counts a different
             # list from the one the compendium shows.
-            for row in select(eligible):
+            limit = (WIDE_SHORTLIST if section in WIDE_SECTIONS
+                     else SHORTLIST)
+            for row in select(eligible, limit):
                 key = str(row["item_id"])
                 if key in out and spec not in out[key]:
                     out[key].append(spec)

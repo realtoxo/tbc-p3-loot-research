@@ -23,6 +23,21 @@ title: Claw of Molten Fury
 Delta
 :   [Claw of Molten Fury]{.item}
 
+#### Survival Hunter
+
+Delta
+:   [Claw of Molten Fury]{.item}
+
+#### Combat Rogue
+
+Delta
+:   [Claw of Molten Fury]{.item}
+
+#### Protection Warrior
+
+Delta
+:   [Claw of Molten Fury]{.item}
+
 :::
 
 ::::

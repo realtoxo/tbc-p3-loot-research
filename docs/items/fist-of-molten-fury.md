@@ -23,6 +23,21 @@ title: Fist of Molten Fury
 Delta
 :   [Fist of Molten Fury]{.item}
 
+#### Survival Hunter
+
+Delta
+:   [Fist of Molten Fury]{.item}
+
+#### Combat Rogue
+
+Delta
+:   [Fist of Molten Fury]{.item}
+
+#### Protection Warrior
+
+Delta
+:   [Fist of Molten Fury]{.item}
+
 :::
 
 ::::

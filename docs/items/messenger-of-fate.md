@@ -18,6 +18,11 @@ title: Messenger of Fate
 
 ::: {.specs}
 
+#### Protection Warrior
+
+Delta
+:   [Messenger of Fate]{.item}
+
 #### Survival Hunter
 
 Delta

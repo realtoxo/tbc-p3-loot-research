@@ -18,7 +18,17 @@ title: Rising Tide
 
 ::: {.specs}
 
+#### Fury Warrior
+
+Delta
+:   [Rising Tide]{.item}
+
 #### Protection Warrior
+
+Delta
+:   [Rising Tide]{.item}
+
+#### Protection Paladin
 
 Delta
 :   [Rising Tide]{.item}

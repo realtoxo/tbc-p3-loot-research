@@ -23,6 +23,16 @@ title: The Brutalizer
 Delta
 :   [The Brutalizer]{.item}
 
+#### Protection Paladin
+
+Delta
+:   [The Brutalizer]{.item}
+
+#### Enhancement Shaman
+
+Delta
+:   [The Brutalizer]{.item}
+
 :::
 
 ::::

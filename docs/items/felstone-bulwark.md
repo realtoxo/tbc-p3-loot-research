@@ -18,6 +18,16 @@ title: Felstone Bulwark
 
 ::: {.specs}
 
+#### Protection Warrior
+
+Delta
+:   [Felstone Bulwark]{.item}
+
+#### Protection Paladin
+
+Delta
+:   [Felstone Bulwark]{.item}
+
 #### Holy Paladin
 
 Delta

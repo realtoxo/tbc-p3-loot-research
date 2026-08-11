@@ -18,6 +18,16 @@ title: Boundless Agony
 
 ::: {.specs}
 
+#### Combat Rogue
+
+Delta
+:   [Boundless Agony]{.item}
+
+#### Beast Mastery Hunter
+
+Delta
+:   [Boundless Agony]{.item}
+
 :::
 
 ::::

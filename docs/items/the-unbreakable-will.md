@@ -18,6 +18,11 @@ title: The Unbreakable Will
 
 ::: {.specs}
 
+#### Protection Warrior
+
+Delta
+:   [The Unbreakable Will]{.item}
+
 #### Protection Paladin
 
 Delta

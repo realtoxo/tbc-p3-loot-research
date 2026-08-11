@@ -28,6 +28,11 @@ Delta
 Delta
 :   [Illidari Runeshield]{.item}
 
+#### Elemental Shaman
+
+Delta
+:   [Illidari Runeshield]{.item}
+
 :::
 
 ::::

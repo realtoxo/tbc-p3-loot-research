@@ -23,6 +23,11 @@ title: Halberd of Desolation
 Delta
 :   [Halberd of Desolation]{.item}
 
+#### Retribution Paladin
+
+Delta
+:   [Halberd of Desolation]{.item}
+
 #### Beast Mastery Hunter
 
 Delta

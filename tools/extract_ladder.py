@@ -357,8 +357,17 @@ CANDIDATES = 2
 # the item on its own page is a spec the item page shows as a claimant.
 SHORTLIST = 5
 
+# WEAPONS AND TRINKETS GET TEN. These are the densest and most contested
+# sections in the workbook and five was too few to show the real field: the
+# guild lead asked for ten on 10 August 2026. Armor sections stay at five,
+# where the EPV spread is wide enough that the sixth item is rarely a live
+# option. Trinkets earn the wider list for a second reason: a player wears two,
+# so the sixth trinket is a live option in a way the sixth belt is not.
+WIDE_SHORTLIST = 10
+TRINKET_SECTION_NAMES = frozenset({"Trinket"})
 
-def select(rows: list[dict]) -> list[dict]:
+
+def select(rows: list[dict], limit: int = SHORTLIST) -> list[dict]:
     """The rows a weapon or armor section shows, best first.
 
     FIVE OBTAINABLE ITEMS, THEN ANY PVP THAT COMPETES. A straight top five let
@@ -377,10 +386,16 @@ def select(rows: list[dict]) -> list[dict]:
     is not, and neither can push a raid drop off the list.
     """
     pve = [row for row in rows if row["route"] != "arena"]
-    picked = pve[:SHORTLIST]
+    picked = pve[:limit]
     if not picked:
-        return rows[:SHORTLIST]
-    floor = picked[-1]["epv"]
+        return rows[:limit]
+    # THE PVP BAR STAYS AT THE FIFTH, even where ten items are shown. Raising
+    # the shown count to ten for weapons moved this floor down with it and let
+    # the Season 2 block back in: the Enhancement one-hand section went to
+    # twenty-four rows, fourteen of them arena, which is more arena rather than
+    # more weapons. The two instructions compose as written when the number of
+    # items shown and the bar an arena weapon must clear are separate.
+    floor = pve[min(SHORTLIST, len(pve)) - 1]["epv"]
     picked += [row for row in rows
                if row["route"] == "arena" and row["epv"] >= floor]
     picked.sort(key=lambda row: row["epv"], reverse=True)
@@ -417,7 +432,8 @@ def shortlist(
     ]
     rows.sort(key=lambda row: row["epv"], reverse=True)
     out = []
-    for rank, row in enumerate(select(rows), 1):
+    limit = WIDE_SHORTLIST if section in WIDE_SECTIONS else SHORTLIST
+    for rank, row in enumerate(select(rows, limit), 1):
         entry = dict(row)
         entry["rank"] = rank
         entry["tier"] = row["item_id"] in tier_ids
@@ -448,6 +464,9 @@ def tier_item_ids(tokens: dict) -> set[int]:
 # other section and kept in these, per the note in off_pieces.
 WEAPON_SECTION_NAMES = frozenset(
     name for names in WEAPON_SECTIONS.values() for name in names)
+
+# The sections that show ten rather than five.
+WIDE_SECTIONS = WEAPON_SECTION_NAMES | TRINKET_SECTION_NAMES
 
 
 WORLD_BOSSES = Path("data/facts/world-bosses.yaml")

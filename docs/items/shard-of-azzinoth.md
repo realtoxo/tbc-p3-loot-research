@@ -18,6 +18,11 @@ title: Shard of Azzinoth
 
 ::: {.specs}
 
+#### Combat Rogue
+
+Delta
+:   [Shard of Azzinoth]{.item}
+
 :::
 
 ::::
