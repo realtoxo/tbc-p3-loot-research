@@ -126,6 +126,24 @@ anchors:
     total_item_hit: 198
 
 notes:
+  weapon_speed_rule_disagreement: >-
+    RECORDED 11 August 2026, not resolved. docs/kb/DOMAIN.md records, on the
+    guild lead's statement, that an Enhancement Shaman runs two weapons of the
+    SAME speed and prefers them slow, because both hands carry a Windfury
+    imbue. THIS CAPTURE DOES NOT MEET THAT RULE AT EITHER TIER ANCHOR. It pairs
+    Swiftsteel Bludgeon at speed 1.5 in the main hand with Rising Tide at speed
+    2.6 in the off hand. The entry anchor is close to matched, at 2.7 against
+    2.6.
+    THE CAUSE IS THE TAB SHAPE rather than a mistake in the capture. The
+    Enhancement tab ranks main hand and off hand in ONE combined One Hand pool,
+    where the Fury tab splits them, so the capture took rank 1 and then the next
+    reachable row and speed never entered the selection. Nothing downstream can
+    restore the distinction either: delta.lua prices neither weapon damage nor
+    weapon speed.
+    DOMAIN.md also records that the speed rule is uncorroborated by any source
+    this project holds, and that a simulation is the route to settle it. So this
+    is a disagreement between a stated rule and a captured set, and both sides
+    are recorded rather than one being corrected to the other.
   downgraded_slots: >-
     Head, chest, hands and legs are held as Cataclysm Helm, Cataclysm
     Chestplate, Cataclysm Gauntlets and Cataclysm Legplates (T5) in every
@@ -214,8 +232,10 @@ notes:
     way crafted and badge gear are not, so it was not treated as equivalently
     reliable. Neither choice changes the total, since both are 0 hit. Wicked
     Edge of the Planes and Merciless Gladiator's Cleaver, from the Entry
-    anchor, are not raid drops or tier pieces, so they are absent from
-    items.csv; their hit 0 rests on data/research/epv-workbook/Enh.csv's stat
+    anchor, are not raid drops or tier pieces. CORRECTED 11 August 2026: this
+    said they are absent from items.csv, and both are present today, 28433 and
+    31965, because task 47 extended that table past raid drops and tier vendor
+    items. The note stood on a state of the fact table that no longer holds; their hit 0 rests on data/research/epv-workbook/Enh.csv's stat
     columns plus general knowledge that both are itemized with Expertise
     Rating rather than Hit Rating, not on a direct Wowhead tooltip, which
     renders client-side and was not retrievable by this session's fetch tool.
