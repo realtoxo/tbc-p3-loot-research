@@ -2234,208 +2234,161 @@ tank_defensive_thresholds:
     confidence: conservative
 
 open_questions:
-
-  tank_defense_falls_across_the_tier:
-    blocks: >-
-      Whether a tank can accept its Tier 6 tokens without re-gemming for
-      defense. Nothing today depends on the answer, because no priority is set,
-      but this is the largest movement the captured sets show.
-    detail: >-
-      FOUND 9 August 2026 by totalling data/facts/set-stats.yaml, which joins
-      the captured gear sets to items.csv. Defense rating on ITEMS falls sharply
-      for all three tanks between the entry set and the tier set, against the
-      284 and 154 thresholds above.
-      protection_paladin goes 305 to 264, crossing from above the plate
-      threshold to 20 below it. protection_warrior goes 257 to 195, and was
-      already 27 below at entry. feral_bear goes 43 to 24 against a threshold of
-      154.
-      THIS IS NOT A CLAIM THAT A TANK LOSES CRIT IMMUNITY. Gems and enchants are
-      excluded from every figure in set-stats.yaml, exactly as they are from the
-      hit figures, and a tank gems and enchants for defense more than any other
-      role. enchants-gems.yaml records the routes: a bracer enchant at 12, a
-      head glyph at 16, shoulder inscriptions at 10 to 15, Thick Lionseye at 10
-      a socket, the Tenacious Earthstorm Diamond meta at 12, Vindicator's Armor
-      Kit at 8, and Flask of Fortification at 10. The Paladin's 20 closes on two
-      gems. The Warrior's 89 is a real gearing problem rather than a rounding
-      one.
-      THE BEAR FIGURE SHOULD BE CHECKED BEFORE IT IS USED. 43 defense rating on
-      a main tank's entry set is implausibly low, and that capture records that
-      PvP armor exclusions forced substitutions in four slots. The number may be
-      describing a set the tank would not wear rather than a real shortfall.
-      Also note Enchant Chest - Defense, one of the larger routes at 15, is
-      marked phase_3_available false in enchants-gems.yaml, so it is not
-      available to close this gap at Phase 3.
-
   improved_seal_of_the_crusader:
     blocks: 3 percent crit for every attacker in the raid
-    detail: >-
-      Whether the rostered Retribution Paladin takes Improved Seal of the
-      Crusader at 3 ranks, and whether the raid accepts Judgement of the
-      Crusader on the boss instead of Judgement of Wisdom. If yes, every physical
-      attacker and possibly every caster gains 3 percent crit, worth 66 crit
-      rating, which exceeds the entire realistic gem and enchant budget for
-      crit.
-      This is the crit analog of improved_faerie_fire in hit.yaml and it has
-      the same shape: the effect is not in doubt, the roster entry is missing.
-      The difference is that Improved Faerie Fire costs the Balance Druid a
-      global cooldown and Improved Seal of the Crusader costs the raid a
-      judgement slot, so the second decision has a price attached and the first
-      does not.
-    recommendation: >-
-      Record the answer in roster.yaml alongside the buff policy and the
-      improved_faerie_fire entry, since it is a composition decision rather than
-      a gearing one.
-
+    detail: 'Whether the rostered Retribution Paladin takes Improved Seal of the Crusader
+      at 3 ranks, and whether the raid accepts Judgement of the Crusader on the boss instead
+      of Judgement of Wisdom. If yes, every physical attacker and possibly every caster gains
+      3 percent crit, worth 66 crit rating, which exceeds the entire realistic gem and enchant
+      budget for crit. This is the crit analog of improved_faerie_fire in hit.yaml and it
+      has the same shape: the effect is not in doubt, the roster entry is missing. The difference
+      is that Improved Faerie Fire costs the Balance Druid a global cooldown and Improved
+      Seal of the Crusader costs the raid a judgement slot, so the second decision has a price
+      attached and the first does not.'
+    recommendation: Record the answer in roster.yaml alongside the buff policy and the improved_faerie_fire
+      entry, since it is a composition decision rather than a gearing one.
   moonkin_aura_party:
     blocks: 5 percent spell crit for one caster party
-    detail: >-
-      roster.yaml records a warlock group with the Elemental Shaman in it and a
-      mage group with no shaman, but it does not record which group the Balance
-      Druid sits in. Moonkin Aura is a PARTY buff at 30 yards, so exactly one
-      caster party receives 5 percent spell crit and this file cannot say which.
-      If the Balance Druid sits with the mages, the Arcane Mages gain 5 percent
-      spell crit and partially offset having no Totem of Wrath. If it sits with
-      the warlocks, the warlocks reach 8 percent from buffs alone and the mages
-      have none.
-    recommendation: >-
-      Add the Balance Druid to a named group in roster.yaml. The same field also
-      resolves who receives Improved Faerie Fire's group-independent debuff,
-      which is already open in hit.yaml.
-
+    detail: roster.yaml records a warlock group with the Elemental Shaman in it and a mage
+      group with no shaman, but it does not record which group the Balance Druid sits in.
+      Moonkin Aura is a PARTY buff at 30 yards, so exactly one caster party receives 5 percent
+      spell crit and this file cannot say which. If the Balance Druid sits with the mages,
+      the Arcane Mages gain 5 percent spell crit and partially offset having no Totem of Wrath.
+      If it sits with the warlocks, the warlocks reach 8 percent from buffs alone and the
+      mages have none.
+    recommendation: Add the Balance Druid to a named group in roster.yaml. The same field
+      also resolves who receives Improved Faerie Fire's group-independent debuff, which is
+      already open in hit.yaml.
   tank_party_assignments:
     blocks: Whether two of the four tanks receive Leader of the Pack
-    detail: >-
-      roster.yaml names two groups and neither contains the Protection Paladin
-      or the Protection Warrior. Leader of the Pack is a party buff, so whether
-      those two tanks receive 5 percent melee crit is unknown. It is threat only
-      and it crosses no threshold, so nothing in this file changes either way.
-
+    detail: roster.yaml names two groups and neither contains the Protection Paladin or the
+      Protection Warrior. Leader of the Pack is a party buff, so whether those two tanks receive
+      5 percent melee crit is unknown. It is threat only and it crosses no threshold, so nothing
+      in this file changes either way.
   simulated_per_spec_crit_figures:
     blocks: Nothing today. It is the evidential basis of the headline answer.
-    detail: >-
-      The four Phase 3 crit percentages under reachability_at_phase_3 come from
-      ONE source, a wowsims TBC engine run against its own committed Phase 3
-      presets. No published TBC guide states a raid-buffed crit percentage for
-      any spec, so there is nothing to corroborate them against. They are
-      reproducible, and they were produced with a harness validated against the
-      project's own committed regression result, which is why they are recorded
-      rather than omitted.
-      Nothing turns on their precision. For the FOUR SIMULATED SPECS the
-      headroom is 18.9 to 33.7 points on the basis stated under
-      reachability_at_phase_3.simulated_figures, and the conclusion survives
-      an error of several points in either direction. The other rostered specs
-      were never simulated, so no headroom figure exists for them; the
-      reachability entries for those groups rest on cap arithmetic and gear
-      crit supply, not on these figures. This entry used to say "the headroom
-      is 11 to 26 points" as if it covered the roster; the range covered only
-      the four simulated specs and the endpoints matched neither comparison
-      basis, see correction_9_august_2026 under simulated_figures. Do not
-      quote them as measured figures.
-
+    detail: The four Phase 3 crit percentages under reachability_at_phase_3 come from ONE
+      source, a wowsims TBC engine run against its own committed Phase 3 presets. No published
+      TBC guide states a raid-buffed crit percentage for any spec, so there is nothing to
+      corroborate them against. They are reproducible, and they were produced with a harness
+      validated against the project's own committed regression result, which is why they are
+      recorded rather than omitted. Nothing turns on their precision. For the FOUR SIMULATED
+      SPECS the headroom is 18.9 to 33.7 points on the basis stated under reachability_at_phase_3.simulated_figures,
+      and the conclusion survives an error of several points in either direction. The other
+      rostered specs were never simulated, so no headroom figure exists for them; the reachability
+      entries for those groups rest on cap arithmetic and gear crit supply, not on these figures.
+      This entry used to say "the headroom is 11 to 26 points" as if it covered the roster;
+      the range covered only the four simulated specs and the endpoints matched neither comparison
+      basis, see correction_9_august_2026 under simulated_figures. Do not quote them as measured
+      figures.
   crit_suppression_component_split:
     blocks: Nothing. It sharpens one number.
-    detail: >-
-      The 4.8 percent total crit suppression has two independent sources. Its
-      split into 3.0 percent on all crit and a further 1.8 percent on
-      aura-sourced crit only, sparing agility-sourced crit, rests on one
-      derivation. A spec whose crit comes mostly from agility loses slightly
-      less than 4.8 percent. Verify before any document applies the split per
+    detail: The 4.8 percent total crit suppression has two independent sources. Its split
+      into 3.0 percent on all crit and a further 1.8 percent on aura-sourced crit only, sparing
+      agility-sourced crit, rests on one derivation. A spec whose crit comes mostly from agility
+      loses slightly less than 4.8 percent. Verify before any document applies the split per
       spec rather than the 4.8 total.
-
   periodic_crit_residuals:
     blocks: Nothing structural. It sharpens per-spec crit exposure.
-    detail: >-
-      The general rule is now settled and sourced: periodic damage and periodic
-      healing cannot crit in 2.4.3, and a spell with both components crits on
-      the direct part only. See valuation_mechanics.dot_and_hot_crit.
-      What remains open is a short list of individual spells with no period
-      source either way, none of which changes a conclusion here. Druid
-      Lifebloom's final bloom and Swiftmend; Priest Holy Nova and Binding Heal;
-      Paladin Avenger's Shield and Retribution Aura; Hunter Explosive Trap's
-      initial damage; Rogue Anesthetic Poison; and whether Paladin Reckoning
-      extra attacks can crit, which is currently a high-confidence inference
-      only.
-      Also open: whether Impale's crit damage bonus feeds the Deep Wounds tick
-      amount. The evidence leans toward no.
-
+    detail: 'The general rule is now settled and sourced: periodic damage and periodic healing
+      cannot crit in 2.4.3, and a spell with both components crits on the direct part only.
+      See valuation_mechanics.dot_and_hot_crit. What remains open is a short list of individual
+      spells with no period source either way, none of which changes a conclusion here. Druid
+      Lifebloom''s final bloom and Swiftmend; Priest Holy Nova and Binding Heal; Paladin Avenger''s
+      Shield and Retribution Aura; Hunter Explosive Trap''s initial damage; Rogue Anesthetic
+      Poison; and whether Paladin Reckoning extra attacks can crit, which is currently a high-confidence
+      inference only. Also open: whether Impale''s crit damage bonus feeds the Deep Wounds
+      tick amount. The evidence leans toward no.'
   agility_denominator_conflict:
     blocks: Nothing. It is recorded so the correction is not undone.
-    detail: >-
-      Two sources give incompatible agility to crit conversions at level 70. The
-      modern Warcraft Wiki gives 40 for Druid, Rogue, Hunter and Shaman alike,
-      and lists Monk. A 2008 capture of the WoWWiki agility article gives Rogue
-      40, Hunter 40, Warrior 33 and everyone else 25. This file uses the 2008
-      table, because the presence of a Mists of Pandaria class in the other one
-      dates it beyond doubt.
-      The consequence is large enough to name. Under the rejected table a Feral
-      Cat's 276 agility is worth 6.9 percent crit; under the accepted one it is
-      worth 11.0. Anyone recomputing this file should reconfirm before changing
-      it back.
-
+    detail: Two sources give incompatible agility to crit conversions at level 70. The modern
+      Warcraft Wiki gives 40 for Druid, Rogue, Hunter and Shaman alike, and lists Monk. A
+      2008 capture of the WoWWiki agility article gives Rogue 40, Hunter 40, Warrior 33 and
+      everyone else 25. This file uses the 2008 table, because the presence of a Mists of
+      Pandaria class in the other one dates it beyond doubt. The consequence is large enough
+      to name. Under the rejected table a Feral Cat's 276 agility is worth 6.9 percent crit;
+      under the accepted one it is worth 11.0. Anyone recomputing this file should reconfirm
+      before changing it back.
   improved_seal_of_the_crusader_school:
     blocks: Whether casters may be credited with the raid crit debuff
-    detail: >-
-      Improved Seal of the Crusader reads "the critical strike chance of all
-      attacks made against that target". Whether that includes SPELL critical
-      strikes is NOT VERIFIED. TBC simulators model it as covering both. No
-      2.4.3 source was found that disambiguates it explicitly. Until one is,
-      credit it to physical attackers only and leave the caster half open.
-
+    detail: Improved Seal of the Crusader reads "the critical strike chance of all attacks
+      made against that target". Whether that includes SPELL critical strikes is NOT VERIFIED.
+      TBC simulators model it as covering both. No 2.4.3 source was found that disambiguates
+      it explicitly. Until one is, credit it to physical attackers only and leave the caster
+      half open.
   shadow_priest_party:
     blocks: Between 0 and 8 percent spell crit for the Shadow Priest
-    detail: >-
-      roster.yaml lists the Shadow Priest under casters and gives it no party.
-      Both caster crit buffs are party-scoped, so the answer moves by 8 points.
-      Sitting with the warlocks supplies Totem of Wrath at 3 percent, and 5
-      percent more if the Balance Druid sits there too. Sitting with the mages
-      supplies nothing today, because roster.yaml does not fix the mage party's
-      shaman as Elemental. This is the same missing field that
-      moonkin_aura_party turns on, and one edit to roster.yaml closes both.
-    recommendation: >-
-      Add the Shadow Priest and the Balance Druid to named caster groups in
+    detail: roster.yaml lists the Shadow Priest under casters and gives it no party. Both
+      caster crit buffs are party-scoped, so the answer moves by 8 points. Sitting with the
+      warlocks supplies Totem of Wrath at 3 percent, and 5 percent more if the Balance Druid
+      sits there too. Sitting with the mages supplies nothing today, because roster.yaml does
+      not fix the mage party's shaman as Elemental. This is the same missing field that moonkin_aura_party
+      turns on, and one edit to roster.yaml closes both.
+    recommendation: Add the Shadow Priest and the Balance Druid to named caster groups in
       roster.yaml, and fix the spec of the shaman sitting with the mages.
-
   supplied_crit_for_the_promoted_specs:
     blocks: The gear crit rating figures for shadow_priest and elemental_shaman
-    detail: >-
-      Every other spec in this file carries supplied_crit_rating_at_p3_entry.
-      The two specs promoted on 8 August 2026 do not, because the rule recorded
-      in method.gear_set_rule does not reproduce the figures already recorded.
-      Re-running that rule returns 259 crit rating for the Destruction Warlock
-      against the 301 recorded, and 319 for the Arcane Mage against the 370
-      recorded, so a term is missing from the written rule rather than from the
-      tabs. Under the same rule the Shad tab returns 125 over 17 slots and the
-      Ele tab returns 308 over 16 slots.
-      Those two numbers are recorded here rather than in the spec entries
-      because they are not comparable with the entries beside them. A reader
-      comparing 125 against the Affliction Warlock's 262 would read a crit
-      shortage that the method created.
-      Nothing in this file turns on them. No caster has a crit cap, so no
-      supplied figure crosses a threshold, and method.known_weakness already
-      holds every such figure at plus or minus 50 rating.
-    recommendation: >-
-      Recover the script that produced the recorded figures, or restate
-      method.gear_set_rule so it reproduces them, then compute both specs the
-      same way and move the numbers into their entries.
-
+    detail: Every other spec in this file carries supplied_crit_rating_at_p3_entry. The two
+      specs promoted on 8 August 2026 do not, because the rule recorded in method.gear_set_rule
+      does not reproduce the figures already recorded. Re-running that rule returns 259 crit
+      rating for the Destruction Warlock against the 301 recorded, and 319 for the Arcane
+      Mage against the 370 recorded, so a term is missing from the written rule rather than
+      from the tabs. Under the same rule the Shad tab returns 125 over 17 slots and the Ele
+      tab returns 308 over 16 slots. Those two numbers are recorded here rather than in the
+      spec entries because they are not comparable with the entries beside them. A reader
+      comparing 125 against the Affliction Warlock's 262 would read a crit shortage that the
+      method created. Nothing in this file turns on them. No caster has a crit cap, so no
+      supplied figure crosses a threshold, and method.known_weakness already holds every such
+      figure at plus or minus 50 rating.
+    recommendation: Recover the script that produced the recorded figures, or restate method.gear_set_rule
+      so it reproduces them, then compute both specs the same way and move the numbers into
+      their entries.
   lightning_overload_crit_roll:
     blocks: Nothing structural. It sharpens one spec's crit exposure.
-    detail: >-
-      Lightning Overload gives an Elemental Shaman's Lightning Bolt and Chain
-      Lightning a 20 percent chance at 5 ranks to cast a free half-damage copy,
-      spell 30681, verified at the tooltip endpoint. Whether that copy rolls its
-      own critical strike is NOT VERIFIED at the spell-data level, and it decides
-      whether a point of crit reaches roughly a fifth more casts than the
-      rotation shows. The tooltip calls the copy a second, similar spell, which
-      leans toward yes, and leaning is not verification.
-
+    detail: Lightning Overload gives an Elemental Shaman's Lightning Bolt and Chain Lightning
+      a 20 percent chance at 5 ranks to cast a free half-damage copy, spell 30681, verified
+      at the tooltip endpoint. Whether that copy rolls its own critical strike is NOT VERIFIED
+      at the spell-data level, and it decides whether a point of crit reaches roughly a fifth
+      more casts than the rotation shows. The tooltip calls the copy a second, similar spell,
+      which leans toward yes, and leaning is not verification.
   workbook_crit_gaps:
     blocks: The supplied figures for two tanks
-    detail: >-
-      The Feral Bear tab carries no crit column in any armor section, only in
-      its weapon sections, so its 42 rating figure is weapon-only and
-      understates the real supply. The Protection Paladin tab carries no crit
-      column anywhere, so its zero is the workbook declining to price crit
-      rather than a statement about the spec. Neither gap changes a conclusion,
-      because crit is a threat stat for both tanks and neither is near any cap,
+    detail: The Feral Bear tab carries no crit column in any armor section, only in its weapon
+      sections, so its 42 rating figure is weapon-only and understates the real supply. The
+      Protection Paladin tab carries no crit column anywhere, so its zero is the workbook
+      declining to price crit rather than a statement about the spec. Neither gap changes
+      a conclusion, because crit is a threat stat for both tanks and neither is near any cap,
       but neither figure should be quoted as a total.
+  tank_defense_across_the_tier_was_retracted:
+    blocks: Nothing. The finding it recorded is inverted by the current captures.
+    retracted: RETRACTED 11 August 2026. This asked whether a tank can accept its Tier 6 tokens
+      without re-gemming for defense, on the finding that item defense FALLS across the tier
+      for all three tanks. It rises. set-stats.yaml now records protection_warrior 303 to
+      338 to 344, protection_paladin 305 to 331 to 331, and feral_bear 132 to 168 to 168,
+      against thresholds of 284 for plate and 154 for a Bear. Only the Bear at entry sits
+      below its threshold, by 22, which check_tank_defense.py already reports as inside the
+      discretionary gem and enchant budget.
+    why_it_was_wrong: The figures it cited, 305 to 264, 257 to 195 and 43 to 24, were read
+      on 9 August 2026 from captures that were rebuilt afterwards. Three of the six tank sets
+      were damage sets wearing a tank label at the time. A true mechanism read off a wrong
+      set is the failure this project keeps meeting, and DOMAIN.md already states it about
+      the Beast Mastery Hunter.
+    found_by: Fable, while reviewing the Protection Warrior conversions
+    previously_claimed: 'FOUND 9 August 2026 by totalling data/facts/set-stats.yaml, which
+      joins the captured gear sets to items.csv. Defense rating on ITEMS falls sharply for
+      all three tanks between the entry set and the tier set, against the 284 and 154 thresholds
+      above. protection_paladin goes 305 to 264, crossing from above the plate threshold to
+      20 below it. protection_warrior goes 257 to 195, and was already 27 below at entry.
+      feral_bear goes 43 to 24 against a threshold of 154. THIS IS NOT A CLAIM THAT A TANK
+      LOSES CRIT IMMUNITY. Gems and enchants are excluded from every figure in set-stats.yaml,
+      exactly as they are from the hit figures, and a tank gems and enchants for defense more
+      than any other role. enchants-gems.yaml records the routes: a bracer enchant at 12,
+      a head glyph at 16, shoulder inscriptions at 10 to 15, Thick Lionseye at 10 a socket,
+      the Tenacious Earthstorm Diamond meta at 12, Vindicator''s Armor Kit at 8, and Flask
+      of Fortification at 10. The Paladin''s 20 closes on two gems. The Warrior''s 89 is a
+      real gearing problem rather than a rounding one. THE BEAR FIGURE SHOULD BE CHECKED BEFORE
+      IT IS USED. 43 defense rating on a main tank''s entry set is implausibly low, and that
+      capture records that PvP armor exclusions forced substitutions in four slots. The number
+      may be describing a set the tank would not wear rather than a real shortfall. Also note
+      Enchant Chest - Defense, one of the larger routes at 15, is marked phase_3_available
+      false in enchants-gems.yaml, so it is not available to close this gap at Phase 3.'
