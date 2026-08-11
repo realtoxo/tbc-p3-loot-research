@@ -99,6 +99,18 @@ end
 -- build on a name it cannot resolve, so the shared builder in itemdb.lua is
 -- used, which emits an `.item` span where the item table holds the row and
 -- builds the same bubble from the generated ladder where it does not.
+-- An arena stat block sold in several weapon flavours is ONE choice, so the
+-- variants collapse to a single row. The row says how many it stands for,
+-- because a reader who counts five arena weapons on Wowhead and finds one here
+-- deserves to know why rather than to suspect the table.
+local function where_text(entry)
+  local where = entry.location or ""
+  if entry.variants and entry.variants > 1 then
+    return where .. string.format(" (%d weapon types)", entry.variants)
+  end
+  return where
+end
+
 local function item_cell(entry)
   local row, held = itemdb.ladder_row(entry)
   if not row then
@@ -209,7 +221,7 @@ local function table_of(entries, spec_name)
       text_cell(string.format("%.2f", entry.epv), pandoc.AlignRight,
         "shortlist-epv"),
       text_cell(tostring(entry.phase), pandoc.AlignRight, "shortlist-phase"),
-      text_cell(entry.location or "", pandoc.AlignLeft,
+      text_cell(where_text(entry), pandoc.AlignLeft,
         (entry.route or "drop") == "drop" and "shortlist-where"
           or "shortlist-where shortlist-gated"),
       priority_cell(entry, spec_name),

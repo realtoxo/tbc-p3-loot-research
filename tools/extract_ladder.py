@@ -396,8 +396,25 @@ def select(rows: list[dict], limit: int = SHORTLIST) -> list[dict]:
     # more weapons. The two instructions compose as written when the number of
     # items shown and the bar an arena weapon must clear are separate.
     floor = pve[min(SHORTLIST, len(pve)) - 1]["epv"]
-    picked += [row for row in rows
-               if row["route"] == "arena" and row["epv"] >= floor]
+    # ONE ROW PER ARENA STAT BLOCK. The Vengeful set is six weapon flavours of
+    # a single item, which is why eight of them share 844.87 and 844.14 to the
+    # penny, and the Merciless set repeats the pattern. Listing each variant
+    # separately says a shaman has eight choices where the shaman has one, so
+    # variants sharing an EPV collapse to the first and carry the count. Only
+    # ARENA rows collapse: two raid drops landing on the same EPV are two
+    # different items and both belong on the page.
+    seen: dict[float, dict] = {}
+    for row in rows:
+        if row["route"] != "arena" or row["epv"] < floor:
+            continue
+        first = seen.get(row["epv"])
+        if first is None:
+            entry = dict(row)
+            entry["variants"] = 1
+            seen[row["epv"]] = entry
+            picked.append(entry)
+        else:
+            first["variants"] += 1
     picked.sort(key=lambda row: row["epv"], reverse=True)
     return picked
 
@@ -733,6 +750,12 @@ def render(specs: dict[str, dict]) -> str:
                 lines = render_item(item, "          ")
                 lines.insert(-1, f"            rank = {item['rank']},")
                 lines.insert(-1, f"            tier = {str(item['tier']).lower()},")
+                # Collapsed arena variants carry their count so the page can
+                # say so. A row standing for six items and not saying so is a
+                # silent omission, which is the thing this project treats as a
+                # defect rather than a tidy-up.
+                if item.get("variants", 1) > 1:
+                    lines.insert(-1, f"            variants = {item['variants']},")
                 out.extend(lines)
             out.append("        },")
         out.append("      },")
