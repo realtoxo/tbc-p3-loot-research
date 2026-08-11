@@ -104,6 +104,9 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_items import ITEM_TYPE, STAT  # noqa: E402
 
+# The database's own hand vocabulary, matching tools/extract_items.py.
+HAND_TYPE = {0: "", 1: "Main Hand", 2: "One Hand", 3: "Off Hand", 4: "Two Hand"}
+
 WORKBOOK = Path("data/research/epv-workbook")
 TOKENS = Path("data/facts/tokens.yaml")
 ITEMS = Path("data/facts/items.csv")
@@ -535,6 +538,8 @@ def off_pieces(
     tier_ids: set[int],
     world_boss: set[int],
     level_60: frozenset[str],
+    hand: str = "",
+    hand_of: dict[int, str] | None = None,
 ) -> list[dict]:
     """The best non-tier items in one section, in the given phases, best first.
 
@@ -562,6 +567,25 @@ def off_pieces(
         and row["location"] not in level_60
         and (arena_allowed or row["route"] != "arena")
     ]
+    # THE HAND IS FILTERED BEFORE THE CUT, NOT AFTER. A section fallback puts
+    # main-hand weapons in front of an off-hand card: the Rogue tab has no
+    # `Off Hand` section, so `Main Hand` is read, and its top rows are main-hand
+    # only. Filtering after the cut emptied the card instead of correcting it,
+    # because the whole candidate pool was main-hand. The workbook files
+    # off-hand items lower in the same section on their own value scale, so the
+    # rows that belong on the card are there to be found once the cut stops
+    # taking them.
+    if hand and hand_of:
+        def fits(row: dict) -> bool:
+            worn = hand_of.get(row["item_id"], "")
+            if not worn:
+                return True
+            if hand == "OffHand":
+                return worn != "Main Hand"
+            if hand in ("MainHand", "OneHand"):
+                return worn != "Off Hand"
+            return True
+        eligible = [row for row in eligible if fits(row)]
     eligible.sort(key=lambda row: row["epv"], reverse=True)
     return eligible[:CANDIDATES]
 
@@ -821,7 +845,10 @@ def main() -> int:
     if not args.db.exists():
         raise Unreadable(f"extract_ladder.py: database not found: {args.db}")
     tokens = yaml.safe_load(args.tokens.read_text())
-    held = {int(row["item_id"]): row["name"] for row in csv.DictReader(args.items.open())}
+    held, hand_of = {}, {}
+    for row in csv.DictReader(args.items.open()):
+        held[int(row["item_id"])] = row["name"]
+        hand_of[int(row["item_id"])] = row["hand_type"]
     tier_ids = tier_item_ids(tokens)
     world_boss = world_boss_ids(WORLD_BOSSES)
     level_60 = level_60_locations(LEVEL_60)
@@ -838,12 +865,13 @@ def main() -> int:
         sixth = tier_pieces(tokens, key, 6, spec)
         slots: dict[str, dict] = {}
 
-        def off_piece_views(section: str) -> dict[str, list[dict]]:
+        def off_piece_views(section: str, hand: str = "") -> dict[str, list[dict]]:
             views: dict[str, list[dict]] = {}
             for view, phases in (("phase3", (3,)), ("prephase", (1, 2))):
                 best = [
                     dict(row) for row in off_pieces(
-                        ladder, section, phases, tier_ids, world_boss, level_60)]
+                        ladder, section, phases, tier_ids, world_boss, level_60,
+                        hand, hand_of)]
                 if best:
                     views[view] = best
                     wanted.update(row["item_id"] for row in best)
@@ -865,7 +893,7 @@ def main() -> int:
             section = next((name for name in sections if name in ladder), None)
             if section is None:
                 continue
-            views = off_piece_views(section)
+            views = off_piece_views(section, hand)
             if views:
                 slots[f"Weapon:{hand}"] = views
         # The per-spec shortlist, one entry per workbook section. Keyed by the
@@ -898,6 +926,26 @@ def main() -> int:
             if item["id"] in outside and item["id"] not in found:
                 found[item["id"]] = item
 
+    def hand_ok(where: str, hand: str) -> bool:
+        """False where a weapon cannot go in the hand the card compares.
+
+        Not reading the hand put four MAIN HAND weapons into the Combat Rogue
+        off-hand baselines: Warglaive of Azzinoth, Vengeful Gladiator's Right
+        Ripper, Dragonstrike and Talon of the Phoenix. A rogue holds none of
+        those in the off hand, so two off-hand cards measured an item against
+        gear the spec cannot wear there. The cause is the fallback in
+        WEAPON_SECTIONS: the Rogue tab has no `Off Hand` section, so `Main Hand`
+        is read, and the top of that section is main-hand only.
+        """
+        wanted = where.split(":")[1] if ":" in where else ""
+        if not wanted or not hand:
+            return True
+        if wanted == "OffHand":
+            return hand != "Main Hand"
+        if wanted in ("MainHand", "OneHand"):
+            return hand != "Off Hand"
+        return True
+
     unnameable: list[tuple[str, str, int]] = []
 
     def fill(entry: dict, spec: str, where: str, check_slot: bool,
@@ -915,6 +963,12 @@ def main() -> int:
         stays visible.
         """
         item_id = entry["item_id"]
+        # THE HAND CHECK RUNS BEFORE EITHER NAMING PATH. It used to sit after
+        # this early return, which meant it never ran at all for an item
+        # items.csv already names, and that is almost every item. The slot check
+        # below has the same history and the same excuse.
+        if check_slot and not hand_ok(where, hand_of.get(item_id, "")):
+            return False
         if item_id in held:
             entry["name"] = held[item_id]
             return True
@@ -935,9 +989,19 @@ def main() -> int:
         entry["stats"] = stat_line(item)
         if not check_slot:
             return True
+        # THE HAND IS CHECKED, NOT ONLY THE SLOT. This used to read the slot
+        # alone, on the note that the database vocabulary knows only the slot.
+        # It knows the hand too, in `handType`, and not reading it put four MAIN
+        # HAND weapons into the Combat Rogue off-hand baselines: Warglaive of
+        # Azzinoth, Vengeful Gladiator's Right Ripper, Dragonstrike and Talon of
+        # the Phoenix. A rogue cannot hold any of those in the off hand, so two
+        # off-hand cards measured an item against gear the spec cannot wear
+        # there. The cause is the fallback in WEAPON_SECTIONS: the Rogue tab has
+        # no `Off Hand` section, so `Main Hand` is read instead, and the top of
+        # that section is main-hand only.
+        if not hand_ok(where, HAND_TYPE.get(item.get("handType"), "")):
+            return False
         slot_named = ITEM_TYPE.get(item.get("type"), "")
-        # A weapon key is the slot and the hand, `Weapon:OffHand`, and the
-        # database vocabulary knows only the slot.
         if slot_named and slot_named != where.split(":")[0]:
             raise Unreadable(
                 f"extract_ladder.py: an off-piece baseline for {spec} in "
@@ -957,8 +1021,10 @@ def main() -> int:
                 if fill(entry, spec, section, check_slot=False, required=False)]
         for slot, views in block["slots"].items():
             for view in ("phase3", "prephase"):
-                for entry in views.get(view, []):
-                    fill(entry, spec, slot, check_slot=True)
+                # THE RETURN IS USED. This called fill and discarded the answer,
+                # so a baseline the hand check rejects stayed on the card.
+                views[view] = [entry for entry in views.get(view, [])
+                               if fill(entry, spec, slot, check_slot=True)]
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(render(specs))
