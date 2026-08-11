@@ -222,9 +222,12 @@ notes:
     "Destroyer 2-piece: Overpower grants 100 attack power for 5 sec" against
     6.36 EPV of raw stats minus 21 item hit on a spec this repository records
     as short of its cap at every anchor. Until one exists, both are recorded
-    and neither is a recommendation. Totals moved: tier_hands_only 107 to
-    122, tier_hands_and_head 86 to 101 worn or 122 refused; entry is
-    unchanged at 84.
+    and neither is a recommendation. Totals moved. CORRECTED 11 August 2026: the figures here were stale against
+    this file's own tables, reading 107 to 122, 86 to 101 worn or 122 refused,
+    and entry unchanged at 84. Summing the hit column gives entry 81,
+    tier_hands_only 132, tier_hands_and_head 111 and the refusal alternative
+    132, and each agrees with its own total_item_hit header. The tables were
+    right and the prose was not.
   downgraded_slots: >-
     Five slots were downgraded from the full-clear Phase 3 list because their
     source is late Black Temple (Illidan, Illidari Council or Mother Shahraz),
@@ -234,8 +237,9 @@ notes:
     Destroyer Breastplate; ring_1 (Stormrage Signet Ring, Illidan) kept the
     Phase 2 Band of the Ranger-General, since no Wowhead-published early
     Hyjal/Black Temple ring alternative was found for this slot; trinket_2
-    (Madness of the Betrayer, Illidari Council) kept the Phase 2 Badge of the
-    Swarmguard; main_hand (Cataclysm's Edge, Archimonde) is downgraded only in
+    (Madness of the Betrayer, Illidari Council) kept a Phase 2 trinket. CORRECTED 11 August 2026: this read Badge of the
+    Swarmguard, and every anchor table records Tsunami Talisman, id 30627, which
+    is what the id settles; main_hand (Cataclysm's Edge, Archimonde) is downgraded only in
     tier_hands_only, which by definition has not killed Archimonde yet, and
     kept the Phase 2 Twinblade of the Phoenix there. Neck was also changed:
     the full-clear pick, Choker of Serrated Blades, is sourced only as "Black
@@ -269,7 +273,10 @@ notes:
   shoulder_corrected: >-
     CORRECTED 9 August 2026, after the guild lead questioned a token claim and
     an off-piece audit followed. This capture wore Shoulderpads of the Stranger
-    at all three anchors. The Arms tab ranks it FIFTH at 87.03.
+    at all three anchors. The Arms tab ranks it FOURTH at 87.03,
+    CORRECTED 11 August 2026 from FIFTH: the EPV was right and the rank was not,
+    and the three above it are 30979 at 101.87, 30866 at 92.08 and 32377 at
+    88.04.
     IT IS A LEATHER SHOULDER AND ITS VALUE IS AGILITY, which buys a warrior
     nothing in attack power. data/facts/attack-power.yaml records that one
     agility gives a Cat one attack power and gives a warrior none, which is why
