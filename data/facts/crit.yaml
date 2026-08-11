@@ -2012,7 +2012,7 @@ tank_defensive_thresholds:
       not move.
       WHAT MOVES IS HOW MUCH OF IT GEAR HAS TO CARRY. Anticipation supplies 20
       defense SKILL, so the gap gear must close is 490 minus 350 minus 20, which
-      is 120 skill points rather than 140. At the exact conversion of 2.365384
+      is 120 skill points rather than 140. At the conversion of 2.365384
       rating per skill point that is 283.85, so 284 rating.
       UNTALENTED THE FIGURE IS 332, from the full 140 points. The 48 rating
       between the two is a little under two thirds of what a Tier 6 helm carries,
@@ -2113,12 +2113,12 @@ tank_defensive_thresholds:
     derivation: >-
       5.6 percent of boss crit minus 3 percent from the talent leaves 2.6
       percent to remove from gear. 2.6 divided by 0.04 is 65 defense skill
-      points. 350 base plus 65 is 415. The exact conversion is 2.365384 rating
+      points. 350 base plus 65 is 415. The conversion used here is 2.365384 rating
       per skill point, so 65 points is 153.75, and the minimum is 154 rating.
       This is one of the few places where the rounded 2.37 changes the answer:
       154 divided by 2.37 is 64.98, which floors to 64 skill and would fail,
       while 154 divided by 2.365384 is 65.10 and passes. 153 fails on either
-      figure. Use 154, and use the exact conversion when a threshold is close.
+      figure. Use 154, and use the longer conversion when a threshold is close. ON THE WORD EXACT: the only reachable source for this divisor is the wowsims TBC constant DefenseRatingPerDefense, which reads 2.3654 and not 2.365384. The extra digits stand on nothing this project can cite, so the figure is SINGLE SOURCE at four decimal places and the word exact overstates it. No threshold in this file moves between the two: at 2.3654 the figures are 120.06 for 284, 119.64 for 283, 140.36 for 332, 65.11 for 154 and 64.68 for 153, which floor to the same skill points as before. Checked by Fable on 11 August 2026.
     roster_application: >-
       The Druid main tank and the Druid third tank. Both need 415 defense skill
       rather than 490, which is 177 fewer defense rating than a plate tank, and
