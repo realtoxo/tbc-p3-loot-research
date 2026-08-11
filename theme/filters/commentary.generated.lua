@@ -4634,7 +4634,7 @@ return {
   },
   ["32500"] = {
     disagreed = true,
-    total = 10,
+    total = 9,
     remarks = {
       {
         creator = "Zatar (Classic Wow Builds)",

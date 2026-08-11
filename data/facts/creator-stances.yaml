@@ -36,7 +36,7 @@
 
 meta:
   captured: '2026-08-10'
-  rows: 580
+  rows: 579
   items: 173
   creators: 27
   recordings_searched: 67
@@ -50,6 +50,13 @@ meta:
     mentions_only: 74
   method: two agent passes with adversarial verification, plus a human spot check
   specs_cleaned: 12
+  duplicate_rows_removed: 'One. NOHITJEROME on Crystal Spire of Karabor at 934 seconds
+    was the same remark as the row at 888 seconds, captured twice with different stances,
+    conditional against favours. transcript-mentions.csv holds ONE passage there, 888
+    to 1009 with two name occurrences, so 934 sits inside that window and was never a
+    passage of its own: a classify agent returned one passage as two results. The richer
+    row was kept, at 888, which carries the clear caption, the correctly cased spec and
+    the interim weapon figures. Found by Fable on 11 August 2026 while reviewing the curation.'
 
 remarks:
 - item_id: 28505
@@ -7427,23 +7434,6 @@ remarks:
   client_dependent: The interim option he names is Vengeful Gladiator's Salvation, an
     arena purchase, so availability depends on arena season timing.
   url: https://www.youtube.com/watch?v=8R9T2zfvRs4&t=888s
-- item_id: 32500
-  item_name: Crystal Spire of Karabor
-  creator: NOHITJEROME
-  slug: nohitjerome-resto-druid-bis-phase-3
-  timestamp: 934
-  stance: favours
-  claim: NOHITJEROME calls it a fantastic mace with 486 healing power that a resto druid
-    will get last, noting the on-use effect only fires on direct heals such as regrowth
-    and not on lifebloom ticks, with the Light-Fathom Scepter and the vengeful gladiator
-    mace as interim options.
-  specs:
-  - resto druid
-  confidence: high
-  caption_quality: noisy
-  client_dependent: names a vengeful gladiator PvP mace as the interim option; arena season
-    timing differs on the Anniversary client
-  url: https://www.youtube.com/watch?v=8R9T2zfvRs4&t=934s
 - item_id: 32500
   item_name: Crystal Spire of Karabor
   creator: NOHITJEROME
