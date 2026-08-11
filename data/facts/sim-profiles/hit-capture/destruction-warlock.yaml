@@ -83,7 +83,7 @@ anchors:
     set_bonuses_held: []
     hit_by_slot:
       head: {item: Hood of the Corruptor, id: 30212, from: "Lady Vashj, Serpentshrine Cavern (carried from entry; Hood of the Malefic needs Archimonde)", hit: 0}
-      neck: {item: Translucent Spellthread Necklace, id: 32349, from: "Black Temple, boss listed as \"Devourer of Souls\" in source workbook", hit: 15}
+      neck: {item: Translucent Spellthread Necklace, id: 32349, from: "Black Temple, Reliquary of Souls. RESOLVED 11 August 2026: the source workbook labels the boss Devourer of Souls, which matches no Black Temple encounter, and data/facts/drops.csv gives npc 22856, Reliquary of Souls. The Affliction capture already recorded the same item against that boss, and the Retribution capture resolved the same label, so the captures no longer disagree.", hit: 15}
       shoulder: {item: Blood-cursed Shoulderpads, id: 32338, from: "Gurtogg Bloodboil, Black Temple (early)", hit: 18}
       back: {item: Nethervoid Cloak, id: 32590, from: "Trash, Mount Hyjal", hit: 18}
       chest: {item: Vestments of the Sea-Witch, id: 30107, from: "Lady Vashj, Serpentshrine Cavern (carried from entry; still tops Robe/Robes of the Malefic and Rhonin lines)", hit: 27}

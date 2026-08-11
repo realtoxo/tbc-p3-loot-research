@@ -95,7 +95,7 @@ notes:
     data/facts/hit.yaml that Gronnstalker's Armor carries zero hit on all five
     pieces holds.
   downgraded_slots: >-
-    Relative to the Phase 3 full-clear BiS list, four slots were downgraded
+    Relative to the Phase 3 full-clear BiS list, eight slots were downgraded (CORRECTED 11 August 2026 from "four": the sentence undercounted its own list, which enumerates head, shoulder, chest, legs, feet, ring_1, ring_2 and trinket_2)
     because their listed item requires a boss the brief marks as not reliably
     dead at 4 to 6 weeks: head (Cursed Vision of Sargeras, Illidan -> kept
     Entry's Rift Stalker Helm until Archimonde is down, then the Archimonde
