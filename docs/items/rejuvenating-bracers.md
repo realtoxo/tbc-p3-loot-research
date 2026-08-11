@@ -18,6 +18,11 @@ title: Rejuvenating Bracers
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Rejuvenating Bracers]{.item}
+
 #### Restoration Shaman
 
 Delta

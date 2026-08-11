@@ -18,12 +18,32 @@ title: Wraps of Precise Flight
 
 ::: {.specs}
 
+#### Arms Warrior
+
+Delta
+:   [Wraps of Precise Flight]{.item}
+
+#### Fury Warrior
+
+Delta
+:   [Wraps of Precise Flight]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Wraps of Precise Flight]{.item}
+
 #### Enhancement Shaman
 
 Delta
 :   [Wraps of Precise Flight]{.item}
 
 #### Beast Mastery Hunter
+
+Delta
+:   [Wraps of Precise Flight]{.item}
+
+#### Survival Hunter
 
 Delta
 :   [Wraps of Precise Flight]{.item}

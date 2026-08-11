@@ -23,6 +23,11 @@ title: Band of the Abyssal Lord
 Delta
 :   [Band of the Abyssal Lord]{.item}
 
+#### Protection Paladin
+
+Delta
+:   [Band of the Abyssal Lord]{.item}
+
 :::
 
 ::::

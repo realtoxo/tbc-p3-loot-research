@@ -743,11 +743,22 @@ local function views_for(spec, row, where)
     end
   end
 
-  if #out == 0 then
+  -- AND AN EMPTY LIST IN EVERY VIEW IS THE SAME FACT, four times over. This
+  -- used to stop the build on the reasoning that a card with no baseline
+  -- renders unmeasured. It does not: the `absent` path says which view had
+  -- nothing and why, so a card whose every view is absent says the item is the
+  -- best this spec has in the slot with nothing to measure it against, which
+  -- is worth knowing and is true. It became reachable when the shortlists grew
+  -- from five to ten and fifteen, which admitted items that top their slot;
+  -- Naaru-Blessed Life Rod for the Priest Healer is the first.
+  --
+  -- Nothing known at all is still a defect, because that is a gap in the
+  -- generated table rather than a fact about the item.
+  if #out == 0 and #absent == 0 then
     fail(where, string.format(
-      "%s is every derived %s baseline for %s, so it has nothing to be "
-      .. "measured against. Name the baseline instead, as [A]{.item} over "
-      .. "[B]{.item}.", row.name, slot, spec.name))
+      "%s resolves no %s baseline for %s, in any view, and no view reports "
+      .. "why. That is a gap in the generated ladder rather than a fact about "
+      .. "the item.", row.name, slot, spec.name))
     return nil
   end
   return out, absent

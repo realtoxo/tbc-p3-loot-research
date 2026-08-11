@@ -33,6 +33,11 @@ Delta
 Delta
 :   [Deadly Cuffs]{.item}
 
+#### Protection Warrior
+
+Delta
+:   [Deadly Cuffs]{.item}
+
 #### Retribution Paladin
 
 Delta

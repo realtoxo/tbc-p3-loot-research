@@ -18,6 +18,11 @@ title: Onslaught Shoulderguards
 
 ::: {.specs}
 
+#### Protection Warrior
+
+Delta
+:   [Onslaught Shoulderguards]{.item}
+
 :::
 
 ::::

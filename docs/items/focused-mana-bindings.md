@@ -18,6 +18,11 @@ title: Focused Mana Bindings
 
 ::: {.specs}
 
+#### Elemental Shaman
+
+Delta
+:   [Focused Mana Bindings]{.item}
+
 #### Balance Druid
 
 Delta

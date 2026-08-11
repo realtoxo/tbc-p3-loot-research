@@ -33,6 +33,11 @@ Delta
 Delta
 :   [Don Alejandro's Money Belt]{.item}
 
+#### Protection Warrior
+
+Delta
+:   [Don Alejandro's Money Belt]{.item}
+
 #### Retribution Paladin
 
 Delta

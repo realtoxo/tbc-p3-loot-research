@@ -38,6 +38,11 @@ Delta
 Delta
 :   [Cuffs of Devastation]{.item}
 
+#### Priest Healer
+
+Delta
+:   [Cuffs of Devastation]{.item}
+
 #### Affliction Warlock
 
 Delta

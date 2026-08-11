@@ -33,6 +33,11 @@ Delta
 Delta
 :   [Quickstrider Moccasins]{.item}
 
+#### Retribution Paladin
+
+Delta
+:   [Quickstrider Moccasins]{.item}
+
 #### Enhancement Shaman
 
 Delta

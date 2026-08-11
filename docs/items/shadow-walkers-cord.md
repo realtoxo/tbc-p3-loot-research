@@ -23,6 +23,11 @@ title: Shadow-walker's Cord
 Delta
 :   [Shadow-walker's Cord]{.item}
 
+#### Arms Warrior
+
+Delta
+:   [Shadow-walker's Cord]{.item}
+
 #### Fury Warrior
 
 Delta

@@ -18,6 +18,11 @@ title: Lightbringer Chestpiece
 
 ::: {.specs}
 
+#### Protection Paladin
+
+Delta
+:   [Lightbringer Chestpiece]{.item}
+
 #### Holy Paladin
 
 Delta

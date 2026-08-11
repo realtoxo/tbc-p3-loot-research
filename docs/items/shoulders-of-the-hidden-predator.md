@@ -18,6 +18,21 @@ title: Shoulders of the Hidden Predator
 
 ::: {.specs}
 
+#### Arms Warrior
+
+Delta
+:   [Shoulders of the Hidden Predator]{.item}
+
+#### Fury Warrior
+
+Delta
+:   [Shoulders of the Hidden Predator]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Shoulders of the Hidden Predator]{.item}
+
 #### Enhancement Shaman
 
 Delta

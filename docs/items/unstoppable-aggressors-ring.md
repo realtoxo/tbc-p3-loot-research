@@ -38,6 +38,11 @@ Delta
 Delta
 :   [Unstoppable Aggressor's Ring]{.item}
 
+#### Feral Cat
+
+Delta
+:   [Unstoppable Aggressor's Ring]{.item}
+
 :::
 
 ::::

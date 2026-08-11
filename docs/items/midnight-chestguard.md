@@ -33,6 +33,11 @@ Delta
 Delta
 :   [Midnight Chestguard]{.item}
 
+#### Protection Warrior
+
+Delta
+:   [Midnight Chestguard]{.item}
+
 #### Retribution Paladin
 
 Delta
@@ -54,6 +59,11 @@ Delta
 :   [Midnight Chestguard]{.item}
 
 #### Beast Mastery Hunter
+
+Delta
+:   [Midnight Chestguard]{.item}
+
+#### Survival Hunter
 
 Delta
 :   [Midnight Chestguard]{.item}

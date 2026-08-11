@@ -23,6 +23,11 @@ title: Belt of the Crescent Moon
 Delta
 :   [Belt of the Crescent Moon]{.item}
 
+#### Balance Druid
+
+Delta
+:   [Belt of the Crescent Moon]{.item}
+
 :::
 
 ::::

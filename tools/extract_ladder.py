@@ -355,16 +355,15 @@ CANDIDATES = 2
 # on a spec page and the count that decides which specs earn a card on an item
 # page, so the two are the same number on purpose: a spec that would be shown
 # the item on its own page is a spec the item page shows as a claimant.
-SHORTLIST = 5
+SHORTLIST = 10
 
-# WEAPONS AND TRINKETS GET TEN. These are the densest and most contested
-# sections in the workbook and five was too few to show the real field: the
-# guild lead asked for ten on 10 August 2026. Armor sections stay at five,
-# where the EPV spread is wide enough that the sixth item is rarely a live
-# option. Trinkets earn the wider list for a second reason: a player wears two,
-# so the sixth trinket is a live option in a way the sixth belt is not.
-WIDE_SHORTLIST = 10
-TRINKET_SECTION_NAMES = frozenset({"Trinket"})
+# TEN EVERYWHERE, FIFTEEN FOR WEAPONS. Five showed too little of the field, so
+# the guild lead raised every slot to ten on 10 August 2026 and weapons to
+# fifteen. Weapons earn the wider list because their sections are the densest
+# and most contested in the workbook, and because a spec fills two hands from
+# one of them. Trinkets sit at ten by the same ruling even though a player
+# wears two, so they take the default rather than a constant of their own.
+WIDE_SHORTLIST = 15
 
 
 def select(rows: list[dict], limit: int = SHORTLIST) -> list[dict]:
@@ -389,13 +388,14 @@ def select(rows: list[dict], limit: int = SHORTLIST) -> list[dict]:
     picked = pve[:limit]
     if not picked:
         return rows[:limit]
-    # THE PVP BAR STAYS AT THE FIFTH, even where ten items are shown. Raising
-    # the shown count to ten for weapons moved this floor down with it and let
-    # the Season 2 block back in: the Enhancement one-hand section went to
-    # twenty-four rows, fourteen of them arena, which is more arena rather than
-    # more weapons. The two instructions compose as written when the number of
-    # items shown and the bar an arena weapon must clear are separate.
-    floor = pve[min(SHORTLIST, len(pve)) - 1]["epv"]
+    # THE BAR IS THE LAST OBTAINABLE ITEM SHOWN. It was briefly pinned to the
+    # fifth, to stop the arena block bloating the list when the count rose. That
+    # reason no longer holds: the clone dedupe below collapses the eight
+    # Vengeful rows to two, which fixes the bloat at its cause, while the pin
+    # fixed it by hiding weapons the guild lead expected to see. The Merciless
+    # Gladiator block sits at 788.73 against an Enhancement fifth of 799.51 and
+    # a fifteenth well below it, so the pin was what removed it.
+    floor = picked[-1]["epv"]
     # ONE ROW PER ARENA STAT BLOCK. The Vengeful set is six weapon flavours of
     # a single item, which is why eight of them share 844.87 and 844.14 to the
     # penny, and the Merciless set repeats the pattern. Listing each variant
@@ -483,7 +483,7 @@ WEAPON_SECTION_NAMES = frozenset(
     name for names in WEAPON_SECTIONS.values() for name in names)
 
 # The sections that show ten rather than five.
-WIDE_SECTIONS = WEAPON_SECTION_NAMES | TRINKET_SECTION_NAMES
+WIDE_SECTIONS = WEAPON_SECTION_NAMES
 
 
 WORLD_BOSSES = Path("data/facts/world-bosses.yaml")

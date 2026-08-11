@@ -33,6 +33,11 @@ Delta
 Delta
 :   [Claw of Molten Fury]{.item}
 
+#### Fury Warrior
+
+Delta
+:   [Claw of Molten Fury]{.item}
+
 #### Protection Warrior
 
 Delta

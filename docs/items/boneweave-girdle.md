@@ -28,6 +28,11 @@ Delta
 Delta
 :   [Boneweave Girdle]{.item}
 
+#### Retribution Paladin
+
+Delta
+:   [Boneweave Girdle]{.item}
+
 #### Enhancement Shaman
 
 Delta

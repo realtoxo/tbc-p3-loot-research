@@ -28,6 +28,11 @@ Delta
 Delta
 :   [Belt of Primal Majesty]{.item}
 
+#### Restoration Druid
+
+Delta
+:   [Belt of Primal Majesty]{.item}
+
 :::
 
 ::::

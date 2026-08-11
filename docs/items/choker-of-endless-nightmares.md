@@ -53,6 +53,11 @@ Delta
 Delta
 :   [Choker of Endless Nightmares]{.item}
 
+#### Survival Hunter
+
+Delta
+:   [Choker of Endless Nightmares]{.item}
+
 :::
 
 ::::

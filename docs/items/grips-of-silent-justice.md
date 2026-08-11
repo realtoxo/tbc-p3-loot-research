@@ -38,6 +38,11 @@ Delta
 Delta
 :   [Grips of Silent Justice]{.item}
 
+#### Protection Paladin
+
+Delta
+:   [Grips of Silent Justice]{.item}
+
 :::
 
 ::::

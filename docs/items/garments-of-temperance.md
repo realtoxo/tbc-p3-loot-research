@@ -18,7 +18,17 @@ title: Garments of Temperance
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Garments of Temperance]{.item}
+
 #### Restoration Shaman
+
+Delta
+:   [Garments of Temperance]{.item}
+
+#### Restoration Druid
 
 Delta
 :   [Garments of Temperance]{.item}

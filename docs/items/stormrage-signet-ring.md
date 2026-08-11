@@ -38,6 +38,11 @@ Delta
 Delta
 :   [Stormrage Signet Ring]{.item}
 
+#### Retribution Paladin
+
+Delta
+:   [Stormrage Signet Ring]{.item}
+
 #### Enhancement Shaman
 
 Delta

@@ -18,6 +18,21 @@ title: Don Rodrigo's Poncho
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Don Rodrigo's Poncho]{.item}
+
+#### Restoration Shaman
+
+Delta
+:   [Don Rodrigo's Poncho]{.item}
+
+#### Restoration Druid
+
+Delta
+:   [Don Rodrigo's Poncho]{.item}
+
 :::
 
 ::::

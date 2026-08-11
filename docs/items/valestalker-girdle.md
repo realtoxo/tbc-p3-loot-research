@@ -18,6 +18,11 @@ title: Valestalker Girdle
 
 ::: {.specs}
 
+#### Arms Warrior
+
+Delta
+:   [Valestalker Girdle]{.item}
+
 #### Fury Warrior
 
 Delta

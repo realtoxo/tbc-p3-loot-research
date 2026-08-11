@@ -38,6 +38,11 @@ Delta
 Delta
 :   [Dreadboots of the Legion]{.item}
 
+#### Protection Paladin
+
+Delta
+:   [Dreadboots of the Legion]{.item}
+
 :::
 
 ::::

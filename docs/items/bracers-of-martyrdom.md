@@ -18,6 +18,16 @@ title: Bracers of Martyrdom
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Bracers of Martyrdom]{.item}
+
+#### Restoration Shaman
+
+Delta
+:   [Bracers of Martyrdom]{.item}
+
 #### Restoration Druid
 
 Delta

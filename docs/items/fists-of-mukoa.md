@@ -18,6 +18,11 @@ title: Fists of Mukoa
 
 ::: {.specs}
 
+#### Arms Warrior
+
+Delta
+:   [Fists of Mukoa]{.item}
+
 #### Fury Warrior
 
 Delta

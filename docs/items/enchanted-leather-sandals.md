@@ -18,6 +18,21 @@ title: Enchanted Leather Sandals
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Enchanted Leather Sandals]{.item}
+
+#### Restoration Shaman
+
+Delta
+:   [Enchanted Leather Sandals]{.item}
+
+#### Restoration Druid
+
+Delta
+:   [Enchanted Leather Sandals]{.item}
+
 :::
 
 ::::

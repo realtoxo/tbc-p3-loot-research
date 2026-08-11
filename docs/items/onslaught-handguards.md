@@ -18,6 +18,11 @@ title: Onslaught Handguards
 
 ::: {.specs}
 
+#### Protection Warrior
+
+Delta
+:   [Onslaught Handguards]{.item}
+
 :::
 
 ::::

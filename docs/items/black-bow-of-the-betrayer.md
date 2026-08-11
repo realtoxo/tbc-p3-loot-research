@@ -23,6 +23,11 @@ title: Black Bow of the Betrayer
 Delta
 :   [Black Bow of the Betrayer]{.item}
 
+#### Survival Hunter
+
+Delta
+:   [Black Bow of the Betrayer]{.item}
+
 :::
 
 ::::

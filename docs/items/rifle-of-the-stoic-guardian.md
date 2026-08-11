@@ -23,6 +23,16 @@ title: Rifle of the Stoic Guardian
 Delta
 :   [Rifle of the Stoic Guardian]{.item}
 
+#### Beast Mastery Hunter
+
+Delta
+:   [Rifle of the Stoic Guardian]{.item}
+
+#### Survival Hunter
+
+Delta
+:   [Rifle of the Stoic Guardian]{.item}
+
 :::
 
 ::::

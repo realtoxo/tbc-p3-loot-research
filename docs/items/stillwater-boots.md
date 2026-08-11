@@ -18,6 +18,11 @@ title: Stillwater Boots
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Stillwater Boots]{.item}
+
 #### Restoration Shaman
 
 Delta

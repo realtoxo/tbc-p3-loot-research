@@ -18,6 +18,21 @@ title: Girdle of the Lightbearer
 
 ::: {.specs}
 
+#### Fury Warrior
+
+Delta
+:   [Girdle of the Lightbearer]{.item}
+
+#### Protection Warrior
+
+Delta
+:   [Girdle of the Lightbearer]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Girdle of the Lightbearer]{.item}
+
 :::
 
 ::::

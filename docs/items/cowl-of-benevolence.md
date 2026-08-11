@@ -18,6 +18,16 @@ title: Cowl of Benevolence
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Cowl of Benevolence]{.item}
+
+#### Restoration Shaman
+
+Delta
+:   [Cowl of Benevolence]{.item}
+
 #### Restoration Druid
 
 Delta

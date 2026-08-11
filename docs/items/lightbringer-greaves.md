@@ -23,6 +23,11 @@ title: Lightbringer Greaves
 Delta
 :   [Lightbringer Greaves]{.item}
 
+#### Protection Paladin
+
+Delta
+:   [Lightbringer Greaves]{.item}
+
 :::
 
 ::::

@@ -18,6 +18,11 @@ title: Pauldrons of Abyssal Fury
 
 ::: {.specs}
 
+#### Protection Warrior
+
+Delta
+:   [Pauldrons of Abyssal Fury]{.item}
+
 #### Protection Paladin
 
 Delta

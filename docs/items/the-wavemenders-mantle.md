@@ -18,6 +18,11 @@ title: The Wavemender's Mantle
 
 ::: {.specs}
 
+#### Restoration Shaman
+
+Delta
+:   [The Wavemender's Mantle]{.item}
+
 :::
 
 ::::

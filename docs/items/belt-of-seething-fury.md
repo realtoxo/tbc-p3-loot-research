@@ -18,6 +18,11 @@ title: Belt of Seething Fury
 
 ::: {.specs}
 
+#### Fury Warrior
+
+Delta
+:   [Belt of Seething Fury]{.item}
+
 #### Protection Warrior
 
 Delta

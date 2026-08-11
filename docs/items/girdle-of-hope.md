@@ -18,6 +18,11 @@ title: Girdle of Hope
 
 ::: {.specs}
 
+#### Protection Paladin
+
+Delta
+:   [Girdle of Hope]{.item}
+
 #### Holy Paladin
 
 Delta

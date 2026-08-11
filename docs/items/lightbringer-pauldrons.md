@@ -18,6 +18,11 @@ title: Lightbringer Pauldrons
 
 ::: {.specs}
 
+#### Protection Paladin
+
+Delta
+:   [Lightbringer Pauldrons]{.item}
+
 #### Holy Paladin
 
 Delta

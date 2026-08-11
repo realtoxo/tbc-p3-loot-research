@@ -18,6 +18,11 @@ title: Choker of Serrated Blades
 
 ::: {.specs}
 
+#### Combat Rogue
+
+Delta
+:   [Choker of Serrated Blades]{.item}
+
 #### Arms Warrior
 
 Delta
@@ -39,6 +44,11 @@ Delta
 :   [Choker of Serrated Blades]{.item}
 
 #### Enhancement Shaman
+
+Delta
+:   [Choker of Serrated Blades]{.item}
+
+#### Feral Cat
 
 Delta
 :   [Choker of Serrated Blades]{.item}

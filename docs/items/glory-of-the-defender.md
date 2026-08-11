@@ -18,6 +18,11 @@ title: Glory of the Defender
 
 ::: {.specs}
 
+#### Protection Warrior
+
+Delta
+:   [Glory of the Defender]{.item}
+
 #### Protection Paladin
 
 Delta

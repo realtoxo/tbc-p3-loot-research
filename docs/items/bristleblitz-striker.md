@@ -18,6 +18,11 @@ title: Bristleblitz Striker
 
 ::: {.specs}
 
+#### Fury Warrior
+
+Delta
+:   [Bristleblitz Striker]{.item}
+
 #### Protection Warrior
 
 Delta

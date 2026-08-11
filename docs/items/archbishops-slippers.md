@@ -18,6 +18,21 @@ title: Archbishop's Slippers
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Archbishop's Slippers]{.item}
+
+#### Restoration Shaman
+
+Delta
+:   [Archbishop's Slippers]{.item}
+
+#### Restoration Druid
+
+Delta
+:   [Archbishop's Slippers]{.item}
+
 #### Priest Healer
 
 Delta

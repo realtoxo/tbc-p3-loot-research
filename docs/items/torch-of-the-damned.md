@@ -28,6 +28,11 @@ Delta
 Delta
 :   [Torch of the Damned]{.item}
 
+#### Feral Cat
+
+Delta
+:   [Torch of the Damned]{.item}
+
 #### Feral Bear
 
 Delta

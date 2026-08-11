@@ -18,7 +18,37 @@ title: Razorfury Mantle
 
 ::: {.specs}
 
+#### Combat Rogue
+
+Delta
+:   [Razorfury Mantle]{.item}
+
+#### Arms Warrior
+
+Delta
+:   [Razorfury Mantle]{.item}
+
+#### Enhancement Shaman
+
+Delta
+:   [Razorfury Mantle]{.item}
+
+#### Feral Cat
+
+Delta
+:   [Razorfury Mantle]{.item}
+
 #### Feral Bear
+
+Delta
+:   [Razorfury Mantle]{.item}
+
+#### Beast Mastery Hunter
+
+Delta
+:   [Razorfury Mantle]{.item}
+
+#### Survival Hunter
 
 Delta
 :   [Razorfury Mantle]{.item}

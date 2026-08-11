@@ -23,7 +23,22 @@ title: Furious Shackles
 Delta
 :   [Furious Shackles]{.item}
 
+#### Fury Warrior
+
+Delta
+:   [Furious Shackles]{.item}
+
 #### Protection Warrior
+
+Delta
+:   [Furious Shackles]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Furious Shackles]{.item}
+
+#### Protection Paladin
 
 Delta
 :   [Furious Shackles]{.item}

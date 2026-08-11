@@ -18,6 +18,11 @@ title: Amice of Brilliant Light
 
 ::: {.specs}
 
+#### Restoration Druid
+
+Delta
+:   [Amice of Brilliant Light]{.item}
+
 #### Priest Healer
 
 Delta

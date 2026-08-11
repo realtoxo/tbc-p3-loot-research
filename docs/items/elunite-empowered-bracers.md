@@ -18,6 +18,11 @@ title: Elunite Empowered Bracers
 
 ::: {.specs}
 
+#### Elemental Shaman
+
+Delta
+:   [Elunite Empowered Bracers]{.item}
+
 #### Balance Druid
 
 Delta

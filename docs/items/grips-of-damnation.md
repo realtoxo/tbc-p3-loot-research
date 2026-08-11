@@ -23,6 +23,11 @@ title: Grips of Damnation
 Delta
 :   [Grips of Damnation]{.item}
 
+#### Arms Warrior
+
+Delta
+:   [Grips of Damnation]{.item}
+
 #### Fury Warrior
 
 Delta

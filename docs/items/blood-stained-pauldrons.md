@@ -23,7 +23,17 @@ title: Blood-stained Pauldrons
 Delta
 :   [Blood-stained Pauldrons]{.item}
 
+#### Fury Warrior
+
+Delta
+:   [Blood-stained Pauldrons]{.item}
+
 #### Protection Warrior
+
+Delta
+:   [Blood-stained Pauldrons]{.item}
+
+#### Retribution Paladin
 
 Delta
 :   [Blood-stained Pauldrons]{.item}

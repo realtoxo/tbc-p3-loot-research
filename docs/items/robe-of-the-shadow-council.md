@@ -18,7 +18,32 @@ title: Robe of the Shadow Council
 
 ::: {.specs}
 
+#### Elemental Shaman
+
+Delta
+:   [Robe of the Shadow Council]{.item}
+
+#### Balance Druid
+
+Delta
+:   [Robe of the Shadow Council]{.item}
+
 #### Arcane Mage
+
+Delta
+:   [Robe of the Shadow Council]{.item}
+
+#### Shadow Priest
+
+Delta
+:   [Robe of the Shadow Council]{.item}
+
+#### Affliction Warlock
+
+Delta
+:   [Robe of the Shadow Council]{.item}
+
+#### Destruction Warlock
 
 Delta
 :   [Robe of the Shadow Council]{.item}

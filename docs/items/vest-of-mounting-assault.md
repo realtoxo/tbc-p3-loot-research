@@ -18,6 +18,11 @@ title: Vest of Mounting Assault
 
 ::: {.specs}
 
+#### Enhancement Shaman
+
+Delta
+:   [Vest of Mounting Assault]{.item}
+
 #### Beast Mastery Hunter
 
 Delta

@@ -23,6 +23,11 @@ title: Lightbringer Breastplate
 Delta
 :   [Lightbringer Breastplate]{.item}
 
+#### Protection Paladin
+
+Delta
+:   [Lightbringer Breastplate]{.item}
+
 :::
 
 ::::

@@ -18,7 +18,22 @@ title: Band of Devastation
 
 ::: {.specs}
 
+#### Combat Rogue
+
+Delta
+:   [Band of Devastation]{.item}
+
+#### Arms Warrior
+
+Delta
+:   [Band of Devastation]{.item}
+
 #### Fury Warrior
+
+Delta
+:   [Band of Devastation]{.item}
+
+#### Protection Warrior
 
 Delta
 :   [Band of Devastation]{.item}
@@ -29,6 +44,16 @@ Delta
 :   [Band of Devastation]{.item}
 
 #### Enhancement Shaman
+
+Delta
+:   [Band of Devastation]{.item}
+
+#### Feral Bear
+
+Delta
+:   [Band of Devastation]{.item}
+
+#### Beast Mastery Hunter
 
 Delta
 :   [Band of Devastation]{.item}

@@ -28,6 +28,21 @@ Delta
 Delta
 :   [Black Featherlight Boots]{.item}
 
+#### Feral Cat
+
+Delta
+:   [Black Featherlight Boots]{.item}
+
+#### Feral Bear
+
+Delta
+:   [Black Featherlight Boots]{.item}
+
+#### Beast Mastery Hunter
+
+Delta
+:   [Black Featherlight Boots]{.item}
+
 :::
 
 ::::

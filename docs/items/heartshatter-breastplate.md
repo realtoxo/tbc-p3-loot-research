@@ -28,6 +28,11 @@ Delta
 Delta
 :   [Heartshatter Breastplate]{.item}
 
+#### Protection Warrior
+
+Delta
+:   [Heartshatter Breastplate]{.item}
+
 #### Retribution Paladin
 
 Delta

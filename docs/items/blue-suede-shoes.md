@@ -18,6 +18,11 @@ title: Blue Suede Shoes
 
 ::: {.specs}
 
+#### Elemental Shaman
+
+Delta
+:   [Blue Suede Shoes]{.item}
+
 #### Balance Druid
 
 Delta

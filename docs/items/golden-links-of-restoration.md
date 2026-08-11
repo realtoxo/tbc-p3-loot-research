@@ -18,6 +18,11 @@ title: Golden Links of Restoration
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Golden Links of Restoration]{.item}
+
 #### Restoration Shaman
 
 Delta

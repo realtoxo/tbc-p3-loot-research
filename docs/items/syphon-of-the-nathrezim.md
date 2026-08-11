@@ -18,7 +18,17 @@ title: Syphon of the Nathrezim
 
 ::: {.specs}
 
+#### Combat Rogue
+
+Delta
+:   [Syphon of the Nathrezim]{.item}
+
 #### Fury Warrior
+
+Delta
+:   [Syphon of the Nathrezim]{.item}
+
+#### Enhancement Shaman
 
 Delta
 :   [Syphon of the Nathrezim]{.item}

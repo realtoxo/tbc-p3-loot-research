@@ -23,6 +23,21 @@ title: Nether Shadow Tunic
 Delta
 :   [Nether Shadow Tunic]{.item}
 
+#### Arms Warrior
+
+Delta
+:   [Nether Shadow Tunic]{.item}
+
+#### Fury Warrior
+
+Delta
+:   [Nether Shadow Tunic]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Nether Shadow Tunic]{.item}
+
 #### Enhancement Shaman
 
 Delta

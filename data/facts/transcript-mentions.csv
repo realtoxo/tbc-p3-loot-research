@@ -5,6 +5,9 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 24259,Vengeance Wrap,anker64-fury-warrior-p3-bis,Anker_64,U_Cd8uy07vw,1765,1839,2,no,name,https://www.youtube.com/watch?v=U_Cd8uy07vw&t=1765s
 24259,Vengeance Wrap,gandii-arms-warrior-black-temple-gearing,Gandii_warrior,kR9BpYJ2OTM,216,321,5,no,name,https://www.youtube.com/watch?v=kR9BpYJ2OTM&t=216s
 24259,Vengeance Wrap,jurpi-before-phase-3-launches,Jurpi,hYtIujtjRN8,483,548,1,no,name,https://www.youtube.com/watch?v=hYtIujtjRN8&t=483s
+27672,Girdle of the Immovable,jurdi-phase-3-preparation-guide,Jurdi,ucwiZkg3eCA,515,580,1,no,name,https://www.youtube.com/watch?v=ucwiZkg3eCA&t=515s
+27778,Spaulders of Oblivion,jambrosay-bm-hunter-p3-p4-loot,Jambrosay,VpQyyTCc89M,855,920,1,yes,alias,https://www.youtube.com/watch?v=VpQyyTCc89M&t=855s
+27778,Spaulders of Oblivion,veramos-survival-hunter-p3-bis-prio,Veramos Gaming,yqQagrZrgos,56,121,1,yes,alias,https://www.youtube.com/watch?v=yqQagrZrgos&t=56s
 27917,Libram of the Eternal Rest,subtlefw-prot-paladin-p3-bis,SubtleFW,ZVALsT8eZOQ,1174,1239,1,no,name,https://www.youtube.com/watch?v=ZVALsT8eZOQ&t=1174s
 28034,Hourglass of the Unraveller,kaghoe-how-to-gear-bear-druid-tank,Kaghoegaming,wL9aBMOIQUA,108,173,1,yes,alias,https://www.youtube.com/watch?v=wL9aBMOIQUA&t=108s
 28034,Hourglass of the Unraveller,kaghoe-how-to-gear-bear-druid-tank,Kaghoegaming,wL9aBMOIQUA,598,671,2,yes,alias,https://www.youtube.com/watch?v=wL9aBMOIQUA&t=598s
@@ -14,6 +17,7 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 28245,Pendant of Dominance,subtlefw-prot-paladin-p3-bis,SubtleFW,ZVALsT8eZOQ,106,171,1,no,name,https://www.youtube.com/watch?v=ZVALsT8eZOQ&t=106s
 28245,Pendant of Dominance,subtlefw-prot-paladin-p3-bis,SubtleFW,ZVALsT8eZOQ,1617,1682,1,no,name,https://www.youtube.com/watch?v=ZVALsT8eZOQ&t=1617s
 28430,Lionheart Executioner,zatar-black-temple-item-priority,Zatar (Classic Wow Builds),6SWlWDYTkvU,4732,4797,1,no,name,https://www.youtube.com/watch?v=6SWlWDYTkvU&t=4732s
+28441,Deep Thunder,defcamp-melderon-shaman-endgame-guide,Defcamp & Melderon TV,pufsqEiYxSg,5519,5584,1,no,name,https://www.youtube.com/watch?v=pufsqEiYxSg&t=5519s
 28476,Gladiator's Maul,griftin-feral-season-2-mace-bis,Griftin,a0LdmAafzUU,97,187,3,no,name,https://www.youtube.com/watch?v=a0LdmAafzUU&t=97s
 28505,Gauntlets of Renewed Hope,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,351,425,2,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=351s
 28522,Shard of the Virtuous,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,321,386,1,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=321s
@@ -44,6 +48,8 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 29272,Orb of the Soul-Eater,drue-shadow-priest-p3-bis,Drue,ljx7ExV-HdE,1257,1371,2,no,name,https://www.youtube.com/watch?v=ljx7ExV-HdE&t=1257s
 29273,Khadgar's Knapsack,defcamp-melderon-shaman-endgame-guide,Defcamp & Melderon TV,pufsqEiYxSg,3344,3409,1,no,name,https://www.youtube.com/watch?v=pufsqEiYxSg&t=3344s
 29274,Tears of Heaven,nohitjerome-resto-druid-bis-phase-3,NOHITJEROME,8R9T2zfvRs4,961,1026,1,no,name,https://www.youtube.com/watch?v=8R9T2zfvRs4&t=961s
+29278,Violet Signet,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,470,535,1,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=470s
+29278,Violet Signet,griftin-feral-my-phase-3-gear-list,Griftin,OchPhmK-7vE,183,248,1,no,name,https://www.youtube.com/watch?v=OchPhmK-7vE&t=183s
 29287,Violet Signet of the Archmage,fearstreet-arcane-mage-p3-bis,Fearstreet 528,CRRwWdMbacQ,18,83,1,no,name,https://www.youtube.com/watch?v=CRRwWdMbacQ&t=18s
 29294,Band of Eternity,classic-gho-balance-druid-p3-bis,Classic Gho,sc_yD4KJAYQ,403,468,1,no,name,https://www.youtube.com/watch?v=sc_yD4KJAYQ&t=403s
 29294,Band of Eternity,crix-warlock-how-to-gear-for-t6,Crix,2Uxcxsmj4jI,331,396,1,no,name,https://www.youtube.com/watch?v=2Uxcxsmj4jI&t=331s
@@ -69,6 +75,7 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 29370,Icon of the Silver Crescent,subtlefw-prot-paladin-p3-bis,SubtleFW,ZVALsT8eZOQ,1102,1167,1,no,name,https://www.youtube.com/watch?v=ZVALsT8eZOQ&t=1102s
 29370,Icon of the Silver Crescent,subtlefw-prot-paladin-p3-bis,SubtleFW,ZVALsT8eZOQ,1492,1557,1,no,name,https://www.youtube.com/watch?v=ZVALsT8eZOQ&t=1492s
 29370,Icon of the Silver Crescent,wundy-prot-paladin-p3-bis,Wundy TV,EOKsCC-hgog,350,415,1,no,name,https://www.youtube.com/watch?v=EOKsCC-hgog&t=350s
+29374,Necklace of Eternal Hope,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,140,205,1,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=140s
 29376,Essence of the Martyr,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,496,561,1,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=496s
 29376,Essence of the Martyr,silvite-holy-paladin-101,SilviteSoltis,dF9O1b--NAM,390,455,1,no,name,https://www.youtube.com/watch?v=dF9O1b--NAM&t=390s
 29376,Essence of the Martyr,zatar-black-temple-item-priority,Zatar (Classic Wow Builds),6SWlWDYTkvU,8198,8263,1,no,name,https://www.youtube.com/watch?v=6SWlWDYTkvU&t=8198s
@@ -78,6 +85,7 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 29383,Bloodlust Brooch,jambrosay-ret-paladin-p3-p4-loot,Jambrosay,HeiHo9Uqjho,699,764,1,no,name,https://www.youtube.com/watch?v=HeiHo9Uqjho&t=699s
 29383,Bloodlust Brooch,youlookupset-prot-warrior-anniversary,Youlookupset,d-zeSDKc0eU,916,981,1,no,name,https://www.youtube.com/watch?v=d-zeSDKc0eU&t=916s
 29458,Aegis of the Vindicator,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,345,410,1,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=345s
+29524,Windhawk Belt,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,396,461,1,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=396s
 29918,Mindstorm Wristbands,fearstreet-arcane-mage-p3-bis,Fearstreet 528,CRRwWdMbacQ,31,96,1,no,name,https://www.youtube.com/watch?v=CRRwWdMbacQ&t=31s
 29918,Mindstorm Wristbands,zatar-black-temple-item-priority,Zatar (Classic Wow Builds),6SWlWDYTkvU,2467,2532,1,no,name,https://www.youtube.com/watch?v=6SWlWDYTkvU&t=2467s
 29918,Mindstorm Wristbands,zatar-mount-hyjal-item-priority,Zatar (Classic Wow Builds),B3zgswtk6T8,885,950,1,no,name,https://www.youtube.com/watch?v=B3zgswtk6T8&t=885s
@@ -133,6 +141,7 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 30040,Belt of Deep Shadow,sarthe-hunter-t6-bis-loot-prio,Sarthe,GDDl91PROlY,557,622,1,no,name,https://www.youtube.com/watch?v=GDDl91PROlY&t=557s
 30040,Belt of Deep Shadow,zatar-black-temple-item-priority,Zatar (Classic Wow Builds),6SWlWDYTkvU,2537,2602,1,no,name,https://www.youtube.com/watch?v=6SWlWDYTkvU&t=2537s
 30041,Boots of Natural Grace,griftin-feral-druid-p3-loot-guide,Griftin,Flgbx9eII7U,799,864,1,no,name,https://www.youtube.com/watch?v=Flgbx9eII7U&t=799s
+30044,Monsoon Belt,subtlefw-prot-paladin-p3-bis,SubtleFW,ZVALsT8eZOQ,662,727,1,no,name,https://www.youtube.com/watch?v=ZVALsT8eZOQ&t=662s
 30052,Ring of Lethality,jambrosay-feral-druid-p3-p4-loot,Jambrosay,88I8chIOGIg,567,632,1,no,name,https://www.youtube.com/watch?v=88I8chIOGIg&t=567s
 30052,Ring of Lethality,joardee-phase-3-loot-prio-fusion,Joardee,DoaTSCCprtM,5468,5533,1,no,name,https://www.youtube.com/watch?v=DoaTSCCprtM&t=5468s
 30052,Ring of Lethality,simonize-rogue-p3-p4-bis,SimonizeShow,LlksG4eBm2c,355,420,1,no,name,https://www.youtube.com/watch?v=LlksG4eBm2c&t=355s
@@ -156,6 +165,7 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 30110,Coral Band of the Revived,nohitjerome-resto-druid-bis-phase-3,NOHITJEROME,8R9T2zfvRs4,1769,1834,1,yes,alias,https://www.youtube.com/watch?v=8R9T2zfvRs4&t=1769s
 30112,Glorious Gauntlets of Crestfall,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,903,968,1,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=903s
 30190,Cataclysm Helm,darkest-enhancement-shaman-t6-bis,Darkest_TV,2d-1x_z7NdE,49,114,1,no,name,https://www.youtube.com/watch?v=2d-1x_z7NdE&t=49s
+30257,Shattrath Leggings,blayst-ret-paladin-p3-p4-bis,TheRealBlayst,N3aQ2v1KAxI,289,354,1,no,name,https://www.youtube.com/watch?v=N3aQ2v1KAxI&t=289s
 30316,Devastation,blayst-ret-paladin-p3-p4-bis,TheRealBlayst,N3aQ2v1KAxI,391,456,1,yes,name,https://www.youtube.com/watch?v=N3aQ2v1KAxI&t=391s
 30316,Devastation,crix-warlock-p3-t6-gearing,Crix,NI2xuOP6aZE,445,510,1,yes,name,https://www.youtube.com/watch?v=NI2xuOP6aZE&t=445s
 30316,Devastation,jambrosay-arms-warrior-p3-p4-loot,Jambrosay,sPikzqMJKUk,562,627,1,yes,name,https://www.youtube.com/watch?v=sPikzqMJKUk&t=562s
@@ -166,6 +176,8 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 30316,Devastation,marrow-fury-warrior-p3-bis-prio,Marrow,STxvv_E7r-Y,1033,1098,1,yes,name,https://www.youtube.com/watch?v=STxvv_E7r-Y&t=1033s
 30316,Devastation,sanmedina-shadowbolt-destruction-warlock,Sanmedina,zuccFUbo7fs,51,116,1,yes,name,https://www.youtube.com/watch?v=zuccFUbo7fs&t=51s
 30316,Devastation,sarthe-full-bt-hyjal-loot-prio,Sarthe,DnDtULWZU4w,2427,2492,1,yes,name,https://www.youtube.com/watch?v=DnDtULWZU4w&t=2427s
+30341,Flesh Handler's Gauntlets,kaghoe-how-to-gear-bear-druid-tank,Kaghoegaming,wL9aBMOIQUA,255,320,1,no,name,https://www.youtube.com/watch?v=wL9aBMOIQUA&t=255s
+30341,Flesh Handler's Gauntlets,silvite-feral-tank-101,SilviteSoltis,Zb2wvOPDk3M,385,450,1,no,name,https://www.youtube.com/watch?v=Zb2wvOPDk3M&t=385s
 30450,Warp-Spring Coil,simonize-rogue-p3-p4-bis,SimonizeShow,LlksG4eBm2c,402,467,1,no,name,https://www.youtube.com/watch?v=LlksG4eBm2c&t=402s
 30450,Warp-Spring Coil,zatar-tier-6-rogue-item-priority,Zatar (Classic Wow Builds),L5AXKvQgWy8,1022,1144,2,no,name,https://www.youtube.com/watch?v=L5AXKvQgWy8&t=1022s
 30627,Tsunami Talisman,anker64-fury-warrior-p3-bis,Anker_64,U_Cd8uy07vw,1187,1252,1,no,name,https://www.youtube.com/watch?v=U_Cd8uy07vw&t=1187s
@@ -660,14 +672,11 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 32528,Blessed Band of Karabor,zatar-black-temple-item-priority,Zatar (Classic Wow Builds),6SWlWDYTkvU,605,670,1,no,name,https://www.youtube.com/watch?v=6SWlWDYTkvU&t=605s
 32568,Swiftsteel Bracers,zatar-mount-hyjal-item-priority,Zatar (Classic Wow Builds),B3zgswtk6T8,830,895,1,no,name,https://www.youtube.com/watch?v=B3zgswtk6T8&t=830s
 32571,Dawnsteel Bracers,slesh-heart-of-darkness-craft,Slesh,5OW2z-FJI4Y,201,272,2,no,name,https://www.youtube.com/watch?v=5OW2z-FJI4Y&t=201s
-32574,Bindings of Lightning Reflexes,blayst-ret-paladin-p3-p4-bis,TheRealBlayst,N3aQ2v1KAxI,211,276,1,yes,alias,https://www.youtube.com/watch?v=N3aQ2v1KAxI&t=211s
 32574,Bindings of Lightning Reflexes,darkest-enhancement-shaman-t6-bis,Darkest_TV,2d-1x_z7NdE,152,217,1,no,name,https://www.youtube.com/watch?v=2d-1x_z7NdE&t=152s
 32574,Bindings of Lightning Reflexes,jambrosay-ret-paladin-p3-p4-loot,Jambrosay,HeiHo9Uqjho,389,478,2,no,name,https://www.youtube.com/watch?v=HeiHo9Uqjho&t=389s
 32574,Bindings of Lightning Reflexes,marrow-fury-warrior-p3-bis-prio,Marrow,STxvv_E7r-Y,454,519,1,no,name,https://www.youtube.com/watch?v=STxvv_E7r-Y&t=454s
-32574,Bindings of Lightning Reflexes,sarthe-full-bt-hyjal-loot-prio,Sarthe,DnDtULWZU4w,3746,3811,1,yes,alias,https://www.youtube.com/watch?v=DnDtULWZU4w&t=3746s
 32574,Bindings of Lightning Reflexes,slesh-heart-of-darkness-craft,Slesh,5OW2z-FJI4Y,227,310,3,no,name,https://www.youtube.com/watch?v=5OW2z-FJI4Y&t=227s
-32574,Bindings of Lightning Reflexes,slesh-heart-of-darkness-craft,Slesh,5OW2z-FJI4Y,389,622,5,no,name,https://www.youtube.com/watch?v=5OW2z-FJI4Y&t=389s
-32574,Bindings of Lightning Reflexes,subtlefw-prot-paladin-p3-bis,SubtleFW,ZVALsT8eZOQ,439,504,1,yes,alias,https://www.youtube.com/watch?v=ZVALsT8eZOQ&t=439s
+32574,Bindings of Lightning Reflexes,slesh-heart-of-darkness-craft,Slesh,5OW2z-FJI4Y,389,622,4,no,name,https://www.youtube.com/watch?v=5OW2z-FJI4Y&t=389s
 32574,Bindings of Lightning Reflexes,zatar-mount-hyjal-item-priority,Zatar (Classic Wow Builds),B3zgswtk6T8,801,866,1,no,name,https://www.youtube.com/watch?v=B3zgswtk6T8&t=801s
 32575,Shoulders of Lightning Reflexes,slesh-heart-of-darkness-craft,Slesh,5OW2z-FJI4Y,388,462,2,no,name,https://www.youtube.com/watch?v=5OW2z-FJI4Y&t=388s
 32575,Shoulders of Lightning Reflexes,veramos-survival-hunter-p3-bis-prio,Veramos Gaming,yqQagrZrgos,207,272,1,no,name,https://www.youtube.com/watch?v=yqQagrZrgos&t=207s
@@ -720,6 +729,9 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 33122,Cloak of Darkness,blayst-ret-paladin-p3-p4-bis,TheRealBlayst,N3aQ2v1KAxI,147,212,1,no,name,https://www.youtube.com/watch?v=N3aQ2v1KAxI&t=147s
 33122,Cloak of Darkness,jambrosay-ret-paladin-p3-p4-loot,Jambrosay,HeiHo9Uqjho,301,366,1,no,name,https://www.youtube.com/watch?v=HeiHo9Uqjho&t=301s
 33122,Cloak of Darkness,joardee-phase-3-loot-prio-fusion,Joardee,DoaTSCCprtM,6324,6389,1,no,name,https://www.youtube.com/watch?v=DoaTSCCprtM&t=6324s
+33669,Vengeful Gladiator's Cleaver,darkest-enhancement-shaman-t6-bis,Darkest_TV,2d-1x_z7NdE,162,257,2,no,name,https://www.youtube.com/watch?v=2d-1x_z7NdE&t=162s
+33669,Vengeful Gladiator's Cleaver,darkest-enhancement-shaman-t6-bis,Darkest_TV,2d-1x_z7NdE,565,630,1,no,name,https://www.youtube.com/watch?v=2d-1x_z7NdE&t=565s
+33669,Vengeful Gladiator's Cleaver,jambrosay-enhancement-shaman-p3-p4-loot,Jambrosay,hfmde-xAD4w,786,851,1,no,name,https://www.youtube.com/watch?v=hfmde-xAD4w&t=786s
 34009,Hammer of Judgement,knot-phase-3-loot-mount-hyjal-part-1,Knot,Q3IBV56JaGk,2916,2981,1,no,name,https://www.youtube.com/watch?v=Q3IBV56JaGk&t=2916s
 34010,Pepe's Shroud of Pacification,griftin-feral-druid-p3-loot-guide,Griftin,Flgbx9eII7U,295,360,1,no,name,https://www.youtube.com/watch?v=Flgbx9eII7U&t=295s
 34010,Pepe's Shroud of Pacification,warriortsw-prot-warrior-t6-bis,WarriorTSW,UtlTgvE_vvA,812,877,1,no,name,https://www.youtube.com/watch?v=UtlTgvE_vvA&t=812s

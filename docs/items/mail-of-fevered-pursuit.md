@@ -18,6 +18,21 @@ title: Mail of Fevered Pursuit
 
 ::: {.specs}
 
+#### Arms Warrior
+
+Delta
+:   [Mail of Fevered Pursuit]{.item}
+
+#### Fury Warrior
+
+Delta
+:   [Mail of Fevered Pursuit]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Mail of Fevered Pursuit]{.item}
+
 #### Enhancement Shaman
 
 Delta

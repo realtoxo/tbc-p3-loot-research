@@ -28,6 +28,16 @@ Delta
 Delta
 :   [Angelista's Sash]{.item}
 
+#### Restoration Druid
+
+Delta
+:   [Angelista's Sash]{.item}
+
+#### Arcane Mage
+
+Delta
+:   [Angelista's Sash]{.item}
+
 #### Priest Healer
 
 Delta

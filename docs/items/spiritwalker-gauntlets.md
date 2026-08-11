@@ -23,6 +23,11 @@ title: Spiritwalker Gauntlets
 Delta
 :   [Spiritwalker Gauntlets]{.item}
 
+#### Elemental Shaman
+
+Delta
+:   [Spiritwalker Gauntlets]{.item}
+
 #### Restoration Shaman
 
 Delta

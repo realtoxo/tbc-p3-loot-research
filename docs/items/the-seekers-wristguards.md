@@ -18,6 +18,11 @@ title: The Seeker's Wristguards
 
 ::: {.specs}
 
+#### Protection Warrior
+
+Delta
+:   [The Seeker's Wristguards]{.item}
+
 #### Protection Paladin
 
 Delta

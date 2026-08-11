@@ -18,6 +18,11 @@ title: Veil of Turning Leaves
 
 ::: {.specs}
 
+#### Restoration Druid
+
+Delta
+:   [Veil of Turning Leaves]{.item}
+
 :::
 
 ::::

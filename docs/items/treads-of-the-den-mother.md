@@ -18,6 +18,11 @@ title: Treads of the Den Mother
 
 ::: {.specs}
 
+#### Feral Cat
+
+Delta
+:   [Treads of the Den Mother]{.item}
+
 #### Feral Bear
 
 Delta

@@ -28,6 +28,11 @@ Delta
 Delta
 :   [Ring of Captured Storms]{.item}
 
+#### Arcane Mage
+
+Delta
+:   [Ring of Captured Storms]{.item}
+
 #### Shadow Priest
 
 Delta

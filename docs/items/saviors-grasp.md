@@ -18,6 +18,11 @@ title: Savior's Grasp
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Savior's Grasp]{.item}
+
 :::
 
 ::::

@@ -18,6 +18,16 @@ title: Bracers of the Pathfinder
 
 ::: {.specs}
 
+#### Enhancement Shaman
+
+Delta
+:   [Bracers of the Pathfinder]{.item}
+
+#### Beast Mastery Hunter
+
+Delta
+:   [Bracers of the Pathfinder]{.item}
+
 #### Survival Hunter
 
 Delta

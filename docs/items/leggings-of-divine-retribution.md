@@ -28,6 +28,11 @@ Delta
 Delta
 :   [Leggings of Divine Retribution]{.item}
 
+#### Protection Warrior
+
+Delta
+:   [Leggings of Divine Retribution]{.item}
+
 #### Retribution Paladin
 
 Delta

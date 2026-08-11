@@ -18,6 +18,11 @@ title: Pillager's Gauntlets
 
 ::: {.specs}
 
+#### Arms Warrior
+
+Delta
+:   [Pillager's Gauntlets]{.item}
+
 #### Fury Warrior
 
 Delta
@@ -29,6 +34,11 @@ Delta
 :   [Pillager's Gauntlets]{.item}
 
 #### Retribution Paladin
+
+Delta
+:   [Pillager's Gauntlets]{.item}
+
+#### Protection Paladin
 
 Delta
 :   [Pillager's Gauntlets]{.item}

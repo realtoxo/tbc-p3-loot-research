@@ -18,6 +18,11 @@ title: Skyshatter Tunic
 
 ::: {.specs}
 
+#### Enhancement Shaman
+
+Delta
+:   [Skyshatter Tunic]{.item}
+
 :::
 
 ::::

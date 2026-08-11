@@ -28,12 +28,27 @@ Delta
 Delta
 :   [Mantle of Darkness]{.item}
 
+#### Fury Warrior
+
+Delta
+:   [Mantle of Darkness]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Mantle of Darkness]{.item}
+
 #### Enhancement Shaman
 
 Delta
 :   [Mantle of Darkness]{.item}
 
 #### Feral Cat
+
+Delta
+:   [Mantle of Darkness]{.item}
+
+#### Feral Bear
 
 Delta
 :   [Mantle of Darkness]{.item}

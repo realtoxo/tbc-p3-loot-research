@@ -18,6 +18,11 @@ title: Skyshatter Pauldrons
 
 ::: {.specs}
 
+#### Enhancement Shaman
+
+Delta
+:   [Skyshatter Pauldrons]{.item}
+
 :::
 
 ::::

@@ -23,6 +23,11 @@ title: Lightbringer War-Helm
 Delta
 :   [Lightbringer War-Helm]{.item}
 
+#### Protection Paladin
+
+Delta
+:   [Lightbringer War-Helm]{.item}
+
 :::
 
 ::::

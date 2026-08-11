@@ -23,7 +23,27 @@ title: Ring of Deceitful Intent
 Delta
 :   [Ring of Deceitful Intent]{.item}
 
+#### Arms Warrior
+
+Delta
+:   [Ring of Deceitful Intent]{.item}
+
+#### Fury Warrior
+
+Delta
+:   [Ring of Deceitful Intent]{.item}
+
 #### Protection Warrior
+
+Delta
+:   [Ring of Deceitful Intent]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Ring of Deceitful Intent]{.item}
+
+#### Enhancement Shaman
 
 Delta
 :   [Ring of Deceitful Intent]{.item}

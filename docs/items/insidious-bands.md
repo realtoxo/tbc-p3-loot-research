@@ -28,6 +28,21 @@ Delta
 Delta
 :   [Insidious Bands]{.item}
 
+#### Fury Warrior
+
+Delta
+:   [Insidious Bands]{.item}
+
+#### Protection Warrior
+
+Delta
+:   [Insidious Bands]{.item}
+
+#### Retribution Paladin
+
+Delta
+:   [Insidious Bands]{.item}
+
 #### Enhancement Shaman
 
 Delta

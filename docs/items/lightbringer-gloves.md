@@ -18,6 +18,11 @@ title: Lightbringer Gloves
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Lightbringer Gloves]{.item}
+
 :::
 
 ::::

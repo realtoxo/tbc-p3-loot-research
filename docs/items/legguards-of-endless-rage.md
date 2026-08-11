@@ -38,6 +38,11 @@ Delta
 Delta
 :   [Legguards of Endless Rage]{.item}
 
+#### Protection Paladin
+
+Delta
+:   [Legguards of Endless Rage]{.item}
+
 :::
 
 ::::

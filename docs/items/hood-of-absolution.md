@@ -23,6 +23,11 @@ title: Hood of Absolution
 Delta
 :   [Hood of Absolution]{.item}
 
+#### Priest Healer
+
+Delta
+:   [Hood of Absolution]{.item}
+
 :::
 
 ::::

@@ -18,6 +18,16 @@ title: Beast-tamer's Shoulders
 
 ::: {.specs}
 
+#### Beast Mastery Hunter
+
+Delta
+:   [Beast-tamer's Shoulders]{.item}
+
+#### Survival Hunter
+
+Delta
+:   [Beast-tamer's Shoulders]{.item}
+
 :::
 
 ::::

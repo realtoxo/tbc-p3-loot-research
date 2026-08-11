@@ -63,6 +63,11 @@ Delta
 Delta
 :   [Shadowmoon Destroyer's Drape]{.item}
 
+#### Survival Hunter
+
+Delta
+:   [Shadowmoon Destroyer's Drape]{.item}
+
 :::
 
 ::::

@@ -24,10 +24,12 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 28370,,Bangle of Endless Blessings,38346,Meditation (38334),15000,
 28370,,Bangle of Endless Blessings,34210,Endless Blessings (34210),20000,spirit=130
 28418,,Shiffar's Nexus-Horn,34321,Call of the Nexus (34320),10000,healing_power=225|spell_damage=225
+28428,,Lionheart Blade,34514,Fear Resistance 5 (34514),-1,
 28429,,Lionheart Champion,34514,Fear Resistance 5 (34514),-1,
 28429,,Lionheart Champion,34513,Lionheart (34513),10000,strength=100
 28430,,Lionheart Executioner,34515,Fear Resistance 8 (34515),-1,
 28430,,Lionheart Executioner,34513,Lionheart (34513),10000,strength=100
+28437,,Drakefist Hammer,21165,Haste (21165),10000,melee_haste=212
 28438,,Dragonmaw,21165,Haste (21165),10000,melee_haste=212
 28439,,Dragonstrike,21165,Haste (21165),10000,melee_haste=212
 28484,,Bulwark of Kings,34511,Valor (34511),15000,strength=150|33=1500
@@ -87,11 +89,14 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 30665,T5,Earring of Soulful Meditation,40402,Deep Meditation (40402),20000,spirit=300
 30720,T5,Serpent-Coil Braid,37447,Improved Mana Gems (37447),-1,
 30787,,Illidari-Bane Mageblade,37649,Illdari Bane (37649),-1,
+30788,,Illidari-Bane Broadsword,37651,Demon Slaying 93 (37651),-1,
 30789,,Illidari-Bane Claymore,37652,Demon Slaying 150 (37652),-1,
 30841,,Lower City Prayerbook,37877,Blessing of Faith (37877),,
 30892,T6,Beast-tamer's Shoulders,27206,Increased Pet Damage +3% (27206),-1,
 30892,T6,Beast-tamer's Shoulders,27043,Increased Pet Crit +2% (27043),-1,
 31109,,Stealther's Helmet of Second Sight,39841,Spectrecles (39841),-1,
+31288,,The Master's Treads,17746,Stealth 5 (17746),-1,
+31333,,The Night Watchman,23217,Stealth Detection (23217),-1,
 31334,,Staff of Natural Fury,38314,Cheaper Druid Shapeshifting (38314),-1,
 31336,,Blade of Wizardry,38317,Forgotten Knowledge (38319),6000,spell_haste=280
 31617,,Ancient Draenei War Talisman,33667,Ferocity (33667),15000,attack_power=200|ranged_attack_power=200
@@ -151,6 +156,7 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 32864,,Commander's Badge,40815,Netherwing Ally (40815),40000,
 35514,,Frostscythe of Lord Ahune,46643,Frostscythe (46643),60000,
 37127,,Brightbrew Charm,48041,Summon the Brewmaiden (48041),35000,
+38175,,The Horseman's Blade,50070,Summon Pumpkin Soldiers (50070),3000,
 38287,,Empty Mug of Direbrew,51955,Dire Drunkard (51955),20000,attack_power=278|ranged_attack_power=278
 38288,,Direbrew Hops,51954,Hopped Up (51954),20000,healing_power=297|spell_damage=99
 38289,,Coren's Lucky Coin,51952,Dark Iron Luck (51952),20000,block_value=200

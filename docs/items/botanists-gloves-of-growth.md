@@ -33,6 +33,11 @@ Delta
 Delta
 :   [Botanist's Gloves of Growth]{.item}
 
+#### Balance Druid
+
+Delta
+:   [Botanist's Gloves of Growth]{.item}
+
 #### Restoration Druid
 
 Delta

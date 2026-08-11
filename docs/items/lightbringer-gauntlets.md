@@ -18,6 +18,16 @@ title: Lightbringer Gauntlets
 
 ::: {.specs}
 
+#### Retribution Paladin
+
+Delta
+:   [Lightbringer Gauntlets]{.item}
+
+#### Protection Paladin
+
+Delta
+:   [Lightbringer Gauntlets]{.item}
+
 :::
 
 ::::

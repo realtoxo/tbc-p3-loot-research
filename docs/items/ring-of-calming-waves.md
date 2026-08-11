@@ -28,6 +28,11 @@ Delta
 Delta
 :   [Ring of Calming Waves]{.item}
 
+#### Restoration Druid
+
+Delta
+:   [Ring of Calming Waves]{.item}
+
 #### Priest Healer
 
 Delta

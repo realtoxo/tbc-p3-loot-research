@@ -18,6 +18,16 @@ title: Leggings of Absolution
 
 ::: {.specs}
 
+#### Shadow Priest
+
+Delta
+:   [Leggings of Absolution]{.item}
+
+#### Priest Healer
+
+Delta
+:   [Leggings of Absolution]{.item}
+
 :::
 
 ::::

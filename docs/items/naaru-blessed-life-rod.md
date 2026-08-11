@@ -18,6 +18,11 @@ title: Naaru-Blessed Life Rod
 
 ::: {.specs}
 
+#### Priest Healer
+
+Delta
+:   [Naaru-Blessed Life Rod]{.item}
+
 :::
 
 ::::

@@ -18,6 +18,16 @@ title: Belt of Divine Guidance
 
 ::: {.specs}
 
+#### Holy Paladin
+
+Delta
+:   [Belt of Divine Guidance]{.item}
+
+#### Restoration Shaman
+
+Delta
+:   [Belt of Divine Guidance]{.item}
+
 #### Restoration Druid
 
 Delta

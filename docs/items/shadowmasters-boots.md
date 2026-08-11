@@ -33,6 +33,11 @@ Delta
 Delta
 :   [Shadowmaster's Boots]{.item}
 
+#### Protection Warrior
+
+Delta
+:   [Shadowmaster's Boots]{.item}
+
 #### Retribution Paladin
 
 Delta

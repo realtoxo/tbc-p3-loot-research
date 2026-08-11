@@ -23,6 +23,11 @@ title: Shroud of Absolution
 Delta
 :   [Shroud of Absolution]{.item}
 
+#### Priest Healer
+
+Delta
+:   [Shroud of Absolution]{.item}
+
 :::
 
 ::::

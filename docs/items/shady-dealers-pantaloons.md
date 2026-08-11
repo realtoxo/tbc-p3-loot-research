@@ -33,6 +33,11 @@ Delta
 Delta
 :   [Shady Dealer's Pantaloons]{.item}
 
+#### Retribution Paladin
+
+Delta
+:   [Shady Dealer's Pantaloons]{.item}
+
 #### Enhancement Shaman
 
 Delta
