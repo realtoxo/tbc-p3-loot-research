@@ -129,3 +129,29 @@ The effect data settles who the claimants would be, where the ladder cannot:
 **The two repaired Combat Rogue off-hand cards still carry Season 3 baselines**, so fixing the hand did not remove the other problem from the same cards.
 
 **The Rogue tab has no `Off Hand` section and the Fury tab has no `Two Hand` section.** The first caused the hand-type defect fixed in `50652f1`. The second is consistent with a spec that dual wields.
+
+## No healer Net contains a healer stat, and one figure in it is unusable
+
+**Found 11 August 2026 by a Fable agent on the Restoration Shaman, then verified directly for all four healers. Needs a ruling from the guild lead, and it is the same ruling the tanks need.**
+
+`theme/filters/conversions.generated.lua` converts, for Holy Paladin, Priest Healer, Restoration Druid and Restoration Shaman alike: `melee_crit`, `melee_hit`, `spell_crit`, `spell_hit` and `strength`. `delta.lua` prints in the Net only what those rules convert into. So a healer card's Net can hold attack power, melee crit, melee hit, spell crit and spell hit.
+
+**Of those, one is useful to a healer and one is actively wrong.**
+
+- **Spell crit** is the single healer-relevant unit, and it is weak: a critical heal lands at 1.5 times rather than 2, per `crit.yaml::crit_multipliers.healing`.
+- **Spell hit prints, and healing cannot miss.** `hit.yaml` records the Restoration Shaman as `not_applicable` for exactly that reason. So the Net states a percentage of a stat the spec has no use for.
+- Attack power, melee crit and melee hit are noise on a healer card.
+
+**Every stat a healer is actually priced on passes through as a raw row and never reaches the Net**: healing power, mana per five, intellect, spirit and spell haste rating.
+
+The sharpest form of the gap is that the compendium already holds a conversion it declines to apply. `crit.yaml::conversions.intellect_per_percent_spell_crit_level_70` records 80 intellect per 1 percent for every caster and says in its own note that it "is recorded because it prices the intellect on a caster item". No rule uses it.
+
+**Why nothing caught this.** No healer has a captured gear set, healers are out of the sim scope by ruling, and no Phase 3 Holy Paladin recording exists. A healer conversion has therefore never been checked against a capture, a simulation or a creator. The simulator could not have caught it either: the vendored wowsims shaman healing file is `sim/shaman/_heals.go`, and Go excludes a file whose name begins with an underscore, so that code never compiles.
+
+### What was established for the Restoration Shaman, and what it needs
+
+Sourced, with the constant and the file named: spell crit 22.076923 per percent and spell haste 15.76923 per percent from `sim/core/base_stats_auto_gen.go`; mana per five paying at all times and spirit paying only outside the five-second rule, from `sim/core/mana.go`; intellect at 15 mana per point above the first 20 and 0.0125 percent spell crit per point, which is the 80 already recorded.
+
+**The five-second rule is the part that decides a shaman's longevity, and it is not recorded anywhere in this project.** No shaman talent in 2.4.3 lets spirit regenerate while casting; `SpiritRegenRateCasting` is set by the Priest and the Druid and by nothing in `sim/shaman/`. So a Restoration Shaman who is actively healing gets no mana at all from spirit, which is why mana per five and not spirit is that spec's longevity stat.
+
+Two Restoration talents that would matter, **Purification** and **Nature's Blessing**, are implemented nowhere in the checkout and appear in no fact file, so their values are unsourced. `talents.yaml` omits Restoration Shaman entirely, so no rank is recorded for any of them.
