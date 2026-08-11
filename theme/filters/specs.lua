@@ -93,8 +93,12 @@ local function generated(path)
   return table_
 end
 
+local TRINKETS = os.getenv("TRINKETS_LUA")
+  or "theme/filters/trinkets.generated.lua"
+
 local constraints = generated(CONSTRAINTS)
 local judgments = generated(JUDGMENTS)
+local trinkets = generated(TRINKETS)
 
 -- Set by the template on every page, so a link from docs/items/ reaches
 -- docs/specs/ whatever depth the reader is at.
@@ -230,6 +234,37 @@ local function card(header, list, id, item)
   fields:insert({ term = "Constraints", body = pandoc.List({
     pandoc.Div(rows, pandoc.Attr("", { "constraint-block" })),
   }) })
+
+  -- A PLAYER WEARS TWO TRINKETS, so a trinket card that names only the item
+  -- under discussion answers half the question. The other slot comes from the
+  -- captured set for this spec, which is a fact about what that set holds and
+  -- not a recommendation.
+  --
+  -- NO SINGLE TRINKET IS ASSUMED. Dragonspine Trophy fits the eight physical
+  -- specs and none of the casters, who carry 40 attack power for nothing;
+  -- Icon of the Silver Crescent is the caster counterpart at five of six. The
+  -- capture gets all of them right, including the Destruction Warlock, who
+  -- wears neither.
+  if item and trinkets.trinket_ids[tonumber(item)] then
+    -- The spec id is the card's own heading, lowered and underscored, which is
+    -- the key the captures use.
+    local pair = trinkets.pairs[name:lower():gsub("[^%w]+", "_")]
+    if pair then
+      local other
+      for _, worn in ipairs(pair) do
+        if tostring(worn.id) ~= tostring(item) then other = worn end
+      end
+      if other then
+        fields:insert({ term = "Paired with", body = pandoc.List({
+          pandoc.Plain(pandoc.List({
+            pandoc.Str(other.name),
+            pandoc.Space(),
+            pandoc.Emph({ pandoc.Str("in this spec's captured set") }),
+          })),
+        }) })
+      end
+    end
+  end
 
   for _, item in ipairs(list.content) do
     local term = pandoc.utils.stringify(item[1])

@@ -104,7 +104,7 @@ dev:
 check: regen
     #!/usr/bin/env bash
     set -euo pipefail
-    generated="data/facts/drops.csv data/facts/items.csv data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md"
+    generated="data/facts/drops.csv data/facts/items.csv data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md"
     if ! git diff --quiet -- $generated; then
         echo "ERROR: the generated tables differ after regeneration." >&2
         echo "Either the data changed and you should commit, or a generated file was hand-edited." >&2
@@ -157,6 +157,7 @@ regen:
     @python3 tools/extract_set_stats.py --out data/facts/set-stats.yaml
     @python3 tools/extract_constraints.py --out theme/filters/constraints.generated.lua
     @python3 tools/extract_judgments.py --out theme/filters/judgments.generated.lua
+    @python3 tools/extract_trinket_pairs.py --out theme/filters/trinkets.generated.lua
     @python3 tools/generate_item_pages.py --out docs/items
     @python3 tools/generate_spec_pages.py
     @python3 tools/extract_conversions.py --out theme/filters/conversions.generated.lua
