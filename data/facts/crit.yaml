@@ -2233,6 +2233,76 @@ tank_defensive_thresholds:
       with loot.
     confidence: conservative
 
+# WHAT A DEFENSIVE STAT IS WORTH, established 11 August 2026 by three Fable
+# agents, one per tank, and recorded here because NO FACT FILE HELD IT. The
+# thresholds above priced defense against crit immunity and nothing priced
+# dodge, parry, block or armor at all.
+#
+# WHY IT MATTERS BEYOND THIS FILE. theme/filters/conversions.generated.lua
+# converts a spec's item stats into the currency its delta card nets. Every
+# tank converts agility, melee crit, melee hit, spell crit, spell hit and
+# strength, and NOT ONE defensive stat. So defense, dodge, parry, block, armor
+# and stamina print as raw rows on a tank card and never reach the Net. The
+# figure summarising a tank's upgrade is offense only.
+#
+# SINGLE SOURCE, AND SAY SO. Every divisor below comes from the wowsims TBC
+# constants and nothing else. The live wiki serves later-expansion numbers and
+# the archives were unreachable, so no second source was obtainable. The
+# constants this project had already double-sourced by other routes, 2.3654,
+# 22.08, 15.77, 39.4 and 0.04, all match that file exactly, which is the whole
+# of the trust argument.
+defensive_conversions:
+  observed: 2026-08-11
+  source: wowsims TBC sim/core/constants.go
+  confidence: single_source
+  defense_rating_per_skill_point: 2.3654
+  dodge_rating_per_percent: 18.9231
+  parry_rating_per_percent: 23.6538
+  block_rating_per_percent: 7.8846
+  resilience_rating_per_percent_crit_taken: 39.4231
+  stamina_per_health: 10
+  what_defense_skill_buys: >-
+    Each point above 350 adds 0.04 percent to be missed, 0.04 dodge, 0.04 parry
+    and 0.04 block, and removes 0.04 from crit taken. FIVE ENTRIES AT ONCE for a
+    plate tank, and THREE for a Bear, which cannot parry or block. So a point of
+    defense rating buys a Bear three fifths of what it buys plate, and the
+    rating divisors are not comparable across the two.
+  how_they_combine: >-
+    ONE ATTACK TABLE, NOT A SUM OF SHEET VALUES. A boss swing resolves on a
+    single roll against one ordered table: miss, dodge, parry, block, crit,
+    crushing, ordinary hit. The entries add within that table. Against a level
+    73 attacker every entry is 0.6 percent lower than the character sheet shows,
+    which is where the 102.4 uncrushable figure above comes from. Block is on
+    the table but is mitigation rather than avoidance, because a blocked hit
+    still lands minus block value.
+  no_diminishing_returns: >-
+    Every rating conversion is LINEAR at level 70 in 2.4.3. Avoidance
+    diminishing returns are a later-expansion mechanic and must not be imported.
+    Armor is the one non-linear stat.
+  not_applicable_to_a_bear: >-
+    Parry and block. The druid package never sets CanParry, and CanBlock needs
+    an equipped shield, which a bear in form does not have. So two of the five
+    divisors are inapplicable to one of the three tanks.
+  bear_armor_multiplier: >-
+    NOT ASSERTED, and deliberately. DOMAIN.md refuses a figure because sources
+    differ between roughly 4.7 and 5.0. The wowsims TBC source models equipment
+    armor times 5.0, rising to 5.5 with Thick Hide at 3 of 3, and that is
+    reported as that source's figure rather than as settled. It applies to
+    armor from ITEMS and not to armor from agility. What depends on the exact
+    value: whether the Bear ends above the plate tanks by a stated margin, and
+    the price of any armor point against any other stat.
+  talents_that_move_these: >-
+    Anticipation supplies 20 defense skill to both plate tanks at 5 ranks of 4,
+    which is already recorded above. Others found and NOT yet priced anywhere:
+    warrior Shield Specialization block chance, Toughness item armor, Shield
+    Mastery block value, Vitality stamina and strength, and Arms Deflection
+    parry; paladin Redoubt, Holy Shield, Improved Holy Shield charges, Toughness,
+    Sacred Duty and Improved Righteous Fury; druid Survival of the Fittest crit
+    taken, Thick Hide item armor, Feral Swiftness 4 percent dodge and Heart of
+    the Wild stamina. THE RANKS THIS ROSTER TAKES ARE NOT RECORDED for any of
+    them, because talents.yaml carries no wowsims string for either protection
+    spec or for the bear.
+
 open_questions:
   improved_seal_of_the_crusader:
     blocks: 3 percent crit for every attacker in the raid
