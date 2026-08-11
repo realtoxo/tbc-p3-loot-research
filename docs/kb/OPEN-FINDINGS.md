@@ -71,3 +71,17 @@ fact. **Guild lead needed.**
 **Ranged attack power per agility** stays unverified for seven classes, with the
 confidence lowered to say so. It drives no call: only the hunters price the
 stat, and the sweep agreed hunters convert.
+
+## Relics have no claimant, because eleven workbook tabs carry no relic section
+
+**Found 11 August 2026, by cross-checking the claimant list against the creator commentary (task 66). Needs a ruling from the guild lead.**
+
+A spec earns a claimant card where the item ranks inside its slot section on that spec's workbook tab. Eleven of the twenty-one tabs have no `Ranged` section at all: both feral specs, the Balance and Restoration Druid, all three Paladins, all three Shamans, and the Priest Healer. Those are exactly the classes whose relic slot holds an idol, a totem or a libram.
+
+The consequence is that a relic can reach the compendium with no claimant at all. Three Phase 3 relic drops carry none: **Idol of the White Stag**, **Totem of Ancestral Guidance** and **Tome of the Lightbringer**. Each is class-locked to a spec that plainly wants it, and each renders as an item nobody claims.
+
+The creator commentary is what surfaced it. Creators name the Feral Cat for the Idol and the Elemental Shaman for the Totem, and neither spec appears on the page, which is the mismatch that led here rather than any figure being wrong.
+
+**Nothing here says the rule is wrong.** The workbook is the published reference and the compendium reports it faithfully; Fazers simply does not rank relics for those classes. What the guild lead has to decide is whether a class-locked relic earns a claimant from its class allowlist rather than from a workbook rank, which is a different rule from the one every other slot uses and would be the first place the two diverge.
+
+**Also found, and NOT the same thing.** Twenty items have a creator naming a spec the page does not list. One is a mis-scoped remark: `Bracers of the Pathfinder` is mail and a creator discussed it for the Combat Rogue. The rest are items the spec could equip and the workbook ranks below the cut, which is the workbook and the creators disagreeing rather than a defect. Disagreement is recorded rather than resolved.
