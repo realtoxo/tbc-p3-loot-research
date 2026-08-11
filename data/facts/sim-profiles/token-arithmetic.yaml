@@ -1,0 +1,442 @@
+# What each Tier 6 token is worth to each spec, four to six weeks into the tier.
+#
+# HOLDS  For every spec, what the two reachable Tier 6 tokens replace, which set
+#        bonus they gain, which they break, and what that costs in the source's
+#        own units.
+# NOT HERE  No priority, no ranking, no recommendation. Which claimant gets a
+#        token is a council decision and this file does not make it. Per the rule
+#        in AGENTS.md, this collects facts and decides nothing.
+#
+# WHY THIS FILE EXISTS
+#   Only TWO Tier 6 tokens are reachable in this window, and both drop in Mount
+#   Hyjal: the head from Archimonde and the hands from Azgalor. Shoulders come
+#   from Mother Shahraz, legs from the Illidari Council and chest from Illidan,
+#   which are Black Temple bosses seven, eight and nine.
+#   That single fact drives everything below. A Tier 6 four-piece does not exist
+#   for anyone in this window, so the only Tier 6 bonus available is a two-piece,
+#   and for several specs the two-piece is worth less than the previous-tier
+#   bonus it destroys. Published best-in-slot lists never show this, because they
+#   assume a full clear where the four-piece exists and the question does not
+#   arise.
+#   ONE TOKEN ALONE GRANTS NOTHING. No Tier 6 set has a one-piece bonus, so the
+#   first token a spec receives buys raw stats only.
+#
+# SOURCE  Every EP figure below comes from the EP Workbook in
+#   data/research/epv-workbook, on the tab that spec uses, column 6. That tab
+#   mapping is written out in tools/extract_ladder.py :: SPECS, and
+#   tools/check_token_arithmetic.py verifies every figure here against it.
+#
+#   THE FIGURES USED TO BE UNCITED and two specs' were wrong. The per-spec
+#   agent captures this file was conventionalized from were not retained, so
+#   their sources were lost; a sweep against the workbook on 9 August 2026
+#   reproduced fourteen figures exactly and contradicted seven. The Balance
+#   Druid's were reversed in direction and the Restoration Shaman's were all
+#   slightly off. Both are corrected in place, with the old wording kept,
+#   because what was claimed matters as much as what is true.
+#
+#   The set bonus TOOLTIPS come from data/facts/tokens.yaml, and the slot
+#   arithmetic from the five tier slots that file records. Neither needs the
+#   workbook.
+
+meta:
+  collected_on: 2026-08-09
+  specs_recorded: 21
+  specs_total: 21
+  collection_complete: true
+  reachable_tokens:
+    head: Helm token, Archimonde, Mount Hyjal
+    hands: Gloves token, Azgalor, Mount Hyjal
+  unreachable_tokens:
+    shoulders: Mother Shahraz, Black Temple boss 7
+    legs: Illidari Council, Black Temple boss 8
+    chest: Illidan Stormrage, Black Temple boss 9
+  archimonde_caveat: >-
+    One capture argues Archimonde is the tier's first real wall, so the HANDS
+    token is reliably early and the HEAD token is not. Where a spec's answer
+    changes between those two states, its own file records both.
+
+specs:
+
+  combat_rogue:
+    detail: >-
+      Both tokens are raw upgrades and both bonuses stay live. Slayer's 2-piece
+      is gained and the Deathmantle 2-piece survives beside it.
+    open: >-
+      Whether to hold the Deathmantle FOUR-piece instead and wear one Tier 6
+      item. Nobody publishes that head-to-head.
+
+  elemental_shaman:
+    detail: >-
+      Both tokens beat what they replace, 144.65 against 136.91 at the head and
+      91.41 against 74.02 at the hands. Nothing is broken, because both Tier 5
+      bonuses are healing and mana effects worth nothing to the spec. The
+      Skyshatter 2-piece is one of the strongest caster two-pieces in the tier
+      and this spec satisfies its totem condition for free.
+    note: The transition is hit-neutral, plus one rating across the two swaps.
+
+  beast_mastery_hunter:
+    hands: >-
+      Gronnstalker's Gloves are the highest-value hands item in the whole ladder
+      for this spec at 210.95, and they stay in the full-clear list, so the item
+      is permanent rather than transitional.
+    head: >-
+      Gronnstalker's Helmet is the smallest tier upgrade in the set and is NOT in
+      the spec's full-clear list, which runs Cursed Vision of Sargeras at head.
+      It is a placeholder discarded the week Illidan dies.
+    bonus_note: >-
+      The Tier 6 two-piece both tokens buy is an Aspect of the Viper mana bonus,
+      which is dead for a raiding hunter, so both tokens are judged on raw stats
+      with no set-bonus credit.
+
+  survival_hunter:
+    priced: >-
+      Holding the Tier 5 four-piece instead costs 172.46 EPV of raw stats across
+      the five tier slots, and buys "your Steady Shot ability has 5% increased
+      critical strike chance". The hands are the correct slot to release, and the
+      four remaining deficits sum to exactly that figure.
+    open: >-
+      Whether 172.46 of raw stats is worth 5% Steady Shot crit. The workbook
+      excludes set bonuses from every item value, so this cannot be closed from
+      the workbook alone and no simulation has been run.
+
+  fury_warrior:
+    detail: >-
+      Entering with the Destroyer four-piece, "Bloodthirst and Mortal Strike cost
+      5 less rage", a permanent discount on the spec's primary ability. Taking
+      both tokens destroys it and replaces it with the Onslaught two-piece,
+      "Execute costs 3 less rage", which pays only below twenty percent health.
+      The Onslaught four-piece that would justify the trade needs Shahraz, the
+      Council or Illidan.
+
+  arms_warrior:
+    hands: >-
+      Onslaught Gauntlets 87.78 sit 14.10 below Grips of Silent Justice 101.88
+      from Shade of Akama, a boss the raid is already killing, and alone they
+      grant no bonus at all.
+    head: >-
+      Plus 6.36 over the Tier 5 helm: Onslaught Battle-Helm 150.76 against
+      Destroyer Battle-Helm 144.40, both on the Arms tab.
+    head_four_piece_claim_is_CONDITIONAL: >-
+      This entry used to add "and it is the piece that costs the Destroyer
+      four-piece." CORRECTED 9 August 2026, because that is a property of the
+      PLAYER'S SET rather than of the token, and it is false for the set this
+      project actually captured.
+      WHICH SLOT PAYS DEPENDS ON WHICH FOUR THE PLAYER USES. Destroyer
+      Battlegear has five slots, head, shoulder, chest, hands and legs, so a
+      four-piece leaves one out. If the one left out is the head, the head
+      token costs nothing and the HANDS token is what breaks the set. The
+      token cannot be said to cost a bonus without naming the composition.
+      THE LEGS SLOT IS THE ONE A WARRIOR IS LIKELIEST TO LEAVE OUT, and the
+      workbook says so: Greaves of the Bloodwarder from High Astromancer
+      Solarian scores 107.52 against Destroyer Greaves at 106.40, so the
+      non-tier legs wins on the Arms tab. The guild lead reports the warriors
+      wearing exactly that piece. A warrior on Solarian legs holds tier at
+      head, shoulder, chest and hands, and for THAT composition the old claim
+      is true.
+      OUR OWN CAPTURE HOLDS TWO DESTROYER PIECES, head and chest, so it has no
+      four-piece at all and the head token there costs a TWO-piece rather than
+      a four. See data/facts/sim-profiles/hit-capture/arms-warrior.yaml.
+      Two other specs carry the same shape of claim against captures holding
+      fewer than four pieces: feral_cat at zero and shadow_priest at two.
+      tools/check_token_arithmetic.py reports every such disagreement.
+    also: >-
+      Keeping shoulder plus legs is the cheapest pair of Tier 5 holds at 24.28
+      EPV against best-available; shoulder plus chest is 25.10, effectively tied.
+
+  retribution_paladin:
+    detail: >-
+      Lightbringer Gauntlets 56.46 against Gloves of the Searing Grip 65.57. No
+      Retribution set bonus in either tier is a damage bonus: both Crystalforge
+      bonuses and the Lightbringer two-piece are mana effects. Every tier-token
+      decision here is a pure stat comparison with nothing being protected.
+    also: >-
+      Lightbringer War-Helm 99.64 beats the Tier 5 helm 96.14 but loses to
+      Furious Gizmatic Goggles 102.94, so the head token is an upgrade for a
+      non-engineer and a downgrade for an engineer.
+
+  enhancement_shaman:
+    quoted:
+      - >-
+        "Neither Tier 6 set bonus is really worth chasing after for Enhancement
+        Shamans, unfortunately, with other pieces being so much stronger
+        individually."
+      - >-
+        "Hold on to the Tier 5 4-piece bonus until you get a couple of BiS items
+        for those slots."
+    detail: >-
+      Cataclysm has five pieces and Skyshatter's tokens occupy the same five
+      slots, so holding the Tier 5 four-piece leaves room for exactly one token.
+      The four-piece is "you gain 5% additional haste from your Flurry ability";
+      the Tier 6 two-piece is ten percent off shock mana costs.
+    also: >-
+      Skyshatter Grips rank below Gloves of the Searing Grip, which this player
+      already owns from Phase 2.
+
+  feral_cat:
+    head: >-
+      Never tier. The slot is Wolfshead Helm, whose energy return on shifting is
+      what makes powershifting work, and the source says keep it for the whole
+      expansion.
+    hands: >-
+      Equipping it leaves the Cat holding exactly ONE Tier 6 piece, so no Tier 6
+      bonus, while cutting Nordrassil from four pieces to three and destroying
+      "+75 Shred damage". Strictly negative.
+    consequence: >-
+      Reaching the Thunderheart four-piece while keeping Wolfshead needs
+      shoulders, chest AND legs, all out of the window.
+
+  balance_druid:
+    previously_claimed: >-
+      "Nordrassil Headpiece 344.8 against Thunderheart Headguard 337.9, so the
+      head token loses value before bonuses are considered." Both figures were
+      uncited and BOTH ARE WRONG, in magnitude and in direction. Kept because
+      the claim was printed on this spec's card and a reader who saw it needs
+      to find the retraction. tools/check_token_arithmetic.py skips this key by
+      name, since a correction has to be able to quote what it corrects.
+    detail: >-
+      CORRECTED 9 August 2026; see previously_claimed. The Owl tab gives
+      Thunderheart
+      Headguard 162.88 against Nordrassil Headpiece 146.00, so the head token
+      GAINS 16.88, and Thunderheart Handguards 103.88 against Nordrassil
+      Gauntlets 73.48, so the hands token gains 30.40. Both tokens are raw
+      upgrades and the pair is worth 47.28.
+      WHAT SURVIVES IS THE STRUCTURAL HALF. The Tier 5 four-piece
+      is head, shoulder, chest and hands, so EITHER token breaks it. THE COMPOSITION IS
+      NAMED because the claim depends on it: the Arms Warrior entry retracted
+      the same shape of statement for being composition-dependent, and this one
+      survives only because those are exactly the four slots this spec's
+      captured entry set holds. Check it against the capture before quoting it,
+      not against the token. Taking both
+      nets roughly plus 1.8 raw and trades "+10% Starfire damage against targets
+      afflicted with Moonfire or Insect Swarm" for "+3 seconds of Moonfire
+      duration".
+    durability: >-
+      Unusually durable, because a Tier 6 four-piece needs Shahraz AND the
+      Council, and the source rates the Tier 5 shoulders and the non-tier legs
+      above their Tier 6 counterparts, so the four-piece pays for two further
+      downgrades when it finally arrives.
+
+  feral_bear:
+    detail: >-
+      A druid has five tier slots. Nordrassil four-piece needs four and
+      Thunderheart two-piece needs two, which is six. The two bonuses cannot
+      coexist at any point in the tier, so this is an either-or the council
+      settles once rather than a sequencing question.
+    unpriced: >-
+      No source publishes a threat comparison between "Mangle generates 15% more
+      threat in Bear Form" and "+75 Shred damage and +15 Lacerate per
+      application", and no simulation was run.
+
+  protection_paladin:
+    hands: >-
+      The entry hands are non-tier, so the Tier 6 gloves cost no bonus at all.
+    head: >-
+      Taking it destroys the Crystalforge two-piece, "+15 damage from your
+      Retribution Aura". Judged worth taking on raw stats, 19 stamina, 7 spell
+      damage and 37 dodge rating over the Tier 5 helm, but the loss is real.
+    contention: >-
+      Tempest of Chaos, the single largest threat upgrade in the window at 259
+      spell damage, also drops from Archimonde, so it competes with the head
+      token on the same kill.
+
+  protection_warrior:
+    with_head: Onslaught two-piece plus Destroyer two-piece
+    without_head: >-
+      Destroyer FOUR-piece survives, "you have a chance each time you are hit to
+      gain 200 haste rating for 10 sec", which is the stronger outcome. The head
+      token is what destroys it.
+    trap: >-
+      The Tier 6 tank set is Onslaught ARMOR, set 673, not Onslaught Battlegear,
+      set 672, which is the Arms and Fury damage set and carries no defense. The
+      token line also regroups at Tier 6: Tier 4 and Tier 5 pair Warrior with
+      Priest and Druid, Tier 6 pairs Warrior with Hunter and Shaman.
+
+  holy_paladin:
+    detail: >-
+      Tier 6 head and hands beside a Tier 5 two-piece in chest and legs. The Tier
+      5 two-piece is "each time you cast a Judgement, your party members gain 50
+      mana", which is weak for Holy because Holy Paladins rarely judge, and
+      holding it costs a real legs downgrade, 165.46 against 202.00.
+
+  restoration_shaman:
+    detail: >-
+      CORRECTED 9 August 2026; the figures below were uncited and none matched
+      the Resto tab. Skyshatter Gloves 131.28 against Botanist's Gloves of
+      Growth 201.03 from Teron Gorefiend, a boss inside the window, is minus
+      69.75 EP, not the minus 86.6 this entry used to claim. Even against the
+      gloves carried in from Phase 2 the token loses: 131.28 against
+      Worldstorm Gauntlets 141.74, minus 10.46. It is the only token in the set that is a
+      downgrade against gear the player ALREADY OWNS.
+    head: >-
+      Skyshatter Helmet 212.15 against Helm of Soothing Currents 202.46 from
+      Naj'entus, plus 9.69 EP, so the head token is close to neutral on stats and
+      its value is almost entirely the two-piece it unlocks.
+    holding_the_four_piece: >-
+      The cheapest route to the Cataclysm four-piece forgoes 88.3 EP, taken at
+      chest, shoulder, head and legs, and leaves the hands slot free. Buying the
+      four-piece through the hands instead costs 110.9 and is the worst of the
+      five.
+    unpriced: >-
+      The source assigns EP to the Tier 4 Cyclone and Whitemend set bonuses but
+      NONE to Tier 5 or Tier 6. Every figure above is item stats only, so the set
+      bonus sits outside the arithmetic entirely. That is the single largest gap
+      in this spec's data and it is exactly the term a council has to weigh by
+      judgment.
+
+  arcane_mage:
+    quoted: >-
+      "You should definately not break your 4-set T5 before simming!" The same
+      guide's own Phase 3 table lists Gloves of Tirisfal in the hands slot rather
+      than the Tier 6 gloves, so it declines the hands token outright.
+    three_configurations: >-
+      Neither token gains nothing and keeps the Tier 5 two-piece and four-piece.
+      ONE token, head or hands, gains 12.41 or 8.79 item value and STILL keeps
+      both Tier 5 bonuses, because four Tirisfal pieces fit in the four remaining
+      tier slots. Both tokens gain 21.20 and cut Tirisfal to three pieces, buying
+      a Tier 6 two-piece and paying the Tier 5 four-piece for it. Taking exactly
+      one is the only case that gains value at no bonus cost.
+    the_tooltip_detail: >-
+      Tempest Regalia four-piece reads "increases the damage of your Fireball,
+      Frostbolt, and Arcane Missiles abilities by 5%". ARCANE BLAST IS NOT NAMED,
+      and in the 40/0/21 build Arcane Blast is the primary nuke. The Tier 5
+      two-piece names Arcane Blast directly. So even the Tier 6 four-piece, once
+      reachable, reaches the filler rather than the main spell.
+    holding_the_two_piece: >-
+      Costs 19.33 EPV at Tier, taken at shoulder and chest, and both pieces are
+      carried in from Phase 2 so it costs no Phase 3 loot at all.
+
+  restoration_druid:
+    hands: >-
+      Thunderheart Gloves 128.90 against Botanist's Gloves of Growth 134.30 from
+      Teron Gorefiend, a boss inside the window, is minus 5.40. The token is a
+      raw downgrade against a non-token drop the raid already kills, and alone it
+      grants no bonus.
+    head: >-
+      Thunderheart Helmet 190.00 against Cowl of Benevolence 186.70, plus 3.30,
+      so near-neutral on stats.
+    priced_across_five_slots: >-
+      Holding the Nordrassil four-piece and refusing both tokens is 801.00.
+      Taking both tokens is 850.40, plus 49.40, trading the Lifebloom four-piece
+      for a Swiftmend two-piece. Taking the HELM and passing on the gloves for
+      Botanist's Gloves is 855.80, which beats both: plus 54.40 over the
+      four-piece line and plus 5.40 over the two-token line, holding only the
+      Tier 5 two-piece and no Tier 6 bonus at all. The Thunderheart two-piece
+      therefore costs 5.40 against the maximum-stat arrangement.
+    later_tokens: >-
+      Recorded for when they arrive: the shoulder and chest tokens are upgrades,
+      but the LEGS token is minus 34.30 against Kilt of Immortal Nature and minus
+      39.10 against Leggings of Eternity, both already held by then.
+    source_disagreement: >-
+      One published source holds NO four-piece in either phase, taking three tier
+      pieces and stopping, in both its Tier 5 and its Tier 6 lists. A council
+      reading only that source would see a different set from the one recorded
+      here, which holds the four-piece per the brief.
+
+  shadow_priest:
+    head: >-
+      Hood of Absolution 113.34 against the Tier 5 helm 121.23 on the workbook's
+      DEFAULT column is minus 7.89, a downgrade. On the HIT-CAPPED column the
+      same pair reads 113.34 against 102.77, plus 10.57, an upgrade. The entire
+      gap is the 24 spell hit on the Tier 5 helm, which the hit-capped column
+      zeroes as waste. Which column applies turns on whether the spec is over its
+      76-rating target, and it is: 131 at entry, 107 at tier.
+    hands: >-
+      Handguards of Absolution 59.92 against Soul-Eater's Handwraps 65.26 on the
+      hit-capped column is minus 5.34. The token loses to a PHASE 1 Magtheridon
+      drop.
+    structural: >-
+      Absolution and Avatar overlap on head and hands, so the three Tier 5 slots
+      that do not collide are shoulder, chest and legs. Three, where four are
+      needed. Wearing both tokens makes the Tier 5 four-piece arithmetically
+      impossible.
+    three_configurations: >-
+      Both tokens and no Tier 5 piece costs nothing and holds the Tier 6
+      two-piece. Both tokens plus Tier 5 chest and shoulder costs 17.17 and holds
+      two two-pieces. One token plus four Tier 5 pieces costs 59.34 through the
+      hands or 68.61 through the head, and holds the Tier 5 four-piece with no
+      Tier 6 bonus.
+    corroboration: >-
+      All four published full-clear lists take the Tier 6 head unanimously, which
+      is independent evidence that the hit-capped column is the one that applies.
+
+  destruction_warlock:
+    detail: >-
+      The Tier 5 set holds the Tier 4 Voidheart two-piece through the shoulder
+      and the HANDS. The Tier 6 hands token takes one of those two slots, so it
+      breaks a live damage proc, "your shadow damage spells have a chance to
+      grant you 135 bonus shadow damage for 15 sec" and the same line for fire,
+      and returns the Malefic two-piece, which heals 70 health per tick and does
+      no damage at all.
+    price_rises_after_the_token: >-
+      At entry the Voidheart two-piece costs 54.30 EPV, taken at shoulder and
+      hands. Once the hands slot is a Tier 6 token the cheap half of the pair is
+      gone and the cheapest surviving pair costs 73.40, at shoulder and legs.
+    tokens_are_upgrades: >-
+      Both tokens gain on raw stats, the head plus 36.76 and the hands plus 43.51
+      against what they replace. Against the best in-window alternative rather
+      than against the tier piece, the hands gain only 2.39 over Anger-Spark
+      Gloves and LOSE 9 spell hit to them.
+    fire_half_matters_here: >-
+      Unlike Affliction, where the Voidheart fire half is dead, a fire-leaning
+      Destruction build makes the fire half primary. No source quantifies the
+      uptime or damage of either half.
+    mechanical_catch: >-
+      The 0/21/40 build consumes the Succubus with Demonic Sacrifice, so the
+      Corruptor two-piece, "causes your pet to be healed for 15% of the damage
+      you deal", has no pet to heal. Read from the two tooltips together; no
+      source states it.
+
+  priest_healer:
+    why: >-
+      Avatar Raiment has FIVE pieces and its top bonus needs FOUR. That spare
+      fifth piece is what the first Tier 6 token replaces, so it costs no bonus
+      at all.
+      THIS ENTRY USED TO ADD "every other spec in the roster pays from the
+      first token onward", and that is false. Corrected 9 August 2026. At least
+      two others pay nothing for their first token: protection_paladin, whose
+      entry hands are non-tier so the Tier 6 gloves displace no set piece, and
+      combat_rogue, whose Slayer's two-piece is gained while the Deathmantle
+      two-piece survives beside it.
+      WHAT IS DISTINCT HERE IS THE REASON, NOT THE OUTCOME. The Paladin pays
+      nothing because of which slot it happens to hold, and the Rogue because
+      two bonuses coexist. This spec pays nothing because of the SHAPE OF THE
+      SET: a five-piece set whose bonus needs four carries a slot the bonus
+      does not need, and no other Tier 5 set on this roster does.
+    first_token: >-
+      Whichever arrives first is a clean gain: hands plus 25.14 EPV, head plus
+      24.90, and Avatar stays at four pieces with both bonuses intact.
+    second_token: >-
+      Takes Avatar from four pieces to three and trades "increases the duration
+      of your Renew spell by 3 sec" for "reduces the mana cost of your Prayer of
+      Healing ability by 10%". Priced per cast: the Renew bonus is a sixth tick,
+      222 healing at unchanged mana cost, against 107 mana saved per Prayer of
+      Healing.
+    order_does_not_matter: >-
+      Whichever token arrives first replaces the spare fifth piece and costs
+      nothing; whichever arrives second pays the four-piece. There is no ordering
+      that avoids it.
+    a_mechanic_that_bears_on_it: >-
+      Periodic healing cannot critically strike in 2.4.3, and the Avatar
+      four-piece is entirely a sixth Renew tick, so its value can never crit.
+    later_token_downgrade: >-
+      Recorded for when it arrives: the legs token scores 265.17 against
+      Leggings of Eternity 269.57 from Archimonde, minus 4.40. A Tier 6 token
+      below a non-set drop from an earlier boss in the same tier.
+
+  affliction_warlock:
+    detail: >-
+      Taking the Tier 6 gloves breaks the Tier 4 Voidheart two-piece, "your
+      Shadow damage spells have a chance to grant 135 bonus Shadow damage for 15
+      sec", which is a live damage proc. The Tier 6 two-piece heals 70 health per
+      periodic tick and is near-worthless. A common configuration is therefore
+      ONE Tier 6 piece, the head, with the Voidheart pair retained.
+
+# Every figure above is the source's own unit, and the sources differ between
+# specs: some publish EPV from the workbook, some publish item comparisons in
+# prose. They are NOT comparable across specs and must not be summed or ranked
+# against each other. Within a spec they are comparable, which is what makes the
+# trade legible.
+comparability_warning: >-
+  EPV figures are per-spec and per-tab. A 172 EPV cost for one spec and a 14 EPV
+  cost for another are not the same currency. Compare within a spec, never
+  across.

@@ -1,0 +1,184 @@
+# Combat Rogue. Collected 9 August 2026.
+#
+# See ../sim-profiles.yaml for the schema and what the two anchors mean, and
+# the README beside this file for what is derived rather than sourced.
+
+spec: combat_rogue
+status: collected
+collected_on: 2026-08-09
+collected_by: agent capture, reviewed in session
+
+sources:
+  entry:
+    url: https://www.wowhead.com/tbc/guide/classes/rogue/dps-bis-gear-pve-phase-2
+    title: Rogue DPS Best in Slot (BiS) Phase 2 Gear Guide, TBC Classic
+    observed: 2026-08-09
+  tier:
+    url: https://www.wowhead.com/tbc/guide/rogue-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Rogue DPS Best in Slot (BiS) Phase 3 Gear Guide
+    observed: 2026-08-09
+    note: >-
+      Publishes a FULL-CLEAR list. The tier set below is a downgrade of it to the
+      four-to-six-week window, and every downgraded slot is named under
+      derived_slots.
+  enchants_and_gems:
+    url: https://www.wowhead.com/tbc/guide/classes/rogue/dps-enchants-gems-pve
+    title: TBC Rogue DPS Gems and Enchants Guide
+    observed: 2026-08-09
+
+# THE WEAKEST DATA HERE. The guide publishes a gemming POLICY, never a per-slot
+# map: agility in red, hit in yellow, Shifting in blue, and the meta needs two
+# red, two yellow and two blue. Every gem below was assigned by applying that
+# policy to socket colors read from data/facts/items.csv.
+gems_derived: true
+
+talents:
+  entry: 20/41/0 Combat Swords
+  entry_url: https://www.wowhead.com/tbc/talent-calc/rogue/0053201252-023305102005015002321051
+  tier: 19/42/0 Combat Swords
+  note: >-
+    A mace main hand moves this to 16/45/0, per the same source.
+
+consumables:
+  flask: Flask of Relentless Assault
+  elixirs_instead: Elixir of Major Agility plus Swiftness of Zanza
+  against_demons: >-
+    Elixir of Demonslaying, which the source calls more than twice as strong as
+    the flask against demons. Almost every boss in Mount Hyjal and Black Temple
+    is a demon or undead, so this is a tier-wide consumable rather than a niche
+    one.
+  food: Spicy Hot Talbuk for hit, or Warp Burger and Grilled Mudfish for agility
+  weapon_main_hand: >-
+    Windfury Totem where a shaman is in party, otherwise Adamantite Sharpening
+    Stone
+  weapon_off_hand: >-
+    Deadly Poison VII on fights over thirty seconds, Adamantite Sharpening Stone
+    on shorter ones
+  scrolls: Scroll of Agility V, Scroll of Strength V
+  potions: Haste Potion, Free Action Potion on stun fights, Super Healing Potion
+
+anchors:
+
+  entry:
+    set_pieces: Deathmantle head, shoulders, hands and legs, a four-piece
+    set_bonuses_held:
+      - >-
+        Deathmantle 2-piece: Eviscerate and Envenom cause 40 extra damage per
+        combo point
+      - >-
+        Deathmantle 4-piece: attacks have a chance to make your next finishing
+        move cost no energy
+    gear:
+      head: {item: Deathmantle Helm, id: 30146, from: Lady Vashj, Serpentshrine Cavern, token, enchant: Glyph of Ferocity, gems: [Relentless Earthstorm Diamond, Glinting Noble Topaz], socket_bonus_met: true}
+      neck: {item: Choker of Vile Intent, id: 29381, from: G'eras, 25 Badges of Justice, enchant: none, gems: [], socket_bonus_met: null}
+      shoulder: {item: Deathmantle Shoulderpads, id: 30149, from: Void Reaver, Tempest Keep, token, enchant: Greater Inscription of Vengeance, gems: [Delicate Living Ruby, Shifting Nightseye], socket_bonus_met: true}
+      back: {item: Drape of the Dark Reavers, id: 28672, from: Shade of Aran, Karazhan, enchant: Enchant Cloak - Greater Agility, gems: [], socket_bonus_met: null}
+      chest: {item: Bloodsea Brigand's Vest, id: 30101, from: Fathom-Lord Karathress, Serpentshrine Cavern, enchant: Enchant Chest - Exceptional Stats, gems: [Glinting Noble Topaz, Glinting Noble Topaz, Shifting Nightseye], socket_bonus_met: true}
+      wrist: {item: Vambraces of Ending, id: 29966, from: High Astromancer Solarian, Tempest Keep, enchant: Enchant Bracer - Assault, gems: [Shifting Nightseye], socket_bonus_met: true}
+      hands: {item: Deathmantle Handguards, id: 30145, from: Leotheras the Blind, Serpentshrine Cavern, token, enchant: Enchant Gloves - Superior Agility, gems: [], socket_bonus_met: null}
+      waist: {item: Belt of One-Hundred Deaths, id: 30106, from: Lady Vashj, Serpentshrine Cavern, enchant: none, gems: [Delicate Living Ruby, Shifting Nightseye], socket_bonus_met: true}
+      legs: {item: Deathmantle Legguards, id: 30148, from: Fathom-Lord Karathress, Serpentshrine Cavern, token, enchant: Nethercobra Leg Armor, gems: [Shifting Nightseye], socket_bonus_met: true}
+      feet: {item: Edgewalker Longboots, id: 28545, from: Moroes, Karazhan, enchant: Enchant Boots - Cat's Swiftness, gems: [Delicate Living Ruby, Glinting Noble Topaz], socket_bonus_met: true}
+      ring_1: {item: Band of the Ranger-General, id: 29997, from: Kael'thas Sunstrider, Tempest Keep, enchant: Enchant Ring - Striking, enchanters only, gems: [], socket_bonus_met: null}
+      ring_2: {item: Ring of Lethality, id: 30052, from: Hydross the Unstable, Serpentshrine Cavern, enchant: Enchant Ring - Striking, enchanters only, gems: [], socket_bonus_met: null}
+      trinket_1: {item: Dragonspine Trophy, id: 28830, from: Gruul the Dragonkiller, Gruul's Lair, enchant: none, gems: [], socket_bonus_met: null}
+      trinket_2: {item: Warp-Spring Coil, id: 30450, from: Void Reaver, Tempest Keep, enchant: none, gems: [], socket_bonus_met: null}
+      main_hand: {item: Talon of Azshara, id: 30082, from: Morogrim Tidewalker, Serpentshrine Cavern, enchant: Enchant Weapon - Mongoose, gems: [], socket_bonus_met: null}
+      off_hand: {item: Merciless Gladiator's Quickblade, id: 32027, from: Arena Season 2, enchant: Enchant Weapon - Mongoose, gems: [], socket_bonus_met: null, alternative: "Latro's Shifting Sword 28189 for a non-arena rogue"}
+      ranged: {item: Arcanite Steam-Pistol, id: 29949, from: Al'ar, Tempest Keep, enchant: Stabilized Eternium Scope, gems: [], socket_bonus_met: null}
+
+  tier:
+    set_pieces: >-
+      Slayer's head and hands from Mount Hyjal, beside Deathmantle shoulders and
+      legs carried in from Phase 2
+    set_bonuses_held:
+      - "Slayer's Armor 2-piece: increases the haste from your Slice and Dice ability by 5%"
+      - >-
+        Deathmantle 2-piece: your Eviscerate and Envenom abilities cause 40 extra
+        damage per combo point
+    split_across_tiers: true
+    split_note: >-
+      Two Tier 6 pieces beside two Tier 5 pieces, and the split is forced by
+      which Tier 6 tokens exist early. Slayer's shoulders come from Mother
+      Shahraz, legs from the Illidari Council and chest from Illidan, none of
+      which a guild four to six weeks in is reliably killing. Only the two Hyjal
+      tokens are in hand, so the rogue banks the Slayer's 2-piece and keeps two
+      Deathmantle pieces rather than letting the old set lapse for nothing.
+    contested: >-
+      Whether a rogue at this point holds Slayer's 2-piece plus Deathmantle
+      2-piece, as recorded here, or holds the Deathmantle 4-PIECE and wears only
+      one Tier 6 item. Warcraft Tavern advises keeping the four-piece as long as
+      possible during progression; Wowhead says the Slayer's 2-piece is stronger
+      than the Slayer's 4-piece. NOBODY PUBLISHES THE HEAD-TO-HEAD and no
+      simulation was run, so this is open. Recorded here as the two Tier 6 items
+      are also raw stat upgrades over the Tier 5 items they replace.
+    gear:
+      head: {item: Slayer's Helm, id: 31027, from: Archimonde, Hyjal Summit, token, enchant: Glyph of Ferocity, gems: [Relentless Earthstorm Diamond, Glinting Pyrestone], socket_bonus_met: true}
+      neck: {item: Choker of Endless Nightmares, id: 32260, from: Supremus, Black Temple boss 2, enchant: none, gems: [], socket_bonus_met: null}
+      shoulder: {item: Deathmantle Shoulderpads, id: 30149, from: Void Reaver, Tempest Keep, carried in, enchant: Greater Inscription of Vengeance, gems: [Delicate Crimson Spinel, Shifting Shadowsong Amethyst], socket_bonus_met: true}
+      back: {item: Shadowmoon Destroyer's Drape, id: 32323, from: Teron Gorefiend, Black Temple boss 4, enchant: Enchant Cloak - Greater Agility, gems: [], socket_bonus_met: null}
+      chest: {item: Midnight Chestguard, id: 30905, from: Archimonde, Hyjal Summit, enchant: Enchant Chest - Exceptional Stats, gems: [Shifting Shadowsong Amethyst, Delicate Crimson Spinel, Glinting Pyrestone], socket_bonus_met: true}
+      wrist: {item: Deadly Cuffs, id: 30863, from: Rage Winterchill, Hyjal Summit boss 1, enchant: Enchant Bracer - Assault, gems: [Glinting Pyrestone], socket_bonus_met: true}
+      hands: {item: Slayer's Handguards, id: 31026, from: Azgalor, Hyjal Summit, token, enchant: Enchant Gloves - Superior Agility, gems: [Shifting Shadowsong Amethyst], socket_bonus_met: true}
+      waist: {item: Belt of One-Hundred Deaths, id: 30106, from: Lady Vashj, Serpentshrine Cavern, carried in, enchant: none, gems: [Delicate Crimson Spinel, Shifting Shadowsong Amethyst], socket_bonus_met: true, note: still best in slot through Phase 4}
+      legs: {item: Deathmantle Legguards, id: 30148, from: Fathom-Lord Karathress, Serpentshrine Cavern, carried in, enchant: Nethercobra Leg Armor, gems: [Shifting Shadowsong Amethyst], socket_bonus_met: true}
+      feet: {item: Edgewalker Longboots, id: 28545, from: Moroes, Karazhan, carried in, enchant: Enchant Boots - Cat's Swiftness, gems: [Delicate Crimson Spinel, Glinting Pyrestone], socket_bonus_met: true}
+      ring_1: {item: Band of the Ranger-General, id: 29997, from: Kael'thas Sunstrider, Tempest Keep, carried in, enchant: Enchant Ring - Striking, gems: [], socket_bonus_met: null}
+      ring_2: {item: Ring of Deceitful Intent, id: 32266, from: Shade of Akama, Black Temple boss 3, enchant: Enchant Ring - Striking, gems: [], socket_bonus_met: null}
+      trinket_1: {item: Dragonspine Trophy, id: 28830, from: Gruul the Dragonkiller, carried in, enchant: none, gems: [], socket_bonus_met: null}
+      trinket_2: {item: Warp-Spring Coil, id: 30450, from: Void Reaver, Tempest Keep, carried in, enchant: none, gems: [], socket_bonus_met: null}
+      main_hand: {item: Talon of Azshara, id: 30082, from: Morogrim Tidewalker, carried in, enchant: Enchant Weapon - Mongoose, gems: [], socket_bonus_met: null}
+      off_hand: {item: Merciless Gladiator's Quickblade, id: 32027, from: Arena Season 2, enchant: Enchant Weapon - Mongoose, gems: [], socket_bonus_met: null}
+      ranged: {item: Arcanite Steam-Pistol, id: 29949, from: Al'ar, Tempest Keep, carried in, enchant: Stabilized Eternium Scope, gems: [], socket_bonus_met: null, note: the source states nothing in Phase 3 or 4 beats it}
+
+# What each reachable token replaces and what it costs. No priority is stated
+# here; that is the council's call.
+token_arithmetic:
+  head_archimonde:
+    piece: Slayer's Helm 31027
+    replaces: Deathmantle Helm 30146
+    bonus_gained: none alone; with the hands it makes the Slayer's 2-piece
+    bonus_broken: none alone
+  hands_azgalor:
+    piece: Slayer's Handguards 31026
+    replaces: Deathmantle Handguards 30145
+    bonus_gained: none alone; with the head it makes the Slayer's 2-piece
+    bonus_broken: >-
+      Taking BOTH drops Deathmantle to two pieces, which keeps its 2-piece.
+      Taking both while also wanting the Deathmantle 4-piece is impossible.
+  note: >-
+    This is one of the two specs in the roster where both early tokens are a
+    clean gain rather than a trade, because the Tier 5 bonuses it keeps and the
+    Tier 6 bonus it gains are all live for the spec.
+
+# Slots the source published as full-clear picks and that were downgraded to fit
+# the window, with what replaced them.
+derived_slots:
+  head: Cursed Vision of Sargeras 32235, Illidan, downgraded to Slayer's Helm
+  shoulder: Slayer's Shoulderpads 31030, Mother Shahraz, kept Deathmantle
+  chest: Slayer's Chestguard 31028, Illidan, downgraded to Midnight Chestguard
+  wrist: Insidious Bands 32324, Teron Gorefiend, downgraded to Deadly Cuffs
+  legs: Slayer's Legguards 31029, Illidari Council, kept Deathmantle
+  feet: Shadowmaster's Boots 32366, Mother Shahraz, kept Edgewalker Longboots
+  ring_1: Stormrage Signet Ring 32497, Illidan, kept Band of the Ranger-General
+  ring_2: >-
+    Band of the Eternal Champion 29301, Scale of the Sands Exalted, which four to
+    six weeks does not reliably reach. Swap it in the moment the reputation
+    lands; it is the better ring.
+  weapons: >-
+    Warglaive of Azzinoth 32837 and 32838, both Illidan. The listed pair is what
+    a rogue actually holds. The other fallbacks the source names, Vengeful
+    Gladiator's Slicer 33762 and Quickblade 33734, are Arena Season 3 and open
+    five days after the phase.
+
+notes:
+  hit: >-
+    The source states a 28% hit target, which is the dual-wield white cap, and
+    says a raid without Improved Faerie Fire needs more hit gems. This guild
+    rules Improved Faerie Fire assumed.
+  routing: >-
+    Warp-Spring Coil is rogue-only and draws almost no competition, while
+    Dragonspine Trophy is contested across the whole melee camp.
+  access: >-
+    Merciless Gladiator's Quickblade is Arena Season 2, so a rogue who does not
+    play arena runs Latro's Shifting Sword and loses a little.

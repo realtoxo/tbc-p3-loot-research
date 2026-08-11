@@ -1,0 +1,378 @@
+1.72	3.68	Resto shamans were considered an
+3.20	4.16	extremely valuable healer in vanilla.
+5.40	3.92	However, much of their appeal came from
+7.36	3.56	their raid utility spells rather than
+9.32	3.64	their healing output. But, things are
+10.92	3.96	different in Burning Crusade and resto
+12.96	3.64	shamans have become a different beast
+14.88	4.24	entirely. And I'm sure you've heard that
+16.60	4.56	already, but what else? What else makes
+19.12	3.80	shaman a compelling choice compared to
+21.16	3.68	the other three healers? That's what
+22.92	3.76	we'll explore in this video. We'll start
+24.84	4.52	off by looking at the spells that you'll
+26.68	4.64	be regularly using as a resto shaman.
+29.36	3.88	The first is chain heal. This iconic
+31.32	3.84	ability heals your initial target for a
+33.24	4.60	fairly large amount and then attempts to
+35.16	4.92	jump to two nearby injured targets. Each
+37.84	5.04	time chain heal jumps, the effectiveness
+40.08	4.68	of the heal is reduced by 50%. There are
+42.88	4.00	three requirements for chain heal to
+44.76	3.68	jump after it heals its initial target.
+46.88	3.32	There has to be at least one player
+48.44	5.00	who's a part of the initial chain heal
+50.20	5.24	target's group below 100% HP and within
+53.44	4.16	15 yards of the initial chain heal
+55.44	4.28	target. But, what if there are multiple
+57.60	4.88	group members within 15 yards of the
+59.72	4.80	initial target and below 100% HP? Who
+62.48	4.08	does it go to? Well, chain heal is a
+64.52	4.36	smart heal, so it will always jump to
+66.56	4.64	the target with the lowest HP when given
+68.88	4.32	the choice. After that first jump, chain
+71.20	4.32	heal can jump a second time to heal a
+73.20	5.32	third target. The heal on the first jump
+75.52	4.92	target is reduced by 50% and the heal on
+78.52	4.44	the second jump target is reduced by
+80.44	4.56	25%. I know that's a little confusing,
+82.96	5.32	so I put together an example. Suppose
+85.00	5.32	that player A, player B, and player C
+88.28	4.32	belong to the same group and are all
+90.32	5.24	within 15 yards of each other. Player A
+92.60	6.16	is missing 1,500 HP, player B is missing
+95.56	4.96	1,000, and player C is missing 750. For
+98.76	3.84	the sake of this example, assume that
+100.52	4.52	your chain heal heals for an average of
+102.60	4.60	2,000. In this scenario, you should cast
+105.04	4.40	chain heal on player A since they're
+107.20	4.92	missing the most HP and the initial hit
+109.44	4.80	is always 100% effective. If you've been
+112.12	4.72	following along so far, you'll know that
+114.24	5.00	chain heal will then jump from player A
+116.84	4.48	to player B. Since player B is missing
+119.24	4.80	more hit points than player C, chain
+121.32	5.08	heal heals player B for 1,000 and then
+124.04	4.88	jumps to player C. Player C is then
+126.40	4.16	healed for 500 and the chain ends there.
+128.92	3.84	It's important to note here that the
+130.56	4.60	initial heal and the subsequent jumps
+132.76	3.88	are all occurring simultaneously. I know
+135.16	3.68	that I'm making it seem like there's a
+136.64	4.00	delay between the heals, but that's just
+138.84	3.68	so you can visualize what's going on
+140.64	3.56	behind the scenes. There are a couple of
+142.52	3.48	smaller things that I wanted to mention
+144.20	3.76	before moving on. If there are no
+146.00	3.96	targets to jump to after the initial
+147.96	4.76	heal and the Shaman that casted it is
+149.96	5.00	below 100% HP, chain heal can actually
+152.72	4.40	jump back to the Shaman regardless of
+154.96	4.76	their proximity to the last link in the
+157.12	4.44	chain. Also, all heals in the chain have
+159.72	3.64	an independent chance to critically
+161.56	3.56	strike. So, if your chain heal hits
+163.36	3.40	three targets, there's a good chance
+165.12	3.32	that at least one of those hits will be
+166.76	3.36	a critical strike. And that's great for
+168.44	3.68	Shaman since they have a talent that
+170.12	4.44	causes their critical heals to leave a
+172.12	4.00	powerful armor buff on their target.
+174.56	3.80	We'll go into more detail about the
+176.12	4.32	technical stuff associated with chain
+178.36	3.96	heal in the last section. But first,
+180.44	4.20	despite what you may have heard, Shamans
+182.32	4.76	do in fact have other healing spells.
+184.64	5.20	Healing Wave is their big single target
+187.08	4.68	heal with a 2.5 second cast time thanks
+189.84	4.12	to improved healing wave. The throughput
+191.76	4.44	of this spell is greatly increased when
+193.96	4.20	you take advantage of healing way. This
+196.20	4.28	talent causes your successful healing
+198.16	4.24	waves to apply a buff to the target that
+200.48	4.32	increases the effect of subsequent
+202.40	4.68	healing waves by 6%. This effect can
+204.80	4.72	stack up to three times for a total of
+207.08	4.60	18% increased effectiveness with healing
+209.52	4.52	wave. This makes healing wave a much
+211.68	4.80	more mana efficient spell when focusing
+214.04	4.24	a single target. Healing Wave can also
+216.48	4.08	function as an incredibly powerful
+218.28	4.28	emergency heal when paired with Nature's
+220.56	4.00	Swiftness. Nature's Swiftness is a
+222.56	4.68	3-minute cooldown spell that makes your
+224.56	4.76	next nature cast an instant cast. It has
+227.24	3.80	no global cooldown, so you can macro
+229.32	4.00	these two abilities together to
+231.04	3.92	instantly top your target from critical
+233.32	3.52	condition, all with the press of a
+234.96	3.96	single button. By the way, if you want
+236.84	3.44	to see a holy paladin guide, I already
+238.92	3.88	have that done. You just have to
+240.28	4.12	subscribe. I I don't know how many subs
+242.80	3.76	I need for it to be released, but you
+244.40	3.12	have to subscribe first because
+246.56	2.84	that's what's that's what's going to
+247.52	3.64	have to happen. Moving on, we have
+249.40	3.92	lesser healing wave. This is the
+251.16	4.16	shaman's fast but inefficient casted
+253.32	3.84	heal. It starts off okay in the
+255.32	4.12	beginning of the expansion, but quickly
+257.16	4.20	declines as you get gear. That's because
+259.44	3.76	it has a relatively low healing
+261.36	3.80	coefficient compared to your other
+263.20	3.64	spells, which means it won't scale as
+265.16	3.32	well with bonus healing. That doesn't
+266.84	3.40	mean you shouldn't use this spell.
+268.48	4.36	Sometimes it's worth sacrificing
+270.24	5.08	throughput and efficiency for speed. For
+272.84	4.72	example, if your target only has 2,000
+275.32	4.76	HP and they're about to be targeted by a
+277.56	4.36	mechanic that hits for 3,000, it's much
+280.08	3.96	safer to heal that target with lesser
+281.92	4.12	healing wave and then use an efficient
+284.04	3.88	heal after. You should also consider
+286.04	4.20	using this spell when the fight has
+287.92	5.08	either a random movement mechanic or an
+290.24	5.04	interrupt or a silence mechanic. Next up
+293.00	5.04	is Earth Shield. This is a new shield
+295.28	4.96	ability for the resto shaman in TBC, and
+298.04	4.16	unlike other shaman shields, it can be
+300.24	4.08	placed on another raid member. Earth
+302.20	4.20	Shield has six charges and provides the
+304.32	4.76	following benefits while it's active.
+306.40	4.84	First, the target has a 30% increased
+309.08	4.04	chance to ignore spell pushback. For
+311.24	4.04	those of you who don't know, spell
+313.12	4.44	pushback is the delay in spell casting
+315.28	4.08	that occurs when you receive an attack,
+317.56	4.04	and many casters have talents that
+319.36	4.40	passively reduce it, but there are a few
+321.60	4.36	who don't, and their DPS suffers
+323.76	4.24	immensely on fights that cause a lot of
+325.96	3.88	spell pushback. The most common specs
+328.00	4.12	that fall under this category are
+329.84	4.84	balance druids, elemental shamans,
+332.12	5.28	shadow priests, UA warlocks, and frost
+334.68	4.64	mages. So, Earth Shield is situationally
+337.40	3.52	very useful for them, but there's more
+339.32	3.76	to Earth Shield than passive spell
+340.92	4.32	pushback reduction. The second benefit
+343.08	4.08	is attacks made against the Earth Shield
+345.24	4.08	target will consume a charge of the
+347.16	4.04	shield, healing the target for a large
+349.32	4.28	amount. A very important concept to
+351.20	4.36	understand here is that when a charge of
+353.60	4.08	Earth Shield is consumed, the heal on
+355.56	4.20	the Earth Shielded target is attributed
+357.68	3.72	to them and not the Shaman who cast it
+359.76	3.88	Earth Shield. The reason why that's
+361.40	4.36	important is because the Earth Shielded
+363.64	4.32	target also assumes all threat
+365.76	4.04	associated with that healing. That makes
+367.96	3.64	this buff exceptional for putting on
+369.80	3.92	tanks. It provides them with both
+371.60	3.84	periodic healing and a ton of extra
+373.72	3.52	threat throughout the fight. One minor
+375.44	4.08	thing I wanted to mention about Earth
+377.24	4.08	Shield is that it can be snapshotted.
+379.52	4.00	That means that all six charges are
+381.32	4.60	calculated using the bonus healing the
+383.52	4.36	Shaman had when they originally casted
+385.92	3.80	the shield and not when the charges are
+387.88	3.92	actually consumed. That means you can
+389.72	4.16	pop a couple of bonus healing trinkets,
+391.80	3.84	drop Wrath of Air Totem, and cast Earth
+393.88	3.76	Shield on the tank, then swap to your
+395.64	4.12	regular gear all before the boss is
+397.64	4.52	actually pulled. And yeah, it is pretty
+399.76	5.32	sweaty, but the shield does last for a
+402.16	4.28	minimum of 20 to 30 seconds on a tank.
+405.08	3.48	And it's the little things like this
+406.44	4.32	that keep healing interesting. Now, this
+408.56	4.60	is a restoration guide, but I will
+410.76	4.24	mention some Shaman utility spells that
+413.16	4.28	you'll be making regular use of. The
+415.00	5.00	first one is Water Shield. This is also
+417.44	4.72	a new shield ability for TBC and it has
+420.00	4.92	three charges. While it's active, the
+422.16	5.48	shield provides a slightly ridiculous 50
+424.92	5.36	MP5 and that's only part of what it
+427.64	4.52	does. The other part is a charge-based
+430.28	4.12	mechanic like Earth Shield, but it
+432.16	5.04	returns mana instead of health. So,
+434.40	4.52	whenever is hit by a ranged or melee
+437.20	4.72	attack, a charge of the shield is
+438.92	4.80	expended and the Shaman gains 204 mana.
+441.92	4.16	An important thing to note here is that
+443.72	4.20	Water Shield costs no mana. That means
+446.08	3.80	you can refresh Water Shield when you're
+447.92	3.72	outside of or trying to get outside of
+449.88	3.56	the five-second rule. The second
+451.64	4.16	non-healing spell that you'll be making
+453.44	4.48	regular use of is Earth Shock. Earth
+455.80	3.84	Shock has two components, a damage
+457.92	3.96	component and a spell interruption
+459.64	3.88	component. Only the damage component of
+461.88	3.88	Earth Shock scales with the spell's
+463.52	4.56	rank, and the spell interruption portion
+465.76	4.60	remains the same from rank one to max
+468.08	4.52	rank. This gives resto shamans access to
+470.36	4.60	the shortest cooldown range interrupt in
+472.60	4.52	the game for only 30 mana. You can
+474.96	3.96	expect to be using this spell regularly
+477.12	3.48	throughout your rating adventures, but
+478.92	4.00	I'll leave you with an example of one
+480.60	4.36	you'll encounter early on, the Moroes
+482.92	4.36	encounter from Karazhan. This boss
+484.96	4.40	starts with four adds. Each add has
+487.28	3.56	their own set of abilities that must be
+489.36	4.00	managed by the raid throughout the
+490.84	4.48	fight. Your duty as a resto shaman is to
+493.36	3.68	coordinate with other interrupters in
+495.32	3.88	the raid to ensure that the following
+497.04	4.08	casts never go off. That's mana burn
+499.20	4.12	from this chick, greater heal from this
+501.12	4.60	chick, and holy light from this chick.
+503.32	4.36	Tremor Totem is another invaluable asset
+505.72	4.12	that the restoration shaman brings to a
+507.68	4.96	raid group. While the totem is active,
+509.84	5.00	it periodically removes all fear, charm,
+512.64	4.56	and sleep effects on all party members
+514.84	4.48	within 30 yards. This ability is a
+517.20	4.44	game-changer on encounters like
+519.32	5.40	Nightbane. His bellowing roar ability
+521.64	5.44	fears all players within 35 yards for 4
+524.72	4.24	seconds. Being feared in this fight is
+527.08	3.96	particularly bad because there are
+528.96	4.28	several mechanics that punish you for
+531.04	4.08	standing in certain locations. For
+533.24	3.92	example, there are various lava
+535.12	4.16	cross-sections around the boss called
+537.16	4.32	charred earth that deal heavy damage
+539.28	4.56	over time to players standing in them.
+541.48	4.52	There's also a frontal physical cleave
+543.84	4.32	and breath of fire, so Tremor Totem
+546.00	4.48	saves lives here. I saved my favorite
+548.16	4.32	spell for last, Grounding Totem. When
+550.48	4.28	the shaman drops this totem, the next
+552.48	4.52	single target spell casted on any of the
+554.76	4.44	shaman's nearby party members will be
+557.00	3.96	redirected to the totem, destroying the
+559.20	3.48	totem and negating the spell. The
+560.96	4.32	spell's function, combined with its
+562.68	4.60	absurdly low cooldown of 15 seconds,
+565.28	3.88	makes it borderline broken on some
+567.28	3.36	encounters. And there are certain fights
+569.16	3.56	that I'd argue would be nearly
+570.64	4.52	impossible without Grounding Totem. One
+572.72	4.28	example is Lady Vashj. In phases one and
+575.16	4.00	three of this encounter, Vashj will
+577.00	4.36	randomly cast Shock Blast on your main
+579.16	5.04	tank. Shock Blast deals approximately
+581.36	5.08	9,500 damage and stuns the target for 5
+584.20	4.40	seconds. Grounding Totem is the perfect
+586.44	3.92	counter to this ability. All the Shaman
+588.60	3.92	needs to do is make sure that they
+590.36	4.12	immediately drop a new Grounding Totem
+592.52	3.76	after the previous one is destroyed from
+594.48	3.44	absorbing Shock Blast. So, with
+596.28	3.76	Grounding Totem, we can completely
+597.92	4.08	bypass certain raid mechanics. Pretty
+600.04	4.40	strong if you ask me. This is the last
+602.00	4.28	section, healing assignments. Shamans
+604.44	3.96	are incredible raid healers, but that's
+606.28	4.28	not the only assignment that you'll get,
+608.40	4.24	at least early on. Tank and single
+610.56	3.96	target spot healing is a very common
+612.64	3.60	assignment in Karazhan since there
+614.52	3.52	aren't many mechanics that take
+616.24	3.88	advantage of Chain Heal. Luckily, the
+618.04	4.24	resto Shaman has excellent tools for
+620.12	4.36	tank healing and the rotation is easy to
+622.28	4.20	execute. Your first priority is to keep
+624.48	4.20	up Earth Shield on your assigned target
+626.48	4.44	at all times. This is usually one of the
+628.68	4.20	tanks, but as we discussed before, there
+630.92	4.36	are other viable targets in certain
+632.88	4.12	situations. Whenever physical damage is
+635.28	3.72	present, you should always maintain
+637.00	4.08	Ancestral Fortitude on your assigned
+639.00	3.80	tank. You should also aim to maintain
+641.08	4.12	three stacks of Healing Wave on your
+642.80	4.76	assigned tank at all times. A tip here
+645.20	4.72	is you can use rank one Healing Wave to
+647.56	4.56	fish for Ancestral Fortitude procs, as
+649.92	4.52	well as maintain Healing Wave stacks for
+652.12	4.12	a very low mana cost. As for healing
+654.44	3.72	spells, you'll primarily be using
+656.24	3.76	Healing Wave. Sometimes you'll use
+658.16	3.76	Lesser Healing Wave or Chain Heal when
+660.00	3.88	the situation calls for it, but Healing
+661.92	3.80	Wave is often the go-to heal. To really
+663.88	3.52	master the tank healing role, though,
+665.72	3.76	you need to know how to downrank your
+667.40	4.12	heals. You see, damage comes in all
+669.48	3.84	shapes and sizes, and if you only use
+671.52	4.04	your max rank spells, you'll end up with
+673.32	3.80	a ton of overhealing and wasted mana.
+675.56	3.92	That's why we downrank. For Healing
+677.12	4.16	Wave, we typically use a mixture of rank
+679.48	3.60	seven and rank eight to deal with
+681.28	3.80	moderate to slightly higher amounts of
+683.08	3.84	damage, but that's only if your target
+685.08	3.60	has three stacks of Healing Wave. If
+686.92	3.72	your target has no stacks of Healing
+688.68	3.88	Wave, the mana efficiency of Healing
+690.64	3.96	Wave rank seven and eight is only
+692.56	3.76	slightly better than lesser healing wave
+694.60	3.56	rank six and seven. So, you'll have to
+696.32	3.64	use your discretion there. You'll use
+698.16	3.68	your max rank healing wave when you need
+699.96	3.76	to heal huge amounts of sustained
+701.84	3.72	damage, which happens quite frequently
+703.72	3.60	as a tank healer. This assignment is
+705.56	4.08	typically short-lived and you should
+707.32	4.28	only expect to get it in phase one.
+709.64	3.80	After that, you're pretty much only raid
+711.60	3.28	healing for the rest of the expansion,
+713.44	3.28	but that doesn't mean you won't be
+714.88	3.72	healing tanks anymore. Far from it,
+716.72	3.96	actually. Remember that chain heal is a
+718.60	4.80	smart heal and since tank are almost
+720.68	4.56	always 100% HP, you'll be healing them
+723.40	3.80	frequently, whether you like it or not.
+725.24	4.20	They're often the best target to cast
+727.20	4.36	chain heal on since the initial heal is
+729.44	3.88	less likely to overheal them compared to
+731.56	3.80	other targets. And they're usually
+733.32	3.96	grouped up with melee and melee tend to
+735.36	3.72	take a lot of splash damage. Now that
+737.28	3.80	we've transitioned to raid healing and
+739.08	4.08	spamming chain heal, we need to learn
+741.08	4.48	how to down rank chain heal. The most
+743.16	4.40	commonly used down rank is chain heal
+745.56	3.92	rank four. That's because rank four
+747.56	3.92	narrowly escapes the threshold for the
+749.48	3.84	down rank penalty, which means that it
+751.48	4.60	still benefits from all of your bonus
+753.32	4.88	healing gear and it costs 20% less mana
+756.08	4.48	than chain heal rank five. Chain heal
+758.20	4.40	rank five does have slightly higher HPS
+760.56	4.16	than rank four, so consider using it
+762.60	3.84	when raw throughput takes priority over
+764.72	3.92	efficiency. And just like with healing
+766.44	4.32	wave, you can macro nature's swiftness
+768.64	4.56	to chain heal rank five for a huge
+770.76	4.92	emergency AoE burst heal. Down ranking
+773.20	4.64	beyond rank four is viable, but due to
+775.68	4.04	the down ranking penalty on those lower
+777.84	4.32	ranks, it really depends on what gear
+779.72	4.48	you have and as a result, I can't make a
+782.16	3.88	solid recommendation. I did make a
+784.20	4.04	detailed spreadsheet with the math and
+786.04	3.84	rationale I use for my down ranking, so
+788.24	3.48	feel free to check that out in the
+789.88	3.48	description below. Okay, guys, that is
+791.72	5.12	all the time I have for this video. I
+793.36	3.48	will see you in the next one. Peace.

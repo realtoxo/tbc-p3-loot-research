@@ -1,0 +1,190 @@
+# Raid composition and buff policy. Hand-authored.
+#
+# HOLDS   Who is in the raid, how the parties are made up, and which buffs may
+#         be credited elsewhere in this repository.
+#
+# BEFORE YOU USE A FIGURE
+#   Racial buffs are NOT assumed. Group buffs ARE. Improved Faerie Fire IS.
+#   Every party has a shaman and a leatherworker, so Heroism and Drums of Battle
+#   reach the whole raid despite being party-scoped.
+#
+# SOURCE  Every entry is stated by the guild lead. Nothing here is derived or
+#   measured. A change here moves numbers in hit.yaml, crit.yaml and haste.yaml.
+buffs:
+  shaman_in_every_party: true
+  shaman_in_every_party_note: >-
+    RULED on 8 August 2026. Bloodlust and Heroism are PARTY buffs in 2.4.3, not
+    raid buffs, so this is the ruling that makes the 30 percent haste burst
+    reach the whole raid. We are Alliance, so the spell is Heroism.
+    Five parties, five shamans, listed under shaman_by_party. Heroism therefore
+    reaches the whole raid. Totem of Wrath does not: it is an Elemental talent
+    and only g3 has an Elemental Shaman.
+  leatherworker_in_every_party: true
+  leatherworker_in_every_party_note: >-
+    RULED on 8 August 2026. Drums of Battle require Leatherworking 350 to use
+    and buff one party, so a leatherworker in each party makes the drums a
+    raid-wide effect rather than a single-party one.
+  racials_assumed: false
+  group_buffs_assumed: true
+  improved_faerie_fire: true    # confirmed by the guild lead
+  improved_faerie_fire_note: >-
+    Supplied by the Balance Druid. A raid-wide 3 percent PHYSICAL hit debuff,
+    worth 48 hit rating, which is three times what a racial would have given.
+    It is physical hit in TBC and does not help casters; it becomes spell hit
+    only in patch 3.0.2, so a Wrath-era source will state this wrongly.
+    Crediting it moves three specs from short to full: Retribution Paladin,
+    Beast Mastery Hunter, and Protection Warrior. Those three therefore read
+    the hit-capped score column, not the base column.
+  note: >-
+    With no racial assumed, every hit requirement is roughly one percent higher
+    than a source that assumes a Draenei in each party states. Cap states must
+    be computed against this baseline before any priority that depends on a hit
+    column is trusted.
+
+groups:
+  - id: g1
+    members: [combat_rogue, arms_warrior, feral_cat, retribution_paladin, enhancement_shaman]
+    note: Melee group. Enhancement supplies the group buff.
+
+  - id: g2
+    members: [enhancement_shaman, beast_mastery_hunter, survival_hunter, fury_warrior, feral_bear]
+    note: >-
+      Second melee and hunter group. One Enhancement Shaman, matching g1, so
+      two in the raid. g1 carries the Feral Cat, so the druid slot here is the
+      Feral Bear, a tank taking melee group buffs.
+      The fury_warrior here is the guild's fourth tank in his off spec; see
+      spec_role below.
+
+  - id: g3
+    members: [affliction_warlock, destruction_warlock, destruction_warlock, elemental_shaman, balance_druid]
+    note: >-
+      Caster group. All three warlocks sit together, so Curse of the Elements
+      and the warlock buffs land in one place, and the Elemental Shaman brings
+      Totem of Wrath to them rather than to the melee.
+
+  - id: g4
+    members: [arcane_mage, arcane_mage, shadow_priest, restoration_shaman, protection_paladin]
+    note: >-
+      Second caster group, with the Shadow Priest supplying its mana return to
+      the mages. The Protection Paladin sits here, given by the guild lead on
+      9 August 2026.
+
+  - id: g5
+    members: [holy_paladin, priest_healer, priest_healer, restoration_druid, restoration_shaman]
+    note: >-
+      Healer group. Named as "healers" by the guild lead; the membership is
+      DERIVED from counts plus shaman_by_party, which places the second
+      Restoration Shaman here, and from the four remaining healers in counts.
+      Corroborated rather than asserted: shaman_by_party already recorded all
+      five parties before the groups were written out, and its g3, g4 and g5
+      entries match the groups above exactly.
+
+# One shaman per party, so Heroism reaches the whole raid. Which SPEC of shaman
+# decides Totem of Wrath, which is an Elemental talent and party scoped.
+shaman_by_party:
+  g1: enhancement_shaman
+  g2: enhancement_shaman
+  g3: elemental_shaman
+  g4: restoration_shaman
+  g5: restoration_shaman
+
+caster_support:
+  - group: warlocks
+    party: g3
+    members: [affliction_warlock, destruction_warlock, destruction_warlock]
+    shaman_present: elemental_shaman
+    totem_of_wrath: yes
+    note: The only party with Totem of Wrath, because it is the only party with an Elemental Shaman.
+
+  - group: mages
+    party: g4
+    shaman_present: restoration_shaman
+    totem_of_wrath: no
+    note: >-
+      The mage party's shaman is Restoration, so the mages get Heroism but NOT
+      Totem of Wrath. That is why arcane_mage carries no group buff in
+      data/facts/hit.yaml and remains short of its spell hit cap.
+
+healers:
+  - restoration_shaman
+  - restoration_druid
+  - holy_paladin
+  - priest_healer       # Holy and Discipline treated as one claiming spec
+
+casters:
+  - arcane_mage         # 2 to 3 of them
+  - balance_druid       # boomkin
+  - shadow_priest       # rostered; supplies Misery and Vampiric Touch
+  - elemental_shaman    # rostered; sits in the warlock group
+
+# Holy and Discipline are combined into one claiming spec, by decision. They
+# share a ladder, and published Priest healer best-in-slot lists cover both
+# together. Where a Discipline-specific call is needed, it is authored against
+# the shared ladder with the difference stated.
+
+# Ladders held but not currently rostered. Keep them: a roster changes.
+unrostered_ladders:
+  - fire_mage
+
+# WHICH SPECS ARE PLACED. Only g1 and g2 are enumerated below. There are more,
+# and the guild lead named one on 9 August 2026: the Protection Paladin sits in
+# g4. g3 and g4 are not filled in because their membership has not been given.
+#
+# The naming was drifting: g2 read `feral_druid`, a name no other file uses,
+# where every other file says `feral_bear`. Corrected 9 August 2026.
+
+# Main spec and off spec, ruled by the guild lead on 9 August 2026. Specs are
+# tracked separately everywhere in this repository and that is deliberate; this
+# records which one a player actually raids in, because an off-spec claim is a
+# claim for a set worn rarely and a council weighs that differently.
+spec_role:
+  fury_warrior: main_spec
+  protection_warrior: off_spec   # the fourth tank, far down the tank ladder
+
+# Specs named above that the compendium already models. Anything claiming a
+# priority must appear here or in the spec registry.
+# Two Arcane Mages, ruled by the guild lead on 9 August 2026. This read 3 and
+# the five groups place two, which tools/check_roster.py caught the moment the
+# groups were written out. The guild lead settled it as two rather than three
+# with one on the bench, so the count is the raid and there is nothing unplaced.
+counts:
+  affliction_warlock: 1
+  destruction_warlock: 2
+  balance_druid: 1
+  arcane_mage: 2
+  shadow_priest: 1
+  elemental_shaman: 1          # 2 to 3; upper bound assumed
+  restoration_shaman: 2
+  restoration_druid: 1
+  holy_paladin: 1
+  priest_healer: 2        # one Holy, one Discipline, sharing a ladder
+  enhancement_shaman: 2
+  feral_druid_in_melee_groups: 2   # Feral Cat in g1; the Feral Bear in g2
+
+# PvP gear availability. Stated by the guild lead.
+arena:
+  season_3_opens: 2026-09-01     # five days after Phase 3 opens on 2026-08-27
+  season_2_purchasable_at_launch: true
+
+  entry_assumption: season_2_or_better_weapons
+  entry_assumption_note: >-
+    Every player is assumed to enter Phase 3 holding Season 2 weapons or better.
+    That is the floor a weapon claim is measured against: when a player loses a
+    weapon roll, this is what they are assumed to already have.
+
+  season_3_in_tier: true
+  season_3_note: >-
+    Season 3 weapons are part of this tier and belong in the comparison set. They
+    are NOT assumed owned. The guild does not expect every player to run arena
+    for the current season, so a Season 3 weapon is something a given player may
+    or may not obtain.
+
+    The two statements are different and both matter. Season 3 being in the tier
+    means it appears as an option and as competition. Season 3 not being assumed
+    owned means it is never the fallback a claim is priced against, because
+    pricing a drop against gear a player has no route to overstates what they
+    already have and understates the drop.
+
+    Practically: the floor is Season 2, the ceiling includes Season 3, and which
+    players actually hold Season 3 is a per-player fact the council knows on the
+    night rather than something this compendium models.

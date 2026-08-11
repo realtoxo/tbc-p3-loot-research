@@ -1,0 +1,62 @@
+# Every priority the council has settled, and why. Kept out of data/facts/ on
+# purpose: a priority is arguable and a fact is not.
+#
+# EMPTY IS THE HONEST STATE. Nothing has been decided yet. A card renders
+# "not yet decided" in the place a priority would sit, so silence here can never
+# be mistaken for a verdict.
+#
+# WHAT USED TO BE HERE, AND WHY IT IS NOT. Each entry carried a For and an
+# Against, a written pair arguing both sides of one item for one spec. Only one
+# item was ever filled in, Cursed Vision of Sargeras across eight claimants, as
+# a worked example to prove the card rendered. The guild lead removed the pair
+# on 10 August 2026: the compendium now carries what creators actually said,
+# 580 remarks on 173 items with a timestamp on each, and a hand-written argument
+# for one item did not earn the field it cost. Removing the pair left the eight
+# entries holding nothing but their keys, so they were removed with it.
+#
+# WHAT A COUNCIL FILLS IN. An entry is keyed by item id and spec together,
+# because the same item is prioritized differently for every claimant.
+
+meta:
+  status: empty
+  entries_decided: 0
+  entries_with_a_priority: 0
+  note: The eight worked-example entries here were Cursed Vision of Sargeras, one per
+    claimant spec, and each held only a For and an Against. Both fields were removed on
+    10 August 2026 by the guild lead, so nothing remained in the entries and they went
+    with the fields. The store keeps its shape for the priorities a council settles.
+schema:
+  item_id: Wowhead item id, which is what the card matches on.
+  item_name: Recorded for readability; item_id is authoritative.
+  spec: The spec id, matching hit.yaml.
+  priority: 'Priority 0, Priority 1, Priority 2, Priority 3, or "no priority". Priorities
+    are defined in docs/conventions.md. A priority is the whole of the ranking; nuance
+    belongs in for and against. ABSENT ON EVERY ENTRY TODAY, per the ruling above: an
+    entry with no priority renders as `not yet decided`, which is what every card in the
+    compendium currently reads.'
+  unit: Present only where this card's figure is in a different unit from its neighbors,
+    such as effective health against damage, so a reader does not compare two numbers
+    that do not compare.
+  stale_figure: 'Present where a figure quoted in for or against no longer agrees with
+    the fact files. It is recorded rather than silently corrected, because an argument
+    is not the same thing as the number it rests on: a stale figure sometimes leaves the
+    conclusion standing and sometimes removes the reason for it, and only the council
+    can say which. None is set today. Four were set when the judgments moved out of the
+    document, and all four were rewritten in agreement with the fact files on 9 August
+    2026.'
+  decided_on: Date the council settled it.
+  decided_by: Who was in the room.
+  status: decided or worked_example.
+entries: []
+open_questions:
+  storage_if_this_grows:
+    blocks: Nothing today.
+    detail: One YAML file holds eight entries comfortably and would hold a few hundred.
+      Every entry is keyed by item id and spec id, which is a primary key, so moving this
+      to a database later is mechanical rather than a redesign. Nothing should be shaped
+      around that move until the volume asks for it.
+  no_priority_has_been_settled:
+    blocks: Every card on every item page reads "not yet decided".
+    detail: Nothing has been decided. That is a statement about council time rather than
+      about tooling, and the card says so in the place a priority would sit, so it cannot
+      be mistaken for a decision.

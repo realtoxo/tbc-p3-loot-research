@@ -1,0 +1,235 @@
+# What a captured gear set IS, ruled rather than assumed.
+#
+# This file holds a judgment. It is arguable, and it is kept out of
+# `data/facts/` on purpose, so that a reader asking what changed an answer gets
+# either "a fact moved" or "we changed our minds" and never both at once.
+
+meta:
+  authored: 2026-08-09
+  ruled_by: the guild lead
+  settles: >-
+    The seventy open rows in
+    data/facts/sim-profiles/hit-capture-review/open-divergences.yaml, and every
+    row that a future audit of the same kind will file.
+  what_stayed_in_facts: >-
+    Every EPV figure, every item id, every legality check and the measurement
+    that sized the question. Nothing checkable moved here.
+
+ruling:
+  name: guide-faithful
+  statement: >-
+    A capture in data/facts/sim-profiles/hit-capture/ is a faithful record of
+    what a published source says a spec wears at that anchor. It is NOT a set
+    rebuilt to the EP Workbook ladder. Where a capture and the workbook
+    disagree, the capture stands and the disagreement is recorded.
+
+  why: >-
+    The disagreement was measured before it was ruled on, and it prints nothing.
+    Each of the 110 open divergences was tested by the only question these
+    captures exist to answer: does taking the higher-ranked item move the
+    anchor's hit state? Sixty-one rows change the hit total at all. Counting the
+    assumed raid debuff, exactly one moves a state, and that one does not
+    survive reading either, because the Protection Paladin capture total of 42
+    melee already disagrees with its published melee supply of 0 before any swap
+    is considered.
+    So rebuilding gear across several captures would move no figure the
+    compendium prints. That is the whole argument: it spends risk for nothing.
+    Gear edits are exactly where this project has been wrong before, and the
+    most recent one, the Belt of Blasting swap, moved published figures on a
+    premise that turned out to be false.
+
+  what_this_does_not_say: >-
+    It does not say the workbook is wrong. The workbook genuinely ranks the
+    named item higher in 28 of the 32 weapon rows, verified section by section
+    against the tabs. Those rows are correct findings about the ladder, and they
+    stay recorded as such. The ruling is about which of the two a capture is
+    supposed to reproduce, not about which one is right.
+
+  what_would_reopen_it: >-
+    A divergence that moves a hit state, a crit state, or a tank's defense
+    against its threshold. That is a different claim from "the workbook ranks
+    something higher", and it is the claim this ruling does not cover. The
+    measurement above is repeatable, so a future audit should run it first and
+    file only what survives.
+
+# Two questions sat behind the main one. Both were ruled on directly by the
+# guild lead on 9 August 2026, on how this guild actually plays rather than on
+# what the gear tables allow.
+raid_scope:
+
+  world_boss_drops_are_out_of_scope:
+    ruling: >-
+      No Doom Lord Kazzak or Doomwalker drop appears in any captured set at any
+      anchor. This guild does not run outdoor world bosses.
+    why: >-
+      Stated by the guild lead. It is a fact about this raid, not about the
+      game: both bosses are live and their loot is reachable in principle, and
+      Anger-Spark Gloves is even Bind on Equip and so buyable without a tag.
+      None of that matters if the raid does not go.
+    reversed_what: >-
+      Four captures wore world-boss loot in ELEVEN slots before this ruling, and
+      an earlier reading of this file treated that as an implicit ruling in
+      favor. It was not a ruling; it was an unexamined assumption inherited from
+      the published guides the captures were built from, and nothing could see
+      it. The eleven slots were replaced.
+    the_items: >-
+      Doomwalker drops Anger-Spark Gloves (30725), Barrel-Blade Longrifle
+      (30724), Talon of the Tempest (30723) and Black-Iron Battlecloak (30729).
+      Doom Lord Kazzak drops Ripfiend Shoulderplates (30740), Ancient Spellcloak
+      of the Highborne (30735) and Leggings of the Seventh Circle (30734).
+      Sources: Icy Veins TBC world-boss loot table updated 12 January 2026, and
+      Wowpedia, both observed 9 August 2026. The attribution was wrong once
+      here: Anger-Spark Gloves is Doomwalker, and an earlier note said Kazzak.
+    enforced: >-
+      tools/check_capture_availability.py WORLD_BOSS_LOOT. The list is named in
+      the checker rather than joined from drops.csv, because drops.csv covers
+      the seven instanced zones only and carries neither npc. That is exactly
+      why eleven slots in four captures passed every check without a word.
+
+  level_60_loot_is_out_of_scope:
+    ruling: >-
+      Level-60 raid loot is not held at any anchor. This guild does not run it.
+    why: >-
+      Stated by the guild lead, and the captures already agreed: not one of the
+      seventeen wears any level-60 item. Only the Affliction capture said why,
+      in its Atiesh note.
+    supporting_facts: >-
+      Naxxramas at level 60 and the Atiesh questline are open on Anniversary
+      realms, so this is a ruling about what the guild runs and not about what
+      exists. Recorded with sources at open-divergences.yaml
+      patterns.vanilla_naxxramas_items.
+    enforced_in_the_ladder: >-
+      tools/extract_ladder.py LEVEL_60_LOCATIONS. The ruling was first read as
+      applying only to captures, and it left 25 Naxxramas rows in the ladder,
+      including Mark of the Champion at rank 4 and rank 5. Those are gone.
+      The match is on the workbook's own Location string rather than an id list,
+      because the exclusion is a whole raid and not a table of drops. A sweep of
+      every location on all eighteen tabs found exactly one level-60 name in
+      use, "Naxxramas". Atiesh needs a component from Ahn'Qiraj as well, and the
+      workbook still files it under Naxxramas, so the one name covers it.
+    unenforced: >-
+      No check bars a level-60 item from a CAPTURE, because none wears one. If
+      one ever appears, the WORLD_BOSS_LOOT pattern above is the shape to copy.
+
+  arena_gear_armor_out_weapons_in:
+    ruling: >-
+      Arena ARMOR is excluded from every comparison baseline, every shortlist
+      and every captured set. Arena WEAPONS are allowed everywhere.
+    why: >-
+      A resilience-bearing armor piece is not what a raider gears into, so
+      measuring a raid drop against one asks the council to compare a piece the
+      roster is not assumed to hold and would not want. A weapon is the opposite
+      case: an arena weapon is a genuine competitor for a raid weapon, it
+      carries no armor to distort the comparison, and for several specs it is
+      the best thing available in the slot. The two are treated differently,
+      which is a decision and is recorded as one.
+    ruled: 9 August 2026 by the guild lead
+    promoted_here: >-
+      10 August 2026. This ruling was already being ENFORCED, in
+      tools/extract_ladder.py off_pieces and shortlist and in
+      tools/extract_set_stats.py, and explained in docs/conventions.md and in
+      several capture files. What it was not doing was living anywhere a reader
+      would look for a judgment. An adversarial review pointed out that the
+      world-boss and level-60 rulings were promoted to this file the same day
+      while this one, which is the same kind of claim, stayed scattered.
+    also_covered: >-
+      Arena Season 3 is a separate and stricter matter: it opens after Phase 3
+      and no Season 3 item is reachable at any anchor, armor or weapon. That is
+      enforced by name prefix in tools/check_capture_availability.py.
+
+# ---------------------------------------------------------------------------
+# WHAT THE SIM PROFILES ASSUME. Ruled by the guild lead on 10 August 2026, when
+# the decision was taken to export idiomatic wowsims profiles rather than keep
+# a private schema. Each of these is a modelling choice, not a fact, which is
+# why they live here.
+sim_profile_scope:
+
+  dps_only:
+    ruling: >-
+      Fourteen DPS specs. Tanks and healers are out.
+    which: >-
+      In: combat_rogue, arms_warrior, fury_warrior, feral_cat,
+      retribution_paladin, enhancement_shaman, beast_mastery_hunter,
+      survival_hunter, affliction_warlock, destruction_warlock, arcane_mage,
+      balance_druid, shadow_priest, elemental_shaman. Out: feral_bear,
+      protection_paladin, protection_warrior and the four healers.
+    why_it_is_clean: >-
+      All fourteen already have a gear capture, so the gear half of every
+      profile exists and is legality-checked. The four healers have no capture
+      at all, and a healing sim needs an encounter model this project does not
+      have. A tank sim answers survivability rather than output, which is a
+      different question from the one these profiles are for.
+
+  encounter:
+    ruling: Patchwerk-style single target, level 73 boss, full raid buffs and debuffs per our composition.
+    why: >-
+      A named Phase 3 boss models its own mechanics and would make each spec's
+      number answer a different question. Patchwerk holds the encounter still so
+      that the only thing varying between two runs is the gear, which is what
+      these profiles exist to measure.
+    buffs_come_from_the_roster: >-
+      Per our composition, not idealised. Totem of Wrath reaches the g3 casters
+      and not the g4 mages, exactly as hit.yaml already models it, because it is
+      party-scoped in 2.4.3. roster.yaml is the source.
+
+  hit_consumables_ignored:
+    ruling: >-
+      No hit consumable is used, because nobody uses them.
+    why_this_matters_more_than_it_looks: >-
+      It removes a trap rather than creating one. hit.yaml records Spicy Hot
+      Talbuk under not_assumed, so if these profiles had assumed full
+      consumables INCLUDING hit, the sim and the hit model would have been
+      answering different questions and a reader comparing a sim figure to a hit
+      state would have combined two bases. This project has already put two
+      different entry percentages on one card that way. The two models now agree
+      on hit.
+
+  race_ignored:
+    ruling: >-
+      Race is not modelled. wowsims requires one per player, so a single default
+      is set and recorded rather than chosen per spec.
+    why_it_is_safe_here: >-
+      These profiles exist to compare one gear configuration against another for
+      the SAME spec, so race is held constant across the comparison and cancels
+      out of the difference. It would NOT be safe if the profiles were used to
+      compare one spec against another, and they are not for that.
+      This matches hit.yaml, which credits no racial anywhere.
+
+  professions_ignored:
+    ruling: >-
+      Neither profession slot is filled.
+    consistent_with: >-
+      The ruling of 9 August 2026 that profession gating is out of scope, which
+      was taken on measurement: no capture needs more than two professions or
+      two specialisations of one, so the check would have caught nothing.
+
+  talents:
+    ruling: >-
+      Encoded as wowsims talent strings, converted from the builds in
+      data/facts/talents.yaml.
+    provenance: >-
+      Those builds were audited against Warcraft Tavern and Icy Veins and then
+      cross-checked against Wowhead, all twenty-one specs agreeing, with three
+      corrections made along the way. The strings must reproduce the recorded
+      point spreads, and that is checkable.
+
+  blessings:
+    ruling: >-
+      Every DPS spec takes Blessing of Kings, plus Might if it is physical and
+      Wisdom if it is a caster. Salvation goes to none of them.
+    why: >-
+      Three paladins can maintain three blessings, and Kings at 10 percent to
+      all attributes is the one nobody argues about. Might is attack power,
+      which a caster cannot use, and Wisdom is mana, which a rogue cannot.
+      Salvation reduces threat and adds no output, and a Patchwerk profile
+      measures damage and never dies to threat, so crediting it would change
+      nothing while implying a raid choice this project has no business making.
+    promoted_here: >-
+      10 August 2026. It was written in data/facts/raid-buffs.yaml, in a block
+      whose own words admitted it was "a raid decision rather than a fact" and
+      then decided it. An adversarial review pointed out that a judgment in the
+      fact files is exactly what AGENTS.md forbids.
+    unresolved: >-
+      Whether Improved Blessing of Might applies. The Retribution build carries
+      improvedSealOfTheCrusader, and nothing decoded settles Improved Might, so
+      it is left at Regular, which understates rather than overstates.

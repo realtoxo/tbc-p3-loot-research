@@ -1,0 +1,193 @@
+# The order the two Phase 3 zones are cleared in, and what is reachable when.
+#
+# WHY THIS FILE EXISTS. Every tier-anchor figure in this repository rests on a
+# claim about which bosses are dead four to six weeks into the tier, and until
+# today that claim was made nowhere and checked by nothing. It was carried in
+# the wording of briefs and in the heads of the people writing them, which is
+# the condition under which two documents quietly disagree.
+#
+# The encounter order is a FACT about the instance. Which of those encounters a
+# particular guild has killed by a particular week is a FORECAST, and the two
+# are separated below so a reader can accept the first without accepting the
+# second.
+#
+# NOTHING HERE IS A PRIORITY. This file says what is reachable, never what is
+# worth taking.
+
+meta:
+  authored: 2026-08-09
+  patch: 2.4.3
+  phase: 3
+  phase_opens: 2026-08-27
+  sibling_files:
+    - data/facts/drops.csv
+    - data/facts/tokens.yaml
+    - data/facts/sim-profiles/hit-capture
+  supersedes: >-
+    Nothing. This is the first progression file in the repository. The claim it
+    replaces was unwritten: briefs and captures each asserted their own version
+    of which bosses are reachable early.
+
+# ---------------------------------------------------------------------------
+# ENCOUNTER ORDER
+# ---------------------------------------------------------------------------
+#
+# Both zones are largely linear in 2.4.3. Mount Hyjal is strictly linear: each
+# boss is gated behind clearing the waves of trash before it, so the order below
+# is the only order. Black Temple is linear until Teron Gorefiend and then opens
+# up, which is recorded per encounter rather than assumed.
+#
+# `position` is the encounter's place in the clear. `token` names the tier slot
+# it supplies, read from data/facts/tokens.yaml rather than restated here.
+
+zones:
+
+  Mount Hyjal:
+    encounters: 5
+    linearity: >-
+      STRICTLY LINEAR. Each boss follows waves of trash that must be cleared to
+      summon it, so a guild cannot skip ahead to a later boss. This matters more
+      here than in Black Temple, because it means the head token cannot be
+      reached before everything in front of it.
+    bosses:
+      - {position: 1, name: Rage Winterchill, token: null}
+      - {position: 2, name: Anetheron, token: null}
+      - {position: 3, name: Kaz'rogal, token: null}
+      - {position: 4, name: Azgalor, token: hands}
+      - {position: 5, name: Archimonde, token: head}
+
+  Black Temple:
+    encounters: 9
+    linearity: >-
+      LINEAR AT FIRST, THEN OPEN. Naj'entus and Supremus gate the instance.
+      After Teron Gorefiend the wings open, so Reliquary of Souls and Gurtogg
+      Bloodboil can be approached in either order. Mother Shahraz gates the
+      Illidari Council, which gates Illidan.
+    bosses:
+      - {position: 1, name: High Warlord Naj'entus, token: null}
+      - {position: 2, name: Supremus, token: null}
+      - {position: 3, name: Shade of Akama, token: null}
+      - {position: 4, name: Teron Gorefiend, token: null}
+      - position: 5
+        name: Reliquary of Souls
+        token: null
+        also_called: >-
+          Essence of Suffering, Essence of Desire and Essence of Anger. THE
+          ENCOUNTER HAS THREE PHASES AND EACH PHASE CARRIES ITS OWN NAME, so a
+          source attributing a drop to "Essence of Anger" is naming this
+          encounter, not a separate boss and not trash. Three hit captures
+          stumbled on this and two dropped real items because of it. The items
+          concerned are Dreadboots of the Legion, item 32345, and Pendant of
+          Titans, item 32362, and drops.csv sources both to this encounter.
+      - {position: 6, name: Gurtogg Bloodboil, token: null}
+      - {position: 7, name: Mother Shahraz, token: shoulder}
+      - {position: 8, name: The Illidari Council, token: legs}
+      - {position: 9, name: Illidan Stormrage, token: chest}
+
+# ---------------------------------------------------------------------------
+# THE FOUR-TO-SIX-WEEK WINDOW
+# ---------------------------------------------------------------------------
+
+four_to_six_weeks:
+  status: forecast
+  what_it_is: >-
+    The gear anchor the framework calls TIER is a set a raider could plausibly
+    hold four to six weeks into the phase. That window was chosen because it is
+    when most of a tier's loot decisions are actually made, rather than at a
+    full clear, which is where every published best-in-slot list is written.
+  reliably_down: >-
+    All of Mount Hyjal through Azgalor, and Black Temple through Gurtogg
+    Bloodboil. That is four of five Hyjal encounters and six of nine Black
+    Temple encounters.
+  contested: >-
+    ARCHIMONDE IS THE TIER'S FIRST SERIOUS WALL. It is a long fight with a
+    raid-wide mechanic that ends attempts outright, and guilds that clear the
+    four bosses before it in week two commonly spend several more weeks on it.
+    So the HEAD token is the one token whose availability in this window cannot
+    be assumed either way.
+  not_reachable: >-
+    Mother Shahraz, the Illidari Council and Illidan Stormrage. Therefore the
+    SHOULDER, LEGS and CHEST tokens are out of reach in this window, and any
+    published list holding those pieces is describing a later point in the tier.
+  the_two_tier_anchors_name_progression_not_gear: >-
+    READ THIS BEFORE INTERPRETING A TIER ANCHOR. `tier_hands_only` and
+    `tier_hands_and_head` name WHICH BOSSES ARE DOWN, not which tokens a spec
+    wears. The first means Azgalor has fallen and Archimonde has not; the
+    second means both have.
+    What a spec WEARS at a given state is its own question, and for several
+    specs the answer is to refuse a token it could take: a Tier 6 two-piece can
+    be worth less than the Tier 5 bonus it destroys, and the Feral Cat's head
+    slot is Wolfshead Helm whatever the token offers.
+    The names were read as gear for a while, which made refusal impossible to
+    represent and produced seventeen captures all wearing both tokens because
+    the capture brief assumed it. Clarified 9 August 2026.
+  consequence_for_tokens: >-
+    HANDS is the only Tier 6 token reliably available at this anchor, and HEAD
+    is available only if Archimonde has fallen. This is why every hit capture
+    under data/facts/sim-profiles/hit-capture states two tier figures rather
+    than one, labelled tier_hands_only and tier_hands_and_head. A single tier
+    figure would hide the fact that the second token depends on clearing the
+    wall.
+  no_set_bonus_from_one_token: >-
+    No Tier 6 set has a 1-piece bonus, so the first token a spec receives buys
+    raw stats only. A spec reaching two Tier 6 pieces gains a 2-piece bonus and
+    may lose a Tier 5 bonus doing it. The per-spec arithmetic is recorded in
+    data/facts/sim-profiles/token-arithmetic.yaml and is not restated here.
+  scale_of_the_sands_reputation:
+    status: ruled
+    ruling: >-
+      RULED by the guild lead on 9 August 2026: assume roughly five Mount Hyjal
+      clears by this anchor, which carries Scale of the Sands to Exalted.
+    detail: >-
+      Scale of the Sands is the Mount Hyjal faction, so none of its rewards can
+      appear at the ENTRY anchor, and that stays a hard rule enforced by
+      tools/check_capture_availability.py.
+      AT THE TIER ANCHORS THEY ARE ALLOWED, including the Exalted rings, and
+      including at tier_hands_only. That last part looks contradictory and is
+      not: reputation comes from the trash waves and the first four bosses as
+      well as from Archimonde, so a guild wiping on Archimonde for weeks is
+      still farming the zone every reset and banking standing the whole time.
+      A guild that has not reached Azgalor has a different problem than which
+      ring it wears.
+    affects: >-
+      Six captures hold an Exalted ring at tier_hands_only: arcane_mage and
+      elemental_shaman on Band of the Eternal Sage, beast_mastery_hunter and
+      enhancement_shaman on Band of the Eternal Champion, and both plate
+      tanks on Band of the Eternal Defender. None of the rings carries hit,
+      but the protection_warrior's hit figure DOES depend on this ruling: its
+      Defender displaced the 21-hit Band of the Abyssal Lord, so its tier
+      totals fall from 177 to 156 with the ring worn. set-stats.yaml depends
+      on it throughout.
+  confidence: >-
+    MEDIUM, and it is a forecast rather than an observation. It rests on the
+    encounter order above, which is a fact, and on typical guild progression
+    pace, which is not. A guild that clears faster or slower moves its own
+    window. Re-check against this roster's actual kill log once Phase 3 opens on
+    27 August 2026.
+
+open_questions:
+  guild_pace_unverified:
+    blocks: >-
+      Nothing structural. It sharpens which of the two tier states this roster
+      should read.
+    detail: >-
+      The four-to-six-week window is a general expectation for a 25-player guild
+      and is not derived from this roster's own history. This repository holds
+      no kill log from Phase 1 or Phase 2, so there is no basis here for saying
+      whether this guild clears faster or slower than that. Capture the Phase 2
+      progression dates and the answer follows.
+  archimonde_attempt_cost:
+    blocks: Nothing today. It would sharpen the contested call above.
+    detail: >-
+      Calling Archimonde the tier's first wall is a qualitative claim taken from
+      how the encounter is generally described rather than from a measured
+      distribution of guild kill dates. A source giving the spread of first-kill
+      dates across comparable guilds would turn the contested call into a
+      figure.
+  black_temple_wing_order:
+    blocks: Nothing today.
+    detail: >-
+      Reliquary of Souls and Gurtogg Bloodboil open together after Teron
+      Gorefiend, so which is killed first varies by guild. Both are inside the
+      reachable set above, so nothing in this file turns on the order, but a
+      capture naming one and not the other should say why.

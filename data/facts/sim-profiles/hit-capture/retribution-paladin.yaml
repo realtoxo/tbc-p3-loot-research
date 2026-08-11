@@ -1,0 +1,191 @@
+spec: retribution_paladin
+collected_on: 2026-08-09
+sources:
+  entry: {
+    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhUJP-KpFvQwgC8DWm39laCPB-0hPcIorSy7Q3yhc12hdsD0WsC7WVi1mp6SbIIeRryMQI0qcX_z77/pubhtml",
+    title: "TBC Phase 3 PVE EPV BIS LIST (Fazers), Retribution tab, top-EPV item per slot restricted to Phase <=2 sources and non-PvP armor, hit values cross-checked against data/facts/items.csv",
+    observed: 2026-08-09,
+  }
+  tier: {
+    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhUJP-KpFvQwgC8DWm39laCPB-0hPcIorSy7Q3yhc12hdsD0WsC7WVi1mp6SbIIeRryMQI0qcX_z77/pubhtml",
+    title: "TBC Phase 3 PVE EPV BIS LIST (Fazers), Retribution tab, top-EPV item per slot restricted to Phase <=3 sources, non-PvP armor, and excluding Illidan Stormrage, The Illidari Council and Mother Shahraz; boss attribution corrected against data/facts/drops.csv",
+    observed: 2026-08-09,
+  }
+
+anchors:
+  entry:
+    tier_pieces_held: [chest, head]
+    set_bonuses_held:
+      - "Crystalforge Battlegear 2-piece: Reduces the cost of your Judgements by 35."
+    hit_by_slot:
+      head:     {item: "Crystalforge War-Helm", id: 30131, hit: 0, note: "Lady Vashj, Phase 2. Replaces Furious Gizmatic Goggles per the 9 August 2026 ruling that this player is not an engineer; the goggles cannot be worn at any anchor. Next non-engineering Phase <=2 head on the Ret tab at 96.14."}
+      neck:     {item: "Pendant of the Perilous", id: 30022, hit: 0}
+      shoulder: {item: "Shoulderpads of the Stranger", id: 30055, hit: 0}
+      back:     {item: "Razor-Scale Battlecloak", id: 30098, hit: 0}
+      chest:    {item: "Crystalforge Breastplate", id: 30129, hit: 23}
+      wrist:    {item: "Bracers of Eradication", id: 30057, hit: 17}
+      hands:    {item: "Gloves of the Searing Grip", id: 29947, hit: 0}
+      waist:    {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
+      legs:     {item: "Greaves of the Bloodwarder", id: 29950, hit: 0}
+      feet:     {item: "Star-Strider Boots", id: 29951, hit: 0}
+      ring_1:    {item: "Shapeshifter's Signet", id: 30834, hit: 0}
+      ring_2:    {item: "Band of the Ranger-General", id: 29997, hit: 18}
+      trinket_1: {item: "Dragonspine Trophy", id: 28830, hit: 0}
+      trinket_2: {item: "Darkmoon Card: Crusade", id: 31856, hit: 0}
+      relic:    {item: "Libram of Avengement (The Maker, Blood Furnace)", id: 27484, hit: 0}
+      main_hand:   {item: "Lionheart Executioner", id: 28430, hit: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+    total_item_hit: 58
+
+  tier_hands_only:
+    tier6_pieces_held: []
+    tier5_pieces_held: [chest, head]
+    set_bonuses_held:
+      - "Crystalforge Battlegear 2-piece: Reduces the cost of your Judgements by 35."
+    hit_by_slot:
+      head:     {item: "Crystalforge War-Helm", id: 30131, hit: 0, note: "Carried in from Phase 2. The goggles are barred by the non-engineer ruling; no reachable Phase 3 head outranks this on the Ret tab at this anchor. See notes.token_refusals."}
+      neck:     {item: "Choker of Endless Nightmares", id: 32260, hit: 21}
+      shoulder: {item: "Shoulderpads of the Stranger", id: 30055, hit: 0}
+      back:     {item: "Shadowmoon Destroyer's Drape", id: 32323, hit: 17}
+      chest:    {item: "Crystalforge Breastplate", id: 30129, hit: 23}
+      wrist:    {item: "Bindings of Lightning Reflexes", id: 32574, hit: 0}
+      hands:    {item: "Gloves of the Searing Grip", id: 29947, hit: 0, note: "Carried in from Phase 2 at 65.57. The Lightbringer Gauntlets token (56.46) is refused; see notes.token_refusals."}
+      waist:    {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
+      legs:     {item: "Bow-stitched Leggings", id: 30900, hit: 0}
+      feet:     {item: "Dreadboots of the Legion", id: 32345, hit: 18}
+      ring_1:    {item: "Unstoppable Aggressor's Ring", id: 32335, hit: 0}
+      ring_2:    {item: "Band of Devastation", id: 32526, hit: 0}
+      trinket_1: {item: "Dragonspine Trophy", id: 28830, hit: 0}
+      trinket_2: {item: "Darkmoon Card: Crusade", id: 31856, hit: 0}
+      relic:    {item: "Libram of Avengement (The Maker, Blood Furnace)", id: 27484, hit: 0}
+      main_hand:   {item: "Torch of the Damned", id: 32332, hit: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+    total_item_hit: 79
+
+  tier_hands_and_head:
+    tier6_pieces_held: [head]
+    tier5_pieces_held: []
+    set_bonuses_held: []
+    hit_by_slot:
+      head:     {item: "Lightbringer War-Helm", id: 30989, hit: 0, note: "Archimonde token, worn. 99.64 beats Crystalforge War-Helm 96.14, and the goggles that used to beat it at 102.94 are barred by the non-engineer ruling."}
+      neck:     {item: "Choker of Endless Nightmares", id: 32260, hit: 21}
+      shoulder: {item: "Shoulderpads of the Stranger", id: 30055, hit: 0}
+      back:     {item: "Shadowmoon Destroyer's Drape", id: 32323, hit: 17}
+      chest:    {item: "Midnight Chestguard", id: 30905, hit: 29}
+      wrist:    {item: "Bindings of Lightning Reflexes", id: 32574, hit: 0}
+      hands:    {item: "Gloves of the Searing Grip", id: 29947, hit: 0, note: "Carried in from Phase 2 at 65.57. The Lightbringer Gauntlets token (56.46) is refused; see notes.token_refusals."}
+      waist:    {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
+      legs:     {item: "Bow-stitched Leggings", id: 30900, hit: 0}
+      feet:     {item: "Dreadboots of the Legion", id: 32345, hit: 18}
+      ring_1:    {item: "Unstoppable Aggressor's Ring", id: 32335, hit: 0}
+      ring_2:    {item: "Band of Devastation", id: 32526, hit: 0}
+      trinket_1: {item: "Dragonspine Trophy", id: 28830, hit: 0}
+      trinket_2: {item: "Darkmoon Card: Crusade", id: 31856, hit: 0}
+      relic:    {item: "Libram of Avengement (The Maker, Blood Furnace)", id: 27484, hit: 0}
+      main_hand:   {item: "Torch of the Damned", id: 32332, hit: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+    total_item_hit: 85
+
+notes:
+  token_refusals: >-
+    REBUILT 9 August 2026. The earlier capture wore the hands token at both
+    tier anchors and the head token at tier_hands_and_head because the capture
+    brief said to, not because any source supported it. Per
+    data/facts/progression.yaml
+    (the_two_tier_anchors_name_progression_not_gear), the anchors name which
+    bosses are down, and what is worn is its own question. What the arithmetic
+    in data/facts/sim-profiles/token-arithmetic.yaml supports for this spec:
+    the HANDS token is refused at every anchor, because Lightbringer Gauntlets
+    are 56.46 EPV against 65.57 on Gloves of the Searing Grip, and no
+    Retribution set bonus in either tier is a damage bonus, so nothing is
+    protected and nothing worth buying rides on the token. The HEAD token is
+    worn at tier_hands_and_head, because Lightbringer War-Helm 99.64 beats
+    every reachable alternative once the goggles are barred (see
+    notes.engineering_ruling). Both calls are settled by the arithmetic alone,
+    so this capture records one configuration per anchor. Two set-bonus facts
+    travel with the refusal, recorded and not priced: holding Crystalforge
+    head and chest keeps the Crystalforge 2-piece (Judgement cost -35) at
+    entry and tier_hands_only, and refusing the hands token forgoes the
+    Lightbringer 2-piece (a 50-mana melee proc) at tier_hands_and_head. Both
+    are mana effects; no source prices either. Totals moved: entry 71 to 58,
+    tier_hands_only 92 to 79, tier_hands_and_head 85 unchanged.
+  engineering_ruling: >-
+    RULED by the guild lead on 9 August 2026: this player is not an engineer.
+    Furious Gizmatic Goggles are an Engineering profession item and cannot be
+    worn at any anchor, so the head falls to Crystalforge War-Helm (96.14,
+    Lady Vashj, Phase 2) at entry and tier_hands_only, and the head token
+    (99.64) becomes a raw upgrade at tier_hands_and_head where before the
+    ruling the goggles (102.94) beat it.
+  availability_corrections: >-
+    tier_hands_only chest: Midnight Chestguard (30905) drops from Archimonde,
+    and tier_hands_only is defined as Archimonde not being down. The
+    workbook's next two chest candidates (Lightbringer Breastplate, Illidan;
+    Heartshatter Breastplate, Mother Shahraz) are also excluded as late Black
+    Temple. No Phase 3 plate chest for this spec survives all three
+    exclusions, so the slot falls back to Crystalforge Breastplate (30129,
+    Tempest Keep, Phase 2, 23 melee hit), the Entry-anchor tier5 piece, which
+    outranks every other reachable plate chest in the EPV workbook (Ret.csv)
+    once Krakken-Heart Breastplate and the excluded items are set aside.
+    Midnight Chestguard is left unchanged in tier_hands_and_head, where
+    Archimonde is down and the item is legitimate. tier5_pieces_held at
+    tier_hands_only now includes chest; tier_hands_only total_item_hit fell
+    from 98 to 92 at that correction, and then to 79 at the 9 August rebuild
+    (see notes.token_refusals).
+  downgraded_slots: >-
+    Against the workbook's full-clear Phase 3 ranking, four slots lose their
+    top pick because the source boss is Illidan Stormrage, The Illidari
+    Council or Mother Shahraz: head (Cursed Vision of Sargeras, Illidan;
+    Helm of the Illidari Shatterer and Forest Prowler's Helm, both attributed
+    in the workbook to "High Nethermancer Zerevor" but confirmed by
+    data/facts/drops.csv to be Illidari Council drops) falls back to the
+    Phase 2 Crystalforge War-Helm (the goggles being barred by
+    notes.engineering_ruling) until the head token drops, then to the
+    Hyjal head token itself; chest (Lightbringer Breastplate, Illidan;
+    Heartshatter Breastplate, Mother Shahraz) falls to the tier5
+    Crystalforge Breastplate in tier_hands_only — see
+    notes.availability_corrections — and to Midnight Chestguard from
+    Archimonde in tier_hands_and_head; legs (Lightbringer Greaves, the Illidari Council tier token) falls
+    to Bow-stitched Leggings from Azgalor, since T6 legs are not obtainable
+    at this anchor at all; shoulder (Lightbringer Shoulderbraces, Mother
+    Shahraz, the T6 tier token) falls back to the unchanged Entry pick,
+    Shoulderpads of the Stranger, since no eligible Phase 3 shoulder outranks
+    it; ring (Stormrage Signet Ring, Illidan) falls to Unstoppable
+    Aggressor's Ring (Gurtogg Bloodboil) and Band of Devastation (trash);
+    trinket (Madness of the Betrayer, Illidari Council) falls back to the
+    unchanged Entry pair, Dragonspine Trophy and Darkmoon Card: Crusade,
+    since no eligible Phase 3 trinket outranks them. After the 9 August
+    rebuild, tier pieces are held only at chest and head (Crystalforge, at
+    Entry and tier_hands_only) and at head (the Lightbringer token, at
+    tier_hands_and_head): this spec's tier itemization is not best-in-slot
+    at shoulder, hands or legs at any anchor, and the hands token is refused
+    outright per notes.token_refusals.
+  uncertain: >-
+    The live Wowhead Phase 2 and Phase 3 best-in-slot guide pages could not
+    be read this session: both are JavaScript-rendered single-page apps that
+    returned only page-header text through the available fetch tool, and the
+    Chrome extension for in-browser navigation failed to connect. Item
+    selection was built instead from this repository's captured EPV workbook
+    (data/research/epv-workbook/Ret.csv, Fazers' Retribution tab), taking the
+    top-EPV item per slot subject to the brief's phase, boss and PvP-armor
+    filters. Every hit value was cross-checked against data/facts/items.csv
+    (the repository's own generated item database) wherever the item is a
+    raid drop or tier piece; where an item is not in that table (crafted,
+    badge, world drop, dungeon, or PvP), the hit value is the workbook's own
+    figure and carries one layer less verification. Boss attribution used
+    the workbook's own "boss" column only as a starting point and was
+    corrected against data/facts/drops.csv, which is how the Illidari
+    Council items were caught (see downgraded_slots) and how the workbook's
+    "Devourer of Souls" label was resolved to the real boss, Reliquary of
+    Souls, a boss not on the brief's exclusion list. The relic slot is not
+    covered by the EPV workbook at all (no Paladin combat libram appears in
+    any spec tab there) and is absent from items.csv (a dungeon drop, not a
+    raid drop). The standard Retribution libram, Libram of Avengement from
+    The Maker in Blood Furnace, is recorded at hit: 0 on the pattern that no
+    libram in the item database carries a printed hit rating (the three
+    raid-drop librams in items.csv all carry zero stat lines, only on-equip
+    effects); its exact Wowhead item id could not be confirmed this session
+    (a live tooltip lookup for the id returned by search returned data for an
+    unrelated placeholder item), so id is left null rather than guessed.
+    Furious Gizmatic Goggles, the ladder's top Phase <=2 head, is an
+    Engineering profession item and is excluded at every anchor by
+    notes.engineering_ruling.

@@ -1,0 +1,164 @@
+# What the council reads out of the token arithmetic.
+#
+# THESE ARE CONCLUSIONS, NOT MEASUREMENTS, which is why they are here and not
+# in data/facts. `data/facts/sim-profiles/token-arithmetic.yaml` holds what is
+# checkable: which piece replaces which, the EP figures, the verbatim set bonus
+# tooltips and the slot collisions. What those add up to for a spec is a
+# reading, and a reading is arguable.
+#
+# TWO KINDS SIT HERE. Where a named source states the conclusion, `basis` names
+# it and the quotation stays in the fact file beside the arithmetic. Where no
+# source states it, the conclusion is ours, `basis` says so, and it carries no
+# more authority than the reasoning printed beside it.
+#
+# Moved out of data/facts on 9 August 2026 after two audits found it breaking
+# the rule in AGENTS.md that a judgment never lives in data/facts. Five of
+# these strings were being printed verbatim on spec cards with no source named.
+
+meta:
+  authored: 2026-08-09
+  supersedes: >-
+    The verdict_shape and ordering fields formerly carried per spec in
+    data/facts/sim-profiles/token-arithmetic.yaml.
+  what_stayed_in_facts: >-
+    Every EP figure, every slot count, every verbatim tooltip and every quoted
+    source. Nothing checkable moved.
+
+verdicts:
+  affliction_warlock:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      token breaks a stronger bonus
+  arcane_mage:
+    basis: a named source states it; the quotation is in the fact file
+    verdict_shape: >-
+      exactly one token is the optimum, and the guide says so
+  arms_warrior:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      one token a downgrade, the other breaks a four-piece
+    ordering: >-
+      Mechanically the head must come first: one Tier 6 piece grants nothing, 
+      so the hands have no value until the head is held and are a downgrade
+      meanwhile.
+  balance_druid:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      both tokens are raw gains, and for the captured set, whose four Tier 5
+      pieces are exactly head, shoulder, chest and hands, either one breaks
+      the Tier 5 four-piece
+    condition: >-
+      The four-piece half is composition-dependent, as the fact file states:
+      it holds only while the player's four Tier 5 slots are head, shoulder,
+      chest and hands. Checked against the capture on 9 August 2026: the entry
+      anchor in data/facts/sim-profiles/hit-capture/balance-druid.yaml holds
+      Nordrassil at exactly those four slots, so the condition holds for the
+      set this project captured. A player wearing a different composition
+      re-derives it before quoting this verdict.
+    corrected: >-
+      Was "head token is a raw downgrade, either token breaks a four-piece",
+      which rested on two uncited figures the workbook contradicts in
+      DIRECTION. The head token gains 16.88 and the hands 30.40. Only the
+      four-piece half of the old verdict survives. Then until 9 August 2026
+      that surviving half read unconditionally, "either one breaks the Tier 5
+      four-piece", while the fact it rests on is composition-dependent; the
+      condition and the capture check above were added the same day.
+  beast_mastery_hunter:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      split, one token much stronger than the other
+  combat_rogue:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      clean gain
+  destruction_warlock:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      the same collision Affliction has, at a higher price
+  elemental_shaman:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      clean gain
+  enhancement_shaman:
+    basis: a named source states it; the quotation is in the fact file
+    verdict_shape: >-
+      the published guide says do not take them
+  feral_bear:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      structurally impossible to hold both bonuses
+  feral_cat:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      both tokens dead to the spec
+  fury_warrior:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      token breaks a stronger bonus
+  holy_paladin:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      works, though what it keeps is weak
+  priest_healer:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      the first token is free, and uniquely so for a
+      structural reason: the set has a slot its bonus does not need
+    corrected: >-
+      Was "the only spec whose FIRST token is free", which the fact file
+      disproves: the Protection Paladin and the Combat Rogue also pay nothing
+      for a first token. What is unique is the REASON, a five-piece set whose
+      bonus needs four. "Only" was a funnel-ordering argument and it did not
+      hold. Corrected 9 August 2026
+  protection_paladin:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      one token free, one a trade
+    ordering: >-
+      route the gloves before the helm; the gloves are a pure gain
+  protection_warrior:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      depends on whether Archimonde is down
+  restoration_druid:
+    basis: a named source states it; the quotation is in the fact file
+    verdict_shape: >-
+      the best line takes one token and refuses the other
+  restoration_shaman:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      the largest token downgrade found in the roster
+  retribution_paladin:
+    basis: >-
+      ours, read off the arithmetic in the fact file, plus a guild lead ruling
+      of 9 August 2026 that this roster's Retribution Paladin is not an
+      engineer
+    verdict_shape: >-
+      hands token a raw stat downgrade, head token a raw stat upgrade, no
+      bonus in play either way
+    per_token:
+      hands: >-
+        the Azgalor gloves token is a raw stat downgrade against the gloves
+        the fact file compares it to, and no bonus is in play
+      head: >-
+        the Archimonde helm token is a raw stat upgrade for this spec. The
+        fact file shows it beating the Tier 5 helm and losing only to an
+        engineering-only head, and the guild lead ruled on 9 August 2026 that
+        this roster's Retribution Paladin is not an engineer, which closes the
+        engineering branch
+    corrected: >-
+      Was "token is a raw stat downgrade, no bonus in play", singular, until
+      9 August 2026. That collapsed two tokens into one verdict and was true
+      only of the hands. The fact file already recorded the head token as an
+      upgrade for a non-engineer and a downgrade only for an engineer; the old
+      verdict suppressed the head figure behind an unstated assumption that
+      the player was an engineer, an assumption the ruling above resolves the
+      other way. Only the no-bonus-in-play half held for both tokens.
+  shadow_priest:
+    basis: a named source states it; the quotation is in the fact file
+    verdict_shape: >-
+      the answer flips with which valuation column applies
+  survival_hunter:
+    basis: ours, read off the arithmetic in the fact file
+    verdict_shape: >-
+      both tokens gain, but they cost a four-piece

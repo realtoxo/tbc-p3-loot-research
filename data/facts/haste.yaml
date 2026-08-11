@@ -1,0 +1,1165 @@
+# Haste, per spec. Hand-authored.
+#
+# HOLDS   Rating conversions, the global cooldown floor, which thresholds are
+#         real in 2.4.3, where haste does nothing, and where the raid's haste
+#         comes from.
+# NOT HERE  Hit is in hit.yaml. Crit is in crit.yaml.
+#
+# BEFORE YOU USE A FIGURE
+#   TBC HAS ALMOST NO HASTE THRESHOLDS. Exactly one is verified: the spell
+#   global cooldown floor at 50 percent spell haste. Periodic effects do not
+#   scale with haste at all in 2.4.3. Every breakpoint table findable by search
+#   is written for Wrath or later and is wrong here.
+#   Spell haste and physical haste are SEPARATE item stats until 3.0.2. A caster
+#   gains nothing from "haste rating" and a melee gains nothing from "spell
+#   haste rating".
+#   Bloodlust and Heroism are PARTY buffs. The tooltip endpoint serves post-TBC
+#   text for Heroism and is wrong about this.
+#
+# SOURCE  The 2.4.3 tooltip endpoint at nether.wowhead.com, contemporaneous 2008
+#   sources for mechanics carrying no tooltip, and the wowsims constants where
+#   one exists. Negative claims in not_in_tbc were checked to confirm absence,
+#   not left unmentioned. What is not settled is in open_questions.
+meta:
+  captured: 2026-08-08
+  patch: 2.4.3
+  edition: TBC Classic Anniversary Edition
+  anchor: phase_3_entry
+  feeds: docs/framework.md, "Cap state and stat valuation"
+  contains_no_judgment: >-
+    This file states what is true. It assigns no priority, no priority and no weight
+    to haste for any spec, and it does not say which spec should receive a
+    haste-bearing item.
+
+assumptions:
+  racials_assumed: false
+  group_buffs_assumed: true
+  consumables_assumed: false
+  note: >-
+    Same buff policy as data/facts/roster.yaml and data/facts/hit.yaml. No racial
+    grants haste in TBC in any case, so the racial ruling has no effect here.
+
+# ---------------------------------------------------------------------------
+# 1. THE MECHANICS
+# ---------------------------------------------------------------------------
+
+# Level 70. The Wrath denominator is 32.79 and every figure below is wrong at
+# level 80.
+conversions:
+  physical_haste_rating_per_percent: 15.77
+  spell_haste_rating_per_percent: 15.77
+  exact_value: 15.769233
+  note: >-
+    The two denominators are identical in 2.4.3. They were not identical at the
+    launch of TBC; patch 2.2.0 rebalanced haste so that melee attacks and spell
+    casts benefit at the same rate per point. The stats stayed separate, only
+    the conversion rate was equalised.
+  general_formula: >-
+    Rating for one percent at level L equals the level 60 base multiplied by
+    82 / (262 - 3L). The level 60 base for every haste rating is 10, so at
+    level 70 the figure is 10 multiplied by 82/52, which is 15.769.
+  sources:
+    - WoWWiki "Combat rating system", archived 29 May 2008, a 2.4-era snapshot.
+      Lists "Haste" and "Spell Haste" as two separate rows, both at 15.76.
+    - >-
+      Elitist Jerks "Global Cooldown", last edited 4 April 2008, states that 50
+      percent spell haste requires 788 spell haste rating. 788 divided by 50 is
+      15.76, which is an independent arrival at the same denominator.
+    - >-
+      wowsims TBC simulator, sim/core/base_stats_auto_gen.go, holds
+      PhysicalHasteRatingPerHastePercent = 15.769233 and
+      SpellHasteRatingPerHastePercent = 15.76923 as two separate constants.
+  do_not_use: >-
+    The current warcraft.wiki.gg "Combat rating system" table gives 10.60 at
+    level 70. Those are modern rescaled figures and its own level 80 row
+    contradicts the real Wrath value of 32.79. That page is unusable for any
+    pre-Cataclysm rating constant. Its patch-note prose is still usable.
+  confidence: high
+
+item_stat_namespace:
+  unified_in_2_4_3: false
+  physical:
+    tooltip_wording: "Equip: Improves haste rating by N."
+    covers: melee and ranged attack speed
+    note: >-
+      The wording carries no qualifier, which reads like the unified stat and is
+      not. In 2.4.3 an unqualified "haste rating" line is the PHYSICAL stat and
+      does nothing for spell casting.
+  spell:
+    tooltip_wording: "Equip: Improves spell haste rating by N."
+    covers: spell cast time and channel time
+  cross_benefit: >-
+    NONE in either direction. Physical haste rating does not shorten a cast, and
+    spell haste rating does not shorten a swing.
+  unified_in: patch 3.0.2
+  evidence:
+    - >-
+      Item tooltips read live from the 2.4.3 data environment. Item 30915 Belt of
+      Seething Fury, a plate belt, reads "Improves haste rating by 38". Item
+      30914 Belt of the Crescent Moon, a leather caster belt, reads "Improves
+      spell haste rating by 36". Item 32234 Fists of Mukoa reads "Improves haste
+      rating by 37". Item 32256 Waistwrap of Infinity reads "Improves spell haste
+      rating by 32". The split follows the rest of the stat line without
+      exception across the ranges sampled.
+    - >-
+      Trinkets carry the same split. Item 28830 Dragonspine Trophy procs "haste
+      rating by 325". Item 32483 The Skull of Gul'dan uses for "spell haste
+      rating by 175".
+    - >-
+      Item 29529 Drums of Battle has to name all three ratings separately,
+      "melee, ranged and spell haste rating on nearby party members by 80",
+      because in 2.4.3 they are three separate ratings.
+    - >-
+      Patch 3.0.2 release notes: "Hit Rating, Critical Strike Rating, and Haste
+      Rating now modify both melee attacks and spells."
+    - >-
+      This repository's own data agrees. data/facts/item-stats.csv carries
+      spell_haste and melee_haste as two columns, populated on disjoint sets of
+      items, extracted from the wowsims TBC item database.
+  confidence: high
+
+stacking:
+  rating_with_rating: additive
+  percent_with_percent: multiplicative
+  rating_with_percent: multiplicative
+  formula: >-
+    Hasted speed equals base speed divided by the product of every percentage
+    haste term and the single rating term. The rating term is
+    1 + (total haste rating / 1577).
+  worked_example: >-
+    A Beast Mastery hunter with Serpent's Swiftness at 20 percent, a quiver at 15
+    percent and 100 haste rating: 3.00 / (1.20 x 1.15 x 1.064) = 2.04 seconds.
+  same_for_melee_and_spell: true
+  linearity: >-
+    Within the rating term the return is linear in damage per second. The 2.4-era
+    source works this out explicitly: the first point of spell haste and the two
+    hundredth point each buy 0.0637 percent damage per second. Haste rating has
+    no diminishing returns in TBC. The diminishing-return brackets are a patch
+    9.0.1 mechanic and the class scalar that gives some melee classes a different
+    rate is a Wrath mechanic. Neither exists in 2.4.3.
+  sources:
+    - WoWWiki "Haste", archived 27 May 2008, a 2.4-era snapshot.
+    - WoWWiki "Spell haste", archived 30 May 2008.
+    - >-
+      wowsims TBC, sim/core/unit.go. Cast speed is
+      CastSpeedMultiplier x (1 + SpellHasteRating/1577), and every percentage
+      buff multiplies into CastSpeedMultiplier.
+  confidence: high
+
+global_cooldown:
+  base_spell: 1.5
+  base_physical: 1.5
+  base_rogue_and_cat_form: 1.0
+  unit: seconds
+  reduced_by: spell haste only
+  floor: 1.0
+  floor_reached_at_percent: 50
+  floor_reached_at_spell_haste_rating: 788
+  formula: GCD = max(1.0, 1.5 / (1 + spell haste))
+  arrived_in_patch: 2.4.0
+  arrived_in_patch_note: >-
+    Before patch 2.4.0 haste did not shorten the global cooldown at all, so spell
+    haste had an effective ceiling for any caster whose casts were already at or
+    below 1.5 seconds. This project targets 2.4.3, so the reduction applies.
+  physical_abilities: >-
+    NOT reduced. Melee and ranged haste do not shorten the global cooldown in
+    2.4.3. A warrior, paladin or hunter keeps a 1.5 second global cooldown at any
+    haste level, and a rogue or a cat-form druid keeps 1.0 seconds. The period
+    source states it twice: haste does not affect the global cooldown of the
+    energy melee classes, and Bloodlust does not lower the global cooldown for
+    classes that do not benefit from spell haste, even though Bloodlust grants
+    melee, ranged and spell haste together. That isolates the mechanic to the
+    spell side.
+  off_global_cooldown_abilities: >-
+    Unaffected. An ability off the global cooldown neither triggers it nor waits
+    for it, so no floor applies to it. Each such ability has its own separate
+    timer. The period source names, for TBC: most clickable trinkets, most pet
+    abilities, on-next-swing abilities such as Heroic Strike, Cleave and Maul,
+    warrior stance change, Shield Block, Taunt, Bloodrage and Spell Reflect,
+    Paladin Judgement and Divine Favor, Hunter Kill Command, Mage Presence of
+    Mind and Arcane Power, Warlock Fel Domination and Demonic Sacrifice, and
+    Shaman and Druid Nature's Swiftness.
+  ordering_quirk: >-
+    The global cooldown is set by the ability used, not by the ability wanted
+    next. Using a 1.5 second global cooldown ability delays a 1.0 second global
+    cooldown ability by the full 1.5 seconds. This matters to a cat druid or a
+    rogue who uses a trinket or a 1.5 second ability inside an energy rotation.
+  sources:
+    - >-
+      Elitist Jerks "Global Cooldown", archived 8 April 2008, last edited 4 April
+      2008, therefore contemporaneous with patch 2.4. States the base figures,
+      the 1.0 second floor, the 50 percent requirement and the 788 rating figure
+      directly.
+    - >-
+      WoWWiki "Spell haste", archived 30 May 2008: "This has changed with patch
+      2.4 -- spell haste also reduces the global cooldown for spells, to a
+      minimum of 1 second."
+    - >-
+      wowsims TBC, sim/core/constants.go: GCDMin = 1 second, GCDDefault = 1500
+      milliseconds. sim/core/unit.go computes the spell global cooldown as
+      max(GCDMin, ApplyCastSpeed(GCDDefault)) and no equivalent exists for
+      physical abilities, which carry fixed durations.
+  do_not_use: >-
+    The 0.75 second floor that appears in most search results is the Legion
+    value. It is wrong here by a quarter of a second.
+  confidence: high
+
+# ---------------------------------------------------------------------------
+# 2. WHAT HASTE DOES NOT AFFECT
+# ---------------------------------------------------------------------------
+#
+# This block is the reason the file exists. A weight table that prices haste off
+# a later expansion's behavior overprices it for six of the nineteen rostered
+# specs, and the overpricing is invisible unless these facts are written down.
+
+does_not_affect:
+
+  periodic_effects:
+    covers: every damage-over-time and heal-over-time effect
+    detail: >-
+      Periodic effects do not tick faster with haste in 2.4.3, gain no ticks from
+      haste, and have no haste breakpoints of any kind. Corruption, Curse of
+      Agony, Unstable Affliction, Immolate, Moonfire, Insect Swarm, Shadow Word:
+      Pain, Devouring Plague, Vampiric Touch, Rejuvenation, Regrowth, Lifebloom
+      and Rip all tick on fixed intervals whatever the caster's haste.
+    changed_in: patch 3.0.2, when periodic effects began to scale with haste
+    evidence:
+      - >-
+        wowsims TBC sets AffectedByCastSpeed false on every periodic effect it
+        models, and sim/priest/shadow_word_pain.go carries the comment "DoT ticks
+        not haste-affected in TBC" against the flag.
+      - >-
+        No 2.4-era source describes haste as affecting periodic effects. The
+        WoWWiki "Haste" page of May 2008 defines haste as attack speed and cast
+        speed only.
+    contradiction_recorded: >-
+      sim/druid/rejuvenation.go in the same simulator sets AffectedByCastSpeed
+      true, which would give Rejuvenation extra ticks from haste. That flag
+      disagrees with the rest of the codebase and with the patch history.
+      AGENTS.md already records that no healer spec in that simulator is
+      functional, so the flag is treated as a defect rather than as evidence.
+      It is recorded here so that nobody finds it later and reads it as a source.
+    confidence: good
+
+  rogue_and_druid_energy:
+    detail: >-
+      Energy regeneration is a fixed 20 energy every 2 seconds and haste does not
+      change it. This holds for the Combat Rogue and for the Feral Cat. Haste
+      that speeds up resource regeneration is a later mechanic.
+    evidence: >-
+      wowsims TBC, sim/core/energy.go, holds EnergyTickDuration at 2 seconds and
+      EnergyPerTick at 20, and its hasteRatingMultiplier is initialised to 1.0
+      and never changed by any TBC content.
+    one_indirect_route: >-
+      Combat Potency, the Combat rogue talent, gives off-hand attacks a 20 percent
+      chance to generate 15 energy at rank 5, verified at the spell tooltip. Haste
+      raises the off-hand swing count, so it raises energy income through that
+      talent even though it does nothing to the regeneration tick. This route
+      belongs to the Combat Rogue alone. No druid equivalent exists.
+    confidence: high
+
+  ability_cooldowns:
+    detail: >-
+      Haste does not shorten any ability cooldown in 2.4.3. Judgement, Crusader
+      Strike, Stormstrike, Shock, Mortal Strike, Bloodthirst, Shield Slam,
+      Mangle, Holy Shield and Consecration all come off cooldown at the same time
+      whatever the wearer's haste. Cooldowns that scale with haste are a Mists of
+      Pandaria and Warlords of Draenor mechanic.
+    consequence: >-
+      A rotation that is limited by cooldowns rather than by the global cooldown
+      or by swing timing gains from haste only through its auto-attacks. This
+      bears on protection_paladin and protection_warrior in particular.
+    confidence: high
+
+  mana_and_rage_pools:
+    detail: >-
+      Haste does not increase mana, mana regeneration or maximum rage. For a
+      caster or a healer, haste raises casts per second and therefore raises mana
+      spent per second by the same proportion. It converts mana into throughput
+      faster; it does not create throughput.
+    confidence: high
+
+  healing_output_per_cast:
+    detail: >-
+      Haste changes no coefficient and no amount healed or dealt per cast. Every
+      gain is in casts per unit time.
+    confidence: high
+
+# ---------------------------------------------------------------------------
+# 3. REAL THRESHOLDS
+# ---------------------------------------------------------------------------
+
+thresholds:
+
+  verified:
+
+    - id: spell_global_cooldown_floor
+      applies_to: every spec that casts spells on the global cooldown
+      threshold_percent: 50
+      threshold_rating: 788
+      rounding_note: >-
+        788 is quoted as the Elitist Jerks source states it, and it is the one
+        rating figure in these files that does not follow the round-up rule in
+        hit.yaml conversions.rounding: 50 percent times 15.769233 is 788.46,
+        which that rule would print as 789, and 788 rating computes to a hair
+        under 50 percent. The point is moot at every anchor, because no
+        rostered spec approaches this figure from gear, per the note below, so
+        the sourced figure is kept rather than adjusted.
+      detail: >-
+        Spell haste shortens the 1.5 second global cooldown down to a floor of
+        1.0 second and no further. At 50 percent spell haste, which is 788 spell
+        haste rating, the floor is reached and additional haste buys nothing on
+        any ability whose cast time is already at or below the floor. Haste
+        continues to shorten longer casts past that point.
+      reachable_from_phase_3_gear: false
+      reachable_from_phase_3_gear_note: >-
+        No rostered spec approaches 788 spell haste rating from gear. The
+        threshold is recorded because it is the only verified numeric haste
+        threshold in the patch, not because a player reaches it.
+      confidence: high
+
+  derived:
+
+    - id: spell_global_cooldown_floor_under_bloodlust
+      threshold_rating: 243
+      derivation: >-
+        Haste stacks multiplicatively, so with Bloodlust or Heroism active at 30
+        percent the gear requirement to reach a total multiplier of 1.5 is
+        1.5/1.3 = 1.1538, which is 242.6 spell haste rating. A caster holding
+        about 243 spell haste rating sits at the global cooldown floor for the 40
+        seconds the buff lasts.
+      status: >-
+        DERIVED from two verified inputs, the multiplicative stacking rule and
+        the 788 figure. It is arithmetic, not a sourced claim, and no period
+        source was found that states it. It applies only to the shaman's own
+        party, because Bloodlust is a party buff.
+      confidence: conservative
+
+  not_verified:
+
+    - id: bloodlust_window_fit
+      question: >-
+        Whether any spec has a haste figure at which one more cast, or one more
+        swing, fits inside the 40 second Bloodlust window.
+      status: >-
+        NOT VERIFIED and not derivable from facts. The answer depends on the
+        rotation, on when the buff is called, and on cast times after talents.
+        Answering it needs a simulation this project has not run. The framework
+        names fit thresholds as a category to capture; for TBC the honest entry
+        is that none has been established.
+
+    - id: hunter_shot_rotation_timing
+      question: >-
+        Whether a Beast Mastery or Survival Hunter has a ranged haste figure at
+        which the auto-shot and Steady Shot weave changes.
+      status: >-
+        NOT VERIFIED. The mechanics underneath it are verified and are recorded
+        under specs.beast_mastery_hunter. The rotation consequence is not.
+        Published TBC hunter rotation figures were not obtained from a
+        patch-stated source within this pass.
+
+    - id: windfury_weapon_internal_cooldown
+      question: >-
+        At what swing speed the 3 second internal cooldown on Windfury Weapon
+        begins to suppress procs for an Enhancement Shaman.
+      status: >-
+        The internal cooldown is VERIFIED. Spell 33727, Windfury Weapon
+        (Passive), reads "Proc chance: 20%, 3s cooldown" in the 2.4.3 data. What
+        is NOT VERIFIED is the swing speed at which it binds, which needs a
+        simulation. No threshold figure is asserted.
+
+  none_found:
+    - >-
+      No talent in any of the nineteen rostered specs keys off a haste value.
+      Talents grant haste; none reads a haste figure and changes behavior at
+      one.
+    - >-
+      No Tier 6 set bonus keys off haste. Verified against data/facts/tokens.yaml,
+      which holds the 2-piece and 4-piece text for all seventeen Tier 6 sets. One
+      bonus mentions haste and it supplies haste rather than reading it: the
+      Rogue 2-piece, "Increases the haste from your Slice and Dice ability by 5%."
+    - >-
+      No cast time floor exists other than the global cooldown floor. A cast
+      shortened below the current global cooldown simply waits for it.
+    - >-
+      No damage-over-time or heal-over-time breakpoint exists. See
+      does_not_affect.periodic_effects.
+
+# ---------------------------------------------------------------------------
+# 4. WHERE HASTE IS WORTH LITTLE
+# ---------------------------------------------------------------------------
+#
+# Stated as mechanics, not as valuations. What follows is what the mechanic does
+# and does not do. What that is worth to a spec is a council judgment.
+
+low_value_cases:
+
+  - case: energy-limited melee
+    specs: [combat_rogue, feral_cat]
+    detail: >-
+      Energy regeneration is fixed and the global cooldown is 1.0 second and is
+      not hasted, so haste changes neither the resource that gates these specs
+      nor the rate at which their abilities can be used. It raises auto-attack
+      damage and, for the Combat Rogue alone, off-hand energy through Combat
+      Potency.
+
+  - case: cooldown-limited tanks
+    specs: [protection_paladin, protection_warrior]
+    detail: >-
+      Threat rotations built on Judgement, Consecration, Holy Shield, Shield Slam
+      and Revenge are limited by cooldowns, and haste shortens no cooldown. The
+      remaining route is the auto-attack, which for a warrior also feeds rage.
+
+  - case: periodic damage casters
+    specs: [affliction_warlock, balance_druid]
+    detail: >-
+      The periodic half of these kits does not scale with haste at all. What does
+      scale is the cast time of hard casts and, for instant applications, the
+      global cooldown itself, which spell haste does shorten. So haste is not
+      inert for them, but its value attaches to a smaller part of the rotation
+      than the same figure would attach to in a later expansion.
+
+  - case: heal-over-time healers
+    specs: [restoration_druid]
+    detail: >-
+      Rejuvenation, Regrowth's periodic component and Lifebloom do not tick
+      faster with haste. Haste shortens the direct casts and the global cooldown
+      only.
+
+  - case: every healer
+    specs: [restoration_shaman, restoration_druid, holy_paladin, priest_healer]
+    detail: >-
+      Haste does not add mana. Casting faster spends mana faster in the same
+      proportion. Where a fight is mana-limited rather than throughput-limited,
+      haste converts a longer sustainable period into a shorter faster one.
+
+# ---------------------------------------------------------------------------
+# 5. SOURCES OF HASTE FOR THIS RAID
+# ---------------------------------------------------------------------------
+
+group_buffs:
+
+  bloodlust_heroism:
+    spell_ids: [2825, 32182]
+    percent: 30
+    covers: melee, ranged and spell haste together
+    duration_seconds: 40
+    cooldown_minutes: 10
+    mana_cost: 750
+    scope: PARTY
+    scope_note: >-
+      PARTY ONLY in 2.4.3. It becomes party and raid in patch 3.0.2. Each shaman
+      covers one party of five, so the raid's coverage is exactly the number of
+      shamans and the parties they sit in. roster.yaml places two Enhancement
+      Shamans in g1 and g2, one Elemental Shaman with the warlocks, and one
+      Restoration Shaman whose party is not recorded. Bloodlust is the Horde
+      spell and Heroism the Alliance spell; they are otherwise identical.
+    tooltip_trap: >-
+      THE WOWHEAD TBC TOOLTIP ENDPOINT IS WRONG ON THIS. Read live from the 2.4.3
+      data environment, spell 2825 Bloodlust returns "for all party members" and
+      spell 32182 Heroism returns "for all party and raid members" from the same
+      database on the same day. The Heroism string is post-TBC text served into a
+      TBC endpoint. Warcraft Wiki's BC Classic version block gives "for all party
+      members" for BOTH spells, and its Wrath Classic block is where "party and
+      raid" first appears. Take the party reading. Anything that treats Heroism
+      as raid-wide is applying a Wrath behavior and hands twenty of twenty-five
+      raiders 30 percent haste they do not have.
+    global_cooldown_effect: >-
+      The 30 percent reduces the spell global cooldown for casters, because it
+      grants spell haste. It does NOT reduce the global cooldown for melee or
+      ranged classes, which is stated directly by the period source.
+    sated_debuff: >-
+      NOT VERIFIED for 2.4.3. The 2.4.3 tooltip for Bloodlust states no Sated or
+      Exhaustion clause, while the Heroism entry in the same database does, and
+      that entry is the one already established as carrying post-TBC text. The
+      10 minute cooldown makes it a once-per-encounter cooldown either way, so
+      nothing in this file depends on the answer.
+    confidence: high
+
+  drums_of_battle:
+    item_id: 29529
+    rating: 80
+    covers: melee, ranged and spell haste rating, all three named on the item
+    duration_seconds: 30
+    cooldown_minutes: 2
+    scope: PARTY
+    scope_note: >-
+      The tooltip reads "on nearby party members". The exact radius is NOT
+      VERIFIED. Warcraft Wiki gives 30 yards for the drums family; the item
+      tooltip states no number.
+    requires: Leatherworking skill 350 to use
+    requires_note: >-
+      Stated on the 2.4.3 item tooltip as "Requires Leatherworking (350)". Only
+      leatherworkers supply this, and each supplies it to one party. How many
+      leatherworkers the roster holds is not recorded in roster.yaml.
+    charges: 50
+    stacks_with_bloodlust: >-
+      Yes. Warcraft Wiki records it explicitly, and it follows from the
+      multiplicative stacking rule in any case: 80 rating is a rating term and
+      Bloodlust is a percentage term.
+    confidence: good
+
+  none_others: >-
+    No other party or raid buff in 2.4.3 grants haste of any kind. The four that
+    a Wrath-trained reader expects to find are enumerated under not_in_tbc below.
+
+talents:
+  # Every entry verified at the 2.4.3 spell tooltip. Values are max rank.
+  # All are self-only unless stated.
+
+  - name: Flurry
+    class: shaman
+    tree: Enhancement
+    ranks: 5
+    percent: 30
+    trigger: next 3 swings after a critical strike
+    spell_id_max_rank: 16284
+    applies_to: [enhancement_shaman]
+    confidence: high
+
+  - name: Flurry
+    class: warrior
+    tree: Fury
+    ranks: 5
+    percent: 25
+    trigger: next 3 swings after a melee critical strike
+    spell_id_max_rank: 12974
+    applies_to: [fury_warrior, arms_warrior]
+    applies_to_arms: >-
+      RULED by the guild lead on 9 August 2026: assume the Arms Warrior takes
+      Flurry.
+    note: >-
+      This was recorded as NOT VERIFIED, deliberately, because it is a
+      per-player fact no document settles and nothing in this file turned on
+      it. The guild lead has now ruled, so it is credited for both warriors.
+      IT IS REACHABLE, which was the part that needed checking. Flurry sits at
+      rowIdx 5 in the Fury tree, the sixth row, needing 25 points, and an Arms
+      build spending 28 in Fury clears that. Precision, one row further at 30
+      points, does NOT clear it, which is why hit.yaml still credits this spec
+      no hit talent. The two talents are one row apart and the difference
+      decides both answers.
+    confidence: high
+
+  - name: Serpent's Swiftness
+    class: hunter
+    tree: Beast Mastery
+    ranks: 5
+    percent: 20
+    covers: the hunter's ranged attack speed and the pet's melee attack speed
+    spell_id_max_rank: 34470
+    applies_to: [beast_mastery_hunter]
+    note: >-
+      A tier 9 Beast Mastery talent. The standard Survival build does not reach
+      it, which is the same split that data/facts/hit.yaml records for Surefooted
+      in the other direction.
+    confidence: high
+
+  - name: Improved Aspect of the Hawk
+    class: hunter
+    tree: Beast Mastery
+    tier: 1
+    ranks: 5
+    percent: 15
+    trigger: 10 percent chance on a normal ranged attack, 12 seconds
+    buff_name: Quick Shots
+    spell_id_max_rank: 19556
+    applies_to: [beast_mastery_hunter, survival_hunter]
+    note: >-
+      Tier 1, so both hunter builds reach it. Do not use the vanilla numbers: the
+      vanilla version was a 1 to 5 percent chance of a 30 percent increase, and
+      patch 2.0.1 inverted it to a 10 percent chance of a 3 to 15 percent
+      increase.
+    confidence: high
+
+  - name: Icy Veins
+    class: mage
+    tree: Frost
+    tier: 3
+    percent: 20
+    duration_seconds: 20
+    cooldown_minutes: 3
+    spell_id: 12472
+    applies_to: []
+    note: >-
+      Frost tree. The rostered mage is Arcane and does not take it. Recorded
+      because THE ARCANE TREE CONTAINS NO HASTE TALENT AT ALL in 2.4.3, which is
+      the fact that matters for the roster.
+    confidence: high
+
+  - name: Slice and Dice
+    class: rogue
+    kind: ability, not a talent
+    percent: 30
+    spell_id_rank_2: 6774
+    duration_seconds: 9 to 21 by combo point
+    applies_to: [combat_rogue]
+    note: >-
+      Rank 2, learned at level 42, is 30 percent. Rank 1 is 20 percent. Warcraft
+      Wiki's version blocks give 20 percent for Classic and for Wrath Classic and
+      carry no BC Classic block, which reads as though TBC were 20 percent. The
+      2.4.3 tooltip for rank 2 says 30 percent. Take 30.
+    confidence: high
+
+  - name: Blade Flurry
+    class: rogue
+    tree: Combat
+    tier: 5
+    percent: 20
+    duration_seconds: 15
+    cooldown_minutes: 2
+    spell_id: 13877
+    applies_to: [combat_rogue]
+    confidence: high
+
+  - name: Rapid Fire
+    class: hunter
+    kind: ability, not a talent
+    percent: 40
+    covers: ranged attack speed
+    duration_seconds: 15
+    cooldown_minutes: 5
+    spell_id: 3045
+    applies_to: [beast_mastery_hunter, survival_hunter]
+    confidence: high
+
+# Trees that contain NO haste talent in 2.4.3. Checked against the tree rather
+# than assumed, in the same way hit.yaml checked the Feral tree.
+no_haste_talent_trees:
+  - tree: Arcane, mage
+    affects: [arcane_mage]
+  - tree: Retribution, Protection and Holy, paladin
+    affects: [retribution_paladin, protection_paladin, holy_paladin]
+    note: The paladin class has no haste talent of any kind in 2.4.3.
+  - tree: Feral, druid
+    affects: [feral_cat, feral_bear]
+  - tree: Balance, druid
+    affects: [balance_druid]
+    note: Celestial Focus grants no haste in TBC. See not_in_tbc.
+  - tree: Restoration, druid and shaman
+    affects: [restoration_druid, restoration_shaman]
+  - tree: Affliction, Demonology and Destruction, warlock
+    affects: [affliction_warlock, destruction_warlock]
+    note: Eradication does not exist in TBC. See not_in_tbc.
+  - tree: Discipline and Holy, priest
+    affects: [priest_healer]
+    note: Enlightenment grants no haste in TBC. See not_in_tbc.
+  - tree: Arms and Protection, warrior
+    affects: [arms_warrior, protection_warrior]
+    note: >-
+      Flurry sits in the Fury tree. See the Flurry entry for the unresolved
+      Arms question.
+
+consumables_and_equipment:
+
+  haste_potion:
+    item_id: 22838
+    rating: 400
+    covers: physical haste. The tooltip reads "haste rating" with no qualifier.
+    duration_seconds: 15
+    cooldown_minutes: 2
+    note: >-
+      The only haste consumable in TBC. It is physical, so it does nothing for a
+      caster. There is NO haste elixir, NO haste flask and NO haste food in
+      2.4.3.
+    assumed: false
+    confidence: good
+
+  gems:
+    exist: true
+    all_are_spell_haste: true
+    physical_haste_gem: NONE EXISTS IN TBC
+    entries: >-
+      Six, all spell haste: Quick Lionseye 35761 at 10, Quick Dawnstone 35315 at
+      8, Reckless Pyrestone 35760 and Reckless Noble Topaz 35316 and Forceful
+      Seaspray Emerald 35759 and Forceful Talasite 35318 at 4 or 5 alongside a
+      second stat.
+    phase_3_available: false
+    phase_3_available_reason: >-
+      All six are patch 2.4.0 content, which is Anniversary Phase 4. This is a
+      schedule inference and not an observation, and it is recorded and reasoned
+      in data/facts/enchants-gems.yaml under gems.haste. That file is the
+      authority; this entry does not restate its open question.
+    asymmetry: >-
+      Note the mirror image of the asymmetry data/facts/hit.yaml records for hit.
+      For hit, a physical consumable exists and no spell consumable does. For
+      haste, spell gems exist and no physical gem does, and the one consumable is
+      physical.
+    confidence: good
+
+  enchants:
+    permanent_haste_enchant: NONE FOUND
+    detail: >-
+      No permanent enchant in TBC grants haste rating. Checked two ways: the
+      142-entry enchant table in the wowsims TBC database holds no haste-bearing
+      enchant, and data/facts/enchants-gems.yaml, which enumerates every
+      permanent enhancement obtainable at Phase 3, contains no haste entry.
+      Enchant Gloves - Major Haste is a WRATH enchant and does not exist in 2.4.3.
+    one_proc_exception:
+      name: Enchant Weapon - Mongoose
+      item_id: 22559
+      proc_spell_id: 28093
+      effect: >-
+        The proc, Lightning Speed, reads "Increases Agility by 120 and slightly
+        increases attack speed for 15 sec". The tooltip states no number. The
+        commonly quoted 2 percent melee haste figure is NOT VERIFIED and is not
+        asserted here.
+    confidence: good
+
+  meta_gems:
+    haste_meta_exists: false
+    note: No meta gem in TBC grants haste. Checked against the gem table.
+    confidence: good
+
+  set_bonuses:
+    tier_6:
+      only_haste_bonus: >-
+        Rogue Tier 6, 2-piece: "Increases the haste from your Slice and Dice
+        ability by 5%." It supplies haste; it does not read a haste figure.
+      every_other_set: No other Tier 6 set bonus mentions haste.
+      source: data/facts/tokens.yaml
+    confidence: high
+
+  ranged_slot:
+    name: quiver or ammo pouch
+    percent: 15
+    covers: ranged attack speed
+    applies_to: [beast_mastery_hunter, survival_hunter]
+    examples: Knothide Ammo Pouch 34099, Ancient Sinew Wrapped Lamina 18714
+    note: >-
+      Every hunter holds one, so it is a baseline multiplier rather than a
+      choice. It is recorded because it enters the multiplicative stack and a
+      hunter haste calculation that omits it is wrong by 15 percent.
+    confidence: high
+
+# Named so that nobody reintroduces them by accident. Each was checked against
+# TBC-era data and found to be a patch 3.0.2 addition.
+not_in_tbc:
+
+  - name: Wrath of Air Totem as a haste totem
+    truth_in_2_4_3: >-
+      It grants up to 101 SPELL DAMAGE AND HEALING to party members within 20
+      yards. Spell 3738, read from the 2.4.3 data. It grants no haste.
+    becomes: a flat 10 percent spell haste totem in patch 3.0.2
+    why_it_matters: >-
+      This is the single most likely wrong entry in any haste model for this
+      raid. A Wrath-trained reader gives every caster party 5 percent spell haste
+      from a totem that in TBC gives spell damage instead.
+    confidence: high
+
+  - name: Windfury Totem as a haste totem
+    truth_in_2_4_3: >-
+      It enchants party members' main-hand weapons for a 20 percent chance of one
+      extra attack with 122 extra attack power. Spell 8512. It is extra attacks,
+      not haste, and it does not enter the multiplicative haste stack.
+    becomes: a flat 20 percent melee haste totem in patch 3.0.2
+    confidence: high
+
+  - name: Improved Moonkin Form
+    truth_in_2_4_3: >-
+      The talent DOES NOT EXIST. It was added in patch 3.0.2. The TBC Moonkin
+      Aura grants 5 percent spell critical chance to the party and no haste.
+    why_it_matters: >-
+      The roster carries a Balance Druid, so a model built on a Wrath talent tree
+      would hand a caster party 3 percent spell haste that has no source in 2.4.3.
+    confidence: high
+
+  - name: Celestial Focus
+    truth_in_2_4_3: >-
+      A Starfire stun chance and Wrath pushback protection. It grants no haste.
+      The 1 to 3 percent spell haste version is patch 3.0.2.
+    confidence: high
+
+  - name: Enlightenment
+    truth_in_2_4_3: >-
+      Increases total Stamina, Intellect and Spirit by 1 to 5 percent. It grants
+      no haste. The spell haste version is patch 3.0.2.
+    confidence: high
+
+  - name: Eradication
+    truth_in_2_4_3: The talent DOES NOT EXIST. It was added in patch 3.0.2.
+    confidence: high
+
+  - name: Swift Retribution and Improved Icy Talons
+    truth_in_2_4_3: >-
+      Neither exists. Both are Wrath raid haste auras and there is no TBC
+      equivalent of either.
+    confidence: good
+
+  - name: haste-scaled periodic ticks, and their breakpoints
+    truth_in_2_4_3: >-
+      Periodic effects ignore haste entirely. See
+      does_not_affect.periodic_effects. Every published breakpoint table is for a
+      later expansion.
+    confidence: good
+
+  - name: haste-scaled energy, focus and rune regeneration
+    truth_in_2_4_3: Energy regeneration is fixed. See does_not_affect.rogue_and_druid_energy.
+    confidence: high
+
+  - name: a 0.75 second global cooldown floor
+    truth_in_2_4_3: The floor is 1.0 second. The 0.75 figure is Legion.
+    confidence: high
+
+# ---------------------------------------------------------------------------
+# 6. PER SPEC
+# ---------------------------------------------------------------------------
+#
+# The nineteen rostered specs of data/facts/roster.yaml, in its order. Every
+# entry answers three questions and no others: which haste stat the spec reads,
+# whether it has a verified threshold, and what haste does and does not reach in
+# its kit. No entry states what haste is worth.
+
+specs:
+
+  # ---- Melee damage -------------------------------------------------------
+
+  - id: combat_rogue
+    role: melee_dps
+    haste_stat: physical
+    verified_threshold: none
+    global_cooldown: 1.0 second, not reduced by haste
+    haste_reaches: >-
+      Auto-attacks on both weapons, and through them Combat Potency energy,
+      Slice and Dice uptime economics and any per-hit proc.
+    haste_does_not_reach: >-
+      The energy tick, the global cooldown, and every ability cooldown.
+    own_haste_sources: Slice and Dice 30 percent, Blade Flurry 20 percent
+    confidence: high
+
+  - id: arms_warrior
+    role: melee_dps
+    haste_stat: physical
+    verified_threshold: none
+    global_cooldown: 1.5 seconds, not reduced by haste
+    haste_reaches: >-
+      Auto-attacks, and through them rage income, since rage from a white swing
+      is generated per hit.
+    haste_does_not_reach: Mortal Strike and every other ability cooldown.
+    own_haste_sources: >-
+      Flurry at 25 percent if the build reaches it. NOT VERIFIED whether a
+      published Arms build spends the Fury points.
+    confidence: good
+
+  - id: fury_warrior
+    role: melee_dps
+    haste_stat: physical
+    verified_threshold: none
+    global_cooldown: 1.5 seconds, not reduced by haste
+    haste_reaches: Auto-attacks on both weapons, rage income, per-hit procs.
+    haste_does_not_reach: Bloodthirst and Whirlwind cooldowns.
+    own_haste_sources: Flurry, 25 percent, Fury tree, 5 ranks
+    confidence: high
+
+  - id: feral_cat
+    role: melee_dps
+    haste_stat: physical
+    verified_threshold: none
+    global_cooldown: 1.0 second in cat form, not reduced by haste
+    haste_reaches: Auto-attacks only.
+    haste_does_not_reach: >-
+      The energy tick, the global cooldown, Rip and Rake periodic damage, and
+      Mangle's cooldown. This spec has the narrowest haste surface of any melee
+      spec in the roster and no talent that supplies haste.
+    own_haste_sources: none
+    confidence: high
+
+  - id: retribution_paladin
+    role: melee_dps
+    haste_stat: physical
+    verified_threshold: none
+    global_cooldown: 1.5 seconds, not reduced by haste
+    haste_reaches: >-
+      Auto-attacks, and through them the seal proc rate, since Seal of Blood and
+      Seal of Command trigger on swings.
+    haste_does_not_reach: Judgement and Crusader Strike cooldowns.
+    own_haste_sources: none. The paladin class has no haste talent in TBC.
+    confidence: good
+
+  - id: enhancement_shaman
+    role: melee_dps
+    haste_stat: physical
+    verified_threshold: none
+    global_cooldown: 1.5 seconds, not reduced by haste
+    haste_reaches: >-
+      Auto-attacks on both weapons, and through them Windfury Weapon procs and
+      Flurry uptime.
+    haste_does_not_reach: Stormstrike and Shock cooldowns.
+    own_haste_sources: Flurry, 30 percent, Enhancement tree, 5 ranks
+    interaction: >-
+      Windfury Weapon carries a 3 second internal cooldown at a 20 percent proc
+      chance, verified at spell 33727. Faster swings therefore do not convert
+      into Windfury procs at a constant rate. The swing speed at which the
+      internal cooldown begins to bind is NOT VERIFIED and no figure is asserted.
+      Two are rostered and both take the same call.
+    confidence: good
+
+  # ---- Ranged damage ------------------------------------------------------
+
+  - id: beast_mastery_hunter
+    role: ranged_dps
+    haste_stat: physical, the ranged half
+    verified_threshold: none
+    global_cooldown: 1.5 seconds, not reduced by haste
+    haste_reaches: Auto-shot frequency and Steady Shot cast time.
+    haste_does_not_reach: >-
+      The global cooldown, and the cooldowns of Kill Command, Multi-Shot and
+      Arcane Shot.
+    steady_shot_note: >-
+      Steady Shot has a 1.5 second cast time in 2.4.3, equal to the hunter's
+      unhastened global cooldown. Ranged haste shortens the cast but not the
+      global cooldown, so the shortened cast does not by itself allow the next
+      ability sooner. What that does to the auto-shot weave is NOT VERIFIED. Note
+      that the Wowhead 2.4.3 tooltip for spell 34120 displays "1 sec cast", which
+      disagrees with the 1500 millisecond figure the wowsims TBC simulator uses.
+      The 1.5 second figure is taken.
+    own_haste_sources: >-
+      Serpent's Swiftness 20 percent, Improved Aspect of the Hawk 15 percent on a
+      10 percent proc, Rapid Fire 40 percent, quiver or ammo pouch 15 percent
+    confidence: good
+
+  - id: survival_hunter
+    role: ranged_dps
+    haste_stat: physical, the ranged half
+    verified_threshold: none
+    global_cooldown: 1.5 seconds, not reduced by haste
+    haste_reaches: Auto-shot frequency and Steady Shot cast time.
+    haste_does_not_reach: The global cooldown and every shot cooldown.
+    own_haste_sources: >-
+      Improved Aspect of the Hawk 15 percent on a 10 percent proc, Rapid Fire 40
+      percent, quiver or ammo pouch 15 percent. NOT Serpent's Swiftness, which is
+      a tier 9 Beast Mastery talent this build does not reach. This is the same
+      split hit.yaml records for Surefooted, running the other way.
+    confidence: good
+
+  # ---- Tanks --------------------------------------------------------------
+
+  - id: feral_bear
+    role: tank
+    tank_slot: main_tank_and_third_tank
+    haste_stat: physical
+    verified_threshold: none
+    global_cooldown: 1.5 seconds in bear form, not reduced by haste
+    haste_reaches: Auto-attacks, and through them rage income.
+    haste_does_not_reach: Mangle, Swipe and Maul, and the Lacerate periodic damage.
+    own_haste_sources: none
+    confidence: good
+
+  - id: protection_paladin
+    role: tank
+    tank_slot: off_tank
+    haste_stat: physical for swings, spell for casts
+    verified_threshold: none
+    global_cooldown: 1.5 seconds. The spell half is reduced by spell haste.
+    haste_reaches: >-
+      Auto-attacks and the seal proc rate, and the cast time of Holy Light and
+      Flash of Light.
+    haste_does_not_reach: >-
+      Consecration, Holy Shield, Avenger's Shield and Judgement, which are all
+      cooldown-limited, and the Consecration periodic damage. This is the most
+      cooldown-bound rotation in the roster.
+    own_haste_sources: none
+    note: >-
+      This spec reads BOTH haste stats, in the same way hit.yaml records it
+      reading both hit stats. A model that gives it one is incomplete, and a
+      model that lets one substitute for the other is wrong.
+    confidence: good
+
+  - id: protection_warrior
+    role: tank
+    tank_slot: fourth_tank
+    haste_stat: physical
+    verified_threshold: none
+    global_cooldown: 1.5 seconds, not reduced by haste
+    haste_reaches: Auto-attacks, and through them rage income.
+    haste_does_not_reach: >-
+      Shield Slam, Revenge and Devastate cooldowns. Heroic Strike and Cleave are
+      on-next-swing abilities and are off the global cooldown, so they queue onto
+      a swing rather than occupying a global cooldown.
+    own_haste_sources: none in a Protection build
+    confidence: good
+
+  # ---- Casters ------------------------------------------------------------
+
+  - id: affliction_warlock
+    role: caster_dps
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    global_cooldown: 1.5 seconds, reduced by spell haste to a 1.0 second floor
+    haste_reaches: >-
+      Shadow Bolt and Drain Life cast and channel time, and the global cooldown
+      that the instant applications of Corruption, Curse of Agony and Unstable
+      Affliction sit on.
+    haste_does_not_reach: >-
+      The tick rate of any of those periodic effects. The damage-over-time half
+      of this kit is entirely insensitive to haste in 2.4.3.
+    own_haste_sources: none. Eradication does not exist in TBC.
+    confidence: good
+
+  - id: destruction_warlock
+    role: caster_dps
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    global_cooldown: 1.5 seconds, reduced by spell haste to a 1.0 second floor
+    haste_reaches: Shadow Bolt and Incinerate cast time.
+    haste_does_not_reach: The Immolate periodic damage.
+    own_haste_sources: none
+    note: Two are rostered and both take the same call.
+    confidence: good
+
+  - id: arcane_mage
+    role: caster_dps
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    global_cooldown: 1.5 seconds, reduced by spell haste to a 1.0 second floor
+    haste_reaches: >-
+      Arcane Blast cast time, and Arcane Missiles channel time. Channelled spells
+      do scale with haste in TBC, shortening the channel without changing total
+      damage, which is a throughput gain.
+    haste_does_not_reach: nothing material in this kit
+    own_haste_sources: >-
+      NONE. The Arcane tree contains no haste talent in 2.4.3. Icy Veins is a
+      Frost talent this build does not take. Up to three of these are rostered.
+    confidence: good
+
+  - id: balance_druid
+    role: caster_dps
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    global_cooldown: 1.5 seconds, reduced by spell haste to a 1.0 second floor
+    haste_reaches: Starfire and Wrath cast time, and Hurricane channel time.
+    haste_does_not_reach: Moonfire and Insect Swarm periodic damage.
+    own_haste_sources: >-
+      NONE. Celestial Focus grants no haste in TBC and Improved Moonkin Form does
+      not exist. Nature's Grace shortens the next cast by 0.5 seconds after a
+      critical strike, which is a flat reduction and not haste, so it does not
+      enter the multiplicative stack.
+    confidence: good
+
+  # ---- Healers ------------------------------------------------------------
+  #
+  # Haste applies to all four. It is not a cap question for any of them, and no
+  # healer has a verified threshold. What separates them is how much of the kit
+  # is periodic, because the periodic half does not scale.
+
+  - id: restoration_shaman
+    role: healer
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    haste_reaches: Chain Heal, Healing Wave and Lesser Healing Wave cast time.
+    haste_does_not_reach: >-
+      Earth Shield charges, which are consumed by incoming damage, and totem
+      pulse intervals.
+    own_haste_sources: >-
+      Bloodlust or Heroism, which this shaman supplies to its own party
+    confidence: good
+
+  - id: restoration_druid
+    role: healer
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    haste_reaches: Healing Touch and Regrowth's direct component, and the global cooldown.
+    haste_does_not_reach: >-
+      Rejuvenation, Lifebloom and the periodic component of Regrowth. The
+      heal-over-time half of this kit does not tick faster at any haste level in
+      2.4.3.
+    own_haste_sources: none
+    confidence: good
+
+  - id: holy_paladin
+    role: healer
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    haste_reaches: Holy Light and Flash of Light cast time.
+    haste_does_not_reach: nothing periodic. This kit carries no heal over time.
+    own_haste_sources: none. The paladin class has no haste talent in TBC.
+    confidence: good
+
+  - id: priest_healer
+    role: healer
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    haste_reaches: Greater Heal, Flash Heal, Binding Heal and Prayer of Healing cast time.
+    haste_does_not_reach: Renew, which does not tick faster with haste.
+    own_haste_sources: >-
+      none. Enlightenment grants no haste in TBC. Holy and Discipline share this
+      entry, per roster.yaml.
+    confidence: good
+
+  - id: shadow_priest
+    role: caster_dps
+    haste_stat: spell
+    global_cooldown: 1.5 seconds, reduced by spell haste to a 1.0 second floor
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    haste_reaches: >-
+      Mind Blast cast time and Mind Flay channel time. Mind Flay is a channel and
+      channels do scale with haste in TBC.
+    haste_does_not_reach: >-
+      Shadow Word: Pain, Vampiric Touch and Devouring Plague tick rates.
+    own_haste_sources: none
+    confidence: good
+
+# ---------------------------------------------------------------------------
+
+  - id: elemental_shaman
+    role: caster_dps
+    haste_stat: spell
+    global_cooldown: 1.5 seconds, reduced by spell haste to a 1.0 second floor
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    haste_reaches: Lightning Bolt and Chain Lightning cast time.
+    haste_does_not_reach: >-
+      Flame Shock periodic damage, and the Shock cooldown. Elemental Mastery
+      grants a guaranteed critical strike and a free cast; it grants no haste.
+    own_haste_sources: Bloodlust or Heroism, supplied to its own party
+    confidence: good
+
+unrostered:
+
+  - id: fire_mage
+    role: caster_dps
+    haste_stat: spell
+    verified_threshold: spell_global_cooldown_floor, at 788 spell haste rating
+    haste_reaches: Fireball and Scorch cast time.
+    haste_does_not_reach: Living Bomb and the Fireball and Pyroblast periodic damage.
+    own_haste_sources: >-
+      Icy Veins at 20 percent is a Frost talent and a Fire build does not take it
+    confidence: good
+
+open_questions:
+
+  bloodlust_party_assignment_RESOLVED: >-
+    RESOLVED 8 August 2026. Every party contains a shaman, ruled by the guild
+    lead and recorded in roster.yaml. Heroism is a party buff, and we are
+    Alliance, so with a shaman in each party the 30 percent haste burst reaches
+    the whole raid. Every party has its buffs.
+
+  drums_of_battle_coverage_RESOLVED: >-
+    RESOLVED 8 August 2026. Every party contains a leatherworker, ruled by the
+    guild lead and recorded in roster.yaml. Drums of Battle therefore apply
+    raid-wide in effect, 80 haste rating per party, rather than to one party.
+
+  bloodlust_window_fit:
+    blocks: Nothing today
+    detail: >-
+      The framework names fit thresholds as a category to capture per spec. For
+      2.4.3 none has been established, because establishing one needs a
+      simulation of a specific rotation inside the 40 second window. This is
+      recorded as an absence rather than left silent, so that a later reader does
+      not conclude the category was overlooked.
+
+  mongoose_haste_value:
+    blocks: Nothing today. It sharpens one number.
+    detail: >-
+      Enchant Weapon - Mongoose procs "slightly increases attack speed" with no
+      figure in the tooltip. The commonly quoted value is 2 percent melee haste
+      and no patch-stated source for it was found in this pass. It is a proc on a
+      weapon enchant, so it enters the multiplicative stack when active.
+
+  rejuvenation_flag_contradiction:
+    blocks: Nothing today
+    detail: >-
+      The wowsims TBC simulator marks Rejuvenation as affected by cast speed,
+      which contradicts both its own Shadow Word: Pain comment and the patch
+      history. AGENTS.md already records that no healer spec in that simulator is
+      functional. If that simulator is ever used to price healer haste, this flag
+      must be checked first, because it would silently give a Restoration Druid
+      haste scaling that 2.4.3 does not have.

@@ -1,0 +1,31 @@
+# Generated HTML output. Disposable; rebuild with `just build`.
+/site/
+
+# Derived analysis. Regenerable, and it embeds modelling choices that are not
+# yet decided, so it is not committed while the project is gathering facts.
+/data/derived/
+
+# Never commit a vendored simulator checkout. Bootstrap it on demand.
+/vendor/
+**/wowsims-*/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node, only if a helper ever needs it
+node_modules/
+
+# OS and editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Scratch work that is not evidence
+/scratch/

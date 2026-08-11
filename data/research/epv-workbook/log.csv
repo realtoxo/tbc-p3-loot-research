@@ -1,0 +1,42 @@
+Latest Changes:
+2021
+,3/10/21,initial release
+,3/17,update mage/warlock epv
+,,add mage ranged section
+,,updated rogue values
+,,updated enh values
+,,updated ret values
+,,updated ele values
+,,updated resto sham values
+,3/18,updated bear values
+,,added pawn addon tab
+,,cleaned up epv tab
+,,item phase adjustment
+,,reworked hunter formula for ranged weapons
+,3/22,added all green items
+,3/24,updated fury t4/5 values (easy values)
+,3/25,switched to wowhead links
+,3/30,added Torgos! quest rewards
+,4/4,updated ret values
+,4/5,updated shroud
+,,changed destro ranged formula
+,4/6,changed shadow ranged formula
+,,changed tsunami tal ap formula
+,,changed dragonspine haste formula
+,4/7,added value to braided eternium chain
+,4/15,added wrath items
+,4/25,added p5 sheet
+,4/27,added analytics for click count
+,5/2,major tank item updates
+,5/6,enh weapon filter
+,5/7,updated cat epv
+,5/9,fixed spell haste display on healers (thanks stanislaw!)
+,5/19,updated BM epv to match hunter discord
+,6/7,added spellstone/firestone
+,,updated prot paladin values
+,6/14,updated remaining gem values
+,,updated resto sham values
+,6/16,added hit cap column to some classes (thank you Zed for the suggestion!)
+,6/28,updated tree values
+,6/30,updated enh values
+,7/2,updated holy priest values

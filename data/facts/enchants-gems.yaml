@@ -1,0 +1,2501 @@
+# Enchants, gems and cap-relevant consumables. Hand-authored.
+#
+# HOLDS   Every permanent item enhancement and every gem obtainable at Phase 3,
+#         plus the consumables that carry a cap-relevant stat.
+# NOT HERE  No ranking and no recommendation. Which enchant a spec takes is a
+#         council judgment.
+#
+# BEFORE YOU USE A FIGURE
+#   Several enchants that guides list do not exist in 2.4.3. Enchant Gloves -
+#   Precision is a Wrath enchant. Glyph of the Wild is retired in this patch.
+#   There is no belt buckle and no way to add a socket to any item.
+#   Meta activation requirements are the TBC ones. Relentless Earthstorm Diamond
+#   needs 2 red, 2 yellow and 2 blue, not the 3 red that Wrath sources give.
+#   Consumables are NOT assumed in hit.yaml. They are recorded here for the
+#   asymmetry: TBC has a 20 hit food and no spell hit consumable at all.
+#
+# SOURCE  Every entry confirmed by item id at the 2.4.3 tooltip endpoint at
+#   nether.wowhead.com, never by name and never from a guide. Negative claims
+#   were built by enumerating a category item by item rather than by failing to
+#   find something. What is not settled is in open_questions.
+meta:
+  captured: 2026-08-08
+  patch: 2.4.3
+  edition: TBC Classic Anniversary Edition
+  phase: 3
+  phase_3_opens: 2026-08-27
+  arena_season_3_opens: 2026-09-01
+  feeds: data/facts/hit.yaml, discretionary_hit_budget
+  excludes: >-
+    Socket bonuses, which are captured per item in data/facts/items.csv and
+    are not duplicated here. Consumables that carry no cap-relevant stat. The
+    low-level Classic-era enchant tiers that a level 70 character supersedes,
+    which are recorded as a count rather than enumerated.
+
+sources:
+  primary:
+    - name: Wowhead TBC Classic tooltip endpoint
+      form: https://nether.wowhead.com/tbc/tooltip/item/<ID>
+      note: >-
+        Server-rendered against the TBC Classic data environment, so it is
+        era-correct by construction. This is the source of every stat line and
+        every activation requirement below. The equivalent spell form and the
+        dataEnv=5 form return the same data.
+    - name: Wowhead TBC XML endpoint
+      form: https://www.wowhead.com/tbc/item=<ID>&xml
+      note: >-
+        The only form that returns vendor, reputation, cost and drop data. It
+        rate-limits hard, returning HTTP 403 under almost any concurrency, and it
+        serves cached URLs in a way that makes recovery look like success.
+    - name: WoWSims TBC item database
+      form: assets/database/db.json from github.com/wowsims/tbc-new
+      note: >-
+        Used as a lead list and as a second opinion, never as proof. It carried
+        seven errors that this capture found and corrected. They are listed under
+        wowsims_db_errors.
+  rejected:
+    - name: warcraft.wiki.gg rendered article pages
+      reason: >-
+        Renders post-TBC values for many items. Confirmed wrong-era renders were
+        found on Spicy Hot Talbuk, Elixir of Healing Power, Adamantite Sharpening
+        Stone, the whole Scroll of X V family, Death's Embrace, Falcon's Call,
+        Presence of Might, Enchant Ring - Healing Power, Enchant Boots -
+        Vitality, and Relentless Earthstorm Diamond. The wiki is used below for
+        vendor, reputation, cost and patch-history data only, never for a stat.
+    - name: Percentage wording on dodge, hit or crit
+      reason: >-
+        A reliable tell that a page is pre-3.0 or post-3.0 rather than 2.4.3. TBC
+        expresses these as rating. A source reading "1% chance to hit" is not
+        describing the 2.4.3 item.
+
+# Wowhead blocks plain HTTP clients via CloudFront, per PROVENANCE.md. Every fetch
+# below went through a browser-equivalent client. No curl was used.
+method:
+  id_confirmation: >-
+    Every id below was resolved against a TBC-era tooltip endpoint. Ids that
+    return HTTP 404 on the TBC subsite are recorded as absent from 2.4.3 rather
+    than omitted, because their absence is the fact.
+  negative_claims: >-
+    Claims of the form "no enchant supplies X" were built by enumerating the slot
+    and reading each entry, not by a filtered query, because Wowhead and Aowow
+    filtered list pages render client-side and return nothing server-side. The
+    individual entries are verified. The claim that an enumeration is complete is
+    weaker than the entries within it and is marked accordingly.
+  corroboration: >-
+    Four independent research passes were run and their overlaps compared. The
+    gem hit enumeration was built twice, once by index scan of the 214-entry
+    WoWSims gem table and once by contiguous tooltip scan of the cut blocks. The
+    two agree.
+
+# ---------------------------------------------------------------------------
+# ENCHANTS
+# ---------------------------------------------------------------------------
+#
+# Item ids given for an enchant are the FORMULA, GLYPH, INSCRIPTION, PATTERN or
+# CRAFTED ITEM id, not an enchantment id. Where an enchant has no scroll item in
+# 2.4.3, the recipe spell id is given instead and item_id is null.
+#
+# A CORRECTION THAT APPLIES TO THE WHOLE SECTION. The WoWSims db spellId column
+# is not the recipe spell. In nearly every case it is the applied aura or proc
+# row, which is a separate database record. Recipe spell ids below were
+# re-resolved. Cite item ids in preference to spell ids.
+
+enchants:
+
+  # ---- Head ---------------------------------------------------------------
+  #
+  # Every head enchant in TBC is a reputation purchase. There is no crafted head
+  # enchant and no drop. This is the slot the brief called out, and the standings
+  # are the gate.
+  head:
+
+    - name: Glyph of Ferocity
+      item_id: 29192
+      spell_id: 35452
+      effect: "Permanently adds 34 attack power and 16 hit rating to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      supplies: [attack_power, melee_hit]
+      hit_rating: 16
+      source: reputation_vendor
+      faction: Cenarion Expedition
+      standing: Revered
+      vendor: Fedryen Swiftspear (npc 17904), Cenarion Refuge, Zangarmarsh
+      cost: 100 gold before reputation discount
+      binds: on_pickup
+      requires_level: 70
+      profession_to_apply: none
+      phase_3_available: true
+      verified: true
+      verified_against: TBC tooltip endpoint, item 29192; TBC XML, vendor and npc id
+      note: >-
+        This is the physical hit enchant hit.yaml prices at 16 rating. Confirmed
+        independently twice during this capture.
+
+    - name: Glyph of Power
+      item_id: 29191
+      spell_id: 35447
+      effect: "Permanently adds up to 22 spell damage and healing and 14 spell hit rating to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      supplies: [spell_power, spell_hit]
+      spell_hit_rating: 14
+      source: reputation_vendor
+      faction: The Sha'tar
+      standing: Revered
+      vendor: Almaador (npc 21432), Shattrath City
+      cost: 100 gold before reputation discount
+      binds: on_pickup
+      requires_level: 70
+      profession_to_apply: none
+      phase_3_available: true
+      verified: true
+      verified_against: TBC tooltip endpoint, item 29191; TBC XML, vendor and npc id
+      note: >-
+        This is the spell hit enchant hit.yaml prices at 14 rating. Confirmed
+        independently twice during this capture.
+
+    - name: Glyph of Renewal
+      item_id: 29189
+      spell_id: 35445
+      effect: "Permanently adds up to 35 healing, +12 Spell Damage, and 7 mana per 5 sec. to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      supplies: [healing, spell_power, mp5]
+      source: reputation_vendor
+      faction: Honor Hold
+      standing: Revered
+      vendor: Logistics Officer Ulrike (npc 17657), Honor Hold, Hellfire Peninsula
+      cost: 100 gold before reputation discount
+      phase_3_available: true
+      verified: true
+      alliance_horde_pair: 29190
+      note: >-
+        Item 29190 is the Thrallmar copy, gated on Thrallmar Revered, vendor
+        Quartermaster Urgronn (npc 17585). The effect text is identical. Two
+        distinct item ids exist because the faction gate differs.
+
+    - name: Glyph of the Defender
+      item_id: 29186
+      spell_id: 35443
+      effect: "Permanently adds 16 defense rating and 17 dodge rating to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      supplies: [defense, dodge]
+      source: reputation_vendor
+      faction: Keepers of Time
+      standing: Revered
+      vendor: Alurmi (npc 21643), Caverns of Time, Tanaris
+      cost: 100 gold before reputation discount
+      phase_3_available: true
+      verified: true
+      note: >-
+        The wiki serves this under its retail name, Arcanum of the Defender, with
+        parry substituted for defense. The 2.4.3 stat is defense rating.
+
+    - name: Glyph of the Outcast
+      item_id: 30846
+      spell_id: 37891
+      effect: "Permanently adds 17 Strength and 16 Intellect to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      supplies: [strength, intellect]
+      source: reputation_vendor
+      faction: Lower City
+      standing: Revered
+      vendor: Nakodu (npc 21655), Lower City, Shattrath City
+      cost: 100 gold before reputation discount
+      phase_3_available: true
+      verified: true
+
+    - name: Glyph of Chromatic Warding
+      item_id: 30845
+      spell_id: 37889
+      effect: "Permanently adds 8 resistance to all 5 schools of magic to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      supplies: [all_resistances]
+      source: reputation_vendor
+      faction: Lower City
+      standing: Honored
+      vendor: Nakodu (npc 21655), Lower City, Shattrath City
+      phase_3_available: true
+      verified: true
+      vendor_verified: false
+      note: >-
+        Faction and standing are read from the tooltip. The vendor block did not
+        return on repeated fetches. Nakodu sells the other two Lower City glyphs,
+        so the vendor attribution rests on that pattern rather than on a record.
+      note_2: >-
+        The WoWSims db spell id for this entry, 37890, is one off. The correct id
+        is 37889.
+
+    - name: Glyph of the Gladiator
+      item_id: 29193
+      spell_id: 35453
+      effect: "Permanently adds 18 Stamina and 20 resilience rating to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      supplies: [stamina, resilience]
+      source: reputation_vendor
+      faction: Shattered Sun Offensive
+      standing: Revered
+      vendor: Eldara Dawnrunner (npc 25032), Isle of Quel'Danas
+      phase_3_available: false
+      phase_3_available_reason: >-
+        The Shattered Sun Offensive arrives with the Isle of Quel'Danas, which is
+        patch 2.4.0 content and is Anniversary Phase 4. It is not reachable at
+        Phase 3 entry. This is a schedule inference from the published phase
+        plan, not an observation on a live server.
+      verified: true
+      verified_availability: false
+
+    - name: Warding glyphs, single school
+      item_ids: [29194, 29195, 29196, 29197, 29198, 29199]
+      effect: "Permanently adds 20 <school> resistance to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      supplies: [single_school_resistance]
+      resistance_value: 20
+      source: reputation_vendor
+      standing: Honored
+      phase_3_available: true
+      verified: true
+      breakdown:
+        - {item_id: 29194, name: Glyph of Nature Warding, faction: Cenarion Expedition, vendor: Fedryen Swiftspear}
+        - {item_id: 29195, name: Glyph of Arcane Warding, faction: The Sha'tar, vendor: Almaador}
+        - {item_id: 29196, name: Glyph of Fire Warding, faction: Honor Hold, vendor: Logistics Officer Ulrike}
+        - {item_id: 29197, name: Glyph of Fire Warding, faction: Thrallmar, vendor: Quartermaster Urgronn}
+        - {item_id: 29198, name: Glyph of Frost Warding, faction: Keepers of Time, vendor: Alurmi}
+        - {item_id: 29199, name: Glyph of Shadow Warding, faction: Lower City, vendor: Nakodu}
+      note: >-
+        The WoWSims db carries blank stat vectors for all six. Each grants 20
+        resistance of its school. Only the Chromatic glyph, which grants 8 of all
+        five, is recorded correctly there.
+
+    - name: Glyph of the Wild
+      item_id: 29188
+      status: NOT_OBTAINABLE
+      actual_item_name_in_2_4_3: zzoldGlyph of the Wild
+      effect: "Permanently adds 18 Stamina, 12 dodge rating, and 12 resilience rating to a head slot item. Does not stack with other enchantments for the selected equipment slot."
+      requires_level: 69
+      source: none
+      phase_3_available: false
+      verified: true
+      note: >-
+        The zzold prefix is Blizzard's retired-item marker. Wowhead TBC returns no
+        vendor and no source of any kind for this id. The Cenarion Expedition
+        Revered head slot is occupied by Glyph of Ferocity, 29192.
+        Two further corrections for anyone carrying this from the WoWSims db: the
+        stat is DODGE rating, not defense rating, and the required level is 69,
+        not 70. Recorded here rather than dropped, because a reader who finds it
+        in a guide needs to know why it does not exist in game.
+
+    - name: Heavy Knothide Armor Kit
+      item_id: 34330
+      use_spell_id: 44968
+      craft_spell_id: 44970
+      effect: "Permanently increase the Stamina of an item worn on the head, chest, shoulders, legs, hands or feet by 10.  Only usable on items level 60 and above."
+      supplies: [stamina]
+      slots: [head, chest, shoulder, legs, hands, feet]
+      source: leatherworking
+      profession_to_apply: none
+      binds: no
+      stacks_to: 10
+      requires_level: 60
+      phase_3_available: true
+      verified: true
+      leatherworking_skill: unverified
+      note: >-
+        The only armor kit that covers head and shoulders. Leatherworking is
+        required to craft it, not to apply it. Reagents are Heavy Knothide
+        Leather times three.
+
+  # ---- Head or legs -------------------------------------------------------
+  #
+  # THIS BLOCK CONTAINS THE FINDING THAT CONTRADICTS hit.yaml.no_route.
+  # Nine Zul'Gurub class enchants and three resistance Guards apply to a leg OR a
+  # head slot item. Two of the nine supply hit. hit.yaml states that no leg
+  # enchant grants hit. That statement is correct for the general leg armors and
+  # spellthreads and is wrong for these two class-locked entries.
+  head_or_legs:
+
+    zulgurub_class_enchants:
+      source: >-
+        Zanza the Restless, Yojamba Isle, Stranglethorn Vale, in exchange for one
+        Primal Hakkari Idol plus one class-specific Punctured Voodoo Doll.
+      requires_level: 60
+      class_locked: true
+      phase_3_available: true
+      removed_in: patch 4.0.3a, so all nine are live in 2.4.3
+      verified: true
+      verified_against: >-
+        TBC tooltip endpoint for all nine ids. Item 19791 returns HTTP 404, so the
+        family is exactly these nine and no tenth exists.
+      repeatable: unverified
+      entries:
+        - name: Presence of Might
+          item_id: 19782
+          spell_id: 24149
+          class: Warrior
+          effect: "Permanently adds 10 Stamina, 10 defense rating, and 15 shield block value to a leg or head slot item."
+        - name: Syncretist's Sigil
+          item_id: 19783
+          spell_id: 24160
+          class: Paladin
+          effect: "Permanently adds 10 Stamina, 10 defense rating, and increases healing by up to 24 to a leg or head slot item."
+        - name: Death's Embrace
+          item_id: 19784
+          spell_id: 24161
+          class: Rogue
+          effect: "Permanently adds 28 attack power and 12 dodge rating to a leg or head slot item."
+        - name: Falcon's Call
+          item_id: 19785
+          spell_id: 24162
+          class: Hunter
+          effect: "Permanently adds 24 ranged attack power, 10 Stamina, and 10 hit rating to a leg or head slot item."
+          supplies: [ranged_attack_power, stamina, ranged_hit]
+          hit_rating: 10
+          flag: >-
+            CONTRADICTS hit.yaml.no_route, which states that no leg enchant
+            grants hit. This one does, for Hunters, at 10 rating. The
+            beast_mastery_hunter entry in hit.yaml is short by 36 rating and its
+            gap_note counts only the Accurascope and the boot enchant. This is a
+            third route and it is not in that arithmetic.
+        - name: Vodouisant's Vigilant Embrace
+          item_id: 19786
+          spell_id: 24163
+          class: Shaman
+          effect: "Permanently adds 15 Intellect and increases all healing and spell damage by up to 13 to a leg or head slot item."
+        - name: Presence of Sight
+          item_id: 19787
+          spell_id: 24164
+          class: Mage
+          effect: "Permanently adds 18 to all healing and damage spells and 8 spell hit rating to a leg or head slot item."
+          supplies: [spell_power, spell_hit]
+          spell_hit_rating: 8
+          flag: >-
+            CONTRADICTS hit.yaml.no_route on the spell side. The arcane_mage
+            entry in hit.yaml is short by 23 rating and its gap_note counts only
+            the 29 rating from the head and glove enchants. This is a fourth
+            route. Note that it competes with Glyph of Power for the head slot if
+            applied to the head, and does not compete if applied to the legs.
+        - name: Hoodoo Hex
+          item_id: 19788
+          spell_id: 24165
+          class: Warlock
+          effect: "Permanently adds 10 Stamina and increases spell damage and healing by up to 18 to a leg or head slot item."
+        - name: Prophetic Aura
+          item_id: 19789
+          spell_id: 24167
+          class: Priest
+          effect: "Permanently adds 10 Stamina, 4 mana per 5 sec., and increases healing by up to 24 to a leg or head slot item."
+        - name: Animist's Caress
+          item_id: 19790
+          spell_id: 24168
+          class: Druid
+          effect: "Permanently adds 10 Stamina, 10 Intellect, and increases healing by up to 24 to a leg or head slot item."
+
+    resistance_guards:
+      requires_level: 55
+      phase_3_available: true
+      removed_in: patch 4.0.3a, so all three are live in 2.4.3
+      verified: true
+      note: >-
+        These three are commonly grouped as Argent Dawn rewards. Only two of them
+        are. Savage Guard comes from a different faction entirely, and the error
+        propagates through guides because the three share an id block and a
+        resistance theme. There is no Fire or Arcane member: item 22637 is Primal
+        Hakkari Idol and 22634 is Underlight Ore, so the ids are not a contiguous
+        resistance block.
+      entries:
+        - name: Savage Guard
+          item_id: 22635
+          spell_id: 28161
+          effect: "Permanently adds 10 nature resistance to a leg or head slot item. Does not stack with other enchantments for the selected equipment slot."
+          source: quest
+          quest: The Savage Guard, from Zanza the Restless, Zul'Gurub
+          faction: Zandalar Tribe
+          standing: Honored
+          cost: >-
+            One Dire Maul arcanum, being Arcanum of Focus, Arcanum of Protection
+            or Arcanum of Rapidity, obtained from Lorekeeper Lydros in the Dire
+            Maul library behind the Elven Legends prerequisite chain. No gold and
+            no Insignia cost.
+        - name: Ice Guard
+          item_id: 22636
+          spell_id: 28163
+          effect: "Permanently adds 10 frost resistance to a leg or head slot item. Does not stack with other enchantments for the selected equipment slot."
+          source: quest
+          quest: The Ice Guard, from Mataus the Wrathcaster, Eastern Plaguelands
+          faction: Argent Dawn
+          standing: unverified
+          cost: 10 Insignia of the Crusade plus 30 gold
+        - name: Shadow Guard
+          item_id: 22638
+          spell_id: 28165
+          effect: "Permanently adds 10 shadow resistance to a leg or head slot item. Does not stack with other enchantments for the selected equipment slot."
+          source: quest
+          quest: The Shadow Guard, from Mataus the Wrathcaster, Eastern Plaguelands
+          faction: Argent Dawn
+          standing: unverified
+          cost: 10 Insignia of the Crusade plus 30 gold
+
+  # ---- Shoulder -----------------------------------------------------------
+  #
+  # The second reputation-gated slot. The Aldor and Scryers split is clean: the
+  # Aldor sell every inscription named with a bare noun, the Scryers sell every
+  # one named "of the". Regular versions are Honored. Greater versions are
+  # Exalted. The rule holds for all eight pairs without exception.
+  shoulder:
+
+    aldor:
+      vendor: Inscriber Saalyn (npc 20807), Shattrath City
+      faction: The Aldor
+      phase_3_available: true
+      verified: true
+      profession_to_apply: none
+      cost: unverified
+      honored:
+        - {name: Inscription of Faith, item_id: 28878, spell_id: 35403, effect: "Permanently adds 29 healing and 10 spell damage to a shoulder slot item."}
+        - {name: Inscription of Discipline, item_id: 28881, spell_id: 35405, effect: "Permanently adds up to 15 spell damage and healing to a shoulder slot item."}
+        - {name: Inscription of Warding, item_id: 28882, spell_id: 35355, effect: "Permanently adds 13 dodge rating to a shoulder slot item."}
+        - {name: Inscription of Vengeance, item_id: 28885, spell_id: 35407, effect: "Permanently adds 26 attack power to a shoulder slot item."}
+      exalted:
+        - {name: Greater Inscription of Faith, item_id: 28887, spell_id: 35404, effect: "Permanently adds up to 33 healing and 11 spell damage and 4 mana per 5 sec. to a shoulder slot item."}
+        - {name: Greater Inscription of Discipline, item_id: 28886, spell_id: 35406, effect: "Permanently adds up to 18 spell damage and healing and 10 spell critical strike rating to a shoulder slot item."}
+        - {name: Greater Inscription of Warding, item_id: 28889, spell_id: 35402, effect: "Permanently adds 15 dodge rating and 10 defense rating to a shoulder slot item."}
+        - {name: Greater Inscription of Vengeance, item_id: 28888, spell_id: 35417, effect: "Permanently adds 30 attack power and 10 critical strike rating to a shoulder slot item."}
+
+    scryers:
+      vendor: Inscriber Veredis (npc 20808), Shattrath City
+      faction: The Scryers
+      phase_3_available: true
+      verified: true
+      profession_to_apply: none
+      cost: unverified
+      honored:
+        - {name: Inscription of the Orb, item_id: 28903, spell_id: 35436, effect: "Permanently adds 13 spell critical strike rating to a shoulder slot item."}
+        - {name: Inscription of the Oracle, item_id: 28904, spell_id: 35434, effect: "Permanently adds 5 mana per 5 sec. to a shoulder slot item."}
+        - {name: Inscription of the Blade, item_id: 28907, spell_id: 35438, effect: "Permanently adds 13 critical strike rating to a shoulder slot item."}
+        - {name: Inscription of the Knight, item_id: 28908, spell_id: 35432, effect: "Permanently adds 13 defense rating to a shoulder slot item."}
+      exalted:
+        - {name: Greater Inscription of the Orb, item_id: 28909, spell_id: 35437, effect: "Permanently adds 15 spell critical strike rating and up to 12 spell damage to a shoulder slot item."}
+        - {name: Greater Inscription of the Oracle, item_id: 28912, spell_id: 35435, effect: "Permanently adds 6 mana per 5 sec. and up to 22 healing to a shoulder slot item."}
+        - {name: Greater Inscription of the Blade, item_id: 28910, spell_id: 35439, effect: "Permanently adds 15 critical strike rating and 20 attack power to a shoulder slot item."}
+        - {name: Greater Inscription of the Knight, item_id: 28911, spell_id: 35433, effect: "Permanently adds 15 defense rating and 10 dodge rating to a shoulder slot item."}
+
+    other:
+      - name: Inscription of Endurance
+        item_id: 29187
+        spell_id: 35441
+        effect: "Permanently adds 7 resistance to all magic schools to a shoulder slot item."
+        source: reputation_vendor
+        faction: The Violet Eye
+        standing: Honored
+        vendor: Apprentice Darius (npc 18255), Karazhan
+        cost: 30 gold
+        phase_3_available: true
+        verified: true
+        note: >-
+          This one carries no "Does not stack" clause. It appears among the
+          shoulder entries in the WoWSims db with no faction attached, which is
+          how it gets misfiled as an Aldor or Scryers item. It is neither.
+
+      - name: Naxxramas shoulder enchants
+        source: drop
+        drops_from: Sapphiron (npc 15989), Naxxramas (zone 3456)
+        phase_3_available: true
+        verified: true
+        drop_rate: unverified
+        note: >-
+          Naxxramas 40 was not relocated until patch 3.0.2 in October 2008, so
+          2.4.3 predates its removal and all four remain obtainable. None carries
+          a "Does not stack" clause. Required level 60, epic quality.
+        entries:
+          - {name: Power of the Scourge, item_id: 23545, spell_id: 29467, effect: "Permanently adds to a shoulder slot item increased damage and healing done by magical spells and effects up to 15 and also increases your spell critical strike rating by 14."}
+          - {name: Resilience of the Scourge, item_id: 23547, spell_id: 29475, effect: "Permanently adds to a shoulder slot item increased healing done by magical spells and effects up to 31, damage by up to 11, and also increases your mana regen by 5 mana per 5 sec."}
+          - {name: Might of the Scourge, item_id: 23548, spell_id: 29483, effect: "Permanently adds to a shoulder slot item increased attack power by 26 and also increases your critical strike rating by 14."}
+          - {name: Fortitude of the Scourge, item_id: 23549, spell_id: 29480, effect: "Permanently adds to a shoulder slot item increased Stamina by 16 and also grants 100 armor."}
+
+      - name: Zandalar Signets
+        source: quest
+        quest: Signets of the Zandalar (quest 8246), from Rin'wosho the Trader, Yojamba Isle
+        faction: Zandalar Tribe
+        standing: Exalted
+        cost: 15 Zandalar Honor Tokens, choose one of three
+        phase_3_available: true
+        verified: true
+        note: >-
+          None carries a "Does not stack" clause and none has a required level.
+          Only one of the three may be taken per completion.
+        entries:
+          - {name: Zandalar Signet of Mojo, item_id: 20076, spell_id: 24421, effect: "Permanently adds to a shoulder slot item increased damage and healing done by magical spells and effects up to 18."}
+          - {name: Zandalar Signet of Might, item_id: 20077, spell_id: 24422, effect: "Permanently adds 30 attack power to a shoulder slot item."}
+          - {name: Zandalar Signet of Serenity, item_id: 20078, spell_id: 24420, effect: "Permanently adds to a shoulder slot item increased healing done by spells and effects up to 33."}
+
+  # ---- Back ---------------------------------------------------------------
+  back:
+    supplies_hit: false
+    supplies_expertise: false
+    verified: true
+    entries:
+      - name: Enchant Cloak - Greater Agility
+        item_id: null
+        recipe_spell_id: 34004
+        effect: "Permanently enchant a cloak to increase Agility by 12.  Requires a level 35 or higher item."
+        source: enchanting
+        reagents: Greater Planar Essence, Arcane Dust times four, Primal Air, Runed Fel Iron Rod
+        enchanting_skill: unverified
+        acquisition: unverified
+        phase_3_available: true
+        verified: true
+        note: >-
+          No formula item was located. The WoWSims db spell id 9102 is the applied
+          aura, not the recipe.
+
+      - name: Enchant Cloak - Major Armor
+        item_id: null
+        recipe_spell_id: 27961
+        effect: "Permanently enchant a cloak to give 120 additional armor.  Requires a level 35 or higher item."
+        source: enchanting
+        enchanting_skill: unverified
+        acquisition: unverified
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Cloak - Subtlety
+        item_id: 33150
+        recipe_spell_id: 25084
+        effect: "Permanently enchant a cloak to decrease threat caused by the wearer by 2%."
+        source: reputation_vendor
+        faction: Honor Hold
+        standing: Exalted
+        enchanting_skill: 300
+        binds: on_pickup
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Cloak - Dodge
+        item_id: 33148
+        recipe_spell_id: 25086
+        effect: "Permanently enchant a cloak to give 12 dodge rating."
+        source: reputation_vendor
+        faction: Lower City
+        standing: Exalted
+        enchanting_skill: 300
+        binds: on_pickup
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Cloak - Stealth
+        item_id: 33149
+        recipe_spell_id: 25083
+        effect: "Permanently enchant a cloak to increase stealth."
+        source: reputation_vendor
+        faction: Cenarion Expedition
+        standing: Exalted
+        enchanting_skill: 300
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Cloak - Spell Penetration
+        item_id: 28274
+        recipe_spell_id: 34003
+        effect: "Permanently enchant a cloak to increase Spell Penetration by 20.  Requires a level 35 or higher item."
+        source: reputation_vendor
+        faction: The Consortium
+        standing: Friendly
+        enchanting_skill: 325
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Cloak - Major Resistance
+        item_id: 22548
+        recipe_spell_id: 27962
+        effect: "Permanently enchant a cloak to increase all Resistances by 7.  Requires a level 35 or higher item."
+        source: enchanting
+        enchanting_skill: 330
+        acquisition: unverified
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Cloak - Steelweave
+        item_id: 35756
+        recipe_spell_id: 47051
+        effect: "Permanently enchant a cloak to grant 12 defense rating.  Requires a level 35 or higher item."
+        source: enchanting
+        enchanting_skill: 375
+        binds: on_pickup
+        acquisition: unverified
+        phase_3_available: false
+        phase_3_available_reason: >-
+          The formula carries a Phase 5 tag on Wowhead and is patch 2.4 content,
+          which is Anniversary Phase 4. Schedule inference, not an observation.
+        verified: true
+        verified_availability: false
+        note: >-
+          The WoWSims db spell id 27908 for this entry belongs to Enchant Bracer
+          - Major Defense, not to Steelweave.
+
+      - name: Cloak resistance line
+        phase_3_available: true
+        verified: true
+        entries:
+          - {name: Enchant Cloak - Greater Arcane Resistance, item_id: 28276, recipe_spell_id: 34005, effect: "Permanently enchant a cloak to increase Arcane Resistance by 15.  Requires a level 35 or higher item.", enchanting_skill: 350, acquisition: unverified}
+          - {name: Enchant Cloak - Greater Shadow Resistance, item_id: 28277, recipe_spell_id: 34006, effect: "Permanently enchant a cloak to increase Shadow Resistance by 15.  Requires a level 35 or higher item.", enchanting_skill: 350, acquisition: unverified}
+          - {name: Enchant Cloak - Greater Fire Resistance, item_id: 20732, recipe_spell_id: 25081, effect: "Permanently enchant a cloak to give 15 fire resistance.", enchanting_skill: 300, faction: Cenarion Circle, standing: Friendly}
+          - {name: Enchant Cloak - Greater Nature Resistance, item_id: 20733, recipe_spell_id: 25082, effect: "Permanently enchant a cloak to give 15 nature resistance.", enchanting_skill: 300, faction: Cenarion Circle, standing: Honored}
+
+      - name: Classic-era cloak enchants still present in 2.4.3
+        enumerated: false
+        count: 12
+        examples:
+          - {name: Enchant Cloak - Superior Defense, recipe_spell_id: 20015, item_id: 16224, effect: "+70 additional armor", enchanting_skill: 285}
+          - {name: Enchant Cloak - Greater Defense, recipe_spell_id: 13746, effect: "+50 additional armor"}
+        note: >-
+          The lower Classic tiers, being Defense, Lesser Agility, Minor Agility,
+          Lesser Protection, Minor Protection, Lesser Fire Resistance, Fire
+          Resistance, Greater Resistance, Resistance and Lesser Shadow
+          Resistance, are confirmed present in 2.4.3 but are not enumerated here
+          because a level 70 character supersedes them. Their skill levels and
+          trainer sources are unverified.
+
+  # ---- Chest --------------------------------------------------------------
+  chest:
+    supplies_hit: false
+    supplies_expertise: false
+    verified: true
+    entries:
+      - name: Enchant Chest - Exceptional Stats
+        item_id: 24003
+        item_id_alliance: 22547
+        recipe_spell_id: 27960
+        effect: "Permanently enchant a piece of chest armor to add 6 to all stats.  Requires a level 35 or higher item."
+        source: reputation_vendor
+        faction_horde: Thrallmar
+        faction_alliance: Honor Hold
+        standing: Revered
+        vendor_horde: Quartermaster Urgronn
+        vendor_alliance: Logistics Officer Ulrike
+        cost: 6 gold
+        enchanting_skill: 345
+        binds: on_pickup
+        phase_3_available: true
+        verified: true
+        note: Two distinct formula item ids exist, one per faction.
+
+      - name: Enchant Chest - Exceptional Health
+        item_id: null
+        recipe_spell_id: 27957
+        effect: "Permanently enchant a piece of chest armor to grant +150 health.  Requires a level 35 or higher item."
+        source: enchanting
+        enchanting_skill: unverified
+        acquisition: unverified
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Chest - Exceptional Mana
+        item_id: 22546
+        recipe_spell_id: 27958
+        effect: "Permanently enchant a piece of chest armor to grant +150 mana.  Requires a level 35 or higher item."
+        source: enchanting
+        enchanting_skill: 325
+        binds: on_pickup
+        acquisition: unverified
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Chest - Major Resilience
+        item_id: 28270
+        recipe_spell_id: 33992
+        effect: "Permanently enchant a piece of chest armor to grant 15 resilience rating.  Requires a level 35 or higher item."
+        source: drop
+        drops_from: unverified
+        enchanting_skill: 345
+        binds: no
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Chest - Major Spirit
+        item_id: null
+        recipe_spell_id: 33990
+        effect: "Permanently enchant a piece of chest armor to grant +15 Spirit.  Requires a level 35 or higher item."
+        source: enchanting
+        enchanting_skill: unverified
+        acquisition: unverified
+        phase_3_available: true
+        verified: true
+        note: The WoWSims db spell id 14433 is the Classic-era aura, not the recipe.
+
+      - name: Enchant Chest - Restore Mana Prime
+        item_id: null
+        recipe_spell_id: 33991
+        effect: "Permanently enchant a piece of chest armor to grant 6 Mana every 5 seconds.  Requires a level 35 or higher item."
+        source: enchanting
+        enchanting_skill: unverified
+        acquisition: unverified
+        phase_3_available: true
+        verified: true
+
+      - name: Enchant Chest - Defense
+        item_id: 35500
+        recipe_spell_id: 46594
+        effect: "Permanently enchant a piece of chest armor to grant 15 defense rating.  Requires a level 35 or higher item."
+        source: reputation_vendor
+        faction: Shattered Sun Offensive
+        standing: Honored
+        vendor: Eldara Dawnrunner (npc 25032), Isle of Quel'Danas
+        cost: 15 gold
+        enchanting_skill: 360
+        binds: on_pickup
+        phase_3_available: false
+        phase_3_available_reason: >-
+          Isle of Quel'Danas is patch 2.4.0 content and is Anniversary Phase 4.
+          Schedule inference, not an observation.
+        verified: true
+        verified_availability: false
+
+      - name: Classic-era chest enchants still present in 2.4.3
+        enumerated: false
+        count: 18
+        highest_tiers:
+          - {name: Enchant Chest - Greater Stats, recipe_spell_id: 20025, effect: "+4 to all stats"}
+          - {name: Enchant Chest - Major Health, recipe_spell_id: 20026, effect: "+100 health"}
+          - {name: Enchant Chest - Major Mana, recipe_spell_id: 20028, effect: "+100 mana"}
+        note: >-
+          Skill levels and trainer sources for these are unverified. They are
+          superseded by the TBC tier for a level 70 character.
+
+  # ---- Chest, legs, hands, feet: Leatherworking armor kits -----------------
+  #
+  # NO ARMOR KIT CARRIES A PROFESSION REQUIREMENT TO USE. Each use-effect spell
+  # states only "Requires level 25" plus the slot list. Leatherworking is
+  # required to craft, not to apply. This is the opposite of the Wrath pattern
+  # and is a common transcription error.
+  armor_kits:
+    profession_to_apply: none
+    leatherworking_skill_to_craft: unverified
+    pattern_sources: unverified
+    phase_3_available: true
+    verified: true
+    entries:
+      - {name: Knothide Armor Kit, item_id: 25650, use_spell_id: 32397, craft_spell_id: 32456, slots: [chest, legs, hands, feet], effect: "Permanently increase the stamina of an item worn on the chest, legs, hands or feet by 8.  Only usable on items level 55 and above."}
+      - {name: Heavy Knothide Armor Kit, item_id: 34330, use_spell_id: 44968, craft_spell_id: 44970, slots: [head, chest, shoulder, legs, hands, feet], effect: "Permanently increase the Stamina of an item worn on the head, chest, shoulders, legs, hands or feet by 10.  Only usable on items level 60 and above."}
+      - {name: Vindicator's Armor Kit, item_id: 25651, use_spell_id: 32398, craft_spell_id: 32457, slots: [chest, legs, hands, feet], effect: "Permanently increase the defense rating of an item worn on the chest, legs, hands or feet by 8.  Only usable on items level 60 and above."}
+      - {name: Magister's Armor Kit, item_id: 25652, use_spell_id: 32399, craft_spell_id: 32458, slots: [chest, legs, hands, feet], effect: "Permanently increase the mana regeneration of an item worn on the chest, legs, hands or feet by 3 mana every 5 seconds.  Only usable on items level 60 and above."}
+      - {name: Arcane Armor Kit, item_id: 29488, use_spell_id: 35420, craft_spell_id: 35524, slots: [chest, legs, hands, feet], effect: "Permanently increase the arcane resistance of an item worn on the chest, legs, hands or feet by 8.  Only usable on items level 60 and above."}
+      - {name: Flame Armor Kit, item_id: 29485, use_spell_id: 35416, craft_spell_id: 35521, slots: [chest, legs, hands, feet], resistance: fire, value: 8}
+      - {name: Frost Armor Kit, item_id: 29486, use_spell_id: 35418, craft_spell_id: 35522, slots: [chest, legs, hands, feet], resistance: frost, value: 8}
+      - {name: Nature Armor Kit, item_id: 29487, use_spell_id: 35419, craft_spell_id: 35523, slots: [chest, legs, hands, feet], resistance: nature, value: 8}
+      - {name: Shadow Armor Kit, item_id: 29483, use_spell_id: 35415, craft_spell_id: 35520, slots: [chest, legs, hands, feet], resistance: shadow, value: 8}
+    note: >-
+      The WoWSims db use-spell id for Magister's Armor Kit, 21625, is wrong. The
+      correct id is 32399.
+
+  # ---- Wrist --------------------------------------------------------------
+  wrist:
+    supplies_hit: false
+    supplies_expertise: false
+    verified: true
+    note: >-
+      Every WoWSims db spell id in this slot is an aura row. Recipe ids below are
+      re-resolved. Superior Healing is the only bracer enchant in the TBC set with
+      a reputation gate printed on the tooltip.
+    entries:
+      - {name: Enchant Bracer - Assault, item_id: null, recipe_spell_id: 34002, effect: "Permanently enchants bracers to increase attack power by 24.  Requires a level 35 or higher item.", enchanting_skill: unverified, acquisition: unverified}
+      - {name: Enchant Bracer - Brawn, item_id: null, recipe_spell_id: 27899, effect: "Permanently enchants bracers to increase Strength by 12.  Requires a level 35 or higher item.", enchanting_skill: unverified, acquisition: unverified}
+      - {name: Enchant Bracer - Fortitude, item_id: 22533, recipe_spell_id: 27914, effect: "Permanently enchants bracers to give 12 Stamina.  Requires a level 35 or higher item.", enchanting_skill: 350, source: drop, binds: on_pickup}
+      - {name: Enchant Bracer - Major Defense, item_id: 22530, recipe_spell_id: 27906, effect: "Permanently enchants bracers to increase your defense rating by 12.  Requires a level 35 or higher item.", enchanting_skill: 320, binds: on_pickup, acquisition: unverified}
+      - {name: Enchant Bracer - Major Intellect, item_id: null, recipe_spell_id: 34001, effect: "Permanently enchants bracers to increase Intellect by 12.  Requires a level 35 or higher item.", enchanting_skill: unverified, acquisition: unverified}
+      - {name: Enchant Bracer - Restore Mana Prime, item_id: 22532, recipe_spell_id: 27913, effect: "Permanently enchants bracers to restore 6 mana every 5 seconds.  Requires a level 35 or higher item.", enchanting_skill: 335, acquisition: unverified}
+      - {name: Enchant Bracer - Spellpower, item_id: 22534, recipe_spell_id: 27917, effect: "Permanently enchant bracers to increase spell damage and healing by up to 15.  Requires a level 35 or higher item.", enchanting_skill: 360, binds: on_pickup, acquisition: unverified}
+      - {name: Enchant Bracer - Stats, item_id: null, recipe_spell_id: 27905, effect: "Permanently enchants bracers to increase all Stats by 4.  Requires a level 35 or higher item.", enchanting_skill: unverified, acquisition: unverified}
+      - {name: Enchant Bracer - Superior Healing, item_id: 22531, recipe_spell_id: 27911, effect: "Permanently enchants bracers to increase the effect of your healing spells by up to 30 and your damage spells by up to 10.  Requires a level 35 or higher item.", enchanting_skill: 325, faction: Honor Hold, standing: Friendly, binds: on_pickup}
+    classic_era_still_present:
+      - {name: Enchant Bracer - Superior Stamina, recipe_spell_id: 20011, effect: "+9 Stamina"}
+      - {name: Enchant Bracer - Superior Strength, recipe_spell_id: 20010, effect: "+9 Strength"}
+      - {name: Enchant Bracer - Greater Intellect, recipe_spell_id: 20008, effect: "+7 Intellect"}
+      - {name: Enchant Bracer - Healing Power, recipe_spell_id: 23802, effect: "increase the effects of your healing spells by 24 and your damage spells by 8"}
+      - {name: Enchant Bracer - Mana Regeneration, recipe_spell_id: 23801, effect: "restore 4 mana every 5 seconds"}
+    correction: >-
+      Superior Stamina grants 9 Stamina, not 12. There is no spell named "Enchant
+      Bracer - Greater Stats" on the TBC subsite; spell 19988 is the aura row
+      named "Greater Stats" applied by Enchant Bracer - Stats, recipe 27905.
+
+  # ---- Hands --------------------------------------------------------------
+  #
+  # THE SLOT THE BRIEF FLAGGED. There is NO melee hit glove enchant in TBC and
+  # Enchant Gloves - Precision does not exist in 2.4.3. See wrath_era_traps.
+  hands:
+    supplies_melee_hit: false
+    supplies_expertise: false
+    supplies_spell_hit: true
+    verified: true
+    entries:
+      - name: Enchant Gloves - Spell Strike
+        item_id: 28271
+        recipe_spell_id: 33994
+        effect: "Permanently enchant gloves to grant 15 spell hit rating.  Requires a level 35 or higher item."
+        supplies: [spell_hit]
+        spell_hit_rating: 15
+        source: reputation_vendor
+        faction: Cenarion Expedition
+        standing: Revered
+        enchanting_skill: 360
+        binds: on_pickup
+        phase_3_available: true
+        verified: true
+        note: >-
+          The only hit-flavoured glove enchant in TBC, and it is spell hit only.
+          This is the 15 rating hit.yaml prices in its spell column.
+
+      - {name: Enchant Gloves - Major Spellpower, item_id: 28272, recipe_spell_id: 33997, effect: "Permanently enchant gloves to increase damage and healing by up to 20.  Requires a level 35 or higher item.", enchanting_skill: 360, faction: Keepers of Time, standing: Honored, binds: on_pickup, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Major Healing, item_id: 28273, recipe_spell_id: 33999, effect: "Permanently enchant gloves to increase Healing by 35 and Spell Damage by 12. Requires a level 35 or higher item.", enchanting_skill: 350, faction: The Sha'tar, standing: Honored, binds: on_pickup, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Superior Agility, item_id: 33152, recipe_spell_id: 25080, effect: "Permanently enchant gloves to increase agility by 15.", enchanting_skill: 300, faction: Keepers of Time, standing: Exalted, binds: on_pickup, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Threat, item_id: 33153, recipe_spell_id: 25072, effect: "Permanently enchant gloves to increase threat from all attacks and spells by 2%.", enchanting_skill: 300, faction: The Sha'tar, standing: Exalted, binds: on_pickup, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Assault, item_id: null, recipe_spell_id: 33996, effect: "Permanently enchant gloves to grant 26 attack power.  Requires a level 35 or higher item.", enchanting_skill: unverified, acquisition: unverified, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Blasting, item_id: null, recipe_spell_id: 33993, effect: "Permanently enchant gloves to grant 10 spell critical strike rating.  Requires a level 35 or higher item.", enchanting_skill: unverified, acquisition: unverified, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Major Strength, item_id: null, recipe_spell_id: 33995, effect: "Permanently enchant gloves to grant +15 Strength.  Requires a level 35 or higher item.", enchanting_skill: unverified, acquisition: unverified, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Fire Power, item_id: 20729, recipe_spell_id: 25078, effect: "Permanently enchant gloves to increase fire damage by up to 20.", enchanting_skill: 300, binds: on_pickup, acquisition: unverified, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Frost Power, item_id: 20728, recipe_spell_id: 25074, effect: "Permanently enchant gloves to increase frost damage by up to 20.", enchanting_skill: 300, binds: on_pickup, acquisition: unverified, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Shadow Power, item_id: 20727, recipe_spell_id: 25073, effect: "Permanently enchant gloves to increase shadow damage by up to 20.", enchanting_skill: 300, binds: on_pickup, acquisition: unverified, phase_3_available: true, verified: true}
+      - {name: Enchant Gloves - Healing Power, item_id: 20730, recipe_spell_id: 25079, effect: "Permanently enchant gloves to increase the caster's healing spells by up to 30 and damage spells by up to 10.", enchanting_skill: 300, binds: on_pickup, acquisition: unverified, phase_3_available: true, verified: true}
+      - name: Glove Reinforcements
+        item_id: 34207
+        use_spell_id: 44769
+        craft_spell_id: 44770
+        effect: "Permanently increase the armor on a pair of gloves by 240.  Only useable on items level 60 and above."
+        source: crafted
+        profession: unverified
+        note: >-
+          Reagents are Heavy Knothide Leather times four and Primal Earth times
+          three, which point at Leatherworking. No profession row was retrievable.
+          Whether it shares or blocks the glove enchant slot is unverified.
+        phase_3_available: true
+        verified: true
+    exhaustive_check: >-
+      Twelve glove enchant spells resolve on the TBC subsite: 25072, 25073, 25074,
+      25078, 25079, 25080, 33993, 33994, 33995, 33996, 33997, 33999. Spell 33998
+      returns HTTP 404 on the TBC subsite. Not one of the twelve grants melee hit
+      rating or expertise rating.
+
+  # ---- Legs ---------------------------------------------------------------
+  #
+  # THE SELF-ONLY QUESTION IS SETTLED. No TBC leg armor and no TBC spellthread is
+  # self-only, and none is restricted at all. Not one of the eight carries a
+  # "Requires Leatherworking" or "Requires Tailoring" line. The only requirement
+  # on any of them is "Requires Level 60". All eight are freely tradeable and
+  # appliable by anyone. The skill level applies to the crafter alone.
+  #
+  # The self-only pattern is a Wrath 3.x mechanic and does not exist in 2.4.3.
+  legs:
+    self_only: false
+    profession_to_apply: none
+    requires_level: 60
+    stacks_to: 20
+    supplies_hit: false
+    supplies_expertise: false
+    phase_3_available: true
+    verified: true
+
+    leatherworking_leg_armors:
+      pattern_source_type: reputation_quartermaster_purchase
+      pattern_drops: none
+      entries:
+        - name: Clefthide Leg Armor
+          item_id: 29534
+          craft_spell_id: 35555
+          quality: rare
+          item_level: 67
+          stats: {stamina: 30, agility: 10}
+          effect: "Permanently attach clefthide armor onto pants to increase stamina by 30 and agility by 10."
+          profession: Leatherworking
+          skill: 335
+          pattern_item_id: 29720
+          faction: Cenarion Expedition
+          standing: Honored
+          vendor: Fedryen Swiftspear, Cenarion Refuge
+          cost: 6 gold
+        - name: Cobrahide Leg Armor
+          item_id: 29533
+          craft_spell_id: 35549
+          quality: rare
+          item_level: 67
+          stats: {attack_power: 40, crit_rating: 10}
+          effect: "Permanently attach cobrahide armor onto pants to increase attack power by 40 and critical strike rating by 10."
+          profession: Leatherworking
+          skill: 335
+          pattern_item_id_alliance: 29719
+          pattern_item_id_horde: 31361
+          faction_alliance: Honor Hold
+          faction_horde: Thrallmar
+          standing: Honored
+          cost: 6 gold
+        - name: Nethercleft Leg Armor
+          item_id: 29536
+          craft_spell_id: 35557
+          quality: epic
+          item_level: 73
+          stats: {stamina: 40, agility: 12}
+          effect: "Permanently attach nethercleft leg armor onto pants to increase Stamina by 40 and Agility by 12."
+          profession: Leatherworking
+          skill: 365
+          pattern_item_id: 29721
+          faction: Cenarion Expedition
+          standing: Exalted
+          vendor: Fedryen Swiftspear
+          cost: 12 gold
+        - name: Nethercobra Leg Armor
+          item_id: 29535
+          craft_spell_id: 35554
+          quality: epic
+          item_level: 73
+          stats: {attack_power: 50, crit_rating: 12}
+          effect: "Permanently attach nethercobra armor onto pants to increase attack power by 50 and critical strike rating by 12."
+          profession: Leatherworking
+          skill: 365
+          pattern_item_id_alliance: 29722
+          pattern_item_id_horde: 31362
+          faction_alliance: Honor Hold
+          faction_horde: Thrallmar
+          standing: Exalted
+          cost: 12 gold
+
+    tailoring_spellthreads:
+      faction_pairing_warning: >-
+        The Aldor and Scryers pairing runs OPPOSITE to the shoulder inscription
+        split. The healing-weighted spellthreads, Silver and Golden, come from the
+        ALDOR. The damage-weighted ones, Mystic and Runic, come from the SCRYERS.
+        This is a common transcription error.
+      entries:
+        - name: Silver Spellthread
+          item_id: 24275
+          craft_spell_id: 31431
+          quality: rare
+          item_level: 67
+          stats: {healing: 46, spell_damage: 16, stamina: 15}
+          effect: "Permanently embroiders spellthread into pants, increasing healing by up to 46, spell damage by up to 16,  and Stamina by 15."
+          profession: Tailoring
+          skill: 335
+          pattern_item_id: 24293
+          faction: The Aldor
+          standing: Honored
+          vendor: Quartermaster Endarin
+          cost: 6 gold
+        - name: Mystic Spellthread
+          item_id: 24273
+          craft_spell_id: 31430
+          quality: rare
+          item_level: 67
+          stats: {spell_damage_and_healing: 25, stamina: 15}
+          effect: "Permanently embroiders spellthread into pants, increasing spell damage and healing by up to 25 and Stamina by 15."
+          profession: Tailoring
+          skill: 335
+          pattern_item_id: 24292
+          faction: The Scryers
+          standing: Honored
+          vendor: Quartermaster Enuril
+          cost: 6 gold
+        - name: Golden Spellthread
+          item_id: 24276
+          craft_spell_id: 31433
+          quality: epic
+          item_level: 75
+          stats: {healing: 66, spell_damage: 22, stamina: 20}
+          effect: "Permanently embroiders spellthread into pants, increasing healing by up to 66, spell damage by up to 22, and Stamina by 20."
+          profession: Tailoring
+          skill: 375
+          pattern_item_id: 24295
+          faction: The Aldor
+          standing: Exalted
+          vendor: Quartermaster Endarin
+          cost: 36 gold
+        - name: Runic Spellthread
+          item_id: 24274
+          craft_spell_id: 31432
+          quality: epic
+          item_level: 75
+          stats: {spell_damage_and_healing: 35, stamina: 20}
+          effect: "Permanently embroiders spellthread into pants, increasing spell damage and healing by up to 35 and Stamina by 20."
+          profession: Tailoring
+          skill: 375
+          pattern_item_id: 24294
+          faction: The Scryers
+          standing: Exalted
+          vendor: Quartermaster Enuril
+          cost: 36 gold
+
+    also_applicable: >-
+      The nine Zul'Gurub class enchants and the three resistance Guards recorded
+      under enchants.head_or_legs apply to a leg slot item as well as a head slot
+      item. Two of them supply hit. See the flags on Falcon's Call and Presence of
+      Sight.
+
+  # ---- Feet ---------------------------------------------------------------
+  #
+  # All six TBC boot enchants are formula DROPS. None is a reputation vendor
+  # purchase. This differs from every other slot in this file.
+  feet:
+    supplies_hit: true
+    supplies_expertise: false
+    verified: true
+    entries:
+      - name: Enchant Boots - Surefooted
+        item_id: 22545
+        recipe_spell_id: 27954
+        aura_spell_id: 27953
+        effect: "Permanently enchant boots to increase snare and root resistance by 5% and increase hit rating by 10. Requires a level 35 or higher item."
+        supplies: [melee_hit, ranged_hit, snare_and_root_resistance]
+        hit_rating: 10
+        source: drop
+        drops_from: Phantom Stagehand (npc 16472), Karazhan
+        enchanting_skill: 370
+        phase_3_available: true
+        verified: true
+        correction: >-
+          The WoWSims db stat vector for this entry is wrong in one direction and
+          the applied aura confirms it. Surefooted grants 10 hit rating and 5
+          percent snare and root resistance. It grants NO agility. The aura row
+          27953 carries three effects: resist Snared 5, resist Rooted 5, Mod
+          Rating 10.
+        spell_hit_coverage: false
+        spell_hit_coverage_confidence: unverified
+        spell_hit_note: >-
+          The tooltip says "hit rating" with no school qualifier. In 2.4.3 hit
+          rating and spell hit rating are separate item stats, so the plain label
+          denotes the physical rating. hit.yaml states that this enchant is
+          worthless to a caster and that casters have one fewer enchant slot than
+          the physical column suggests. Nothing found here contradicts that. What
+          was NOT established is whether the aura's rating mask covers the ranged
+          hit index as well as the melee hit index. Treat the ranged half as
+          conventional rather than confirmed.
+
+      - {name: Enchant Boots - Dexterity, item_id: 22544, recipe_spell_id: 27951, effect: "Permanently enchant boots to increase Agility by 12. Requires a level 35 or higher item.", enchanting_skill: 340, source: drop, drops_from: "Raging Skeleton (npc 18521)", phase_3_available: true, verified: true}
+      - {name: Enchant Boots - Fortitude, item_id: 22543, recipe_spell_id: 27950, effect: "Permanently enchant boots to increase Stamina by 12. Requires a level 35 or higher item.", enchanting_skill: 320, source: drop, drops_from: "Ethereal Priest (npc 18317)", phase_3_available: true, verified: true}
+      - name: Enchant Boots - Vitality
+        item_id: 22542
+        recipe_spell_id: 27948
+        effect: "Permanently enchant boots to restore 4 health and mana every 5 seconds. Requires a level 35 or higher item."
+        enchanting_skill: 305
+        source: drop
+        drops_from: random world drop, usually in Outland
+        phase_3_available: true
+        verified: true
+        correction: >-
+          It restores 4 health AND 4 mana per 5 seconds, not mana alone. The value
+          5 that circulates is the Wrath-era figure. The 2.4.3 value is 4.
+      - {name: Enchant Boots - Cat's Swiftness, item_id: 28279, recipe_spell_id: 34007, effect: "Permanently enchant boots to give a minor movement speed increase and 6 Agility. Requires a level 35 or higher item.", enchanting_skill: 360, source: drop, drops_from: "random world drop in Outland, and Sealed Scroll Case", phase_3_available: true, verified: true}
+      - {name: Enchant Boots - Boar's Speed, item_id: 28280, recipe_spell_id: 34008, effect: "Permanently enchant boots to give a minor movement speed increase and 9 Stamina. Requires a level 35 or higher item.", enchanting_skill: 360, source: drop, drops_from: "random world drop in Outland, Sealed Scroll Case, and Kael'thas Sunstrider in Magisters' Terrace Heroic", phase_3_available: true, verified: true}
+    classic_era_still_present:
+      - {name: Enchant Boots - Greater Agility, recipe_spell_id: 20023, effect: "+7 Agility"}
+      - {name: Enchant Boots - Greater Stamina, recipe_spell_id: 20020, effect: "+7 Stamina"}
+      - {name: Enchant Boots - Minor Speed, recipe_spell_id: 13890, effect: "Minor Speed Increase"}
+
+  # ---- Rings --------------------------------------------------------------
+  #
+  # ALL FOUR ARE ENCHANTER-ONLY AND THE RESTRICTION IS PRINTED IN THE ENCHANT
+  # TEXT ITSELF. All four are reputation-gated vendor purchases. None is a
+  # trainer recipe and none is a drop.
+  rings:
+    enchanter_only: true
+    restriction_text: "Only the enchanter's rings can be enchanted, and enchanting a ring will cause it to become soulbound."
+    supplies_hit: false
+    supplies_expertise: false
+    phase_3_available: true
+    verified: true
+    entries:
+      - name: Enchant Ring - Striking
+        item_id: 22535
+        recipe_spell_id: 27920
+        effect: "Permanently enchant ring to add 2 damage to physical attacks. Only the enchanter's rings can be enchanted, and enchanting a ring will cause it to become soulbound. Requires a level 35 or higher item."
+        supplies: [weapon_damage]
+        enchanting_skill: 360
+        faction: The Consortium
+        standing: Revered
+        vendor: Ythyar (npc 17518), Karazhan
+        cost: 10 gold
+        verified: true
+        flag: >-
+          CONFIRMS hit.yaml.no_route. This grants WEAPON DAMAGE, not hit rating.
+          The 2.4.3 text is "add 2 damage to physical attacks". hit.yaml records
+          it as a common misread and that record is correct.
+      - {name: Enchant Ring - Spellpower, item_id: 22536, recipe_spell_id: 27924, effect: "Permanently enchant a ring to increase spell damage and healing by up to 12. Only the Enchanter's rings can be enchanted, and enchanting a ring will cause it to become soulbound.", enchanting_skill: 360, faction: Keepers of Time, standing: Honored, vendor: "Alurmi, Caverns of Time", cost: 10 gold, verified: true}
+      - {name: Enchant Ring - Healing Power, item_id: 22537, recipe_spell_id: 27926, effect: "Permanently enchant a ring to increase healing spells by up to 20 and damage spells by up to 7. Only the enchanter's rings can be enchanted, and enchanting a ring will cause it to become soulbound. Requires a level 35 or higher item.", enchanting_skill: 370, faction: The Sha'tar, standing: Revered, vendor: "Almaador, Shattrath City", cost: 2 gold 50 silver, verified: true}
+      - {name: Enchant Ring - Stats, item_id: 22538, recipe_spell_id: 27927, effect: "Permanently enchant a ring to increase all stats by 4. Only the enchanter's rings can be enchanted, and enchanting a ring will cause it to become soulbound. Requires a level 35 or higher item.", enchanting_skill: 375, faction: Lower City, standing: Honored, vendor: "Nakodu, Shattrath City", cost: 20 gold, verified: true}
+    correction: >-
+      The WoWSims db spell ids 354723 for Striking and 357403 for Stats are
+      retail-era ids and are wrong for 2.4.3. The correct recipe ids are 27920 and
+      27927. The Spellpower and Healing Power db ids, 27923 and 27925, are also
+      wrong; the correct ids are 27924 and 27926.
+    standing_confidence: >-
+      The Consortium Revered and Lower City Honored gates were read directly off
+      the Striking and Stats formula tooltips. The Keepers of Time Honored and
+      Sha'tar Revered gates rest on a retail wiki page and are weaker.
+
+  # ---- Weapon -------------------------------------------------------------
+  weapon:
+    supplies_hit: false
+    supplies_expertise: false
+    verified: true
+    note: >-
+      The only rating any weapon enhancement supplies in 2.4.3 is parry rating,
+      from the Adamantite Weapon Chain.
+    tbc_one_hand_and_general:
+      - {name: Enchant Weapon - Mongoose, item_id: 22559, recipe_spell_id: 27984, proc_spell_id: 28093, effect: "permanently enchant a Melee Weapon to occasionally increase Agility by 120 and attack speed slightly", enchanting_skill: 375, source: drop, drops_from: "Moroes, Karazhan", phase_3_available: true}
+      - {name: Enchant Weapon - Executioner, item_id: 33307, recipe_spell_id: 42974, proc_spell_id: 42976, effect: "Learn how to permanently enchant a Melee Weapon to occasionally ignore 840 of your enemy's armor. Requires a level 60 or higher item.", enchanting_skill: 375, source: drop, drops_from: "Zul'Aman", patch: 2.3.0, phase_3_available: false, phase_3_available_reason: "Zul'Aman is Anniversary Phase 3.5, Autumn 2026. Schedule inference."}
+      - {name: Enchant Weapon - Soulfrost, item_id: 22561, recipe_spell_id: 27982, effect: "Permanently enchant a Melee Weapon to add up to 54 damage to frost and shadow spells. Requires a level 35 or higher item.", enchanting_skill: 375, source: drop, drops_from: "Terestian Illhoof, Karazhan", phase_3_available: true}
+      - {name: Enchant Weapon - Sunfire, item_id: 22560, recipe_spell_id: 27981, effect: "Permanently enchant a Melee Weapon to add up to 50 damage to fire and arcane spells. Requires a level 35 or higher item.", enchanting_skill: 375, source: drop, drops_from: "Shade of Aran, Karazhan", phase_3_available: true}
+      - {name: Enchant Weapon - Major Spellpower, item_id: 22555, recipe_spell_id: 27975, effect: "permanently enchant a melee weapon to increase spell damage and healing by up to 40. Requires a level 35 or higher item.", enchanting_skill: 350, source: drop, drops_from: "Bash'ir Spell-Thief, Blade's Edge Mountains", phase_3_available: true}
+      - {name: Enchant Weapon - Major Intellect, item_id: 22551, recipe_spell_id: 27968, effect: "Permanently enchant a melee weapon to grant +30 Intellect. Requires a level 35 or higher item.", enchanting_skill: 340, source: drop, drops_from: "Sunfury Researcher, Netherstorm", phase_3_available: true}
+      - {name: Enchant Weapon - Potency, item_id: 22553, recipe_spell_id: 27972, effect: "Permanently enchant a Melee Weapon to add 20 Strength. Requires a level 35 or higher item.", enchanting_skill: 350, source: drop, drops_from: "Burning Crusade world drop", phase_3_available: true}
+      - {name: Enchant Weapon - Greater Agility, item_id: 33165, recipe_spell_id: 42620, effect: "Permanently enchant a weapon to increase Agility by 20. Requires a level 35 or higher item.", enchanting_skill: 350, faction: The Violet Eye, standing: Exalted, vendor: "Apprentice Darius, Deadwind Pass", patch: 2.3.0, phase_3_available: true}
+      - {name: Enchant Weapon - Battlemaster, item_id: 22557, recipe_spell_id: 28004, effect: "Permanently enchant a Melee Weapon to occasionaly heal nearby party members of 180 to 300 health when an enemy is struck. Requires a level 35 or higher item.", enchanting_skill: 360, source: drop, drops_from: "Outland world drop, monsters level 64 and above", phase_3_available: true, note: "The misspelling of occasionally is present in the source tooltip and is reproduced as-is."}
+      - {name: Enchant Weapon - Spellsurge, item_id: 22558, recipe_spell_id: 28003, effect: "permanently enchant a Melee Weapon to have a 3% chance on spellcast to restore 100 mana to all party members over 10 seconds.", enchanting_skill: 360, source: drop, drops_from: "Outland world drop", phase_3_available: true}
+      - {name: Enchant Weapon - Major Healing, item_id: 28281, recipe_spell_id: 34010, effect: "Permanently enchant a Melee Weapon to add +81 Healing and +27 Spell Damage. Requires a level 35 or higher item.", enchanting_skill: 350, faction: The Sha'tar, standing: Revered, vendor: "Almaador, Shattrath City", phase_3_available: true}
+      - {name: Enchant Weapon - Major Striking, item_id: 22552, recipe_spell_id: 27967, effect: "Permanently enchant a Melee Weapon to do 7 additional points of damage. Requires a level 35 or higher item.", enchanting_skill: 340, faction: The Consortium, standing: Honored, phase_3_available: true}
+      - name: Enchant Weapon - Deathfrost
+        item_id: 35498
+        recipe_spell_id: 46578
+        proc_spell_id: 46579
+        effect: "Permanently enchant a weapon so your damaging spells and melee weapon hits occasionally inflict an additional 150 Frost damage and reduce the target's melee, ranged, and casting speed by 15% for 8 sec. Requires a level 60 or higher item."
+        enchanting_skill: 350
+        patch: 2.4.0
+        source: world_event_drop
+        drops_from: >-
+          The Ice Chest after Lord Ahune, The Slave Pens, during the Midsummer
+          Fire Festival world event only.
+        phase_3_available: false
+        phase_3_available_reason: >-
+          Gated on the Midsummer Fire Festival, which does not run on 27 August.
+          Whether the formula is obtainable at any point before Phase 3 in the
+          Anniversary schedule was not established.
+        verified: true
+        verified_availability: false
+    classic_era_carryovers:
+      - {name: Enchant Weapon - Crusader, item_id: 16252, recipe_spell_id: 20034, proc_spell_id: 20007, effect: "Permanently enchant a melee weapon so that often when attacking in melee it heals for 75 to 125 and increases Strength by 100 for 15 sec. Has a reduced effect for players above level 60.", enchanting_skill: 300, source: drop, drops_from: "Scarlet Archmage and Scarlet Praetorian at Tyr's Hand, Eastern Plaguelands, and Scarlet Spellbinder near Hearthglen, Western Plaguelands", phase_3_available: true}
+      - {name: Enchant Weapon - Agility, item_id: 19445, recipe_spell_id: 23800, aura_spell_id: 23794, effect: "Permanently enchant a melee weapon to grant +15 Agility.", enchanting_skill: 290, faction: Timbermaw Hold, standing: Honored, vendor: "Meilosh, Timbermaw Hold, Felwood", phase_3_available: true}
+    two_hand:
+      note: >-
+        Savagery and Major Agility are the only two TBC-introduced two-hand weapon
+        enchants. Every other two-hand enchant usable in 2.4.3 is a Classic
+        carryover.
+      entries:
+        - {name: Enchant 2H Weapon - Savagery, item_id: 22554, recipe_spell_id: 27971, aura_spell_id: 27970, effect: "Permanently enchant a Two Handed Melee Weapon to add 70 attack power. Requires a level 35 or higher item.", enchanting_skill: 350, source: drop, drops_from: "Shattered Hand Centurion, The Shattered Halls", era: TBC, phase_3_available: true}
+        - {name: Enchant 2H Weapon - Major Agility, item_id: 22556, recipe_spell_id: 27977, effect: "Permanently enchant a Two Handed Melee Weapon to add 35 Agility. Requires a level 35 or higher item.", enchanting_skill: 360, source: drop, drops_from: "Eredar Deathbringer, The Arcatraz", era: TBC, phase_3_available: true}
+        - {name: Enchant 2H Weapon - Agility, item_id: 22392, recipe_spell_id: 27837, aura_spell_id: 27836, effect: "Permanently enchant a two-handed melee weapon to grant +25 Agility.", enchanting_skill: 290, faction: Timbermaw Hold, standing: Friendly, vendor: "Meilosh, Felwood", era: Classic, phase_3_available: true}
+        - {name: Enchant 2H Weapon - Impact, item_id: null, recipe_spell_id: 13695, effect: "+5 Weapon Damage", source: enchanting_trainer, enchanting_skill: unverified, era: Classic, phase_3_available: true}
+        - {name: Enchant 2H Weapon - Major Spirit, item_id: null, recipe_spell_id: 20035, effect: "+9 Spirit", era: Classic, source: unverified, phase_3_available: true}
+    correction: >-
+      Spell 20004 in the TBC Classic database is named "Life Steal", a
+      drain-health effect of value 30. It is NOT a Major Spirit weapon enchant.
+      The WoWSims db lists it as "Enchant Weapon - Major Spirit". The real Major
+      Spirit enchant is a TWO-HAND enchant, recipe spell 20035, and it is a
+      Classic carryover.
+    weapon_chain:
+      - name: Adamantite Weapon Chain
+        item_id: 33185
+        craft_spell_id: 42688
+        aura_spell_id: 43588
+        effect: "Attaches a chain to your weapon, reducing the duration of Disarm effects by 50% and increasing your Parry rating by 15. Does not stack with other similar effects. Can only be attached to level 60 and higher items."
+        supplies: [parry]
+        parry_rating: 15
+        profession: Blacksmithing
+        skill: 335
+        recipe_item_id: 35296
+        recipe_source: >-
+          Plans: Adamantite Weapon Chain, recorded on Wowhead TBC as a 22.12
+          percent drop from Kael'thas Sunstrider, Magisters' Terrace.
+        soulbinds_on_apply: true
+        phase_3_available: false
+        phase_3_available_reason: >-
+          Magisters' Terrace is patch 2.4.0 content, which is Anniversary Phase 4.
+          A conflicting source calls the plans a Burning Crusade world drop also
+          found in Sealed Scroll Case, which would make them available at Phase 3.
+          The conflict is unresolved.
+        verified: true
+        verified_availability: false
+        note: >-
+          The second component is +15 PARRY rating, not hit rating. Whether patch
+          2.4.2 removed the blacksmithing requirement to apply it is unverified.
+
+  # ---- Shield -------------------------------------------------------------
+  shield:
+    supplies_hit: false
+    supplies_expertise: false
+    verified: true
+    entries:
+      - {name: Enchant Shield - Major Stamina, item_id: 28282, recipe_spell_id: 34009, effect: "Permanently enchant a shield to give 18 Stamina.  Requires a level 35 or higher item.", enchanting_skill: 325, source: vendor, vendor: "Madame Ruby (npc 19663), Shattrath City", faction: none_recorded, phase_3_available: true, verified: true}
+      - {name: Enchant Shield - Shield Block, item_id: 22540, recipe_spell_id: 27946, effect: "Permanently enchant a shield to give 15 block rating.  Requires a level 35 or higher item.", enchanting_skill: 340, source: drop, drops_from: unverified, phase_3_available: true, verified: true}
+      - {name: Enchant Shield - Intellect, item_id: 22539, recipe_spell_id: 27945, effect: "Permanently enchant a shield to give 12 intellect.  Requires a level 35 or higher item.", enchanting_skill: 325, source: vendor, vendor: "Aged Dalaran Wizard (npc 18664), Old Hillsbrad Foothills", faction: none_recorded, phase_3_available: true, verified: true}
+      - {name: Enchant Shield - Resistance, item_id: 22541, recipe_spell_id: 27947, effect: "Permanently enchant a shield to increase resistance to all magic schools by 5.  Requires a level 35 or higher item.", enchanting_skill: 360, source: drop, drops_from: unverified, phase_3_available: true, verified: true}
+      - {name: Enchant Shield - Tough Shield, item_id: null, recipe_spell_id: 27944, effect: "Permanently enchant a shield to give 18 additional block value.  Requires a level 35 or higher item.", enchanting_skill: unverified, source: unverified, phase_3_available: true, verified: true}
+      - name: Enchant Shield - Resilience
+        item_id: null
+        recipe_spell_id: 44383
+        effect: "Permanently enchant a shield to increase Resilience by 12.  Requires a level 35 or higher item."
+        enchanting_skill: unverified
+        source: unverified
+        patch: 2.3.0
+        phase_3_available: true
+        verified: true
+        correction: >-
+          The WoWSims db item id 34110 for this entry is NOT a 2.4.3 item; it
+          returns HTTP 404 on the TBC subsite. The enchant itself does exist in
+          2.4.3 as spell 44383. No replacement formula item id was found.
+      - name: Felsteel Shield Spike
+        item_id: 23530
+        apply_spell_id: 29454
+        craft_spell_id: 29657
+        proc_spell_id: 29455
+        effect: "Attaches a Felsteel Spike to your shield that deals 26-38 damage every time you block with it."
+        proc_cooldown: 5 seconds
+        profession: Blacksmithing
+        skill: 360
+        recipe_item_id_alliance: 23619
+        recipe_item_id_horde: 24002
+        faction_alliance: Honor Hold
+        faction_horde: Thrallmar
+        standing: Exalted
+        profession_to_apply: none
+        binds: no
+        stacks_to: 5
+        phase_3_available: true
+        verified: true
+        note: >-
+          The crafted spike carries no profession requirement to use. Apply spell
+          29454 states only "Requires level 12" and "Requires Shield". Whether a
+          shield enchant and the spike are mutually exclusive on the same shield
+          is unverified.
+
+  # ---- Ranged -------------------------------------------------------------
+  #
+  # None of the four scopes carries an Engineering requirement to USE, so any
+  # character may apply them. Engineering is required only to craft. Every effect
+  # text names "a bow or gun"; none mentions crossbows.
+  ranged:
+    supplies_hit: true
+    profession_to_apply: none
+    crossbow_eligibility: unverified
+    verified: true
+    entries:
+      - name: Biznicks 247x128 Accurascope
+        item_id: 18283
+        apply_spell_id: 22779
+        aura_spell_id: 22780
+        craft_spell_id: 22793
+        effect: "Attaches a permanent scope to a bow or gun that increases its ranged hit rating by 30."
+        aura_text: "Increases your ranged hit rating by 30."
+        supplies: [ranged_hit]
+        ranged_hit_rating: 30
+        profession: Engineering
+        skill: 300
+        schematic_item_id: 18290
+        schematic_source: boss drop, Molten Core (zone 2717)
+        schematic_binds: on_pickup
+        reagents: Lava Core times two, Essence of Earth times two, Delicate Arcanite Converter times four, Dark Iron Bar times six, Thorium Tube
+        requires_level: 50
+        era: Classic 1.x
+        phase_3_available: true
+        verified: true
+        note: >-
+          This is the 30 ranged hit rating hit.yaml prices under hunter_only. It
+          is a Classic-era Engineering item present on the TBC subsite with an
+          unchanged effect, so it remains obtainable and usable in 2.4.3. The
+          schematic requires a Molten Core run.
+      - {name: Stabilized Eternium Scope, item_id: 23766, apply_spell_id: 30260, aura_spell_id: 30257, craft_spell_id: 30334, effect: "Attaches a permanent scope to a bow or gun that increases its critical strike rating by 28.", profession: Engineering, skill: 375, schematic_item_id: 23809, schematic_source: "dungeon drop, Karazhan (zone 3457)", requires_level: 60, phase_3_available: true, verified: true}
+      - {name: Khorium Scope, item_id: 23765, apply_spell_id: 30252, craft_spell_id: 30332, effect: "Attaches a permanent scope to a bow or gun that increases its damage by 12.", profession: Engineering, skill: 360, schematic_item_id: 23808, schematic_source: "drop from Sunfury Bowman (npc 20207), Netherstorm", requires_level: 55, phase_3_available: true, verified: true}
+      - {name: Adamantite Scope, item_id: 23764, apply_spell_id: 30250, craft_spell_id: 30329, effect: "Attaches a permanent scope to a bow or gun that increases its damage by 10.", profession: Engineering, skill: 335, schematic_item_id: 23807, schematic_source: "vendor, NPC not named", requires_level: 55, phase_3_available: true, verified: true}
+    correction: >-
+      The WoWSims db carries two rows for the eternium scope. The second, spelled
+      "Stabilized Eternium Scope" with spellId 22780, is a duplicate pointing at
+      the Biznicks aura and should be discarded. The real item is 23766, which the
+      database spells "Stabilitzed Eternium Scope", matching Wowhead.
+
+# ---------------------------------------------------------------------------
+# ENCHANT SUMMARY: EVERY HIT AND EXPERTISE ROUTE
+# ---------------------------------------------------------------------------
+#
+# This is the complete enchant-side answer to the question hit.yaml asks. It is
+# built by enumerating each slot and reading each entry, not by a filtered query.
+
+enchant_hit_and_expertise:
+  expertise: >-
+    NONE. No enchant, armor kit, leg armor, spellthread, scope, weapon chain or
+    shield spike in 2.4.3 supplies expertise rating. Expertise was introduced in
+    patch 2.3.0 and no enchant provides it. This confirms hit.yaml.
+  melee_and_ranged_hit:
+    - {name: Glyph of Ferocity, item_id: 29192, slot: head, rating: 16, gate: Cenarion Expedition Revered}
+    - {name: Enchant Boots - Surefooted, item_id: 22545, slot: feet, rating: 10, gate: formula drop, Karazhan}
+    - {name: Falcon's Call, item_id: 19785, slot: head_or_legs, rating: 10, gate: Zul'Gurub, Hunter only, NOT IN hit.yaml}
+    - {name: Biznicks 247x128 Accurascope, item_id: 18283, slot: ranged, rating: 30, gate: Engineering 300, ranged hit only, hunters and any bow or gun user}
+  spell_hit:
+    - {name: Glyph of Power, item_id: 29191, slot: head, rating: 14, gate: The Sha'tar Revered}
+    - {name: Enchant Gloves - Spell Strike, item_id: 28271, slot: hands, rating: 15, gate: Cenarion Expedition Revered}
+    - {name: Presence of Sight, item_id: 19787, slot: head_or_legs, rating: 8, gate: Zul'Gurub, Mage only, NOT IN hit.yaml}
+  totals_against_caps_yaml:
+    caps_yaml_physical_enchant_total: 26
+    this_capture_physical_general: 26
+    this_capture_physical_hunter: 56
+    this_capture_physical_hunter_note: >-
+      Glyph of Ferocity 16, Surefooted 10, and Falcon's Call 10 on the LEGS so it
+      does not compete with the head glyph, plus the Accurascope 30 on the ranged
+      weapon, which hit.yaml already accounts separately. The 56 figure counts
+      the three armor enchants only.
+    caps_yaml_spell_enchant_total: 29
+    this_capture_spell_general: 29
+    this_capture_spell_mage: 37
+    this_capture_spell_mage_note: >-
+      Glyph of Power 14 on the head, Spell Strike 15 on the gloves, and Presence
+      of Sight 8 on the LEGS. If Presence of Sight is applied to the head instead
+      it displaces Glyph of Power and the total falls to 23.
+  confidence: good
+  completeness_confidence: >-
+    Conservative on completeness. The individual entries are verified against
+    TBC-era tooltips. The claim that no further hit-bearing enchant exists rests
+    on slot-by-slot enumeration rather than an authoritative filtered list,
+    because Wowhead's filtered pages render client-side and return nothing
+    server-side.
+
+# ---------------------------------------------------------------------------
+# GEMS
+# ---------------------------------------------------------------------------
+
+gems:
+
+  # ---- Meta gems ----------------------------------------------------------
+  #
+  # ALL EIGHTEEN. The activation requirement is the field that makes a socket
+  # configuration legal or not, and it is the field most often wrong in guides,
+  # because patch 3.0.2 changed several of them. Every requirement below was read
+  # from the TBC Classic tooltip endpoint.
+  #
+  # A worked example of the trap: warcraft.wiki.gg states that Relentless
+  # Earthstorm Diamond requires three red gems. That is the WRATH value. The TBC
+  # requirement is two red, two yellow and two blue.
+  meta:
+    item_level: 70
+    socket_text: "Only fits in a meta gem slot."
+    requires_level: none
+    supplies_hit: false
+    supplies_expertise: false
+    verified: true
+    verified_against: TBC Classic tooltip endpoint, all eighteen ids, read twice independently
+    entries:
+
+      - name: Relentless Earthstorm Diamond
+        item_id: 32409
+        colour: meta
+        quality: rare
+        effect: "+12 Agility & 3% Increased Critical Damage"
+        activation: "Requires at least 2 Red Gems / Requires at least 2 Yellow Gems / Requires at least 2 Blue Gems"
+        source: jewelcrafting
+        design_gate: The Consortium Exalted, Karaaz and Paulsta'ats, 12 gold, Jewelcrafting 365
+        patch: 2.0.3
+        phase_3_available: true
+        wrath_trap: >-
+          The wiki states a three-red requirement. That is the Wrath value and is
+          wrong for 2.4.3.
+
+      - name: Chaotic Skyfire Diamond
+        item_id: 34220
+        colour: meta
+        quality: rare
+        effect: "+12 Spell Critical & 3% Increased Critical Damage"
+        activation: "Requires at least 2 Blue Gems"
+        source: jewelcrafting
+        design_gate: >-
+          Design 34221 drops from Coilskar Sirens in Shadowmoon Valley.
+          Open-world source with no raid and no reputation gate.
+        design_skill: 365
+        patch: 2.3.0
+        phase_3_available: true
+
+      - {name: Insightful Earthstorm Diamond, item_id: 25901, color: meta, quality: rare, effect: "+12 Intellect & Chance to restore mana on spellcast", activation: "Requires at least 2 Red Gems / Requires at least 2 Yellow Gems / Requires at least 2 Blue Gems", source: jewelcrafting, design_gate: "The Sha'tar Friendly, Almaador, Shattrath, 12 gold, Jewelcrafting 365", patch: 2.0.3, phase_3_available: true}
+      - {name: Mystical Skyfire Diamond, item_id: 25893, color: meta, quality: rare, effect: "Chance to Increase Spell Cast Speed", activation: "Requires more Blue gems than Yellow gems", source: jewelcrafting, design_gate: "Design is a Burning Crusade world drop", patch: 2.0.3, phase_3_available: true}
+      - {name: Destructive Skyfire Diamond, item_id: 25890, color: meta, quality: rare, effect: "+14 Spell Crit Rating and 1% Spell Reflect", activation: "Requires at least 2 Red Gems / Requires at least 2 Blue Gems / Requires at least 2 Yellow Gems", source: jewelcrafting, design_gate: unverified, patch: 2.0.3, phase_3_available: true}
+      - {name: Bracing Earthstorm Diamond, item_id: 25897, color: meta, quality: rare, effect: "+26 Healing +9 Spell Damage and 2% Reduced Threat", activation: "Requires more Red gems than Blue gems", source: jewelcrafting, design_gate: unverified, patch: 2.0.3, phase_3_available: true}
+      - {name: Brutal Earthstorm Diamond, item_id: 25899, color: meta, quality: rare, effect: "+3 Melee Damage & Chance to Stun Target", activation: "Requires at least 2 Red Gems / Requires at least 2 Yellow Gems / Requires at least 2 Blue Gems", source: jewelcrafting, design_gate: unverified, patch: 2.0.3, phase_3_available: true}
+      - {name: Enigmatic Skyfire Diamond, item_id: 25895, color: meta, quality: rare, effect: "+12 Critical Strike Rating & 5% Snare and Root Resist", activation: "Requires more Red gems than Yellow gems", source: jewelcrafting, design_gate: unverified, patch: 2.0.3, phase_3_available: true}
+      - {name: Powerful Earthstorm Diamond, item_id: 25896, color: meta, quality: rare, effect: "+18 Stamina & 5% Stun Resist", activation: "Requires at least 3 Blue Gems", source: jewelcrafting, design_gate: "The Consortium Honored, Ythyar, Guardian's Library, Karazhan, 12 gold, Jewelcrafting 365", patch: 2.0.3, phase_3_available: true}
+      - {name: Tenacious Earthstorm Diamond, item_id: 25898, color: meta, quality: rare, effect: "+12 Defense Rating & Chance to Restore Health on hit", activation: "Requires at least 5 Blue Gems", source: jewelcrafting, design_gate: "Design 25905, world drop, Jewelcrafting 365", patch: 2.0.3, phase_3_available: true}
+      - {name: Swift Skyfire Diamond, item_id: 25894, color: meta, quality: rare, effect: "+24 Attack Power and Minor Run Speed Increase", activation: "Requires at least 2 Yellow Gems / Requires at least 1 Red Gem", source: jewelcrafting, design_gate: "The Consortium Honored, Karaaz and Paulsta'ats, 12 gold, Jewelcrafting 365", patch: 2.0.3, phase_3_available: true}
+      - {name: Thundering Skyfire Diamond, item_id: 32410, color: meta, quality: rare, effect: "Chance to Increase Melee/Ranged Attack Speed", activation: "Requires at least 2 Red Gems / Requires at least 2 Blue Gems / Requires at least 2 Yellow Gems", source: jewelcrafting, design_gate: "Design 32411, world drop, Jewelcrafting 365", patch: "2.0.3, unverified", phase_3_available: true}
+      - {name: Swift Windfire Diamond, item_id: 28556, color: meta, quality: rare, effect: "+20 Attack Power and Minor Run Speed Increase", activation: "Requires at least 2 Yellow Gems / Requires at least 1 Red Gem", source: vendor, design_gate: "8 Spirit Shards, Spirit Sage Gartok (Horde) or Spirit Sage Zran (Alliance), Terokkar Forest. Binds when picked up, Unique-Equipped", patch: 2.0.3, phase_3_available: true}
+      - {name: Swift Starfire Diamond, item_id: 28557, color: meta, quality: rare, effect: "+12 Spell Damage and Minor Run Speed Increase", activation: "Requires at least 2 Yellow Gems / Requires at least 1 Red Gem", source: vendor, design_gate: "8 Spirit Shards, Spirit Sage Gartok (Horde) or Spirit Sage Zran (Alliance), Terokkar Forest. Binds when picked up, Unique-Equipped", patch: 2.0.3, phase_3_available: true}
+      - {name: Potent Unstable Diamond, item_id: 32640, color: meta, quality: rare, effect: "+24 Attack Power and 5% Stun Resistance", activation: "Requires more Blue gems than Yellow gems", source: vendor, design_gate: "160 Apexis Shards, Aether-tech Master (npc 23245), Bash'ir Landing, Blade's Edge Mountains. Binds when picked up. No reputation gate", patch: 2.1.0, phase_3_available: true, available_since: Anniversary Phase 2}
+      - {name: Imbued Unstable Diamond, item_id: 32641, color: meta, quality: rare, effect: "+14 Spell Damage & 5% Stun Resistance", activation: "Requires at least 3 Yellow Gems", source: vendor, design_gate: "160 Apexis Shards, Aether-tech Master (npc 23245), Bash'ir Landing, Blade's Edge Mountains. Binds when picked up. No reputation gate", patch: 2.1.0, phase_3_available: true, available_since: Anniversary Phase 2}
+
+      - name: Eternal Earthstorm Diamond
+        item_id: 35501
+        colour: meta
+        quality: rare
+        effect: "+12 Defense Rating & +10% Shield Block Value"
+        activation: "Requires at least 2 Blue Gems / Requires at least 1 Yellow Gem"
+        source: jewelcrafting
+        design_item_id: 35502
+        design_gate: Shattered Sun Offensive Revered, Eldara Dawnrunner, Isle of Quel'Danas
+        design_skill: 370
+        patch: 2.4.0
+        phase_3_available: false
+        phase_3_available_reason: >-
+          Isle of Quel'Danas is Anniversary Phase 4. Schedule inference from the
+          published phase plan, not an observation.
+        verified_availability: false
+
+      - name: Ember Skyfire Diamond
+        item_id: 35503
+        colour: meta
+        quality: rare
+        effect: "+14 Spell Damage & +2% Intellect"
+        activation: "Requires at least 3 Red Gems"
+        source: jewelcrafting
+        design_item_id: 35505
+        design_gate: Shattered Sun Offensive Revered, Eldara Dawnrunner, Isle of Quel'Danas
+        design_skill: 370
+        patch: 2.4.0
+        phase_3_available: false
+        phase_3_available_reason: >-
+          Isle of Quel'Danas is Anniversary Phase 4. Schedule inference.
+        verified_availability: false
+
+    completeness: >-
+      No nineteenth TBC meta gem was found. Wowhead's meta-gem listing page never
+      rendered, so the set rests on an expansion grouping confirmed item by item
+      against Wowhead TBC. A meta gem absent from both that grouping and the
+      simulator database would not have been detected. Confidence on the set being
+      complete is Conservative; confidence on each entry within it is High.
+
+  # ---- Epic colored gems, the Phase 3 tier -------------------------------
+  #
+  # THIS IS THE TIER THAT ARRIVES WITH PHASE 3. Blizzard's Phase 3 announcement
+  # states, verbatim: "Earn epic gems through mining in the Battle for Mount Hyjal
+  # with a Mining skill of 375, or discover them as rare drops within the Black
+  # Temple," and "Purchase Jewelcrafting Designs from Indormi, Keeper of Ancient
+  # Gem Lore, inside the Battle for Mount Hyjal raid instance."
+  epic_phase_3:
+    arrives_with: Phase 3
+    item_level: 100
+    quality: epic
+    binds: no
+    unique: no
+    sell_price: 6 gold
+    raw_gem_source: >-
+      Mining in Battle for Mount Hyjal at Mining 375, and rare drops within Black
+      Temple.
+    design_source: >-
+      Indormi, Keeper of Ancient Gem Lore, inside Battle for Mount Hyjal. Designs
+      unlock across Scale of the Sands Friendly, Honored and Revered, at 6 gold
+      each.
+    verified: true
+    verified_against: >-
+      Blizzard Phase 3 announcement for the acquisition route; TBC Classic tooltip
+      endpoint for every stat line. The cut blocks were scanned contiguously and
+      are closed sets; item 32227 onward are the uncut raw epic gems.
+    red_crimson_spinel:
+      - {name: Bold Crimson Spinel, item_id: 32193, stats: {strength: 10}}
+      - {name: Delicate Crimson Spinel, item_id: 32194, stats: {agility: 10}}
+      - {name: Teardrop Crimson Spinel, item_id: 32195, stats: {healing: 22, spell_damage: 8}}
+      - {name: Runed Crimson Spinel, item_id: 32196, stats: {spell_damage: 12}}
+      - {name: Bright Crimson Spinel, item_id: 32197, stats: {attack_power: 20}}
+      - {name: Subtle Crimson Spinel, item_id: 32198, stats: {dodge_rating: 10}}
+      - {name: Flashing Crimson Spinel, item_id: 32199, stats: {parry_rating: 10}}
+    blue_empyrean_sapphire:
+      - {name: Solid Empyrean Sapphire, item_id: 32200, stats: {stamina: 15}}
+      - {name: Sparkling Empyrean Sapphire, item_id: 32201, stats: {spirit: 10}}
+      - {name: Lustrous Empyrean Sapphire, item_id: 32202, stats: {mp5: 4}}
+      - {name: Stormy Empyrean Sapphire, item_id: 32203, stats: {spell_penetration: 13}}
+    yellow_lionseye:
+      - {name: Brilliant Lionseye, item_id: 32204, stats: {intellect: 10}}
+      - {name: Smooth Lionseye, item_id: 32205, stats: {crit_rating: 10}}
+      - name: Rigid Lionseye
+        item_id: 32206
+        stats: {hit_rating: 10}
+        effect: "+10 Hit Rating"
+        flag: >-
+          This is the epic physical hit gem hit.yaml names in its
+          discretionary_hit_budget. Confirmed at 10 hit rating.
+      - {name: Gleaming Lionseye, item_id: 32207, stats: {spell_crit_rating: 10}}
+      - {name: Thick Lionseye, item_id: 32208, stats: {defense_rating: 10}}
+      - {name: Mystic Lionseye, item_id: 32209, stats: {resilience_rating: 10}}
+      - name: Great Lionseye
+        item_id: 32210
+        stats: {spell_hit_rating: 10}
+        effect: "+10 Spell Hit Rating"
+        flag: >-
+          This is the epic spell hit gem hit.yaml names. Confirmed at 10 spell
+          hit rating.
+    orange_pyrestone:
+      - {name: Inscribed Pyrestone, item_id: 32217, stats: {strength: 5, crit_rating: 5}}
+      - {name: Potent Pyrestone, item_id: 32218, stats: {spell_damage: 6, spell_crit_rating: 5}}
+      - {name: Luminous Pyrestone, item_id: 32219, stats: {intellect: 5, healing: 11, spell_damage: 4}}
+      - name: Glinting Pyrestone
+        item_id: 32220
+        stats: {hit_rating: 5, agility: 5}
+        effect: "+5 Hit Rating and +5 Agility"
+        flag: >-
+          A hit-bearing Phase 3 epic gem that hit.yaml does not name. It supplies
+          half the hit of Rigid Lionseye alongside 5 agility, and it fits a red or
+          a yellow socket.
+      - name: Veiled Pyrestone
+        item_id: 32221
+        stats: {spell_hit_rating: 5, spell_damage: 6}
+        effect: "+5 Spell Hit Rating and +6 Spell Damage"
+        flag: >-
+          A spell-hit-bearing Phase 3 epic gem that hit.yaml does not name.
+      - {name: Wicked Pyrestone, item_id: 32222, stats: {attack_power: 10, crit_rating: 5}}
+    green_seaspray_emerald:
+      - {name: Enduring Seaspray Emerald, item_id: 32223, stats: {stamina: 7, defense_rating: 5}}
+      - {name: Radiant Seaspray Emerald, item_id: 32224, stats: {spell_crit_rating: 5, spell_penetration: 6}}
+      - {name: Dazzling Seaspray Emerald, item_id: 32225, stats: {intellect: 5, mp5: 2}}
+      - {name: Jagged Seaspray Emerald, item_id: 32226, stats: {stamina: 7, crit_rating: 5}}
+      - {name: Steady Seaspray Emerald, item_id: 35758, stats: {stamina: 7, crit_rating: 4, resilience_rating: 5}, patch: unverified}
+    purple_shadowsong_amethyst:
+      - {name: Sovereign Shadowsong Amethyst, item_id: 32211, stats: {strength: 5, stamina: 7}}
+      - {name: Shifting Shadowsong Amethyst, item_id: 32212, stats: {agility: 5, stamina: 7}}
+      - {name: Balanced Shadowsong Amethyst, item_id: 32213, stats: {stamina: 7, attack_power: 10}}
+      - {name: Infused Shadowsong Amethyst, item_id: 32214, stats: {attack_power: 10, mp5: 2}}
+      - {name: Glowing Shadowsong Amethyst, item_id: 32215, stats: {stamina: 7, spell_damage: 6}}
+      - {name: Royal Shadowsong Amethyst, item_id: 32216, stats: {healing: 11, spell_damage: 4, mp5: 2}}
+      - {name: Purified Shadowsong Amethyst, item_id: 37503, stats: {healing: 11, spell_damage: 4, spirit: 5}, patch: unverified}
+    duplicate_ids_resolved:
+      - name: Bright Crimson Spinel
+        original_item_id: 32197
+        reissue_item_id: 35487
+        difference: >-
+          35487 is a patch 2.4 Binds-when-picked-up re-issue carrying a Phase 5
+          tag. The stats are identical at +20 Attack Power. The original 32197
+          carries no bind line.
+      - name: Runed Crimson Spinel
+        original_item_id: 32196
+        reissue_item_id: 35488
+        difference: >-
+          35488 is a patch 2.4 Binds-when-picked-up re-issue carrying a Phase 5
+          tag. The stats are identical at +12 Spell Damage.
+
+  # ---- Epic colored gems already available before Phase 3 ----------------
+  epic_pre_phase_3:
+
+    heroic_dungeon_set:
+      display_names: Tanzanite, Fire Opal, Chrysoprase
+      item_id_range: 30546 to 30608
+      quality: epic
+      item_level: 70
+      binds: on_pickup
+      sell_price: 3 gold
+      patch: 2.0.3
+      available_since: Anniversary Phase 1
+      phase_3_available: true
+      verified: true
+      source: >-
+        Boss drops inside TBC dungeons on Heroic difficulty. Wowhead TBC returns
+        source code 2 (drop) with sourcemore bd:1 (boss drop) plus a zone id. No
+        vendor sells them.
+      correction_to_the_brief: >-
+        These are NOT PvP gems. They are not honor gems, not arena-point gems, and
+        carry no rating requirement and no purchase cost. Their availability does
+        not depend on Arena Season 3.
+      confirmed_drop_zones:
+        - {item_id: 30546, name: Sovereign Tanzanite, zone: The Shattered Halls}
+        - {item_id: 30552, name: Blessed Tanzanite, zone: Sethekk Halls}
+        - {item_id: 30574, name: Brutal Tanzanite, zone: The Botanica}
+        - {item_id: 30603, name: Royal Tanzanite, zone: The Slave Pens}
+        - {item_id: 30556, name: Glinting Fire Opal, zone: The Black Morass and Sethekk Halls}
+        - {item_id: 30559, name: Etched Fire Opal, zone: Shadow Labyrinth}
+        - {item_id: 30553, name: Pristine Fire Opal, zone: Sethekk Halls}
+        - {item_id: 30564, name: Shining Fire Opal, zone: The Mechanar}
+        - {item_id: 30589, name: Dazzling Chrysoprase, zone: Escape from Durnholde Keep}
+        - {item_id: 30606, name: Lambent Chrysoprase, zone: The Underbog}
+        - {item_id: 30605, name: Vivid Chrysoprase, zone: The Slave Pens}
+      unique_flag_conflict: >-
+        Wowhead TBC tooltips display the Unique flag with maxcount:1. The wiki
+        records patch 2.4.0 as removing Unique-Equipped from Heroic-instance gems.
+        Both readings are recorded without reconciliation. This matters because it
+        governs whether more than one may be worn.
+
+    unique_equipped_jewelcrafting_set:
+      item_ids: [33131, 33133, 33134, 33135, 33140, 33143, 33144]
+      quality: epic
+      item_level: 130
+      binds: on_pickup
+      unique_equipped: true
+      patch: 2.2.0
+      released: 2007-09-25
+      jewelcrafting_skill: 360
+      design_cost: 12 gold
+      phase_3_available: true
+      phase_3_available_reason: Gated only on Outland reputations farmable from Phase 1.
+      verified: true
+      entries:
+        - {name: Crimson Sun, item_id: 33131, effect: "+24 Attack Power", design_gate: The Consortium Revered, vendor: Paulsta'ats or Karaaz}
+        - {name: Don Julio's Heart, item_id: 33133, effect: "+14 Spell Damage", design_gate: The Consortium Revered, vendor: Paulsta'ats or Karaaz}
+        - {name: Kailee's Rose, item_id: 33134, effect: "+26 Healing and +9 Spell Damage", design_gate: The Sha'tar Honored, vendor: "Almaador, Shattrath"}
+        - {name: Falling Star, item_id: 33135, effect: "+18 Stamina", design_gate: Lower City Revered, vendor: "Nakodu, Shattrath"}
+        - {name: Blood of Amber, item_id: 33140, effect: "+12 Spell Critical Rating", design_gate: The Sha'tar Revered, vendor: "Almaador, Shattrath"}
+        - {name: Stone of Blades, item_id: 33143, effect: "+12 Critical Strike Rating", design_gate: Keepers of Time Revered, vendor: "Alurmi, Tanaris"}
+        - {name: Facet of Eternity, item_id: 33144, effect: "+12 Defense Rating", design_gate: Keepers of Time Honored, vendor: "Alurmi, Tanaris"}
+      wowsims_db_conflict: >-
+        The WoWSims tbc-new database gives Crimson Sun 32 attack power, Falling
+        Star 19 stamina, Blood of Amber 13, Stone of Blades 13 and Facet of
+        Eternity 13. Those values are genuinely present in that file and are
+        contradicted by four independent sources: the Wowhead TBC tooltip, the
+        Wowhead WotLK 3.3.5 tooltip (a later client, in which any TBC-era buff
+        would still appear and does not), the wiki gemattrib field, and the older
+        wowsims/tbc all_gems.go, which gives 24 / 18 / 12 / 12 / 12. Raw patch
+        histories show no TBC-era stat change on any of the five; the earliest is
+        patch 4.0.1. TREAT tbc-new AS THE OUTLIER and use the values above.
+        No explanation for the tbc-new figures was located.
+
+    pvp_and_world_pvp:
+      ornate_gems:
+        source: PvP honor vendor
+        cost: 8100 Honor points, reduced from 28125 in patch 2.1.0
+        item_level: 60
+        binds: on_pickup
+        unique_equipped: true
+        patch: 2.0.3
+        phase_3_available: true
+        cost_at_2_4_3: unverified
+        vendor_identity: unverified
+        entries:
+          - {name: Runed Ornate Ruby, item_id: 28118, effect: "+12 Spell Damage"}
+          - {name: Smooth Ornate Dawnstone, item_id: 28119, effect: "+10 Critical Strike Rating"}
+          - {name: Gleaming Ornate Dawnstone, item_id: 28120, effect: "+10 Spell Critical Strike Rating"}
+          - {name: Potent Ornate Topaz, item_id: 28123, effect: "+6 Spell Damage, +5 Spell Crit Rating"}
+          - {name: Bold Ornate Ruby, item_id: 28362, effect: "+20 Attack Power"}
+          - {name: Inscribed Ornate Topaz, item_id: 28363, effect: "+10 Attack Power, +5 Critical Strike Rating"}
+        id_traps:
+          - "28121 is NOT a gem. It is Icon of Unyielding Courage, a trinket."
+          - "28122 is a retired item. Wowhead TBC returns the name zzOLDEnscribed Ornate Topaz with no source array."
+      hellfire_faction_quartermaster_gems:
+        source: 10 Marks each from the Hellfire Peninsula faction quartermasters
+        vendor_horde: Battlecryer Blackeye (npc 18267), Thrallmar
+        vendor_alliance: Warrant Officer Tracy Proudwell (npc 18266), Honor Hold
+        quality: rare
+        item_level: 60
+        binds: on_pickup
+        unique_equipped: true
+        patch: 2.0.3
+        phase_3_available: true
+        note: >-
+          The apparent duplicate pairs in the simulator database are FACTION
+          PAIRS, not unused duplicates. Every id in every pair is live.
+        entries:
+          - {name: Mighty Blood Garnet, item_id_horde: 28360, item_id_alliance: 28361, effect: "+14 Attack Power"}
+          - {name: Stark Blood Garnet, item_id_horde: 27777, item_id_alliance: 27812, effect: "+8 Spell Damage"}
+          - {name: Notched Deep Peridot, item_id_horde: 27785, item_id_alliance: 27820, effect: "+3 Stamina, +4 Spell Critical Strike Rating"}
+          - {name: Barbed Deep Peridot, item_id_horde: 27786, item_id_alliance: 27809, effect: "+3 Stamina, +4 Critical Strike Rating"}
+      halaa_world_pvp:
+        - {name: Sublime Mystic Dawnstone, item_id: 27679, effect: "+10 Resilience Rating", cost: 100 Halaa Battle Tokens, vendor: Nagrand PvP quartermasters, patch: 2.1.0, phase_3_available: true, note: "Genuinely PvP. Halaa world-PvP currency, not honor and not arena points."}
+        - {name: Don Amancio's Heart, item_id: 30598, faction: Alliance, effect: "+8 Strength", quality: rare, cost: "14 gold 9 silver 72 copper, Blade Merchant at Halaa, Nagrand", phase_3_available: true, note: "Available to whichever faction controls Halaa."}
+        - {name: Don Rodrigo's Heart, item_id: 30571, faction: Horde, effect: "+8 Strength", quality: rare, cost: "14 gold 9 silver 72 copper, Blade Merchant at Halaa, Nagrand", phase_3_available: true}
+
+    apexis_shard_gems:
+      quality: rare
+      item_level: 70
+      binds: on_pickup
+      unique_equipped: true
+      sell_price: 92 silver
+      patch: 2.1.0
+      source: 40 Apexis Shards each, Aether-tech Adept (npc 23244), Blade's Edge Mountains
+      available_since: Anniversary Phase 2
+      phase_3_available: true
+      verified: true
+      item_ids: [32634, 32635, 32636, 32637, 32638, 32639]
+      correction: >-
+        These are RARE quality, not epic, despite the item level. The vendor is
+        the Aether-tech ADEPT at 40 shards, which is a different NPC from the
+        Aether-tech MASTER who sells the two Unstable meta gems at 160 shards.
+
+    karazhan_quest_gems:
+      source: quest reward, Karazhan raid quest Nightbane (quest 9644)
+      requires_level: 70
+      patch: 2.0.3
+      phase_3_available: true
+      entries:
+        - {name: Infused Amethyst, item_id: 31116}
+        - {name: Soothing Amethyst, item_id: 31117}
+        - {name: Pulsing Amethyst, item_id: 31118}
+
+  # ---- Rare colored gems -------------------------------------------------
+  rare:
+    quality: rare
+    item_level: 70
+    sell_price: 3 gold
+    requires_level: none
+    phase_3_available: true
+    verified: true
+    raw_gem_source: >-
+      Prospecting Adamantite Ore at Jewelcrafting 325, which yields the six
+      uncommon and six rare Outland gems, and prospecting Fel Iron Ore, which
+      yields the rare gems at roughly one percent each.
+    design_source: >-
+      None of the Outland rare cuts is trainer-taught. Designs come from four
+      routes: the Master Jewelcrafter vendors in Hellfire Peninsula, being Tatiana
+      for Alliance and Kalaen for Horde, for the uncommon cuts; Outland world
+      drops, bind on equip, which is the dominant source for the base rare cuts,
+      all patch 2.0.3, all requiring Jewelcrafting 350; the Halaa PvP objective
+      vendor for Design: Mystic Dawnstone (24208); and Shattered Sun Offensive
+      Revered for Design: Regal Nightseye (35708), patch 2.4.0. Patch 2.4.0 also
+      added bind-on-pickup copies of several rare cut designs dropping from
+      Kael'thas Sunstrider in Magisters' Terrace.
+    design_source_completeness: unverified
+    red_living_ruby:
+      socket_text: "Matches a Red Socket."
+      cuts:
+        - {name: Bold Living Ruby, item_id: 24027, effect: "+8 Strength"}
+        - {name: Delicate Living Ruby, item_id: 24028, effect: "+8 Agility"}
+        - {name: Teardrop Living Ruby, item_id: 24029, effect: "+18 Healing and +6 Spell Damage"}
+        - {name: Runed Living Ruby, item_id: 24030, effect: "+9 Spell Damage"}
+        - {name: Bright Living Ruby, item_id: 24031, effect: "+16 Attack Power"}
+        - {name: Subtle Living Ruby, item_id: 24032, effect: "+8 Dodge Rating"}
+        - {name: Flashing Living Ruby, item_id: 24036, effect: "+8 Parry Rating"}
+    blue_star_of_elune:
+      socket_text: "Matches a Blue Socket."
+      cuts:
+        - {name: Solid Star of Elune, item_id: 24033, effect: "+12 Stamina"}
+        - {name: Sparkling Star of Elune, item_id: 24035, effect: "+8 Spirit"}
+        - {name: Lustrous Star of Elune, item_id: 24037, effect: "+3 Mana every 5 seconds"}
+        - {name: Stormy Star of Elune, item_id: 24039, effect: "+10 Spell Penetration"}
+    yellow_dawnstone:
+      socket_text: "Matches a Yellow Socket."
+      cuts:
+        - {name: Brilliant Dawnstone, item_id: 24047, effect: "+8 Intellect"}
+        - {name: Smooth Dawnstone, item_id: 24048, effect: "+8 Critical Strike Rating"}
+        - {name: Gleaming Dawnstone, item_id: 24050, effect: "+8 Spell Critical Rating"}
+        - name: Rigid Dawnstone
+          item_id: 24051
+          effect: "+8 Hit Rating"
+          flag: >-
+            CONFIRMED at exactly 8 hit rating, read three times independently,
+            including from inside the tooltip of Design: Rigid Dawnstone (item
+            24205), which embeds the produced gem. This is the rare fallback
+            hit.yaml names.
+        - {name: Thick Dawnstone, item_id: 24052, effect: "+8 Defense Rating"}
+        - {name: Mystic Dawnstone, item_id: 24053, effect: "+8 Resilience Rating"}
+        - name: Great Dawnstone
+          item_id: 31861
+          effect: "+8 Spell Hit Rating"
+          patch: 2.1.0
+          flag: >-
+            CONFIRMED at exactly 8 spell hit rating, read twice independently. This
+            is the rare spell fallback hit.yaml names.
+    purple_nightseye:
+      socket_text: "Matches a Red or Blue Socket."
+      cuts:
+        - {name: Sovereign Nightseye, item_id: 24054, effect: "+4 Strength and +6 Stamina"}
+        - {name: Shifting Nightseye, item_id: 24055, effect: "+4 Agility and +6 Stamina"}
+        - {name: Glowing Nightseye, item_id: 24056, effect: "+5 Spell Damage and +6 Stamina"}
+        - {name: Royal Nightseye, item_id: 24057, effect: "+9 Healing +3 Spell Damage and +2 Mana every 5 seconds"}
+        - {name: Balanced Nightseye, item_id: 31863, effect: "+8 Attack Power and +6 Stamina", patch: 2.1.0}
+        - {name: Infused Nightseye, item_id: 31865, effect: "+8 Attack Power and +2 Mana every 5 seconds", patch: 2.1.0}
+        - {name: Regal Nightseye, item_id: 35707, effect: "+4 Dodge Rating and +6 Stamina", patch: 2.4.0, phase_3_available: false, phase_3_available_reason: "Design gated on Shattered Sun Offensive Revered, Anniversary Phase 4. Schedule inference."}
+    green_talasite:
+      socket_text: "Matches a Yellow or Blue Socket."
+      cuts:
+        - {name: Enduring Talasite, item_id: 24062, effect: "+4 Defense Rating and +6 Stamina"}
+        - {name: Dazzling Talasite, item_id: 24065, effect: "+4 Intellect and +2 Mana every 5 seconds"}
+        - {name: Radiant Talasite, item_id: 24066, effect: "+4 Spell Critical Rating and +5 Spell Penetration"}
+        - {name: Jagged Talasite, item_id: 24067, effect: "+4 Critical Strike Rating and +6 Stamina"}
+        - {name: Steady Talasite, item_id: 33782, effect: "+6 Stamina and +4 Resilience Rating", patch: 2.1.0, note: "Rare, not epic, despite appearing in epic-adjacent id ranges."}
+    orange_noble_topaz:
+      socket_text: "Matches a Red or Yellow Socket."
+      cuts:
+        - {name: Inscribed Noble Topaz, item_id: 24058, effect: "+4 Critical Strike Rating and +4 Strength"}
+        - {name: Potent Noble Topaz, item_id: 24059, effect: "+4 Spell Critical Rating and +5 Spell Damage"}
+        - {name: Luminous Noble Topaz, item_id: 24060, effect: "+9 Healing +3 Spell Damage and +4 Intellect"}
+        - {name: Glinting Noble Topaz, item_id: 24061, effect: "+4 Hit Rating and +4 Agility"}
+        - {name: Veiled Noble Topaz, item_id: 31867, effect: "+4 Spell Hit Rating and +5 Spell Damage", patch: 2.1.0}
+        - {name: Wicked Noble Topaz, item_id: 31868, effect: "+4 Critical Strike Rating and +8 Attack Power", patch: 2.1.0}
+    other:
+      - {name: Purified Shadow Pearl, item_id: 32836, color: purple, effect: "+9 Healing +3 Spell Damage and +4 Spirit", source: "Jewelcrafting craft, spell 41429, from Shadow Pearl plus Purified Draenic Water", patch: 2.1.0, note: "Rare, not epic."}
+      - {name: Eye of the Sea, item_id: 34831, color: blue, effect: "+15 Stamina", unique_equipped: true, binds: no, source: "Bag of Fishing Treasures from the Terokkar Forest fishing daily quests", patch: 2.4.0, phase_3_available: unverified, note: "Its source is open-world Phase 1 content rather than Isle of Quel'Danas content, so whether Blizzard gated it to Phase 4 with the rest of patch 2.4 is not determined."}
+
+  # ---- Prismatic ----------------------------------------------------------
+  prismatic:
+    count: 2
+    socket_text: "Matches a Red, Yellow or Blue Socket."
+    phase_3_available: true
+    verified: true
+    entries:
+      - {name: Void Sphere, item_id: 22459, quality: epic, effect: "+4 Resist All"}
+      - {name: Prismatic Sphere, item_id: 22460, quality: rare, effect: "+3 Resist All"}
+    flag: >-
+      CONFIRMS hit.yaml. An index scan of the full 214-entry gem table returns
+      exactly two prismatic-color entries, both resistance spheres. The
+      all-attributes prismatic variety belongs to Wrath. No prismatic gem in TBC
+      supplies hit.
+
+  # ---- Haste gems ---------------------------------------------------------
+  haste:
+    patch: 2.4.0
+    introduced_with: Isle of Quel'Danas and Sunwell
+    phase_3_available: false
+    phase_3_available_reason: >-
+      Patch 2.4.0 content, which is Anniversary Phase 4. Schedule inference.
+    verified: true
+    verified_availability: false
+    entries:
+      - {name: Quick Lionseye, item_id: 35761, quality: epic, effect: "+10 Spell Haste Rating"}
+      - {name: Reckless Pyrestone, item_id: 35760, quality: epic, stats: {healing: 6, spell_damage: 6, spell_haste_rating: 5}}
+      - {name: Forceful Seaspray Emerald, item_id: 35759, quality: epic, stats: {stamina: 7, spell_haste_rating: 5}}
+      - {name: Quick Dawnstone, item_id: 35315, quality: rare, effect: "+8 Spell Haste Rating"}
+      - {name: Reckless Noble Topaz, item_id: 35316, quality: rare, effect: "+4 Spell Haste Rating and +5 Spell Damage"}
+      - {name: Forceful Talasite, item_id: 35318, quality: rare, effect: "+4 Spell Haste Rating and +6 Stamina"}
+    open_question: >-
+      Indormi's vendor table, as recorded in its final 2.4.3 state, lists Design:
+      Quick Lionseye, Design: Reckless Pyrestone and Design: Forceful Seaspray
+      Emerald at Honored. That table cannot distinguish Phase 3 launch stock from
+      Phase 4 additions. The original-patch fact is verified. The Anniversary
+      Phase 3 vendor state is not.
+
+  # ---- Later-phase gems ---------------------------------------------------
+  not_available_at_phase_3:
+    caveat: >-
+      Every entry in this block is a schedule inference from Blizzard's published
+      Anniversary phase plan combined with the item's original patch of
+      introduction. None is an observation on a live Phase 3 server. If the
+      Anniversary build ships 2.4.3 item data unrestricted, some of these become
+      reachable earlier. See open_questions.anniversary_phase_gating.
+    items:
+      - {name: Charmed Amani Jewel, item_id: 34256, color: blue, quality: epic, effect: "+15 Stamina", unique_equipped: true, binds: on_pickup, source: "quest reward, Playin' With Dolls, from Zungam inside Zul'Aman, turned in to Griftah in Shattrath City", patch: 2.3.0, arrives: Anniversary Phase 3.5, note: "It is a QUEST REWARD, not a boss drop."}
+      - {name: Eternal Earthstorm Diamond, item_id: 35501, arrives: Anniversary Phase 4}
+      - {name: Ember Skyfire Diamond, item_id: 35503, arrives: Anniversary Phase 4}
+      - {name: Regal Nightseye, item_id: 35707, arrives: Anniversary Phase 4}
+      - {name: The six haste gems, item_ids: [35759, 35760, 35761, 35315, 35316, 35318], arrives: Anniversary Phase 4}
+      - {name: Bright and Runed Crimson Spinel BoP re-issues, item_ids: [35487, 35488], arrives: Anniversary Phase 4}
+
+# ---------------------------------------------------------------------------
+# GEM SUMMARY: EVERY HIT AND EXPERTISE ROUTE
+# ---------------------------------------------------------------------------
+#
+# Built two ways and cross-checked: an exhaustive index scan of the 214-entry
+# simulator gem table on stat indices 12 and 20, and contiguous tooltip scans of
+# the cut blocks. The two agree.
+
+gem_hit_and_expertise:
+  expertise: >-
+    NONE. Zero gems in TBC supply expertise rating. Expertise was introduced in
+    patch 2.3.0 but no gem provides it in 2.4.3. The first expertise gems appear
+    in Wrath. This confirms hit.yaml.
+  meta_gems_supplying_hit: >-
+    NONE. All eighteen meta tooltips were read directly. Every one pairs a proc or
+    percentage effect with stamina, intellect, agility, defense, crit, spell crit,
+    spell damage, healing, attack power or melee damage. None carries hit rating,
+    spell hit rating or expertise rating. This confirms hit.yaml.
+  socket_addition: >-
+    NONE EXISTS. Sockets are a fixed property of an item as it drops or is
+    crafted. Eternal Belt Buckle and the Blacksmithing self-only bracer and glove
+    socket additions were both introduced in patch 3.0.2. Neither exists in TBC.
+    Independently corroborated: a name scan of all 8,254 items in the simulator
+    database returns no belt buckle of any kind. This confirms hit.yaml.
+  total_hit_bearing_gems: 19
+  uncommon:
+    note: These four are absent from the simulator database extract used as a lead list.
+    items:
+      - {name: Glinting Flame Spessarite, item_id: 23100, effect: "+3 Hit Rating and +3 Agility"}
+      - {name: Rigid Golden Draenite, item_id: 23116, effect: "+6 Hit Rating"}
+      - {name: Great Golden Draenite, item_id: 31860, effect: "+6 Spell Hit Rating"}
+      - {name: Veiled Flame Spessarite, item_id: 31866, effect: "+3 Spell Hit Rating and +4 Spell Damage"}
+  rare:
+    - {name: Rigid Dawnstone, item_id: 24051, hit_rating: 8}
+    - {name: Great Dawnstone, item_id: 31861, spell_hit_rating: 8}
+    - {name: Glinting Noble Topaz, item_id: 24061, hit_rating: 4, also: agility 4}
+    - {name: Veiled Noble Topaz, item_id: 31867, spell_hit_rating: 4, also: spell damage 5}
+  epic_phase_3:
+    - {name: Rigid Lionseye, item_id: 32206, hit_rating: 10}
+    - {name: Great Lionseye, item_id: 32210, spell_hit_rating: 10}
+    - {name: Glinting Pyrestone, item_id: 32220, hit_rating: 5, also: agility 5}
+    - {name: Veiled Pyrestone, item_id: 32221, spell_hit_rating: 5, also: spell damage 6}
+  epic_heroic_dungeon:
+    completeness: >-
+      Conservative. That family's ids are scattered across 30546 to 30612
+      interleaved with unrelated items, so a full contiguous tooltip scan was not
+      run. The seven listed are confirmed. The claim that no eighth exists rests
+      on the simulator index scan alone.
+    items:
+      - {name: Pristine Fire Opal, item_id: 30553, hit_rating: 4, also: attack power 10}
+      - {name: Glinting Fire Opal, item_id: 30556, hit_rating: 4, also: agility 5}
+      - {name: Etched Fire Opal, item_id: 30559, hit_rating: 4, also: strength 5}
+      - {name: Shining Fire Opal, item_id: 30564, spell_hit_rating: 5, also: spell damage 6}
+      - {name: Nimble Fire Opal, item_id: 30575, hit_rating: 4, also: dodge rating 5}
+      - {name: Vivid Chrysoprase, item_id: 30605, spell_hit_rating: 5, also: stamina 6}
+      - {name: Lambent Chrysoprase, item_id: 30606, spell_hit_rating: 5, also: mp5 2}
+  confidence: good
+
+# ---------------------------------------------------------------------------
+# CONSUMABLES, CAP-RELEVANT ONLY
+# ---------------------------------------------------------------------------
+#
+# This is NOT a consumables catalog. Only items supplying hit rating, spell hit
+# rating, expertise rating or defense rating are recorded. Everything else was
+# read and rejected, and the rejections are recorded as negative claims below
+# because hit.yaml depends on them.
+
+consumables:
+  scope: hit, spell hit, expertise, defense
+  categories_swept: food and drink, battle elixirs, guardian elixirs, flasks, scrolls, weapon oils, sharpening stones, weightstones, weapon coatings, potions
+  verified: true
+
+  supplies_a_cap_relevant_stat:
+
+    - name: Spicy Hot Talbuk
+      item_id: 33872
+      category: food
+      supplies: [melee_hit, ranged_hit]
+      hit_rating: 20
+      use_text: "Restores 7500 health over 30 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 20 Hit Rating and Spirit for 30 min."
+      buff_text: "Hit Rating and Spirit increased by 20."
+      buff_spell_id: 43764
+      food_spell_id: 43763
+      duration: 30 minutes
+      item_level: 75
+      requires_level: 65
+      source: >-
+        Cooking. Recipe: Spicy Hot Talbuk, item 33873, binds when picked up,
+        requires Cooking 325, teaches spell 43765. Reagents Talbuk Venison (27682)
+        and Hot Spices (2692). The recipe comes from a reward container from The
+        Rokk's daily cooking quests in Lower City, Shattrath City.
+      patch: 2.3.0
+      phase_3_available: true
+      persists_through_death: unverified
+      verified: true
+      spell_hit_coverage: false
+      spell_hit_evidence: >-
+        Spell 43764 lists Effect #1 as "Apply Aura: Mod Rating (Hit Chance) Value:
+        20" and Effect #2 as "Apply Aura: Mod Stat - Flat (Spirit) Value: 20".
+        Only one rating label is present and it carries no spell qualifier. The
+        same dataset labels spell-school ratings explicitly elsewhere: Skullfish
+        Soup renders as "Spell Critical Strike Rating". Plain "Hit Rating"
+        therefore denotes the physical rating. The simulator database
+        independently assigns MeleeHit 20 with no SpellHit component.
+      ranged_coverage: unverified
+      ranged_note: >-
+        Whether the aura's rating mask covers only the melee hit index or both the
+        melee and ranged hit indices was not established. Aowow does not display
+        the raw misc value for spell 43764 and the tooltip JSON does not expose
+        effect misc values. hit.yaml records this as melee and ranged. Nothing
+        found contradicts that; nothing found confirms the ranged half either.
+      flag: >-
+        This is the 20 rating hit.yaml prices. Confirmed by two independent
+        sources: the TBC tooltip, and the simulator consumables table, in which
+        it is the ONLY entry of 105 carrying hit rating.
+
+    - name: Flask of Fortification
+      item_id: 22851
+      category: flask
+      supplies: [defense, health]
+      defense_rating: 10
+      effect: "Increases maximum health by 500 and defense rating by 10 for 2 hrs. Counts as both a Battle and Guardian elixir. This effect persists through death."
+      duration: 2 hours
+      persists_through_death: true
+      requires_level: 65
+      source: >-
+        Alchemy. Learned by discovery while making potions, and must be created at
+        an Alchemy Lab. Reagents: 1 Fel Lotus, 3 Mana Thistle, 7 Ancient Lichen, 1
+        Crystal Vial.
+      phase_3_available: true
+      verified: true
+      flag: >-
+        NOT IN hit.yaml. hit.yaml's consumables block records that TBC has a
+        food granting 20 physical hit and no spell hit consumable at all, and says
+        nothing about defense. This flask supplies 10 defense rating, which is a
+        cap-relevant stat for feral_bear, protection_paladin and
+        protection_warrior against the crit-immunity threshold. It is the only
+        flask that supplies one.
+
+    - name: Insane Strength Potion
+      item_id: 22828
+      category: potion
+      supplies: [strength, defense_penalty]
+      defense_rating: -75
+      effect: "Increases your Strength by 120 and decreases your defense rating by 75 for 15 sec."
+      cooldown: 2 minutes
+      duration: 15 seconds
+      requires_level: 50
+      source: Alchemy 320, spell 28494, reagents 3 Terocone and 1 Crystal Vial
+      phase_3_available: true
+      verified: true
+      flag: >-
+        Recorded because it is the only defense-rating interaction in the whole
+        consumable set and it runs in the NEGATIVE direction. A tank at exactly
+        the crit-immunity threshold loses it for 15 seconds while this is active.
+
+  negative_claims:
+    #
+    # These are the claims hit.yaml rests on. Each was tested by enumerating the
+    # category item by item, because filtered database queries render
+    # client-side and return nothing server-side.
+    #
+    - claim: No TBC food, elixir, flask, potion, scroll, oil or stone grants SPELL HIT RATING.
+      verdict: CONFIRMED
+      basis: >-
+        Hit rating and spell hit rating are separate item stats through the whole
+        of TBC. The merge happened in patch 3.0.2, whose notes read, verbatim:
+        "Hit Rating, Critical Strike Rating, and Haste Rating now modify both
+        melee attacks and spells." Item-level confirmation across all categories:
+        the only rating-type effects on TBC food are Hit Rating on Spicy Hot
+        Talbuk and Spell Critical Strike Rating on Skullfish Soup. The simulator
+        consumables table contains no SpellHit assignment on any consumable.
+      confidence: good
+      flag: CONFIRMS hit.yaml, including the asymmetry it flags for arcane_mage.
+
+    - claim: No TBC consumable grants EXPERTISE.
+      verdict: CONFIRMED
+      basis: >-
+        Expertise was introduced in patch 2.3.0. Its sources are gear, gems,
+        enchantments, racial traits and talents. No consumable grants it. The
+        simulator consumables table contains no Expertise assignment anywhere.
+      scope_caveat: >-
+        Confirmed for CONSUMABLES. Raid buffs and boss debuffs were not separately
+        enumerated in this capture, so the broader "no buff or debuff" half of the
+        hit.yaml claim is not re-tested here. hit.yaml already records it.
+      confidence: good
+
+    - claim: The six named elixirs carry no hit rating.
+      verdict: CONFIRMED
+      detail:
+        - {name: Elixir of Draenic Wisdom, item_id: 32067, effect: "Increases Intellect and Spirit by 30 for 1 hour. Guardian Elixir.", hit: none}
+        - {name: Elixir of Major Agility, item_id: 22831, effect: "Increases your Agility by 35 and your critical strike rating by 20 for 1 hour. Battle Elixir.", hit: none}
+        - {name: Elixir of Demonslaying, item_id: 9224, effect: "Increases attack power by 265 against demons. Lasts 5 min. Battle Elixir.", hit: none}
+        - {name: Adept's Elixir, item_id: 28103, effect: "Increases spell damage and healing by up to 24 and spell critical strike rating by 24 for 1 hour. Battle Elixir.", hit: none}
+        - {name: Elixir of Mastery, item_id: 28104, effect: "Increases all Stats by 15 for 1 hour. Battle Elixir.", hit: none}
+        - {name: Elixir of the Mongoose, item_id: 13452, effect: "Increases Agility by 25 and critical strike rating by 28 for 1 hour. Battle Elixir.", hit: none}
+      note: >-
+        Their secondary stat is critical strike rating, never hit rating. Also
+        recorded: Elixir of Major Defense, item 22834, grants ARMOR of 550, not
+        defense rating. The name is misleading and is a common source of error.
+      confidence: good
+
+    - claim: Weapon oils, sharpening stones and weightstones grant no hit, expertise or weapon skill.
+      verdict: CONFIRMED
+      detail:
+        - {name: Superior Wizard Oil, item_id: 22522, effect: "While applied to target weapon it increases spell damage by up to 42. Lasts for 1 hour."}
+        - {name: Superior Mana Oil, item_id: 22521, effect: "While applied to target weapon it restores 14 mana to the caster every 5 seconds. Lasts for 1 hour."}
+        - {name: Brilliant Wizard Oil, item_id: 20749, effect: "While applied to target weapon it increases spell damage by up to 36 and increases spell critical strike rating by 14. Lasts for 1 hour."}
+        - {name: Brilliant Mana Oil, item_id: 20748, effect: "While applied to target weapon it restores 12 mana to the caster every 5 seconds and increases the effect of healing spells by up to 25. Lasts for 1 hour."}
+        - {name: Adamantite Sharpening Stone, item_id: 23529, effect: "Increase sharp weapon damage by 12 and add 14 melee critical strike rating for 1 hour.", source: "Blacksmithing 350, plans require Cenarion Expedition Honored, Fedryen Swiftspear, 6 gold"}
+        - {name: Adamantite Weightstone, item_id: 28421, effect: "Increase blunt weapon damage by 12 and add 14 critical hit rating for 1 hour.", source: "Blacksmithing 350, plans require Cenarion Expedition Honored"}
+        - {name: Fel Sharpening Stone, item_id: 23528, effect: "Increase sharp weapon damage by 12 for 1 hour.", source: "Blacksmithing 300, trainer"}
+        - {name: Fel Weightstone, item_id: 28420, effect: "Increase blunt weapon damage by 12 for 1 hour.", source: "Blacksmithing 300, trainer"}
+        - {name: Elemental Sharpening Stone, item_id: 18262, effect: "Increase the critical strike rating on a melee weapon by 28 for 1 hour.", source: "Blacksmithing 300"}
+      weapon_skill_note: >-
+        The vanilla weapon-skill stones were converted to flat weapon damage in
+        TBC. Dense Sharpening Stone, item 12404, reads "Increase sharp weapon
+        damage by 8 for 1 hour" and serves as the control confirming the
+        conversion. Zero weapon skill on any of them.
+      confidence: good
+
+    - claim: Scrolls grant no hit.
+      verdict: CONFIRMED
+      detail:
+        - {name: Scroll of Strength V, item_id: 27503, effect: "Increases the target's Strength by 20 for 30 min."}
+        - {name: Scroll of Agility V, item_id: 27498, effect: "Increases the target's Agility by 20 for 30 min."}
+        - {name: Scroll of Intellect V, item_id: 27499, effect: "Increases the target's Intellect by 20 for 30 min."}
+        - {name: Scroll of Spirit V, item_id: 27501, effect: "Increases the target's Spirit by 30 for 30 min."}
+        - {name: Scroll of Stamina V, item_id: 27502, effect: "Increases the target's Stamina by 20 for 30 min."}
+        - {name: Scroll of Protection V, item_id: 27500, effect: "Increases the target's Armor by 300 for 30 min."}
+      id_correction: >-
+        27501 is Spirit and 27502 is Stamina. The alphabetical assumption is
+        wrong.
+      note: >-
+        Scroll of Protection V grants flat ARMOR, not defense rating. In 2.4.3
+        these carry no Battle Elixir or Guardian Elixir classification, so they do
+        not occupy an elixir slot. Inscription did not exist in 2.4.3, so any
+        source citing an Inscription origin is post-TBC.
+      confidence: good
+
+    - claim: No TBC food other than Spicy Hot Talbuk grants hit, and no TBC food grants defense rating.
+      verdict: CONFIRMED
+      surveyed_count: 25
+      representative:
+        - {name: Spicy Crawdad, item_id: 27667, grants: "30 Stamina and 20 Spirit"}
+        - {name: Blackened Sporefish, item_id: 27663, grants: "20 Stamina and 8 mana every 5 seconds"}
+        - {name: Fisherman's Feast, item_id: 33052, grants: "30 Stamina and 20 Spirit"}
+        - {name: Roasted Clefthoof, item_id: 27658, grants: "20 Strength and 20 Spirit"}
+        - {name: Warp Burger, item_id: 27659, grants: "20 Agility and 20 Spirit"}
+        - {name: Grilled Mudfish, item_id: 27664, grants: "20 Agility and 20 Spirit"}
+        - {name: Ravager Dog, item_id: 27655, grants: "40 attack power and 20 Spirit"}
+        - {name: Talbuk Steak, item_id: 27660, grants: "20 Stamina and 20 Spirit"}
+        - {name: Skullfish Soup, item_id: 33825, grants: "20 Spell Critical Strike Rating and 20 Spirit"}
+        - {name: Golden Fish Sticks, item_id: 27666, grants: "44 healing and 20 Spirit"}
+      note: >-
+        Skullfish Soup applies a buff named Enlightened, not Well Fed. Hot
+        Buttered Trout is item 33053, not 33825, and has no Well Fed buff in TBC.
+        Stormchops in TBC is item 33866; the Wrath id 43015 does not exist in the
+        TBC dataset.
+      confidence: good
+
+    - claim: No flask other than Flask of Fortification supplies a cap-relevant stat.
+      verdict: CONFIRMED
+      detail:
+        - {name: Flask of Relentless Assault, item_id: 22854, effect: "Increases attack power by 120 for 2 hrs. Counts as both a Battle and Guardian elixir. This effect persists through death."}
+        - {name: Flask of Blinding Light, item_id: 22861, effect: "Increases spell damage caused by Arcane, Holy and Nature spells by up to 80 for 2 hrs. Counts as both a Battle and Guardian elixir. This effect persists through death."}
+        - {name: Flask of Pure Death, item_id: 22866, effect: "Increases spell damage caused by Shadow, Fire and Frost spells by up to 80 for 2 hrs. Counts as both a Battle and Guardian elixir. This effect persists through death."}
+        - {name: Flask of Mighty Restoration, item_id: 22853, effect: "Increases mana regeneration by 25 mana per 5 seconds for 2 hrs. Counts as both a Battle and Guardian elixir. This effect persists through death."}
+        - {name: Flask of Chromatic Wonder, item_id: 33208, effect: "Increases resistance to all schools of magic by 35 and all stats by 18 for 2 hrs. Counts as both a Battle and Guardian elixir. This effect persists through death."}
+      shattrath_flask_correction: >-
+        The flasks referred to as "Shattrath flasks" are the UNSTABLE FLASK line,
+        items 32596 through 32601, and they are not from Shattrath. They are made
+        at the Fel Crystalforge in Blade's Edge Mountains for 10 Apexis Shards
+        each, and they function ONLY in the Blade's Edge Mountains Plateaus and
+        Gruul's Lair. None supplies hit, expertise or defense. They are therefore
+        irrelevant to a Hyjal or Black Temple raid.
+      confidence: good
+
+    - claim: Phase 3 introduces no new cap-relevant consumable.
+      verdict: CONFIRMED_WITH_CAVEAT
+      basis: >-
+        Neither Black Temple nor Battle for Mount Hyjal drops any consumable,
+        weapon oil, stone, coating, or alchemy or cooking recipe.
+      caveat: >-
+        The negative rests on the published loot lists for both zones showing no
+        consumables. No exhaustive Phase 3 consumable list was retrievable, so the
+        absence is inferred rather than proven.
+      confidence: conservative
+
+  phase_note_on_spicy_hot_talbuk: >-
+    Spicy Hot Talbuk was added in patch 2.3.0, which is the Zul'Aman content
+    patch, and Zul'Aman is Anniversary Phase 3.5. Its recipe source is The Rokk's
+    daily cooking quests in Shattrath, which are not gated on Zul'Aman. Whether
+    the Anniversary build ships that recipe at Phase 3 or holds it to Phase 3.5 is
+    UNVERIFIED and matters, because hit.yaml names this food as the fallback that
+    lets retribution_paladin close most of its 24-rating gap by eating.
+
+# ---------------------------------------------------------------------------
+# WRATH-ERA TRAPS
+# ---------------------------------------------------------------------------
+#
+# Entries that appear in guides and do NOT exist in 2.4.3, or that exist with
+# different values. Each was tested, not assumed.
+
+wrath_era_traps:
+
+  - name: Enchant Gloves - Precision
+    spell_id: 44488
+    verdict: DOES NOT EXIST IN TBC
+    evidence: >-
+      Three independent strands. First, the TBC tooltip endpoint returns HTTP 404
+      for spell 44488, and the TBC XML endpoint returns HTTP 404. Both are
+      TBC-era requests. Second, the retail page for the same spell returns HTTP
+      200 with the acquisition line "Profession Trainer: Northrend Enchanting
+      (35)" and reagents Greater Cosmic Essence and Lesser Cosmic Essence, all of
+      which is Wrath content. Third, an exhaustive enumeration of the twelve glove
+      enchant spells that resolve on the TBC subsite finds none granting melee hit
+      or expertise.
+    confirms: hit.yaml, which already records this correction.
+    confidence: high
+
+  - name: A melee hit glove enchant of any name
+    verdict: DOES NOT EXIST IN TBC
+    evidence: The twelve-spell enumeration above. The only hit-flavoured glove enchant is Spell Strike, and it is spell hit only.
+    confidence: high
+
+  - name: Eternal Belt Buckle, and any means of adding a socket
+    verdict: DOES NOT EXIST IN TBC
+    evidence: >-
+      Introduced in patch 3.0.2 together with the Blacksmithing self-only bracer
+      and glove socket additions. A name scan of all 8,254 items in the TBC
+      simulator database returns no belt buckle of any kind.
+    confirms: hit.yaml
+    confidence: high
+
+  - name: Relentless Earthstorm Diamond, three-red activation
+    item_id: 32409
+    verdict: WRONG FOR TBC
+    correct_tbc_activation: "Requires at least 2 Red Gems / Requires at least 2 Yellow Gems / Requires at least 2 Blue Gems"
+    note: The three-red requirement is the Wrath value. A guide quoting it is describing a different patch.
+    confidence: high
+
+  - name: Self-only leg armors and spellthreads
+    verdict: DOES NOT EXIST IN TBC
+    evidence: >-
+      Not one of the eight TBC leg enhancements carries a "Requires Leatherworking
+      (nnn)" or "Requires Tailoring (nnn)" line. The self-only pattern belongs to
+      Wrath, where Icescale and Frosthide Leg Armor read "Requires Leatherworking
+      (400)".
+    confidence: high
+
+  - name: Self-only armor kits
+    verdict: DOES NOT EXIST IN TBC
+    evidence: Each armor kit use-effect spell states only "Requires level 25" plus the slot list. Leatherworking is required to craft, not to apply.
+    confidence: high
+
+  - name: Percentage wording on dodge, hit or crit in enchant text
+    verdict: NOT A 2.4.3 RENDER
+    examples:
+      - "Death's Embrace rendered as +28 attack power and 1% dodge. The 2.4.3 value is 12 dodge rating."
+      - "Falcon's Call rendered as 1% chance to hit. The 2.4.3 value is 10 hit rating."
+      - "Presence of Might rendered as 10 dodge rating and 10 parry rating. The 2.4.3 value is 10 Stamina, 10 defense rating and 15 shield block value."
+      - "Glyph of the Defender served under its retail name Arcanum of the Defender with parry substituted for defense."
+    note: >-
+      TBC expresses these as rating. A source reading in percentages is pre-3.0 or
+      post-3.0, not 2.4.3. This is the fastest single tell for era drift.
+    confidence: high
+
+  - name: Enchant Ring - Healing Power rendered as spell power
+    item_id: 22537
+    verdict: NOT A 2.4.3 RENDER
+    correct_tbc_text: "Permanently enchant a ring to increase healing spells by up to 20 and damage spells by up to 7."
+    note: The single spell power figure is the post-3.0 consolidation.
+    confidence: high
+
+  - name: Enchant Boots - Vitality at 5 mana per 5 seconds
+    item_id: 22542
+    verdict: WRONG FOR TBC
+    correct_tbc_value: 4 health and 4 mana every 5 seconds
+    confidence: good
+
+  - name: Enchant Bracer - Superior Stamina at 12 Stamina
+    verdict: WRONG FOR TBC
+    correct_tbc_value: 9 Stamina
+    confidence: good
+
+  - name: Adamantite Sharpening Stone at +4 damage and +4 crit
+    item_id: 23529
+    verdict: WRONG FOR TBC
+    correct_tbc_text: "Increase sharp weapon damage by 12 and add 14 melee critical strike rating for 1 hour."
+    confidence: good
+
+  - name: Scroll of X V at +15 stats and +60 armor
+    verdict: WRONG FOR TBC
+    correct_tbc_values: 20 for Strength, Agility, Intellect and Stamina, 30 for Spirit, 300 armor for Protection
+    note: The wiki also classifies these as Battle or Guardian Elixirs. The 2.4.3 items carry no such classification.
+    confidence: good
+
+  - name: Spicy Hot Talbuk requiring level 26 and Outland Cooking 25
+    item_id: 33872
+    verdict: WRONG FOR TBC
+    correct_tbc_values: Requires Level 65, Cooking 325
+    note: The wiki also omits Hot Spices as a reagent, which patch 3.1.0 removed.
+    confidence: good
+
+# ---------------------------------------------------------------------------
+# ERRORS FOUND IN THE WOWSIMS DATABASE
+# ---------------------------------------------------------------------------
+#
+# AGENTS.md already records two traps in this database, being the unreliable
+# phase field and the absent tier tokens. These are further ones, found while
+# using it as a lead list for this capture. None is fixed there.
+
+wowsims_db_errors:
+
+  - id: spell_id_column_is_not_the_recipe
+    severity: high
+    detail: >-
+      The enchants[].spellId column is not the recipe spell in nearly every case.
+      It is the applied aura or proc row, which is a separate database record.
+      Confirmed wrong on Glyph of Ferocity (listed 15806, actual 35452), Glyph of
+      Renewal (18029 / 35445), Glyph of Power (15714 / 35447), Glyph of Chromatic
+      Warding (37890 / 37889), Presence of Might (24148 / 24149), Presence of
+      Sight (24156 / 24164), and on every entry in the wrist, feet, hands, weapon
+      and shield blocks. CITE ITEM IDS, NOT DB SPELL IDS.
+
+  - id: retired_glyph_of_the_wild
+    severity: high
+    detail: >-
+      Item 29188 is named zzoldGlyph of the Wild in the 2.4.3 data and has no
+      vendor and no source. The database presents it as a live head enchant. Its
+      stat is also wrong there: dodge rating 12, not defense rating 12, and the
+      required level is 69, not 70.
+
+  - id: surefooted_stat_vector
+    severity: high
+    detail: >-
+      Enchant Boots - Surefooted is recorded with hit 10, which is correct, but
+      the entry omits the 5 percent snare and root resistance and the applied aura
+      confirms the enchant grants no agility. Any secondary source giving it
+      agility is wrong.
+
+  - id: unique_equipped_jewelcrafting_gem_stats
+    severity: high
+    detail: >-
+      The 33131 family carries inflated values in tbc-new: Crimson Sun 32 attack
+      power against an actual 24, Falling Star 19 stamina against 18, and Blood of
+      Amber, Stone of Blades and Facet of Eternity each 13 against 12. Four
+      independent sources give the lower figures, including an older wowsims
+      release. tbc-new is the outlier.
+
+  - id: reckless_noble_topaz_hit
+    severity: high
+    detail: >-
+      Item 35316 is recorded with hit 4. The TBC tooltip reads "+4 Spell Haste
+      Rating and +5 Spell Damage". There is no hit rating on that gem. A model
+      reading the database would credit a hit source that does not exist.
+
+  - id: enchant_shield_resilience_item_id
+    severity: medium
+    detail: >-
+      Item id 34110 is given for Enchant Shield - Resilience. That id returns HTTP
+      404 on the TBC subsite and is not a 2.4.3 item. The enchant exists as spell
+      44383. No replacement formula item id was found.
+
+  - id: enchant_weapon_major_spirit_misattribution
+    severity: medium
+    detail: >-
+      The database lists "Enchant Weapon - Major Spirit" against spell 20004. In
+      the TBC database that spell is named "Life Steal", a drain-health effect of
+      value 30. The real Major Spirit enchant is a TWO-HAND enchant, recipe spell
+      20035.
+
+  - id: magisters_armor_kit_use_spell
+    severity: low
+    detail: The use-spell id 21625 is wrong. The correct id is 32399.
+
+  - id: warding_glyph_blank_stat_vectors
+    severity: low
+    detail: >-
+      The five single-school Warding glyphs carry blank stat vectors. Each grants
+      20 resistance of its school. Only the Chromatic glyph is recorded correctly.
+
+  - id: duplicate_eternium_scope_row
+    severity: low
+    detail: >-
+      Two rows exist for the eternium scope. The second, spelled "Stabilized
+      Eternium Scope" with spellId 22780, is a duplicate pointing at the Biznicks
+      aura and should be discarded. The real item is 23766.
+
+  - id: heavy_tonk_armor_listed_as_a_gem
+    severity: low
+    detail: >-
+      Item 34627, Heavy Tonk Armor, appears as a yellow rare gem. It is a Darkmoon
+      Faire tonk item reading "Fits into a tonk Overdrive socket" and is not a
+      character gem.
+
+  - id: missing_uncommon_hit_gems
+    severity: low
+    detail: >-
+      Four uncommon hit-bearing gems are absent from the extract used as a lead
+      list: 23100 Glinting Flame Spessarite, 23116 Rigid Golden Draenite, 31860
+      Great Golden Draenite, 31866 Veiled Flame Spessarite.
+
+  - id: missing_zulgurub_class_enchants
+    severity: medium
+    detail: >-
+      The database carries two of the nine Zul'Gurub class enchants. Seven are
+      missing, including Falcon's Call, which is one of only two hit-bearing
+      enchants outside the head, feet and hands slots.
+
+  - id: inscription_of_endurance_unfactioned
+    severity: low
+    detail: >-
+      Item 29187 appears among the shoulder entries with no faction, which is how
+      it gets misfiled as an Aldor or Scryers item. It is The Violet Eye, Honored,
+      Karazhan.
+
+# ---------------------------------------------------------------------------
+# OPEN QUESTIONS
+# ---------------------------------------------------------------------------
+
+open_questions:
+
+  anniversary_phase_gating:
+    blocks: "Every phase_3_available: false call in this file"
+    detail: >-
+      Fifteen entries are marked unavailable at Phase 3 on the ground that they
+      are patch 2.4.0 content and the Isle of Quel'Danas is Anniversary Phase 4,
+      or that they are Zul'Aman content and Zul'Aman is Anniversary Phase 3.5.
+      Blizzard's published phase plan supports the schedule. What is NOT
+      established is whether the Anniversary build gates the ITEMS or only the
+      CONTENT. The client runs 2.4.3 item data throughout, so an item whose source
+      is not itself gated could be reachable early. The affected entries are Glyph
+      of the Gladiator, Enchant Chest - Defense, Enchant Cloak - Steelweave,
+      Enchant Weapon - Executioner, Enchant Weapon - Deathfrost, the Adamantite
+      Weapon Chain plans, Eternal Earthstorm Diamond, Ember Skyfire Diamond, Regal
+      Nightseye, the six haste gems, the two Crimson Spinel re-issues, Charmed
+      Amani Jewel, and Eye of the Sea.
+    recommendation: >-
+      Resolve on the live server in the first week and correct this file. Nothing
+      in hit.yaml depends on any of them today, because none supplies hit or
+      expertise.
+
+  spicy_hot_talbuk_phase_availability:
+    blocks: The retribution_paladin gap_note in hit.yaml
+    detail: >-
+      Spicy Hot Talbuk is patch 2.3.0 content, and 2.3.0 is the Zul'Aman patch,
+      which the Anniversary plan places at Phase 3.5. Its recipe source, The
+      Rokk's daily cooking quests in Shattrath, is not itself gated on Zul'Aman.
+      hit.yaml names this food as the route by which retribution_paladin closes
+      most of its 24-rating gap without loot. If the food is not available at
+      Phase 3, that gap_note is wrong for the opening weeks.
+    recommendation: Check The Rokk's daily quest rewards on day one.
+
+  surefooted_ranged_coverage:
+    blocks: Nothing today. It sharpens the hunter budget.
+    detail: >-
+      Enchant Boots - Surefooted grants "10 hit rating" with no school qualifier.
+      Whether the rating mask covers the ranged hit index as well as the melee hit
+      index was not established from the spell data, because the raw misc value is
+      not exposed by any source consulted. The same question applies to Spicy Hot
+      Talbuk. Both are recorded in hit.yaml as melee and ranged. Nothing found
+      contradicts that; nothing found confirms it either.
+
+  hit_bearing_leg_enchants:
+    resolved: >-
+      RESOLVED. Kept for the audit trail. hit.yaml acted on this: no_route now
+      reads "No GENERAL-PURPOSE cloak, bracer, chest, weapon, ring, shoulder or
+      leg enchant grants hit", and the two exceptions are recorded there under
+      class_locked_hit_levers with their net trade, because each displaces a leg
+      enchant and returns less than it takes. Nothing here contradicts that file
+      any longer. The original wording is kept below because it is what caused
+      the correction.
+    blocks: Nothing. It was acted on in hit.yaml.class_locked_hit_levers.
+    detail: >-
+      hit.yaml.no_route USED TO STATE "No cloak, bracer, chest, weapon, ring,
+      shoulder or leg enchant grants hit." That was correct for the general leg
+      armors and spellthreads and WRONG for two class-locked head-or-leg
+      enchants:
+      Falcon's Call, item 19785, at 10 hit rating for Hunters, and Presence of
+      Sight, item 19787, at 8 spell hit rating for Mages. Both come from Zanza the
+      Restless in Zul'Gurub for one Primal Hakkari Idol plus one class Voodoo
+      Doll, and Zul'Gurub is live in 2.4.3.
+      The two specs affected are exactly the two that hit.yaml calls short and
+      routes to gems and enchants: beast_mastery_hunter, short by 36, and
+      arcane_mage, short by 23.
+    recommendation: >-
+      Amend hit.yaml.no_route and recheck both gap_notes. Note that whether the
+      Zanza quests are repeatable is unverified, which governs whether a player can
+      obtain more than one.
+
+  flask_of_fortification_defense:
+    blocks: Nothing today. It adds a route hit.yaml does not carry.
+    detail: >-
+      Flask of Fortification, item 22851, grants 10 defense rating for two hours
+      and persists through death. hit.yaml's consumables block records only the
+      hit food and the absence of a spell hit consumable. Defense rating is
+      cap-relevant for the three tank specs against the crit-immunity threshold,
+      which the framework calls the binding constraint for feral_bear. Insane
+      Strength Potion, item 22828, runs the other way at minus 75 defense rating
+      for 15 seconds.
+
+  unique_equipped_on_heroic_gems:
+    blocks: How many of the Tanzanite, Fire Opal and Chrysoprase set may be worn
+    detail: >-
+      Wowhead TBC tooltips display the Unique flag with maxcount:1 on that whole
+      family. The wiki records patch 2.4.0 as removing Unique-Equipped from
+      Heroic-instance gems. The two were not reconciled for the 2.4.3 client. This
+      governs whether a player may socket more than one, and five of the family
+      supply hit.
+
+  indormi_phase_3_stock:
+    blocks: Whether the three epic haste designs are buyable at Phase 3
+    detail: >-
+      Indormi's vendor table, as recorded in its final 2.4.3 state, lists Design:
+      Quick Lionseye, Design: Reckless Pyrestone and Design: Forceful Seaspray
+      Emerald at Scale of the Sands Honored. That table cannot distinguish Phase 3
+      launch stock from a Phase 4 addition. None supplies hit, so nothing in
+      hit.yaml turns on it.
+
+  enchant_acquisition_gaps:
+    blocks: Nothing analytical. It is completeness.
+    detail: >-
+      Roughly thirty enchants below level-70 relevance, plus a smaller number of
+      TBC-tier enchants, carry an unverified enchanting skill level or an
+      unverified acquisition route. They are marked entry by entry. The pattern is
+      that the tooltip endpoints carry no vendor, cost or drop data, and the XML
+      endpoint that does rate-limits to roughly one request per window. None of
+      the gaps sits on a hit-bearing or expertise-bearing entry.
+
+  shoulder_inscription_costs:
+    blocks: Nothing analytical.
+    detail: >-
+      Gold costs for the sixteen Aldor and Scryers inscriptions were not
+      retrievable. The tooltip endpoints carry no price field and the XML endpoint
+      returned the vendor without one. The retail wiki pages for both
+      quartermasters no longer list inscriptions, because they were removed from
+      retail. Vendor npc ids and standings are solid.
+
+  completeness_of_negative_claims:
+    blocks: The strength of every "none exists" statement in this file
+    detail: >-
+      Every negative claim here was built by enumerating a category item by item,
+      because Wowhead and Aowow filtered list pages render client-side and return
+      nothing server-side. The individual entries are High confidence. The claim
+      that any given enumeration is exhaustive is Conservative. Where a second
+      independent method was available, it was used: the gem hit enumeration was
+      built twice and the two agree, which is why that one carries Good rather
+      than Conservative.
