@@ -641,6 +641,26 @@ local BASELINES = {
   { key = "prephase", label = "best pre-phase off-piece", list = true },
 }
 
+-- A WEAPON SLOT COMPARES DIFFERENTLY, ruled by the guild lead on 12 August
+-- 2026. No tier set holds a weapon, so the two tier views never applied and a
+-- weapon card carried two columns where an armor card carried four. It now
+-- carries the four best weapons that are not PvP, one Season 3 arena weapon,
+-- one Season 2 arena weapon, and the weapon the raider walks into the tier
+-- holding, which comes from the entry anchor of that spec's capture.
+--
+-- The arena seasons contribute ONE comparison each. Their sets are a single
+-- stat block sold in several weapon flavours, so listing every flavour would
+-- fill the card with one weapon repeated.
+local WEAPON_BASELINES = {
+  { key = "nonpvp1", label = "best weapon", list = true },
+  { key = "nonpvp2", label = "second best", list = true },
+  { key = "nonpvp3", label = "third best", list = true },
+  { key = "nonpvp4", label = "fourth best", list = true },
+  { key = "season3", label = "Season 3 arena", list = true },
+  { key = "season2", label = "Season 2 arena", list = true },
+  { key = "entry", label = "carried into the tier", list = true },
+}
+
 -- The first candidate in one off-piece cell that is not the item under
 -- discussion. EXCLUDING THAT ITEM IS NOT OPTIONAL: it is the top Phase 3 head
 -- on seven of the eight ladders the worked example uses, so taking rank one
@@ -714,7 +734,13 @@ local function views_for(spec, row, where)
   -- the exclusion of the item under discussion, which would otherwise be
   -- compared with itself.
   local out, absent = {}, {}
-  for _, cell in ipairs(BASELINES) do
+  -- A weapon slot uses its own view set. `where` is the slot key the generated
+  -- ladder wrote, and a weapon key carries the hand after a colon.
+  local cells = BASELINES
+  if key:match("^Weapon:") then
+    cells = WEAPON_BASELINES
+  end
+  for _, cell in ipairs(cells) do
     local baseline
     if cell.list then
       baseline = first_other(slots[cell.key] or {}, row.item_id)

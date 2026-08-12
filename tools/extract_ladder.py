@@ -461,6 +461,90 @@ def shortlist(
     return out
 
 
+
+# WHAT A WEAPON CARD COMPARES AGAINST, ruled by the guild lead on 12 August
+# 2026: the best four weapons that are not PvP, then the Season 3 arena weapon,
+# then the Season 2 arena weapon, and the weapon the raider walks into the tier
+# holding. Seven comparisons rather than the two an armor slot gets, because a
+# weapon is the most contested slot in the tier and the arena seasons are real
+# competition a council has to weigh rather than noise to hide.
+#
+# ARENA IS DEDUPLICATED TO ONE PER SEASON. The Vengeful and Merciless sets are
+# one stat block sold in several weapon flavours, so the seasons contribute one
+# comparison each and not six.
+WEAPON_VIEWS = ("nonpvp1", "nonpvp2", "nonpvp3", "nonpvp4", "season3",
+                "season2", "entry")
+
+
+def entry_weapons(captures: Path) -> dict[str, dict[str, int]]:
+    """The weapon each spec walks into the tier holding, per hand.
+
+    Read from the entry anchor of every capture. A spec with no capture, which
+    is every healer, contributes nothing and its cards simply carry no entry
+    column.
+    """
+    out: dict[str, dict[str, int]] = {}
+    for path in sorted(captures.glob("*.yaml")):
+        doc = yaml.safe_load(path.read_text())
+        block = (doc.get("anchors") or {}).get("entry") or {}
+        slots = block.get("hit_by_slot") or {}
+        held = {}
+        for hand in ("main_hand", "off_hand"):
+            entry = slots.get(hand) or {}
+            if entry.get("id"):
+                held[hand] = int(entry["id"])
+        if held:
+            out[doc.get("spec") or path.stem.replace("-", "_")] = held
+    return out
+
+
+def weapon_views(rows: list[dict], hand: str, hand_of: dict[int, str],
+                 entry_id: int | None,
+                 slot_of: dict[int, str] | None = None) -> dict[str, list[dict]]:
+    """The seven weapon comparisons, each as a one-item list.
+
+    A list rather than a bare row so `first_other` in delta.lua can skip the
+    item under discussion exactly as it does for an armor cell.
+    """
+    def fits(row: dict) -> bool:
+        # A WEAPON SECTION IS NOT ALWAYS ALL WEAPONS. The Priest Healer tab
+        # files Vengeful Gladiator's Baton of Light, a wand, inside Two Hand,
+        # and the item database calls it Ranged. Dropping the phase filter
+        # surfaced it and the slot check then stopped the build. A row the
+        # database files outside the Weapon slot is not a weapon comparison.
+        if slot_of is not None:
+            named = slot_of.get(row["item_id"])
+            if named and named != "Weapon":
+                return False
+        worn = hand_of.get(row["item_id"], "")
+        if not worn:
+            return True
+        if hand == "OffHand":
+            return worn != "Main Hand"
+        if hand in ("MainHand", "OneHand"):
+            return worn != "Off Hand"
+        return True
+
+    usable = [r for r in rows if fits(r)]
+    views: dict[str, list[dict]] = {}
+
+    nonpvp = [r for r in usable if r["route"] != "arena"][:5]
+    for index in range(4):
+        if index < len(nonpvp):
+            views[f"nonpvp{index + 1}"] = [dict(nonpvp[index])]
+
+    for key, season in (("season3", "Season 3"), ("season2", "Season 2")):
+        best = next((r for r in usable if r["location"] == season), None)
+        if best:
+            views[key] = [dict(best)]
+
+    if entry_id is not None:
+        walked_in = next((r for r in usable if r["item_id"] == entry_id), None)
+        if walked_in:
+            views["entry"] = [dict(walked_in)]
+    return views
+
+
 def tier_item_ids(tokens: dict) -> set[int]:
     """Every item id that belongs to a recorded tier set, at any tier.
 
@@ -587,7 +671,24 @@ def off_pieces(
             return True
         eligible = [row for row in eligible if fits(row)]
     eligible.sort(key=lambda row: row["epv"], reverse=True)
-    return eligible[:CANDIDATES]
+    # ONE ARENA STAT BLOCK IS ONE COMPARISON. The Vengeful and Merciless sets
+    # are a single item sold in several weapon flavours, which is why their
+    # entries share an EPV to the penny. Eleven baseline cells held two of them,
+    # so a card offered two comparisons that were the same weapon twice and the
+    # second candidate did no work. The second candidate exists so a card never
+    # compares an item with itself, which needs it to be a DIFFERENT item.
+    #
+    # The guild lead ruled on 12 August 2026 that weapons inside the tier are
+    # compared, deduplicated, so arena weapons stay and only the duplicates go.
+    seen: set[float] = set()
+    deduped = []
+    for row in eligible:
+        if row["route"] == "arena":
+            if row["epv"] in seen:
+                continue
+            seen.add(row["epv"])
+        deduped.append(row)
+    return deduped[:CANDIDATES]
 
 
 def tier_pieces(tokens: dict, key: str, tier: int, spec: str) -> dict[str, dict]:
@@ -749,7 +850,7 @@ def render(specs: dict[str, dict]) -> str:
             # quietly stop parsing.
             out.append(f"        [{lua_string(slot)}] = {{")
             # Written in reading order, which is the order the cards print.
-            for view in ("tier6", "phase3", "tier5", "prephase"):
+            for view in ("tier6", "phase3", "tier5", "prephase") + WEAPON_VIEWS:
                 held = views.get(view)
                 if not held:
                     continue
@@ -845,10 +946,12 @@ def main() -> int:
     if not args.db.exists():
         raise Unreadable(f"extract_ladder.py: database not found: {args.db}")
     tokens = yaml.safe_load(args.tokens.read_text())
-    held, hand_of = {}, {}
+    walked_in = entry_weapons(Path("data/facts/sim-profiles/hit-capture"))
+    held, hand_of, slot_of = {}, {}, {}
     for row in csv.DictReader(args.items.open()):
         held[int(row["item_id"])] = row["name"]
         hand_of[int(row["item_id"])] = row["hand_type"]
+        slot_of[int(row["item_id"])] = row["slot"]
     tier_ids = tier_item_ids(tokens)
     world_boss = world_boss_ids(WORLD_BOSSES)
     level_60 = level_60_locations(LEVEL_60)
@@ -893,8 +996,29 @@ def main() -> int:
             section = next((name for name in sections if name in ladder), None)
             if section is None:
                 continue
-            views = off_piece_views(section, hand)
+            # A WEAPON SLOT GETS THE SEVEN COMPARISONS, not the two an armor
+            # slot gets. Every phase is kept, because the ruling is to compare
+            # weapons inside the tier rather than to split them by phase.
+            rows = [
+                row for row in ladder.get(section, [])
+                if row["item_id"]
+                and row["item_id"] not in tier_ids
+                and row["item_id"] not in world_boss
+                and row["location"] not in level_60
+            ]
+            rows.sort(key=lambda row: row["epv"], reverse=True)
+            slot_hand = "off_hand" if hand == "OffHand" else "main_hand"
+            # THE CAPTURES KEY ON THE SNAKE NAME, the loop on the display
+            # name. Looking up "Combat Rogue" in a table keyed by
+            # "combat_rogue" silently returned nothing, so every card lost its
+            # carried-into-the-tier column without any error.
+            spec_key = spec.lower().replace(" ", "_")
+            views = weapon_views(rows, hand, hand_of,
+                                 (walked_in.get(spec_key) or {}).get(slot_hand),
+                                 slot_of)
             if views:
+                for entries in views.values():
+                    wanted.update(row["item_id"] for row in entries)
                 slots[f"Weapon:{hand}"] = views
         # The per-spec shortlist, one entry per workbook section. Keyed by the
         # section rather than by the items.csv slot, because the sections are
@@ -1003,6 +1127,15 @@ def main() -> int:
             return False
         slot_named = ITEM_TYPE.get(item.get("type"), "")
         if slot_named and slot_named != where.split(":")[0]:
+            # A WEAPON SECTION IS NOT ALWAYS ALL WEAPONS, and that is the
+            # workbook's shape rather than a vocabulary error. The Priest Healer
+            # tab files Vengeful Gladiator's Baton of Light, a wand, inside Two
+            # Hand. Such a row is dropped from a weapon comparison instead of
+            # stopping the build, because it is not a weapon the slot can hold.
+            # An ARMOR slot mismatch is still a genuine vocabulary disagreement
+            # and still fails.
+            if where.startswith("Weapon:"):
+                return False
             raise Unreadable(
                 f"extract_ladder.py: an off-piece baseline for {spec} in "
                 f"{where} is {item['name']!r}, which the database files under "
@@ -1020,7 +1153,7 @@ def main() -> int:
                 entry for entry in rows
                 if fill(entry, spec, section, check_slot=False, required=False)]
         for slot, views in block["slots"].items():
-            for view in ("phase3", "prephase"):
+            for view in ("phase3", "prephase") + WEAPON_VIEWS:
                 # THE RETURN IS USED. This called fill and discarded the answer,
                 # so a baseline the hand check rejects stayed on the card.
                 views[view] = [entry for entry in views.get(view, [])

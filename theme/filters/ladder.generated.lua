@@ -525,7 +525,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30910,
               name = "Tempest of Chaos",
@@ -534,24 +534,18 @@ return {
               epv = 284.21,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
-              item_id = 33763,
-              name = "Vengeful Gladiator's Spellblade",
-              location = "Season 3",
-              route = "arena",
-              epv = 257.59,
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 236.97,
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 32053,
-              name = "Merciless Gladiator's Spellblade",
-              location = "Season 2",
-              route = "arena",
-              epv = 233.87,
-              phase = 2,
-            },
+          nonpvp3 = {
             {
               item_id = 30095,
               name = "Fang of the Leviathan",
@@ -561,9 +555,49 @@ return {
               phase = 2,
             },
           },
+          nonpvp4 = {
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 206.55,
+              phase = 1,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 257.59,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 233.87,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 233.87,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30872,
               name = "Chronicle of Dark Secrets",
@@ -572,6 +606,8 @@ return {
               epv = 81.3,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32361,
               name = "Blind-Seers Icon",
@@ -581,7 +617,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 28734,
               name = "Jewel of Infinite Possibilities",
@@ -590,6 +626,8 @@ return {
               epv = 56.98,
               phase = 1,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 30049,
               name = "Fathomstone",
@@ -599,9 +637,29 @@ return {
               phase = 2,
             },
           },
+          season2 = {
+            {
+              item_id = 31978,
+              name = "Merciless Gladiator's Endgame",
+              location = "Season 2",
+              route = "arena",
+              epv = 36.15,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 28734,
+              name = "Jewel of Infinite Possibilities",
+              location = "Karazhan",
+              route = "drop",
+              epv = 56.98,
+              phase = 1,
+            },
+          },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30910,
               name = "Tempest of Chaos",
@@ -610,24 +668,18 @@ return {
               epv = 284.21,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
-              item_id = 33763,
-              name = "Vengeful Gladiator's Spellblade",
-              location = "Season 3",
-              route = "arena",
-              epv = 257.59,
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 236.97,
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 32053,
-              name = "Merciless Gladiator's Spellblade",
-              location = "Season 2",
-              route = "arena",
-              epv = 233.87,
-              phase = 2,
-            },
+          nonpvp3 = {
             {
               item_id = 30095,
               name = "Fang of the Leviathan",
@@ -637,9 +689,49 @@ return {
               phase = 2,
             },
           },
+          nonpvp4 = {
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 206.55,
+              phase = 1,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 257.59,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 233.87,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 233.87,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32374,
               name = "Zhar'doom, Greatstaff of the Devourer",
@@ -648,6 +740,38 @@ return {
               epv = 337.19,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 264.68,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 218.67,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 35514,
+              name = "Frostscythe of Lord Ahune",
+              location = "Slave Pens",
+              route = "drop",
+              epv = 192.85,
+              phase = 3,
+            },
+          },
+          season3 = {
             {
               item_id = 34540,
               name = "Vengeful Gladiator's Battle Staff",
@@ -657,21 +781,13 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32055,
               name = "Merciless Gladiator's War Staff",
               location = "Season 2",
               route = "arena",
               epv = 280.53,
-              phase = 2,
-            },
-            {
-              item_id = 29988,
-              name = "The Nexus Key",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 264.68,
               phase = 2,
             },
           },
@@ -2951,7 +3067,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30910,
               name = "Tempest of Chaos",
@@ -2960,6 +3076,38 @@ return {
               epv = 170.89,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 152.56,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30095,
+              name = "Fang of the Leviathan",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 143.22,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 132.74,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33763,
               name = "Vengeful Gladiator's Spellblade",
@@ -2969,15 +3117,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30095,
-              name = "Fang of the Leviathan",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 143.22,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
@@ -2989,7 +3129,7 @@ return {
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30872,
               name = "Chronicle of Dark Secrets",
@@ -2998,6 +3138,8 @@ return {
               epv = 43.58,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32361,
               name = "Blind-Seers Icon",
@@ -3007,7 +3149,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 29271,
               name = "Talisman of Kalecgos",
@@ -3016,6 +3158,8 @@ return {
               epv = 36.33,
               phase = 1,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 30049,
               name = "Fathomstone",
@@ -3025,9 +3169,19 @@ return {
               phase = 2,
             },
           },
+          season2 = {
+            {
+              item_id = 31978,
+              name = "Merciless Gladiator's Endgame",
+              location = "Season 2",
+              route = "arena",
+              epv = 29.9,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30910,
               name = "Tempest of Chaos",
@@ -3036,6 +3190,38 @@ return {
               epv = 170.89,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 152.56,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30095,
+              name = "Fang of the Leviathan",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 143.22,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 132.74,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33763,
               name = "Vengeful Gladiator's Spellblade",
@@ -3045,15 +3231,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30095,
-              name = "Fang of the Leviathan",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 143.22,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
@@ -3065,7 +3243,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32374,
               name = "Zhar'doom, Greatstaff of the Devourer",
@@ -3074,6 +3252,38 @@ return {
               epv = 242.67,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 182.4,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 139.56,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 133.13,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 34540,
               name = "Vengeful Gladiator's Battle Staff",
@@ -3083,21 +3293,23 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 29988,
-              name = "The Nexus Key",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 182.4,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32055,
               name = "Merciless Gladiator's War Staff",
               location = "Season 2",
               route = "arena",
               epv = 172.64,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 182.4,
               phase = 2,
             },
           },
@@ -5413,7 +5625,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30902,
               name = "Cataclysm's Edge",
@@ -5422,6 +5634,38 @@ return {
               epv = 1377.64,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32348,
+              name = "Soul Cleaver",
+              location = "Black Temple",
+              route = "drop",
+              epv = 1295.62,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 29993,
+              name = "Twinblade of the Phoenix",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 1287.64,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 32332,
+              name = "Torch of the Damned",
+              location = "Black Temple",
+              route = "drop",
+              epv = 1286.56,
+              phase = 3,
+            },
+          },
+          season3 = {
             {
               item_id = 33663,
               name = "Vengeful Gladiator's Bonegrinder",
@@ -5431,21 +5675,23 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
+            {
+              item_id = 31959,
+              name = "Merciless Gladiator's Bonegrinder",
+              location = "Season 2",
+              route = "arena",
+              epv = 1234.98,
+              phase = 2,
+            },
+          },
+          entry = {
             {
               item_id = 29993,
               name = "Twinblade of the Phoenix",
               location = "Tempest Keep",
               route = "drop",
               epv = 1287.64,
-              phase = 2,
-            },
-            {
-              item_id = 28430,
-              name = "Lionheart Executioner",
-              location = "Blacksmithing",
-              route = "crafted",
-              epv = 1253.89,
               phase = 2,
             },
           },
@@ -7524,7 +7770,47 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
+            {
+              item_id = 34009,
+              name = "Hammer of Judgement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 270.76,
+              phase = 3,
+            },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 257.18,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 223.64,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30787,
+              name = "Illidari-Bane Mageblade",
+              location = "Shadowmoon Valley",
+              route = "drop",
+              epv = 201.18,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
@@ -7533,16 +7819,8 @@ return {
               epv = 275,
               phase = 3,
             },
-            {
-              item_id = 33763,
-              name = "Vengeful Gladiator's Spellblade",
-              location = "Season 3",
-              route = "arena",
-              epv = 275,
-              phase = 3,
-            },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
@@ -7551,18 +7829,10 @@ return {
               epv = 249.84,
               phase = 2,
             },
-            {
-              item_id = 32963,
-              name = "Merciless Gladiator's Gavel",
-              location = "Season 2",
-              route = "arena",
-              epv = 249.84,
-              phase = 2,
-            },
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30872,
               name = "Chronicle of Dark Secrets",
@@ -7571,6 +7841,8 @@ return {
               epv = 80.76,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32361,
               name = "Blind-Seers Icon",
@@ -7580,7 +7852,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 28734,
               name = "Jewel of Infinite Possibilities",
@@ -7589,6 +7861,8 @@ return {
               epv = 55.04,
               phase = 1,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 30049,
               name = "Fathomstone",
@@ -7598,9 +7872,59 @@ return {
               phase = 2,
             },
           },
+          season2 = {
+            {
+              item_id = 31978,
+              name = "Merciless Gladiator's Endgame",
+              location = "Season 2",
+              route = "arena",
+              epv = 40.22,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
+            {
+              item_id = 34009,
+              name = "Hammer of Judgement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 270.76,
+              phase = 3,
+            },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 257.18,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 223.64,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30787,
+              name = "Illidari-Bane Mageblade",
+              location = "Shadowmoon Valley",
+              route = "drop",
+              epv = 201.18,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
@@ -7609,16 +7933,8 @@ return {
               epv = 275,
               phase = 3,
             },
-            {
-              item_id = 33763,
-              name = "Vengeful Gladiator's Spellblade",
-              location = "Season 3",
-              route = "arena",
-              epv = 275,
-              phase = 3,
-            },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
@@ -7627,18 +7943,10 @@ return {
               epv = 249.84,
               phase = 2,
             },
-            {
-              item_id = 32963,
-              name = "Merciless Gladiator's Gavel",
-              location = "Season 2",
-              route = "arena",
-              epv = 249.84,
-              phase = 2,
-            },
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32374,
               name = "Zhar'doom, Greatstaff of the Devourer",
@@ -7647,6 +7955,38 @@ return {
               epv = 342.46,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 286.36,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 231.98,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 35514,
+              name = "Frostscythe of Lord Ahune",
+              location = "Slave Pens",
+              route = "drop",
+              epv = 209.1,
+              phase = 3,
+            },
+          },
+          season3 = {
             {
               item_id = 34540,
               name = "Vengeful Gladiator's Battle Staff",
@@ -7656,7 +7996,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32055,
               name = "Merciless Gladiator's War Staff",
@@ -7665,6 +8005,8 @@ return {
               epv = 294.96,
               phase = 2,
             },
+          },
+          entry = {
             {
               item_id = 29988,
               name = "The Nexus Key",
@@ -9865,7 +10207,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30881,
               name = "Blade of Infamy",
@@ -9874,6 +10216,8 @@ return {
               epv = 113.4,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 30865,
               name = "Tracker's Blade",
@@ -9883,7 +10227,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 32944,
               name = "Talon of the Phoenix",
@@ -9892,18 +10236,40 @@ return {
               epv = 103.95,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 30082,
               name = "Talon of Azshara",
               location = "Serpentshrine Cavern",
               route = "drop",
               epv = 100.75,
+              phase = 2,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33737,
+              name = "Vengeful Gladiator's Right Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 93.25,
+              phase = 3,
+            },
+          },
+          entry = {
+            {
+              item_id = 32944,
+              name = "Talon of the Phoenix",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 103.95,
               phase = 2,
             },
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30881,
               name = "Blade of Infamy",
@@ -9912,6 +10278,8 @@ return {
               epv = 113.4,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 30865,
               name = "Tracker's Blade",
@@ -9921,7 +10289,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 30082,
               name = "Talon of Azshara",
@@ -9931,9 +10299,40 @@ return {
               phase = 2,
             },
           },
+          nonpvp4 = {
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
+              phase = 3,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33689,
+              name = "Vengeful Gladiator's Hacker",
+              location = "Season 3",
+              route = "arena",
+              epv = 93.25,
+              phase = 3,
+              icon = "inv_axe_84",
+              url = "https://www.wowhead.com/tbc/item=33689",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
+          },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30881,
               name = "Blade of Infamy",
@@ -9942,6 +10341,8 @@ return {
               epv = 113.4,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 30865,
               name = "Tracker's Blade",
@@ -9951,7 +10352,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 32944,
               name = "Talon of the Phoenix",
@@ -9960,6 +10361,8 @@ return {
               epv = 103.95,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 30082,
               name = "Talon of Azshara",
@@ -9969,9 +10372,29 @@ return {
               phase = 2,
             },
           },
+          season3 = {
+            {
+              item_id = 33737,
+              name = "Vengeful Gladiator's Right Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 93.25,
+              phase = 3,
+            },
+          },
+          entry = {
+            {
+              item_id = 32944,
+              name = "Talon of the Phoenix",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 103.95,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32248,
               name = "Halberd of Desolation",
@@ -9980,6 +10403,38 @@ return {
               epv = 249.55,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29993,
+              name = "Twinblade of the Phoenix",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 211.5,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30789,
+              name = "Illidari-Bane Claymore",
+              location = "Shadowmoon Valley",
+              route = "drop",
+              epv = 207.35,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28436,
+              name = "Bloodmoon",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 198.8,
+              phase = 2,
+            },
+          },
+          season3 = {
             {
               item_id = 33670,
               name = "Vengeful Gladiator's Decapitator",
@@ -9989,22 +10444,14 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
-              item_id = 29993,
-              name = "Twinblade of the Phoenix",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 211.5,
+              item_id = 31966,
+              name = "Merciless Gladiator's Decapitator",
+              location = "Season 2",
+              route = "arena",
+              epv = 176.1,
               phase = 2,
-            },
-            {
-              item_id = 30789,
-              name = "Illidari-Bane Claymore",
-              location = "Shadowmoon Valley",
-              route = "drop",
-              epv = 207.35,
-              phase = 1,
             },
           },
         },
@@ -12072,7 +12519,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32837,
               name = "Warglaive of Azzinoth",
@@ -12081,16 +12528,8 @@ return {
               epv = 1102.26,
               phase = 3,
             },
-            {
-              item_id = 33737,
-              name = "Vengeful Gladiator's Right Ripper",
-              location = "Season 3",
-              route = "arena",
-              epv = 1009.94,
-              phase = 3,
-            },
           },
-          prephase = {
+          nonpvp2 = {
             {
               item_id = 28439,
               name = "Dragonstrike",
@@ -12099,6 +12538,18 @@ return {
               epv = 1007.44,
               phase = 2,
             },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30881,
+              name = "Blade of Infamy",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 997.48,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
             {
               item_id = 32944,
               name = "Talon of the Phoenix",
@@ -12108,9 +12559,79 @@ return {
               phase = 2,
             },
           },
+          season3 = {
+            {
+              item_id = 33737,
+              name = "Vengeful Gladiator's Right Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 1009.94,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32052,
+              name = "Merciless Gladiator's Slicer",
+              location = "Season 2",
+              route = "arena",
+              epv = 947.44,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
+            {
+              item_id = 30881,
+              name = "Blade of Infamy",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 997.48,
+              phase = 3,
+            },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30901,
+              name = "Boundless Agony",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 970.04,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 32471,
+              name = "Shard of Azzinoth",
+              location = "Black Temple",
+              route = "drop",
+              epv = 969.8,
+              phase = 3,
+            },
+          },
+          season3 = {
             {
               item_id = 33733,
               name = "Vengeful Gladiator's Pummeler",
@@ -12130,36 +12651,30 @@ return {
                 stamina = 30,
               },
             },
-            {
-              item_id = 33762,
-              name = "Vengeful Gladiator's Slicer",
-              location = "Season 3",
-              route = "arena",
-              epv = 1009.94,
-              phase = 3,
-            },
           },
-          prephase = {
+          season2 = {
             {
-              item_id = 30082,
-              name = "Talon of Azshara",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 974.95,
+              item_id = 32052,
+              name = "Merciless Gladiator's Slicer",
+              location = "Season 2",
+              route = "arena",
+              epv = 947.44,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 30103,
-              name = "Fang of Vashj",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 968.26,
+              item_id = 32027,
+              name = "Merciless Gladiator's Quickblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 136.4,
               phase = 2,
             },
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32837,
               name = "Warglaive of Azzinoth",
@@ -12168,6 +12683,38 @@ return {
               epv = 1102.26,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 28439,
+              name = "Dragonstrike",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1007.44,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30881,
+              name = "Blade of Infamy",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 997.48,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 32944,
+              name = "Talon of the Phoenix",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 975.04,
+              phase = 2,
+            },
+          },
+          season3 = {
             {
               item_id = 33737,
               name = "Vengeful Gladiator's Right Ripper",
@@ -12177,21 +12724,23 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
-              item_id = 28439,
-              name = "Dragonstrike",
-              location = "Blacksmithing",
-              route = "crafted",
-              epv = 1007.44,
+              item_id = 32052,
+              name = "Merciless Gladiator's Slicer",
+              location = "Season 2",
+              route = "arena",
+              epv = 947.44,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 32944,
-              name = "Talon of the Phoenix",
-              location = "Tempest Keep",
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
               route = "drop",
-              epv = 975.04,
+              epv = 974.95,
               phase = 2,
             },
           },
@@ -14278,7 +14827,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30910,
               name = "Tempest of Chaos",
@@ -14287,24 +14836,18 @@ return {
               epv = 363.09,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
-              item_id = 33763,
-              name = "Vengeful Gladiator's Spellblade",
-              location = "Season 3",
-              route = "arena",
-              epv = 329.68,
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 307.92,
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 32053,
-              name = "Merciless Gladiator's Spellblade",
-              location = "Season 2",
-              route = "arena",
-              epv = 299.45,
-              phase = 2,
-            },
+          nonpvp3 = {
             {
               item_id = 30095,
               name = "Fang of the Leviathan",
@@ -14314,9 +14857,49 @@ return {
               phase = 2,
             },
           },
+          nonpvp4 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 267.24,
+              phase = 1,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 329.68,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 299.45,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 299.45,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30872,
               name = "Chronicle of Dark Secrets",
@@ -14325,6 +14908,8 @@ return {
               epv = 100.12,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32361,
               name = "Blind-Seers Icon",
@@ -14334,7 +14919,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 29270,
               name = "Flametongue Seal",
@@ -14343,6 +14928,8 @@ return {
               epv = 70.86,
               phase = 1,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 28734,
               name = "Jewel of Infinite Possibilities",
@@ -14352,9 +14939,29 @@ return {
               phase = 1,
             },
           },
+          season2 = {
+            {
+              item_id = 31978,
+              name = "Merciless Gladiator's Endgame",
+              location = "Season 2",
+              route = "arena",
+              epv = 49.88,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 29270,
+              name = "Flametongue Seal",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 70.86,
+              phase = 1,
+            },
+          },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30910,
               name = "Tempest of Chaos",
@@ -14363,24 +14970,18 @@ return {
               epv = 363.09,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
-              item_id = 33763,
-              name = "Vengeful Gladiator's Spellblade",
-              location = "Season 3",
-              route = "arena",
-              epv = 329.68,
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 307.92,
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 32053,
-              name = "Merciless Gladiator's Spellblade",
-              location = "Season 2",
-              route = "arena",
-              epv = 299.45,
-              phase = 2,
-            },
+          nonpvp3 = {
             {
               item_id = 30095,
               name = "Fang of the Leviathan",
@@ -14390,9 +14991,49 @@ return {
               phase = 2,
             },
           },
+          nonpvp4 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 267.24,
+              phase = 1,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 329.68,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 299.45,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 299.45,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32374,
               name = "Zhar'doom, Greatstaff of the Devourer",
@@ -14401,6 +15042,38 @@ return {
               epv = 436.76,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 347.66,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 282.5,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 35514,
+              name = "Frostscythe of Lord Ahune",
+              location = "Slave Pens",
+              route = "drop",
+              epv = 252.52,
+              phase = 3,
+            },
+          },
+          season3 = {
             {
               item_id = 34540,
               name = "Vengeful Gladiator's Battle Staff",
@@ -14410,21 +15083,13 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32055,
               name = "Merciless Gladiator's War Staff",
               location = "Season 2",
               route = "arena",
               epv = 358.59,
-              phase = 2,
-            },
-            {
-              item_id = 29988,
-              name = "The Nexus Key",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 347.66,
               phase = 2,
             },
           },
@@ -16682,7 +17347,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32237,
               name = "The Maelstrom's Fury",
@@ -16691,6 +17356,38 @@ return {
               epv = 259.25,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 34009,
+              name = "Hammer of Judgement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 249.86,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 226.16,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30787,
+              name = "Illidari-Bane Mageblade",
+              location = "Shadowmoon Valley",
+              route = "drop",
+              epv = 203.79,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
@@ -16700,7 +17397,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
@@ -16709,9 +17406,11 @@ return {
               epv = 235.32,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 32963,
-              name = "Merciless Gladiator's Gavel",
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
               location = "Season 2",
               route = "arena",
               epv = 235.32,
@@ -16720,7 +17419,7 @@ return {
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30872,
               name = "Chronicle of Dark Secrets",
@@ -16729,6 +17428,8 @@ return {
               epv = 69.2,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 30909,
               name = "Antonidas's Aegis of Rapt Concentration",
@@ -16738,7 +17439,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 30049,
               name = "Fathomstone",
@@ -16747,18 +17448,30 @@ return {
               epv = 57.42,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
-              item_id = 29273,
-              name = "Khadgar's Knapsack",
-              location = "Badge of Justice",
-              route = "badge",
-              epv = 49,
-              phase = 1,
+              item_id = 32361,
+              name = "Blind-Seers Icon",
+              location = "Black Temple",
+              route = "drop",
+              epv = 54.8,
+              phase = 3,
+            },
+          },
+          entry = {
+            {
+              item_id = 30049,
+              name = "Fathomstone",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 57.42,
+              phase = 2,
             },
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32237,
               name = "The Maelstrom's Fury",
@@ -16767,6 +17480,38 @@ return {
               epv = 259.25,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 34009,
+              name = "Hammer of Judgement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 249.86,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 226.16,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30787,
+              name = "Illidari-Bane Mageblade",
+              location = "Shadowmoon Valley",
+              route = "drop",
+              epv = 203.79,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
@@ -16776,7 +17521,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
@@ -16785,9 +17530,11 @@ return {
               epv = 235.32,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 32963,
-              name = "Merciless Gladiator's Gavel",
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
               location = "Season 2",
               route = "arena",
               epv = 235.32,
@@ -16796,7 +17543,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32374,
               name = "Zhar'doom, Greatstaff of the Devourer",
@@ -16805,6 +17552,38 @@ return {
               epv = 366.71,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 290.86,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 35514,
+              name = "Frostscythe of Lord Ahune",
+              location = "Slave Pens",
+              route = "drop",
+              epv = 211.89,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 209.04,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 34540,
               name = "Vengeful Gladiator's Battle Staff",
@@ -16814,15 +17593,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 29988,
-              name = "The Nexus Key",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 290.86,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32055,
               name = "Merciless Gladiator's War Staff",
@@ -18983,7 +19754,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32943,
               name = "Swiftsteel Bludgeon",
@@ -18992,16 +19763,8 @@ return {
               epv = 854.38,
               phase = 3,
             },
-            {
-              item_id = 33737,
-              name = "Vengeful Gladiator's Right Ripper",
-              location = "Season 3",
-              route = "arena",
-              epv = 844.87,
-              phase = 3,
-            },
           },
-          prephase = {
+          nonpvp2 = {
             {
               item_id = 28439,
               name = "Dragonstrike",
@@ -19010,6 +19773,18 @@ return {
               epv = 830.15,
               phase = 2,
             },
+          },
+          nonpvp3 = {
+            {
+              item_id = 32236,
+              name = "Rising Tide",
+              location = "Black Temple",
+              route = "drop",
+              epv = 811.22,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
             {
               item_id = 32944,
               name = "Talon of the Phoenix",
@@ -19019,9 +19794,29 @@ return {
               phase = 2,
             },
           },
+          season3 = {
+            {
+              item_id = 33737,
+              name = "Vengeful Gladiator's Right Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 844.87,
+              phase = 3,
+            },
+          },
+          entry = {
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 795.12,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32943,
               name = "Swiftsteel Bludgeon",
@@ -19030,6 +19825,38 @@ return {
               epv = 854.38,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32236,
+              name = "Rising Tide",
+              location = "Black Temple",
+              route = "drop",
+              epv = 811.22,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 32945,
+              name = "Fist of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 799.51,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 32254,
+              name = "The Brutalizer",
+              location = "Black Temple",
+              route = "drop",
+              epv = 792.86,
+              phase = 3,
+            },
+          },
+          season3 = {
             {
               item_id = 34015,
               name = "Vengeful Gladiator's Chopper",
@@ -19039,7 +19866,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 31958,
               name = "Merciless Gladiator's Bonecracker",
@@ -19048,28 +19875,20 @@ return {
               epv = 788.73,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 31985,
-              name = "Merciless Gladiator's Hacker",
+              item_id = 31965,
+              name = "Merciless Gladiator's Cleaver",
               location = "Season 2",
               route = "arena",
-              epv = 788.73,
+              epv = 787.27,
               phase = 2,
-              icon = "inv_axe_54",
-              url = "https://www.wowhead.com/tbc/item=31985",
-              stats = {
-                attack_power = 30,
-                melee_crit = 19,
-                melee_hit = 10,
-                ranged_attack_power = 30,
-                resilience = 12,
-                stamina = 27,
-              },
             },
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32943,
               name = "Swiftsteel Bludgeon",
@@ -19078,6 +19897,38 @@ return {
               epv = 854.38,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 28439,
+              name = "Dragonstrike",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 830.15,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 32236,
+              name = "Rising Tide",
+              location = "Black Temple",
+              route = "drop",
+              epv = 811.22,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 32944,
+              name = "Talon of the Phoenix",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 810.39,
+              phase = 2,
+            },
+          },
+          season3 = {
             {
               item_id = 33737,
               name = "Vengeful Gladiator's Right Ripper",
@@ -19087,21 +19938,13 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          entry = {
             {
-              item_id = 28439,
-              name = "Dragonstrike",
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
               location = "Blacksmithing",
               route = "crafted",
-              epv = 830.15,
-              phase = 2,
-            },
-            {
-              item_id = 32944,
-              name = "Talon of the Phoenix",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 810.39,
+              epv = 795.12,
               phase = 2,
             },
           },
@@ -21029,15 +21872,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
-            {
-              item_id = 33716,
-              name = "Vengeful Gladiator's Staff",
-              location = "Season 3",
-              route = "arena",
-              epv = 2023.12,
-              phase = 3,
-            },
+          nonpvp1 = {
             {
               item_id = 30883,
               name = "Pillar of Ferocity",
@@ -21047,7 +21882,47 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp2 = {
+            {
+              item_id = 30021,
+              name = "Wildfury Greatstaff",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 1781.34,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28658,
+              name = "Terestian's Stranglestaff",
+              location = "Karazhan",
+              route = "drop",
+              epv = 1712.85,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 29359,
+              name = "Feral Staff of Lashing",
+              location = "Botanica",
+              route = "drop",
+              epv = 1562.02,
+              phase = 1,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33716,
+              name = "Vengeful Gladiator's Staff",
+              location = "Season 3",
+              route = "arena",
+              epv = 2023.12,
+              phase = 3,
+            },
+          },
+          season2 = {
             {
               item_id = 32014,
               name = "Merciless Gladiator's Maul",
@@ -21056,6 +21931,8 @@ return {
               epv = 1864.17,
               phase = 2,
             },
+          },
+          entry = {
             {
               item_id = 30021,
               name = "Wildfury Greatstaff",
@@ -22977,15 +23854,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
-            {
-              item_id = 33716,
-              name = "Vengeful Gladiator's Staff",
-              location = "Season 3",
-              route = "arena",
-              epv = 1634.04,
-              phase = 3,
-            },
+          nonpvp1 = {
             {
               item_id = 30883,
               name = "Pillar of Ferocity",
@@ -22995,7 +23864,47 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp2 = {
+            {
+              item_id = 28658,
+              name = "Terestian's Stranglestaff",
+              location = "Karazhan",
+              route = "drop",
+              epv = 1349.3,
+              phase = 1,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30021,
+              name = "Wildfury Greatstaff",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 1226.38,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 29359,
+              name = "Feral Staff of Lashing",
+              location = "Botanica",
+              route = "drop",
+              epv = 1195.12,
+              phase = 1,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33716,
+              name = "Vengeful Gladiator's Staff",
+              location = "Season 3",
+              route = "arena",
+              epv = 1634.04,
+              phase = 3,
+            },
+          },
+          season2 = {
             {
               item_id = 32014,
               name = "Merciless Gladiator's Maul",
@@ -23004,13 +23913,15 @@ return {
               epv = 1497.69,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 28658,
-              name = "Terestian's Stranglestaff",
-              location = "Karazhan",
-              route = "drop",
-              epv = 1349.3,
-              phase = 1,
+              item_id = 32014,
+              name = "Merciless Gladiator's Maul",
+              location = "Season 2",
+              route = "arena",
+              epv = 1497.69,
+              phase = 2,
             },
           },
         },
@@ -24969,7 +25880,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32837,
               name = "Warglaive of Azzinoth",
@@ -24978,6 +25889,8 @@ return {
               epv = 1919.9,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32262,
               name = "Syphon of the Nathrezim",
@@ -24987,7 +25900,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 28439,
               name = "Dragonstrike",
@@ -24996,6 +25909,8 @@ return {
               epv = 1685.24,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 29996,
               name = "Rod of the Sun King",
@@ -25005,9 +25920,39 @@ return {
               phase = 2,
             },
           },
+          season3 = {
+            {
+              item_id = 33737,
+              name = "Vengeful Gladiator's Right Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 1692.51,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32028,
+              name = "Merciless Gladiator's Right Ripper",
+              location = "Season 2",
+              route = "arena",
+              epv = 1590.13,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 28439,
+              name = "Dragonstrike",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1685.24,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32262,
               name = "Syphon of the Nathrezim",
@@ -25016,6 +25961,38 @@ return {
               epv = 1737.75,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29996,
+              name = "Rod of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 1677.54,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30881,
+              name = "Blade of Infamy",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 1638.94,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 1635,
+              phase = 2,
+            },
+          },
+          season3 = {
             {
               item_id = 34015,
               name = "Vengeful Gladiator's Chopper",
@@ -25025,15 +26002,17 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
-              item_id = 29996,
-              name = "Rod of the Sun King",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 1677.54,
+              item_id = 31965,
+              name = "Merciless Gladiator's Cleaver",
+              location = "Season 2",
+              route = "arena",
+              epv = 1590.13,
               phase = 2,
             },
+          },
+          entry = {
             {
               item_id = 30082,
               name = "Talon of Azshara",
@@ -25045,7 +26024,7 @@ return {
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32837,
               name = "Warglaive of Azzinoth",
@@ -25054,6 +26033,8 @@ return {
               epv = 1919.9,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32262,
               name = "Syphon of the Nathrezim",
@@ -25063,7 +26044,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 28439,
               name = "Dragonstrike",
@@ -25072,12 +26053,44 @@ return {
               epv = 1685.24,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 29996,
               name = "Rod of the Sun King",
               location = "Tempest Keep",
               route = "drop",
               epv = 1677.54,
+              phase = 2,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33737,
+              name = "Vengeful Gladiator's Right Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 1692.51,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32028,
+              name = "Merciless Gladiator's Right Ripper",
+              location = "Season 2",
+              route = "arena",
+              epv = 1590.13,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 28439,
+              name = "Dragonstrike",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1685.24,
               phase = 2,
             },
           },
@@ -27334,7 +28347,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32500,
               name = "Crystal Spire of Karabor",
@@ -27343,6 +28356,38 @@ return {
               epv = 498,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30918,
+              name = "Hammer of Atonement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 465.69,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30108,
+              name = "Lightfathom Scepter",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 461.25,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28771,
+              name = "Light's Justice",
+              location = "Karazhan",
+              route = "drop",
+              epv = 392.5,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33743,
               name = "Vengeful Gladiator's Salvation",
@@ -27352,15 +28397,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30108,
-              name = "Lightfathom Scepter",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 461.25,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32964,
               name = "Merciless Gladiator's Salvation",
@@ -27372,7 +28409,7 @@ return {
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30882,
               name = "Bastion of Light",
@@ -27381,6 +28418,8 @@ return {
               epv = 98,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32255,
               name = "Felstone Bulwark",
@@ -27390,27 +28429,39 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
-              item_id = 29274,
-              name = "Tears of Heaven",
-              location = "Badge of Justice",
-              route = "badge",
-              epv = 79.5,
-              phase = 1,
-            },
-            {
-              item_id = 29923,
-              name = "Talisman of the Sun King",
-              location = "Tempest Keep",
+              item_id = 30911,
+              name = "Scepter of Purification",
+              location = "Hyjal Summit",
               route = "drop",
-              epv = 75.5,
+              epv = 85.5,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 32350,
+              name = "Touch of Inspiration",
+              location = "Black Temple",
+              route = "drop",
+              epv = 83.5,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32961,
+              name = "Merciless Gladiator's Reprieve",
+              location = "Season 2",
+              route = "arena",
+              epv = 71.5,
               phase = 2,
             },
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32500,
               name = "Crystal Spire of Karabor",
@@ -27419,6 +28470,38 @@ return {
               epv = 498,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30918,
+              name = "Hammer of Atonement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 465.69,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30108,
+              name = "Lightfathom Scepter",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 461.25,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28771,
+              name = "Light's Justice",
+              location = "Karazhan",
+              route = "drop",
+              epv = 392.5,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33743,
               name = "Vengeful Gladiator's Salvation",
@@ -27428,15 +28511,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30108,
-              name = "Lightfathom Scepter",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 461.25,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32964,
               name = "Merciless Gladiator's Salvation",
@@ -29439,7 +30514,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32500,
               name = "Crystal Spire of Karabor",
@@ -29448,6 +30523,38 @@ return {
               epv = 524.56,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30108,
+              name = "Lightfathom Scepter",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 502.24,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30918,
+              name = "Hammer of Atonement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 497.26,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28771,
+              name = "Light's Justice",
+              location = "Karazhan",
+              route = "drop",
+              epv = 450.43,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33743,
               name = "Vengeful Gladiator's Salvation",
@@ -29457,15 +30564,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30108,
-              name = "Lightfathom Scepter",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 502.24,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32964,
               name = "Merciless Gladiator's Salvation",
@@ -29477,7 +30576,7 @@ return {
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30911,
               name = "Scepter of Purification",
@@ -29486,6 +30585,8 @@ return {
               epv = 148.4,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32350,
               name = "Touch of Inspiration",
@@ -29495,7 +30596,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 29923,
               name = "Talisman of the Sun King",
@@ -29504,6 +30605,8 @@ return {
               epv = 111.31,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 29170,
               name = "Windcaller's Orb",
@@ -29513,9 +30616,19 @@ return {
               phase = 1,
             },
           },
+          season2 = {
+            {
+              item_id = 32961,
+              name = "Merciless Gladiator's Reprieve",
+              location = "Season 2",
+              route = "arena",
+              epv = 91.03,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32500,
               name = "Crystal Spire of Karabor",
@@ -29524,6 +30637,38 @@ return {
               epv = 524.56,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30108,
+              name = "Lightfathom Scepter",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 502.24,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30918,
+              name = "Hammer of Atonement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 497.26,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28771,
+              name = "Light's Justice",
+              location = "Karazhan",
+              route = "drop",
+              epv = 450.43,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33743,
               name = "Vengeful Gladiator's Salvation",
@@ -29533,15 +30678,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30108,
-              name = "Lightfathom Scepter",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 502.24,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32964,
               name = "Merciless Gladiator's Salvation",
@@ -29553,7 +30690,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30908,
               name = "Apostle of Argus",
@@ -29562,6 +30699,8 @@ return {
               epv = 636.11,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32344,
               name = "Staff of Immaculate Recovery",
@@ -29571,7 +30710,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 29981,
               name = "Ethereum Life-Staff",
@@ -29580,6 +30719,8 @@ return {
               epv = 594.89,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 28782,
               name = "Crystalheart Pulse-Staff",
@@ -31727,7 +32868,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30910,
               name = "Tempest of Chaos",
@@ -31736,6 +32877,38 @@ return {
               epv = 288.02,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 34009,
+              name = "Hammer of Judgement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 275.76,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30095,
+              name = "Fang of the Leviathan",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 259.42,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 248.82,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
@@ -31745,7 +32918,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32963,
               name = "Merciless Gladiator's Gavel",
@@ -31754,6 +32927,8 @@ return {
               epv = 262.07,
               phase = 2,
             },
+          },
+          entry = {
             {
               item_id = 30095,
               name = "Fang of the Leviathan",
@@ -31765,7 +32940,7 @@ return {
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32375,
               name = "Bulwark of Azzinoth",
@@ -31774,6 +32949,8 @@ return {
               epv = 434.6,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 30909,
               name = "Antonidas's Aegis of Rapt Concentration",
@@ -31783,7 +32960,27 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
+            {
+              item_id = 34011,
+              name = "Illidari Runeshield",
+              location = "Black Temple",
+              route = "drop",
+              epv = 411.5,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30889,
+              name = "Kaz'rogal's Hardened Heart",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 407.3,
+              phase = 3,
+            },
+          },
+          season2 = {
             {
               item_id = 33313,
               name = "Merciless Gladiator's Barrier",
@@ -31792,18 +32989,20 @@ return {
               epv = 381.25,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 32045,
-              name = "Merciless Gladiator's Shield Wall",
-              location = "Season 2",
-              route = "arena",
-              epv = 375.15,
-              phase = 2,
+              item_id = 28825,
+              name = "Aldori Legacy Defender",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 360.05,
+              phase = 1,
             },
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30910,
               name = "Tempest of Chaos",
@@ -31812,6 +33011,38 @@ return {
               epv = 288.02,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 34009,
+              name = "Hammer of Judgement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 275.76,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30095,
+              name = "Fang of the Leviathan",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 259.42,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 248.82,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
@@ -31821,7 +33052,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32963,
               name = "Merciless Gladiator's Gavel",
@@ -31830,6 +33061,8 @@ return {
               epv = 262.07,
               phase = 2,
             },
+          },
+          entry = {
             {
               item_id = 30095,
               name = "Fang of the Leviathan",
@@ -33824,7 +35057,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32837,
               name = "Warglaive of Azzinoth",
@@ -33833,6 +35066,38 @@ return {
               epv = 351.3,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32236,
+              name = "Rising Tide",
+              location = "Black Temple",
+              route = "drop",
+              epv = 319.97,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 32254,
+              name = "The Brutalizer",
+              location = "Black Temple",
+              route = "drop",
+              epv = 317.96,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30103,
+              name = "Fang of Vashj",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 311.36,
+              phase = 2,
+            },
+          },
+          season3 = {
             {
               item_id = 33737,
               name = "Vengeful Gladiator's Right Ripper",
@@ -33842,27 +35107,19 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
-              item_id = 30103,
-              name = "Fang of Vashj",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 311.36,
-              phase = 2,
-            },
-            {
-              item_id = 28427,
-              name = "Blazefury",
-              location = "Blacksmithing",
-              route = "crafted",
-              epv = 306.11,
+              item_id = 32052,
+              name = "Merciless Gladiator's Slicer",
+              location = "Season 2",
+              route = "arena",
+              epv = 302.4,
               phase = 2,
             },
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32375,
               name = "Bulwark of Azzinoth",
@@ -33871,6 +35128,8 @@ return {
               epv = 461.02,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 30889,
               name = "Kaz'rogal's Hardened Heart",
@@ -33880,7 +35139,27 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
+            {
+              item_id = 30909,
+              name = "Antonidas's Aegis of Rapt Concentration",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 423.29,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 34011,
+              name = "Illidari Runeshield",
+              location = "Black Temple",
+              route = "drop",
+              epv = 412.96,
+              phase = 3,
+            },
+          },
+          season2 = {
             {
               item_id = 32045,
               name = "Merciless Gladiator's Shield Wall",
@@ -33889,6 +35168,8 @@ return {
               epv = 401.68,
               phase = 2,
             },
+          },
+          entry = {
             {
               item_id = 28825,
               name = "Aldori Legacy Defender",
@@ -33900,7 +35181,7 @@ return {
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32837,
               name = "Warglaive of Azzinoth",
@@ -33909,6 +35190,38 @@ return {
               epv = 351.3,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32236,
+              name = "Rising Tide",
+              location = "Black Temple",
+              route = "drop",
+              epv = 319.97,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 32254,
+              name = "The Brutalizer",
+              location = "Black Temple",
+              route = "drop",
+              epv = 317.96,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30103,
+              name = "Fang of Vashj",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 311.36,
+              phase = 2,
+            },
+          },
+          season3 = {
             {
               item_id = 33737,
               name = "Vengeful Gladiator's Right Ripper",
@@ -33918,21 +35231,13 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
-              item_id = 30103,
-              name = "Fang of Vashj",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 311.36,
-              phase = 2,
-            },
-            {
-              item_id = 28427,
-              name = "Blazefury",
-              location = "Blacksmithing",
-              route = "crafted",
-              epv = 306.11,
+              item_id = 32052,
+              name = "Merciless Gladiator's Slicer",
+              location = "Season 2",
+              route = "arena",
+              epv = 302.4,
               phase = 2,
             },
           },
@@ -36028,7 +37333,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32500,
               name = "Crystal Spire of Karabor",
@@ -36037,6 +37342,38 @@ return {
               epv = 493.5,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30108,
+              name = "Lightfathom Scepter",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 454.5,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30918,
+              name = "Hammer of Atonement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 449.3,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28771,
+              name = "Light's Justice",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.3,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33743,
               name = "Vengeful Gladiator's Salvation",
@@ -36046,15 +37383,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30108,
-              name = "Lightfathom Scepter",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 454.5,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32964,
               name = "Merciless Gladiator's Salvation",
@@ -36066,7 +37395,7 @@ return {
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30911,
               name = "Scepter of Purification",
@@ -36075,6 +37404,18 @@ return {
               epv = 89.6,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 78,
+              phase = 1,
+            },
+          },
+          nonpvp3 = {
             {
               item_id = 32350,
               name = "Touch of Inspiration",
@@ -36084,15 +37425,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 29274,
-              name = "Tears of Heaven",
-              location = "Badge of Justice",
-              route = "badge",
-              epv = 78,
-              phase = 1,
-            },
+          nonpvp4 = {
             {
               item_id = 29170,
               name = "Windcaller's Orb",
@@ -36102,9 +37435,19 @@ return {
               phase = 1,
             },
           },
+          season2 = {
+            {
+              item_id = 32961,
+              name = "Merciless Gladiator's Reprieve",
+              location = "Season 2",
+              route = "arena",
+              epv = 67.7,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32500,
               name = "Crystal Spire of Karabor",
@@ -36113,6 +37456,38 @@ return {
               epv = 493.5,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30108,
+              name = "Lightfathom Scepter",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 454.5,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30918,
+              name = "Hammer of Atonement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 449.3,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28771,
+              name = "Light's Justice",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.3,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33743,
               name = "Vengeful Gladiator's Salvation",
@@ -36122,15 +37497,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30108,
-              name = "Lightfathom Scepter",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 454.5,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32964,
               name = "Merciless Gladiator's Salvation",
@@ -36142,7 +37509,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30908,
               name = "Apostle of Argus",
@@ -36151,6 +37518,8 @@ return {
               epv = 515.2,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32344,
               name = "Staff of Immaculate Recovery",
@@ -36160,7 +37529,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 29981,
               name = "Ethereum Life-Staff",
@@ -36169,6 +37538,8 @@ return {
               epv = 446.8,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 28782,
               name = "Crystalheart Pulse-Staff",
@@ -38326,7 +39697,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32500,
               name = "Crystal Spire of Karabor",
@@ -38335,6 +39706,38 @@ return {
               epv = 502.8,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30918,
+              name = "Hammer of Atonement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 470.71,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30108,
+              name = "Lightfathom Scepter",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 469.9,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28771,
+              name = "Light's Justice",
+              location = "Karazhan",
+              route = "drop",
+              epv = 392.92,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33743,
               name = "Vengeful Gladiator's Salvation",
@@ -38344,15 +39747,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30108,
-              name = "Lightfathom Scepter",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 469.9,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32964,
               name = "Merciless Gladiator's Salvation",
@@ -38364,7 +39759,7 @@ return {
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30882,
               name = "Bastion of Light",
@@ -38373,6 +39768,8 @@ return {
               epv = 98.56,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32255,
               name = "Felstone Bulwark",
@@ -38382,27 +39779,39 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
-              item_id = 29274,
-              name = "Tears of Heaven",
-              location = "Badge of Justice",
-              route = "badge",
-              epv = 84,
-              phase = 1,
-            },
-            {
-              item_id = 29923,
-              name = "Talisman of the Sun King",
-              location = "Tempest Keep",
+              item_id = 32350,
+              name = "Touch of Inspiration",
+              location = "Black Temple",
               route = "drop",
-              epv = 80.48,
+              epv = 92.92,
+              phase = 3,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30911,
+              name = "Scepter of Purification",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 85.84,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32961,
+              name = "Merciless Gladiator's Reprieve",
+              location = "Season 2",
+              route = "arena",
+              epv = 71.88,
               phase = 2,
             },
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32500,
               name = "Crystal Spire of Karabor",
@@ -38411,6 +39820,38 @@ return {
               epv = 502.8,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 30918,
+              name = "Hammer of Atonement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 470.71,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 30108,
+              name = "Lightfathom Scepter",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 469.9,
+              phase = 2,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 28771,
+              name = "Light's Justice",
+              location = "Karazhan",
+              route = "drop",
+              epv = 392.92,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33743,
               name = "Vengeful Gladiator's Salvation",
@@ -38420,15 +39861,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 30108,
-              name = "Lightfathom Scepter",
-              location = "Serpentshrine Cavern",
-              route = "drop",
-              epv = 469.9,
-              phase = 2,
-            },
+          season2 = {
             {
               item_id = 32964,
               name = "Merciless Gladiator's Salvation",
@@ -38440,7 +39873,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30908,
               name = "Apostle of Argus",
@@ -38449,6 +39882,8 @@ return {
               epv = 551.18,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 32344,
               name = "Staff of Immaculate Recovery",
@@ -38458,7 +39893,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 29981,
               name = "Ethereum Life-Staff",
@@ -38467,6 +39902,8 @@ return {
               epv = 437.88,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 28782,
               name = "Crystalheart Pulse-Staff",
@@ -40625,7 +42062,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32332,
               name = "Torch of the Damned",
@@ -40634,6 +42071,8 @@ return {
               epv = 360.12,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 30902,
               name = "Cataclysm's Edge",
@@ -40643,7 +42082,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 28430,
               name = "Lionheart Executioner",
@@ -40652,12 +42091,44 @@ return {
               epv = 340.01,
               phase = 2,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 29993,
               name = "Twinblade of the Phoenix",
               location = "Tempest Keep",
               route = "drop",
               epv = 338.74,
+              phase = 2,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33663,
+              name = "Vengeful Gladiator's Bonegrinder",
+              location = "Season 3",
+              route = "arena",
+              epv = 341.63,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 31959,
+              name = "Merciless Gladiator's Bonegrinder",
+              location = "Season 2",
+              route = "arena",
+              epv = 315.42,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 28430,
+              name = "Lionheart Executioner",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 340.01,
               phase = 2,
             },
           },
@@ -42654,7 +44125,47 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
+            {
+              item_id = 34009,
+              name = "Hammer of Judgement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 254.29,
+              phase = 3,
+            },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 241.25,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 208.24,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30787,
+              name = "Illidari-Bane Mageblade",
+              location = "Shadowmoon Valley",
+              route = "drop",
+              epv = 189.27,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
@@ -42663,16 +44174,8 @@ return {
               epv = 261.32,
               phase = 3,
             },
-            {
-              item_id = 33763,
-              name = "Vengeful Gladiator's Spellblade",
-              location = "Season 3",
-              route = "arena",
-              epv = 261.32,
-              phase = 3,
-            },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
@@ -42681,9 +44184,11 @@ return {
               epv = 237.65,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 32963,
-              name = "Merciless Gladiator's Gavel",
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
               location = "Season 2",
               route = "arena",
               epv = 237.65,
@@ -42692,7 +44197,7 @@ return {
           },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32361,
               name = "Blind-Seers Icon",
@@ -42701,6 +44206,8 @@ return {
               epv = 61.45,
               phase = 3,
             },
+          },
+          nonpvp2 = {
             {
               item_id = 30872,
               name = "Chronicle of Dark Secrets",
@@ -42710,7 +44217,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp3 = {
             {
               item_id = 29272,
               name = "Orb of the Soul-Eater",
@@ -42719,6 +44226,8 @@ return {
               epv = 51,
               phase = 1,
             },
+          },
+          nonpvp4 = {
             {
               item_id = 29273,
               name = "Khadgar's Knapsack",
@@ -42728,9 +44237,69 @@ return {
               phase = 1,
             },
           },
+          season2 = {
+            {
+              item_id = 31978,
+              name = "Merciless Gladiator's Endgame",
+              location = "Season 2",
+              route = "arena",
+              epv = 34.18,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 29272,
+              name = "Orb of the Soul-Eater",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 51,
+              phase = 1,
+            },
+          },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
+            {
+              item_id = 34009,
+              name = "Hammer of Judgement",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 254.29,
+              phase = 3,
+            },
+          },
+          nonpvp2 = {
+            {
+              item_id = 32237,
+              name = "The Maelstrom's Fury",
+              location = "Black Temple",
+              route = "drop",
+              epv = 241.25,
+              phase = 3,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 208.24,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 30787,
+              name = "Illidari-Bane Mageblade",
+              location = "Shadowmoon Valley",
+              route = "drop",
+              epv = 189.27,
+              phase = 1,
+            },
+          },
+          season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
@@ -42739,16 +44308,8 @@ return {
               epv = 261.32,
               phase = 3,
             },
-            {
-              item_id = 33763,
-              name = "Vengeful Gladiator's Spellblade",
-              location = "Season 3",
-              route = "arena",
-              epv = 261.32,
-              phase = 3,
-            },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
@@ -42757,9 +44318,11 @@ return {
               epv = 237.65,
               phase = 2,
             },
+          },
+          entry = {
             {
-              item_id = 32963,
-              name = "Merciless Gladiator's Gavel",
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
               location = "Season 2",
               route = "arena",
               epv = 237.65,
@@ -42768,7 +44331,7 @@ return {
           },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32374,
               name = "Zhar'doom, Greatstaff of the Devourer",
@@ -42777,6 +44340,38 @@ return {
               epv = 323.38,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 248.38,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 205.85,
+              phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 35514,
+              name = "Frostscythe of Lord Ahune",
+              location = "Slave Pens",
+              route = "drop",
+              epv = 184.09,
+              phase = 3,
+            },
+          },
+          season3 = {
             {
               item_id = 34540,
               name = "Vengeful Gladiator's Battle Staff",
@@ -42786,21 +44381,13 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          season2 = {
             {
               item_id = 32055,
               name = "Merciless Gladiator's War Staff",
               location = "Season 2",
               route = "arena",
               epv = 253.6,
-              phase = 2,
-            },
-            {
-              item_id = 29988,
-              name = "The Nexus Key",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 248.38,
               phase = 2,
             },
           },
@@ -45105,7 +46692,7 @@ return {
           },
         },
         ["Weapon:MainHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30881,
               name = "Blade of Infamy",
@@ -45114,6 +46701,18 @@ return {
               epv = 201.88,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 170.25,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
             {
               item_id = 32269,
               name = "Messenger of Fate",
@@ -45123,15 +46722,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 29924,
-              name = "Netherbane",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 170.25,
-              phase = 2,
-            },
+          nonpvp4 = {
             {
               item_id = 30082,
               name = "Talon of Azshara",
@@ -45141,9 +46732,19 @@ return {
               phase = 2,
             },
           },
+          entry = {
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 170.25,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:OffHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30881,
               name = "Blade of Infamy",
@@ -45152,6 +46753,18 @@ return {
               epv = 201.88,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 170.25,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
             {
               item_id = 32269,
               name = "Messenger of Fate",
@@ -45161,15 +46774,17 @@ return {
               phase = 3,
             },
           },
-          prephase = {
+          nonpvp4 = {
             {
-              item_id = 29924,
-              name = "Netherbane",
+              item_id = 29948,
+              name = "Claw of the Phoenix",
               location = "Tempest Keep",
               route = "drop",
-              epv = 170.25,
+              epv = 149.41,
               phase = 2,
             },
+          },
+          entry = {
             {
               item_id = 29948,
               name = "Claw of the Phoenix",
@@ -45181,7 +46796,7 @@ return {
           },
         },
         ["Weapon:OneHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 30881,
               name = "Blade of Infamy",
@@ -45190,6 +46805,18 @@ return {
               epv = 201.88,
               phase = 3,
             },
+          },
+          nonpvp2 = {
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 170.25,
+              phase = 2,
+            },
+          },
+          nonpvp3 = {
             {
               item_id = 32269,
               name = "Messenger of Fate",
@@ -45199,15 +46826,7 @@ return {
               phase = 3,
             },
           },
-          prephase = {
-            {
-              item_id = 29924,
-              name = "Netherbane",
-              location = "Tempest Keep",
-              route = "drop",
-              epv = 170.25,
-              phase = 2,
-            },
+          nonpvp4 = {
             {
               item_id = 30082,
               name = "Talon of Azshara",
@@ -45217,9 +46836,19 @@ return {
               phase = 2,
             },
           },
+          entry = {
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 170.25,
+              phase = 2,
+            },
+          },
         },
         ["Weapon:TwoHand"] = {
-          phase3 = {
+          nonpvp1 = {
             {
               item_id = 32248,
               name = "Halberd of Desolation",
@@ -45228,16 +46857,8 @@ return {
               epv = 410.71,
               phase = 3,
             },
-            {
-              item_id = 33670,
-              name = "Vengeful Gladiator's Decapitator",
-              location = "Season 3",
-              route = "arena",
-              epv = 224.7,
-              phase = 3,
-            },
           },
-          prephase = {
+          nonpvp2 = {
             {
               item_id = 28587,
               name = "Legacy",
@@ -45246,6 +46867,8 @@ return {
               epv = 288.4,
               phase = 1,
             },
+          },
+          nonpvp3 = {
             {
               item_id = 29329,
               name = "Terokk's Quill",
@@ -45253,6 +46876,26 @@ return {
               route = "drop",
               epv = 281.34,
               phase = 1,
+            },
+          },
+          nonpvp4 = {
+            {
+              item_id = 27903,
+              name = "Sonic Spear",
+              location = "Shadow Labyrinth",
+              route = "drop",
+              epv = 280.35,
+              phase = 1,
+            },
+          },
+          season3 = {
+            {
+              item_id = 33670,
+              name = "Vengeful Gladiator's Decapitator",
+              location = "Season 3",
+              route = "arena",
+              epv = 224.7,
+              phase = 3,
             },
           },
         },
