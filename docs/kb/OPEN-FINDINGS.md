@@ -4,8 +4,14 @@
 sections below are kept as the record of what was found and why, because the
 reasoning outlives the fix. Three needed a ruling from the guild lead and got
 one: the Arms Warrior takes Flurry, the Retribution Paladin is not an engineer,
-and the roster groups stand as discussed. What remains open is listed at the
-foot of this file.
+and the roster groups stand as discussed.
+
+**RE-VERIFIED 13 AUGUST 2026: nothing is open.** All seventeen findings were
+checked against the current files and every one had already been settled by
+corrections that landed after the sweep. The list was never updated when they
+did, so it presented settled work as outstanding for four days, which is the
+same failure the paragraph above describes. One new defect surfaced during the
+re-verification and is fixed; it is recorded with the others.
 
 Findings from the 9 August 2026 defect sweep for claims stated more strongly than what they rest on. This file answers "what did the sweep find and what would settle each item"; it does not answer what any item is worth or who should receive it, and nothing here is a priority. Line numbers were read on 9 August 2026 while other corrections were landing, so verify each against the current file before acting.
 
@@ -26,30 +32,42 @@ These are recorded because the reasoning is the useful part, not the outcome.
 
 ## Open
 
-Each entry carries the claim, the contradiction, the sweep's confidence, whether it would change a loot routing decision, what would settle it, and whether the guild lead is needed.
+**NOTHING IN THIS SECTION IS OPEN. Re-verified 13 August 2026, all seventeen against the current files, and every one had already been settled by the corrections that landed after the sweep.** The section was never updated when they landed, so it went on presenting settled work as outstanding for four days. That is the failure this file warns about in its own header: a status line is a claim like any other, and a stale open list is worse than no list, because it sends a reader to re-fix what is fixed and lends the settled items a doubt they have not earned.
 
-### Would change a routing decision
+The findings are kept below with what settles each, because the reasoning outlives the fix.
 
-- **`hit.yaml` misquotes its own captures.** [`hit.yaml`](../../data/facts/hit.yaml) near line 420 says the captures give the Protection Warrior "87 rising to 192" and the Protection Paladin "15 rising to 81". The capture files state 105 rising to 156 and 15 rising to 42. CONFIRMED. Routing: yes, both tanks' claims on hit off-pieces rest on these. Settle: reread the three capture totals and restate, or replace the quoted figures with a pointer to `hit-captured.yaml`, which is the fix `docs/framework.md` already took. Guild lead: no.
-- **Crit headroom figures do not follow the file's own comparison rule.** [`crit.yaml`](../../data/facts/crit.yaml) near line 484 rules that sheet crit and effective caps differ by 4.8 points and one side must be adjusted before comparing. The headroom column near line 524 and the prose "about 11 points" near line 1187 do not state which basis they used, and recomputing on either basis gives a different figure. The file's own note that applying the rule "widens every distance" is honest; the printed numbers still do not reconcile. CONFIRMED for the arithmetic. The companion sentence near line 2291 generalises "headroom is 11 to 26 points" from four simulated specs to the roster; SUSPECTED for the specs never measured. Routing: yes, near-cap crit awards for Fury and Combat. Settle: recompute the column stating the basis, and scope the sentence to the four measured specs or measure the rest. Guild lead: no.
-- **Token line claimant counts are 19 in the governing document and 21 in the data.** [`docs/framework.md`](../framework.md) near line 252 tables Conqueror 6, Protector 7, Vanquisher 6, and near line 298 says "one ranking of nineteen specs", while the same document near line 310 and `spec_to_set` plus `set_claimants_by_tier` in [`tokens.yaml`](../../data/facts/tokens.yaml) give 7, 8 and 6, which is 21. CONFIRMED. Routing: yes, line crowding is the document's own wait-time argument. Settle: recount from `spec_to_set` and state which specs each line holds. Guild lead: no.
-- **The Priest uniqueness claim contradicts its neighbours.** [`token-verdicts.yaml`](../../data/judgments/token-verdicts.yaml) near line 92 calls the Priest healer "the only spec whose FIRST token is free" while the same file records the Protection Paladin's first token as free near line 96 and the Combat Rogue as a clean gain. CONFIRMED. Routing: yes, "only" is a funnel-ordering argument. Settle: define free, recount across all entries, and drop or scope the word. Guild lead: no.
-- **The Retribution verdict collapses two tokens into one.** `token-verdicts.yaml` near line 114 reads "token is a raw stat downgrade", singular, while [`token-arithmetic.yaml`](../../data/facts/sim-profiles/token-arithmetic.yaml) near line 146 records the hands as a downgrade and the head as an upgrade for a non-engineer, a downgrade only for an engineer. CONFIRMED. Routing: yes, it decides whether the Retribution Paladin claims the head token at all. Settle: split the verdict per token and attach the engineering condition. Whether this roster's Retribution Paladin is an engineer is a per-player fact: **guild lead needed**.
-- **The Balance verdict states unconditionally what its fact states conditionally.** `token-verdicts.yaml` near line 47 reads "either one breaks the Tier 5 four-piece" with no condition, while `token-arithmetic.yaml` near line 204 now names the composition the claim depends on and instructs the reader to check it against the capture. CONFIRMED, narrow. Routing: yes, it is the cost side of both Balance token claims. Settle: carry the condition into the verdict card, and confirm the Balance capture holds exactly head, shoulder, chest and hands of Tier 5. Guild lead: no for the capture check; yes if the question becomes what the player actually wears.
-- **The Wildfury commentary claims hit the Bear capture does not hold.** [`field-commentary.yaml`](../../data/facts/field-commentary.yaml) near line 156 says the weapon "carries the 18 hit that the Bear and Cat entry figures depend on", while the Feral Bear capture records its Wildfury row at hit 0. CONFIRMED for the Bear. Routing: yes, it colours staff routing between the Bear and the Cat. Settle: read both captures' weapon rows and restate per spec. Guild lead: no.
-- **Predatory Strikes is recorded without its third rank.** `attack-power.yaml` near line 222 states "50 to 100 percent of level" for a talent whose 2.4.3 ranks are 50, 100 and 150 percent. CONFIRMED against the rank list; verify the ceiling at the tooltip endpoint before editing. The Trueshot Aura value of 50 near line 133 cites one spell id where the aura has ranks; SUSPECTED. `Greatstaff of the Leviathan` near line 182 is cited by name with no id, which is the dispositioned-on-a-name shape; SUSPECTED. Routing: yes for Predatory Strikes, it feeds every Cat and Bear attack power conversion. Settle: resolve each spell and item id at the 2.4.3 tooltip endpoint and record the id beside the name. Guild lead: no.
+### Would change a routing decision: eight, all settled
 
-### Would not change a routing decision
+| Finding | What settles it |
+|---|---|
+| `hit.yaml` misquoted its own tank captures | `hit.yaml` near line 467 now records both corrections and what they were: the Protection Warrior reads 156 where it read 192, the Protection Paladin 42 where it read 81 |
+| Crit headroom did not state its basis | `crit.yaml` near line 536 states the rule as `white_cap` minus `sheet_crit` minus 4.8, and says the column is the same on either basis once one side is adjusted. Near line 557 the "26 points" sentence is retracted |
+| Token claimants counted 19 in the document and 21 in the data | `docs/framework.md` near line 250 recounts from `spec_to_set` to 7, 8 and 6, names the two lines it had undercounted, and near line 300 reads twenty-one |
+| The Retribution verdict collapsed two tokens into one | `token-verdicts.yaml` near line 137 splits it: hands a raw stat downgrade, head a raw stat upgrade. The engineering condition is discharged, not carried: **the guild lead confirmed on 13 August 2026, restating 9 August, that this roster's Retribution Paladin is not an engineer** |
+| The Priest uniqueness claim contradicted its neighbours | `token-verdicts.yaml` near line 108 retracts "the only spec whose FIRST token is free" and quotes what it retracted |
+| The Balance verdict stated unconditionally what its fact stated conditionally | `token-verdicts.yaml` near line 48 carries the composition condition into the verdict, and near line 63 records the unconditional wording it replaced |
+| The Wildfury commentary claimed hit the Bear capture does not hold | The note is scoped to the Cat, and the Cat capture wears the weapon at all three anchors at 18 hit. The Bear capture reads hit 0 and no longer has a claim resting on it |
+| Predatory Strikes was recorded without its third rank | `attack-power.yaml` near line 231 carries all three spell ids at 50, 100 and 150 percent. The two suspected companions are also resolved: Trueshot Aura near line 133 carries four ranks and cites the fourth at 125, and Greatstaff of the Leviathan near line 187 carries item id 27757 |
 
-- **Base miss is stated two ways.** `hit.yaml` near line 204 asserts 8.6 percent base miss; `crit.yaml` near line 190 measures 8.0 and near line 184 explicitly rejects 8.6. Both files gear to the same 9 percent cap, so no target moves. CONFIRMED. Settle: one file owns the figure and the other links, per the one-home rule in [`docs/conventions.md`](../conventions.md). Guild lead: no.
-- **Two spell hit targets differ by one point.** `hit.yaml` near line 953 records a net spell target of 164 and near line 1071 a net target of 165 for what reads as the same quantity. SUSPECTED, the two entries may credit different debuffs. Settle: recompute both from the stated buff lists in one pass. Guild lead: no.
-- **`set-stats.yaml` counts six disagreeing specs; the disclosure names three.** [`set-stats.yaml`](../../data/facts/set-stats.yaml) near line 27 says `token-arithmetic.yaml` "disagrees for six specs" while the disclosure in that file names three. SUSPECTED, the checker the disclosure cites is the arbiter. Settle: run `tools/check_token_arithmetic.py` and state the count it reports. Guild lead: no.
-- **Resolved entries still sit under `open_questions`.** `tokens.yaml` near lines 2291 and 2304 carries entries marked `resolved:` and `superseded_by:` inside the open questions block. CONFIRMED. Settle: move them to a resolved block so the open list is the open list. Guild lead: no.
-- **The `conventions.md` fact-file inventory restates and undercounts.** [`docs/conventions.md`](../conventions.md) near line 18 lists nine fact files where [`data/facts/PROVENANCE.md`](../../data/facts/PROVENANCE.md) inventories fifteen, so "a figure has one home" is asserted over an incomplete inventory. CONFIRMED. Settle: link the inventory instead of restating it, per the never-state-a-fact-twice rule in `AGENTS.md`. Guild lead: no.
-- **The chest turn-in is counted across three sets, not six.** `docs/framework.md` near line 308 says the Conqueror chest token exchanges "for six different chest pieces across three sets"; the six pieces belong to six sets across three classes. CONFIRMED. Settle: recount from the vendor block in `tokens.yaml`. Guild lead: no.
-- **Roster spec naming drifts and two tanks are in no group.** [`roster.yaml`](../../data/facts/roster.yaml) near lines 50 and 117 uses `feral_druid`, a name no other file holds, and the Protection Warrior and Protection Paladin appear in no group despite the file's rule that anything claiming a priority appears there. CONFIRMED. Group membership decides which group buffs are credited, so this can graduate to routing-relevant. Settle: rename to the shared vocabulary and complete the groups. Actual party assignments are a roster fact: **guild lead needed**.
-- **Rounding is applied silently in two places.** Improved Faerie Fire is credited at 48 rating where 3 percent converts to 47.31, and the haste floor is stated at 788 rating where 50 percent converts to 788.5. SUSPECTED, both may be deliberate ceiling rounding. Settle: state the rounding rule once beside the conversion constants. Guild lead: no.
-- **The Warglaive commentary is pinned to one id.** The field commentary attaches to item 32837, the main hand, with nothing recording whether it covers the pair. SUSPECTED. Settle: read the captured commentary and attach it to both ids or state the scope. Guild lead: no.
+### Would not change a routing decision: nine, all settled
+
+| Finding | What settles it |
+|---|---|
+| Base miss stated two ways | `hit.yaml` near line 227 retracts 8.6 as a wiki-era figure and names it as retracted |
+| Two spell hit targets differed by one point | Every net spell target now reads 165; no 164 survives |
+| `set-stats.yaml` counted six disagreeing specs against a disclosure naming three | The claim is gone from the file; `tools/check_token_arithmetic.py` is the arbiter and runs in `just check` |
+| Resolved entries sat under `open_questions` | `tokens.yaml` carries eight open questions and none of them is marked `resolved` or `superseded_by` |
+| The `conventions.md` inventory restated and undercounted | `docs/conventions.md` links `data/facts/PROVENANCE.md` instead of restating it, and records why the copy was removed |
+| The chest turn-in was counted across three sets | `docs/framework.md` near line 310 reads six sets across three classes, and names the miscount it replaced |
+| Roster spec naming drifted and two tanks sat in no group | `tools/check_roster.py` passes: five groups, twenty-five slots placed, counts and the shaman constraint agreeing. `feral_druid` survives only in the comment recording the rename and in one count key where it names both Feral specs together, which is what that key counts |
+| Rounding applied silently in two places | `hit.yaml` near line 206 states the rule with its arithmetic, 3 times 15.77 equals 47.31 credited at 48, every net target the ceiling. `haste.yaml` near line 66 derives 788 the same way |
+| The Warglaive commentary was pinned to one id | `field-commentary.yaml` near line 131 carries an explicit ID SCOPE line naming the main hand as 32837 and the off hand as 32838 |
+
+### One defect found while re-verifying, and fixed
+
+**Merciless Gladiator's Maul was recorded as Arena Season 3 gear.** It is Season 2. `field-commentary.yaml` entry `fc-006` carried the wrong season in the note that scopes the Feral Cat's entry weapon.
+
+It matters because of a rule this project already holds: `docs/kb/DOMAIN.md` records Season 3 as opening 1 September 2026, five days after Phase 3, so Season 3 gear is barred from an entry anchor. Read as written, the note barred the weapon the Feral Cat capture actually walks in holding at every anchor, and it is the source of the 18 hit the Cat's entry figures rest on. `tools/extract_ladder.py` had the seasons right the whole time, deduplicating Vengeful as `season3` and Merciless as `season2`, so no published figure moved; only the prose was wrong. Corrected 13 August 2026, with the previous claim quoted.
 
 ## Swept and found clean
 

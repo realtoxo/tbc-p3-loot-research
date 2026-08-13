@@ -2528,7 +2528,7 @@ return {
         views = 0,
         captured = true,
         scope = { "feral_cat", "feral_bear" },
-        note = "READ BY HAND, not by the agent pass. This item is Arena Season 3 gear rather than a Phase 3 drop, so it sat outside the drop table the classification ran over and would otherwise have been dropped silently. It answers what the placeholder asked: the Cat capture wears this weapon at every anchor for its 18 hit, and a creator does argue ferals carry it.",
+        note = "READ BY HAND, not by the agent pass. This item is Arena Season 2 gear rather than a Phase 3 drop, so it sat outside the drop table the classification ran over and would otherwise have been dropped silently. It answers what the placeholder asked: the Cat capture wears this weapon at every anchor for its 18 hit, and a creator does argue ferals carry it. CORRECTED 13 August 2026, previously_claimed \"Arena Season 3 gear\". Merciless Gladiator is Season 2. Season 3 is Vengeful Gladiator, which docs/kb/DOMAIN.md records as opening 1 September 2026, five days after Phase 3 and therefore barred from an entry anchor. The wrong season here would have barred the weapon the Feral Cat capture actually walks in holding, at every anchor, and it is the source of the 18 hit those entry figures rest on. tools/extract_ladder.py had it right the whole time: it deduplicates Vengeful as season3 and Merciless as season2.",
       },
     },
   },
