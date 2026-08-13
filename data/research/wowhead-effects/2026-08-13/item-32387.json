@@ -1,0 +1,7 @@
+{
+ "name": "Idol of the Raven Goddess",
+ "quality": 3,
+ "icon": "inv-mount_raven_54",
+ "tooltip": "<table><tr><td><table style=\"display:inline-table; vertical-align:inherit\"><tr><td><!--nstart--><b class=\"q3\">Idol of the Raven Goddess</b><!--nend--></td><th><b class=\"q0 whtt-extra\">Phase 3</b></th></tr></table><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->115</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Relic</td><th><!--scstart4:8--><span class=\"q1\">Idol</span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/tbc/spell=39926/improved-party-auras\" class=\"q2\">Increases the healing granted by the Tree of Life form aura by 44, adds 20 critical strike rating to the Leader of the Pack aura, and adds 20 spell critical strike rating to the Moonkin form aura.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">50</span> <span class=\"moneycopper\">96</span></div></td></tr></table>",
+ "spells": []
+}

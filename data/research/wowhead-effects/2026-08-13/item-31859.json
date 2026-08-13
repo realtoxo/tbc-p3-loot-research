@@ -1,0 +1,7 @@
+{
+ "name": "Darkmoon Card: Madness",
+ "quality": 4,
+ "icon": "inv_misc_ticket_tarot_madness",
+ "tooltip": "<table><tr><td><table style=\"display:inline-table; vertical-align:inherit\"><tr><td><!--nstart--><b class=\"q4\">Darkmoon Card: Madness</b><!--nend--></td><th><b class=\"q0 whtt-extra\">Phase 3</b></th></tr></table><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->100</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+51 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->70<br><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/tbc/spell=39446/aura-of-madness\" class=\"q2\">Each time you land a killing blow on an enemy that yields experience or honor, you gain the Power of Madness.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">10</span></div></td></tr></table>",
+ "spells": []
+}

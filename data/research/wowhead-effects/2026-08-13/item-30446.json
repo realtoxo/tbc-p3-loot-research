@@ -1,0 +1,7 @@
+{
+ "name": "Solarian's Sapphire",
+ "quality": 4,
+ "icon": "inv_misc_gem_sapphire_01",
+ "tooltip": "<table><tr><td><table style=\"display:inline-table; vertical-align:inherit\"><tr><td><!--nstart--><b class=\"q4\">Solarian's Sapphire</b><!--nend--></td><th><b class=\"q0 whtt-extra\">Phase 2</b></th></tr></table><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->128</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+30 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"/tbc/class=1/warrior\" class=\"c1\">Warrior</a></div></td></tr></table><table><tr><td>Requires Level <!--rlvl-->70<br><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/tbc/spell=37536/improved-battle-shout\" class=\"q2\">Your Battle Shout ability grants an additional 70 attack power.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">7</span> <span class=\"moneysilver\">20</span> <span class=\"moneycopper\">39</span></div></td></tr></table>",
+ "spells": []
+}

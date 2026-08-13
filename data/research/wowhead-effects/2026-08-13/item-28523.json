@@ -1,0 +1,7 @@
+{
+ "name": "Totem of Healing Rains",
+ "quality": 4,
+ "icon": "spell_nature_giftofthewaterspirit",
+ "tooltip": "<table><tr><td><table style=\"display:inline-table; vertical-align:inherit\"><tr><td><!--nstart--><b class=\"q4\">Totem of Healing Rains</b><!--nend--></td><th><b class=\"q0 whtt-extra\">Phase 1</b></th></tr></table><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->115</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Relic</td><th><!--scstart4:9--><span class=\"q1\">Totem</span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->70<br><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/tbc/spell=38322/improved-chain-heal\" class=\"q2\">Increases the base amount healed by Chain Heal by 87.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">3</span> <span class=\"moneysilver\">48</span> <span class=\"moneycopper\">66</span></div></td></tr></table>",
+ "spells": []
+}

@@ -1,0 +1,130 @@
+meta:
+  captured: '2026-08-13'
+  source: https://nether.wowhead.com/tbc/tooltip/item/{id}
+  what: The Wowhead tooltip payload for items whose effect the WoWSims database names but
+    does not describe.
+  scope: Twenty-four items approved by the guild lead on 13 August 2026 out of forty-six candidates.
+    The twenty-two not captured carry utility buffs a loot council does not argue about. See
+    the module docstring of tools/fetch_effect_text.py.
+  items: 24
+captures:
+- item_id: 28568
+  group: relics
+  file: item-28568.json
+  name: Idol of the Avian Heart
+  refetched: true
+- item_id: 30051
+  group: relics
+  file: item-30051.json
+  name: Idol of the Crescent Goddess
+  refetched: true
+- item_id: 32387
+  group: relics
+  file: item-32387.json
+  name: Idol of the Raven Goddess
+  refetched: true
+- item_id: 32257
+  group: relics
+  file: item-32257.json
+  name: Idol of the White Stag
+  refetched: true
+- item_id: 30063
+  group: relics
+  file: item-30063.json
+  name: Libram of Absolute Truth
+  refetched: true
+- item_id: 28592
+  group: relics
+  file: item-28592.json
+  name: Libram of Souls Redeemed
+  refetched: true
+- item_id: 27917
+  group: relics
+  file: item-27917.json
+  name: Libram of the Eternal Rest
+  refetched: true
+- item_id: 32368
+  group: relics
+  file: item-32368.json
+  name: Tome of the Lightbringer
+  refetched: true
+- item_id: 32330
+  group: relics
+  file: item-32330.json
+  name: Totem of Ancestral Guidance
+  refetched: true
+- item_id: 28523
+  group: relics
+  file: item-28523.json
+  name: Totem of Healing Rains
+  refetched: true
+- item_id: 27815
+  group: relics
+  file: item-27815.json
+  name: Totem of the Astral Winds
+  refetched: true
+- item_id: 30023
+  group: relics
+  file: item-30023.json
+  name: Totem of the Maelstrom
+  refetched: true
+- item_id: 28248
+  group: relics
+  file: item-28248.json
+  name: Totem of the Void
+  refetched: true
+- item_id: 32490
+  group: ashtongue_trinkets
+  file: item-32490.json
+  name: Ashtongue Talisman of Acumen
+  refetched: true
+- item_id: 32486
+  group: ashtongue_trinkets
+  file: item-32486.json
+  name: Ashtongue Talisman of Equilibrium
+  refetched: true
+- item_id: 32492
+  group: ashtongue_trinkets
+  file: item-32492.json
+  name: Ashtongue Talisman of Lethality
+  refetched: true
+- item_id: 32491
+  group: ashtongue_trinkets
+  file: item-32491.json
+  name: Ashtongue Talisman of Vision
+  refetched: true
+- item_id: 32489
+  group: ashtongue_trinkets
+  file: item-32489.json
+  name: Ashtongue Talisman of Zeal
+  refetched: true
+- item_id: 31859
+  group: other_trinkets
+  file: item-31859.json
+  name: 'Darkmoon Card: Madness'
+  refetched: true
+- item_id: 30448
+  group: other_trinkets
+  file: item-30448.json
+  name: Talon of Al'ar
+  refetched: true
+- item_id: 30720
+  group: other_trinkets
+  file: item-30720.json
+  name: Serpent-Coil Braid
+  refetched: true
+- item_id: 30446
+  group: other_trinkets
+  file: item-30446.json
+  name: Solarian's Sapphire
+  refetched: true
+- item_id: 30318
+  group: weapons
+  file: item-30318.json
+  name: Netherstrand Longbow
+  refetched: true
+- item_id: 31334
+  group: weapons
+  file: item-31334.json
+  name: Staff of Natural Fury
+  refetched: true

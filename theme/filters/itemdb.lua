@@ -21,6 +21,7 @@ local M = {}
 
 M.ITEMS = os.getenv("ITEMS_CSV") or "data/facts/items.csv"
 M.EFFECTS = os.getenv("ITEM_EFFECTS_CSV") or "data/facts/item-effects.csv"
+M.EFFECT_TEXT = os.getenv("EFFECT_TEXT_CSV") or "data/facts/effect-text.csv"
 
 -- Stats in reading order, with the labels the documents use. A column absent
 -- from this list is never printed, so a stat index the extractor could not name
@@ -216,10 +217,27 @@ for _, row in ipairs(M.parse_csv(M.EFFECTS)) do
   M.EFFECT[row.item_id] = list
 end
 
+-- WHAT THE EFFECT ACTUALLY DOES, IN WORDS, for the twenty-four items the
+-- WoWSims database names but does not describe. Captured from Wowhead on
+-- 13 August 2026 and parsed by tools/extract_effect_text.py. See
+-- data/research/wowhead-effects/ for the bytes the sentence came from.
+M.EFFECT_WORDS = {}
+for _, row in ipairs(M.parse_csv(M.EFFECT_TEXT)) do
+  local list = M.EFFECT_WORDS[row.item_id] or {}
+  list[#list + 1] = row.trigger .. ": " .. row.text
+  M.EFFECT_WORDS[row.item_id] = list
+end
+
 -- The effect as one line: what it is called, what it grants, and for how long.
 -- Nil where the item has none, so a caller adds nothing rather than an empty
 -- row.
 function M.effect_line(row)
+  -- THE CAPTURED SENTENCE WINS WHERE THERE IS ONE. It exists only for items
+  -- whose database record is an internal label such as "Rogue Tier 6 Trinket",
+  -- so it never competes with a record that describes itself; where it is
+  -- present it is the whole description and the label adds nothing.
+  local words = row and M.EFFECT_WORDS[tostring(row.item_id)]
+  if words then return table.concat(words, " ") end
   local effects = row and M.EFFECT[tostring(row.item_id)]
   if not effects then return nil end
   local lines = {}

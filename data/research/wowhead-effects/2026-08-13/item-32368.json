@@ -1,0 +1,7 @@
+{
+ "name": "Tome of the Lightbringer",
+ "quality": 4,
+ "icon": "inv_relics_libramofhope",
+ "tooltip": "<table><tr><td><table style=\"display:inline-table; vertical-align:inherit\"><tr><td><!--nstart--><b class=\"q4\">Tome of the Lightbringer</b><!--nend--></td><th><b class=\"q0 whtt-extra\">Phase 3</b></th></tr></table><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->141</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Relic</td><th><!--scstart4:7--><span class=\"q1\">Libram</span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->70<br><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/tbc/spell=41042/judgement-block-value\" class=\"q2\">Your Judgement ability also increases your shield block value by 186 for 5 sec.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">7</span> <span class=\"moneysilver\">50</span></div></td></tr></table>",
+ "spells": []
+}

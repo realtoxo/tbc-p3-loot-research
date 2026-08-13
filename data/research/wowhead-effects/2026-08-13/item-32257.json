@@ -1,0 +1,7 @@
+{
+ "name": "Idol of the White Stag",
+ "quality": 4,
+ "icon": "inv_qirajidol_alabaster",
+ "tooltip": "<table><tr><td><table style=\"display:inline-table; vertical-align:inherit\"><tr><td><!--nstart--><b class=\"q4\">Idol of the White Stag</b><!--nend--></td><th><b class=\"q0 whtt-extra\">Phase 3</b></th></tr></table><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->141</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Relic</td><th><!--scstart4:8--><span class=\"q1\">Idol</span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->70<br><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/tbc/spell=41037/mangle-ap-buff\" class=\"q2\">Your Mangle ability also increases your attack power by 94 for 20 sec.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">4</span> <span class=\"moneysilver\">39</span> <span class=\"moneycopper\">30</span></div></td></tr></table>",
+ "spells": []
+}

@@ -1,0 +1,7 @@
+{
+ "name": "Libram of the Eternal Rest",
+ "quality": 3,
+ "icon": "inv_relics_libramoftruth",
+ "tooltip": "<table><tr><td><table style=\"display:inline-table; vertical-align:inherit\"><tr><td><!--nstart--><b class=\"q3\">Libram of the Eternal Rest</b><!--nend--></td><th><b class=\"q0 whtt-extra\">Phase 1</b></th></tr></table><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->112</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Relic</td><th><!--scstart4:7--><span class=\"q1\">Libram</span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->68<br><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/tbc/spell=34252/improved-consecration\" class=\"q2\">Increases the damage of your Consecration spell by up to 47.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">47</span> <span class=\"moneycopper\">59</span></div></td></tr></table>",
+ "spells": []
+}
