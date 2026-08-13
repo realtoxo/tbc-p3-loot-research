@@ -500,7 +500,8 @@ def entry_weapons(captures: Path) -> dict[str, dict[str, int]]:
 
 def weapon_views(rows: list[dict], hand: str, hand_of: dict[int, str],
                  entry_id: int | None,
-                 slot_of: dict[int, str] | None = None) -> dict[str, list[dict]]:
+                 slot_of: dict[int, str] | None = None,
+                 named: dict[int, dict] | None = None) -> dict[str, list[dict]]:
     """The seven weapon comparisons, each as a one-item list.
 
     A list rather than a bare row so `first_other` in delta.lua can skip the
@@ -525,23 +526,49 @@ def weapon_views(rows: list[dict], hand: str, hand_of: dict[int, str],
             return worn != "Off Hand"
         return True
 
+    named = named or {}
     usable = [r for r in rows if fits(r)]
     views: dict[str, list[dict]] = {}
 
+    # EVERY VIEW CARRIES A FALLBACK, because `first_other` in delta.lua skips
+    # the item the card is about. A one-item view yields nothing for the very
+    # weapon it names, and the card then states that the weapon does not exist
+    # while the reader is looking at its page. The fifth non-PvP weapon is the
+    # fallback for all four non-PvP views, so whichever one the card is about,
+    # the other three keep their own pick and the fourth shows the fifth.
     nonpvp = [r for r in usable if r["route"] != "arena"][:5]
+    spare = [dict(nonpvp[4])] if len(nonpvp) > 4 else []
     for index in range(4):
         if index < len(nonpvp):
-            views[f"nonpvp{index + 1}"] = [dict(nonpvp[index])]
+            views[f"nonpvp{index + 1}"] = [dict(nonpvp[index])] + spare
 
+    # A season carries its runner-up for the same reason, and for a second one:
+    # the single pick can fail the hand check in `fill`, which emptied the
+    # Enhancement Shaman Season 2 column even though Merciless Gladiator's
+    # Right Ripper sat in the same section and fits the hand.
     for key, season in (("season3", "Season 3"), ("season2", "Season 2")):
-        best = next((r for r in usable if r["location"] == season), None)
-        if best:
-            views[key] = [dict(best)]
+        of_season = [dict(r) for r in usable if r["location"] == season][:3]
+        if of_season:
+            views[key] = of_season
 
     if entry_id is not None:
-        walked_in = next((r for r in usable if r["item_id"] == entry_id), None)
-        if walked_in:
-            views["entry"] = [dict(walked_in)]
+        carried = next((r for r in usable if r["item_id"] == entry_id), None)
+        if carried:
+            views["entry"] = [dict(carried)]
+        elif entry_id in named:
+            # THE TAB DOES NOT HAVE TO RANK WHAT THE RAIDER CARRIES IN. The
+            # Protection Warrior walks in holding Dragonstrike and the Beast
+            # Mastery Hunter holds Claw of the Phoenix, and neither is a row of
+            # its own spec's weapon section, so the column vanished and the card
+            # said nothing was carried in. What the raider holds is a fact about
+            # the capture rather than a ranking, so it is taken from items.csv
+            # and carries no EPV, because the tab priced none.
+            row = named[entry_id]
+            views["entry"] = [{
+                "item_id": entry_id, "name": row["name"],
+                "location": row.get("source", "") or "carried in",
+                "route": "drop",
+            }]
     return views
 
 
@@ -947,11 +974,12 @@ def main() -> int:
         raise Unreadable(f"extract_ladder.py: database not found: {args.db}")
     tokens = yaml.safe_load(args.tokens.read_text())
     walked_in = entry_weapons(Path("data/facts/sim-profiles/hit-capture"))
-    held, hand_of, slot_of = {}, {}, {}
+    held, hand_of, slot_of, item_rows = {}, {}, {}, {}
     for row in csv.DictReader(args.items.open()):
         held[int(row["item_id"])] = row["name"]
         hand_of[int(row["item_id"])] = row["hand_type"]
         slot_of[int(row["item_id"])] = row["slot"]
+        item_rows[int(row["item_id"])] = row
     tier_ids = tier_item_ids(tokens)
     world_boss = world_boss_ids(WORLD_BOSSES)
     level_60 = level_60_locations(LEVEL_60)
@@ -1015,7 +1043,7 @@ def main() -> int:
             spec_key = spec.lower().replace(" ", "_")
             views = weapon_views(rows, hand, hand_of,
                                  (walked_in.get(spec_key) or {}).get(slot_hand),
-                                 slot_of)
+                                 slot_of, item_rows)
             if views:
                 for entries in views.values():
                     wanted.update(row["item_id"] for row in entries)

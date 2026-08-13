@@ -534,6 +534,14 @@ return {
               epv = 284.21,
               phase = 3,
             },
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 206.18,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -543,6 +551,14 @@ return {
               route = "drop",
               epv = 236.97,
               phase = 3,
+            },
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 206.18,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -554,6 +570,14 @@ return {
               epv = 222.2,
               phase = 2,
             },
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 206.18,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -562,6 +586,14 @@ return {
               location = "Gruul's Lair",
               route = "drop",
               epv = 206.55,
+              phase = 1,
+            },
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 206.18,
               phase = 1,
             },
           },
@@ -606,6 +638,14 @@ return {
               epv = 81.3,
               phase = 3,
             },
+            {
+              item_id = 28412,
+              name = "Lamp of Peaceful Radiance",
+              location = "Arcatraz",
+              route = "drop",
+              epv = 49.01,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -615,6 +655,14 @@ return {
               route = "drop",
               epv = 78.33,
               phase = 3,
+            },
+            {
+              item_id = 28412,
+              name = "Lamp of Peaceful Radiance",
+              location = "Arcatraz",
+              route = "drop",
+              epv = 49.01,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -626,6 +674,14 @@ return {
               epv = 56.98,
               phase = 1,
             },
+            {
+              item_id = 28412,
+              name = "Lamp of Peaceful Radiance",
+              location = "Arcatraz",
+              route = "drop",
+              epv = 49.01,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -635,6 +691,14 @@ return {
               route = "drop",
               epv = 51.15,
               phase = 2,
+            },
+            {
+              item_id = 28412,
+              name = "Lamp of Peaceful Radiance",
+              location = "Arcatraz",
+              route = "drop",
+              epv = 49.01,
+              phase = 1,
             },
           },
           season2 = {
@@ -668,6 +732,14 @@ return {
               epv = 284.21,
               phase = 3,
             },
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 206.18,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -677,6 +749,14 @@ return {
               route = "drop",
               epv = 236.97,
               phase = 3,
+            },
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 206.18,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -688,6 +768,14 @@ return {
               epv = 222.2,
               phase = 2,
             },
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 206.18,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -696,6 +784,14 @@ return {
               location = "Gruul's Lair",
               route = "drop",
               epv = 206.55,
+              phase = 1,
+            },
+            {
+              item_id = 28770,
+              name = "Nathrezim Mindblade",
+              location = "Karazhan",
+              route = "drop",
+              epv = 206.18,
               phase = 1,
             },
           },
@@ -740,6 +836,14 @@ return {
               epv = 337.19,
               phase = 3,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 189.99,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -750,6 +854,14 @@ return {
               epv = 264.68,
               phase = 2,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 189.99,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -758,6 +870,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 218.67,
+              phase = 1,
+            },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 189.99,
               phase = 1,
             },
           },
@@ -770,6 +890,14 @@ return {
               epv = 192.85,
               phase = 3,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 189.99,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -778,6 +906,14 @@ return {
               location = "Season 3",
               route = "arena",
               epv = 310.29,
+              phase = 3,
+            },
+            {
+              item_id = 33766,
+              name = "Vengeful Gladiator's War Staff",
+              location = "Season 3",
+              route = "arena",
+              epv = 269.69,
               phase = 3,
             },
           },
@@ -789,6 +925,14 @@ return {
               route = "arena",
               epv = 280.53,
               phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "arena",
+              route = "drop",
             },
           },
         },
@@ -3076,6 +3220,14 @@ return {
               epv = 170.89,
               phase = 3,
             },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 131.69,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -3085,6 +3237,14 @@ return {
               route = "drop",
               epv = 152.56,
               phase = 3,
+            },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 131.69,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -3096,6 +3256,14 @@ return {
               epv = 143.22,
               phase = 2,
             },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 131.69,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -3104,6 +3272,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 132.74,
+              phase = 1,
+            },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 131.69,
               phase = 1,
             },
           },
@@ -3127,6 +3303,14 @@ return {
               phase = 2,
             },
           },
+          entry = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "raid_drop",
+              route = "drop",
+            },
+          },
         },
         ["Weapon:OffHand"] = {
           nonpvp1 = {
@@ -3138,6 +3322,14 @@ return {
               epv = 43.58,
               phase = 3,
             },
+            {
+              item_id = 28603,
+              name = "Talisman of Nightbane",
+              location = "Karazhan",
+              route = "drop",
+              epv = 33.59,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -3147,6 +3339,14 @@ return {
               route = "drop",
               epv = 38.95,
               phase = 3,
+            },
+            {
+              item_id = 28603,
+              name = "Talisman of Nightbane",
+              location = "Karazhan",
+              route = "drop",
+              epv = 33.59,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -3158,6 +3358,14 @@ return {
               epv = 36.33,
               phase = 1,
             },
+            {
+              item_id = 28603,
+              name = "Talisman of Nightbane",
+              location = "Karazhan",
+              route = "drop",
+              epv = 33.59,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -3167,6 +3375,14 @@ return {
               route = "drop",
               epv = 36.09,
               phase = 2,
+            },
+            {
+              item_id = 28603,
+              name = "Talisman of Nightbane",
+              location = "Karazhan",
+              route = "drop",
+              epv = 33.59,
+              phase = 1,
             },
           },
           season2 = {
@@ -3190,6 +3406,14 @@ return {
               epv = 170.89,
               phase = 3,
             },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 131.69,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -3199,6 +3423,14 @@ return {
               route = "drop",
               epv = 152.56,
               phase = 3,
+            },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 131.69,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -3210,6 +3442,14 @@ return {
               epv = 143.22,
               phase = 2,
             },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 131.69,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -3218,6 +3458,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 132.74,
+              phase = 1,
+            },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 131.69,
               phase = 1,
             },
           },
@@ -3241,6 +3489,14 @@ return {
               phase = 2,
             },
           },
+          entry = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "raid_drop",
+              route = "drop",
+            },
+          },
         },
         ["Weapon:TwoHand"] = {
           nonpvp1 = {
@@ -3252,6 +3508,14 @@ return {
               epv = 242.67,
               phase = 3,
             },
+            {
+              item_id = 29130,
+              name = "Auchenai Staff",
+              location = "Quartermaster Endarin",
+              route = "drop",
+              epv = 109.82,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -3262,6 +3526,14 @@ return {
               epv = 182.4,
               phase = 2,
             },
+            {
+              item_id = 29130,
+              name = "Auchenai Staff",
+              location = "Quartermaster Endarin",
+              route = "drop",
+              epv = 109.82,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -3270,6 +3542,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 139.56,
+              phase = 1,
+            },
+            {
+              item_id = 29130,
+              name = "Auchenai Staff",
+              location = "Quartermaster Endarin",
+              route = "drop",
+              epv = 109.82,
               phase = 1,
             },
           },
@@ -3282,6 +3562,14 @@ return {
               epv = 133.13,
               phase = 1,
             },
+            {
+              item_id = 29130,
+              name = "Auchenai Staff",
+              location = "Quartermaster Endarin",
+              route = "drop",
+              epv = 109.82,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -3290,6 +3578,14 @@ return {
               location = "Season 3",
               route = "arena",
               epv = 189.81,
+              phase = 3,
+            },
+            {
+              item_id = 33766,
+              name = "Vengeful Gladiator's War Staff",
+              location = "Season 3",
+              route = "arena",
+              epv = 182.98,
               phase = 3,
             },
           },
@@ -5634,6 +5930,14 @@ return {
               epv = 1377.64,
               phase = 3,
             },
+            {
+              item_id = 32248,
+              name = "Halberd of Desolation",
+              location = "Black Temple",
+              route = "drop",
+              epv = 1273.98,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -5642,6 +5946,14 @@ return {
               location = "Black Temple",
               route = "drop",
               epv = 1295.62,
+              phase = 3,
+            },
+            {
+              item_id = 32248,
+              name = "Halberd of Desolation",
+              location = "Black Temple",
+              route = "drop",
+              epv = 1273.98,
               phase = 3,
             },
           },
@@ -5654,6 +5966,14 @@ return {
               epv = 1287.64,
               phase = 2,
             },
+            {
+              item_id = 32248,
+              name = "Halberd of Desolation",
+              location = "Black Temple",
+              route = "drop",
+              epv = 1273.98,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -5662,6 +5982,14 @@ return {
               location = "Black Temple",
               route = "drop",
               epv = 1286.56,
+              phase = 3,
+            },
+            {
+              item_id = 32248,
+              name = "Halberd of Desolation",
+              location = "Black Temple",
+              route = "drop",
+              epv = 1273.98,
               phase = 3,
             },
           },
@@ -5674,6 +6002,32 @@ return {
               epv = 1324.06,
               phase = 3,
             },
+            {
+              item_id = 33688,
+              name = "Vengeful Gladiator's Greatsword",
+              location = "Season 3",
+              route = "arena",
+              epv = 1324.06,
+              phase = 3,
+              icon = "inv_sword_108",
+              url = "https://www.wowhead.com/tbc/item=33688",
+              stats = {
+                armor_pen = 98,
+                melee_crit = 46,
+                melee_hit = 15,
+                resilience = 33,
+                stamina = 62,
+                strength = 46,
+              },
+            },
+            {
+              item_id = 33670,
+              name = "Vengeful Gladiator's Decapitator",
+              location = "Season 3",
+              route = "arena",
+              epv = 1319.87,
+              phase = 3,
+            },
           },
           season2 = {
             {
@@ -5682,6 +6036,31 @@ return {
               location = "Season 2",
               route = "arena",
               epv = 1234.98,
+              phase = 2,
+            },
+            {
+              item_id = 31984,
+              name = "Merciless Gladiator's Greatsword",
+              location = "Season 2",
+              route = "arena",
+              epv = 1234.98,
+              phase = 2,
+              icon = "inv_sword_70",
+              url = "https://www.wowhead.com/tbc/item=31984",
+              stats = {
+                melee_crit = 42,
+                melee_hit = 18,
+                resilience = 33,
+                stamina = 55,
+                strength = 42,
+              },
+            },
+            {
+              item_id = 31966,
+              name = "Merciless Gladiator's Decapitator",
+              location = "Season 2",
+              route = "arena",
+              epv = 1231.16,
               phase = 2,
             },
           },
@@ -7779,6 +8158,14 @@ return {
               epv = 270.76,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 187.82,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -7789,6 +8176,14 @@ return {
               epv = 257.18,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 187.82,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -7797,6 +8192,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 223.64,
+              phase = 1,
+            },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 187.82,
               phase = 1,
             },
           },
@@ -7809,11 +8212,27 @@ return {
               epv = 201.18,
               phase = 1,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 187.82,
+              phase = 1,
+            },
           },
           season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
+              location = "Season 3",
+              route = "arena",
+              epv = 275,
+              phase = 3,
+            },
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
               location = "Season 3",
               route = "arena",
               epv = 275,
@@ -7829,6 +8248,22 @@ return {
               epv = 249.84,
               phase = 2,
             },
+            {
+              item_id = 32963,
+              name = "Merciless Gladiator's Gavel",
+              location = "Season 2",
+              route = "arena",
+              epv = 249.84,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "raid_drop",
+              route = "drop",
+            },
           },
         },
         ["Weapon:OffHand"] = {
@@ -7841,6 +8276,14 @@ return {
               epv = 80.76,
               phase = 3,
             },
+            {
+              item_id = 29273,
+              name = "Khadgar's Knapsack",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 49,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -7850,6 +8293,14 @@ return {
               route = "drop",
               epv = 76.88,
               phase = 3,
+            },
+            {
+              item_id = 29273,
+              name = "Khadgar's Knapsack",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 49,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -7861,6 +8312,14 @@ return {
               epv = 55.04,
               phase = 1,
             },
+            {
+              item_id = 29273,
+              name = "Khadgar's Knapsack",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 49,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -7870,6 +8329,14 @@ return {
               route = "drop",
               epv = 54.36,
               phase = 2,
+            },
+            {
+              item_id = 29273,
+              name = "Khadgar's Knapsack",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 49,
+              phase = 1,
             },
           },
           season2 = {
@@ -7893,6 +8360,14 @@ return {
               epv = 270.76,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 187.82,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -7903,6 +8378,14 @@ return {
               epv = 257.18,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 187.82,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -7911,6 +8394,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 223.64,
+              phase = 1,
+            },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 187.82,
               phase = 1,
             },
           },
@@ -7923,11 +8414,27 @@ return {
               epv = 201.18,
               phase = 1,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 187.82,
+              phase = 1,
+            },
           },
           season3 = {
             {
               item_id = 33687,
               name = "Vengeful Gladiator's Gavel",
+              location = "Season 3",
+              route = "arena",
+              epv = 275,
+              phase = 3,
+            },
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
               location = "Season 3",
               route = "arena",
               epv = 275,
@@ -7943,6 +8450,22 @@ return {
               epv = 249.84,
               phase = 2,
             },
+            {
+              item_id = 32963,
+              name = "Merciless Gladiator's Gavel",
+              location = "Season 2",
+              route = "arena",
+              epv = 249.84,
+              phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 29988,
+              name = "The Nexus Key",
+              location = "raid_drop",
+              route = "drop",
+            },
           },
         },
         ["Weapon:TwoHand"] = {
@@ -7955,6 +8478,14 @@ return {
               epv = 342.46,
               phase = 3,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 206.16,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -7965,6 +8496,14 @@ return {
               epv = 286.36,
               phase = 2,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 206.16,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -7973,6 +8512,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 231.98,
+              phase = 1,
+            },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 206.16,
               phase = 1,
             },
           },
@@ -7985,6 +8532,14 @@ return {
               epv = 209.1,
               phase = 3,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 206.16,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -7993,6 +8548,14 @@ return {
               location = "Season 3",
               route = "arena",
               epv = 325.68,
+              phase = 3,
+            },
+            {
+              item_id = 33766,
+              name = "Vengeful Gladiator's War Staff",
+              location = "Season 3",
+              route = "arena",
+              epv = 292.08,
               phase = 3,
             },
           },
@@ -10216,6 +10779,14 @@ return {
               epv = 113.4,
               phase = 3,
             },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -10224,6 +10795,14 @@ return {
               location = "Hyjal Summit",
               route = "drop",
               epv = 109.65,
+              phase = 3,
+            },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
               phase = 3,
             },
           },
@@ -10236,6 +10815,14 @@ return {
               epv = 103.95,
               phase = 2,
             },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -10245,6 +10832,14 @@ return {
               route = "drop",
               epv = 100.75,
               phase = 2,
+            },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
+              phase = 3,
             },
           },
           season3 = {
@@ -10278,6 +10873,14 @@ return {
               epv = 113.4,
               phase = 3,
             },
+            {
+              item_id = 30901,
+              name = "Boundless Agony",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 100.2,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -10286,6 +10889,14 @@ return {
               location = "Hyjal Summit",
               route = "drop",
               epv = 109.65,
+              phase = 3,
+            },
+            {
+              item_id = 30901,
+              name = "Boundless Agony",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 100.2,
               phase = 3,
             },
           },
@@ -10298,6 +10909,14 @@ return {
               epv = 100.75,
               phase = 2,
             },
+            {
+              item_id = 30901,
+              name = "Boundless Agony",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 100.2,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -10306,6 +10925,14 @@ return {
               location = "Black Temple",
               route = "drop",
               epv = 100.6,
+              phase = 3,
+            },
+            {
+              item_id = 30901,
+              name = "Boundless Agony",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 100.2,
               phase = 3,
             },
           },
@@ -10329,6 +10956,52 @@ return {
                 stamina = 30,
               },
             },
+            {
+              item_id = 33705,
+              name = "Vengeful Gladiator's Left Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 93.25,
+              phase = 3,
+              icon = "inv_weapon_hand_13",
+              url = "https://www.wowhead.com/tbc/item=33705",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
+            {
+              item_id = 33734,
+              name = "Vengeful Gladiator's Quickblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 93.25,
+              phase = 3,
+              icon = "inv_sword_89",
+              url = "https://www.wowhead.com/tbc/item=33734",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
+          },
+          entry = {
+            {
+              item_id = 29948,
+              name = "Claw of the Phoenix",
+              location = "raid_drop",
+              route = "drop",
+            },
           },
         },
         ["Weapon:OneHand"] = {
@@ -10341,6 +11014,14 @@ return {
               epv = 113.4,
               phase = 3,
             },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -10349,6 +11030,14 @@ return {
               location = "Hyjal Summit",
               route = "drop",
               epv = 109.65,
+              phase = 3,
+            },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
               phase = 3,
             },
           },
@@ -10361,6 +11050,14 @@ return {
               epv = 103.95,
               phase = 2,
             },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -10370,6 +11067,14 @@ return {
               route = "drop",
               epv = 100.75,
               phase = 2,
+            },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 100.6,
+              phase = 3,
             },
           },
           season3 = {
@@ -10403,6 +11108,14 @@ return {
               epv = 249.55,
               phase = 3,
             },
+            {
+              item_id = 28435,
+              name = "Mooncleaver",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 186.6,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -10413,6 +11126,14 @@ return {
               epv = 211.5,
               phase = 2,
             },
+            {
+              item_id = 28435,
+              name = "Mooncleaver",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 186.6,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -10421,6 +11142,14 @@ return {
               location = "Shadowmoon Valley",
               route = "drop",
               epv = 207.35,
+              phase = 1,
+            },
+            {
+              item_id = 28435,
+              name = "Mooncleaver",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 186.6,
               phase = 1,
             },
           },
@@ -10433,6 +11162,14 @@ return {
               epv = 198.8,
               phase = 2,
             },
+            {
+              item_id = 28435,
+              name = "Mooncleaver",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 186.6,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -10441,6 +11178,33 @@ return {
               location = "Season 3",
               route = "arena",
               epv = 215.2,
+              phase = 3,
+            },
+            {
+              item_id = 34014,
+              name = "Vengeful Gladiator's Waraxe",
+              location = "Season 3",
+              route = "arena",
+              epv = 215.2,
+              phase = 3,
+              icon = "inv_axe_61",
+              url = "https://www.wowhead.com/tbc/item=34014",
+              stats = {
+                armor_pen = 98,
+                attack_power = 92,
+                melee_crit = 46,
+                melee_hit = 15,
+                ranged_attack_power = 92,
+                resilience = 33,
+                stamina = 62,
+              },
+            },
+            {
+              item_id = 33727,
+              name = "Vengeful Gladiator's Painsaw",
+              location = "Season 3",
+              route = "arena",
+              epv = 164.85,
               phase = 3,
             },
           },
@@ -10452,6 +11216,14 @@ return {
               route = "arena",
               epv = 176.1,
               phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32944,
+              name = "Talon of the Phoenix",
+              location = "raid_drop",
+              route = "drop",
             },
           },
         },
@@ -12528,6 +13300,14 @@ return {
               epv = 1102.26,
               phase = 3,
             },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -12536,6 +13316,14 @@ return {
               location = "Blacksmithing",
               route = "crafted",
               epv = 1007.44,
+              phase = 2,
+            },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
               phase = 2,
             },
           },
@@ -12548,6 +13336,14 @@ return {
               epv = 997.48,
               phase = 3,
             },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
+              phase = 2,
+            },
           },
           nonpvp4 = {
             {
@@ -12558,11 +13354,46 @@ return {
               epv = 975.04,
               phase = 2,
             },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
+              phase = 2,
+            },
           },
           season3 = {
             {
               item_id = 33737,
               name = "Vengeful Gladiator's Right Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 1009.94,
+              phase = 3,
+            },
+            {
+              item_id = 33733,
+              name = "Vengeful Gladiator's Pummeler",
+              location = "Season 3",
+              route = "arena",
+              epv = 1009.94,
+              phase = 3,
+              icon = "inv_mace_41",
+              url = "https://www.wowhead.com/tbc/item=33733",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
+            {
+              item_id = 33762,
+              name = "Vengeful Gladiator's Slicer",
               location = "Season 3",
               route = "arena",
               epv = 1009.94,
@@ -12577,6 +13408,32 @@ return {
               route = "arena",
               epv = 947.44,
               phase = 2,
+            },
+            {
+              item_id = 32028,
+              name = "Merciless Gladiator's Right Ripper",
+              location = "Season 2",
+              route = "arena",
+              epv = 945.84,
+              phase = 2,
+            },
+            {
+              item_id = 32026,
+              name = "Merciless Gladiator's Pummeler",
+              location = "Season 2",
+              route = "arena",
+              epv = 945.84,
+              phase = 2,
+              icon = "inv_mace_36",
+              url = "https://www.wowhead.com/tbc/item=32026",
+              stats = {
+                attack_power = 30,
+                melee_crit = 19,
+                melee_hit = 10,
+                ranged_attack_power = 30,
+                resilience = 12,
+                stamina = 27,
+              },
             },
           },
           entry = {
@@ -12600,6 +13457,14 @@ return {
               epv = 997.48,
               phase = 3,
             },
+            {
+              item_id = 30103,
+              name = "Fang of Vashj",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 968.26,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -12608,6 +13473,14 @@ return {
               location = "Serpentshrine Cavern",
               route = "drop",
               epv = 974.95,
+              phase = 2,
+            },
+            {
+              item_id = 30103,
+              name = "Fang of Vashj",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 968.26,
               phase = 2,
             },
           },
@@ -12620,6 +13493,14 @@ return {
               epv = 970.04,
               phase = 3,
             },
+            {
+              item_id = 30103,
+              name = "Fang of Vashj",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 968.26,
+              phase = 2,
+            },
           },
           nonpvp4 = {
             {
@@ -12629,6 +13510,14 @@ return {
               route = "drop",
               epv = 969.8,
               phase = 3,
+            },
+            {
+              item_id = 30103,
+              name = "Fang of Vashj",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 968.26,
+              phase = 2,
             },
           },
           season3 = {
@@ -12651,6 +13540,22 @@ return {
                 stamina = 30,
               },
             },
+            {
+              item_id = 33762,
+              name = "Vengeful Gladiator's Slicer",
+              location = "Season 3",
+              route = "arena",
+              epv = 1009.94,
+              phase = 3,
+            },
+            {
+              item_id = 33754,
+              name = "Vengeful Gladiator's Shanker",
+              location = "Season 3",
+              route = "arena",
+              epv = 985.94,
+              phase = 3,
+            },
           },
           season2 = {
             {
@@ -12659,6 +13564,32 @@ return {
               location = "Season 2",
               route = "arena",
               epv = 947.44,
+              phase = 2,
+            },
+            {
+              item_id = 32026,
+              name = "Merciless Gladiator's Pummeler",
+              location = "Season 2",
+              route = "arena",
+              epv = 945.84,
+              phase = 2,
+              icon = "inv_mace_36",
+              url = "https://www.wowhead.com/tbc/item=32026",
+              stats = {
+                attack_power = 30,
+                melee_crit = 19,
+                melee_hit = 10,
+                ranged_attack_power = 30,
+                resilience = 12,
+                stamina = 27,
+              },
+            },
+            {
+              item_id = 32044,
+              name = "Merciless Gladiator's Shanker",
+              location = "Season 2",
+              route = "arena",
+              epv = 921.84,
               phase = 2,
             },
           },
@@ -12683,6 +13614,14 @@ return {
               epv = 1102.26,
               phase = 3,
             },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -12691,6 +13630,14 @@ return {
               location = "Blacksmithing",
               route = "crafted",
               epv = 1007.44,
+              phase = 2,
+            },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
               phase = 2,
             },
           },
@@ -12703,6 +13650,14 @@ return {
               epv = 997.48,
               phase = 3,
             },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
+              phase = 2,
+            },
           },
           nonpvp4 = {
             {
@@ -12713,11 +13668,46 @@ return {
               epv = 975.04,
               phase = 2,
             },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 974.95,
+              phase = 2,
+            },
           },
           season3 = {
             {
               item_id = 33737,
               name = "Vengeful Gladiator's Right Ripper",
+              location = "Season 3",
+              route = "arena",
+              epv = 1009.94,
+              phase = 3,
+            },
+            {
+              item_id = 33733,
+              name = "Vengeful Gladiator's Pummeler",
+              location = "Season 3",
+              route = "arena",
+              epv = 1009.94,
+              phase = 3,
+              icon = "inv_mace_41",
+              url = "https://www.wowhead.com/tbc/item=33733",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
+            {
+              item_id = 33762,
+              name = "Vengeful Gladiator's Slicer",
               location = "Season 3",
               route = "arena",
               epv = 1009.94,
@@ -12732,6 +13722,32 @@ return {
               route = "arena",
               epv = 947.44,
               phase = 2,
+            },
+            {
+              item_id = 32028,
+              name = "Merciless Gladiator's Right Ripper",
+              location = "Season 2",
+              route = "arena",
+              epv = 945.84,
+              phase = 2,
+            },
+            {
+              item_id = 32026,
+              name = "Merciless Gladiator's Pummeler",
+              location = "Season 2",
+              route = "arena",
+              epv = 945.84,
+              phase = 2,
+              icon = "inv_mace_36",
+              url = "https://www.wowhead.com/tbc/item=32026",
+              stats = {
+                attack_power = 30,
+                melee_crit = 19,
+                melee_hit = 10,
+                ranged_attack_power = 30,
+                resilience = 12,
+                stamina = 27,
+              },
             },
           },
           entry = {
@@ -14836,6 +15852,14 @@ return {
               epv = 363.09,
               phase = 3,
             },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 267.2,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -14845,6 +15869,14 @@ return {
               route = "drop",
               epv = 307.92,
               phase = 3,
+            },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 267.2,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -14856,6 +15888,14 @@ return {
               epv = 288.62,
               phase = 2,
             },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 267.2,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -14864,6 +15904,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 267.24,
+              phase = 1,
+            },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 267.2,
               phase = 1,
             },
           },
@@ -14908,6 +15956,14 @@ return {
               epv = 100.12,
               phase = 3,
             },
+            {
+              item_id = 30049,
+              name = "Fathomstone",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 66.85,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -14917,6 +15973,14 @@ return {
               route = "drop",
               epv = 95.91,
               phase = 3,
+            },
+            {
+              item_id = 30049,
+              name = "Fathomstone",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 66.85,
+              phase = 2,
             },
           },
           nonpvp3 = {
@@ -14928,6 +15992,14 @@ return {
               epv = 70.86,
               phase = 1,
             },
+            {
+              item_id = 30049,
+              name = "Fathomstone",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 66.85,
+              phase = 2,
+            },
           },
           nonpvp4 = {
             {
@@ -14937,6 +16009,14 @@ return {
               route = "drop",
               epv = 69.39,
               phase = 1,
+            },
+            {
+              item_id = 30049,
+              name = "Fathomstone",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 66.85,
+              phase = 2,
             },
           },
           season2 = {
@@ -14970,6 +16050,14 @@ return {
               epv = 363.09,
               phase = 3,
             },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 267.2,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -14979,6 +16067,14 @@ return {
               route = "drop",
               epv = 307.92,
               phase = 3,
+            },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 267.2,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -14990,6 +16086,14 @@ return {
               epv = 288.62,
               phase = 2,
             },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 267.2,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -14998,6 +16102,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 267.24,
+              phase = 1,
+            },
+            {
+              item_id = 28802,
+              name = "Bloodmaw Magus-Blade",
+              location = "Gruul's Lair",
+              route = "drop",
+              epv = 267.2,
               phase = 1,
             },
           },
@@ -15042,6 +16154,14 @@ return {
               epv = 436.76,
               phase = 3,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 249.45,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -15052,6 +16172,14 @@ return {
               epv = 347.66,
               phase = 2,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 249.45,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -15060,6 +16188,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 282.5,
+              phase = 1,
+            },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 249.45,
               phase = 1,
             },
           },
@@ -15072,6 +16208,14 @@ return {
               epv = 252.52,
               phase = 3,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 249.45,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -15080,6 +16224,14 @@ return {
               location = "Season 3",
               route = "arena",
               epv = 396.18,
+              phase = 3,
+            },
+            {
+              item_id = 33766,
+              name = "Vengeful Gladiator's War Staff",
+              location = "Season 3",
+              route = "arena",
+              epv = 353.06,
               phase = 3,
             },
           },
@@ -15091,6 +16243,14 @@ return {
               route = "arena",
               epv = 358.59,
               phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "arena",
+              route = "drop",
             },
           },
         },
@@ -17356,6 +18516,14 @@ return {
               epv = 259.25,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 189.89,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -17366,6 +18534,14 @@ return {
               epv = 249.86,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 189.89,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -17374,6 +18550,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 226.16,
+              phase = 1,
+            },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 189.89,
               phase = 1,
             },
           },
@@ -17386,6 +18570,14 @@ return {
               epv = 203.79,
               phase = 1,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 189.89,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -17396,11 +18588,27 @@ return {
               epv = 258.58,
               phase = 3,
             },
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 258.58,
+              phase = 3,
+            },
           },
           season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 235.32,
+              phase = 2,
+            },
+            {
+              item_id = 32963,
+              name = "Merciless Gladiator's Gavel",
               location = "Season 2",
               route = "arena",
               epv = 235.32,
@@ -17428,6 +18636,14 @@ return {
               epv = 69.2,
               phase = 3,
             },
+            {
+              item_id = 29273,
+              name = "Khadgar's Knapsack",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 49,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -17437,6 +18653,14 @@ return {
               route = "drop",
               epv = 63.4,
               phase = 3,
+            },
+            {
+              item_id = 29273,
+              name = "Khadgar's Knapsack",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 49,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -17448,6 +18672,14 @@ return {
               epv = 57.42,
               phase = 2,
             },
+            {
+              item_id = 29273,
+              name = "Khadgar's Knapsack",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 49,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -17457,6 +18689,14 @@ return {
               route = "drop",
               epv = 54.8,
               phase = 3,
+            },
+            {
+              item_id = 29273,
+              name = "Khadgar's Knapsack",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 49,
+              phase = 1,
             },
           },
           entry = {
@@ -17480,6 +18720,14 @@ return {
               epv = 259.25,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 189.89,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -17490,6 +18738,14 @@ return {
               epv = 249.86,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 189.89,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -17498,6 +18754,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 226.16,
+              phase = 1,
+            },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 189.89,
               phase = 1,
             },
           },
@@ -17510,6 +18774,14 @@ return {
               epv = 203.79,
               phase = 1,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 189.89,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -17520,11 +18792,27 @@ return {
               epv = 258.58,
               phase = 3,
             },
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 258.58,
+              phase = 3,
+            },
           },
           season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 235.32,
+              phase = 2,
+            },
+            {
+              item_id = 32963,
+              name = "Merciless Gladiator's Gavel",
               location = "Season 2",
               route = "arena",
               epv = 235.32,
@@ -17552,6 +18840,14 @@ return {
               epv = 366.71,
               phase = 3,
             },
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 207.61,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -17561,6 +18857,14 @@ return {
               route = "drop",
               epv = 290.86,
               phase = 2,
+            },
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 207.61,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -17572,6 +18876,14 @@ return {
               epv = 211.89,
               phase = 3,
             },
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 207.61,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -17580,6 +18892,14 @@ return {
               location = "Sethekk Halls",
               route = "drop",
               epv = 209.04,
+              phase = 1,
+            },
+            {
+              item_id = 28633,
+              name = "Staff of Infinite Mysteries",
+              location = "Karazhan",
+              route = "drop",
+              epv = 207.61,
               phase = 1,
             },
           },
@@ -17592,6 +18912,14 @@ return {
               epv = 305.74,
               phase = 3,
             },
+            {
+              item_id = 33766,
+              name = "Vengeful Gladiator's War Staff",
+              location = "Season 3",
+              route = "arena",
+              epv = 296.22,
+              phase = 3,
+            },
           },
           season2 = {
             {
@@ -17601,6 +18929,14 @@ return {
               route = "arena",
               epv = 278.1,
               phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "arena",
+              route = "drop",
             },
           },
         },
@@ -19763,6 +21099,14 @@ return {
               epv = 854.38,
               phase = 3,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 798.78,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -19773,6 +21117,14 @@ return {
               epv = 830.15,
               phase = 2,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 798.78,
+              phase = 3,
+            },
           },
           nonpvp3 = {
             {
@@ -19781,6 +21133,14 @@ return {
               location = "Black Temple",
               route = "drop",
               epv = 811.22,
+              phase = 3,
+            },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 798.78,
               phase = 3,
             },
           },
@@ -19793,6 +21153,14 @@ return {
               epv = 810.39,
               phase = 2,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 798.78,
+              phase = 3,
+            },
           },
           season3 = {
             {
@@ -19802,6 +21170,24 @@ return {
               route = "arena",
               epv = 844.87,
               phase = 3,
+            },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
+              location = "Season 3",
+              route = "arena",
+              epv = 844.87,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32028,
+              name = "Merciless Gladiator's Right Ripper",
+              location = "Season 2",
+              route = "arena",
+              epv = 787.27,
+              phase = 2,
             },
           },
           entry = {
@@ -19825,6 +21211,14 @@ return {
               epv = 854.38,
               phase = 3,
             },
+            {
+              item_id = 29996,
+              name = "Rod of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 783.86,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -19834,6 +21228,14 @@ return {
               route = "drop",
               epv = 811.22,
               phase = 3,
+            },
+            {
+              item_id = 29996,
+              name = "Rod of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 783.86,
+              phase = 2,
             },
           },
           nonpvp3 = {
@@ -19845,6 +21247,14 @@ return {
               epv = 799.51,
               phase = 3,
             },
+            {
+              item_id = 29996,
+              name = "Rod of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 783.86,
+              phase = 2,
+            },
           },
           nonpvp4 = {
             {
@@ -19855,11 +21265,46 @@ return {
               epv = 792.86,
               phase = 3,
             },
+            {
+              item_id = 29996,
+              name = "Rod of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 783.86,
+              phase = 2,
+            },
           },
           season3 = {
             {
               item_id = 34015,
               name = "Vengeful Gladiator's Chopper",
+              location = "Season 3",
+              route = "arena",
+              epv = 844.87,
+              phase = 3,
+            },
+            {
+              item_id = 34016,
+              name = "Vengeful Gladiator's Left Render",
+              location = "Season 3",
+              route = "arena",
+              epv = 844.87,
+              phase = 3,
+              icon = "inv_weapon_hand_13",
+              url = "https://www.wowhead.com/tbc/item=34016",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
               location = "Season 3",
               route = "arena",
               epv = 844.87,
@@ -19874,6 +21319,42 @@ return {
               route = "arena",
               epv = 788.73,
               phase = 2,
+            },
+            {
+              item_id = 31985,
+              name = "Merciless Gladiator's Hacker",
+              location = "Season 2",
+              route = "arena",
+              epv = 788.73,
+              phase = 2,
+              icon = "inv_axe_54",
+              url = "https://www.wowhead.com/tbc/item=31985",
+              stats = {
+                attack_power = 30,
+                melee_crit = 19,
+                melee_hit = 10,
+                ranged_attack_power = 30,
+                resilience = 12,
+                stamina = 27,
+              },
+            },
+            {
+              item_id = 32003,
+              name = "Merciless Gladiator's Left Ripper",
+              location = "Season 2",
+              route = "arena",
+              epv = 788.73,
+              phase = 2,
+              icon = "inv_weapon_hand_13",
+              url = "https://www.wowhead.com/tbc/item=32003",
+              stats = {
+                attack_power = 30,
+                melee_crit = 19,
+                melee_hit = 10,
+                ranged_attack_power = 30,
+                resilience = 12,
+                stamina = 27,
+              },
             },
           },
           entry = {
@@ -19897,6 +21378,14 @@ return {
               epv = 854.38,
               phase = 3,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 798.78,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -19907,6 +21396,14 @@ return {
               epv = 830.15,
               phase = 2,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 798.78,
+              phase = 3,
+            },
           },
           nonpvp3 = {
             {
@@ -19915,6 +21412,14 @@ return {
               location = "Black Temple",
               route = "drop",
               epv = 811.22,
+              phase = 3,
+            },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 798.78,
               phase = 3,
             },
           },
@@ -19927,6 +21432,14 @@ return {
               epv = 810.39,
               phase = 2,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 798.78,
+              phase = 3,
+            },
           },
           season3 = {
             {
@@ -19936,6 +21449,24 @@ return {
               route = "arena",
               epv = 844.87,
               phase = 3,
+            },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
+              location = "Season 3",
+              route = "arena",
+              epv = 844.87,
+              phase = 3,
+            },
+          },
+          season2 = {
+            {
+              item_id = 32028,
+              name = "Merciless Gladiator's Right Ripper",
+              location = "Season 2",
+              route = "arena",
+              epv = 787.27,
+              phase = 2,
             },
           },
           entry = {
@@ -21881,6 +23412,14 @@ return {
               epv = 1968.21,
               phase = 3,
             },
+            {
+              item_id = 29171,
+              name = "Earthwarden",
+              location = "Cenarion Expedition",
+              route = "drop",
+              epv = 1470.72,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -21891,6 +23430,14 @@ return {
               epv = 1781.34,
               phase = 2,
             },
+            {
+              item_id = 29171,
+              name = "Earthwarden",
+              location = "Cenarion Expedition",
+              route = "drop",
+              epv = 1470.72,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -21899,6 +23446,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 1712.85,
+              phase = 1,
+            },
+            {
+              item_id = 29171,
+              name = "Earthwarden",
+              location = "Cenarion Expedition",
+              route = "drop",
+              epv = 1470.72,
               phase = 1,
             },
           },
@@ -21911,6 +23466,14 @@ return {
               epv = 1562.02,
               phase = 1,
             },
+            {
+              item_id = 29171,
+              name = "Earthwarden",
+              location = "Cenarion Expedition",
+              route = "drop",
+              epv = 1470.72,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -21921,6 +23484,14 @@ return {
               epv = 2023.12,
               phase = 3,
             },
+            {
+              item_id = 33663,
+              name = "Vengeful Gladiator's Bonegrinder",
+              location = "Season 3",
+              route = "arena",
+              epv = 1331.47,
+              phase = 3,
+            },
           },
           season2 = {
             {
@@ -21929,6 +23500,14 @@ return {
               location = "Season 2",
               route = "arena",
               epv = 1864.17,
+              phase = 2,
+            },
+            {
+              item_id = 31959,
+              name = "Merciless Gladiator's Bonegrinder",
+              location = "Season 2",
+              route = "arena",
+              epv = 1225.79,
               phase = 2,
             },
           },
@@ -23863,6 +25442,14 @@ return {
               epv = 1404.22,
               phase = 3,
             },
+            {
+              item_id = 31334,
+              name = "Staff of Natural Fury",
+              location = "",
+              route = "drop",
+              epv = 1011,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -23871,6 +25458,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 1349.3,
+              phase = 1,
+            },
+            {
+              item_id = 31334,
+              name = "Staff of Natural Fury",
+              location = "",
+              route = "drop",
+              epv = 1011,
               phase = 1,
             },
           },
@@ -23883,6 +25478,14 @@ return {
               epv = 1226.38,
               phase = 2,
             },
+            {
+              item_id = 31334,
+              name = "Staff of Natural Fury",
+              location = "",
+              route = "drop",
+              epv = 1011,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -23891,6 +25494,14 @@ return {
               location = "Botanica",
               route = "drop",
               epv = 1195.12,
+              phase = 1,
+            },
+            {
+              item_id = 31334,
+              name = "Staff of Natural Fury",
+              location = "",
+              route = "drop",
+              epv = 1011,
               phase = 1,
             },
           },
@@ -23903,6 +25514,14 @@ return {
               epv = 1634.04,
               phase = 3,
             },
+            {
+              item_id = 33663,
+              name = "Vengeful Gladiator's Bonegrinder",
+              location = "Season 3",
+              route = "arena",
+              epv = 755.37,
+              phase = 3,
+            },
           },
           season2 = {
             {
@@ -23911,6 +25530,14 @@ return {
               location = "Season 2",
               route = "arena",
               epv = 1497.69,
+              phase = 2,
+            },
+            {
+              item_id = 31959,
+              name = "Merciless Gladiator's Bonegrinder",
+              location = "Season 2",
+              route = "arena",
+              epv = 675.99,
               phase = 2,
             },
           },
@@ -25889,6 +27516,14 @@ return {
               epv = 1919.9,
               phase = 3,
             },
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1656.92,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -25899,6 +27534,14 @@ return {
               epv = 1737.75,
               phase = 3,
             },
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1656.92,
+              phase = 2,
+            },
           },
           nonpvp3 = {
             {
@@ -25907,6 +27550,14 @@ return {
               location = "Blacksmithing",
               route = "crafted",
               epv = 1685.24,
+              phase = 2,
+            },
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1656.92,
               phase = 2,
             },
           },
@@ -25919,6 +27570,14 @@ return {
               epv = 1677.54,
               phase = 2,
             },
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1656.92,
+              phase = 2,
+            },
           },
           season3 = {
             {
@@ -25929,6 +27588,33 @@ return {
               epv = 1692.51,
               phase = 3,
             },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
+              location = "Season 3",
+              route = "arena",
+              epv = 1692.51,
+              phase = 3,
+            },
+            {
+              item_id = 33733,
+              name = "Vengeful Gladiator's Pummeler",
+              location = "Season 3",
+              route = "arena",
+              epv = 1692.51,
+              phase = 3,
+              icon = "inv_mace_41",
+              url = "https://www.wowhead.com/tbc/item=33733",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
           },
           season2 = {
             {
@@ -25938,6 +27624,32 @@ return {
               route = "arena",
               epv = 1590.13,
               phase = 2,
+            },
+            {
+              item_id = 31965,
+              name = "Merciless Gladiator's Cleaver",
+              location = "Season 2",
+              route = "arena",
+              epv = 1590.13,
+              phase = 2,
+            },
+            {
+              item_id = 32026,
+              name = "Merciless Gladiator's Pummeler",
+              location = "Season 2",
+              route = "arena",
+              epv = 1590.13,
+              phase = 2,
+              icon = "inv_mace_36",
+              url = "https://www.wowhead.com/tbc/item=32026",
+              stats = {
+                attack_power = 30,
+                melee_crit = 19,
+                melee_hit = 10,
+                ranged_attack_power = 30,
+                resilience = 12,
+                stamina = 27,
+              },
             },
           },
           entry = {
@@ -25961,6 +27673,14 @@ return {
               epv = 1737.75,
               phase = 3,
             },
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 1573.2,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -25969,6 +27689,14 @@ return {
               location = "Tempest Keep",
               route = "drop",
               epv = 1677.54,
+              phase = 2,
+            },
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 1573.2,
               phase = 2,
             },
           },
@@ -25981,6 +27709,14 @@ return {
               epv = 1638.94,
               phase = 3,
             },
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 1573.2,
+              phase = 2,
+            },
           },
           nonpvp4 = {
             {
@@ -25991,11 +27727,46 @@ return {
               epv = 1635,
               phase = 2,
             },
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 1573.2,
+              phase = 2,
+            },
           },
           season3 = {
             {
               item_id = 34015,
               name = "Vengeful Gladiator's Chopper",
+              location = "Season 3",
+              route = "arena",
+              epv = 1692.51,
+              phase = 3,
+            },
+            {
+              item_id = 34016,
+              name = "Vengeful Gladiator's Left Render",
+              location = "Season 3",
+              route = "arena",
+              epv = 1692.51,
+              phase = 3,
+              icon = "inv_weapon_hand_13",
+              url = "https://www.wowhead.com/tbc/item=34016",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
               location = "Season 3",
               route = "arena",
               epv = 1692.51,
@@ -26009,6 +27780,32 @@ return {
               location = "Season 2",
               route = "arena",
               epv = 1590.13,
+              phase = 2,
+            },
+            {
+              item_id = 32026,
+              name = "Merciless Gladiator's Pummeler",
+              location = "Season 2",
+              route = "arena",
+              epv = 1590.13,
+              phase = 2,
+              icon = "inv_mace_36",
+              url = "https://www.wowhead.com/tbc/item=32026",
+              stats = {
+                attack_power = 30,
+                melee_crit = 19,
+                melee_hit = 10,
+                ranged_attack_power = 30,
+                resilience = 12,
+                stamina = 27,
+              },
+            },
+            {
+              item_id = 32052,
+              name = "Merciless Gladiator's Slicer",
+              location = "Season 2",
+              route = "arena",
+              epv = 1472.63,
               phase = 2,
             },
           },
@@ -26033,6 +27830,14 @@ return {
               epv = 1919.9,
               phase = 3,
             },
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1656.92,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -26043,6 +27848,14 @@ return {
               epv = 1737.75,
               phase = 3,
             },
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1656.92,
+              phase = 2,
+            },
           },
           nonpvp3 = {
             {
@@ -26051,6 +27864,14 @@ return {
               location = "Blacksmithing",
               route = "crafted",
               epv = 1685.24,
+              phase = 2,
+            },
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1656.92,
               phase = 2,
             },
           },
@@ -26063,6 +27884,14 @@ return {
               epv = 1677.54,
               phase = 2,
             },
+            {
+              item_id = 28433,
+              name = "Wicked Edge of the Planes",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 1656.92,
+              phase = 2,
+            },
           },
           season3 = {
             {
@@ -26073,6 +27902,33 @@ return {
               epv = 1692.51,
               phase = 3,
             },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
+              location = "Season 3",
+              route = "arena",
+              epv = 1692.51,
+              phase = 3,
+            },
+            {
+              item_id = 33733,
+              name = "Vengeful Gladiator's Pummeler",
+              location = "Season 3",
+              route = "arena",
+              epv = 1692.51,
+              phase = 3,
+              icon = "inv_mace_41",
+              url = "https://www.wowhead.com/tbc/item=33733",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
           },
           season2 = {
             {
@@ -26082,6 +27938,32 @@ return {
               route = "arena",
               epv = 1590.13,
               phase = 2,
+            },
+            {
+              item_id = 31965,
+              name = "Merciless Gladiator's Cleaver",
+              location = "Season 2",
+              route = "arena",
+              epv = 1590.13,
+              phase = 2,
+            },
+            {
+              item_id = 32026,
+              name = "Merciless Gladiator's Pummeler",
+              location = "Season 2",
+              route = "arena",
+              epv = 1590.13,
+              phase = 2,
+              icon = "inv_mace_36",
+              url = "https://www.wowhead.com/tbc/item=32026",
+              stats = {
+                attack_power = 30,
+                melee_crit = 19,
+                melee_hit = 10,
+                ranged_attack_power = 30,
+                resilience = 12,
+                stamina = 27,
+              },
             },
           },
           entry = {
@@ -28356,6 +30238,14 @@ return {
               epv = 498,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 362.5,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -28365,6 +30255,14 @@ return {
               route = "drop",
               epv = 465.69,
               phase = 3,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 362.5,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -28376,6 +30274,14 @@ return {
               epv = 461.25,
               phase = 2,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 362.5,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -28384,6 +30290,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 392.5,
+              phase = 1,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 362.5,
               phase = 1,
             },
           },
@@ -28418,6 +30332,14 @@ return {
               epv = 98,
               phase = 3,
             },
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 79.5,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -28427,6 +30349,14 @@ return {
               route = "drop",
               epv = 88.81,
               phase = 3,
+            },
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 79.5,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -28438,6 +30368,14 @@ return {
               epv = 85.5,
               phase = 3,
             },
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 79.5,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -28448,11 +30386,27 @@ return {
               epv = 83.5,
               phase = 3,
             },
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 79.5,
+              phase = 1,
+            },
           },
           season2 = {
             {
               item_id = 32961,
               name = "Merciless Gladiator's Reprieve",
+              location = "Season 2",
+              route = "arena",
+              epv = 71.5,
+              phase = 2,
+            },
+            {
+              item_id = 33309,
+              name = "Merciless Gladiator's Redoubt",
               location = "Season 2",
               route = "arena",
               epv = 71.5,
@@ -28470,6 +30424,14 @@ return {
               epv = 498,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 362.5,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -28479,6 +30441,14 @@ return {
               route = "drop",
               epv = 465.69,
               phase = 3,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 362.5,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -28490,6 +30460,14 @@ return {
               epv = 461.25,
               phase = 2,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 362.5,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -28498,6 +30476,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 392.5,
+              phase = 1,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 362.5,
               phase = 1,
             },
           },
@@ -30523,6 +32509,14 @@ return {
               epv = 524.56,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.2,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -30532,6 +32526,14 @@ return {
               route = "drop",
               epv = 502.24,
               phase = 2,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.2,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -30543,6 +32545,14 @@ return {
               epv = 497.26,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.2,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -30551,6 +32561,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 450.43,
+              phase = 1,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.2,
               phase = 1,
             },
           },
@@ -30585,6 +32603,14 @@ return {
               epv = 148.4,
               phase = 3,
             },
+            {
+              item_id = 28525,
+              name = "Signet of Unshakable Faith",
+              location = "Karazhan",
+              route = "drop",
+              epv = 109.06,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -30594,6 +32620,14 @@ return {
               route = "drop",
               epv = 127.37,
               phase = 3,
+            },
+            {
+              item_id = 28525,
+              name = "Signet of Unshakable Faith",
+              location = "Karazhan",
+              route = "drop",
+              epv = 109.06,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -30605,6 +32639,14 @@ return {
               epv = 111.31,
               phase = 2,
             },
+            {
+              item_id = 28525,
+              name = "Signet of Unshakable Faith",
+              location = "Karazhan",
+              route = "drop",
+              epv = 109.06,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -30613,6 +32655,14 @@ return {
               location = "Cenarion Expedition",
               route = "drop",
               epv = 110.25,
+              phase = 1,
+            },
+            {
+              item_id = 28525,
+              name = "Signet of Unshakable Faith",
+              location = "Karazhan",
+              route = "drop",
+              epv = 109.06,
               phase = 1,
             },
           },
@@ -30637,6 +32687,14 @@ return {
               epv = 524.56,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.2,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -30646,6 +32704,14 @@ return {
               route = "drop",
               epv = 502.24,
               phase = 2,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.2,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -30657,6 +32723,14 @@ return {
               epv = 497.26,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.2,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -30665,6 +32739,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 450.43,
+              phase = 1,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 394.2,
               phase = 1,
             },
           },
@@ -30699,6 +32781,14 @@ return {
               epv = 636.11,
               phase = 3,
             },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 499.89,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -30708,6 +32798,14 @@ return {
               route = "drop",
               epv = 621.02,
               phase = 3,
+            },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 499.89,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -30719,6 +32817,14 @@ return {
               epv = 594.89,
               phase = 2,
             },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 499.89,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -30727,6 +32833,14 @@ return {
               location = "Magtheridon's Lair",
               route = "drop",
               epv = 500.11,
+              phase = 1,
+            },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 499.89,
               phase = 1,
             },
           },
@@ -32877,6 +34991,14 @@ return {
               epv = 288.02,
               phase = 3,
             },
+            {
+              item_id = 30874,
+              name = "The Unbreakable Will",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 244.07,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -32885,6 +35007,14 @@ return {
               location = "Hyjal Summit",
               route = "drop",
               epv = 275.76,
+              phase = 3,
+            },
+            {
+              item_id = 30874,
+              name = "The Unbreakable Will",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 244.07,
               phase = 3,
             },
           },
@@ -32897,6 +35027,14 @@ return {
               epv = 259.42,
               phase = 2,
             },
+            {
+              item_id = 30874,
+              name = "The Unbreakable Will",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 244.07,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -32907,6 +35045,14 @@ return {
               epv = 248.82,
               phase = 1,
             },
+            {
+              item_id = 30874,
+              name = "The Unbreakable Will",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 244.07,
+              phase = 3,
+            },
           },
           season3 = {
             {
@@ -32916,6 +35062,33 @@ return {
               route = "arena",
               epv = 280.37,
               phase = 3,
+            },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
+              location = "Season 3",
+              route = "arena",
+              epv = 228.88,
+              phase = 3,
+            },
+            {
+              item_id = 33733,
+              name = "Vengeful Gladiator's Pummeler",
+              location = "Season 3",
+              route = "arena",
+              epv = 228.88,
+              phase = 3,
+              icon = "inv_mace_41",
+              url = "https://www.wowhead.com/tbc/item=33733",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
             },
           },
           season2 = {
@@ -32949,6 +35122,14 @@ return {
               epv = 434.6,
               phase = 3,
             },
+            {
+              item_id = 30882,
+              name = "Bastion of Light",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 383.3,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -32957,6 +35138,14 @@ return {
               location = "Hyjal Summit",
               route = "drop",
               epv = 425.6,
+              phase = 3,
+            },
+            {
+              item_id = 30882,
+              name = "Bastion of Light",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 383.3,
               phase = 3,
             },
           },
@@ -32969,6 +35158,14 @@ return {
               epv = 411.5,
               phase = 3,
             },
+            {
+              item_id = 30882,
+              name = "Bastion of Light",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 383.3,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -32979,6 +35176,14 @@ return {
               epv = 407.3,
               phase = 3,
             },
+            {
+              item_id = 30882,
+              name = "Bastion of Light",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 383.3,
+              phase = 3,
+            },
           },
           season2 = {
             {
@@ -32987,6 +35192,22 @@ return {
               location = "Season 2",
               route = "arena",
               epv = 381.25,
+              phase = 2,
+            },
+            {
+              item_id = 32045,
+              name = "Merciless Gladiator's Shield Wall",
+              location = "Season 2",
+              route = "arena",
+              epv = 375.15,
+              phase = 2,
+            },
+            {
+              item_id = 33309,
+              name = "Merciless Gladiator's Redoubt",
+              location = "Season 2",
+              route = "arena",
+              epv = 358.15,
               phase = 2,
             },
           },
@@ -33011,6 +35232,14 @@ return {
               epv = 288.02,
               phase = 3,
             },
+            {
+              item_id = 30874,
+              name = "The Unbreakable Will",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 244.07,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -33019,6 +35248,14 @@ return {
               location = "Hyjal Summit",
               route = "drop",
               epv = 275.76,
+              phase = 3,
+            },
+            {
+              item_id = 30874,
+              name = "The Unbreakable Will",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 244.07,
               phase = 3,
             },
           },
@@ -33031,6 +35268,14 @@ return {
               epv = 259.42,
               phase = 2,
             },
+            {
+              item_id = 30874,
+              name = "The Unbreakable Will",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 244.07,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -33041,6 +35286,14 @@ return {
               epv = 248.82,
               phase = 1,
             },
+            {
+              item_id = 30874,
+              name = "The Unbreakable Will",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 244.07,
+              phase = 3,
+            },
           },
           season3 = {
             {
@@ -33050,6 +35303,33 @@ return {
               route = "arena",
               epv = 280.37,
               phase = 3,
+            },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
+              location = "Season 3",
+              route = "arena",
+              epv = 228.88,
+              phase = 3,
+            },
+            {
+              item_id = 33733,
+              name = "Vengeful Gladiator's Pummeler",
+              location = "Season 3",
+              route = "arena",
+              epv = 228.88,
+              phase = 3,
+              icon = "inv_mace_41",
+              url = "https://www.wowhead.com/tbc/item=33733",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
             },
           },
           season2 = {
@@ -35066,6 +37346,14 @@ return {
               epv = 351.3,
               phase = 3,
             },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 310.97,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -35074,6 +37362,14 @@ return {
               location = "Black Temple",
               route = "drop",
               epv = 319.97,
+              phase = 3,
+            },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 310.97,
               phase = 3,
             },
           },
@@ -35086,6 +37382,14 @@ return {
               epv = 317.96,
               phase = 3,
             },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 310.97,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -35095,6 +37399,14 @@ return {
               route = "drop",
               epv = 311.36,
               phase = 2,
+            },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 310.97,
+              phase = 3,
             },
           },
           season3 = {
@@ -35106,6 +37418,33 @@ return {
               epv = 323.61,
               phase = 3,
             },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
+              location = "Season 3",
+              route = "arena",
+              epv = 323.61,
+              phase = 3,
+            },
+            {
+              item_id = 33733,
+              name = "Vengeful Gladiator's Pummeler",
+              location = "Season 3",
+              route = "arena",
+              epv = 323.61,
+              phase = 3,
+              icon = "inv_mace_41",
+              url = "https://www.wowhead.com/tbc/item=33733",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
           },
           season2 = {
             {
@@ -35115,6 +37454,14 @@ return {
               route = "arena",
               epv = 302.4,
               phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 28439,
+              name = "Dragonstrike",
+              location = "crafted",
+              route = "drop",
             },
           },
         },
@@ -35128,6 +37475,14 @@ return {
               epv = 461.02,
               phase = 3,
             },
+            {
+              item_id = 30882,
+              name = "Bastion of Light",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 407.96,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -35136,6 +37491,14 @@ return {
               location = "Hyjal Summit",
               route = "drop",
               epv = 450.66,
+              phase = 3,
+            },
+            {
+              item_id = 30882,
+              name = "Bastion of Light",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 407.96,
               phase = 3,
             },
           },
@@ -35148,6 +37511,14 @@ return {
               epv = 423.29,
               phase = 3,
             },
+            {
+              item_id = 30882,
+              name = "Bastion of Light",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 407.96,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -35158,6 +37529,14 @@ return {
               epv = 412.96,
               phase = 3,
             },
+            {
+              item_id = 30882,
+              name = "Bastion of Light",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 407.96,
+              phase = 3,
+            },
           },
           season2 = {
             {
@@ -35166,6 +37545,22 @@ return {
               location = "Season 2",
               route = "arena",
               epv = 401.68,
+              phase = 2,
+            },
+            {
+              item_id = 33309,
+              name = "Merciless Gladiator's Redoubt",
+              location = "Season 2",
+              route = "arena",
+              epv = 380.68,
+              phase = 2,
+            },
+            {
+              item_id = 33313,
+              name = "Merciless Gladiator's Barrier",
+              location = "Season 2",
+              route = "arena",
+              epv = 380.68,
               phase = 2,
             },
           },
@@ -35190,6 +37585,14 @@ return {
               epv = 351.3,
               phase = 3,
             },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 310.97,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -35198,6 +37601,14 @@ return {
               location = "Black Temple",
               route = "drop",
               epv = 319.97,
+              phase = 3,
+            },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 310.97,
               phase = 3,
             },
           },
@@ -35210,6 +37621,14 @@ return {
               epv = 317.96,
               phase = 3,
             },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 310.97,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -35219,6 +37638,14 @@ return {
               route = "drop",
               epv = 311.36,
               phase = 2,
+            },
+            {
+              item_id = 32369,
+              name = "Blade of Savagery",
+              location = "Black Temple",
+              route = "drop",
+              epv = 310.97,
+              phase = 3,
             },
           },
           season3 = {
@@ -35230,6 +37657,33 @@ return {
               epv = 323.61,
               phase = 3,
             },
+            {
+              item_id = 33669,
+              name = "Vengeful Gladiator's Cleaver",
+              location = "Season 3",
+              route = "arena",
+              epv = 323.61,
+              phase = 3,
+            },
+            {
+              item_id = 33733,
+              name = "Vengeful Gladiator's Pummeler",
+              location = "Season 3",
+              route = "arena",
+              epv = 323.61,
+              phase = 3,
+              icon = "inv_mace_41",
+              url = "https://www.wowhead.com/tbc/item=33733",
+              stats = {
+                armor_pen = 49,
+                attack_power = 34,
+                melee_crit = 21,
+                melee_hit = 8,
+                ranged_attack_power = 34,
+                resilience = 12,
+                stamina = 30,
+              },
+            },
           },
           season2 = {
             {
@@ -35239,6 +37693,14 @@ return {
               route = "arena",
               epv = 302.4,
               phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 28439,
+              name = "Dragonstrike",
+              location = "crafted",
+              route = "drop",
             },
           },
         },
@@ -37342,6 +39804,14 @@ return {
               epv = 493.5,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 357,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -37351,6 +39821,14 @@ return {
               route = "drop",
               epv = 454.5,
               phase = 2,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 357,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -37362,6 +39840,14 @@ return {
               epv = 449.3,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 357,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -37370,6 +39856,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 394.3,
+              phase = 1,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 357,
               phase = 1,
             },
           },
@@ -37404,6 +39898,14 @@ return {
               epv = 89.6,
               phase = 3,
             },
+            {
+              item_id = 29923,
+              name = "Talisman of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 69.2,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -37413,6 +39915,14 @@ return {
               route = "badge",
               epv = 78,
               phase = 1,
+            },
+            {
+              item_id = 29923,
+              name = "Talisman of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 69.2,
+              phase = 2,
             },
           },
           nonpvp3 = {
@@ -37424,6 +39934,14 @@ return {
               epv = 76.3,
               phase = 3,
             },
+            {
+              item_id = 29923,
+              name = "Talisman of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 69.2,
+              phase = 2,
+            },
           },
           nonpvp4 = {
             {
@@ -37433,6 +39951,14 @@ return {
               route = "drop",
               epv = 72.4,
               phase = 1,
+            },
+            {
+              item_id = 29923,
+              name = "Talisman of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 69.2,
+              phase = 2,
             },
           },
           season2 = {
@@ -37456,6 +39982,14 @@ return {
               epv = 493.5,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 357,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -37465,6 +39999,14 @@ return {
               route = "drop",
               epv = 454.5,
               phase = 2,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 357,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -37476,6 +40018,14 @@ return {
               epv = 449.3,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 357,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -37484,6 +40034,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 394.3,
+              phase = 1,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 357,
               phase = 1,
             },
           },
@@ -37518,6 +40076,14 @@ return {
               epv = 515.2,
               phase = 3,
             },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 374.7,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -37527,6 +40093,14 @@ return {
               route = "drop",
               epv = 475.8,
               phase = 3,
+            },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 374.7,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -37538,6 +40112,14 @@ return {
               epv = 446.8,
               phase = 2,
             },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 374.7,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -37546,6 +40128,14 @@ return {
               location = "Magtheridon's Lair",
               route = "drop",
               epv = 405,
+              phase = 1,
+            },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 374.7,
               phase = 1,
             },
           },
@@ -39706,6 +42296,14 @@ return {
               epv = 502.8,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 367.4,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -39715,6 +42313,14 @@ return {
               route = "drop",
               epv = 470.71,
               phase = 3,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 367.4,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -39726,6 +42332,14 @@ return {
               epv = 469.9,
               phase = 2,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 367.4,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -39734,6 +42348,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 392.92,
+              phase = 1,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 367.4,
               phase = 1,
             },
           },
@@ -39768,6 +42390,14 @@ return {
               epv = 98.56,
               phase = 3,
             },
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 84,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -39777,6 +42407,14 @@ return {
               route = "drop",
               epv = 94.63,
               phase = 3,
+            },
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 84,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -39788,6 +42426,14 @@ return {
               epv = 92.92,
               phase = 3,
             },
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 84,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -39798,11 +42444,27 @@ return {
               epv = 85.84,
               phase = 3,
             },
+            {
+              item_id = 29274,
+              name = "Tears of Heaven",
+              location = "Badge of Justice",
+              route = "badge",
+              epv = 84,
+              phase = 1,
+            },
           },
           season2 = {
             {
               item_id = 32961,
               name = "Merciless Gladiator's Reprieve",
+              location = "Season 2",
+              route = "arena",
+              epv = 71.88,
+              phase = 2,
+            },
+            {
+              item_id = 33309,
+              name = "Merciless Gladiator's Redoubt",
               location = "Season 2",
               route = "arena",
               epv = 71.88,
@@ -39820,6 +42482,14 @@ return {
               epv = 502.8,
               phase = 3,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 367.4,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -39829,6 +42499,14 @@ return {
               route = "drop",
               epv = 470.71,
               phase = 3,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 367.4,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -39840,6 +42518,14 @@ return {
               epv = 469.9,
               phase = 2,
             },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 367.4,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -39848,6 +42534,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 392.92,
+              phase = 1,
+            },
+            {
+              item_id = 28522,
+              name = "Shard of the Virtuous",
+              location = "Karazhan",
+              route = "drop",
+              epv = 367.4,
               phase = 1,
             },
           },
@@ -39882,6 +42576,14 @@ return {
               epv = 551.18,
               phase = 3,
             },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 365.68,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -39891,6 +42593,14 @@ return {
               route = "drop",
               epv = 490.52,
               phase = 3,
+            },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 365.68,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -39902,6 +42612,14 @@ return {
               epv = 437.88,
               phase = 2,
             },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 365.68,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -39910,6 +42628,14 @@ return {
               location = "Magtheridon's Lair",
               route = "drop",
               epv = 432,
+              phase = 1,
+            },
+            {
+              item_id = 28604,
+              name = "Nightstaff of the Everliving",
+              location = "Karazhan",
+              route = "drop",
+              epv = 365.68,
               phase = 1,
             },
           },
@@ -42071,6 +44797,14 @@ return {
               epv = 360.12,
               phase = 3,
             },
+            {
+              item_id = 32348,
+              name = "Soul Cleaver",
+              location = "Black Temple",
+              route = "drop",
+              epv = 331.81,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -42079,6 +44813,14 @@ return {
               location = "Hyjal Summit",
               route = "drop",
               epv = 355.86,
+              phase = 3,
+            },
+            {
+              item_id = 32348,
+              name = "Soul Cleaver",
+              location = "Black Temple",
+              route = "drop",
+              epv = 331.81,
               phase = 3,
             },
           },
@@ -42091,6 +44833,14 @@ return {
               epv = 340.01,
               phase = 2,
             },
+            {
+              item_id = 32348,
+              name = "Soul Cleaver",
+              location = "Black Temple",
+              route = "drop",
+              epv = 331.81,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -42100,6 +44850,14 @@ return {
               route = "drop",
               epv = 338.74,
               phase = 2,
+            },
+            {
+              item_id = 32348,
+              name = "Soul Cleaver",
+              location = "Black Temple",
+              route = "drop",
+              epv = 331.81,
+              phase = 3,
             },
           },
           season3 = {
@@ -42111,6 +44869,32 @@ return {
               epv = 341.63,
               phase = 3,
             },
+            {
+              item_id = 33688,
+              name = "Vengeful Gladiator's Greatsword",
+              location = "Season 3",
+              route = "arena",
+              epv = 341.63,
+              phase = 3,
+              icon = "inv_sword_108",
+              url = "https://www.wowhead.com/tbc/item=33688",
+              stats = {
+                armor_pen = 98,
+                melee_crit = 46,
+                melee_hit = 15,
+                resilience = 33,
+                stamina = 62,
+                strength = 46,
+              },
+            },
+            {
+              item_id = 33670,
+              name = "Vengeful Gladiator's Decapitator",
+              location = "Season 3",
+              route = "arena",
+              epv = 335.73,
+              phase = 3,
+            },
           },
           season2 = {
             {
@@ -42119,6 +44903,31 @@ return {
               location = "Season 2",
               route = "arena",
               epv = 315.42,
+              phase = 2,
+            },
+            {
+              item_id = 31984,
+              name = "Merciless Gladiator's Greatsword",
+              location = "Season 2",
+              route = "arena",
+              epv = 315.42,
+              phase = 2,
+              icon = "inv_sword_70",
+              url = "https://www.wowhead.com/tbc/item=31984",
+              stats = {
+                melee_crit = 42,
+                melee_hit = 18,
+                resilience = 33,
+                stamina = 55,
+                strength = 42,
+              },
+            },
+            {
+              item_id = 31966,
+              name = "Merciless Gladiator's Decapitator",
+              location = "Season 2",
+              route = "arena",
+              epv = 310.04,
               phase = 2,
             },
           },
@@ -44134,6 +46943,14 @@ return {
               epv = 254.29,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 172.95,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -44144,6 +46961,14 @@ return {
               epv = 241.25,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 172.95,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -44152,6 +46977,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 208.24,
+              phase = 1,
+            },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 172.95,
               phase = 1,
             },
           },
@@ -44164,6 +46997,14 @@ return {
               epv = 189.27,
               phase = 1,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 172.95,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -44174,11 +47015,27 @@ return {
               epv = 261.32,
               phase = 3,
             },
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 261.32,
+              phase = 3,
+            },
           },
           season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 237.65,
+              phase = 2,
+            },
+            {
+              item_id = 32963,
+              name = "Merciless Gladiator's Gavel",
               location = "Season 2",
               route = "arena",
               epv = 237.65,
@@ -44206,6 +47063,14 @@ return {
               epv = 61.45,
               phase = 3,
             },
+            {
+              item_id = 25099,
+              name = "Draenei Crystal Rod",
+              location = "",
+              route = "drop",
+              epv = 45,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -44215,6 +47080,14 @@ return {
               route = "drop",
               epv = 59.95,
               phase = 3,
+            },
+            {
+              item_id = 25099,
+              name = "Draenei Crystal Rod",
+              location = "",
+              route = "drop",
+              epv = 45,
+              phase = 1,
             },
           },
           nonpvp3 = {
@@ -44226,6 +47099,14 @@ return {
               epv = 51,
               phase = 1,
             },
+            {
+              item_id = 25099,
+              name = "Draenei Crystal Rod",
+              location = "",
+              route = "drop",
+              epv = 45,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -44234,6 +47115,14 @@ return {
               location = "Badge of Justice",
               route = "badge",
               epv = 49,
+              phase = 1,
+            },
+            {
+              item_id = 25099,
+              name = "Draenei Crystal Rod",
+              location = "",
+              route = "drop",
+              epv = 45,
               phase = 1,
             },
           },
@@ -44268,6 +47157,14 @@ return {
               epv = 254.29,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 172.95,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -44278,6 +47175,14 @@ return {
               epv = 241.25,
               phase = 3,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 172.95,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -44286,6 +47191,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 208.24,
+              phase = 1,
+            },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 172.95,
               phase = 1,
             },
           },
@@ -44298,6 +47211,14 @@ return {
               epv = 189.27,
               phase = 1,
             },
+            {
+              item_id = 23554,
+              name = "Eternium Runed Blade",
+              location = "Blacksmithing",
+              route = "crafted",
+              epv = 172.95,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -44308,11 +47229,27 @@ return {
               epv = 261.32,
               phase = 3,
             },
+            {
+              item_id = 33763,
+              name = "Vengeful Gladiator's Spellblade",
+              location = "Season 3",
+              route = "arena",
+              epv = 261.32,
+              phase = 3,
+            },
           },
           season2 = {
             {
               item_id = 32053,
               name = "Merciless Gladiator's Spellblade",
+              location = "Season 2",
+              route = "arena",
+              epv = 237.65,
+              phase = 2,
+            },
+            {
+              item_id = 32963,
+              name = "Merciless Gladiator's Gavel",
               location = "Season 2",
               route = "arena",
               epv = 237.65,
@@ -44340,6 +47277,14 @@ return {
               epv = 323.38,
               phase = 3,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 177.25,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -44350,6 +47295,14 @@ return {
               epv = 248.38,
               phase = 2,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 177.25,
+              phase = 1,
+            },
           },
           nonpvp3 = {
             {
@@ -44358,6 +47311,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 205.85,
+              phase = 1,
+            },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 177.25,
               phase = 1,
             },
           },
@@ -44370,6 +47331,14 @@ return {
               epv = 184.09,
               phase = 3,
             },
+            {
+              item_id = 29355,
+              name = "Terokk's Shadowstaff",
+              location = "Sethekk Halls",
+              route = "drop",
+              epv = 177.25,
+              phase = 1,
+            },
           },
           season3 = {
             {
@@ -44378,6 +47347,14 @@ return {
               location = "Season 3",
               route = "arena",
               epv = 279.65,
+              phase = 3,
+            },
+            {
+              item_id = 33766,
+              name = "Vengeful Gladiator's War Staff",
+              location = "Season 3",
+              route = "arena",
+              epv = 258.11,
               phase = 3,
             },
           },
@@ -44389,6 +47366,14 @@ return {
               route = "arena",
               epv = 253.6,
               phase = 2,
+            },
+          },
+          entry = {
+            {
+              item_id = 32053,
+              name = "Merciless Gladiator's Spellblade",
+              location = "arena",
+              route = "drop",
             },
           },
         },
@@ -46701,6 +49686,14 @@ return {
               epv = 201.88,
               phase = 3,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 142.2,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -46710,6 +49703,14 @@ return {
               route = "drop",
               epv = 170.25,
               phase = 2,
+            },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 142.2,
+              phase = 3,
             },
           },
           nonpvp3 = {
@@ -46721,6 +49722,14 @@ return {
               epv = 158.62,
               phase = 3,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 142.2,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -46730,6 +49739,14 @@ return {
               route = "drop",
               epv = 148.15,
               phase = 2,
+            },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 142.2,
+              phase = 3,
             },
           },
           entry = {
@@ -46753,6 +49770,14 @@ return {
               epv = 201.88,
               phase = 3,
             },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 148.15,
+              phase = 2,
+            },
           },
           nonpvp2 = {
             {
@@ -46761,6 +49786,14 @@ return {
               location = "Tempest Keep",
               route = "drop",
               epv = 170.25,
+              phase = 2,
+            },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 148.15,
               phase = 2,
             },
           },
@@ -46773,6 +49806,14 @@ return {
               epv = 158.62,
               phase = 3,
             },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 148.15,
+              phase = 2,
+            },
           },
           nonpvp4 = {
             {
@@ -46781,6 +49822,14 @@ return {
               location = "Tempest Keep",
               route = "drop",
               epv = 149.41,
+              phase = 2,
+            },
+            {
+              item_id = 30082,
+              name = "Talon of Azshara",
+              location = "Serpentshrine Cavern",
+              route = "drop",
+              epv = 148.15,
               phase = 2,
             },
           },
@@ -46805,6 +49854,14 @@ return {
               epv = 201.88,
               phase = 3,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 142.2,
+              phase = 3,
+            },
           },
           nonpvp2 = {
             {
@@ -46814,6 +49871,14 @@ return {
               route = "drop",
               epv = 170.25,
               phase = 2,
+            },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 142.2,
+              phase = 3,
             },
           },
           nonpvp3 = {
@@ -46825,6 +49890,14 @@ return {
               epv = 158.62,
               phase = 3,
             },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 142.2,
+              phase = 3,
+            },
           },
           nonpvp4 = {
             {
@@ -46834,6 +49907,14 @@ return {
               route = "drop",
               epv = 148.15,
               phase = 2,
+            },
+            {
+              item_id = 32946,
+              name = "Claw of Molten Fury",
+              location = "Hyjal Summit",
+              route = "drop",
+              epv = 142.2,
+              phase = 3,
             },
           },
           entry = {
@@ -46857,6 +49938,14 @@ return {
               epv = 410.71,
               phase = 3,
             },
+            {
+              item_id = 29166,
+              name = "Hellforged Halberd",
+              location = "Honor Hold",
+              route = "drop",
+              epv = 255.96,
+              phase = 1,
+            },
           },
           nonpvp2 = {
             {
@@ -46865,6 +49954,14 @@ return {
               location = "Karazhan",
               route = "drop",
               epv = 288.4,
+              phase = 1,
+            },
+            {
+              item_id = 29166,
+              name = "Hellforged Halberd",
+              location = "Honor Hold",
+              route = "drop",
+              epv = 255.96,
               phase = 1,
             },
           },
@@ -46877,6 +49974,14 @@ return {
               epv = 281.34,
               phase = 1,
             },
+            {
+              item_id = 29166,
+              name = "Hellforged Halberd",
+              location = "Honor Hold",
+              route = "drop",
+              epv = 255.96,
+              phase = 1,
+            },
           },
           nonpvp4 = {
             {
@@ -46885,6 +49990,14 @@ return {
               location = "Shadow Labyrinth",
               route = "drop",
               epv = 280.35,
+              phase = 1,
+            },
+            {
+              item_id = 29166,
+              name = "Hellforged Halberd",
+              location = "Honor Hold",
+              route = "drop",
+              epv = 255.96,
               phase = 1,
             },
           },
@@ -46896,6 +50009,33 @@ return {
               route = "arena",
               epv = 224.7,
               phase = 3,
+            },
+            {
+              item_id = 34014,
+              name = "Vengeful Gladiator's Waraxe",
+              location = "Season 3",
+              route = "arena",
+              epv = 224.7,
+              phase = 3,
+              icon = "inv_axe_61",
+              url = "https://www.wowhead.com/tbc/item=34014",
+              stats = {
+                armor_pen = 98,
+                attack_power = 92,
+                melee_crit = 46,
+                melee_hit = 15,
+                ranged_attack_power = 92,
+                resilience = 33,
+                stamina = 62,
+              },
+            },
+          },
+          entry = {
+            {
+              item_id = 29924,
+              name = "Netherbane",
+              location = "raid_drop",
+              route = "drop",
             },
           },
         },

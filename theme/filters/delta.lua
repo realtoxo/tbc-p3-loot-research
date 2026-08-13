@@ -543,10 +543,24 @@ local function render(spec, a_span, views, rates, named, absent)
   if absent and #absent > 0 then
     local names = {}
     for _, label in ipairs(absent) do names[#names + 1] = label end
+    -- THE REASON DIFFERS BY SLOT, so the sentence does too. The armor wording
+    -- names the tier sets and arena, which are the two exclusions that empty an
+    -- armor cell. A weapon view is emptied by neither: a weapon slot has no
+    -- tier view at all, and arena weapons are kept on purpose. Printing the
+    -- armor reason on a weapon card asserted a cause that is not the cause, on
+    -- 48 cards, and for a healer it asserted a nonexistence nobody can know.
+    local reason
+    if cells == WEAPON_BASELINES then
+      reason = " is ranked for this spec in this slot, so that comparison is "
+        .. "not shown. A weapon the workbook does not rank cannot be compared "
+        .. "against, and a spec with no captured gear set has nothing recorded "
+        .. "to carry in."
+    else
+      reason = " exists for this spec outside its tier sets and outside arena, "
+        .. "so that comparison is not shown."
+    end
     blocks:insert(pandoc.Div(
-      { plain("No " .. table.concat(names, " and no ")
-        .. " exists for this spec outside its tier sets and outside arena, so "
-        .. "that comparison is not shown.") },
+      { plain("No " .. table.concat(names, " and no ") .. reason) },
       pandoc.Attr("", { "delta-absent" })))
   end
 
