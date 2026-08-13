@@ -174,6 +174,17 @@ local function source_line(row)
     local set = row.set_name ~= "" and row.set_name or "a tier set"
     return "Tier set piece, " .. set .. ". Bought with a token, never a raid drop"
   end
+  -- A ROUTE THAT IS NOT A BOSS DROP still has to say where the item comes
+  -- from. Only tier pieces and raid drops did, so every reputation reward and
+  -- every crafted piece showed a blank line, and the Ashtongue Talismans read
+  -- as items from nowhere. `source_note` names the faction and the standing,
+  -- or the profession, and is written by tools/extract_items.py::source_note.
+  if row.source_note ~= nil and row.source_note ~= "" then
+    if row.source:find("reputation") then
+      return "Reputation reward, " .. row.source_note
+    end
+    return row.source_note
+  end
   local list = drop_sources[row.item_id]
   if not list or #list == 0 then return "" end
   if #list <= 2 then return "Drops from " .. table.concat(list, "; ") end

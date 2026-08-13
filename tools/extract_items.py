@@ -114,7 +114,7 @@ WEAPON_TYPE = {
 GEM_COLOUR = {0: "", 1: "Meta", 2: "Red", 3: "Blue", 4: "Yellow", 5: "Green",
               6: "Orange", 7: "Purple", 8: "Prismatic"}
 
-BASE = ["item_id", "tier", "source", "name", "icon", "slot", "armor_type", "hand_type",
+BASE = ["item_id", "tier", "source", "source_note", "name", "icon", "slot", "armor_type", "hand_type",
         "weapon_type", "ranged_weapon_type", "set_name", "class_allowlist",
         "has_effect", "sockets", "socket_bonus", "weapon_min", "weapon_max",
         "weapon_speed", "url"]
@@ -137,7 +137,65 @@ CLASS = {0: "", 1: "Warrior", 2: "Paladin", 3: "Hunter", 4: "Rogue",
          5: "Priest", 6: "Death Knight", 7: "Shaman", 8: "Mage",
          9: "Warlock", 10: "Monk", 11: "Druid"}
 
+# proto/ui.proto :: enum RepFaction and enum RepLevel, transcribed from the
+# vendored proto rather than recalled. THE ASHTONGUE TALISMANS ARE WHY. They are
+# Ashtongue Deathsworn Exalted rewards bought from a quartermaster, and the
+# workbook leaves their Location cell empty, so route_of bucketed all nine into
+# `drop` and every card said they fall off a boss. The database knew better the
+# whole time and nothing read it.
+REP_FACTION = {
+    933: "The Consortium", 941: "The Mag'har", 942: "Cenarion Expedition",
+    946: "Honor Hold", 947: "Thrallmar", 970: "Sporeggar", 978: "Kurenai",
+    1012: "Ashtongue Deathsworn", 1015: "Netherwing", 1038: "Ogri'la",
+}
+REP_LEVEL = {
+    1: "Hated", 2: "Hostile", 3: "Unfriendly", 4: "Neutral", 5: "Friendly",
+    6: "Honored", 7: "Revered", 8: "Exalted",
+}
+
+# proto/common.proto :: enum Profession
+PROFESSION = {
+    1: "Alchemy", 2: "Blacksmithing", 3: "Enchanting", 4: "Engineering",
+    5: "Herbalism", 6: "Inscription", 7: "Jewelcrafting", 8: "Leatherworking",
+    9: "Mining", 10: "Skinning", 11: "Tailoring",
+}
+
+
+def source_note(item: dict) -> tuple[str, bool]:
+    """How the item is acquired in words, and whether a reputation grants it.
+
+    The `source` column is a ROUTE, one word from a fixed set. This is the
+    sentence a card can print, which a route cannot carry: which faction, at
+    what standing, or which profession.
+    """
+    notes, is_rep = [], False
+    for entry in item.get("sources") or []:
+        if "rep" in entry:
+            is_rep = True
+            rep = entry["rep"]
+            faction = REP_FACTION.get(rep.get("repFactionId"),
+                                      f"faction {rep.get('repFactionId')}")
+            level = REP_LEVEL.get(rep.get("repLevel"), "an unrecorded standing")
+            notes.append(f"{faction}, {level}")
+        elif "crafted" in entry:
+            trade = PROFESSION.get(entry["crafted"].get("profession"), "")
+            notes.append(f"Crafted, {trade}" if trade else "Crafted")
+    # The database lists a crafted source twice for every crafted item, so the
+    # note would read the profession twice without this.
+    seen, unique = set(), []
+    for note in notes:
+        if note not in seen:
+            seen.add(note)
+            unique.append(note)
+    return "; ".join(unique), is_rep
+
+
+# WHAT MAKES AN EFFECT FIRE, which the compendium never said. The guild lead
+# asked for passive and on-use effects to be shown and both were printed
+# identically, so a card could not tell a button press from a chance on hit.
+# `onUse` and `proc` sit on the effect record and both were discarded.
 EFFECT_FIELDS = ["item_id", "tier", "item_name", "buff_id", "buff_name",
+                 "trigger", "proc_chance", "proc_icd_ms", "proc_ppm",
                  "duration_ms", "stats_granted"]
 
 
@@ -245,10 +303,21 @@ def main() -> int:
             unstatted.append((item["id"], item["name"]))
         effects = item.get("itemEffects", []) or []
         tier = "|".join(sorted(tiers[item["id"]]))
+        note, is_rep = source_note(item)
+        # THE DATABASE OUTRANKS THE FALLBACK BUCKET. `route_of` returns "drop"
+        # for any Location it does not recognize, including an empty one, so
+        # "drop" here means "nothing else answered" rather than "a boss drops
+        # it". A rep source in the database is a positive statement and
+        # replaces it. It never touches `raid_drop` or `tier_vendor`, which are
+        # positive statements of their own.
+        routes = set(sources[item["id"]])
+        if is_rep and routes == {"drop"}:
+            routes = {"reputation"}
         row = {
             "item_id": item["id"],
             "tier": tier,
-            "source": "|".join(sorted(sources[item["id"]])),
+            "source": "|".join(sorted(routes)),
+            "source_note": note,
             "name": item["name"],
             # The icon file name, which tools/fetch_icons.py turns into a
             # committed image. An item is recognized by its icon before its
@@ -282,6 +351,11 @@ def main() -> int:
                 "item_name": item["name"],
                 "buff_id": e.get("buffId", ""),
                 "buff_name": e.get("buffName", ""),
+                "trigger": ("on_use" if "onUse" in e
+                            else "proc" if "proc" in e else ""),
+                "proc_chance": e.get("proc", {}).get("procChance", ""),
+                "proc_icd_ms": e.get("proc", {}).get("icdMs", ""),
+                "proc_ppm": e.get("proc", {}).get("ppm", ""),
                 "duration_ms": e.get("effectDurationMs", ""),
                 "stats_granted": "|".join(
                     f"{EFFECT_STAT.get(int(k), k)}={v}"

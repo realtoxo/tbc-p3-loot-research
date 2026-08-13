@@ -208,6 +208,10 @@ for _, row in ipairs(M.parse_csv(M.EFFECTS)) do
     buff_id = id,
     stats = row.stats_granted or "",
     duration = tonumber(row.duration_ms),
+    trigger = row.trigger or "",
+    chance = tonumber(row.proc_chance),
+    icd = tonumber(row.proc_icd_ms),
+    ppm = tonumber(row.proc_ppm),
   }
   M.EFFECT[row.item_id] = list
 end
@@ -231,17 +235,51 @@ function M.effect_line(row)
           .. (M.LABEL[key] or M.EFFECT_LABEL[key] or key:gsub("_", " "))
       end
     end
+    -- WHAT MAKES IT FIRE, which the guild lead asked for by name and which
+    -- nothing printed. A button press and a chance on hit read identically
+    -- before this, so a card could not tell a player what to do with the item.
+    local how
+    if effect.trigger == "on_use" then
+      how = "On use"
+    elseif effect.trigger == "proc" then
+      local terms = {}
+      if effect.chance then
+        terms[#terms + 1] = string.format("%g%% chance", effect.chance * 100)
+      end
+      if effect.ppm then
+        terms[#terms + 1] = string.format("%g per minute", effect.ppm)
+      end
+      if effect.icd and effect.icd > 0 then
+        terms[#terms + 1] = math.floor(effect.icd / 1000)
+          .. " sec internal cooldown"
+      end
+      how = #terms > 0 and ("Proc, " .. table.concat(terms, ", ")) or "Proc"
+    end
+
     local text
     if effect.name ~= "" then
       text = effect.name
     elseif effect.buff_id then
-      text = "an effect the item database does not name, buff " .. effect.buff_id
+      text = "An effect the item database does not name, buff " .. effect.buff_id
     else
-      text = "an effect the item database does not name"
+      text = "An effect the item database does not name"
     end
     if #parts > 0 then text = text .. ": " .. table.concat(parts, ", ") end
     if effect.duration and effect.duration > 0 then
       text = text .. " for " .. math.floor(effect.duration / 1000) .. " sec"
+    end
+    -- AN EFFECT THE DATABASE NAMES BUT DOES NOT DESCRIBE. The nine Ashtongue
+    -- Talismans are the case: wowsims models them in Go and carries no stats,
+    -- no duration and no trigger for them, so the buff name is an internal
+    -- label such as "Rogue Tier 6 Trinket". Saying nothing would read as an
+    -- item that does nothing, which is the opposite of the truth for a trinket
+    -- whose whole worth is its effect.
+    if #parts == 0 and not how
+      and not (effect.duration and effect.duration > 0) then
+      text = text .. ". The item database records the effect but not what it "
+        .. "does, so it must be read on Wowhead"
+    elseif how then
+      text = how .. ". " .. text
     end
     lines[#lines + 1] = text
   end
