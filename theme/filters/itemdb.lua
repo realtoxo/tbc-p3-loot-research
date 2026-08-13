@@ -178,37 +178,75 @@ M.by_name, M.by_id, M.ambiguous = {}, {}, {}
 -- item-procs.yaml is richer and is NOT used here, because it covers 29 items
 -- against this file's 134 and a card that describes some effects and not others
 -- reads as though the quiet ones have none.
+-- AN ITEM CAN CARRY MORE THAN ONE EFFECT, and seventeen do. Beast-tamer's
+-- Shoulders grant increased pet damage AND increased pet crit, and a table
+-- keyed by item id alone kept whichever row came last, so the card named one
+-- and hid the other.
+--
+-- AN EFFECT WITH NO NAME IS STILL AN EFFECT. Four rows carry a buff id and an
+-- empty name, and Black Bow of the Betrayer is one of them. Skipping those
+-- printed nothing at all, which tells a reader the item has no effect. It is
+-- named as unnamed instead, with its buff id, so the gap is visible and
+-- checkable rather than silent.
+-- Labels for the stats only an EFFECT can grant. items.csv has no column for
+-- these, so M.LABEL does not carry them, and they printed as bare enum numbers
+-- until tools/extract_items.py::EFFECT_STAT named them on 12 August 2026.
+M.EFFECT_LABEL = {
+  health = "health", mana = "mana", mp5 = "mana per 5",
+  arcane_resistance = "arcane resistance", fire_resistance = "fire resistance",
+  frost_resistance = "frost resistance", nature_resistance = "nature resistance",
+  shadow_resistance = "shadow resistance",
+}
+
 M.EFFECT = {}
 for _, row in ipairs(M.parse_csv(M.EFFECTS)) do
   local name = (row.buff_name or ""):gsub("%s*%(%d+%)%s*$", "")
-  if name ~= "" then
-    M.EFFECT[row.item_id] = {
-      name = name,
-      stats = row.stats_granted or "",
-      duration = tonumber(row.duration_ms),
-    }
-  end
+  local id = (row.buff_name or ""):match("%((%d+)%)%s*$")
+  local list = M.EFFECT[row.item_id] or {}
+  list[#list + 1] = {
+    name = name,
+    buff_id = id,
+    stats = row.stats_granted or "",
+    duration = tonumber(row.duration_ms),
+  }
+  M.EFFECT[row.item_id] = list
 end
 
 -- The effect as one line: what it is called, what it grants, and for how long.
 -- Nil where the item has none, so a caller adds nothing rather than an empty
 -- row.
 function M.effect_line(row)
-  local effect = row and M.EFFECT[tostring(row.item_id)]
-  if not effect then return nil end
-  local parts = {}
-  for pair in (effect.stats or ""):gmatch("[^;]+") do
-    local key, value = pair:match("^%s*([%w_]+)=(-?%d+)%s*$")
-    if key then
-      parts[#parts + 1] = value .. " " .. (M.LABEL[key] or key:gsub("_", " "))
+  local effects = row and M.EFFECT[tostring(row.item_id)]
+  if not effects then return nil end
+  local lines = {}
+  for _, effect in ipairs(effects) do
+    local parts = {}
+    -- THE EXTRACTOR JOINS WITH A PIPE, not a semicolon. Splitting on the
+    -- wrong character meant an effect granting two stats was read as one
+    -- unparseable pair and printed with no stats at all.
+    for pair in (effect.stats or ""):gmatch("[^|]+") do
+      local key, value = pair:match("^%s*([%w_]+)=(-?%d+)%s*$")
+      if key then
+        parts[#parts + 1] = value .. " "
+          .. (M.LABEL[key] or M.EFFECT_LABEL[key] or key:gsub("_", " "))
+      end
     end
+    local text
+    if effect.name ~= "" then
+      text = effect.name
+    elseif effect.buff_id then
+      text = "an effect the item database does not name, buff " .. effect.buff_id
+    else
+      text = "an effect the item database does not name"
+    end
+    if #parts > 0 then text = text .. ": " .. table.concat(parts, ", ") end
+    if effect.duration and effect.duration > 0 then
+      text = text .. " for " .. math.floor(effect.duration / 1000) .. " sec"
+    end
+    lines[#lines + 1] = text
   end
-  local text = effect.name
-  if #parts > 0 then text = text .. ": " .. table.concat(parts, ", ") end
-  if effect.duration and effect.duration > 0 then
-    text = text .. " for " .. math.floor(effect.duration / 1000) .. " sec"
-  end
-  return text
+  if #lines == 0 then return nil end
+  return table.concat(lines, " · ")
 end
 
 for _, row in ipairs(M.parse_csv(M.ITEMS)) do

@@ -71,6 +71,20 @@ STAT = {
     30: "resilience", 31: "armor", 32: "bonus_armor",
 }
 
+# EVERY STAT AN EFFECT CAN GRANT, which is more than an ITEM can carry. STAT
+# above stops at 32 because those are the columns items.csv holds, and adding to
+# it would add columns. An effect reaches further: Shadowmoon Insignia grants
+# health and Memento of Tyrande grants mana per five, and neither index was
+# mapped, so item-effects.csv wrote the raw enum number and the card read
+# "1750 33" and "76 35". Transcribed from proto/common.proto :: enum Stat, the
+# same source as STAT.
+EFFECT_STAT = dict(STAT)
+EFFECT_STAT.update({
+    33: "health", 34: "mana", 35: "mp5",
+    36: "arcane_resistance", 37: "fire_resistance", 38: "frost_resistance",
+    39: "nature_resistance", 40: "shadow_resistance",
+})
+
 ITEM_TYPE = {
     0: "Unknown", 1: "Head", 2: "Neck", 3: "Shoulder", 4: "Back", 5: "Chest",
     6: "Wrist", 7: "Hands", 8: "Waist", 9: "Legs", 10: "Feet", 11: "Finger",
@@ -270,7 +284,8 @@ def main() -> int:
                 "buff_name": e.get("buffName", ""),
                 "duration_ms": e.get("effectDurationMs", ""),
                 "stats_granted": "|".join(
-                    f"{STAT.get(int(k), k)}={v}" for k, v in est.items() if v),
+                    f"{EFFECT_STAT.get(int(k), k)}={v}"
+                    for k, v in est.items() if v),
             })
 
     rows.sort(key=lambda r: r["item_id"])
