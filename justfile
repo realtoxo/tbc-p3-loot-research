@@ -120,6 +120,7 @@ check: regen
     python3 tools/check_roster.py
     python3 tools/check_raid_buffs.py
     python3 tools/check_weapon_layout.py
+    python3 tools/check_workbook_columns.py
 
 # Fail if a sim profile wears a gem or an enchant Phase 3 cannot supply.
 # Runs inside `just check` as well; this is the one-line way to run it alone.

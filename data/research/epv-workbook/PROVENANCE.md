@@ -116,3 +116,21 @@ Found by direct inspection of the extracted CSVs. Recorded here because
   with the Draenei racial and names 95 without it. Since racials are not
   assumed here, 95 is the operative number and the worked example is stale.
 
+
+
+## The weapon sections declare their stat columns one column left of the data
+
+Found 11 August 2026 by a per-spec audit, and confirmed on eleven of the twenty-one tabs.
+
+In a WEAPON section the header declares `type, dps, spd, ap, str, agi` starting at one column, and every data row underneath carries an EXTRA leading cell holding the equip slot:
+
+```
+header  ... type      dps    spd   ap
+data    ... One Hand  Mace   100.3 1.5
+```
+
+So a reader that trusts the header reads the weapon TYPE where it asked for dps.
+
+**No figure in this compendium is wrong because of it.** `tools/extract_ladder.py` resolves the columns it needs by name and reaches at most column 10, the Wowhead url. Every stat published comes from `data/facts/items.csv`, keyed on the id in that url, never from the workbook's own stat columns. The EPV column, at 5, is left of the shift and unaffected, so every ranking is sound.
+
+**What would make it live** is somebody adding `dps` or `speed` to the column map, which the header invites. `tools/check_workbook_columns.py` fails the build at that moment rather than after the figures have travelled, and `just check` runs it.

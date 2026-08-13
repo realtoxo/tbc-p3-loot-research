@@ -522,9 +522,12 @@ def weapon_views(rows: list[dict], hand: str, hand_of: dict[int, str],
         worn = hand_of.get(row["item_id"], "")
         if not worn:
             return True
+        # The same three rules as `hand_ok`, and they must stay the same three.
         if hand == "OffHand":
             return worn != "Main Hand"
-        if hand in ("MainHand", "OneHand"):
+        if hand == "OneHand":
+            return worn == "One Hand"
+        if hand == "MainHand":
             return worn != "Off Hand"
         return True
 
@@ -1097,9 +1100,17 @@ def main() -> int:
         wanted = where.split(":")[1] if ":" in where else ""
         if not wanted or not hand:
             return True
+        # RULED BY THE GUILD LEAD, 12 August 2026. A main hand compares against
+        # main hands AND one hands, because either can be held there. A ONE HAND
+        # compares only against other one hands: a main-hand-only weapon is not
+        # a candidate for a slot that has to work in either hand, and admitting
+        # one made half the baselines on a dual-wield card true of the main hand
+        # only. An off hand takes one hands and off hands, never a main hand.
         if wanted == "OffHand":
             return hand != "Main Hand"
-        if wanted in ("MainHand", "OneHand"):
+        if wanted == "OneHand":
+            return hand == "One Hand"
+        if wanted == "MainHand":
             return hand != "Off Hand"
         return True
 
