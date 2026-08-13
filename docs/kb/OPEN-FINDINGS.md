@@ -92,15 +92,13 @@ All fourteen specs that have a capture were audited, one Opus agent each, compar
 
 **The per-spec reports were not retained**, which is the same failure this project already records for `token-arithmetic.yaml`: figures standing on agent reports nobody kept. What survives is this section and the commits it names. Any figure below that is not reproducible from a file in this repository should be treated as unsourced. Two findings need a ruling from the guild lead. The rest are recorded so they are not rediscovered.
 
-### Arena Season 3 sits in the delta baselines, and our own rules bar it everywhere else
+### Arena Season 3 in the delta baselines: SETTLED 12 August 2026
 
-Sixteen distinct Season 3 items appear in the generated ladder. `tools/check_capture_availability.py` excludes every one of them from every anchor, because Season 3 opens on 1 September and Phase 3 on 27 August, and several captures record removing a Season 3 item for exactly that reason. The baselines still use them, so a card can measure an item against gear no raider can hold in this phase.
+**Season 3 weapons stay in the delta baselines.** Ruled by the guild lead. A weapon card compares weapons inside the tier, and an arena weapon is part of that field whether or not the season has opened, because a council weighing a drop is weighing it against what the slot will hold.
 
-Four independent agents found this without prompting: Balance Druid, Protection Paladin, Feral Cat and Shadow Priest. It is not confined to one slot or one spec.
+What was resolved with it: the clones. The Vengeful and Merciless sets are one stat block sold in several weapon flavours, so eleven baseline cells had held two of them and offered the same weapon twice. Each season now contributes one comparison, and a weapon card carries a Season 3 column and a Season 2 column of its own.
 
-**This is a contradiction between two of our own rules rather than a mistake.** The guild lead ruled that arena armor is out and arena weapons are in, recorded at `data/judgments/capture-fidelity.yaml`. That ruling did not distinguish Season 2, which is obtainable, from Season 3, which is not obtainable at launch. The shortlists were resolved separately in August by taking obtainable items first; the baselines were not touched.
-
-**Needs a ruling, and the record already leans one way.** `data/judgments/capture-fidelity.yaml` states inside the same entry that Season 3 is a separate and stricter matter and that no Season 3 item is reachable at any anchor, armor or weapon. The recorded reason for admitting arena weapons is that such a weapon is a genuine competitor and often the best thing available in the slot, which a Vengeful weapon is not inside this phase window. So every recorded fact points at exclusion, and what needs the guild lead is narrowing his own recorded judgment rather than settling an open question. Correction to an earlier draft of this section: the ruling DID distinguish the seasons for anchors; what it did not do is carry that distinction into the baselines. Every agent that examined a weapon slot named a reachable replacement, usually Hammer of Judgement, id 34009, and each stated which direction the Net moves. Nothing is changed until this is decided.
+The tension this section originally recorded is therefore closed rather than open. `check_capture_availability.py` still bars Season 3 from every captured GEAR SET, and that is a different question from what a card compares against: a capture states what a raider holds at an anchor, and a baseline states what the item is measured against. The two rules disagreeing was the finding; the ruling is that they are answering different questions and both stand.
 
 ### A class-locked relic can have no claimant, and the cause is not per spec
 

@@ -649,6 +649,9 @@ local HAND_KEY = {
   ["Off Hand"] = "OffHand", ["Two Hand"] = "TwoHand",
 }
 
+-- ARMOR ONLY. A weapon slot reads WEAPON_BASELINES below, seven views ruled
+-- by the guild lead on 12 August 2026, because no tier set holds a weapon
+-- and the two tier views never applied to one.
 -- The two by two, in the order the card reads: this phase before the phase
 -- before it, and the tier piece before the off-piece in each row. `list` marks
 -- the two cells the generated table holds as ranked candidates rather than as
