@@ -155,3 +155,20 @@ Sourced, with the constant and the file named: spell crit 22.076923 per percent 
 **The five-second rule is the part that decides a shaman's longevity, and it is not recorded anywhere in this project.** No shaman talent in 2.4.3 lets spirit regenerate while casting; `SpiritRegenRateCasting` is set by the Priest and the Druid and by nothing in `sim/shaman/`. So a Restoration Shaman who is actively healing gets no mana at all from spirit, which is why mana per five and not spirit is that spec's longevity stat.
 
 Two Restoration talents that would matter, **Purification** and **Nature's Blessing**, are implemented nowhere in the checkout and appear in no fact file, so their values are unsourced. `talents.yaml` omits Restoration Shaman entirely, so no rank is recorded for any of them.
+
+## Does every spec have a meaningful delta area? Measured 12 August 2026
+
+**Yes for every damage spec and every tank. No for the healers, and that is now by ruling rather than by oversight.**
+
+Measured from `theme/filters/ladder.generated.lua` and the 288 built pages.
+
+**Baseline coverage is sound everywhere.** Across all 21 specs, **no delta slot carries fewer than two baseline views**. The median is two for the two-hand specs, which have fewer slots because they hold no off hand, and four for everyone else. An earlier reading of this data appeared to show Ring and Shoulders thin for all 21 specs; that was a parse that conflated the shortlist block with the delta block, and it is wrong. There is no systematically thin slot.
+
+**109 of 856 spec cards render a delta table with no Net line.** They fall into two groups and neither is a defect that remains open:
+
+- **About 100 are healer cards.** Healing power, mana per five, intellect, spirit and spell haste do not convert, so nothing reaches the Net. The guild lead ruled on 12 August 2026 that healer stats are out of scope, so these cards state their comparison without summarising it, which is honest rather than wrong. The full analysis is in the section above.
+- **Two are relic cards**, on Idol of the White Stag for the Feral Bear and the Feral Cat. A relic carries no stat line at all, so there is nothing to net. The claimant is now correct, which is the part that was missing.
+
+**596 of 856 cards state at least one absent comparison.** That is the designed behaviour rather than a gap: a slot outside the five a tier set covers has no Tier 6 or Tier 5 view to show, and the card says so instead of leaving a blank column.
+
+So the remaining work on this question is not per spec. It is the single decision about what a healer card should summarise, which the guild lead has ruled out of scope.
