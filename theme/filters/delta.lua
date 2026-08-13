@@ -510,8 +510,20 @@ local function table_of(names, views)
                               "delta-net-label") }
     for _, view in ipairs(views) do
       cells[#cells + 1] = text_cell("", pandoc.AlignRight, 1, "delta-raw")
-      cells[#cells + 1] = lines_cell(view.nets,
-        pandoc.AlignLeft, 1, "delta-net-value")
+      -- A COLUMN WITH NOTHING IN THE ROW SAYS SO. It used to render blank
+      -- beside a neighbour carrying figures, which reads as a rendering fault
+      -- rather than as the fact it is: the two items share no stat this spec
+      -- sums, so there is nothing to add up. Reported by the guild lead on
+      -- 13 August 2026 from the Protection Paladin belt card, where the Phase 3
+      -- column was empty because the item and the baseline differ only in
+      -- stats the row does not sum.
+      if #view.nets > 0 then
+        cells[#cells + 1] = lines_cell(view.nets,
+          pandoc.AlignLeft, 1, "delta-net-value")
+      else
+        cells[#cells + 1] = text_cell("no change in the stats summed here",
+          pandoc.AlignLeft, 1, "delta-net-value delta-net-empty")
+      end
     end
     foot = pandoc.TableFoot({ pandoc.Row(cells, pandoc.Attr("", { "delta-net-row" })) })
   end

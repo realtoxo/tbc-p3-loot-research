@@ -171,6 +171,38 @@ TANK_SPECS = frozenset({"Protection Warrior", "Protection Paladin", "Feral Bear"
 
 PRIMARY_STATS = ("strength", "agility", "stamina", "intellect")
 
+# THE DEFENSIVE RATINGS, WHICH NOTHING CONVERTED UNTIL 13 AUGUST 2026. The
+# comment above says the divisors sit in crit.yaml "for whoever prices them
+# later"; nobody did, so a tank card printed `defense rating +7`, `dodge rating
+# -18`, `block rating +25` with an empty Converted cell beside each. Those are
+# the rows the role is played on. The guild lead asked why offense converted and
+# defense did not.
+#
+# EACH RATING BECOMES ITS OWN PERCENTAGE AND NOTHING IS SUMMED. That keeps the
+# reasoning above intact: dodge and parry share an attack table, block is
+# mitigation rather than avoidance, and adding them would state a quantity no
+# source here defines. A single rating turning into a single percentage is a
+# division by a recorded constant, not a model.
+#
+# Every rule is `net = false`, so the Net still sums primary stats only and the
+# 12 August ruling is untouched.
+#
+# (stat, label, key under crit.yaml::defensive_conversions, plate only)
+DEFENSIVE_RATES = (
+    ("defense", "defense skill", "defense_rating_per_skill_point", False),
+    ("dodge", "dodge", "dodge_rating_per_percent", False),
+    ("parry", "parry", "parry_rating_per_percent", True),
+    ("block_rating", "block", "block_rating_per_percent", True),
+    ("resilience", "crit taken", "resilience_rating_per_percent_crit_taken",
+     False),
+)
+
+# A BEAR CANNOT PARRY AND CANNOT BLOCK. crit.yaml says so where it explains what
+# a point of defense skill buys: five entries at once for a plate tank and three
+# for a Bear. Emitting a parry rate for a Bear would convert a rating it can
+# never have into a percentage it can never gain.
+PLATE_TANKS = frozenset({"Protection Warrior", "Protection Paladin"})
+
 
 def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit: dict) -> dict:
     """Every conversion one spec has, keyed by the item stat it consumes."""
@@ -291,6 +323,43 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit
                             "primary stats")
             rule["net"] = True
             rules.setdefault(stat, []).append(rule)
+
+        # DEFENSE SKILL IS NOT A PERCENTAGE, so it divides into points rather
+        # than into percent, and the label says so. What a point then buys is
+        # recorded beside the divisor in the fact file and is deliberately not
+        # multiplied out here: it is five separate percentages for a plate tank
+        # and three for a Bear, and printing one number for five outcomes would
+        # be the summing this file refuses to do.
+        for stat, label, key, plate_only in DEFENSIVE_RATES:
+            if plate_only and spec not in PLATE_TANKS:
+                continue
+            keys = ["defensive_conversions", key]
+            divisor = rate(crit, CRIT, keys, spec)
+            rule = divide(stat, label, divisor,
+                          f"{number(divisor)} rating per "
+                          + ("1 defense skill point" if stat == "defense"
+                             else f"1 percent {label}"),
+                          cite(CRIT, keys))
+            if stat == "defense":
+                # Points, not percent. The unit field drives the suffix, and
+                # "3 percent defense skill" would be a different and wrong
+                # quantity from "3 defense skill".
+                rule["unit"] = ""
+            rule["net"] = False
+            rules.setdefault(stat, []).append(rule)
+
+        # STAMINA BUYS HEALTH, and the card can say how much. The identity rule
+        # above is what the Net reads; this sits beside it in the Converted
+        # column. Talents and Blessing of Kings multiply stamina and are NOT
+        # applied: this is what the item carries, not what the raid buffs it to.
+        health_keys = ["defensive_conversions", "stamina_per_health"]
+        per_point = rate(crit, CRIT, health_keys, spec)
+        health = multiply("stamina", "health", per_point,
+                          f"{number(per_point)} health per stamina, before "
+                          "talents and Blessing of Kings",
+                          cite(CRIT, health_keys))
+        health["net"] = False
+        rules.setdefault("stamina", []).append(health)
     return rules
 
 
