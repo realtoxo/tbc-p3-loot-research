@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mount Hyjal And Black Temple · Phase 3 Loot Compendium</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Applied before first paint so the page never flashes the wrong theme.
+    (function () {
+      try {
+        var t = localStorage.getItem('tbc-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="site">
+  <div class="site-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">P3</span>
+      <span class="brand-name">Loot Compendium</span>
+    </a>
+    <!-- Sections are added here as they are written. `just links` fails on
+         any entry whose target does not exist. -->
+    <nav class="site-nav" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="bosses.html">By Boss</a>
+      <a href="specs.html">By Spec</a>
+      <a href="framework.html">Framework</a>
+      <a href="conventions.html">Conventions</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+      <span aria-hidden="true">◐</span>
+    </button>
+  </div>
+</header>
+
+<div class="shell shell-full">
+
+
+  <main id="content" class="doc">
+    <div class="doc-head">
+      <p class="eyebrow">Loot Council Research · Anniversary Phase 3</p>
+      <h1>Mount Hyjal And Black Temple</h1>
+      <p class="standfirst">The decision system for Phase 3 loot. It
+does not tell a player what to want. It tells the council who gets a
+drop first, and what the raid loses by routing it one way instead of
+another.</p>
+      <p class="doc-meta"><span class="pill pill-draft">draft</span> <span class="doc-updated">updated 2026-08-08</span></p>
+    </div>
+
+
+<p>Published best-in-slot lists answer “is this item my best in slot?”
+for one spec at a time. This compendium consumes them rather than
+competing with them, and answers the question they leave open:
+<strong>when several specs have a real claim on the same drop, which one
+takes it, and on what grounds.</strong></p>
+<p>It carries best in slot as reference, because players arrive
+expecting specific items and the council should know which expectations
+a conclusion runs against. Reference is all it is.</p>
+<h2 id="the-two-ways-in">The two ways in</h2>
+<p>A council asks two different questions, so the compendium is entered
+two ways. When a drop lands the question is who wants it, and <a
+href="bosses.html">Loot By Boss</a> leads to that item’s page and every
+claimant on it. When a week is being planned the question is what a
+player still needs, and <a href="specs.html">Loot By Spec</a> leads to
+what one spec wants, slot by slot. Both read the same shortlist, so the
+two cannot disagree.</p>
+<h2 id="start-here">Start here</h2>
+<div class="note brass">
+<p>Every analytical decision traces back to one document, the <a
+href="framework.html">Framework</a>. It carries the mission, the full
+assumption table, the layers a call is built from, and the order in
+which they win when they disagree. <strong>It is where the reasoning
+behind a call comes from.</strong></p>
+</div>
+<h2 id="what-this-will-answer">What this will answer</h2>
+<p>Existing sources rank an item against one spec at a time. Five
+questions sit above that ranking, and they are the ones a loot council
+has to settle.</p>
+<div class="cards">
+<section id="cost-of-routing" class="card">
+<h4>Cost of routing</h4>
+<p>What the raid loses by giving a drop here instead of there.</p>
+</section>
+<section id="token-order" class="card funnel">
+<h4>Token order</h4>
+<p>Which claimant on a contested token line goes first.</p>
+</section>
+<section id="what-a-set-breaks" class="card warn">
+<h4>What a set breaks</h4>
+<p>What a tier piece breaks the night it is equipped.</p>
+</section>
+<section id="flow" class="card">
+<h4>Flow</h4>
+<p>In what order items should flow to make the raid strongest
+fastest.</p>
+</section>
+<section id="equity" class="card equity">
+<h4>Equity</h4>
+<p>Whether loot is reaching people fairly across the phase.</p>
+</section>
+</div>
+<p>Terms used across this compendium are defined in <a
+href="conventions.html">Conventions</a>, which also carries the worked
+example: one item, every claimant, and the priority each was given.</p>
+  </main>
+</div>
+
+<footer class="site-foot">
+  <div class="site-inner">
+    <span>Phase 3 Loot Compendium</span>
+    <span class="src">docs/index.md</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.theme-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var root = document.documentElement;
+      var cur = root.getAttribute('data-theme');
+      if (!cur) {
+        cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      var next = cur === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('tbc-theme', next); } catch (e) {}
+    });
+  })();
+</script>
+
+<script>
+  // Show and hide spec cards by spec. The control is written hidden by
+  // theme/filters/specs.lua and is revealed here, so a reader with no script
+  // sees every card and no control. Nothing is ever hidden at render time.
+  //
+  // The state is deliberately not stored. A council member opening the page
+  // must see every claimant, every time; a remembered filter would hide one
+  // silently, which is how this feature would cause a wrong decision.
+  (function () {
+    var bars = document.querySelectorAll('[data-spec-filter]');
+    Array.prototype.forEach.call(bars, function (bar) {
+      var boxes = bar.querySelectorAll('input[data-spec-card]');
+      var groups = bar.querySelectorAll('input[data-spec-group]');
+      var count = bar.querySelector('[data-spec-count]');
+      var reset = bar.querySelector('[data-spec-reset]');
+      var clear = bar.querySelector('[data-spec-clear]');
+      var empty = bar.parentNode.querySelector('[data-spec-empty]')
+        || bar.querySelector('[data-spec-empty]');
+      if (!boxes.length || !count) return;
+
+      function membersOf(group) {
+        var key = group.getAttribute('data-spec-group');
+        return Array.prototype.filter.call(boxes, function (box) {
+          return box.getAttribute('data-spec-member') === key;
+        });
+      }
+
+      function apply() {
+        var shown = 0;
+        Array.prototype.forEach.call(boxes, function (box) {
+          var card = document.getElementById(box.getAttribute('data-spec-card'));
+          if (!card) return;
+          card.hidden = !box.checked;
+          if (box.checked) shown++;
+        });
+        var total = boxes.length;
+        count.textContent = shown === total
+          ? 'Showing all ' + total + ' spec cards.'
+          : 'Showing ' + shown + ' of ' + total + ' spec cards.';
+        if (reset) reset.disabled = shown === total;
+        if (clear) clear.disabled = shown === 0;
+        // A priority checkbox reports its own members. Half a priority showing
+        // is neither checked nor unchecked, and `indeterminate` is the state
+        // that says so; leaving it checked would claim every claimant at that
+        // priority is on screen when one is not.
+        Array.prototype.forEach.call(groups, function (group) {
+          var members = membersOf(group);
+          var on = 0;
+          members.forEach(function (box) { if (box.checked) on++; });
+          group.checked = on === members.length;
+          group.indeterminate = on > 0 && on < members.length;
+        });
+        // Say so when nothing is showing. Silence there reads as a claim that
+        // the item has no claimants.
+        if (empty) empty.hidden = shown !== 0;
+      }
+
+      Array.prototype.forEach.call(boxes, function (box) {
+        box.addEventListener('change', apply);
+      });
+      // A priority checkbox sets its own members and nothing else, so the
+      // priorities are additive: turning Priority 1 on and then Priority 2 on
+      // shows both, which is the case the council actually asks for.
+      Array.prototype.forEach.call(groups, function (group) {
+        group.addEventListener('change', function () {
+          var state = group.checked;
+          membersOf(group).forEach(function (box) { box.checked = state; });
+          apply();
+        });
+      });
+      function setAll(state) {
+        Array.prototype.forEach.call(boxes, function (box) { box.checked = state; });
+        apply();
+      }
+      if (reset) {
+        reset.addEventListener('click', function () { setAll(true); });
+      }
+      if (clear) {
+        clear.addEventListener('click', function () { setAll(false); });
+      }
+      apply();
+      bar.hidden = false;
+    });
+  })();
+</script>
+
+</body>
+</html>

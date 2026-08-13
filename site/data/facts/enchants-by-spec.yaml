@@ -1,0 +1,419 @@
+# Which enchant each DPS spec puts in each slot, and how it gems.
+#
+# WHAT THIS IS FOR. The sim profiles need an enchant per slot and a gem per
+# socket, and the captures record items only. Its sibling enchants-gems.yaml is
+# a catalogue of what EXISTS and what Phase 3 gates; this file records what each
+# SPEC uses, which is a different question and has a different source.
+#
+# FARMED FROM WOWHEAD, per the guild lead, because that is what this guild
+# reads. Three agents split the fourteen DPS specs on 10 August 2026 and read
+# every page in a browser, since Wowhead guide bodies render client-side and a
+# plain fetch returns navigation chrome only.
+#
+# ZERO DISAGREEMENTS WITH enchants-gems.yaml ON ANY STAT VALUE. Every rating,
+# every meta activation requirement and every faction gate matched, including
+# the TBC-correct Relentless Earthstorm activation of two red, two yellow and
+# two blue, and the two-blue Chaotic Skyfire. That is worth stating because the
+# two files were built from different sources months apart.
+#
+# WHERE A GUIDE'S ADVICE DOES NOT FIT THIS RAID, IT IS FLAGGED AND NOT COPIED.
+# A guide gems for its own assumed hit position. Ours differ, and the gems are
+# the dial that closes the difference. See `where_our_numbers_diverge` below.
+
+meta:
+  collected: 2026-08-10
+  scope: the fourteen DPS specs, per data/judgments/capture-fidelity.yaml sim_profile_scope
+  method: >-
+    Wowhead TBC Classic guide pages, one per class or spec, read in a browser.
+    Each recommendation was cross-checked against enchants-gems.yaml for its
+    stat value and its Phase 3 availability.
+  url_pattern_trap: >-
+    The working slug is `dps-enchants-gems-pve`. The reversed form,
+    `enchants-gems-pve-dps`, silently redirects to the RETAIL guide, which is a
+    different game. Two agents hit this independently.
+  pages_are_shared: >-
+    Wowhead has one page for both warriors, one for both hunters, one for both
+    warlocks, and the mage page serves Arcane. So a per-spec difference below
+    comes from the guide's own prose rather than from separate pages.
+  professions: >-
+    None assumed, per the ruling of 9 August 2026. Ring enchants are enchanter
+    only and are skipped everywhere. Leg armors and scopes require a profession
+    to CRAFT and none to APPLY, which enchants-gems.yaml confirms, so they are
+    not gated for the wearer and are used.
+
+# The slots that take one in 2.4.3. Neck, waist and trinkets take none, a
+# caster's ranged slot holds a wand and takes none, and a shaman or druid relic
+# takes none either.
+enchantable_slots: [head, shoulder, back, chest, wrist, hands, legs, feet, main_hand, off_hand, ranged]
+
+# Every physical DPS spec shares this core. Differences are recorded per spec.
+physical_core:
+  head: Glyph of Ferocity            # 16 hit, Cenarion Expedition Revered
+  shoulder: Greater Inscription of Vengeance
+  back: Enchant Cloak - Greater Agility
+  chest: Enchant Chest - Exceptional Stats
+  hands: Enchant Gloves - Superior Agility
+  legs: Nethercobra Leg Armor
+  main_hand: Enchant Weapon - Mongoose
+
+caster_core:
+  head: Glyph of Power               # 14 spell hit, Sha'tar Revered
+  shoulder: Greater Inscription of Discipline
+  back: Enchant Cloak - Subtlety
+  chest: Enchant Chest - Exceptional Stats
+  wrist: Enchant Bracer - Spellpower
+  hands: Enchant Gloves - Major Spellpower
+  legs: Runic Spellthread
+  feet: Enchant Boots - Boar's Speed
+  off_hand: none                     # No off-hand frill enchant exists in 2.4.3
+
+specs:
+
+  combat_rogue:
+    source: wowhead.com/tbc/guide/classes/rogue/dps-enchants-gems-pve
+    enchants:
+      head: Glyph of Ferocity
+      shoulder: Greater Inscription of Vengeance
+      back: Enchant Cloak - Greater Agility
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Assault
+      hands: Enchant Gloves - Superior Agility
+      legs: Nethercobra Leg Armor
+      feet: Enchant Boots - Cat's Swiftness
+      main_hand: Enchant Weapon - Mongoose
+      off_hand: Enchant Weapon - Mongoose
+      ranged: Stabilized Eternium Scope
+    gems:
+      meta: Relentless Earthstorm Diamond
+      red: Delicate Living Ruby
+      yellow: Glinting Noble Topaz
+      blue: Shifting Nightseye
+      hit_dial: Glinting Noble Topaz at 4 hit, or Rigid Dawnstone at 8 for a pure yellow socket
+      socket_bonuses: Match colours only for the meta or a bonus that pays
+
+  arms_warrior: &warrior
+    source: wowhead.com/tbc/guide/classes/warrior/dps-enchants-gems-pve
+    note: One Wowhead guide serves both warriors; they differ only in the weapon.
+    enchants:
+      head: Glyph of Ferocity
+      shoulder: Greater Inscription of the Blade
+      back: Enchant Cloak - Greater Agility
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Brawn
+      hands: Enchant Gloves - Major Strength
+      legs: Nethercobra Leg Armor
+      feet: Enchant Boots - Cat's Swiftness
+      main_hand: Enchant Weapon - Mongoose
+      ranged: Khorium Scope
+    gems:
+      meta: Relentless Earthstorm Diamond
+      red: Bold Living Ruby
+      yellow: Inscribed Noble Topaz
+      blue: Sovereign Nightseye
+      hit_dial: Rigid Dawnstone at 8 hit while under the 9 percent cap
+      socket_bonuses: Match only where the bonus pays 3 strength or 3 crit per blue gem required
+    excluded_by_gating: >-
+      Enchant Weapon - Executioner. Wowhead names it the later main-hand pick
+      and calls it Phase 4 on the original TBCC schedule; enchants-gems.yaml
+      gates it at Anniversary Phase 3.5. Different labels, same conclusion:
+      not Phase 3. Mongoose is the non-gated pick.
+
+  fury_warrior:
+    <<: *warrior
+    # A SLOT ENTRY AND NOT PROSE. This was recorded as a sentence, and the sim
+    # exporter reads `enchants` and cannot read English, so all three Fury
+    # profiles went out with an unenchanted off hand. Found by an audit on
+    # 10 August 2026. The Mongoose proc is per weapon, so a dual-wielder
+    # enchants both, which is why the merge key alone was not enough.
+    enchants:
+      head: Glyph of Ferocity
+      shoulder: Greater Inscription of the Blade
+      back: Enchant Cloak - Greater Agility
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Brawn
+      hands: Enchant Gloves - Major Strength
+      legs: Nethercobra Leg Armor
+      feet: Enchant Boots - Cat's Swiftness
+      main_hand: Enchant Weapon - Mongoose
+      off_hand: Enchant Weapon - Mongoose
+      ranged: Khorium Scope
+
+  feral_cat:
+    source: wowhead.com/tbc/guide/classes/druid/feral/dps-enchants-gems-pve
+    enchants:
+      head: Glyph of Ferocity
+      shoulder: Greater Inscription of Vengeance
+      back: Enchant Cloak - Greater Agility
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Brawn
+      hands: Enchant Gloves - Superior Agility
+      legs: Nethercobra Leg Armor
+      feet: Enchant Boots - Cat's Swiftness
+      main_hand: Enchant 2H Weapon - Major Agility
+      ranged: none
+    guide_contradicts_itself: >-
+      Its table says Enchant Bracer - Assault and its body argues Brawn is
+      superior, because Brawn scales with talents and with Blessing of Kings.
+      The body is the reasoned pick and is what is recorded.
+    gems:
+      meta: none
+      meta_note: >-
+        NO META GEM. This spec's head is Wolfshead Helm, which has no meta
+        socket. That follows from the Wolfshead ruling this project already
+        holds, and it means the meta activation requirement never binds here.
+      red: Delicate Living Ruby
+      yellow: Glinting Noble Topaz
+      blue: Shifting Nightseye
+      socket_bonuses: Ignore blue sockets entirely; take a yellow bonus only when it pays a damage stat
+    head_enchant_applies: >-
+      The glyph applies to Wolfshead Helm, confirmed in the guide's own comment
+      thread. Worth recording because the helm is otherwise an oddity.
+
+  retribution_paladin:
+    source: wowhead.com/tbc/guide/classes/paladin/retribution/dps-enchants-gems-pve
+    enchants:
+      head: Glyph of Ferocity
+      shoulder: Greater Inscription of Vengeance
+      back: Enchant Cloak - Greater Agility
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Brawn
+      hands: Enchant Gloves - Major Strength
+      legs: Nethercobra Leg Armor
+      feet: Enchant Boots - Dexterity
+      main_hand: Enchant Weapon - Mongoose
+    head_choice_is_conditional: >-
+      The guide picks Glyph of Ferocity "to maintain the 3 percent hit" and
+      names Glyph of the Outcast where hit is not needed. This spec's recorded
+      hit position decides which, so it is a live choice and not a default.
+    feet_choice_is_conditional: >-
+      Dexterity assumes 2 of 2 Pursuit of Justice. Enchant Boots - Surefooted,
+      at 10 hit, is the pick where hit is needed, and Cat's Swiftness where the
+      talent is absent.
+    gems:
+      meta: Relentless Earthstorm Diamond
+      red: Bold Living Ruby
+      yellow: Inscribed Noble Topaz
+      blue: Sovereign Nightseye
+      blue_count: Exactly two, to activate the meta
+      socket_bonuses: Activate only paying bonuses, plus the meta
+
+  enhancement_shaman:
+    source: wowhead.com/tbc/guide/classes/shaman/enhancement/dps-enchants-gems-pve
+    enchants:
+      head: Glyph of Ferocity
+      shoulder: Greater Inscription of Vengeance
+      back: Enchant Cloak - Greater Agility
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Brawn
+      hands: Enchant Gloves - Major Strength
+      legs: Nethercobra Leg Armor
+      feet: Enchant Boots - Cat's Swiftness
+      main_hand: Enchant Weapon - Mongoose
+      off_hand: Enchant Weapon - Mongoose
+      ranged: none
+    gems:
+      meta: Relentless Earthstorm Diamond
+      red: Bold Living Ruby
+      yellow: Inscribed Noble Topaz
+      blue: Sovereign Nightseye
+      socket_bonuses: Gem the best stat everywhere; match colours only to feed the meta or a paying bonus
+
+  elemental_shaman:
+    source: wowhead.com/tbc/guide/classes/shaman/elemental/dps-enchants-gems-pve
+    enchants:
+      head: Glyph of Power
+      shoulder: Greater Inscription of Discipline
+      back: Enchant Cloak - Spell Penetration
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Spellpower
+      hands: Enchant Gloves - Major Spellpower
+      legs: Runic Spellthread
+      feet: Enchant Boots - Boar's Speed
+      main_hand: Enchant Weapon - Major Spellpower
+      off_hand: Enchant Shield - Intellect
+      ranged: none
+    gems:
+      meta: Chaotic Skyfire Diamond
+      red: Runed Crimson Spinel
+      yellow: Potent Noble Topaz
+      blue: Glowing Nightseye
+      socket_bonuses: Normally not worth it; stack spell power and match only for the meta or a strong bonus
+    excluded_by_gating: >-
+      Reckless Noble Topaz, the haste alternative for yellow, is Phase 4 content
+      per enchants-gems.yaml.
+
+  beast_mastery_hunter: &hunter
+    source: wowhead.com/tbc/guide/classes/hunter/dps-enchants-gems-pve
+    note: >-
+      One Wowhead page serves both hunters and nothing on it distinguishes
+      them, so the two records are identical by the source's own construction
+      rather than by our assumption.
+    enchants:
+      head: Glyph of Ferocity
+      shoulder: Greater Inscription of Vengeance
+      back: Enchant Cloak - Greater Agility
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Assault
+      hands: Enchant Gloves - Superior Agility
+      legs: Nethercobra Leg Armor
+      feet: Enchant Boots - Dexterity
+      ranged: Stabilized Eternium Scope
+    gems:
+      meta: Relentless Earthstorm Diamond
+      red: Delicate Living Ruby
+      yellow: Wicked Noble Topaz
+      blue: Shifting Nightseye
+      hit_dial: >-
+        Rigid Dawnstone at 8 hit is what the guide says hunters prefer in a pure
+        yellow socket, and Glinting Noble Topaz at 4 hit plus 4 agility where
+        already close to the cap. The guide frames the orange gems explicitly as
+        the dial for adding or shedding hit.
+      socket_bonuses: Ignore unless the bonus pays or the meta needs it
+    scope_is_not_profession_gated: >-
+      Stabilized Eternium Scope needs Engineering 375 to CRAFT and none to
+      APPLY, which enchants-gems.yaml confirms. Khorium Scope is the budget one.
+
+  survival_hunter:
+    <<: *hunter
+
+  affliction_warlock: &warlock
+    source: wowhead.com/tbc/guide/classes/warlock/dps-enchants-gems-pve
+    note: One class page serves both warlock specs.
+    enchants:
+      head: Glyph of Power
+      shoulder: Greater Inscription of Discipline
+      back: Enchant Cloak - Subtlety
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Spellpower
+      hands: Enchant Gloves - Major Spellpower
+      legs: Runic Spellthread
+      feet: Enchant Boots - Boar's Speed
+      main_hand: Enchant Weapon - Soulfrost
+      off_hand: none
+    gems:
+      meta: Chaotic Skyfire Diamond
+      red: Runed Living Ruby
+      yellow: Veiled Noble Topaz
+      blue: Glowing Nightseye
+      hit_dial: >-
+        Veiled Noble Topaz, and Great Dawnstone at 8 spell hit where the guide's
+        own words are "in desperate need". It states that hit gems beat spell
+        power until the cap, which is the rule this raid needs.
+      socket_bonuses: Chase only bonuses granting spell damage or spell hit
+
+  destruction_warlock:
+    <<: *warlock
+    main_hand_is_disputed_in_the_source: >-
+      The guide's prose says most warlocks want Soulfrost and that FIRE
+      Destruction wants Sunfire; its own summary table prints the reverse, and
+      its commenters call the table a typo. Recorded as disputed rather than
+      resolved, because it is the source disagreeing with itself and not us
+      disagreeing with the source.
+
+  arcane_mage:
+    source: wowhead.com/tbc/guide/classes/mage/dps-enchants-gems-pve
+    enchants:
+      head: Glyph of Power
+      shoulder: Greater Inscription of Discipline
+      back: Enchant Cloak - Subtlety
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Spellpower
+      hands: Enchant Gloves - Major Spellpower
+      legs: Runic Spellthread
+      feet: Enchant Boots - Boar's Speed
+      main_hand: Enchant Weapon - Sunfire
+      off_hand: none
+    gems:
+      meta: Chaotic Skyfire Diamond
+      red: Runed Living Ruby
+      yellow: Brilliant Dawnstone
+      blue: Glowing Nightseye
+      socket_bonuses: Ignore unless strong
+
+  balance_druid:
+    source: wowhead.com/tbc/guide/classes/druid/balance/dps-enchants-gems-pve
+    enchants:
+      head: Glyph of Power
+      shoulder: Greater Inscription of the Orb
+      back: Enchant Cloak - Subtlety
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Spellpower
+      hands: Enchant Gloves - Major Spellpower
+      legs: Runic Spellthread
+      feet: Enchant Boots - Boar's Speed
+      main_hand: Enchant Weapon - Sunfire
+      off_hand: none
+    staff_or_pair_changes_nothing: >-
+      Sunfire is a melee-weapon enchant and applies to a staff or a one-hand
+      mace alike, and a held off hand takes no enchant in 2.4.3, so the weapon
+      configuration does not change the answer.
+    gems:
+      meta: Chaotic Skyfire Diamond
+      red: Runed Living Ruby
+      yellow: Potent Noble Topaz
+      blue: Glowing Nightseye
+      hit_dial: Veiled Noble Topaz where hit is needed
+      socket_bonuses: Tend not to be worth it; match only for the meta
+    excluded_by_gating: >-
+      Ember Skyfire Diamond, named as a lesser meta option, is Phase 4 content
+      per enchants-gems.yaml.
+
+  shadow_priest:
+    source: wowhead.com/tbc/guide/classes/priest/shadow/dps-enchants-gems-pve
+    enchants:
+      head: Glyph of Power
+      shoulder: Greater Inscription of Discipline
+      back: Enchant Cloak - Subtlety
+      chest: Enchant Chest - Exceptional Stats
+      wrist: Enchant Bracer - Spellpower
+      hands: Enchant Gloves - Major Spellpower
+      legs: Runic Spellthread
+      feet: Enchant Boots - Boar's Speed
+      main_hand: Enchant Weapon - Soulfrost
+      off_hand: none
+    feet_interacts_with_the_meta: >-
+      Boar's Speed must be swapped for Fortitude or Vitality if the Swift
+      Starfire Diamond meta is used, because two run-speed effects do not stack.
+    gems:
+      meta: Mystical Skyfire Diamond
+      meta_activation: More blue than yellow, which one Glowing Nightseye and no yellow satisfies
+      red: Runed Living Ruby
+      yellow: Potent Noble Topaz
+      blue: Glowing Nightseye
+      hit_dial: Veiled Noble Topaz
+      socket_bonuses: Ignore colours and bonuses, stack spell power
+
+# The reason this file exists rather than a straight copy of the guides.
+where_our_numbers_diverge:
+  the_rule: >-
+    A guide gems for the hit position it assumes. This raid's positions are
+    recorded in hit.yaml and several differ, so the gems are the dial that
+    closes the difference and the guide's default is the starting point rather
+    than the answer.
+  arcane_mage: >-
+    THE SHARPEST CASE. Wowhead calls Brilliant Dawnstone, which is Intellect,
+    "the Arcane Mage gem of choice", and that advice assumes a hit-capped
+    build. This project records the Arcane Mage as SHORT on spell hit and as
+    the one spec with no consumable route to close it, because no food, elixir
+    or flask in TBC grants spell hit. Following the guide here would gem past
+    the constraint that actually binds.
+  enhancement_shaman: >-
+    The opposite case. The guide still takes Glyph of Ferocity for its 16 hit
+    and 34 attack power, and this spec needs NO hit from gear at all once Dual
+    Wield Specialization and Nature's Guidance are counted. The glyph is still
+    right, for the attack power, but every hit gem the guide offers is surplus.
+  retribution_paladin: >-
+    Both of this spec's conditional slots, the head glyph and the boot enchant,
+    are chosen by the guide on whether hit is needed. That makes them live
+    decisions against our recorded position rather than defaults to copy.
+  guides_predate_phase_3: >-
+    The pages are written against original TBCC Phase 1 and 2 and rarely name
+    the Phase 3 epic gems that enchants-gems.yaml carries, such as Great
+    Lionseye at 10 spell hit, Rigid Lionseye at 10 hit, Veiled Pyrestone and
+    Glinting Pyrestone. Where a hit gap has to be closed, those are the better
+    version of the same gem.
+  unresolved_in_the_catalogue: >-
+    enchants-gems.yaml carries an open question on whether the Heroic-dungeon
+    hit gems are unique-equipped, which decides whether more than one can be
+    slotted. That question now matters, because it caps how much hit gemming
+    can supply.

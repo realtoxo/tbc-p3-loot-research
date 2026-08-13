@@ -1,5 +1,5 @@
 # Generated HTML output. Disposable; rebuild with `just build`.
-/site/
+# /site/
 
 # Derived analysis. Regenerable, and it embeds modelling choices that are not
 # yet decided, so it is not committed while the project is gathering facts.

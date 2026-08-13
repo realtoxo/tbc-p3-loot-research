@@ -1,0 +1,192 @@
+# Simulator profiles, one per rostered spec. Hand-authored.
+#
+# HOLDS   The gear, enchants and gems each spec is simulated in, at both gear
+#         anchors, and the talent build and rotation the run assumes.
+# NOT HERE  Buffs are in roster.yaml, cap positions in hit.yaml, crit.yaml and
+#         haste.yaml, and the items themselves in items.csv.
+#
+# BEFORE YOU USE A FIGURE
+#   NOTHING IS COLLECTED YET. Every spec below is an empty shell with the fields
+#   named and no values in them. Collection is deferred and this file exists so
+#   the shape is agreed before anyone starts.
+#   A run is only comparable with another run if both were configured from this
+#   file. A figure produced from an ad hoc profile is not comparable with
+#   anything and must not be recorded beside one that was.
+#   Consumables ARE assumed in a run, per the framework, and are NOT counted in
+#   hit.yaml cap states. The two settings answer different questions and must
+#   not be reconciled by changing either one.
+#
+# SOURCE  Hand-authored per spec. Gear is named by item id so it resolves
+#   against items.csv. Enchants and gems are named by item or spell id so they
+#   resolve against enchants-gems.yaml. A slot filled by anything not in either
+#   file is recorded with its source, because an unsourced entry cannot be
+#   rebuilt by someone checking the run.
+
+meta:
+  status: schema_only_for_the_planned_runs
+  specs_defined: 21
+  specs_collected: 0
+  what_that_does_and_does_not_mean: >-
+    NO SIMULATION HAS BEEN RUN AT THESE ANCHORS, which is what this counter
+    tracks, and no set bonus has been priced anywhere in the repository. It does
+    NOT mean nothing has been collected: seventeen gear captures live under
+    sim-profiles/hit-capture, rolled up into hit-captured.yaml and set-stats.yaml
+    and checked by just check, and crit.yaml records four crit figures from a
+    wowsims run against that engine's OWN presets rather than ours. This
+    counter read as though the directory beside it were empty.
+  anchors: [entry, tier]
+  note: >-
+    Two anchors per spec, and both describe gear a real player has. RULED on
+    9 August 2026.
+    ENTRY is the spec's Tier 5 best-in-slot set: what a raider walks into Phase
+    3 wearing. Season 2 is in, Season 3 is out, because Season 3 arrives five
+    days after the phase opens.
+    TIER is NOT a Phase 3 best-in-slot list. A full-clear list assumes the
+    hardest drops in the tier and describes almost nobody. The Tier anchor is
+    what a player could plausibly be wearing FOUR TO SIX WEEKS INTO Mount Hyjal
+    and Black Temple: the Tier 6 token pieces the spec actually runs, usually a
+    two-piece or a four-piece rather than five, with every other slot filled by
+    what that player realistically holds by then, which is Phase 2 gear, early
+    Hyjal and Black Temple off-pieces, badge rewards and crafted items.
+    KEEPING A PREVIOUS TIER'S SET BONUS IS PART OF THE ANSWER, not a
+    complication. Where it is optimal the spec holds a Tier 5 two-piece beside a
+    Tier 6 two-piece, and which bonuses a configuration holds is the single most
+    important thing a profile records.
+  split_combinations: >-
+    A configuration mixing two tiers, such as two Tier 6 pieces beside two Tier
+    5 pieces, is supported by this schema because a slot names its own item and
+    its own tier. None is confirmed for any spec yet, so none is enumerated. It
+    is recorded here so the shape does not have to change when one is found.
+
+# The fields every spec entry carries, so a collection session has a checklist
+# and two people collecting separately produce the same shape.
+schema:
+  spec: The rostered spec id, matching hit.yaml.
+  talent_build: Link to the build, and the count. The tree split changes caps.
+  rotation: What the simulator is told to cast, and where that came from.
+  anchors:
+    entry:
+      gear: One entry per slot, item id and name, with the source of each.
+      enchants: One entry per enchantable slot, by id.
+      gems: One entry per socket, by id, with the socket color and whether the
+        socket bonus is met.
+      consumables: Flask or elixir pair, food, weapon enhancement, scrolls.
+    tier:
+      gear: >-
+        The same shape, holding THE PIECES THE SPEC ACTUALLY WEARS four to six
+        weeks in. Not five tier pieces, and not a full-clear best-in-slot list:
+        the first describes gear nobody runs and the second describes gear
+        almost nobody has yet. Most specs run a two-piece or a four-piece, the
+        remaining slots hold Phase 2 gear, early Hyjal and Black Temple
+        off-pieces, badge rewards and crafted items, and a spec may keep pieces
+        of Tier 5 to hold a Tier 5 bonus alongside a Tier 6 one. Name every
+        slot's item by id, whichever tier it comes from, so the profile states
+        the configuration rather than implying it.
+      enchants: The same.
+      gems: The same, since a tier piece changes the sockets available.
+      consumables: The same.
+      bonuses_held: >-
+        Which set bonuses this configuration actually holds, named, one per set.
+        A four-piece Tier 6 holds its two-piece as well. A two plus two holds
+        one bonus from each set. This is what the configuration was chosen FOR,
+        so it is stated rather than left to be counted from the slot list.
+  composition_source: >-
+    Where the configuration came from. Which pieces a spec runs is a fact about
+    what that class does, established by its community, not a choice we make, so
+    it carries a source the same way a stat line does. Where no reliable source
+    exists and we worked it out ourselves, say so: a composition we derived is a
+    weaker fact than one the class agrees on.
+  collected_on: Date the profile was filled in.
+  collected_by: Who filled it in.
+  verified_against: What the resulting figures were checked against, if anything.
+
+# Slots a profile must fill, so a half-filled profile is visible as half-filled.
+slots:
+  armor: [head, neck, shoulder, back, chest, wrist, hands, waist, legs, feet]
+  jewelry: [ring_1, ring_2, trinket_1, trinket_2]
+  weapons: >-
+    Spec-dependent. Main hand and off hand for a dual-wielder, two hand for a
+    two-hander, plus ranged or a relic where the class carries one. The EP
+    Workbook tabs differ here, and a Fury Warrior tab has no two-hand section
+    at all.
+
+# Every rostered spec, empty. Fill one and set its status to collected.
+profiles:
+
+  - spec: combat_rogue
+    status: not_collected
+  - spec: feral_cat
+    status: not_collected
+  - spec: feral_bear
+    status: not_collected
+  - spec: arms_warrior
+    status: not_collected
+  - spec: fury_warrior
+    status: not_collected
+  - spec: protection_warrior
+    status: not_collected
+  - spec: retribution_paladin
+    status: not_collected
+  - spec: protection_paladin
+    status: not_collected
+  - spec: holy_paladin
+    status: not_collected
+  - spec: beast_mastery_hunter
+    status: not_collected
+  - spec: survival_hunter
+    status: not_collected
+  - spec: enhancement_shaman
+    status: not_collected
+  - spec: elemental_shaman
+    status: not_collected
+  - spec: restoration_shaman
+    status: not_collected
+  - spec: balance_druid
+    status: not_collected
+  - spec: restoration_druid
+    status: not_collected
+  - spec: arcane_mage
+    status: not_collected
+  - spec: affliction_warlock
+    status: not_collected
+  - spec: destruction_warlock
+    status: not_collected
+  - spec: shadow_priest
+    status: not_collected
+  - spec: priest_healer
+    status: not_collected
+
+open_questions:
+
+  collection_order:
+    blocks: Every throughput figure the compendium would quote.
+    detail: >-
+      Nothing is collected. Order by what a figure would decide. The three specs
+      hit.yaml records as short come first, feral_bear, protection_paladin and
+      arcane_mage, because a short state is the only cap state that creates a
+      claim on loot. Then the two that change state between anchors,
+      beast_mastery_hunter and protection_warrior, since their tier sets carry
+      no hit and that movement is already recorded but not measured. Then the
+      contested pairs, the two ferals and the two warriors, who share a set and
+      contest the same pieces.
+
+  gear_for_the_entry_anchor:
+    blocks: The entry profile for every spec.
+    detail: >-
+      The entry gear set is currently computed inside tools/extract_ladder.py to
+      derive a supply figure and then discarded, so there is no list to copy
+      into a profile. Publishing it is a separate deferred task. Until then an
+      entry profile has to be assembled by hand from the EP Workbook, which is
+      slower and will not agree with the supply figures unless the same rule is
+      followed.
+
+  rotation_source:
+    blocks: Comparability between specs.
+    detail: >-
+      Rotation quality varies sharply between specs in a simulator and distorts
+      absolute damage far more than it distorts what one point of a stat is
+      worth within a spec. A rotation copied from a community source carries that
+      source's assumptions. Whether a rotation is taken from the simulator's
+      default, from a community guide, or written here, is not decided, and it
+      has to be the same choice across specs or cross-spec figures are not
+      comparable.
