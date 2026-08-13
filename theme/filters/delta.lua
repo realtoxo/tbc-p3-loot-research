@@ -920,6 +920,25 @@ local function build(spec_name, blocks, where, named)
       render(spec, spans[1], { view }, merged_rates({ view }), named) })
   end
 
+  -- AN ITEM WITH NO STAT LINE HAS NO STAT DELTA, and saying so is the whole
+  -- answer. The nine Ashtongue Deathsworn trinkets are the case: they carry no
+  -- stats at all, so every comparison found nothing to differ and the build
+  -- stopped, correctly, on "there is nothing to compare". The fix is not to
+  -- compare harder. It is to state the fact, which is more useful than a table
+  -- of zeroes: what such an item is worth is entirely its effect, and the
+  -- effect is printed above this block.
+  local carried = 0
+  for _, pair in ipairs(itemdb.STATS) do
+    if tonumber(a[pair[1]]) then carried = carried + 1 end
+  end
+  if carried == 0 then
+    return pandoc.List({ pandoc.Div(
+      { plain(a.name .. " carries no stats, so there is no stat delta to "
+        .. "show. What it is worth to " .. spec.name .. " is its effect, "
+        .. "stated above.") },
+      pandoc.Attr("", { "delta-absent" })) })
+  end
+
   local derived, absent = views_for(spec, a, where)
   if not derived then return nil end
 

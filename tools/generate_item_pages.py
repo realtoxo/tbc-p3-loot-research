@@ -89,6 +89,54 @@ SPEC_CLASS = {
     "Restoration Shaman": "shaman",
 }
 
+# THE MAP ABOVE STOPS AT THREE CLASSES, because relics belong to Druids,
+# Paladins and Shamans and that is all it was written for. A class-locked
+# trinket exists for all nine classes, so the general question, which class is
+# this spec, is answered here instead. Every spec name but the two Feral ones
+# contains its own class.
+CLASSES = ("warrior", "paladin", "hunter", "rogue", "priest", "shaman",
+           "mage", "warlock", "druid")
+
+UNSPOKEN_CLASS = {"Feral Bear": "druid", "Feral Cat": "druid"}
+
+
+def spec_class(spec: str) -> str | None:
+    if spec in UNSPOKEN_CLASS:
+        return UNSPOKEN_CLASS[spec]
+    lowered = spec.lower()
+    for name in CLASSES:
+        if name in lowered:
+            return name
+    return None
+
+
+def class_locked_claimants(item_ids: set[str],
+                          items: dict[str, dict]) -> dict[str, list[str]]:
+    """Every spec of the class an item is locked to.
+
+    A workbook rank cannot supply the claimants for an item no tab ranks, and
+    seven of the nine Ashtongue Deathsworn trinkets are ranked by no tab. The
+    lock is the claim: an item only a Paladin may equip is contested by the
+    three Paladin specs and by nobody else.
+
+    REPUTATION REWARDS ONLY, and the narrowing is deliberate. A tier piece also
+    names one class, so an unrestricted rule added every spec of that class to
+    all 190 tier pages, silently widening claimants the ladder had already
+    decided. The ladder answers for anything it ranks; this answers only where
+    it says nothing.
+    """
+    out: dict[str, list[str]] = {}
+    for item_id in item_ids:
+        row = items.get(item_id)
+        if not row or "reputation" not in row.get("source", ""):
+            continue
+        names = [n for n in (row.get("class_allowlist") or "").split("|") if n]
+        if len(names) != 1:
+            continue
+        owner = names[0].lower()
+        out[item_id] = [spec for spec in SPECS if spec_class(spec) == owner]
+    return out
+
 
 def relic_claimants(item_ids: set[str], items: dict[str, dict]) -> dict[str, list[str]]:
     """Every spec of the class a relic belongs to.
@@ -263,16 +311,27 @@ def main() -> int:
         item_id for item_id, row in items.items()
         if row.get("source") == "tier_vendor" and row.get("tier") in TIERS
     }
-    subjects = dropped | tier_pieces
+    # A REPUTATION REWARD IS PHASE 3 LOOT AND HAD NO PAGE. Pages are keyed on
+    # the drop table, and the nine Ashtongue Deathsworn trinkets are bought at
+    # Exalted rather than dropped, so all nine were reachable from nowhere: no
+    # card, and no row on any boss page. They are class-locked, so each one has
+    # exactly one set of claimants and a page has something to say.
+    reputation = {
+        item_id for item_id, row in items.items()
+        if "reputation" in row.get("source", "") and row.get("tier") in TIERS
+    }
+    subjects = dropped | tier_pieces | reputation
 
     contested = claimants(subjects)
     # A relic is claimed by its class, not by a workbook rank. Merged after the
     # ladder pass so it can only ADD a claimant, never remove one the workbook
     # supplied.
-    for item_id, specs in relic_claimants(subjects, items).items():
-        for spec in specs:
-            if spec not in contested.setdefault(item_id, []):
-                contested[item_id].append(spec)
+    for source in (relic_claimants(subjects, items),
+                   class_locked_claimants(subjects, items)):
+        for item_id, specs in source.items():
+            for spec in specs:
+                if spec not in contested.setdefault(item_id, []):
+                    contested[item_id].append(spec)
     share_within_weapon_sets(contested, items)
 
     # The directory is rebuilt rather than added to, so an item removed from the

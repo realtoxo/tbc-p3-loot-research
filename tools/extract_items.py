@@ -314,7 +314,12 @@ def main() -> int:
         for entry in item.get("sources") or []:
             if entry.get("rep", {}).get("repFactionId") != ASHTONGUE_DEATHSWORN:
                 continue
-            tiers.setdefault(item["id"], set())
+            # TIER 6, BECAUSE THE ZONE STATES IT. `tier` is what a raid zone
+            # or a token set says, and a reputation has no tier of its own;
+            # but Ashtongue Deathsworn IS the Black Temple faction, and Black
+            # Temple is Tier 6. Leaving the column empty made every card read
+            # "not this phase" for nine trinkets that are Phase 3 content.
+            tiers.setdefault(item["id"], set()).add("T6")
             sources.setdefault(item["id"], {"reputation"})
 
     wanted = set(tiers)

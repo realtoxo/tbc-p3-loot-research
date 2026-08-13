@@ -127,7 +127,7 @@ dev:
 check: regen
     #!/usr/bin/env bash
     set -euo pipefail
-    generated="data/facts/drops.csv data/facts/items.csv data/facts/effect-text.csv data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md"
+    generated="data/facts/drops.csv data/facts/items.csv data/facts/effect-text.csv data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/unranked.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md"
     if ! git diff --quiet -- $generated; then
         echo "ERROR: the generated tables differ after regeneration." >&2
         echo "Either the data changed and you should commit, or a generated file was hand-edited." >&2
@@ -170,6 +170,7 @@ icons:
 
 # Regenerate derived fact tables from source data.
 regen:
+    @python3 tools/extract_unranked.py --out theme/filters/unranked.generated.lua
     @python3 tools/extract_effect_text.py --out data/facts/effect-text.csv
     @python3 tools/extract_drops.py --db "{{wowsims}}/assets/database/db.json" --out data/facts/drops.csv
     @python3 tools/extract_items.py --db "{{wowsims}}/assets/database/db.json" --out data/facts/items.csv

@@ -61,6 +61,13 @@ local PAGES = os.getenv("PAGES_LUA") or "theme/filters/pages.generated.lua"
 local ok_pages, pages = pcall(dofile, PAGES)
 if not ok_pages or type(pages) ~= "table" then pages = {} end
 
+-- The items a class can wear that no workbook tab ranks: the relics, and the
+-- trinkets locked to one class. Written by tools/extract_unranked.py, which
+-- explains why they are unrankable rather than merely unranked.
+local UNRANKED = os.getenv("UNRANKED_LUA") or "theme/filters/unranked.generated.lua"
+local ok_unranked, unranked = pcall(dofile, UNRANKED)
+if not ok_unranked or type(unranked) ~= "table" then unranked = {} end
+
 -- Set by the template on every page, so a link from docs/specs/ reaches
 -- docs/items/ whatever depth the reader is at.
 local root = ""
@@ -258,6 +265,35 @@ local function table_of(entries, spec_name)
     { pandoc.TableBody(rows, {}, 0) }, pandoc.TableFoot({}))
 end
 
+-- NO RANK COLUMN AND NO EPV COLUMN, because neither exists for these items. A
+-- relic carries no stats, so no tab scores one, and printing a rank here would
+-- be the compendium ordering a set the council orders. The three columns left
+-- are the three that are true: what it is, where it comes from, and what has
+-- been decided about it.
+local UNRANKED_HEADS = {
+  { "Item", pandoc.AlignLeft }, { "Where", pandoc.AlignLeft },
+  { "Priority", pandoc.AlignLeft },
+}
+
+local function unranked_table_of(entries, spec_name)
+  local aligns, heads = {}, {}
+  for _, pair in ipairs(UNRANKED_HEADS) do
+    aligns[#aligns + 1] = { pair[2], nil }
+    heads[#heads + 1] = text_cell(pair[1], pair[2], "shortlist-head")
+  end
+  local rows = {}
+  for _, entry in ipairs(entries) do
+    rows[#rows + 1] = pandoc.Row({
+      item_cell(entry),
+      text_cell(entry.location or "", pandoc.AlignLeft, "shortlist-where"),
+      priority_cell(entry, spec_name),
+    })
+  end
+  return pandoc.Table(pandoc.Caption({}), aligns,
+    pandoc.TableHead({ pandoc.Row(heads) }),
+    { pandoc.TableBody(rows, {}, 0) }, pandoc.TableFoot({}))
+end
+
 function Meta(meta)
   if meta.root then root = pandoc.utils.stringify(meta.root) end
   return meta
@@ -282,10 +318,17 @@ function Div(div)
 
   local out = pandoc.List({})
   local shown = {}
+  -- Every item id a ranked section has printed. The unranked set is emitted
+  -- whole and filtered here, because this is the only place that knows what the
+  -- ladder actually chose for THIS spec.
+  local ranked_ids = {}
   local function section(slot)
     local entries = rungs.by_slot[slot]
     if not entries or #entries == 0 or shown[slot] then return end
     shown[slot] = true
+    for _, entry in ipairs(entries) do
+      ranked_ids[tostring(entry.item_id)] = true
+    end
     out:insert(pandoc.Div({ pandoc.Plain(pandoc.Str(slot)) },
       pandoc.Attr("", { "shortlist-slot" })))
     out:insert(pandoc.Div({ table_of(entries, name) },
@@ -300,6 +343,28 @@ function Div(div)
   end
   table.sort(extra)
   for _, slot in ipairs(extra) do section(slot) end
+
+  -- THE UNRANKED SET LAST, under its own headings, so a reader never mistakes
+  -- an unordered list for the bottom of a ranked one.
+  local groups, order = {}, {}
+  for _, entry in ipairs(unranked[name] or {}) do
+    if not ranked_ids[tostring(entry.item_id)] then
+      local slot = entry.slot or "Other"
+      if not groups[slot] then
+        groups[slot] = {}
+        order[#order + 1] = slot
+      end
+      table.insert(groups[slot], entry)
+    end
+  end
+  table.sort(order)
+  for _, slot in ipairs(order) do
+    out:insert(pandoc.Div(
+      { pandoc.Plain(pandoc.Str(slot .. ", not ranked by the workbook")) },
+      pandoc.Attr("", { "shortlist-slot", "shortlist-slot-unranked" })))
+    out:insert(pandoc.Div({ unranked_table_of(groups[slot], name) },
+      pandoc.Attr("", { "shortlist-grid", "shortlist-grid-unranked" })))
+  end
 
   div.content = out
   return div
