@@ -148,6 +148,10 @@ REP_FACTION = {
     946: "Honor Hold", 947: "Thrallmar", 970: "Sporeggar", 978: "Kurenai",
     1012: "Ashtongue Deathsworn", 1015: "Netherwing", 1038: "Ogri'la",
 }
+# The Black Temple faction. Its reward line is a scope population of its own,
+# explained where it is used.
+ASHTONGUE_DEATHSWORN = 1012
+
 REP_LEVEL = {
     1: "Hated", 2: "Hostile", 3: "Unfriendly", 4: "Neutral", 5: "Friendly",
     6: "Honored", 7: "Revered", 8: "Exalted",
@@ -289,8 +293,31 @@ def main() -> int:
                     tiers.setdefault(item_id, set())
                     sources[item_id] = {"worn"}
 
-    wanted = set(tiers)
     db = json.loads(args.db.read_text())
+
+    # The fifth population: every Ashtongue Deathsworn reward.
+    #
+    # WHY A FACTION EARNS A POPULATION OF ITS OWN. Ashtongue Deathsworn is the
+    # Black Temple faction, so its rewards are Phase 3 items by definition. They
+    # are nine trinkets, one locked to each class, and the only way in is
+    # Exalted. Two were in scope because two workbook tabs happen to rank one,
+    # and the other seven were invisible: a council weighing a trinket for a
+    # Paladin could not see that the Paladin has an Exalted trinket waiting,
+    # which is exactly the comparison a trinket card exists to make. Taking the
+    # whole faction rather than the ranked two takes the set as the game
+    # defines it instead of as one spreadsheet happens to cover it.
+    #
+    # THE ROUTE IS SET HERE RATHER THAN INFERRED. These never pass through
+    # `route_of`, so the fallback that filed all nine as boss drops cannot
+    # reach them.
+    for item in db["items"]:
+        for entry in item.get("sources") or []:
+            if entry.get("rep", {}).get("repFactionId") != ASHTONGUE_DEATHSWORN:
+                continue
+            tiers.setdefault(item["id"], set())
+            sources.setdefault(item["id"], {"reputation"})
+
+    wanted = set(tiers)
 
     rows, seen, unstatted, effect_rows = [], set(), [], []
     for item in db["items"]:

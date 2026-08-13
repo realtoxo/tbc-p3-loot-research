@@ -140,8 +140,15 @@ item_id,tier,item_name,buff_id,buff_name,trigger,proc_chance,proc_icd_ms,proc_pp
 32480,,Magnified Moon Specs,40273,Stealth Detection (40273),,,,,-1,
 32480,,Magnified Moon Specs,12883,Longsight (12883),on_use,,,,-1,
 32483,T6,The Skull of Gul'dan,40396,Fel Infusion (40396),on_use,,,,20000,spell_haste=175
+32485,,Ashtongue Talisman of Valor,40459,Fire Blood (40458),proc,0.25,,,12000,strength=55
+32486,,Ashtongue Talisman of Equilibrium,40442,Druid Tier 6 Trinket (40442),,,,,-1,
+32487,,Ashtongue Talisman of Swiftness,40487,Deadly Aim (40485),proc,0.15,,,8000,attack_power=275|ranged_attack_power=275
+32488,,Ashtongue Talisman of Insight,40483,Insight of the Ashtongue (40482),proc,0.5,,,5000,spell_haste=145
+32489,,Ashtongue Talisman of Zeal,40470,Paladin Tier 6 Trinket (40470),,,,,,
+32490,,Ashtongue Talisman of Acumen,40438,Priest Tier 6 Trinket (40438),,,,,,
 32491,,Ashtongue Talisman of Vision,40463,Shaman Tier 6 Trinket (40463),,,,,-1,
 32492,,Ashtongue Talisman of Lethality,40460,Rogue Tier 6 Trinket (40460),,,,,,
+32493,,Ashtongue Talisman of Shadows,40480,Power of the Ashtongue (40478),proc,0.2,,,5000,spell_damage=220
 32494,,Destruction Holo-gogs,30645,Gas Cloud Tracking (30645),,,,,,
 32494,,Destruction Holo-gogs,40273,Stealth Detection (40273),,,,,-1,
 32494,,Destruction Holo-gogs,12883,Longsight (12883),on_use,,,,-1,
