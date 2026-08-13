@@ -32,7 +32,7 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 28437,,Drakefist Hammer,21165,Haste (21165),10000,melee_haste=212
 28438,,Dragonmaw,21165,Haste (21165),10000,melee_haste=212
 28439,,Dragonstrike,21165,Haste (21165),10000,melee_haste=212
-28484,,Bulwark of Kings,34511,Valor (34511),15000,strength=150|33=1500
+28484,,Bulwark of Kings,34511,Valor (34511),15000,strength=150|health=1500
 28523,T4,Totem of Healing Rains,38322,Improved Chain Heal (38322),-1,
 28528,T4,Moroes' Lucky Pocket Watch,34519,Time's Favor (34519),10000,dodge=300
 28568,T4,Idol of the Avian Heart,38321,Improved Healing Touch (38321),-1,
@@ -42,7 +42,7 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 28590,T4,Ribbon of Sacrifice,38332,Blessing of Life (38332),10000,
 28592,T4,Libram of Souls Redeemed,38320,Increased Blessing of Light Healing (38320),,
 28602,T4,Robe of the Elder Scribes,34597,Power of Arcanagos (34598),10000,spell_damage=130
-28727,T4,Pendant of the Violet Eye,29601,Enlightenment (29601),20000,35=21
+28727,T4,Pendant of the Violet Eye,29601,Enlightenment (29601),20000,mp5=21
 28767,T4,The Decapitator,37208,The Decapitator (37208),,
 28774,T4,Glaive of the Pit,34696,Drain Life (34696),,
 28785,T4,The Lightning Capacitor,, (37657),,
@@ -148,9 +148,9 @@ item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
 32495,,Powerheal 4000 Lens,30645,Gas Cloud Tracking (30645),,
 32495,,Powerheal 4000 Lens,40273,Stealth Detection (40273),-1,
 32495,,Powerheal 4000 Lens,12883,Longsight (12883),-1,
-32496,T6,Memento of Tyrande,37656,Wisdom (37655),15000,35=76
+32496,T6,Memento of Tyrande,37656,Wisdom (37655),15000,mp5=76
 32500,T6,Crystal Spire of Karabor,40972,Heal (40971),-1,
-32501,T6,Shadowmoon Insignia,40464,Protector's Vigor (40464),20000,33=1750
+32501,T6,Shadowmoon Insignia,40464,Protector's Vigor (40464),20000,health=1750
 32505,T6,Madness of the Betrayer,40477,Forceful Strike (40475),10000,armor_pen=300
 32658,,Badge of Tenacity,40729,Heightened Reflexes (40729),20000,agility=150
 32864,,Commander's Badge,40815,Netherwing Ally (40815),40000,
