@@ -202,6 +202,9 @@ local function item_reference(name, row, bare)
   add(tip_part("item-tip-meta", meta_line(row)))
   add(tip_part("item-tip-stats", stat_line(row)))
   add(tip_part("item-tip-sockets", socket_line(row)))
+  -- The effect sits between what the item carries and where it drops, because
+  -- it is a property of the item rather than of its source.
+  add(tip_part("item-tip-effect", itemdb.effect_line(row)))
   add(tip_part("item-tip-source", source_line(row)))
 
   -- The link is the focusable element and the tooltip describes it, so the
@@ -338,6 +341,7 @@ local function subject(div)
   add(subject_line("subject-meta", meta_line(row)))
   add(subject_line("subject-stats", stat_line(row)))
   add(subject_line("subject-sockets", socket_line(row)))
+  add(subject_line("subject-effect", itemdb.effect_line(row)))
   add(subject_line("subject-source", source_line(row)))
   if #lines > 0 then
     blocks:insert(pandoc.Div(lines, pandoc.Attr("", { "subject-lines" })))

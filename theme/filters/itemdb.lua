@@ -20,6 +20,7 @@
 local M = {}
 
 M.ITEMS = os.getenv("ITEMS_CSV") or "data/facts/items.csv"
+M.EFFECTS = os.getenv("ITEM_EFFECTS_CSV") or "data/facts/item-effects.csv"
 
 -- Stats in reading order, with the labels the documents use. A column absent
 -- from this list is never printed, so a stat index the extractor could not name
@@ -166,6 +167,50 @@ end
 -- chosen by id rather than by name: the workbook truncates names and repeats
 -- them across tiers, so an id is the only stable handle on a ladder row.
 M.by_name, M.by_id, M.ambiguous = {}, {}, {}
+-- WHAT AN ITEM DOES, beside what it carries. An on-use or on-equip effect is
+-- frequently the whole reason an item is contested, and until 12 August 2026 it
+-- appeared nowhere a reader could see: not on the item card, not in a tooltip.
+-- Madness of the Betrayer printed 84 attack power and 20 hit and said nothing
+-- about the armor penetration proc that every creator discusses.
+--
+-- READ FROM data/facts/item-effects.csv, which the transform generates from the
+-- item database, so the text cannot drift from the item. The prose in
+-- item-procs.yaml is richer and is NOT used here, because it covers 29 items
+-- against this file's 134 and a card that describes some effects and not others
+-- reads as though the quiet ones have none.
+M.EFFECT = {}
+for _, row in ipairs(M.parse_csv(M.EFFECTS)) do
+  local name = (row.buff_name or ""):gsub("%s*%(%d+%)%s*$", "")
+  if name ~= "" then
+    M.EFFECT[row.item_id] = {
+      name = name,
+      stats = row.stats_granted or "",
+      duration = tonumber(row.duration_ms),
+    }
+  end
+end
+
+-- The effect as one line: what it is called, what it grants, and for how long.
+-- Nil where the item has none, so a caller adds nothing rather than an empty
+-- row.
+function M.effect_line(row)
+  local effect = row and M.EFFECT[tostring(row.item_id)]
+  if not effect then return nil end
+  local parts = {}
+  for pair in (effect.stats or ""):gmatch("[^;]+") do
+    local key, value = pair:match("^%s*([%w_]+)=(-?%d+)%s*$")
+    if key then
+      parts[#parts + 1] = value .. " " .. (M.LABEL[key] or key:gsub("_", " "))
+    end
+  end
+  local text = effect.name
+  if #parts > 0 then text = text .. ": " .. table.concat(parts, ", ") end
+  if effect.duration and effect.duration > 0 then
+    text = text .. " for " .. math.floor(effect.duration / 1000) .. " sec"
+  end
+  return text
+end
+
 for _, row in ipairs(M.parse_csv(M.ITEMS)) do
   local key = M.fold(row.name)
   local existing = M.by_name[key]
@@ -395,6 +440,7 @@ function M.ladder_inline(entry, row, held, prefix)
     add(tip_part("item-tip-meta", "Phase " .. entry.phase))
   end
   add(tip_part("item-tip-stats", M.stat_summary(row)))
+  add(tip_part("item-tip-effect", M.effect_line(row)))
   add(tip_part("item-tip-source", M.route_line(entry)))
 
   local shown = pandoc.List({})

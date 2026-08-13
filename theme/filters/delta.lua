@@ -503,7 +503,11 @@ local function table_of(names, views)
     if #view.nets > 0 then any = true end
   end
   if any then
-    local cells = { text_cell("Net", pandoc.AlignLeft, 1, "delta-net-label") }
+    -- "Net Change", not "Net". The row sums the CHANGE each column shows,
+    -- and the one word alone read as a total of the item rather than of the
+    -- difference. Renamed by the guild lead on 12 August 2026.
+    local cells = { text_cell("Net Change", pandoc.AlignLeft, 1,
+                              "delta-net-label") }
     for _, view in ipairs(views) do
       cells[#cells + 1] = text_cell("", pandoc.AlignRight, 1, "delta-raw")
       cells[#cells + 1] = lines_cell(view.nets,
