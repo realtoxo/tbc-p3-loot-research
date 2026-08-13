@@ -262,10 +262,16 @@ local function compute(spec, a, b, where)
   -- the pair being compared. It has to come from the spec: a baseline where the
   -- contributing stat happens to differ by zero fires no rule, and a per-pair
   -- test would then drop that baseline's total and leave the column blank.
+  -- A RULE CAN CONVERT WITHOUT ENTERING THE NET. A tank keeps its crit and hit
+  -- conversions, because the convertible list requires a rate for them and the
+  -- rows are worth showing, and the guild lead ruled on 12 August 2026 that the
+  -- Net sums primary stats only. `net = false` is how a rule says so.
   local converts_into = {}
   for _, rules in pairs(spec.rules or {}) do
     for _, rule in ipairs(rules) do
-      converts_into[(rule.unit or "") .. "|" .. rule.label] = true
+      if rule.net ~= false then
+        converts_into[(rule.unit or "") .. "|" .. rule.label] = true
+      end
     end
   end
 

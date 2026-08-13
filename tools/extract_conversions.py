@@ -151,6 +151,27 @@ def divide(stat, label, divisor, rate_text, source):
     }
 
 
+# A TANK NETS PRIMARY STATS AND NOTHING ELSE, ruled by the guild lead on 12
+# August 2026.
+#
+# WHAT IT REPLACES. Every tank converted the same six stats as a damage spec:
+# strength, agility, melee crit, melee hit, spell crit and spell hit. So the Net
+# summarising a tank upgrade was made of offense, while defense, dodge, parry,
+# block, armor and stamina printed as raw rows and never reached it. The figure
+# that summarised the upgrade left out the stats the role is played on.
+#
+# WHY PRIMARY STATS RATHER THAN AVOIDANCE. Avoidance is not one number. Dodge
+# and parry sit on one attack table, block is mitigation rather than avoidance
+# because a blocked hit still lands, armor is a separate multiplicative layer
+# and stamina is effective health. Summing them would state a quantity no
+# source in this project defines. A primary stat needs no model: it is what the
+# item carries, and the divisors are recorded at
+# data/facts/crit.yaml::defensive_conversions for whoever prices them later.
+TANK_SPECS = frozenset({"Protection Warrior", "Protection Paladin", "Feral Bear"})
+
+PRIMARY_STATS = ("strength", "agility", "stamina", "intellect")
+
+
 def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit: dict) -> dict:
     """Every conversion one spec has, keyed by the item stat it consumes."""
     rules: dict[str, list[dict]] = {}
@@ -222,6 +243,27 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit
             cite(path, keys),
         )]
 
+    if spec in TANK_SPECS:
+        # THE OFFENSE RULES STAY, AND LEAVE THE NET. They stay because
+        # `convertible` in this file means "every spec must have a rate for this
+        # stat or the build fails", so removing them stopped the build on the
+        # first tank item carrying crit. They leave the Net because the guild
+        # lead ruled on 12 August 2026 that a tank nets primary stats. A tank
+        # card therefore still SHOWS what its crit and hit convert to, and the
+        # Net beneath sums primaries only.
+        for stat_rules in rules.values():
+            for rule in stat_rules:
+                rule["net"] = False
+        # Identity, so the Net reads in the stat's own name. A tank card states
+        # what the item carries rather than converting it into a currency this
+        # project has not defined for the role.
+        for stat in PRIMARY_STATS:
+            rule = multiply(stat, stat, 1,
+                            f"{stat} counted as itself for a tank",
+                            "guild lead ruling, 12 August 2026: a tank nets "
+                            "primary stats")
+            rule["net"] = True
+            rules.setdefault(stat, []).append(rule)
     return rules
 
 
@@ -239,7 +281,8 @@ def lua_rule(rule: dict, indent: str) -> str:
         f'unit = {lua_string(rule["unit"])}, '
         f'op = {lua_string(rule["op"])}, by = {number(rule["by"])},\n'
         f'{indent}  rate = {lua_string(rule["rate"])},\n'
-        f'{indent}  source = {lua_string(rule["source"])} }},'
+        + (f'{indent}  net = false,\n' if rule.get("net") is False else "")
+        + f'{indent}  source = {lua_string(rule["source"])} }},'
     )
 
 
@@ -262,7 +305,14 @@ def render(specs: dict[str, dict], crit: dict, hit: dict) -> str:
     out = [HEADER, "return {"]
     out.append("  convertible = { " + ", ".join(
         lua_string(s) for s in
-        ["strength", "agility", "melee_hit", "melee_crit", "spell_hit", "spell_crit"]
+        # STAMINA AND INTELLECT ARE NOT LISTED HERE, and a tank still nets
+        # them. This list means "every spec must have a rate for this stat, or
+        # the build fails". Adding the two primaries to it broke every non-tank,
+        # because a Feral Cat has no intellect rate and needs none. A spec's own
+        # rules are read BEFORE this gate, so the tank identity rules apply and
+        # every other spec falls through to the raw row it had before.
+        ["strength", "agility", "melee_hit", "melee_crit", "spell_hit",
+         "spell_crit"]
     ) + " },")
     # Rating to percent, keyed by the stat column rather than by spec. TBC keeps
     # hit and spell hit as SEPARATE item stats, and likewise crit, so the
