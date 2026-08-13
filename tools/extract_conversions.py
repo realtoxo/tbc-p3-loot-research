@@ -243,6 +243,33 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit
             cite(path, keys),
         )]
 
+    # STATS THAT NET AS THEMSELVES, ruled by the guild lead on 12 August 2026.
+    # A conversion is not wanted for these, but the Net has to carry them.
+    #
+    # WHAT WAS WRONG. Haste, armor penetration, expertise, resilience and spell
+    # penetration printed their raw difference as a row and then vanished from
+    # the Net, because the Net sums only what a rule converts. So a card could
+    # show plus 175 armor penetration in the table and summarise the item
+    # without it. Ten Phase 3 drops carry melee haste, thirteen carry spell
+    # haste, eight carry armor penetration and eight carry expertise.
+    #
+    # AN IDENTITY RULE IS THE WHOLE FIX. It converts the stat into itself, so
+    # the figure reaching the Net is the rating the item carries, in the same
+    # words the row above it uses. This project holds a real haste conversion,
+    # 15.77 rating per percent in haste.yaml, and deliberately does NOT use it
+    # here: the ruling is that these are captured as themselves.
+    for stat, label in (("melee_haste", "haste rating"),
+                        ("spell_haste", "spell haste rating"),
+                        ("armor_pen", "armor penetration"),
+                        ("expertise", "expertise rating"),
+                        ("resilience", "resilience"),
+                        ("spell_pen", "spell penetration")):
+        rules.setdefault(stat, []).append(multiply(
+            stat, label, 1, f"{label} counted as itself",
+            "guild lead ruling, 12 August 2026: captured as themselves rather "
+            "than converted",
+        ))
+
     if spec in TANK_SPECS:
         # THE OFFENSE RULES STAY, AND LEAVE THE NET. They stay because
         # `convertible` in this file means "every spec must have a rate for this
