@@ -1,0 +1,492 @@
+# The talent build each spec is modelled on, and what it supplies.
+#
+# WHY THIS FILE EXISTS. Every hit figure this project publishes is a cap, less a
+# talent, less an assumed buff. The talent is the largest single term, and until
+# 9 August 2026 it was asserted per spec in hit.yaml with a note but, for most
+# specs, no outside source. The guild lead asked for the assumed builds to be
+# checked so we were not wildly off. Three audits ran in parallel, split by
+# role, and found twenty of twenty-one hit claims correct and two wrong.
+#
+# WHAT LIVES HERE AND WHAT DOES NOT. This file records the BUILD: its point
+# spread, its source, and every talent in it that supplies hit, expertise or
+# defense skill. The arithmetic that turns those into a target lives in
+# hit.yaml, and the talent blocks there are what the generators read. Nothing
+# here is read by a tool; it is the evidence behind those blocks.
+#
+# A ROSTER FACT BEATS A PUBLISHED BUILD. Where the guild lead states what this
+# raid actually runs, that governs, and the published build is recorded beside
+# it as context rather than as a correction.
+
+meta:
+  audited: 2026-08-09
+  patch: 2.4.3
+  phase: Phase 3, Mount Hyjal and Black Temple, Anniversary realms
+  method: >-
+    Three parallel audits, split across physical melee, casters, and the hunters
+    with the paladin tank and four healers. Each was asked for the point spread
+    of two or more published raid builds, whether the talent hit.yaml credits is
+    in them, and any talent granting hit or expertise that we had missed. Every
+    claim carries its source and the date observed.
+  result: >-
+    Nineteen of the twenty-one hit claims CONFIRMED. THREE wrong, all three
+    under-crediting, and one of those moved a published state.
+    This line read "twenty of twenty-one" and "two wrong" until 10 August 2026.
+    It was overstating what had been checked: the Enhancement Shaman was the
+    one spec whose point spread nobody recorded, so the question was never
+    actually asked for it, and the answer turned out to be the same as the
+    Elemental Shaman's. Four
+    expertise findings, none of which touches a hit figure.
+  second_source: >-
+    A Wowhead cross-check ran on 10 August 2026 across all twenty-one specs, at
+    the guild lead's request, because the first audits leaned on Warcraft Tavern
+    and Icy Veins and a single-source confirmation is weaker than two
+    independent ones. EVERY SPEC AGREES, both the eighteen that were confirmed
+    first time and the two that were corrected. Nothing moved on the second
+    pass, one open question closed, and one correction gained a published source
+    where it had rested on a roster fact. See wowhead_cross_check below.
+
+corrections_made:
+
+  elemental_shaman:
+    was: Elemental Precision alone, 6 percent, target 89 rating
+    now: Elemental Precision 6 percent plus Nature's Guidance 3 percent, target 51
+    why: >-
+      Nature's Guidance sits at Restoration tier 3, grants 3 percent melee AND
+      spell hit in TBC, and the standard 41/0/20 build spends part of its twenty
+      Restoration points on it. It was missed entirely.
+    moved_a_state: >-
+      YES, and it is the largest correction of the session. The capture turns
+      from short to full at ALL THREE anchors, on 52, 72 and 54 rating against
+      51. Every earlier reading of this spec as short on items was wrong by one
+      uncredited talent.
+    corroborated_by_arithmetic: >-
+      The card now reads "gear needs 4 percent", and Warcraft Tavern works the
+      same sum independently as Elemental Precision plus Nature's Guidance plus
+      Totem of Wrath equals 12, leaving 4 percent from gear. Two routes, one
+      answer.
+    source: >-
+      Warcraft Tavern, Elemental Shaman Talents and Builds, and Stat Priority,
+      TBC Classic 2.4.3, observed 9 August 2026.
+
+  balance_druid:
+    was: no group buff credited, target 152 rating
+    now: Totem of Wrath at 3 percent, target 114
+    why: >-
+      Not a talent error and not a source error. hit.yaml carried a note saying
+      the Balance Druid does not sit with a shaman who drops Totem of Wrath, and
+      that note was written before the raid groups were. roster.yaml g3 holds
+      three warlocks, the Elemental Shaman and this spec, so it is in the
+      totem's party.
+    moved_a_state: >-
+      No. The capture is short at all three anchors before and after, on 107, 95
+      and 106 rating.
+
+  fury_warrior:
+    was: Precision credited at 3 percent, target 95 rating
+    now: not credited, target 142
+    why: >-
+      Stated by the guild lead, who supplied the build:
+      https://sixtyupgrades.com/tbc/talents/warrior/1BDHKMNi4PRsiT0AEIHKbbGbbM
+      Neither warrior takes Precision. This is a fact about THIS raid, and for a
+      roster model it governs.
+    what_the_published_builds_say: >-
+      They disagree with each other, and WOWHEAD AGREES WITH THE GUILD LEAD.
+      Warcraft Tavern gives a standard 17/44/0 that DOES take Precision and a
+      Death Wish hybrid at 21/40/0 that drops it. Wowhead's only recommended
+      raid Fury build is the 21/40/0 Death Wish one, decoded from its own
+      calculator string as Precision 0/3, Flurry 5/5, Weapon Mastery 2/2, and it
+      does not offer a Precision variant at all
+      (wowhead.com/tbc/guide/classes/warrior/dps-talent-builds-pve, observed
+      10 August 2026).
+      So this correction no longer rests on the roster fact alone. It began as
+      one and is now corroborated by the source the guild reads.
+    moved_a_state: >-
+      No. Fury stays full at all three anchors, on 176, 208 and 187 rating
+      against 142. The margin narrows from 5.1, 7.2 and 5.8 percent to 2.2, 4.2
+      and 2.9 percent.
+    provenance_defect_it_exposed: >-
+      The block credited 3 percent with no note, no citation and nothing behind
+      it, while the arms_warrior block beside it carried twelve lines recording
+      how its claim had been challenged and upheld. It was asserted once and
+      never questioned, which is exactly the shape of defect this project's
+      provenance rule exists to catch.
+
+  enhancement_shaman:
+    was: Dual Wield Specialization alone, 6 percent, target 48 rating
+    now: plus Nature's Guidance 3 percent, target 0
+    why: >-
+      The default raid build is 3/44/14 and its fourteen Restoration points go
+      Tidal Focus 5, Totemic Focus 5, Nature's Guidance 3 and Totemic Mastery 1.
+      Talent alone covers the 9 percent cap.
+    found_by: >-
+      An adversarial review on 10 August 2026, which noticed that Enhancement
+      spends Restoration points deep enough to reach a tier-3 talent and was the
+      ONE spec whose point spread the Wowhead cross-check had not recorded. The
+      question had never been asked for it.
+    sources: >-
+      Wowhead, Warcraft Tavern and Icy Veins, all observed 10 August 2026, and
+      all three decoded from their own embedded talent-calculator strings rather
+      than read off prose. Warcraft Tavern names 3/44/14 the "Default endgame
+      PvE build for totem support and Hit" and writes that "an extra 3% Hit will
+      let you reach the soft Hit cap just through your talents".
+    moved_a_state: >-
+      No, and no card moves either. Improved Faerie Fire already supplied the 48
+      rating this spec needed, so the card already printed a zero requirement.
+      What changes is that the zero is now correct for the right reason.
+    droppable: >-
+      Yes, and both sources say so. A 17/44/0 variant spends no Restoration
+      points and is framed as the choice for when hit is already covered by
+      gear. The same caveat the Elemental entry carries.
+
+# The claim that had the most riding on it, and it held.
+arms_warrior_precision_closed:
+  the_open_question: >-
+    hit.yaml said in its own words that whether any published Arms build reaches
+    Precision was NOT VERIFIED, so nothing was credited. If a standard build did
+    reach it, the target fell from 142 rating to 95 and every Arms anchor turned
+    from short to full.
+  answer: >-
+    It does not. Both published Arms raiding builds, the standard and the
+    dual-wield variant, are 33/28/0, and both stop the Fury dip at Flurry and
+    Improved Slam. Twenty-eight points is short of the thirty Precision needs at
+    rowIdx 6. The conservative reading was also the correct one and the target
+    stays 142.
+  sources: >-
+    Warcraft Tavern TBC Arms talents guide, which gives both builds as 33/28/0;
+    nottoolateforclassic.com Arms guide, 33/28/0; tbctalentcalculator.net. All
+    2.4.3, all observed 9 August 2026.
+
+# Confirmed as authored, with the build that confirms each.
+confirmed:
+  combat_rogue: Precision 5/5 in the standard 19/42/0 Combat build, 5 percent
+  arms_warrior: Precision out of reach at 33/28/0, 0 percent
+  protection_warrior: >-
+    Precision out of reach. Four published builds run 8/5/48, 17/3/41, 8/10/43
+    and 14/2/45, and the deepest Fury investment anywhere is 10 points
+  retribution_paladin: Precision 3/3 in the Protection dip of the 5/11/45 build
+  enhancement_shaman: >-
+    PARTLY WRONG, CORRECTED 10 August 2026. Dual Wield Specialization 3/3 at 6
+    percent is right, and no shaman expertise talent exists in TBC. What this
+    line missed is Nature's Guidance 3/3, the same talent missed on the
+    Elemental Shaman, for the same reason. See corrections_made below.
+  feral_cat: no Feral talent grants hit or expertise in TBC. Primal Precision is Wrath
+  feral_bear: same trees, same absence
+  survival_hunter: Surefooted 3/3 in the standard 0/20/41 build, 3 percent
+  beast_mastery_hunter: >-
+    Surefooted out of reach. The standard build is 41/20/0 with zero Survival
+    points. One source notes an early-gearing variant that dips Survival for it
+    when hit gear is scarce, which would move the target from 142 to 95; that is
+    a fact about a player's build rather than a modelling error
+  protection_paladin: >-
+    Precision confirmed on all four parts: Protection tree, tier 2, 3 ranks, and
+    granting SPELL hit as well as melee in 2.4.3. Patch 2.3.0 made that change,
+    in the official notes, and 3.0.2 reverted it. Anticipation 5/5 confirmed
+  arcane_mage: Arcane Focus 5/5 in the standard 40/0/21 build, 10 percent
+  shadow_priest: Shadow Focus 5/5 in the standard 14/0/47 build, 10 percent
+  balance_druid: Balance of Power 2/2, 4 percent
+  affliction_warlock: >-
+    Suppression covers Affliction spells and not the filler, so crediting zero
+    is right. Whether the flex point goes to Suppression or Soul Siphon is
+    unverified and carries no rating either way
+  destruction_warlock: >-
+    No hit talent at all, and the guide's own Affliction-tree listing for the
+    0/21/40 build reads "None"
+  healers: >-
+    Holy Paladin, Restoration Shaman, Restoration Druid and the Priest healer
+    all correctly carry no hit cap. Healing spells cannot miss and are not
+    affected by spell hit chance, and no healer guide consulted lists a hit
+    target
+
+# Found by the audits. NONE of these touches a hit figure.
+#
+# THE CONVENTION QUESTION IS ANSWERED, 9 August 2026. `supplied_expertise` on a
+# spec counts the greedy workbook GEAR set and nothing else; it shares its
+# lineage with `supplied_at_p3_entry`, and the Retribution note in hit.yaml
+# describes it in those exact terms. So talent expertise was never inside it,
+# and the three figures below are additions rather than corrections.
+# They are recorded as a SEPARATE `talent_expertise` field rather than folded
+# in, because folding them in would put two different measurements behind one
+# number, and a reader asking why a figure changed would get "the gear moved"
+# and "we credited a talent" at once. Nothing in the toolchain consumes either
+# field today, so this is a record, not a calculation.
+expertise_from_talents_not_yet_counted:
+  protection_warrior: Defiance 3/3 supplies 6 expertise, and hit.yaml records 0
+  combat_rogue: >-
+    Weapon Expertise 2/2 supplies 10 expertise. hit.yaml records 35, and whether
+    those 10 are inside that figure is not established
+  protection_paladin: >-
+    Combat Expertise supplies 5 expertise at 5 ranks in 2.4.3, taken mostly for
+    its 10 percent stamina. hit.yaml records 0. It was cut to 3 ranks in 3.0.2,
+    so do not use the Wrath figure
+  fury_warrior: >-
+    Weapon Mastery 2/2 reduces the chance to be dodged by 2 percent, which is
+    the equivalent of 8 expertise skill against dodge only
+  arms_warrior: >-
+    SETTLED YES, 10 August 2026. Both Wowhead Arms variants carry Weapon Mastery
+    2/2 inside the 28-point Fury dip, decoded from the calculator strings rather
+    than read off the prose, and the guide says outright that "Weapon Mastery
+    and Flurry will also greatly boost your damage". It reduces the chance to be
+    dodged by 2 percent, which is not expertise, so it is recorded here and not
+    as talent_expertise on the spec
+
+# A SECOND SOURCE, ASKED FOR BY THE GUILD LEAD ON 10 AUGUST 2026. The audits
+# above leaned on Warcraft Tavern and Icy Veins. Wowhead is what the guild
+# reads, and a single-source confirmation is weaker than two independent ones,
+# so every spec was checked again against Wowhead specifically.
+#
+# HOW WOWHEAD WAS READ, because it matters. A plain fetch of a Wowhead guide
+# returns only navigation chrome, so the guide bodies were read through a live
+# browser and the talent values were taken from Wowhead's own spell pages,
+# which do render server-side. Where a build tree renders ranks without talent
+# names, the reading is anchored on the guide's prose and is marked as such
+# rather than presented as hover-verified.
+wowhead_cross_check:
+
+  hunters_and_the_paladin_tank:
+    checked: 2026-08-10
+    beast_mastery_hunter:
+      verdict: AGREES
+      detail: >-
+        Wowhead gives 41/20/0 "with no deviation" and shows the Survival tree at
+        0 of 61. The only Survival dip it mentions anywhere is a PvP note, and
+        it does not reach Surefooted. So the variant flagged in the first audit
+        is not a Wowhead PvE recommendation, and the target stays 142 rating.
+        This was the highest-value open question in the set.
+      source: wowhead.com/tbc/guide/classes/hunter/dps-talent-builds-pve
+    survival_hunter:
+      verdict: AGREES
+      detail: >-
+        Three PvE builds, 7/20/34, 0/20/41 and 5/20/36. Surefooted is 3/3 in
+        every one, called "critical in all survival builds". The build we model
+        is among the three.
+      source: wowhead.com/tbc/guide/classes/hunter/dps-talent-builds-pve
+    protection_paladin:
+      verdict: AGREES on every talent, DISAGREES on the point spread
+      precision: >-
+        CONFIRMED FROM THE DATABASE, not from prose. Wowhead spell 20193 at rank
+        3 carries both Mod Melee and Ranged Hit +3 percent AND Mod Spell Hit +3
+        percent. So crediting this talent against both of this tank's threat
+        floors is right, and the guide says the same in words: it "lowers the
+        hit cap on both melee and spells to 6 percent and 13 percent".
+      anticipation: >-
+        CONFIRMED. Wowhead spell 20100 gives Mod Skill (Defense) Value 20, and
+        the guide calls it usually an auto-include. This is what puts crit
+        immunity at 284 defense rating from gear rather than 332.
+      combat_expertise: >-
+        CONFIRMED at the 2.4.3 values. Wowhead spell 31862 gives 5 expertise and
+        10 percent stamina. That is the figure now recorded as talent_expertise.
+      point_spread: >-
+        Wowhead gives three builds, 0/43/18, 0/40/21 and 0/31/30, and none is
+        the 0/49/12 that a briefing had assumed. NOTHING IN THE REPOSITORY
+        CARRIED THAT SPREAD, so no file was wrong; it was an error in the
+        question rather than in the answer. Every talent we credit appears in
+        Wowhead builds at the rank we credit.
+      reading_caveat: >-
+        The build trees render ranks without talent names, so the rank
+        assignments are anchored on the guide's own variant prose rather than
+        hovered. The three talent VALUES above are database-confirmed and carry
+        no such caveat.
+    figures_that_moved: none
+    undetermined:
+      - >-
+        Wowhead's hunter guide says nothing about expertise or about ranged
+        attacks being dodged, so it neither confirms nor contradicts the
+        position crit.yaml sources elsewhere. No figure depends on it.
+
+  physical_melee:
+    checked: 2026-08-10
+    verdict: All eight AGREE. No hit figure moves.
+    how_read: >-
+      A direct fetch of a Wowhead guide is blocked and an extraction returns
+      only chrome, so the pages were read in a live browser and the builds were
+      DECODED FROM THE TALENT CALCULATOR STRINGS embedded in each guide rather
+      than inferred from prose. That is stronger evidence than the first audit
+      had.
+    arms_warrior: >-
+      CLOSED, AND IN OUR FAVOUR. Both variants, the standard and the dual-wield
+      one, are 33/28/0, and both decoded Fury strings end before tier 7 with
+      Precision at 0 of 3. The target stays 142 rating. This was the single
+      highest-value open question in the project.
+    fury_warrior: >-
+      Wowhead's only recommended raid Fury build is 21/40/0 Death Wish, with
+      Precision 0/3. It offers no Precision variant. This corroborates the guild
+      lead's build from a published source.
+    combat_rogue: >-
+      Precision 5/5 and Weapon Expertise 2/2 in all three Combat variants.
+      A label discrepancy worth knowing: the heading reads "Combat Swords
+      20/41/0" while the guide's own embedded calculator string sums to 19/42/0,
+      which is what we model. Precision is 5/5 either way, so no figure moves.
+    protection_warrior: >-
+      Builds are 12/5/43, 10/10/41 and 17/3/41. The deepest Fury dip anywhere is
+      10 points, so Precision at 30 is unreachable. Defiance 3/3 is in the
+      12/5/43 string.
+    retribution_paladin: Precision 3/3 in the 5/11/45 build and in the No Kings variant
+    enhancement_shaman: Dual Wield Specialization 3/3 in both published builds
+    feral_cat: 0/44/17 standard and 0/47/14 alternate, and no hit or expertise talent exists in the 2.4.3 trees
+    feral_bear: >-
+      Same builds on the tank page. The calculator strings did not render there,
+      which is recorded rather than glossed; the conclusion does not depend on
+      them, because no hit talent exists for this spec to take.
+    noted_but_not_hit_relevant: >-
+      Wowhead's Arms Fury dip differs internally from Warcraft Tavern's, taking
+      Improved Demoralizing Shout 5 and Flurry 3/5 where Warcraft Tavern takes
+      Flurry 5/5. Same 28-point total, same conclusion that Precision is absent.
+      Recorded so nobody mistakes the disagreement for a hit-relevant one.
+
+  casters_and_healers:
+    checked: 2026-08-10
+    verdict: All ten AGREE. No hit figure moves.
+    how_read: >-
+      Wowhead guide bodies render client-side and both curl and an extraction
+      returned only chrome, so every page was read in a real browser. Point
+      spreads were decoded from the talent calculator strings embedded in each
+      guide, and the Affliction string was opened in Wowhead's own calculator so
+      names and ranks could be read from the page rather than inferred.
+    elemental_shaman: >-
+      THE CORRECTION HOLDS, AND ON THREE INDEPENDENT WOWHEAD ROUTES. This was
+      the largest change this project has made, and until now it rested on one
+      source.
+      First, the build: Wowhead's single Elemental PvE build is 41/0/20 and its
+      Restoration string decodes as Tidal Focus 5, Improved Reincarnation 1,
+      Totemic Focus 5, NATURE'S GUIDANCE 3/3, Totemic Mastery 1 and Tidal
+      Mastery 5, which sums to the twenty points shown.
+      Second, the tooltip: Wowhead spell 16198 at rank 3 reads "Increases your
+      chance to hit with melee attacks and spells by 3%", so it grants SPELL hit
+      and is not melee-only.
+      Third, the arithmetic: Wowhead's own stat page states "9% Spell Hit from
+      talents" and gives the cap as "16% against bosses, reduced to 4% for
+      Elemental in most scenarios". That is 16 less 6 less 3 less 3, the same
+      sum our card prints and the same one Warcraft Tavern works. Three routes,
+      one answer.
+    arcane_mage: Two 40/0/21 variants, both with Arcane Focus 5/5
+    shadow_priest: Two 14/0/47 PvE builds, Default and Max Output, both with Shadow Focus 5/5
+    balance_druid: >-
+      One PvE build at 48/0/13 with Balance of Power 2/2, which the prose calls
+      a must-have that reduces the hit rating needed. We had recorded the talent
+      but no spread; 48/0/13 is the spread.
+    affliction_warlock: >-
+      Suppression 5/5 is in the raid build, and Wowhead's stat page states the
+      reasoning we had inferred, in its own words: Affliction "gains 10% hit for
+      their DoTs thanks to Suppression, but will still want hit for Shadow Bolt,
+      their main filler". So taking it and crediting nothing from it is right.
+      Wowhead also frames the geared variant as swapping Suppression out once
+      the hit rating is reached, which is consistent with the same reading.
+    destruction_warlock: >-
+      0/21/40 with the Affliction tree empty in the string, so no Suppression,
+      and no hit talent exists in Demonology or Destruction
+    healers: >-
+      All four confirmed to have no hit target at all. Wowhead's stat pages list
+      Healing Power, crit and mana per five and never mention hit, and the
+      Restoration Druid page says outright that Balance of Power does not impact
+      healing output.
+    variants_never_differ_on_the_hit_talent: >-
+      Where a spec has more than one Wowhead build, the hit talent is the same
+      in each. Both Arcane 40/0/21 variants and both Shadow PvE builds carry
+      theirs at full rank.
+    undetermined:
+      - >-
+        Cosmetic only. Wowhead's Affliction section heading reads 41/0/20 while
+        its embedded build renders 40/0/21, the Ruin variant without Unstable
+        Affliction. It touches neither Suppression nor any hit figure.
+
+# ---------------------------------------------------------------------------
+# WOWSIMS TALENT STRINGS, for the sim profiles. Extracted 10 August 2026 from
+# the presets the vendored simulator ships, at ui/<class>/<spec>/presets.ts.
+#
+# WHY THESE AND NOT OUR OWN ENCODING. A wowsims profile carries talents as an
+# encoded string, so a profile is importable and shareable only if the string is
+# the one the tool itself uses. Taking the simulator's own preset makes the
+# profile idiomatic by construction rather than by our transcription.
+#
+# EVERY ONE DECODES TO THE BUILD WE AUDITED. The point spread is the digit sum
+# per tree, and all twelve match what the Warcraft Tavern, Icy Veins and Wowhead
+# passes recorded. That is a fourth independent source agreeing, and it agrees
+# on the two findings that mattered most: the Fury string is 21/40/0, the Death
+# Wish build that does NOT take Precision, which is what the guild lead said
+# their warriors run; and the Enhancement Restoration tree decodes as Tidal
+# Focus 5, Totemic Focus 5, NATURE'S GUIDANCE 3 and Totemic Mastery 1, which is
+# the talent this project credited to that spec the same day.
+#
+# TWO SPECS ARE NOT HERE. The Feral Cat preset ships an EMPTY talentsString in
+# this build of the simulator, and the Arcane Mage preset entries carry none
+# either. Both must be sourced from Wowhead's calculator and are marked below.
+wowsims_talent_strings:
+  extracted: 2026-08-10
+  from: the vendored wowsims-tbc presets, ui/<class>/<spec>/presets.ts
+  how_to_check: >-
+    Split the string on "-" and sum the digits of each tree. That is the point
+    spread, and it must equal the build recorded above for that spec.
+  strings:
+    affliction_warlock:
+      string: "05022221112351055003--50500051220001"
+      preset: Affliction
+      decoded: 40/0/21
+    arms_warrior:
+      string: "32005020352010500221-0550000500521203"
+      preset: Arms
+      decoded: 33/28/0
+    balance_druid:
+      string: "510022312503135231351--520033"
+      preset: Standard
+      decoded: 48/0/13
+    beast_mastery_hunter:
+      string: "522002005150122431051-0505201205"
+      preset: BM
+      decoded: 41/20/0
+    combat_rogue:
+      string: "0053201252-023305200005015002321151"
+      preset: Combat Swords
+      decoded: 20/41/0
+    destruction_warlock:
+      string: "-20500301332101-50500051220051053105"
+      preset: Destruction
+      decoded: 0/21/40
+    elemental_shaman:
+      string: "55003105100213351051--05105301005"
+      preset: Default
+      decoded: 41/0/20
+    enhancement_shaman:
+      string: "03-500502210501133531151-50005301"
+      preset: Sub-Restoration IWT
+      decoded: 3/44/14
+    fury_warrior:
+      string: "3400502130201-05050005505012050115"
+      preset: Fury
+      decoded: 21/40/0
+    retribution_paladin:
+      string: "5-053201-0523005120033125331051"
+      preset: Default
+      decoded: 5/11/45
+    shadow_priest:
+      string: "500230013--503250510240103051451"
+      preset: Shadow
+      decoded: 14/0/47
+    survival_hunter:
+      string: "502-0550201205-333200022003223005103"
+      preset: SV
+      decoded: 7/20/34
+    feral_cat:
+      string: "-503032132322105301251-05503301"
+      preset: StandardTalents, from the live wowsims TBC repository
+      decoded: 0/44/17
+      note: >-
+        The VENDORED copy ships an empty talentsString for this spec, so it was
+        taken from the same file upstream, ui/feral_druid/presets.ts, observed
+        10 August 2026. That file states the encoding in its own words: it is
+        the Wowhead calculator format, made on the calculator and copied out of
+        the URL, which is exactly the encoding the simulator imports.
+        A MonocatTalents variant exists at the same 0/44/17 spread; the standard
+        one is recorded because it is the build this project's audit named.
+    arcane_mage:
+      string: "2500052300030150330125--053500031003001"
+      preset: ARCANE_TALENTS
+      decoded: 40/0/21
+      note: >-
+        THE EARLIER CLAIM HERE WAS WRONG AND IS CORRECTED. This entry said the
+        mage presets carry no usable string. They do: ARCANE_TALENTS is in the
+        vendored file, and only the unnamed default beneath it is empty. The
+        extraction that reported it missing matched one declaration form and
+        this preset uses another.
+        Arcane Focus is present at 5 of 5, which matters because it is the ten
+        percent this project credits: the Arcane tree opens Arcane Subtlety then
+        Arcane Focus, and the string begins 2 then 5.

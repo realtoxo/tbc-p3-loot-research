@@ -1,0 +1,469 @@
+# Trigger data for effect-bearing items. Hand-authored.
+#
+# HOLDS   How often an item effect fires: proc chance, procs per minute,
+#         internal cooldown, the trigger mask, and which effects are on-use
+#         rather than chance-based. This is the half of every trinket
+#         comparison that item-effects.csv does not carry; that table records
+#         what an effect grants and for how long, and its PROVENANCE.md states
+#         that the trigger lives in the simulator source, which is where these
+#         figures were read.
+# NOT HERE  No ranking, no uptime estimate, no expected-value figure. Turning
+#         a rate and a duration into a value is a judgment on a fight profile.
+# SCOPE   Every row of item-effects.csv with tier T6, fourteen rows across
+#         thirteen items, plus every trinket worn in any capture under
+#         sim-profiles/hit-capture/, seventeen distinct trinkets. One item,
+#         Shadowmoon Insignia, is in both sets, so there are twenty-nine
+#         entries. A trinket nobody wears is out of scope on purpose.
+#
+# BEFORE YOU USE A FIGURE
+#   A figure marked unpublished is unpublished, not zero and not one. The
+#   2.4.3 tooltip endpoint prints a proc chance and cooldown for some items
+#   and stays silent for others, and the simulator models the silent ones
+#   with a procs-per-minute rate instead of a chance. A PPM figure and a
+#   percent chance are different units: PPM scales with weapon speed and a
+#   percent does not. Where the simulator models no internal cooldown and the
+#   tooltip prints none, icd_seconds reads none_modeled, which is a statement
+#   about the sources and not a claim that the game has no cooldown.
+
+meta:
+  captured: 2026-08-09
+  patch: 2.4.3
+  edition: TBC Classic Anniversary Edition
+  phase: 3
+  scope_from:
+    - data/facts/item-effects.csv, rows with tier T6
+    - data/facts/sim-profiles/hit-capture/*.yaml, trinket slots
+  feeds: trinket and weapon-effect comparisons in the compendium
+  excludes: >-
+    What each effect grants and for how long, which item-effects.csv already
+    carries and is not restated here. Trinkets no captured set wears.
+    Non-T6 effect items outside the worn-trinket list.
+
+sources:
+  primary:
+    - key: wowsims
+      name: WoWSims TBC simulator source
+      repo: github.com/wowsims/tbc
+      commit: 3301fca59306a747e521274c36e073e69acc7b77
+      committed: 2026-08-06
+      observed: 2026-08-09
+      files:
+        - sim/common/melee_trinkets.go
+        - sim/common/caster_trinkets.go
+        - sim/common/melee_items.go
+        - sim/common/lightning_capacitor.go
+        - sim/druid/items.go
+        - sim/hunter/items.go
+        - sim/paladin/items.go
+        - sim/rogue/items.go
+        - sim/mage/mana_gems.go
+        - sim/shaman/electric_spell.go
+      note: >-
+        Fetched from raw.githubusercontent.com at master on the observed date.
+        Where an entry cites wowsims, the exact file is named on the entry.
+        The simulator encodes each trigger as code: a percent chance appears
+        as a procChance constant, a rate as a NewPPMManager argument, an
+        internal cooldown as an icd Duration, and the trigger mask as a
+        ProcMask test. Whether a PPM value in this source derives from
+        measurement or from project convention is not stated in the code; see
+        open_questions.ppm_provenance.
+    - key: tooltip
+      name: Wowhead TBC Classic tooltip endpoint
+      form: https://nether.wowhead.com/tbc/tooltip/item/<ID>
+      observed: 2026-08-09
+      note: >-
+        Server-rendered against the 2.4.3 data environment. For some items the
+        tooltip itself prints a proc chance and cooldown in parentheses; where
+        it does, the entry quotes it and the figure counts as published by the
+        game data. Where it does not, the tooltip still fixes the trigger
+        wording, the granted effect and the on-use cooldown.
+
+# Field vocabulary, applied to every entry:
+#   kind                 proc | on_use | on_use_proc_window | ability_triggered
+#                        | passive
+#   trigger              What fires it, in the source's own terms.
+#   proc_chance_percent  Percent chance per trigger, or unpublished.
+#   ppm                  Procs per minute, or unpublished. PPM and chance are
+#                        alternatives; an entry carries at most one number.
+#   icd_seconds          Internal cooldown between procs, none_modeled, or
+#                        unpublished.
+#   duration_seconds     How long the granted effect lasts. Restated from
+#                        item-effects.csv only where needed to read the entry.
+#   cooldown_seconds     On-use items only. The use cooldown.
+#   off_hand             Whether an off-hand swing can trigger it, where the
+#                        source answers it. Melee triggers only.
+#   periodic             Whether periodic damage can trigger it, where the
+#                        source answers it. Spell triggers only.
+#   source               Which source each figure came from, per figure.
+
+items:
+
+  # ---- T6 effect rows, item-effects.csv ----------------------------------
+
+  - item_id: 30892
+    name: "Beast-tamer's Shoulders"
+    effect: "Pet damage increased 3 percent, pet crit increased 2 percent"
+    kind: passive
+    trigger: always on while equipped
+    source: "wowsims sim/hunter/items.go; tooltip item 30892"
+
+  - item_id: 32235
+    name: Cursed Vision of Sargeras
+    effect: "Sense Demons tracking on use"
+    kind: on_use
+    cooldown_seconds: 600
+    note: >-
+      Tracking only. The effect grants no combat stat, so no trigger figure
+      exists to collect. The item's combat value is its stat line in
+      items.csv.
+    source: "tooltip item 32235"
+
+  - item_id: 32257
+    name: Idol of the White Stag
+    effect: "94 attack power for 20 sec after Mangle"
+    kind: ability_triggered
+    trigger: every cast of Mangle
+    proc_chance_percent: 100
+    icd_seconds: none_modeled
+    duration_seconds: 20
+    note: >-
+      Deterministic. Uptime is set by how often Mangle is pressed, not by a
+      roll, so a 20 second buff against a 6 second Mangle cooldown is
+      refreshed before it falls.
+    source: "wowsims sim/druid/items.go; tooltip item 32257"
+
+  - item_id: 32262
+    name: Syphon of the Nathrezim
+    effect: "Siphon Essence for 6 sec; while it holds, every landed melee attack casts a 20 shadow damage drain"
+    kind: proc
+    trigger: landed melee hit with the weapon's own hand
+    proc_chance_percent: unpublished
+    ppm: 1.0
+    icd_seconds: none_modeled
+    duration_seconds: 6
+    off_hand: >-
+      The simulator restricts the trigger to the hand wielding the weapon,
+      via GetMeleeProcMaskForHands, so an off-hand copy procs from off-hand
+      swings and a main-hand copy does not.
+    note: >-
+      The tooltip reads chance on hit and prints no rate. The simulator
+      models the drain as flat 20 shadow damage per landed melee attack
+      during the window and models no self-heal; see
+      open_questions.syphon_self_heal.
+    source: "wowsims sim/common/melee_items.go; tooltip item 32262"
+
+  - item_id: 32330
+    name: Totem of Ancestral Guidance
+    effect: "Lightning Bolt and Chain Lightning damage increased by up to 85"
+    kind: passive
+    trigger: always on while equipped
+    source: "wowsims sim/shaman/electric_spell.go; tooltip item 32330"
+
+  - item_id: 32336
+    name: Black Bow of the Betrayer
+    effect: "8 mana returned per successful ranged attack"
+    kind: passive
+    trigger: every landed ranged attack
+    proc_chance_percent: 100
+    icd_seconds: none_modeled
+    note: >-
+      The tooltip also drains 8 mana from the target where possible; raid
+      bosses have no mana pool for it to matter against.
+    source: "wowsims sim/hunter/items.go; tooltip item 32336"
+
+  - item_id: 32368
+    name: Tome of the Lightbringer
+    effect: "186 shield block value for 5 sec after Judgement"
+    kind: ability_triggered
+    trigger: every cast of Judgement
+    proc_chance_percent: 100
+    icd_seconds: none_modeled
+    duration_seconds: 5
+    note: >-
+      Deterministic, and the 5 second duration is shorter than the shortest
+      Judgement cooldown, 8 seconds with Improved Judgement, so the buff
+      cannot be held continuously.
+    source: "wowsims sim/paladin/items.go; tooltip item 32368"
+
+  - item_id: 32375
+    name: Bulwark of Azzinoth
+    effect: "2000 armor for 10 sec when struck"
+    kind: proc
+    trigger: landed physical hit taken
+    proc_chance_percent: 2
+    icd_seconds: none_modeled
+    duration_seconds: 10
+    published: "Tooltip prints (Proc chance: 2%)"
+    source: "tooltip item 32375; wowsims sim/common/melee_items.go agrees at 0.02"
+
+  - item_id: 32483
+    name: The Skull of Gul'dan
+    effect: "175 spell haste rating for 20 sec"
+    kind: on_use
+    duration_seconds: 20
+    cooldown_seconds: 120
+    note: Shares the simulator's offensive trinket cooldown group.
+    source: "tooltip item 32483; wowsims sim/common/caster_trinkets.go"
+
+  - item_id: 32496
+    name: Memento of Tyrande
+    effect: "Up to 76 mana per 5 for 15 sec"
+    kind: proc
+    trigger: each spell cast
+    proc_chance_percent: 10
+    icd_seconds: 50
+    duration_seconds: 15
+    published: "Tooltip prints (Proc chance: 10%, 50s cooldown)"
+    note: >-
+      Absent from the simulator source; no NewItemEffect exists for the id.
+      Both figures rest on the tooltip alone.
+    source: "tooltip item 32496"
+
+  - item_id: 32500
+    name: Crystal Spire of Karabor
+    effect: "Direct heals on targets below 50 percent health heal an additional 180 to 220"
+    kind: passive
+    trigger: every direct heal landing on a target below half health
+    proc_chance_percent: 100
+    icd_seconds: none_modeled
+    note: >-
+      Conditional on the target, not on a roll. Absent from the simulator
+      source, which models no healer throughput. The tooltip reads 180 to
+      220; sources quoting 180 to 250 are describing a later patch.
+    source: "tooltip item 32500"
+
+  - item_id: 32501
+    name: Shadowmoon Insignia
+    effect: "Maximum health increased 1750 for 20 sec"
+    kind: on_use
+    duration_seconds: 20
+    cooldown_seconds: 180
+    note: >-
+      Also a worn trinket, in the Protection Warrior capture. On-use only;
+      the item carries no equip proc. Shares the simulator's defensive
+      trinket cooldown group.
+    source: "tooltip item 32501; wowsims sim/common/melee_trinkets.go"
+
+  - item_id: 32505
+    name: Madness of the Betrayer
+    effect: "300 armor penetration for 10 sec"
+    kind: proc
+    trigger: landed melee or ranged hit
+    proc_chance_percent: unpublished
+    ppm: 1.0
+    icd_seconds: none_modeled
+    duration_seconds: 10
+    off_hand: "Yes; the PPM manager covers off-hand swings and weapon specials"
+    note: >-
+      The tooltip prints no rate and no cooldown. The simulator models 1 PPM
+      with no internal cooldown, where Dragonspine Trophy at the same 1 PPM
+      carries a 20 second one; see open_questions.madness_icd.
+    source: "wowsims sim/common/melee_trinkets.go; tooltip item 32505"
+
+  # ---- Trinkets worn in the hit captures ---------------------------------
+
+  - item_id: 21670
+    name: Badge of the Swarmguard
+    effect: "On use, a 30 sec window; hits inside it stack 200 armor penetration up to 6 times"
+    kind: on_use_proc_window
+    cooldown_seconds: 180
+    window_seconds: 30
+    trigger: landed melee or ranged hit while the window holds
+    proc_chance_percent: unpublished
+    ppm: 10.0
+    icd_seconds: none_modeled
+    off_hand: "Yes; the PPM manager covers off-hand swings and weapon specials"
+    note: >-
+      Two layers: the use is deterministic on a 3 minute cooldown, and the
+      stacking inside the window rolls at 10 PPM per the simulator. The
+      tooltip prints no rate for the stacking.
+    source: "wowsims sim/common/melee_trinkets.go; tooltip item 21670"
+
+  - item_id: 27683
+    name: "Quagmirran's Eye"
+    effect: "320 spell haste rating for 6 sec"
+    kind: proc
+    trigger: harmful spell cast completing
+    proc_chance_percent: 10
+    icd_seconds: 45
+    duration_seconds: 6
+    periodic: "No; the simulator triggers on cast completion, not on ticks"
+    published: "Tooltip prints (Proc chance: 10%, 45s cooldown)"
+    source: "tooltip item 27683; wowsims sim/common/caster_trinkets.go agrees"
+
+  - item_id: 28121
+    name: Icon of Unyielding Courage
+    effect: "600 armor penetration for 20 sec"
+    kind: on_use
+    duration_seconds: 20
+    cooldown_seconds: 120
+    source: "tooltip item 28121; wowsims sim/common/melee_trinkets.go"
+
+  - item_id: 28785
+    name: The Lightning Capacitor
+    effect: "A charge per damaging spell crit; at 3 charges, a Lightning Bolt for 694 to 806"
+    kind: proc
+    trigger: damaging spell critical strike
+    proc_chance_percent: 100
+    icd_seconds: 2.5
+    periodic: "No; the simulator gains charges from direct spell crits only"
+    published: "Tooltip prints Electrical Charge cannot be gained more often than once every 2.5 sec"
+    note: >-
+      The 2.5 second cooldown gates charge gain, not the bolt. Rate of fire
+      is therefore set by the wearer's crit rate: three gated crits per bolt,
+      so at best one bolt per 7.5 seconds.
+    source: "tooltip item 28785; wowsims sim/common/lightning_capacitor.go agrees"
+
+  - item_id: 28789
+    name: Eye of Magtheridon
+    effect: "170 spell damage for 10 sec when a spell is resisted"
+    kind: proc
+    trigger: own spell fully resisted
+    proc_chance_percent: 100
+    icd_seconds: none_modeled
+    duration_seconds: 10
+    periodic: "Yes; the simulator triggers on resisted periodic damage as well"
+    note: >-
+      Deterministic on the resist itself, so uptime falls as spell hit
+      rises. Against a hit-capped wearer the trigger is only the 1 percent
+      unremovable miss.
+    source: "wowsims sim/common/caster_trinkets.go; tooltip item 28789"
+
+  - item_id: 28830
+    name: Dragonspine Trophy
+    effect: "325 haste rating for 10 sec"
+    kind: proc
+    trigger: landed melee or ranged hit
+    proc_chance_percent: unpublished
+    ppm: 1.0
+    icd_seconds: 20
+    duration_seconds: 10
+    off_hand: "Yes; the PPM manager covers off-hand swings and weapon specials"
+    published: "Tooltip prints (20s cooldown); the rate itself is unpublished"
+    source: "wowsims sim/common/melee_trinkets.go for the PPM; tooltip item 28830 for the cooldown"
+
+  - item_id: 29370
+    name: Icon of the Silver Crescent
+    effect: "Spell damage and healing increased by up to 155 for 20 sec"
+    kind: on_use
+    duration_seconds: 20
+    cooldown_seconds: 120
+    source: "tooltip item 29370; wowsims sim/common/caster_trinkets.go"
+
+  - item_id: 29383
+    name: Bloodlust Brooch
+    effect: "278 attack power for 20 sec"
+    kind: on_use
+    duration_seconds: 20
+    cooldown_seconds: 120
+    source: "tooltip item 29383; wowsims sim/common/melee_trinkets.go"
+
+  - item_id: 29387
+    name: Gnomeregan Auto-Blocker 600
+    effect: "200 shield block value for 20 sec"
+    kind: on_use
+    duration_seconds: 20
+    cooldown_seconds: 120
+    source: "tooltip item 29387; wowsims sim/common/melee_trinkets.go"
+
+  - item_id: 30450
+    name: Warp-Spring Coil
+    effect: "1000 armor penetration for 15 sec"
+    kind: proc
+    trigger: landed special attack
+    proc_chance_percent: 25
+    icd_seconds: 30
+    duration_seconds: 15
+    off_hand: "White swings do not trigger it at all; the simulator masks to melee specials only"
+    published: "Tooltip prints (Proc chance: 25%, 30s cooldown)"
+    source: "tooltip item 30450; wowsims sim/rogue/items.go agrees"
+
+  - item_id: 30626
+    name: Sextant of Unstable Currents
+    effect: "Spell damage and healing increased for 15 sec"
+    kind: proc
+    trigger: spell critical strike
+    proc_chance_percent: 20
+    icd_seconds: 45
+    duration_seconds: 15
+    published: "Tooltip prints (Proc chance: 20%, 45s cooldown)"
+    note: >-
+      item-effects.csv records the buff at 190 spell damage and 175 healing;
+      the simulator models the 190 alone.
+    source: "tooltip item 30626; wowsims sim/common/caster_trinkets.go agrees"
+
+  - item_id: 30627
+    name: Tsunami Talisman
+    effect: "340 attack power for 10 sec"
+    kind: proc
+    trigger: melee or ranged critical strike
+    proc_chance_percent: 10
+    icd_seconds: 45
+    duration_seconds: 10
+    published: "Tooltip prints (Proc chance: 10%, 45s cooldown)"
+    source: "tooltip item 30627; wowsims sim/common/melee_trinkets.go agrees"
+
+  - item_id: 30629
+    name: Scarab of Displacement
+    effect: "165 defense rating and minus 330 attack power for 15 sec"
+    kind: on_use
+    duration_seconds: 15
+    cooldown_seconds: 180
+    source: "tooltip item 30629; wowsims sim/common/melee_trinkets.go"
+
+  - item_id: 30720
+    name: Serpent-Coil Braid
+    effect: "Mana gems return 25 percent more mana, and using one grants 225 spell damage for 15 sec"
+    kind: ability_triggered
+    trigger: every use of a mana gem
+    proc_chance_percent: 100
+    icd_seconds: none_modeled
+    duration_seconds: 15
+    note: >-
+      Deterministic. Frequency is governed by the mana gem's own cooldown,
+      not by the trinket.
+    source: "wowsims sim/mage/mana_gems.go; tooltip item 30720"
+
+  - item_id: 31856
+    name: "Darkmoon Card: Crusade"
+    effect: "6 attack power per melee or ranged hit, 20 stacks; 8 spell damage per landed spell, 10 stacks; each for 10 sec"
+    kind: proc
+    trigger: every melee or ranged hit, and every landed harmful spell
+    proc_chance_percent: 100
+    icd_seconds: none_modeled
+    duration_seconds: 10
+    note: >-
+      No roll and no cooldown; the 10 second duration refreshes on every
+      stack, so the question a council weighs is ramp time to full stacks,
+      not uptime.
+    source: "wowsims sim/common/caster_trinkets.go; tooltip item 31856"
+
+  - item_id: 32658
+    name: Badge of Tenacity
+    effect: "150 agility for 20 sec"
+    kind: on_use
+    duration_seconds: 20
+    cooldown_seconds: 120
+    source: "tooltip item 32658; wowsims sim/common/melee_trinkets.go"
+
+open_questions:
+  ppm_provenance: >-
+    The simulator states 1 PPM for Dragonspine Trophy, Madness of the
+    Betrayer and Syphon of the Nathrezim, and 10 PPM inside the Badge of the
+    Swarmguard window, but the code does not say whether those figures were
+    measured against the game or adopted by convention. The tooltip publishes
+    none of them. Until a measurement source is found, treat a PPM figure
+    here as the simulator's model rather than a game constant.
+  madness_icd: >-
+    Madness of the Betrayer carries no internal cooldown in the simulator
+    and none on the tooltip, while Dragonspine Trophy at the same 1 PPM
+    carries a published 20 second one. Whether the game enforces an
+    unpublished cooldown on Madness is not settled by either source.
+  syphon_self_heal: >-
+    The Syphon of the Nathrezim tooltip says the fel energy drains life from
+    opponents; the simulator models 20 flat shadow damage per attack and no
+    heal to the wielder. Which the game does is not settled here.
+  healer_items_unsimulated: >-
+    Memento of Tyrande and Crystal Spire of Karabor have no implementation
+    in the simulator source, so their entries rest on the tooltip alone and
+    no second source corroborates them.

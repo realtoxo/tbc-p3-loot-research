@@ -1,0 +1,189 @@
+# Arcane Mage hit capture. Collected 9 August 2026.
+#
+# Cap: spell, raw 202 rating (16%), net target after talents 76 rating (per the
+# task brief; not reproduced here). Weapon is a two-hand staff (The Nexus Key)
+# at Entry and at tier_hands_only, dropped for a one-hand main hand plus
+# off-hand at tier_hands_and_head (Tempest of Chaos plus Chronicle of Dark
+# Secrets), so main_hand and off_hand are reported as separate keys. Ranged
+# slot carries a wand throughout.
+# Improved Faerie Fire is melee and ranged hit only in 2.4.3 and grants this
+# spec no spell hit, so it is not credited anywhere below.
+#
+# Every hit value below is the "Improves spell hit rating by N" equip line
+# read directly from each item's nether.wowhead.com (2.4.3) tooltip via the
+# item page, cross-checked against the guide's own item choice and boss
+# source. Socket-bonus hit (e.g. Cowl of Tirisfal's +4 if the socket is filled
+# right) is NOT included, matching the convention used throughout this file
+# set: the bonus is conditional on gem choice, not printed unconditionally.
+
+spec: arcane_mage
+collected_on: 2026-08-09
+
+sources:
+  entry:
+    url: https://www.wowhead.com/tbc/guide/classes/mage/arcane/dps-bis-gear-pve-phase-2
+    title: "Arcane Mage DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic"
+    observed: 2026-08-09
+  tier:
+    url: https://www.wowhead.com/tbc/guide/arcane-mage-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: "Burning Crusade Classic Arcane Mage DPS Best in Slot (BiS) Phase 3 Gear Guide"
+    observed: 2026-08-09
+    note: >-
+      Publishes a FULL-CLEAR Phase 3 list. The tier anchor below downgrades it
+      to the four-to-six-week window: any slot whose full-clear top pick
+      comes from Illidan or the Illidari Council (late Black Temple) is
+      replaced with the guide's own next-named alternative if that
+      alternative is itself reachable (early Hyjal, early Black Temple,
+      Black Temple trash, quest reward or badge vendor); otherwise the
+      Entry-anchor item is kept. See notes.downgraded_slots.
+
+anchors:
+
+  entry:
+    tier_pieces_held: [head, shoulder, chest, legs]
+    set_bonuses_held:
+      - "Tirisfal Regalia 2-piece: Increases the damage and mana cost of Arcane Blast by 20%."
+      - "Tirisfal Regalia 4-piece: Your spell critical strikes grant you up to 70 spell damage for 6 sec."
+    hit_by_slot:
+      head:      {item: "Cowl of Tirisfal", id: 30206, hit: 0}
+      neck:      {item: "The Sun King's Talisman", id: 30015, hit: 0}
+      shoulder:  {item: "Mantle of Tirisfal", id: 30210, hit: 0}
+      back:      {item: "Royal Cloak of the Sunstriders", id: 29992, hit: 0}
+      chest:     {item: "Robes of Tirisfal", id: 30196, hit: 0}
+      wrist:     {item: "Mindstorm Wristbands", id: 29918, hit: 0}
+      hands:     {item: "Gauntlets of the Sun King", id: 29987, hit: 0}
+      waist:     {item: "Cord of Screaming Terrors", id: 30064, hit: 24}
+      legs:      {item: "Leggings of Tirisfal", id: 30207, hit: 26}
+      feet:      {item: "Velvet Boots of the Guardian", id: 30067, hit: 0}
+      ring_1:    {item: "Ashyen's Gift", id: 29172, hit: 21}
+      ring_2:    {item: "Violet Signet of the Archmage", id: 29287, hit: 0}
+      trinket_1: {item: "Serpent-Coil Braid", id: 30720, hit: 12}
+      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
+      main_hand: {item: "The Nexus Key", id: 29988, hit: 0, note: "Two-hand staff. No off-hand slot in use."}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+      ranged:    {item: "Eredar Wand of Obliteration", id: 28783, hit: 0}
+    total_item_hit: 83
+
+  tier_hands_only:
+    tier6_pieces_held: [hands]
+    tier5_pieces_held: [head, shoulder, chest]
+    set_bonuses_held:
+      - "Tirisfal Regalia 2-piece: Increases the damage and mana cost of Arcane Blast by 20%."
+    hit_by_slot:
+      head:      {item: "Cowl of Tirisfal", id: 30206, hit: 0, note: "Kept. Cowl of the Tempest needs Archimonde, not yet dead in this state."}
+      neck:      {item: "The Sun King's Talisman", id: 30015, hit: 0}
+      shoulder:  {item: "Mantle of Tirisfal", id: 30210, hit: 0, note: "No Illidan/Illidari Council competitor for this slot; unchanged from Entry."}
+      back:      {item: "Royal Cloak of the Sunstriders", id: 29992, hit: 0, note: "Kept. Cloak of the Illidari Council (full-clear BiS) is an Illidari Council drop, unreachable; no other reachable alternative is named."}
+      chest:     {item: "Robes of Tirisfal", id: 30196, hit: 0, note: "Kept. The guide's own text calls this best in slot in most gear sets independent of the Illidan-locked Robes of the Tempest."}
+      wrist:     {item: "Cuffs of Devastation", id: 30870, hit: 0, note: "From Rage Winterchill, first Mount Hyjal boss."}
+      hands:     {item: "Gloves of the Tempest", id: 31055, hit: 20, note: "Azgalor token."}
+      waist:     {item: "Anetheron's Noose", id: 30888, hit: 0, note: "From Anetheron, Mount Hyjal, second boss. Waistwrap of Infinity (Supremus, early Black Temple) is an equally-ranked BiS alternative and also carries 0 hit."}
+      legs:      {item: "Leggings of Channeled Elements", id: 30916, hit: 18, note: "From Kaz'rogal, Mount Hyjal, third boss, killed before Azgalor. Leggings of the Tempest (full-clear BiS) is an Illidari Council token, unreachable."}
+      feet:      {item: "Slippers of the Seacaller", id: 32239, hit: 0, note: "From High Warlord Naj'entus, first Black Temple boss."}
+      ring_1:    {item: "Band of the Eternal Sage", id: 29305, hit: 0, note: "Quest reward, Scale of the Sands exalted; upgrades the Entry ring of the same quest chain."}
+      ring_2:    {item: "Ring of Ancient Knowledge", id: 32527, hit: 0, note: "Black Temple trash drop, not boss-gated."}
+      trinket_1: {item: "Serpent-Coil Braid", id: 30720, hit: 12, note: "Kept. Guide states it continues to be one of the best trinkets for single target."}
+      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0, note: "Kept. See notes.uncertain on Ashtongue Talisman of Insight."}
+      main_hand: {item: "The Nexus Key", id: 29988, hit: 0, note: "Two-hand staff, kept. Tempest of Chaos needs Archimonde; Zhar'doom needs Illidan. Neither reachable in this state."}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+      ranged:    {item: "Eredar Wand of Obliteration", id: 28783, hit: 0}
+    total_item_hit: 50
+
+  tier_hands_and_head:
+    tier6_pieces_held: [hands]
+    tier5_pieces_held: [head, shoulder, chest]
+    set_bonuses_held:
+      - "Tirisfal Regalia 2-piece: Increases the damage and mana cost of Arcane Blast by 20%."
+    hit_by_slot:
+      head:      {item: "Cowl of Tirisfal", id: 30206, hit: 0, note: "Kept even though Cowl of the Tempest (Archimonde token) is now available. See notes.uncertain."}
+      neck:      {item: "The Sun King's Talisman", id: 30015, hit: 0}
+      shoulder:  {item: "Mantle of Tirisfal", id: 30210, hit: 0}
+      back:      {item: "Royal Cloak of the Sunstriders", id: 29992, hit: 0}
+      chest:     {item: "Robes of Tirisfal", id: 30196, hit: 0}
+      wrist:     {item: "Cuffs of Devastation", id: 30870, hit: 0}
+      hands:     {item: "Gloves of the Tempest", id: 31055, hit: 20, note: "Azgalor token."}
+      waist:     {item: "Anetheron's Noose", id: 30888, hit: 0}
+      legs:      {item: "Leggings of Channeled Elements", id: 30916, hit: 18}
+      feet:      {item: "Slippers of the Seacaller", id: 32239, hit: 0}
+      ring_1:    {item: "Band of the Eternal Sage", id: 29305, hit: 0}
+      ring_2:    {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
+      trinket_1: {item: "Serpent-Coil Braid", id: 30720, hit: 12}
+      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
+      main_hand: {item: "Tempest of Chaos", id: 30910, hit: 17, note: "From Archimonde, now reachable. Replaces the two-hand Nexus Key."}
+      off_hand:  {item: "Chronicle of Dark Secrets", id: 30872, hit: 17, note: "From Rage Winterchill, Mount Hyjal, first boss. Only paired once a one-hand main hand (Tempest of Chaos) is equipped."}
+      ranged:    {item: "Eredar Wand of Obliteration", id: 28783, hit: 0}
+    total_item_hit: 84
+
+notes:
+  downgraded_slots: >-
+    Back: Cloak of the Illidari Council (Illidari Council, late Black Temple)
+    has no reachable named alternative in the guide, so the Entry piece
+    (Royal Cloak of the Sunstriders) is kept in both tier states. Chest:
+    Robes of the Tempest (Illidan, late Black Temple) is not used; the guide
+    calls Robes of Tirisfal best in slot in most sets on its own merits, so
+    it is kept in both tier states regardless of Illidan access. Legs:
+    Leggings of the Tempest (Illidari Council token) is unreachable;
+    Leggings of Channeled Elements (Kaz'rogal, Mount Hyjal, reachable before
+    Azgalor) is the guide's other named BiS pick for this slot and is used in
+    both tier states. Hands: the Azgalor token, Gloves of the Tempest, is
+    used in both tier states per the brief. Head: the Archimonde token, Cowl
+    of the Tempest, is available in tier_hands_and_head but not equipped; see
+    notes.uncertain. Trinket 1: The Skull of Gul'dan (Illidan) has no
+    reachable named alternative, so the Entry piece (Serpent-Coil Braid,
+    itself still called a top pick by the guide) is kept. Weapon: Zhar'doom,
+    Greatstaff of the Devourer (Illidan) is never reachable at this anchor.
+    Tempest of Chaos (Archimonde) is reachable only in tier_hands_and_head,
+    where it replaces the two-hand Nexus Key and pulls in Chronicle of Dark
+    Secrets (Rage Winterchill, reachable in both states but only useful
+    paired with a one-hand main hand) as an off-hand.
+  uncertain: >-
+    Head in tier_hands_and_head: the guide states, unconditionally, that Cowl
+    of Tirisfal is "the uncontested winner for this slot... it provides
+    synergy for the set bonus from Tirisfal Regalia, which more than makes up
+    the difference" over Cowl of the Tempest (+13 spell hit). That statement
+    is followed literally here. But the guide's own full-clear single-target
+    set reaches this conclusion while also holding Leggings of Tirisfal, for
+    a genuine 4-piece bonus; at this anchor, legs has already moved to
+    Leggings of Channeled Elements for a reachable spell hit gain, so only
+    three Tirisfal pieces are held (head, shoulder, chest) and the 4-piece
+    bonus is NOT active, only the 2-piece is. Whether the council still
+    prefers keeping the head in Tirisfal for a 2-piece-only bonus, or would
+    rather wear Cowl of the Tempest for the token grant plus 13 more item
+    hit, is not settled by any source and no simulation has been run. If the
+    token is worn instead, tier_hands_and_head's total_item_hit rises from 84
+    to 97 and set_bonuses_held becomes empty.
+    Trinket 2 at both tier states is reported as the Entry piece, Icon of the
+    Silver Crescent, rather than the full-clear pick, Ashtongue Talisman of
+    Insight, which requires Exalted with the Ashtongue Deathsworn. Whether
+    Exalted is reachable by week four to six could not be verified against
+    any source, so it was not assumed. Its tooltip carries no hit rating
+    regardless (a spell-crit-triggered haste proc), so total_item_hit is
+    unaffected either way.
+    Waist: Anetheron's Noose was picked over the equally-ranked Waistwrap of
+    Infinity with no stated reason beyond guide ordering; both carry 0 hit,
+    so totals are unaffected by which is actually held.
+    Weapon, both tier states: Vengeful Gladiator's Battle Staff (Season 3
+    arena points) is a legal PvP weapon per the brief and is named by the
+    guide as a lesser option below both raid picks. It was not modeled
+    because reaching the required arena rating within four to six weeks is
+    not verifiable from any source here, and the guide itself ranks it below
+    the raid options used above.
+    Entry figure corroboration: this capture's entry total_item_hit was 62
+    (matching the "62 item spell hit" figure the task brief attributes to a
+    previous capture, against this repository's currently recorded 53) before
+    ring_1 was corrected from Band of Eternity (29302, a Scale of the Sands
+    reward) to Ashyen's Gift (29172, Cenarion Expedition, Phase <=2, 21 spell
+    hit), which is the entry anchor's own Band of Eternity being unreachable
+    before Mount Hyjal opens; that correction raises the figure to 83. Both
+    the earlier 62/53 pair and the corrected 83 leave this spec short of its
+    stated 76-rating net target at the entry anchor; this capture cannot say
+    which of 62 or 53 was right for the previously recorded fact, only that
+    the sourced entry set here now sums to 83.
+  availability_corrections: >-
+    Entry ring_1: Band of Eternity (29302) is a Scale of the Sands reputation
+    reward, and Scale of the Sands is the Mount Hyjal faction, so it cannot be
+    held before Phase 3 opens. Replaced with Ashyen's Gift (29172, Cenarion
+    Expedition, Phase <=2 drop, 21 spell hit), the next-ranked prephase Finger
+    item in the ladder after Band of Eternity itself; ring_2 already holds the
+    ladder's other prephase candidate, Violet Signet of the Archmage. Entry
+    total_item_hit rises from 62 to 83.

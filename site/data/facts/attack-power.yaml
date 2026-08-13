@@ -1,0 +1,377 @@
+# Attack power, per class. Hand-authored.
+#
+# HOLDS   How strength and agility become melee and ranged attack power at
+#         level 70, the feral druid case including the feral attack power item
+#         stat, and how attack power becomes damage.
+# NOT HERE  Crit is in crit.yaml. Hit is in hit.yaml. Haste is in haste.yaml.
+#
+# BEFORE YOU USE A FIGURE
+#   THE RATE DIFFERS BY CLASS. Two attack power per strength for Warrior,
+#   Paladin, Shaman and Druid; one for Hunter, Rogue, Mage, Priest and Warlock.
+#   Do not apply one constant to the raid.
+#   ONLY three cases gain MELEE attack power from agility: Hunter, Rogue, and
+#   Druid in Cat Form. Bear, Dire Bear and Moonkin gain none. Every class gains
+#   one RANGED attack power per agility, which matters for the two hunters.
+#   Hunters received two ranged attack power per agility BEFORE patch 2.0.1 and
+#   one from 2.0.1 onward. A vanilla-era source states the wrong figure.
+#   FERAL ATTACK POWER IS AN EXPLICIT ITEM STAT IN 2.4.3, not a conversion from
+#   weapon damage. See feral below before valuing a feral weapon.
+#
+# SOURCE  Form and talent text read from the 2.4.3 tooltip endpoint at
+#   nether.wowhead.com. Per-class conversions from 2008 captures of the WoWWiki
+#   attack power and attributes articles, corroborated against two independent
+#   2.4.3 server emulators. Conflicting readings are kept as rejected_reading.
+#   What is not settled is in open_questions.
+meta:
+  authored: 2026-08-08
+  anchor: phase_3_entry
+  patch: 2.4.3
+  edition: TBC Classic Anniversary Edition
+  sibling_files:
+    - data/facts/crit.yaml
+    - data/facts/hit.yaml
+    - data/facts/haste.yaml
+    - data/facts/roster.yaml
+  supersedes: >-
+    Nothing. This is the first attack power file in the repository. The worked
+    example in docs/conventions.md asserts two attack power per strength for
+    feral. That assertion is CONFIRMED here and now carries a source.
+  contains_no_judgment: >-
+    This file states what is true. It assigns no priority, no priority and no weight
+    to attack power for any spec, and it does not say which spec should receive
+    an attack-power-bearing item.
+
+assumptions:
+  racials_assumed: false
+  group_buffs_assumed: true
+  consumables_assumed: false
+  gems_and_enchants_counted: false
+  attacker: level 70 player
+  note: >-
+    The same assumption set as hit.yaml, crit.yaml and haste.yaml, so the four
+    files can be read together. No racial grants attack power or a stat-to-attack
+    power conversion in 2.4.3, so the racial ruling has no effect here.
+
+# ---------------------------------------------------------------------------
+# 1. PRIMARY STAT TO ATTACK POWER
+# ---------------------------------------------------------------------------
+# Level 70. Stated per class even where the value repeats, so the map is
+# complete and no reader has to infer a missing row.
+conversions:
+
+  melee_attack_power_per_strength_level_70:
+    warrior: 2
+    paladin: 2
+    shaman: 2
+    druid: 2
+    hunter: 1
+    rogue: 1
+    mage: 1
+    priest: 1
+    warlock: 1
+    druid_note: >-
+      TWO, in every form and out of form. The forms add a flat block and, in Cat
+      Form only, an agility term. No form changes the strength rate.
+    confidence: high
+    evidence: two_period_sources_and_two_emulators_agree
+
+  melee_attack_power_per_agility_level_70:
+    hunter: 1
+    rogue: 1
+    druid_cat_form: 1
+    druid_bear_form: 0
+    druid_dire_bear_form: 0
+    druid_moonkin_form: 0
+    druid_no_form: 0
+    warrior: 0
+    paladin: 0
+    shaman: 0
+    mage: 0
+    priest: 0
+    warlock: 0
+    warning: >-
+      THIS IS WHY THE FILE HOLDS A MAP AND NOT A CONSTANT. Exactly three cases
+      gain melee attack power from agility. An Enhancement Shaman, a Retribution
+      Paladin and a Protection Warrior gain NONE, so agility buys them crit and
+      dodge only. A Feral Cat gains one; a Feral Bear gains none, which is the
+      single largest difference between the two feral specs in this file.
+    confidence: high
+    evidence: form_tooltips_from_the_2_4_3_endpoint_plus_period_sources
+
+  ranged_attack_power_per_agility_level_70:
+    hunter: 1
+    warrior: 1
+    rogue: 1
+    paladin: 1
+    shaman: 1
+    druid: 1
+    mage: 1
+    priest: 1
+    warlock: 1
+    note: >-
+      One per point for every class. Only the LEVEL term of the base ranged
+      attack power differs, and a level term is not loot. Ranged attack power is
+      a damage source for the two rostered hunters only; for everyone else the
+      ranged slot is a stat stick and this row does not drive a call.
+    strength_contributes_zero_ranged_attack_power: true
+    challenged_2026_08_09: >-
+      An audit reported that only the Hunter, the Rogue and the Warrior convert
+      agility to ranged attack power, and that granting it to all nine classes
+      is wrong. IT COULD NOT BE VERIFIED EITHER WAY from the sources reachable
+      here, so no figure was changed and the confidence is lowered instead.
+      Nothing in this repository depends on the answer: the row drives no call
+      by its own statement, and ranged attack power is a damage source for the
+      two rostered hunters only, both of which the audit agrees convert.
+      Settle it against the simulator's stat conversion or a period source
+      before this row is used for anything but a hunter.
+    confidence: unverified_for_the_seven_non_converting_classes
+
+  attack_power_and_ranged_attack_power_are_separate_pools: >-
+    An item reading "+N Attack Power" with neither word "Melee" nor "Ranged"
+    adds N to BOTH pools. An item that names one pool adds to that pool only.
+    Buffs follow the same rule: Greater Blessing of Might, spell 27141, grants
+    220 to both, and Trueshot Aura grants its rank value to both. The aura has
+    FOUR ranks, spells 19506, 20905, 20906 and 27066, at 50, 75, 100 and 125,
+    read from the 2.4.3 tooltip endpoint on 9 August 2026; the rank a level 70
+    hunter trains is the fourth, at 125, which is the figure crit.yaml already
+    records. Until 9 August 2026 this line cited spell 19506 alone and quoted
+    50, which is the rank 1 value and understates the aura at level 70 by 75.
+
+# ---------------------------------------------------------------------------
+# 2. THE FERAL CASE
+# ---------------------------------------------------------------------------
+feral:
+
+  strength: >-
+    One strength gives a feral druid TWO attack power, in Cat Form and in Bear
+    and Dire Bear Form alike. This confirms the worked example in
+    docs/conventions.md.
+
+  agility: >-
+    One agility gives a Cat ONE attack power and gives a Bear or Dire Bear NONE.
+    Cat Form, spell 768, reads "increasing melee attack power by 40 plus
+    Agility". Bear Form, spell 5487, and Dire Bear Form, spell 9634, name a flat
+    figure and no stat term at all. Agility still buys a Bear crit, dodge and
+    armor; it buys the Bear no attack power.
+
+  form_flat_bonus_level_70:
+    cat_form: {spell_id: 768, reads: "40 plus Agility"}
+    bear_form: {spell_id: 5487, attack_power: 120}
+    dire_bear_form: {spell_id: 9634, attack_power: 210}
+    moonkin_form: {spell_id: 24858, attack_power: "150 percent of level"}
+
+  weapon_speed_does_not_reach_a_form: >-
+    THIS IS WHY THE SEPARATE STAT EXISTS. Both the 2007 and the 2008 capture of
+    the WoWWiki normalization article state that druid feral attacks are not
+    normalized and are unaffected by weapon speed. A 2 December 2007 capture of
+    the WoWWiki feral druid article puts the two halves in consecutive bullets:
+    "Weapon DPS and weapon +damage enchants have no effect", immediately
+    followed by "Items with an 'Equip:' do work in forms". Feral attack power is
+    an Equip effect, so it is exempt from the rule that makes the weapon's own
+    damage inert. What the weapon supplies a shapeshifted druid is its stat line
+    and, on a feral weapon, the explicit grant below. What it does not supply is
+    its damage or its speed.
+
+  feral_attack_power_item_stat:
+    what_it_is: >-
+      A FLAT ATTACK POWER GRANT THAT APPLIES ONLY WHILE SHAPESHIFTED. The 2.4.3
+      item tooltip wording is verbatim "Increases attack power by N in Cat,
+      Bear, Dire Bear, and Moonkin forms only". It is an equip effect carried by
+      its own spell, not a scaling rule. The spell carries the four forms as an
+      explicit requirement; spell 44909, "Attack Power - Feral (+0712)", reads
+      "Requires Cat Form, Bear Form, Dire Bear Form, Moonkin Form".
+    it_is_not_derived_from_weapon_damage: >-
+      READ THIS BEFORE VALUING A FERAL WEAPON. The value is authored per item
+      and tracks ITEM LEVEL, not the weapon's damage per second. The decisive
+      evidence is that two items at the same item level carry different grants:
+      at item level 115, Greatstaff of the Leviathan, item 27757, carries 539
+      and Terestian's Stranglestaff, item 28658, carries 829. Both ids were
+      resolved and both figures and item levels confirmed at the 2.4.3 tooltip
+      endpoint on 9 August 2026; until then the first item was cited by name
+      alone, with no id. A quantity that differs at fixed item level and
+      fixed damage per second is not computed from damage per second.
+      The widely quoted formula that converts weapon damage per second into
+      feral attack power, at damage per second minus 54.8, all times 14, does
+      not reproduce any in-scope item. It is a later-patch rule and applying it
+      to 2.4.3 invents attack power that no item grants. The patch that
+      introduced it is recorded as not verified in open_questions.
+    census: >-
+      Exactly 72 items in the 2.4.3 database carry the "Moonkin forms only"
+      line, and none above item id 35674. Of those, 48 are real items and 24 are
+      developer placeholders. NO idol, relic, gem or enchant carries it, so the
+      stat reaches a druid through a WEAPON and through nothing else. The only
+      non-weapon carriers are six developer test chests that never dropped.
+    moonkin_receives_it: >-
+      The wording names Moonkin Form, so the rostered Balance Druid receives the
+      grant. Attack power is close to inert for that spec, so receiving it is
+      not the same as gaining from it.
+    in_scope_items:
+      - {item_id: 30883, name: Pillar of Ferocity, tier: T6, ilvl: 141, feral_attack_power: 1059, spell_id: 44916}
+      - {item_id: 30021, name: Wildfury Greatstaff, tier: T5, ilvl: 134, feral_attack_power: 992, spell_id: 44914}
+      - {item_id: 28658, name: Terestian's Stranglestaff, tier: T4, ilvl: 115, feral_attack_power: 829, spell_id: 44911}
+      - item_id: 30313
+        name: Staff of Disintegration
+        tier: T5
+        ilvl: 175
+        feral_attack_power: 1459
+        caution: >-
+          NOT LOOT. This is the encounter item from Tempest Keep, unique and
+          carrying "Duration: 15 min (real time)". It is recorded because
+          data/facts/items.csv and data/facts/drops.csv both carry it, and its
+          1459 is the largest feral attack power figure in the game. Reading it
+          as a gearing option would be wrong.
+    generated_table_agreement: >-
+      The feral_attack_power column in data/facts/items.csv was checked item by
+      item against the 2.4.3 tooltips for all four rows above and agrees with
+      every one, including the 1459 on Staff of Disintegration. The column is
+      trustworthy.
+
+  talent_conversions:
+    - name: Predatory Strikes
+      spell_ids: [16972, 16974, 16975]
+      effect: "melee attack power in Cat, Bear, Dire Bear and Moonkin Form by 50, 100 or 150 percent of level"
+      is_a_stat_conversion: false
+      corrected: >-
+        Until 9 August 2026 this row listed two spell ids and "50 to 100
+        percent of level", omitting the third rank. The 2.4.3 tooltip endpoint
+        returns three ranks, spells 16972, 16974 and 16975, at 50, 100 and 150
+        percent of level, read 9 August 2026.
+    - {name: Heart of the Wild, spell_ids: [17003, 24894], effect: "attack power in Cat Form by 2 to 10 percent", is_a_stat_conversion: false}
+
+  rejected_reading: >-
+      A 2007 capture of the WoWWiki attack power article states that Heart of
+      the Wild gives a Cat 2.4 attack power per strength. The 2008 capture of
+      the same article, and the 2.4.3 talent tooltip, both describe a flat
+      percentage increase to attack power instead. The talent is a MULTIPLIER,
+      so it does not change the two-per-strength rate above. Recorded because
+      the 2.4 figure is quotable and wrong.
+
+# ---------------------------------------------------------------------------
+# 3. ATTACK POWER TO DAMAGE
+# ---------------------------------------------------------------------------
+# The next question a reader asks. There is one clean constant and then it
+# stops being clean, so the boundary is stated rather than a single number.
+to_damage:
+
+  attack_power_per_one_weapon_damage_per_second: 14
+  holds_for: [melee, ranged]
+  white_swing_formula: >-
+    average white swing damage equals weapon damage per second plus attack power
+    divided by 14, all multiplied by the weapon's base speed. The divisor stayed
+    14 for the whole of TBC.
+
+  depends_on_weapon_speed: >-
+    YES, PER SWING. NO, PER SECOND. Attack power adds a flat amount to damage
+    per second, so 1400 attack power is 100 damage per second on a dagger and on
+    a two-hander alike. Per swing it is proportional to speed, so the same 1400
+    is 130 damage on a 1.3 speed weapon and 380 on a 3.8 speed weapon. Attack
+    power is applied before haste, so haste and attack power multiply.
+
+  normalized_speed_for_yellow_abilities:
+    dagger: 1.7
+    other_one_hand: 2.4
+    two_hand: 3.3
+    ranged: 2.8
+    note: >-
+      Instant attacks fire on the global cooldown, so their rate does not track
+      weapon speed. Normalization replaces the weapon's real speed with the
+      constant above in the attack power term. A two-hander therefore extracts
+      the most damage per point of attack power on a normalized ability.
+      Druid feral attacks are NOT normalized and are unaffected by weapon speed.
+
+  depends_on_the_ability: >-
+    NO SINGLE NUMBER HOLDS. Three patterns coexist in 2.4.3. Sinister Strike and
+    Mortal Strike are weapon damage plus a FLAT constant, so attack power
+    reaches them only through the normalized weapon damage term. Steady Shot
+    carries an explicit coefficient of 0.2 of ranged attack power on top of
+    weapon damage. Arcane Shot and Aimed Shot carry a flat figure and no attack
+    power term at all. Quote 14 for a white swing and for weapon damage per
+    second; do not quote it for an ability.
+
+  ranged: >-
+    Auto Shot follows the same rule with the same divisor of 14 and the ranged
+    weapon's base speed. Only some hunter shots carry a ranged attack power
+    coefficient. A tooltip that names no attack power term is weaker evidence
+    than one that names a term, because this era's tooltips do not always
+    disclose a coefficient.
+
+# ---------------------------------------------------------------------------
+# 4. ROUTES THAT ARE NOT PRIMARY STAT CONVERSIONS
+# ---------------------------------------------------------------------------
+other_routes_to_attack_power:
+  - name: Careful Aim
+    class: hunter
+    spell_ids: [34482, 34483, 34484]
+    effect: ranged attack power equal to 15, 30 or 45 percent of total Intellect
+    note: >-
+      The only intellect to attack power conversion in the raid. It is a
+      Marksmanship talent, so whether either rostered hunter has it depends on
+      the build, not the class.
+  - name: Expose Weakness
+    class: hunter
+    spell_id: 34503
+    effect: >-
+      A ranged critical strike applies a target debuff granting ALL attackers
+      attack power equal to 25 percent of this hunter's Agility for 7 seconds.
+    note: >-
+      An agility to attack power conversion that leaves the hunter and reaches
+      the whole raid. Already recorded in data/facts/crit.yaml under the
+      Survival hunter; stated here as a cross-reference, not as a second copy.
+
+# ---------------------------------------------------------------------------
+# 5. WHAT IS NOT SETTLED
+# ---------------------------------------------------------------------------
+open_questions:
+
+  - question: Does the wowsims TBC checkout state the druid conversions correctly?
+    answer: NO. Do not read attack power conversions out of that source.
+    detail: >-
+      The auto-generated constants in that checkout match this repository
+      exactly, including every rating denominator and the crit per agility map
+      in crit.yaml, so the generated half is trustworthy. The hand-written class
+      stat dependencies are not uniformly so. The druid block gives one attack
+      power per strength and two per agility in Cat AND Bear Form, which
+      contradicts the 2.4.3 form tooltips on both counts, and the druid package
+      still carries Cataclysm-era files. Treat the druid block as a port
+      leftover. The warrior, paladin, shaman, rogue, hunter and warlock entries
+      there do agree with this file.
+    confidence: high
+
+  - question: Does Steady Shot's weapon damage component use the normalized 2.8?
+    status: NOT VERIFIED
+    detail: >-
+      Neither 2007 nor 2008 capture of the WoWWiki normalization article
+      classifies Steady Shot in either list. The wowsims implementation uses
+      2.8, which is consistent with the ranged normalization constant, but that
+      is one source and it is not contemporaneous. The 0.2 ranged attack power
+      coefficient is separately verified and is not in doubt.
+
+  - question: Which patch replaced the feral attack power item stat with a weapon formula?
+    status: NOT VERIFIED
+    detail: >-
+      That the 2.4.3 stat is an explicit per-item grant IS verified, from the
+      item tooltips and from the three in-scope values failing to fit any
+      divisor. Which later patch removed the stat and replaced it with the
+      damage per second minus 54.8, all times 14, rule is NOT verified here. It
+      does not need to be. Nothing in this scope depends on it, and the only
+      thing a reader must not do is apply that formula to a 2.4.3 item.
+    confidence: the_2_4_3_half_is_high_and_the_later_patch_half_is_unverified
+
+  - question: Does feral attack power stack with a plain attack power stat on the same item?
+    status: NOT VERIFIED, and it cannot be settled from 2.4.3 data
+    detail: >-
+      No 2.4.3 item carries both a plain attack power line and a feral attack
+      power line, so the game data contains no case to read. No 2007 or 2008
+      source addresses it. Do not assert stacking behavior in either direction.
+
+  - question: What is the exact melee attack power level term for a druid out of form?
+    status: DISPUTED, and it does not affect any figure in this file
+    detail: >-
+      One 2.4.3 emulator applies three times level to a druid in every form
+      including caster form. The 2008 WoWWiki capture and a second 2.4.3
+      emulator give no level term out of form, three times level in Bear, twice
+      level in Cat and one and a half times level in Moonkin. Three sources
+      against one, so the second reading is recorded above. A level term is
+      fixed per character and is not bought with loot, so the dispute changes no
+      loot call. Recorded so that a reader who computes an absolute attack power
+      figure knows it is not settled.
