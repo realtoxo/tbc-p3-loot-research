@@ -18,6 +18,21 @@ title: Totem of Ancestral Guidance
 
 ::: {.specs}
 
+#### Elemental Shaman
+
+Delta
+:   [Totem of Ancestral Guidance]{.item}
+
+#### Enhancement Shaman
+
+Delta
+:   [Totem of Ancestral Guidance]{.item}
+
+#### Restoration Shaman
+
+Delta
+:   [Totem of Ancestral Guidance]{.item}
+
 :::
 
 ::::

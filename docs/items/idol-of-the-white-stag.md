@@ -18,6 +18,26 @@ title: Idol of the White Stag
 
 ::: {.specs}
 
+#### Feral Bear
+
+Delta
+:   [Idol of the White Stag]{.item}
+
+#### Feral Cat
+
+Delta
+:   [Idol of the White Stag]{.item}
+
+#### Balance Druid
+
+Delta
+:   [Idol of the White Stag]{.item}
+
+#### Restoration Druid
+
+Delta
+:   [Idol of the White Stag]{.item}
+
 :::
 
 ::::

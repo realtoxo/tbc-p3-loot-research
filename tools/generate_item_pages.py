@@ -63,6 +63,57 @@ def slug(name: str) -> str:
     return text.strip("-")
 
 
+
+# A CLASS-LOCKED RELIC IS CLAIMED BY ITS CLASS, ruled by the guild lead on 12
+# August 2026: relics are owned by a class type, and by more than one spec
+# inside that class.
+#
+# THIS IS THE ONE CLAIMANT NOT DERIVED FROM A WORKBOOK RANK, and it exists
+# because eleven of the twenty-one tabs carry no `Ranged` section at all. Every
+# druid, paladin and shaman tab is among them, which is exactly the three
+# classes whose relic slot holds an idol, a libram or a totem. So the workbook
+# ranks no relic for the only classes that can wear one, and three Phase 3
+# relics reached the compendium claimed by nobody.
+#
+# THE LOCK IS CARRIED BY `ranged_weapon_type`, NOT BY `class_allowlist`, which
+# is empty for all three. A review on 11 August 2026 caught a draft of this rule
+# phrased on the allowlist, which names data that does not exist.
+RELIC_TYPE_TO_CLASS = {"6": "druid", "7": "paladin", "8": "shaman"}
+
+SPEC_CLASS = {
+    "Feral Bear": "druid", "Feral Cat": "druid", "Balance Druid": "druid",
+    "Restoration Druid": "druid",
+    "Retribution Paladin": "paladin", "Protection Paladin": "paladin",
+    "Holy Paladin": "paladin",
+    "Elemental Shaman": "shaman", "Enhancement Shaman": "shaman",
+    "Restoration Shaman": "shaman",
+}
+
+
+def relic_claimants(item_ids: set[str], items: dict[str, dict]) -> dict[str, list[str]]:
+    """Every spec of the class a relic belongs to.
+
+    A relic carries no stat line, so no ladder could rank it on stats even if a
+    tab held the section. What decides the claim is the class lock and the
+    effect, and the effect is recorded in data/facts/item-effects.csv rather
+    than here: this function answers WHO CAN WEAR IT, and the effect answers who
+    wants it. Both belong on the page.
+    """
+    out: dict[str, list[str]] = {}
+    for item_id in item_ids:
+        row = items.get(item_id)
+        if not row or row.get("slot") != "Ranged":
+            continue
+        # A ranged WEAPON has weapon damage. A relic has none.
+        if row.get("weapon_min"):
+            continue
+        owner = RELIC_TYPE_TO_CLASS.get(row.get("ranged_weapon_type", ""))
+        if not owner:
+            continue
+        out[item_id] = [spec for spec, cls in SPEC_CLASS.items() if cls == owner]
+    return out
+
+
 def claimants(item_ids: set[str]) -> dict[str, list[str]]:
     """Which specs rank each item in the top five of its slot.
 
@@ -215,6 +266,13 @@ def main() -> int:
     subjects = dropped | tier_pieces
 
     contested = claimants(subjects)
+    # A relic is claimed by its class, not by a workbook rank. Merged after the
+    # ladder pass so it can only ADD a claimant, never remove one the workbook
+    # supplied.
+    for item_id, specs in relic_claimants(subjects, items).items():
+        for spec in specs:
+            if spec not in contested.setdefault(item_id, []):
+                contested[item_id].append(spec)
     share_within_weapon_sets(contested, items)
 
     # The directory is rebuilt rather than added to, so an item removed from the

@@ -18,6 +18,21 @@ title: Tome of the Lightbringer
 
 ::: {.specs}
 
+#### Retribution Paladin
+
+Delta
+:   [Tome of the Lightbringer]{.item}
+
+#### Protection Paladin
+
+Delta
+:   [Tome of the Lightbringer]{.item}
+
+#### Holy Paladin
+
+Delta
+:   [Tome of the Lightbringer]{.item}
+
 :::
 
 ::::
