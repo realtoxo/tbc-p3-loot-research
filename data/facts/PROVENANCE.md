@@ -33,10 +33,10 @@ Some of these files are machine-produced and some are hand-authored. That distin
 
 | File | What it holds | Produced | `just regen` |
 |---|---|---|---|
-| `drops.csv` | What drops where. 507 rows across seven raids in three tiers | Generated from the item database | Overwrites |
+| `drops.csv` | What drops where. 500 rows across seven raids in three tiers, excluding the seven weapons Kael'thas animates during his own encounter | Generated from the item database | Overwrites |
 | `items.csv` | The full stat line of every item in `drops.csv` and every tier set piece in `tokens.yaml`, with sockets, socket bonus, and weapon damage and speed | Generated from the item database | Overwrites |
 | `item-effects.csv` | On-use and on-equip effects, the stats they grant, and what makes each one fire: on use, or a proc with its chance, its internal cooldown and its procs per minute. 169 rows | Generated from the item database | Overwrites |
-| `effect-text.csv` | What an effect does in words, for the 24 items the item database names but does not describe. 28 lines, one per trigger, because an item can carry several | Parsed from the Wowhead tooltips captured under `data/research/wowhead-effects/`, which are never edited after capture | Overwrites |
+| `effect-text.csv` | What an effect does in words, for the items the item database names but does not describe. 24 lines across 23 items, one per trigger, because an item can carry several | Parsed from the Wowhead tooltips captured under `data/research/wowhead-effects/`, which are never edited after capture | Overwrites |
 | `talents.yaml` | The talent build each spec is modelled on, its source, and every talent in it supplying hit, expertise or defense skill | Three parallel audits against published 2.4.3 build guides, plus roster facts stated by the guild lead | Never |
 | `level-60.yaml` | Level-60 raid content: the four workbook location strings that name it, and all 54 items it ranks | Swept from the Location column of the 21 tabs the extractor reads, ids from each row's own link | Never |
 | `world-bosses.yaml` | The full loot tables of Doomwalker and Doom Lord Kazzak, twenty items over one unbroken id block | Hand-authored from Icy Veins and Wowpedia, corroborated against the whole id range in the wowsims database | Never |

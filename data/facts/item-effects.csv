@@ -67,11 +67,6 @@ item_id,tier,item_name,buff_id,buff_name,trigger,proc_chance,proc_icd_ms,proc_pp
 30051,T5,Idol of the Crescent Goddess,37737,Reduced Regrowth Cost (37737),,,,,,
 30063,T5,Libram of Absolute Truth,37739,Reduced Holy Light Cost (37739),,,,,,
 30090,T5,World Breaker,36111,World Breaker (36111),proc,,,1,4000,melee_crit=900
-30311,T5,Warp Slicer,36479,Speed Infusion (36479),proc,,,2,30000,
-30314,T5,Phaseshift Bulwark,36481,Arcane Barrier (36481),on_use,,,,4000,
-30316,T5,Devastation,36479,Speed Infusion (36479),proc,,,2,30000,
-30317,T5,Cosmic Infuser,36483,Infernal Protection (36488),proc,1,,,30000,
-30318,T5,Netherstrand Longbow,36413,Mortal Shots (36413),,,,,-1,
 30340,,Starkiller's Bauble,36432,Spell Power (36432),on_use,,,,15000,spell_damage=125
 30446,T5,Solarian's Sapphire,37536,Improved Battle Shout (37536),,,,,-1,
 30447,T5,Tome of Fiery Redemption,37198,Blessing of Righteousness (37197),proc,0.15,45000,,15000,healing_power=290|spell_damage=290

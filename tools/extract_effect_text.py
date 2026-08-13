@@ -57,13 +57,26 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--captures", type=Path, default=CAPTURES)
     ap.add_argument("--out", type=Path, default=Path("data/facts/effect-text.csv"))
+    ap.add_argument("--items", type=Path, default=Path("data/facts/items.csv"))
     args = ap.parse_args()
 
-    rows, unparsed = [], []
+    # AN ITEM THAT LEFT THE ITEM TABLE LEAVES THIS TABLE WITH IT. Netherstrand
+    # Longbow was captured on 13 August 2026 and excluded from the drop table
+    # the same day, once the guild lead identified it as one of Kael'thas's
+    # encounter weapons rather than loot. The capture is kept, because nothing
+    # under data/research/ is edited after the fact, and it is simply not
+    # published. A fact table naming an item the item table does not hold is a
+    # dangling reference waiting to be cited.
+    known = {int(r["item_id"]) for r in csv.DictReader(args.items.open())}
+
+    rows, unparsed, dropped = [], [], []
     for path in sorted(args.captures.glob("*/item-*.json")):
         captured = path.parent.name
         item_id = int(path.stem.split("-")[1])
         payload = json.loads(path.read_text())
+        if item_id not in known:
+            dropped.append(f"{item_id} {payload.get('name', '')}")
+            continue
         found = 0
         for fragment in USE_TEXT.findall(payload.get("tooltip", "")):
             sentence = plain(fragment)
@@ -93,6 +106,8 @@ def main() -> int:
 
     items = len({r["item_id"] for r in rows})
     print(f"{len(rows)} effect line(s) across {items} item(s) -> {args.out}")
+    for line in dropped:
+        print(f"  captured and not published, not in the item table: {line}")
     if unparsed:
         print(f"\n{len(unparsed)} capture(s) yielded no effect line:",
               file=sys.stderr)

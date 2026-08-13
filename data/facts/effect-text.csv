@@ -8,10 +8,6 @@ item_id,item_name,trigger,text,captured
 30023,Totem of the Maelstrom,Equip,Reduces the mana cost of Healing Wave by 24.,2026-08-13
 30051,Idol of the Crescent Goddess,Equip,Reduces the mana cost of Regrowth by 65.,2026-08-13
 30063,Libram of Absolute Truth,Equip,Reduces the mana cost of Holy Light by 34.,2026-08-13
-30318,Netherstrand Longbow,Chance on hit,Increases Physical damage taken by the target by 5%. Can be applied up to 5 times. Lasts 30 sec.,2026-08-13
-30318,Netherstrand Longbow,Equip,Increases ranged attack power by 70.,2026-08-13
-30318,Netherstrand Longbow,Equip,Increases your ranged weapon critical strike damage bonus by 50%.,2026-08-13
-30318,Netherstrand Longbow,Use,Summons a bundle of Nether Spikes for use as ammo.,2026-08-13
 30446,Solarian's Sapphire,Equip,Your Battle Shout ability grants an additional 70 attack power.,2026-08-13
 30448,Talon of Al'ar,Equip,Your Arcane Shot ability increases the damage dealt by all other damaging shots by 40 for 6 sec.,2026-08-13
 30720,Serpent-Coil Braid,Equip,"You gain 25% more mana when you use a mana gem. In addition, using a mana gem grants you 225 spell damage for 15 sec.",2026-08-13

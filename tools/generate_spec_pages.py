@@ -101,13 +101,26 @@ def main() -> int:
     for row in drops:
         by_boss[(row["zone"], row["boss"])].add(row["item_id"])
 
+    # A REPUTATION REWARD HAS A PAGE AND HAD NO WAY IN. This index is built from
+    # the drop table, so the nine Ashtongue Deathsworn trinkets appeared under
+    # no zone and no boss, and their pages were reachable only from a spec page.
+    # The index answers "where does this come from", and a quartermaster is an
+    # answer to that question, so it is a group here like a boss is. The zone
+    # and the standing come from the item table rather than being written out,
+    # so a second faction would need no change.
+    for item_id, row in items.items():
+        if "reputation" not in row.get("source", "") or row["tier"] not in TIERS:
+            continue
+        by_boss[("Reputation", row["source_note"])].add(item_id)
+
     lines = [
         "---",
         "title: Loot By Boss",
         "eyebrow: Mount Hyjal and Black Temple",
         "subtitle: >-",
-        "  Every item the two raids drop, under the boss that drops it. Open the",
-        "  page for the boss you are about to pull.",
+        "  Every item the two raids drop, under the boss that drops it, and the",
+        "  rewards a reputation sells. Open the page for the boss you are about",
+        "  to pull.",
         "---",
         "",
         BANNER,

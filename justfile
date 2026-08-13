@@ -170,10 +170,10 @@ icons:
 
 # Regenerate derived fact tables from source data.
 regen:
-    @python3 tools/extract_unranked.py --out theme/filters/unranked.generated.lua
-    @python3 tools/extract_effect_text.py --out data/facts/effect-text.csv
     @python3 tools/extract_drops.py --db "{{wowsims}}/assets/database/db.json" --out data/facts/drops.csv
     @python3 tools/extract_items.py --db "{{wowsims}}/assets/database/db.json" --out data/facts/items.csv
+    @python3 tools/extract_unranked.py --out theme/filters/unranked.generated.lua
+    @python3 tools/extract_effect_text.py --out data/facts/effect-text.csv
     @python3 tools/extract_commentary.py
     # These two produce what extract_constraints reads, so they run BEFORE it.
     # Reversed, a single `just regen` wrote the card text from the PREVIOUS

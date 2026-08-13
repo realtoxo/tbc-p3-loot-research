@@ -195,10 +195,36 @@ FIELDS = [
 ]
 
 
+# KAEL'THAS'S SEVEN WEAPONS ARE NOT LOOT. During the fourth phase of the Tempest
+# Keep encounter Kael'thas animates his weapons and the raid picks them up to
+# use against him; they vanish when the fight ends. The item database records
+# them as legendary zone drops, which is true of how they are handed out and
+# false about what they are, so all seven arrived in the drop table as Tier 5
+# gear. Reported by the guild lead on 13 August 2026: "netherstrand longbow
+# should not be in our data set, it is only relevant for the KT encounter in
+# tempest keep".
+#
+# THEY ARE EXCLUDED BY ID, and by all seven ids rather than the one that was
+# noticed. Excluding on the "Legendary" quality would take the two Warglaives of
+# Azzinoth with them, which are real loot and the most contested drop in the
+# phase.
+KAELTHAS_ENCOUNTER_WEAPONS = {
+    30311,  # Warp Slicer
+    30312,  # Infinity Blade
+    30313,  # Staff of Disintegration
+    30314,  # Phaseshift Bulwark
+    30316,  # Devastation
+    30317,  # Cosmic Infuser
+    30318,  # Netherstrand Longbow
+}
+
+
 def extract(db_path: Path) -> list[dict]:
     db = json.loads(db_path.read_text())
     rows: list[dict] = []
     for item in db["items"]:
+        if item["id"] in KAELTHAS_ENCOUNTER_WEAPONS:
+            continue
         for source in item.get("sources", []):
             drop = source.get("drop")
             if not drop or drop.get("zoneId") not in ZONES:
