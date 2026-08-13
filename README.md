@@ -33,6 +33,7 @@ The first run pauses for a few seconds while `npx` fetches browser-sync. Later r
 | `just build` | Write `site/` and stop. |
 | `just style` | Check documents against the house writing style. |
 | `just bundle docs/index.md` | One self-contained HTML file in `site/bundles/`, for sharing. |
+| `just publish` | Build, then commit `site/` to the `gh-pages` branch. |
 
 After `just build` you can also open `site/index.html` straight from disk. Every path is relative, so the site works over `file://` with no server at all.
 

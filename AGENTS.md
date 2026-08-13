@@ -58,6 +58,7 @@ Everything runs through `just`. Run `just` alone to list.
 |---|---|
 | `just dev` | Rebuild on change and live-reload the browser on :4000 |
 | `just build` | Render `docs/**.md`, excluding `docs/kb/`, to a static site in `site/` |
+| `just publish` | Build, then commit `site/` to `gh-pages` from a throwaway index, leaving it untracked here |
 | `just regen` | Rebuild the six generated fact tables and the six generated Lua filters the compendium reads from |
 | `just check` | Regenerate, then fail on drift, on a gated gem or enchant, on a capture disagreeing with its own rows or with `items.csv`, and on gear an anchor could not have reached |
 | `just gating` | Only the gem and enchant gating half of `just check` |

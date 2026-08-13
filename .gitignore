@@ -1,5 +1,6 @@
-# Generated HTML output. Disposable; rebuild with `just build`.
-# /site/
+# Generated HTML output. Disposable; rebuild with `just build`, and publish it
+# with `just publish`, which commits it to gh-pages without tracking it here.
+/site/
 
 # Derived analysis. Regenerable, and it embeds modelling choices that are not
 # yet decided, so it is not committed while the project is gathering facts.

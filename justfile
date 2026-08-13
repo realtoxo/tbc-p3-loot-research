@@ -72,6 +72,29 @@ bundle FILE:
         --output="{{out}}/bundles/${name}.html"
     echo "bundled -> {{out}}/bundles/${name}.html  ($(du -h "{{out}}/bundles/${name}.html" | cut -f1))"
 
+# Publish the built site to the gh-pages branch. The output is not tracked on
+# main, so the commit is written from a throwaway index instead of the work
+# tree, and parented on the current gh-pages tip so the push fast-forwards.
+publish: build
+    #!/usr/bin/env bash
+    set -euo pipefail
+    git fetch origin gh-pages
+    export GIT_INDEX_FILE="$(mktemp -u "${TMPDIR:-/tmp}/tbc-publish-index.XXXXXX")"
+    trap 'rm -f "$GIT_INDEX_FILE"' EXIT
+    # --work-tree puts the repository .gitattributes out of reach, so the
+    # `*.csv text eol=lf` rule stops applying and the CRLF that Python's csv
+    # writer emits into data/facts/*.csv would rewrite three files on every
+    # publish. Point git back at the attributes file to keep the bytes stable.
+    git -c core.attributesfile="$PWD/.gitattributes" --work-tree="{{out}}" add -Af .
+    tree="$(git write-tree)"
+    if [ "$tree" = "$(git rev-parse origin/gh-pages^{tree})" ]; then
+        echo "gh-pages already carries this site; nothing to publish"
+        exit 0
+    fi
+    commit="$(git commit-tree "$tree" -p origin/gh-pages -m "publish site $(git rev-parse --short HEAD)")"
+    git push origin "$commit":gh-pages
+    echo "published -> gh-pages  ($commit, tree $tree)"
+
 # ---------------------------------------------------------------- dev loop
 
 # Serve the built site. Does not rebuild.
