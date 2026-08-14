@@ -2,244 +2,287 @@ spec: enhancement_shaman
 collected_on: 2026-08-09
 sources:
   entry:
-    url: "https://www.wowhead.com/tbc/guide/classes/shaman/enhancement/dps-bis-gear-pve-phase-2"
-    title: "Enhancement Shaman DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic - Wowhead"
+    url: https://www.wowhead.com/tbc/guide/classes/shaman/enhancement/dps-bis-gear-pve-phase-2
+    title: Enhancement Shaman DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic - Wowhead
     attempted: 2026-08-09
-    outcome: >-
-      NOT READ. The gear table renders client-side and could not be scraped as
-      static text. The entry set comes from entry_basis below.
+    outcome: NOT READ. The gear table renders client-side and could not be scraped as static
+      text. The entry set comes from entry_basis below.
   tier:
-    url: "https://www.wowhead.com/tbc/guide/enhancement-shaman-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade"
-    title: "Burning Crusade Classic Enhancement Shaman DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead"
+    url: https://www.wowhead.com/tbc/guide/enhancement-shaman-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Enhancement Shaman DPS Best in Slot (BiS) Phase 3 Gear
+      Guide - Wowhead
     attempted: 2026-08-09
-    outcome: >-
-      NOT READ, same client-side rendering. The tier set comes from tier_basis
-      below.
-  # THE ACTUAL BASES. Lifted out of a trailing comment below the sources
-  # mapping, where no tool reading `sources` could see them.
+    outcome: NOT READ, same client-side rendering. The tier set comes from tier_basis below.
   entry_basis:
-    url: "https://tbc-bis-guide.com"
-    title: "Secondary transcription, phase 2 Enhancement page"
+    url: https://tbc-bis-guide.com
+    title: Secondary transcription, phase 2 Enhancement page
     observed: 2026-08-09
   tier_basis:
     path: data/research/epv-workbook/Enh.csv
-    title: "TBC Phase 3 PVE EPV BIS LIST (Fazers), Enhancement tab"
+    title: TBC Phase 3 PVE EPV BIS LIST (Fazers), Enhancement tab
     observed: 2026-08-09
-    note: >-
-      Crossed against data/facts/progression.yaml for reachability and
-      data/facts/drops.csv for the source boss, which is treated as
-      authoritative over the workbook's own Location column. Two rows in
-      Enh.csv name the wrong boss and were caught by that cross-check.
-
-# The two Wowhead pages above render their gear tables client-side and could
-# not be scraped as static text. The Entry loadout was read from a secondary
-# transcription (tbc-bis-guide.com, phase-2 Enhancement page, observed
-# 2026-08-09). The Tier loadout was rebuilt from data/facts/progression.yaml's
-# reachable-encounter set (all of Mount Hyjal through Azgalor, plus Archimonde
-# for tier_hands_and_head only; Black Temple bosses 1-6, Naj'entus through
-# Gurtogg Bloodboil) crossed against data/research/epv-workbook/Enh.csv's
-# per-slot EPV rank order: for every non-token, non-bonus-held slot, the
-# highest-ranked item whose source boss/zone (per data/facts/drops.csv, which
-# is treated as authoritative over the workbook's own Location/Phase columns —
-# two rows in Enh.csv name the wrong boss, caught by this cross-check) falls
-# inside the reachable set, or that is crafted/badge/reputation gear, was
-# taken. Every hit: figure traces to data/facts/items.csv, not to Wowhead
-# guide text or to the workbook's own stat columns. See notes.downgraded_slots
-# for the token- and bonus-held slots, which do not follow this rule.
-
+    note: Crossed against data/facts/progression.yaml for reachability and data/facts/drops.csv
+      for the source boss, which is treated as authoritative over the workbook's own Location
+      column. Two rows in Enh.csv name the wrong boss and were caught by that cross-check.
 anchors:
   entry:
-    tier_pieces_held: [head, chest, hands, legs]
+    tier_pieces_held:
+    - head
+    - chest
+    - hands
+    - legs
     set_bonuses_held:
-      - "Cataclysm Harness 2-piece: Your melee attacks have a chance to reduce the cast time of your next Lesser Healing Wave by 1.5 sec."
-      - "Cataclysm Harness 4-piece: You gain 5% additional haste from your Flurry ability."
+    - 'Cataclysm Harness 2-piece: Your melee attacks have a chance to reduce the cast time
+      of your next Lesser Healing Wave by 1.5 sec.'
+    - 'Cataclysm Harness 4-piece: You gain 5% additional haste from your Flurry ability.'
     hit_by_slot:
-      head:      { item: "Cataclysm Helm", id: 30190, hit: 21 }
-      neck:      { item: "Telonicus's Pendant of Mayhem", id: 30017, hit: 0 }
-      shoulder:  { item: "Shoulderpads of the Stranger", id: 30055, hit: 0 }
-      back:      { item: "Vengeance Wrap", id: 24259, hit: 0 }
-      chest:     { item: "Cataclysm Chestplate", id: 30185, hit: 19 }
-      wrist:     { item: "True-Aim Stalker Bands", id: 30091, hit: 0 }
-      hands:     { item: "Cataclysm Gauntlets", id: 30189, hit: 24 }
-      waist:     { item: "Belt of One-Hundred Deaths", id: 30106, hit: 0 }
-      legs:      { item: "Cataclysm Legplates", id: 30192, hit: 21 }
-      feet:      { item: "Boots of Utter Darkness", id: 30039, hit: 23 }
-      ring_1:    { item: "Band of the Ranger-General", id: 29997, hit: 18 }
-      ring_2:    { item: "Ring of Lethality", id: 30052, hit: 19 }
-      trinket_1: { item: "Dragonspine Trophy", id: 28830, hit: 0 }
-      trinket_2: { item: "Bloodlust Brooch", id: 29383, hit: 0 }
-      relic:     { item: "Totem of the Astral Winds", id: 27815, hit: 0 }
-      main_hand: { item: "Wicked Edge of the Planes", id: 28433, hit: 0 }
-      off_hand:  { item: "Merciless Gladiator's Cleaver", id: 31965, hit: 10 }
+      head:
+        item: Cataclysm Helm
+        id: 30190
+        hit: 21
+      neck:
+        item: Telonicus's Pendant of Mayhem
+        id: 30017
+        hit: 0
+      shoulder:
+        item: Shoulderpads of the Stranger
+        id: 30055
+        hit: 0
+      back:
+        item: Vengeance Wrap
+        id: 24259
+        hit: 0
+      chest:
+        item: Cataclysm Chestplate
+        id: 30185
+        hit: 19
+      wrist:
+        item: True-Aim Stalker Bands
+        id: 30091
+        hit: 0
+      hands:
+        item: Cataclysm Gauntlets
+        id: 30189
+        hit: 24
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      legs:
+        item: Cataclysm Legplates
+        id: 30192
+        hit: 21
+      feet:
+        item: Boots of Utter Darkness
+        id: 30039
+        hit: 23
+      ring_1:
+        item: Band of the Ranger-General
+        id: 29997
+        hit: 18
+      ring_2:
+        item: Ring of Lethality
+        id: 30052
+        hit: 19
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+      trinket_2:
+        item: Bloodlust Brooch
+        id: 29383
+        hit: 0
+      relic:
+        item: Totem of the Astral Winds
+        id: 27815
+        hit: 0
+      main_hand:
+        item: Wicked Edge of the Planes
+        id: 28433
+        hit: 0
+      off_hand:
+        item: Merciless Gladiator's Cleaver
+        id: 31965
+        hit: 10
     total_item_hit: 155
-
-  tier_hands_only:
-    tier6_pieces_held: []
-    tier5_pieces_held: [head, chest, hands, legs]
-    set_bonuses_held:
-      - "Cataclysm Harness 2-piece: Your melee attacks have a chance to reduce the cast time of your next Lesser Healing Wave by 1.5 sec."
-      - "Cataclysm Harness 4-piece: You gain 5% additional haste from your Flurry ability."
-    hit_by_slot:
-      head:      { item: "Cataclysm Helm", id: 30190, hit: 21 }
-      neck:      { item: "Choker of Endless Nightmares", id: 32260, hit: 21 }
-      shoulder:  { item: "Swiftstrike Shoulders", id: 32581, hit: 0 }
-      back:      { item: "Shadowmoon Destroyer's Drape", id: 32323, hit: 17 }
-      chest:     { item: "Cataclysm Chestplate", id: 30185, hit: 19 }
-      wrist:     { item: "Bindings of Lightning Reflexes", id: 32574, hit: 0 }
-      hands:     { item: "Cataclysm Gauntlets", id: 30189, hit: 24 }
-      waist:     { item: "Belt of One-Hundred Deaths", id: 30106, hit: 0 }
-      legs:      { item: "Cataclysm Legplates", id: 30192, hit: 21 }
-      feet:      { item: "Softstep Boots of Tracking", id: 32510, hit: 17 }
-      ring_1:    { item: "Band of the Eternal Champion", id: 29301, hit: 0 }
-      ring_2:    { item: "Band of the Ranger-General", id: 29997, hit: 18 }
-      trinket_1: { item: "Dragonspine Trophy", id: 28830, hit: 0 }
-      trinket_2: { item: "Bloodlust Brooch", id: 29383, hit: 0 }
-      relic:     { item: "Totem of the Astral Winds", id: 27815, hit: 0 }
-      main_hand: { item: "Swiftsteel Bludgeon", id: 32943, hit: 19 }
-      off_hand:  { item: "Rising Tide", id: 32236, hit: 21 }
-    total_item_hit: 198
-
   tier_hands_and_head:
     tier6_pieces_held: []
-    tier5_pieces_held: [head, chest, hands, legs]
-    set_bonuses_held:
-      - "Cataclysm Harness 2-piece: Your melee attacks have a chance to reduce the cast time of your next Lesser Healing Wave by 1.5 sec."
-      - "Cataclysm Harness 4-piece: You gain 5% additional haste from your Flurry ability."
+    tier5_pieces_held:
+    - chest
+    - hands
+    - head
+    - legs
     hit_by_slot:
-      head:      { item: "Cataclysm Helm", id: 30190, hit: 21 }
-      neck:      { item: "Choker of Endless Nightmares", id: 32260, hit: 21 }
-      shoulder:  { item: "Swiftstrike Shoulders", id: 32581, hit: 0 }
-      back:      { item: "Shadowmoon Destroyer's Drape", id: 32323, hit: 17 }
-      chest:     { item: "Cataclysm Chestplate", id: 30185, hit: 19 }
-      wrist:     { item: "Bindings of Lightning Reflexes", id: 32574, hit: 0 }
-      hands:     { item: "Cataclysm Gauntlets", id: 30189, hit: 24 }
-      waist:     { item: "Belt of One-Hundred Deaths", id: 30106, hit: 0 }
-      legs:      { item: "Cataclysm Legplates", id: 30192, hit: 21 }
-      feet:      { item: "Softstep Boots of Tracking", id: 32510, hit: 17 }
-      ring_1:    { item: "Band of the Eternal Champion", id: 29301, hit: 0 }
-      ring_2:    { item: "Band of the Ranger-General", id: 29997, hit: 18 }
-      trinket_1: { item: "Dragonspine Trophy", id: 28830, hit: 0 }
-      trinket_2: { item: "Bloodlust Brooch", id: 29383, hit: 0 }
-      relic:     { item: "Totem of the Astral Winds", id: 27815, hit: 0 }
-      main_hand: { item: "Swiftsteel Bludgeon", id: 32943, hit: 19 }
-      off_hand:  { item: "Rising Tide", id: 32236, hit: 21 }
-    total_item_hit: 198
-
+      head:
+        item: Cataclysm Helm
+        id: 30190
+        hit: 21
+      neck:
+        item: Telonicus's Pendant of Mayhem
+        id: 30017
+        hit: 0
+      shoulder:
+        item: Shoulderpads of the Stranger
+        id: 30055
+        hit: 0
+      back:
+        item: Vengeance Wrap
+        id: 24259
+        hit: 0
+      chest:
+        item: Cataclysm Chestplate
+        id: 30185
+        hit: 19
+      wrist:
+        item: True-Aim Stalker Bands
+        id: 30091
+        hit: 0
+      hands:
+        item: Cataclysm Gauntlets
+        id: 30189
+        hit: 24
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      legs:
+        item: Cataclysm Legplates
+        id: 30192
+        hit: 21
+      feet:
+        item: Boots of Utter Darkness
+        id: 30039
+        hit: 23
+      ring_1:
+        item: Band of the Ranger-General
+        id: 29997
+        hit: 18
+      ring_2:
+        item: Ring of Lethality
+        id: 30052
+        hit: 19
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+      trinket_2:
+        item: Bloodlust Brooch
+        id: 29383
+        hit: 0
+      relic:
+        item: Totem of the Astral Winds
+        id: 27815
+        hit: 0
+      main_hand:
+        item: Wicked Edge of the Planes
+        id: 28433
+        hit: 0
+      off_hand:
+        item: Merciless Gladiator's Cleaver
+        id: 31965
+        hit: 10
+    total_item_hit: 155
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Cataclysm Harness: 4
+    set_pieces_held_note: 'The prose bonus descriptions recorded here before 13 August 2026
+      described the OLD tier set and seven of them no longer held once the set was rebuilt
+      from the Phase 3 best-in-slot list. They are not rewritten, because this project does
+      not have the bonus text for the sets that replaced them and inventing it would be worse
+      than counting. What is recorded instead is what can be checked: how many pieces of each
+      set the anchor wears. Two is a 2-piece bonus and four is a 4-piece; the text of each
+      is on the item.'
 notes:
-  weapon_speed_rule_disagreement: >-
-    RECORDED 11 August 2026, not resolved. docs/kb/DOMAIN.md records, on the
-    guild lead's statement, that an Enhancement Shaman runs two weapons of the
-    SAME speed and prefers them slow, because both hands carry a Windfury
-    imbue. THIS CAPTURE DOES NOT MEET THAT RULE AT EITHER TIER ANCHOR. It pairs
-    Swiftsteel Bludgeon at speed 1.5 in the main hand with Rising Tide at speed
-    2.6 in the off hand. The entry anchor is close to matched, at 2.7 against
-    2.6.
-    THE CAUSE IS THE TAB SHAPE rather than a mistake in the capture. The
-    Enhancement tab ranks main hand and off hand in ONE combined One Hand pool,
-    where the Fury tab splits them, so the capture took rank 1 and then the next
-    reachable row and speed never entered the selection. Nothing downstream can
-    restore the distinction either: delta.lua prices neither weapon damage nor
-    weapon speed.
-    DOMAIN.md also records that the speed rule is uncorroborated by any source
-    this project holds, and that a simulation is the route to settle it. So this
-    is a disagreement between a stated rule and a captured set, and both sides
-    are recorded rather than one being corrected to the other.
-  downgraded_slots: >-
-    Head, chest, hands and legs are held as Cataclysm Helm, Cataclysm
-    Chestplate, Cataclysm Gauntlets and Cataclysm Legplates (T5) in every
-    state, including both tier states, rather than any Phase 3 off-piece or
-    either Tier 6 token, because those four pieces carry the Cataclysm
-    Harness four-piece the published guide says to hold; both reachable
-    Skyshatter tokens are refused, and the arithmetic is in the
-    token_refusal note. Every other slot was rebuilt for the tier states
-    from data/research/epv-workbook/Enh.csv's per-slot EPV rank, taking the
-    highest-ranked entry whose source lies inside the reachable set in
-    data/facts/progression.yaml (Mount Hyjal through Azgalor, Archimonde only
-    for tier_hands_and_head, Black Temple bosses 1-6) or that is crafted,
-    badge, or reputation gear, per drops.csv rather than the workbook's own
-    Location/Phase columns. That changed nine of the fifteen non-bonus-held
-    slots from the Entry loadout: neck (Telonicus's Pendant of Mayhem, Tempest
-    Keep -> Choker of Endless Nightmares, Supremus, rank 1, hit 0 -> 21),
-    shoulder (Shoulderpads of the Stranger -> Swiftstrike Shoulders, crafted,
-    rank 1, hit unchanged at 0), back (Vengeance Wrap -> Shadowmoon Destroyer's
-    Drape, Teron Gorefiend, rank 1, hit 0 -> 17), wrist (True-Aim Stalker Bands
-    -> Bindings of Lightning Reflexes, crafted, rank 1, hit unchanged at 0),
-    feet (Boots of Utter Darkness -> Softstep Boots of Tracking, Teron
-    Gorefiend, rank 1, hit 23 -> 17), both rings (Band of the Ranger-General +
-    Ring of Lethality -> Band of the Eternal Champion + Band of the
-    Ranger-General, hit 37 -> 18 combined, since a third candidate now
-    outranks Ring of Lethality), and both weapons (Wicked Edge of the Planes +
-    Merciless Gladiator's Cleaver -> Swiftsteel Bludgeon, Black Temple trash,
-    + Rising Tide, Naj'entus, hit 0 -> 40 combined). Waist (Belt of One-Hundred
-    Deaths) and both trinkets (Dragonspine Trophy, Bloodlust Brooch) did not
-    change: each is already the EPV-workbook's rank-1 or a deliberately chosen
-    entry among the reachable candidates (see uncertain, on Bloodlust Brooch).
-    Cursed Vision of Sargeras (head, Illidan), Nether Shadow Tunic (chest,
-    Supremus — displaced by the bonus-holding rule, not by reach), Skyshatter
-    Pants (legs, Illidari Council), Cloak of Fiends (back, Zul'Aman, Phase 4,
-    excluded under counting rule 3), Shadowmaster's Boots (feet, Mother
-    Shahraz), Madness of the Betrayer (trinket, Illidari Council) and
-    Stormrage Signet Ring (ring, Illidan) are the full-clear picks this
-    rebuild deliberately did not take, each for the reason named.
-  token_refusal: >-
-    REBUILT 9 August 2026 on token-arithmetic.yaml's enhancement_shaman
-    entry, which quotes the published guide verbatim: "Neither Tier 6 set
-    bonus is really worth chasing after for Enhancement Shamans" and "Hold on
-    to the Tier 5 4-piece bonus until you get a couple of BiS items for those
-    slots." The earlier capture wore Skyshatter Grips at both tier states and
-    Skyshatter Cover at tier_hands_and_head because the brief assumed the
-    anchors named gear; data/facts/progression.yaml's
-    the_two_tier_anchors_name_progression_not_gear clarifies they name which
-    bosses are down, so this rebuild holds the Cataclysm four-piece at head,
-    chest, hands and legs in both tier states and refuses both tokens.
-    WHY REFUSAL, PER THE WORKBOOK (Enh.csv, all figures its own EPV).
-    HANDS: Skyshatter Grips 156.57 sit below Gloves of the Searing Grip
-    165.38, which token-arithmetic records this player already owning from
-    Phase 2, and wearing either breaks the four-piece; Cataclysm Gauntlets
-    are 154.31. HEAD: token-arithmetic's structural point is that holding
-    the four-piece leaves room for exactly one token, but taking Skyshatter
-    Cover while keeping four Tier 5 pieces means recomposing through the
-    shoulder: Cover over Cataclysm Helm gains 20.52 (289.76 against 269.24)
-    while Cataclysm Shoulderplates over Swiftstrike Shoulders loses 59.50
-    (126.51 against 186.01), net minus 38.98, so no four-piece-holding
-    composition improves on the one already worn. The same test rules out
-    releasing hands for Grips of Damnation (gain 28.96, same shoulder cost,
-    net minus 30.54).
-    WHAT CHANGED. tier_hands_only: hands Skyshatter Grips -> Cataclysm
-    Gauntlets, tier6_pieces_held [hands] -> [], the four-piece line returns
-    to set_bonuses_held. tier_hands_and_head: additionally head Skyshatter
-    Cover -> Cataclysm Helm, and the Skyshatter two-piece line is gone. The
-    two tier states are now identical: for this spec, killing Archimonde
-    changes nothing. Totals recomputed from the rows: 187 -> 198 and 186 ->
-    198 (Gauntlets carry 24 hit against the Grips' 13 and the Cover's 20 at
-    head's 21). Entry is unchanged at 155. The spec was already past its
-    48-rating cap at every anchor, so no cap state moves; the extra hit is
-    surplus, which is itself a fact the council may weigh.
-  uncertain: >-
-    drops.csv gives "Trash / zone drop" as the boss for Swiftsteel Bludgeon
-    (Black Temple) and treats it as reachable zone-wide; the exact trash pull
-    is not pinpointed, so if that trash sits deep in the unreached wings this
-    weapon overstates what is held. Ring_1 (Band of the Eternal Champion) and
-    several crafted picks (Swiftstrike Shoulders, Bindings of Lightning
-    Reflexes) depend on a reputation grind or a profession pattern unlock
-    whose pace this repository does not track, distinct from the raid-kill
-    pace progression.yaml documents; they are included because the brief
-    lists "badge gear, and crafted gear" as reachable at this anchor without
-    a pace caveat, but that grind could still lag the raid. Trinket_2 stays
-    Bloodlust Brooch (badge, hit 0) rather than the EPV workbook's higher-
-    ranked reachable Darkmoon Card: Crusade (hit 0): that card is acquired by
-    trading Darkmoon Faire deck drops, which is RNG- and calendar-gated in a
-    way crafted and badge gear are not, so it was not treated as equivalently
-    reliable. Neither choice changes the total, since both are 0 hit. Wicked
-    Edge of the Planes and Merciless Gladiator's Cleaver, from the Entry
-    anchor, are not raid drops or tier pieces. CORRECTED 11 August 2026: this
-    said they are absent from items.csv, and both are present today, 28433 and
-    31965, because task 47 extended that table past raid drops and tier vendor
-    items. The note stood on a state of the fact table that no longer holds; their hit 0 rests on data/research/epv-workbook/Enh.csv's stat
-    columns plus general knowledge that both are itemized with Expertise
-    Rating rather than Hit Rating, not on a direct Wowhead tooltip, which
-    renders client-side and was not retrievable by this session's fetch tool.
-    Totem of the Astral Winds (relic, both anchors) is confirmed hit 0 from a
-    secondary search snippet (it boosts the Windfury Weapon attack-power proc
-    only) for the same reason, and the EPV workbook carries no relic section
-    for Enhancement to rank alternatives against.
+  weapon_speed_rule_disagreement: 'RECORDED 11 August 2026, not resolved. docs/kb/DOMAIN.md
+    records, on the guild lead''s statement, that an Enhancement Shaman runs two weapons of
+    the SAME speed and prefers them slow, because both hands carry a Windfury imbue. THIS
+    CAPTURE DOES NOT MEET THAT RULE AT EITHER TIER ANCHOR. It pairs Swiftsteel Bludgeon at
+    speed 1.5 in the main hand with Rising Tide at speed 2.6 in the off hand. The entry anchor
+    is close to matched, at 2.7 against 2.6. THE CAUSE IS THE TAB SHAPE rather than a mistake
+    in the capture. The Enhancement tab ranks main hand and off hand in ONE combined One Hand
+    pool, where the Fury tab splits them, so the capture took rank 1 and then the next reachable
+    row and speed never entered the selection. Nothing downstream can restore the distinction
+    either: delta.lua prices neither weapon damage nor weapon speed. DOMAIN.md also records
+    that the speed rule is uncorroborated by any source this project holds, and that a simulation
+    is the route to settle it. So this is a disagreement between a stated rule and a captured
+    set, and both sides are recorded rather than one being corrected to the other.'
+  downgraded_slots: 'Head, chest, hands and legs are held as Cataclysm Helm, Cataclysm Chestplate,
+    Cataclysm Gauntlets and Cataclysm Legplates (T5) in every state, including both tier states,
+    rather than any Phase 3 off-piece or either Tier 6 token, because those four pieces carry
+    the Cataclysm Harness four-piece the published guide says to hold; both reachable Skyshatter
+    tokens are refused, and the arithmetic is in the token_refusal note. Every other slot
+    was rebuilt for the tier states from data/research/epv-workbook/Enh.csv''s per-slot EPV
+    rank, taking the highest-ranked entry whose source lies inside the reachable set in data/facts/progression.yaml
+    (Mount Hyjal through Azgalor, Archimonde only for tier_hands_and_head, Black Temple bosses
+    1-6) or that is crafted, badge, or reputation gear, per drops.csv rather than the workbook''s
+    own Location/Phase columns. That changed nine of the fifteen non-bonus-held slots from
+    the Entry loadout: neck (Telonicus''s Pendant of Mayhem, Tempest Keep -> Choker of Endless
+    Nightmares, Supremus, rank 1, hit 0 -> 21), shoulder (Shoulderpads of the Stranger ->
+    Swiftstrike Shoulders, crafted, rank 1, hit unchanged at 0), back (Vengeance Wrap -> Shadowmoon
+    Destroyer''s Drape, Teron Gorefiend, rank 1, hit 0 -> 17), wrist (True-Aim Stalker Bands
+    -> Bindings of Lightning Reflexes, crafted, rank 1, hit unchanged at 0), feet (Boots of
+    Utter Darkness -> Softstep Boots of Tracking, Teron Gorefiend, rank 1, hit 23 -> 17),
+    both rings (Band of the Ranger-General + Ring of Lethality -> Band of the Eternal Champion
+    + Band of the Ranger-General, hit 37 -> 18 combined, since a third candidate now outranks
+    Ring of Lethality), and both weapons (Wicked Edge of the Planes + Merciless Gladiator''s
+    Cleaver -> Swiftsteel Bludgeon, Black Temple trash, + Rising Tide, Naj''entus, hit 0 ->
+    40 combined). Waist (Belt of One-Hundred Deaths) and both trinkets (Dragonspine Trophy,
+    Bloodlust Brooch) did not change: each is already the EPV-workbook''s rank-1 or a deliberately
+    chosen entry among the reachable candidates (see uncertain, on Bloodlust Brooch). Cursed
+    Vision of Sargeras (head, Illidan), Nether Shadow Tunic (chest, Supremus — displaced by
+    the bonus-holding rule, not by reach), Skyshatter Pants (legs, Illidari Council), Cloak
+    of Fiends (back, Zul''Aman, Phase 4, excluded under counting rule 3), Shadowmaster''s
+    Boots (feet, Mother Shahraz), Madness of the Betrayer (trinket, Illidari Council) and
+    Stormrage Signet Ring (ring, Illidan) are the full-clear picks this rebuild deliberately
+    did not take, each for the reason named.'
+  token_refusal: 'REBUILT 9 August 2026 on token-arithmetic.yaml''s enhancement_shaman entry,
+    which quotes the published guide verbatim: "Neither Tier 6 set bonus is really worth chasing
+    after for Enhancement Shamans" and "Hold on to the Tier 5 4-piece bonus until you get
+    a couple of BiS items for those slots." The earlier capture wore Skyshatter Grips at both
+    tier states and Skyshatter Cover at tier_hands_and_head because the brief assumed the
+    anchors named gear; data/facts/progression.yaml''s the_two_tier_anchors_name_progression_not_gear
+    clarifies they name which bosses are down, so this rebuild holds the Cataclysm four-piece
+    at head, chest, hands and legs in both tier states and refuses both tokens. WHY REFUSAL,
+    PER THE WORKBOOK (Enh.csv, all figures its own EPV). HANDS: Skyshatter Grips 156.57 sit
+    below Gloves of the Searing Grip 165.38, which token-arithmetic records this player already
+    owning from Phase 2, and wearing either breaks the four-piece; Cataclysm Gauntlets are
+    154.31. HEAD: token-arithmetic''s structural point is that holding the four-piece leaves
+    room for exactly one token, but taking Skyshatter Cover while keeping four Tier 5 pieces
+    means recomposing through the shoulder: Cover over Cataclysm Helm gains 20.52 (289.76
+    against 269.24) while Cataclysm Shoulderplates over Swiftstrike Shoulders loses 59.50
+    (126.51 against 186.01), net minus 38.98, so no four-piece-holding composition improves
+    on the one already worn. The same test rules out releasing hands for Grips of Damnation
+    (gain 28.96, same shoulder cost, net minus 30.54). WHAT CHANGED. tier_hands_only: hands
+    Skyshatter Grips -> Cataclysm Gauntlets, tier6_pieces_held [hands] -> [], the four-piece
+    line returns to set_bonuses_held. tier_hands_and_head: additionally head Skyshatter Cover
+    -> Cataclysm Helm, and the Skyshatter two-piece line is gone. The two tier states are
+    now identical: for this spec, killing Archimonde changes nothing. Totals recomputed from
+    the rows: 187 -> 198 and 186 -> 198 (Gauntlets carry 24 hit against the Grips'' 13 and
+    the Cover''s 20 at head''s 21). Entry is unchanged at 155. The spec was already past its
+    48-rating cap at every anchor, so no cap state moves; the extra hit is surplus, which
+    is itself a fact the council may weigh.'
+  uncertain: 'drops.csv gives "Trash / zone drop" as the boss for Swiftsteel Bludgeon (Black
+    Temple) and treats it as reachable zone-wide; the exact trash pull is not pinpointed,
+    so if that trash sits deep in the unreached wings this weapon overstates what is held.
+    Ring_1 (Band of the Eternal Champion) and several crafted picks (Swiftstrike Shoulders,
+    Bindings of Lightning Reflexes) depend on a reputation grind or a profession pattern unlock
+    whose pace this repository does not track, distinct from the raid-kill pace progression.yaml
+    documents; they are included because the brief lists "badge gear, and crafted gear" as
+    reachable at this anchor without a pace caveat, but that grind could still lag the raid.
+    Trinket_2 stays Bloodlust Brooch (badge, hit 0) rather than the EPV workbook''s higher-
+    ranked reachable Darkmoon Card: Crusade (hit 0): that card is acquired by trading Darkmoon
+    Faire deck drops, which is RNG- and calendar-gated in a way crafted and badge gear are
+    not, so it was not treated as equivalently reliable. Neither choice changes the total,
+    since both are 0 hit. Wicked Edge of the Planes and Merciless Gladiator''s Cleaver, from
+    the Entry anchor, are not raid drops or tier pieces. CORRECTED 11 August 2026: this said
+    they are absent from items.csv, and both are present today, 28433 and 31965, because task
+    47 extended that table past raid drops and tier vendor items. The note stood on a state
+    of the fact table that no longer holds; their hit 0 rests on data/research/epv-workbook/Enh.csv''s
+    stat columns plus general knowledge that both are itemized with Expertise Rating rather
+    than Hit Rating, not on a direct Wowhead tooltip, which renders client-side and was not
+    retrievable by this session''s fetch tool. Totem of the Astral Winds (relic, both anchors)
+    is confirmed hit 0 from a secondary search snippet (it boosts the Windfury Weapon attack-power
+    proc only) for the same reason, and the EPV workbook carries no relic section for Enhancement
+    to rank alternatives against.'

@@ -1,223 +1,303 @@
 spec: protection_paladin
 collected_on: 2026-08-09
-
 sources:
   entry:
     url: https://raw.githubusercontent.com/wowsims/tbc/master/ui/protection_paladin/presets.ts
-    title: >-
-      wowsims TBC Classic, Protection Paladin "P2 Preset" (Serpentshrine Cavern
-      / Tempest Keep best-in-slot loadout)
+    title: wowsims TBC Classic, Protection Paladin "P2 Preset" (Serpentshrine Cavern / Tempest
+      Keep best-in-slot loadout)
     observed: 2026-08-09
   tier:
     url: https://raw.githubusercontent.com/wowsims/tbc/master/ui/protection_paladin/presets.ts
-    title: >-
-      wowsims TBC Classic, Protection Paladin "P3 Preset" (Mount Hyjal / Black
-      Temple full-clear best-in-slot loadout), downgraded per this file's method
+    title: wowsims TBC Classic, Protection Paladin "P3 Preset" (Mount Hyjal / Black Temple
+      full-clear best-in-slot loadout), downgraded per this file's method
     observed: 2026-08-09
-
-method_note: >-
-  Wowhead's own Phase 2 and Phase 3 Protection Paladin BiS guide pages could
-  not be read: they are client-rendered, and every fetch of
-  wowhead.com/tbc/guide/... returned only page chrome, no gear table. The item
-  lists above come from wowsims's community-maintained TBC Classic sim, which
-  publishes its own BiS presets per phase and is the same generation of
-  reference data this project already treats as authoritative for gear
-  (data/research/epv-workbook). EVERY item id below was then independently
-  verified stat-by-stat against Wowhead's own live tooltip data at
-  https://nether.wowhead.com/tbc/tooltip/item/<id>, the endpoint this
-  repository's other fact tables already cite (see data/facts/PROVENANCE.md).
-  Every drop source named below was cross-checked against this repo's own
-  data/facts/drops.csv, not asserted from memory.
-
+method_note: 'Wowhead''s own Phase 2 and Phase 3 Protection Paladin BiS guide pages could
+  not be read: they are client-rendered, and every fetch of wowhead.com/tbc/guide/... returned
+  only page chrome, no gear table. The item lists above come from wowsims''s community-maintained
+  TBC Classic sim, which publishes its own BiS presets per phase and is the same generation
+  of reference data this project already treats as authoritative for gear (data/research/epv-workbook).
+  EVERY item id below was then independently verified stat-by-stat against Wowhead''s own
+  live tooltip data at https://nether.wowhead.com/tbc/tooltip/item/<id>, the endpoint this
+  repository''s other fact tables already cite (see data/facts/PROVENANCE.md). Every drop
+  source named below was cross-checked against this repo''s own data/facts/drops.csv, not
+  asserted from memory.'
 anchors:
-
   entry:
-    tier_pieces_held: [head, hands, legs]
+    tier_pieces_held:
+    - head
+    - hands
+    - legs
     set_bonuses_held:
-      - "Crystalforge Armor 2-piece (3 of 5 held): Increases the damage from your Retribution Aura by 15."
-      - "Justicar Armor 2-piece (2 of 5 held, shoulder+chest): Increases the damage dealt by your Seal of Righteousness, Seal of Vengeance, or Seal of the Martyr by 10%."
+    - 'Crystalforge Armor 2-piece (3 of 5 held): Increases the damage from your Retribution
+      Aura by 15.'
+    - 'Justicar Armor 2-piece (2 of 5 held, shoulder+chest): Increases the damage dealt by
+      your Seal of Righteousness, Seal of Vengeance, or Seal of the Martyr by 10%.'
     hit_by_slot:
-      head:     {item: "Crystalforge Faceguard", id: 30125, hit: 0, spell_hit: 0}
-      neck:     {item: "The Darkener's Grasp", id: 30007, hit: 0, spell_hit: 0}
-      shoulder: {item: "Justicar Shoulderguards", id: 29070, hit: 0, spell_hit: 0}
-      back:     {item: "Phoenix-Wing Cloak", id: 29925, hit: 0, spell_hit: 0}
-      chest:    {item: "Justicar Chestguard", id: 29066, hit: 0, spell_hit: 0}
-      wrist:    {item: "Wristguards of Determination", id: 32515, hit: 0, spell_hit: 0}
-      hands:    {item: "Crystalforge Handguards", id: 30124, hit: 0, spell_hit: 0}
-      waist:    {item: "Girdle of the Invulnerable", id: 30096, hit: 0, spell_hit: 0}
-      legs:     {item: "Crystalforge Legguards", id: 30126, hit: 0, spell_hit: 0}
-      feet:     {item: "Boots of the Resilient", id: 32267, hit: 0, spell_hit: 0}
-      ring_1: {item: "Ring of Sundered Souls", id: 30083, hit: 0, spell_hit: 0}
-      ring_2: {item: "Elementium Band of the Sentry", id: 28407, hit: 0, spell_hit: 0}
-      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0, spell_hit: 0}
-      trinket_2: {item: "Eye of Magtheridon", id: 28789, hit: 0, spell_hit: 0}
-      main_hand: {item: "Fang of the Leviathan", id: 30095, hit: 0, spell_hit: 0}
-      off_hand:  {item: "Aldori Legacy Defender", id: 28825, hit: 15, spell_hit: 0}
-      relic:     {item: "Libram of the Eternal Rest", id: 27917, hit: 0, spell_hit: 0}
+      head:
+        item: Crystalforge Faceguard
+        id: 30125
+        hit: 0
+        spell_hit: 0
+      neck:
+        item: The Darkener's Grasp
+        id: 30007
+        hit: 0
+        spell_hit: 0
+      shoulder:
+        item: Justicar Shoulderguards
+        id: 29070
+        hit: 0
+        spell_hit: 0
+      back:
+        item: Phoenix-Wing Cloak
+        id: 29925
+        hit: 0
+        spell_hit: 0
+      chest:
+        item: Justicar Chestguard
+        id: 29066
+        hit: 0
+        spell_hit: 0
+      wrist:
+        item: Wristguards of Determination
+        id: 32515
+        hit: 0
+        spell_hit: 0
+      hands:
+        item: Crystalforge Handguards
+        id: 30124
+        hit: 0
+        spell_hit: 0
+      waist:
+        item: Girdle of the Invulnerable
+        id: 30096
+        hit: 0
+        spell_hit: 0
+      legs:
+        item: Crystalforge Legguards
+        id: 30126
+        hit: 0
+        spell_hit: 0
+      feet:
+        item: Boots of the Resilient
+        id: 32267
+        hit: 0
+        spell_hit: 0
+      ring_1:
+        item: Ring of Sundered Souls
+        id: 30083
+        hit: 0
+        spell_hit: 0
+      ring_2:
+        item: Elementium Band of the Sentry
+        id: 28407
+        hit: 0
+        spell_hit: 0
+      trinket_1:
+        item: Icon of the Silver Crescent
+        id: 29370
+        hit: 0
+        spell_hit: 0
+      trinket_2:
+        item: Eye of Magtheridon
+        id: 28789
+        hit: 0
+        spell_hit: 0
+      main_hand:
+        item: Fang of the Leviathan
+        id: 30095
+        hit: 0
+        spell_hit: 0
+      off_hand:
+        item: Aldori Legacy Defender
+        id: 28825
+        hit: 15
+        spell_hit: 0
+      relic:
+        item: Libram of the Eternal Rest
+        id: 27917
+        hit: 0
+        spell_hit: 0
     total_item_hit: 15
     total_item_spell_hit: 0
-
-  tier_hands_only:
-    tier6_pieces_held: [hands]
-    tier5_pieces_held: [head, legs]
-    set_bonuses_held:
-      - "Crystalforge Armor 2-piece (2 of 5 held, head+legs): Increases the damage from your Retribution Aura by 15."
-      - "Justicar Armor 2-piece (2 of 5 held, shoulder+chest): Increases the damage dealt by your Seal of Righteousness, Seal of Vengeance, or Seal of the Martyr by 10%."
-      - "Lightbringer Armor: 1 of 5 held (hands only). No bonus at 1 piece."
-    hit_by_slot:
-      head:     {item: "Crystalforge Faceguard", id: 30125, hit: 0, spell_hit: 0}
-      neck:     {item: "The Darkener's Grasp", id: 30007, hit: 0, spell_hit: 0}
-      shoulder: {item: "Justicar Shoulderguards", id: 29070, hit: 0, spell_hit: 0}
-      back:     {item: "Phoenix-Wing Cloak", id: 29925, hit: 0, spell_hit: 0}
-      chest:    {item: "Justicar Chestguard", id: 29066, hit: 0, spell_hit: 0}
-      wrist:    {item: "The Seeker's Wristguards", id: 32279, hit: 0, spell_hit: 0}
-      hands:    {item: "Lightbringer Handguards", id: 30985, hit: 0, spell_hit: 0}
-      waist:    {item: "Girdle of Mighty Resolve", id: 32342, hit: 0, spell_hit: 0}
-      legs:     {item: "Crystalforge Legguards", id: 30126, hit: 0, spell_hit: 0}
-      feet:     {item: "Tide-stomper's Greaves", id: 32245, hit: 0, spell_hit: 0}
-      ring_1: {item: "Band of the Abyssal Lord", id: 32261, hit: 21, spell_hit: 0}
-      ring_2: {item: "Band of the Eternal Defender", id: 29297, hit: 0, spell_hit: 0}
-      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0, spell_hit: 0}
-      trinket_2: {item: "Eye of Magtheridon", id: 28789, hit: 0, spell_hit: 0}
-      main_hand: {item: "Fang of the Leviathan", id: 30095, hit: 0, spell_hit: 0}
-      off_hand:  {item: "Kaz'rogal's Hardened Heart", id: 30889, hit: 21, spell_hit: 0}
-      relic:     {item: "Libram of the Eternal Rest", id: 27917, hit: 0, spell_hit: 0}
-    total_item_hit: 42
-    total_item_spell_hit: 0
-
   tier_hands_and_head:
-    tier6_pieces_held: [hands, head]
-    tier5_pieces_held: [legs]
-    set_bonuses_held:
-      - "Lightbringer Armor 2-piece (2 of 5 held, hands+head): Increases the mana gained from your Spiritual Attunement ability by 10%."
-      - "Justicar Armor 2-piece (2 of 5 held, shoulder+chest): Increases the damage dealt by your Seal of Righteousness, Seal of Vengeance, or Seal of the Martyr by 10%."
-      - "Crystalforge Armor: 1 of 5 held (legs only). No bonus at 1 piece."
+    tier6_pieces_held:
+    - chest
+    - hands
+    - legs
+    - shoulder
+    tier5_pieces_held: []
     hit_by_slot:
-      head:     {item: "Lightbringer Faceguard", id: 30987, hit: 0, spell_hit: 0}
-      neck:     {item: "The Darkener's Grasp", id: 30007, hit: 0, spell_hit: 0}
-      shoulder: {item: "Justicar Shoulderguards", id: 29070, hit: 0, spell_hit: 0}
-      back:     {item: "Phoenix-Wing Cloak", id: 29925, hit: 0, spell_hit: 0}
-      chest:    {item: "Justicar Chestguard", id: 29066, hit: 0, spell_hit: 0}
-      wrist:    {item: "The Seeker's Wristguards", id: 32279, hit: 0, spell_hit: 0}
-      hands:    {item: "Lightbringer Handguards", id: 30985, hit: 0, spell_hit: 0}
-      waist:    {item: "Girdle of Mighty Resolve", id: 32342, hit: 0, spell_hit: 0}
-      legs:     {item: "Crystalforge Legguards", id: 30126, hit: 0, spell_hit: 0}
-      feet:     {item: "Tide-stomper's Greaves", id: 32245, hit: 0, spell_hit: 0}
-      ring_1: {item: "Band of the Abyssal Lord", id: 32261, hit: 21, spell_hit: 0}
-      ring_2: {item: "Band of the Eternal Defender", id: 29297, hit: 0, spell_hit: 0}
-      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0, spell_hit: 0}
-      trinket_2: {item: "Eye of Magtheridon", id: 28789, hit: 0, spell_hit: 0}
-      main_hand: {item: "Tempest of Chaos", id: 30910, hit: 0, spell_hit: 17}
-      off_hand:  {item: "Kaz'rogal's Hardened Heart", id: 30889, hit: 21, spell_hit: 0}
-      relic:     {item: "Libram of the Eternal Rest", id: 27917, hit: 0, spell_hit: 0}
-    total_item_hit: 42
+      head:
+        item: Faceplate of the Impenetrable
+        id: 32521
+        hit: 0
+      neck:
+        item: The Darkener's Grasp
+        id: 30007
+        hit: 0
+        spell_hit: 0
+      shoulder:
+        item: Lightbringer Shoulderguards
+        id: 30998
+        hit: 0
+      back:
+        item: Phoenix-Wing Cloak
+        id: 29925
+        hit: 0
+        spell_hit: 0
+      chest:
+        item: Lightbringer Chestguard
+        id: 30991
+        hit: 0
+      wrist:
+        item: Wristguards of Determination
+        id: 32515
+        hit: 0
+        spell_hit: 0
+      hands:
+        item: Lightbringer Handguards
+        id: 30985
+        hit: 0
+      waist:
+        item: Girdle of the Invulnerable
+        id: 30096
+        hit: 0
+        spell_hit: 0
+      legs:
+        item: Lightbringer Legguards
+        id: 30995
+        hit: 0
+      feet:
+        item: Boots of the Resilient
+        id: 32267
+        hit: 0
+        spell_hit: 0
+      ring_1:
+        item: Ring of Sundered Souls
+        id: 30083
+        hit: 0
+        spell_hit: 0
+      ring_2:
+        item: Elementium Band of the Sentry
+        id: 28407
+        hit: 0
+        spell_hit: 0
+      trinket_1:
+        item: Icon of the Silver Crescent
+        id: 29370
+        hit: 0
+        spell_hit: 0
+      trinket_2:
+        item: Eye of Magtheridon
+        id: 28789
+        hit: 0
+        spell_hit: 0
+      main_hand:
+        item: Fang of the Leviathan
+        id: 30095
+        hit: 0
+        spell_hit: 0
+      off_hand:
+        item: Aldori Legacy Defender
+        id: 28825
+        hit: 15
+        spell_hit: 0
+      relic:
+        item: Libram of the Eternal Rest
+        id: 27917
+        hit: 0
+        spell_hit: 0
+    total_item_hit: 15
     total_item_spell_hit: 17
-
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Lightbringer Armor: 4
+    set_pieces_held_note: 'The prose bonus descriptions recorded here before 13 August 2026
+      described the OLD tier set and seven of them no longer held once the set was rebuilt
+      from the Phase 3 best-in-slot list. They are not rewritten, because this project does
+      not have the bonus text for the sets that replaced them and inventing it would be worse
+      than counting. What is recorded instead is what can be checked: how many pieces of each
+      set the anchor wears. Two is a 2-piece bonus and four is a 4-piece; the text of each
+      is on the item.'
 notes:
-  lightbringer_armor_hit_verified: >-
-    CONFIRMED by direct tooltip read of all five Lightbringer Armor pieces
-    (head 30987, shoulder 30998, chest 30991, hands 30985, legs 30995): every
-    piece carries defense, dodge, parry or shield-block rating and NOT ONE
-    carries hit rating or spell hit rating. The recorded claim that Lightbringer
-    Armor supplies zero hit is correct.
-  entry_supply_is_not_zero: >-
-    The pre-existing supplied_at_p3_entry: 0 figure in data/facts/hit.yaml
-    does NOT reproduce here, and should not: this file counts item hit only
-    (no talents, gems, enchants, buffs), and under that narrower count the
-    Entry set already carries 15 melee hit rating, all of it from the
-    off-hand, Aldori Legacy Defender (id 28825, +15 hit). No item in the Entry
-    set carries any spell hit.
-  downgraded_slots: >-
-    Starting from the wowsims P3 full-clear preset, three slots were reverted
-    to their Entry (or an available Phase-1/T5) item because the P3 preset's
-    own choice is locked behind a late Black Temple boss: shoulder (Lightbringer
-    Shoulderguards drops from Mother Shahraz, reverted to Justicar
-    Shoulderguards), chest (Lightbringer Chestguard drops from Illidan
-    Stormrage, reverted to Justicar Chestguard), legs (Lightbringer Legguards
-    drops from the Illidari Council, reverted to the T5 token Crystalforge
-    Legguards, which the Entry set already held). Two more slots were reverted
-    for the same reason: off_hand (Bulwark of Azzinoth drops from Illidan,
-    reverted to Aldori Legacy Defender) and relic (Tome of the Lightbringer
-    drops from Mother Shahraz, reverted to Libram of the Eternal Rest). The
-    head and main_hand slots are reverted ONLY in tier_hands_only, because
-    their P3-preset picks are locked behind Archimonde: head (Faceplate of the
-    Impenetrable is an Illidan drop anyway and was never reachable, so head
-    instead takes the T5 token, Crystalforge Faceguard, which also happens to
-    hold a Crystalforge Armor set-bonus piece), and main_hand (Tempest of
-    Chaos drops from Archimonde itself, reverted to Fang of the Leviathan).
-    Six slots (neck, back, wrist, waist, feet, finger_1, finger_2) took the
-    P3-preset item as-is because data/facts/drops.csv confirms each source is
-    either early Black Temple (Naj'entus: feet; Supremus: finger_1; Shade of
-    Akama: wrist; Gurtogg Bloodboil: waist; Reliquary of Souls: neck), Black
-    Temple zone trash (back), or Phase 1 (finger_2, Ashyen's Gift, already
-    legal at Entry too).
-  trinkets_kept_conservative: >-
-    trinket_1 and trinket_2 were kept at their Entry items rather than the P3
-    preset's Darkmoon Card: Vengeance and Ashtongue Talisman of Zeal. Neither
-    swap changes a hit total (both P3-preset trinkets carry zero hit and zero
-    spell hit per their tooltip), but their availability by week four to six
-    was not verified: the Darkmoon Card requires assembling multiple card
-    drops across several raids and the Ashtongue Talisman is a reputation
-    reward gated behind Ashtongue Deathsworn standing, which data/facts/drops.csv
-    does not track and this pass did not verify. Uncounted either way.
-  uncertain: >-
-    Wowhead's own Phase 2 and Phase 3 BiS guide pages render client-side and
-    returned no gear content to this agent's fetch tools; the item lists here
-    trace to wowsims's published presets instead, cross-verified item-by-item
-    against Wowhead's live tooltip data and this repo's own drops.csv (see
-    method_note above). Gem and enchant choices in the wowsims source were
-    NOT read into this file, per the brief's rule that only the number printed
-    on the item counts. Whether trinket_1 and trinket_2 are realistically
-    obtainable by week four to six was not resolved; see
-    trinkets_kept_conservative.
-
-  defense_first_correction: >-
-    CORRECTED 9 August 2026. Both tier anchors had traded defense for hit in
-    two slots and fallen to 264 defense rating against the 284 a plate tank
-    needs with Anticipation at five ranks, which is recorded in
-    data/facts/crit.yaml. That was read as a gearing ceiling and it was not.
-    Pepe's Shroud of Pacification carries 25 hit and NO defense, against the
-    22 defense on Phoenix-Wing Cloak it displaced, and Ashyen's Gift carries
-    no defense against the 20 on Elementium Band of the Sentry. Both entry
-    items remain equippable at the tier anchors, so nothing forced the trade.
-    Reverting the two slots returns 306 defense rating, clear of 284, and
-    costs 25 item hit at each tier anchor, taking them from 81 to 56, and 21
-    spell hit, because Ashyen's Gift carried its hit on the spell side.
-    THAT IS THE TRADE STATED PLAINLY: a tank that is not immune to critical
-    strikes has no threat problem worth solving. The same diagnosis was
-    already applied to the Protection Warrior; this file was left with the
-    defect until an audit found it.
-
-  workbook_divergence_correction: >-
-    CORRECTED 9 August 2026, after a workbook audit found three tier-anchor
-    slots this capture wore against both the EPV ranking in
-    data/research/epv-workbook/Tank.csv AND the item's own defense line, with
-    no reason stated. All three were changed at both tier anchors; entry is
-    untouched because every replacement is Phase 3 gear.
-    NECK reverted from Pendant of Titans (32362, EPV 64.10, 21 defense, 20
-    hit) to the capture's own entry item The Darkener's Grasp (30007, EPV
-    69.42, 27 defense, 0 hit): the Phase 3 item was worse on EPV and on
-    defense, and only its 20 hit recommended it, which is the same
-    hit-over-defense trade the defense_first_correction note above already
-    reversed in two other slots. This slot was missed by that pass.
-    OFF_HAND swapped from Aldori Legacy Defender (28825, EPV 360.05, 19
-    defense, 15 hit) to Kaz'rogal's Hardened Heart (30889, Kaz'rogal, third
-    boss of Mount Hyjal and inside the reachable set, EPV 407.30, 28 defense,
-    21 hit): better on EPV, on defense AND on hit, so nothing recommended
-    keeping the Phase 1 shield. The tab ranks one reachable shield higher
-    still, Illidari Runeshield (34011, Black Temple trash, EPV 411.50), but
-    items.csv shows it carries ZERO defense and its value is spell damage and
-    intellect, so it is named rather than taken; which shield the council
-    routes is not decided here.
-    FINGER_2 swapped from Elementium Band of the Sentry (28407, 20 defense, 0
-    hit, unranked on the tab) to Band of the Eternal Defender (29297, EPV
-    70.55, rank 1 on the tab, 30 defense, 0 hit), the Scale of the Sands
-    Exalted ring that progression.yaml RULES allowed at both tier anchors and
-    barred at entry. The earlier defense-first pass predates that ruling and
-    never harvested the tier-side allowance.
-    NET PER TIER ANCHOR: hit moves from 56 to 42 (minus 20 at neck, plus 6 at
-    off_hand), spell hit is unchanged, and defense rating from items rises 25,
-    from 306 to 331 against the 284 data/facts/crit.yaml requires for plate
-    crit immunity, so the swaps widen the margin on the binding constraint
-    while the hit line falls. No priority is stated; the rows record what the
-    items carry.
+  lightbringer_armor_hit_verified: 'CONFIRMED by direct tooltip read of all five Lightbringer
+    Armor pieces (head 30987, shoulder 30998, chest 30991, hands 30985, legs 30995): every
+    piece carries defense, dodge, parry or shield-block rating and NOT ONE carries hit rating
+    or spell hit rating. The recorded claim that Lightbringer Armor supplies zero hit is correct.'
+  entry_supply_is_not_zero: 'The pre-existing supplied_at_p3_entry: 0 figure in data/facts/hit.yaml
+    does NOT reproduce here, and should not: this file counts item hit only (no talents, gems,
+    enchants, buffs), and under that narrower count the Entry set already carries 15 melee
+    hit rating, all of it from the off-hand, Aldori Legacy Defender (id 28825, +15 hit). No
+    item in the Entry set carries any spell hit.'
+  downgraded_slots: 'Starting from the wowsims P3 full-clear preset, three slots were reverted
+    to their Entry (or an available Phase-1/T5) item because the P3 preset''s own choice is
+    locked behind a late Black Temple boss: shoulder (Lightbringer Shoulderguards drops from
+    Mother Shahraz, reverted to Justicar Shoulderguards), chest (Lightbringer Chestguard drops
+    from Illidan Stormrage, reverted to Justicar Chestguard), legs (Lightbringer Legguards
+    drops from the Illidari Council, reverted to the T5 token Crystalforge Legguards, which
+    the Entry set already held). Two more slots were reverted for the same reason: off_hand
+    (Bulwark of Azzinoth drops from Illidan, reverted to Aldori Legacy Defender) and relic
+    (Tome of the Lightbringer drops from Mother Shahraz, reverted to Libram of the Eternal
+    Rest). The head and main_hand slots are reverted ONLY in tier_hands_only, because their
+    P3-preset picks are locked behind Archimonde: head (Faceplate of the Impenetrable is an
+    Illidan drop anyway and was never reachable, so head instead takes the T5 token, Crystalforge
+    Faceguard, which also happens to hold a Crystalforge Armor set-bonus piece), and main_hand
+    (Tempest of Chaos drops from Archimonde itself, reverted to Fang of the Leviathan). Six
+    slots (neck, back, wrist, waist, feet, finger_1, finger_2) took the P3-preset item as-is
+    because data/facts/drops.csv confirms each source is either early Black Temple (Naj''entus:
+    feet; Supremus: finger_1; Shade of Akama: wrist; Gurtogg Bloodboil: waist; Reliquary of
+    Souls: neck), Black Temple zone trash (back), or Phase 1 (finger_2, Ashyen''s Gift, already
+    legal at Entry too).'
+  trinkets_kept_conservative: 'trinket_1 and trinket_2 were kept at their Entry items rather
+    than the P3 preset''s Darkmoon Card: Vengeance and Ashtongue Talisman of Zeal. Neither
+    swap changes a hit total (both P3-preset trinkets carry zero hit and zero spell hit per
+    their tooltip), but their availability by week four to six was not verified: the Darkmoon
+    Card requires assembling multiple card drops across several raids and the Ashtongue Talisman
+    is a reputation reward gated behind Ashtongue Deathsworn standing, which data/facts/drops.csv
+    does not track and this pass did not verify. Uncounted either way.'
+  uncertain: Wowhead's own Phase 2 and Phase 3 BiS guide pages render client-side and returned
+    no gear content to this agent's fetch tools; the item lists here trace to wowsims's published
+    presets instead, cross-verified item-by-item against Wowhead's live tooltip data and this
+    repo's own drops.csv (see method_note above). Gem and enchant choices in the wowsims source
+    were NOT read into this file, per the brief's rule that only the number printed on the
+    item counts. Whether trinket_1 and trinket_2 are realistically obtainable by week four
+    to six was not resolved; see trinkets_kept_conservative.
+  defense_first_correction: 'CORRECTED 9 August 2026. Both tier anchors had traded defense
+    for hit in two slots and fallen to 264 defense rating against the 284 a plate tank needs
+    with Anticipation at five ranks, which is recorded in data/facts/crit.yaml. That was read
+    as a gearing ceiling and it was not. Pepe''s Shroud of Pacification carries 25 hit and
+    NO defense, against the 22 defense on Phoenix-Wing Cloak it displaced, and Ashyen''s Gift
+    carries no defense against the 20 on Elementium Band of the Sentry. Both entry items remain
+    equippable at the tier anchors, so nothing forced the trade. Reverting the two slots returns
+    306 defense rating, clear of 284, and costs 25 item hit at each tier anchor, taking them
+    from 81 to 56, and 21 spell hit, because Ashyen''s Gift carried its hit on the spell side.
+    THAT IS THE TRADE STATED PLAINLY: a tank that is not immune to critical strikes has no
+    threat problem worth solving. The same diagnosis was already applied to the Protection
+    Warrior; this file was left with the defect until an audit found it.'
+  workbook_divergence_correction: 'CORRECTED 9 August 2026, after a workbook audit found three
+    tier-anchor slots this capture wore against both the EPV ranking in data/research/epv-workbook/Tank.csv
+    AND the item''s own defense line, with no reason stated. All three were changed at both
+    tier anchors; entry is untouched because every replacement is Phase 3 gear. NECK reverted
+    from Pendant of Titans (32362, EPV 64.10, 21 defense, 20 hit) to the capture''s own entry
+    item The Darkener''s Grasp (30007, EPV 69.42, 27 defense, 0 hit): the Phase 3 item was
+    worse on EPV and on defense, and only its 20 hit recommended it, which is the same hit-over-defense
+    trade the defense_first_correction note above already reversed in two other slots. This
+    slot was missed by that pass. OFF_HAND swapped from Aldori Legacy Defender (28825, EPV
+    360.05, 19 defense, 15 hit) to Kaz''rogal''s Hardened Heart (30889, Kaz''rogal, third
+    boss of Mount Hyjal and inside the reachable set, EPV 407.30, 28 defense, 21 hit): better
+    on EPV, on defense AND on hit, so nothing recommended keeping the Phase 1 shield. The
+    tab ranks one reachable shield higher still, Illidari Runeshield (34011, Black Temple
+    trash, EPV 411.50), but items.csv shows it carries ZERO defense and its value is spell
+    damage and intellect, so it is named rather than taken; which shield the council routes
+    is not decided here. FINGER_2 swapped from Elementium Band of the Sentry (28407, 20 defense,
+    0 hit, unranked on the tab) to Band of the Eternal Defender (29297, EPV 70.55, rank 1
+    on the tab, 30 defense, 0 hit), the Scale of the Sands Exalted ring that progression.yaml
+    RULES allowed at both tier anchors and barred at entry. The earlier defense-first pass
+    predates that ruling and never harvested the tier-side allowance. NET PER TIER ANCHOR:
+    hit moves from 56 to 42 (minus 20 at neck, plus 6 at off_hand), spell hit is unchanged,
+    and defense rating from items rises 25, from 306 to 331 against the 284 data/facts/crit.yaml
+    requires for plate crit immunity, so the swaps widen the margin on the binding constraint
+    while the hit line falls. No priority is stated; the rows record what the items carry.'

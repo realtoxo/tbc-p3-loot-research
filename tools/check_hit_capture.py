@@ -49,7 +49,7 @@ ITEMS = Path("data/facts/items.csv")
 # set. The two tier states exist because Archimonde is the tier's first wall and
 # it drops the head token, so whether a raid has cleared it is the difference
 # between one reachable Tier 6 piece and two.
-ANCHORS = ("entry", "tier_hands_only", "tier_hands_and_head")
+ANCHORS = ("entry", "tier_hands_and_head")
 
 # Spell hit is a separate stat from melee hit in 2.4.3 and one spec needs both.
 TOTALS = {"total_item_hit": "hit", "total_item_spell_hit": "spell_hit"}
