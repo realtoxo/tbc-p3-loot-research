@@ -152,8 +152,11 @@ entries:
   status: captured
   confidence: high where the remark is mechanical and checkable; the url opens the recording
     at the second it was said
-  note: Answers the question the placeholder asked, which of the tanks this serves, for the
-    plate case. No captured remark addresses the Bear.
+  note: Speaks to the plate tanks. No captured remark addresses the Bear.
+  record: >-
+    Written against a placeholder that asked which of the tanks this serves.
+    That framing was internal and was removed from the published note on
+    13 August 2026.
 - id: fc-005
   item_id: 32483
   item_name: The Skull of Gul'dan
@@ -181,12 +184,18 @@ entries:
   status: captured
   confidence: high where the remark is mechanical and checkable; the url opens the recording
     at the second it was said
-  note: 'The placeholder predicted a community source would be worth most here because a proc
-    rate and an internal cooldown are absent from this project data. What arrived instead
-    is an argument about who wastes the least on the passive stats. AXIS OF THE CONFLICT,
-    because the stance labels hide it: both rows read favours, and they disagree about the
-    ELEMENTAL SHAMAN. Zatar argues the hit rating is wasted on that spec and routes the trinket
-    to a warlock; Darkest calls it the absolute best trinket for elemental.'
+  note: >-
+    Both this remark and Darkest's speak well of the trinket, so the
+    disagreement is not about whether it is good but about who should hold it.
+    Zatar argues the hit rating is wasted on an Elemental Shaman and routes it
+    to a warlock. Darkest calls it the best trinket an Elemental Shaman can
+    wear.
+  record: >-
+    The published note used to open by comparing what a placeholder predicted
+    against what the capture returned, and to explain that the stance labels
+    hide the axis of the conflict. Both are notes to this project's authors
+    rather than to a reader, and the second half repeated fc-007 word for word
+    on the same item page. Rewritten 13 August 2026.
 - id: fc-006
   item_id: 32014
   item_name: Merciless Gladiator's Maul
@@ -209,17 +218,21 @@ entries:
   status: captured
   confidence: high on what he says. The equivalence figures are his, taken from a third party,
     and this project has not checked them.
-  note: 'READ BY HAND, not by the agent pass. This item is Arena Season 2 gear rather than
-    a Phase 3 drop, so it sat outside the drop table the classification ran over and would
-    otherwise have been dropped silently. It answers what the placeholder asked: the Cat capture
-    wears this weapon at every anchor for its 18 hit, and a creator does argue ferals carry
-    it. CORRECTED 13 August 2026, previously_claimed "Arena Season 3 gear". Merciless Gladiator
-    is Season 2. Season 3 is Vengeful Gladiator, which docs/kb/DOMAIN.md records as opening
-    1 September 2026, five days after Phase 3 and therefore barred from an entry anchor. The
-    wrong season here would have barred the weapon the Feral Cat capture actually walks in
-    holding, at every anchor, and it is the source of the 18 hit those entry figures rest
-    on. tools/extract_ladder.py had it right the whole time: it deduplicates Vengeful as
-    season3 and Merciless as season2.'
+  note: >-
+    Arena Season 2 gear rather than a Phase 3 drop. The Feral Cat capture wears
+    it at every anchor for its 18 hit, and a creator does argue ferals carry it.
+  record: >-
+    Read by hand rather than by the transcript pass, because the item sits
+    outside the drop table that pass ran over and would otherwise have been
+    dropped silently.
+    CORRECTED 13 August 2026, previously_claimed "Arena Season 3 gear".
+    Merciless Gladiator is Season 2; Season 3 is Vengeful Gladiator, which
+    docs/kb/DOMAIN.md records as opening 1 September 2026, five days after
+    Phase 3 and therefore barred from an entry anchor. The wrong season would
+    have barred the weapon the Feral Cat capture actually walks in holding, at
+    every anchor, and it is the source of the 18 hit those entry figures rest
+    on. tools/extract_ladder.py had it right the whole time: it deduplicates
+    Vengeful as season3 and Merciless as season2.
 - id: fc-007
   item_id: 32483
   item_name: The Skull of Gul'dan
@@ -238,12 +251,13 @@ entries:
   status: captured
   confidence: high where the remark is mechanical and checkable; the url opens the recording
     at the second it was said
-  note: 'Recorded against fc-005 because the two reach different specs from the same item.
-    Zatar argues the hit rating is wasted on Elemental Shaman; Darkest calls it the absolute
-    best trinket for elemental. Disagreement is recorded, never resolved. AXIS OF THE CONFLICT,
-    because the stance labels hide it: both rows read favours, and they disagree about the
-    ELEMENTAL SHAMAN. Zatar argues the hit rating is wasted on that spec and routes the trinket
-    to a warlock; Darkest calls it the absolute best trinket for elemental.'
+  note: >-
+    The other side of the Elemental Shaman question. The disagreement is
+    recorded and not resolved.
+  record: >-
+    This note repeated fc-005 in full, so the same paragraph printed twice on
+    one item page, and both copies carried the internal phrase "AXIS OF THE
+    CONFLICT, because the stance labels hide it". Rewritten 13 August 2026.
 - id: fc-008
   item_id: 30910
   item_name: Tempest of Chaos
