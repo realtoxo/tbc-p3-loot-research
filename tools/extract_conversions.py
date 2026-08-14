@@ -354,7 +354,18 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict,
             "guild lead ruling, 12 August 2026: captured as themselves rather "
             "than converted",
         )
-        identity["net"] = False
+        # HASTE IS THE EXCEPTION AND STAYS IN THE SUM. Every other stat counted
+        # as itself left the total on 13 August 2026, so that resilience would
+        # stop restating a column that already showed it. Haste went with them
+        # and should not have: a weapon swap moving 27 haste rating is a real
+        # change to a shaman or a caster, and a summary that omits it describes
+        # a different item. The guild lead asked for it back the same day.
+        #
+        # It is an identity rule for the reason the 12 August ruling gives, that
+        # haste has no conversion in this project, NOT because it is unimportant.
+        # Those are two different reasons that had been sharing one flag.
+        if stat not in ("melee_haste", "spell_haste"):
+            identity["net"] = False
         rules.setdefault(stat, []).append(identity)
 
     if spec in CASTER_SPECS:

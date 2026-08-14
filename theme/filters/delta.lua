@@ -299,6 +299,19 @@ local function compute(spec, a, b, where)
     ["|attack power"] = true, ["|ranged attack power"] = true,
     ["|feral attack power"] = true, ["|spell damage"] = true,
     ["|healing power"] = true,
+    -- HASTE IS HERE BY NAME, and it is the one identity rule that is.
+    --
+    -- Haste has no conversion in this project: `haste.yaml` records one real
+    -- threshold in 2.4.3 and the guild lead ruled on 12 August 2026 that haste
+    -- and armor penetration are captured as themselves rather than converted.
+    -- That made haste an identity rule, and identity rules left the sum on
+    -- 13 August so that resilience would stop restating a column.
+    --
+    -- Haste went with them, and it should not have. The guild lead asked for it
+    -- back the same day: a weapon swap moving 27 haste rating is a real change
+    -- to a shaman or a caster, and a summary that omits it is describing a
+    -- different item. Resilience is not in that class and stays out.
+    ["|haste rating"] = true, ["|spell haste rating"] = true,
   }
 
   -- A SPEC THAT DELIBERATELY EXCLUDED A CURRENCY KEEPS IT EXCLUDED. A tank's
@@ -1165,6 +1178,26 @@ function Div(div)
   return nil
 end
 
+-- EVERY FILTER GETS ITS OWN itemdb, and this one never set its root.
+--
+-- itemdb.lua is loaded with dofile by each filter that needs it, so each holds
+-- a SEPARATE module table; AGENTS.md records that as a trap this project has
+-- already been caught by. items.lua sets `itemdb.root` from the document's
+-- metadata so an icon on a page in docs/items/ resolves through "../". This
+-- filter never did, so its copy stayed empty and any icon IT drew was written
+-- as "icons/name.jpg", which from docs/items/ points at a directory that does
+-- not exist.
+--
+-- It only showed on six images across the whole site, because a baseline the
+-- item table holds is drawn by items.lua with a correct root. The six are the
+-- baselines items.csv does NOT hold, arena weapons among them, which this
+-- filter builds itself. The guild lead found one on the published site on
+-- 13 August 2026: Vengeful Gladiator's Pummeler with a broken image beside it.
+function Meta(meta)
+  if meta.root then itemdb.root = pandoc.utils.stringify(meta.root) end
+  return meta
+end
+
 function Pandoc(doc)
   if #failures == 0 then return doc end
   local source = pandoc.utils.stringify(doc.meta.srcpath or "")
@@ -1180,3 +1213,14 @@ function Pandoc(doc)
     .. "wrong, so no page is written."
   error(table.concat(lines, "\n"))
 end
+
+-- NAMED PASSES, SO Meta RUNS FIRST. A Lua filter's default order walks the
+-- blocks before the metadata, so `Meta` above was setting `itemdb.root` after
+-- every icon on the page had already been written with an empty prefix. The
+-- same trap is documented at the foot of shortlist.lua, which is where this fix
+-- comes from. Declaring the passes fixes the order.
+return {
+  { Meta = Meta },
+  { Div = Div },
+  { Pandoc = Pandoc },
+}

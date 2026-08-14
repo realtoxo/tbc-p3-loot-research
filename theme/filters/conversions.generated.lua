@@ -55,7 +55,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -77,7 +76,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -137,7 +135,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -159,7 +156,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -211,7 +207,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -233,7 +228,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -296,7 +290,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -318,7 +311,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -373,7 +365,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -395,7 +386,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -447,7 +437,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -469,7 +458,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -526,7 +514,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -548,7 +535,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -605,7 +591,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -627,7 +612,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -679,7 +663,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -701,7 +684,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -871,7 +853,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -893,7 +874,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -945,7 +925,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -967,7 +946,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1024,7 +1002,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1046,7 +1023,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1098,7 +1074,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1120,7 +1095,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1183,7 +1157,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1205,7 +1178,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1260,7 +1232,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1282,7 +1253,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1339,7 +1309,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1361,7 +1330,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1682,7 +1650,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1704,7 +1671,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1767,7 +1733,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1789,7 +1754,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1841,7 +1805,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1863,7 +1826,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1920,7 +1882,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1942,7 +1903,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1997,7 +1957,6 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -2019,7 +1978,6 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
