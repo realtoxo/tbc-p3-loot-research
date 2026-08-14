@@ -236,6 +236,27 @@ def main() -> int:
             scope = remark.get("specs") or []
             out.append("        scope = { "
                        + ", ".join(lua_string(s) for s in scope) + " },")
+            # A PUBLISHED NOTE IS WRITTEN TO A READER, NOT TO US. Four notes
+            # opened by comparing what a placeholder predicted against what the
+            # capture returned, or by explaining that the stance labels hide the
+            # axis of a conflict. That is this project talking to itself, and it
+            # printed on a card under a creator's name. The guild lead read one
+            # on the published site on 13 August 2026 and asked what it was.
+            #
+            # The material is not lost: those entries now carry a `record` field
+            # for the authoring detail, which nothing publishes. This refuses to
+            # publish a note that still speaks in the vocabulary of the process.
+            leaked = [w for w in ("placeholder", "agent pass",
+                                  "AXIS OF THE CONFLICT", "stance labels hide")
+                      if w.lower() in (note.get("note") or "").lower()]
+            if leaked:
+                raise SystemExit(
+                    f"extract_commentary.py: the note on {key[0]} speaks about "
+                    f"how this project works, not about the item: {leaked}.\n"
+                    "  A published note is written to a reader. Move the "
+                    "authoring detail to a `record:` field, which is not "
+                    "published, and leave the note saying what the remark "
+                    "means.")
             if note.get("note"):
                 out.append(f"        note = {lua_string(tidy(note['note']))},")
             if note.get("conflicts_with"):

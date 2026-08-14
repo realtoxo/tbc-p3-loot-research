@@ -71,6 +71,20 @@ CAP_NAME = {
     "spell": ("spells", "spell hit cap"),
 }
 
+# WHICH CAP A BLOCK IS ABOUT, said on its first row.
+#
+# A spec that casts and swings gets one block per cap, and every block opened
+# with the words "Hit cap". So a Protection Paladin card showed two stacks of
+# figures, one reading 9 percent and the other 16, with nothing anywhere saying
+# that the first is for special attacks and the second for spells. The guild
+# lead asked what they were on 13 August 2026. They are the same question asked
+# of two different attack types, and the row now says which.
+CAP_ROW_LABEL = {
+    "melee_special": "Special-attack hit cap",
+    "ranged": "Ranged hit cap",
+    "spell": "Spell hit cap",
+}
+
 
 def percent(rating: float, per_percent: float) -> str:
     """A rating as a percentage, one decimal, trailing zero dropped.
@@ -222,7 +236,7 @@ def cap_sentences(spec: dict, hit: dict, cap: str, rating_per_percent: float,
     cap_percent = percent(cap_rating, rating_per_percent)
     kind = ("threat floor" if spec.get("cap_kind") == "threat_floor"
             else attacks)
-    out = [row("Hit cap", cap_percent, kind)]
+    out = [row(CAP_ROW_LABEL[cap], cap_percent, kind)]
 
     # CALLED FOR ITS GUARD, NOT ITS RETURN VALUE. talent_clause raises when a
     # spec credits no talent percent and gives no reason, which is the check
@@ -311,7 +325,7 @@ def cap_sentences(spec: dict, hit: dict, cap: str, rating_per_percent: float,
         return out
 
     out.append(BREAK)
-    out.append(row("Entry", percent(entry, rating_per_percent),
+    out.append(row("Walking in, before Phase 3", percent(entry, rating_per_percent),
                    margin_note(entry + debuff, target_rating,
                                rating_per_percent)))
     if tier != entry:
@@ -373,7 +387,7 @@ def captured_sentences(captured: dict, cap: str, rating_per_percent: float,
         # anchor and the Feral Cat holds none, so naming the tier described
         # gear those specs do not wear.
         out.append(
-            row("Entry", percent(entry[field], rating_per_percent),
+            row("Walking in, before Phase 3", percent(entry[field], rating_per_percent),
                 margin_note(entry[field] + debuff, target_rating,
                             rating_per_percent)))
 
@@ -386,8 +400,16 @@ def captured_sentences(captured: dict, cap: str, rating_per_percent: float,
                    "outright, so every point of hit on an item is surplus.")
 
     contested = captured.get("token_configuration_contested")
-    for key, label in (("tier_hands_only", "Tier hands"),
-                       ("tier_hands_and_head", "Tier hands and head")):
+    # AN ANCHOR NAMES A STATE OF THE RAID, NOT A PIECE OF GEAR, and the labels
+    # hid that. "Entry", "Tier hands" and "Tier hands and head" meant nothing to
+    # a reader who had not read progression.yaml, and the guild lead asked on
+    # 13 August 2026 what they were. They are the three points a council
+    # actually reasons from: before the phase opens, after Azgalor drops the
+    # hands token, and after Archimonde drops the head token. The boss is what a
+    # reader recognises, so the boss is named.
+    for key, label in (("tier_hands_only", "After Azgalor, hands token"),
+                       ("tier_hands_and_head",
+                        "After Archimonde, hands and head")):
         block = captured.get(key) or {}
         if not block or field not in block:
             continue
@@ -396,7 +418,7 @@ def captured_sentences(captured: dict, cap: str, rating_per_percent: float,
         # it was wearing one.
         held = block.get("tier6_pieces_held") or []
         if key == "tier_hands_and_head" and "head" not in held:
-            label = "Tier hands, keeps T5 helm"
+            label = "After Azgalor, keeps Tier 5 helm"
         out.append(row(label, percent(block[field], rating_per_percent),
                        margin_note(block[field] + debuff, target_rating,
                                    rating_per_percent)))
