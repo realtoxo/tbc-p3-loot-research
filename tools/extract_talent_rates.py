@@ -104,10 +104,15 @@ def points_taken(string: str, klass: str, talent_name: str,
     """How many points this build spends on one talent, or None if unrecorded."""
     trees, _ = tree_index(klass)
     parts = string.split("-")
-    if len(parts) != len(trees):
+    # A TRAILING TREE CAN BE ABSENT, not merely empty. The Priest raid build is
+    # "20/41/0" and its string carries two sections, because the Shadow tree
+    # takes no points and is dropped rather than written as an empty section.
+    # More sections than trees is still fatal.
+    if len(parts) > len(trees):
         raise SystemExit(
             f"extract_talent_rates.py: {spec} has {len(parts)} tree(s) in its "
             f"talent string and the {klass} tree file has {len(trees)}.")
+    parts += [""] * (len(trees) - len(parts))
     for tree, part in zip(trees, parts):
         # A STRING IS TRUNCATED, NOT PADDED. wowsims drops trailing zeros, so
         # the Shadow Priest's Discipline part is nine digits against a tree of
@@ -137,6 +142,16 @@ def main() -> int:
 
     strings = (yaml.safe_load(TALENTS.read_text())
                ["wowsims_talent_strings"]["strings"])
+
+    # THE FOUR HEALERS COME FROM A PUBLISHED GUIDE, because wowsims has no
+    # usable build for any of them. The capture records which build each string
+    # belongs to and that they are a guide's recommendation rather than this
+    # roster's own choice, and that distinction is carried through to the fact
+    # file: `source` says which, per spec, so no reader has to assume.
+    guides: dict[str, list[dict]] = {}
+    for path in sorted(CAPTURES.glob("*/guide-builds.yaml")):
+        for build in yaml.safe_load(path.read_text())["builds"]:
+            guides.setdefault(build["spec"], []).append(build)
 
     manifests = sorted(args.captures.glob("*/manifest.yaml"))
     if not manifests:
@@ -187,12 +202,46 @@ def main() -> int:
         for spec in SPECS_BY_TALENT.get(name, []):
             key = SPEC_KEY[spec]
             entry = strings.get(key)
-            if entry is None:
+            if entry is not None:
+                taken[spec] = {
+                    "points": points_taken(entry["string"], block["class"],
+                                           name, spec),
+                    "of": block["max_rank"],
+                    "build": entry.get("preset", ""),
+                    "source": "wowsims preset for this spec",
+                }
+                continue
+            found = []
+            for build in guides.get(spec, []):
+                points = points_taken(build["talents_string"], block["class"],
+                                      name, spec)
+                if points is None:
+                    continue
+                found.append({
+                    "points": points, "of": block["max_rank"],
+                    "build": build["build"], "primary": build["primary"],
+                    "source": "published guide, not this roster's own build",
+                    "url": build["url"],
+                })
+            if not found:
                 taken[spec] = None
                 unresolved.append(f"{spec} / {name}")
-                continue
-            taken[spec] = points_taken(entry["string"], block["class"], name,
-                                       spec)
+            elif len({f["points"] for f in found}) == 1:
+                taken[spec] = found[0] if len(found) == 1 else next(
+                    f for f in found if f["primary"])
+            else:
+                # THE BUILDS DISAGREE AND THE DISAGREEMENT IS THE ANSWER. A
+                # Restoration Druid running Tree of Life takes no Lunar
+                # Guidance at all and one running Dreamstate takes all three
+                # points. Collapsing that to the primary build would state a
+                # rate for a druid who may convert nothing.
+                taken[spec] = {"points": None, "of": block["max_rank"],
+                               "source": "the published builds disagree",
+                               "builds": found}
+                unresolved.append(
+                    f"{spec} / {name} (builds disagree: "
+                    + ", ".join(f"{f['build'].split(' Restoration')[0]} "
+                                f"{f['points']}" for f in found) + ")")
         block["points_taken"] = taken
 
     doc = {

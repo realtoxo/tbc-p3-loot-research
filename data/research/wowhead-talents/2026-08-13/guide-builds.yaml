@@ -1,0 +1,104 @@
+meta:
+  captured: 2026-08-13
+  source: Wowhead TBC Classic class guides, read in a browser
+  why_a_browser: >-
+    Wowhead answers a non-browser client with 403 on its loot pages and renders
+    the talent calculator client-side on its guides, so neither a plain fetch nor
+    a crawler returns the build. The encoded strings below were read from the
+    rendered page.
+  why_these_builds: >-
+    The four healer specs have no usable build in the vendored wowsims checkout:
+    the Holy Paladin preset carries an empty talent string, the Priest has no
+    healer preset at all, and the Restoration Druid and Restoration Shaman
+    presets carry commented-out strings that spend 26 or 27 talents in a tree
+    holding 20, so they belong to a later talent revision. These are published
+    builds, not this roster's builds. Read them as what a guide recommends until
+    the guild lead states what the four healers actually run.
+  a_wrong_url_returns_a_wrong_expansion: >-
+    /tbc/guide/classes/priest/holy/healer-talent-builds-pve redirects to the
+    Mists of Pandaria guide rather than answering 404, and that page renders a
+    full set of talents that are not 2.4.3 at all. Every capture below was
+    checked by reading the page title for "TBC Classic" before its build was
+    taken.
+  verified: >-
+    Every string was decoded against ui/core/talents/trees/<class>.json in the
+    vendored wowsims checkout, and the points it spends per tree reproduce the
+    spread the guide states in its own heading.
+
+builds:
+  - spec: Holy Paladin
+    build: 45/11/5 Holy Paladin Healing Talent Build in TBC Classic
+    primary: true
+    url: https://www.wowhead.com/tbc/guide/classes/paladin/holy/healer-talent-builds-pve
+    talents_string: 05503121520132531051-500231-5
+    decoded_spread: 45/11/5
+    of_interest:
+      Holy Guidance: 5/5
+      Divine Intellect: 5/5
+
+  - spec: Priest Healer
+    build: Holy 20/41/0 Circle of Healing Raid Healing Build in TBC Classic
+    primary: true
+    url: https://www.wowhead.com/tbc/guide/classes/priest/healer-talent-builds-pve
+    talents_string: 50023011305-235050032002150520051
+    decoded_spread: 20/41/0
+    of_interest:
+      Spiritual Guidance: 5/5
+
+  - spec: Priest Healer
+    build: Holy 23/38/0 Improved Divine Spirit Build in TBC Classic
+    primary: false
+    url: https://www.wowhead.com/tbc/guide/classes/priest/healer-talent-builds-pve
+    talents_string: 500230113050012-23405003030215052003
+    decoded_spread: 23/38/0
+    of_interest:
+      Spiritual Guidance: 5/5
+
+  - spec: Restoration Shaman
+    build: Enhancing Totems 0/12/49 Restoration Shaman Healing Talent Build
+    primary: true
+    url: https://www.wowhead.com/tbc/guide/classes/shaman/healer-talent-builds-pve
+    talents_string: -5020212-55035051255010510321
+    decoded_spread: 0/12/49
+    of_interest:
+      Nature's Blessing: 3/3
+
+  - spec: Restoration Shaman
+    build: Elemental Warding 8/0/53 Restoration Shaman Healing Talent Build
+    primary: false
+    url: https://www.wowhead.com/tbc/guide/classes/shaman/healer-talent-builds-pve
+    talents_string: 5003--55035051355310510321
+    decoded_spread: 8/0/53
+    of_interest:
+      Nature's Blessing: 3/3
+
+  - spec: Restoration Druid
+    build: Tree of Life Restoration Druid Healing Talent Build in TBC Classic
+    primary: true
+    url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
+    talents_string: --50353351531522531351
+    decoded_spread: 0/0/61
+    of_interest:
+      Lunar Guidance: 0/3
+      Living Spirit: 3/3
+
+  - spec: Restoration Druid
+    build: Dreamstate Restoration Druid Healing Talent Build in TBC Classic
+    primary: false
+    url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
+    talents_string: 51102231050313303--50520300501502
+    decoded_spread: 33/0/28
+    of_interest:
+      Lunar Guidance: 3/3
+      Living Spirit: 0/3
+
+the_restoration_druid_answer_depends_on_the_build: >-
+  The two Restoration Druid builds disagree completely, and the disagreement is
+  the whole question. Tree of Life, which the guide calls the one most commonly
+  seen and which spends every point in Restoration, takes NO Lunar Guidance, so
+  intellect converts into no spell power at all for that druid. Dreamstate goes
+  33 points into Balance specifically to reach Lunar Guidance and Dreamstate,
+  and takes it 3 of 3. So a Restoration Druid either converts 25 percent of
+  intellect into spell power or none of it, with nothing in between, and which
+  one is a fact about the player rather than about the spec. The guild lead has
+  to say which this roster's druid runs.

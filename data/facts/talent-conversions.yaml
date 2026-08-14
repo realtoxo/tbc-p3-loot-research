@@ -7,12 +7,8 @@ meta:
     vendored talent trees and checked against the point spread already recorded for each
     spec'
   no_build_recorded:
-  - Holy Paladin / Divine Intellect
-  - Holy Paladin / Holy Guidance
-  - Priest Healer / Spiritual Guidance
-  - Restoration Druid / Living Spirit
-  - Restoration Druid / Lunar Guidance
-  - Restoration Shaman / Nature's Blessing
+  - 'Restoration Druid / Living Spirit (builds disagree: Tree of Life 3, Dreamstate 0)'
+  - 'Restoration Druid / Lunar Guidance (builds disagree: Tree of Life 0, Dreamstate 3)'
   why_some_are_null: 'wowsims ships healer simulations but no talent string any of them
     can use, checked 13 August 2026: the Holy Paladin preset carries an empty string,
     the Priest has no healer preset at all, and both the Restoration Druid and Restoration
@@ -45,7 +41,11 @@ talents:
       percent: 15
     max_rank: 5
     points_taken:
-      Arcane Mage: 5
+      Arcane Mage:
+        points: 5
+        of: 5
+        build: ARCANE_TALENTS
+        source: wowsims preset for this spec
   Divine Intellect:
     class: paladin
     tree: Holy
@@ -71,7 +71,13 @@ talents:
       percent: 10
     max_rank: 5
     points_taken:
-      Holy Paladin: null
+      Holy Paladin:
+        points: 5
+        of: 5
+        build: 45/11/5 Holy Paladin Healing Talent Build in TBC Classic
+        primary: true
+        source: published guide, not this roster's own build
+        url: https://www.wowhead.com/tbc/guide/classes/paladin/holy/healer-talent-builds-pve
   Holy Guidance:
     class: paladin
     tree: Holy
@@ -97,7 +103,13 @@ talents:
       percent: 35
     max_rank: 5
     points_taken:
-      Holy Paladin: null
+      Holy Paladin:
+        points: 5
+        of: 5
+        build: 45/11/5 Holy Paladin Healing Talent Build in TBC Classic
+        primary: true
+        source: published guide, not this roster's own build
+        url: https://www.wowhead.com/tbc/guide/classes/paladin/holy/healer-talent-builds-pve
   Living Spirit:
     class: druid
     tree: Restoration
@@ -117,7 +129,23 @@ talents:
       percent: 15
     max_rank: 3
     points_taken:
-      Restoration Druid: null
+      Restoration Druid:
+        points: null
+        of: 3
+        source: the published builds disagree
+        builds:
+        - points: 3
+          of: 3
+          build: Tree of Life Restoration Druid Healing Talent Build in TBC Classic
+          primary: true
+          source: published guide, not this roster's own build
+          url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
+        - points: 0
+          of: 3
+          build: Dreamstate Restoration Druid Healing Talent Build in TBC Classic
+          primary: false
+          source: published guide, not this roster's own build
+          url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
   Lunar Guidance:
     class: druid
     tree: Balance
@@ -137,8 +165,28 @@ talents:
       percent: 25
     max_rank: 3
     points_taken:
-      Balance Druid: 3
-      Restoration Druid: null
+      Balance Druid:
+        points: 3
+        of: 3
+        build: Standard
+        source: wowsims preset for this spec
+      Restoration Druid:
+        points: null
+        of: 3
+        source: the published builds disagree
+        builds:
+        - points: 0
+          of: 3
+          build: Tree of Life Restoration Druid Healing Talent Build in TBC Classic
+          primary: true
+          source: published guide, not this roster's own build
+          url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
+        - points: 3
+          of: 3
+          build: Dreamstate Restoration Druid Healing Talent Build in TBC Classic
+          primary: false
+          source: published guide, not this roster's own build
+          url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
   Mind Mastery:
     class: mage
     tree: Arcane
@@ -164,7 +212,11 @@ talents:
       percent: 25
     max_rank: 5
     points_taken:
-      Arcane Mage: 5
+      Arcane Mage:
+        points: 5
+        of: 5
+        build: ARCANE_TALENTS
+        source: wowsims preset for this spec
   Nature's Blessing:
     class: shaman
     tree: Restoration
@@ -184,7 +236,13 @@ talents:
       percent: 30
     max_rank: 3
     points_taken:
-      Restoration Shaman: null
+      Restoration Shaman:
+        points: 3
+        of: 3
+        build: Enhancing Totems 0/12/49 Restoration Shaman Healing Talent Build
+        primary: true
+        source: published guide, not this roster's own build
+        url: https://www.wowhead.com/tbc/guide/classes/shaman/healer-talent-builds-pve
   Spiritual Guidance:
     class: priest
     tree: Holy
@@ -210,5 +268,15 @@ talents:
       percent: 25
     max_rank: 5
     points_taken:
-      Priest Healer: null
-      Shadow Priest: 0
+      Priest Healer:
+        points: 5
+        of: 5
+        build: Holy 20/41/0 Circle of Healing Raid Healing Build in TBC Classic
+        primary: true
+        source: published guide, not this roster's own build
+        url: https://www.wowhead.com/tbc/guide/classes/priest/healer-talent-builds-pve
+      Shadow Priest:
+        points: 0
+        of: 5
+        build: Shadow
+        source: wowsims preset for this spec
