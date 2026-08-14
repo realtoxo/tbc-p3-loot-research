@@ -11,23 +11,90 @@ subtitle: >-
      Every row is read at build time from data/facts and data/judgments.
      To change what it says, change the data. -->
 
+## Mount Hyjal
+
+### Rage Winterchill
+
+- [Blessed Adamantite Bracers](items/blessed-adamantite-bracers.md)
+- [Blood-stained Pauldrons](items/blood-stained-pauldrons.md)
+- [Bracers of Martyrdom](items/bracers-of-martyrdom.md)
+- [Bracers of the Pathfinder](items/bracers-of-the-pathfinder.md)
+- [Chronicle of Dark Secrets](items/chronicle-of-dark-secrets.md)
+- [Cuffs of Devastation](items/cuffs-of-devastation.md)
+- [Deadly Cuffs](items/deadly-cuffs.md)
+- [Furious Shackles](items/furious-shackles.md)
+- [Howling Wind Bracers](items/howling-wind-bracers.md)
+- [Rejuvenating Bracers](items/rejuvenating-bracers.md)
+- [Stillwater Boots](items/stillwater-boots.md)
+- [Tracker's Blade](items/trackers-blade.md)
+
+### Anetheron
+
+- [Anetheron's Noose](items/anetherons-noose.md)
+- [Archbishop's Slippers](items/archbishops-slippers.md)
+- [Bastion of Light](items/bastion-of-light.md)
+- [Blade of Infamy](items/blade-of-infamy.md)
+- [Don Alejandro's Money Belt](items/don-alejandros-money-belt.md)
+- [Enchanted Leather Sandals](items/enchanted-leather-sandals.md)
+- [Glimmering Steel Mantle](items/glimmering-steel-mantle.md)
+- [Golden Links of Restoration](items/golden-links-of-restoration.md)
+- [Hatefury Mantle](items/hatefury-mantle.md)
+- [Pillar of Ferocity](items/pillar-of-ferocity.md)
+- [Quickstrider Moccasins](items/quickstrider-moccasins.md)
+- [The Unbreakable Will](items/the-unbreakable-will.md)
+
+### Kaz'rogal
+
+- [Angelista's Sash](items/angelistas-sash.md)
+- [Beast-tamer's Shoulders](items/beast-tamers-shoulders.md)
+- [Belt of Seething Fury](items/belt-of-seething-fury.md)
+- [Belt of the Crescent Moon](items/belt-of-the-crescent-moon.md)
+- [Black Featherlight Boots](items/black-featherlight-boots.md)
+- [Blue Suede Shoes](items/blue-suede-shoes.md)
+- [Hammer of Atonement](items/hammer-of-atonement.md)
+- [Kaz'rogal's Hardened Heart](items/kazrogals-hardened-heart.md)
+- [Leggings of Channeled Elements](items/leggings-of-channeled-elements.md)
+- [Razorfury Mantle](items/razorfury-mantle.md)
+- [Sun-touched Chain Leggings](items/sun-touched-chain-leggings.md)
+- [Valestalker Girdle](items/valestalker-girdle.md)
+
+### Azgalor
+
+- [Boundless Agony](items/boundless-agony.md)
+- [Bow-stitched Leggings](items/bow-stitched-leggings.md)
+- [Don Rodrigo's Poncho](items/don-rodrigos-poncho.md)
+- [Girdle of Hope](items/girdle-of-hope.md)
+- [Glory of the Defender](items/glory-of-the-defender.md)
+- [Shady Dealer's Pantaloons](items/shady-dealers-pantaloons.md)
+
+### Archimonde
+
+- [Antonidas's Aegis of Rapt Concentration](items/antonidass-aegis-of-rapt-concentration.md)
+- [Apostle of Argus](items/apostle-of-argus.md)
+- [Bristleblitz Striker](items/bristleblitz-striker.md)
+- [Cataclysm's Edge](items/cataclysms-edge.md)
+- [Leggings of Eternity](items/leggings-of-eternity.md)
+- [Legguards of Endless Rage](items/legguards-of-endless-rage.md)
+- [Mail of Fevered Pursuit](items/mail-of-fevered-pursuit.md)
+- [Midnight Chestguard](items/midnight-chestguard.md)
+- [Robes of Rhonin](items/robes-of-rhonin.md)
+- [Savior's Grasp](items/saviors-grasp.md)
+- [Scepter of Purification](items/scepter-of-purification.md)
+- [Tempest of Chaos](items/tempest-of-chaos.md)
+
+### Trash / zone drop
+
+- [Boots of the Divine Light](items/boots-of-the-divine-light.md)
+- [Chestguard of Relentless Storms](items/chestguard-of-relentless-storms.md)
+- [Choker of Serrated Blades](items/choker-of-serrated-blades.md)
+- [Claw of Molten Fury](items/claw-of-molten-fury.md)
+- [Fist of Molten Fury](items/fist-of-molten-fury.md)
+- [Hammer of Judgement](items/hammer-of-judgement.md)
+- [Hellfire-Encased Pendant](items/hellfire-encased-pendant.md)
+- [Nethervoid Cloak](items/nethervoid-cloak.md)
+- [Pepe's Shroud of Pacification](items/pepes-shroud-of-pacification.md)
+
 ## Black Temple
-
-### Gurtogg Bloodboil
-
-- [Belt of Primal Majesty](items/belt-of-primal-majesty.md)
-- [Blood-cursed Shoulderpads](items/blood-cursed-shoulderpads.md)
-- [Garments of Temperance](items/garments-of-temperance.md)
-- [Girdle of Mighty Resolve](items/girdle-of-mighty-resolve.md)
-- [Girdle of Stability](items/girdle-of-stability.md)
-- [Leggings of Divine Retribution](items/leggings-of-divine-retribution.md)
-- [Messenger of Fate](items/messenger-of-fate.md)
-- [Shadowmoon Insignia](items/shadowmoon-insignia.md)
-- [Shroud of Forgiveness](items/shroud-of-forgiveness.md)
-- [Staff of Immaculate Recovery](items/staff-of-immaculate-recovery.md)
-- [Unstoppable Aggressor's Ring](items/unstoppable-aggressors-ring.md)
-- [Vest of Mounting Assault](items/vest-of-mounting-assault.md)
-- [Wand of Prismatic Focus](items/wand-of-prismatic-focus.md)
 
 ### High Warlord Naj'entus
 
@@ -46,47 +113,21 @@ subtitle: >-
 - [The Maelstrom's Fury](items/the-maelstroms-fury.md)
 - [Tide-stomper's Greaves](items/tide-stompers-greaves.md)
 
-### Illidan Stormrage
+### Supremus
 
-- [Black Bow of the Betrayer](items/black-bow-of-the-betrayer.md)
-- [Bulwark of Azzinoth](items/bulwark-of-azzinoth.md)
-- [Cowl of the Illidari High Lord](items/cowl-of-the-illidari-high-lord.md)
-- [Crystal Spire of Karabor](items/crystal-spire-of-karabor.md)
-- [Cursed Vision of Sargeras](items/cursed-vision-of-sargeras.md)
-- [Faceplate of the Impenetrable](items/faceplate-of-the-impenetrable.md)
-- [Memento of Tyrande](items/memento-of-tyrande.md)
-- [Shard of Azzinoth](items/shard-of-azzinoth.md)
-- [Shroud of the Highborne](items/shroud-of-the-highborne.md)
-- [Stormrage Signet Ring](items/stormrage-signet-ring.md)
-- [The Skull of Gul'dan](items/the-skull-of-guldan.md)
-- [Warglaive of Azzinoth (Main Hand)](items/warglaive-of-azzinoth-32837.md)
-- [Warglaive of Azzinoth (Off Hand)](items/warglaive-of-azzinoth-32838.md)
-- [Zhar'doom, Greatstaff of the Devourer](items/zhardoom-greatstaff-of-the-devourer.md)
-
-### Mother Shahraz
-
-- [Blade of Savagery](items/blade-of-savagery.md)
-- [Heartshatter Breastplate](items/heartshatter-breastplate.md)
-- [Leggings of Devastation](items/leggings-of-devastation.md)
-- [Nadina's Pendant of Purity](items/nadinas-pendant-of-purity.md)
-- [Shadowmaster's Boots](items/shadowmasters-boots.md)
-- [Tome of the Lightbringer](items/tome-of-the-lightbringer.md)
-
-### Reliquary of Souls
-
-- [Boneweave Girdle](items/boneweave-girdle.md)
-- [Crown of Empowered Fate](items/crown-of-empowered-fate.md)
-- [Dreadboots of the Legion](items/dreadboots-of-the-legion.md)
-- [Elunite Empowered Bracers](items/elunite-empowered-bracers.md)
-- [Gloves of Unfailing Faith](items/gloves-of-unfailing-faith.md)
-- [Grips of Damnation](items/grips-of-damnation.md)
-- [Naaru-Blessed Life Rod](items/naaru-blessed-life-rod.md)
-- [Naturewarden's Treads](items/naturewardens-treads.md)
-- [Pendant of Titans](items/pendant-of-titans.md)
-- [The Wavemender's Mantle](items/the-wavemenders-mantle.md)
-- [Torch of the Damned](items/torch-of-the-damned.md)
-- [Touch of Inspiration](items/touch-of-inspiration.md)
-- [Translucent Spellthread Necklace](items/translucent-spellthread-necklace.md)
+- [Band of the Abyssal Lord](items/band-of-the-abyssal-lord.md)
+- [Bands of the Coming Storm](items/bands-of-the-coming-storm.md)
+- [Choker of Endless Nightmares](items/choker-of-endless-nightmares.md)
+- [Felstone Bulwark](items/felstone-bulwark.md)
+- [Idol of the White Stag](items/idol-of-the-white-stag.md)
+- [Legionkiller](items/legionkiller.md)
+- [Naturalist's Preserving Cinch](items/naturalists-preserving-cinch.md)
+- [Nether Shadow Tunic](items/nether-shadow-tunic.md)
+- [Pauldrons of Abyssal Fury](items/pauldrons-of-abyssal-fury.md)
+- [Syphon of the Nathrezim](items/syphon-of-the-nathrezim.md)
+- [The Brutalizer](items/the-brutalizer.md)
+- [Waistwrap of Infinity](items/waistwrap-of-infinity.md)
+- [Wraps of Precise Flight](items/wraps-of-precise-flight.md)
 
 ### Shade of Akama
 
@@ -105,22 +146,6 @@ subtitle: >-
 - [The Seeker's Wristguards](items/the-seekers-wristguards.md)
 - [Wristbands of Divine Influence](items/wristbands-of-divine-influence.md)
 
-### Supremus
-
-- [Band of the Abyssal Lord](items/band-of-the-abyssal-lord.md)
-- [Bands of the Coming Storm](items/bands-of-the-coming-storm.md)
-- [Choker of Endless Nightmares](items/choker-of-endless-nightmares.md)
-- [Felstone Bulwark](items/felstone-bulwark.md)
-- [Idol of the White Stag](items/idol-of-the-white-stag.md)
-- [Legionkiller](items/legionkiller.md)
-- [Naturalist's Preserving Cinch](items/naturalists-preserving-cinch.md)
-- [Nether Shadow Tunic](items/nether-shadow-tunic.md)
-- [Pauldrons of Abyssal Fury](items/pauldrons-of-abyssal-fury.md)
-- [Syphon of the Nathrezim](items/syphon-of-the-nathrezim.md)
-- [The Brutalizer](items/the-brutalizer.md)
-- [Waistwrap of Infinity](items/waistwrap-of-infinity.md)
-- [Wraps of Precise Flight](items/wraps-of-precise-flight.md)
-
 ### Teron Gorefiend
 
 - [Botanist's Gloves of Growth](items/botanists-gloves-of-growth.md)
@@ -136,6 +161,47 @@ subtitle: >-
 - [Totem of Ancestral Guidance](items/totem-of-ancestral-guidance.md)
 - [Twisted Blades of Zarak](items/twisted-blades-of-zarak.md)
 
+### Gurtogg Bloodboil
+
+- [Belt of Primal Majesty](items/belt-of-primal-majesty.md)
+- [Blood-cursed Shoulderpads](items/blood-cursed-shoulderpads.md)
+- [Garments of Temperance](items/garments-of-temperance.md)
+- [Girdle of Mighty Resolve](items/girdle-of-mighty-resolve.md)
+- [Girdle of Stability](items/girdle-of-stability.md)
+- [Leggings of Divine Retribution](items/leggings-of-divine-retribution.md)
+- [Messenger of Fate](items/messenger-of-fate.md)
+- [Shadowmoon Insignia](items/shadowmoon-insignia.md)
+- [Shroud of Forgiveness](items/shroud-of-forgiveness.md)
+- [Staff of Immaculate Recovery](items/staff-of-immaculate-recovery.md)
+- [Unstoppable Aggressor's Ring](items/unstoppable-aggressors-ring.md)
+- [Vest of Mounting Assault](items/vest-of-mounting-assault.md)
+- [Wand of Prismatic Focus](items/wand-of-prismatic-focus.md)
+
+### Reliquary of Souls
+
+- [Boneweave Girdle](items/boneweave-girdle.md)
+- [Crown of Empowered Fate](items/crown-of-empowered-fate.md)
+- [Dreadboots of the Legion](items/dreadboots-of-the-legion.md)
+- [Elunite Empowered Bracers](items/elunite-empowered-bracers.md)
+- [Gloves of Unfailing Faith](items/gloves-of-unfailing-faith.md)
+- [Grips of Damnation](items/grips-of-damnation.md)
+- [Naaru-Blessed Life Rod](items/naaru-blessed-life-rod.md)
+- [Naturewarden's Treads](items/naturewardens-treads.md)
+- [Pendant of Titans](items/pendant-of-titans.md)
+- [The Wavemender's Mantle](items/the-wavemenders-mantle.md)
+- [Torch of the Damned](items/torch-of-the-damned.md)
+- [Touch of Inspiration](items/touch-of-inspiration.md)
+- [Translucent Spellthread Necklace](items/translucent-spellthread-necklace.md)
+
+### Mother Shahraz
+
+- [Blade of Savagery](items/blade-of-savagery.md)
+- [Heartshatter Breastplate](items/heartshatter-breastplate.md)
+- [Leggings of Devastation](items/leggings-of-devastation.md)
+- [Nadina's Pendant of Purity](items/nadinas-pendant-of-purity.md)
+- [Shadowmaster's Boots](items/shadowmasters-boots.md)
+- [Tome of the Lightbringer](items/tome-of-the-lightbringer.md)
+
 ### The Illidari Council
 
 - [Belt of Divine Guidance](items/belt-of-divine-guidance.md)
@@ -144,6 +210,23 @@ subtitle: >-
 - [Helm of the Illidari Shatterer](items/helm-of-the-illidari-shatterer.md)
 - [Madness of the Betrayer](items/madness-of-the-betrayer.md)
 - [Veil of Turning Leaves](items/veil-of-turning-leaves.md)
+
+### Illidan Stormrage
+
+- [Black Bow of the Betrayer](items/black-bow-of-the-betrayer.md)
+- [Bulwark of Azzinoth](items/bulwark-of-azzinoth.md)
+- [Cowl of the Illidari High Lord](items/cowl-of-the-illidari-high-lord.md)
+- [Crystal Spire of Karabor](items/crystal-spire-of-karabor.md)
+- [Cursed Vision of Sargeras](items/cursed-vision-of-sargeras.md)
+- [Faceplate of the Impenetrable](items/faceplate-of-the-impenetrable.md)
+- [Memento of Tyrande](items/memento-of-tyrande.md)
+- [Shard of Azzinoth](items/shard-of-azzinoth.md)
+- [Shroud of the Highborne](items/shroud-of-the-highborne.md)
+- [Stormrage Signet Ring](items/stormrage-signet-ring.md)
+- [The Skull of Gul'dan](items/the-skull-of-guldan.md)
+- [Warglaive of Azzinoth (Main Hand)](items/warglaive-of-azzinoth-32837.md)
+- [Warglaive of Azzinoth (Off Hand)](items/warglaive-of-azzinoth-32838.md)
+- [Zhar'doom, Greatstaff of the Devourer](items/zhardoom-greatstaff-of-the-devourer.md)
 
 ### Trash / zone drop
 
@@ -162,89 +245,6 @@ subtitle: >-
 - [Shroud of the Final Stand](items/shroud-of-the-final-stand.md)
 - [Swiftsteel Bludgeon](items/swiftsteel-bludgeon.md)
 - [Treads of the Den Mother](items/treads-of-the-den-mother.md)
-
-## Mount Hyjal
-
-### Anetheron
-
-- [Anetheron's Noose](items/anetherons-noose.md)
-- [Archbishop's Slippers](items/archbishops-slippers.md)
-- [Bastion of Light](items/bastion-of-light.md)
-- [Blade of Infamy](items/blade-of-infamy.md)
-- [Don Alejandro's Money Belt](items/don-alejandros-money-belt.md)
-- [Enchanted Leather Sandals](items/enchanted-leather-sandals.md)
-- [Glimmering Steel Mantle](items/glimmering-steel-mantle.md)
-- [Golden Links of Restoration](items/golden-links-of-restoration.md)
-- [Hatefury Mantle](items/hatefury-mantle.md)
-- [Pillar of Ferocity](items/pillar-of-ferocity.md)
-- [Quickstrider Moccasins](items/quickstrider-moccasins.md)
-- [The Unbreakable Will](items/the-unbreakable-will.md)
-
-### Archimonde
-
-- [Antonidas's Aegis of Rapt Concentration](items/antonidass-aegis-of-rapt-concentration.md)
-- [Apostle of Argus](items/apostle-of-argus.md)
-- [Bristleblitz Striker](items/bristleblitz-striker.md)
-- [Cataclysm's Edge](items/cataclysms-edge.md)
-- [Leggings of Eternity](items/leggings-of-eternity.md)
-- [Legguards of Endless Rage](items/legguards-of-endless-rage.md)
-- [Mail of Fevered Pursuit](items/mail-of-fevered-pursuit.md)
-- [Midnight Chestguard](items/midnight-chestguard.md)
-- [Robes of Rhonin](items/robes-of-rhonin.md)
-- [Savior's Grasp](items/saviors-grasp.md)
-- [Scepter of Purification](items/scepter-of-purification.md)
-- [Tempest of Chaos](items/tempest-of-chaos.md)
-
-### Azgalor
-
-- [Boundless Agony](items/boundless-agony.md)
-- [Bow-stitched Leggings](items/bow-stitched-leggings.md)
-- [Don Rodrigo's Poncho](items/don-rodrigos-poncho.md)
-- [Girdle of Hope](items/girdle-of-hope.md)
-- [Glory of the Defender](items/glory-of-the-defender.md)
-- [Shady Dealer's Pantaloons](items/shady-dealers-pantaloons.md)
-
-### Kaz'rogal
-
-- [Angelista's Sash](items/angelistas-sash.md)
-- [Beast-tamer's Shoulders](items/beast-tamers-shoulders.md)
-- [Belt of Seething Fury](items/belt-of-seething-fury.md)
-- [Belt of the Crescent Moon](items/belt-of-the-crescent-moon.md)
-- [Black Featherlight Boots](items/black-featherlight-boots.md)
-- [Blue Suede Shoes](items/blue-suede-shoes.md)
-- [Hammer of Atonement](items/hammer-of-atonement.md)
-- [Kaz'rogal's Hardened Heart](items/kazrogals-hardened-heart.md)
-- [Leggings of Channeled Elements](items/leggings-of-channeled-elements.md)
-- [Razorfury Mantle](items/razorfury-mantle.md)
-- [Sun-touched Chain Leggings](items/sun-touched-chain-leggings.md)
-- [Valestalker Girdle](items/valestalker-girdle.md)
-
-### Rage Winterchill
-
-- [Blessed Adamantite Bracers](items/blessed-adamantite-bracers.md)
-- [Blood-stained Pauldrons](items/blood-stained-pauldrons.md)
-- [Bracers of Martyrdom](items/bracers-of-martyrdom.md)
-- [Bracers of the Pathfinder](items/bracers-of-the-pathfinder.md)
-- [Chronicle of Dark Secrets](items/chronicle-of-dark-secrets.md)
-- [Cuffs of Devastation](items/cuffs-of-devastation.md)
-- [Deadly Cuffs](items/deadly-cuffs.md)
-- [Furious Shackles](items/furious-shackles.md)
-- [Howling Wind Bracers](items/howling-wind-bracers.md)
-- [Rejuvenating Bracers](items/rejuvenating-bracers.md)
-- [Stillwater Boots](items/stillwater-boots.md)
-- [Tracker's Blade](items/trackers-blade.md)
-
-### Trash / zone drop
-
-- [Boots of the Divine Light](items/boots-of-the-divine-light.md)
-- [Chestguard of Relentless Storms](items/chestguard-of-relentless-storms.md)
-- [Choker of Serrated Blades](items/choker-of-serrated-blades.md)
-- [Claw of Molten Fury](items/claw-of-molten-fury.md)
-- [Fist of Molten Fury](items/fist-of-molten-fury.md)
-- [Hammer of Judgement](items/hammer-of-judgement.md)
-- [Hellfire-Encased Pendant](items/hellfire-encased-pendant.md)
-- [Nethervoid Cloak](items/nethervoid-cloak.md)
-- [Pepe's Shroud of Pacification](items/pepes-shroud-of-pacification.md)
 
 ## Reputation
 

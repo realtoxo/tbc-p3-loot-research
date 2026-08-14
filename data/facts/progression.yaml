@@ -60,15 +60,28 @@ zones:
     encounters: 9
     linearity: >-
       LINEAR AT FIRST, THEN OPEN. Naj'entus and Supremus gate the instance.
-      After Teron Gorefiend the wings open, so Reliquary of Souls and Gurtogg
-      Bloodboil can be approached in either order. Mother Shahraz gates the
+      After Teron Gorefiend the wings open, so Gurtogg Bloodboil and Reliquary
+      of Souls can be approached in either order. Mother Shahraz gates the
       Illidari Council, which gates Illidan.
+    positions_5_and_6_corrected: >-
+      This file first placed Reliquary of Souls fifth and Gurtogg Bloodboil
+      sixth. Either walk is possible, which is what the note above says, and no
+      check validates the order, so nothing caught it. But every published guide
+      lists Gurtogg fifth, and the compendium's boss index is meant to be opened
+      before a pull, so it now reads in the order a raid expects. Corrected
+      13 August 2026 against Warcraft Tavern, wow.gg, EpicForge and Icy Veins,
+      which agree on Naj'entus, Supremus, Shade of Akama, Teron Gorefiend,
+      Gurtogg Bloodboil, Reliquary of Souls, Mother Shahraz, the Illidari
+      Council and Illidan Stormrage. THE SET OF SIX reachable in four to six
+      weeks is unchanged, because both orderings contain the same six
+      encounters; only the boss named as the sixth moved.
     bosses:
       - {position: 1, name: High Warlord Naj'entus, token: null}
       - {position: 2, name: Supremus, token: null}
       - {position: 3, name: Shade of Akama, token: null}
       - {position: 4, name: Teron Gorefiend, token: null}
-      - position: 5
+      - {position: 5, name: Gurtogg Bloodboil, token: null}
+      - position: 6
         name: Reliquary of Souls
         token: null
         also_called: >-
@@ -79,7 +92,6 @@ zones:
           stumbled on this and two dropped real items because of it. The items
           concerned are Dreadboots of the Legion, item 32345, and Pendant of
           Titans, item 32362, and drops.csv sources both to this encounter.
-      - {position: 6, name: Gurtogg Bloodboil, token: null}
       - {position: 7, name: Mother Shahraz, token: shoulder}
       - {position: 8, name: The Illidari Council, token: legs}
       - {position: 9, name: Illidan Stormrage, token: chest}
@@ -96,9 +108,14 @@ four_to_six_weeks:
     when most of a tier's loot decisions are actually made, rather than at a
     full clear, which is where every published best-in-slot list is written.
   reliably_down: >-
-    All of Mount Hyjal through Azgalor, and Black Temple through Gurtogg
-    Bloodboil. That is four of five Hyjal encounters and six of nine Black
-    Temple encounters.
+    All of Mount Hyjal through Azgalor, and Black Temple through Reliquary of
+    Souls. That is four of five Hyjal encounters and six of nine Black Temple
+    encounters.
+    THE SIX ARE THE SAME SIX this file has always meant. It used to say "through
+    Gurtogg Bloodboil" while listing Gurtogg sixth; the positions of Gurtogg and
+    Reliquary of Souls were corrected on 13 August 2026, so the boss that stands
+    sixth is now Reliquary of Souls and the sentence names it. No encounter
+    entered or left the set, and no anchor moved.
   contested: >-
     ARCHIMONDE IS THE TIER'S FIRST SERIOUS WALL. It is a long fight with a
     raid-wide mechanic that ends attempts outright, and guilds that clear the
