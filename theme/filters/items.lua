@@ -226,9 +226,12 @@ local function item_reference(name, row, bare)
   local icon = not bare and itemdb.icon_img(row) or nil
   if icon then shown:insert(icon) end
   shown:insert(pandoc.Str(name))
+  -- OUR PAGE WHERE WE HAVE ONE, Wowhead only where we do not. See
+  -- itemdb.page_href for why this is answered in the shared module.
   local link = pandoc.Link(
     shown,
-    "https://www.wowhead.com/tbc/item=" .. row.item_id,
+    itemdb.page_href(row.item_id)
+      or ("https://www.wowhead.com/tbc/item=" .. row.item_id),
     "",
     pandoc.Attr("", { "item-link" }, {
       ["aria-describedby"] = tip_id,
@@ -365,6 +368,8 @@ end
 
 function Meta(meta)
   if meta.root then itemdb.root = pandoc.utils.stringify(meta.root) end
+  -- The page being rendered, so an item does not link to itself.
+  itemdb.current_page = pandoc.utils.stringify(meta.srcpath or "")
   return meta
 end
 

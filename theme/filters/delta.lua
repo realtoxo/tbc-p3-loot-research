@@ -1195,6 +1195,8 @@ end
 -- 13 August 2026: Vengeful Gladiator's Pummeler with a broken image beside it.
 function Meta(meta)
   if meta.root then itemdb.root = pandoc.utils.stringify(meta.root) end
+  -- The page being rendered, so an item does not link to itself.
+  itemdb.current_page = pandoc.utils.stringify(meta.srcpath or "")
   return meta
 end
 

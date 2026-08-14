@@ -427,6 +427,42 @@ end
 -- page in docs/items/ needs `../` and a page at the root needs nothing.
 M.root = ""
 
+-- WHICH ITEMS WE HOLD A PAGE FOR, keyed by id, written by
+-- tools/generate_item_pages.py because that file owns the slug rule.
+--
+-- WHY THIS MOVED HERE. shortlist.lua loaded it and used it, so a spec page
+-- linked an item to our own page. items.lua and delta.lua did not, so every
+-- link on an item card and on every delta baseline went to Wowhead even where
+-- the compendium held a page for that exact item. The guild lead clicked one on
+-- 13 August 2026 and left the site. Loading it in the shared module means the
+-- three filters answer the question the same way.
+M.PAGES = os.getenv("PAGES_LUA") or "theme/filters/pages.generated.lua"
+local ok_pages, pages = pcall(dofile, M.PAGES)
+if not ok_pages or type(pages) ~= "table" then pages = {} end
+
+-- The page being rendered, as its source path, set from the document metadata
+-- by each filter's Meta pass.
+M.current_page = ""
+
+-- Our own page for an item, or nil. `M.root` is the prefix the document sets,
+-- so a card in docs/items/ resolves a sibling and one at the root does not.
+--
+-- NIL ON THE ITEM'S OWN PAGE, which is the whole reason this takes the current
+-- page into account. Linking every item to our page sent the subject at the top
+-- of an item page to the page it was already on, and worse, left no route to
+-- Wowhead for that item anywhere on it. A reader who wants the tooltip has to
+-- be able to get there from somewhere, and its own page is the one place the
+-- outside link is the useful one.
+function M.page_href(item_id)
+  local slug = pages[tostring(item_id)]
+  if not slug then return nil end
+  -- A PLAIN COMPARISON, NOT A PATTERN MATCH. Every slug here is hyphenated and
+  -- `-` is a quantifier in a Lua pattern, so `madness-of-the-betrayer` matched
+  -- nothing and every item page kept linking to itself.
+  if M.current_page == "items/" .. slug .. ".md" then return nil end
+  return M.root .. "items/" .. slug .. ".html"
+end
+
 -- The item's icon, as an image, or nil where the item database named none and
 -- nothing was fetched for it. AN ITEM IS RECOGNIZED BY ITS ICON before its name
 -- is read, and a council scanning a page of claimants is doing exactly that.
@@ -541,8 +577,12 @@ function M.ladder_inline(entry, row, held, prefix)
   local icon = M.icon_img(row) or M.icon_img(entry)
   if icon then shown:insert(icon) end
   shown:insert(pandoc.Str(M.display_name(row)))
+  -- OUR PAGE WHERE WE HAVE ONE. A reader clicking a baseline wants to know who
+  -- else contests it and what it is worth to them, and that is on the item's
+  -- page. Wowhead answers a question they did not ask, and it is still one hop
+  -- away from the page they land on.
   local link = pandoc.Link(
-    shown, entry.url, "",
+    shown, M.page_href(entry.item_id) or entry.url, "",
     pandoc.Attr("", { "item-link" }, {
       ["aria-describedby"] = tip_id,
       -- A NEW TAB, ALWAYS. A council member clicks an item to check it while
