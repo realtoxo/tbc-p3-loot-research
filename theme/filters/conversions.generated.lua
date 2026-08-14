@@ -715,6 +715,7 @@ return {
     },
     ["feral bear"] = {
       name = "Feral Bear",
+      net_excludes = { "|attack power", "|ranged attack power", "|feral attack power", "|spell damage", "|healing power" },
       rules = {
         agility = {
           { label = "attack power", unit = "", op = "multiply", by = 0,
@@ -1368,6 +1369,7 @@ return {
     },
     ["protection paladin"] = {
       name = "Protection Paladin",
+      net_excludes = { "|attack power", "|ranged attack power", "|feral attack power", "|spell damage", "|healing power" },
       rules = {
         agility = {
           { label = "attack power", unit = "", op = "multiply", by = 0,
@@ -1495,6 +1497,7 @@ return {
     },
     ["protection warrior"] = {
       name = "Protection Warrior",
+      net_excludes = { "|attack power", "|ranged attack power", "|feral attack power", "|spell damage", "|healing power" },
       rules = {
         agility = {
           { label = "attack power", unit = "", op = "multiply", by = 0,

@@ -266,13 +266,51 @@ local function compute(spec, a, b, where)
   -- conversions, because the convertible list requires a rate for them and the
   -- rows are worth showing, and the guild lead ruled on 12 August 2026 that the
   -- Net sums primary stats only. `net = false` is how a rule says so.
-  local converts_into = {}
+  local converts_into, kept_out = {}, {}
   for _, rules in pairs(spec.rules or {}) do
     for _, rule in ipairs(rules) do
+      local key = (rule.unit or "") .. "|" .. rule.label
       if rule.net ~= false then
-        converts_into[(rule.unit or "") .. "|" .. rule.label] = true
+        converts_into[key] = true
+      else
+        kept_out[key] = true
       end
     end
+  end
+
+  -- THE OUTPUT CURRENCIES ARE BOTTOM LINES WHETHER OR NOT A RULE MAKES ONE.
+  --
+  -- A unit reached the sum only if some rule for this spec converted into it,
+  -- which made membership depend on an accident. A Rogue's flat attack power
+  -- summed, because `strength -> attack power` exists and the flat stat rode
+  -- along on the unit that rule created. A Holy Paladin's flat healing power
+  -- did not, because nothing converts into healing power yet, so the single
+  -- biggest figure on a healer card was missing from its own summary while a
+  -- crit rating a tenth its size was present. Reported by the guild lead on
+  -- 13 August 2026.
+  --
+  -- These five are what conversions PRODUCE. A stat already denominated in one
+  -- is not a raw stat needing a rate; it is an amount of the finished currency,
+  -- so it belongs in the total by the same logic that puts the converted
+  -- figures there. This is not the flat-stat problem: armor, stamina, defense
+  -- and resilience are not currencies and stay out, which is what the guild
+  -- lead asked for in the same conversation.
+  local CURRENCIES = {
+    ["|attack power"] = true, ["|ranged attack power"] = true,
+    ["|feral attack power"] = true, ["|spell damage"] = true,
+    ["|healing power"] = true,
+  }
+
+  -- A SPEC THAT DELIBERATELY EXCLUDED A CURRENCY KEEPS IT EXCLUDED. A tank's
+  -- offense rules carry `net = false`, so attack power is kept out of a tank
+  -- summary on purpose; forcing the currency in would put it back and undo the
+  -- ruling that a tank's summary is about the role.
+  -- A spec can also name a currency it does not carry, which is how a tank
+  -- keeps spell damage and healing power out of a defensive summary when no
+  -- rule of its own speaks for either.
+  for _, unit in ipairs(spec.net_excludes or {}) do kept_out[unit] = true end
+  for key in pairs(CURRENCIES) do
+    if not kept_out[key] then converts_into[key] = true end
   end
 
   local function contribute(label, unit, value)

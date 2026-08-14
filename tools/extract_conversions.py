@@ -231,6 +231,21 @@ DEFENSIVE_RATES = (
 PLATE_TANKS = frozenset({"Protection Warrior", "Protection Paladin"})
 
 
+# THE CURRENCIES A TANK'S SUMMARY DOES NOT CARRY. `delta.lua` treats attack
+# power, spell damage and healing power as bottom lines wherever a spec has not
+# said otherwise, so a flat amount of one reaches the sum without needing a rate.
+# A tank has said otherwise. Its offense conversions already carry `net = false`,
+# which keeps attack power out, but nothing spoke for spell damage or healing
+# power, so a Protection Paladin belt summed "+30 spell damage, +30 healing
+# power" beside its defense skill and block. Threat is real and those stats feed
+# it; the row is still a defensive summary, and the guild lead approved it as
+# one on 13 August 2026.
+TANK_EXCLUDED_UNITS = (
+    "|attack power", "|ranged attack power", "|feral attack power",
+    "|spell damage", "|healing power",
+)
+
+
 def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit: dict) -> dict:
     """Every conversion one spec has, keyed by the item stat it consumes."""
     rules: dict[str, list[dict]] = {}
@@ -494,6 +509,9 @@ def render(specs: dict[str, dict], crit: dict, hit: dict) -> str:
         rules = specs[name]
         out.append(f"    [{lua_string(name.lower())}] = {{")
         out.append(f"      name = {lua_string(name)},")
+        if name in TANK_SPECS:
+            out.append("      net_excludes = { " + ", ".join(
+                lua_string(unit) for unit in TANK_EXCLUDED_UNITS) + " },")
         out.append("      rules = {")
         for stat in sorted(rules):
             out.append(f"        {stat} = {{")
