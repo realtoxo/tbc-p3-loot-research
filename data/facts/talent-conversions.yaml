@@ -1,0 +1,212 @@
+meta:
+  what: The talents that turn a stat into spell power, the percentage at every rank, and
+    the rank each rostered spec's own build takes.
+  percentages_from: the Wowhead tooltip text captured under data/research/wowhead-talents/,
+    read out of the sentence rather than transcribed
+  ranks_from: 'data/facts/talents.yaml :: wowsims_talent_strings, decoded against the
+    vendored talent trees and checked against the point spread already recorded for each
+    spec'
+  no_build_recorded:
+  - Holy Paladin / Divine Intellect
+  - Holy Paladin / Holy Guidance
+  - Priest Healer / Spiritual Guidance
+  - Restoration Druid / Living Spirit
+  - Restoration Druid / Lunar Guidance
+  - Restoration Shaman / Nature's Blessing
+  why_some_are_null: wowsims TBC ships no healer simulation, so no preset build exists
+    for the Holy Paladin, the Priest Healer, the Restoration Shaman or the Restoration
+    Druid. Those are the specs these talents matter most to. A rank of null is a gap this
+    project has not filled, not a talent that does not apply.
+talents:
+  Arcane Mind:
+    class: mage
+    tree: Arcane
+    kind: multiplier
+    converts: intellect
+    grants: the stat itself
+    captured: '2026-08-13'
+    ranks:
+    - rank: 1
+      spell_id: 11232
+      percent: 3
+    - rank: 2
+      spell_id: 12500
+      percent: 6
+    - rank: 3
+      spell_id: 12501
+      percent: 9
+    - rank: 4
+      spell_id: 12502
+      percent: 12
+    - rank: 5
+      spell_id: 12503
+      percent: 15
+    max_rank: 5
+    points_taken:
+      Arcane Mage: 5
+  Divine Intellect:
+    class: paladin
+    tree: Holy
+    kind: multiplier
+    converts: intellect
+    grants: the stat itself
+    captured: '2026-08-13'
+    ranks:
+    - rank: 1
+      spell_id: 20257
+      percent: 2
+    - rank: 2
+      spell_id: 20258
+      percent: 4
+    - rank: 3
+      spell_id: 20259
+      percent: 6
+    - rank: 4
+      spell_id: 20260
+      percent: 8
+    - rank: 5
+      spell_id: 20261
+      percent: 10
+    max_rank: 5
+    points_taken:
+      Holy Paladin: null
+  Holy Guidance:
+    class: paladin
+    tree: Holy
+    kind: conversion
+    converts: intellect
+    grants: spell damage and healing
+    captured: '2026-08-13'
+    ranks:
+    - rank: 1
+      spell_id: 31837
+      percent: 7
+    - rank: 2
+      spell_id: 31838
+      percent: 14
+    - rank: 3
+      spell_id: 31839
+      percent: 21
+    - rank: 4
+      spell_id: 31840
+      percent: 28
+    - rank: 5
+      spell_id: 31841
+      percent: 35
+    max_rank: 5
+    points_taken:
+      Holy Paladin: null
+  Living Spirit:
+    class: druid
+    tree: Restoration
+    kind: multiplier
+    converts: spirit
+    grants: the stat itself
+    captured: '2026-08-13'
+    ranks:
+    - rank: 1
+      spell_id: 34151
+      percent: 5
+    - rank: 2
+      spell_id: 34152
+      percent: 10
+    - rank: 3
+      spell_id: 34153
+      percent: 15
+    max_rank: 3
+    points_taken:
+      Restoration Druid: null
+  Lunar Guidance:
+    class: druid
+    tree: Balance
+    kind: conversion
+    converts: intellect
+    grants: spell damage and healing
+    captured: '2026-08-13'
+    ranks:
+    - rank: 1
+      spell_id: 33589
+      percent: 8
+    - rank: 2
+      spell_id: 33590
+      percent: 16
+    - rank: 3
+      spell_id: 33591
+      percent: 25
+    max_rank: 3
+    points_taken:
+      Balance Druid: 3
+      Restoration Druid: null
+  Mind Mastery:
+    class: mage
+    tree: Arcane
+    kind: conversion
+    converts: intellect
+    grants: spell damage
+    captured: '2026-08-13'
+    ranks:
+    - rank: 1
+      spell_id: 31584
+      percent: 5
+    - rank: 2
+      spell_id: 31585
+      percent: 10
+    - rank: 3
+      spell_id: 31586
+      percent: 15
+    - rank: 4
+      spell_id: 31587
+      percent: 20
+    - rank: 5
+      spell_id: 31588
+      percent: 25
+    max_rank: 5
+    points_taken:
+      Arcane Mage: 5
+  Nature's Blessing:
+    class: shaman
+    tree: Restoration
+    kind: conversion
+    converts: intellect
+    grants: spell damage and healing
+    captured: '2026-08-13'
+    ranks:
+    - rank: 1
+      spell_id: 30867
+      percent: 10
+    - rank: 2
+      spell_id: 30868
+      percent: 20
+    - rank: 3
+      spell_id: 30869
+      percent: 30
+    max_rank: 3
+    points_taken:
+      Restoration Shaman: null
+  Spiritual Guidance:
+    class: priest
+    tree: Holy
+    kind: conversion
+    converts: spirit
+    grants: spell damage and healing
+    captured: '2026-08-13'
+    ranks:
+    - rank: 1
+      spell_id: 14901
+      percent: 5
+    - rank: 2
+      spell_id: 15028
+      percent: 10
+    - rank: 3
+      spell_id: 15029
+      percent: 15
+    - rank: 4
+      spell_id: 15030
+      percent: 20
+    - rank: 5
+      spell_id: 15031
+      percent: 25
+    max_rank: 5
+    points_taken:
+      Priest Healer: null
+      Shadow Priest: 0

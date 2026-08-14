@@ -1,0 +1,246 @@
+meta:
+  captured: '2026-08-13'
+  source: https://nether.wowhead.com/tbc/tooltip/spell/{id}
+  ids_from: wowsims ui/core/talents/trees/<class>.json
+  what: The tooltip text of every rank of the talents that turn a stat into spell damage and
+    healing, and of the talents that raise those stats.
+  ranks: 34
+captures:
+- spell_id: 33589
+  rank: 1
+  talent: Lunar Guidance
+  class: druid
+  tree: Balance
+  kind: conversion
+  file: spell-33589.json
+- spell_id: 33590
+  rank: 2
+  talent: Lunar Guidance
+  class: druid
+  tree: Balance
+  kind: conversion
+  file: spell-33590.json
+- spell_id: 33591
+  rank: 3
+  talent: Lunar Guidance
+  class: druid
+  tree: Balance
+  kind: conversion
+  file: spell-33591.json
+- spell_id: 31837
+  rank: 1
+  talent: Holy Guidance
+  class: paladin
+  tree: Holy
+  kind: conversion
+  file: spell-31837.json
+- spell_id: 31838
+  rank: 2
+  talent: Holy Guidance
+  class: paladin
+  tree: Holy
+  kind: conversion
+  file: spell-31838.json
+- spell_id: 31839
+  rank: 3
+  talent: Holy Guidance
+  class: paladin
+  tree: Holy
+  kind: conversion
+  file: spell-31839.json
+- spell_id: 31840
+  rank: 4
+  talent: Holy Guidance
+  class: paladin
+  tree: Holy
+  kind: conversion
+  file: spell-31840.json
+- spell_id: 31841
+  rank: 5
+  talent: Holy Guidance
+  class: paladin
+  tree: Holy
+  kind: conversion
+  file: spell-31841.json
+- spell_id: 14901
+  rank: 1
+  talent: Spiritual Guidance
+  class: priest
+  tree: Holy
+  kind: conversion
+  file: spell-14901.json
+- spell_id: 15028
+  rank: 2
+  talent: Spiritual Guidance
+  class: priest
+  tree: Holy
+  kind: conversion
+  file: spell-15028.json
+- spell_id: 15029
+  rank: 3
+  talent: Spiritual Guidance
+  class: priest
+  tree: Holy
+  kind: conversion
+  file: spell-15029.json
+- spell_id: 15030
+  rank: 4
+  talent: Spiritual Guidance
+  class: priest
+  tree: Holy
+  kind: conversion
+  file: spell-15030.json
+- spell_id: 15031
+  rank: 5
+  talent: Spiritual Guidance
+  class: priest
+  tree: Holy
+  kind: conversion
+  file: spell-15031.json
+- spell_id: 30867
+  rank: 1
+  talent: Nature's Blessing
+  class: shaman
+  tree: Restoration
+  kind: conversion
+  file: spell-30867.json
+- spell_id: 30868
+  rank: 2
+  talent: Nature's Blessing
+  class: shaman
+  tree: Restoration
+  kind: conversion
+  file: spell-30868.json
+- spell_id: 30869
+  rank: 3
+  talent: Nature's Blessing
+  class: shaman
+  tree: Restoration
+  kind: conversion
+  file: spell-30869.json
+- spell_id: 31584
+  rank: 1
+  talent: Mind Mastery
+  class: mage
+  tree: Arcane
+  kind: conversion
+  file: spell-31584.json
+- spell_id: 31585
+  rank: 2
+  talent: Mind Mastery
+  class: mage
+  tree: Arcane
+  kind: conversion
+  file: spell-31585.json
+- spell_id: 31586
+  rank: 3
+  talent: Mind Mastery
+  class: mage
+  tree: Arcane
+  kind: conversion
+  file: spell-31586.json
+- spell_id: 31587
+  rank: 4
+  talent: Mind Mastery
+  class: mage
+  tree: Arcane
+  kind: conversion
+  file: spell-31587.json
+- spell_id: 31588
+  rank: 5
+  talent: Mind Mastery
+  class: mage
+  tree: Arcane
+  kind: conversion
+  file: spell-31588.json
+- spell_id: 11232
+  rank: 1
+  talent: Arcane Mind
+  class: mage
+  tree: Arcane
+  kind: multiplier
+  file: spell-11232.json
+- spell_id: 12500
+  rank: 2
+  talent: Arcane Mind
+  class: mage
+  tree: Arcane
+  kind: multiplier
+  file: spell-12500.json
+- spell_id: 12501
+  rank: 3
+  talent: Arcane Mind
+  class: mage
+  tree: Arcane
+  kind: multiplier
+  file: spell-12501.json
+- spell_id: 12502
+  rank: 4
+  talent: Arcane Mind
+  class: mage
+  tree: Arcane
+  kind: multiplier
+  file: spell-12502.json
+- spell_id: 12503
+  rank: 5
+  talent: Arcane Mind
+  class: mage
+  tree: Arcane
+  kind: multiplier
+  file: spell-12503.json
+- spell_id: 20257
+  rank: 1
+  talent: Divine Intellect
+  class: paladin
+  tree: Holy
+  kind: multiplier
+  file: spell-20257.json
+- spell_id: 20258
+  rank: 2
+  talent: Divine Intellect
+  class: paladin
+  tree: Holy
+  kind: multiplier
+  file: spell-20258.json
+- spell_id: 20259
+  rank: 3
+  talent: Divine Intellect
+  class: paladin
+  tree: Holy
+  kind: multiplier
+  file: spell-20259.json
+- spell_id: 20260
+  rank: 4
+  talent: Divine Intellect
+  class: paladin
+  tree: Holy
+  kind: multiplier
+  file: spell-20260.json
+- spell_id: 20261
+  rank: 5
+  talent: Divine Intellect
+  class: paladin
+  tree: Holy
+  kind: multiplier
+  file: spell-20261.json
+- spell_id: 34151
+  rank: 1
+  talent: Living Spirit
+  class: druid
+  tree: Restoration
+  kind: multiplier
+  file: spell-34151.json
+- spell_id: 34152
+  rank: 2
+  talent: Living Spirit
+  class: druid
+  tree: Restoration
+  kind: multiplier
+  file: spell-34152.json
+- spell_id: 34153
+  rank: 3
+  talent: Living Spirit
+  class: druid
+  tree: Restoration
+  kind: multiplier
+  file: spell-34153.json
