@@ -97,6 +97,8 @@ return {
             name = "Robe of the Malefic",
             location = "Black Temple",
             route = "drop",
+            epv = 144.37,
+            phase = 3,
           },
           phase3 = {
             {
@@ -121,6 +123,8 @@ return {
             name = "Robe of the Corruptor",
             location = "Tempest Keep",
             route = "drop",
+            epv = 132.3,
+            phase = 2,
           },
           prephase = {
             {
@@ -223,12 +227,16 @@ return {
             name = "Gloves of the Malefic",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 91.52,
+            phase = 3,
           },
           tier5 = {
             item_id = 30211,
             name = "Gloves of the Corruptor",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 61.93,
+            phase = 2,
           },
           prephase = {
             {
@@ -255,6 +263,8 @@ return {
             name = "Hood of the Malefic",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 175.02,
+            phase = 3,
           },
           phase3 = {
             {
@@ -271,6 +281,8 @@ return {
             name = "Hood of the Corruptor",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 141.3,
+            phase = 2,
           },
           prephase = {
             {
@@ -297,6 +309,8 @@ return {
             name = "Leggings of the Malefic",
             location = "Black Temple",
             route = "drop",
+            epv = 133.83,
+            phase = 3,
           },
           phase3 = {
             {
@@ -321,6 +335,8 @@ return {
             name = "Leggings of the Corruptor",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 128.02,
+            phase = 2,
           },
           prephase = {
             {
@@ -407,6 +423,8 @@ return {
             name = "Mantle of the Malefic",
             location = "Black Temple",
             route = "drop",
+            epv = 111.64,
+            phase = 3,
           },
           phase3 = {
             {
@@ -431,6 +449,8 @@ return {
             name = "Mantle of the Corruptor",
             location = "Tempest Keep",
             route = "drop",
+            epv = 96.7,
+            phase = 2,
           },
           prephase = {
             {
@@ -2681,6 +2701,8 @@ return {
             name = "Robes of the Tempest",
             location = "Black Temple",
             route = "drop",
+            epv = 98,
+            phase = 3,
           },
           phase3 = {
             {
@@ -2705,6 +2727,8 @@ return {
             name = "Robes of Tirisfal",
             location = "Tempest Keep",
             route = "drop",
+            epv = 84.2,
+            phase = 2,
           },
           prephase = {
             {
@@ -2807,12 +2831,16 @@ return {
             name = "Gloves of the Tempest",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 65.49,
+            phase = 3,
           },
           tier5 = {
             item_id = 30205,
             name = "Gloves of Tirisfal",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 54.04,
+            phase = 2,
           },
           prephase = {
             {
@@ -2839,6 +2867,8 @@ return {
             name = "Cowl of the Tempest",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 116.76,
+            phase = 3,
           },
           phase3 = {
             {
@@ -2855,6 +2885,8 @@ return {
             name = "Cowl of Tirisfal",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 104.35,
+            phase = 2,
           },
           prephase = {
             {
@@ -2881,6 +2913,8 @@ return {
             name = "Leggings of the Tempest",
             location = "Black Temple",
             route = "drop",
+            epv = 92.97,
+            phase = 3,
           },
           phase3 = {
             {
@@ -2905,6 +2939,8 @@ return {
             name = "Leggings of Tirisfal",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 77.98,
+            phase = 2,
           },
           prephase = {
             {
@@ -2991,6 +3027,8 @@ return {
             name = "Mantle of the Tempest",
             location = "Black Temple",
             route = "drop",
+            epv = 68.67,
+            phase = 3,
           },
           phase3 = {
             {
@@ -3015,6 +3053,8 @@ return {
             name = "Mantle of Tirisfal",
             location = "Tempest Keep",
             route = "drop",
+            epv = 62.74,
+            phase = 2,
           },
           prephase = {
             {
@@ -5265,6 +5305,8 @@ return {
             name = "Onslaught Breastplate",
             location = "Black Temple",
             route = "drop",
+            epv = 139.7,
+            phase = 3,
           },
           phase3 = {
             {
@@ -5289,6 +5331,8 @@ return {
             name = "Destroyer Breastplate",
             location = "Tempest Keep",
             route = "drop",
+            epv = 120.56,
+            phase = 2,
           },
           prephase = {
             {
@@ -5391,6 +5435,8 @@ return {
             name = "Onslaught Gauntlets",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 87.78,
+            phase = 3,
           },
           phase3 = {
             {
@@ -5415,6 +5461,8 @@ return {
             name = "Destroyer Gauntlets",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 71.6,
+            phase = 2,
           },
           prephase = {
             {
@@ -5441,6 +5489,8 @@ return {
             name = "Onslaught Battle-Helm",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 150.76,
+            phase = 3,
           },
           phase3 = {
             {
@@ -5465,6 +5515,8 @@ return {
             name = "Destroyer Battle-Helm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 144.4,
+            phase = 2,
           },
           prephase = {
             {
@@ -5491,6 +5543,8 @@ return {
             name = "Onslaught Greaves",
             location = "Black Temple",
             route = "drop",
+            epv = 128.28,
+            phase = 3,
           },
           phase3 = {
             {
@@ -5515,6 +5569,8 @@ return {
             name = "Destroyer Greaves",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 106.4,
+            phase = 2,
           },
           prephase = {
             {
@@ -5609,6 +5665,8 @@ return {
             name = "Onslaught Shoulderblades",
             location = "Black Temple",
             route = "drop",
+            epv = 101.87,
+            phase = 3,
           },
           phase3 = {
             {
@@ -5633,6 +5691,8 @@ return {
             name = "Destroyer Shoulderblades",
             location = "Tempest Keep",
             route = "drop",
+            epv = 86.64,
+            phase = 2,
           },
           prephase = {
             {
@@ -7539,6 +7599,8 @@ return {
             name = "Thunderheart Vest",
             location = "Black Temple",
             route = "drop",
+            epv = 157.78,
+            phase = 3,
           },
           phase3 = {
             {
@@ -7563,6 +7625,8 @@ return {
             name = "Nordrassil Chestpiece",
             location = "Tempest Keep",
             route = "drop",
+            epv = 143.66,
+            phase = 2,
           },
           prephase = {
             {
@@ -7665,6 +7729,8 @@ return {
             name = "Thunderheart Handguards",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 103.88,
+            phase = 3,
           },
           phase3 = {
             {
@@ -7681,6 +7747,8 @@ return {
             name = "Nordrassil Gauntlets",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 73.48,
+            phase = 2,
           },
           prephase = {
             {
@@ -7707,6 +7775,8 @@ return {
             name = "Thunderheart Headguard",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 162.88,
+            phase = 3,
           },
           phase3 = {
             {
@@ -7723,6 +7793,8 @@ return {
             name = "Nordrassil Headpiece",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 146,
+            phase = 2,
           },
           prephase = {
             {
@@ -7749,6 +7821,8 @@ return {
             name = "Thunderheart Pants",
             location = "Black Temple",
             route = "drop",
+            epv = 138.02,
+            phase = 3,
           },
           phase3 = {
             {
@@ -7773,6 +7847,8 @@ return {
             name = "Nordrassil Wrath-Kilt",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 108.18,
+            phase = 2,
           },
           prephase = {
             {
@@ -7829,6 +7905,8 @@ return {
             name = "Thunderheart Shoulderpads",
             location = "Black Temple",
             route = "drop",
+            epv = 112.84,
+            phase = 3,
           },
           phase3 = {
             {
@@ -7853,6 +7931,8 @@ return {
             name = "Nordrassil Wrath-Mantle",
             location = "Tempest Keep",
             route = "drop",
+            epv = 98.7,
+            phase = 2,
           },
           prephase = {
             {
@@ -9990,6 +10070,8 @@ return {
             name = "Gronnstalker's Chestguard",
             location = "Black Temple",
             route = "drop",
+            epv = 244.6,
+            phase = 3,
           },
           phase3 = {
             {
@@ -10014,6 +10096,8 @@ return {
             name = "Rift Stalker Hauberk",
             location = "Tempest Keep",
             route = "drop",
+            epv = 233.65,
+            phase = 2,
           },
           prephase = {
             {
@@ -10116,6 +10200,8 @@ return {
             name = "Gronnstalker's Gloves",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 210.95,
+            phase = 3,
           },
           phase3 = {
             {
@@ -10140,6 +10226,8 @@ return {
             name = "Rift Stalker Gauntlets",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 166.2,
+            phase = 2,
           },
           prephase = {
             {
@@ -10166,6 +10254,8 @@ return {
             name = "Gronnstalker's Helmet",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 257.63,
+            phase = 3,
           },
           phase3 = {
             {
@@ -10190,6 +10280,8 @@ return {
             name = "Rift Stalker Helm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 238.38,
+            phase = 2,
           },
           prephase = {
             {
@@ -10216,6 +10308,8 @@ return {
             name = "Gronnstalker's Leggings",
             location = "Black Temple",
             route = "drop",
+            epv = 226.35,
+            phase = 3,
           },
           phase3 = {
             {
@@ -10240,6 +10334,8 @@ return {
             name = "Rift Stalker Leggings",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 216.05,
+            phase = 2,
           },
           prephase = {
             {
@@ -10342,6 +10438,8 @@ return {
             name = "Gronnstalker's Spaulders",
             location = "Black Temple",
             route = "drop",
+            epv = 204.6,
+            phase = 3,
           },
           phase3 = {
             {
@@ -10366,6 +10464,8 @@ return {
             name = "Rift Stalker Mantle",
             location = "Tempest Keep",
             route = "drop",
+            epv = 154.9,
+            phase = 2,
           },
           prephase = {
             {
@@ -12515,6 +12615,8 @@ return {
             name = "Slayer's Chestguard",
             location = "Black Temple",
             route = "drop",
+            epv = 350.53,
+            phase = 3,
           },
           phase3 = {
             {
@@ -12539,6 +12641,8 @@ return {
             name = "Deathmantle Chestguard",
             location = "Tempest Keep",
             route = "drop",
+            epv = 270.05,
+            phase = 2,
           },
           prephase = {
             {
@@ -12641,6 +12745,8 @@ return {
             name = "Slayer's Handguards",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 270.96,
+            phase = 3,
           },
           phase3 = {
             {
@@ -12657,6 +12763,8 @@ return {
             name = "Deathmantle Handguards",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 208.12,
+            phase = 2,
           },
           prephase = {
             {
@@ -12683,6 +12791,8 @@ return {
             name = "Slayer's Helm",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 385.21,
+            phase = 3,
           },
           phase3 = {
             {
@@ -12699,6 +12809,8 @@ return {
             name = "Deathmantle Helm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 316.07,
+            phase = 2,
           },
           prephase = {
             {
@@ -12725,6 +12837,8 @@ return {
             name = "Slayer's Legguards",
             location = "Black Temple",
             route = "drop",
+            epv = 299.26,
+            phase = 3,
           },
           phase3 = {
             {
@@ -12741,6 +12855,8 @@ return {
             name = "Deathmantle Legguards",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 260.03,
+            phase = 2,
           },
           prephase = {
             {
@@ -12835,6 +12951,8 @@ return {
             name = "Slayer's Shoulderpads",
             location = "Black Temple",
             route = "drop",
+            epv = 251.44,
+            phase = 3,
           },
           phase3 = {
             {
@@ -12859,6 +12977,8 @@ return {
             name = "Deathmantle Shoulderpads",
             location = "Tempest Keep",
             route = "drop",
+            epv = 200.82,
+            phase = 2,
           },
           prephase = {
             {
@@ -15069,6 +15189,8 @@ return {
             name = "Robe of the Malefic",
             location = "Black Temple",
             route = "drop",
+            epv = 179.61,
+            phase = 3,
           },
           phase3 = {
             {
@@ -15093,6 +15215,8 @@ return {
             name = "Robe of the Corruptor",
             location = "Tempest Keep",
             route = "drop",
+            epv = 163.76,
+            phase = 2,
           },
           prephase = {
             {
@@ -15195,12 +15319,16 @@ return {
             name = "Gloves of the Malefic",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 117.26,
+            phase = 3,
           },
           tier5 = {
             item_id = 30211,
             name = "Gloves of the Corruptor",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 83.47,
+            phase = 2,
           },
           prephase = {
             {
@@ -15227,6 +15355,8 @@ return {
             name = "Hood of the Malefic",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 209.11,
+            phase = 3,
           },
           phase3 = {
             {
@@ -15243,6 +15373,8 @@ return {
             name = "Hood of the Corruptor",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 172.35,
+            phase = 2,
           },
           prephase = {
             {
@@ -15269,6 +15401,8 @@ return {
             name = "Leggings of the Malefic",
             location = "Black Temple",
             route = "drop",
+            epv = 170.17,
+            phase = 3,
           },
           phase3 = {
             {
@@ -15293,6 +15427,8 @@ return {
             name = "Leggings of the Corruptor",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 159.59,
+            phase = 2,
           },
           prephase = {
             {
@@ -15387,6 +15523,8 @@ return {
             name = "Mantle of the Malefic",
             location = "Black Temple",
             route = "drop",
+            epv = 139.09,
+            phase = 3,
           },
           phase3 = {
             {
@@ -15411,6 +15549,8 @@ return {
             name = "Mantle of the Corruptor",
             location = "Tempest Keep",
             route = "drop",
+            epv = 119.69,
+            phase = 2,
           },
           prephase = {
             {
@@ -17651,6 +17791,8 @@ return {
             name = "Skyshatter Breastplate",
             location = "Black Temple",
             route = "drop",
+            epv = 126,
+            phase = 3,
           },
           phase3 = {
             {
@@ -17675,6 +17817,8 @@ return {
             name = "Cataclysm Chestpiece",
             location = "Tempest Keep",
             route = "drop",
+            epv = 107.5,
+            phase = 2,
           },
           prephase = {
             {
@@ -17777,6 +17921,8 @@ return {
             name = "Skyshatter Gauntlets",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 91.41,
+            phase = 3,
           },
           phase3 = {
             {
@@ -17801,6 +17947,8 @@ return {
             name = "Cataclysm Handgrips",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 71.02,
+            phase = 2,
           },
           prephase = {
             {
@@ -17827,6 +17975,8 @@ return {
             name = "Skyshatter Headguard",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 144.65,
+            phase = 3,
           },
           phase3 = {
             {
@@ -17843,6 +17993,8 @@ return {
             name = "Cataclysm Headpiece",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 136.91,
+            phase = 2,
           },
           prephase = {
             {
@@ -17869,6 +18021,8 @@ return {
             name = "Skyshatter Legguards",
             location = "Black Temple",
             route = "drop",
+            epv = 114.71,
+            phase = 3,
           },
           phase3 = {
             {
@@ -17893,6 +18047,8 @@ return {
             name = "Cataclysm Leggings",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 100.5,
+            phase = 2,
           },
           prephase = {
             {
@@ -17949,6 +18105,8 @@ return {
             name = "Skyshatter Mantle",
             location = "Black Temple",
             route = "drop",
+            epv = 94.99,
+            phase = 3,
           },
           phase3 = {
             {
@@ -17973,6 +18131,8 @@ return {
             name = "Cataclysm Shoulderpads",
             location = "Tempest Keep",
             route = "drop",
+            epv = 80.69,
+            phase = 2,
           },
           prephase = {
             {
@@ -20100,6 +20260,8 @@ return {
             name = "Skyshatter Tunic",
             location = "Black Temple",
             route = "drop",
+            epv = 209.37,
+            phase = 3,
           },
           phase3 = {
             {
@@ -20124,6 +20286,8 @@ return {
             name = "Cataclysm Chestplate",
             location = "Tempest Keep",
             route = "drop",
+            epv = 214.49,
+            phase = 2,
           },
           prephase = {
             {
@@ -20226,6 +20390,8 @@ return {
             name = "Skyshatter Grips",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 156.57,
+            phase = 3,
           },
           phase3 = {
             {
@@ -20250,6 +20416,8 @@ return {
             name = "Cataclysm Gauntlets",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 154.31,
+            phase = 2,
           },
           prephase = {
             {
@@ -20276,6 +20444,8 @@ return {
             name = "Skyshatter Cover",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 289.76,
+            phase = 3,
           },
           phase3 = {
             {
@@ -20300,6 +20470,8 @@ return {
             name = "Cataclysm Helm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 269.24,
+            phase = 2,
           },
           prephase = {
             {
@@ -20326,6 +20498,8 @@ return {
             name = "Skyshatter Pants",
             location = "Black Temple",
             route = "drop",
+            epv = 208.58,
+            phase = 3,
           },
           phase3 = {
             {
@@ -20350,6 +20524,8 @@ return {
             name = "Cataclysm Legplates",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 192.38,
+            phase = 2,
           },
           prephase = {
             {
@@ -20414,6 +20590,8 @@ return {
             name = "Skyshatter Pauldrons",
             location = "Black Temple",
             route = "drop",
+            epv = 163.36,
+            phase = 3,
           },
           phase3 = {
             {
@@ -20438,6 +20616,8 @@ return {
             name = "Cataclysm Shoulderplates",
             location = "Tempest Keep",
             route = "drop",
+            epv = 126.51,
+            phase = 2,
           },
           prephase = {
             {
@@ -22438,6 +22618,8 @@ return {
             name = "Thunderheart Chestguard",
             location = "Black Temple",
             route = "drop",
+            epv = 901.65,
+            phase = 3,
           },
           phase3 = {
             {
@@ -22462,6 +22644,8 @@ return {
             name = "Nordrassil Chestplate",
             location = "Tempest Keep",
             route = "drop",
+            epv = 812.75,
+            phase = 2,
           },
           prephase = {
             {
@@ -22564,6 +22748,8 @@ return {
             name = "Thunderheart Gauntlets",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 616.5,
+            phase = 3,
           },
           phase3 = {
             {
@@ -22580,6 +22766,8 @@ return {
             name = "Nordrassil Handgrips",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 555.31,
+            phase = 2,
           },
           prephase = {
             {
@@ -22606,6 +22794,8 @@ return {
             name = "Thunderheart Cover",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 870.19,
+            phase = 3,
           },
           phase3 = {
             {
@@ -22622,6 +22812,8 @@ return {
             name = "Nordrassil Headdress",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 785.77,
+            phase = 2,
           },
           prephase = {
             {
@@ -22648,6 +22840,8 @@ return {
             name = "Thunderheart Leggings",
             location = "Black Temple",
             route = "drop",
+            epv = 905.45,
+            phase = 3,
           },
           phase3 = {
             {
@@ -22664,6 +22858,8 @@ return {
             name = "Nordrassil Feral-Kilt",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 810.23,
+            phase = 2,
           },
           prephase = {
             {
@@ -22728,6 +22924,8 @@ return {
             name = "Thunderheart Pauldrons",
             location = "Black Temple",
             route = "drop",
+            epv = 638.46,
+            phase = 3,
           },
           phase3 = {
             {
@@ -22752,6 +22950,8 @@ return {
             name = "Nordrassil Feral-Mantle",
             location = "Tempest Keep",
             route = "drop",
+            epv = 596.27,
+            phase = 2,
           },
           prephase = {
             {
@@ -24476,6 +24676,8 @@ return {
             name = "Thunderheart Chestguard",
             location = "Black Temple",
             route = "drop",
+            epv = 351.1,
+            phase = 3,
           },
           phase3 = {
             {
@@ -24500,6 +24702,8 @@ return {
             name = "Nordrassil Chestplate",
             location = "Tempest Keep",
             route = "drop",
+            epv = 314.24,
+            phase = 2,
           },
           prephase = {
             {
@@ -24602,6 +24806,8 @@ return {
             name = "Thunderheart Gauntlets",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 235.37,
+            phase = 3,
           },
           phase3 = {
             {
@@ -24618,6 +24824,8 @@ return {
             name = "Nordrassil Handgrips",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 173.81,
+            phase = 2,
           },
           prephase = {
             {
@@ -24644,6 +24852,8 @@ return {
             name = "Thunderheart Cover",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 291.6,
+            phase = 3,
           },
           phase3 = {
             {
@@ -24660,6 +24870,8 @@ return {
             name = "Nordrassil Headdress",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 254.74,
+            phase = 2,
           },
           prephase = {
             {
@@ -24686,6 +24898,8 @@ return {
             name = "Thunderheart Leggings",
             location = "Black Temple",
             route = "drop",
+            epv = 385,
+            phase = 3,
           },
           phase3 = {
             {
@@ -24702,6 +24916,8 @@ return {
             name = "Nordrassil Feral-Kilt",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 326.34,
+            phase = 2,
           },
           prephase = {
             {
@@ -24766,6 +24982,8 @@ return {
             name = "Thunderheart Pauldrons",
             location = "Black Temple",
             route = "drop",
+            epv = 284.37,
+            phase = 3,
           },
           phase3 = {
             {
@@ -24790,6 +25008,8 @@ return {
             name = "Nordrassil Feral-Mantle",
             location = "Tempest Keep",
             route = "drop",
+            epv = 268.31,
+            phase = 2,
           },
           prephase = {
             {
@@ -26496,6 +26716,8 @@ return {
             name = "Onslaught Breastplate",
             location = "Black Temple",
             route = "drop",
+            epv = 143.97,
+            phase = 3,
           },
           phase3 = {
             {
@@ -26520,6 +26742,8 @@ return {
             name = "Destroyer Breastplate",
             location = "Tempest Keep",
             route = "drop",
+            epv = 121.86,
+            phase = 2,
           },
           prephase = {
             {
@@ -26622,6 +26846,8 @@ return {
             name = "Onslaught Gauntlets",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 91.33,
+            phase = 3,
           },
           phase3 = {
             {
@@ -26646,6 +26872,8 @@ return {
             name = "Destroyer Gauntlets",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 72.84,
+            phase = 2,
           },
           prephase = {
             {
@@ -26672,6 +26900,8 @@ return {
             name = "Onslaught Battle-Helm",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 157.96,
+            phase = 3,
           },
           phase3 = {
             {
@@ -26696,6 +26926,8 @@ return {
             name = "Destroyer Battle-Helm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 148.48,
+            phase = 2,
           },
           prephase = {
             {
@@ -26722,6 +26954,8 @@ return {
             name = "Onslaught Greaves",
             location = "Black Temple",
             route = "drop",
+            epv = 131.6,
+            phase = 3,
           },
           phase3 = {
             {
@@ -26746,6 +26980,8 @@ return {
             name = "Destroyer Greaves",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 106.84,
+            phase = 2,
           },
           prephase = {
             {
@@ -26840,6 +27076,8 @@ return {
             name = "Onslaught Shoulderblades",
             location = "Black Temple",
             route = "drop",
+            epv = 106.27,
+            phase = 3,
           },
           phase3 = {
             {
@@ -26864,6 +27102,8 @@ return {
             name = "Destroyer Shoulderblades",
             location = "Tempest Keep",
             route = "drop",
+            epv = 86.88,
+            phase = 2,
           },
           prephase = {
             {
@@ -29230,6 +29470,8 @@ return {
             name = "Lightbringer Chestpiece",
             location = "Black Temple",
             route = "drop",
+            epv = 222.59,
+            phase = 3,
           },
           phase3 = {
             {
@@ -29254,6 +29496,8 @@ return {
             name = "Crystalforge Chestpiece",
             location = "Tempest Keep",
             route = "drop",
+            epv = 203.43,
+            phase = 2,
           },
           prephase = {
             {
@@ -29356,6 +29600,8 @@ return {
             name = "Lightbringer Gloves",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 131.5,
+            phase = 3,
           },
           phase3 = {
             {
@@ -29380,6 +29626,8 @@ return {
             name = "Crystalforge Gloves",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 108.97,
+            phase = 2,
           },
           prephase = {
             {
@@ -29406,6 +29654,8 @@ return {
             name = "Lightbringer Greathelm",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 212.28,
+            phase = 3,
           },
           phase3 = {
             {
@@ -29430,6 +29680,8 @@ return {
             name = "Crystalforge Greathelm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 192.92,
+            phase = 2,
           },
           prephase = {
             {
@@ -29480,6 +29732,8 @@ return {
             name = "Crystalforge Leggings",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 165.46,
+            phase = 2,
           },
           prephase = {
             {
@@ -29544,6 +29798,8 @@ return {
             name = "Lightbringer Pauldrons",
             location = "Black Temple",
             route = "drop",
+            epv = 160.04,
+            phase = 3,
           },
           phase3 = {
             {
@@ -29568,6 +29824,8 @@ return {
             name = "Crystalforge Pauldrons",
             location = "Tempest Keep",
             route = "drop",
+            epv = 142.48,
+            phase = 2,
           },
           prephase = {
             {
@@ -31431,6 +31689,8 @@ return {
             name = "Vestments of Absolution",
             location = "Black Temple",
             route = "drop",
+            epv = 299.81,
+            phase = 3,
           },
           phase3 = {
             {
@@ -31447,6 +31707,8 @@ return {
             name = "Vestments of the Avatar",
             location = "Tempest Keep",
             route = "drop",
+            epv = 259.71,
+            phase = 2,
           },
           prephase = {
             {
@@ -31549,6 +31811,8 @@ return {
             name = "Gloves of Absolution",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 211.73,
+            phase = 3,
           },
           phase3 = {
             {
@@ -31565,6 +31829,8 @@ return {
             name = "Gloves of the Avatar",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 186.59,
+            phase = 2,
           },
           prephase = {
             {
@@ -31591,6 +31857,8 @@ return {
             name = "Cowl of Absolution",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 323.02,
+            phase = 3,
           },
           phase3 = {
             {
@@ -31607,6 +31875,8 @@ return {
             name = "Cowl of the Avatar",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 298.12,
+            phase = 2,
           },
           prephase = {
             {
@@ -31633,6 +31903,8 @@ return {
             name = "Breeches of Absolution",
             location = "Black Temple",
             route = "drop",
+            epv = 265.17,
+            phase = 3,
           },
           phase3 = {
             {
@@ -31657,6 +31929,8 @@ return {
             name = "Breeches of the Avatar",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 252.62,
+            phase = 2,
           },
           prephase = {
             {
@@ -31721,6 +31995,8 @@ return {
             name = "Mantle of Absolution",
             location = "Black Temple",
             route = "drop",
+            epv = 219.75,
+            phase = 3,
           },
           phase3 = {
             {
@@ -31745,6 +32021,8 @@ return {
             name = "Mantle of the Avatar",
             location = "Tempest Keep",
             route = "drop",
+            epv = 185.6,
+            phase = 2,
           },
           prephase = {
             {
@@ -33835,6 +34113,8 @@ return {
             name = "Lightbringer Chestguard",
             location = "Black Temple",
             route = "drop",
+            epv = 256.24,
+            phase = 3,
           },
           phase3 = {
             {
@@ -33851,6 +34131,8 @@ return {
             name = "Crystalforge Chestguard",
             location = "Tempest Keep",
             route = "drop",
+            epv = 216.9,
+            phase = 2,
           },
           prephase = {
             {
@@ -33953,6 +34235,8 @@ return {
             name = "Lightbringer Handguards",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 174.25,
+            phase = 3,
           },
           phase3 = {
             {
@@ -33977,6 +34261,8 @@ return {
             name = "Crystalforge Handguards",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 144.16,
+            phase = 2,
           },
           prephase = {
             {
@@ -34003,6 +34289,8 @@ return {
             name = "Lightbringer Faceguard",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 229.45,
+            phase = 3,
           },
           phase3 = {
             {
@@ -34019,6 +34307,8 @@ return {
             name = "Crystalforge Faceguard",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 202.92,
+            phase = 2,
           },
           prephase = {
             {
@@ -34045,6 +34335,8 @@ return {
             name = "Lightbringer Legguards",
             location = "Black Temple",
             route = "drop",
+            epv = 225.05,
+            phase = 3,
           },
           phase3 = {
             {
@@ -34069,6 +34361,8 @@ return {
             name = "Crystalforge Legguards",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 204,
+            phase = 2,
           },
           prephase = {
             {
@@ -34125,6 +34419,8 @@ return {
             name = "Lightbringer Shoulderguards",
             location = "Black Temple",
             route = "drop",
+            epv = 180.15,
+            phase = 3,
           },
           phase3 = {
             {
@@ -34141,6 +34437,8 @@ return {
             name = "Crystalforge Shoulderguards",
             location = "Tempest Keep",
             route = "drop",
+            epv = 156.25,
+            phase = 2,
           },
           prephase = {
             {
@@ -36060,6 +36358,8 @@ return {
             name = "Onslaught Chestguard",
             location = "Black Temple",
             route = "drop",
+            epv = 218.83,
+            phase = 3,
           },
           phase3 = {
             {
@@ -36084,6 +36384,8 @@ return {
             name = "Destroyer Chestguard",
             location = "Tempest Keep",
             route = "drop",
+            epv = 228.47,
+            phase = 2,
           },
           prephase = {
             {
@@ -36186,6 +36488,8 @@ return {
             name = "Onslaught Handguards",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 132.54,
+            phase = 3,
           },
           phase3 = {
             {
@@ -36210,6 +36514,8 @@ return {
             name = "Destroyer Handguards",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 141.95,
+            phase = 2,
           },
           prephase = {
             {
@@ -36236,6 +36542,8 @@ return {
             name = "Onslaught Greathelm",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 202,
+            phase = 3,
           },
           phase3 = {
             {
@@ -36260,6 +36568,8 @@ return {
             name = "Destroyer Greathelm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 179.13,
+            phase = 2,
           },
           prephase = {
             {
@@ -36286,6 +36596,8 @@ return {
             name = "Onslaught Legguards",
             location = "Black Temple",
             route = "drop",
+            epv = 217.79,
+            phase = 3,
           },
           phase3 = {
             {
@@ -36310,6 +36622,8 @@ return {
             name = "Destroyer Legguards",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 191.51,
+            phase = 2,
           },
           prephase = {
             {
@@ -36412,6 +36726,8 @@ return {
             name = "Onslaught Shoulderguards",
             location = "Black Temple",
             route = "drop",
+            epv = 148.53,
+            phase = 3,
           },
           phase3 = {
             {
@@ -36436,6 +36752,8 @@ return {
             name = "Destroyer Shoulderguards",
             location = "Tempest Keep",
             route = "drop",
+            epv = 168.91,
+            phase = 2,
           },
           prephase = {
             {
@@ -38556,6 +38874,8 @@ return {
             name = "Thunderheart Tunic",
             location = "Black Temple",
             route = "drop",
+            epv = 207.1,
+            phase = 3,
           },
           phase3 = {
             {
@@ -38580,6 +38900,8 @@ return {
             name = "Nordrassil Chestguard",
             location = "Tempest Keep",
             route = "drop",
+            epv = 188.2,
+            phase = 2,
           },
           prephase = {
             {
@@ -38682,6 +39004,8 @@ return {
             name = "Thunderheart Gloves",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 128.9,
+            phase = 3,
           },
           phase3 = {
             {
@@ -38706,6 +39030,8 @@ return {
             name = "Nordrassil Gloves",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 96.8,
+            phase = 2,
           },
           prephase = {
             {
@@ -38732,6 +39058,8 @@ return {
             name = "Thunderheart Helmet",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 190,
+            phase = 3,
           },
           phase3 = {
             {
@@ -38756,6 +39084,8 @@ return {
             name = "Nordrassil Headguard",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 172.7,
+            phase = 2,
           },
           prephase = {
             {
@@ -38782,6 +39112,8 @@ return {
             name = "Thunderheart Legguards",
             location = "Black Temple",
             route = "drop",
+            epv = 167.3,
+            phase = 3,
           },
           phase3 = {
             {
@@ -38806,6 +39138,8 @@ return {
             name = "Nordrassil Life-Kilt",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 147.4,
+            phase = 2,
           },
           prephase = {
             {
@@ -38862,6 +39196,8 @@ return {
             name = "Thunderheart Spaulders",
             location = "Black Temple",
             route = "drop",
+            epv = 148.5,
+            phase = 3,
           },
           phase3 = {
             {
@@ -38886,6 +39222,8 @@ return {
             name = "Nordrassil Life-Mantle",
             location = "Tempest Keep",
             route = "drop",
+            epv = 136.9,
+            phase = 2,
           },
           prephase = {
             {
@@ -40946,6 +41284,8 @@ return {
             name = "Skyshatter Chestguard",
             location = "Black Temple",
             route = "drop",
+            epv = 202.49,
+            phase = 3,
           },
           phase3 = {
             {
@@ -40970,6 +41310,8 @@ return {
             name = "Cataclysm Chestguard",
             location = "Tempest Keep",
             route = "drop",
+            epv = 188.53,
+            phase = 2,
           },
           prephase = {
             {
@@ -41072,6 +41414,8 @@ return {
             name = "Skyshatter Gloves",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 131.28,
+            phase = 3,
           },
           phase3 = {
             {
@@ -41096,6 +41440,8 @@ return {
             name = "Cataclysm Gloves",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 116.09,
+            phase = 2,
           },
           prephase = {
             {
@@ -41122,6 +41468,8 @@ return {
             name = "Skyshatter Helmet",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 212.15,
+            phase = 3,
           },
           phase3 = {
             {
@@ -41146,6 +41494,8 @@ return {
             name = "Cataclysm Headguard",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 192.04,
+            phase = 2,
           },
           prephase = {
             {
@@ -41172,6 +41522,8 @@ return {
             name = "Skyshatter Leggings",
             location = "Black Temple",
             route = "drop",
+            epv = 184.88,
+            phase = 3,
           },
           phase3 = {
             {
@@ -41196,6 +41548,8 @@ return {
             name = "Cataclysm Legguards",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 155.44,
+            phase = 2,
           },
           prephase = {
             {
@@ -41260,6 +41614,8 @@ return {
             name = "Skyshatter Shoulderpads",
             location = "Black Temple",
             route = "drop",
+            epv = 151.47,
+            phase = 3,
           },
           phase3 = {
             {
@@ -41284,6 +41640,8 @@ return {
             name = "Cataclysm Shoulderguards",
             location = "Tempest Keep",
             route = "drop",
+            epv = 131.56,
+            phase = 2,
           },
           prephase = {
             {
@@ -43353,6 +43711,8 @@ return {
             name = "Lightbringer Breastplate",
             location = "Black Temple",
             route = "drop",
+            epv = 88.42,
+            phase = 3,
           },
           phase3 = {
             {
@@ -43377,6 +43737,8 @@ return {
             name = "Crystalforge Breastplate",
             location = "Tempest Keep",
             route = "drop",
+            epv = 83.02,
+            phase = 2,
           },
           prephase = {
             {
@@ -43479,6 +43841,8 @@ return {
             name = "Lightbringer Gauntlets",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 56.46,
+            phase = 3,
           },
           phase3 = {
             {
@@ -43503,6 +43867,8 @@ return {
             name = "Crystalforge Gauntlets",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 47.07,
+            phase = 2,
           },
           prephase = {
             {
@@ -43529,6 +43895,8 @@ return {
             name = "Lightbringer War-Helm",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 99.64,
+            phase = 3,
           },
           phase3 = {
             {
@@ -43553,6 +43921,8 @@ return {
             name = "Crystalforge War-Helm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 96.14,
+            phase = 2,
           },
           prephase = {
             {
@@ -43579,6 +43949,8 @@ return {
             name = "Lightbringer Greaves",
             location = "Black Temple",
             route = "drop",
+            epv = 80.41,
+            phase = 3,
           },
           phase3 = {
             {
@@ -43603,6 +43975,8 @@ return {
             name = "Crystalforge Greaves",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 73,
+            phase = 2,
           },
           prephase = {
             {
@@ -43667,6 +44041,8 @@ return {
             name = "Lightbringer Shoulderbraces",
             location = "Black Temple",
             route = "drop",
+            epv = 63.11,
+            phase = 3,
           },
           phase3 = {
             {
@@ -43691,6 +44067,8 @@ return {
             name = "Crystalforge Shoulderbraces",
             location = "Tempest Keep",
             route = "drop",
+            epv = 57.61,
+            phase = 2,
           },
           prephase = {
             {
@@ -45503,6 +45881,8 @@ return {
             name = "Shroud of Absolution",
             location = "Black Temple",
             route = "drop",
+            epv = 118.57,
+            phase = 3,
           },
           phase3 = {
             {
@@ -45527,6 +45907,8 @@ return {
             name = "Shroud of the Avatar",
             location = "Tempest Keep",
             route = "drop",
+            epv = 109.98,
+            phase = 2,
           },
           prephase = {
             {
@@ -45629,12 +46011,16 @@ return {
             name = "Handguards of Absolution",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 74.54,
+            phase = 3,
           },
           tier5 = {
             item_id = 30160,
             name = "Handguards of the Avatar",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 59.27,
+            phase = 2,
           },
           prephase = {
             {
@@ -45661,6 +46047,8 @@ return {
             name = "Hood of Absolution",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 113.34,
+            phase = 3,
           },
           phase3 = {
             {
@@ -45677,6 +46065,8 @@ return {
             name = "Hood of the Avatar",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 121.23,
+            phase = 2,
           },
           prephase = {
             {
@@ -45703,6 +46093,8 @@ return {
             name = "Leggings of Absolution",
             location = "Black Temple",
             route = "drop",
+            epv = 84.65,
+            phase = 3,
           },
           phase3 = {
             {
@@ -45727,6 +46119,8 @@ return {
             name = "Leggings of the Avatar",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 93.55,
+            phase = 2,
           },
           prephase = {
             {
@@ -45813,6 +46207,8 @@ return {
             name = "Shoulderpads of Absolution",
             location = "Black Temple",
             route = "drop",
+            epv = 83.96,
+            phase = 3,
           },
           phase3 = {
             {
@@ -45837,6 +46233,8 @@ return {
             name = "Wings of the Avatar",
             location = "Tempest Keep",
             route = "drop",
+            epv = 72.18,
+            phase = 2,
           },
           prephase = {
             {
@@ -48086,6 +48484,8 @@ return {
             name = "Gronnstalker's Chestguard",
             location = "Black Temple",
             route = "drop",
+            epv = 397.44,
+            phase = 3,
           },
           phase3 = {
             {
@@ -48110,6 +48510,8 @@ return {
             name = "Rift Stalker Hauberk",
             location = "Tempest Keep",
             route = "drop",
+            epv = 362.57,
+            phase = 2,
           },
           prephase = {
             {
@@ -48212,6 +48614,8 @@ return {
             name = "Gronnstalker's Gloves",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 348.65,
+            phase = 3,
           },
           phase3 = {
             {
@@ -48236,6 +48640,8 @@ return {
             name = "Rift Stalker Gauntlets",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 273.64,
+            phase = 2,
           },
           prephase = {
             {
@@ -48262,6 +48668,8 @@ return {
             name = "Gronnstalker's Helmet",
             location = "Mount Hyjal",
             route = "drop",
+            epv = 449.63,
+            phase = 3,
           },
           phase3 = {
             {
@@ -48286,6 +48694,8 @@ return {
             name = "Rift Stalker Helm",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 398.65,
+            phase = 2,
           },
           prephase = {
             {
@@ -48312,6 +48722,8 @@ return {
             name = "Gronnstalker's Leggings",
             location = "Black Temple",
             route = "drop",
+            epv = 363.97,
+            phase = 3,
           },
           phase3 = {
             {
@@ -48336,6 +48748,8 @@ return {
             name = "Rift Stalker Leggings",
             location = "Serpentshrine Cavern",
             route = "drop",
+            epv = 361.25,
+            phase = 2,
           },
           prephase = {
             {
@@ -48438,6 +48852,8 @@ return {
             name = "Gronnstalker's Spaulders",
             location = "Black Temple",
             route = "drop",
+            epv = 317.99,
+            phase = 3,
           },
           phase3 = {
             {
@@ -48462,6 +48878,8 @@ return {
             name = "Rift Stalker Mantle",
             location = "Tempest Keep",
             route = "drop",
+            epv = 274.66,
+            phase = 2,
           },
           prephase = {
             {

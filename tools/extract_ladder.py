@@ -1000,6 +1000,37 @@ def main() -> int:
             raise Unreadable(
                 f"extract_ladder.py: {spec} names the tab {path}, which is absent.")
         ladder = read_tab(path)
+        # THE WORKBOOK'S SCORE FOR EVERY ROW ON THIS TAB, keyed by item id.
+        #
+        # A TIER BASELINE HAD NO EPV AND EVERY OTHER BASELINE DID. The tier
+        # cells are read from tokens.yaml, which names which piece a set holds
+        # in a slot and knows nothing about scoring, so a card showed
+        # "Cowl of the Grand Engineer EPV 139.46" beside a bare
+        # "Thunderheart Headguard". The guild lead spotted the blank on the
+        # published site on 13 August 2026.
+        #
+        # The workbook does rank tier pieces; nothing had ever joined the two.
+        # This is a lookup, not a computation: the figure is the one already on
+        # the spec's own tab.
+        # THE PHASE TRAVELS WITH THE SCORE. render_item writes the two together
+        # and reads `phase` unconditionally once `epv` is present, so attaching
+        # one without the other stops the build. That is the right pairing: a
+        # score with no phase beside it invites comparing a Phase 2 figure with
+        # a Phase 3 one.
+        tab_row = {row["item_id"]: row
+                   for rows in ladder.values() for row in rows}
+
+        def with_epv(piece: dict) -> dict:
+            out = dict(piece)
+            row = tab_row.get(int(out["item_id"]))
+            # ABSENT IS LEFT ABSENT. A tab that does not rank its own tier piece
+            # gives no figure, and a card saying nothing is right where an
+            # invented zero would read as a score of zero.
+            if row is not None:
+                out["epv"] = row["epv"]
+                out["phase"] = row["phase"]
+            return out
+
         fifth = tier_pieces(tokens, key, 5, spec)
         sixth = tier_pieces(tokens, key, 6, spec)
         slots: dict[str, dict] = {}
@@ -1019,9 +1050,9 @@ def main() -> int:
         for section, slot in SECTION_TO_SLOT.items():
             views: dict[str, dict | list[dict]] = {}
             if slot in sixth:
-                views["tier6"] = dict(sixth[slot])
+                views["tier6"] = with_epv(sixth[slot])
             if slot in fifth:
-                views["tier5"] = dict(fifth[slot])
+                views["tier5"] = with_epv(fifth[slot])
             views.update(off_piece_views(section))
             if views:
                 slots[slot] = views

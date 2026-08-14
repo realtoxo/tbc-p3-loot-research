@@ -549,8 +549,8 @@ local function table_of(names, views)
     if #view.nets > 0 then any = true end
   end
   if any then
-    -- "Stat Highlights (Totals)", named by the guild lead on 13 August 2026,
-    -- and the fourth name this row has carried.
+    -- "Stat Highlights (Total Change)", named by the guild lead on 13 August
+    -- 2026, and the fifth name this row has carried.
     --
     -- "Net" read as a total of the ITEM rather than of the difference, so it
     -- became "Net Change" on 12 August. That fixed the wrong half. The half it
@@ -563,7 +563,7 @@ local function table_of(names, views)
     -- The name now states the gate. It is long for a table label and that is
     -- the trade accepted: a short label that misleads costs more than a long
     -- one that does not.
-    local cells = { text_cell("Stat Highlights (Totals)", pandoc.AlignLeft,
+    local cells = { text_cell("Stat Highlights (Total Change)", pandoc.AlignLeft,
                               1, "delta-net-label") }
     for _, view in ipairs(views) do
       cells[#cells + 1] = text_cell("", pandoc.AlignRight, 1, "delta-raw")
