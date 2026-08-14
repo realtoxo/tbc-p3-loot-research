@@ -545,6 +545,16 @@ pre code { background:none; border:none; padding:0; font-size:13px; line-height:
   font-family:var(--serif); font-size:1.08rem; font-weight:600;
   letter-spacing:-.01em; text-transform:none; color:var(--ink); margin:0;
 }
+/* The badge says the VALUE; this says what the value is of. It is deliberately
+   quieter than the badge beside it: naming the field must not compete with the
+   answer, which is still the loudest thing on the card. */
+.spec-priority-pair { display:inline-flex; align-items:stretch; }
+.spec-priority-label {
+  font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.11em;
+  text-transform:uppercase; white-space:nowrap; color:var(--ink-2);
+  background:var(--panel-2); border:1px solid var(--rule-2); border-right:0;
+  padding:4px 9px; display:inline-flex; align-items:center;
+}
 /* The priority is the unit of output, so it is the loudest thing on the card. */
 .spec-priority {
   font-family:var(--mono); font-size:14px; font-weight:700; letter-spacing:.09em;
