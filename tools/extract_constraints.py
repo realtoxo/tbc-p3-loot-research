@@ -387,7 +387,7 @@ def captured_sentences(captured: dict, cap: str, rating_per_percent: float,
         # anchor and the Feral Cat holds none, so naming the tier described
         # gear those specs do not wear.
         out.append(
-            row("Walking in, before Phase 3", percent(entry[field], rating_per_percent),
+            row("Entry set", percent(entry[field], rating_per_percent),
                 margin_note(entry[field] + debuff, target_rating,
                             rating_per_percent)))
 
@@ -400,25 +400,35 @@ def captured_sentences(captured: dict, cap: str, rating_per_percent: float,
                    "outright, so every point of hit on an item is surplus.")
 
     contested = captured.get("token_configuration_contested")
-    # AN ANCHOR NAMES A STATE OF THE RAID, NOT A PIECE OF GEAR, and the labels
-    # hid that. "Entry", "Tier hands" and "Tier hands and head" meant nothing to
-    # a reader who had not read progression.yaml, and the guild lead asked on
-    # 13 August 2026 what they were. They are the three points a council
-    # actually reasons from: before the phase opens, after Azgalor drops the
-    # hands token, and after Archimonde drops the head token. The boss is what a
-    # reader recognises, so the boss is named.
-    for key, label in (("tier_hands_only", "After Azgalor, hands token"),
-                       ("tier_hands_and_head",
-                        "After Archimonde, hands and head")):
-        block = captured.get(key) or {}
-        if not block or field not in block:
-            continue
-        # BUILT FROM WHAT THE SET HOLDS, NOT FROM THE ANCHOR NAME. The Arcane
-        # Mage declines the head token at this anchor, and the card used to say
-        # it was wearing one.
-        held = block.get("tier6_pieces_held") or []
-        if key == "tier_hands_and_head" and "head" not in held:
-            label = "After Azgalor, keeps Tier 5 helm"
+
+    # TWO SETS, NOT THREE STATES OF THE RAID.
+    #
+    # The captures record three anchors, because the head token sits behind
+    # Archimonde and the middle anchor answers what a spec holds if that fight
+    # holds the raid up. The guild lead ruled on 13 August 2026 that the card
+    # does not carry that distinction: "there is no wall or progression, do not
+    # care about that", and asked for what the ENTRY set reaches and what the
+    # TIER set reaches, and whether each is over or under the cap.
+    #
+    # So the middle anchor is not printed. The data keeps all three, and
+    # `just check` still uses the split to verify that no tier-anchor set wears
+    # an Archimonde drop before Archimonde is down. This is a display decision
+    # and not a change to what was captured.
+    #
+    # THE LABEL NAMES WHAT THE SET HOLDS. "Tier hands and head" meant nothing
+    # without progression.yaml open beside it, and it was also wrong for the two
+    # specs that refuse a token: the Arcane Mage declines the head and the
+    # Balance Druid holds the Tier 5 four-piece instead. Reading the pieces off
+    # the set says something true for all seventeen.
+    PIECE_ORDER = ("head", "shoulder", "chest", "hands", "legs")
+    block = captured.get("tier_hands_and_head") or {}
+    if block and field in block:
+        held = [piece for piece in PIECE_ORDER
+                if piece in (block.get("tier6_pieces_held") or [])]
+        if not held:
+            label = "Tier set, no Tier 6 piece worn"
+        else:
+            label = "Tier set, Tier 6 " + " and ".join(held)
         out.append(row(label, percent(block[field], rating_per_percent),
                        margin_note(block[field] + debuff, target_rating,
                                    rating_per_percent)))
