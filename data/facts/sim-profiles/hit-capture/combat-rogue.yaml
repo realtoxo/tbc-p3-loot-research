@@ -9,118 +9,207 @@ sources:
     url: https://www.wowhead.com/tbc/guide/rogue-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
     title: Burning Crusade Classic Rogue DPS Best in Slot (BiS) Phase 3 Gear Guide
     observed: 2026-08-09
-
 anchors:
-
   entry:
-    tier_pieces_held: [head, shoulder, hands, legs]
+    tier_pieces_held:
+    - head
+    - shoulder
+    - hands
+    - legs
     set_bonuses_held:
-      - "Deathmantle 2-piece: Eviscerate and Envenom cause 40 extra damage per combo point"
-      - "Deathmantle 4-piece: attacks have a chance to make your next finishing move cost no energy"
+    - 'Deathmantle 2-piece: Eviscerate and Envenom cause 40 extra damage per combo point'
+    - 'Deathmantle 4-piece: attacks have a chance to make your next finishing move cost no
+      energy'
     hit_by_slot:
-      head: {item: "Deathmantle Helm", id: 30146, hit: 0}
-      neck: {item: "Choker of Vile Intent", id: 29381, hit: 18}
-      shoulder: {item: "Deathmantle Shoulderpads", id: 30149, hit: 0}
-      back: {item: "Drape of the Dark Reavers", id: 28672, hit: 17}
-      chest: {item: "Bloodsea Brigand's Vest", id: 30101, hit: 27}
-      wrist: {item: "Vambraces of Ending", id: 29966, hit: 0}
-      hands: {item: "Deathmantle Handguards", id: 30145, hit: 24}
-      waist: {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
-      legs: {item: "Deathmantle Legguards", id: 30148, hit: 0}
-      feet: {item: "Edgewalker Longboots", id: 28545, hit: 13}
-      ring_1: {item: "Band of the Ranger-General", id: 29997, hit: 18}
-      ring_2: {item: "Ring of Lethality", id: 30052, hit: 19}
-      trinket_1: {item: "Dragonspine Trophy", id: 28830, hit: 0}
-      trinket_2: {item: "Warp-Spring Coil", id: 30450, hit: 21}
-      main_hand: {item: "Talon of Azshara", id: 30082, hit: 20}
-      off_hand: {item: "Merciless Gladiator's Quickblade", id: 32027, hit: 10}
-      ranged: {item: "Arcanite Steam-Pistol", id: 29949, hit: 19}
+      head:
+        item: Deathmantle Helm
+        id: 30146
+        hit: 0
+      neck:
+        item: Choker of Vile Intent
+        id: 29381
+        hit: 18
+      shoulder:
+        item: Deathmantle Shoulderpads
+        id: 30149
+        hit: 0
+      back:
+        item: Drape of the Dark Reavers
+        id: 28672
+        hit: 17
+      chest:
+        item: Bloodsea Brigand's Vest
+        id: 30101
+        hit: 27
+      wrist:
+        item: Vambraces of Ending
+        id: 29966
+        hit: 0
+      hands:
+        item: Deathmantle Handguards
+        id: 30145
+        hit: 24
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      legs:
+        item: Deathmantle Legguards
+        id: 30148
+        hit: 0
+      feet:
+        item: Edgewalker Longboots
+        id: 28545
+        hit: 13
+      ring_1:
+        item: Band of the Ranger-General
+        id: 29997
+        hit: 18
+      ring_2:
+        item: Ring of Lethality
+        id: 30052
+        hit: 19
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+      trinket_2:
+        item: Warp-Spring Coil
+        id: 30450
+        hit: 21
+      main_hand:
+        item: Talon of Azshara
+        id: 30082
+        hit: 20
+      off_hand:
+        item: Merciless Gladiator's Quickblade
+        id: 32027
+        hit: 10
+      ranged:
+        item: Arcanite Steam-Pistol
+        id: 29949
+        hit: 19
     total_item_hit: 206
-
-  tier_hands_only:
-    tier6_pieces_held: [hands]
-    tier5_pieces_held: [head, shoulder, legs]
-    set_bonuses_held:
-      - "Deathmantle 2-piece: Eviscerate and Envenom cause 40 extra damage per combo point"
-    hit_by_slot:
-      head: {item: "Deathmantle Helm", id: 30146, hit: 0}
-      neck: {item: "Choker of Endless Nightmares", id: 32260, hit: 21}
-      shoulder: {item: "Deathmantle Shoulderpads", id: 30149, hit: 0}
-      back: {item: "Shadowmoon Destroyer's Drape", id: 32323, hit: 17}
-      chest: {item: "Nether Shadow Tunic", id: 32252, hit: 35}
-      wrist: {item: "Deadly Cuffs", id: 30863, hit: 12}
-      hands: {item: "Slayer's Handguards", id: 31026, hit: 18}
-      waist: {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
-      legs: {item: "Deathmantle Legguards", id: 30148, hit: 0}
-      feet: {item: "Edgewalker Longboots", id: 28545, hit: 13}
-      ring_1: {item: "Band of the Ranger-General", id: 29997, hit: 18}
-      ring_2: {item: "Ring of Deceitful Intent", id: 32266, hit: 19}
-      trinket_1: {item: "Dragonspine Trophy", id: 28830, hit: 0}
-      trinket_2: {item: "Warp-Spring Coil", id: 30450, hit: 21}
-      main_hand: {item: "Talon of Azshara", id: 30082, hit: 20}
-      off_hand: {item: "Merciless Gladiator's Quickblade", id: 32027, hit: 10}
-      ranged: {item: "Arcanite Steam-Pistol", id: 29949, hit: 19}
-    total_item_hit: 223
-
   tier_hands_and_head:
-    tier6_pieces_held: [hands, head]
-    tier5_pieces_held: [shoulder, legs]
-    set_bonuses_held:
-      - "Slayer's Armor 2-piece: increases the haste from your Slice and Dice ability by 5%"
-      - "Deathmantle 2-piece: Eviscerate and Envenom cause 40 extra damage per combo point"
+    tier6_pieces_held:
+    - chest
+    - hands
+    - legs
+    - shoulder
+    tier5_pieces_held: []
     hit_by_slot:
-      head: {item: "Slayer's Helm", id: 31027, hit: 15}
-      neck: {item: "Choker of Endless Nightmares", id: 32260, hit: 21}
-      shoulder: {item: "Deathmantle Shoulderpads", id: 30149, hit: 0}
-      back: {item: "Shadowmoon Destroyer's Drape", id: 32323, hit: 17}
-      chest: {item: "Midnight Chestguard", id: 30905, hit: 29}
-      wrist: {item: "Deadly Cuffs", id: 30863, hit: 12}
-      hands: {item: "Slayer's Handguards", id: 31026, hit: 18}
-      waist: {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
-      legs: {item: "Deathmantle Legguards", id: 30148, hit: 0}
-      feet: {item: "Edgewalker Longboots", id: 28545, hit: 13}
-      ring_1: {item: "Band of the Ranger-General", id: 29997, hit: 18}
-      ring_2: {item: "Ring of Deceitful Intent", id: 32266, hit: 19}
-      trinket_1: {item: "Dragonspine Trophy", id: 28830, hit: 0}
-      trinket_2: {item: "Warp-Spring Coil", id: 30450, hit: 21}
-      main_hand: {item: "Talon of Azshara", id: 30082, hit: 20}
-      off_hand: {item: "Merciless Gladiator's Quickblade", id: 32027, hit: 10}
-      ranged: {item: "Arcanite Steam-Pistol", id: 29949, hit: 19}
-    total_item_hit: 232
+      head:
+        item: Cursed Vision of Sargeras
+        id: 32235
+        hit: 21
+      neck:
+        item: Choker of Vile Intent
+        id: 29381
+        hit: 18
+      shoulder:
+        item: Slayer's Shoulderpads
+        id: 31030
+        hit: 0
+      back:
+        item: Drape of the Dark Reavers
+        id: 28672
+        hit: 17
+      chest:
+        item: Slayer's Chestguard
+        id: 31028
+        hit: 15
+      wrist:
+        item: Vambraces of Ending
+        id: 29966
+        hit: 0
+      hands:
+        item: Slayer's Handguards
+        id: 31026
+        hit: 18
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      legs:
+        item: Slayer's Legguards
+        id: 31029
+        hit: 0
+      feet:
+        item: Edgewalker Longboots
+        id: 28545
+        hit: 13
+      ring_1:
+        item: Band of the Ranger-General
+        id: 29997
+        hit: 18
+      ring_2:
+        item: Ring of Lethality
+        id: 30052
+        hit: 19
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+      trinket_2:
+        item: Warp-Spring Coil
+        id: 30450
+        hit: 21
+      main_hand:
+        item: Talon of Azshara
+        id: 30082
+        hit: 20
+      off_hand:
+        item: Merciless Gladiator's Quickblade
+        id: 32027
+        hit: 10
+      ranged:
+        item: Arcanite Steam-Pistol
+        id: 29949
+        hit: 19
+    total_item_hit: 209
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Slayer's Armor: 4
+notes_from_the_previous_construction:
+  READ_THIS_FIRST: 'THESE NOTES WERE WRITTEN FOR A TIER SET BUILT A DIFFERENT WAY, and are
+    kept because the reasoning in them outlives the set. Read nothing here as describing the
+    tier anchor as it now stands.
 
-notes:
-  availability_corrections: >-
-    tier_hands_only chest: Midnight Chestguard (30905) drops from Archimonde,
-    and tier_hands_only is defined as Archimonde not being down. Replaced
-    with Nether Shadow Tunic (32252, Black Temple, Supremus, 35 melee hit),
-    the next-ranked Phase 3 leather chest item in the ladder, legal because
-    Supremus is an early Black Temple boss well inside the four-to-six-week
-    window. Midnight Chestguard is left unchanged in tier_hands_and_head,
-    where Archimonde is down and the item is legitimate. tier_hands_only
-    total_item_hit rises from 217 to 223.
-  downgraded_slots: >-
-    Both tier states start from the same Phase 3 downgrade already recorded in
-    data/facts/sim-profiles/combat-rogue.yaml (head, chest, wrist, ring_2 and
-    the weapons swapped from the published full-clear list to what is
-    reachable four to six weeks in). tier_hands_only applies one further
-    downgrade beyond that file: the head reverts from Slayer's Helm 31027
-    (Archimonde) back to Deathmantle Helm 30146, since this state assumes only
-    the Azgalor hands token is in hand. Everything else in tier_hands_only
-    matches tier_hands_and_head except chest, which is Nether Shadow Tunic in
-    tier_hands_only and Midnight Chestguard in tier_hands_and_head — see
-    notes.availability_corrections.
-  uncertain: >-
-    Every hit value above is the base "Improves hit rating by N" equip effect
-    read from each item's Wowhead tooltip. Socket bonuses that grant hit
-    (Slayer's Helm +4 if the socket is filled correctly, Edgewalker Longboots
-    +3) are NOT included, on the same reasoning the brief uses to exclude
-    gems: the bonus is conditional on gem choice, not printed unconditionally
-    on the item. If the council wants socket-bonus hit counted, hands_only and
-    tier_hands_and_head both undercount by 3 (boots) and tier_hands_and_head
-    undercounts by an additional 4 (helm) when the sockets are filled to meet
-    the bonus. Also unresolved, and inherited from the source profile: whether
-    a rogue at the tier anchor actually holds Slayer's 2-piece plus Deathmantle
-    2-piece (as modeled in tier_hands_and_head) or instead keeps the
-    Deathmantle 4-piece and wears only one Tier 6 item. Wowhead and Warcraft
-    Tavern disagree and no simulation has been run, so this remains open; see
-    the "contested" note in combat-rogue.yaml.
+    The tier set was rebuilt on 14 August 2026 from the entry set plus the tokens the spec''s
+    Phase 3 best-in-slot list actually wears, per the rule in tools/rebuild_tier_sets.py.
+    Every construction note below predates that and several are now false against the file
+    they sit in: one said a shoulder token ''is not available, so Voidheart Mantle is carried
+    forward'' beside a file holding that token.
+
+    THE ENTRY ANCHOR DID NOT CHANGE, so a note about entry gear, an availability correction
+    or a random-suffix ruling still holds. A note about the TIER anchor does not. The anchor''s
+    own `rebuilt` field is the authority on how it was made.'
+  availability_corrections: 'tier_hands_only chest: Midnight Chestguard (30905) drops from
+    Archimonde, and tier_hands_only is defined as Archimonde not being down. Replaced with
+    Nether Shadow Tunic (32252, Black Temple, Supremus, 35 melee hit), the next-ranked Phase
+    3 leather chest item in the ladder, legal because Supremus is an early Black Temple boss
+    well inside the four-to-six-week window. Midnight Chestguard is left unchanged in tier_hands_and_head,
+    where Archimonde is down and the item is legitimate. tier_hands_only total_item_hit rises
+    from 217 to 223.'
+  downgraded_slots: 'Both tier states start from the same Phase 3 downgrade already recorded
+    in data/facts/sim-profiles/combat-rogue.yaml (head, chest, wrist, ring_2 and the weapons
+    swapped from the published full-clear list to what is reachable four to six weeks in).
+    tier_hands_only applies one further downgrade beyond that file: the head reverts from
+    Slayer''s Helm 31027 (Archimonde) back to Deathmantle Helm 30146, since this state assumes
+    only the Azgalor hands token is in hand. Everything else in tier_hands_only matches tier_hands_and_head
+    except chest, which is Nether Shadow Tunic in tier_hands_only and Midnight Chestguard
+    in tier_hands_and_head — see notes.availability_corrections.'
+  uncertain: 'Every hit value above is the base "Improves hit rating by N" equip effect read
+    from each item''s Wowhead tooltip. Socket bonuses that grant hit (Slayer''s Helm +4 if
+    the socket is filled correctly, Edgewalker Longboots +3) are NOT included, on the same
+    reasoning the brief uses to exclude gems: the bonus is conditional on gem choice, not
+    printed unconditionally on the item. If the council wants socket-bonus hit counted, hands_only
+    and tier_hands_and_head both undercount by 3 (boots) and tier_hands_and_head undercounts
+    by an additional 4 (helm) when the sockets are filled to meet the bonus. Also unresolved,
+    and inherited from the source profile: whether a rogue at the tier anchor actually holds
+    Slayer''s 2-piece plus Deathmantle 2-piece (as modeled in tier_hands_and_head) or instead
+    keeps the Deathmantle 4-piece and wears only one Tier 6 item. Wowhead and Warcraft Tavern
+    disagree and no simulation has been run, so this remains open; see the "contested" note
+    in combat-rogue.yaml.'

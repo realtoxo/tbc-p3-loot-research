@@ -452,8 +452,20 @@ def captured_sentences(captured: dict, cap: str, rating_per_percent: float,
                 f"{percent(after_gems, rating_per_percent)} still remains, so "
                 "gems alone do not close this.")
 
+    # THE TIER ROW ASSUMES NOTHING ABOUT TOKENS ANY MORE. This line used to read
+    # "Tier rows assume both reachable tokens", which was written when a tier
+    # anchor was defined as the hands and head tokens on a Phase 2 set. Since
+    # 14 August 2026 the tier set is the entry set plus whatever tokens the
+    # spec's Phase 3 best-in-slot list actually wears, which is five for the
+    # Feral Bear, one for the Protection Warrior and NONE for the Enhancement
+    # Shaman or the Retribution Paladin. On those two the old sentence asserted
+    # two tokens on a set holding zero.
+    #
+    # The row label already names the pieces the set holds, read off the
+    # capture, so this line no longer needs to describe the configuration and
+    # only carries the contested note where one exists.
     if contested:
-        out.append(f"Tier rows assume both reachable tokens. {upper_first(contested)}.")
+        out.append(upper_first(contested) + ".")
     return out
 
 

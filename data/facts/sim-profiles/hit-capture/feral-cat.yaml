@@ -2,222 +2,284 @@ spec: feral_cat
 collected_on: 2026-08-09
 sources:
   entry:
-    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhUJP-KpFvQwgC8DWm39laCPB-0hPcIorSy7Q3yhc12hdsD0WsC7WVi1mp6SbIIeRryMQI0qcX_z77/pubhtml"
-    title: >-
-      TBC Phase 3 PVE EPV BIS LIST, Per Class, by Fazers — Cat tab, rows with
-      phase 0/1/2 (Karazhan, Gruul's Lair, Magtheridon's Lair, Serpentshrine
-      Cavern, Tempest Keep and pre-raid content). Captured in this repo at
-      data/research/epv-workbook/Cat.csv. Relic/idol slot: this workbook has
-      no Ranged/Idol section for Druid tabs, so the idol pick is cross-checked
-      against data/facts/items.csv and data/facts/drops.csv instead.
+    url: https://docs.google.com/spreadsheets/d/e/2PACX-1vQhUJP-KpFvQwgC8DWm39laCPB-0hPcIorSy7Q3yhc12hdsD0WsC7WVi1mp6SbIIeRryMQI0qcX_z77/pubhtml
+    title: 'TBC Phase 3 PVE EPV BIS LIST, Per Class, by Fazers — Cat tab, rows with phase
+      0/1/2 (Karazhan, Gruul''s Lair, Magtheridon''s Lair, Serpentshrine Cavern, Tempest Keep
+      and pre-raid content). Captured in this repo at data/research/epv-workbook/Cat.csv.
+      Relic/idol slot: this workbook has no Ranged/Idol section for Druid tabs, so the idol
+      pick is cross-checked against data/facts/items.csv and data/facts/drops.csv instead.'
     observed: 2026-08-09
   tier:
-    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhUJP-KpFvQwgC8DWm39laCPB-0hPcIorSy7Q3yhc12hdsD0WsC7WVi1mp6SbIIeRryMQI0qcX_z77/pubhtml"
-    title: >-
-      Same workbook, same Cat tab, rows with phase 3 filtered to early Mount
-      Hyjal (Rage Winterchill, Anetheron, Kaz'rogal, Azgalor, plus Hyjal trash)
-      and early-to-mid Black Temple (High Warlord Naj'entus through Gurtogg
-      Bloodboil and Reliquary of Souls / Devourer of Souls), with Mother
-      Shahraz, the Illidari Council and Illidan Stormrage excluded as
-      not-yet-dead. Tier 6 pieces cross-checked against data/facts/tokens.yaml
-      (Thunderheart Harness). Idol cross-checked against data/facts/items.csv
-      and data/facts/drops.csv.
+    url: https://docs.google.com/spreadsheets/d/e/2PACX-1vQhUJP-KpFvQwgC8DWm39laCPB-0hPcIorSy7Q3yhc12hdsD0WsC7WVi1mp6SbIIeRryMQI0qcX_z77/pubhtml
+    title: Same workbook, same Cat tab, rows with phase 3 filtered to early Mount Hyjal (Rage
+      Winterchill, Anetheron, Kaz'rogal, Azgalor, plus Hyjal trash) and early-to-mid Black
+      Temple (High Warlord Naj'entus through Gurtogg Bloodboil and Reliquary of Souls / Devourer
+      of Souls), with Mother Shahraz, the Illidari Council and Illidan Stormrage excluded
+      as not-yet-dead. Tier 6 pieces cross-checked against data/facts/tokens.yaml (Thunderheart
+      Harness). Idol cross-checked against data/facts/items.csv and data/facts/drops.csv.
     observed: 2026-08-09
 anchors:
   entry:
     tier_pieces_held: []
     set_bonuses_held: []
     hit_by_slot:
-      head: {item: "Wolfshead Helm", id: 8345, hit: 0}
-      neck: {item: "Braided Eternium Chain", id: 24114, hit: 21}
-      shoulder: {item: "Shoulderpads of the Stranger", id: 30055, hit: 0}
-      back: {item: "Drape of the Dark Reavers", id: 28672, hit: 17}
-      chest: {item: "Bloodsea Brigand's Vest", id: 30101, hit: 27}
-      wrist: {item: "Vambraces of Ending", id: 29966, hit: 0}
-      hands: {item: "Gloves of the Searing Grip", id: 29947, hit: 0}
-      waist: {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
-      ring_1: {item: "Ring of Lethality", id: 30052, hit: 19}
-      ring_2: {item: "Band of the Ranger-General", id: 29997, hit: 18}
-      legs: {item: "Skulker's Greaves", id: 28741, hit: 28}
-      feet: {item: "Edgewalker Longboots", id: 28545, hit: 13}
-      trinket_1: {item: "Dragonspine Trophy", id: 28830, hit: 0}
-      trinket_2: {item: "Tsunami Talisman", id: 30627, hit: 10}
-      relic: {item: "Idol of the Crescent Goddess", id: 30051, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Maul (Feral)", id: 32014, hit: 18}
-      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+      head:
+        item: Wolfshead Helm
+        id: 8345
+        hit: 0
+      neck:
+        item: Braided Eternium Chain
+        id: 24114
+        hit: 21
+      shoulder:
+        item: Shoulderpads of the Stranger
+        id: 30055
+        hit: 0
+      back:
+        item: Drape of the Dark Reavers
+        id: 28672
+        hit: 17
+      chest:
+        item: Bloodsea Brigand's Vest
+        id: 30101
+        hit: 27
+      wrist:
+        item: Vambraces of Ending
+        id: 29966
+        hit: 0
+      hands:
+        item: Gloves of the Searing Grip
+        id: 29947
+        hit: 0
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      ring_1:
+        item: Ring of Lethality
+        id: 30052
+        hit: 19
+      ring_2:
+        item: Band of the Ranger-General
+        id: 29997
+        hit: 18
+      legs:
+        item: Skulker's Greaves
+        id: 28741
+        hit: 28
+      feet:
+        item: Edgewalker Longboots
+        id: 28545
+        hit: 13
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+      trinket_2:
+        item: Tsunami Talisman
+        id: 30627
+        hit: 10
+      relic:
+        item: Idol of the Crescent Goddess
+        id: 30051
+        hit: 0
+      main_hand:
+        item: Merciless Gladiator's Maul (Feral)
+        id: 32014
+        hit: 18
+      off_hand:
+        item: none, two-hand weapon equipped
+        id: null
+        hit: 0
     total_item_hit: 171
-  tier_hands_only:
-    tier6_pieces_held: []
-    tier5_pieces_held: []
-    set_bonuses_held: []
-    hit_by_slot:
-      head: {item: "Wolfshead Helm", id: 8345, hit: 0}
-      neck: {item: "Choker of Endless Nightmares", id: 32260, hit: 21}
-      shoulder: {item: "Shoulderpads of the Stranger", id: 30055, hit: 0}
-      back: {item: "Shadowmoon Destroyer's Drape", id: 32323, hit: 17}
-      chest: {item: "Nether Shadow Tunic", id: 32252, hit: 35}
-      wrist: {item: "Insidious Bands", id: 32324, hit: 12}
-      hands: {item: "Gloves of the Searing Grip", id: 29947, hit: 0}
-      waist: {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
-      ring_1: {item: "Ring of Lethality", id: 30052, hit: 19}
-      ring_2: {item: "Ring of Deceitful Intent", id: 32266, hit: 19}
-      legs: {item: "Skulker's Greaves", id: 28741, hit: 28}
-      feet: {item: "Edgewalker Longboots", id: 28545, hit: 13}
-      trinket_1: {item: "Tsunami Talisman", id: 30627, hit: 10}
-      trinket_2: {item: "Dragonspine Trophy", id: 28830, hit: 0}
-      relic: {item: "Idol of the White Stag", id: 32257, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Maul (Feral)", id: 32014, hit: 18}
-      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
-    total_item_hit: 192
   tier_hands_and_head:
-    tier6_pieces_held: []
+    tier6_pieces_held:
+    - legs
+    - shoulder
     tier5_pieces_held: []
-    set_bonuses_held: []
     hit_by_slot:
-      head: {item: "Wolfshead Helm", id: 8345, hit: 0}
-      neck: {item: "Choker of Endless Nightmares", id: 32260, hit: 21}
-      shoulder: {item: "Shoulderpads of the Stranger", id: 30055, hit: 0}
-      back: {item: "Shadowmoon Destroyer's Drape", id: 32323, hit: 17}
-      chest: {item: "Nether Shadow Tunic", id: 32252, hit: 35}
-      wrist: {item: "Insidious Bands", id: 32324, hit: 12}
-      hands: {item: "Gloves of the Searing Grip", id: 29947, hit: 0}
-      waist: {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
-      ring_1: {item: "Ring of Lethality", id: 30052, hit: 19}
-      ring_2: {item: "Ring of Deceitful Intent", id: 32266, hit: 19}
-      legs: {item: "Skulker's Greaves", id: 28741, hit: 28}
-      feet: {item: "Edgewalker Longboots", id: 28545, hit: 13}
-      trinket_1: {item: "Tsunami Talisman", id: 30627, hit: 10}
-      trinket_2: {item: "Dragonspine Trophy", id: 28830, hit: 0}
-      relic: {item: "Idol of the White Stag", id: 32257, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Maul (Feral)", id: 32014, hit: 18}
-      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
-    total_item_hit: 192
-notes:
-  availability_corrections: >-
-    Both tier states, trinket_1: Madness of the Betrayer (32505) drops from
-    The Illidari Council, which data/facts/progression.yaml places outside
-    the four-to-six-week window. Replaced with Tsunami Talisman (30627,
-    Serpentshrine Cavern, Phase 2, 10 melee hit), the workbook's next-ranked
-    trinket not already held in trinket_2 (Dragonspine Trophy, the
-    workbook's own rank-2 pick). Both tier states, weapon: Vengeful
-    Gladiator's Staff (Feral) (33716) is Arena Season 3, which opens after
-    Phase 3. Replaced with Merciless Gladiator's Maul (Feral) (32014, Arena
-    Season 2, 18 melee hit), the workbook's next-ranked two-hand weapon and
-    the same weapon already held at the Entry anchor; the swap keeps the
-    two-hand weapon type unchanged. tier_hands_only total_item_hit falls
-    from 217 to 203 (trinket -10, weapon -4); tier_hands_and_head falls from
-    206 to 192 (same deltas).
-  downgraded_slots: >-
-    Head: the full-clear Phase 3 pick is Cursed Vision of Sargeras (Illidan
-    Stormrage, late Black Temple, not available). In tier_hands_only it is
-    replaced by the next open-market item, Deathblow X11 Goggles (Engineering,
-    unchanged from Entry). In tier_hands_and_head it is replaced by the
-    Archimonde token, Thunderheart Cover, per this file's brief. Shoulder: the
-    full-clear pick is Thunderheart Pauldrons (Mother Shahraz, late Black
-    Temple, not available); the piece held instead is Shoulderpads of the
-    Stranger, carried over unchanged from Entry (Serpentshrine Cavern). Legs:
-    the full-clear pick is Thunderheart Leggings (Illidari Council, late Black
-    Temple, not available); the piece held instead is Skulker's Greaves,
-    carried over unchanged from Entry (Karazhan). Hands: Gloves of the Searing Grip (Tempest Keep,
-    already held at Entry) at both tier states — the workbook ranks it first
-    at 239.10 over Thunderheart Gauntlets at 235.37, and the hands token is
-    refused; see the token_refusal note. Chest, neck, back, wrist, waist, both
-    rings, feet, both trinkets and the weapon are unaffected: their top-ranked
-    picks already come from Phase-2 content or from Black Temple bosses at or
-    before Gurtogg Bloodboil / Reliquary of Souls / Devourer of Souls, which
-    this file treats as reliably dead 4 to 6 weeks into Phase 3.
-  uncertain: >-
-    No Nordrassil Harness (Tier 5) piece is the top-ranked item for any slot
-    at the Entry anchor in the source workbook, so tier_pieces_held is empty
-    there and there is nothing to "keep" into the Tier anchor — tier5_pieces_
-    held is empty in both Tier states too. This is a real divergence from the
-    common community claim that Feral Cat runs a near-full Nordrassil Harness
-    at Phase 2 for its 4-piece (Shred +75 damage): the source workbook's own
-    provenance states plainly that "set bonuses are not included in any item
-    value," so an off-set item with better raw itemization can rank above a
-    tier piece here even where a set-bonus-aware guide would keep the tier
-    piece instead. Not resolved — flagged. Separately, live Wowhead guide
-    pages (wowhead.com/tbc/guide/...) could not be fetched directly: the
-    static HTML returns page chrome only, and the tooltip/JSON endpoints
-    tried did not return usable item data, so entry and tier both fall back
-    to this repository's already-captured EPV workbook, cross-checked against
-    data/facts/tokens.yaml for the Thunderheart Harness pieces and against
-    data/facts/items.csv / data/facts/drops.csv for the relic slot, which the
-    workbook does not cover for Druids at all. Every raid-drop idol available
-    to Feral Cat in this item database (Idol of the Avian Heart, Idol of the
-    Crescent Goddess, Idol of the White Stag) carries 0 melee hit rating, so
-    the specific idol equipped does not change any total here regardless of
-    which one a raider actually prefers for its on-equip effect. Boss
-    attributions (e.g. which named Black Temple boss drops a given item) are
-    taken as given from the source workbook and were not independently
-    reverified item-by-item against Wowhead, beyond confirming the three
-    named late-Black-Temple bosses (Mother Shahraz, Illidari Council, Illidan
-    Stormrage) match the tokens.yaml token-to-boss mapping. One phase-3 row,
-    "The Frost Lord's War Cloak" / Amulet of Bitter Hatred (Slave Pens, boss
-    Ahune), was excluded from consideration at the Tier anchor because Ahune
-    is a seasonal fishing-event boss whose TBC Classic introduction date
-    relative to this project's Phase 3 window was not verified; it did not
-    end up winning any slot regardless.
+      head:
+        item: Wolfshead Helm
+        id: 8345
+        hit: 0
+      neck:
+        item: Braided Eternium Chain
+        id: 24114
+        hit: 21
+      shoulder:
+        item: Thunderheart Pauldrons
+        id: 31048
+        hit: 0
+      back:
+        item: Drape of the Dark Reavers
+        id: 28672
+        hit: 17
+      chest:
+        item: Bloodsea Brigand's Vest
+        id: 30101
+        hit: 27
+      wrist:
+        item: Vambraces of Ending
+        id: 29966
+        hit: 0
+      hands:
+        item: Gloves of the Searing Grip
+        id: 29947
+        hit: 0
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      ring_1:
+        item: Ring of Lethality
+        id: 30052
+        hit: 19
+      ring_2:
+        item: Band of the Ranger-General
+        id: 29997
+        hit: 18
+      legs:
+        item: Thunderheart Leggings
+        id: 31044
+        hit: 27
+      feet:
+        item: Edgewalker Longboots
+        id: 28545
+        hit: 13
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+      trinket_2:
+        item: Tsunami Talisman
+        id: 30627
+        hit: 10
+      relic:
+        item: Idol of the Crescent Goddess
+        id: 30051
+        hit: 0
+      main_hand:
+        item: Merciless Gladiator's Maul (Feral)
+        id: 32014
+        hit: 18
+      off_hand:
+        item: none, two-hand weapon equipped
+        id: null
+        hit: 0
+    total_item_hit: 170
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Thunderheart Harness: 2
+notes_from_the_previous_construction:
+  READ_THIS_FIRST: 'THESE NOTES WERE WRITTEN FOR A TIER SET BUILT A DIFFERENT WAY, and are
+    kept because the reasoning in them outlives the set. Read nothing here as describing the
+    tier anchor as it now stands.
 
-  wolfshead_helm: >-
-    CORRECTED 9 August 2026. This capture put Deathblow X11 Goggles in the head
-    slot at entry and at tier_hands_only, and the Archimonde head token at
-    tier_hands_and_head. All three are wrong, and four sources agree:
-    THE TOOLTIP, read from the 2.4.3 endpoint on 9 August 2026. Wolfshead Helm,
-    item 8345, is an item level 45 leather head with 109 armor and 10 spirit,
-    Druid only, and reads "When shapeshifting into Cat form the Druid gains 20
-    energy, when shapeshifting into Bear form the Druid gains 5 rage."
-    THE EP WORKBOOK ranks it FIRST in the Cat head section at 0.00 EPV, with
-    the author's own note on the next row: "Yes, its that good." A stat ladder
-    cannot price an energy return, so the zero is a refusal to score it rather
-    than a score.
-    ICY VEINS, observed 9 August 2026: "the best helm for DPS is usually
-    Wolfshead Helm due to improving your Powershifting output." It adds that
-    the Tier 6 two-piece reduces Mangle cost and improves the NON-Wolfshead
-    rotation, "making it less of a DPS cost to not use it when you know you
-    will be tanking for part of the fight", so the exception is a cat that
-    tanks part of an encounter rather than a cat that does not.
-    EXA, a synthesis over several TBC feral guides with citations, observed
-    9 August 2026: "Wolfshead Helm is the best-in-slot head item for Feral
-    Druid cat DPS for the majority of The Burning Crusade Classic. It remains
-    superior to higher-stat gear because its unique passive grants 20 energy
-    upon shifting into Cat Form. When combined with the Furor talent, this
-    provides 60 energy per shift, which is the foundational mechanic for
-    powershifting." That 60 figure is the part our own files did not hold.
-    token-arithmetic.yaml already recorded the head slot as never tier.
-    WHY THIS CAPTURE MISSED IT, and the reason is ours. hit.yaml records the
-    "Yes, its that good." row as a PARSER TRAP that must not be read as a
-    section header, which is true and necessary. It also taught every reader to
-    discard the row, and the row was the answer.
-    CONSEQUENCES. Item hit falls 11 at entry and at tier_hands_only, because
-    Deathblow X11 Goggles carried 11 and Wolfshead carries none. The head token
-    is not worn at any anchor, so tier6_pieces_held held hands alone in both
-    tier states when this correction landed (the hands token was refused later
-    the same day; see token_refusal below), and since the head slot was the
-    ONLY difference between them, the two tier states became identical: for
-    this spec, killing Archimonde changes nothing.
-    ONE LIMIT. Wolfshead Helm is absent from the simulator database, so
-    items.csv cannot carry it and set-stats.yaml reports one unresolved slot
-    per anchor. That is a limit of our table, not of the item.
+    The tier set was rebuilt on 14 August 2026 from the entry set plus the tokens the spec''s
+    Phase 3 best-in-slot list actually wears, per the rule in tools/rebuild_tier_sets.py.
+    Every construction note below predates that and several are now false against the file
+    they sit in: one said a shoulder token ''is not available, so Voidheart Mantle is carried
+    forward'' beside a file holding that token.
 
-  token_refusal: >-
-    REBUILT 9 August 2026 on token-arithmetic.yaml's feral_cat finding: both
-    reachable Tier 6 tokens are dead to this spec. The head slot is Wolfshead
-    Helm whatever the token offers (see wolfshead_helm above), and the hands
-    token, per that entry, would leave the Cat holding exactly ONE Tier 6
-    piece — no Tier 6 bonus — while displacing a higher-ranked item: the Cat
-    tab ranks Gloves of the Searing Grip (29947, Al'ar, Phase 2, already held
-    at Entry) first at 239.10 EPV against Thunderheart Gauntlets (31034) at
-    235.37. The earlier capture wore the hands token at both tier states, and
-    the head token at tier_hands_and_head, because the capture brief assumed
-    the anchors named gear; data/facts/progression.yaml's
-    the_two_tier_anchors_name_progression_not_gear clarifies they name which
-    bosses are down, and refusing a reachable token is a legitimate answer.
-    WHAT CHANGED. Hands is Gloves of the Searing Grip at both tier states,
-    tier6_pieces_held is empty at both, and the Thunderheart Harness 2-piece
-    previously listed at tier_hands_and_head is gone — it was wrong on its
-    own file's terms, since that anchor held only one Thunderheart piece and
-    no Tier 6 set has a one-piece bonus. Both tier states remain identical:
-    for this spec, killing Archimonde still changes nothing. Both swapped
-    items carry 0 melee hit, so every anchor total is unchanged at 171, 192
-    and 192, recomputed from the rows, and the cap state does not move.
+    THE ENTRY ANCHOR DID NOT CHANGE, so a note about entry gear, an availability correction
+    or a random-suffix ruling still holds. A note about the TIER anchor does not. The anchor''s
+    own `rebuilt` field is the authority on how it was made.'
+  availability_corrections: 'Both tier states, trinket_1: Madness of the Betrayer (32505)
+    drops from The Illidari Council, which data/facts/progression.yaml places outside the
+    four-to-six-week window. Replaced with Tsunami Talisman (30627, Serpentshrine Cavern,
+    Phase 2, 10 melee hit), the workbook''s next-ranked trinket not already held in trinket_2
+    (Dragonspine Trophy, the workbook''s own rank-2 pick). Both tier states, weapon: Vengeful
+    Gladiator''s Staff (Feral) (33716) is Arena Season 3, which opens after Phase 3. Replaced
+    with Merciless Gladiator''s Maul (Feral) (32014, Arena Season 2, 18 melee hit), the workbook''s
+    next-ranked two-hand weapon and the same weapon already held at the Entry anchor; the
+    swap keeps the two-hand weapon type unchanged. tier_hands_only total_item_hit falls from
+    217 to 203 (trinket -10, weapon -4); tier_hands_and_head falls from 206 to 192 (same deltas).'
+  downgraded_slots: 'Head: the full-clear Phase 3 pick is Cursed Vision of Sargeras (Illidan
+    Stormrage, late Black Temple, not available). In tier_hands_only it is replaced by the
+    next open-market item, Deathblow X11 Goggles (Engineering, unchanged from Entry). In tier_hands_and_head
+    it is replaced by the Archimonde token, Thunderheart Cover, per this file''s brief. Shoulder:
+    the full-clear pick is Thunderheart Pauldrons (Mother Shahraz, late Black Temple, not
+    available); the piece held instead is Shoulderpads of the Stranger, carried over unchanged
+    from Entry (Serpentshrine Cavern). Legs: the full-clear pick is Thunderheart Leggings
+    (Illidari Council, late Black Temple, not available); the piece held instead is Skulker''s
+    Greaves, carried over unchanged from Entry (Karazhan). Hands: Gloves of the Searing Grip
+    (Tempest Keep, already held at Entry) at both tier states — the workbook ranks it first
+    at 239.10 over Thunderheart Gauntlets at 235.37, and the hands token is refused; see the
+    token_refusal note. Chest, neck, back, wrist, waist, both rings, feet, both trinkets and
+    the weapon are unaffected: their top-ranked picks already come from Phase-2 content or
+    from Black Temple bosses at or before Gurtogg Bloodboil / Reliquary of Souls / Devourer
+    of Souls, which this file treats as reliably dead 4 to 6 weeks into Phase 3.'
+  uncertain: 'No Nordrassil Harness (Tier 5) piece is the top-ranked item for any slot at
+    the Entry anchor in the source workbook, so tier_pieces_held is empty there and there
+    is nothing to "keep" into the Tier anchor — tier5_pieces_ held is empty in both Tier states
+    too. This is a real divergence from the common community claim that Feral Cat runs a near-full
+    Nordrassil Harness at Phase 2 for its 4-piece (Shred +75 damage): the source workbook''s
+    own provenance states plainly that "set bonuses are not included in any item value," so
+    an off-set item with better raw itemization can rank above a tier piece here even where
+    a set-bonus-aware guide would keep the tier piece instead. Not resolved — flagged. Separately,
+    live Wowhead guide pages (wowhead.com/tbc/guide/...) could not be fetched directly: the
+    static HTML returns page chrome only, and the tooltip/JSON endpoints tried did not return
+    usable item data, so entry and tier both fall back to this repository''s already-captured
+    EPV workbook, cross-checked against data/facts/tokens.yaml for the Thunderheart Harness
+    pieces and against data/facts/items.csv / data/facts/drops.csv for the relic slot, which
+    the workbook does not cover for Druids at all. Every raid-drop idol available to Feral
+    Cat in this item database (Idol of the Avian Heart, Idol of the Crescent Goddess, Idol
+    of the White Stag) carries 0 melee hit rating, so the specific idol equipped does not
+    change any total here regardless of which one a raider actually prefers for its on-equip
+    effect. Boss attributions (e.g. which named Black Temple boss drops a given item) are
+    taken as given from the source workbook and were not independently reverified item-by-item
+    against Wowhead, beyond confirming the three named late-Black-Temple bosses (Mother Shahraz,
+    Illidari Council, Illidan Stormrage) match the tokens.yaml token-to-boss mapping. One
+    phase-3 row, "The Frost Lord''s War Cloak" / Amulet of Bitter Hatred (Slave Pens, boss
+    Ahune), was excluded from consideration at the Tier anchor because Ahune is a seasonal
+    fishing-event boss whose TBC Classic introduction date relative to this project''s Phase
+    3 window was not verified; it did not end up winning any slot regardless.'
+  wolfshead_helm: 'CORRECTED 9 August 2026. This capture put Deathblow X11 Goggles in the
+    head slot at entry and at tier_hands_only, and the Archimonde head token at tier_hands_and_head.
+    All three are wrong, and four sources agree: THE TOOLTIP, read from the 2.4.3 endpoint
+    on 9 August 2026. Wolfshead Helm, item 8345, is an item level 45 leather head with 109
+    armor and 10 spirit, Druid only, and reads "When shapeshifting into Cat form the Druid
+    gains 20 energy, when shapeshifting into Bear form the Druid gains 5 rage." THE EP WORKBOOK
+    ranks it FIRST in the Cat head section at 0.00 EPV, with the author''s own note on the
+    next row: "Yes, its that good." A stat ladder cannot price an energy return, so the zero
+    is a refusal to score it rather than a score. ICY VEINS, observed 9 August 2026: "the
+    best helm for DPS is usually Wolfshead Helm due to improving your Powershifting output."
+    It adds that the Tier 6 two-piece reduces Mangle cost and improves the NON-Wolfshead rotation,
+    "making it less of a DPS cost to not use it when you know you will be tanking for part
+    of the fight", so the exception is a cat that tanks part of an encounter rather than a
+    cat that does not. EXA, a synthesis over several TBC feral guides with citations, observed
+    9 August 2026: "Wolfshead Helm is the best-in-slot head item for Feral Druid cat DPS for
+    the majority of The Burning Crusade Classic. It remains superior to higher-stat gear because
+    its unique passive grants 20 energy upon shifting into Cat Form. When combined with the
+    Furor talent, this provides 60 energy per shift, which is the foundational mechanic for
+    powershifting." That 60 figure is the part our own files did not hold. token-arithmetic.yaml
+    already recorded the head slot as never tier. WHY THIS CAPTURE MISSED IT, and the reason
+    is ours. hit.yaml records the "Yes, its that good." row as a PARSER TRAP that must not
+    be read as a section header, which is true and necessary. It also taught every reader
+    to discard the row, and the row was the answer. CONSEQUENCES. Item hit falls 11 at entry
+    and at tier_hands_only, because Deathblow X11 Goggles carried 11 and Wolfshead carries
+    none. The head token is not worn at any anchor, so tier6_pieces_held held hands alone
+    in both tier states when this correction landed (the hands token was refused later the
+    same day; see token_refusal below), and since the head slot was the ONLY difference between
+    them, the two tier states became identical: for this spec, killing Archimonde changes
+    nothing. ONE LIMIT. Wolfshead Helm is absent from the simulator database, so items.csv
+    cannot carry it and set-stats.yaml reports one unresolved slot per anchor. That is a limit
+    of our table, not of the item.'
+  token_refusal: 'REBUILT 9 August 2026 on token-arithmetic.yaml''s feral_cat finding: both
+    reachable Tier 6 tokens are dead to this spec. The head slot is Wolfshead Helm whatever
+    the token offers (see wolfshead_helm above), and the hands token, per that entry, would
+    leave the Cat holding exactly ONE Tier 6 piece — no Tier 6 bonus — while displacing a
+    higher-ranked item: the Cat tab ranks Gloves of the Searing Grip (29947, Al''ar, Phase
+    2, already held at Entry) first at 239.10 EPV against Thunderheart Gauntlets (31034) at
+    235.37. The earlier capture wore the hands token at both tier states, and the head token
+    at tier_hands_and_head, because the capture brief assumed the anchors named gear; data/facts/progression.yaml''s
+    the_two_tier_anchors_name_progression_not_gear clarifies they name which bosses are down,
+    and refusing a reachable token is a legitimate answer. WHAT CHANGED. Hands is Gloves of
+    the Searing Grip at both tier states, tier6_pieces_held is empty at both, and the Thunderheart
+    Harness 2-piece previously listed at tier_hands_and_head is gone — it was wrong on its
+    own file''s terms, since that anchor held only one Thunderheart piece and no Tier 6 set
+    has a one-piece bonus. Both tier states remain identical: for this spec, killing Archimonde
+    still changes nothing. Both swapped items carry 0 melee hit, so every anchor total is
+    unchanged at 171, 192 and 192, recomputed from the rows, and the cap state does not move.'

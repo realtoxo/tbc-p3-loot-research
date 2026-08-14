@@ -2,216 +2,288 @@ spec: beast_mastery_hunter
 collected_on: 2026-08-09
 sources:
   entry:
-    url: "https://www.wowhead.com/tbc/guide/classes/hunter/beast-mastery/dps-bis-gear-pve-phase-2"
-    title: "Beast Mastery Hunter DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic - Wowhead"
+    url: https://www.wowhead.com/tbc/guide/classes/hunter/beast-mastery/dps-bis-gear-pve-phase-2
+    title: Beast Mastery Hunter DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic -
+      Wowhead
     observed: 2026-08-09
   tier:
-    url: "https://www.wowhead.com/tbc/guide/beast-mastery-hunter-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade"
-    title: "Burning Crusade Classic Beast Mastery Hunter DPS Best in Slot (BiS) Gear Guide - Wowhead"
+    url: https://www.wowhead.com/tbc/guide/beast-mastery-hunter-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Beast Mastery Hunter DPS Best in Slot (BiS) Gear Guide
+      - Wowhead
     observed: 2026-08-09
-# Every item's melee_hit figure below was cross-checked against this repo's own
-# data/facts/items.csv, generated from the item database, rather than trusted
-# from the guide prose alone. Item ids are Wowhead item ids.
 anchors:
   entry:
-    tier_pieces_held: [head, shoulder, chest, hands]
+    tier_pieces_held:
+    - head
+    - shoulder
+    - chest
+    - hands
     set_bonuses_held:
-      - "Rift Stalker Armor 2-piece: Causes your pet to be healed for 15% of the damage you deal."
-      - "Rift Stalker Armor 4-piece: Your Steady Shot ability has 5% increased critical strike chance."
+    - 'Rift Stalker Armor 2-piece: Causes your pet to be healed for 15% of the damage you
+      deal.'
+    - 'Rift Stalker Armor 4-piece: Your Steady Shot ability has 5% increased critical strike
+      chance.'
     hit_by_slot:
-      head:       { item: "Rift Stalker Helm", id: 30141, hit: 0 }
-      neck:       { item: "Telonicus's Pendant of Mayhem", id: 30017, hit: 0 }
-      shoulder:   { item: "Rift Stalker Mantle", id: 30143, hit: 13 }
-      back:       { item: "Thalassian Wildercloak", id: 29994, hit: 0 }
-      chest:      { item: "Rift Stalker Hauberk", id: 30139, hit: 19 }
-      wrist:      { item: "Vambraces of Ending", id: 29966, hit: 0 }
-      hands:      { item: "Rift Stalker Gauntlets", id: 30140, hit: 19 }
-      waist:      { item: "Belt of Deep Shadow", id: 30040, hit: 18 }
-      legs:       { item: "Leggings of Murderous Intent", id: 29995, hit: 0 }
-      feet:       { item: "Cobra-Lash Boots", id: 30104, hit: 0 }
-      ring_1:     { item: "Ring of Lethality", id: 30052, hit: 19 }
-      ring_2:     { item: "Band of the Ranger-General", id: 29997, hit: 18 }
-      trinket_1:  { item: "Dragonspine Trophy", id: 28830, hit: 0 }
-      trinket_2:  { item: "Bloodlust Brooch", id: 29383, hit: 0 }
-      ranged:     { item: "Serpent Spine Longbow", id: 30105, hit: 0 }
-      main_hand:  { item: "Talon of the Phoenix", id: 32944, hit: 15 }
-      off_hand:   { item: "Claw of the Phoenix", id: 29948, hit: 0 }
+      head:
+        item: Rift Stalker Helm
+        id: 30141
+        hit: 0
+      neck:
+        item: Telonicus's Pendant of Mayhem
+        id: 30017
+        hit: 0
+      shoulder:
+        item: Rift Stalker Mantle
+        id: 30143
+        hit: 13
+      back:
+        item: Thalassian Wildercloak
+        id: 29994
+        hit: 0
+      chest:
+        item: Rift Stalker Hauberk
+        id: 30139
+        hit: 19
+      wrist:
+        item: Vambraces of Ending
+        id: 29966
+        hit: 0
+      hands:
+        item: Rift Stalker Gauntlets
+        id: 30140
+        hit: 19
+      waist:
+        item: Belt of Deep Shadow
+        id: 30040
+        hit: 18
+      legs:
+        item: Leggings of Murderous Intent
+        id: 29995
+        hit: 0
+      feet:
+        item: Cobra-Lash Boots
+        id: 30104
+        hit: 0
+      ring_1:
+        item: Ring of Lethality
+        id: 30052
+        hit: 19
+      ring_2:
+        item: Band of the Ranger-General
+        id: 29997
+        hit: 18
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+      trinket_2:
+        item: Bloodlust Brooch
+        id: 29383
+        hit: 0
+      ranged:
+        item: Serpent Spine Longbow
+        id: 30105
+        hit: 0
+      main_hand:
+        item: Talon of the Phoenix
+        id: 32944
+        hit: 15
+      off_hand:
+        item: Claw of the Phoenix
+        id: 29948
+        hit: 0
     total_item_hit: 121
-  tier_hands_only:
-    tier6_pieces_held: [hands]
-    tier5_pieces_held: [head, chest]
-    set_bonuses_held:
-      - "Rift Stalker Armor 2-piece: Causes your pet to be healed for 15% of the damage you deal."
-    hit_by_slot:
-      head:       { item: "Rift Stalker Helm", id: 30141, hit: 0 }
-      neck:       { item: "Choker of Endless Nightmares", id: 32260, hit: 21 }
-      shoulder:   { item: "Swiftstrike Shoulders", id: 32581, hit: 0 }
-      back:       { item: "Thalassian Wildercloak", id: 29994, hit: 0 }
-      chest:      { item: "Rift Stalker Hauberk", id: 30139, hit: 19 }
-      wrist:      { item: "Insidious Bands", id: 32324, hit: 12 }
-      hands:      { item: "Gronnstalker's Gloves", id: 31001, hit: 0 }
-      waist:      { item: "Boneweave Girdle", id: 32346, hit: 17 }
-      legs:       { item: "Leggings of Murderous Intent", id: 29995, hit: 0 }
-      feet:       { item: "Softstep Boots of Tracking", id: 32510, hit: 17 }
-      ring_1:     { item: "Ring of Lethality", id: 30052, hit: 19 }
-      ring_2:     { item: "Band of the Eternal Champion", id: 29301, hit: 0 }
-      trinket_1:  { item: "Dragonspine Trophy", id: 28830, hit: 0 }
-      trinket_2:  { item: "Bloodlust Brooch", id: 29383, hit: 0 }
-      ranged:     { item: "Serpent Spine Longbow", id: 30105, hit: 0 }
-      main_hand:  { item: "Boundless Agony", id: 30901, hit: 0 }
-      off_hand:   { item: "Blade of Infamy", id: 30881, hit: 0 }
-    total_item_hit: 105
   tier_hands_and_head:
-    tier6_pieces_held: [hands, head]
-    tier5_pieces_held: [shoulder, chest]
-    set_bonuses_held:
-      - "Rift Stalker Armor 2-piece: Causes your pet to be healed for 15% of the damage you deal."
-      - "Gronnstalker's Armor 2-piece: Increases the mana you gain from your Aspect of the Viper by an additional 5% of your Intellect."
+    tier6_pieces_held:
+    - chest
+    - hands
+    - legs
+    - shoulder
+    tier5_pieces_held: []
     hit_by_slot:
-      head:       { item: "Gronnstalker's Helmet", id: 31003, hit: 0 }
-      neck:       { item: "Choker of Endless Nightmares", id: 32260, hit: 21 }
-      shoulder:   { item: "Rift Stalker Mantle", id: 30143, hit: 13 }
-      back:       { item: "Thalassian Wildercloak", id: 29994, hit: 0 }
-      chest:      { item: "Rift Stalker Hauberk", id: 30139, hit: 19 }
-      wrist:      { item: "Insidious Bands", id: 32324, hit: 12 }
-      hands:      { item: "Gronnstalker's Gloves", id: 31001, hit: 0 }
-      waist:      { item: "Boneweave Girdle", id: 32346, hit: 17 }
-      legs:       { item: "Leggings of Murderous Intent", id: 29995, hit: 0 }
-      feet:       { item: "Softstep Boots of Tracking", id: 32510, hit: 17 }
-      ring_1:     { item: "Ring of Lethality", id: 30052, hit: 19 }
-      ring_2:     { item: "Band of the Eternal Champion", id: 29301, hit: 0 }
-      trinket_1:  { item: "Dragonspine Trophy", id: 28830, hit: 0 }
-      trinket_2:  { item: "Bloodlust Brooch", id: 29383, hit: 0 }
-      ranged:     { item: "Bristleblitz Striker", id: 30906, hit: 0 }
-      main_hand:  { item: "Boundless Agony", id: 30901, hit: 0 }
-      off_hand:   { item: "Blade of Infamy", id: 30881, hit: 0 }
-    total_item_hit: 118
-notes:
-  gronnstalkers_zero_hit_verified: >-
-    VERIFIED. All five Gronnstalker's Armor pieces (Helmet 31003, Spaulders
-    31006, Chestguard 31004, Gloves 31001, Leggings 31005) carry no melee_hit
-    entry in data/facts/items.csv, generated from the item database, and this
-    was cross-checked against each item's live Wowhead tooltip. The claim in
-    data/facts/hit.yaml that Gronnstalker's Armor carries zero hit on all five
-    pieces holds.
-  downgraded_slots: >-
-    Relative to the Phase 3 full-clear BiS list, eight slots were downgraded (CORRECTED 11 August 2026 from "four": the sentence undercounted its own list, which enumerates head, shoulder, chest, legs, feet, ring_1, ring_2 and trinket_2)
-    because their listed item requires a boss the brief marks as not reliably
-    dead at 4 to 6 weeks: head (Cursed Vision of Sargeras, Illidan -> kept
-    Entry's Rift Stalker Helm until Archimonde is down, then the Archimonde
-    head token), shoulder (Gronnstalker's Spaulders, Mother Shahraz -> the
-    workbook's next-ranked reachable item, Swiftstrike Shoulders, at
-    hands_only, and Entry's Rift Stalker Mantle at hands_and_head, where the
-    Mantle is what holds the Rift Stalker 2-piece — see
-    notes.second_best_pass), chest (Gronnstalker's Chestguard, Illidan ->
-    kept Entry's Rift Stalker Hauberk, no Tier 6 chest token available), legs
-    (Gronnstalker's Leggings, Illidari Council -> kept Entry's Leggings of
-    Murderous Intent, which was never a Rift Stalker piece even at Entry),
-    feet (Shadowmaster's Boots, Mother Shahraz -> Softstep Boots of Tracking,
-    Teron Gorefiend, see notes.second_best_pass), ring_1 (Stormrage
-    Signet Ring, Illidan -> kept Entry's Ring of Lethality), trinket_2 (Madness
-    of the Betrayer, Illidari Council -> kept Entry's Bloodlust Brooch), and
-    ranged in the hands_only state only (Bristleblitz Striker needs Archimonde
-    -> kept Entry's Serpent Spine Longbow; swapped in for hands_and_head).
-    Everything else on the full-clear list was kept because its source boss is
-    not one of the three the brief names as unavailable: wrist (Insidious
-    Bands, Teron Gorefiend), ring_2 (Band of the Eternal Champion, a Scale of
-    the Sands exalted quest reward, not a boss drop), and both melee weapons
-    (Boundless Agony and Blade of Infamy, Azgalor and Anetheron). The guide's
-    neck (Choker of Serrated Blades) and waist (Don Alejandro's Money Belt)
-    were kept at first and then corrected off the guide; see
-    notes.off_piece_corrections_2026_08_09.
-  what_the_downgrade_shows: >-
-    The tier-anchor drop from 121 to 105 at hands_only is NOT driven only by
-    the Tier 6 hands token being zero-hit. Two other swaps that have nothing
-    to do with a tier token remove hit at the same anchor: ring_2 swaps from
-    Band of the Ranger-General (18 hit) to Band of the Eternal Champion (0),
-    and the melee weapon pair swaps from Talon of the Phoenix plus Claw of
-    the Phoenix (15 hit) to Boundless Agony plus Blade of Infamy (0 hit),
-    while Insidious Bands on the wrist (+12), Softstep Boots of Tracking on
-    the feet (+17), Choker of Endless Nightmares on the neck (+21, see
-    notes.off_piece_corrections_2026_08_09) and Boneweave Girdle on the
-    waist (17, replacing the crafted Belt of Deep Shadow's 18) give hit
-    back, and the shoulder swap to Swiftstrike Shoulders removes 13 more at
-    hands_only. The zero-hit hands token contributes 19 of the fall on its
-    own; the rest comes from ordinary Phase 3 off-piece upgrades that happen
-    to carry little hit, the same pattern method.known_weakness in hit.yaml
-    describes for greedy-EPV sets in reverse: Phase 3 itemization on this
-    tab is hit-light generally, not just on the tier set.
-  off_piece_corrections_2026_08_09: >-
-    ADDED 9 August 2026, resolving two entries in
-    data/facts/sim-profiles/hit-capture-review/open-divergences.yaml. Both
-    tier anchors held two guide picks that the spec's own tab
-    (data/research/epv-workbook/BM.csv) outranks with items legal in the
-    window, and the spec is SHORT of its ranged hit cap at both anchors
-    (hit-captured.yaml gap before this change: 27 at hands_only, 14 at
-    hands_and_head), so the mechanic is concrete, not only a rank. NECK:
-    Choker of Serrated Blades (32591, 0 hit, 175 armor penetration) is
-    replaced by Choker of Endless Nightmares (32260, Supremus, position 2 in
-    the Black Temple order, 21 hit, 27 crit; BM.csv 145.35 against 122.50).
-    WAIST: Don Alejandro's Money Belt (30879, leather, 0 hit) is replaced by
-    Boneweave Girdle (32346, Reliquary of Souls, position 5, mail, 17 hit,
-    9 more agility; BM.csv 216.60 against 194.00). No set bonus rides on
-    either slot. The two swaps add 38 item hit at each tier anchor,
-    closing the gap at both. The entry anchor is untouched: neither
-    Phase 3 item is a Phase 2 divergence, and the entry trinket_2 row
-    (Bloodlust Brooch, delta 17.72) sits below the 20-EPV materiality bar
-    this pass reworked.
-  hands_only_versus_hands_and_head: >-
-    The two tier states total 105 and 118, and the 13-point difference is the
-    SHOULDER, not anything Archimonde drops. Neither of the two items the
-    Archimonde kill unlocks (Gronnstalker's Helmet and Bristleblitz Striker)
-    carries hit, and neither displaces a hit-bearing item: the head slot was
-    already 0 hit (Rift Stalker Helm) before the swap, and the ranged slot
-    was already 0 hit (Serpent Spine Longbow) before the swap. The difference
-    is that hands_and_head keeps Rift Stalker Mantle (13 hit) because the
-    Mantle is what holds the Rift Stalker 2-piece there, while hands_only
-    holds the 2-piece on head plus chest and wears Swiftstrike Shoulders (0
-    hit) — see notes.second_best_pass. Clearing Archimonde also changes the
-    set bonuses held (Gronnstalker's 2-piece is gained).
-  second_best_pass: >-
-    ADDED 9 August 2026, after a workbook audit. The earlier draft kept two
-    Entry items at the tier anchors without checking the workbook's own
-    next-best-alternative ladder in data/research/epv-workbook/BM.csv, and
-    the ladder ranks a reachable item above both. FEET, both tier anchors:
-    Cobra-Lash Boots (30104, EPV 163.75, 0 hit) is replaced by the tab's
-    rank-1 item Softstep Boots of Tracking (32510, Teron Gorefiend, fourth
-    of nine Black Temple encounters and inside the reachable set, EPV 197.15,
-    17 hit), better on EPV and on hit with no set-bonus interaction.
-    SHOULDER, tier_hands_only only: Rift Stalker Mantle (30143, EPV 154.90,
-    13 hit) is replaced by Swiftstrike Shoulders (32581, Phase 3
-    leatherworking craft, EPV 195.20, 0 hit), the tab's highest-ranked
-    reachable shoulder (rank 1, Gronnstalker's Spaulders, is a Mother Shahraz
-    drop and out of the window). The Rift Stalker 2-piece SURVIVES this swap
-    at hands_only, because Rift Stalker Helm and Rift Stalker Hauberk are
-    still worn. At tier_hands_and_head the same swap would drop Rift Stalker
-    to one piece (chest) and lose the 2-piece, which the workbook's score
-    cannot see (its author excludes set bonuses), so the Mantle is KEPT there
-    and the divergence is the recorded set-bonus hold, not an oversight.
-    Whether Swiftstrike Shoulders is craftable by week four to six depends on
-    its pattern dropping, which drops.csv does not track; recorded as the
-    one availability caveat on this pass.
-  uncertain: >-
-    Three fallback slots (chest, ring_1, trinket_2) were kept at their Entry
-    item because the Phase 3 full-clear guide's only listed upgrade for that
-    slot is locked behind an excluded late-Black-Temple boss. Whether a
-    lesser, non-excluded Mount Hyjal or early/mid Black Temple item exists
-    for any of those three slots that would beat the Entry item was NOT
-    researched beyond the shoulder and feet pass recorded in
-    notes.second_best_pass; the full-clear guide does not name a second-best
-    item per slot, only the single best. If such an item exists this would
-    move the tier totals, most likely upward given the pattern in
-    what_the_downgrade_shows. Whether "trash mobs" for Choker of Serrated
-    Blades means trash encountered before or after the raid's harder bosses
-    was not separately verified; it was treated as generally available
-    Black-Temple-wide per the item's own drop description. The choice between
-    Ring of the Recalcitrant and Ring of Lethality at Entry is explicitly
-    conditional in the Phase 2 guide on whether the raid runs a Boomkin;
-    Ring of Lethality (19 hit) was used here as the buff-independent default,
-    noted because it is a 19-point swing on the Entry total if the other ring
-    is what a given raid actually runs. Whether Teron Gorefiend (Insidious
-    Bands) and Gurtogg Bloodboil/Reliquary of Souls (Boneweave Girdle, see
-    notes.off_piece_corrections_2026_08_09) count as "early Black Temple" was inferred from the brief's exclusion list naming
-    only Illidan, the Illidari Council and Mother Shahraz as not reliably
-    dead, rather than from a separate confirmation that those bosses are
-    themselves down at 4 to 6 weeks.
+      head:
+        item: Cursed Vision of Sargeras
+        id: 32235
+        hit: 21
+      neck:
+        item: Telonicus's Pendant of Mayhem
+        id: 30017
+        hit: 0
+      shoulder:
+        item: Gronnstalker's Spaulders
+        id: 31006
+        hit: 0
+      back:
+        item: Thalassian Wildercloak
+        id: 29994
+        hit: 0
+      chest:
+        item: Gronnstalker's Chestguard
+        id: 31004
+        hit: 0
+      wrist:
+        item: Vambraces of Ending
+        id: 29966
+        hit: 0
+      hands:
+        item: Gronnstalker's Gloves
+        id: 31001
+        hit: 0
+      waist:
+        item: Belt of Deep Shadow
+        id: 30040
+        hit: 18
+      legs:
+        item: Gronnstalker's Leggings
+        id: 31005
+        hit: 0
+      feet:
+        item: Cobra-Lash Boots
+        id: 30104
+        hit: 0
+      ring_1:
+        item: Ring of Lethality
+        id: 30052
+        hit: 19
+      ring_2:
+        item: Band of the Ranger-General
+        id: 29997
+        hit: 18
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+      trinket_2:
+        item: Bloodlust Brooch
+        id: 29383
+        hit: 0
+      ranged:
+        item: Serpent Spine Longbow
+        id: 30105
+        hit: 0
+      main_hand:
+        item: Talon of the Phoenix
+        id: 32944
+        hit: 15
+      off_hand:
+        item: Claw of the Phoenix
+        id: 29948
+        hit: 0
+    total_item_hit: 91
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Gronnstalker's Armor: 4
+notes_from_the_previous_construction:
+  READ_THIS_FIRST: 'THESE NOTES WERE WRITTEN FOR A TIER SET BUILT A DIFFERENT WAY, and are
+    kept because the reasoning in them outlives the set. Read nothing here as describing the
+    tier anchor as it now stands.
+
+    The tier set was rebuilt on 14 August 2026 from the entry set plus the tokens the spec''s
+    Phase 3 best-in-slot list actually wears, per the rule in tools/rebuild_tier_sets.py.
+    Every construction note below predates that and several are now false against the file
+    they sit in: one said a shoulder token ''is not available, so Voidheart Mantle is carried
+    forward'' beside a file holding that token.
+
+    THE ENTRY ANCHOR DID NOT CHANGE, so a note about entry gear, an availability correction
+    or a random-suffix ruling still holds. A note about the TIER anchor does not. The anchor''s
+    own `rebuilt` field is the authority on how it was made.'
+  gronnstalkers_zero_hit_verified: VERIFIED. All five Gronnstalker's Armor pieces (Helmet
+    31003, Spaulders 31006, Chestguard 31004, Gloves 31001, Leggings 31005) carry no melee_hit
+    entry in data/facts/items.csv, generated from the item database, and this was cross-checked
+    against each item's live Wowhead tooltip. The claim in data/facts/hit.yaml that Gronnstalker's
+    Armor carries zero hit on all five pieces holds.
+  downgraded_slots: 'Relative to the Phase 3 full-clear BiS list, eight slots were downgraded
+    (CORRECTED 11 August 2026 from "four": the sentence undercounted its own list, which enumerates
+    head, shoulder, chest, legs, feet, ring_1, ring_2 and trinket_2) because their listed
+    item requires a boss the brief marks as not reliably dead at 4 to 6 weeks: head (Cursed
+    Vision of Sargeras, Illidan -> kept Entry''s Rift Stalker Helm until Archimonde is down,
+    then the Archimonde head token), shoulder (Gronnstalker''s Spaulders, Mother Shahraz ->
+    the workbook''s next-ranked reachable item, Swiftstrike Shoulders, at hands_only, and
+    Entry''s Rift Stalker Mantle at hands_and_head, where the Mantle is what holds the Rift
+    Stalker 2-piece — see notes.second_best_pass), chest (Gronnstalker''s Chestguard, Illidan
+    -> kept Entry''s Rift Stalker Hauberk, no Tier 6 chest token available), legs (Gronnstalker''s
+    Leggings, Illidari Council -> kept Entry''s Leggings of Murderous Intent, which was never
+    a Rift Stalker piece even at Entry), feet (Shadowmaster''s Boots, Mother Shahraz -> Softstep
+    Boots of Tracking, Teron Gorefiend, see notes.second_best_pass), ring_1 (Stormrage Signet
+    Ring, Illidan -> kept Entry''s Ring of Lethality), trinket_2 (Madness of the Betrayer,
+    Illidari Council -> kept Entry''s Bloodlust Brooch), and ranged in the hands_only state
+    only (Bristleblitz Striker needs Archimonde -> kept Entry''s Serpent Spine Longbow; swapped
+    in for hands_and_head). Everything else on the full-clear list was kept because its source
+    boss is not one of the three the brief names as unavailable: wrist (Insidious Bands, Teron
+    Gorefiend), ring_2 (Band of the Eternal Champion, a Scale of the Sands exalted quest reward,
+    not a boss drop), and both melee weapons (Boundless Agony and Blade of Infamy, Azgalor
+    and Anetheron). The guide''s neck (Choker of Serrated Blades) and waist (Don Alejandro''s
+    Money Belt) were kept at first and then corrected off the guide; see notes.off_piece_corrections_2026_08_09.'
+  what_the_downgrade_shows: 'The tier-anchor drop from 121 to 105 at hands_only is NOT driven
+    only by the Tier 6 hands token being zero-hit. Two other swaps that have nothing to do
+    with a tier token remove hit at the same anchor: ring_2 swaps from Band of the Ranger-General
+    (18 hit) to Band of the Eternal Champion (0), and the melee weapon pair swaps from Talon
+    of the Phoenix plus Claw of the Phoenix (15 hit) to Boundless Agony plus Blade of Infamy
+    (0 hit), while Insidious Bands on the wrist (+12), Softstep Boots of Tracking on the feet
+    (+17), Choker of Endless Nightmares on the neck (+21, see notes.off_piece_corrections_2026_08_09)
+    and Boneweave Girdle on the waist (17, replacing the crafted Belt of Deep Shadow''s 18)
+    give hit back, and the shoulder swap to Swiftstrike Shoulders removes 13 more at hands_only.
+    The zero-hit hands token contributes 19 of the fall on its own; the rest comes from ordinary
+    Phase 3 off-piece upgrades that happen to carry little hit, the same pattern method.known_weakness
+    in hit.yaml describes for greedy-EPV sets in reverse: Phase 3 itemization on this tab
+    is hit-light generally, not just on the tier set.'
+  off_piece_corrections_2026_08_09: 'ADDED 9 August 2026, resolving two entries in data/facts/sim-profiles/hit-capture-review/open-divergences.yaml.
+    Both tier anchors held two guide picks that the spec''s own tab (data/research/epv-workbook/BM.csv)
+    outranks with items legal in the window, and the spec is SHORT of its ranged hit cap at
+    both anchors (hit-captured.yaml gap before this change: 27 at hands_only, 14 at hands_and_head),
+    so the mechanic is concrete, not only a rank. NECK: Choker of Serrated Blades (32591,
+    0 hit, 175 armor penetration) is replaced by Choker of Endless Nightmares (32260, Supremus,
+    position 2 in the Black Temple order, 21 hit, 27 crit; BM.csv 145.35 against 122.50).
+    WAIST: Don Alejandro''s Money Belt (30879, leather, 0 hit) is replaced by Boneweave Girdle
+    (32346, Reliquary of Souls, position 5, mail, 17 hit, 9 more agility; BM.csv 216.60 against
+    194.00). No set bonus rides on either slot. The two swaps add 38 item hit at each tier
+    anchor, closing the gap at both. The entry anchor is untouched: neither Phase 3 item is
+    a Phase 2 divergence, and the entry trinket_2 row (Bloodlust Brooch, delta 17.72) sits
+    below the 20-EPV materiality bar this pass reworked.'
+  hands_only_versus_hands_and_head: 'The two tier states total 105 and 118, and the 13-point
+    difference is the SHOULDER, not anything Archimonde drops. Neither of the two items the
+    Archimonde kill unlocks (Gronnstalker''s Helmet and Bristleblitz Striker) carries hit,
+    and neither displaces a hit-bearing item: the head slot was already 0 hit (Rift Stalker
+    Helm) before the swap, and the ranged slot was already 0 hit (Serpent Spine Longbow) before
+    the swap. The difference is that hands_and_head keeps Rift Stalker Mantle (13 hit) because
+    the Mantle is what holds the Rift Stalker 2-piece there, while hands_only holds the 2-piece
+    on head plus chest and wears Swiftstrike Shoulders (0 hit) — see notes.second_best_pass.
+    Clearing Archimonde also changes the set bonuses held (Gronnstalker''s 2-piece is gained).'
+  second_best_pass: 'ADDED 9 August 2026, after a workbook audit. The earlier draft kept two
+    Entry items at the tier anchors without checking the workbook''s own next-best-alternative
+    ladder in data/research/epv-workbook/BM.csv, and the ladder ranks a reachable item above
+    both. FEET, both tier anchors: Cobra-Lash Boots (30104, EPV 163.75, 0 hit) is replaced
+    by the tab''s rank-1 item Softstep Boots of Tracking (32510, Teron Gorefiend, fourth of
+    nine Black Temple encounters and inside the reachable set, EPV 197.15, 17 hit), better
+    on EPV and on hit with no set-bonus interaction. SHOULDER, tier_hands_only only: Rift
+    Stalker Mantle (30143, EPV 154.90, 13 hit) is replaced by Swiftstrike Shoulders (32581,
+    Phase 3 leatherworking craft, EPV 195.20, 0 hit), the tab''s highest-ranked reachable
+    shoulder (rank 1, Gronnstalker''s Spaulders, is a Mother Shahraz drop and out of the window).
+    The Rift Stalker 2-piece SURVIVES this swap at hands_only, because Rift Stalker Helm and
+    Rift Stalker Hauberk are still worn. At tier_hands_and_head the same swap would drop Rift
+    Stalker to one piece (chest) and lose the 2-piece, which the workbook''s score cannot
+    see (its author excludes set bonuses), so the Mantle is KEPT there and the divergence
+    is the recorded set-bonus hold, not an oversight. Whether Swiftstrike Shoulders is craftable
+    by week four to six depends on its pattern dropping, which drops.csv does not track; recorded
+    as the one availability caveat on this pass.'
+  uncertain: Three fallback slots (chest, ring_1, trinket_2) were kept at their Entry item
+    because the Phase 3 full-clear guide's only listed upgrade for that slot is locked behind
+    an excluded late-Black-Temple boss. Whether a lesser, non-excluded Mount Hyjal or early/mid
+    Black Temple item exists for any of those three slots that would beat the Entry item was
+    NOT researched beyond the shoulder and feet pass recorded in notes.second_best_pass; the
+    full-clear guide does not name a second-best item per slot, only the single best. If such
+    an item exists this would move the tier totals, most likely upward given the pattern in
+    what_the_downgrade_shows. Whether "trash mobs" for Choker of Serrated Blades means trash
+    encountered before or after the raid's harder bosses was not separately verified; it was
+    treated as generally available Black-Temple-wide per the item's own drop description.
+    The choice between Ring of the Recalcitrant and Ring of Lethality at Entry is explicitly
+    conditional in the Phase 2 guide on whether the raid runs a Boomkin; Ring of Lethality
+    (19 hit) was used here as the buff-independent default, noted because it is a 19-point
+    swing on the Entry total if the other ring is what a given raid actually runs. Whether
+    Teron Gorefiend (Insidious Bands) and Gurtogg Bloodboil/Reliquary of Souls (Boneweave
+    Girdle, see notes.off_piece_corrections_2026_08_09) count as "early Black Temple" was
+    inferred from the brief's exclusion list naming only Illidan, the Illidari Council and
+    Mother Shahraz as not reliably dead, rather than from a separate confirmation that those
+    bosses are themselves down at 4 to 6 weeks.

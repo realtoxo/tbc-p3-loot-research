@@ -1,22 +1,5 @@
-# Fury Warrior. Item hit rating only, at two gear anchors. Collected 9 August 2026.
-#
-# COUNTING RULES applied throughout: item hit rating only, no gems, no
-# enchants, no consumables, no talents, no racials, no raid buffs. No PvP
-# armor (PvP weapons allowed). No Phase 4 content. Cap is melee_special, raw
-# 142 rating; this spec dual-wields. Every hit: value, including 0, is the
-# number printed on that item's own tooltip, read from the Wowhead TBC
-# Classic item XML endpoint (https://www.wowhead.com/tbc/item=<id>&xml),
-# never inferred and never a socket-bonus or gem figure.
-#
-# This file does NOT reproduce the 142 / 124 figures previously recorded in
-# data/facts/hit.yaml. Those came from a greedy-EPV workbook selection and
-# from a rule that swapped in all five Tier 6 pieces. Neither method is used
-# here. See hit.yaml's tier_anchor_assumption_is_provisional for why that
-# rule was retired.
-
 spec: fury_warrior
 collected_on: 2026-08-09
-
 sources:
   entry:
     url: https://www.wowhead.com/tbc/guide/classes/warrior/fury/dps-bis-gear-pve-phase-2
@@ -26,162 +9,272 @@ sources:
     url: https://www.wowhead.com/tbc/guide/fury-warrior-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
     title: Burning Crusade Classic Fury Warrior DPS Best in Slot (BiS) Phase 3 Gear Guide
     observed: 2026-08-09
-    note: >-
-      Publishes a FULL-CLEAR list, all nine Black Temple bosses and all five
-      Mount Hyjal bosses dead. The tier anchor below downgrades every slot
-      whose full-clear pick is not reliably killable four to six weeks in,
-      per the boss list in notes.downgraded_slots. Every item id and hit
-      value, including for the downgraded picks, was read individually from
-      its own Wowhead item page.
+    note: Publishes a FULL-CLEAR list, all nine Black Temple bosses and all five Mount Hyjal
+      bosses dead. The tier anchor below downgrades every slot whose full-clear pick is not
+      reliably killable four to six weeks in, per the boss list in notes.downgraded_slots.
+      Every item id and hit value, including for the downgraded picks, was read individually
+      from its own Wowhead item page.
   token_data:
     url: internal, data/facts/tokens.yaml
-    title: Destroyer Battlegear (Tier 5) and Onslaught Battlegear (Tier 6) piece ids and set bonuses
+    title: Destroyer Battlegear (Tier 5) and Onslaught Battlegear (Tier 6) piece ids and set
+      bonuses
     observed: 2026-08-09
-
 anchors:
-
   entry:
-    tier_pieces_held: [head, shoulder, chest, hands]
+    tier_pieces_held:
+    - head
+    - shoulder
+    - chest
+    - hands
     set_bonuses_held:
-      - "Destroyer Battlegear 2-piece: your Overpower ability now grants you 100 attack power for 5 sec"
-      - "Destroyer Battlegear 4-piece: your Bloodthirst and Mortal Strike abilities cost 5 less rage"
-    note: >-
-      The published Phase 2 BiS list does not take the fifth Destroyer piece.
-      Legs is Leggings of Murderous Intent, a Kael'thas Sunstrider drop with
-      no set tag, so the 4-piece bonus is held through head, shoulder, chest
-      and hands alone, not through a full 5-for-5 run of the token.
+    - 'Destroyer Battlegear 2-piece: your Overpower ability now grants you 100 attack power
+      for 5 sec'
+    - 'Destroyer Battlegear 4-piece: your Bloodthirst and Mortal Strike abilities cost 5 less
+      rage'
+    note: The published Phase 2 BiS list does not take the fifth Destroyer piece. Legs is
+      Leggings of Murderous Intent, a Kael'thas Sunstrider drop with no set tag, so the 4-piece
+      bonus is held through head, shoulder, chest and hands alone, not through a full 5-for-5
+      run of the token.
     hit_by_slot:
-      head:     {item: "Destroyer Battle-Helm", id: 30120, from: "Lady Vashj, Serpentshrine Cavern, token", hit: 21}
-      neck:     {item: "Pendant of the Perilous", id: 30022, from: "Trash drop, Serpentshrine Cavern", hit: 0}
-      shoulder: {item: "Destroyer Shoulderblades", id: 30122, from: "Void Reaver, Tempest Keep, token", hit: 18}
-      back:     {item: "Vengeance Wrap", id: 24259, from: "Tailoring, crafted", hit: 0}
-      chest:    {item: "Destroyer Breastplate", id: 30118, from: "Kael'thas Sunstrider, Tempest Keep, token", hit: 15}
-      wrist:    {item: "Bracers of Eradication", id: 30057, from: "The Lurker Below, Serpentshrine Cavern", hit: 17}
-      hands:    {item: "Destroyer Gauntlets", id: 30119, from: "Leotheras the Blind, Serpentshrine Cavern, token", hit: 0}
-      waist:    {item: "Belt of One-Hundred Deaths", id: 30106, from: "Lady Vashj, Serpentshrine Cavern", hit: 0}
-      legs:     {item: "Leggings of Murderous Intent", id: 29995, from: "Kael'thas Sunstrider, Tempest Keep", hit: 0}
-      feet:     {item: "Warboots of Obliteration", id: 30081, from: "Morogrim Tidewalker, Serpentshrine Cavern", hit: 0}
-      ring_1:   {item: "Band of the Ranger-General", id: 29997, from: "Kael'thas Sunstrider, Tempest Keep", hit: 18}
-      ring_2:   {item: "Ring of a Thousand Marks", id: 28757, from: "Prince Malchezaar, Karazhan", hit: 19}
-      trinket_1: {item: "Dragonspine Trophy", id: 28830, from: "Gruul the Dragonkiller, Gruul's Lair", hit: 0}
-      trinket_2: {item: "Tsunami Talisman", id: 30627, from: "Leotheras the Blind, Serpentshrine Cavern", hit: 10}
-      main_hand: {item: "Dragonstrike", id: 28439, from: "Blacksmithing, crafted, Master Hammersmith", hit: 0}
-      off_hand:  {item: "Talon of Azshara", id: 30082, from: "Morogrim Tidewalker, Serpentshrine Cavern", hit: 20}
-      ranged:    {item: "Mama's Insurance", id: 30279, from: "Quest, Declawing Doomclaw, Netherstorm", hit: 0}
+      head:
+        item: Destroyer Battle-Helm
+        id: 30120
+        from: Lady Vashj, Serpentshrine Cavern, token
+        hit: 21
+      neck:
+        item: Pendant of the Perilous
+        id: 30022
+        from: Trash drop, Serpentshrine Cavern
+        hit: 0
+      shoulder:
+        item: Destroyer Shoulderblades
+        id: 30122
+        from: Void Reaver, Tempest Keep, token
+        hit: 18
+      back:
+        item: Vengeance Wrap
+        id: 24259
+        from: Tailoring, crafted
+        hit: 0
+      chest:
+        item: Destroyer Breastplate
+        id: 30118
+        from: Kael'thas Sunstrider, Tempest Keep, token
+        hit: 15
+      wrist:
+        item: Bracers of Eradication
+        id: 30057
+        from: The Lurker Below, Serpentshrine Cavern
+        hit: 17
+      hands:
+        item: Destroyer Gauntlets
+        id: 30119
+        from: Leotheras the Blind, Serpentshrine Cavern, token
+        hit: 0
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        from: Lady Vashj, Serpentshrine Cavern
+        hit: 0
+      legs:
+        item: Leggings of Murderous Intent
+        id: 29995
+        from: Kael'thas Sunstrider, Tempest Keep
+        hit: 0
+      feet:
+        item: Warboots of Obliteration
+        id: 30081
+        from: Morogrim Tidewalker, Serpentshrine Cavern
+        hit: 0
+      ring_1:
+        item: Band of the Ranger-General
+        id: 29997
+        from: Kael'thas Sunstrider, Tempest Keep
+        hit: 18
+      ring_2:
+        item: Ring of a Thousand Marks
+        id: 28757
+        from: Prince Malchezaar, Karazhan
+        hit: 19
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        from: Gruul the Dragonkiller, Gruul's Lair
+        hit: 0
+      trinket_2:
+        item: Tsunami Talisman
+        id: 30627
+        from: Leotheras the Blind, Serpentshrine Cavern
+        hit: 10
+      main_hand:
+        item: Dragonstrike
+        id: 28439
+        from: Blacksmithing, crafted, Master Hammersmith
+        hit: 0
+      off_hand:
+        item: Talon of Azshara
+        id: 30082
+        from: Morogrim Tidewalker, Serpentshrine Cavern
+        hit: 20
+      ranged:
+        item: Mama's Insurance
+        id: 30279
+        from: Quest, Declawing Doomclaw, Netherstorm
+        hit: 0
     total_item_hit: 138
-
-  tier_hands_only:
-    tier6_pieces_held: [hands]
-    tier5_pieces_held: [head, shoulder, chest]
-    set_bonuses_held:
-      - "Destroyer Battlegear 2-piece: your Overpower ability now grants you 100 attack power for 5 sec"
-    note: >-
-      Holding only the Azgalor hands breaks the Destroyer 4-piece (down to 3
-      of 5: head, shoulder, chest) and does not reach the Onslaught 2-piece
-      (1 of 5). Only the Destroyer 2-piece survives.
-    hit_by_slot:
-      head:     {item: "Destroyer Battle-Helm", id: 30120, from: "Lady Vashj, Serpentshrine Cavern, token, carried in from Entry", hit: 21}
-      neck:     {item: "Choker of Endless Nightmares", id: 32260, from: "Supremus, Black Temple boss 2", hit: 21}
-      shoulder: {item: "Destroyer Shoulderblades", id: 30122, from: "Void Reaver, Tempest Keep, token, carried in from Entry", hit: 18}
-      back:     {item: "Shadowmoon Destroyer's Drape", id: 32323, from: "Teron Gorefiend, Black Temple boss 4", hit: 17}
-      chest:    {item: "Destroyer Breastplate", id: 30118, from: "Kael'thas Sunstrider, Tempest Keep, token, carried in from Entry", hit: 15}
-      wrist:    {item: "Deadly Cuffs", id: 30863, from: "Rage Winterchill, Mount Hyjal boss 1", hit: 12}
-      hands:    {item: "Onslaught Gauntlets", id: 30969, from: "Azgalor, Mount Hyjal, token", hit: 0}
-      waist:    {item: "Belt of One-Hundred Deaths", id: 30106, from: "Lady Vashj, Serpentshrine Cavern, carried in from Entry", hit: 0}
-      legs:     {item: "Leggings of Divine Retribution", id: 32341, from: "Gurtogg Bloodboil, Black Temple boss 5", hit: 0}
-      feet:     {item: "Dreadboots of the Legion", id: 32345, from: "Essence of Anger add, Reliquary of Souls, Black Temple boss 6", hit: 18}
-      ring_1:   {item: "Band of the Ranger-General", id: 29997, from: "Kael'thas Sunstrider, Tempest Keep, carried in from Entry", hit: 18}
-      ring_2:   {item: "Unstoppable Aggressor's Ring", id: 32335, from: "Gurtogg Bloodboil, Black Temple boss 5", hit: 0}
-      trinket_1: {item: "Dragonspine Trophy", id: 28830, from: "Gruul the Dragonkiller, Gruul's Lair, carried in from Entry", hit: 0}
-      trinket_2: {item: "Tsunami Talisman", id: 30627, from: "Leotheras the Blind, Serpentshrine Cavern, carried in from Entry", hit: 10}
-      main_hand: {item: "Dragonstrike", id: 28439, from: "Blacksmithing, crafted, carried in from Entry", hit: 0}
-      off_hand:  {item: "Talon of Azshara", id: 30082, from: "Morogrim Tidewalker, Serpentshrine Cavern, carried in from Entry", hit: 20}
-      ranged:    {item: "Serpent Spine Longbow", id: 30105, from: "Lady Vashj, Serpentshrine Cavern", hit: 0}
-    total_item_hit: 170
-
   tier_hands_and_head:
-    tier6_pieces_held: [hands, head]
-    tier5_pieces_held: [shoulder, chest]
-    set_bonuses_held:
-      - "Destroyer Battlegear 2-piece: your Overpower ability now grants you 100 attack power for 5 sec"
-      - "Onslaught Battlegear 2-piece: reduces the rage cost of your Execute ability by 3"
-    note: >-
-      Taking the Archimonde head alongside the Azgalor hands drops Destroyer
-      to 2 of 5 (shoulder, chest) and raises Onslaught to 2 of 5 (hands,
-      head). Both 2-piece bonuses are held at once; neither 4-piece is
-      reachable at this anchor.
+    tier6_pieces_held:
+    - chest
+    - shoulder
+    tier5_pieces_held:
+    - hands
+    - head
+    note: Taking the Archimonde head alongside the Azgalor hands drops Destroyer to 2 of 5
+      (shoulder, chest) and raises Onslaught to 2 of 5 (hands, head). Both 2-piece bonuses
+      are held at once; neither 4-piece is reachable at this anchor.
     hit_by_slot:
-      head:     {item: "Onslaught Battle-Helm", id: 30972, from: "Archimonde, Mount Hyjal, token", hit: 0}
-      neck:     {item: "Choker of Endless Nightmares", id: 32260, from: "Supremus, Black Temple boss 2", hit: 21}
-      shoulder: {item: "Destroyer Shoulderblades", id: 30122, from: "Void Reaver, Tempest Keep, token, carried in from Entry", hit: 18}
-      back:     {item: "Shadowmoon Destroyer's Drape", id: 32323, from: "Teron Gorefiend, Black Temple boss 4", hit: 17}
-      chest:    {item: "Destroyer Breastplate", id: 30118, from: "Kael'thas Sunstrider, Tempest Keep, token, carried in from Entry", hit: 15}
-      wrist:    {item: "Deadly Cuffs", id: 30863, from: "Rage Winterchill, Mount Hyjal boss 1", hit: 12}
-      hands:    {item: "Onslaught Gauntlets", id: 30969, from: "Azgalor, Mount Hyjal, token", hit: 0}
-      waist:    {item: "Belt of One-Hundred Deaths", id: 30106, from: "Lady Vashj, Serpentshrine Cavern, carried in from Entry", hit: 0}
-      legs:     {item: "Leggings of Divine Retribution", id: 32341, from: "Gurtogg Bloodboil, Black Temple boss 5", hit: 0}
-      feet:     {item: "Dreadboots of the Legion", id: 32345, from: "Essence of Anger add, Reliquary of Souls, Black Temple boss 6", hit: 18}
-      ring_1:   {item: "Band of the Ranger-General", id: 29997, from: "Kael'thas Sunstrider, Tempest Keep, carried in from Entry", hit: 18}
-      ring_2:   {item: "Unstoppable Aggressor's Ring", id: 32335, from: "Gurtogg Bloodboil, Black Temple boss 5", hit: 0}
-      trinket_1: {item: "Dragonspine Trophy", id: 28830, from: "Gruul the Dragonkiller, Gruul's Lair, carried in from Entry", hit: 0}
-      trinket_2: {item: "Tsunami Talisman", id: 30627, from: "Leotheras the Blind, Serpentshrine Cavern, carried in from Entry", hit: 10}
-      main_hand: {item: "Dragonstrike", id: 28439, from: "Blacksmithing, crafted, carried in from Entry", hit: 0}
-      off_hand:  {item: "Talon of Azshara", id: 30082, from: "Morogrim Tidewalker, Serpentshrine Cavern, carried in from Entry", hit: 20}
-      ranged:    {item: "Serpent Spine Longbow", id: 30105, from: "Lady Vashj, Serpentshrine Cavern", hit: 0}
-    total_item_hit: 149
+      head:
+        item: Destroyer Battle-Helm
+        id: 30120
+        from: Lady Vashj, Serpentshrine Cavern, token
+        hit: 21
+      neck:
+        item: Pendant of the Perilous
+        id: 30022
+        from: Trash drop, Serpentshrine Cavern
+        hit: 0
+      shoulder:
+        item: Onslaught Shoulderblades
+        id: 30979
+        hit: 0
+      back:
+        item: Vengeance Wrap
+        id: 24259
+        from: Tailoring, crafted
+        hit: 0
+      chest:
+        item: Onslaught Breastplate
+        id: 30975
+        hit: 16
+      wrist:
+        item: Bracers of Eradication
+        id: 30057
+        from: The Lurker Below, Serpentshrine Cavern
+        hit: 17
+      hands:
+        item: Destroyer Gauntlets
+        id: 30119
+        from: Leotheras the Blind, Serpentshrine Cavern, token
+        hit: 0
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        from: Lady Vashj, Serpentshrine Cavern
+        hit: 0
+      legs:
+        item: Leggings of Murderous Intent
+        id: 29995
+        from: Kael'thas Sunstrider, Tempest Keep
+        hit: 0
+      feet:
+        item: Warboots of Obliteration
+        id: 30081
+        from: Morogrim Tidewalker, Serpentshrine Cavern
+        hit: 0
+      ring_1:
+        item: Band of the Ranger-General
+        id: 29997
+        from: Kael'thas Sunstrider, Tempest Keep
+        hit: 18
+      ring_2:
+        item: Ring of a Thousand Marks
+        id: 28757
+        from: Prince Malchezaar, Karazhan
+        hit: 19
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        from: Gruul the Dragonkiller, Gruul's Lair
+        hit: 0
+      trinket_2:
+        item: Tsunami Talisman
+        id: 30627
+        from: Leotheras the Blind, Serpentshrine Cavern
+        hit: 10
+      main_hand:
+        item: Dragonstrike
+        id: 28439
+        from: Blacksmithing, crafted, Master Hammersmith
+        hit: 0
+      off_hand:
+        item: Talon of Azshara
+        id: 30082
+        from: Morogrim Tidewalker, Serpentshrine Cavern
+        hit: 20
+      ranged:
+        item: Mama's Insurance
+        id: 30279
+        from: Quest, Declawing Doomclaw, Netherstorm
+        hit: 0
+    total_item_hit: 121
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Destroyer Battlegear: 2
+      Onslaught Battlegear: 2
+notes_from_the_previous_construction:
+  READ_THIS_FIRST: 'THESE NOTES WERE WRITTEN FOR A TIER SET BUILT A DIFFERENT WAY, and are
+    kept because the reasoning in them outlives the set. Read nothing here as describing the
+    tier anchor as it now stands.
 
-notes:
-  world_boss_ruling_2026_08_09: >-
-    The guild lead ruled on 9 August 2026 that this guild does not run outdoor
-    world bosses, so no Doom Lord Kazzak or Doomwalker drop may appear at any
-    anchor. See data/judgments/capture-fidelity.yaml. Each replacement is the
-    highest-EPV item in that slot's section of this spec's own workbook tab
-    that is legal at the anchor. The blocklist is enforced at
-    tools/check_capture_availability.py WORLD_BOSS_LOOT, which names both loot
-    tables in full, because drops.csv covers the seven instanced zones only and
-    carries neither boss. That blindness is why these slots passed every check
-    until now.
-    The ranged slot at both tier anchors goes from Barrel-Blade Longrifle
-    (30724, Doomwalker) to Serpent Spine Longbow (30105, Lady Vashj, 33.23).
-    Neither carries hit, so no total and no state moves.
-  downgraded_slots: >-
-    Against the full-clear Phase 3 list: head (Cursed Vision of Sargeras,
-    Illidan, Black Temple boss 9) is not reachable, so tier_hands_only keeps
-    the Entry Destroyer Battle-Helm and only tier_hands_and_head takes the
-    Archimonde token. Shoulder (Onslaught Shoulderblades, Mother Shahraz,
-    Black Temple boss 7) and chest (Onslaught Breastplate, Illidan, Black
-    Temple boss 9) are not reachable at either tier state, so both keep the
-    Entry Destroyer pieces throughout. Ring 1 (Stormrage Signet Ring,
-    Illidan, Black Temple boss 9) is not reachable, so it keeps the Entry
-    Band of the Ranger-General. Both weapons (Warglaive of Azzinoth pair,
-    Illidan, Black Temple boss 9) are not reachable; no reachable early-tier
-    weapon upgrade is named in the source guide for either hand, so both tier
-    states keep the Entry Dragonstrike and Talon of Azshara. Hands: the
-    full-clear guide's own pick for this slot is Grips of Silent Justice
-    (Shade of Akama, Black Temple boss 3), not the Onslaught token, but both
-    tier states force the Azgalor Onslaught Gauntlets in because this file
-    models the token being held, per the anchor definition.
-    Six slots take a reachable full-clear pick unchanged, because their boss
-    is within the reliably-dead set (early Mount Hyjal: Rage Winterchill,
-    Azgalor; early Black Temple: Naj'entus through Reliquary of Souls,
-    bosses 1 through 6): neck (Choker of Endless Nightmares, Supremus),
-    back (Shadowmoon Destroyer's Drape, Teron Gorefiend), wrist (Deadly
-    Cuffs, Rage Winterchill), legs (Leggings of Divine Retribution, Gurtogg
-    Bloodboil), feet (Dreadboots of the Legion, off an add at Reliquary of
-    Souls) and ring 2 (Unstoppable Aggressor's Ring, Gurtogg Bloodboil).
-    Ranged (Barrel-Blade Longrifle, Doomwalker) is a world-boss drop, not
-    gated by Mount Hyjal or Black Temple progression at all; it replaces the
-    Entry ranged item at both tier states. Waist, both trinkets and both
-    tier5_pieces_held slots are unchanged from Entry.
-  uncertain: >-
-    Deadly Cuffs (wrist, hit 12) replaces Bracers of Eradication (hit 17) in
-    the tier state even though it carries LESS hit, because that is what the
-    sourced full-clear guide picks for the slot; the guide is followed as
-    read rather than re-optimized for hit. Whether a raider four to six weeks
-    in has actually killed Doomwalker for the Barrel-Blade Longrifle is not
-    verified; it does not change the hit total either way, since both the
-    entry ranged item and this one carry 0 hit. Grips of Silent Justice's own
-    hit rating was not looked up, since it is not used in any state here.
-    Vengeance Wrap's printed tooltip carries 0 hit; its red socket's +2 hit
-    bonus is a gem-contingent socket bonus and is excluded per the counting
-    rule that gems are not counted.
+    The tier set was rebuilt on 14 August 2026 from the entry set plus the tokens the spec''s
+    Phase 3 best-in-slot list actually wears, per the rule in tools/rebuild_tier_sets.py.
+    Every construction note below predates that and several are now false against the file
+    they sit in: one said a shoulder token ''is not available, so Voidheart Mantle is carried
+    forward'' beside a file holding that token.
+
+    THE ENTRY ANCHOR DID NOT CHANGE, so a note about entry gear, an availability correction
+    or a random-suffix ruling still holds. A note about the TIER anchor does not. The anchor''s
+    own `rebuilt` field is the authority on how it was made.'
+  world_boss_ruling_2026_08_09: The guild lead ruled on 9 August 2026 that this guild does
+    not run outdoor world bosses, so no Doom Lord Kazzak or Doomwalker drop may appear at
+    any anchor. See data/judgments/capture-fidelity.yaml. Each replacement is the highest-EPV
+    item in that slot's section of this spec's own workbook tab that is legal at the anchor.
+    The blocklist is enforced at tools/check_capture_availability.py WORLD_BOSS_LOOT, which
+    names both loot tables in full, because drops.csv covers the seven instanced zones only
+    and carries neither boss. That blindness is why these slots passed every check until now.
+    The ranged slot at both tier anchors goes from Barrel-Blade Longrifle (30724, Doomwalker)
+    to Serpent Spine Longbow (30105, Lady Vashj, 33.23). Neither carries hit, so no total
+    and no state moves.
+  downgraded_slots: 'Against the full-clear Phase 3 list: head (Cursed Vision of Sargeras,
+    Illidan, Black Temple boss 9) is not reachable, so tier_hands_only keeps the Entry Destroyer
+    Battle-Helm and only tier_hands_and_head takes the Archimonde token. Shoulder (Onslaught
+    Shoulderblades, Mother Shahraz, Black Temple boss 7) and chest (Onslaught Breastplate,
+    Illidan, Black Temple boss 9) are not reachable at either tier state, so both keep the
+    Entry Destroyer pieces throughout. Ring 1 (Stormrage Signet Ring, Illidan, Black Temple
+    boss 9) is not reachable, so it keeps the Entry Band of the Ranger-General. Both weapons
+    (Warglaive of Azzinoth pair, Illidan, Black Temple boss 9) are not reachable; no reachable
+    early-tier weapon upgrade is named in the source guide for either hand, so both tier states
+    keep the Entry Dragonstrike and Talon of Azshara. Hands: the full-clear guide''s own pick
+    for this slot is Grips of Silent Justice (Shade of Akama, Black Temple boss 3), not the
+    Onslaught token, but both tier states force the Azgalor Onslaught Gauntlets in because
+    this file models the token being held, per the anchor definition. Six slots take a reachable
+    full-clear pick unchanged, because their boss is within the reliably-dead set (early Mount
+    Hyjal: Rage Winterchill, Azgalor; early Black Temple: Naj''entus through Reliquary of
+    Souls, bosses 1 through 6): neck (Choker of Endless Nightmares, Supremus), back (Shadowmoon
+    Destroyer''s Drape, Teron Gorefiend), wrist (Deadly Cuffs, Rage Winterchill), legs (Leggings
+    of Divine Retribution, Gurtogg Bloodboil), feet (Dreadboots of the Legion, off an add
+    at Reliquary of Souls) and ring 2 (Unstoppable Aggressor''s Ring, Gurtogg Bloodboil).
+    Ranged (Barrel-Blade Longrifle, Doomwalker) is a world-boss drop, not gated by Mount Hyjal
+    or Black Temple progression at all; it replaces the Entry ranged item at both tier states.
+    Waist, both trinkets and both tier5_pieces_held slots are unchanged from Entry.'
+  uncertain: Deadly Cuffs (wrist, hit 12) replaces Bracers of Eradication (hit 17) in the
+    tier state even though it carries LESS hit, because that is what the sourced full-clear
+    guide picks for the slot; the guide is followed as read rather than re-optimized for hit.
+    Whether a raider four to six weeks in has actually killed Doomwalker for the Barrel-Blade
+    Longrifle is not verified; it does not change the hit total either way, since both the
+    entry ranged item and this one carry 0 hit. Grips of Silent Justice's own hit rating was
+    not looked up, since it is not used in any state here. Vengeance Wrap's printed tooltip
+    carries 0 hit; its red socket's +2 hit bonus is a gem-contingent socket bonus and is excluded
+    per the counting rule that gems are not counted.

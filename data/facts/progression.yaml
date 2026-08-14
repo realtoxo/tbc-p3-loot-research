@@ -102,6 +102,21 @@ zones:
 
 four_to_six_weeks:
   status: forecast
+  does_not_constrain_the_tier_anchor: >-
+    READ THIS BEFORE USING not_reachable AGAINST A CAPTURE. Until 14 August 2026
+    the tier gear anchor was defined by this window, so a captured set could not
+    wear a token from an encounter named below. The guild lead removed that
+    coupling: "there is no wall or progression, do not care about that". A tier
+    set is now the entry set plus the tokens the spec's Phase 3 best-in-slot
+    list wears, which for several specs includes the shoulder, legs or chest
+    token from an encounter this block calls unreachable.
+    What is below is still true ABOUT THE RAID and is what the encounter order
+    and the token map rest on. It is no longer a constraint on the gear anchors,
+    and nothing checks captures against it.
+    NOTE THAT NOTHING COULD CHECK IT ANYWAY: tools/check_capture_availability.py
+    resolves an item's boss through drops.csv, and a tier piece is a vendor
+    purchase with no row there, so a token from any encounter has always passed
+    silently. That gap is recorded in docs/kb/OPEN-FINDINGS.md.
   what_it_is: >-
     The gear anchor the framework calls TIER is a set a raider could plausibly
     hold four to six weeks into the phase. That window was chosen because it is
