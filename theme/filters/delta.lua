@@ -479,6 +479,14 @@ local function view_head(view)
   if view.label then
     blocks:insert(view_label(view.label, view.route))
     blocks:insert(pandoc.Plain(view.baseline))
+    -- THE SCORE THE COLUMNS ARE ORDERED BY, said rather than implied. The
+    -- columns read highest EPV first, and an order a reader cannot see the
+    -- basis of is an order they have to take on trust.
+    if view.epv then
+      blocks:insert(pandoc.Plain(pandoc.Span(
+        pandoc.Str(string.format("EPV %.2f", view.epv)),
+        pandoc.Attr("", { "delta-epv" }))))
+    end
   else
     blocks:insert(pandoc.Plain(pandoc.List({
       pandoc.Span(pandoc.Str("over"), pandoc.Attr("", { "delta-over" })),
@@ -586,18 +594,45 @@ end
 -- One block for one spec's reading of one item, holding every baseline it is
 -- measured against. The item under discussion keeps the author's own span, so
 -- items.lua links it and gives it its tooltip.
-local function render(spec, a_span, views, rates, named, absent)
+-- WHAT THE WORKBOOK SCORES THIS ITEM AT FOR THIS SPEC. Read from the spec's own
+-- ranked shortlist rather than computed, because the workbook is the authority
+-- on EPV and this project does not score items.
+--
+-- NIL IS AN ANSWER. The shortlist is what the workbook ranks, and a card can be
+-- built for an item that no tab ranks: a reputation trinket, a relic, a piece
+-- outside the ten a slot shows. Those carry no EPV for the spec and the card
+-- says nothing rather than printing a zero that would read as a score.
+local function spec_epv(spec, item_id)
+  local rungs = ladder.specs[spec.name:lower()]
+  if not rungs or not rungs.by_slot then return nil end
+  for _, entries in pairs(rungs.by_slot) do
+    for _, entry in ipairs(entries) do
+      if tostring(entry.item_id) == tostring(item_id) then
+        return tonumber(entry.epv)
+      end
+    end
+  end
+  return nil
+end
+
+local function render(spec, a_span, views, rates, named, absent, epv)
   local blocks = pandoc.List({})
 
   local head = pandoc.List({})
   if named then
     head:insert(plain(spec.name, "delta-spec"))
   end
-  head:insert(pandoc.Plain(pandoc.List({
+  local title = pandoc.List({
     a_span, pandoc.Str(" "),
     pandoc.Span(pandoc.Str("in " .. spec.name .. " terms"),
       pandoc.Attr("", { "delta-terms" })),
-  })))
+  })
+  if epv then
+    title:insert(pandoc.Str(" "))
+    title:insert(pandoc.Span(pandoc.Str(string.format("EPV %.2f", epv)),
+      pandoc.Attr("", { "delta-epv", "delta-epv-subject" })))
+  end
+  head:insert(pandoc.Plain(title))
   blocks:insert(pandoc.Div(head, pandoc.Attr("", { "delta-head" })))
 
   blocks:insert(pandoc.Div({ table_of(stats_across(views), views) },
@@ -855,9 +890,29 @@ local function views_for(spec, row, where)
       out[#out + 1] = {
         entry = baseline, label = "Over " .. label,
         route = baseline.route or "drop",
+        epv = tonumber(baseline.epv),
       }
     end
   end
+
+  -- HIGHEST EPV FIRST, LEFT TO RIGHT. The columns used to read in the order the
+  -- baseline cells are defined, a tier-and-phase grid for armor and a fixed
+  -- series for weapons, so a Season 3 weapon worth more than the best non-PvP
+  -- one still sat fifth. A reader comparing an item against its alternatives
+  -- wants the strongest alternative nearest the item, and the workbook already
+  -- scores every baseline. Asked for by the guild lead on 13 August 2026.
+  --
+  -- THE ORIGINAL POSITION IS THE TIE-BREAK, because table.sort is not stable in
+  -- Lua and two baselines sharing an EPV to the penny is ordinary here: an
+  -- arena stat block sold in several weapon flavours is exactly that. An
+  -- unstable sort would let those columns swap between builds and fail
+  -- `just check` on drift that is not a change.
+  for index, view in ipairs(out) do view.at = index end
+  table.sort(out, function(a, b)
+    local ea, eb = a.epv or -math.huge, b.epv or -math.huge
+    if ea ~= eb then return ea > eb end
+    return a.at < b.at
+  end)
 
   -- AND AN EMPTY LIST IN EVERY VIEW IS THE SAME FACT, four times over. This
   -- used to stop the build on the reasoning that a card with no baseline
@@ -870,6 +925,27 @@ local function views_for(spec, row, where)
   --
   -- Nothing known at all is still a defect, because that is a gap in the
   -- generated table rather than a fact about the item.
+  -- HIGHEST EPV FIRST, LEFT TO RIGHT. The columns used to read in the order the
+  -- baseline cells are defined, which is a tier-and-phase grid for armor and a
+  -- fixed series for weapons, so a Season 3 weapon worth more than the best
+  -- non-PvP one still sat fifth. A reader comparing an item against its
+  -- alternatives wants the strongest alternative nearest the item, and the
+  -- workbook already scores every baseline. Asked for by the guild lead on
+  -- 13 August 2026.
+  --
+  -- The sort carries its original position as a tie-break, because table.sort
+  -- is not stable in Lua and two baselines sharing an EPV to the penny is
+  -- common: an arena stat block sold in several weapon flavours is exactly
+  -- that, and an unstable sort would let those columns swap between builds and
+  -- fail `just check` on drift that is not a change.
+  for index, view in ipairs(out) do view.at = index end
+  table.sort(out, function(a, b)
+    local ea = tonumber(a.entry and a.entry.epv) or -math.huge
+    local eb = tonumber(b.entry and b.entry.epv) or -math.huge
+    if ea ~= eb then return ea > eb end
+    return a.at < b.at
+  end)
+
   if #out == 0 and #absent == 0 then
     fail(where, string.format(
       "%s resolves no %s baseline for %s, in any view, and no view reports "
@@ -980,7 +1056,8 @@ local function build(spec_name, blocks, where, named)
     local view = one_view(spec, a, spans[2], b, where, nil, nil)
     if not view then return nil end
     return pandoc.List({
-      render(spec, spans[1], { view }, merged_rates({ view }), named) })
+      render(spec, spans[1], { view }, merged_rates({ view }), named, nil,
+        spec_epv(spec, a.item_id)) })
   end
 
   -- AN ITEM WITH NO STAT LINE HAS NO STAT DELTA, and saying so is the whole
@@ -1018,10 +1095,12 @@ local function build(spec_name, blocks, where, named)
     local built = one_view(spec, a, baseline_inline(view.entry, b, held), b,
       where, view.label, view.route)
     if not built then return nil end
+    built.epv = view.epv
     views[#views + 1] = built
   end
   return pandoc.List({
-    render(spec, spans[1], views, merged_rates(views), named, absent) })
+    render(spec, spans[1], views, merged_rates(views), named, absent,
+      spec_epv(spec, a.item_id)) })
 end
 
 -- ---------------------------------------------------------------- the filters

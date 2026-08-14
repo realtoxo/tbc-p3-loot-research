@@ -581,6 +581,14 @@ pre code { background:none; border:none; padding:0; font-size:13px; line-height:
   margin:0; padding:14px 18px; font-size:14px; color:var(--ink-2);
   background:var(--panel-2); border:1px dashed var(--rule-2);
 }
+/* The workbook's score. It is a reference figure, not the answer, so it is set
+   in the quiet mono used for the other measured values and never competes with
+   the item name beside it. */
+.delta-epv {
+  font-family:var(--mono); font-size:12px; letter-spacing:.06em;
+  color:var(--ink-2); white-space:nowrap;
+}
+.delta-epv-subject { margin-left:.35em; }
 .spec-figure { font-size:1.2rem; line-height:1.3; color:var(--ink); padding:13px 20px 0; }
 .spec-figure.down { color:var(--veto); }
 /* A figure in some other unit says so directly under itself, so it is never
