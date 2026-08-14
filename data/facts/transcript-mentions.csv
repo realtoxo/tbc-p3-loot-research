@@ -166,16 +166,6 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 30112,Glorious Gauntlets of Crestfall,costin-holy-paladin-top-5-t5-items,Costin Gaming,Ko-mq1NP_jk,903,968,1,no,name,https://www.youtube.com/watch?v=Ko-mq1NP_jk&t=903s
 30190,Cataclysm Helm,darkest-enhancement-shaman-t6-bis,Darkest_TV,2d-1x_z7NdE,49,114,1,no,name,https://www.youtube.com/watch?v=2d-1x_z7NdE&t=49s
 30257,Shattrath Leggings,blayst-ret-paladin-p3-p4-bis,TheRealBlayst,N3aQ2v1KAxI,289,354,1,no,name,https://www.youtube.com/watch?v=N3aQ2v1KAxI&t=289s
-30316,Devastation,blayst-ret-paladin-p3-p4-bis,TheRealBlayst,N3aQ2v1KAxI,391,456,1,yes,name,https://www.youtube.com/watch?v=N3aQ2v1KAxI&t=391s
-30316,Devastation,crix-warlock-p3-t6-gearing,Crix,NI2xuOP6aZE,445,510,1,yes,name,https://www.youtube.com/watch?v=NI2xuOP6aZE&t=445s
-30316,Devastation,jambrosay-arms-warrior-p3-p4-loot,Jambrosay,sPikzqMJKUk,562,627,1,yes,name,https://www.youtube.com/watch?v=sPikzqMJKUk&t=562s
-30316,Devastation,jambrosay-bm-hunter-p3-p4-loot,Jambrosay,VpQyyTCc89M,620,685,1,yes,name,https://www.youtube.com/watch?v=VpQyyTCc89M&t=620s
-30316,Devastation,jambrosay-ret-paladin-p3-p4-loot,Jambrosay,HeiHo9Uqjho,624,689,1,yes,name,https://www.youtube.com/watch?v=HeiHo9Uqjho&t=624s
-30316,Devastation,joardee-phase-3-loot-prio-fusion,Joardee,DoaTSCCprtM,1272,1337,1,yes,name,https://www.youtube.com/watch?v=DoaTSCCprtM&t=1272s
-30316,Devastation,joardee-phase-3-loot-prio-fusion,Joardee,DoaTSCCprtM,4391,4456,1,yes,name,https://www.youtube.com/watch?v=DoaTSCCprtM&t=4391s
-30316,Devastation,marrow-fury-warrior-p3-bis-prio,Marrow,STxvv_E7r-Y,1033,1098,1,yes,name,https://www.youtube.com/watch?v=STxvv_E7r-Y&t=1033s
-30316,Devastation,sanmedina-shadowbolt-destruction-warlock,Sanmedina,zuccFUbo7fs,51,116,1,yes,name,https://www.youtube.com/watch?v=zuccFUbo7fs&t=51s
-30316,Devastation,sarthe-full-bt-hyjal-loot-prio,Sarthe,DnDtULWZU4w,2427,2492,1,yes,name,https://www.youtube.com/watch?v=DnDtULWZU4w&t=2427s
 30341,Flesh Handler's Gauntlets,kaghoe-how-to-gear-bear-druid-tank,Kaghoegaming,wL9aBMOIQUA,255,320,1,no,name,https://www.youtube.com/watch?v=wL9aBMOIQUA&t=255s
 30341,Flesh Handler's Gauntlets,silvite-feral-tank-101,SilviteSoltis,Zb2wvOPDk3M,385,450,1,no,name,https://www.youtube.com/watch?v=Zb2wvOPDk3M&t=385s
 30450,Warp-Spring Coil,simonize-rogue-p3-p4-bis,SimonizeShow,LlksG4eBm2c,402,467,1,no,name,https://www.youtube.com/watch?v=LlksG4eBm2c&t=402s
@@ -602,6 +592,7 @@ item_id,item_name,slug,channel,video_id,start_seconds,end_seconds,mentions,ambig
 32483,The Skull of Gul'dan,sarthe-full-bt-hyjal-loot-prio,Sarthe,DnDtULWZU4w,5439,5504,1,yes,alias,https://www.youtube.com/watch?v=DnDtULWZU4w&t=5439s
 32483,The Skull of Gul'dan,zatar-black-temple-item-priority,Zatar (Classic Wow Builds),6SWlWDYTkvU,7731,7796,1,yes,alias,https://www.youtube.com/watch?v=6SWlWDYTkvU&t=7731s
 32483,The Skull of Gul'dan,zatar-black-temple-item-priority,Zatar (Classic Wow Builds),6SWlWDYTkvU,7945,8103,2,yes,alias,https://www.youtube.com/watch?v=6SWlWDYTkvU&t=7945s
+32488,Ashtongue Talisman of Insight,fearstreet-arcane-mage-p3-bis,Fearstreet 528,CRRwWdMbacQ,125,190,1,no,name,https://www.youtube.com/watch?v=CRRwWdMbacQ&t=125s
 32496,Memento of Tyrande,joardee-phase-3-loot-prio-fusion,Joardee,DoaTSCCprtM,8334,8399,1,no,name,https://www.youtube.com/watch?v=DoaTSCCprtM&t=8334s
 32497,Stormrage Signet Ring,darkest-enhancement-shaman-t6-bis,Darkest_TV,2d-1x_z7NdE,427,492,1,no,name,https://www.youtube.com/watch?v=2d-1x_z7NdE&t=427s
 32497,Stormrage Signet Ring,griftin-feral-druid-p3-loot-guide,Griftin,Flgbx9eII7U,753,818,1,no,name,https://www.youtube.com/watch?v=Flgbx9eII7U&t=753s

@@ -1,163 +1,165 @@
-item_id,tier,item_name,buff_id,buff_name,duration_ms,stats_granted
-19288,,Darkmoon Card: Blue Dragon,23684,Aura of the Blue Dragon (23688),15000,
-23835,,Gnomish Poultryizer,30507,Poultryizer (30507),,
-23836,,Goblin Rocket Launcher,46567,Rocket Launch (46567),3000,
-24114,,Braided Eternium Chain,31025,Braided Eternium Chain (31025),1800000,melee_crit=28
-24116,,Eye of the Night,31033,Eye of the Night (31033),1800000,
-24121,,Chain of the Twilight Owl,31035,Chain of the Twilight Owl (31035),1800000,spell_crit=44.153846
-24390,,Auslese's Light Channeler,31794,Focused Mind (31794),10000,
-25620,,Ancient Crystal Talisman,32355,Focused Power (32355),20000,healing_power=104|spell_damage=104
-25634,,Oshu'gun Relic,32367,Power of Prayer (32367),20000,healing_power=213|spell_damage=71
-25937,,Terokkar Tablet of Precision,39200,Heroism (39200),15000,attack_power=140|ranged_attack_power=140
-27484,,Libram of Avengement,34260,Justice (34258),5000,spell_crit=53|melee_crit=53
-27683,,Quagmirran's Eye,33370,Spell Haste (33297),6000,spell_haste=320
-27815,,Totem of the Astral Winds,34244,Increased Windfury Weapon (34244),-1,
-27828,,Warp-Scarab Brooch,33400,Accelerated Mending (33400),20000,healing_power=282|spell_damage=94
-27917,,Libram of the Eternal Rest,34252,Improved Consecration (34252),-1,
-28034,,Hourglass of the Unraveller,33649,Rage of the Unraveller (33648),10000,attack_power=300|ranged_attack_power=300
-28041,,Bladefist's Breadth,33667,Ferocity (33667),15000,attack_power=200|ranged_attack_power=200
-28121,,Icon of Unyielding Courage,34106,Armor Penetration (34106),20000,armor_pen=600
-28190,,Scarab of the Infinite Cycle,33370,Spell Haste (33953),6000,spell_haste=320
-28223,,Arcanist's Stone,34000,The Arcanist's Stone (34000),20000,healing_power=167|spell_damage=167
-28248,,Totem of the Void,34230,Increased Lightning Damage (34230),-1,
-28288,,Abacus of Violent Odds,33807,Haste (33807),10000,melee_haste=260
-28370,,Bangle of Endless Blessings,38346,Meditation (38334),15000,
-28370,,Bangle of Endless Blessings,34210,Endless Blessings (34210),20000,spirit=130
-28418,,Shiffar's Nexus-Horn,34321,Call of the Nexus (34320),10000,healing_power=225|spell_damage=225
-28428,,Lionheart Blade,34514,Fear Resistance 5 (34514),-1,
-28429,,Lionheart Champion,34514,Fear Resistance 5 (34514),-1,
-28429,,Lionheart Champion,34513,Lionheart (34513),10000,strength=100
-28430,,Lionheart Executioner,34515,Fear Resistance 8 (34515),-1,
-28430,,Lionheart Executioner,34513,Lionheart (34513),10000,strength=100
-28437,,Drakefist Hammer,21165,Haste (21165),10000,melee_haste=212
-28438,,Dragonmaw,21165,Haste (21165),10000,melee_haste=212
-28439,,Dragonstrike,21165,Haste (21165),10000,melee_haste=212
-28484,,Bulwark of Kings,34511,Valor (34511),15000,strength=150|health=1500
-28523,T4,Totem of Healing Rains,38322,Improved Chain Heal (38322),-1,
-28528,T4,Moroes' Lucky Pocket Watch,34519,Time's Favor (34519),10000,dodge=300
-28568,T4,Idol of the Avian Heart,38321,Improved Healing Touch (38321),-1,
-28573,T4,Despair,34580,Impale (34580),,
-28578,T4,Masquerade Gown,34585,Love Struck (34584),15000,spirit=145
-28579,T4,Romulo's Poison Vial,34587,Romulo's Poison (34586),-1,
-28590,T4,Ribbon of Sacrifice,38332,Blessing of Life (38332),10000,
-28592,T4,Libram of Souls Redeemed,38320,Increased Blessing of Light Healing (38320),,
-28602,T4,Robe of the Elder Scribes,34597,Power of Arcanagos (34598),10000,spell_damage=130
-28727,T4,Pendant of the Violet Eye,29601,Enlightenment (29601),20000,mp5=21
-28767,T4,The Decapitator,37208,The Decapitator (37208),,
-28774,T4,Glaive of the Pit,34696,Drain Life (34696),,
-28785,T4,The Lightning Capacitor,, (37657),,
-28789,T4,Eye of Magtheridon,34747,Recurring Power (34749),10000,healing_power=170|spell_damage=170
-28823,T4,Eye of Gruul,, (37705),-1,
-28830,T4,Dragonspine Trophy,34775,Haste (34774),10000,melee_haste=325
-29132,,Scryer's Bloodgem,35337,Spell Power (35337),15000,healing_power=280|spell_damage=150
-29179,,Xi'ri's Gift,35337,Spell Power (35337),15000,healing_power=280|spell_damage=150
-29297,,Band of the Eternal Defender,35078,Band of the Eternal Defender (35077),10000,armor=800
-29301,,Band of the Eternal Champion,35081,Band of the Eternal Champion (35080),10000,attack_power=160|ranged_attack_power=160
-29305,,Band of the Eternal Sage,35084,Band of the Eternal Sage (35083),10000,healing_power=95|spell_damage=95
-29309,,Band of the Eternal Restorer,35087,Band of the Eternal Restorer (35086),10000,healing_power=175|spell_damage=59
-29370,,Icon of the Silver Crescent,35163,Blessing of the Silver Crescent (35163),20000,healing_power=155|spell_damage=155
-29376,,Essence of the Martyr,35165,Essence of the Martyr (35165),20000,healing_power=297|spell_damage=99
-29383,,Bloodlust Brooch,35166,Lust for Battle (35166),20000,attack_power=278|ranged_attack_power=278
-29387,,Gnomeregan Auto-Blocker 600,35169,Gnome Ingenuity (35169),20000,block_value=200
-29776,,Core of Ar'kelos,35733,Ancient Power (35733),20000,attack_power=200|ranged_attack_power=200
-29962,T5,Heartrazor,36041,Heartrazor (36041),10000,attack_power=270|ranged_attack_power=270
-29996,T5,Rod of the Sun King,36070,Power of the Sun King (36070),,
-30008,T5,Pendant of the Lost Ages,35126,Silence Resistance 20% (35126),-1,
-30023,T5,Totem of the Maelstrom,37738,Reduced Healing Wave Cost (37738),-1,
-30051,T5,Idol of the Crescent Goddess,37737,Reduced Regrowth Cost (37737),,
-30063,T5,Libram of Absolute Truth,37739,Reduced Holy Light Cost (37739),,
-30090,T5,World Breaker,36111,World Breaker (36111),4000,melee_crit=900
-30311,T5,Warp Slicer,36479,Speed Infusion (36479),30000,
-30314,T5,Phaseshift Bulwark,36481,Arcane Barrier (36481),4000,
-30316,T5,Devastation,36479,Speed Infusion (36479),30000,
-30317,T5,Cosmic Infuser,36483,Infernal Protection (36488),30000,
-30318,T5,Netherstrand Longbow,36413,Mortal Shots (36413),-1,
-30340,,Starkiller's Bauble,36432,Spell Power (36432),15000,spell_damage=125
-30446,T5,Solarian's Sapphire,37536,Improved Battle Shout (37536),-1,
-30447,T5,Tome of Fiery Redemption,37198,Blessing of Righteousness (37197),15000,healing_power=290|spell_damage=290
-30448,T5,Talon of Al'ar,37507,Improved Shots (37507),-1,
-30450,T5,Warp-Spring Coil,37174,Perceived Weakness (37173),15000,armor_pen=1000
-30619,T5,Fel Reaver's Piston,38324,Regeneration (38299),12000,
-30620,T5,Spyglass of the Hidden Fleet,38325,Regeneration (38325),12000,
-30621,T5,Prism of Inner Calm,38329,Threat Reduction (38326),-1,
-30621,T5,Prism of Inner Calm,38328,Threat Reduction (38327),-1,
-30626,T5,Sextant of Unstable Currents,38348,Unstable Currents (38347),15000,healing_power=175|spell_damage=190
-30627,T5,Tsunami Talisman,42084,Fury of the Crashing Waves (42083),10000,attack_power=340|ranged_attack_power=340
-30629,T5,Scarab of Displacement,38351,Displacement (38351),15000,attack_power=-330|ranged_attack_power=-330|defense=165
-30663,T5,Fathom-Brooch of the Tidewalker,37243,Revitalize (37247),-1,
-30664,T5,Living Root of the Wildheart,, (37336),-1,
-30665,T5,Earring of Soulful Meditation,40402,Deep Meditation (40402),20000,spirit=300
-30720,T5,Serpent-Coil Braid,37447,Improved Mana Gems (37447),-1,
-30787,,Illidari-Bane Mageblade,37649,Illdari Bane (37649),-1,
-30788,,Illidari-Bane Broadsword,37651,Demon Slaying 93 (37651),-1,
-30789,,Illidari-Bane Claymore,37652,Demon Slaying 150 (37652),-1,
-30841,,Lower City Prayerbook,37877,Blessing of Faith (37877),,
-30892,T6,Beast-tamer's Shoulders,27206,Increased Pet Damage +3% (27206),-1,
-30892,T6,Beast-tamer's Shoulders,27043,Increased Pet Crit +2% (27043),-1,
-31109,,Stealther's Helmet of Second Sight,39841,Spectrecles (39841),-1,
-31288,,The Master's Treads,17746,Stealth 5 (17746),-1,
-31333,,The Night Watchman,23217,Stealth Detection (23217),-1,
-31334,,Staff of Natural Fury,38314,Cheaper Druid Shapeshifting (38314),-1,
-31336,,Blade of Wizardry,38317,Forgotten Knowledge (38319),6000,spell_haste=280
-31617,,Ancient Draenei War Talisman,33667,Ferocity (33667),15000,attack_power=200|ranged_attack_power=200
-31856,,Darkmoon Card: Crusade,39439,Aura of the Crusader (39438),10000,attack_power=6|ranged_attack_power=6
-31856,,Darkmoon Card: Crusade,39441,Aura of the Crusader (39440),10000,spell_damage=8
-31858,,Darkmoon Card: Vengeance,39445,Vengeance (39444),,
-31859,,Darkmoon Card: Madness,39446,Aura of Madness (39446),-1,
-32235,T6,Cursed Vision of Sargeras,47524,Sense Demons (47524),-1,
-32257,T6,Idol of the White Stag,41037,Mangle AP Buff (41037),-1,
-32262,T6,Syphon of the Nathrezim,40293,Siphon Essence (40291),6000,
-32330,T6,Totem of Ancestral Guidance,41040,Increased Lightning Damage (41040),-1,
-32336,T6,Black Bow of the Betrayer,, (46939),,
-32368,T6,Tome of the Lightbringer,41042,Judgement Block Value (41042),-1,
-32375,T6,Bulwark of Azzinoth,40408,Unbreakable (40407),10000,armor=2000
-32387,,Idol of the Raven Goddess,39926,Improved Party Auras (39926),,
-32461,,Furious Gizmatic Goggles,30645,Gas Cloud Tracking (30645),,
-32461,,Furious Gizmatic Goggles,40273,Stealth Detection (40273),-1,
-32461,,Furious Gizmatic Goggles,12883,Longsight (12883),-1,
-32472,,Justicebringer 2000 Specs,30645,Gas Cloud Tracking (30645),,
-32472,,Justicebringer 2000 Specs,40273,Stealth Detection (40273),-1,
-32472,,Justicebringer 2000 Specs,12883,Longsight (12883),-1,
-32473,,Tankatronic Goggles,30645,Gas Cloud Tracking (30645),,
-32473,,Tankatronic Goggles,40273,Stealth Detection (40273),-1,
-32473,,Tankatronic Goggles,12883,Longsight (12883),-1,
-32474,,Surestrike Goggles v2.0,30645,Gas Cloud Tracking (30645),,
-32474,,Surestrike Goggles v2.0,40273,Stealth Detection (40273),-1,
-32474,,Surestrike Goggles v2.0,12883,Longsight (12883),-1,
-32475,,Living Replicator Specs,30645,Gas Cloud Tracking (30645),,
-32475,,Living Replicator Specs,40273,Stealth Detection (40273),-1,
-32475,,Living Replicator Specs,12883,Longsight (12883),-1,
-32476,,Gadgetstorm Goggles,30645,Gas Cloud Tracking (30645),,
-32476,,Gadgetstorm Goggles,40273,Stealth Detection (40273),-1,
-32476,,Gadgetstorm Goggles,12883,Longsight (12883),-1,
-32478,,Deathblow X11 Goggles,30645,Gas Cloud Tracking (30645),,
-32478,,Deathblow X11 Goggles,40273,Stealth Detection (40273),-1,
-32478,,Deathblow X11 Goggles,12883,Longsight (12883),-1,
-32479,,Wonderheal XT40 Shades,30645,Gas Cloud Tracking (30645),,
-32479,,Wonderheal XT40 Shades,40273,Stealth Detection (40273),-1,
-32479,,Wonderheal XT40 Shades,12883,Longsight (12883),-1,
-32480,,Magnified Moon Specs,30645,Gas Cloud Tracking (30645),,
-32480,,Magnified Moon Specs,40273,Stealth Detection (40273),-1,
-32480,,Magnified Moon Specs,12883,Longsight (12883),-1,
-32483,T6,The Skull of Gul'dan,40396,Fel Infusion (40396),20000,spell_haste=175
-32491,,Ashtongue Talisman of Vision,40463,Shaman Tier 6 Trinket (40463),-1,
-32492,,Ashtongue Talisman of Lethality,40460,Rogue Tier 6 Trinket (40460),,
-32494,,Destruction Holo-gogs,30645,Gas Cloud Tracking (30645),,
-32494,,Destruction Holo-gogs,40273,Stealth Detection (40273),-1,
-32494,,Destruction Holo-gogs,12883,Longsight (12883),-1,
-32495,,Powerheal 4000 Lens,30645,Gas Cloud Tracking (30645),,
-32495,,Powerheal 4000 Lens,40273,Stealth Detection (40273),-1,
-32495,,Powerheal 4000 Lens,12883,Longsight (12883),-1,
-32496,T6,Memento of Tyrande,37656,Wisdom (37655),15000,mp5=76
-32500,T6,Crystal Spire of Karabor,40972,Heal (40971),-1,
-32501,T6,Shadowmoon Insignia,40464,Protector's Vigor (40464),20000,health=1750
-32505,T6,Madness of the Betrayer,40477,Forceful Strike (40475),10000,armor_pen=300
-32658,,Badge of Tenacity,40729,Heightened Reflexes (40729),20000,agility=150
-32864,,Commander's Badge,40815,Netherwing Ally (40815),40000,
-35514,,Frostscythe of Lord Ahune,46643,Frostscythe (46643),60000,
-37127,,Brightbrew Charm,48041,Summon the Brewmaiden (48041),35000,
-38175,,The Horseman's Blade,50070,Summon Pumpkin Soldiers (50070),3000,
-38287,,Empty Mug of Direbrew,51955,Dire Drunkard (51955),20000,attack_power=278|ranged_attack_power=278
-38288,,Direbrew Hops,51954,Hopped Up (51954),20000,healing_power=297|spell_damage=99
-38289,,Coren's Lucky Coin,51952,Dark Iron Luck (51952),20000,block_value=200
-38290,,Dark Iron Smoking Pipe,51953,Dark Iron Pipeweed (51953),20000,healing_power=155|spell_damage=155
+item_id,tier,item_name,buff_id,buff_name,trigger,proc_chance,proc_icd_ms,proc_ppm,duration_ms,stats_granted
+19288,,Darkmoon Card: Blue Dragon,23684,Aura of the Blue Dragon (23688),proc,0.02,,,15000,
+23835,,Gnomish Poultryizer,30507,Poultryizer (30507),on_use,,,,,
+23836,,Goblin Rocket Launcher,46567,Rocket Launch (46567),on_use,,,,3000,
+24114,,Braided Eternium Chain,31025,Braided Eternium Chain (31025),on_use,,,,1800000,melee_crit=28
+24116,,Eye of the Night,31033,Eye of the Night (31033),on_use,,,,1800000,
+24121,,Chain of the Twilight Owl,31035,Chain of the Twilight Owl (31035),on_use,,,,1800000,spell_crit=44.153846
+24390,,Auslese's Light Channeler,31794,Focused Mind (31794),on_use,,,,10000,
+25620,,Ancient Crystal Talisman,32355,Focused Power (32355),on_use,,,,20000,healing_power=104|spell_damage=104
+25634,,Oshu'gun Relic,32367,Power of Prayer (32367),on_use,,,,20000,healing_power=213|spell_damage=71
+25937,,Terokkar Tablet of Precision,39200,Heroism (39200),on_use,,,,15000,attack_power=140|ranged_attack_power=140
+27484,,Libram of Avengement,34260,Justice (34258),proc,1,,,5000,spell_crit=53|melee_crit=53
+27683,,Quagmirran's Eye,33370,Spell Haste (33297),proc,0.1,45000,,6000,spell_haste=320
+27815,,Totem of the Astral Winds,34244,Increased Windfury Weapon (34244),,,,,-1,
+27828,,Warp-Scarab Brooch,33400,Accelerated Mending (33400),on_use,,,,20000,healing_power=282|spell_damage=94
+27917,,Libram of the Eternal Rest,34252,Improved Consecration (34252),,,,,-1,
+28034,,Hourglass of the Unraveller,33649,Rage of the Unraveller (33648),proc,0.1,50000,,10000,attack_power=300|ranged_attack_power=300
+28041,,Bladefist's Breadth,33667,Ferocity (33667),on_use,,,,15000,attack_power=200|ranged_attack_power=200
+28121,,Icon of Unyielding Courage,34106,Armor Penetration (34106),on_use,,,,20000,armor_pen=600
+28190,,Scarab of the Infinite Cycle,33370,Spell Haste (33953),proc,0.1,45000,,6000,spell_haste=320
+28223,,Arcanist's Stone,34000,The Arcanist's Stone (34000),on_use,,,,20000,healing_power=167|spell_damage=167
+28248,,Totem of the Void,34230,Increased Lightning Damage (34230),,,,,-1,
+28288,,Abacus of Violent Odds,33807,Haste (33807),on_use,,,,10000,melee_haste=260
+28370,,Bangle of Endless Blessings,38346,Meditation (38334),proc,0.1,50000,,15000,
+28370,,Bangle of Endless Blessings,34210,Endless Blessings (34210),on_use,,,,20000,spirit=130
+28418,,Shiffar's Nexus-Horn,34321,Call of the Nexus (34320),proc,0.2,45000,,10000,healing_power=225|spell_damage=225
+28428,,Lionheart Blade,34514,Fear Resistance 5 (34514),,,,,-1,
+28429,,Lionheart Champion,34514,Fear Resistance 5 (34514),,,,,-1,
+28429,,Lionheart Champion,34513,Lionheart (34513),proc,,,1,10000,strength=100
+28430,,Lionheart Executioner,34515,Fear Resistance 8 (34515),,,,,-1,
+28430,,Lionheart Executioner,34513,Lionheart (34513),proc,,,1,10000,strength=100
+28437,,Drakefist Hammer,21165,Haste (21165),proc,,,1,10000,melee_haste=212
+28438,,Dragonmaw,21165,Haste (21165),proc,,,1,10000,melee_haste=212
+28439,,Dragonstrike,21165,Haste (21165),proc,,,1,10000,melee_haste=212
+28484,,Bulwark of Kings,34511,Valor (34511),on_use,,,,15000,strength=150|health=1500
+28523,T4,Totem of Healing Rains,38322,Improved Chain Heal (38322),,,,,-1,
+28528,T4,Moroes' Lucky Pocket Watch,34519,Time's Favor (34519),on_use,,,,10000,dodge=300
+28568,T4,Idol of the Avian Heart,38321,Improved Healing Touch (38321),,,,,-1,
+28573,T4,Despair,34580,Impale (34580),proc,,,0.5,,
+28578,T4,Masquerade Gown,34585,Love Struck (34584),proc,0.1,50000,,15000,spirit=145
+28579,T4,Romulo's Poison Vial,34587,Romulo's Poison (34586),proc,,,1,-1,
+28590,T4,Ribbon of Sacrifice,38332,Blessing of Life (38332),on_use,,,,10000,
+28592,T4,Libram of Souls Redeemed,38320,Increased Blessing of Light Healing (38320),,,,,,
+28602,T4,Robe of the Elder Scribes,34597,Power of Arcanagos (34598),proc,0.2,50000,,10000,spell_damage=130
+28727,T4,Pendant of the Violet Eye,29601,Enlightenment (29601),on_use,,,,20000,mp5=21
+28767,T4,The Decapitator,37208,The Decapitator (37208),on_use,,,,,
+28774,T4,Glaive of the Pit,34696,Drain Life (34696),proc,,,1.33,,
+28785,T4,The Lightning Capacitor,, (37657),proc,1,2500,,,
+28789,T4,Eye of Magtheridon,34747,Recurring Power (34749),proc,1,,,10000,healing_power=170|spell_damage=170
+28823,T4,Eye of Gruul,, (37705),proc,0.02,,,-1,
+28830,T4,Dragonspine Trophy,34775,Haste (34774),proc,,20000,1,10000,melee_haste=325
+29132,,Scryer's Bloodgem,35337,Spell Power (35337),on_use,,,,15000,healing_power=280|spell_damage=150
+29179,,Xi'ri's Gift,35337,Spell Power (35337),on_use,,,,15000,healing_power=280|spell_damage=150
+29297,,Band of the Eternal Defender,35078,Band of the Eternal Defender (35077),proc,0.03,60000,,10000,armor=800
+29301,,Band of the Eternal Champion,35081,Band of the Eternal Champion (35080),proc,1,60000,,10000,attack_power=160|ranged_attack_power=160
+29305,,Band of the Eternal Sage,35084,Band of the Eternal Sage (35083),proc,0.1,60000,,10000,healing_power=95|spell_damage=95
+29309,,Band of the Eternal Restorer,35087,Band of the Eternal Restorer (35086),proc,0.1,60000,,10000,healing_power=175|spell_damage=59
+29370,,Icon of the Silver Crescent,35163,Blessing of the Silver Crescent (35163),on_use,,,,20000,healing_power=155|spell_damage=155
+29376,,Essence of the Martyr,35165,Essence of the Martyr (35165),on_use,,,,20000,healing_power=297|spell_damage=99
+29383,,Bloodlust Brooch,35166,Lust for Battle (35166),on_use,,,,20000,attack_power=278|ranged_attack_power=278
+29387,,Gnomeregan Auto-Blocker 600,35169,Gnome Ingenuity (35169),on_use,,,,20000,block_value=200
+29776,,Core of Ar'kelos,35733,Ancient Power (35733),on_use,,,,20000,attack_power=200|ranged_attack_power=200
+29962,T5,Heartrazor,36041,Heartrazor (36041),proc,,,1,10000,attack_power=270|ranged_attack_power=270
+29996,T5,Rod of the Sun King,36070,Power of the Sun King (36070),proc,,,1,,
+30008,T5,Pendant of the Lost Ages,35126,Silence Resistance 20% (35126),,,,,-1,
+30023,T5,Totem of the Maelstrom,37738,Reduced Healing Wave Cost (37738),,,,,-1,
+30051,T5,Idol of the Crescent Goddess,37737,Reduced Regrowth Cost (37737),,,,,,
+30063,T5,Libram of Absolute Truth,37739,Reduced Holy Light Cost (37739),,,,,,
+30090,T5,World Breaker,36111,World Breaker (36111),proc,,,1,4000,melee_crit=900
+30340,,Starkiller's Bauble,36432,Spell Power (36432),on_use,,,,15000,spell_damage=125
+30446,T5,Solarian's Sapphire,37536,Improved Battle Shout (37536),,,,,-1,
+30447,T5,Tome of Fiery Redemption,37198,Blessing of Righteousness (37197),proc,0.15,45000,,15000,healing_power=290|spell_damage=290
+30448,T5,Talon of Al'ar,37507,Improved Shots (37507),,,,,-1,
+30450,T5,Warp-Spring Coil,37174,Perceived Weakness (37173),proc,0.25,30000,,15000,armor_pen=1000
+30619,T5,Fel Reaver's Piston,38324,Regeneration (38299),proc,0.15,15000,,12000,
+30620,T5,Spyglass of the Hidden Fleet,38325,Regeneration (38325),on_use,,,,12000,
+30621,T5,Prism of Inner Calm,38329,Threat Reduction (38326),proc,1,,,-1,
+30621,T5,Prism of Inner Calm,38328,Threat Reduction (38327),proc,1,,,-1,
+30626,T5,Sextant of Unstable Currents,38348,Unstable Currents (38347),proc,0.2,45000,,15000,healing_power=175|spell_damage=190
+30627,T5,Tsunami Talisman,42084,Fury of the Crashing Waves (42083),proc,0.1,45000,,10000,attack_power=340|ranged_attack_power=340
+30629,T5,Scarab of Displacement,38351,Displacement (38351),on_use,,,,15000,attack_power=-330|ranged_attack_power=-330|defense=165
+30663,T5,Fathom-Brooch of the Tidewalker,37243,Revitalize (37247),proc,0.15,40000,,-1,
+30664,T5,Living Root of the Wildheart,, (37336),proc,0.03,,,-1,
+30665,T5,Earring of Soulful Meditation,40402,Deep Meditation (40402),on_use,,,,20000,spirit=300
+30720,T5,Serpent-Coil Braid,37447,Improved Mana Gems (37447),,,,,-1,
+30787,,Illidari-Bane Mageblade,37649,Illdari Bane (37649),,,,,-1,
+30788,,Illidari-Bane Broadsword,37651,Demon Slaying 93 (37651),,,,,-1,
+30789,,Illidari-Bane Claymore,37652,Demon Slaying 150 (37652),,,,,-1,
+30841,,Lower City Prayerbook,37877,Blessing of Faith (37877),on_use,,,,,
+30892,T6,Beast-tamer's Shoulders,27206,Increased Pet Damage +3% (27206),,,,,-1,
+30892,T6,Beast-tamer's Shoulders,27043,Increased Pet Crit +2% (27043),,,,,-1,
+31109,,Stealther's Helmet of Second Sight,39841,Spectrecles (39841),,,,,-1,
+31288,,The Master's Treads,17746,Stealth 5 (17746),,,,,-1,
+31333,,The Night Watchman,23217,Stealth Detection (23217),,,,,-1,
+31334,,Staff of Natural Fury,38314,Cheaper Druid Shapeshifting (38314),,,,,-1,
+31336,,Blade of Wizardry,38317,Forgotten Knowledge (38319),proc,0.15,50000,,6000,spell_haste=280
+31617,,Ancient Draenei War Talisman,33667,Ferocity (33667),on_use,,,,15000,attack_power=200|ranged_attack_power=200
+31856,,Darkmoon Card: Crusade,39439,Aura of the Crusader (39438),proc,1,,,10000,attack_power=6|ranged_attack_power=6
+31856,,Darkmoon Card: Crusade,39441,Aura of the Crusader (39440),proc,1,,,10000,spell_damage=8
+31858,,Darkmoon Card: Vengeance,39445,Vengeance (39444),proc,0.1,,,,
+31859,,Darkmoon Card: Madness,39446,Aura of Madness (39446),,,,,-1,
+32235,T6,Cursed Vision of Sargeras,47524,Sense Demons (47524),on_use,,,,-1,
+32257,T6,Idol of the White Stag,41037,Mangle AP Buff (41037),,,,,-1,
+32262,T6,Syphon of the Nathrezim,40293,Siphon Essence (40291),proc,,,1,6000,
+32330,T6,Totem of Ancestral Guidance,41040,Increased Lightning Damage (41040),,,,,-1,
+32336,T6,Black Bow of the Betrayer,, (46939),proc,1,,,,
+32368,T6,Tome of the Lightbringer,41042,Judgement Block Value (41042),,,,,-1,
+32375,T6,Bulwark of Azzinoth,40408,Unbreakable (40407),proc,0.02,,,10000,armor=2000
+32387,,Idol of the Raven Goddess,39926,Improved Party Auras (39926),,,,,,
+32461,,Furious Gizmatic Goggles,30645,Gas Cloud Tracking (30645),,,,,,
+32461,,Furious Gizmatic Goggles,40273,Stealth Detection (40273),,,,,-1,
+32461,,Furious Gizmatic Goggles,12883,Longsight (12883),on_use,,,,-1,
+32472,,Justicebringer 2000 Specs,30645,Gas Cloud Tracking (30645),,,,,,
+32472,,Justicebringer 2000 Specs,40273,Stealth Detection (40273),,,,,-1,
+32472,,Justicebringer 2000 Specs,12883,Longsight (12883),on_use,,,,-1,
+32473,,Tankatronic Goggles,30645,Gas Cloud Tracking (30645),,,,,,
+32473,,Tankatronic Goggles,40273,Stealth Detection (40273),,,,,-1,
+32473,,Tankatronic Goggles,12883,Longsight (12883),on_use,,,,-1,
+32474,,Surestrike Goggles v2.0,30645,Gas Cloud Tracking (30645),,,,,,
+32474,,Surestrike Goggles v2.0,40273,Stealth Detection (40273),,,,,-1,
+32474,,Surestrike Goggles v2.0,12883,Longsight (12883),on_use,,,,-1,
+32475,,Living Replicator Specs,30645,Gas Cloud Tracking (30645),,,,,,
+32475,,Living Replicator Specs,40273,Stealth Detection (40273),,,,,-1,
+32475,,Living Replicator Specs,12883,Longsight (12883),on_use,,,,-1,
+32476,,Gadgetstorm Goggles,30645,Gas Cloud Tracking (30645),,,,,,
+32476,,Gadgetstorm Goggles,40273,Stealth Detection (40273),,,,,-1,
+32476,,Gadgetstorm Goggles,12883,Longsight (12883),on_use,,,,-1,
+32478,,Deathblow X11 Goggles,30645,Gas Cloud Tracking (30645),,,,,,
+32478,,Deathblow X11 Goggles,40273,Stealth Detection (40273),,,,,-1,
+32478,,Deathblow X11 Goggles,12883,Longsight (12883),on_use,,,,-1,
+32479,,Wonderheal XT40 Shades,30645,Gas Cloud Tracking (30645),,,,,,
+32479,,Wonderheal XT40 Shades,40273,Stealth Detection (40273),,,,,-1,
+32479,,Wonderheal XT40 Shades,12883,Longsight (12883),on_use,,,,-1,
+32480,,Magnified Moon Specs,30645,Gas Cloud Tracking (30645),,,,,,
+32480,,Magnified Moon Specs,40273,Stealth Detection (40273),,,,,-1,
+32480,,Magnified Moon Specs,12883,Longsight (12883),on_use,,,,-1,
+32483,T6,The Skull of Gul'dan,40396,Fel Infusion (40396),on_use,,,,20000,spell_haste=175
+32485,T6,Ashtongue Talisman of Valor,40459,Fire Blood (40458),proc,0.25,,,12000,strength=55
+32486,T6,Ashtongue Talisman of Equilibrium,40442,Druid Tier 6 Trinket (40442),,,,,-1,
+32487,T6,Ashtongue Talisman of Swiftness,40487,Deadly Aim (40485),proc,0.15,,,8000,attack_power=275|ranged_attack_power=275
+32488,T6,Ashtongue Talisman of Insight,40483,Insight of the Ashtongue (40482),proc,0.5,,,5000,spell_haste=145
+32489,T6,Ashtongue Talisman of Zeal,40470,Paladin Tier 6 Trinket (40470),,,,,,
+32490,T6,Ashtongue Talisman of Acumen,40438,Priest Tier 6 Trinket (40438),,,,,,
+32491,T6,Ashtongue Talisman of Vision,40463,Shaman Tier 6 Trinket (40463),,,,,-1,
+32492,T6,Ashtongue Talisman of Lethality,40460,Rogue Tier 6 Trinket (40460),,,,,,
+32493,T6,Ashtongue Talisman of Shadows,40480,Power of the Ashtongue (40478),proc,0.2,,,5000,spell_damage=220
+32494,,Destruction Holo-gogs,30645,Gas Cloud Tracking (30645),,,,,,
+32494,,Destruction Holo-gogs,40273,Stealth Detection (40273),,,,,-1,
+32494,,Destruction Holo-gogs,12883,Longsight (12883),on_use,,,,-1,
+32495,,Powerheal 4000 Lens,30645,Gas Cloud Tracking (30645),,,,,,
+32495,,Powerheal 4000 Lens,40273,Stealth Detection (40273),,,,,-1,
+32495,,Powerheal 4000 Lens,12883,Longsight (12883),on_use,,,,-1,
+32496,T6,Memento of Tyrande,37656,Wisdom (37655),proc,0.1,50000,,15000,mp5=76
+32500,T6,Crystal Spire of Karabor,40972,Heal (40971),proc,1,,,-1,
+32501,T6,Shadowmoon Insignia,40464,Protector's Vigor (40464),on_use,,,,20000,health=1750
+32505,T6,Madness of the Betrayer,40477,Forceful Strike (40475),proc,,,1,10000,armor_pen=300
+32658,,Badge of Tenacity,40729,Heightened Reflexes (40729),on_use,,,,20000,agility=150
+32864,,Commander's Badge,40815,Netherwing Ally (40815),on_use,,,,40000,
+35514,,Frostscythe of Lord Ahune,46643,Frostscythe (46643),on_use,,,,60000,
+37127,,Brightbrew Charm,48041,Summon the Brewmaiden (48041),on_use,,,,35000,
+38175,,The Horseman's Blade,50070,Summon Pumpkin Soldiers (50070),on_use,,,,3000,
+38287,,Empty Mug of Direbrew,51955,Dire Drunkard (51955),on_use,,,,20000,attack_power=278|ranged_attack_power=278
+38288,,Direbrew Hops,51954,Hopped Up (51954),on_use,,,,20000,healing_power=297|spell_damage=99
+38289,,Coren's Lucky Coin,51952,Dark Iron Luck (51952),on_use,,,,20000,block_value=200
+38290,,Dark Iron Smoking Pipe,51953,Dark Iron Pipeweed (51953),on_use,,,,20000,healing_power=155|spell_damage=155

@@ -1,0 +1,25 @@
+item_id,item_name,trigger,text,captured
+27815,Totem of the Astral Winds,Equip,Increases the attack power bonus on Windfury Weapon attacks by 80.,2026-08-13
+27917,Libram of the Eternal Rest,Equip,Increases the damage of your Consecration spell by up to 47.,2026-08-13
+28248,Totem of the Void,Equip,Increases damage done by Chain Lightning and Lightning Bolt by up to 55.,2026-08-13
+28523,Totem of Healing Rains,Equip,Increases the base amount healed by Chain Heal by 87.,2026-08-13
+28568,Idol of the Avian Heart,Equip,Increases the amount healed by Healing Touch by 136.,2026-08-13
+28592,Libram of Souls Redeemed,Equip,Increases the benefit your Flash of Light spell receives from Blessing of Light by 60 and Holy Light spell receives from Blessing of Light by 120.,2026-08-13
+30023,Totem of the Maelstrom,Equip,Reduces the mana cost of Healing Wave by 24.,2026-08-13
+30051,Idol of the Crescent Goddess,Equip,Reduces the mana cost of Regrowth by 65.,2026-08-13
+30063,Libram of Absolute Truth,Equip,Reduces the mana cost of Holy Light by 34.,2026-08-13
+30446,Solarian's Sapphire,Equip,Your Battle Shout ability grants an additional 70 attack power.,2026-08-13
+30448,Talon of Al'ar,Equip,Your Arcane Shot ability increases the damage dealt by all other damaging shots by 40 for 6 sec.,2026-08-13
+30720,Serpent-Coil Braid,Equip,"You gain 25% more mana when you use a mana gem. In addition, using a mana gem grants you 225 spell damage for 15 sec.",2026-08-13
+31334,Staff of Natural Fury,Equip,"Increases attack power by 712 in Cat, Bear, Dire Bear, and Moonkin forms only.",2026-08-13
+31334,Staff of Natural Fury,Equip,Reduces the base Mana cost of your shapeshifting spells by 200.,2026-08-13
+31859,Darkmoon Card: Madness,Equip,"Each time you land a killing blow on an enemy that yields experience or honor, you gain the Power of Madness.",2026-08-13
+32257,Idol of the White Stag,Equip,Your Mangle ability also increases your attack power by 94 for 20 sec.,2026-08-13
+32330,Totem of Ancestral Guidance,Equip,Increases damage done by Chain Lightning and Lightning Bolt by up to 85.,2026-08-13
+32368,Tome of the Lightbringer,Equip,Your Judgement ability also increases your shield block value by 186 for 5 sec.,2026-08-13
+32387,Idol of the Raven Goddess,Equip,"Increases the healing granted by the Tree of Life form aura by 44, adds 20 critical strike rating to the Leader of the Pack aura, and adds 20 spell critical strike rating to the Moonkin form aura.",2026-08-13
+32486,Ashtongue Talisman of Equilibrium,Equip,"Mangle has a 40% chance to grant 140 Strength for 8 sec, Starfire has a 25% chance to grant up to 150 spell damage for 8 sec, and Rejuvenation has a 25% chance to grant up to 210 healing for 8 sec.",2026-08-13
+32489,Ashtongue Talisman of Zeal,Equip,"Flash of Light and Holy Light have a 15% chance to grant your target 760 healing over 12 sec, and your Judgements have a 50% chance to inflict 480 damage on their target over 8 sec.",2026-08-13
+32490,Ashtongue Talisman of Acumen,Equip,"Each time your Shadow Word: Pain deals damage, it has a 10% chance to grant you 220 spell damage for 10 sec and each time your Renew heals, it has a 10% chance to grant you 220 healing for 5 sec. (Proc chance: 10%)",2026-08-13
+32491,Ashtongue Talisman of Vision,Equip,"Lesser Healing Wave has a 10% chance to grant 170 mana, Lightning Bolt has a 15% chance to grant up to 170 mana, and Stormstrike has a 50% chance to grant up to 275 attack power for 10 sec.",2026-08-13
+32492,Ashtongue Talisman of Lethality,Equip,20% chance per combo point for your finishing moves to grant 145 critical strike rating for 10 sec.,2026-08-13

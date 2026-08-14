@@ -490,3 +490,29 @@ wowsims_talent_strings:
         Arcane Focus is present at 5 of 5, which matters because it is the ten
         percent this project credits: the Arcane tree opens Arcane Subtlety then
         Arcane Focus, and the string begins 2 then 5.
+
+# WHICH BUILD EACH HEALER ACTUALLY RUNS, stated by the guild lead on
+# 13 August 2026. wowsims has no usable healer build, so the ranks are read from
+# the published Wowhead guides captured under data/research/wowhead-talents/,
+# and this block records that those guides match what this roster runs.
+roster_builds:
+  stated: 2026-08-13
+  by: the guild lead
+  healers_match_the_published_guides: true
+  asked: >-
+    Whether the four Wowhead guide builds match what our healers actually run.
+    Answered "yes sure".
+  restoration_druid:
+    runs: Tree of Life
+    asked: >-
+      Whether the Restoration Druid runs Tree of Life or Dreamstate. The two
+      builds disagree about Lunar Guidance completely: Tree of Life takes none
+      of it and Dreamstate takes all three points.
+    answered: probably tree of life
+    confidence: hedged
+    why_the_hedge_is_kept: >-
+      The guild lead said "probably". It is recorded as said, because this one
+      answer decides whether the Restoration Druid converts 25 percent of
+      intellect into spell power or none of it, and a reader who later finds the
+      druid on Dreamstate should see that the answer was never firm rather than
+      conclude the fact file was wrong.
