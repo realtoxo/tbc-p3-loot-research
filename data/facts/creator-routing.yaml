@@ -1,0 +1,5756 @@
+meta:
+  what: Which specs each captured creator remark sends an item TO and which it sends it
+    AWAY FROM, read out of the remark rather than inferred from its stance.
+  why: 'A stance says whether a creator likes an item. A council needs to know where they
+    think it should go, and those are different questions: a remark can speak well of
+    an item and still argue three of the four specs that could take it would waste it.'
+  produced: '2026-08-13'
+  method: A workflow of Sonnet subagents, 40 remarks each, reading only the paraphrase
+    already captured in creator-stances.yaml. No transcript was re-read and no new source
+    was consulted.
+  constraint: An agent could only use the spec strings the remark already named. This
+    file rejects any row that names one it did not, so a destination cannot be invented.
+  keyed_by: item id, creator and timestamp, never the row number
+  time_conditional_remarks_are_left_unrouted: 'A remark that puts an item on a spec now
+    and takes it off later routes in both directions, and this file records direction
+    rather than timing. One remark does it and it is listed under `rejected`. Ruled 13
+    August 2026: it stays unrouted rather than be flattened to one half.'
+  remarks: 578
+  routed_to_someone: 405
+  routed_away_from_someone: 141
+  both_directions: 53
+  no_routing_stated: 80
+  rejected:
+  - 'remark 533 routes [''Arms Warrior''] both to and away at once, so it is left unrouted:
+    the claim is time-conditional and this file records direction, not timing'
+routing:
+- item_id: 28505
+  item_name: Gauntlets of Renewed Hope
+  creator: Costin Gaming
+  timestamp: 371
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28522
+  item_name: Shard of the Virtuous
+  creator: Costin Gaming
+  timestamp: 341
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Holy Paladin
+  no_routing_stated: false
+- item_id: 28530
+  item_name: Brooch of Unquenchable Fury
+  creator: DevTanks
+  timestamp: 300
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28566
+  item_name: Crimson Girdle of the Indomitable
+  creator: DevTanks
+  timestamp: 813
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28579
+  item_name: Romulo's Poison Vial
+  creator: Defcamp & Melderon TV
+  timestamp: 2288
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 28590
+  item_name: Ribbon of Sacrifice
+  creator: Costin Gaming
+  timestamp: 528
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28657
+  item_name: Fool's Bane
+  creator: Defcamp & Melderon TV
+  timestamp: 5519
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28660
+  item_name: Gilded Thorium Cloak
+  creator: SubtleFW
+  timestamp: 248
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28672
+  item_name: Drape of the Dark Reavers
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 550
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: describes the item only as the baseline the rogue's new cloak modestly improves
+    on; no directive to get or avoid this item
+- item_id: 28733
+  item_name: Girdle of Truth
+  creator: Costin Gaming
+  timestamp: 398
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28741
+  item_name: Skulker's Greaves
+  creator: Jambrosay
+  timestamp: 494
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 28741
+  item_name: Skulker's Greaves
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2970
+  stance: mentions_only
+  routes_to: []
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+  note: 'conditional: swap applies specifically when breaking set bonuses'
+- item_id: 28741
+  item_name: Skulker's Greaves
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 669
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: purely comparative observation about tier six legs vs this item, no directive
+- item_id: 28751
+  item_name: Heart-Flame Leggings
+  creator: Costin Gaming
+  timestamp: 437
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28765
+  item_name: Stainless Cloak of the Pure Hearted
+  creator: Costin Gaming
+  timestamp: 191
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28766
+  item_name: Ruby Drape of the Mysticant
+  creator: Crix
+  timestamp: 395
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: explicitly stated as a passing mention about ring/hit choice, not about the cloak
+    itself
+- item_id: 28766
+  item_name: Ruby Drape of the Mysticant
+  creator: SubtleFW
+  timestamp: 193
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28766
+  item_name: Ruby Drape of the Mysticant
+  creator: SubtleFW
+  timestamp: 1457
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Protection Paladin
+  no_routing_stated: false
+  note: specific to trash pulls, where he swaps away from it
+- item_id: 28767
+  item_name: The Decapitator
+  creator: Defcamp & Melderon TV
+  timestamp: 5517
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 28785
+  item_name: The Lightning Capacitor
+  creator: Defcamp & Melderon TV
+  timestamp: 2196
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 29458
+  item_name: Aegis of the Vindicator
+  creator: Costin Gaming
+  timestamp: 365
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29918
+  item_name: Mindstorm Wristbands
+  creator: Fearstreet 528
+  timestamp: 51
+  stance: mentions_only
+  routes_to: []
+  routes_away_from:
+  - Arcane Mage
+  no_routing_stated: false
+- item_id: 29918
+  item_name: Mindstorm Wristbands
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2485
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 29918
+  item_name: Mindstorm Wristbands
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 905
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 29920
+  item_name: Phoenix-Ring of Rebirth
+  creator: Costin Gaming
+  timestamp: 1097
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29920
+  item_name: Phoenix-Ring of Rebirth
+  creator: Costin Gaming
+  timestamp: 1327
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29925
+  item_name: Phoenix-Wing Cloak
+  creator: DevTanks
+  timestamp: 519
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: describes current usage and compares alternatives without directing prot paladins
+    toward or away from this cloak itself
+- item_id: 29947
+  item_name: Gloves of the Searing Grip
+  creator: TheRealBlayst
+  timestamp: 278
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29947
+  item_name: Gloves of the Searing Grip
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 162
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29947
+  item_name: Gloves of the Searing Grip
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2785
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29948
+  item_name: Claw of the Phoenix
+  creator: Jambrosay
+  timestamp: 750
+  stance: mentions_only
+  routes_to: []
+  routes_away_from:
+  - Beast Mastery Hunter
+  no_routing_stated: false
+- item_id: 29949
+  item_name: Arcanite Steam-Pistol
+  creator: SimonizeShow
+  timestamp: 400
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29949
+  item_name: Arcanite Steam-Pistol
+  creator: WarriorTSW
+  timestamp: 2199
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29982
+  item_name: Wand of the Forgotten Star
+  creator: Drue
+  timestamp: 863
+  stance: favours
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29989
+  item_name: Sunshower Light Cloak
+  creator: NOHITJEROME
+  timestamp: 1849
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29991
+  item_name: Sunhawk Leggings
+  creator: Costin Gaming
+  timestamp: 1298
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29991
+  item_name: Sunhawk Leggings
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2781
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: comparison baseline for a different item (Suntouched Chain Leggings), not a directive
+    about this item for either listed spec
+- item_id: 29992
+  item_name: Royal Cloak of the Sunstriders
+  creator: DevTanks
+  timestamp: 568
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Protection Paladin
+  no_routing_stated: false
+  note: specific to pure trash tanking
+- item_id: 29992
+  item_name: Royal Cloak of the Sunstriders
+  creator: Fearstreet 528
+  timestamp: 78
+  stance: mentions_only
+  routes_to:
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+  note: implies staying in this item since swapping is only a very small gain
+- item_id: 29992
+  item_name: Royal Cloak of the Sunstriders
+  creator: SubtleFW
+  timestamp: 234
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29992
+  item_name: Royal Cloak of the Sunstriders
+  creator: SubtleFW
+  timestamp: 1471
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29992
+  item_name: Royal Cloak of the Sunstriders
+  creator: Wundy TV
+  timestamp: 90
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29995
+  item_name: Leggings of Murderous Intent
+  creator: Jambrosay
+  timestamp: 204
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29996
+  item_name: Rod of the Sun King
+  creator: Knot
+  timestamp: 3021
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Item named only as a reference weapon the shaman may already own, used to judge
+    a different item; no claim about whether the shaman should have it.
+- item_id: 29997
+  item_name: Band of the Ranger-General
+  creator: Jambrosay
+  timestamp: 514
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Called still strong despite two other rings ranked higher; comparison to other
+    items, not a warning off.
+- item_id: 29997
+  item_name: Band of the Ranger-General
+  creator: Jambrosay
+  timestamp: 609
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Purely historical description of past pairing and rough parity with another ring;
+    no claim about current use.
+- item_id: 29997
+  item_name: Band of the Ranger-General
+  creator: SimonizeShow
+  timestamp: 378
+  stance: mentions_only
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29997
+  item_name: Band of the Ranger-General
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3001
+  stance: favours
+  routes_to:
+  - hunter
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29997
+  item_name: Band of the Ranger-General
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3376
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Debate among three items for warriors, with Aggressor's Ring seen as best; item-vs-item
+    ranking, not a statement that warriors should avoid this ring.
+- item_id: 29997
+  item_name: Band of the Ranger-General
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 7453
+  stance: mentions_only
+  routes_to:
+  - Arms Warrior
+  - hunter
+  routes_away_from:
+  - rogue
+  - Enhancement Shaman
+  no_routing_stated: false
+  note: Small swap gain for arms warrior/hunter implies near-optimal fit; much larger
+    gain for rogue/enhancement shaman implies this ring is comparatively wasted on them.
+- item_id: 29997
+  item_name: Band of the Ranger-General
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 879
+  stance: mentions_only
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 29998
+  item_name: Royal Gauntlets of Silvermoon
+  creator: DevTanks
+  timestamp: 720
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Explicitly states no view is expressed beyond naming the item.
+- item_id: 29998
+  item_name: Royal Gauntlets of Silvermoon
+  creator: Slesh
+  timestamp: 804
+  stance: mentions_only
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Named as a viable alternative gloves option, though Gauntlets of Enforcement is
+    called the ideal pick.
+- item_id: 30022
+  item_name: Pendant of the Perilous
+  creator: TheRealBlayst
+  timestamp: 103
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30028
+  item_name: Seventh Ring of the Tirisfalen
+  creator: Jurdi
+  timestamp: 519
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30028
+  item_name: Seventh Ring of the Tirisfalen
+  creator: SubtleFW
+  timestamp: 808
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30052
+  item_name: Ring of Lethality
+  creator: Jambrosay
+  timestamp: 601
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 30052
+  item_name: Ring of Lethality
+  creator: Joardee
+  timestamp: 5488
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30052
+  item_name: Ring of Lethality
+  creator: SimonizeShow
+  timestamp: 377
+  stance: mentions_only
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30052
+  item_name: Ring of Lethality
+  creator: Veramos Gaming
+  timestamp: 476
+  stance: conditional
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Called a decent stopgap rather than a long-term best, but still a positive recommendation
+    for current use.
+- item_id: 30052
+  item_name: Ring of Lethality
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2893
+  stance: mentions_only
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30055
+  item_name: Shoulderpads of the Stranger
+  creator: Slesh
+  timestamp: 335
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30057
+  item_name: Bracers of Eradication
+  creator: Slesh
+  timestamp: 547
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30058
+  item_name: Mallet of the Tides
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2282
+  stance: conditional
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30061
+  item_name: Ancestral Ring of Conquest
+  creator: Jambrosay
+  timestamp: 102
+  stance: mentions_only
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Presented as his endorsed simulation baseline over the alternative ring/bracer
+    pair, valued for near-equal DPS without needing world boss loot.
+- item_id: 30061
+  item_name: Ancestral Ring of Conquest
+  creator: Jambrosay
+  timestamp: 517
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Describes the ring's phase-two standing and its place in a phase-three upgrade
+    chart; historical/progression description, not a should/should-not claim.
+- item_id: 30061
+  item_name: Ancestral Ring of Conquest
+  creator: Jambrosay
+  timestamp: 634
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Notes many phase-three rings are upgrades but that most options sit within a couple
+    DPS of each other; no explicit should/should-not claim.
+- item_id: 30067
+  item_name: Velvet Boots of the Guardian
+  creator: Fearstreet 528
+  timestamp: 96
+  stance: mentions_only
+  routes_to: []
+  routes_away_from:
+  - Arcane Mage
+  no_routing_stated: false
+  note: Named only as the item replaced by a clear (50-80 DPS) upgrade.
+- item_id: 30083
+  item_name: Ring of Sundered Souls
+  creator: Jurdi
+  timestamp: 537
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30084
+  item_name: Pauldrons of the Argent Sentinel
+  creator: Costin Gaming
+  timestamp: 798
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Holy Paladin
+  no_routing_stated: false
+- item_id: 30092
+  item_name: Orca-Hide Boots
+  creator: NOHITJEROME
+  timestamp: 1212
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Used only as a benchmark to argue boots in general aren't worth stressing over;
+    no should/should-not claim about this item specifically.
+- item_id: 30095
+  item_name: Fang of the Leviathan
+  creator: Jurdi
+  timestamp: 598
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30100
+  item_name: Soul-Strider Boots
+  creator: NOHITJEROME
+  timestamp: 1214
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Used only as a benchmark equating it to easily farmed trash boots.
+- item_id: 30104
+  item_name: Cobra-Lash Boots
+  creator: Jambrosay
+  timestamp: 588
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Describes current boots and names two later upgrades; progression description
+    without an explicit should/should-not claim.
+- item_id: 30105
+  item_name: Serpent Spine Longbow
+  creator: Anker_64
+  timestamp: 2507
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: Argues warriors should instead take a different (thrown) weapon since this bow
+    is hunter best-in-slot.
+- item_id: 30110
+  item_name: Coral Band of the Revived
+  creator: NOHITJEROME
+  timestamp: 1583
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+  note: Concludes a druid holding one Blessed Band should pair it with Band of the Eternal
+    Restorer rather than this ring.
+- item_id: 30110
+  item_name: Coral Band of the Revived
+  creator: NOHITJEROME
+  timestamp: 1622
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+  note: 'Same conclusion restated: take Band of the Eternal Restorer instead of this ring.'
+- item_id: 30110
+  item_name: Coral Band of the Revived
+  creator: NOHITJEROME
+  timestamp: 1769
+  stance: mentions_only
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: In the scenario where neither Blessed Band drops, the druid keeps and uses this
+    ring.
+- item_id: 30112
+  item_name: Glorious Gauntlets of Crestfall
+  creator: Costin Gaming
+  timestamp: 923
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30450
+  item_name: Warp-Spring Coil
+  creator: SimonizeShow
+  timestamp: 410
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30450
+  item_name: Warp-Spring Coil
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1042
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Claim is about not chasing Madness of the Betrayer (a different item), not about
+    who should get Warp-Spring Coil itself; hunter/warrior mentioned as better served
+    by Madness aren't in this record's specs list.
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Anker_64
+  timestamp: 1207
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Tsunami is only the reference point for describing Madness; no claim about who
+    should get Tsunami.
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Anker_64
+  timestamp: 2470
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Tsunami mentioned only as a slot he could have shown instead of Madness; no routing
+    claim about Tsunami.
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Darkest_TV
+  timestamp: 490
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Gandii_warrior
+  timestamp: 707
+  stance: conditional
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Jambrosay
+  timestamp: 678
+  stance: favours
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Joardee
+  timestamp: 7389
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from:
+  - Enhancement Shaman
+  no_routing_stated: false
+  note: Shaman without a Tsunami is steered toward Madness instead, implying Tsunami is
+    not the priority pickup for that shaman.
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Marrow
+  timestamp: 197
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Marrow
+  timestamp: 848
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Hunter named as who Madness is better left to, but hunter is not in this record's
+    specs list.
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: Marrow
+  timestamp: 1111
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Purely a comparative ranking of Madness vs Tsunami in one hypothetical set, not
+    a statement of who should hold Tsunami.
+- item_id: 30627
+  item_name: Tsunami Talisman
+  creator: WarriorTSW
+  timestamp: 2158
+  stance: conditional
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30861
+  item_name: Furious Shackles
+  creator: Knot
+  timestamp: 262
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30861
+  item_name: Furious Shackles
+  creator: Sarthe
+  timestamp: 4894
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30862
+  item_name: Blessed Adamantite Bracers
+  creator: Slesh
+  timestamp: 236
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Anker_64
+  timestamp: 714
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Praises the item's stats/hit but only compares it against a different gemmed alternative
+    when hit isn't needed; not a clear directive to route Deadly Cuffs to or away from
+    Fury Warrior.
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Darkest_TV
+  timestamp: 149
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Gandii_warrior
+  timestamp: 401
+  stance: conditional
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Calls it best bracer for arms warriors even though he'd prioritize it last in
+    raid order; that's a timing/priority note, not a spec-routing exclusion.
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Griftin
+  timestamp: 149
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Jambrosay
+  timestamp: 332
+  stance: conditional
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Jambrosay
+  timestamp: 423
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Jambrosay
+  timestamp: 782
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Joardee
+  timestamp: 1270
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Marrow
+  timestamp: 489
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Marrow
+  timestamp: 1093
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Slesh
+  timestamp: 523
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Veramos Gaming
+  timestamp: 335
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Survival Hunter
+  no_routing_stated: false
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1675
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  - Fury Warrior
+  routes_away_from:
+  - Enhancement Shaman
+  no_routing_stated: false
+  note: Shaman explicitly ranked behind warriors for this item, though not called bad
+    for shaman.
+- item_id: 30863
+  item_name: Deadly Cuffs
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 338
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Discusses rogue's own wrist item; Deadly Cuffs named only as what other classes
+    want, not a routing claim about rogue and Deadly Cuffs.
+- item_id: 30864
+  item_name: Bracers of the Pathfinder
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1727
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Hunter
+  - Rogue
+  - Enhancement Shaman
+  no_routing_stated: false
+- item_id: 30865
+  item_name: Tracker's Blade
+  creator: Knot
+  timestamp: 304
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: No specs listed on the record; dismissive general remark.
+- item_id: 30866
+  item_name: Blood-stained Pauldrons
+  creator: Knot
+  timestamp: 238
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: No specs listed on the record; general catch-up-item remark.
+- item_id: 30868
+  item_name: Rejuvenating Bracers
+  creator: NOHITJEROME
+  timestamp: 847
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+  note: Praised in isolation but says resto druids cannot actually run them long term
+    due to the haste requirement, forcing other bracers instead.
+- item_id: 30868
+  item_name: Rejuvenating Bracers
+  creator: NOHITJEROME
+  timestamp: 1547
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+  note: Restates that druids are forced off these bracers unless both haste rings land.
+- item_id: 30868
+  item_name: Rejuvenating Bracers
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1711
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from:
+  - Retribution Paladin
+  no_routing_stated: false
+- item_id: 30869
+  item_name: Howling Wind Bracers
+  creator: Slesh
+  timestamp: 239
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30870
+  item_name: Cuffs of Devastation
+  creator: Classic Gho
+  timestamp: 255
+  stance: favours
+  routes_to:
+  - Balance Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30870
+  item_name: Cuffs of Devastation
+  creator: Crix
+  timestamp: 397
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Warlock
+  no_routing_stated: false
+- item_id: 30870
+  item_name: Cuffs of Devastation
+  creator: Fearstreet 528
+  timestamp: 51
+  stance: favours
+  routes_to:
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30870
+  item_name: Cuffs of Devastation
+  creator: Joardee
+  timestamp: 1059
+  stance: favours
+  routes_to:
+  - Mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30870
+  item_name: Cuffs of Devastation
+  creator: Knot
+  timestamp: 112
+  stance: conditional
+  routes_to:
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+  note: Other casters preferring Bindings/Bracers of Nimble Thought are not named specs
+    in this record.
+- item_id: 30870
+  item_name: Cuffs of Devastation
+  creator: Sarthe
+  timestamp: 4902
+  stance: favours
+  routes_to:
+  - Mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30870
+  item_name: Cuffs of Devastation
+  creator: Slesh
+  timestamp: 215
+  stance: favours
+  routes_to:
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30870
+  item_name: Cuffs of Devastation
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1625
+  stance: conditional
+  routes_to:
+  - Arcane Mage
+  - Balance Druid
+  - Elemental Shaman
+  - Warlock
+  routes_away_from:
+  - Shadow Priest
+  no_routing_stated: false
+  note: Ranked in descending interest; Shadow Priest placed away because the claim explicitly
+    says the crit is wasted on that spec, per rule 3.
+- item_id: 30871
+  item_name: Bracers of Martyrdom
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1539
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  - holy priest
+  routes_away_from: []
+  no_routing_stated: false
+  note: Priest lists preferring haste wrists refers to a different item, not this one;
+    final verdict still gives this item to the priest ahead of the druid.
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Crix
+  timestamp: 469
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Discusses a personal weapon preference for a different item (Zhar'doom) and ends
+    with 'take whichever you can get' — no directive about who should or should not receive
+    this item.
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Crix
+  timestamp: 879
+  stance: conditional
+  routes_to:
+  - Destruction Warlock
+  routes_away_from: []
+  no_routing_stated: false
+  note: He states he will probably still run Tempest and Chronicle himself.
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Crix
+  timestamp: 208
+  stance: favours
+  routes_to:
+  - Destruction Warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Knot
+  timestamp: 311
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: States a general principle (pair with one-handers, withhold from anyone about
+    to get Zhar'doom) without tying it to any of the specific listed specs.
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Knot
+  timestamp: 2109
+  stance: conditional
+  routes_to:
+  - Fire Mage
+  - Destruction Warlock
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: '''Fire warlocks'' mapped to the only warlock spec listed, Destruction Warlock.'
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Knot
+  timestamp: 2341
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Elemental Shaman
+  no_routing_stated: false
+  note: Protection Paladin is discussed only regarding a different item (Aegis of Rapt
+    Concentration), not this one, so left out of both lists.
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Sarthe
+  timestamp: 4874
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Specs list is empty; the claim's 'every caster using a one-hander' is not tied
+    to any listed spec.
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Sarthe
+  timestamp: 5687
+  stance: conditional
+  routes_to:
+  - Arcane Mage
+  routes_away_from:
+  - Destruction Warlock
+  no_routing_stated: false
+  note: Under the hard-optimizing scenario described, warlocks get Zhar'doom instead of
+    this item while mages get this item.
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Sarthe
+  timestamp: 5751
+  stance: conditional
+  routes_to:
+  - mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30872
+  item_name: Chronicle of Dark Secrets
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1863
+  stance: favours
+  routes_to:
+  - warlock
+  - Balance Druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Shadow priest and elemental shaman are explicitly excluded in the claim but are
+    not in this record's specs list, so omitted per rule 1. 'mage' is listed but the claim
+    addresses it only via the generic phrase 'a caster,' not specifically, so left in
+    neither list.
+- item_id: 30873
+  item_name: Stillwater Boots
+  creator: Knot
+  timestamp: 224
+  stance: favours
+  routes_to:
+  - Restoration Shaman
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30873
+  item_name: Stillwater Boots
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1775
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: '''Healer'' names the item''s general recipient class, not a specific routing
+    directive; claim only rates item quality and says it should go to ''whoever.'''
+- item_id: 30878
+  item_name: Glimmering Steel Mantle
+  creator: Knot
+  timestamp: 599
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30878
+  item_name: Glimmering Steel Mantle
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2220
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30879
+  item_name: Don Alejandro's Money Belt
+  creator: Sarthe
+  timestamp: 420
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Comment ranks this item below other hunter pieces in priority, but does not say
+    hunters should not receive it.
+- item_id: 30879
+  item_name: Don Alejandro's Money Belt
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3876
+  stance: conditional
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30879
+  item_name: Don Alejandro's Money Belt
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2086
+  stance: conditional
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Routing discussed is between individual hunters (hit-starved vs not), not between
+    specs.
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Anker_64
+  timestamp: 2210
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Jambrosay
+  timestamp: 779
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Joardee
+  timestamp: 2124
+  stance: conditional
+  routes_to:
+  - rogue
+  - Survival Hunter
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Knot
+  timestamp: 629
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Knot
+  timestamp: 1345
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Names the item only as a pairing reference while discussing a different item (Boundless
+    Agony).
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Sarthe
+  timestamp: 4936
+  stance: favours
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Sarthe
+  timestamp: 393
+  stance: favours
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: SimonizeShow
+  timestamp: 496
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+  note: Says a rogue who already has Talon 'need not think about it,' dismissing rogue
+    interest in this item.
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Veramos Gaming
+  timestamp: 126
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Veramos Gaming
+  timestamp: 574
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30881
+  item_name: Blade of Infamy
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2285
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Survival Hunter
+  - Beast Mastery Hunter
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+  note: Orc exclusion is race-specific, not spec-specific.
+- item_id: 30882
+  item_name: Bastion of Light
+  creator: Knot
+  timestamp: 675
+  stance: conditional
+  routes_to:
+  - Restoration Shaman
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Holy Paladins are described as split on preference versus an alternative item,
+    not excluded.
+- item_id: 30882
+  item_name: Bastion of Light
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2435
+  stance: favours
+  routes_to:
+  - Restoration Shaman
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30883
+  item_name: Pillar of Ferocity
+  creator: Griftin
+  timestamp: 189
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30883
+  item_name: Pillar of Ferocity
+  creator: Griftin
+  timestamp: 261
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30883
+  item_name: Pillar of Ferocity
+  creator: Griftin
+  timestamp: 19
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30883
+  item_name: Pillar of Ferocity
+  creator: Knot
+  timestamp: 668
+  stance: favours
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30883
+  item_name: Pillar of Ferocity
+  creator: Sarthe
+  timestamp: 4943
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Preference for the arena weapon over this staff is a within-spec item comparison,
+    not an exclusion of feral druid from this item.
+- item_id: 30883
+  item_name: Pillar of Ferocity
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2411
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30886
+  item_name: Enchanted Leather Sandals
+  creator: Joardee
+  timestamp: 1891
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from:
+  - holy priest
+  no_routing_stated: false
+  note: Priests are steered to the cloth trash boots instead; druids get these.
+- item_id: 30886
+  item_name: Enchanted Leather Sandals
+  creator: Knot
+  timestamp: 546
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - healer
+  no_routing_stated: false
+  note: Called only okay because healers are already covered by trash boots or Orca-Hide,
+    i.e. don't need these.
+- item_id: 30886
+  item_name: Enchanted Leather Sandals
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2181
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30887
+  item_name: Golden Links of Restoration
+  creator: Joardee
+  timestamp: 1908
+  stance: conditional
+  routes_to:
+  - Restoration Shaman
+  routes_away_from: []
+  no_routing_stated: false
+  note: Low-priority stopgap for shaman until chest/tier pieces come; still the intended
+    recipient spec.
+- item_id: 30888
+  item_name: Anetheron's Noose
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1975
+  stance: favours
+  routes_to:
+  - mage
+  - Balance Druid
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+  note: Mage-first is an order among recipients, not an exclusion of the others.
+- item_id: 30889
+  item_name: Kaz'rogal's Hardened Heart
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2900
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30891
+  item_name: Black Featherlight Boots
+  creator: Griftin
+  timestamp: 230
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 30891
+  item_name: Black Featherlight Boots
+  creator: Joardee
+  timestamp: 2577
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30893
+  item_name: Sun-touched Chain Leggings
+  creator: Knot
+  timestamp: 1115
+  stance: conditional
+  routes_to:
+  - resto shaman
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Goes to whichever of the two lacks the comparable mail legs; not an exclusion
+    of either.
+- item_id: 30894
+  item_name: Blue Suede Shoes
+  creator: Classic Gho
+  timestamp: 400
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Balance Druid
+  no_routing_stated: false
+- item_id: 30894
+  item_name: Blue Suede Shoes
+  creator: Joardee
+  timestamp: 2418
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - caster
+  no_routing_stated: false
+- item_id: 30894
+  item_name: Blue Suede Shoes
+  creator: Knot
+  timestamp: 1011
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - caster
+  no_routing_stated: false
+  note: Spell hit called off-itemization for casters even while calling it a decent fill-in.
+- item_id: 30894
+  item_name: Blue Suede Shoes
+  creator: SubtleFW
+  timestamp: 748
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30894
+  item_name: Blue Suede Shoes
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1141
+  stance: against
+  routes_to:
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+  note: Warlocks default to these for lack of any other option; mage is listed in specs
+    but not addressed regarding this item in the claim.
+- item_id: 30894
+  item_name: Blue Suede Shoes
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2597
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Warlock is listed in specs but not addressed in this particular claim's text.
+- item_id: 30895
+  item_name: Angelista's Sash
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2468
+  stance: favours
+  routes_to:
+  - Holy Priest
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Priest-before-druid is an order among recipients, not an exclusion.
+- item_id: 30896
+  item_name: Glory of the Defender
+  creator: Knot
+  timestamp: 1330
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30896
+  item_name: Glory of the Defender
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3046
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Protection Warrior
+  no_routing_stated: false
+  note: Discourages actually using it even if a prot warrior receives it, since it's called
+    much worse than tier five.
+- item_id: 30897
+  item_name: Girdle of Hope
+  creator: Joardee
+  timestamp: 3086
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30898
+  item_name: Shady Dealer's Pantaloons
+  creator: Darkest_TV
+  timestamp: 347
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30898
+  item_name: Shady Dealer's Pantaloons
+  creator: Griftin
+  timestamp: 269
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Rogue and hunter are mentioned as worse claimants but are not in this record's
+    specs list, so omitted per rule.
+- item_id: 30898
+  item_name: Shady Dealer's Pantaloons
+  creator: Jambrosay
+  timestamp: 507
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30898
+  item_name: Shady Dealer's Pantaloons
+  creator: Joardee
+  timestamp: 2876
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from:
+  - Beast Mastery Hunter
+  no_routing_stated: false
+  note: BM hunter is called wearable without falling far behind, but the claim concludes
+    feral is the better fit, ranking BM below it.
+- item_id: 30898
+  item_name: Shady Dealer's Pantaloons
+  creator: Knot
+  timestamp: 1262
+  stance: conditional
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30898
+  item_name: Shady Dealer's Pantaloons
+  creator: Sarthe
+  timestamp: 5125
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30898
+  item_name: Shady Dealer's Pantaloons
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2951
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Claim mentions a rogue breaking set bonuses as the only real use case, but this
+    record's specs array is empty so no spec name is available to use.
+- item_id: 30899
+  item_name: Don Rodrigo's Poncho
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2947
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30900
+  item_name: Bow-stitched Leggings
+  creator: TheRealBlayst
+  timestamp: 313
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30900
+  item_name: Bow-stitched Leggings
+  creator: Slesh
+  timestamp: 340
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30900
+  item_name: Bow-stitched Leggings
+  creator: Slesh
+  timestamp: 676
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30900
+  item_name: Bow-stitched Leggings
+  creator: Veramos Gaming
+  timestamp: 614
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30901
+  item_name: Boundless Agony
+  creator: Jambrosay
+  timestamp: 766
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30901
+  item_name: Boundless Agony
+  creator: Knot
+  timestamp: 1342
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30901
+  item_name: Boundless Agony
+  creator: Sarthe
+  timestamp: 5396
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30901
+  item_name: Boundless Agony
+  creator: Sarthe
+  timestamp: 5467
+  stance: conditional
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: Taking it over the hunter is explicitly called griefing.
+- item_id: 30901
+  item_name: Boundless Agony
+  creator: Sarthe
+  timestamp: 391
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: false
+  note: Claim itself states he speaks of hunters generally and names no spec, so it is
+    not attributed to Beast Mastery Hunter specifically despite that spec appearing in
+    the record's specs array.
+- item_id: 30902
+  item_name: Cataclysm's Edge
+  creator: TheRealBlayst
+  timestamp: 532
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Retribution Paladin
+  no_routing_stated: false
+- item_id: 30902
+  item_name: Cataclysm's Edge
+  creator: Jambrosay
+  timestamp: 645
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30902
+  item_name: Cataclysm's Edge
+  creator: Jambrosay
+  timestamp: 764
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Retribution Paladin
+  no_routing_stated: false
+  note: Arms warriors are said to get it first, but Arms Warrior is not in this record's
+    specs array.
+- item_id: 30902
+  item_name: Cataclysm's Edge
+  creator: Knot
+  timestamp: 2204
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from:
+  - Retribution Paladin
+  no_routing_stated: false
+  note: Warns against taking it from an arms warrior; called merely okay for retribution.
+- item_id: 30902
+  item_name: Cataclysm's Edge
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4725
+  stance: conditional
+  routes_to:
+  - Arms Warrior
+  routes_away_from:
+  - Retribution Paladin
+  no_routing_stated: false
+- item_id: 30904
+  item_name: Savior's Grasp
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4475
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Holy Paladin
+  no_routing_stated: false
+- item_id: 30905
+  item_name: Midnight Chestguard
+  creator: Slesh
+  timestamp: 336
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30907
+  item_name: Mail of Fevered Pursuit
+  creator: Knot
+  timestamp: 1880
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30907
+  item_name: Mail of Fevered Pursuit
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4443
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from:
+  - Beast Mastery Hunter
+  - Enhancement Shaman
+  no_routing_stated: false
+- item_id: 30908
+  item_name: Apostle of Argus
+  creator: Knot
+  timestamp: 1925
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: false
+  note: Claim only speaks of a generic 'healer' / 'worst-geared healer'; it does not attribute
+    the routing to holy priest or Restoration Druid specifically, so neither listed spec
+    is assigned.
+- item_id: 30908
+  item_name: Apostle of Argus
+  creator: Sarthe
+  timestamp: 5879
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30908
+  item_name: Apostle of Argus
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4738
+  stance: favours
+  routes_to:
+  - Restoration Druid
+  - holy priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30909
+  item_name: Antonidas's Aegis of Rapt Concentration
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4782
+  stance: favours
+  routes_to:
+  - Elemental Shaman
+  routes_away_from:
+  - Protection Paladin
+  no_routing_stated: false
+  note: Paladin is offered only as a speed-running alternate; the closing line says the
+    shaman should be secured the item, so paladin is ranked below.
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Crix
+  timestamp: 890
+  stance: conditional
+  routes_to:
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Crix
+  timestamp: 220
+  stance: conditional
+  routes_to:
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Knot
+  timestamp: 323
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Knot
+  timestamp: 2050
+  stance: conditional
+  routes_to:
+  - warlock
+  - fire mage
+  routes_away_from:
+  - Protection Paladin
+  no_routing_stated: false
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Knot
+  timestamp: 2917
+  stance: conditional
+  routes_to:
+  - warlock
+  - fire mage
+  routes_away_from:
+  - Protection Paladin
+  no_routing_stated: false
+  note: '''Casters'' freed by the mace waiting-room is read as covering the warlock and
+    fire mage already established in the companion remark (n=212).'
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Sarthe
+  timestamp: 2840
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Sarthe
+  timestamp: 5523
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  - warlock
+  - mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Sarthe
+  timestamp: 5697
+  stance: conditional
+  routes_to:
+  - mage
+  routes_away_from:
+  - warlock
+  no_routing_stated: false
+  note: Optimising guilds are said to give warlocks Zardoom instead and start mages on
+    this sword, so warlock is routed away from this item specifically.
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: SubtleFW
+  timestamp: 483
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: SubtleFW
+  timestamp: 1666
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Describes a hypothetical display placement, not an assertion that paladins should
+    receive the item.
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Wundy TV
+  timestamp: 153
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1407
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Protection Paladin
+  no_routing_stated: false
+- item_id: 30910
+  item_name: Tempest of Chaos
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4526
+  stance: conditional
+  routes_to:
+  - mage
+  - warlock
+  routes_away_from:
+  - Protection Paladin
+  no_routing_stated: false
+- item_id: 30911
+  item_name: Scepter of Purification
+  creator: Joardee
+  timestamp: 3339
+  stance: favours
+  routes_to:
+  - resto druid
+  - holy priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30911
+  item_name: Scepter of Purification
+  creator: Knot
+  timestamp: 1910
+  stance: conditional
+  routes_to:
+  - holy priest
+  - resto druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30911
+  item_name: Scepter of Purification
+  creator: NOHITJEROME
+  timestamp: 985
+  stance: favours
+  routes_to:
+  - resto druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30911
+  item_name: Scepter of Purification
+  creator: NOHITJEROME
+  timestamp: 1558
+  stance: favours
+  routes_to:
+  - resto druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30912
+  item_name: Leggings of Eternity
+  creator: Knot
+  timestamp: 1764
+  stance: favours
+  routes_to:
+  - holy priest
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30912
+  item_name: Leggings of Eternity
+  creator: NOHITJEROME
+  timestamp: 1116
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30912
+  item_name: Leggings of Eternity
+  creator: Slesh
+  timestamp: 171
+  stance: mentions_only
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Named as the off-piece in Slesh's holy paladin setups; treated as a routing signal
+    even though he offers no evaluative opinion on the legs.
+- item_id: 30912
+  item_name: Leggings of Eternity
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4186
+  stance: favours
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30912
+  item_name: Leggings of Eternity
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4352
+  stance: favours
+  routes_to:
+  - holy priest
+  - Restoration Druid
+  - Holy Paladin
+  - Restoration Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30914
+  item_name: Belt of the Crescent Moon
+  creator: Joardee
+  timestamp: 2476
+  stance: conditional
+  routes_to:
+  - Balance Druid
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30914
+  item_name: Belt of the Crescent Moon
+  creator: Knot
+  timestamp: 1050
+  stance: conditional
+  routes_to:
+  - Balance Druid
+  routes_away_from:
+  - Elemental Shaman
+  no_routing_stated: false
+  note: Elemental shaman 'could take it' but is said to have a better mail belt coming,
+    read as deprioritizing this item for them rather than a neutral comparison.
+- item_id: 30915
+  item_name: Belt of Seething Fury
+  creator: Joardee
+  timestamp: 2758
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30916
+  item_name: Leggings of Channeled Elements
+  creator: Classic Gho
+  timestamp: 62
+  stance: favours
+  routes_to:
+  - Balance Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30916
+  item_name: Leggings of Channeled Elements
+  creator: Classic Gho
+  timestamp: 326
+  stance: favours
+  routes_to:
+  - Balance Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30916
+  item_name: Leggings of Channeled Elements
+  creator: Darkest_TV
+  timestamp: 308
+  stance: conditional
+  routes_to:
+  - Elemental Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30916
+  item_name: Leggings of Channeled Elements
+  creator: Drue
+  timestamp: 627
+  stance: favours
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30916
+  item_name: Leggings of Channeled Elements
+  creator: Sarthe
+  timestamp: 5052
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Claim ('most casters go for') names no spec from the (empty) specs array.
+- item_id: 30916
+  item_name: Leggings of Channeled Elements
+  creator: Slesh
+  timestamp: 265
+  stance: favours
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30916
+  item_name: Leggings of Channeled Elements
+  creator: Slesh
+  timestamp: 409
+  stance: favours
+  routes_to:
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30916
+  item_name: Leggings of Channeled Elements
+  creator: Slesh
+  timestamp: 628
+  stance: conditional
+  routes_to:
+  - Balance Druid
+  - Elemental Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 30918
+  item_name: Hammer of Atonement
+  creator: Knot
+  timestamp: 1163
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  - healer
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32232
+  item_name: Eternium Shell Bracers
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1343
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Protection Paladin
+  - Protection Warrior
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Anker_64
+  timestamp: 128
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: routes away from Fury Warrior for this item despite acknowledging it as a strong
+    item overall; hit-rating alternatives (draenei, boomkin) are named but not in this
+    record's specs list so not added to any list
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Anker_64
+  timestamp: 1119
+  stance: mentions_only
+  routes_to: []
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: Anker says he can accept it being routed to other classes first, implying Fury
+    Warrior is not the priority recipient
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Anker_64
+  timestamp: 1646
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: TheRealBlayst
+  timestamp: 39
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: warriors, rogues, hunters and enhancement are named as contesting classes but
+    are not in this record's specs list
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: TheRealBlayst
+  timestamp: 540
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Darkest_TV
+  timestamp: 54
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Griftin
+  timestamp: 770
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Jambrosay
+  timestamp: 201
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Jambrosay
+  timestamp: 525
+  stance: conditional
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Jambrosay
+  timestamp: 865
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Jambrosay
+  timestamp: 207
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Jambrosay
+  timestamp: 178
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Jambrosay
+  timestamp: 815
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Joardee
+  timestamp: 558
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: describes a build option (skipping the helm while keeping tier gloves) without
+    asserting whether Fury Warrior should have it
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Joardee
+  timestamp: 7276
+  stance: favours
+  routes_to:
+  - hunter
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Joardee
+  timestamp: 7809
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  - Enhancement Shaman
+  - Retribution Paladin
+  - Fury Warrior
+  - rogue
+  routes_away_from:
+  - Survival Hunter
+  no_routing_stated: false
+  note: the five routed-to specs are given a priority order, not excluded; Survival Hunter
+    is explicitly diverted to a different item
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Joardee
+  timestamp: 9653
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Joardee
+  timestamp: 9807
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Knot
+  timestamp: 1254
+  stance: mentions_only
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+  note: named as part of the eventual rogue set rogues work toward
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Knot
+  timestamp: 1527
+  stance: mentions_only
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: hunter is in this record's specs list but is not mentioned anywhere in the claim
+    text, so it is left unrouted
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Knot
+  timestamp: 2415
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  - Enhancement Shaman
+  - Fury Warrior
+  - Beast Mastery Hunter
+  routes_away_from:
+  - Survival Hunter
+  no_routing_stated: false
+  note: Arms Warrior is in this record's specs list but the claim text discusses only
+    'fury warriors', not Arms Warrior, so it is left unrouted
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Marrow
+  timestamp: 55
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Marrow
+  timestamp: 775
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Marrow
+  timestamp: 960
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Sarthe
+  timestamp: 4495
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: argues against players griefing the guild by passing helms while waiting for this
+    item; predicts ret is unlikely to get one early but does not recommend against routing
+    it to ret, and Fury Warrior is in the specs list but not mentioned in the claim text
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Sarthe
+  timestamp: 6375
+  stance: favours
+  routes_to:
+  - hunter
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Sarthe
+  timestamp: 6553
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  - Fury Warrior
+  - hunter
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Sarthe
+  timestamp: 326
+  stance: conditional
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: SimonizeShow
+  timestamp: 52
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: SimonizeShow
+  timestamp: 175
+  stance: conditional
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Slesh
+  timestamp: 666
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Slesh
+  timestamp: 894
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Veramos Gaming
+  timestamp: 183
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Survival Hunter
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2164
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: discusses what a ret without this helm needs elsewhere (hit rating), not a claim
+    about whether ret should get this helm
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3813
+  stance: mentions_only
+  routes_to: []
+  routes_away_from:
+  - hunter
+  no_routing_stated: false
+  note: states enhancement usually receives it before hunters, ranking hunter below a
+    spec not in this record's specs list, so only hunter is marked away
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 6016
+  stance: mentions_only
+  routes_to:
+  - Retribution Paladin
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+  note: Beast Mastery Hunter is in this record's specs list but the claim text discusses
+    only ret and enhancement; 'enhancement is his prio for it' refers to Forest Prowler's
+    Helm, not to Cursed Vision itself, but the framing implies ret and enhancement would
+    prefer Cursed Vision when available
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 6336
+  stance: conditional
+  routes_to:
+  - hunter
+  routes_away_from:
+  - Fury Warrior
+  - Arms Warrior
+  no_routing_stated: false
+  note: Warriors are said to take Madness of the Betrayer instead, with tier fallbacks
+    noted; hunters get this helm.
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 7079
+  stance: favours
+  routes_to:
+  - rogue
+  - physical DPS generally
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 7236
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  - hunter
+  - Retribution Paladin
+  - Fury Warrior
+  - rogue
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: This is a full priority queue for the same item; no spec is said to skip it or
+    waste it, so all six are recorded as eventual recipients in the stated order.
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2974
+  stance: conditional
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Claim's direct subject is Bow-Stitched Leggings priority; BM hunter's preference
+    for Cursed Vision itself is only implied by 'hoping they get Cursed Vision.' Survival
+    Hunter, Enhancement Shaman and Retribution Paladin are listed as specs but this claim
+    does not discuss routing Cursed Vision to them.
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3821
+  stance: conditional
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3996
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Mechanical note about which build makes the tier glove best in slot; makes no
+    routing claim about who should get the helm.
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4956
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from:
+  - Survival Hunter
+  - Fury Warrior
+  - Arms Warrior
+  - rogue
+  no_routing_stated: false
+  note: Beast Mastery Hunter is listed as a spec but this claim does not mention it.
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 159
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32235
+  item_name: Cursed Vision of Sargeras
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 641
+  stance: conditional
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+  note: Claim mainly addresses the tier 6 helm as a fallback; rogue's preference for Cursed
+    Vision itself is implied by 'if they cannot get Cursed Vision of Sargeras quickly.'
+- item_id: 32236
+  item_name: Rising Tide
+  creator: Anker_64
+  timestamp: 2220
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32236
+  item_name: Rising Tide
+  creator: Darkest_TV
+  timestamp: 241
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32236
+  item_name: Rising Tide
+  creator: Darkest_TV
+  timestamp: 592
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32236
+  item_name: Rising Tide
+  creator: Joardee
+  timestamp: 4301
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32236
+  item_name: Rising Tide
+  creator: Sarthe
+  timestamp: 3437
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32236
+  item_name: Rising Tide
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1792
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32236
+  item_name: Rising Tide
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2365
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32237
+  item_name: The Maelstrom's Fury
+  creator: Drue
+  timestamp: 1256
+  stance: favours
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32237
+  item_name: The Maelstrom's Fury
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1610
+  stance: conditional
+  routes_to:
+  - Elemental Shaman
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+  note: Shadow Priest and Balance Druid are listed as specs but this claim does not route
+    them for this item.
+- item_id: 32238
+  item_name: Ring of Calming Waves
+  creator: Sarthe
+  timestamp: 3382
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32238
+  item_name: Ring of Calming Waves
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1434
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  - Restoration Shaman
+  - caster
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32243
+  item_name: Pearl Inlaid Boots
+  creator: Knot
+  timestamp: 2809
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32243
+  item_name: Pearl Inlaid Boots
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1375
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32245
+  item_name: Tide-stomper's Greaves
+  creator: DevTanks
+  timestamp: 1017
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32245
+  item_name: Tide-stomper's Greaves
+  creator: Wundy TV
+  timestamp: 312
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32247
+  item_name: Ring of Captured Storms
+  creator: SubtleFW
+  timestamp: 845
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Claim says casters should get it first, but 'caster' is not among this record's
+    listed specs; Protection Paladin is the eventual recipient of a spare once others
+    are served.
+- item_id: 32247
+  item_name: Ring of Captured Storms
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1479
+  stance: conditional
+  routes_to:
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32248
+  item_name: Halberd of Desolation
+  creator: Sarthe
+  timestamp: 3465
+  stance: favours
+  routes_to:
+  - Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32250
+  item_name: Pauldrons of Abyssal Fury
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2061
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Protection Warrior
+  no_routing_stated: false
+- item_id: 32252
+  item_name: Nether Shadow Tunic
+  creator: Jambrosay
+  timestamp: 376
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+  note: Individually strong but 'cannot be justified' because it breaks tier set bonuses.
+- item_id: 32252
+  item_name: Nether Shadow Tunic
+  creator: Jambrosay
+  timestamp: 775
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 32252
+  item_name: Nether Shadow Tunic
+  creator: SimonizeShow
+  timestamp: 106
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+- item_id: 32254
+  item_name: The Brutalizer
+  creator: WarriorTSW
+  timestamp: 1482
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32254
+  item_name: The Brutalizer
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2256
+  stance: conditional
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32257
+  item_name: Idol of the White Stag
+  creator: Griftin
+  timestamp: 446
+  stance: favours
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32257
+  item_name: Idol of the White Stag
+  creator: Griftin
+  timestamp: 479
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Situational swap to Raven idol when buffing a hunter group; still his own feral
+    idol pick overall.
+- item_id: 32257
+  item_name: Idol of the White Stag
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2244
+  stance: mentions_only
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32259
+  item_name: Bands of the Coming Storm
+  creator: Sarthe
+  timestamp: 3560
+  stance: conditional
+  routes_to:
+  - Elemental Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32259
+  item_name: Bands of the Coming Storm
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2000
+  stance: conditional
+  routes_to:
+  - Elemental Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: TheRealBlayst
+  timestamp: 116
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Darkest_TV
+  timestamp: 91
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Gandii_warrior
+  timestamp: 148
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Arms Warrior
+  no_routing_stated: false
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Griftin
+  timestamp: 363
+  stance: conditional
+  routes_to:
+  - Feral Druid (Cat)
+  routes_away_from: []
+  no_routing_stated: false
+  note: Explicitly excludes a 'mitigation bear' from chasing it, but also says it's worth
+    grabbing for a 'heavy-threat' set, which may itself be a Bear build; left Bear out
+    of routes_away_from since the claim distinguishes by gear-set purpose (mitigation
+    vs threat) rather than cleanly by spec.
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Jambrosay
+  timestamp: 175
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Jambrosay
+  timestamp: 693
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Jambrosay
+  timestamp: 219
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Describes the direct DPS gain as small and the hit as 'wasted,' but still recommends
+    taking it for gearing flexibility, so it is not being routed away.
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Jambrosay
+  timestamp: 851
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Joardee
+  timestamp: 4897
+  stance: conditional
+  routes_to:
+  - Rogue
+  - Enhancement Shaman
+  routes_away_from:
+  - Fury Warrior
+  - Retribution Paladin
+  no_routing_stated: false
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Marrow
+  timestamp: 240
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: Calls it the best straight-DPS neck for fury but then steers fury toward the alternative
+    Choker of Serrated Blades due to unneeded hit and lack of stamina, so it is recorded
+    as routed away rather than to.
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: SimonizeShow
+  timestamp: 209
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Rogue
+  no_routing_stated: false
+  note: Personal upgrade acknowledged but the creator says he'd still wear a different
+    neck for raid benefit, i.e. steers away from actually taking this one.
+- item_id: 32260
+  item_name: Choker of Endless Nightmares
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 286
+  stance: favours
+  routes_to:
+  - Rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32261
+  item_name: Band of the Abyssal Lord
+  creator: Griftin
+  timestamp: 414
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Feral Druid (Bear)
+  no_routing_stated: false
+- item_id: 32261
+  item_name: Band of the Abyssal Lord
+  creator: WarriorTSW
+  timestamp: 1349
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32261
+  item_name: Band of the Abyssal Lord
+  creator: WarriorTSW
+  timestamp: 2130
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Only says he skips a different item (the Hyjal rep ring) because he already has
+    this one; makes no routing claim about Band of the Abyssal Lord itself.
+- item_id: 32261
+  item_name: Band of the Abyssal Lord
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2222
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  - Feral Druid (Bear)
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32264
+  item_name: Shoulders of the Hidden Predator
+  creator: Veramos Gaming
+  timestamp: 222
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Survival Hunter
+  no_routing_stated: false
+- item_id: 32265
+  item_name: Shadow-walker's Cord
+  creator: Griftin
+  timestamp: 490
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+  note: Exception given for bears specifically chasing haste, but the default guidance
+    is to pass.
+- item_id: 32265
+  item_name: Shadow-walker's Cord
+  creator: Jambrosay
+  timestamp: 484
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Retribution Paladin
+  no_routing_stated: false
+- item_id: 32265
+  item_name: Shadow-walker's Cord
+  creator: Joardee
+  timestamp: 5155
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Claim also says explicitly not to hunters or rogues, but neither spec is in this
+    record's specs list, so that part is omitted per rule 1.
+- item_id: 32265
+  item_name: Shadow-walker's Cord
+  creator: Sarthe
+  timestamp: 3788
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: No spec listed on the record and the claim itself names none.
+- item_id: 32265
+  item_name: Shadow-walker's Cord
+  creator: SimonizeShow
+  timestamp: 321
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+- item_id: 32265
+  item_name: Shadow-walker's Cord
+  creator: Veramos Gaming
+  timestamp: 397
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Survival Hunter
+  no_routing_stated: false
+- item_id: 32265
+  item_name: Shadow-walker's Cord
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2537
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Called best in slot for nobody generally, but still a usable pickup for a ret
+    paladin without the Vashj belt, so kept in routes_to rather than away.
+- item_id: 32266
+  item_name: Ring of Deceitful Intent
+  creator: Griftin
+  timestamp: 512
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 32266
+  item_name: Ring of Deceitful Intent
+  creator: Griftin
+  timestamp: 332
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Named as a viable threat ring for feral if more hit is wanted; that he personally
+    prefers a different ring is a personal choice, not a statement that feral should avoid
+    it.
+- item_id: 32266
+  item_name: Ring of Deceitful Intent
+  creator: SimonizeShow
+  timestamp: 375
+  stance: mentions_only
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+  note: Listed as one of several roughly-equal viable second-ring options for rogue.
+- item_id: 32266
+  item_name: Ring of Deceitful Intent
+  creator: Veramos Gaming
+  timestamp: 479
+  stance: conditional
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Ranked behind two other rings as a long-term choice, but still called a decent
+    pickup for hit, so kept in routes_to rather than away.
+- item_id: 32266
+  item_name: Ring of Deceitful Intent
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3077
+  stance: conditional
+  routes_to:
+  - feral druid
+  - hunter
+  routes_away_from:
+  - rogue
+  - warrior
+  - Retribution Paladin
+  no_routing_stated: false
+  note: Enhancement Shaman and Protection Warrior are listed on the record but not placed
+    at either the front or back in the claim, so left in neither list.
+- item_id: 32267
+  item_name: Boots of the Resilient
+  creator: DevTanks
+  timestamp: 1003
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Current guidance is still favorable ('most prot paladins should be in these');
+    the go-to alternative it will eventually lose to is a different item, not a statement
+    that prot paladin shouldn't want this one.
+- item_id: 32267
+  item_name: Boots of the Resilient
+  creator: Jurdi
+  timestamp: 536
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32269
+  item_name: Messenger of Fate
+  creator: Joardee
+  timestamp: 5862
+  stance: against
+  routes_to:
+  - Survival Hunter
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+  note: Called a dagger-rogue item for a niche that 'doesn't really exist,' i.e. routed
+    away from mainstream rogue use (PvP-rogue mention isn't a listed spec); allowed as
+    a stopgap for a survival hunter waiting on a sword, so kept in routes_to despite the
+    overall negative framing of the item.
+- item_id: 32269
+  item_name: Messenger of Fate
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3449
+  stance: against
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Despite calling the item weak overall, the claim states it should go to a hunter
+    lacking the Al'ar claw.
+- item_id: 32271
+  item_name: Kilt of Immortal Nature
+  creator: Knot
+  timestamp: 1786
+  stance: conditional
+  routes_to:
+  - resto druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Holy priest is discussed as ranked ahead of resto druid on a different item (Leggings
+    of Eternity) but is not a spec on this record.
+- item_id: 32271
+  item_name: Kilt of Immortal Nature
+  creator: NOHITJEROME
+  timestamp: 1120
+  stance: conditional
+  routes_to:
+  - resto druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32271
+  item_name: Kilt of Immortal Nature
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2568
+  stance: favours
+  routes_to:
+  - resto druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Shamans and paladins mentioned as preferring their own tier are not in this record's
+    specs list.
+- item_id: 32278
+  item_name: Grips of Silent Justice
+  creator: Anker_64
+  timestamp: 2671
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Compares the item favorably to fury's own tier gloves item-for-item, while noting
+    the tier four-piece set bonus overall beats it; no other spec is named to route away
+    from.
+- item_id: 32278
+  item_name: Grips of Silent Justice
+  creator: Gandii_warrior
+  timestamp: 447
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Fury warriors said to gain more and be served first, but Fury Warrior is not in
+    this record's specs list.
+- item_id: 32278
+  item_name: Grips of Silent Justice
+  creator: Jambrosay
+  timestamp: 698
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32278
+  item_name: Grips of Silent Justice
+  creator: Jambrosay
+  timestamp: 449
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32278
+  item_name: Grips of Silent Justice
+  creator: Joardee
+  timestamp: 5319
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32278
+  item_name: Grips of Silent Justice
+  creator: Sarthe
+  timestamp: 3801
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32278
+  item_name: Grips of Silent Justice
+  creator: Slesh
+  timestamp: 898
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Describes the ideal two-piece build for both fury and one-handed arms using this
+    item; four-piece is offered as an equally competitive alternative, not a routing-away
+    statement.
+- item_id: 32278
+  item_name: Grips of Silent Justice
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2754
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Retribution Paladin
+  routes_away_from:
+  - Arms Warrior
+  no_routing_stated: false
+  note: Ret is named as a 'close alternative' claimant, which reads as a viable routing
+    target, not merely a comparison point.
+- item_id: 32280
+  item_name: Gauntlets of Enforcement
+  creator: DevTanks
+  timestamp: 766
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Protection Paladin
+  no_routing_stated: false
+- item_id: 32280
+  item_name: Gauntlets of Enforcement
+  creator: Knot
+  timestamp: 1552
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32280
+  item_name: Gauntlets of Enforcement
+  creator: Slesh
+  timestamp: 814
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32280
+  item_name: Gauntlets of Enforcement
+  creator: WarriorTSW
+  timestamp: 1902
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32280
+  item_name: Gauntlets of Enforcement
+  creator: WarriorTSW
+  timestamp: 2514
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32280
+  item_name: Gauntlets of Enforcement
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4701
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Griftin
+  timestamp: 152
+  stance: favours
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Deadly Cuffs comparison is a different item and out of scope; only the routing
+    claim about Insidious Bands for feral druid (bear) is recorded.
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Griftin
+  timestamp: 690
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Calls it the best non-PvP bear bracers and a threat gain, despite personally preferring
+    PvP wrists except when catting; still a favourable routing claim for feral druid.
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Jambrosay
+  timestamp: 417
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Jambrosay
+  timestamp: 398
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+  note: Acknowledges it is BiS for feral druid in principle but recommends the druid take
+    Vindicator's Dragonhide Bracers instead, i.e. pass on this item.
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Joardee
+  timestamp: 6481
+  stance: conditional
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+  note: Explicit hunter-vs-rogue contest resolved in the hunter's favor.
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: SimonizeShow
+  timestamp: 286
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Slesh
+  timestamp: 356
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Veramos Gaming
+  timestamp: 88
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Veramos Gaming
+  timestamp: 318
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32324
+  item_name: Insidious Bands
+  creator: Veramos Gaming
+  timestamp: 613
+  stance: mentions_only
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Placement on a wishlist (even in a lower-priority group) is read as a routing
+    claim for the spec the list is built for.
+- item_id: 32325
+  item_name: Rifle of the Stoic Guardian
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4832
+  stance: conditional
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32326
+  item_name: Twisted Blades of Zarak
+  creator: Jambrosay
+  timestamp: 600
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Arms Warrior
+  no_routing_stated: false
+  note: Says it is not an upgrade for arms warrior over the phase 2 bow, favoring a later
+    item instead.
+- item_id: 32326
+  item_name: Twisted Blades of Zarak
+  creator: Joardee
+  timestamp: 6765
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+- item_id: 32326
+  item_name: Twisted Blades of Zarak
+  creator: Marrow
+  timestamp: 964
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: '''Nobody wants or cares about it'' is read as routing away from the only listed
+    spec, though it is more a value dismissal than a spec-vs-spec ranking.'
+- item_id: 32326
+  item_name: Twisted Blades of Zarak
+  creator: Sarthe
+  timestamp: 4189
+  stance: conditional
+  routes_to:
+  - Arms Warrior
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Refers generically to 'a warrior' without distinguishing arms from fury; both
+    listed warrior specs are recorded as routed to.
+- item_id: 32326
+  item_name: Twisted Blades of Zarak
+  creator: SimonizeShow
+  timestamp: 384
+  stance: conditional
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32326
+  item_name: Twisted Blades of Zarak
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4761
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+- item_id: 32327
+  item_name: Robe of the Shadow Council
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4346
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: No specs listed on the record to route.
+- item_id: 32329
+  item_name: Cowl of Benevolence
+  creator: NOHITJEROME
+  timestamp: 616
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32329
+  item_name: Cowl of Benevolence
+  creator: Slesh
+  timestamp: 597
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32329
+  item_name: Cowl of Benevolence
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4316
+  stance: conditional
+  routes_to:
+  - Holy Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32330
+  item_name: Totem of Ancestral Guidance
+  creator: Darkest_TV
+  timestamp: 442
+  stance: favours
+  routes_to:
+  - Elemental Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32331
+  item_name: Cloak of the Illidari Council
+  creator: Crix
+  timestamp: 111
+  stance: favours
+  routes_to:
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32331
+  item_name: Cloak of the Illidari Council
+  creator: Fearstreet 528
+  timestamp: 80
+  stance: conditional
+  routes_to:
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32331
+  item_name: Cloak of the Illidari Council
+  creator: Joardee
+  timestamp: 7154
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: false
+  note: Routes it to 'casters not getting the healing cloak' generically, but no spec
+    names are present on this record to map that onto.
+- item_id: 32331
+  item_name: Cloak of the Illidari Council
+  creator: Sarthe
+  timestamp: 4392
+  stance: favours
+  routes_to:
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32331
+  item_name: Cloak of the Illidari Council
+  creator: Sarthe
+  timestamp: 6138
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: false
+  note: Routes it to casters generically as an alternative to the healer haste cloak,
+    but no spec names are present on this record to map that onto.
+- item_id: 32331
+  item_name: Cloak of the Illidari Council
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 5800
+  stance: favours
+  routes_to:
+  - mage
+  - Elemental Shaman
+  - Balance Druid
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+  note: '''Best cloak for every caster except shadow priest'' covers all four listed specs;
+    the suggested mage prio is an ordering, not an exclusion of the others.'
+- item_id: 32332
+  item_name: Torch of the Damned
+  creator: TheRealBlayst
+  timestamp: 510
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32332
+  item_name: Torch of the Damned
+  creator: Jambrosay
+  timestamp: 751
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32332
+  item_name: Torch of the Damned
+  creator: NOHITJEROME
+  timestamp: 344
+  stance: mentions_only
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Mentioned only in passing, but the claim still frames it as a weapon a ret paladin
+    would pick up.
+- item_id: 32333
+  item_name: Girdle of Stability
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3267
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: '''Before the paladin'' names a spec not present in this record''s specs list,
+    so it cannot be added to routes_away_from.'
+- item_id: 32335
+  item_name: Unstoppable Aggressor's Ring
+  creator: Anker_64
+  timestamp: 1176
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32335
+  item_name: Unstoppable Aggressor's Ring
+  creator: Anker_64
+  timestamp: 2458
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Named only as the other item in a displayed set; no routing claim.
+- item_id: 32335
+  item_name: Unstoppable Aggressor's Ring
+  creator: Anker_64
+  timestamp: 2770
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Named only as a pairing suggestion for a spare item; no routing claim.
+- item_id: 32335
+  item_name: Unstoppable Aggressor's Ring
+  creator: TheRealBlayst
+  timestamp: 393
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32335
+  item_name: Unstoppable Aggressor's Ring
+  creator: Griftin
+  timestamp: 541
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 32335
+  item_name: Unstoppable Aggressor's Ring
+  creator: Marrow
+  timestamp: 718
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32335
+  item_name: Unstoppable Aggressor's Ring
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3331
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32336
+  item_name: Black Bow of the Betrayer
+  creator: Jambrosay
+  timestamp: 776
+  stance: conditional
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Ranked second best in slot behind the Archimonde bow, but still recommended for
+    BM.
+- item_id: 32336
+  item_name: Black Bow of the Betrayer
+  creator: Joardee
+  timestamp: 9081
+  stance: conditional
+  routes_to:
+  - Survival Hunter
+  routes_away_from:
+  - Beast Mastery Hunter
+  no_routing_stated: false
+  note: First priority is whichever hunter lacks a Tier 5 bow (no matching spec in list);
+    fallback rule names Survival to get this bow and BM to use the other.
+- item_id: 32336
+  item_name: Black Bow of the Betrayer
+  creator: Knot
+  timestamp: 2386
+  stance: conditional
+  routes_to:
+  - Beast Mastery Hunter
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Low-confidence, conditional (mana issue) endorsement not differentiated between
+    the two listed specs.
+- item_id: 32336
+  item_name: Black Bow of the Betrayer
+  creator: Sarthe
+  timestamp: 5966
+  stance: conditional
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32336
+  item_name: Black Bow of the Betrayer
+  creator: Sarthe
+  timestamp: 154
+  stance: conditional
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: 'Conditional: only for mana-starved guilds or speed runs.'
+- item_id: 32336
+  item_name: Black Bow of the Betrayer
+  creator: Veramos Gaming
+  timestamp: 112
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32336
+  item_name: Black Bow of the Betrayer
+  creator: Veramos Gaming
+  timestamp: 516
+  stance: conditional
+  routes_to:
+  - Survival Hunter
+  routes_away_from:
+  - Beast Mastery Hunter
+  no_routing_stated: false
+- item_id: 32336
+  item_name: Black Bow of the Betrayer
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 9577
+  stance: conditional
+  routes_to:
+  - Survival Hunter
+  routes_away_from:
+  - Beast Mastery Hunter
+  no_routing_stated: false
+- item_id: 32337
+  item_name: Shroud of Forgiveness
+  creator: NOHITJEROME
+  timestamp: 775
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+- item_id: 32337
+  item_name: Shroud of Forgiveness
+  creator: NOHITJEROME
+  timestamp: 1849
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Describes a mechanical consequence (shoulder swap cost), not a routing claim.
+- item_id: 32339
+  item_name: Belt of Primal Majesty
+  creator: NOHITJEROME
+  timestamp: 1805
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: 'Conditional: only if the druid needs the belt slot to hit the haste target.'
+- item_id: 32341
+  item_name: Leggings of Divine Retribution
+  creator: Jambrosay
+  timestamp: 458
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32341
+  item_name: Leggings of Divine Retribution
+  creator: Jambrosay
+  timestamp: 719
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32341
+  item_name: Leggings of Divine Retribution
+  creator: Knot
+  timestamp: 1900
+  stance: favours
+  routes_to:
+  - warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32341
+  item_name: Leggings of Divine Retribution
+  creator: Marrow
+  timestamp: 625
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Ret paladin comparison mentioned in claim but not present in this record's specs
+    list, so omitted.
+- item_id: 32341
+  item_name: Leggings of Divine Retribution
+  creator: Marrow
+  timestamp: 1019
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32341
+  item_name: Leggings of Divine Retribution
+  creator: Slesh
+  timestamp: 927
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32342
+  item_name: Girdle of Mighty Resolve
+  creator: DevTanks
+  timestamp: 851
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Warrior mentioned as target for a different belt, but warrior is not in this record's
+    specs list.
+- item_id: 32342
+  item_name: Girdle of Mighty Resolve
+  creator: Wundy TV
+  timestamp: 249
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32343
+  item_name: Wand of Prismatic Focus
+  creator: Drue
+  timestamp: 1210
+  stance: favours
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32343
+  item_name: Wand of Prismatic Focus
+  creator: Joardee
+  timestamp: 5942
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Dismissive stance but no spec listed to route away from.
+- item_id: 32343
+  item_name: Wand of Prismatic Focus
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3530
+  stance: conditional
+  routes_to:
+  - Shadow Priest
+  - warlock
+  routes_away_from:
+  - mage
+  no_routing_stated: false
+  note: Warlock use is conditional (only until a better tier five wand is obtained).
+- item_id: 32344
+  item_name: Staff of Immaculate Recovery
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3476
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Claim recommends it for 'a healer who lacks a good one-hander' but no spec is
+    listed on this record.
+- item_id: 32347
+  item_name: Grips of Damnation
+  creator: TheRealBlayst
+  timestamp: 293
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: 'Conditional: for players unable to get the expertise gloves from Al''ar.'
+- item_id: 32347
+  item_name: Grips of Damnation
+  creator: Darkest_TV
+  timestamp: 261
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32347
+  item_name: Grips of Damnation
+  creator: Griftin
+  timestamp: 610
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 32347
+  item_name: Grips of Damnation
+  creator: Jambrosay
+  timestamp: 839
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Beast Mastery Hunter
+  no_routing_stated: false
+- item_id: 32347
+  item_name: Grips of Damnation
+  creator: Joardee
+  timestamp: 5990
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from:
+  - Retribution Paladin
+  no_routing_stated: false
+- item_id: 32348
+  item_name: Soul Cleaver
+  creator: Jambrosay
+  timestamp: 666
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Arms Warrior
+  no_routing_stated: false
+  note: Framed as a last-resort option only, with Cataclysm's Edge the clear preferred
+    choice.
+- item_id: 32348
+  item_name: Soul Cleaver
+  creator: Joardee
+  timestamp: 6748
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Arms Warrior
+  - Retribution Paladin
+  no_routing_stated: false
+  note: Both floated then rejected in the conclusion that nobody will use it.
+- item_id: 32348
+  item_name: Soul Cleaver
+  creator: Sarthe
+  timestamp: 4209
+  stance: conditional
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32348
+  item_name: Soul Cleaver
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4730
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Arms Warrior
+  no_routing_stated: false
+  note: Retribution Paladin is listed on this record but the claim text never addresses
+    ret paladin specifically, so it is left unrouted.
+- item_id: 32350
+  item_name: Touch of Inspiration
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4129
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Recommends it for 'whoever is not using a staff' but no spec is listed on this
+    record.
+- item_id: 32353
+  item_name: Gloves of Unfailing Faith
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3556
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  - holy priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32354
+  item_name: Crown of Empowered Fate
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3960
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32362
+  item_name: Pendant of Titans
+  creator: Griftin
+  timestamp: 631
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: upgrade is conditional on the bear not already holding a threat/PvP neck, but
+    feral druid remains the only spec named as a recipient
+- item_id: 32366
+  item_name: Shadowmaster's Boots
+  creator: TheRealBlayst
+  timestamp: 354
+  stance: favours
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32366
+  item_name: Shadowmaster's Boots
+  creator: Darkest_TV
+  timestamp: 388
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32367
+  item_name: Leggings of Devastation
+  creator: Drue
+  timestamp: 1077
+  stance: conditional
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32367
+  item_name: Leggings of Devastation
+  creator: Joardee
+  timestamp: 6836
+  stance: against
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+  note: stance is against the item's quality overall, but the claim still ends by naming
+    shadow priest as the maybe recipient for a catch-up give
+- item_id: 32367
+  item_name: Leggings of Devastation
+  creator: Slesh
+  timestamp: 271
+  stance: conditional
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32367
+  item_name: Leggings of Devastation
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4862
+  stance: favours
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32369
+  item_name: Blade of Savagery
+  creator: Anker_64
+  timestamp: 2316
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: he would not take it ahead of a rogue, but rogue is not in this record's specs
+    list so it is omitted
+- item_id: 32369
+  item_name: Blade of Savagery
+  creator: Sarthe
+  timestamp: 4240
+  stance: favours
+  routes_to:
+  - Rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32369
+  item_name: Blade of Savagery
+  creator: SimonizeShow
+  timestamp: 537
+  stance: favours
+  routes_to:
+  - Rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32369
+  item_name: Blade of Savagery
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 952
+  stance: conditional
+  routes_to:
+  - Rogue
+  routes_away_from:
+  - Protection Warrior
+  no_routing_stated: false
+- item_id: 32369
+  item_name: Blade of Savagery
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 5239
+  stance: favours
+  routes_to:
+  - Rogue
+  routes_away_from:
+  - Protection Warrior
+  no_routing_stated: false
+- item_id: 32369
+  item_name: Blade of Savagery
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 454
+  stance: favours
+  routes_to:
+  - Rogue
+  routes_away_from: []
+  no_routing_stated: false
+  note: human protection warrior is mentioned only as a footnote to rogue priority, and
+    Protection Warrior is not in this record's specs list
+- item_id: 32370
+  item_name: Nadina's Pendant of Purity
+  creator: NOHITJEROME
+  timestamp: 682
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+- item_id: 32370
+  item_name: Nadina's Pendant of Purity
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 5164
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  - Restoration Shaman
+  - holy priest
+  routes_away_from: []
+  no_routing_stated: false
+  note: Restoration Druid is listed in specs but not mentioned anywhere in the claim text,
+    so it is left in neither list
+- item_id: 32373
+  item_name: Helm of the Illidari Shatterer
+  creator: TheRealBlayst
+  timestamp: 77
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32373
+  item_name: Helm of the Illidari Shatterer
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 6042
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32374
+  item_name: Zhar'doom, Greatstaff of the Devourer
+  creator: Fearstreet 528
+  timestamp: 126
+  stance: favours
+  routes_to:
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32375
+  item_name: Bulwark of Azzinoth
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 2910
+  stance: conditional
+  routes_to:
+  - Protection Paladin
+  routes_away_from:
+  - Protection Warrior
+  no_routing_stated: false
+- item_id: 32375
+  item_name: Bulwark of Azzinoth
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4825
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32376
+  item_name: Forest Prowler's Helm
+  creator: TheRealBlayst
+  timestamp: 57
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32376
+  item_name: Forest Prowler's Helm
+  creator: Jambrosay
+  timestamp: 206
+  stance: conditional
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32376
+  item_name: Forest Prowler's Helm
+  creator: Jambrosay
+  timestamp: 854
+  stance: conditional
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32376
+  item_name: Forest Prowler's Helm
+  creator: Jambrosay
+  timestamp: 831
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32377
+  item_name: Mantle of Darkness
+  creator: Griftin
+  timestamp: 345
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 32377
+  item_name: Mantle of Darkness
+  creator: Joardee
+  timestamp: 3942
+  stance: against
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: specs list is empty even though the claim is dismissive of the item generally
+- item_id: 32377
+  item_name: Mantle of Darkness
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1182
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Classic Gho
+  timestamp: 178
+  stance: favours
+  routes_to:
+  - Balance Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Crix
+  timestamp: 696
+  stance: favours
+  routes_to:
+  - Destruction Warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Darkest_TV
+  timestamp: 406
+  stance: favours
+  routes_to:
+  - Elemental Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Drue
+  timestamp: 737
+  stance: conditional
+  routes_to:
+  - Shadow Priest
+  - Destruction Warlock
+  routes_away_from: []
+  no_routing_stated: false
+  note: both specs are named as live contenders (a possible council split, and an acknowledgement
+    the skull is also really good on warlocks); no clear away-routing stated
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Fearstreet 528
+  timestamp: 140
+  stance: favours
+  routes_to:
+  - Arcane Mage
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: 'Jokerd '
+  timestamp: 515
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Sarthe
+  timestamp: 5439
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: false
+  note: he later says the Skull should go to warlocks first, but 'warlock'/'Destruction
+    Warlock' is not in this record's specs array, so no spec can be routed to
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 7731
+  stance: favours
+  routes_to:
+  - Destruction Warlock
+  routes_away_from:
+  - Elemental Shaman
+  - Arcane Mage
+  - Shadow Priest
+  - Balance Druid
+  no_routing_stated: false
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 7945
+  stance: conditional
+  routes_to:
+  - Destruction Warlock
+  - Arcane Mage
+  routes_away_from:
+  - Shadow Priest
+  - Elemental Shaman
+  no_routing_stated: false
+  note: Arcane Mage is called close behind and a viable exceptional-player give, so kept
+    as a secondary routes_to rather than away_from
+- item_id: 32483
+  item_name: The Skull of Gul'dan
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 8058
+  stance: conditional
+  routes_to:
+  - warlock
+  - Arcane Mage
+  routes_away_from:
+  - Shadow Priest
+  no_routing_stated: false
+  note: Elemental Shaman is listed in specs but not mentioned in this claim's text, so
+    left in neither list
+- item_id: 32496
+  item_name: Memento of Tyrande
+  creator: Joardee
+  timestamp: 8354
+  stance: against
+  routes_to:
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: stance is against the item's overall quality, but the claim still names holy paladin
+    as the only spec he thinks clearly uses it
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Darkest_TV
+  timestamp: 447
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Griftin
+  timestamp: 799
+  stance: favours
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Jambrosay
+  timestamp: 623
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Beast Mastery Hunter
+  no_routing_stated: false
+  note: He says he would not treat it as a huge priority since alternatives sim close,
+    effectively deprioritizing it for BM Hunter.
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Jambrosay
+  timestamp: 623
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+  note: Says a feral need not compete for it since a hit piece plus another ring simmed
+    even or better.
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Joardee
+  timestamp: 8026
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Marrow
+  timestamp: 781
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: He left it off his fury priority list; the PvP remark is not tied to a listed
+    spec.
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Sarthe
+  timestamp: 6295
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Sarthe
+  timestamp: 6529
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Warrior and hunter routing in the claim is stated for Madness of the Betrayer
+    and Cursed Vision, not this ring; for this ring he says he'd route to the individual
+    player rather than a class, and only notes Enhancement Shaman 'can argue for it' without
+    himself endorsing that.
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Sarthe
+  timestamp: 460
+  stance: favours
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: SimonizeShow
+  timestamp: 363
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32497
+  item_name: Stormrage Signet Ring
+  creator: Veramos Gaming
+  timestamp: 457
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Survival Hunter
+  no_routing_stated: false
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: Joardee
+  timestamp: 8548
+  stance: conditional
+  routes_to:
+  - Holy Priest
+  routes_away_from:
+  - Restoration Shaman
+  - Holy Paladin
+  - Restoration Druid
+  no_routing_stated: false
+  note: Full priority order given; each spec after Holy Priest is explicitly ranked below
+    the one before it.
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: Knot
+  timestamp: 1167
+  stance: favours
+  routes_to:
+  - Holy Paladin
+  - Restoration Druid
+  - Restoration Shaman
+  - Holy Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: Knot
+  timestamp: 2228
+  stance: favours
+  routes_to:
+  - Holy Priest
+  - Restoration Druid
+  - Restoration Shaman
+  - Holy Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: NOHITJEROME
+  timestamp: 888
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+  note: Calls it best in slot for Resto Druid by stats, but concludes the druid will be
+    last in the guild to receive it because every other healer has priority.
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: NOHITJEROME
+  timestamp: 1534
+  stance: favours
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+  note: Explicitly framed as a restatement of the n494 verdict, where the druid was placed
+    last in priority despite the weapon being fantastic.
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 8436
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: No specs listed in the record to route despite the 'every healer' language.
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 8861
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - resto druid
+  - Holy Paladin
+  no_routing_stated: false
+  note: Says it should go to a priest or shaman instead, but neither is in this record's
+    specs list.
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4728
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+  note: The Holy Priest mention concerns Apostle of Argus routing (a different item),
+    not Crystal Spire.
+- item_id: 32500
+  item_name: Crystal Spire of Karabor
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 4748
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - resto druid
+  no_routing_stated: false
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Anker_64
+  timestamp: 1202
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Darkest_TV
+  timestamp: 483
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Gandii_warrior
+  timestamp: 707
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - Arms Warrior
+  no_routing_stated: false
+  note: Says it matters more to other classes so no warrior really needs it.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Jambrosay
+  timestamp: 601
+  stance: favours
+  routes_to:
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Ranked second among trinkets (an item comparison, not a spec comparison), still
+    a want for Arms Warrior.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Jambrosay
+  timestamp: 186
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: A ranking among items for hit rating with no further comment, not a routing claim.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Jambrosay
+  timestamp: 724
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Jambrosay
+  timestamp: 670
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+  note: Sims well but Tsunami Talisman stays the feral's actual trinket until phase four.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Marrow
+  timestamp: 69
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Cursed Vision preference is a comparison between items, not away-routing of this
+    trinket from Fury Warrior.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Marrow
+  timestamp: 855
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: Hunters are mentioned as the better recipients but are not in this record's specs
+    list.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Sarthe
+  timestamp: 4564
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - rogue
+  - feral druid
+  no_routing_stated: false
+  note: '''Bear druids'' matched to the feral druid spec listed on the record; other listed
+    specs only get per-spec gain figures, not an explicit routing call.'
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Sarthe
+  timestamp: 4819
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Sarthe
+  timestamp: 6367
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from:
+  - hunter
+  no_routing_stated: false
+  note: Hunters are routed to Cursed Vision instead of this item under the proposed split.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Sarthe
+  timestamp: 522
+  stance: conditional
+  routes_to:
+  - hunter
+  routes_away_from: []
+  no_routing_stated: false
+  note: Presented as the hunter's trinket upgrade, though the sim gain is small and the
+    verdict is unsettled.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: SimonizeShow
+  timestamp: 415
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+  note: Keeps two phase-two trinkets as the rogue's best, implying this one is not taken.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Veramos Gaming
+  timestamp: 119
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Veramos Gaming
+  timestamp: 492
+  stance: favours
+  routes_to:
+  - Survival Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 3820
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Names it only as a contested item a hunter is unlikely to get quickly, while arguing
+    a different item (a hit belt) should go to hunters.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 6098
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  routes_away_from:
+  - Retribution Paladin
+  - rogue
+  - feral druid
+  no_routing_stated: false
+  note: Fury Warrior is the sole remaining listed spec matching 'a class stacking armour
+    pen' once the other three are explicitly excluded.
+- item_id: 32505
+  item_name: Madness of the Betrayer
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1032
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+  note: Hunters and warriors are named as better served but are not in this record's specs
+    list.
+- item_id: 32515
+  item_name: Wristguards of Determination
+  creator: Jurdi
+  timestamp: 533
+  stance: conditional
+  routes_to:
+  - Protection Warrior
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32518
+  item_name: Veil of Turning Leaves
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 5980
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - Restoration Druid
+  no_routing_stated: false
+  note: '''give it to whoever'' plus calling the resto druid shoulder bad routes the item
+    away from resto druid rather than toward any spec.'
+- item_id: 32519
+  item_name: Belt of Divine Guidance
+  creator: NOHITJEROME
+  timestamp: 1067
+  stance: favours
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32519
+  item_name: Belt of Divine Guidance
+  creator: NOHITJEROME
+  timestamp: 1574
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32519
+  item_name: Belt of Divine Guidance
+  creator: NOHITJEROME
+  timestamp: 1819
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32519
+  item_name: Belt of Divine Guidance
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 5916
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from:
+  - Holy Priest
+  no_routing_stated: false
+  note: Priest is routed away because priests are said to almost always want a haste belt
+    instead, so this one is given to the druid first.
+- item_id: 32521
+  item_name: Faceplate of the Impenetrable
+  creator: DevTanks
+  timestamp: 23
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32521
+  item_name: Faceplate of the Impenetrable
+  creator: DevTanks
+  timestamp: 58
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32521
+  item_name: Faceplate of the Impenetrable
+  creator: Sarthe
+  timestamp: 6052
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32524
+  item_name: Shroud of the Highborne
+  creator: NOHITJEROME
+  timestamp: 1490
+  stance: favours
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32526
+  item_name: Band of Devastation
+  creator: Anker_64
+  timestamp: 2742
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from:
+  - Fury Warrior
+  no_routing_stated: false
+  note: The 'a second copy is worth grabbing as a paired DPS ring' clause is ambiguous
+    about which spec it applies to; not counted toward either list.
+- item_id: 32526
+  item_name: Band of Devastation
+  creator: TheRealBlayst
+  timestamp: 389
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32526
+  item_name: Band of Devastation
+  creator: Darkest_TV
+  timestamp: 458
+  stance: favours
+  routes_to:
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32526
+  item_name: Band of Devastation
+  creator: Griftin
+  timestamp: 840
+  stance: conditional
+  routes_to:
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32526
+  item_name: Band of Devastation
+  creator: Joardee
+  timestamp: 4428
+  stance: conditional
+  routes_to:
+  - Enhancement Shaman
+  - Retribution Paladin
+  - feral druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32526
+  item_name: Band of Devastation
+  creator: Marrow
+  timestamp: 761
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32526
+  item_name: Band of Devastation
+  creator: Sarthe
+  timestamp: 5327
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Sarthe merely reads the ring off an existing set list, making no claim about who
+    should receive it.
+- item_id: 32526
+  item_name: Band of Devastation
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 193
+  stance: conditional
+  routes_to:
+  - Retribution Paladin
+  routes_away_from:
+  - warrior
+  - Enhancement Shaman
+  no_routing_stated: false
+  note: Routing it to ret is framed as freeing the crit ring for warriors and the hit
+    ring for enhancement, i.e. this ring is not meant for them.
+- item_id: 32527
+  item_name: Ring of Ancient Knowledge
+  creator: Crix
+  timestamp: 610
+  stance: favours
+  routes_to:
+  - warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32527
+  item_name: Ring of Ancient Knowledge
+  creator: Darkest_TV
+  timestamp: 395
+  stance: favours
+  routes_to:
+  - Elemental Shaman
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32527
+  item_name: Ring of Ancient Knowledge
+  creator: Drue
+  timestamp: 716
+  stance: favours
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32527
+  item_name: Ring of Ancient Knowledge
+  creator: Drue
+  timestamp: 1186
+  stance: favours
+  routes_to:
+  - Shadow Priest
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32527
+  item_name: Ring of Ancient Knowledge
+  creator: Joardee
+  timestamp: 4629
+  stance: conditional
+  routes_to:
+  - warlock
+  routes_away_from:
+  - mage
+  - Elemental Shaman
+  no_routing_stated: false
+  note: Mage is routed away because he says mages would likely use the reputation ring
+    instead; elemental shaman is routed away because he questions giving one to a shaman
+    who has not reached the haste breakpoint.
+- item_id: 32528
+  item_name: Blessed Band of Karabor
+  creator: Joardee
+  timestamp: 4124
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  - holy priest
+  - Restoration Shaman
+  routes_away_from:
+  - Holy Paladin
+  no_routing_stated: false
+  note: Holy Paladin is given a different ring first, so it is deprioritized here even
+    though the claim says paladins still want it eventually.
+- item_id: 32528
+  item_name: Blessed Band of Karabor
+  creator: Joardee
+  timestamp: 4579
+  stance: favours
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32528
+  item_name: Blessed Band of Karabor
+  creator: NOHITJEROME
+  timestamp: 1256
+  stance: conditional
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32528
+  item_name: Blessed Band of Karabor
+  creator: NOHITJEROME
+  timestamp: 1634
+  stance: favours
+  routes_to:
+  - Restoration Druid
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32528
+  item_name: Blessed Band of Karabor
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 588
+  stance: conditional
+  routes_to:
+  - healer
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32589
+  item_name: Hellfire-Encased Pendant
+  creator: Knot
+  timestamp: 898
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: The claim is about how the pendant's existence affects a different item's (the
+    leg drop's) priority, not a claim about who should receive the pendant itself.
+- item_id: 32589
+  item_name: Hellfire-Encased Pendant
+  creator: Knot
+  timestamp: 2106
+  stance: conditional
+  routes_to:
+  - fire mage
+  - Destruction Warlock
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32591
+  item_name: Choker of Serrated Blades
+  creator: Knot
+  timestamp: 2840
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Beast Mastery Hunter
+  - Enhancement Shaman
+  - rogue
+  - feral druid
+  - Retribution Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: Called a great neck for most physical DPS with no per-class priority given, so
+    treated as routing to all listed physical DPS specs.
+- item_id: 32591
+  item_name: Choker of Serrated Blades
+  creator: Marrow
+  timestamp: 224
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32591
+  item_name: Choker of Serrated Blades
+  creator: Sarthe
+  timestamp: 3597
+  stance: mentions_only
+  routes_to:
+  - rogue
+  - Enhancement Shaman
+  routes_away_from: []
+  no_routing_stated: false
+  note: Named as the neck 'other classes' (rogue, enhancement shaman) go for; fury warrior
+    is only said to be able to take either, a comparison rather than a routing claim,
+    so left in neither list.
+- item_id: 32591
+  item_name: Choker of Serrated Blades
+  creator: Sarthe
+  timestamp: 361
+  stance: favours
+  routes_to:
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32591
+  item_name: Choker of Serrated Blades
+  creator: SimonizeShow
+  timestamp: 216
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - rogue
+  no_routing_stated: false
+- item_id: 32591
+  item_name: Choker of Serrated Blades
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 1290
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Beast Mastery Hunter
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32591
+  item_name: Choker of Serrated Blades
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 286
+  stance: favours
+  routes_to:
+  - rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32608
+  item_name: Pillager's Gauntlets
+  creator: Sarthe
+  timestamp: 2331
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: No spec is named in the record's specs array, so no routing can be recorded even
+    though the stance toward the item itself is favourable.
+- item_id: 32608
+  item_name: Pillager's Gauntlets
+  creator: Slesh
+  timestamp: 821
+  stance: conditional
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Listed as a viable (if non-ideal) alternative glove for protection warrior, not
+    warned off.
+- item_id: 32608
+  item_name: Pillager's Gauntlets
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 149
+  stance: conditional
+  routes_to:
+  - warrior
+  routes_away_from: []
+  no_routing_stated: false
+  note: Retribution Paladin is only implied via the Grips of Silent Justice comparison,
+    not clearly routed away from; left in neither list.
+- item_id: 32609
+  item_name: Boots of the Divine Light
+  creator: Knot
+  timestamp: 2802
+  stance: favours
+  routes_to:
+  - holy priest
+  routes_away_from: []
+  no_routing_stated: false
+  note: Shaman and druid are named as already having Orca-Hide boots but neither is in
+    this record's specs list, so they cannot be added to routes_away_from.
+- item_id: 32609
+  item_name: Boots of the Divine Light
+  creator: NOHITJEROME
+  timestamp: 1191
+  stance: conditional
+  routes_to: []
+  routes_away_from:
+  - resto druid
+  no_routing_stated: false
+  note: Kazzak boots are named as the true best for resto druid, implying this item is
+    not the pick despite being easy to get.
+- item_id: 32609
+  item_name: Boots of the Divine Light
+  creator: Sarthe
+  timestamp: 2303
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32837
+  item_name: Warglaive of Azzinoth
+  creator: Jambrosay
+  timestamp: 823
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32837
+  item_name: Warglaive of Azzinoth
+  creator: Jambrosay
+  timestamp: 893
+  stance: mentions_only
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+- item_id: 32837
+  item_name: Warglaive of Azzinoth
+  creator: NOHITJEROME
+  timestamp: 0
+  stance: favours
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: General hype for the weapon with no spec comparison; specs list is empty.
+- item_id: 32837
+  item_name: Warglaive of Azzinoth
+  creator: NOHITJEROME
+  timestamp: 271
+  stance: favours
+  routes_to:
+  - Combat Rogue
+  - Arms Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32837
+  item_name: Warglaive of Azzinoth
+  creator: NOHITJEROME
+  timestamp: 554
+  stance: conditional
+  routes_to:
+  - Fury Warrior
+  - Arms Warrior
+  - Protection Warrior
+  routes_away_from:
+  - Combat Rogue
+  no_routing_stated: false
+  note: Recommends stacking warriors with warglaives for end game composition over rogues,
+    and names Prot or Arms as fallback specs to secure one when Fury competition is high.
+- item_id: 32837
+  item_name: Warglaive of Azzinoth
+  creator: Sarthe
+  timestamp: 1908
+  stance: favours
+  routes_to:
+  - Fury Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32837
+  item_name: Warglaive of Azzinoth
+  creator: Sarthe
+  timestamp: 6941
+  stance: conditional
+  routes_to: []
+  routes_away_from: []
+  no_routing_stated: true
+  note: Deliberately defers the warrior-versus-rogue routing question to a separate video.
+- item_id: 32837
+  item_name: Warglaive of Azzinoth
+  creator: SimonizeShow
+  timestamp: 444
+  stance: favours
+  routes_to:
+  - Combat Rogue
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 32944
+  item_name: Talon of the Phoenix
+  creator: Jambrosay
+  timestamp: 748
+  stance: mentions_only
+  routes_to: []
+  routes_away_from:
+  - Beast Mastery Hunter
+  no_routing_stated: false
+  note: Named as the prior main hand, since replaced in his own phase 3 pick by Boundless
+    Agony (not in this record's specs list).
+- item_id: 33054
+  item_name: The Seal of Danzalar
+  creator: SubtleFW
+  timestamp: 1523
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+  note: '"spell damage" in specs is a stat on the ring, not a spec the claim routes it
+    to or away from.'
+- item_id: 33054
+  item_name: The Seal of Danzalar
+  creator: Wundy TV
+  timestamp: 331
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 34009
+  item_name: Hammer of Judgement
+  creator: Knot
+  timestamp: 2936
+  stance: favours
+  routes_to:
+  - Protection Paladin
+  - Balance Druid
+  routes_away_from: []
+  no_routing_stated: false
+  note: Elemental Shaman and Shadow Priest appear in the record's specs list but the claim
+    text never discusses them, so neither list includes them.
+- item_id: 34010
+  item_name: Pepe's Shroud of Pacification
+  creator: Griftin
+  timestamp: 315
+  stance: against
+  routes_to: []
+  routes_away_from:
+  - feral druid
+  no_routing_stated: false
+- item_id: 34010
+  item_name: Pepe's Shroud of Pacification
+  creator: WarriorTSW
+  timestamp: 832
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 34010
+  item_name: Pepe's Shroud of Pacification
+  creator: WarriorTSW
+  timestamp: 2208
+  stance: favours
+  routes_to:
+  - Protection Warrior
+  routes_away_from: []
+  no_routing_stated: false
+- item_id: 34012
+  item_name: Shroud of the Final Stand
+  creator: Zatar (Classic Wow Builds)
+  timestamp: 51
+  stance: conditional
+  routes_to:
+  - Holy Paladin
+  - Restoration Shaman
+  routes_away_from:
+  - Restoration Druid
+  - holy priest
+  no_routing_stated: false
+  note: Lacking spirit means Sunshower beats it for druids and priests, while mp5 makes
+    it the better overall piece and best in slot for a tank-healing Holy Light paladin.
