@@ -503,25 +503,38 @@ local function table_of(names, views)
     if #view.nets > 0 then any = true end
   end
   if any then
-    -- "Net Change", not "Net". The row sums the CHANGE each column shows,
-    -- and the one word alone read as a total of the item rather than of the
-    -- difference. Renamed by the guild lead on 12 August 2026.
-    local cells = { text_cell("Net Change", pandoc.AlignLeft, 1,
-                              "delta-net-label") }
+    -- "Sum of Converted Stats", named by the guild lead on 13 August 2026,
+    -- and the third name this row has carried.
+    --
+    -- "Net" read as a total of the ITEM rather than of the difference, so it
+    -- became "Net Change" on 12 August. That fixed the wrong half. The half it
+    -- left wrong is the one the guild lead caught a day later: the row is not a
+    -- net of the table above it. It sums only the stats this spec holds a
+    -- conversion rule for, and every other row, armor and block value and
+    -- healing power among them, is shown and excluded. A reader who added the
+    -- column up by hand got a different number and had no way to know why.
+    --
+    -- The name now states the gate. It is long for a table label and that is
+    -- the trade accepted: a short label that misleads costs more than a long
+    -- one that does not.
+    local cells = { text_cell("Sum of Converted Stats", pandoc.AlignLeft,
+                              1, "delta-net-label") }
     for _, view in ipairs(views) do
       cells[#cells + 1] = text_cell("", pandoc.AlignRight, 1, "delta-raw")
       -- A COLUMN WITH NOTHING IN THE ROW SAYS SO. It used to render blank
       -- beside a neighbour carrying figures, which reads as a rendering fault
-      -- rather than as the fact it is: the two items share no stat this spec
-      -- sums, so there is nothing to add up. Reported by the guild lead on
-      -- 13 August 2026 from the Protection Paladin belt card, where the Phase 3
-      -- column was empty because the item and the baseline differ only in
-      -- stats the row does not sum.
+      -- rather than as the fact it is: the two items differ in no stat this
+      -- spec converts, so there is nothing to add up. Reported by the guild
+      -- lead on 13 August 2026 from the Protection Paladin belt card, where the
+      -- Phase 3 column was empty because the item and the baseline differ only
+      -- in stats the row does not sum. The wording is the guild lead's own, and
+      -- it repeats the row label on purpose so the cell reads without having to
+      -- look left.
       if #view.nets > 0 then
         cells[#cells + 1] = lines_cell(view.nets,
           pandoc.AlignLeft, 1, "delta-net-value")
       else
-        cells[#cells + 1] = text_cell("no change in the stats summed here",
+        cells[#cells + 1] = text_cell("No changes in converted stats.",
           pandoc.AlignLeft, 1, "delta-net-value delta-net-empty")
       end
     end

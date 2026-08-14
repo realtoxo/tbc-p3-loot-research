@@ -33,12 +33,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 81.92,
+            rate = "81.92 intellect per 1 percent spell crit for a warlock",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.warlock" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -48,6 +55,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -58,6 +66,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -68,6 +77,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -78,6 +88,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -101,12 +112,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80,
+            rate = "80 intellect per 1 percent spell crit for a mage",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.mage" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -116,6 +134,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -126,6 +145,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -136,6 +156,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -146,6 +167,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -169,11 +191,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -184,6 +208,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -194,6 +219,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -204,6 +230,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -214,6 +241,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -237,12 +265,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80,
+            rate = "80 intellect per 1 percent spell crit for a druid",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.druid" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -252,6 +287,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -262,6 +298,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -272,6 +309,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -282,6 +320,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -308,11 +347,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -323,6 +364,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -333,6 +375,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -343,6 +386,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -353,6 +397,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -376,11 +421,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -391,6 +438,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -401,6 +449,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -411,6 +460,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -421,6 +471,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -444,12 +495,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 81.92,
+            rate = "81.92 intellect per 1 percent spell crit for a warlock",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.warlock" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -459,6 +517,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -469,6 +528,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -479,6 +539,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -489,6 +550,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -512,12 +574,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80,
+            rate = "80 intellect per 1 percent spell crit for a shaman",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.shaman" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -527,6 +596,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -537,6 +607,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -547,6 +618,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -557,6 +629,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -580,11 +653,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -595,6 +670,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -605,6 +681,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -615,6 +692,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -625,6 +703,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -648,6 +727,7 @@ return {
             source = "data/facts/crit.yaml :: conversions.agility_per_percent_crit_level_70.druid" },
           { label = "agility", unit = "", op = "multiply", by = 1,
             rate = "agility counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
         armor_pen = {
@@ -659,13 +739,11 @@ return {
         defense = {
           { label = "defense skill", unit = "", op = "divide", by = 2.365385,
             rate = "2.365385 rating per 1 defense skill point",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.defense_rating_per_skill_point" },
         },
         dodge = {
           { label = "dodge", unit = "percent", op = "divide", by = 18.923079,
             rate = "18.923079 rating per 1 percent dodge",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.dodge_rating_per_percent" },
         },
         expertise = {
@@ -677,6 +755,7 @@ return {
         intellect = {
           { label = "intellect", unit = "", op = "multiply", by = 1,
             rate = "intellect counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
         melee_crit = {
@@ -704,7 +783,6 @@ return {
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
           { label = "crit taken", unit = "percent", op = "divide", by = 39.4231,
             rate = "39.4231 rating per 1 percent crit taken",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.resilience_rating_per_percent_crit_taken" },
         },
         spell_crit = {
@@ -734,10 +812,10 @@ return {
         stamina = {
           { label = "stamina", unit = "", op = "multiply", by = 1,
             rate = "stamina counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
           { label = "health", unit = "", op = "multiply", by = 10,
             rate = "10 health per stamina, before talents and Blessing of Kings",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.stamina_per_health" },
         },
         strength = {
@@ -747,6 +825,7 @@ return {
             source = "data/facts/attack-power.yaml :: conversions.melee_attack_power_per_strength_level_70.druid" },
           { label = "strength", unit = "", op = "multiply", by = 1,
             rate = "strength counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
       },
@@ -765,11 +844,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -780,6 +861,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -790,6 +872,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -800,6 +883,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -810,6 +894,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -833,11 +918,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -848,6 +935,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -858,6 +946,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -868,6 +957,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -878,6 +968,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -901,12 +992,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80,
+            rate = "80 intellect per 1 percent spell crit for a mage",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.mage" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -916,6 +1014,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -926,6 +1025,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -936,6 +1036,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -946,6 +1047,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -969,11 +1071,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -984,6 +1088,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -994,6 +1099,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1004,6 +1110,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1014,6 +1121,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -1037,12 +1145,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80.05,
+            rate = "80.05 intellect per 1 percent spell crit for a paladin",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.paladin" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -1052,6 +1167,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1062,6 +1178,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1072,6 +1189,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1082,6 +1200,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -1108,11 +1227,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -1123,6 +1244,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1133,6 +1255,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1143,6 +1266,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1153,6 +1277,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -1176,12 +1301,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80,
+            rate = "80 intellect per 1 percent spell crit for a priest",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.priest" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -1191,6 +1323,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1201,6 +1334,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1211,6 +1345,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1221,6 +1356,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -1244,6 +1380,7 @@ return {
             source = "data/facts/crit.yaml :: conversions.agility_per_percent_crit_level_70.paladin" },
           { label = "agility", unit = "", op = "multiply", by = 1,
             rate = "agility counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
         armor_pen = {
@@ -1255,19 +1392,16 @@ return {
         block_rating = {
           { label = "block", unit = "percent", op = "divide", by = 7.884615,
             rate = "7.884615 rating per 1 percent block",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.block_rating_per_percent" },
         },
         defense = {
           { label = "defense skill", unit = "", op = "divide", by = 2.365385,
             rate = "2.365385 rating per 1 defense skill point",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.defense_rating_per_skill_point" },
         },
         dodge = {
           { label = "dodge", unit = "percent", op = "divide", by = 18.923079,
             rate = "18.923079 rating per 1 percent dodge",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.dodge_rating_per_percent" },
         },
         expertise = {
@@ -1279,6 +1413,7 @@ return {
         intellect = {
           { label = "intellect", unit = "", op = "multiply", by = 1,
             rate = "intellect counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
         melee_crit = {
@@ -1302,7 +1437,6 @@ return {
         parry = {
           { label = "parry", unit = "percent", op = "divide", by = 23.653847,
             rate = "23.653847 rating per 1 percent parry",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.parry_rating_per_percent" },
         },
         resilience = {
@@ -1312,7 +1446,6 @@ return {
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
           { label = "crit taken", unit = "percent", op = "divide", by = 39.4231,
             rate = "39.4231 rating per 1 percent crit taken",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.resilience_rating_per_percent_crit_taken" },
         },
         spell_crit = {
@@ -1342,10 +1475,10 @@ return {
         stamina = {
           { label = "stamina", unit = "", op = "multiply", by = 1,
             rate = "stamina counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
           { label = "health", unit = "", op = "multiply", by = 10,
             rate = "10 health per stamina, before talents and Blessing of Kings",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.stamina_per_health" },
         },
         strength = {
@@ -1355,6 +1488,7 @@ return {
             source = "data/facts/attack-power.yaml :: conversions.melee_attack_power_per_strength_level_70.paladin" },
           { label = "strength", unit = "", op = "multiply", by = 1,
             rate = "strength counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
       },
@@ -1373,6 +1507,7 @@ return {
             source = "data/facts/crit.yaml :: conversions.agility_per_percent_crit_level_70.warrior" },
           { label = "agility", unit = "", op = "multiply", by = 1,
             rate = "agility counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
         armor_pen = {
@@ -1384,19 +1519,16 @@ return {
         block_rating = {
           { label = "block", unit = "percent", op = "divide", by = 7.884615,
             rate = "7.884615 rating per 1 percent block",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.block_rating_per_percent" },
         },
         defense = {
           { label = "defense skill", unit = "", op = "divide", by = 2.365385,
             rate = "2.365385 rating per 1 defense skill point",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.defense_rating_per_skill_point" },
         },
         dodge = {
           { label = "dodge", unit = "percent", op = "divide", by = 18.923079,
             rate = "18.923079 rating per 1 percent dodge",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.dodge_rating_per_percent" },
         },
         expertise = {
@@ -1408,6 +1540,7 @@ return {
         intellect = {
           { label = "intellect", unit = "", op = "multiply", by = 1,
             rate = "intellect counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
         melee_crit = {
@@ -1431,7 +1564,6 @@ return {
         parry = {
           { label = "parry", unit = "percent", op = "divide", by = 23.653847,
             rate = "23.653847 rating per 1 percent parry",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.parry_rating_per_percent" },
         },
         resilience = {
@@ -1441,7 +1573,6 @@ return {
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
           { label = "crit taken", unit = "percent", op = "divide", by = 39.4231,
             rate = "39.4231 rating per 1 percent crit taken",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.resilience_rating_per_percent_crit_taken" },
         },
         spell_crit = {
@@ -1471,10 +1602,10 @@ return {
         stamina = {
           { label = "stamina", unit = "", op = "multiply", by = 1,
             rate = "stamina counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
           { label = "health", unit = "", op = "multiply", by = 10,
             rate = "10 health per stamina, before talents and Blessing of Kings",
-            net = false,
             source = "data/facts/crit.yaml :: defensive_conversions.stamina_per_health" },
         },
         strength = {
@@ -1484,6 +1615,7 @@ return {
             source = "data/facts/attack-power.yaml :: conversions.melee_attack_power_per_strength_level_70.warrior" },
           { label = "strength", unit = "", op = "multiply", by = 1,
             rate = "strength counted as itself for a tank",
+            net = false,
             source = "guild lead ruling, 12 August 2026: a tank nets primary stats" },
         },
       },
@@ -1502,12 +1634,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80,
+            rate = "80 intellect per 1 percent spell crit for a druid",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.druid" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -1517,6 +1656,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1527,6 +1667,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1537,6 +1678,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1547,6 +1689,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -1570,12 +1713,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80,
+            rate = "80 intellect per 1 percent spell crit for a shaman",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.shaman" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -1585,6 +1735,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1595,6 +1746,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1605,6 +1757,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1615,6 +1768,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -1638,11 +1792,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -1653,6 +1809,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1663,6 +1820,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1673,6 +1831,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1683,6 +1842,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -1706,12 +1866,19 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
+        },
+        intellect = {
+          { label = "spell crit", unit = "percent", op = "divide", by = 80,
+            rate = "80 intellect per 1 percent spell crit for a priest",
+            source = "data/facts/crit.yaml :: conversions.intellect_per_percent_spell_crit_level_70.priest" },
         },
         melee_crit = {
           { label = "melee crit", unit = "percent", op = "divide", by = 22.08,
@@ -1721,6 +1888,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1731,6 +1899,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1741,6 +1910,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1751,6 +1921,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {
@@ -1777,11 +1948,13 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
           { label = "expertise rating", unit = "", op = "multiply", by = 1,
             rate = "expertise rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_crit = {
@@ -1792,6 +1965,7 @@ return {
         melee_haste = {
           { label = "haste rating", unit = "", op = "multiply", by = 1,
             rate = "haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         melee_hit = {
@@ -1802,6 +1976,7 @@ return {
         resilience = {
           { label = "resilience", unit = "", op = "multiply", by = 1,
             rate = "resilience counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_crit = {
@@ -1812,6 +1987,7 @@ return {
         spell_haste = {
           { label = "spell haste rating", unit = "", op = "multiply", by = 1,
             rate = "spell haste rating counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         spell_hit = {
@@ -1822,6 +1998,7 @@ return {
         spell_pen = {
           { label = "spell penetration", unit = "", op = "multiply", by = 1,
             rate = "spell penetration counted as itself",
+            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         strength = {

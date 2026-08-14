@@ -169,6 +169,33 @@ def divide(stat, label, divisor, rate_text, source):
 # data/facts/crit.yaml::defensive_conversions for whoever prices them later.
 TANK_SPECS = frozenset({"Protection Warrior", "Protection Paladin", "Feral Bear"})
 
+# INTELLECT BUYS SPELL CRIT, and until 13 August 2026 no caster card said so.
+# The guild lead asked whether the healers and casters implement their intellect
+# to crit ratios. They did not: `intellect_per_percent_spell_crit_level_70` sat
+# in crit.yaml with a figure for every casting class and nothing read it, so a
+# Holy Paladin card showed `intellect -5` against an empty Converted cell. It is
+# the same gap the defensive ratings had, in the other half of the roster.
+#
+# THE SPECS THAT CAST FOR A LIVING. A Retribution Paladin and an Enhancement
+# Shaman also carry intellect, and a percent of spell crit is not what either is
+# weighed on, so naming the specs is more honest than naming the classes.
+#
+# THE RATIO IS NOT TALENT-DEPENDENT, which is worth saying because the guild
+# lead asked for talent awareness in the same breath. The source in crit.yaml
+# gives one figure per CLASS and records no talent that moves it. What talents
+# do move is intellect into SPELL POWER, through Holy Guidance, Lunar Guidance,
+# Mind Mastery and their kin, and none of those is recorded anywhere in this
+# repository: talents.yaml carries only the talents supplying hit, expertise and
+# defense skill. Those conversions are therefore NOT emitted here. A rate with
+# no fact file behind it is the defect this whole module exists to prevent.
+CASTER_SPECS = frozenset({
+    "Holy Paladin", "Priest Healer", "Shadow Priest",
+    "Restoration Shaman", "Elemental Shaman",
+    "Restoration Druid", "Balance Druid",
+    "Arcane Mage", "Fire Mage",
+    "Affliction Warlock", "Destruction Warlock",
+})
+
 PRIMARY_STATS = ("strength", "agility", "stamina", "intellect")
 
 # THE DEFENSIVE RATINGS, WHICH NOTHING CONVERTED UNTIL 13 AUGUST 2026. The
@@ -296,11 +323,32 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit
                         ("expertise", "expertise rating"),
                         ("resilience", "resilience"),
                         ("spell_pen", "spell penetration")):
-        rules.setdefault(stat, []).append(multiply(
+        # A STAT COUNTED AS ITSELF IS NOT A CONVERSION AND LEAVES THE SUM.
+        # The guild lead asked on 13 August 2026 why resilience appeared in a
+        # Holy Paladin's summary row: the identity rule made it a member, so
+        # "-21 resilience" was restated underneath a column that already said
+        # -21. It added a line and no information, and it sat beside a real
+        # conversion, "-1.04% spell crit", which made the row read as though the
+        # two were the same kind of quantity. The rule stays, because the guild
+        # lead ruled these are captured as themselves and the Converted column
+        # is where that shows. It just does not enter the sum.
+        identity = multiply(
             stat, label, 1, f"{label} counted as itself",
             "guild lead ruling, 12 August 2026: captured as themselves rather "
             "than converted",
-        ))
+        )
+        identity["net"] = False
+        rules.setdefault(stat, []).append(identity)
+
+    if spec in CASTER_SPECS:
+        keys = ["conversions", "intellect_per_percent_spell_crit_level_70",
+                klass]
+        per_percent = rate(crit, CRIT, keys, spec)
+        rules.setdefault("intellect", []).append(divide(
+            "intellect", "spell crit", per_percent,
+            f"{number(per_percent)} intellect per 1 percent spell crit for a "
+            f"{klass}",
+            cite(CRIT, keys)))
 
     if spec in TANK_SPECS:
         # THE OFFENSE RULES STAY, AND LEAVE THE NET. They stay because
@@ -313,15 +361,27 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit
         for stat_rules in rules.values():
             for rule in stat_rules:
                 rule["net"] = False
-        # Identity, so the Net reads in the stat's own name. A tank card states
-        # what the item carries rather than converting it into a currency this
-        # project has not defined for the role.
+        # Identity, so the Converted column reads in the stat's own name.
+        #
+        # THESE LEFT THE SUM ON 13 AUGUST 2026 and the reason is worth stating,
+        # because it changes the letter of an earlier ruling. On 12 August the
+        # guild lead ruled that a tank nets primary stats. That ruling was made
+        # when a tank had NO defensive conversion at all: defense, dodge and
+        # block printed as raw ratings, so the only summable things were the
+        # primaries, and summing raw defensive ratings would have produced a
+        # number with no unit. Both conditions are gone. The defensive ratings
+        # now convert, and the row is named "Sum of Converted Stats", under
+        # which a stat counted as itself is not a member. Keeping them would
+        # have made the tank the one role whose summary was a restatement.
+        #
+        # The intent of that ruling is kept: a tank's summary is about the role.
+        # That is why the offense conversions above stay out.
         for stat in PRIMARY_STATS:
             rule = multiply(stat, stat, 1,
                             f"{stat} counted as itself for a tank",
                             "guild lead ruling, 12 August 2026: a tank nets "
                             "primary stats")
-            rule["net"] = True
+            rule["net"] = False
             rules.setdefault(stat, []).append(rule)
 
         # DEFENSE SKILL IS NOT A PERCENTAGE, so it divides into points rather
@@ -345,7 +405,9 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit
                 # "3 percent defense skill" would be a different and wrong
                 # quantity from "3 defense skill".
                 rule["unit"] = ""
-            rule["net"] = False
+            # THESE ARE WHAT A TANK'S SUM IS MADE OF. Each is a real conversion
+            # into its own named unit, so no two of them are added together and
+            # nothing mixes offense into a defensive summary.
             rules.setdefault(stat, []).append(rule)
 
         # STAMINA BUYS HEALTH, and the card can say how much. The identity rule
@@ -358,7 +420,6 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit
                           f"{number(per_point)} health per stamina, before "
                           "talents and Blessing of Kings",
                           cite(CRIT, health_keys))
-        health["net"] = False
         rules.setdefault("stamina", []).append(health)
     return rules
 
