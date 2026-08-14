@@ -13,10 +13,12 @@ meta:
   - Restoration Druid / Living Spirit
   - Restoration Druid / Lunar Guidance
   - Restoration Shaman / Nature's Blessing
-  why_some_are_null: wowsims TBC ships no healer simulation, so no preset build exists
-    for the Holy Paladin, the Priest Healer, the Restoration Shaman or the Restoration
-    Druid. Those are the specs these talents matter most to. A rank of null is a gap this
-    project has not filled, not a talent that does not apply.
+  why_some_are_null: 'wowsims ships healer simulations but no talent string any of them
+    can use, checked 13 August 2026: the Holy Paladin preset carries an empty string,
+    the Priest has no healer preset at all, and both the Restoration Druid and Restoration
+    Shaman presets carry commented-out strings that spend 26 or 27 talents in a tree holding
+    20, so they belong to a later talent revision and cannot be decoded against 2.4.3.
+    A rank of null is a gap this project has not filled, not a talent that does not apply.'
 talents:
   Arcane Mind:
     class: mage

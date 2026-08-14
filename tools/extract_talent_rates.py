@@ -19,12 +19,24 @@ WHERE EACH HALF COMES FROM, because they are different kinds of claim.
   tree's digit count must match that tree's talent count and the point totals
   must match the spread already recorded for the spec, or the run fails.
 
-THE HEALERS HAVE NO BUILD RECORDED AND THIS FILE SAYS SO RATHER THAN GUESSING.
-wowsims TBC ships no healer simulation, so no preset exists for the Holy
-Paladin, the Priest Healer, the Restoration Shaman or the Restoration Druid.
-Those are exactly the specs these talents matter most to. Each is listed with
-its talent and `rank: null`, so the gap is visible and countable instead of
-looking like the talent does not apply.
+THE HEALERS HAVE NO USABLE BUILD AND THIS FILE SAYS SO RATHER THAN GUESSING.
+The reason was checked on 13 August 2026 and is not the one first written here,
+which said wowsims ships no healer simulation. It ships four. What it does not
+ship is a talent string any of them can use:
+
+  ui/paladin/holy/presets.ts   talentsString is the empty string
+  ui/priest/                   holds only `dps`; no healer preset exists
+  ui/druid/restoration         two presets, both talent strings COMMENTED OUT
+  ui/shaman/restoration        two presets, both talent strings COMMENTED OUT
+
+The four commented strings do not fit the 2.4.3 trees and that is presumably why
+they are commented: each spends 26 or 27 talents in a third tree that holds 20,
+so they belong to a later talent revision. Decoding one would place points on
+whatever talent happened to sit at each index.
+
+Those four specs are exactly the ones these talents matter most to. Each is
+listed with its talent and `rank: null`, so the gap is visible and countable
+instead of looking like the talent does not apply.
 
 Usage:
     python3 tools/extract_talent_rates.py --out data/facts/talent-conversions.yaml
@@ -197,12 +209,15 @@ def main() -> int:
                            "point spread already recorded for each spec"),
             "no_build_recorded": sorted(unresolved),
             "why_some_are_null": (
-                "wowsims TBC ships no healer simulation, so no preset build "
-                "exists for the Holy Paladin, the Priest Healer, the "
-                "Restoration Shaman or the Restoration Druid. Those are the "
-                "specs these talents matter most to. A rank of null is a gap "
-                "this project has not filled, not a talent that does not "
-                "apply."),
+                "wowsims ships healer simulations but no talent string any of "
+                "them can use, checked 13 August 2026: the Holy Paladin preset "
+                "carries an empty string, the Priest has no healer preset at "
+                "all, and both the Restoration Druid and Restoration Shaman "
+                "presets carry commented-out strings that spend 26 or 27 "
+                "talents in a tree holding 20, so they belong to a later "
+                "talent revision and cannot be decoded against 2.4.3. A rank "
+                "of null is a gap this project has not filled, not a talent "
+                "that does not apply."),
         },
         "talents": dict(sorted(talents.items())),
     }
