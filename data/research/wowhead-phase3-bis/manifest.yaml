@@ -1,0 +1,12 @@
+meta:
+  captured: '2026-08-13'
+  source: Wowhead TBC Classic Phase 3 best-in-slot guides, one per spec
+  why_a_browser: 'Those pages render their gear tables client-side. A plain fetch is refused
+    and a crawler returns page chrome only: exa returned 1,744 characters and no gear.
+    Each list was read in Chrome and the item ids taken from the links.'
+  what: For each spec, the item the Phase 3 list ranks first in each of the five token
+    slots, with its Wowhead item id.
+  used_by: A rebuild of the tier sets on 14 August 2026 that was reverted the same night.
+    See docs/kb/OPEN-FINDINGS.md. The capture is kept so a second attempt does not have
+    to re-read seventeen client-rendered pages.
+  specs: 17

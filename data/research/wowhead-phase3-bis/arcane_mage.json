@@ -1,0 +1,25 @@
+{
+ "spec": "arcane_mage",
+ "slots": {
+  "head": {
+   "item": "Cowl of Tirisfal",
+   "id": "30206"
+  },
+  "shoulder": {
+   "item": "Mantle of Tirisfal",
+   "id": "30210"
+  },
+  "chest": {
+   "item": "Robes of Tirisfal",
+   "id": "30196"
+  },
+  "hand": {
+   "item": "Gloves of Tirisfal",
+   "id": "30205"
+  },
+  "leg": {
+   "item": "Leggings of the Tempest",
+   "id": "31058"
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "spec": "feral_bear",
+ "slots": {
+  "head": {
+   "item": "Thunderheart Cover",
+   "id": "31039"
+  },
+  "shoulder": {
+   "item": "Thunderheart Pauldrons",
+   "id": "31048"
+  },
+  "chest": {
+   "item": "Thunderheart Chestguard",
+   "id": "31042"
+  },
+  "hand": {
+   "item": "Thunderheart Gauntlets",
+   "id": "31034"
+  },
+  "leg": {
+   "item": "Thunderheart Leggings",
+   "id": "31044"
+  }
+ }
+}

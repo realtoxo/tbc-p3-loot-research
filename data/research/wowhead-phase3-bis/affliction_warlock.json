@@ -1,0 +1,25 @@
+{
+ "spec": "affliction_warlock",
+ "slots": {
+  "head": {
+   "item": "Hood of the Malefic",
+   "id": "31051"
+  },
+  "shoulder": {
+   "item": "Mantle of the Malefic",
+   "id": "31054"
+  },
+  "chest": {
+   "item": "Vestments of the Sea-Witch",
+   "id": "30107"
+  },
+  "hand": {
+   "item": "Gloves of the Malefic",
+   "id": "31050"
+  },
+  "leg": {
+   "item": "Leggings of Channeled Elements",
+   "id": "30916"
+  }
+ }
+}

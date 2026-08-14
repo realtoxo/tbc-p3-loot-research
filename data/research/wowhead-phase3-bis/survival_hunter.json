@@ -1,0 +1,25 @@
+{
+ "spec": "survival_hunter",
+ "slots": {
+  "head": {
+   "item": "Gronnstalker's Helmet",
+   "id": "31003"
+  },
+  "shoulder": {
+   "item": "Gronnstalker's Spaulders",
+   "id": "31006"
+  },
+  "chest": {
+   "item": "Gronnstalker's Chestguard",
+   "id": "31004"
+  },
+  "hand": {
+   "item": "Gronnstalker's Gloves",
+   "id": "31001"
+  },
+  "leg": {
+   "item": "Bow-stitched Leggings",
+   "id": "30900"
+  }
+ }
+}

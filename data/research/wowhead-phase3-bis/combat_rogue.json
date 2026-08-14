@@ -1,0 +1,25 @@
+{
+ "spec": "combat_rogue",
+ "slots": {
+  "head": {
+   "item": "Cursed Vision of Sargeras",
+   "id": "32235"
+  },
+  "shoulder": {
+   "item": "Slayer's Shoulderpads",
+   "id": "31030"
+  },
+  "chest": {
+   "item": "Slayer's Chestguard",
+   "id": "31028"
+  },
+  "hand": {
+   "item": "Slayer's Handguards",
+   "id": "31026"
+  },
+  "leg": {
+   "item": "Slayer's Legguards",
+   "id": "31029"
+  }
+ }
+}

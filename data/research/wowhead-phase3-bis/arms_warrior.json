@@ -1,0 +1,25 @@
+{
+ "spec": "arms_warrior",
+ "slots": {
+  "head": {
+   "item": "Onslaught Battle-Helm",
+   "id": "30972"
+  },
+  "shoulder": {
+   "item": "Onslaught Shoulderblades",
+   "id": "30979"
+  },
+  "chest": {
+   "item": "Onslaught Breastplate",
+   "id": "30975"
+  },
+  "hand": {
+   "item": "Onslaught Gauntlets",
+   "id": "30969"
+  },
+  "leg": {
+   "item": "Leggings of Divine Retribution",
+   "id": "32341"
+  }
+ }
+}

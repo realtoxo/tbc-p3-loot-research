@@ -1,0 +1,25 @@
+{
+ "spec": "feral_cat",
+ "slots": {
+  "head": {
+   "item": "Wolfshead Helm",
+   "id": "8345"
+  },
+  "shoulder": {
+   "item": "Thunderheart Pauldrons",
+   "id": "31048"
+  },
+  "chest": {
+   "item": "Nether Shadow Tunic",
+   "id": "32252"
+  },
+  "hand": {
+   "item": "Gloves of the Searing Grip",
+   "id": "29947"
+  },
+  "leg": {
+   "item": "Thunderheart Leggings",
+   "id": "31044"
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "spec": "enhancement_shaman",
+ "slots": {
+  "head": {
+   "item": "Cursed Vision of Sargeras",
+   "id": "32235"
+  },
+  "shoulder": {
+   "item": "Shoulders of Lightning Reflexes",
+   "id": "32575"
+  },
+  "chest": {
+   "item": "Midnight Chestguard",
+   "id": "30905"
+  },
+  "hand": {
+   "item": "Fists of Mukoa",
+   "id": "32234"
+  },
+  "leg": {
+   "item": "Bow-stitched Leggings",
+   "id": "30900"
+  }
+ }
+}

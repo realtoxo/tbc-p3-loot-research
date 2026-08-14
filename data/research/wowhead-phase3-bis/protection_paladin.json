@@ -1,0 +1,25 @@
+{
+ "spec": "protection_paladin",
+ "slots": {
+  "head": {
+   "item": "Faceplate of the Impenetrable",
+   "id": "32521"
+  },
+  "shoulder": {
+   "item": "Lightbringer Shoulderguards",
+   "id": "30998"
+  },
+  "chest": {
+   "item": "Lightbringer Chestguard",
+   "id": "30991"
+  },
+  "hand": {
+   "item": "Lightbringer Handguards",
+   "id": "30985"
+  },
+  "leg": {
+   "item": "Lightbringer Legguards",
+   "id": "30995"
+  }
+ }
+}

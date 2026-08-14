@@ -1,0 +1,25 @@
+{
+ "spec": "retribution_paladin",
+ "slots": {
+  "head": {
+   "item": "Cursed Vision of Sargeras",
+   "id": "32235"
+  },
+  "shoulder": {
+   "item": "Shoulderpads of the Stranger",
+   "id": "30055"
+  },
+  "chest": {
+   "item": "Bulwark of the Ancient Kings",
+   "id": "28485"
+  },
+  "hand": {
+   "item": "Gloves of the Searing Grip",
+   "id": "29947"
+  },
+  "leg": {
+   "item": "Bow-stitched Leggings",
+   "id": "30900"
+  }
+ }
+}

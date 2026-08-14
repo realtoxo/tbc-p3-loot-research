@@ -1,0 +1,25 @@
+{
+ "spec": "beast_mastery_hunter",
+ "slots": {
+  "head": {
+   "item": "Cursed Vision of Sargeras",
+   "id": "32235"
+  },
+  "shoulder": {
+   "item": "Gronnstalker's Spaulders",
+   "id": "31006"
+  },
+  "chest": {
+   "item": "Gronnstalker's Chestguard",
+   "id": "31004"
+  },
+  "hand": {
+   "item": "Gronnstalker's Gloves",
+   "id": "31001"
+  },
+  "leg": {
+   "item": "Gronnstalker's Leggings",
+   "id": "31005"
+  }
+ }
+}

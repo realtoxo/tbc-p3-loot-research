@@ -1,0 +1,25 @@
+{
+ "spec": "elemental_shaman",
+ "slots": {
+  "head": {
+   "item": "Skyshatter Headguard",
+   "id": "31014"
+  },
+  "shoulder": {
+   "item": "Skyshatter Mantle",
+   "id": "31023"
+  },
+  "chest": {
+   "item": "Skyshatter Breastplate",
+   "id": "31017"
+  },
+  "hand": {
+   "item": "Skyshatter Gauntlets",
+   "id": "31008"
+  },
+  "leg": {
+   "item": "Leggings of Channeled Elements",
+   "id": "30916"
+  }
+ }
+}

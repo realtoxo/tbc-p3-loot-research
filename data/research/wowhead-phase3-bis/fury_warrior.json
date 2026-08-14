@@ -1,0 +1,25 @@
+{
+ "spec": "fury_warrior",
+ "slots": {
+  "head": {
+   "item": "Cursed Vision of Sargeras",
+   "id": "32235"
+  },
+  "shoulder": {
+   "item": "Onslaught Shoulderblades",
+   "id": "30979"
+  },
+  "chest": {
+   "item": "Onslaught Breastplate",
+   "id": "30975"
+  },
+  "hand": {
+   "item": "Grips of Silent Justice",
+   "id": "32278"
+  },
+  "leg": {
+   "item": "Leggings of Divine Retribution",
+   "id": "32341"
+  }
+ }
+}

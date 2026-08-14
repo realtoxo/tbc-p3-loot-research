@@ -69,6 +69,62 @@ The findings are kept below with what settles each, because the reasoning outliv
 
 It matters because of a rule this project already holds: `docs/kb/DOMAIN.md` records Season 3 as opening 1 September 2026, five days after Phase 3, so Season 3 gear is barred from an entry anchor. Read as written, the note barred the weapon the Feral Cat capture actually walks in holding at every anchor, and it is the source of the 18 hit the Cat's entry figures rest on. `tools/extract_ladder.py` had the seasons right the whole time, deduplicating Vengeful as `season3` and Merciless as `season2`, so no published figure moved; only the prose was wrong. Corrected 13 August 2026, with the previous claim quoted.
 
+## The tier-set rebuild, attempted and reverted, 14 August 2026
+
+**A rebuild of all seventeen tier sets was applied, reviewed by seventeen Opus
+agents, and reverted the same night on the guild lead's instruction.** The gear
+it produced was right. What it did not touch was every word written about that
+gear, and the review returned 96 findings across all 17 specs.
+
+THE RULE IT IMPLEMENTED, which still stands and is worth keeping. A tier set is
+the entry set with only the five token slots reconsidered: take a tier token the
+spec's Wowhead Phase 3 best-in-slot list puts there, from ANY tier; otherwise
+keep the entry item unless it is a tier piece whose set bonus no longer holds, in
+which case take the best off-piece the workbook ranks.
+
+WHAT IT GOT RIGHT. Token counts matched the seventeen extracted Phase 3 lists
+spec for spec: five for the Feral Bear, four for most, three for the warlocks,
+one for the Protection Warrior, and none for the Enhancement Shaman or the
+Retribution Paladin, whose lists wear no tier at all. It also removed the defect
+that started it, the orphaned Tier 4 Voidheart Mantle on the Affliction Warlock.
+
+WHY IT WAS REVERTED. The data moved and the prose did not, so roughly 74 of the
+96 findings were fact files contradicting themselves:
+
+  - Affliction's note still said Mantle of the Malefic "is not available, so
+    Voidheart Mantle is carried forward", beside a file holding the Malefic.
+  - Protection Warrior's note named item 30111 as Destroyer Legguards from Shade
+    of Akama. Wrong item, wrong boss.
+  - Feral Bear's crit-immunity note quoted defense totals from the old set, and
+    that note feeds a TANK SURVIVABILITY claim.
+  - Card footnotes read "Tier rows assume both reachable tokens", false for the
+    four specs that ended with one or none.
+  - token-arithmetic.yaml, crit.yaml's retraction block, hit-captured.yaml's
+    contested text and the sim gear files all still described the old sets.
+
+TWO THINGS THE REVERT DID NOT RESOLVE, and they were true before the rebuild too.
+
+  1. THE ORPHANS ARE STILL THERE. Six tier pieces are worn at a tier anchor for
+     no set bonus, and the workbook ranks a better off-piece for four of them.
+     The Affliction Warlock's Voidheart Mantle is the case the guild lead found:
+     rank 6, EPV 84.72 and 14 hit, against Blood-cursed Shoulderpads at rank 2,
+     98.08 and 18 hit. Worse on both counts, and the Destruction Warlock, same
+     class and same gear pool, already wears the Blood-cursed.
+
+  2. NOTHING CAN CATCH A TIER PIECE FROM AN OUT-OF-WINDOW BOSS.
+     `check_capture_availability.py` resolves an item's boss through
+     `drops.csv`, and a tier piece is a vendor purchase with no row there. The
+     shoulder, legs and chest tokens come from Mother Shahraz, the Illidari
+     Council and Illidan, which `progression.yaml` places out of reach, and a
+     capture could wear one today without any check noticing.
+
+WHAT A SECOND ATTEMPT MUST DO IN ONE PASS. Rebuild the sets, strip or rewrite
+every note that describes the old ones, refresh token-arithmetic and the sim
+gear files, fix the card footnote, and settle what `progression.yaml` means now
+that the guild lead has ruled the tier set does not respect the window. The
+seventeen Phase 3 best-in-slot lists are captured and do not need re-reading.
+
+
 ## Swept and found clean
 
 Token to slot to boss for all 45 tokens; set bonus verbatim text across files; the conversion constants; the 490, 415, 332, 284 and 102.4 tank thresholds; expertise caps; the generated table counts against `PROVENANCE.md`; `docs/bosses.md` against `drops.csv`; every EPV figure in `docs/conventions.md` against the workbook; `docs/kb/DOMAIN.md`; `enchants-gems.yaml` era claims; all item id and name pairs in the captures; the schedule dates; and `just check` passes.

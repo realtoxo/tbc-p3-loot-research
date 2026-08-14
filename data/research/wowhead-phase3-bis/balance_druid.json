@@ -1,0 +1,25 @@
+{
+ "spec": "balance_druid",
+ "slots": {
+  "head": {
+   "item": "Thunderheart Headguard",
+   "id": "31040"
+  },
+  "shoulder": {
+   "item": "Thunderheart Shoulderpads",
+   "id": "31049"
+  },
+  "chest": {
+   "item": "Thunderheart Vest",
+   "id": "31043"
+  },
+  "hand": {
+   "item": "Thunderheart Handguards",
+   "id": "31035"
+  },
+  "leg": {
+   "item": "Leggings of Channeled Elements",
+   "id": "30916"
+  }
+ }
+}

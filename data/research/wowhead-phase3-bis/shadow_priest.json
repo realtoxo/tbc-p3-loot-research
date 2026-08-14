@@ -1,0 +1,25 @@
+{
+ "spec": "shadow_priest",
+ "slots": {
+  "head": {
+   "item": "Hood of Absolution",
+   "id": "31064"
+  },
+  "shoulder": {
+   "item": "Shoulderpads of Absolution",
+   "id": "31070"
+  },
+  "chest": {
+   "item": "Shroud of Absolution",
+   "id": "31065"
+  },
+  "hand": {
+   "item": "Handguards of Absolution",
+   "id": "31061"
+  },
+  "leg": {
+   "item": "Leggings of Channeled Elements",
+   "id": "30916"
+  }
+ }
+}

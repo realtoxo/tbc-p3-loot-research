@@ -1,0 +1,25 @@
+{
+ "spec": "protection_warrior",
+ "slots": {
+  "head": {
+   "item": "Vengeful Gladiator's Plate Helm",
+   "id": "33730"
+  },
+  "shoulder": {
+   "item": "Onslaught Shoulderblades",
+   "id": "30979"
+  },
+  "chest": {
+   "item": "Vengeful Gladiator's Plate Chestpiece",
+   "id": "33728"
+  },
+  "hand": {
+   "item": "Gauntlets of Enforcement",
+   "id": "32280"
+  },
+  "leg": {
+   "item": "Vengeful Gladiator's Plate Legguards",
+   "id": "33731"
+  }
+ }
+}
