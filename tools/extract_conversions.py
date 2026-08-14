@@ -45,6 +45,7 @@ import yaml
 
 ATTACK_POWER = Path("data/facts/attack-power.yaml")
 CRIT = Path("data/facts/crit.yaml")
+TALENT_CONVERSIONS = Path("data/facts/talent-conversions.yaml")
 HIT = Path("data/facts/hit.yaml")
 
 # Spec identity. class, and druid form where the class has one. Not a rate.
@@ -246,7 +247,8 @@ TANK_EXCLUDED_UNITS = (
 )
 
 
-def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit: dict) -> dict:
+def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict,
+              hit: dict, talents: dict | None = None) -> dict:
     """Every conversion one spec has, keyed by the item stat it consumes."""
     rules: dict[str, list[dict]] = {}
 
@@ -356,14 +358,63 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict, hit
         rules.setdefault(stat, []).append(identity)
 
     if spec in CASTER_SPECS:
+        # A TALENT CAN RAISE THE STAT BEFORE ANYTHING CONVERTS IT. Divine
+        # Intellect and Arcane Mind increase TOTAL intellect, and every
+        # conversion below reads total intellect, so an item's intellect is
+        # multiplied first and converted second. The factors are composed here
+        # rather than left to the reader, and the composition is written into
+        # the rate text so a card shows its working.
+        multiplier, multiplier_by = 1.0, None
+        for name, block in (talents or {}).get("talents", {}).items():
+            if block["kind"] != "multiplier" or block["converts"] != "intellect":
+                continue
+            entry = (block.get("points_taken") or {}).get(spec)
+            points = (entry or {}).get("points")
+            if not points:
+                continue
+            percent = next(r["percent"] for r in block["ranks"]
+                           if r["rank"] == points)
+            multiplier *= 1 + percent / 100
+            multiplier_by = f"{name} {points} of {block['max_rank']}"
+
         keys = ["conversions", "intellect_per_percent_spell_crit_level_70",
                 klass]
-        per_percent = rate(crit, CRIT, keys, spec)
+        per_percent = rate(crit, CRIT, keys, spec) / multiplier
+        note = (f"{number(round(per_percent, 2))} intellect per 1 percent "
+                f"spell crit for a {klass}")
+        if multiplier_by:
+            note += f", after {multiplier_by} raises total intellect"
         rules.setdefault("intellect", []).append(divide(
-            "intellect", "spell crit", per_percent,
-            f"{number(per_percent)} intellect per 1 percent spell crit for a "
-            f"{klass}",
+            "intellect", "spell crit", round(per_percent, 4), note,
             cite(CRIT, keys)))
+
+        # INTELLECT AND SPIRIT INTO SPELL POWER, which is the larger half of
+        # what a caster's intellect is worth and which nothing converted until
+        # 13 August 2026. A spec whose build takes NO points in the talent gets
+        # no rule at all: a Restoration Druid on Tree of Life and a Shadow
+        # Priest both hold the talent in their tree and buy none of it.
+        for name, block in (talents or {}).get("talents", {}).items():
+            if block["kind"] != "conversion":
+                continue
+            entry = (block.get("points_taken") or {}).get(spec)
+            points = (entry or {}).get("points")
+            if not points:
+                continue
+            percent = next(r["percent"] for r in block["ranks"]
+                           if r["rank"] == points)
+            stat = block["converts"]
+            factor = percent / 100 * (multiplier if stat == "intellect" else 1)
+            rate_text = (f"{name} {points} of {block['max_rank']} grants "
+                         f"{percent} percent of {stat}")
+            if multiplier_by and stat == "intellect":
+                rate_text += f", on intellect already raised by {multiplier_by}"
+            for label in ("spell damage", "healing power"):
+                if label == "healing power" and "healing" not in block["grants"]:
+                    continue
+                rules.setdefault(stat, []).append(multiply(
+                    stat, label, round(factor, 4), rate_text,
+                    "data/facts/talent-conversions.yaml :: talents."
+                    + name.replace(" ", "_")))
 
     if spec in TANK_SPECS:
         # THE OFFENSE RULES STAY, AND LEAVE THE NET. They stay because
@@ -532,8 +583,9 @@ def main() -> int:
     args = parser.parse_args()
 
     ap, crit, hit = load(ATTACK_POWER), load(CRIT), load(HIT)
+    talents = load(TALENT_CONVERSIONS) if TALENT_CONVERSIONS.is_file() else None
     specs = {
-        name: rules_for(name, klass, form, ap, crit, hit)
+        name: rules_for(name, klass, form, ap, crit, hit, talents)
         for name, (klass, form) in SPECS.items()
     }
     args.out.write_text(render(specs, crit, hit))

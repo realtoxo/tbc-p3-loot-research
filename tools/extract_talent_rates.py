@@ -140,8 +140,15 @@ def main() -> int:
                     default=Path("data/facts/talent-conversions.yaml"))
     args = ap.parse_args()
 
-    strings = (yaml.safe_load(TALENTS.read_text())
-               ["wowsims_talent_strings"]["strings"])
+    talents_doc = yaml.safe_load(TALENTS.read_text())
+    strings = talents_doc["wowsims_talent_strings"]["strings"]
+    # WHICH BUILD A SPEC RUNS WHERE THE PUBLISHED ONES DISAGREE. Only the guild
+    # lead can settle that: it is a fact about a player. Recorded in
+    # talents.yaml::roster_builds and read here so this file states one rank
+    # rather than two.
+    roster = talents_doc.get("roster_builds") or {}
+    chosen = {"Restoration Druid": (roster.get("restoration_druid") or {})
+              .get("runs")}
 
     # THE FOUR HEALERS COME FROM A PUBLISHED GUIDE, because wowsims has no
     # usable build for any of them. The capture records which build each string
@@ -230,18 +237,32 @@ def main() -> int:
                 taken[spec] = found[0] if len(found) == 1 else next(
                     f for f in found if f["primary"])
             else:
-                # THE BUILDS DISAGREE AND THE DISAGREEMENT IS THE ANSWER. A
-                # Restoration Druid running Tree of Life takes no Lunar
-                # Guidance at all and one running Dreamstate takes all three
-                # points. Collapsing that to the primary build would state a
-                # rate for a druid who may convert nothing.
-                taken[spec] = {"points": None, "of": block["max_rank"],
-                               "source": "the published builds disagree",
-                               "builds": found}
-                unresolved.append(
-                    f"{spec} / {name} (builds disagree: "
-                    + ", ".join(f"{f['build'].split(' Restoration')[0]} "
-                                f"{f['points']}" for f in found) + ")")
+                # THE BUILDS DISAGREE, so the guild lead's answer decides. A
+                # Restoration Druid running Tree of Life takes no Lunar Guidance
+                # at all and one running Dreamstate takes all three points.
+                # Picking the guide's primary build instead would state a rate
+                # for a druid who converts nothing.
+                runs = chosen.get(spec)
+                picked = next((f for f in found
+                               if runs and f["build"].startswith(runs)), None)
+                if picked is None:
+                    taken[spec] = {"points": None, "of": block["max_rank"],
+                                   "source": "the published builds disagree",
+                                   "builds": found}
+                    unresolved.append(
+                        f"{spec} / {name} (builds disagree: "
+                        + ", ".join(f"{f['build'].split(' Restoration')[0]} "
+                                    f"{f['points']}" for f in found) + ")")
+                else:
+                    picked = dict(picked)
+                    picked["source"] = (
+                        f"the guild lead states this spec runs {runs}; the "
+                        "published builds disagree and the others are listed")
+                    picked["not_chosen"] = [
+                        {"build": f["build"], "points": f["points"]}
+                        for f in found if f is not picked
+                        and f["build"] != picked["build"]]
+                    taken[spec] = picked
         block["points_taken"] = taken
 
     doc = {

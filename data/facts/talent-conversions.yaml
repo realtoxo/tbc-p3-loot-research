@@ -6,9 +6,7 @@ meta:
   ranks_from: 'data/facts/talents.yaml :: wowsims_talent_strings, decoded against the
     vendored talent trees and checked against the point spread already recorded for each
     spec'
-  no_build_recorded:
-  - 'Restoration Druid / Living Spirit (builds disagree: Tree of Life 3, Dreamstate 0)'
-  - 'Restoration Druid / Lunar Guidance (builds disagree: Tree of Life 0, Dreamstate 3)'
+  no_build_recorded: []
   why_some_are_null: 'wowsims ships healer simulations but no talent string any of them
     can use, checked 13 August 2026: the Holy Paladin preset carries an empty string,
     the Priest has no healer preset at all, and both the Restoration Druid and Restoration
@@ -130,22 +128,16 @@ talents:
     max_rank: 3
     points_taken:
       Restoration Druid:
-        points: null
+        points: 3
         of: 3
-        source: the published builds disagree
-        builds:
-        - points: 3
-          of: 3
-          build: Tree of Life Restoration Druid Healing Talent Build in TBC Classic
-          primary: true
-          source: published guide, not this roster's own build
-          url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
-        - points: 0
-          of: 3
-          build: Dreamstate Restoration Druid Healing Talent Build in TBC Classic
-          primary: false
-          source: published guide, not this roster's own build
-          url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
+        build: Tree of Life Restoration Druid Healing Talent Build in TBC Classic
+        primary: true
+        source: the guild lead states this spec runs Tree of Life; the published builds
+          disagree and the others are listed
+        url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
+        not_chosen:
+        - build: Dreamstate Restoration Druid Healing Talent Build in TBC Classic
+          points: 0
   Lunar Guidance:
     class: druid
     tree: Balance
@@ -171,22 +163,16 @@ talents:
         build: Standard
         source: wowsims preset for this spec
       Restoration Druid:
-        points: null
+        points: 0
         of: 3
-        source: the published builds disagree
-        builds:
-        - points: 0
-          of: 3
-          build: Tree of Life Restoration Druid Healing Talent Build in TBC Classic
-          primary: true
-          source: published guide, not this roster's own build
-          url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
-        - points: 3
-          of: 3
-          build: Dreamstate Restoration Druid Healing Talent Build in TBC Classic
-          primary: false
-          source: published guide, not this roster's own build
-          url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
+        build: Tree of Life Restoration Druid Healing Talent Build in TBC Classic
+        primary: true
+        source: the guild lead states this spec runs Tree of Life; the published builds
+          disagree and the others are listed
+        url: https://www.wowhead.com/tbc/guide/classes/druid/healer-talent-builds-pve
+        not_chosen:
+        - build: Dreamstate Restoration Druid Healing Talent Build in TBC Classic
+          points: 3
   Mind Mastery:
     class: mage
     tree: Arcane
