@@ -307,7 +307,22 @@ local function card(header, list, id, item)
     elseif not text:match("^%s*[Pp]riority%s+%d%s*$") then
       table.insert(classes, "spec-priority-none")
     end
-    head:insert(pandoc.Plain(pandoc.Span(pandoc.Str(text), pandoc.Attr("", classes))))
+    -- THE WORD "PRIORITY" IS SAID, NOT IMPLIED. The badge carried the value
+    -- alone, so a card read "not yet decided" or "no priority" with nothing
+    -- naming what was undecided, and a reader had to already know that the
+    -- badge in that position is the priority. Reported by the guild lead on
+    -- 13 August 2026: "we just see the priority value and it's very confusing".
+    --
+    -- THE VALUE IS NORMALIZED so the label is not said twice. A judgment reads
+    -- "Priority 2" and the badge shows "2"; an absent one shows "not yet
+    -- decided"; a deliberate refusal reads "no priority" and shows "none",
+    -- because "Priority: no priority" is not a sentence anyone wants to read.
+    local value = text:gsub("^%s*[Pp]riority%s+", "")
+    if value:match("^%s*[Nn]o priority%s*$") then value = "none" end
+    head:insert(pandoc.Plain(pandoc.Span({
+      pandoc.Span(pandoc.Str("Priority"), pandoc.Attr("", { "spec-priority-label" })),
+      pandoc.Span(pandoc.Str(value), pandoc.Attr("", classes)),
+    }, pandoc.Attr("", { "spec-priority-pair" }))))
   end
   blocks:insert(pandoc.Div(head, pandoc.Attr("", { "spec-head" })))
 
