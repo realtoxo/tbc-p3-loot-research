@@ -1,425 +1,248 @@
+# Balance Druid hit capture. Collected 9 August 2026.
+#
+# Cap: spell, raw 202 rating (16%). Weapon is a two-hand staff (The Nexus Key)
+# at Entry, dropped for a one-hand main hand plus off-hand at Tier (Maelstrom's
+# Fury plus Chronicle of Dark Secrets), so main_hand and off_hand are reported
+# as separate keys instead of a single weapon key. No wand, no ranged slot.
+# Improved Faerie Fire is melee and ranged hit only in 2.4.3 and grants this
+# spec no spell hit, so it is not credited anywhere below.
+#
+# Every hit value below was cross-checked against this repository's own
+# data/facts/items.csv, which is generated from the nether.wowhead.com 2.4.3
+# tooltip endpoint per data/facts/PROVENANCE.md. The two guide sources below
+# supplied item choice and boss source; they did not supply the numbers.
+
 spec: balance_druid
 collected_on: 2026-08-09
+
 sources:
   entry:
     url: https://boosting-ground.com/wow-classic/guides/the-burning-crusade-guides/balance-druid-bis-gear-guide
-    title: TBC Classic Balance Druid BiS Gear Guide - All Phases (Phase 2 section)
+    title: "TBC Classic Balance Druid BiS Gear Guide - All Phases (Phase 2 section)"
     observed: 2026-08-09
   tier:
     url: https://boosting-ground.com/wow-classic/guides/the-burning-crusade-guides/balance-druid-bis-gear-guide
-    title: TBC Classic Balance Druid BiS Gear Guide - All Phases (Phase 3 section)
+    title: "TBC Classic Balance Druid BiS Gear Guide - All Phases (Phase 3 section)"
     observed: 2026-08-09
-    note: 'Publishes a FULL-CLEAR Phase 3 list. The tier anchor below downgrades it to the
-      four-to-six-week window: any slot whose full-clear pick comes from Illidan, the Illidari
-      Council or Mother Shahraz (late Black Temple) is replaced with the guide''s own next-named
-      alternative if that alternative is itself reachable (early Hyjal, early Black Temple
-      bosses one through six, Black Temple trash, crafted, badge vendor or quest reward);
-      if no reachable alternative is named, the Entry-anchor item is kept. See notes.downgraded_slots
-      for every slot that changed and why. The Ring 2 pick follows the guide''s "without Totem
-      of Wrath" branch, matching data/facts/hit.yaml, which credits balance_druid no Totem
-      of Wrath (group_buff_percent: 0).'
+    note: >-
+      Publishes a FULL-CLEAR Phase 3 list. The tier anchor below downgrades it
+      to the four-to-six-week window: any slot whose full-clear pick comes from
+      Illidan, the Illidari Council or Mother Shahraz (late Black Temple) is
+      replaced with the guide's own next-named alternative if that alternative
+      is itself reachable (early Hyjal, early Black Temple bosses one through
+      six, Black Temple trash, crafted, badge vendor or quest reward); if no
+      reachable alternative is named, the Entry-anchor item is kept. See
+      notes.downgraded_slots for every slot that changed and why. The Ring 2
+      pick follows the guide's "without Totem of Wrath" branch, matching
+      data/facts/hit.yaml, which credits balance_druid no Totem of Wrath
+      (group_buff_percent: 0).
+
 anchors:
+
   entry:
-    tier_pieces_held:
-    - head
-    - shoulder
-    - chest
-    - hands
+    tier_pieces_held: [head, shoulder, chest, hands]
     set_bonuses_held:
-    - 'Nordrassil Regalia 2-piece: When you shift out of Moonkin Form, your next Regrowth
-      spell costs 450 less mana.'
-    - 'Nordrassil Regalia 4-piece: Increases your Starfire damage against targets afflicted
-      with Moonfire or Insect Swarm by 10%.'
+      - "Nordrassil Regalia 2-piece: When you shift out of Moonkin Form, your next Regrowth spell costs 450 less mana."
+      - "Nordrassil Regalia 4-piece: Increases your Starfire damage against targets afflicted with Moonfire or Insect Swarm by 10%."
     hit_by_slot:
-      head:
-        item: Nordrassil Headpiece
-        id: 30233
-        hit: 10
-      neck:
-        item: The Sun King's Talisman
-        id: 30015
-        hit: 0
-      shoulder:
-        item: Nordrassil Wrath-Mantle
-        id: 30235
-        hit: 15
-      back:
-        item: Brute Cloak of the Ogre-Magi
-        id: 28797
-        hit: 0
-      chest:
-        item: Nordrassil Chestpiece
-        id: 30231
-        hit: 19
-      wrist:
-        item: Mindstorm Wristbands
-        id: 29918
-        hit: 0
-      hands:
-        item: Nordrassil Gauntlets
-        id: 30232
-        hit: 0
-      waist:
-        item: Belt of Blasting
-        id: 30038
-        hit: 23
-      legs:
-        item: Spellstrike Pants
-        id: 24262
-        hit: 22
-      feet:
-        item: Boots of Blasting
-        id: 30037
-        hit: 18
-      ring_1:
-        item: Ring of Recurrence
-        id: 28753
-        hit: 0
-      ring_2:
-        item: Ring of Unrelenting Storms
-        id: 30667
-        hit: 0
-      trinket_1:
-        item: Icon of the Silver Crescent
-        id: 29370
-        hit: 0
-      trinket_2:
-        item: Quagmirran's Eye
-        id: 27683
-        hit: 0
-      main_hand:
-        item: The Nexus Key
-        id: 29988
-        hit: 0
-        note: Two-hand staff. No off-hand slot in use.
-      off_hand:
-        item: none, two-hand weapon equipped
-        id: null
-        hit: 0
-      relic:
-        item: Idol of the Raven Goddess
-        id: 32387
-        hit: 0
-        note: No stat line; not in data/facts/items.csv, which excludes relics with no stats.
-          Confirmed no hit by name and slot only.
+      head:     {item: "Nordrassil Headpiece", id: 30233, hit: 10}
+      neck:     {item: "The Sun King's Talisman", id: 30015, hit: 0}
+      shoulder: {item: "Nordrassil Wrath-Mantle", id: 30235, hit: 15}
+      back:     {item: "Brute Cloak of the Ogre-Magi", id: 28797, hit: 0}
+      chest:    {item: "Nordrassil Chestpiece", id: 30231, hit: 19}
+      wrist:    {item: "Mindstorm Wristbands", id: 29918, hit: 0}
+      hands:    {item: "Nordrassil Gauntlets", id: 30232, hit: 0}
+      waist:    {item: "Belt of Blasting", id: 30038, hit: 23}
+      legs:     {item: "Spellstrike Pants", id: 24262, hit: 22}
+      feet:     {item: "Boots of Blasting", id: 30037, hit: 18}
+      ring_1:   {item: "Ring of Recurrence", id: 28753, hit: 0}
+      ring_2:   {item: "Ring of Unrelenting Storms", id: 30667, hit: 0}
+      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
+      trinket_2: {item: "Quagmirran's Eye", id: 27683, hit: 0}
+      main_hand:   {item: "The Nexus Key", id: 29988, hit: 0, note: "Two-hand staff. No off-hand slot in use."}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+      relic:    {item: "Idol of the Raven Goddess", id: 32387, hit: 0, note: "No stat line; not in data/facts/items.csv, which excludes relics with no stats. Confirmed no hit by name and slot only."}
     total_item_hit: 107
-  tier_hands_and_head:
-    tier6_pieces_held:
-    - chest
-    - hands
-    - head
-    - shoulder
-    tier5_pieces_held: []
+
+  tier_hands_only:
+    tier6_pieces_held: [hands]
+    tier5_pieces_held: [head, chest]
+    set_bonuses_held:
+      - "Nordrassil Regalia 2-piece: When you shift out of Moonkin Form, your next Regrowth spell costs 450 less mana."
     hit_by_slot:
-      head:
-        item: Thunderheart Headguard
-        id: 31040
-        hit: 13
-      neck:
-        item: The Sun King's Talisman
-        id: 30015
-        hit: 0
-      shoulder:
-        item: Thunderheart Shoulderpads
-        id: 31049
-        hit: 14
-      back:
-        item: Brute Cloak of the Ogre-Magi
-        id: 28797
-        hit: 0
-      chest:
-        item: Thunderheart Vest
-        id: 31043
-        hit: 17
-      wrist:
-        item: Mindstorm Wristbands
-        id: 29918
-        hit: 0
-      hands:
-        item: Thunderheart Handguards
-        id: 31035
-        hit: 12
-      waist:
-        item: Belt of Blasting
-        id: 30038
-        hit: 23
-      legs:
-        item: Spellstrike Pants
-        id: 24262
-        hit: 22
-      feet:
-        item: Boots of Blasting
-        id: 30037
-        hit: 18
-      ring_1:
-        item: Ring of Recurrence
-        id: 28753
-        hit: 0
-      ring_2:
-        item: Ring of Unrelenting Storms
-        id: 30667
-        hit: 0
-      trinket_1:
-        item: Icon of the Silver Crescent
-        id: 29370
-        hit: 0
-      trinket_2:
-        item: Quagmirran's Eye
-        id: 27683
-        hit: 0
-      main_hand:
-        item: The Nexus Key
-        id: 29988
-        hit: 0
-        note: Two-hand staff. No off-hand slot in use.
-      off_hand:
-        item: none, two-hand weapon equipped
-        id: null
-        hit: 0
-      relic:
-        item: Idol of the Raven Goddess
-        id: 32387
-        hit: 0
-        note: No stat line; not in data/facts/items.csv, which excludes relics with no stats.
-          Confirmed no hit by name and slot only.
-    total_item_hit: 119
-    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
-      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
-      2026-08-13'
-    set_pieces_held:
-      Thunderheart Regalia: 4
-    set_pieces_held_note: 'The prose bonus descriptions recorded here before 13 August 2026
-      described the OLD tier set and seven of them no longer held once the set was rebuilt
-      from the Phase 3 best-in-slot list. They are not rewritten, because this project does
-      not have the bonus text for the sets that replaced them and inventing it would be worse
-      than counting. What is recorded instead is what can be checked: how many pieces of each
-      set the anchor wears. Two is a 2-piece bonus and four is a 4-piece; the text of each
-      is on the item.'
+      head:     {item: "Nordrassil Headpiece", id: 30233, hit: 10, note: "Kept. Thunderheart Headguard needs Archimonde, not yet dead in this state."}
+      neck:     {item: "The Sun King's Talisman", id: 30015, hit: 0}
+      shoulder: {item: "Hatefury Mantle", id: 30884, hit: 0, note: "From Anetheron, Mount Hyjal. Replaces Thunderheart Shoulderpads (Mother Shahraz, unreachable)."}
+      back:     {item: "Brute Cloak of the Ogre-Magi", id: 28797, hit: 0, note: "Kept. No reachable alternative to the full-clear pick (Illidari Council) is named."}
+      chest:    {item: "Nordrassil Chestpiece", id: 30231, hit: 19, note: "Kept. Robes of Rhonin needs Archimonde, not yet dead in this state."}
+      wrist:    {item: "Bracers of Nimble Thought", id: 32586, hit: 0, note: "Crafted, always reachable."}
+      hands:    {item: "Thunderheart Handguards", id: 31035, hit: 12, note: "Azgalor token."}
+      waist:    {item: "Anetheron's Noose", id: 30888, hit: 0, note: "From Anetheron, Mount Hyjal."}
+      legs:     {item: "Leggings of Channeled Elements", id: 30916, hit: 18, note: "From Kaz'rogal, Mount Hyjal, killed before Azgalor."}
+      feet:     {item: "Slippers of the Seacaller", id: 32239, hit: 0, note: "From High Warlord Naj'entus, first Black Temple boss."}
+      ring_1:   {item: "Ring of Ancient Knowledge", id: 32527, hit: 0, note: "Black Temple trash drop, not boss-gated."}
+      ring_2:   {item: "Ring of Captured Storms", id: 32247, hit: 19, note: "From High Warlord Naj'entus. Picked over Ring of Ancient Knowledge x2 because this spec is not credited Totem of Wrath in data/facts/hit.yaml."}
+      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0, note: "Kept. The Skull of Gul'dan needs Illidan, unreachable."}
+      trinket_2: {item: "Quagmirran's Eye", id: 27683, hit: 0, note: "Kept. See notes.uncertain on Ashtongue Talisman of Equilibrium."}
+      main_hand: {item: "The Maelstrom's Fury", id: 32237, hit: 0, note: "From High Warlord Naj'entus. Replaces the two-hand Nexus Key."}
+      off_hand:  {item: "Chronicle of Dark Secrets", id: 30872, hit: 17, note: "From Rage Winterchill, Mount Hyjal, first boss."}
+      relic:    {item: "Idol of the Raven Goddess", id: 32387, hit: 0}
+    total_item_hit: 95
+
+  tier_hands_and_head:
+    tier6_pieces_held: [hands, head]
+    tier5_pieces_held: []
+    set_bonuses_held:
+      - "Thunderheart Regalia 2-piece: Increases the duration of your Moonfire ability by 3 sec."
+    hit_by_slot:
+      head:     {item: "Thunderheart Headguard", id: 31040, hit: 13, note: "Archimonde token."}
+      neck:     {item: "The Sun King's Talisman", id: 30015, hit: 0}
+      shoulder: {item: "Hatefury Mantle", id: 30884, hit: 0}
+      back:     {item: "Brute Cloak of the Ogre-Magi", id: 28797, hit: 0}
+      chest:    {item: "Robes of Rhonin", id: 30913, hit: 27, note: "From Archimonde, now reachable. Replaces Nordrassil Chestpiece."}
+      wrist:    {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
+      hands:    {item: "Thunderheart Handguards", id: 31035, hit: 12, note: "Azgalor token."}
+      waist:    {item: "Anetheron's Noose", id: 30888, hit: 0}
+      legs:     {item: "Leggings of Channeled Elements", id: 30916, hit: 18}
+      feet:     {item: "Slippers of the Seacaller", id: 32239, hit: 0}
+      ring_1:   {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
+      ring_2:   {item: "Ring of Captured Storms", id: 32247, hit: 19}
+      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
+      trinket_2: {item: "Quagmirran's Eye", id: 27683, hit: 0}
+      main_hand: {item: "The Maelstrom's Fury", id: 32237, hit: 0}
+      off_hand:  {item: "Chronicle of Dark Secrets", id: 30872, hit: 17}
+      relic:    {item: "Idol of the Raven Goddess", id: 32387, hit: 0}
+    total_item_hit: 106
+
+  # ALTERNATIVE CONFIGURATION at the same progression state as
+  # tier_hands_only. The anchors name which bosses are down, not which tokens
+  # are worn (data/facts/progression.yaml,
+  # the_two_tier_anchors_name_progression_not_gear), and for this spec the
+  # arithmetic does not settle whether a reachable token should be worn. See
+  # notes.two_configurations for the term that would decide it.
   tier_hands_only_alternative_hold_tier5_four_piece:
     tier6_pieces_held: []
-    tier5_pieces_held:
-    - head
-    - shoulder
-    - chest
-    - hands
+    tier5_pieces_held: [head, shoulder, chest, hands]
     set_bonuses_held:
-    - 'Nordrassil Regalia 2-piece: When you shift out of Moonkin Form, your next Regrowth
-      spell costs 450 less mana.'
-    - 'Nordrassil Regalia 4-piece: Increases your Starfire damage against targets afflicted
-      with Moonfire or Insect Swarm by 10%.'
+      - "Nordrassil Regalia 2-piece: When you shift out of Moonkin Form, your next Regrowth spell costs 450 less mana."
+      - "Nordrassil Regalia 4-piece: Increases your Starfire damage against targets afflicted with Moonfire or Insect Swarm by 10%."
     hit_by_slot:
-      head:
-        item: Nordrassil Headpiece
-        id: 30233
-        hit: 10
-      neck:
-        item: The Sun King's Talisman
-        id: 30015
-        hit: 0
-      shoulder:
-        item: Nordrassil Wrath-Mantle
-        id: 30235
-        hit: 15
-        note: Kept over Hatefury Mantle (100.24 against 98.70 on the Owl tab, minus 1.54)
-          because the shoulder is one of the four slots the Tier 5 four-piece needs.
-      back:
-        item: Brute Cloak of the Ogre-Magi
-        id: 28797
-        hit: 0
-      chest:
-        item: Nordrassil Chestpiece
-        id: 30231
-        hit: 19
-      wrist:
-        item: Bracers of Nimble Thought
-        id: 32586
-        hit: 0
-      hands:
-        item: Nordrassil Gauntlets
-        id: 30232
-        hit: 0
-        note: Kept. The Azgalor hands token (Thunderheart Handguards, plus 30.40 EPV) is refused
-          to hold the four-piece.
-      waist:
-        item: Anetheron's Noose
-        id: 30888
-        hit: 0
-      legs:
-        item: Leggings of Channeled Elements
-        id: 30916
-        hit: 18
-      feet:
-        item: Slippers of the Seacaller
-        id: 32239
-        hit: 0
-      ring_1:
-        item: Ring of Ancient Knowledge
-        id: 32527
-        hit: 0
-      ring_2:
-        item: Ring of Captured Storms
-        id: 32247
-        hit: 19
-      trinket_1:
-        item: Icon of the Silver Crescent
-        id: 29370
-        hit: 0
-      trinket_2:
-        item: Quagmirran's Eye
-        id: 27683
-        hit: 0
-      main_hand:
-        item: The Maelstrom's Fury
-        id: 32237
-        hit: 0
-      off_hand:
-        item: Chronicle of Dark Secrets
-        id: 30872
-        hit: 17
-      relic:
-        item: Idol of the Raven Goddess
-        id: 32387
-        hit: 0
+      head:     {item: "Nordrassil Headpiece", id: 30233, hit: 10}
+      neck:     {item: "The Sun King's Talisman", id: 30015, hit: 0}
+      shoulder: {item: "Nordrassil Wrath-Mantle", id: 30235, hit: 15, note: "Kept over Hatefury Mantle (100.24 against 98.70 on the Owl tab, minus 1.54) because the shoulder is one of the four slots the Tier 5 four-piece needs."}
+      back:     {item: "Brute Cloak of the Ogre-Magi", id: 28797, hit: 0}
+      chest:    {item: "Nordrassil Chestpiece", id: 30231, hit: 19}
+      wrist:    {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
+      hands:    {item: "Nordrassil Gauntlets", id: 30232, hit: 0, note: "Kept. The Azgalor hands token (Thunderheart Handguards, plus 30.40 EPV) is refused to hold the four-piece."}
+      waist:    {item: "Anetheron's Noose", id: 30888, hit: 0}
+      legs:     {item: "Leggings of Channeled Elements", id: 30916, hit: 18}
+      feet:     {item: "Slippers of the Seacaller", id: 32239, hit: 0}
+      ring_1:   {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
+      ring_2:   {item: "Ring of Captured Storms", id: 32247, hit: 19}
+      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
+      trinket_2: {item: "Quagmirran's Eye", id: 27683, hit: 0}
+      main_hand: {item: "The Maelstrom's Fury", id: 32237, hit: 0}
+      off_hand:  {item: "Chronicle of Dark Secrets", id: 30872, hit: 17}
+      relic:    {item: "Idol of the Raven Goddess", id: 32387, hit: 0}
     total_item_hit: 98
+
+  # ALTERNATIVE CONFIGURATION at the same progression state as
+  # tier_hands_and_head. Gear-identical to the hands_only alternative: holding
+  # the four-piece pins head, shoulder, chest and hands to Nordrassil, so
+  # Archimonde falling adds nothing to this configuration (Robes of Rhonin
+  # and the head token would each take a four-piece slot).
   tier_hands_and_head_alternative_hold_tier5_four_piece:
     tier6_pieces_held: []
-    tier5_pieces_held:
-    - head
-    - shoulder
-    - chest
-    - hands
+    tier5_pieces_held: [head, shoulder, chest, hands]
     set_bonuses_held:
-    - 'Nordrassil Regalia 2-piece: When you shift out of Moonkin Form, your next Regrowth
-      spell costs 450 less mana.'
-    - 'Nordrassil Regalia 4-piece: Increases your Starfire damage against targets afflicted
-      with Moonfire or Insect Swarm by 10%.'
+      - "Nordrassil Regalia 2-piece: When you shift out of Moonkin Form, your next Regrowth spell costs 450 less mana."
+      - "Nordrassil Regalia 4-piece: Increases your Starfire damage against targets afflicted with Moonfire or Insect Swarm by 10%."
     hit_by_slot:
-      head:
-        item: Nordrassil Headpiece
-        id: 30233
-        hit: 10
-        note: Kept. The Archimonde head token (Thunderheart Headguard, plus 16.88 EPV) is
-          refused to hold the four-piece.
-      neck:
-        item: The Sun King's Talisman
-        id: 30015
-        hit: 0
-      shoulder:
-        item: Nordrassil Wrath-Mantle
-        id: 30235
-        hit: 15
-        note: Kept over Hatefury Mantle (minus 1.54); the slot is needed by the four-piece.
-      back:
-        item: Brute Cloak of the Ogre-Magi
-        id: 28797
-        hit: 0
-      chest:
-        item: Nordrassil Chestpiece
-        id: 30231
-        hit: 19
-        note: Kept. Robes of Rhonin is reachable at this state but the chest is a four-piece
-          slot.
-      wrist:
-        item: Bracers of Nimble Thought
-        id: 32586
-        hit: 0
-      hands:
-        item: Nordrassil Gauntlets
-        id: 30232
-        hit: 0
-        note: Kept. The Azgalor hands token (plus 30.40 EPV) is refused to hold the four-piece.
-      waist:
-        item: Anetheron's Noose
-        id: 30888
-        hit: 0
-      legs:
-        item: Leggings of Channeled Elements
-        id: 30916
-        hit: 18
-      feet:
-        item: Slippers of the Seacaller
-        id: 32239
-        hit: 0
-      ring_1:
-        item: Ring of Ancient Knowledge
-        id: 32527
-        hit: 0
-      ring_2:
-        item: Ring of Captured Storms
-        id: 32247
-        hit: 19
-      trinket_1:
-        item: Icon of the Silver Crescent
-        id: 29370
-        hit: 0
-      trinket_2:
-        item: Quagmirran's Eye
-        id: 27683
-        hit: 0
-      main_hand:
-        item: The Maelstrom's Fury
-        id: 32237
-        hit: 0
-      off_hand:
-        item: Chronicle of Dark Secrets
-        id: 30872
-        hit: 17
-      relic:
-        item: Idol of the Raven Goddess
-        id: 32387
-        hit: 0
+      head:     {item: "Nordrassil Headpiece", id: 30233, hit: 10, note: "Kept. The Archimonde head token (Thunderheart Headguard, plus 16.88 EPV) is refused to hold the four-piece."}
+      neck:     {item: "The Sun King's Talisman", id: 30015, hit: 0}
+      shoulder: {item: "Nordrassil Wrath-Mantle", id: 30235, hit: 15, note: "Kept over Hatefury Mantle (minus 1.54); the slot is needed by the four-piece."}
+      back:     {item: "Brute Cloak of the Ogre-Magi", id: 28797, hit: 0}
+      chest:    {item: "Nordrassil Chestpiece", id: 30231, hit: 19, note: "Kept. Robes of Rhonin is reachable at this state but the chest is a four-piece slot."}
+      wrist:    {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
+      hands:    {item: "Nordrassil Gauntlets", id: 30232, hit: 0, note: "Kept. The Azgalor hands token (plus 30.40 EPV) is refused to hold the four-piece."}
+      waist:    {item: "Anetheron's Noose", id: 30888, hit: 0}
+      legs:     {item: "Leggings of Channeled Elements", id: 30916, hit: 18}
+      feet:     {item: "Slippers of the Seacaller", id: 32239, hit: 0}
+      ring_1:   {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
+      ring_2:   {item: "Ring of Captured Storms", id: 32247, hit: 19}
+      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
+      trinket_2: {item: "Quagmirran's Eye", id: 27683, hit: 0}
+      main_hand: {item: "The Maelstrom's Fury", id: 32237, hit: 0}
+      off_hand:  {item: "Chronicle of Dark Secrets", id: 30872, hit: 17}
+      relic:    {item: "Idol of the Raven Goddess", id: 32387, hit: 0}
     total_item_hit: 98
+
 notes:
-  two_configurations: 'REBUILT 9 August 2026. This capture records TWO configurations at each
-    tier state instead of one, because for this spec the arithmetic does not settle whether
-    a reachable token should be worn. data/facts/sim-profiles/token-arithmetic.yaml records
-    that both tokens are raw EPV gains on the Owl tab (Thunderheart Headguard 162.88 against
-    Nordrassil Headpiece 146.00, plus 16.88; Thunderheart Handguards 103.88 against Nordrassil
-    Gauntlets 73.48, plus 30.40), and that EITHER token breaks the Nordrassil four-piece,
-    whose slots (head, shoulder, chest, hands) are exactly the four this capture''s entry
-    set holds. The collision is the BONUS, not the items. NO SOURCE PRICES A SET BONUS: the
-    workbook excludes set bonuses from every item value, and no simulation has been run here.
-    What would decide between the configurations is a price for "Nordrassil 4-piece: +10%
-    Starfire damage against targets afflicted with Moonfire or Insect Swarm" against "Thunderheart
-    2-piece: +3 seconds of Moonfire duration" plus the raw EPV the token configuration gains.
-    Until one exists, both configurations are recorded with their totals, and neither is a
-    recommendation. ITEM HIT TOTALS AT EACH STATE: tier_hands_only 95 wearing the hands token
-    against 98 holding the four-piece; tier_hands_and_head 106 wearing both tokens against
-    98 holding the four-piece. The four-piece configuration is gear-identical at both states,
-    because the four pinned Nordrassil slots are the only slots Archimonde''s fall would have
-    changed. The token-wearing blocks keep the names the checkers expect (tier_hands_only,
-    tier_hands_and_head); the alternatives sit beside them with _alternative_hold_tier5_four_piece
-    appended.'
-  availability_corrections: 'Entry ring_2: Band of Eternity (29304) is a Scale of the Sands
-    reputation reward, and Scale of the Sands is the Mount Hyjal faction, so it cannot be
-    held before Phase 3 opens. Replaced with Ring of Unrelenting Storms (30667, Karazhan,
-    Phase 1), the top-ranked prephase Finger item in the ladder not already held in ring_1
-    (Ring of Recurrence). Both items carry 0 hit, so total_item_hit is unchanged.'
-  downgraded_slots: 'Six slots changed from the Phase 3 full-clear list because their published
-    pick is late Black Temple (Illidan, the Illidari Council or Mother Shahraz). Shoulder:
-    Thunderheart Shoulderpads (Mother Shahraz) replaced by Hatefury Mantle (Anetheron), in
-    both tier states. Chest: Thunderheart Vest (Illidan) replaced by Robes of Rhonin (Archimonde)
-    in hands_and_head only, kept as Nordrassil Chestpiece in hands_only since Archimonde is
-    not yet down. Head: Thunderheart Headguard (Archimonde) is the token itself, so it only
-    appears in hands_and_head; hands_only keeps Nordrassil Headpiece. Back: Cloak of the Illidari
-    Council (Illidari Council) has no reachable named alternative, so the Entry piece (Brute
-    Cloak of the Ogre-Magi) is kept in both tier states. Trinket 1: The Skull of Gul''dan
-    (Illidan) has no reachable named alternative, so the Entry piece (Icon of the Silver Crescent)
-    is kept. Weapon: Zhar''doom, Greatstaff of the Devourer (Illidan) replaced by The Maelstrom''s
-    Fury (High Warlord Naj''entus, main hand) plus Chronicle of Dark Secrets (Rage Winterchill,
-    off hand), splitting the single Entry staff slot into two slots.'
-  uncertain: Trinket 2 at both tier states is reported as the Entry piece, Quagmirran's Eye,
-    rather than the full-clear pick, Ashtongue Talisman of Equilibrium. That trinket requires
-    Exalted with the Ashtongue Deathsworn, a Black Temple reputation grind rather than a boss
-    kill, and whether Exalted is reached by week four to six could not be verified against
-    any source, so it was not assumed. Its tooltip (nether.wowhead.com/tbc/tooltip/item/32486)
-    carries no hit rating regardless, so the total_item_hit figures are unaffected either
-    way. Band of Eternity (Entry, ring 2) is issued in several stat variants under the same
-    name from the same quest; id 29304 (the intellect and spell damage variant) was used,
-    and none of the variants carry hit rating, so total_item_hit is unaffected by which variant
-    a given druid actually holds. Whether Hatefury Mantle or Blood-cursed Shoulderpads (Gurtogg
-    Bloodboil) is the better-attended shoulder alternative was not settled; both are named
-    by the source and Gurtogg Bloodboil is not in the boss list this brief marks unreachable,
-    so either is defensible. Hatefury Mantle was used because the source lists it first; it
-    carries 0 hit either way, so the totals would not change if Blood-cursed Shoulderpads
-    were used instead.
+  two_configurations: >-
+    REBUILT 9 August 2026. This capture records TWO configurations at each
+    tier state instead of one, because for this spec the arithmetic does not
+    settle whether a reachable token should be worn.
+    data/facts/sim-profiles/token-arithmetic.yaml records that both tokens
+    are raw EPV gains on the Owl tab (Thunderheart Headguard 162.88 against
+    Nordrassil Headpiece 146.00, plus 16.88; Thunderheart Handguards 103.88
+    against Nordrassil Gauntlets 73.48, plus 30.40), and that EITHER token
+    breaks the Nordrassil four-piece, whose slots (head, shoulder, chest,
+    hands) are exactly the four this capture's entry set holds. The collision
+    is the BONUS, not the items. NO SOURCE PRICES A SET BONUS: the workbook
+    excludes set bonuses from every item value, and no simulation has been
+    run here. What would decide between the configurations is a price for
+    "Nordrassil 4-piece: +10% Starfire damage against targets afflicted with
+    Moonfire or Insect Swarm" against "Thunderheart 2-piece: +3 seconds of
+    Moonfire duration" plus the raw EPV the token configuration gains. Until
+    one exists, both configurations are recorded with their totals, and
+    neither is a recommendation.
+    ITEM HIT TOTALS AT EACH STATE: tier_hands_only 95 wearing the hands
+    token against 98 holding the four-piece; tier_hands_and_head 106 wearing
+    both tokens against 98 holding the four-piece. The four-piece
+    configuration is gear-identical at both states, because the four pinned
+    Nordrassil slots are the only slots Archimonde's fall would have changed.
+    The token-wearing blocks keep the names the checkers expect
+    (tier_hands_only, tier_hands_and_head); the alternatives sit beside them
+    with _alternative_hold_tier5_four_piece appended.
+  availability_corrections: >-
+    Entry ring_2: Band of Eternity (29304) is a Scale of the Sands
+    reputation reward, and Scale of the Sands is the Mount Hyjal faction, so
+    it cannot be held before Phase 3 opens. Replaced with Ring of Unrelenting
+    Storms (30667, Karazhan, Phase 1), the top-ranked prephase Finger item in
+    the ladder not already held in ring_1 (Ring of Recurrence). Both items
+    carry 0 hit, so total_item_hit is unchanged.
+  downgraded_slots: >-
+    Six slots changed from the Phase 3 full-clear list because their published
+    pick is late Black Temple (Illidan, the Illidari Council or Mother
+    Shahraz). Shoulder: Thunderheart Shoulderpads (Mother Shahraz) replaced by
+    Hatefury Mantle (Anetheron), in both tier states. Chest: Thunderheart Vest
+    (Illidan) replaced by Robes of Rhonin (Archimonde) in hands_and_head only,
+    kept as Nordrassil Chestpiece in hands_only since Archimonde is not yet
+    down. Head: Thunderheart Headguard (Archimonde) is the token itself, so it
+    only appears in hands_and_head; hands_only keeps Nordrassil Headpiece. Back:
+    Cloak of the Illidari Council (Illidari Council) has no reachable named
+    alternative, so the Entry piece (Brute Cloak of the Ogre-Magi) is kept in
+    both tier states. Trinket 1: The Skull of Gul'dan (Illidan) has no reachable
+    named alternative, so the Entry piece (Icon of the Silver Crescent) is kept.
+    Weapon: Zhar'doom, Greatstaff of the Devourer (Illidan) replaced by The
+    Maelstrom's Fury (High Warlord Naj'entus, main hand) plus Chronicle of Dark
+    Secrets (Rage Winterchill, off hand), splitting the single Entry staff slot
+    into two slots.
+  uncertain: >-
+    Trinket 2 at both tier states is reported as the Entry piece, Quagmirran's
+    Eye, rather than the full-clear pick, Ashtongue Talisman of Equilibrium.
+    That trinket requires Exalted with the Ashtongue Deathsworn, a Black Temple
+    reputation grind rather than a boss kill, and whether Exalted is reached by
+    week four to six could not be verified against any source, so it was not
+    assumed. Its tooltip (nether.wowhead.com/tbc/tooltip/item/32486) carries no
+    hit rating regardless, so the total_item_hit figures are unaffected either
+    way. Band of Eternity (Entry, ring 2) is issued in several stat variants
+    under the same name from the same quest; id 29304 (the intellect and spell
+    damage variant) was used, and none of the variants carry hit rating, so
+    total_item_hit is unaffected by which variant a given druid actually holds.
+    Whether Hatefury Mantle or Blood-cursed Shoulderpads (Gurtogg Bloodboil) is
+    the better-attended shoulder alternative was not settled; both are named by
+    the source and Gurtogg Bloodboil is not in the boss list this brief marks
+    unreachable, so either is defensible. Hatefury Mantle was used because the
+    source lists it first; it carries 0 hit either way, so the totals would not
+    change if Blood-cursed Shoulderpads were used instead.

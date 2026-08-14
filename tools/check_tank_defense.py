@@ -39,7 +39,7 @@ import yaml
 STATS = Path("data/facts/set-stats.yaml")
 CRIT = Path("data/facts/crit.yaml")
 
-ANCHORS = ("entry", "tier_hands_and_head")
+ANCHORS = ("entry", "tier_hands_only", "tier_hands_and_head")
 
 # Defense rating a tank can add without changing an item, from
 # enchants-gems.yaml. Named individually so a reader can see which are assumed

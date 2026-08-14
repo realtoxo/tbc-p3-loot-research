@@ -217,12 +217,7 @@ def main() -> int:
                         problems.append(
                             f"{where} drops from {boss}, which "
                             f"{args.progression} puts outside the window")
-                    # THE MIDDLE ANCHOR IS GONE. It named the state where
-                    # Archimonde was not yet down, and the guild lead removed
-                    # the progression split on 13 August 2026. There is one
-                    # tier anchor now and it may hold an Archimonde drop, so
-                    # this rule has nothing left to fire on.
-                    if False:
+                    if anchor == "tier_hands_only" and boss == "Archimonde":
                         problems.append(
                             f"{where} drops from Archimonde, and this anchor "
                             "is defined as Archimonde not being down")

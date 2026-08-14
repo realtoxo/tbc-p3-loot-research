@@ -2,334 +2,257 @@ spec: feral_bear
 collected_on: 2026-08-09
 sources:
   entry:
-    attempted: https://wowtbc.gg/bis-list/feral-tank-druid/
-    outcome: 'Fetched successfully, but the page is the same recycled feral-DPS gear table
-      that produced the file this rebuild replaces: Romulo''s Poison Vial (a damage trinket)
-      at Trinket 1, Idol of the Raven Goddess (a party-aura idol, not a threat or mitigation
-      idol) at Relic, Gloves of the Searing Grip (no bonus armor, the cat-form glove) at Hands,
-      and four PvP ARMOR pieces (Veteran''s Pendant of Triumph, Veteran''s Dragonhide Bracers,
-      Veteran''s Leather Boots, plus a fourth) that this project''s brief excludes outright.
-      Not used as a source. No other Wowhead or community FERAL TANK (not feral DPS) Phase
-      2/3 BiS page could be located and fetched; Wowhead''s own guide pages render client-side
-      and returned page chrome only, consistent with the unfetchable finding already recorded
-      against this same spec.'
-    url_tried_and_unfetchable: https://www.wowhead.com/tbc/guide/classes/druid/feral-tank/bis-gear
-    outcome_2: Returns page chrome only; the gear table renders client-side.
+    attempted: "https://wowtbc.gg/bis-list/feral-tank-druid/"
+    outcome: >-
+      Fetched successfully, but the page is the same recycled feral-DPS gear
+      table that produced the file this rebuild replaces: Romulo's Poison
+      Vial (a damage trinket) at Trinket 1, Idol of the Raven Goddess (a
+      party-aura idol, not a threat or mitigation idol) at Relic, Gloves of
+      the Searing Grip (no bonus armor, the cat-form glove) at Hands, and
+      four PvP ARMOR pieces (Veteran's Pendant of Triumph, Veteran's
+      Dragonhide Bracers, Veteran's Leather Boots, plus a fourth) that this
+      project's brief excludes outright. Not used as a source. No other
+      Wowhead or community FERAL TANK (not feral DPS) Phase 2/3 BiS page
+      could be located and fetched; Wowhead's own guide pages render
+      client-side and returned page chrome only, consistent with the
+      unfetchable finding already recorded against this same spec.
+    url_tried_and_unfetchable: "https://www.wowhead.com/tbc/guide/classes/druid/feral-tank/bis-gear"
+    outcome_2: >-
+      Returns page chrome only; the gear table renders client-side.
   tier:
-    url: data/facts/items.csv, data/facts/drops.csv, data/facts/tokens.yaml, data/facts/progression.yaml
-    title: 'Built directly from the item database, per the brief''s fallback instruction,
-      because no usable published feral TANK list exists. Every Leather item usable by a Druid
-      in `items.csv` (the T4-T6 raid-drop and tier-vendor scope) was ranked per slot on the
-      stated priority order: defense rating first, then armor plus bonus armor, then stamina,
-      then dodge rating plus agility, then melee hit last. Accessory slots (neck, back, both
-      rings, both trinkets, relic, weapon) carry no armor-type restriction and were ranked
-      the same way across the full unrestricted pool. Availability was filtered by `data/facts/progression.yaml`''s
-      reachable-boss set before ranking, using the same zone and boss rules `tools/check_capture_availability.py`
-      enforces.'
+    url: "data/facts/items.csv, data/facts/drops.csv, data/facts/tokens.yaml, data/facts/progression.yaml"
+    title: >-
+      Built directly from the item database, per the brief's fallback
+      instruction, because no usable published feral TANK list exists. Every
+      Leather item usable by a Druid in `items.csv` (the T4-T6 raid-drop and
+      tier-vendor scope) was ranked per slot on the stated priority order:
+      defense rating first, then armor plus bonus armor, then stamina, then
+      dodge rating plus agility, then melee hit last. Accessory slots (neck,
+      back, both rings, both trinkets, relic, weapon) carry no armor-type
+      restriction and were ranked the same way across the full unrestricted
+      pool. Availability was filtered by `data/facts/progression.yaml`'s
+      reachable-boss set before ranking, using the same zone and boss rules
+      `tools/check_capture_availability.py` enforces.
     observed: 2026-08-09
 anchors:
   entry:
-    tier_pieces_held:
-    - head
-    - shoulder
-    - chest
-    - hands
-    - legs
+    tier_pieces_held: [head, shoulder, chest, hands, legs]
     set_bonuses_held:
-    - 'Nordrassil Harness 2-piece: When you shift out of Bear Form, Dire Bear Form, or Cat
-      Form, your next Regrowth spell takes 2.0 fewer sec to cast.'
-    - 'Nordrassil Harness 4-piece: Your Shred ability deals an additional 75 damage, and your
-      Lacerate ability does an additional 15 per application.'
+      - "Nordrassil Harness 2-piece: When you shift out of Bear Form, Dire Bear Form, or Cat Form, your next Regrowth spell takes 2.0 fewer sec to cast."
+      - "Nordrassil Harness 4-piece: Your Shred ability deals an additional 75 damage, and your Lacerate ability does an additional 15 per application."
     hit_by_slot:
-      head:
-        item: Nordrassil Headdress
-        id: 30228
-        hit: 0
-        resilience: 0
-      neck:
-        item: Frayed Tether of the Drowned
-        id: 30099
-        hit: 18
-        resilience: 0
-      shoulder:
-        item: Nordrassil Feral-Mantle
-        id: 30230
-        hit: 0
-        resilience: 0
-      back:
-        item: Gilded Thorium Cloak
-        id: 28660
-        hit: 0
-        resilience: 0
-      chest:
-        item: Nordrassil Chestplate
-        id: 30222
-        hit: 0
-        resilience: 0
-      wrist:
-        item: Forestheart Bracers
-        id: 29263
-        hit: 0
-        resilience: 0
-      hands:
-        item: Nordrassil Handgrips
-        id: 30223
-        hit: 0
-        resilience: 0
-      waist:
-        item: Belt of Natural Power
-        id: 30042
-        hit: 0
-        resilience: 0
-      legs:
-        item: Nordrassil Feral-Kilt
-        id: 30229
-        hit: 18
-        resilience: 0
-      feet:
-        item: Boots of Natural Grace
-        id: 30041
-        hit: 14
-        resilience: 0
-      ring_1:
-        item: Shermanar Great-Ring
-        id: 28675
-        hit: 0
-        resilience: 0
-      ring_2:
-        item: Violet Signet of the Great Protector
-        id: 29279
-        hit: 0
-        resilience: 0
-      trinket_1:
-        item: Scarab of Displacement
-        id: 30629
-        hit: 0
-        resilience: 0
-      trinket_2:
-        item: Badge of Tenacity
-        id: 32658
-        hit: 0
-        resilience: 0
-      relic:
-        item: Idol of the Raven Goddess
-        id: 32387
-        hit: 0
-        resilience: 0
-      main_hand:
-        item: Wildfury Greatstaff
-        id: 30021
-        hit: 0
-        resilience: 0
-      off_hand:
-        item: none, two-hand weapon equipped
-        id: null
-        hit: 0
+      head: {item: "Nordrassil Headdress", id: 30228, hit: 0, resilience: 0}
+      neck: {item: "Frayed Tether of the Drowned", id: 30099, hit: 18, resilience: 0}
+      shoulder: {item: "Nordrassil Feral-Mantle", id: 30230, hit: 0, resilience: 0}
+      back: {item: "Gilded Thorium Cloak", id: 28660, hit: 0, resilience: 0}
+      chest: {item: "Nordrassil Chestplate", id: 30222, hit: 0, resilience: 0}
+      wrist: {item: "Forestheart Bracers", id: 29263, hit: 0, resilience: 0}
+      hands: {item: "Nordrassil Handgrips", id: 30223, hit: 0, resilience: 0}
+      waist: {item: "Belt of Natural Power", id: 30042, hit: 0, resilience: 0}
+      legs: {item: "Nordrassil Feral-Kilt", id: 30229, hit: 18, resilience: 0}
+      feet: {item: "Boots of Natural Grace", id: 30041, hit: 14, resilience: 0}
+      ring_1: {item: "Shermanar Great-Ring", id: 28675, hit: 0, resilience: 0}
+      ring_2: {item: "Violet Signet of the Great Protector", id: 29279, hit: 0, resilience: 0}
+      trinket_1: {item: "Scarab of Displacement", id: 30629, hit: 0, resilience: 0}
+      trinket_2: {item: "Badge of Tenacity", id: 32658, hit: 0, resilience: 0}
+      relic: {item: "Idol of the Raven Goddess", id: 32387, hit: 0, resilience: 0}
+      main_hand: {item: "Wildfury Greatstaff", id: 30021, hit: 0, resilience: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
     total_item_hit: 50
-  tier_hands_and_head:
-    tier6_pieces_held:
-    - chest
-    - hands
-    - head
-    - legs
-    - shoulder
-    tier5_pieces_held: []
+  tier_hands_only:
+    tier6_pieces_held: [hands]
+    tier5_pieces_held: [head, shoulder, chest, legs]
+    set_bonuses_held:
+      - "Nordrassil Harness 2-piece: When you shift out of Bear Form, Dire Bear Form, or Cat Form, your next Regrowth spell takes 2.0 fewer sec to cast."
+      - "Nordrassil Harness 4-piece: Your Shred ability deals an additional 75 damage, and your Lacerate ability does an additional 15 per application."
     hit_by_slot:
-      head:
-        item: Thunderheart Cover
-        id: 31039
-        hit: 0
-      neck:
-        item: Frayed Tether of the Drowned
-        id: 30099
-        hit: 18
-        resilience: 0
-      shoulder:
-        item: Thunderheart Pauldrons
-        id: 31048
-        hit: 0
-      back:
-        item: Gilded Thorium Cloak
-        id: 28660
-        hit: 0
-        resilience: 0
-      chest:
-        item: Thunderheart Chestguard
-        id: 31042
-        hit: 0
-      wrist:
-        item: Forestheart Bracers
-        id: 29263
-        hit: 0
-        resilience: 0
-      hands:
-        item: Thunderheart Gauntlets
-        id: 31034
-        hit: 0
-      waist:
-        item: Belt of Natural Power
-        id: 30042
-        hit: 0
-        resilience: 0
-      legs:
-        item: Thunderheart Leggings
-        id: 31044
-        hit: 27
-      feet:
-        item: Boots of Natural Grace
-        id: 30041
-        hit: 14
-        resilience: 0
-      ring_1:
-        item: Shermanar Great-Ring
-        id: 28675
-        hit: 0
-        resilience: 0
-      ring_2:
-        item: Violet Signet of the Great Protector
-        id: 29279
-        hit: 0
-        resilience: 0
-      trinket_1:
-        item: Scarab of Displacement
-        id: 30629
-        hit: 0
-        resilience: 0
-      trinket_2:
-        item: Badge of Tenacity
-        id: 32658
-        hit: 0
-        resilience: 0
-      relic:
-        item: Idol of the Raven Goddess
-        id: 32387
-        hit: 0
-        resilience: 0
-      main_hand:
-        item: Wildfury Greatstaff
-        id: 30021
-        hit: 0
-        resilience: 0
-      off_hand:
-        item: none, two-hand weapon equipped
-        id: null
-        hit: 0
-    total_item_hit: 59
-    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
-      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
-      2026-08-13'
-    set_pieces_held:
-      Thunderheart Harness: 5
-    set_pieces_held_note: 'The prose bonus descriptions recorded here before 13 August 2026
-      described the OLD tier set and seven of them no longer held once the set was rebuilt
-      from the Phase 3 best-in-slot list. They are not rewritten, because this project does
-      not have the bonus text for the sets that replaced them and inventing it would be worse
-      than counting. What is recorded instead is what can be checked: how many pieces of each
-      set the anchor wears. Two is a 2-piece bonus and four is a 4-piece; the text of each
-      is on the item.'
+      head: {item: "Nordrassil Headdress", id: 30228, hit: 0, resilience: 0}
+      neck: {item: "Frayed Tether of the Drowned", id: 30099, hit: 18, resilience: 0}
+      shoulder: {item: "Nordrassil Feral-Mantle", id: 30230, hit: 0, resilience: 0}
+      back: {item: "Gilded Thorium Cloak", id: 28660, hit: 0, resilience: 0}
+      chest: {item: "Nordrassil Chestplate", id: 30222, hit: 0, resilience: 0}
+      wrist: {item: "Forestheart Bracers", id: 29263, hit: 0, resilience: 0}
+      hands: {item: "Thunderheart Gauntlets", id: 31034, hit: 0, resilience: 0}
+      waist: {item: "Belt of Natural Power", id: 30042, hit: 0, resilience: 0}
+      legs: {item: "Nordrassil Feral-Kilt", id: 30229, hit: 18, resilience: 0}
+      feet: {item: "Treads of the Den Mother", id: 32593, hit: 0, resilience: 0}
+      ring_1: {item: "Shermanar Great-Ring", id: 28675, hit: 0, resilience: 0}
+      ring_2: {item: "Violet Signet of the Great Protector", id: 29279, hit: 0, resilience: 0}
+      trinket_1: {item: "Scarab of Displacement", id: 30629, hit: 0, resilience: 0}
+      trinket_2: {item: "Shadowmoon Insignia", id: 32501, hit: 0, resilience: 0}
+      relic: {item: "Idol of the White Stag", id: 32257, hit: 0, resilience: 0}
+      main_hand: {item: "Pillar of Ferocity", id: 30883, hit: 0, resilience: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+    total_item_hit: 36
+  tier_hands_and_head:
+    tier6_pieces_held: [hands]
+    tier5_pieces_held: [head, shoulder, chest, legs]
+    set_bonuses_held:
+      - "Nordrassil Harness 2-piece: When you shift out of Bear Form, Dire Bear Form, or Cat Form, your next Regrowth spell takes 2.0 fewer sec to cast."
+      - "Nordrassil Harness 4-piece: Your Shred ability deals an additional 75 damage, and your Lacerate ability does an additional 15 per application."
+    hit_by_slot:
+      head: {item: "Nordrassil Headdress", id: 30228, hit: 0, resilience: 0}
+      neck: {item: "Frayed Tether of the Drowned", id: 30099, hit: 18, resilience: 0}
+      shoulder: {item: "Nordrassil Feral-Mantle", id: 30230, hit: 0, resilience: 0}
+      back: {item: "Gilded Thorium Cloak", id: 28660, hit: 0, resilience: 0}
+      chest: {item: "Nordrassil Chestplate", id: 30222, hit: 0, resilience: 0}
+      wrist: {item: "Forestheart Bracers", id: 29263, hit: 0, resilience: 0}
+      hands: {item: "Thunderheart Gauntlets", id: 31034, hit: 0, resilience: 0}
+      waist: {item: "Belt of Natural Power", id: 30042, hit: 0, resilience: 0}
+      legs: {item: "Nordrassil Feral-Kilt", id: 30229, hit: 18, resilience: 0}
+      feet: {item: "Treads of the Den Mother", id: 32593, hit: 0, resilience: 0}
+      ring_1: {item: "Shermanar Great-Ring", id: 28675, hit: 0, resilience: 0}
+      ring_2: {item: "Violet Signet of the Great Protector", id: 29279, hit: 0, resilience: 0}
+      trinket_1: {item: "Scarab of Displacement", id: 30629, hit: 0, resilience: 0}
+      trinket_2: {item: "Shadowmoon Insignia", id: 32501, hit: 0, resilience: 0}
+      relic: {item: "Idol of the White Stag", id: 32257, hit: 0, resilience: 0}
+      main_hand: {item: "Pillar of Ferocity", id: 30883, hit: 0, resilience: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+    total_item_hit: 36
+
 notes:
-  downgraded_slots: 'HEAD, SHOULDER, CHEST and LEGS keep their Entry Nordrassil Harness piece
-    at both tier anchors because their Tier 6 tokens (shoulder from Mother Shahraz, legs from
-    the Illidari Council, chest from Illidan Stormrage) sit behind bosses `data/facts/progression.yaml`
-    marks unreachable in the four-to-six-week window. WEAPON, FEET and TRINKET 2 upgrade at
-    both tier anchors regardless of Archimonde, because their replacements (Pillar of Ferocity,
-    Treads of the Den Mother, Shadowmoon Insignia) drop from Anetheron, Black Temple trash
-    and Gurtogg Bloodboil respectively, all inside the reliably-down set. HEAD stays Nordrassil
-    Headdress even in tier_hands_and_head, where the Archimonde head token is reachable: the
-    head token is refused because wearing it beside the hands token would break the Nordrassil
-    four-piece; see the token_refusal note. RELIC swaps to Idol of the White Stag (Black Temple,
-    Supremus, reliably down) at both tier anchors because its Mangle threat/AP effect is a
-    bear ability, where the Entry idol (Idol of the Raven Goddess) supplies only a party aura.'
-  uncertain: 'THE PROBLEM WITH THE FILE THIS REPLACES WAS NOT THE TIER TOKEN CHOICE. Nordrassil
-    Harness and Thunderheart Harness are the correct picks at head, shoulder, chest, hands
-    and legs: cross-checked against `data/facts/items.csv`, every Harness piece carries more
-    armor and bonus armor than any other Leather item Druids can wear in this slot, and the
-    full five-piece Harness is held at Entry. The bug was everywhere else: wrist, waist, feet,
-    neck, back, both rings, both trinkets, relic and weapon were all picked off the EPV workbook''s
-    Bear tab, a DAMAGE ladder that scores zero armor, zero defense and zero stamina, which
-    is why those nine slots matched `feral-cat.yaml` almost item for item. Both trinkets (Romulo''s
-    Poison Vial, Dragonspine Trophy) and the idol (Idol of the Raven Goddess) carried no defensive
-    stat, and total defense rating never rose above 43. This file replaces those nine slots
-    with the highest-defense, then highest-armor, then highest-stamina, then highest-dodge-plus-agility
-    Leather (armor slots) or unrestricted (accessory slots) item reachable at each anchor,
-    per `items.csv`. NO LEATHER ARMOR-SLOT ITEM IN THIS ENTIRE DATABASE CARRIES DEFENSE OR
-    DODGE RATING. Every Leather item at head, shoulder, chest, wrist, hands, waist, legs and
-    feet in the full T4-T6 raid-drop-plus-tier-vendor scope was checked; none carry either
-    stat. Every point of defense in this build comes from six non-armor slots instead: neck,
-    back, both rings, and trinket 1 at every anchor, plus trinket 2 once Shadowmoon Insignia
-    (Black Temple, Gurtogg Bloodboil) becomes reachable at the tier anchors. Dodge rating
-    is likewise absent from every slot except trinket 2 at tier (Shadowmoon Insignia, 32 dodge);
-    every other point of dodge this build has comes from Agility, not an item''s Dodge Rating
-    stat, and is not counted in the defense figure below. RESILIENCE WAS DELIBERATELY NOT
-    CHASED. The weapon slot''s top priority-order pick, Wildfury Greatstaff (0 defense, 500
-    armor, 75 stamina, 54 dodge rating, 0 hit, 0 resilience, Serpentshrine Cavern trash) at
-    Entry and Pillar of Ferocity (0 defense, 550 armor, 96 stamina, 0 dodge, 0 hit, 0 resilience,
-    Mount Hyjal, Anetheron) at both tier anchors, beats the Season 2 arena weapon this project''s
-    brief flagged, Merciless Gladiator''s Maul, on armor and stamina by a wide margin under
-    the stated priority order (armor and stamina rank above dodge and hit, and resilience
-    is not itself a ranked priority). The Maul carries 33 resilience (worth roughly 0.84 percent
-    crit avoidance, cited in the brief as roughly 50 defense-equivalent) and 18 melee hit,
-    against 0 armor and 55 stamina; a council that weighs resilience or hit above armor and
-    stamina could reasonably take the Maul instead, which would raise every tier''s total_item_hit
-    by 18 and add 33 resilience at the cost of 500 (Entry) or 550 (tier) armor and 20-41 stamina.
-    Recorded here, not chosen. RING 2 IS A DELIBERATE ARMOR-OVER-DEFENSE TRADE. Violet Signet
-    of the Great Protector (19 defense, 392 bonus armor) was kept over Band of the Abyssal
-    Lord (27 defense, 0 armor, 53 stamina, 21 hit, Black Temple, Supremus) at every anchor.
-    The two are 8 defense rating apart against a 392 armor gap; this file treats that as armor-favoring
-    under the stated priority order (armor outranks defense''s marginal difference of the
-    two candidates once one candidate''s defense is already secured by a different item in
-    the other ring slot). A council weighing raw defense rating higher could swap this ring
-    at either tier anchor for +8 defense, reaching 176 against the 154 target, at a cost of
-    392 armor and 32 stamina. THE ENTRY TRINKET 2 AND SEVERAL OFF-PIECE SLOTS HAVE NO KNOWN
-    BOSS OR VENDOR ATTRIBUTION IN THIS REPOSITORY. `items.csv` classifies Badge of Tenacity
-    (entry trinket 2), Forestheart Bracers (wrist, all anchors) and Violet Signet of the Great
-    Protector (ring 2, all anchors, a known Violet Eye exalted reward) by a `source` tag of
-    `drop` or `worn` rather than a specific boss or vendor, and neither is listed in `data/facts/drops.csv`.
-    Their stat lines are still read from `items.csv` and cross-checked by `tools/check_hit_capture.py`,
-    but their precise acquisition path is not independently verified here beyond that classification,
-    consistent with this repository''s own gap: `items.csv`''s PROVENANCE only documents the
-    489 `raid_drop` and 255 `tier_vendor` rows in detail, not the smaller `drop`, `worn`,
-    `crafted`, `badge` and `arena` populations. Belt of Natural Power (waist) and Boots of
-    Natural Grace (feet) are tagged `crafted`, which this file treats as safely available
-    at every anchor regardless of raid progression, since a profession pattern is not raid-gated.
-    HIT AND EXPERTISE ARE, AS EXPECTED, LOW. Total item hit falls from the prior file''s 85/116/116
-    to 50/36/36 once armor, defense and stamina are prioritized ahead of it, matching the
-    brief''s expectation that a bear runs short of the hit cap. The drop from Entry to tier
-    (50 to 36) is the loss of Boots of Natural Grace''s 14 hit when Treads of the Den Mother
-    replaces it for its higher armor.'
-  token_refusal: 'REBUILT 9 August 2026 on token-arithmetic.yaml''s feral_bear finding: a
-    druid has five tier slots, the Nordrassil four-piece needs four and the Thunderheart two-piece
-    needs two, which is six, so the two bonuses cannot coexist at any point in the tier, and
-    no source prices "Mangle generates 15% more threat in Bear Form" against "+75 Shred damage
-    and +15 Lacerate per application". The earlier capture wore the head token at tier_hands_and_head
-    because the brief assumed the anchors named gear; data/facts/progression.yaml''s the_two_tier_anchors_name_progression_not_gear
-    clarifies they name which bosses are down. Wearing the head token is exactly the either-or
-    token-arithmetic says the council settles once, and no judgment in data/judgments/ has
-    settled it, so this capture records the set the bear already holds: the Nordrassil four-piece,
-    carried unbroken from Entry, with head staying Nordrassil Headdress (30228) at both tier
-    anchors. THE HANDS TOKEN IS STILL WORN at both tier anchors, because it costs nothing:
-    the four-piece survives on head, shoulder, chest and legs, and Thunderheart Gauntlets
-    (31034, 287+252 armor, 34 stamina) beat Nordrassil Handgrips (30223, 262+252 armor, 40
-    stamina) under this file''s stated priority order, where armor outranks stamina. THE REFUSED
-    ALTERNATIVE, recorded not chosen: Thunderheart Cover (31039, 373+238 armor, 49 stamina)
-    beats Nordrassil Headdress (341+224 armor, 43 stamina) per-item under the same priority
-    order, so a council that settles the either-or for the Thunderheart side gains that raw
-    difference plus the Thunderheart two-piece and loses the Nordrassil four-piece. Both heads
-    carry 0 defense, 0 hit and 0 resilience, so the choice moves no total in this file either
-    way. WHAT CHANGED. tier_hands_and_head: head Thunderheart Cover -> Nordrassil Headdress,
-    tier6_pieces_held [hands, head] -> [hands], tier5_pieces_held regains head, and set_bonuses_held
-    trades the Thunderheart two-piece back for the Nordrassil four-piece. The two tier anchors
-    are now identical. Totals recomputed from the rows: item hit stays 50/36/36 and defense
-    stays 132/168/168, so the entry anchor remains 22 rating short exactly as before — this
-    rebuild does not move it.'
-  crit_immunity: 'Total defense rating from items alone: 132 at Entry, 168 at both tier anchors,
-    against `data/facts/crit.yaml`''s 154-rating requirement for a bear to be immune to critical
-    strikes (5.6 percent boss crit minus 3 percent from three ranks of Survival of the Fittest,
-    divided by 0.04 percent per defense skill point, at 2.365 rating per skill point). ENTRY
-    FALLS 22 RATING SHORT (132 of 154, 85.7 percent of target) and cannot reach crit immunity
-    from items alone at this anchor; that is a real finding, not a gap in this capture, since
-    no Leather armor-slot item in the entire T4-T6 database carries any defense rating at
-    all. BOTH TIER ANCHORS CLEAR THE THRESHOLD, reaching 168, 14 rating past 154, once Shadowmoon
-    Insignia (Black Temple, Gurtogg Bloodboil, 36 defense) becomes available in trinket 2
-    in place of the Entry-only Badge of Tenacity (0 defense). This crossing does not depend
-    on Archimonde, so it holds at both tier_hands_only and tier_hands_and_head.'
+    downgraded_slots: >-
+      HEAD, SHOULDER, CHEST and LEGS keep their Entry Nordrassil Harness piece
+      at both tier anchors because their Tier 6 tokens (shoulder from Mother
+      Shahraz, legs from the Illidari Council, chest from Illidan Stormrage)
+      sit behind bosses `data/facts/progression.yaml` marks unreachable in the
+      four-to-six-week window. WEAPON, FEET and TRINKET 2 upgrade at both tier
+      anchors regardless of Archimonde, because their replacements
+      (Pillar of Ferocity, Treads of the Den Mother, Shadowmoon Insignia) drop
+      from Anetheron, Black Temple trash and Gurtogg Bloodboil respectively,
+      all inside the reliably-down set. HEAD stays Nordrassil Headdress even
+      in tier_hands_and_head, where the Archimonde head token is reachable:
+      the head token is refused because wearing it beside the hands token
+      would break the Nordrassil four-piece; see the token_refusal note.
+      RELIC swaps to Idol of the White Stag (Black Temple, Supremus,
+      reliably down) at both tier anchors because its Mangle threat/AP effect
+      is a bear ability, where the Entry idol (Idol of the Raven Goddess)
+      supplies only a party aura.
+    uncertain: >-
+      THE PROBLEM WITH THE FILE THIS REPLACES WAS NOT THE TIER TOKEN CHOICE.
+      Nordrassil Harness and Thunderheart Harness are the correct picks at
+      head, shoulder, chest, hands and legs: cross-checked against
+      `data/facts/items.csv`, every Harness piece carries more armor and bonus
+      armor than any other Leather item Druids can wear in this slot, and the
+      full five-piece Harness is held at Entry. The bug was everywhere else:
+      wrist, waist, feet, neck, back, both rings, both trinkets, relic and
+      weapon were all picked off the EPV workbook's Bear tab, a DAMAGE ladder
+      that scores zero armor, zero defense and zero stamina, which is why
+      those nine slots matched `feral-cat.yaml` almost item for item. Both
+      trinkets (Romulo's Poison Vial, Dragonspine Trophy) and the idol (Idol
+      of the Raven Goddess) carried no defensive stat, and total defense
+      rating never rose above 43. This file replaces those nine slots with
+      the highest-defense, then highest-armor, then highest-stamina,
+      then highest-dodge-plus-agility Leather (armor slots) or unrestricted
+      (accessory slots) item reachable at each anchor, per `items.csv`.
+      NO LEATHER ARMOR-SLOT ITEM IN THIS ENTIRE DATABASE CARRIES DEFENSE OR
+      DODGE RATING. Every Leather item at head, shoulder, chest, wrist, hands,
+      waist, legs and feet in the full T4-T6 raid-drop-plus-tier-vendor scope
+      was checked; none carry either stat. Every point of defense in this
+      build comes from six non-armor slots instead: neck, back, both rings,
+      and trinket 1 at every anchor, plus trinket 2 once Shadowmoon Insignia
+      (Black Temple, Gurtogg Bloodboil) becomes reachable at the tier anchors.
+      Dodge rating is likewise absent from every slot except trinket 2 at
+      tier (Shadowmoon Insignia, 32 dodge); every other point of dodge this
+      build has comes from Agility, not an item's Dodge Rating stat, and is
+      not counted in the defense figure below.
+      RESILIENCE WAS DELIBERATELY NOT CHASED. The weapon slot's top
+      priority-order pick, Wildfury Greatstaff (0 defense, 500 armor, 75
+      stamina, 54 dodge rating, 0 hit, 0 resilience, Serpentshrine Cavern
+      trash) at Entry and Pillar of Ferocity (0 defense, 550 armor, 96
+      stamina, 0 dodge, 0 hit, 0 resilience, Mount Hyjal, Anetheron) at both
+      tier anchors, beats the Season 2 arena weapon this project's brief
+      flagged, Merciless Gladiator's Maul, on armor and stamina by a wide
+      margin under the stated priority order (armor and stamina rank above
+      dodge and hit, and resilience is not itself a ranked priority). The
+      Maul carries 33 resilience (worth roughly 0.84 percent crit avoidance,
+      cited in the brief as roughly 50 defense-equivalent) and 18 melee hit,
+      against 0 armor and 55 stamina; a council that weighs resilience or hit
+      above armor and stamina could reasonably take the Maul instead, which
+      would raise every tier's total_item_hit by 18 and add 33 resilience at
+      the cost of 500 (Entry) or 550 (tier) armor and 20-41 stamina. Recorded
+      here, not chosen.
+      RING 2 IS A DELIBERATE ARMOR-OVER-DEFENSE TRADE. Violet Signet of the
+      Great Protector (19 defense, 392 bonus armor) was kept over Band of the
+      Abyssal Lord (27 defense, 0 armor, 53 stamina, 21 hit, Black Temple,
+      Supremus) at every anchor. The two are 8 defense rating apart against a
+      392 armor gap; this file treats that as armor-favoring under the stated
+      priority order (armor outranks defense's marginal difference of the two
+      candidates once one candidate's defense is already secured by a
+      different item in the other ring slot). A council weighing raw defense
+      rating higher could swap this ring at either tier anchor for +8 defense,
+      reaching 176 against the 154 target, at a cost of 392 armor and 32
+      stamina.
+      THE ENTRY TRINKET 2 AND SEVERAL OFF-PIECE SLOTS HAVE NO KNOWN BOSS OR
+      VENDOR ATTRIBUTION IN THIS REPOSITORY. `items.csv` classifies Badge of
+      Tenacity (entry trinket 2), Forestheart Bracers (wrist, all anchors) and
+      Violet Signet of the Great Protector (ring 2, all anchors, a known
+      Violet Eye exalted reward) by a
+      `source` tag of `drop` or `worn` rather than a specific boss or vendor,
+      and neither is listed in `data/facts/drops.csv`. Their stat lines are
+      still read from `items.csv` and cross-checked by
+      `tools/check_hit_capture.py`, but their precise acquisition path is not
+      independently verified here beyond that classification, consistent with
+      this repository's own gap: `items.csv`'s PROVENANCE only documents the
+      489 `raid_drop` and 255 `tier_vendor` rows in detail, not the smaller
+      `drop`, `worn`, `crafted`, `badge` and `arena` populations. Belt of
+      Natural Power (waist) and Boots of Natural Grace (feet) are tagged
+      `crafted`, which this file treats as safely available at every anchor
+      regardless of raid progression, since a profession pattern is not
+      raid-gated.
+      HIT AND EXPERTISE ARE, AS EXPECTED, LOW. Total item hit falls from the
+      prior file's 85/116/116 to 50/36/36 once armor, defense and stamina are
+      prioritized ahead of it, matching the brief's expectation that a bear
+      runs short of the hit cap. The drop from Entry to tier (50 to 36) is the
+      loss of Boots of Natural Grace's 14 hit when Treads of the Den Mother
+      replaces it for its higher armor.
+    token_refusal: >-
+      REBUILT 9 August 2026 on token-arithmetic.yaml's feral_bear finding: a
+      druid has five tier slots, the Nordrassil four-piece needs four and the
+      Thunderheart two-piece needs two, which is six, so the two bonuses
+      cannot coexist at any point in the tier, and no source prices "Mangle
+      generates 15% more threat in Bear Form" against "+75 Shred damage and
+      +15 Lacerate per application". The earlier capture wore the head token
+      at tier_hands_and_head because the brief assumed the anchors named
+      gear; data/facts/progression.yaml's
+      the_two_tier_anchors_name_progression_not_gear clarifies they name
+      which bosses are down. Wearing the head token is exactly the either-or
+      token-arithmetic says the council settles once, and no judgment in
+      data/judgments/ has settled it, so this capture records the set the
+      bear already holds: the Nordrassil four-piece, carried unbroken from
+      Entry, with head staying Nordrassil Headdress (30228) at both tier
+      anchors. THE HANDS TOKEN IS STILL WORN at both tier anchors, because it
+      costs nothing: the four-piece survives on head, shoulder, chest and
+      legs, and Thunderheart Gauntlets (31034, 287+252 armor, 34 stamina)
+      beat Nordrassil Handgrips (30223, 262+252 armor, 40 stamina) under this
+      file's stated priority order, where armor outranks stamina.
+      THE REFUSED ALTERNATIVE, recorded not chosen: Thunderheart Cover
+      (31039, 373+238 armor, 49 stamina) beats Nordrassil Headdress (341+224
+      armor, 43 stamina) per-item under the same priority order, so a council
+      that settles the either-or for the Thunderheart side gains that raw
+      difference plus the Thunderheart two-piece and loses the Nordrassil
+      four-piece. Both heads carry 0 defense, 0 hit and 0 resilience, so the
+      choice moves no total in this file either way.
+      WHAT CHANGED. tier_hands_and_head: head Thunderheart Cover ->
+      Nordrassil Headdress, tier6_pieces_held [hands, head] -> [hands],
+      tier5_pieces_held regains head, and set_bonuses_held trades the
+      Thunderheart two-piece back for the Nordrassil four-piece. The two tier
+      anchors are now identical. Totals recomputed from the rows: item hit
+      stays 50/36/36 and defense stays 132/168/168, so the entry anchor
+      remains 22 rating short exactly as before — this rebuild does not move
+      it.
+    crit_immunity: >-
+      Total defense rating from items alone: 132 at Entry, 168 at both tier
+      anchors, against `data/facts/crit.yaml`'s 154-rating requirement for a
+      bear to be immune to critical strikes (5.6 percent boss crit minus 3
+      percent from three ranks of Survival of the Fittest, divided by 0.04
+      percent per defense skill point, at 2.365 rating per skill point).
+      ENTRY FALLS 22 RATING SHORT (132 of 154, 85.7 percent of target) and
+      cannot reach crit immunity from items alone at this anchor; that is a
+      real finding, not a gap in this capture, since no Leather armor-slot
+      item in the entire T4-T6 database carries any defense rating at all.
+      BOTH TIER ANCHORS CLEAR THE THRESHOLD, reaching 168, 14 rating past 154,
+      once Shadowmoon Insignia (Black Temple, Gurtogg Bloodboil, 36 defense)
+      becomes available in trinket 2 in place of the Entry-only Badge of
+      Tenacity (0 defense). This crossing does not depend on Archimonde, so it
+      holds at both tier_hands_only and tier_hands_and_head.

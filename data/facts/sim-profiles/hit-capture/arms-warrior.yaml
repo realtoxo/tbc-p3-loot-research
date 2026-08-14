@@ -1,276 +1,153 @@
+# Arms Warrior item hit rating capture. Collected 9 August 2026.
+#
+# Counting rule: ITEM hit rating only, read from data/facts/items.csv
+# (melee_hit column). No gems, enchants, consumables, talents, racials or raid
+# buffs. No PvP armor. No Phase 4 content. A blank melee_hit in items.csv is
+# recorded as 0, never omitted, so every sum here is checkable against the
+# generated table.
+
 spec: arms_warrior
 collected_on: 2026-08-09
+
 sources:
   entry:
     url: https://www.wowhead.com/tbc/guide/classes/warrior/arms/dps-bis-gear-pve-phase-2
-    title: Arms Warrior DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic
+    title: "Arms Warrior DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic"
     observed: 2026-08-09
-    note: The published table itself uses only TWO Destroyer Battlegear pieces (head, chest),
-      filling shoulder, hands and legs with off-tier picks. The same guide's prose separately
-      floats a "4 Destroyer pieces plus one leather off-piece" compromise for itemization/contest
-      reasons, but does not present that as the BiS table. This capture uses the literal table,
-      per the instruction to use the Wowhead Phase 2 BiS list. The alternate compromise is
-      recorded under notes.uncertain because it would change the entry total materially.
+    note: >-
+      The published table itself uses only TWO Destroyer Battlegear pieces
+      (head, chest), filling shoulder, hands and legs with off-tier picks. The
+      same guide's prose separately floats a "4 Destroyer pieces plus one
+      leather off-piece" compromise for itemization/contest reasons, but does
+      not present that as the BiS table. This capture uses the literal table,
+      per the instruction to use the Wowhead Phase 2 BiS list. The alternate
+      compromise is recorded under notes.uncertain because it would change the
+      entry total materially.
   tier:
     url: https://www.wowhead.com/tbc/guide/arms-warrior-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
-    title: Burning Crusade Classic Arms Warrior DPS Best in Slot (BiS) Phase 3 Gear Guide
+    title: "Burning Crusade Classic Arms Warrior DPS Best in Slot (BiS) Phase 3 Gear Guide"
     observed: 2026-08-09
-    note: Publishes a FULL-CLEAR list, including Onslaught Battlegear shoulder (Mother Shahraz),
-      chest (Illidan) and ring (Illidan), none of which are reachable four to six weeks in.
-      The tier states below downgrade those slots; every downgraded slot is named under notes.downgraded_slots.
+    note: >-
+      Publishes a FULL-CLEAR list, including Onslaught Battlegear shoulder
+      (Mother Shahraz), chest (Illidan) and ring (Illidan), none of which are
+      reachable four to six weeks in. The tier states below downgrade those
+      slots; every downgraded slot is named under notes.downgraded_slots.
   items_table:
     url: data/facts/items.csv
     title: This repository's generated item table (melee_hit column)
     observed: 2026-08-09
-    note: Every hit value below was read from this table by item id, not transcribed from
-      Wowhead tooltips, so it is already cross-checked against the project's own item database.
+    note: >-
+      Every hit value below was read from this table by item id, not
+      transcribed from Wowhead tooltips, so it is already cross-checked
+      against the project's own item database.
+
 anchors:
+
   entry:
-    tier_pieces_held:
-    - head
-    - chest
+    tier_pieces_held: [head, chest]
     set_bonuses_held:
-    - 'Destroyer Battlegear 2-piece: your Overpower ability grants 100 attack power for 5
-      sec'
+      - "Destroyer Battlegear 2-piece: your Overpower ability grants 100 attack power for 5 sec"
     hit_by_slot:
-      head:
-        item: Destroyer Battle-Helm
-        id: 30120
-        hit: 21
-      neck:
-        item: Pendant of the Perilous
-        id: 30022
-        hit: 0
-      shoulder:
-        item: Shoulderpads of the Stranger
-        id: 30055
-        hit: 0
-      back:
-        item: Vengeance Wrap
-        id: 24259
-        hit: 0
-      chest:
-        item: Destroyer Breastplate
-        id: 30118
-        hit: 15
-      wrist:
-        item: Bracers of Eradication
-        id: 30057
-        hit: 17
-      hands:
-        item: Gloves of the Searing Grip
-        id: 29947
-        hit: 0
-      waist:
-        item: Belt of One-Hundred Deaths
-        id: 30106
-        hit: 0
-      legs:
-        item: Leggings of Murderous Intent
-        id: 29995
-        hit: 0
-      feet:
-        item: Warboots of Obliteration
-        id: 30081
-        hit: 0
-      ring_1:
-        item: Band of the Ranger-General
-        id: 29997
-        hit: 18
-      ring_2:
-        item: Shapeshifter's Signet
-        id: 30834
-        hit: 0
-      trinket_1:
-        item: Dragonspine Trophy
-        id: 28830
-        hit: 0
-      trinket_2:
-        item: Tsunami Talisman
-        id: 30627
-        hit: 10
-      ranged:
-        item: Serpent Spine Longbow
-        id: 30105
-        hit: 0
-      main_hand:
-        item: Twinblade of the Phoenix (Two-Hand)
-        id: 29993
-        hit: 0
-      off_hand:
-        item: none, two-hand weapon equipped
-        id: null
-        hit: 0
+      head: {item: "Destroyer Battle-Helm", id: 30120, hit: 21}
+      neck: {item: "Pendant of the Perilous", id: 30022, hit: 0}
+      shoulder: {item: "Shoulderpads of the Stranger", id: 30055, hit: 0}
+      back: {item: "Vengeance Wrap", id: 24259, hit: 0}
+      chest: {item: "Destroyer Breastplate", id: 30118, hit: 15}
+      wrist: {item: "Bracers of Eradication", id: 30057, hit: 17}
+      hands: {item: "Gloves of the Searing Grip", id: 29947, hit: 0}
+      waist: {item: "Belt of One-Hundred Deaths", id: 30106, hit: 0}
+      legs: {item: "Leggings of Murderous Intent", id: 29995, hit: 0}
+      feet: {item: "Warboots of Obliteration", id: 30081, hit: 0}
+      ring_1: {item: "Band of the Ranger-General", id: 29997, hit: 18}
+      ring_2: {item: "Shapeshifter's Signet", id: 30834, hit: 0}
+      trinket_1: {item: "Dragonspine Trophy", id: 28830, hit: 0}
+      trinket_2: {item: "Tsunami Talisman", id: 30627, hit: 10}
+      ranged: {item: "Serpent Spine Longbow", id: 30105, hit: 0}
+      main_hand: {item: "Twinblade of the Phoenix (Two-Hand)", id: 29993, hit: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
     total_item_hit: 81
-  tier_hands_and_head:
-    tier6_pieces_held:
-    - chest
-    - hands
-    - head
-    - shoulder
-    tier5_pieces_held: []
+
+  tier_hands_only:
+    tier6_pieces_held: []
+    tier5_pieces_held: [head, chest]
+    set_bonuses_held:
+      - "Destroyer Battlegear 2-piece: your Overpower ability grants 100 attack power for 5 sec"
     hit_by_slot:
-      head:
-        item: Onslaught Battle-Helm
-        id: 30972
-        hit: 0
-      neck:
-        item: Pendant of the Perilous
-        id: 30022
-        hit: 0
-      shoulder:
-        item: Onslaught Shoulderblades
-        id: 30979
-        hit: 0
-      back:
-        item: Vengeance Wrap
-        id: 24259
-        hit: 0
-      chest:
-        item: Onslaught Breastplate
-        id: 30975
-        hit: 16
-      wrist:
-        item: Bracers of Eradication
-        id: 30057
-        hit: 17
-      hands:
-        item: Onslaught Gauntlets
-        id: 30969
-        hit: 0
-      waist:
-        item: Belt of One-Hundred Deaths
-        id: 30106
-        hit: 0
-      legs:
-        item: Leggings of Murderous Intent
-        id: 29995
-        hit: 0
-      feet:
-        item: Warboots of Obliteration
-        id: 30081
-        hit: 0
-      ring_1:
-        item: Band of the Ranger-General
-        id: 29997
-        hit: 18
-      ring_2:
-        item: Shapeshifter's Signet
-        id: 30834
-        hit: 0
-      trinket_1:
-        item: Dragonspine Trophy
-        id: 28830
-        hit: 0
-      trinket_2:
-        item: Tsunami Talisman
-        id: 30627
-        hit: 10
-      ranged:
-        item: Serpent Spine Longbow
-        id: 30105
-        hit: 0
-      main_hand:
-        item: Twinblade of the Phoenix (Two-Hand)
-        id: 29993
-        hit: 0
-      off_hand:
-        item: none, two-hand weapon equipped
-        id: null
-        hit: 0
-    total_item_hit: 61
-    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
-      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
-      2026-08-13'
-    set_pieces_held:
-      Onslaught Battlegear: 4
-    set_pieces_held_note: 'The prose bonus descriptions recorded here before 13 August 2026
-      described the OLD tier set and seven of them no longer held once the set was rebuilt
-      from the Phase 3 best-in-slot list. They are not rewritten, because this project does
-      not have the bonus text for the sets that replaced them and inventing it would be worse
-      than counting. What is recorded instead is what can be checked: how many pieces of each
-      set the anchor wears. Two is a 2-piece bonus and four is a 4-piece; the text of each
-      is on the item.'
+      head: {item: "Destroyer Battle-Helm (T5, carried in)", id: 30120, hit: 21}
+      neck: {item: "Pendant of the Perilous (carried in)", id: 30022, hit: 0}
+      shoulder: {item: "Blood-stained Pauldrons", id: 30866, hit: 23}
+      back: {item: "Cloak of Darkness (crafted)", id: 33122, hit: 0}
+      chest: {item: "Destroyer Breastplate (T5, carried in)", id: 30118, hit: 15}
+      wrist: {item: "Deadly Cuffs, Rage Winterchill, Mount Hyjal boss 1", id: 30863, hit: 12}
+      hands: {item: "Grips of Silent Justice, Shade of Akama, Black Temple", id: 32278, hit: 15, note: "101.88 on the Arms tab against 87.78 on the Onslaught Gauntlets token, which is refused; see notes.token_refusals."}
+      waist: {item: "Belt of One-Hundred Deaths (carried in)", id: 30106, hit: 0}
+      legs: {item: "Leggings of Divine Retribution, Gurtogg Bloodboil, Black Temple", id: 32341, hit: 0}
+      feet: {item: "Dreadboots of the Legion, Essence of Anger, Black Temple", id: 32345, hit: 18}
+      ring_1: {item: "Band of the Ranger-General (carried in, downgraded)", id: 29997, hit: 18}
+      ring_2: {item: "Unstoppable Aggressor's Ring, Gurtogg Bloodboil, Black Temple", id: 32335, hit: 0}
+      trinket_1: {item: "Dragonspine Trophy (carried in)", id: 28830, hit: 0}
+      trinket_2: {item: "Tsunami Talisman (carried in)", id: 30627, hit: 10}
+      ranged: {item: "Serpent Spine Longbow", id: 30105, hit: 0}
+      main_hand: {item: "Twinblade of the Phoenix (Two-Hand, carried in, downgraded)", id: 29993, hit: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+    total_item_hit: 132
+
+  tier_hands_and_head:
+    tier6_pieces_held: [head]
+    tier5_pieces_held: [chest]
+    set_bonuses_held: []
+    hit_by_slot:
+      head: {item: "Onslaught Battle-Helm (T6), Archimonde, Mount Hyjal", id: 30972, hit: 0, note: "Worn in this configuration. With the hands token refused this is the only Onslaught piece, so it grants NO bonus, and it drops Destroyer to one piece, losing the Destroyer 2-piece. See the alternative block and notes.token_refusals."}
+      neck: {item: "Pendant of the Perilous (carried in)", id: 30022, hit: 0}
+      shoulder: {item: "Blood-stained Pauldrons", id: 30866, hit: 23}
+      back: {item: "Cloak of Darkness (crafted)", id: 33122, hit: 0}
+      chest: {item: "Destroyer Breastplate (T5, carried in)", id: 30118, hit: 15}
+      wrist: {item: "Deadly Cuffs, Rage Winterchill, Mount Hyjal boss 1", id: 30863, hit: 12}
+      hands: {item: "Grips of Silent Justice, Shade of Akama, Black Temple", id: 32278, hit: 15, note: "101.88 against 87.78 on the refused Onslaught Gauntlets token; see notes.token_refusals."}
+      waist: {item: "Belt of One-Hundred Deaths (carried in)", id: 30106, hit: 0}
+      legs: {item: "Leggings of Divine Retribution, Gurtogg Bloodboil, Black Temple", id: 32341, hit: 0}
+      feet: {item: "Dreadboots of the Legion, Essence of Anger, Black Temple", id: 32345, hit: 18}
+      ring_1: {item: "Band of the Ranger-General (carried in, downgraded)", id: 29997, hit: 18}
+      ring_2: {item: "Unstoppable Aggressor's Ring, Gurtogg Bloodboil, Black Temple", id: 32335, hit: 0}
+      trinket_1: {item: "Dragonspine Trophy (carried in)", id: 28830, hit: 0}
+      trinket_2: {item: "Tsunami Talisman (carried in)", id: 30627, hit: 10}
+      ranged: {item: "Serpent Spine Longbow", id: 30105, hit: 0}
+      main_hand: {item: "Cataclysm's Edge (Two-Hand), Archimonde, Mount Hyjal", id: 30902, hit: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
+    total_item_hit: 111
+
+  # ALTERNATIVE CONFIGURATION at the same progression state as
+  # tier_hands_and_head. The anchors name which bosses are down, not which
+  # tokens are worn (data/facts/progression.yaml,
+  # the_two_tier_anchors_name_progression_not_gear). Here the head token is
+  # REFUSED and the Destroyer 2-piece kept. See notes.token_refusals for the
+  # term that would decide between the two blocks.
   tier_hands_and_head_alternative_refuse_head_token:
     tier6_pieces_held: []
-    tier5_pieces_held:
-    - head
-    - chest
+    tier5_pieces_held: [head, chest]
     set_bonuses_held:
-    - 'Destroyer Battlegear 2-piece: your Overpower ability grants 100 attack power for 5
-      sec'
+      - "Destroyer Battlegear 2-piece: your Overpower ability grants 100 attack power for 5 sec"
     hit_by_slot:
-      head:
-        item: Destroyer Battle-Helm (T5, carried in)
-        id: 30120
-        hit: 21
-        note: Kept. The Onslaught Battle-Helm token (plus 6.36 EPV) is refused, keeping 21
-          item hit and the Destroyer 2-piece.
-      neck:
-        item: Pendant of the Perilous (carried in)
-        id: 30022
-        hit: 0
-      shoulder:
-        item: Blood-stained Pauldrons
-        id: 30866
-        hit: 23
-      back:
-        item: Cloak of Darkness (crafted)
-        id: 33122
-        hit: 0
-      chest:
-        item: Destroyer Breastplate (T5, carried in)
-        id: 30118
-        hit: 15
-      wrist:
-        item: Deadly Cuffs, Rage Winterchill, Mount Hyjal boss 1
-        id: 30863
-        hit: 12
-      hands:
-        item: Grips of Silent Justice, Shade of Akama, Black Temple
-        id: 32278
-        hit: 15
-      waist:
-        item: Belt of One-Hundred Deaths (carried in)
-        id: 30106
-        hit: 0
-      legs:
-        item: Leggings of Divine Retribution, Gurtogg Bloodboil, Black Temple
-        id: 32341
-        hit: 0
-      feet:
-        item: Dreadboots of the Legion, Essence of Anger, Black Temple
-        id: 32345
-        hit: 18
-      ring_1:
-        item: Band of the Ranger-General (carried in, downgraded)
-        id: 29997
-        hit: 18
-      ring_2:
-        item: Unstoppable Aggressor's Ring, Gurtogg Bloodboil, Black Temple
-        id: 32335
-        hit: 0
-      trinket_1:
-        item: Dragonspine Trophy (carried in)
-        id: 28830
-        hit: 0
-      trinket_2:
-        item: Tsunami Talisman (carried in)
-        id: 30627
-        hit: 10
-      ranged:
-        item: Serpent Spine Longbow
-        id: 30105
-        hit: 0
-      main_hand:
-        item: Cataclysm's Edge (Two-Hand), Archimonde, Mount Hyjal
-        id: 30902
-        hit: 0
-      off_hand:
-        item: none, two-hand weapon equipped
-        id: null
-        hit: 0
+      head: {item: "Destroyer Battle-Helm (T5, carried in)", id: 30120, hit: 21, note: "Kept. The Onslaught Battle-Helm token (plus 6.36 EPV) is refused, keeping 21 item hit and the Destroyer 2-piece."}
+      neck: {item: "Pendant of the Perilous (carried in)", id: 30022, hit: 0}
+      shoulder: {item: "Blood-stained Pauldrons", id: 30866, hit: 23}
+      back: {item: "Cloak of Darkness (crafted)", id: 33122, hit: 0}
+      chest: {item: "Destroyer Breastplate (T5, carried in)", id: 30118, hit: 15}
+      wrist: {item: "Deadly Cuffs, Rage Winterchill, Mount Hyjal boss 1", id: 30863, hit: 12}
+      hands: {item: "Grips of Silent Justice, Shade of Akama, Black Temple", id: 32278, hit: 15}
+      waist: {item: "Belt of One-Hundred Deaths (carried in)", id: 30106, hit: 0}
+      legs: {item: "Leggings of Divine Retribution, Gurtogg Bloodboil, Black Temple", id: 32341, hit: 0}
+      feet: {item: "Dreadboots of the Legion, Essence of Anger, Black Temple", id: 32345, hit: 18}
+      ring_1: {item: "Band of the Ranger-General (carried in, downgraded)", id: 29997, hit: 18}
+      ring_2: {item: "Unstoppable Aggressor's Ring, Gurtogg Bloodboil, Black Temple", id: 32335, hit: 0}
+      trinket_1: {item: "Dragonspine Trophy (carried in)", id: 28830, hit: 0}
+      trinket_2: {item: "Tsunami Talisman (carried in)", id: 30627, hit: 10}
+      ranged: {item: "Serpent Spine Longbow", id: 30105, hit: 0}
+      main_hand: {item: "Cataclysm's Edge (Two-Hand), Archimonde, Mount Hyjal", id: 30902, hit: 0}
+      off_hand: {item: "none, two-hand weapon equipped", id: null, hit: 0}
     total_item_hit: 132
+
+# What each reachable token replaces. No priority is stated here.
 token_arithmetic:
   hands_azgalor:
     piece: Onslaught Gauntlets 30969, hit 0
@@ -279,113 +156,150 @@ token_arithmetic:
     hit_change: -15
     bonus_gained: none alone; with the head it makes the Onslaught 2-piece
     bonus_broken: none, hands was never a Destroyer piece
-    note: REFUSED in every configuration of this capture. The token is a raw EPV downgrade
-      against a drop from a boss the raid is already killing, it carries 15 less item hit,
-      and alone it grants no bonus, so the arithmetic settles it without pricing anything.
+    note: >-
+      REFUSED in every configuration of this capture. The token is a raw EPV
+      downgrade against a drop from a boss the raid is already killing, it
+      carries 15 less item hit, and alone it grants no bonus, so the
+      arithmetic settles it without pricing anything.
   head_archimonde:
     piece: Onslaught Battle-Helm 30972, hit 0
     replaces: Destroyer Battle-Helm 30120, hit 21
     epv_change: +6.36 (150.76 against 144.40 on the Arms tab)
     hit_change: -21
-    bonus_gained: NONE in this capture's configurations. The Onslaught 2-piece needs the hands
-      token, which is refused, so the head token alone grants nothing.
-    bonus_broken: Drops Destroyer Battlegear to one piece (chest only), losing the Destroyer
-      2-piece (Overpower grants 100 attack power for 5 sec). This capture holds TWO Destroyer
-      pieces, so what the head token costs here is a two-piece, not a four-piece; see token-arithmetic.yaml::head_four_piece_claim_is_CONDITIONAL.
-  note: 'The head token gains 6.36 EPV and costs 21 item hit plus the Destroyer 2-piece, and
-    no source prices that bonus, so tier_hands_and_head records BOTH configurations: the token
-    worn (total_item_hit 101) and the token refused (total_item_hit 122, in the alternative
-    block). No priority is stated by this file; the council weighs the bonus and stat tradeoffs
-    against the hit change itself.'
+    bonus_gained: >-
+      NONE in this capture's configurations. The Onslaught 2-piece needs the
+      hands token, which is refused, so the head token alone grants nothing.
+    bonus_broken: >-
+      Drops Destroyer Battlegear to one piece (chest only), losing the
+      Destroyer 2-piece (Overpower grants 100 attack power for 5 sec). This
+      capture holds TWO Destroyer pieces, so what the head token costs here
+      is a two-piece, not a four-piece; see
+      token-arithmetic.yaml::head_four_piece_claim_is_CONDITIONAL.
+  note: >-
+    The head token gains 6.36 EPV and costs 21 item hit plus the Destroyer
+    2-piece, and no source prices that bonus, so tier_hands_and_head records
+    BOTH configurations: the token worn (total_item_hit 101) and the token
+    refused (total_item_hit 122, in the alternative block). No priority is
+    stated by this file; the council weighs the bonus and stat tradeoffs
+    against the hit change itself.
+
 notes:
-  world_boss_ruling_2026_08_09: 'The guild lead ruled on 9 August 2026 that this guild does
-    not run outdoor world bosses, so no Doom Lord Kazzak or Doomwalker drop may appear at
-    any anchor. See data/judgments/capture-fidelity.yaml. Each replacement is the highest-EPV
-    item in that slot''s section of this spec''s own workbook tab that is legal at the anchor.
-    The blocklist is enforced at tools/check_capture_availability.py WORLD_BOSS_LOOT, which
-    names both loot tables in full, because drops.csv covers the seven instanced zones only
-    and carries neither boss. That blindness is why these slots passed every check until now.
-    Three slots moved. The entry shoulder goes from Ripfiend Shoulderplates (30740, Doom Lord
-    Kazzak, 13 hit) to Shoulderpads of the Stranger (30055, Hydross, 87.03). Read notes.shoulder_corrected
-    beside this: Shoulderpads was the slot''s ORIGINAL defect, worn over the higher-ranked
-    and legal Ripfiend. The defect was the ordering, not the item. With Ripfiend now out of
-    scope, Shoulderpads is the highest legal entry row, because the four Arms rows above it
-    are the Mother Shahraz token and three Phase 3 drops. The entry back goes to Vengeance
-    Wrap (24259, Tailoring, 54.79). Cloak of Darkness (33122) scores 0.29 higher but is workbook-phase
-    3, and it was excluded on the entry premise rather than by the check, which keys on drops.csv
-    zones and cannot see a crafted item. The ranged slot at all three tier anchors goes to
-    Serpent Spine Longbow (30105, Lady Vashj, 31.99). No hit moves with it. Entry total_item_hit
-    falls from 84 to 71, and the state does not change.'
-  token_refusals: 'REBUILT 9 August 2026. The earlier capture wore the hands token at both
-    tier anchors because the capture brief said to. Per token-arithmetic.yaml the HANDS token
-    is a raw downgrade (87.78 against 101.88 on Grips of Silent Justice from Shade of Akama,
-    a reachable boss), grants no bonus alone and breaks none, so it is refused at both tier
-    states and the arithmetic settles that alone. The HEAD token is NOT settled: it gains
-    6.36 EPV, costs 21 item hit, grants no bonus (the hands token being refused, one Onslaught
-    piece buys nothing) and breaks the Destroyer 2-piece, and NO SOURCE PRICES A SET BONUS,
-    so tier_hands_and_head carries two configurations. What would decide between them is a
-    price for "Destroyer 2-piece: Overpower grants 100 attack power for 5 sec" against 6.36
-    EPV of raw stats minus 21 item hit on a spec this repository records as short of its cap
-    at every anchor. Until one exists, both are recorded and neither is a recommendation.
-    Totals moved. CORRECTED 11 August 2026: the figures here were stale against this file''s
-    own tables, reading 107 to 122, 86 to 101 worn or 122 refused, and entry unchanged at
-    84. Summing the hit column gives entry 81, tier_hands_only 132, tier_hands_and_head 111
-    and the refusal alternative 132, and each agrees with its own total_item_hit header. The
-    tables were right and the prose was not.'
-  downgraded_slots: 'Five slots were downgraded from the full-clear Phase 3 list because their
-    source is late Black Temple (Illidan, Illidari Council or Mother Shahraz), which is not
-    reliably dead four to six weeks in: shoulder (Onslaught Shoulderblades, Mother Shahraz)
-    kept the Phase 2 Shoulderpads of the Stranger; chest (Onslaught Breastplate, Illidan)
-    kept the Phase 2 T5 Destroyer Breastplate; ring_1 (Stormrage Signet Ring, Illidan) kept
-    the Phase 2 Band of the Ranger-General, since no Wowhead-published early Hyjal/Black Temple
-    ring alternative was found for this slot; trinket_2 (Madness of the Betrayer, Illidari
-    Council) kept a Phase 2 trinket. CORRECTED 11 August 2026: this read Badge of the Swarmguard,
-    and every anchor table records Tsunami Talisman, id 30627, which is what the id settles;
-    main_hand (Cataclysm''s Edge, Archimonde) is downgraded only in tier_hands_only, which
-    by definition has not killed Archimonde yet, and kept the Phase 2 Twinblade of the Phoenix
-    there. Neck was also changed: the full-clear pick, Choker of Serrated Blades, is sourced
-    only as "Black Temple trash," and its location within the instance could not be confirmed
-    as early enough, so this capture conservatively kept the Phase 2 Pendant of the Perilous
-    instead. Both necks carry 0 item hit, so this choice does not affect any total.'
-  uncertain: Dreadboots of the Legion drop from "Essence of Anger," which Wowhead's own item
-    page lists only as "?? Boss" with no place recorded in the Black Temple encounter order.
-    RESOLVED after this capture was written. data/facts/drops.csv sources the boots to Reliquary
-    of Souls, and data/facts/progression.yaml puts that encounter fifth of nine and inside
-    the reachable set, so the 18 stands. It is treated as reachable (not one of the three
-    named-late bosses) on the strength of general TBC raid knowledge that this is a mid-instance
-    trash-adjacent drop, not a post-Reliquary one, but this was not confirmed against a primary
-    source and should be checked. If it is in fact late-instance, feet should revert to Warboots
-    of Obliteration (hit 0) in both tier states, which would lower both totals by 18. Leggings
-    of Divine Retribution and Unstoppable Aggressor's Ring, both from Gurtogg Bloodboil (Black
-    Temple boss 5), were treated as reachable under the same "not one of the three named-late
-    bosses" reading; neither carries hit, so this does not affect any total either way. The
-    alternate "4 Destroyer pieces plus one leather off-piece" entry compromise named in the
-    Phase 2 guide's own text, rather than its published table, was NOT used for the entry
-    anchor; see sources.entry.note. Had it been used, Destroyer Shoulderblades (18 hit) and
-    Destroyer Greaves (22 hit) would replace the two 0-hit off-pieces at shoulder and legs,
+  world_boss_ruling_2026_08_09: >-
+    The guild lead ruled on 9 August 2026 that this guild does not run outdoor
+    world bosses, so no Doom Lord Kazzak or Doomwalker drop may appear at any
+    anchor. See data/judgments/capture-fidelity.yaml. Each replacement is the
+    highest-EPV item in that slot's section of this spec's own workbook tab
+    that is legal at the anchor. The blocklist is enforced at
+    tools/check_capture_availability.py WORLD_BOSS_LOOT, which names both loot
+    tables in full, because drops.csv covers the seven instanced zones only and
+    carries neither boss. That blindness is why these slots passed every check
+    until now.
+    Three slots moved. The entry shoulder goes from Ripfiend Shoulderplates
+    (30740, Doom Lord Kazzak, 13 hit) to Shoulderpads of the Stranger (30055,
+    Hydross, 87.03). Read notes.shoulder_corrected beside this: Shoulderpads
+    was the slot's ORIGINAL defect, worn over the higher-ranked and legal
+    Ripfiend. The defect was the ordering, not the item. With Ripfiend now out
+    of scope, Shoulderpads is the highest legal entry row, because the four
+    Arms rows above it are the Mother Shahraz token and three Phase 3 drops.
+    The entry back goes to Vengeance Wrap (24259, Tailoring, 54.79). Cloak of
+    Darkness (33122) scores 0.29 higher but is workbook-phase 3, and it was
+    excluded on the entry premise rather than by the check, which keys on
+    drops.csv zones and cannot see a crafted item.
+    The ranged slot at all three tier anchors goes to Serpent Spine Longbow
+    (30105, Lady Vashj, 31.99). No hit moves with it.
+    Entry total_item_hit falls from 84 to 71, and the state does not change.
+  token_refusals: >-
+    REBUILT 9 August 2026. The earlier capture wore the hands token at both
+    tier anchors because the capture brief said to. Per token-arithmetic.yaml
+    the HANDS token is a raw downgrade (87.78 against 101.88 on Grips of
+    Silent Justice from Shade of Akama, a reachable boss), grants no bonus
+    alone and breaks none, so it is refused at both tier states and the
+    arithmetic settles that alone. The HEAD token is NOT settled: it gains
+    6.36 EPV, costs 21 item hit, grants no bonus (the hands token being
+    refused, one Onslaught piece buys nothing) and breaks the Destroyer
+    2-piece, and NO SOURCE PRICES A SET BONUS, so tier_hands_and_head carries
+    two configurations. What would decide between them is a price for
+    "Destroyer 2-piece: Overpower grants 100 attack power for 5 sec" against
+    6.36 EPV of raw stats minus 21 item hit on a spec this repository records
+    as short of its cap at every anchor. Until one exists, both are recorded
+    and neither is a recommendation. Totals moved. CORRECTED 11 August 2026: the figures here were stale against
+    this file's own tables, reading 107 to 122, 86 to 101 worn or 122 refused,
+    and entry unchanged at 84. Summing the hit column gives entry 81,
+    tier_hands_only 132, tier_hands_and_head 111 and the refusal alternative
+    132, and each agrees with its own total_item_hit header. The tables were
+    right and the prose was not.
+  downgraded_slots: >-
+    Five slots were downgraded from the full-clear Phase 3 list because their
+    source is late Black Temple (Illidan, Illidari Council or Mother Shahraz),
+    which is not reliably dead four to six weeks in: shoulder (Onslaught
+    Shoulderblades, Mother Shahraz) kept the Phase 2 Shoulderpads of the
+    Stranger; chest (Onslaught Breastplate, Illidan) kept the Phase 2 T5
+    Destroyer Breastplate; ring_1 (Stormrage Signet Ring, Illidan) kept the
+    Phase 2 Band of the Ranger-General, since no Wowhead-published early
+    Hyjal/Black Temple ring alternative was found for this slot; trinket_2
+    (Madness of the Betrayer, Illidari Council) kept a Phase 2 trinket. CORRECTED 11 August 2026: this read Badge of the
+    Swarmguard, and every anchor table records Tsunami Talisman, id 30627, which
+    is what the id settles; main_hand (Cataclysm's Edge, Archimonde) is downgraded only in
+    tier_hands_only, which by definition has not killed Archimonde yet, and
+    kept the Phase 2 Twinblade of the Phoenix there. Neck was also changed:
+    the full-clear pick, Choker of Serrated Blades, is sourced only as "Black
+    Temple trash," and its location within the instance could not be
+    confirmed as early enough, so this capture conservatively kept the Phase 2
+    Pendant of the Perilous instead. Both necks carry 0 item hit, so this
+    choice does not affect any total.
+  uncertain: >-
+    Dreadboots of the Legion drop from "Essence of Anger," which Wowhead's own
+    item page lists only as "?? Boss" with no place recorded in the Black
+    Temple encounter order.
+    RESOLVED after this capture was written. data/facts/drops.csv sources the
+    boots to Reliquary of Souls, and data/facts/progression.yaml puts that
+    encounter fifth of nine and inside the reachable set, so the 18 stands. It is treated as reachable (not one of the three
+    named-late bosses) on the strength of general TBC raid knowledge that this
+    is a mid-instance trash-adjacent drop, not a post-Reliquary one, but this
+    was not confirmed against a primary source and should be checked. If it is
+    in fact late-instance, feet should revert to Warboots of Obliteration
+    (hit 0) in both tier states, which would lower both totals by 18.
+    Leggings of Divine Retribution and Unstoppable Aggressor's Ring, both from
+    Gurtogg Bloodboil (Black Temple boss 5), were treated as reachable under
+    the same "not one of the three named-late bosses" reading; neither carries
+    hit, so this does not affect any total either way.
+    The alternate "4 Destroyer pieces plus one leather off-piece" entry
+    compromise named in the Phase 2 guide's own text, rather than its
+    published table, was NOT used for the entry anchor; see sources.entry.note.
+    Had it been used, Destroyer Shoulderblades (18 hit) and Destroyer Greaves
+    (22 hit) would replace the two 0-hit off-pieces at shoulder and legs,
     raising the entry total from 71 to 111.
-  shoulder_corrected: 'CORRECTED 9 August 2026, after the guild lead questioned a token claim
-    and an off-piece audit followed. This capture wore Shoulderpads of the Stranger at all
-    three anchors. The Arms tab ranks it FIFTH at 87.03. A correction on 11 August 2026 changed
-    this to FOURTH and was WRONG, and is reverted here. The tab ranks Ripfiend Shoulderplates,
-    id 30740, third at 88.08, and that item is a Doom Lord Kazzak drop. tools/extract_ladder.py
-    excludes world boss drops from the shortlist, so the SHORTLIST rank is fourth while the
-    TAB rank is fifth. The note speaks about the tab, so fifth is right. Reading a shortlist
-    position and calling it a tab rank is the mistake. IT IS A LEATHER SHOULDER AND ITS VALUE
-    IS AGILITY, which buys a warrior nothing in attack power. data/facts/attack-power.yaml
-    records that one agility gives a Cat one attack power and gives a warrior none, which
-    is why the same item is rank 1 on the Retribution tab, rank 3 on the Cat tab and rank
-    5 here. The workbook prices it correctly per spec; this capture ignored the workbook.
-    Against 33 agility, 60 attack power, 16 crit and 10 expertise, Blood-stained Pauldrons
-    carries 47 strength, which is 94 attack power for a warrior, plus 32 crit and 23 HIT.
-    More attack power, twice the crit, and 23 hit against none, on a spec this repository
-    records as short of its hit cap at every anchor. It drops from Rage Winterchill, the first
-    boss in Mount Hyjal. Entry took Ripfiend Shoulderplates instead, 39 strength, 22 crit,
-    13 hit, because Blood-stained Pauldrons is a Mount Hyjal drop and the entry anchor is
-    the set worn before Phase 3 opens. SUPERSEDED THE SAME DAY, AND THE FIGURES BELOW ARE
-    NOT CURRENT. Ripfiend is a Doom Lord Kazzak drop and went out of scope on 9 August 2026,
-    so the entry shoulder is now Shoulderpads of the Stranger. See notes.world_boss_ruling_2026_08_09,
-    which carries the live figures. The movement this note described was real when written:
-    entry 71 to 84, tier_hands_only 84 to 107, tier_hands_and_head 63 to 86, with entry and
-    tier_hands_and_head reading short rather than full once the debuff is added. It is kept
-    because the reasoning about the shoulder still holds; only the item and the totals moved.'
+
+  shoulder_corrected: >-
+    CORRECTED 9 August 2026, after the guild lead questioned a token claim and
+    an off-piece audit followed. This capture wore Shoulderpads of the Stranger
+    at all three anchors. The Arms tab ranks it FIFTH at 87.03. A correction on 11 August 2026
+    changed this to FOURTH and was WRONG, and is reverted here. The tab ranks
+    Ripfiend Shoulderplates, id 30740, third at 88.08, and that item is a Doom
+    Lord Kazzak drop. tools/extract_ladder.py excludes world boss drops from
+    the shortlist, so the SHORTLIST rank is fourth while the TAB rank is
+    fifth. The note speaks about the tab, so fifth is right. Reading a
+    shortlist position and calling it a tab rank is the mistake.
+    IT IS A LEATHER SHOULDER AND ITS VALUE IS AGILITY, which buys a warrior
+    nothing in attack power. data/facts/attack-power.yaml records that one
+    agility gives a Cat one attack power and gives a warrior none, which is why
+    the same item is rank 1 on the Retribution tab, rank 3 on the Cat tab and
+    rank 5 here. The workbook prices it correctly per spec; this capture
+    ignored the workbook.
+    Against 33 agility, 60 attack power, 16 crit and 10 expertise, Blood-stained
+    Pauldrons carries 47 strength, which is 94 attack power for a warrior, plus
+    32 crit and 23 HIT. More attack power, twice the crit, and 23 hit against
+    none, on a spec this repository records as short of its hit cap at every
+    anchor. It drops from Rage Winterchill, the first boss in Mount Hyjal.
+    Entry took Ripfiend Shoulderplates instead, 39 strength, 22 crit, 13 hit,
+    because Blood-stained Pauldrons is a Mount Hyjal drop and the entry anchor
+    is the set worn before Phase 3 opens.
+    SUPERSEDED THE SAME DAY, AND THE FIGURES BELOW ARE NOT CURRENT. Ripfiend is
+    a Doom Lord Kazzak drop and went out of scope on 9 August 2026, so the
+    entry shoulder is now Shoulderpads of the Stranger. See
+    notes.world_boss_ruling_2026_08_09, which carries the live figures. The
+    movement this note described was real when written: entry 71 to 84,
+    tier_hands_only 84 to 107, tier_hands_and_head 63 to 86, with entry and
+    tier_hands_and_head reading short rather than full once the debuff is
+    added. It is kept because the reasoning about the shoulder still holds; only
+    the item and the totals moved.

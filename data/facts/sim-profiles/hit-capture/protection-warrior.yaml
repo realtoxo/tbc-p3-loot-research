@@ -2,315 +2,253 @@ spec: protection_warrior
 collected_on: 2026-08-09
 sources:
   entry:
-    url: https://www.wowhead.com/tbc/guide/classes/warrior/protection/tank-bis-gear-pve-phase-2
-    title: Protection Warrior Tank Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic - Wowhead
+    url: "https://www.wowhead.com/tbc/guide/classes/warrior/protection/tank-bis-gear-pve-phase-2"
+    title: "Protection Warrior Tank Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic - Wowhead"
     observed: 2026-08-09
   tier:
-    url: https://www.wowhead.com/tbc/guide/protection-warrior-tank-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
-    title: Burning Crusade Classic Protection Warrior Tank Best in Slot (BiS) Phase 3 Gear
-      Guide - Wowhead
+    url: "https://www.wowhead.com/tbc/guide/protection-warrior-tank-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade"
+    title: "Burning Crusade Classic Protection Warrior Tank Best in Slot (BiS) Phase 3 Gear Guide - Wowhead"
     observed: 2026-08-09
+
+# Item hit rating (melee, item=142 raw cap) only. No gems, enchants, talents,
+# racials, buffs or consumables. No PvP armor (PvP weapons allowed). No Phase 4.
+# Every value is read from data/facts/items.csv column melee_hit, which is the
+# generated item database's stat line, not re-typed from the guide text.
 anchors:
+
   entry:
-    tier_pieces_held:
-    - head
-    - shoulder
-    - chest
-    - legs
+    tier_pieces_held: [head, shoulder, chest, legs]
     set_bonuses_held:
-    - 'Destroyer Armor 2pc: Each time you use your Shield Block ability, you gain 100 block
-      value against a single attack in the next 6 sec.'
-    - 'Destroyer Armor 4pc: You have a chance each time you are hit to gain 200 haste rating
-      for 10 sec.'
+      - "Destroyer Armor 2pc: Each time you use your Shield Block ability, you gain 100 block value against a single attack in the next 6 sec."
+      - "Destroyer Armor 4pc: You have a chance each time you are hit to gain 200 haste rating for 10 sec."
     hit_by_slot:
-      head:
-        item: Destroyer Greathelm
-        id: 30115
-        hit: 0
-      neck:
-        item: Frayed Tether of the Drowned
-        id: 30099
-        hit: 18
-      shoulder:
-        item: Destroyer Shoulderguards
-        id: 30117
-        hit: 0
-      back:
-        item: Gilded Thorium Cloak
-        id: 28660
-        hit: 0
-        note: Karazhan, Terestian Illhoof, Phase 1. Replaces Thalassian Wildercloak (an agility
-          cloak carrying no defense) — see notes.tank_rebuild.
-      chest:
-        item: Destroyer Chestguard
-        id: 30113
-        hit: 24
-      wrist:
-        item: Vambraces of Courage
-        id: 28502
-        hit: 0
-      hands:
-        item: Royal Gauntlets of Silvermoon
-        id: 29998
-        hit: 0
-      waist:
-        item: Crimson Girdle of the Indomitable
-        id: 28566
-        hit: 0
-        note: Karazhan, Moroes, Phase 1. Replaces Belt of One-Hundred Deaths (leather, no
-          defensive stats) — see notes.tank_rebuild.
-      legs:
-        item: Destroyer Legguards
-        id: 30116
-        hit: 0
-      feet:
-        item: Boots of the Resilient
-        id: 32267
-        hit: 0
-      ring_1:
-        item: Shermanar Great-Ring
-        id: 28675
-        hit: 0
-        note: Karazhan, Shade of Aran, Phase 1. Replaces Shapeshifter's Signet (a feral druid
-          ring) — see notes.tank_rebuild.
-      ring_2:
-        item: Band of the Ranger-General
-        id: 29997
-        hit: 18
-      trinket_1:
-        item: Icon of Unyielding Courage
-        id: 28121
-        hit: 30
-      trinket_2:
-        item: Gnomeregan Auto-Blocker 600
-        id: 29387
-        hit: 0
-      ranged:
-        item: Gyro-Balanced Khorium Destroyer
-        id: 32756
-        hit: 0
-      main_hand:
-        item: Dragonstrike
-        id: 28439
-        hit: 0
-      off_hand:
-        item: Aldori Legacy Defender
-        id: 28825
-        hit: 15
+      head:     { item: "Destroyer Greathelm", id: 30115, hit: 0 }
+      neck:     { item: "Frayed Tether of the Drowned", id: 30099, hit: 18 }
+      shoulder: { item: "Destroyer Shoulderguards", id: 30117, hit: 0 }
+      back:     { item: "Gilded Thorium Cloak", id: 28660, hit: 0, note: "Karazhan, Terestian Illhoof, Phase 1. Replaces Thalassian Wildercloak (an agility cloak carrying no defense) — see notes.tank_rebuild." }
+      chest:    { item: "Destroyer Chestguard", id: 30113, hit: 24 }
+      wrist:    { item: "Vambraces of Courage", id: 28502, hit: 0 }
+      hands:    { item: "Royal Gauntlets of Silvermoon", id: 29998, hit: 0 }
+      waist:    { item: "Crimson Girdle of the Indomitable", id: 28566, hit: 0, note: "Karazhan, Moroes, Phase 1. Replaces Belt of One-Hundred Deaths (leather, no defensive stats) — see notes.tank_rebuild." }
+      legs:     { item: "Destroyer Legguards", id: 30116, hit: 0 }
+      feet:     { item: "Boots of the Resilient", id: 32267, hit: 0 }
+      ring_1:   { item: "Shermanar Great-Ring", id: 28675, hit: 0, note: "Karazhan, Shade of Aran, Phase 1. Replaces Shapeshifter's Signet (a feral druid ring) — see notes.tank_rebuild." }
+      ring_2:   { item: "Band of the Ranger-General", id: 29997, hit: 18 }
+      trinket_1: { item: "Icon of Unyielding Courage", id: 28121, hit: 30 }
+      trinket_2: { item: "Gnomeregan Auto-Blocker 600", id: 29387, hit: 0 }
+      ranged:   { item: "Gyro-Balanced Khorium Destroyer", id: 32756, hit: 0 }
+      main_hand: { item: "Dragonstrike", id: 28439, hit: 0 }
+      off_hand:   { item: "Aldori Legacy Defender", id: 28825, hit: 15 }
     total_item_hit: 105
+
+  tier_hands_only:
+    tier6_pieces_held: [hands]
+    tier5_pieces_held: [head, shoulder, chest]
+    set_bonuses_held:
+      - "Destroyer Armor 2pc: Each time you use your Shield Block ability, you gain 100 block value against a single attack in the next 6 sec."
+    hit_by_slot:
+      head:     { item: "Destroyer Greathelm", id: 30115, hit: 0, note: "T5, kept. Archimonde not down, head token unreachable." }
+      neck:     { item: "Pendant of Titans", id: 32362, hit: 20, note: "Reliquary of Souls (Essence of Anger phase), the fifth of nine Black Temple encounters, well inside the 4-6 week window per data/facts/progression.yaml. Phase 3 guide's Best Overall pick." }
+      shoulder: { item: "Destroyer Shoulderguards", id: 30117, hit: 0, note: "T5, kept. Mother Shahraz not down, shoulder token unreachable." }
+      back:     { item: "Pepe's Shroud of Pacification", id: 34010, hit: 25, note: "Hyjal Summit trash drop, Phase 3 Best Overall pick." }
+      chest:    { item: "Destroyer Chestguard", id: 30113, hit: 24, note: "T5, kept. Illidan not down, chest token unreachable. Guide's own Phase 3 threat alternative." }
+      wrist:    { item: "Eternium Shell Bracers", id: 32232, hit: 0, note: "Black Temple, High Warlord Naj'entus, position 1. Replaces Bracers of Eradication (0 defense) — see notes.tank_rebuild." }
+      hands:    { item: "Onslaught Handguards", id: 30970, hit: 0, note: "T6, Azgalor token. ZERO hit, verified against items.csv." }
+      waist:    { item: "Girdle of Mighty Resolve", id: 32342, hit: 0, note: "Black Temple, Gurtogg Bloodboil, position 6. Replaces Belt of One-Hundred Deaths (leather, no defensive stats) — see notes.tank_rebuild." }
+      legs:     { item: "Destroyer Legguards", id: 30116, hit: 0, note: "T5, reverted from Destroyer Legguards (0 defense). No reachable Phase 3 legs item, token or off-piece, carries any defense; T5 is the highest-defense option this spec can wear — see notes.tank_rebuild." }
+      feet:     { item: "Myrmidon's Treads", id: 32268, hit: 17, note: "Black Temple, Shade of Akama, position 3. Replaces Myrmidon's Treads (0 defense) — see notes.tank_rebuild." }
+      ring_1:   { item: "Band of the Eternal Defender", id: 29297, hit: 0, note: "Scale of the Sands Exalted, allowed at the tier anchors by the ruling in data/facts/progression.yaml. Replaces Band of the Abyssal Lord — see notes.eternal_defender_correction." }
+      ring_2:   { item: "Ring of Deceitful Intent", id: 32266, hit: 19, note: "Shade of Akama, early Black Temple." }
+      trinket_1: { item: "Icon of Unyielding Courage", id: 28121, hit: 30, note: "Unchanged from Entry; still the guide's best Phase 3 threat trinket." }
+      trinket_2: { item: "Gnomeregan Auto-Blocker 600", id: 29387, hit: 0, note: "Badge of Justice vendor. Unchanged from Entry." }
+      ranged:   { item: "Legionkiller", id: 32253, hit: 0, note: "Supremus, early Black Temple. Phase 3 Best Overall pick; carries no hit." }
+      main_hand: { item: "The Brutalizer", id: 32254, hit: 0, note: "Supremus, early Black Temple. Phase 3 Best pick; carries no hit, but carries 22 defense and 33 stamina per items.csv." }
+      off_hand:   { item: "Kaz'rogal's Hardened Heart", id: 30889, hit: 21, note: "Kaz'rogal, early Hyjal. Guide calls it the hit-bearing stepping-stone shield ahead of Bulwark of Azzinoth." }
+    total_item_hit: 156
+
   tier_hands_and_head:
-    tier6_pieces_held:
-    - shoulder
-    tier5_pieces_held:
-    - chest
-    - head
-    - legs
+    tier6_pieces_held: [head, hands]
+    tier5_pieces_held: [shoulder, chest]
+    set_bonuses_held:
+      - "Destroyer Armor 2pc: Each time you use your Shield Block ability, you gain 100 block value against a single attack in the next 6 sec."
+      - "Onslaught Armor 2pc: Increases the health bonus from your Commanding Shout ability by 170."
     hit_by_slot:
-      head:
-        item: Destroyer Greathelm
-        id: 30115
-        hit: 0
-      neck:
-        item: Frayed Tether of the Drowned
-        id: 30099
-        hit: 18
-      shoulder:
-        item: Onslaught Shoulderblades
-        id: 30979
-        hit: 0
-      back:
-        item: Gilded Thorium Cloak
-        id: 28660
-        hit: 0
-        note: Karazhan, Terestian Illhoof, Phase 1. Replaces Thalassian Wildercloak (an agility
-          cloak carrying no defense) — see notes.tank_rebuild.
-      chest:
-        item: Destroyer Chestguard
-        id: 30113
-        hit: 24
-      wrist:
-        item: Vambraces of Courage
-        id: 28502
-        hit: 0
-      hands:
-        item: Royal Gauntlets of Silvermoon
-        id: 29998
-        hit: 0
-      waist:
-        item: Crimson Girdle of the Indomitable
-        id: 28566
-        hit: 0
-        note: Karazhan, Moroes, Phase 1. Replaces Belt of One-Hundred Deaths (leather, no
-          defensive stats) — see notes.tank_rebuild.
-      legs:
-        item: Destroyer Legguards
-        id: 30116
-        hit: 0
-      feet:
-        item: Boots of the Resilient
-        id: 32267
-        hit: 0
-      ring_1:
-        item: Shermanar Great-Ring
-        id: 28675
-        hit: 0
-        note: Karazhan, Shade of Aran, Phase 1. Replaces Shapeshifter's Signet (a feral druid
-          ring) — see notes.tank_rebuild.
-      ring_2:
-        item: Band of the Ranger-General
-        id: 29997
-        hit: 18
-      trinket_1:
-        item: Icon of Unyielding Courage
-        id: 28121
-        hit: 30
-      trinket_2:
-        item: Gnomeregan Auto-Blocker 600
-        id: 29387
-        hit: 0
-      ranged:
-        item: Gyro-Balanced Khorium Destroyer
-        id: 32756
-        hit: 0
-      main_hand:
-        item: Dragonstrike
-        id: 28439
-        hit: 0
-      off_hand:
-        item: Aldori Legacy Defender
-        id: 28825
-        hit: 15
-    total_item_hit: 105
-    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
-      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
-      2026-08-13'
-    set_pieces_held:
-      Destroyer Armor: 3
-    set_pieces_held_note: 'The prose bonus descriptions recorded here before 13 August 2026
-      described the OLD tier set and seven of them no longer held once the set was rebuilt
-      from the Phase 3 best-in-slot list. They are not rewritten, because this project does
-      not have the bonus text for the sets that replaced them and inventing it would be worse
-      than counting. What is recorded instead is what can be checked: how many pieces of each
-      set the anchor wears. Two is a 2-piece bonus and four is a 4-piece; the text of each
-      is on the item.'
+      head:     { item: "Onslaught Greathelm", id: 30974, hit: 0, note: "T6, Archimonde token. ZERO hit, verified against items.csv." }
+      neck:     { item: "Pendant of Titans", id: 32362, hit: 20, note: "Reliquary of Souls (Essence of Anger phase), fifth of nine Black Temple encounters." }
+      shoulder: { item: "Destroyer Shoulderguards", id: 30117, hit: 0, note: "T5, kept. Mother Shahraz not down, shoulder token unreachable." }
+      back:     { item: "Pepe's Shroud of Pacification", id: 34010, hit: 25 }
+      chest:    { item: "Destroyer Chestguard", id: 30113, hit: 24, note: "T5, kept. Illidan not down, chest token unreachable." }
+      wrist:    { item: "Eternium Shell Bracers", id: 32232, hit: 0, note: "Black Temple, High Warlord Naj'entus, position 1. Replaces Bracers of Eradication (0 defense) — see notes.tank_rebuild." }
+      hands:    { item: "Onslaught Handguards", id: 30970, hit: 0, note: "T6, Azgalor token. ZERO hit, verified against items.csv." }
+      waist:    { item: "Girdle of Mighty Resolve", id: 32342, hit: 0, note: "Black Temple, Gurtogg Bloodboil, position 6. Replaces Belt of One-Hundred Deaths (leather, no defensive stats) — see notes.tank_rebuild." }
+      legs:     { item: "Destroyer Legguards", id: 30116, hit: 0, note: "T5, reverted from Destroyer Legguards (0 defense). Illidari Council not down regardless, so the T6 legs token is unreachable, and no Phase 3 off-piece legs item carries any defense — see notes.tank_rebuild." }
+      feet:     { item: "Myrmidon's Treads", id: 32268, hit: 17, note: "Black Temple, Shade of Akama, position 3. Replaces Myrmidon's Treads (0 defense) — see notes.tank_rebuild." }
+      ring_1:   { item: "Band of the Eternal Defender", id: 29297, hit: 0, note: "Scale of the Sands Exalted, allowed at the tier anchors by the ruling in data/facts/progression.yaml. Replaces Band of the Abyssal Lord — see notes.eternal_defender_correction." }
+      ring_2:   { item: "Ring of Deceitful Intent", id: 32266, hit: 19 }
+      trinket_1: { item: "Icon of Unyielding Courage", id: 28121, hit: 30 }
+      trinket_2: { item: "Gnomeregan Auto-Blocker 600", id: 29387, hit: 0 }
+      ranged:   { item: "Legionkiller", id: 32253, hit: 0 }
+      main_hand: { item: "The Brutalizer", id: 32254, hit: 0, note: "Carries no hit, but carries 22 defense and 33 stamina per items.csv." }
+      off_hand:   { item: "Kaz'rogal's Hardened Heart", id: 30889, hit: 21 }
+    total_item_hit: 156
+
 notes:
-  tank_rebuild: 'An audit found this set optimised for hit at the cost of the stat that defines
-    the role: data/facts/crit.yaml requires 284 defense rating from gear for a plate tank
-    to be crit-immune (Anticipation, 5 ranks), and this capture carried only 257 at entry
-    and 189-195 at the tier anchors, about 90 rating short at tier. The audit traced this
-    to four slots that swapped a defensive item for a higher-hit damage item (legs, feet,
-    wrist, ring_1) and three slots holding items a plate tank could legally wear but would
-    not (waist: Belt of One-Hundred Deaths, leather, no defensive stats; ring_1: Shapeshifter''s
-    Signet, a feral druid ring; back at entry only: Thalassian Wildercloak, an agility cloak).
-    All were rebuilt in the stated priority: defense rating first, then armor/stamina/dodge/parry/block,
-    then threat stats. RESULT — defense rating from gear now reads 303 at entry, 338 at tier_hands_only
-    and 344 at tier_hands_and_head, all above the 284 requirement, so this tank DOES reach
-    crit immunity from items alone once itemized correctly; the prior shortfall was a itemization
-    defect, not a gearing ceiling. Per-slot: back (entry only) Thalassian Wildercloak to Gilded
-    Thorium Cloak (Karazhan, Terestian Illhoof, def 24); waist (all anchors) Belt of One-Hundred
-    Deaths to Crimson Girdle of the Indomitable at entry (Karazhan, Moroes, def 24) and Girdle
-    of Mighty Resolve at both tier anchors (Black Temple, Gurtogg Bloodboil position 6, def
-    26); ring_1 (all anchors) Shapeshifter''s Signet to Shermanar Great-Ring at entry (Karazhan,
-    Shade of Aran, def 23) and Band of the Abyssal Lord at both tier anchors (Black Temple,
-    Supremus position 2, def 27, and 21 hit; itself later displaced by Band of the Eternal
-    Defender, see notes.eternal_defender_correction); wrist (tier anchors only — entry already
-    held the defensive Vambraces of Courage) Bracers of Eradication to Eternium Shell Bracers
-    (Black Temple, High Warlord Naj''entus position 1, def 24); legs (tier anchors only —
-    entry already held T5) Destroyer Legguards reverted to the T5 Destroyer Legguards (def
-    39), because no reachable Phase 3 legs item, token or off-piece, carries any defense at
-    all — the Tier 6 legs token is the Illidari Council drop and unreachable, and every off-piece
-    legs item surveyed (Leggings of Divine Retribution, Praetorian''s Legguards) itemizes
-    for offense only; feet (tier anchors only — entry already held the defensive Boots of
-    the Resilient) Dreadboots of the Legion to Myrmidon''s Treads (Black Temple, Shade of
-    Akama position 3, def 30, and still 17 hit, an improvement on every stat over the item
-    it replaces). Back at the tier anchors (Pepe''s Shroud of Pacification) and ring_2 at
-    the tier anchors (Ring of Deceitful Intent) were left unchanged: no reachable Phase 3
-    item in either slot carries any defense at all, so ring_1 and the other defense-bearing
-    slots are what closes the gap instead, per the stated priority order. Entry ring_2 (Band
-    of the Ranger-General) was already fixed by a concurrent agent for the separate Scale
-    of the Sands defect and is left as found.'
-  eternal_defender_correction: CORRECTED 9 August 2026, after a workbook audit. Both tier
-    anchors wore Band of the Abyssal Lord (32261) in ring_1 while skipping Band of the Eternal
-    Defender (29297), which data/research/epv-workbook/Prot.csv ranks above it (84.32 against
-    80.50) and which carries more defense (30 against 27). The Eternal Defender is the Scale
-    of the Sands Exalted ring, and data/facts/progression.yaml records the guild lead's ruling
-    that Scale of the Sands rewards ARE allowed at the tier anchors, including at tier_hands_only,
-    and barred only at entry; the earlier tank_rebuild pass predates that ruling and never
-    harvested the tier-side allowance, which is why the Supremus ring was chosen then. Swapping
-    ring_1 at both tier anchors costs 21 item hit, taking each tier total from 177 to 156,
-    and raises defense rating from items by 3, to 338 at tier_hands_only and 344 at tier_hands_and_head
-    against the 284 requirement. The two rings' remaining differences (stamina, block value
-    against hit) are in items.csv; no priority between hit and defense is stated here.
-  availability_corrections: 'Entry ring_2: Band of Eternity (29294) is a Scale of the Sands
-    reputation reward, and Scale of the Sands is the Mount Hyjal faction, so it cannot be
-    held before Phase 3 opens. Replaced with Band of the Ranger-General (29997, Tempest Keep,
-    Phase 2, 18 melee hit), the top-ranked prephase Finger item in the ladder not already
-    held in ring_1 (Shapeshifter''s Signet). Entry total_item_hit rises from 87 to 105.'
-  downgraded_slots: 'Relative to the published Phase 3 full-clear BiS list: head holds the
-    T5 Destroyer Greathelm at hands_only (Archimonde, the head token''s boss, is not down
-    yet) and only swaps to the T6 Onslaught Greathelm at hands_and_head. Shoulder, chest and
-    legs never take a T6 piece in either state, because their tokens drop from Mother Shahraz,
-    Illidan and the Illidari Council respectively, all late Black Temple and not reliably
-    dead 4-6 weeks in. Shoulder and chest hold their T5 Destroyer pieces throughout, per the
-    Phase 3 guide''s own text calling both still competitive. Legs do not hold T5: the Phase
-    3 guide does not list the T5 legs as an option at all and instead names Destroyer Legguards
-    (Shade of Akama, early Black Temple) as superior to even the T6 legs, so that replaces
-    the T5 piece in both tier states. Every other slot (neck, back, wrist, waist, feet, rings,
-    trinkets, ranged, weapon, shield) was rebuilt from the Phase 3 guide''s own recommended
-    picks, filtered to exclude PvP armor (rule 2), late Black Temple bosses (Illidan, Illidari
-    Council, Mother Shahraz) and Phase 4 content, keeping Phase 1/2 items, early Hyjal/Black
-    Temple drops, one Badge of Justice vendor trinket, and one crafted/engineered item (the
-    Entry ranged weapon) where nothing early outranked it on hit. Neck and feet take the guide''s
-    own Best Overall and Best Threat picks, Pendant of Titans and Myrmidon''s Treads, both
-    from Reliquary of Souls: confirmed the fifth of nine Black Temple encounters in data/facts/progression.yaml,
-    and sourced to that encounter in data/facts/drops.csv, so both are reliably dead well
-    inside the 4-6 week window and were not downgraded.'
-  zero_hit_verification: VERIFIED. Onslaught Handguards (item 30970, the only Tier 6 piece
-    reachable at hands_only) and Onslaught Greathelm (item 30974, the second piece reachable
-    at hands_and_head) both carry a blank melee_hit field in data/facts/items.csv, i.e. zero.
-    Checked directly against the generated item table rather than trusted from prior notes.
-    The claim in data/facts/hit.yaml that "Onslaught Armor carries ZERO hit on all five pieces"
-    holds for both pieces this spec can actually reach in the 4-6 week window; the other three
-    pieces (shoulder, chest, legs) were not re-checked here because this spec never wears
-    them at either tier state.
-  direction_of_movement: 'Total item hit RISES across both anchors: 105 at Entry, 156 at both
-    tier_hands_only and tier_hands_and_head. This is the opposite direction from the retired
-    five-piece rule''s collapse. The figures moved from an earlier draft (87 at Entry, 192
-    at tier) after the tank_rebuild note''s defense-first pass: entry gained the availability-corrected
-    ring_2 (+18) with the rest of its rebuilt slots hit-neutral; the tier anchors gave up
-    hit at legs (-18), wrist (-17) and feet (-1) to restore defense, and gained it back at
-    ring_1 (+21), for a net -15 relative to the hit-optimised draft; the ring_1 hit was then
-    given back again when the Eternal Defender correction displaced Band of the Abyssal Lord
-    — see notes.eternal_defender_correction. This still reads well above the retired rule''s
-    figures, from off-piece upgrades it did not admit, and the set now also clears the 284
-    defense-rating requirement at every anchor — see notes.tank_rebuild.'
-  tier_states_identical: 'tier_hands_only and tier_hands_and_head both total 156, with no
-    change at all between them. This is not a coincidence of rounding: the only slot that
-    moves when the Archimonde head token is added is head itself, and Destroyer Greathelm
-    (T5, the item it replaces) and Onslaught Greathelm (T6, the item it becomes) both carry
-    zero item hit, verified against items.csv. So the head token displaces no hit, and its
-    only effect is on which tier set bonuses are held, Destroyer 2pc plus Onslaught 2pc replacing
-    Destroyer 2pc plus 3 T5 pieces. This differs from arms_warrior in hit.yaml, where the
-    Tier 6 token DOES displace a hit-bearing item and the total falls when it is worn.'
-  uncertain: 'Ring_2 at both tier states (Ring of Deceitful Intent, item 32266) and legs (Destroyer
-    Legguards, item 30111) both drop from Shade of Akama, an early Black Temple boss; this
-    is asserted reliably dead per the brief''s ruling, not independently re-verified against
-    a kill log. Neck (Pendant of Titans, item 32362) and feet (Myrmidon''s Treads, item 32268)
-    both drop from Reliquary of Souls, specifically its third phase, Essence of Anger; this
-    was initially misread as a separate Black Temple trash mob of uncertain position and both
-    items were wrongly excluded in an earlier draft of this file. Corrected per the coordinator:
-    Reliquary of Souls is the fifth of nine Black Temple encounters per data/facts/progression.yaml,
-    and data/facts/drops.csv sources both items to it directly, so both are reliably dead
-    in the 4-6 week window and are now included at full value. Trinket 29387 (Gnomeregan Auto-Blocker
-    600) is the Badge of Justice vendor item the task brief flagged as newly present in the
-    item table; it carries zero hit and does not change either total, but its presence here
-    is the confirmation the badge vendor is now resolvable.'
-  notes_reconciled: 'CORRECTED 9 August 2026. Three note blocks in this file still described
-    the set as it was BEFORE the defense-first rebuild, naming Praetorian''s Legguards at
-    legs and Dreadboots of the Legion at feet where the rows hold Destroyer Legguards and
-    Myrmidon''s Treads, and stating 328 defense rating at entry where the rows give 303. The
-    25-point difference was Band of Eternity, which a separate pass removed as a Mount Hyjal
-    reputation reward at a pre-Phase-3 anchor; the two passes were never reconciled. The figures
-    in the rows and in set-stats.yaml were right throughout. The account of how they were
-    reached was not, which is its own defect: a note naming two items the set does not hold
-    sends the next reader to verify a set that does not exist.'
+  tank_rebuild: >-
+    An audit found this set optimised for hit at the cost of the stat that
+    defines the role: data/facts/crit.yaml requires 284 defense rating from
+    gear for a plate tank to be crit-immune (Anticipation, 5 ranks), and this
+    capture carried only 257 at entry and 189-195 at the tier anchors, about
+    90 rating short at tier. The audit traced this to four slots that swapped
+    a defensive item for a higher-hit damage item (legs, feet, wrist, ring_1)
+    and three slots holding items a plate tank could legally wear but would
+    not (waist: Belt of One-Hundred Deaths, leather, no defensive stats;
+    ring_1: Shapeshifter's Signet, a feral druid ring; back at entry only:
+    Thalassian Wildercloak, an agility cloak). All were rebuilt in the stated
+    priority: defense rating first, then armor/stamina/dodge/parry/block,
+    then threat stats. RESULT — defense rating from gear now reads 303 at
+    entry, 338 at tier_hands_only and 344 at tier_hands_and_head, all above
+    the 284 requirement, so this tank DOES reach crit immunity from items
+    alone once itemized correctly; the prior shortfall was a itemization
+    defect, not a gearing ceiling. Per-slot: back (entry only) Thalassian
+    Wildercloak to Gilded Thorium Cloak (Karazhan, Terestian Illhoof, def 24);
+    waist (all anchors) Belt of One-Hundred Deaths to Crimson Girdle of the
+    Indomitable at entry (Karazhan, Moroes, def 24) and Girdle of Mighty
+    Resolve at both tier anchors (Black Temple, Gurtogg Bloodboil position 6,
+    def 26); ring_1 (all anchors) Shapeshifter's Signet to Shermanar
+    Great-Ring at entry (Karazhan, Shade of Aran, def 23) and Band of the
+    Abyssal Lord at both tier anchors (Black Temple, Supremus position 2, def
+    27, and 21 hit; itself later displaced by Band of the Eternal Defender,
+    see notes.eternal_defender_correction); wrist (tier anchors only — entry already held the
+    defensive Vambraces of Courage) Bracers of Eradication to Eternium Shell
+    Bracers (Black Temple, High Warlord Naj'entus position 1, def 24); legs
+    (tier anchors only — entry already held T5) Destroyer Legguards
+    reverted to the T5 Destroyer Legguards (def 39), because no reachable
+    Phase 3 legs item, token or off-piece, carries any defense at all — the
+    Tier 6 legs token is the Illidari Council drop and unreachable, and every
+    off-piece legs item surveyed (Leggings of Divine Retribution, Praetorian's
+    Legguards) itemizes for offense only; feet (tier anchors only — entry
+    already held the defensive Boots of the Resilient) Dreadboots of the
+    Legion to Myrmidon's Treads (Black Temple, Shade of Akama position 3, def
+    30, and still 17 hit, an improvement on every stat over the item it
+    replaces). Back at the tier anchors (Pepe's Shroud of Pacification) and
+    ring_2 at the tier anchors (Ring of Deceitful Intent) were left
+    unchanged: no reachable Phase 3 item in either slot carries any defense
+    at all, so ring_1 and the other defense-bearing slots are what closes the
+    gap instead, per the stated priority order. Entry ring_2 (Band of the
+    Ranger-General) was already fixed by a concurrent agent for the separate
+    Scale of the Sands defect and is left as found.
+  eternal_defender_correction: >-
+    CORRECTED 9 August 2026, after a workbook audit. Both tier anchors wore
+    Band of the Abyssal Lord (32261) in ring_1 while skipping Band of the
+    Eternal Defender (29297), which data/research/epv-workbook/Prot.csv ranks
+    above it (84.32 against 80.50) and which carries more defense (30 against
+    27). The Eternal Defender is the Scale of the Sands Exalted ring, and
+    data/facts/progression.yaml records the guild lead's ruling that Scale of
+    the Sands rewards ARE allowed at the tier anchors, including at
+    tier_hands_only, and barred only at entry; the earlier tank_rebuild pass
+    predates that ruling and never harvested the tier-side allowance, which
+    is why the Supremus ring was chosen then. Swapping ring_1 at both tier
+    anchors costs 21 item hit, taking each tier total from 177 to 156, and
+    raises defense rating from items by 3, to 338 at tier_hands_only and 344
+    at tier_hands_and_head against the 284 requirement. The two rings'
+    remaining differences (stamina, block value against hit) are in
+    items.csv; no priority between hit and defense is stated here.
+  availability_corrections: >-
+    Entry ring_2: Band of Eternity (29294) is a Scale of the Sands
+    reputation reward, and Scale of the Sands is the Mount Hyjal faction, so
+    it cannot be held before Phase 3 opens. Replaced with Band of the
+    Ranger-General (29997, Tempest Keep, Phase 2, 18 melee hit), the
+    top-ranked prephase Finger item in the ladder not already held in ring_1
+    (Shapeshifter's Signet). Entry total_item_hit rises from 87 to 105.
+  downgraded_slots: >-
+    Relative to the published Phase 3 full-clear BiS list: head holds the T5
+    Destroyer Greathelm at hands_only (Archimonde, the head token's boss, is
+    not down yet) and only swaps to the T6 Onslaught Greathelm at
+    hands_and_head. Shoulder, chest and legs never take a T6 piece in either
+    state, because their tokens drop from Mother Shahraz, Illidan and the
+    Illidari Council respectively, all late Black Temple and not reliably
+    dead 4-6 weeks in. Shoulder and chest hold their T5 Destroyer pieces
+    throughout, per the Phase 3 guide's own text calling both still
+    competitive. Legs do not hold T5: the Phase 3 guide does not list the T5
+    legs as an option at all and instead names Destroyer Legguards (Shade
+    of Akama, early Black Temple) as superior to even the T6 legs, so that
+    replaces the T5 piece in both tier states. Every other slot (neck, back,
+    wrist, waist, feet, rings, trinkets, ranged, weapon, shield) was rebuilt
+    from the Phase 3 guide's own recommended picks, filtered to exclude PvP
+    armor (rule 2), late Black Temple bosses (Illidan, Illidari Council,
+    Mother Shahraz) and Phase 4 content, keeping Phase 1/2 items, early
+    Hyjal/Black Temple drops, one Badge of Justice vendor trinket, and one
+    crafted/engineered item (the Entry ranged weapon) where nothing early
+    outranked it on hit. Neck and feet take the guide's own Best Overall and
+    Best Threat picks, Pendant of Titans and Myrmidon's Treads, both
+    from Reliquary of Souls: confirmed the fifth of nine Black Temple
+    encounters in data/facts/progression.yaml, and sourced to that encounter
+    in data/facts/drops.csv, so both are reliably dead well inside the 4-6
+    week window and were not downgraded.
+  zero_hit_verification: >-
+    VERIFIED. Onslaught Handguards (item 30970, the only Tier 6 piece
+    reachable at hands_only) and Onslaught Greathelm (item 30974, the second
+    piece reachable at hands_and_head) both carry a blank melee_hit field in
+    data/facts/items.csv, i.e. zero. Checked directly against the generated
+    item table rather than trusted from prior notes. The claim in
+    data/facts/hit.yaml that "Onslaught Armor carries ZERO hit on all five
+    pieces" holds for both pieces this spec can actually reach in the 4-6
+    week window; the other three pieces (shoulder, chest, legs) were not
+    re-checked here because this spec never wears them at either tier state.
+  direction_of_movement: >-
+    Total item hit RISES across both anchors: 105 at Entry, 156 at both
+    tier_hands_only and tier_hands_and_head. This is the opposite direction
+    from the retired five-piece rule's collapse. The figures moved from an
+    earlier draft (87 at Entry, 192 at tier) after the tank_rebuild note's
+    defense-first pass: entry gained the availability-corrected ring_2 (+18)
+    with the rest of its rebuilt slots hit-neutral; the tier anchors gave up
+    hit at legs (-18), wrist (-17) and feet (-1) to restore defense, and
+    gained it back at ring_1 (+21), for a net -15 relative to the
+    hit-optimised draft; the ring_1 hit was then given back again when the
+    Eternal Defender correction displaced Band of the Abyssal Lord — see
+    notes.eternal_defender_correction. This still reads well above the retired
+    rule's figures, from off-piece upgrades it did not admit, and the set now
+    also clears the 284 defense-rating requirement at every anchor — see
+    notes.tank_rebuild.
+  tier_states_identical: >-
+    tier_hands_only and tier_hands_and_head both total 156, with no change
+    at all between them. This is not a coincidence of rounding: the only
+    slot that moves when the Archimonde head token is added is head itself,
+    and Destroyer Greathelm (T5, the item it replaces) and Onslaught
+    Greathelm (T6, the item it becomes) both carry zero item hit, verified
+    against items.csv. So the head token displaces no hit, and its only
+    effect is on which tier set bonuses are held, Destroyer 2pc plus
+    Onslaught 2pc replacing Destroyer 2pc plus 3 T5 pieces. This differs from
+    arms_warrior in hit.yaml, where the Tier 6 token DOES displace a
+    hit-bearing item and the total falls when it is worn.
+  uncertain: >-
+    Ring_2 at both tier states (Ring of Deceitful Intent, item 32266) and
+    legs (Destroyer Legguards, item 30111) both drop from Shade of Akama,
+    an early Black Temple boss; this is asserted reliably dead per the
+    brief's ruling, not independently re-verified against a kill log.
+    Neck (Pendant of Titans, item 32362) and feet (Myrmidon's Treads,
+    item 32268) both drop from Reliquary of Souls, specifically its third
+    phase, Essence of Anger; this was initially misread as a separate Black
+    Temple trash mob of uncertain position and both items were wrongly
+    excluded in an earlier draft of this file. Corrected per the coordinator:
+    Reliquary of Souls is the fifth of nine Black Temple encounters per
+    data/facts/progression.yaml, and data/facts/drops.csv sources both items
+    to it directly, so both are reliably dead in the 4-6 week window and are
+    now included at full value.
+    Trinket 29387 (Gnomeregan Auto-Blocker 600) is the Badge of Justice
+    vendor item the task brief flagged as newly present in the item table;
+    it carries zero hit and does not change either total, but its presence
+    here is the confirmation the badge vendor is now resolvable.
+
+  notes_reconciled: >-
+    CORRECTED 9 August 2026. Three note blocks in this file still described the
+    set as it was BEFORE the defense-first rebuild, naming Praetorian's
+    Legguards at legs and Dreadboots of the Legion at feet where the rows hold
+    Destroyer Legguards and Myrmidon's Treads, and stating 328 defense rating
+    at entry where the rows give 303. The 25-point difference was Band of
+    Eternity, which a separate pass removed as a Mount Hyjal reputation reward
+    at a pre-Phase-3 anchor; the two passes were never reconciled.
+    The figures in the rows and in set-stats.yaml were right throughout. The
+    account of how they were reached was not, which is its own defect: a note
+    naming two items the set does not hold sends the next reader to verify a
+    set that does not exist.

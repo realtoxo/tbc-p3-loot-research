@@ -1,277 +1,197 @@
+# Destruction Warlock item hit rating, ENTRY and TIER anchors.
+#
+# COLLECTS FACTS ONLY. No priority, ranking or recommendation is made or
+# implied by this file. Per-item raw hit rating, summed, with provenance.
+#
+# CAP  Destruction Warlock caps on SPELL hit, raw 202 rating (16%), per
+#      data/facts/hit.yaml. Spell hit and melee hit are different stats on
+#      2.4.3 items; every figure below is SPELL hit only. Where an item
+#      carries no hit rating at all, its row still reports hit: 0 so the sum
+#      stays checkable.
+#
+# NOT COUNTED  Gems, enchants, sockets, talents, racials, consumables and raid
+#      buffs. Improved Faerie Fire grants melee and ranged hit only in 2.4.3
+#      and is not credited to any caster, this spec included.
+
 spec: destruction_warlock
 collected_on: 2026-08-09
+
 sources:
   entry:
     url: https://www.wowhead.com/tbc/guide/classes/warlock/destruction/dps-bis-gear-pve-phase-2
-    title: Destruction Warlock DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic
+    title: "Destruction Warlock DPS Best in Slot (BiS) Phase 2 Gear Guide - TBC Classic"
     attempted: 2026-08-09
-    outcome: NOT READ. The gear table renders client-side and a direct fetch returned page
-      chrome only. The set below comes from stat_data, not from here.
+    outcome: >-
+      NOT READ. The gear table renders client-side and a direct fetch returned
+      page chrome only. The set below comes from stat_data, not from here.
   tier:
     url: https://www.wowhead.com/tbc/guide/destruction-warlock-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
-    title: Burning Crusade Classic Destruction Warlock DPS Best in Slot (BiS) Phase 3 Gear
-      Guide
+    title: "Burning Crusade Classic Destruction Warlock DPS Best in Slot (BiS) Phase 3 Gear Guide"
     attempted: 2026-08-09
-    outcome: NOT READ, same client-side rendering. The set below comes from stat_data.
-    note: Publishes a FULL-CLEAR list. Both tier states below are a downgrade of it to the
-      four-to-six-week window; see notes.downgraded_slots.
+    outcome: >-
+      NOT READ, same client-side rendering. The set below comes from stat_data.
+    note: >-
+      Publishes a FULL-CLEAR list. Both tier states below are a downgrade of
+      it to the four-to-six-week window; see notes.downgraded_slots.
+  # THE ACTUAL BASIS FOR THIS SET. The two URLs above were attempted and not
+  # read, so this is the source, not a supplement to them.
   basis:
     path: data/research/epv-workbook/Dest.csv
-    title: TBC Phase 3 PVE EPV BIS LIST, Per Class (Fazers), Destruction tab
+    title: "TBC Phase 3 PVE EPV BIS LIST, Per Class (Fazers), Destruction tab"
     observed: 2026-08-09
-    note: Wowhead's guide pages render their gear tables client-side; a direct fetch of both
-      guide URLs above returned page chrome only (no table), and the browser automation tool
-      needed to render them was unavailable this session. A text-extraction proxy (r.jina.ai)
-      confirmed both pages exist, confirmed their titles, and was used to cross-check slot
-      picks and tier-token boss assignments, but every ITEM ID and every HIT NUMBER below
-      is read directly from this project's own in-repo reference workbook (data/research/epv-workbook/Dest.csv,
-      see its PROVENANCE.md), not from the proxy text. Per-slot pick is the highest-EPV item
-      passing the phase/PvP/boss-availability filter for that anchor.
+    note: >-
+      Wowhead's guide pages render their gear tables client-side; a direct
+      fetch of both guide URLs above returned page chrome only (no table),
+      and the browser automation tool needed to render them was unavailable
+      this session. A text-extraction proxy (r.jina.ai) confirmed both pages
+      exist, confirmed their titles, and was used to cross-check slot picks
+      and tier-token boss assignments, but every ITEM ID and every HIT NUMBER
+      below is read directly from this project's own in-repo reference
+      workbook (data/research/epv-workbook/Dest.csv, see its PROVENANCE.md),
+      not from the proxy text. Per-slot pick is the highest-EPV item passing
+      the phase/PvP/boss-availability filter for that anchor.
+
 anchors:
+
   entry:
-    tier_pieces_held:
-    - head
-    - shoulder
-    - legs
+    tier_pieces_held: [head, shoulder, legs]
     set_bonuses_held:
-    - 'Corruptor Raiment 2-piece: Causes your pet to be healed for 15% of the damage you deal'
+      - "Corruptor Raiment 2-piece: Causes your pet to be healed for 15% of the damage you deal"
     hit_by_slot:
-      head:
-        item: Hood of the Corruptor
-        id: 30212
-        from: Lady Vashj, Serpentshrine Cavern
-        hit: 0
-      neck:
-        item: The Sun King's Talisman
-        id: 30015
-        from: Kael'thas Sunstrider, Tempest Keep
-        hit: 0
-      shoulder:
-        item: Mantle of the Corruptor
-        id: 30215
-        from: Void Reaver, Tempest Keep
-        hit: 18
-      back:
-        item: Ruby Drape of the Mysticant
-        id: 28766
-        from: Prince Malchezaar, Karazhan
-        hit: 18
-      chest:
-        item: Vestments of the Sea-Witch
-        id: 30107
-        from: Lady Vashj, Serpentshrine Cavern
-        hit: 27
-      wrist:
-        item: Mindstorm Wristbands
-        id: 29918
-        from: Al'ar, Tempest Keep
-        hit: 0
-      hands:
-        item: Spellfire Gloves
-        id: 21847
-        from: Tailoring, crafted
-        hit: 0
-      waist:
-        item: Belt of Blasting
-        id: 30038
-        from: Tailoring, crafted
-        hit: 23
-      legs:
-        item: Leggings of the Corruptor
-        id: 30213
-        from: Fathom-Lord Karathress, Serpentshrine Cavern
-        hit: 24
-      feet:
-        item: Boots of the Shifting Nightmare
-        id: 30050
-        from: Hydross the Unstable, Serpentshrine Cavern
-        hit: 18
-      ring_1:
-        item: Ring of Endless Coils
-        id: 30109
-        from: Lady Vashj, Serpentshrine Cavern
-        hit: 0
-      ring_2:
-        item: Band of Crimson Fury
-        id: 28793
-        from: Magtheridon, Magtheridon's Lair
-        hit: 16
-      trinket_1:
-        item: Sextant of Unstable Currents
-        id: 30626
-        from: Fathom-Lord Karathress, Serpentshrine Cavern
-        hit: 0
-      trinket_2:
-        item: Quagmirran's Eye
-        id: 27683
-        from: Quagmirran, Heroic Slave Pens
-        hit: 0
-      main_hand:
-        item: Merciless Gladiator's Spellblade
-        id: 32053
-        from: Season 2 Arena (PvP weapon, allowed under counting rule 2)
-        hit: 15
-      off_hand:
-        item: Flametongue Seal
-        id: 29270
-        from: G'eras, Badge of Justice
-        hit: 0
-      ranged:
-        item: Wand of the Forgotten Star
-        id: 29982
-        from: High Astromancer Solarian, Tempest Keep
-        hit: 11
+      head: {item: Hood of the Corruptor, id: 30212, from: "Lady Vashj, Serpentshrine Cavern", hit: 0}
+      neck: {item: "The Sun King's Talisman", id: 30015, from: "Kael'thas Sunstrider, Tempest Keep", hit: 0}
+      shoulder: {item: Mantle of the Corruptor, id: 30215, from: "Void Reaver, Tempest Keep", hit: 18}
+      back: {item: Ruby Drape of the Mysticant, id: 28766, from: "Prince Malchezaar, Karazhan", hit: 18}
+      chest: {item: Vestments of the Sea-Witch, id: 30107, from: "Lady Vashj, Serpentshrine Cavern", hit: 27}
+      wrist: {item: Mindstorm Wristbands, id: 29918, from: "Al'ar, Tempest Keep", hit: 0}
+      hands: {item: "Spellfire Gloves", id: 21847, from: "Tailoring, crafted", hit: 0}
+      waist: {item: Belt of Blasting, id: 30038, from: "Tailoring, crafted", hit: 23}
+      legs: {item: Leggings of the Corruptor, id: 30213, from: "Fathom-Lord Karathress, Serpentshrine Cavern", hit: 24}
+      feet: {item: Boots of the Shifting Nightmare, id: 30050, from: "Hydross the Unstable, Serpentshrine Cavern", hit: 18}
+      ring_1: {item: Ring of Endless Coils, id: 30109, from: "Lady Vashj, Serpentshrine Cavern", hit: 0}
+      ring_2: {item: "Band of Crimson Fury", id: 28793, from: "Magtheridon, Magtheridon's Lair", hit: 16}
+      trinket_1: {item: Sextant of Unstable Currents, id: 30626, from: "Fathom-Lord Karathress, Serpentshrine Cavern", hit: 0}
+      trinket_2: {item: "Quagmirran's Eye", id: 27683, from: "Quagmirran, Heroic Slave Pens", hit: 0}
+      main_hand: {item: "Merciless Gladiator's Spellblade", id: 32053, from: "Season 2 Arena (PvP weapon, allowed under counting rule 2)", hit: 15}
+      off_hand: {item: Flametongue Seal, id: 29270, from: "G'eras, Badge of Justice", hit: 0}
+      ranged: {item: Wand of the Forgotten Star, id: 29982, from: "High Astromancer Solarian, Tempest Keep", hit: 11}
     total_item_hit: 170
-  tier_hands_and_head:
-    tier6_pieces_held:
-    - hands
-    - head
-    - shoulder
-    tier5_pieces_held: []
+
+  tier_hands_only:
+    tier6_pieces_held: [hands]
+    tier5_pieces_held: [head]
+    set_bonuses_held: []
     hit_by_slot:
-      head:
-        item: Hood of the Malefic
-        id: 31051
-        hit: 16
-      neck:
-        item: The Sun King's Talisman
-        id: 30015
-        from: Kael'thas Sunstrider, Tempest Keep
-        hit: 0
-      shoulder:
-        item: Mantle of the Malefic
-        id: 31054
-        hit: 21
-      back:
-        item: Ruby Drape of the Mysticant
-        id: 28766
-        from: Prince Malchezaar, Karazhan
-        hit: 18
-      chest:
-        item: Vestments of the Sea-Witch
-        id: 30107
-        from: Lady Vashj, Serpentshrine Cavern
-        hit: 27
-      wrist:
-        item: Mindstorm Wristbands
-        id: 29918
-        from: Al'ar, Tempest Keep
-        hit: 0
-      hands:
-        item: Gloves of the Malefic
-        id: 31050
-        hit: 11
-      waist:
-        item: Belt of Blasting
-        id: 30038
-        from: Tailoring, crafted
-        hit: 23
-      legs:
-        item: Leggings of Channeled Elements
-        id: 30916
-        hit: 18
-      feet:
-        item: Boots of the Shifting Nightmare
-        id: 30050
-        from: Hydross the Unstable, Serpentshrine Cavern
-        hit: 18
-      ring_1:
-        item: Ring of Endless Coils
-        id: 30109
-        from: Lady Vashj, Serpentshrine Cavern
-        hit: 0
-      ring_2:
-        item: Band of Crimson Fury
-        id: 28793
-        from: Magtheridon, Magtheridon's Lair
-        hit: 16
-      trinket_1:
-        item: Sextant of Unstable Currents
-        id: 30626
-        from: Fathom-Lord Karathress, Serpentshrine Cavern
-        hit: 0
-      trinket_2:
-        item: Quagmirran's Eye
-        id: 27683
-        from: Quagmirran, Heroic Slave Pens
-        hit: 0
-      main_hand:
-        item: Merciless Gladiator's Spellblade
-        id: 32053
-        from: Season 2 Arena (PvP weapon, allowed under counting rule 2)
-        hit: 15
-      off_hand:
-        item: Flametongue Seal
-        id: 29270
-        from: G'eras, Badge of Justice
-        hit: 0
-      ranged:
-        item: Wand of the Forgotten Star
-        id: 29982
-        from: High Astromancer Solarian, Tempest Keep
-        hit: 11
-    total_item_hit: 194
-    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
-      piece, per the rule in tools/rebuild_tier_sets.py. Source: https://www.wowhead.com/tbc/guide/destruction-warlock-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade'
-    set_pieces_held:
-      Malefic Raiment: 3
-    set_pieces_held_note: 'The prose bonus descriptions recorded here before 13 August 2026
-      described the OLD tier set and seven of them no longer held once the set was rebuilt
-      from the Phase 3 best-in-slot list. They are not rewritten, because this project does
-      not have the bonus text for the sets that replaced them and inventing it would be worse
-      than counting. What is recorded instead is what can be checked: how many pieces of each
-      set the anchor wears. Two is a 2-piece bonus and four is a 4-piece; the text of each
-      is on the item.'
+      head: {item: Hood of the Corruptor, id: 30212, from: "Lady Vashj, Serpentshrine Cavern (carried from entry; Hood of the Malefic needs Archimonde)", hit: 0}
+      neck: {item: Translucent Spellthread Necklace, id: 32349, from: "Black Temple, Reliquary of Souls. RESOLVED 11 August 2026: the source workbook labels the boss Devourer of Souls, which matches no Black Temple encounter, and data/facts/drops.csv gives npc 22856, Reliquary of Souls. The Affliction capture already recorded the same item against that boss, and the Retribution capture resolved the same label, so the captures no longer disagree.", hit: 15}
+      shoulder: {item: Blood-cursed Shoulderpads, id: 32338, from: "Gurtogg Bloodboil, Black Temple (early)", hit: 18}
+      back: {item: Nethervoid Cloak, id: 32590, from: "Trash, Mount Hyjal", hit: 18}
+      chest: {item: Vestments of the Sea-Witch, id: 30107, from: "Lady Vashj, Serpentshrine Cavern (carried from entry; still tops Robe/Robes of the Malefic and Rhonin lines)", hit: 27}
+      wrist: {item: Bracers of Nimble Thought, id: 32586, from: "Tailoring, crafted", hit: 0}
+      hands: {item: Gloves of the Malefic, id: 31050, from: "Azgalor, Mount Hyjal", hit: 11, note: "Tier 6 token, and an UPGRADE on hit. This read as a downgrade against Anger-Spark Gloves at 20 hit until 9 August 2026, when that world-boss drop went out of scope; the entry pick is now Spellfire Gloves at 0."}
+      waist: {item: Belt of Blasting, id: 30038, from: "Tailoring, crafted (carried from entry)", hit: 23}
+      legs: {item: Leggings of Channeled Elements, id: 30916, from: "Kaz'rogal, Mount Hyjal (early)", hit: 18}
+      feet: {item: Slippers of the Seacaller, id: 32239, from: "High Warlord Naj'entus, Black Temple (early)", hit: 0}
+      ring_1: {item: Ring of Captured Storms, id: 32247, from: "High Warlord Naj'entus, Black Temple (early)", hit: 19}
+      ring_2: {item: Ring of Ancient Knowledge, id: 32527, from: "Trash, Black Temple", hit: 0}
+      trinket_1: {item: Sextant of Unstable Currents, id: 30626, from: "Fathom-Lord Karathress, Serpentshrine Cavern (carried from entry)", hit: 0}
+      trinket_2: {item: "Quagmirran's Eye", id: 27683, from: "Quagmirran, Heroic Slave Pens (carried from entry)", hit: 0}
+      main_hand: {item: "The Maelstrom's Fury", id: 32237, from: "High Warlord Naj'entus, Black Temple (early)", hit: 0}
+      off_hand: {item: Chronicle of Dark Secrets, id: 30872, from: "Rage Winterchill, Mount Hyjal (early)", hit: 17}
+      ranged: {item: Wand of the Forgotten Star, id: 29982, from: "High Astromancer Solarian, Tempest Keep (carried from entry)", hit: 11}
+    total_item_hit: 177
+
+  tier_hands_and_head:
+    tier6_pieces_held: [hands, head]
+    tier5_pieces_held: []
+    set_bonuses_held:
+      - "Malefic Raiment 2-piece: Each time one of your Corruption or Immolate spells deals periodic damage, you heal 70 health."
+    hit_by_slot:
+      head: {item: Hood of the Malefic, id: 31051, from: "Archimonde, Mount Hyjal", hit: 16, note: "Tier 6 token."}
+      neck: {item: Translucent Spellthread Necklace, id: 32349, from: "Black Temple, boss listed as \"Devourer of Souls\" in source workbook", hit: 15}
+      shoulder: {item: Blood-cursed Shoulderpads, id: 32338, from: "Gurtogg Bloodboil, Black Temple (early)", hit: 18}
+      back: {item: Nethervoid Cloak, id: 32590, from: "Trash, Mount Hyjal", hit: 18}
+      chest: {item: Vestments of the Sea-Witch, id: 30107, from: "Lady Vashj, Serpentshrine Cavern (still tops Robe of the Malefic, which needs Illidan, and Robes of Rhonin)", hit: 27}
+      wrist: {item: Bracers of Nimble Thought, id: 32586, from: "Tailoring, crafted", hit: 0}
+      hands: {item: Gloves of the Malefic, id: 31050, from: "Azgalor, Mount Hyjal", hit: 11, note: "Tier 6 token."}
+      waist: {item: Belt of Blasting, id: 30038, from: "Tailoring, crafted", hit: 23}
+      legs: {item: Leggings of Channeled Elements, id: 30916, from: "Kaz'rogal, Mount Hyjal (early)", hit: 18}
+      feet: {item: Slippers of the Seacaller, id: 32239, from: "High Warlord Naj'entus, Black Temple (early)", hit: 0}
+      ring_1: {item: Ring of Captured Storms, id: 32247, from: "High Warlord Naj'entus, Black Temple (early)", hit: 19}
+      ring_2: {item: Ring of Ancient Knowledge, id: 32527, from: "Trash, Black Temple", hit: 0}
+      trinket_1: {item: Sextant of Unstable Currents, id: 30626, from: "Fathom-Lord Karathress, Serpentshrine Cavern", hit: 0}
+      trinket_2: {item: "Quagmirran's Eye", id: 27683, from: "Quagmirran, Heroic Slave Pens", hit: 0}
+      main_hand: {item: Tempest of Chaos, id: 30910, from: "Archimonde, Mount Hyjal", hit: 17}
+      off_hand: {item: Chronicle of Dark Secrets, id: 30872, from: "Rage Winterchill, Mount Hyjal (early)", hit: 17}
+      ranged: {item: Wand of the Forgotten Star, id: 29982, from: "High Astromancer Solarian, Tempest Keep", hit: 11}
+    total_item_hit: 210
+
 notes:
-  world_boss_ruling_2026_08_09: The guild lead ruled on 9 August 2026 that this guild does
-    not run outdoor world bosses, so no Doom Lord Kazzak or Doomwalker drop may appear at
-    any anchor. See data/judgments/capture-fidelity.yaml. Each replacement is the highest-EPV
-    item in that slot's section of this spec's own workbook tab that is legal at the anchor.
-    The blocklist is enforced at tools/check_capture_availability.py WORLD_BOSS_LOOT, which
-    names both loot tables in full, because drops.csv covers the seven instanced zones only
-    and carries neither boss. That blindness is why these slots passed every check until now.
-    The entry hands slot goes from Anger-Spark Gloves (30725, Doomwalker, 20 spell hit) to
-    Spellfire Gloves (21847, Tailoring, 110.35, no hit). The workbook labels that row "(Fire/Arcane)",
-    which is a school-scoring variant and not a group-buff row. Entry total_item_hit falls
-    from 190 to 170, against a 165 target, so this spec stays at its cap on items alone with
-    5 rating to spare. It was 25.
-  availability_corrections: 'Entry ring_2: Band of Eternity (friendly) (29302) is a Scale
-    of the Sands reputation reward, and Scale of the Sands is the Mount Hyjal faction, so
-    it cannot be held before Phase 3 opens. Replaced with Band of Crimson Fury (28793, Magtheridon''s
-    Lair, Phase 1, 16 spell hit), the top-ranked prephase Finger item in the ladder not already
-    held in ring_1 (Ring of Endless Coils). Entry total_item_hit rises from 174 to 190.'
-  downgraded_slots: 'Against the full-clear Phase 3 list: head is Hood of the Corruptor (T5,
-    carried from entry) in hands_only, moving to Hood of the Malefic (T6, Archimonde) only
-    in hands_and_head. Shoulder drops the T6 token (Mantle of the Malefic, Mother Shahraz,
-    late Black Temple) for Blood-cursed Shoulderpads (Gurtogg Bloodboil, early Black Temple)
-    in both tier states. Legs drops the T6 token (Leggings of the Malefic, Illidari Council,
-    late Black Temple) for Leggings of Channeled Elements (Kaz''rogal, Mount Hyjal, early)
-    in both tier states. Chest never takes the T6 token at all: Robe of the Malefic needs
-    Illidan (late Black Temple) and Vestments of the Sea-Witch (Serpentshrine Cavern, Phase
-    2) outranks it anyway per the source workbook''s EPV column, so this is not a forced downgrade.
-    Trinket drops The Skull of Gul''dan, the guide''s stated top pick, entirely: its source
-    is Illidan Stormrage, late Black Temple, unavailable in both tier states, so Sextant of
-    Unstable Currents (Phase 2) is carried forward instead. Main hand only reaches Tempest
-    of Chaos (Archimonde) in hands_and_head; hands_only uses The Maelstrom''s Fury (Naj''entus,
-    early Black Temple) instead.'
-  uncertain: (1) The neck pick at both tier states, Translucent Spellthread Necklace, is sourced
-    by the reference workbook to a Black Temple boss it names "Devourer of Souls." That name
-    could not be matched against the standard nine-boss Black Temple kill order (Naj'entus,
-    Supremus, Shade of Akama, Teron Gorefiend, Gurtogg Bloodboil, Reliquary of Souls, Mother
-    Shahraz, Illidari Council, Illidan Stormrage) and was not independently verified this
-    session; if it is in fact a late-Black-Temple source, drop 15 hit from both tier totals.
-    (2) "Early Black Temple" was read as the first six bosses in that order, since the brief
-    names only the last three (Mother Shahraz, Illidari Council, Illidan) as unavailable;
-    crediting Gurtogg Bloodboil and Reliquary-of-Souls-adjacent drops is this session's inference,
-    not a brief-stated boundary. (3) Both Wowhead guide pages render their gear tables client-side
-    and could not be fetched directly this session (browser automation tool disconnected);
-    slot and boss assignments were cross-checked through a third-party text-extraction proxy
-    for corroboration only, while every hit number and item id comes from the in-repo epv-workbook.
-    (4) Per-slot picks follow the workbook's EPV ranking strictly, including where it favors
-    a zero-hit item over a same-slot alternative carrying hit (for example off-hand at entry,
-    Flametongue Seal over Jewel of Infinite Possibilities); this is a mechanical application
-    of the source's own ranking, not a hit-maximizing choice. (5) Main hand plus off-hand
-    was chosen over a two-handed staff at both anchors because the combined EPV of the two
-    best one-hand items exceeds the best available two-handed staff at every anchor checked;
-    this combined-value comparison is this session's arithmetic on the workbook's numbers,
-    not a stated guide recommendation.
+  world_boss_ruling_2026_08_09: >-
+    The guild lead ruled on 9 August 2026 that this guild does not run outdoor
+    world bosses, so no Doom Lord Kazzak or Doomwalker drop may appear at any
+    anchor. See data/judgments/capture-fidelity.yaml. Each replacement is the
+    highest-EPV item in that slot's section of this spec's own workbook tab
+    that is legal at the anchor. The blocklist is enforced at
+    tools/check_capture_availability.py WORLD_BOSS_LOOT, which names both loot
+    tables in full, because drops.csv covers the seven instanced zones only and
+    carries neither boss. That blindness is why these slots passed every check
+    until now.
+    The entry hands slot goes from Anger-Spark Gloves (30725, Doomwalker, 20
+    spell hit) to Spellfire Gloves (21847, Tailoring, 110.35, no hit). The
+    workbook labels that row "(Fire/Arcane)", which is a school-scoring variant
+    and not a group-buff row.
+    Entry total_item_hit falls from 190 to 170, against a 165 target, so this
+    spec stays at its cap on items alone with 5 rating to spare. It was 25.
+  availability_corrections: >-
+    Entry ring_2: Band of Eternity (friendly) (29302) is a Scale of the Sands
+    reputation reward, and Scale of the Sands is the Mount Hyjal faction, so
+    it cannot be held before Phase 3 opens. Replaced with Band of Crimson
+    Fury (28793, Magtheridon's Lair, Phase 1, 16 spell hit), the top-ranked
+    prephase Finger item in the ladder not already held in ring_1 (Ring of
+    Endless Coils). Entry total_item_hit rises from 174 to 190.
+  downgraded_slots: >-
+    Against the full-clear Phase 3 list: head is Hood of the Corruptor (T5,
+    carried from entry) in hands_only, moving to Hood of the Malefic (T6,
+    Archimonde) only in hands_and_head. Shoulder drops the T6 token (Mantle
+    of the Malefic, Mother Shahraz, late Black Temple) for Blood-cursed
+    Shoulderpads (Gurtogg Bloodboil, early Black Temple) in both tier states.
+    Legs drops the T6 token (Leggings of the Malefic, Illidari Council, late
+    Black Temple) for Leggings of Channeled Elements (Kaz'rogal, Mount Hyjal,
+    early) in both tier states. Chest never takes the T6 token at all: Robe
+    of the Malefic needs Illidan (late Black Temple) and Vestments of the
+    Sea-Witch (Serpentshrine Cavern, Phase 2) outranks it anyway per the
+    source workbook's EPV column, so this is not a forced downgrade. Trinket
+    drops The Skull of Gul'dan, the guide's stated top pick, entirely: its
+    source is Illidan Stormrage, late Black Temple, unavailable in both tier
+    states, so Sextant of Unstable Currents (Phase 2) is carried forward
+    instead. Main hand only reaches Tempest of Chaos (Archimonde) in
+    hands_and_head; hands_only uses The Maelstrom's Fury (Naj'entus, early
+    Black Temple) instead.
+  uncertain: >-
+    (1) The neck pick at both tier states, Translucent Spellthread Necklace,
+    is sourced by the reference workbook to a Black Temple boss it names
+    "Devourer of Souls." That name could not be matched against the standard
+    nine-boss Black Temple kill order (Naj'entus, Supremus, Shade of Akama,
+    Teron Gorefiend, Gurtogg Bloodboil, Reliquary of Souls, Mother Shahraz,
+    Illidari Council, Illidan Stormrage) and was not independently verified
+    this session; if it is in fact a late-Black-Temple source, drop 15 hit
+    from both tier totals. (2) "Early Black Temple" was read as the first six
+    bosses in that order, since the brief names only the last three (Mother
+    Shahraz, Illidari Council, Illidan) as unavailable; crediting Gurtogg
+    Bloodboil and Reliquary-of-Souls-adjacent drops is this session's
+    inference, not a brief-stated boundary. (3) Both Wowhead guide pages
+    render their gear tables client-side and could not be fetched directly
+    this session (browser automation tool disconnected); slot and boss
+    assignments were cross-checked through a third-party text-extraction
+    proxy for corroboration only, while every hit number and item id comes
+    from the in-repo epv-workbook. (4) Per-slot picks follow the workbook's
+    EPV ranking strictly, including where it favors a zero-hit item over a
+    same-slot alternative carrying hit (for example off-hand at entry,
+    Flametongue Seal over Jewel of Infinite Possibilities); this is a
+    mechanical application of the source's own ranking, not a hit-maximizing
+    choice. (5) Main hand plus off-hand was chosen over a two-handed staff at
+    both anchors because the combined EPV of the two best one-hand items
+    exceeds the best available two-handed staff at every anchor checked; this
+    combined-value comparison is this session's arithmetic on the workbook's
+    numbers, not a stated guide recommendation.

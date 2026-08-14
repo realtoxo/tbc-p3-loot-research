@@ -42,6 +42,7 @@ ITEMS = Path("data/facts/items.csv")
 # The three states every capture reports, and the name each carries here.
 ANCHORS = (
     ("entry", "entry"),
+    ("tier_hands_only", "tier_hands_only"),
     ("tier_hands_and_head", "tier_hands_and_head"),
 )
 
@@ -50,7 +51,7 @@ ANCHORS = (
 # the gem counts here optimistic, so the figure is named rather than assumed.
 RATING_PER_GEM = 10
 
-ANCHOR_NAMES = ("entry", "tier_hands_and_head")
+ANCHOR_NAMES = ("entry", "tier_hands_only", "tier_hands_and_head")
 
 # Specs where the token arithmetic records a collision with the configuration
 # these captures wear. THE STRINGS ARE MECHANICAL, not verdicts: each names the

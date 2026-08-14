@@ -41,7 +41,7 @@ CAPTURES = Path("data/facts/sim-profiles/hit-capture")
 # The three states each capture reports. `downgraded_slots` and `uncertain` sit
 # beside them in some files as prose, so the anchors are named rather than
 # discovered.
-ANCHORS = ("entry", "tier_hands_and_head")
+ANCHORS = ("entry", "tier_hands_only", "tier_hands_and_head")
 
 # Every stat worth totalling for a raid set.
 #

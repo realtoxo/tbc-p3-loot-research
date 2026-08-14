@@ -73,13 +73,28 @@ specs:
       gem_sockets: 8
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 231
+      item_hit: 189
       state: full
-      tier5_pieces_held: []
+      tier5_pieces_held:
+      - legs
       tier6_pieces_held:
       - hands
       - head
-      - shoulder
+    tier_hands_only:
+      enchant_rating_available: 29
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 70
+      gem_sockets: 7
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 175
+      state: full
+      tier5_pieces_held:
+      - legs
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 242
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -111,19 +126,35 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 60
-      gem_sockets: 6
+      gem_rating_available: 100
+      gem_sockets: 10
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 77
+      item_hit: 84
       state: full
       tier5_pieces_held:
-      - chest
-      - hands
       - head
       - shoulder
+      - chest
       tier6_pieces_held:
-      - legs
+      - hands
+    tier_hands_only:
+      enchant_rating_available: 29
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 26
+      gem_rating_available: 100
+      gem_sockets: 10
+      gems_after_enchants: 0
+      gems_needed: 3
+      item_hit: 50
+      state: short
+      tier5_pieces_held:
+      - head
+      - shoulder
+      - chest
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 53
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -152,19 +183,32 @@ specs:
       enchant_rating_available: 26
       gap_after_enchants: 0
       gap_after_gems: 0
-      gap_rating: 33
-      gem_rating_available: 80
-      gem_sockets: 8
+      gap_rating: 0
+      gem_rating_available: 90
+      gem_sockets: 9
       gems_after_enchants: 0
-      gems_needed: 4
-      item_hit: 61
-      state: short
-      tier5_pieces_held: []
-      tier6_pieces_held:
+      gems_needed: 0
+      item_hit: 111
+      state: full
+      tier5_pieces_held:
       - chest
-      - hands
+      tier6_pieces_held:
       - head
-      - shoulder
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 100
+      gem_sockets: 10
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 132
+      state: full
+      tier5_pieces_held:
+      - head
+      - chest
+      tier6_pieces_held: []
     token_configuration_contested: Onslaught Gauntlets are 87.78 EPV against 101.88
       on the Shade of Akama gloves they displace, and the head token costs the Destroyer
       four-piece
@@ -198,19 +242,33 @@ specs:
       enchant_rating_available: 29
       gap_after_enchants: 0
       gap_after_gems: 0
-      gap_rating: 0
+      gap_rating: 8
       gem_rating_available: 70
       gem_sockets: 7
       gems_after_enchants: 0
-      gems_needed: 0
-      item_hit: 119
-      state: full
+      gems_needed: 1
+      item_hit: 106
+      state: short
       tier5_pieces_held: []
       tier6_pieces_held:
-      - chest
       - hands
       - head
-      - shoulder
+    tier_hands_only:
+      enchant_rating_available: 29
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 19
+      gem_rating_available: 80
+      gem_sockets: 8
+      gems_after_enchants: 0
+      gems_needed: 2
+      item_hit: 95
+      state: short
+      tier5_pieces_held:
+      - head
+      - chest
+      tier6_pieces_held:
+      - hands
     token_configuration_contested: either token breaks the Tier 5 four-piece, whose
       slots are head, shoulder, chest and hands; both tokens are raw EPV gains,
       so the collision is the bonus and not the items
@@ -244,19 +302,35 @@ specs:
       enchant_rating_available: 26
       gap_after_enchants: 0
       gap_after_gems: 0
-      gap_rating: 3
-      gem_rating_available: 80
-      gem_sockets: 8
+      gap_rating: 0
+      gem_rating_available: 70
+      gem_sockets: 7
       gems_after_enchants: 0
-      gems_needed: 1
-      item_hit: 91
-      state: short
-      tier5_pieces_held: []
-      tier6_pieces_held:
-      - chest
-      - hands
-      - legs
+      gems_needed: 0
+      item_hit: 118
+      state: full
+      tier5_pieces_held:
       - shoulder
+      - chest
+      tier6_pieces_held:
+      - hands
+      - head
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 50
+      gem_sockets: 5
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 105
+      state: full
+      tier5_pieces_held:
+      - head
+      - chest
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 106
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -288,18 +362,35 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 70
-      gem_sockets: 7
+      gem_rating_available: 80
+      gem_sockets: 8
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 209
+      item_hit: 232
       state: full
-      tier5_pieces_held: []
-      tier6_pieces_held:
-      - chest
-      - hands
-      - legs
+      tier5_pieces_held:
       - shoulder
+      - legs
+      tier6_pieces_held:
+      - hands
+      - head
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 80
+      gem_sockets: 8
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 223
+      state: full
+      tier5_pieces_held:
+      - head
+      - shoulder
+      - legs
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 201
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -338,13 +429,27 @@ specs:
       gem_sockets: 8
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 194
+      item_hit: 210
       state: full
       tier5_pieces_held: []
       tier6_pieces_held:
       - hands
       - head
-      - shoulder
+    tier_hands_only:
+      enchant_rating_available: 29
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 70
+      gem_sockets: 7
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 177
+      state: full
+      tier5_pieces_held:
+      - head
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 200
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -374,18 +479,31 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 70
-      gem_sockets: 7
+      gem_rating_available: 40
+      gem_sockets: 4
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 103
+      item_hit: 54
       state: full
       tier5_pieces_held: []
       tier6_pieces_held:
-      - chest
       - hands
       - head
-      - shoulder
+    tier_hands_only:
+      enchant_rating_available: 29
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 50
+      gem_sockets: 5
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 72
+      state: full
+      tier5_pieces_held:
+      - head
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 121
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -422,16 +540,33 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 80
-      gem_sockets: 8
+      gem_rating_available: 50
+      gem_sockets: 5
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 155
+      item_hit: 198
       state: full
       tier5_pieces_held:
+      - head
       - chest
       - hands
+      - legs
+      tier6_pieces_held: []
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 50
+      gem_sockets: 5
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 198
+      state: full
+      tier5_pieces_held:
       - head
+      - chest
+      - hands
       - legs
       tier6_pieces_held: []
     token_configuration_contested: the published guide states in its own words that
@@ -467,20 +602,38 @@ specs:
       enchant_rating_available: 26
       gap_after_enchants: 0
       gap_after_gems: 0
-      gap_rating: 35
-      gem_rating_available: 50
-      gem_sockets: 5
+      gap_rating: 58
+      gem_rating_available: 60
+      gem_sockets: 6
       gems_after_enchants: 0
-      gems_needed: 4
-      item_hit: 59
+      gems_needed: 6
+      item_hit: 36
       state: short
-      tier5_pieces_held: []
-      tier6_pieces_held:
-      - chest
-      - hands
+      tier5_pieces_held:
       - head
-      - legs
       - shoulder
+      - chest
+      - legs
+      tier6_pieces_held:
+      - hands
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 58
+      gem_rating_available: 60
+      gem_sockets: 6
+      gems_after_enchants: 0
+      gems_needed: 6
+      item_hit: 36
+      state: short
+      tier5_pieces_held:
+      - head
+      - shoulder
+      - chest
+      - legs
+      tier6_pieces_held:
+      - hands
     token_configuration_contested: a druid has five tier slots, and the Nordrassil
       four-piece plus the Thunderheart two-piece need six
     workbook_greedy_reference:
@@ -510,16 +663,27 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 60
-      gem_sockets: 6
+      gem_rating_available: 90
+      gem_sockets: 9
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 170
+      item_hit: 192
       state: full
       tier5_pieces_held: []
-      tier6_pieces_held:
-      - legs
-      - shoulder
+      tier6_pieces_held: []
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 90
+      gem_sockets: 9
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 192
+      state: full
+      tier5_pieces_held: []
+      tier6_pieces_held: []
     token_configuration_contested: the head slot is Wolfshead Helm, which is not
       tier, and the hands token alone leaves one Tier 6 piece and so no Tier 6 bonus
       while cutting Nordrassil from four pieces to three
@@ -554,18 +718,35 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 40
-      gem_sockets: 4
+      gem_rating_available: 90
+      gem_sockets: 9
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 121
+      item_hit: 149
       state: full
       tier5_pieces_held:
+      - shoulder
+      - chest
+      tier6_pieces_held:
       - hands
       - head
-      tier6_pieces_held:
-      - chest
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 80
+      gem_sockets: 8
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 170
+      state: full
+      tier5_pieces_held:
+      - head
       - shoulder
+      - chest
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 142
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -602,12 +783,12 @@ specs:
       enchant_rating_available: 26
       gap_after_enchants: 0
       gap_after_gems: 0
-      gap_rating: 32
-      gem_rating_available: 110
-      gem_sockets: 11
+      gap_rating: 5
+      gem_rating_available: 100
+      gem_sockets: 10
       gems_after_enchants: 0
-      gems_needed: 4
-      item_hit: 15
+      gems_needed: 1
+      item_hit: 42
       item_spell_hit: 17
       net_spell_target_rating: 165
       spell_enchant_rating_available: 29
@@ -616,12 +797,34 @@ specs:
       spell_gems_after_enchants: 12
       spell_state: short
       state: short
-      tier5_pieces_held: []
-      tier6_pieces_held:
-      - chest
-      - hands
+      tier5_pieces_held:
       - legs
-      - shoulder
+      tier6_pieces_held:
+      - hands
+      - head
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 5
+      gem_rating_available: 100
+      gem_sockets: 10
+      gems_after_enchants: 0
+      gems_needed: 1
+      item_hit: 42
+      item_spell_hit: 0
+      net_spell_target_rating: 165
+      spell_enchant_rating_available: 29
+      spell_gap_after_enchants: 136
+      spell_gap_rating: 165
+      spell_gems_after_enchants: 14
+      spell_state: short
+      state: short
+      tier5_pieces_held:
+      - head
+      - legs
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 0
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -653,18 +856,35 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 120
-      gem_sockets: 12
+      gem_rating_available: 100
+      gem_sockets: 10
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 105
+      item_hit: 156
       state: full
       tier5_pieces_held:
-      - chest
-      - head
-      - legs
-      tier6_pieces_held:
       - shoulder
+      - chest
+      tier6_pieces_held:
+      - head
+      - hands
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 100
+      gem_sockets: 10
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 156
+      state: full
+      tier5_pieces_held:
+      - head
+      - shoulder
+      - chest
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 120
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -694,11 +914,25 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 80
-      gem_sockets: 8
+      gem_rating_available: 90
+      gem_sockets: 9
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 58
+      item_hit: 85
+      state: full
+      tier5_pieces_held: []
+      tier6_pieces_held:
+      - head
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 100
+      gem_sockets: 10
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 79
       state: full
       tier5_pieces_held:
       - chest
@@ -736,18 +970,33 @@ specs:
       gap_after_enchants: 0
       gap_after_gems: 0
       gap_rating: 0
-      gem_rating_available: 70
-      gem_sockets: 7
+      gem_rating_available: 80
+      gem_sockets: 8
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 100
+      item_hit: 183
       state: full
-      tier5_pieces_held: []
-      tier6_pieces_held:
+      tier5_pieces_held:
       - chest
+      tier6_pieces_held:
       - hands
       - head
-      - shoulder
+    tier_hands_only:
+      enchant_rating_available: 29
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 90
+      gem_sockets: 9
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 207
+      state: full
+      tier5_pieces_held:
+      - head
+      - chest
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 162
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -778,19 +1027,38 @@ specs:
       enchant_rating_available: 26
       gap_after_enchants: 0
       gap_after_gems: 0
-      gap_rating: 10
-      gem_rating_available: 70
-      gem_sockets: 7
+      gap_rating: 0
+      gem_rating_available: 110
+      gem_sockets: 11
       gems_after_enchants: 0
-      gems_needed: 1
-      item_hit: 37
-      state: short
-      tier5_pieces_held: []
-      tier6_pieces_held:
+      gems_needed: 0
+      item_hit: 92
+      state: full
+      tier5_pieces_held:
+      - shoulder
       - chest
+      - legs
+      tier6_pieces_held:
       - hands
       - head
+    tier_hands_only:
+      enchant_rating_available: 26
+      gap_after_enchants: 0
+      gap_after_gems: 0
+      gap_rating: 0
+      gem_rating_available: 110
+      gem_sockets: 11
+      gems_after_enchants: 0
+      gems_needed: 0
+      item_hit: 92
+      state: full
+      tier5_pieces_held:
+      - head
       - shoulder
+      - chest
+      - legs
+      tier6_pieces_held:
+      - hands
     workbook_greedy_reference:
       entry: 110
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
