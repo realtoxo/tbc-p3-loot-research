@@ -125,6 +125,66 @@ that the guild lead has ruled the tier set does not respect the window. The
 seventeen Phase 3 best-in-slot lists are captured and do not need re-reading.
 
 
+## The tier-set rebuild, second attempt, 14 August 2026: landed, NOT verified
+
+The rebuild is on `main` at 8292f10 and is **not published**. `gh-pages` remains
+on f84406d. A second seventeen-agent Opus review took the findings from 96 to
+54, with two specs clean, and the remaining 21 routing findings are real. Do not
+publish until they are settled.
+
+WHAT THE SECOND PASS FIXED. The prose moved with the data: 37 note keys retired
+under `notes_from_the_previous_construction` behind a header, the card footnote
+"Tier rows assume both reachable tokens" removed from 243 places, and
+`progression.yaml` told what it now governs.
+
+### Three defects in the rebuild itself
+
+**THE ORPHAN REPLACEMENT HAS NO AVAILABILITY FILTER.** Rule 2 replaces an
+orphaned tier piece with the highest-EPV off-piece the workbook ranks, and
+nothing stops that being an Illidan drop. Cursed Vision of Sargeras (32235)
+landed in the Combat Rogue, Beast Mastery Hunter and Protection Paladin head
+slots. AGENTS.md bars Illidan, Mother Shahraz, the Illidari Council and Arena
+Season 3 from EVERY anchor, and that rule is separate from the progression
+window the guild lead set aside. The replacement must be filtered.
+
+**ONE PHASE 3 LIST WAS EXTRACTED WRONG.** The Protection Warrior's shoulder was
+captured as Onslaught Shoulderblades, item 30979, which is `Onslaught
+Battlegear`, the DPS set: 0 defense, 39 strength. The tank set is `Onslaught
+Armor`. A tank guide does not recommend it, so the extractor took a row from the
+wrong table. `check_tank_defense` still passes because the defense shortfall
+sits inside the gem and enchant budget, so nothing caught it. EVERY captured
+list needs re-checking against the spec's own set before the rebuild is trusted.
+
+**A DERIVED FIELD WAS NOT RECOMPUTED.** The Protection Paladin tier anchor
+carries `total_item_spell_hit: 17` while no item in the set has any spell hit.
+The rebuild recomputed `total_item_hit` and missed its sibling, and the stale 17
+has already reached hit-captured.yaml and the spell line derived from it.
+
+### Two things that are contested rather than wrong
+
+**TIER TOKENS FROM OUT-OF-WINDOW BOSSES.** Eight specs wear a shoulder, chest or
+legs token from Mother Shahraz, the Illidari Council or Illidan. That follows
+directly from the guild lead's rule and his ruling that progression does not
+constrain the tier set. It is recorded, not a defect. Note it sits uneasily
+beside the AGENTS.md rule above, which bars those bosses at any anchor: the two
+rules now disagree and one of them has to give.
+
+**THE ARCANE MAGE'S ORPHANED LEGS.** Leggings of the Tempest sits alone in
+Tempest Regalia, buys no bonus, and the workbook ranks Leggings of Channeled
+Elements above it, 94.31 to 92.97. Rule 1 took it because the Phase 3 list
+chose it, and rule 2 does not test a rule 1 pick. Working as specified, and
+worth a ruling.
+
+### Still stale
+
+Contested-token sentences printed on Arms Warrior, Balance Druid and Feral Cat
+cards describe token configurations the rebuilt sets no longer hold. The Arms
+Warrior one repeats a claim already retracted in token-arithmetic.yaml: it says
+the head token costs the Destroyer four-piece when that capture holds two
+Destroyer pieces. The string is hardcoded in tools/extract_hit_captures.py and
+so bypasses tools/check_token_arithmetic.py entirely.
+
+
 ## Swept and found clean
 
 Token to slot to boss for all 45 tokens; set bonus verbatim text across files; the conversion constants; the 490, 415, 332, 284 and 102.4 tank thresholds; expertise caps; the generated table counts against `PROVENANCE.md`; `docs/bosses.md` against `drops.csv`; every EPV figure in `docs/conventions.md` against the workbook; `docs/kb/DOMAIN.md`; `enchants-gems.yaml` era claims; all item id and name pairs in the captures; the schedule dates; and `just check` passes.
