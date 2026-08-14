@@ -33,7 +33,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -110,7 +109,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -190,7 +188,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -262,7 +259,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -348,7 +344,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -420,7 +415,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -492,7 +486,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -569,7 +562,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -646,7 +638,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -836,7 +827,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -908,7 +898,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -980,7 +969,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1057,7 +1045,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1129,7 +1116,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1215,7 +1201,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1287,7 +1272,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1628,7 +1612,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1705,7 +1688,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1788,7 +1770,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1860,7 +1841,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {
@@ -1940,7 +1920,6 @@ return {
         armor_pen = {
           { label = "armor penetration", unit = "", op = "multiply", by = 1,
             rate = "armor penetration counted as itself",
-            net = false,
             source = "guild lead ruling, 12 August 2026: captured as themselves rather than converted" },
         },
         expertise = {

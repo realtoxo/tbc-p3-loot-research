@@ -40,6 +40,7 @@ import yaml
 
 SOURCE = Path("data/facts/field-commentary.yaml")
 STANCES = Path("data/facts/creator-stances.yaml")
+ROUTING = Path("data/facts/creator-routing.yaml")
 REACH = Path("data/facts/creator-reach.yaml")
 
 # How many remarks one item page shows.
@@ -88,6 +89,18 @@ def main() -> int:
         notes[key] = entry
 
     stances = list(yaml.safe_load(STANCES.read_text())["remarks"])
+
+    # WHERE A REMARK SENDS THE ITEM, keyed the same way the notes are: item id,
+    # creator and timestamp. The guild lead ruled on 13 August 2026 that a card
+    # should say where a creator puts an item rather than whether they like it,
+    # so this is what the label is built from and the stance becomes a fallback
+    # for a remark the routing pass could not read.
+    routing = {}
+    if ROUTING.is_file():
+        for row in yaml.safe_load(ROUTING.read_text())["routing"]:
+            key = (str(row["item_id"]), str(row["creator"]).strip(),
+                   str(row["timestamp"]).strip())
+            routing[key] = row
 
     # A CURATED ENTRY WITH NO REMARK BEHIND IT STILL BELONGS ON THE PAGE.
     # fc-006, Merciless Gladiator's Maul, was read by hand because the item is
@@ -231,6 +244,16 @@ def main() -> int:
             out.append(f"        timestamp = {lua_string(stamp(remark['timestamp']))},")
             out.append(f"        claim = {lua_string(tidy(remark['claim']))},")
             out.append(f"        stance = {lua_string(tidy(remark['stance']))},")
+            route = routing.get((str(remark["item_id"]),
+                                 str(remark["creator"]).strip(),
+                                 str(remark["timestamp"]).strip()), {})
+            for field in ("routes_to", "routes_away_from"):
+                names = route.get(field) or []
+                if names:
+                    out.append(f"        {field} = {{ " + ", ".join(
+                        lua_string(n) for n in names) + " },")
+            if route.get("no_routing_stated"):
+                out.append("        no_routing_stated = true,")
             out.append(f"        views = {reach.get(remark['slug'], 0)},")
             out.append("        captured = true,")
             scope = remark.get("specs") or []

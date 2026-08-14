@@ -57,14 +57,49 @@ local function item_span(blocks)
   return nil
 end
 
--- What each stance reads as on the page. The word "stance" is jargon and the
--- reader is a council member, not a data engineer.
+-- WHAT THE LABEL SAYS, AND WHY IT STOPPED BEING THE STANCE.
+--
+-- It used to read "Speaks well of it" or "Argues against it". The guild lead
+-- rejected that axis on 13 August 2026: "The item exists to exist. It does not
+-- matter if they like it or not. Our influencer quotes should focus on opinions
+-- about where the item should be placed."
+--
+-- Approval and routing are different questions and the stance answers only the
+-- first. Zatar on The Skull of Gul'dan is the case that proves it: he speaks
+-- well of it throughout AND argues the hit rating is wasted on three of the
+-- four casters who could take it. "Speaks well of it" is true and useless. The
+-- label now names the destination, from data/facts/creator-routing.yaml.
 local STANCE = {
   favours = "Speaks well of it",
   against = "Argues against it",
   conditional = "It depends",
   mentions_only = "Mentioned, no view given",
 }
+
+local function name_list(names)
+  if #names == 1 then return names[1] end
+  if #names == 2 then return names[1] .. " and " .. names[2] end
+  local head = {}
+  for i = 1, #names - 1 do head[#head + 1] = names[i] end
+  return table.concat(head, ", ") .. " and " .. names[#names]
+end
+
+-- The routing as one line, or nil where the pass recorded none. A remark that
+-- states no routing says so rather than falling back to approval, because
+-- "Mentioned, no view given" is the honest answer for those and the stance file
+-- already says it.
+local function routing_text(entry)
+  local to = entry.routes_to or {}
+  local away = entry.routes_away_from or {}
+  if #to > 0 and #away > 0 then
+    return "Puts it on " .. name_list(to) .. ", not " .. name_list(away)
+  elseif #to > 0 then
+    return "Puts it on " .. name_list(to)
+  elseif #away > 0 then
+    return "Keeps it off " .. name_list(away)
+  end
+  return nil
+end
 
 local function views_text(views)
   if views >= 1000000 then
@@ -122,7 +157,15 @@ local function entry_block(entry)
   -- siblings they become grid cells of their own and the stance lands in the
   -- claim column while the claim drops to the next row.
   local body = pandoc.List({})
-  if entry.stance and entry.stance ~= "" then
+  local routed = routing_text(entry)
+  if routed then
+    body:insert(pandoc.Div({ pandoc.Plain(pandoc.Str(routed)) },
+      pandoc.Attr("", { "commentary-stance", "commentary-routed",
+                        "stance-" .. (entry.stance or "none") })))
+  elseif entry.stance and entry.stance ~= "" then
+    -- NO ROUTING WAS READ OUT OF THIS ONE, so the card falls back to what the
+    -- capture does say. Eighty remarks are genuinely a proc rate or a passing
+    -- comparison and state nothing about who should hold the item.
     body:insert(pandoc.Div({ pandoc.Plain(pandoc.Str(STANCE[entry.stance]
       or entry.stance)) },
       pandoc.Attr("", { "commentary-stance", "stance-" .. entry.stance })))
