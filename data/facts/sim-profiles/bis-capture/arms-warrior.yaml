@@ -1,0 +1,137 @@
+spec: arms_warrior
+anchor_built: bis
+built_on: '2026-08-15'
+GENERATED: BY tools/build_bis_capture.py. DO NOT EDIT. It is rebuilt from data/research/wowhead-phase3-bis-full/arms_warrior.json,
+  which is a capture and is never edited, plus the weapon routing in data/judgments/weapon-routing.yaml,
+  which is a judgment. To change a slot here, change one of those two.
+sources:
+  bis:
+    url: https://www.wowhead.com/tbc/guide/arms-warrior-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Arms Warrior DPS Best in Slot (BiS) Phase 3 Gear
+      Guide - Wowhead
+    observed: '2026-08-15'
+anchors:
+  bis:
+    hit_by_slot:
+      head:
+        item: Onslaught Battle-Helm
+        id: 30972
+        hit: 0
+      neck:
+        item: Choker of Serrated Blades
+        id: 32591
+        hit: 0
+      shoulder:
+        item: Onslaught Shoulderblades
+        id: 30979
+        hit: 0
+      back:
+        item: Cloak of Darkness
+        id: 33122
+        hit: 0
+        capture_note: first of two tied 'Best' rows in the Back Armor table; the
+          other was Vengeance Wrap, id 24259
+      chest:
+        item: Onslaught Breastplate
+        id: 30975
+        hit: 16
+        capture_note: table also listed Destroyer Breastplate, id 30118, ranked
+          'P2 Best' (a lower, non-tied rank), so it is not a tie
+      wrist:
+        item: Deadly Cuffs
+        id: 30863
+        hit: 12
+        capture_note: first of four tied 'Best' rows in the Wrist Armor table; the
+          others were Bindings of Lightning Reflexes id 32574, Bladespire Warbands
+          id 28795, and Furious Shackles id 30861
+      hands:
+        item: Onslaught Gauntlets
+        id: 30969
+        hit: 0
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      legs:
+        item: Leggings of Divine Retribution
+        id: 32341
+        hit: 0
+      feet:
+        item: Dreadboots of the Legion
+        id: 32345
+        hit: 18
+        capture_note: first of two tied 'Best' rows in the Feet Armor table; the
+          other was Shadowmaster's Boots, id 32366
+      ring_1:
+        item: Stormrage Signet Ring
+        id: 32497
+        hit: 30
+        capture_note: first of two tied 'Best' rows in the Ring Jewelry table
+      ring_2:
+        item: Unstoppable Aggressor's Ring
+        id: 32335
+        hit: 0
+        capture_note: second of two tied 'Best' rows in the Ring Jewelry table
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+        capture_note: first of four tied 'Best' rows in the Trinkets table
+      trinket_2:
+        item: Badge of the Swarmguard
+        id: 21670
+        hit: 0
+        outside_items_csv: Badge of the Swarmguard is not in data/facts/items.csv,
+          which is scoped to Phase 3 and pre-phase gear. Its hit is read from the
+          simulator database instead. It simulates normally.
+        capture_note: second of four tied 'Best' rows in the Trinkets table; id
+          21670 is ABSENT from data/facts/items.csv, could not be cross-checked
+          against the fact table
+      main_hand:
+        item: Cataclysm's Edge
+        id: 30902
+        hit: 0
+      off_hand:
+        item: null
+        id: null
+        hit: 0
+      ranged:
+        item: Barrel-Blade Longrifle
+        id: 30724
+        hit: 0
+        outside_items_csv: Barrel-Blade Longrifle is not in data/facts/items.csv,
+          which is scoped to Phase 3 and pre-phase gear. Its hit is read from the
+          simulator database instead. It simulates normally.
+        capture_note: first of three tied 'Best' rows in the Ranged Weapons table;
+          the others were Twisted Blades of Zarak id 32326 and Serpent Spine Longbow
+          id 30105; id 30724 is ABSENT from data/facts/items.csv, could not be cross-checked
+          against the fact table
+    total_item_hit: 76
+    tier6_pieces_held:
+    - head
+    - shoulder
+    - chest
+    - hands
+    tier5_pieces_held: []
+    tier4_pieces_held: []
+    set_pieces_held:
+      Onslaught Battlegear: 4
+    hit_state:
+      cap: melee_special
+      net_target_rating: 142
+      assumed_debuff_rating: 48.0
+      item_hit: 76
+      state: short
+      gap_rating: 18
+      gem_sockets: 8
+      gems_needed: 2
+routing_applied:
+- 'main_hand: Cataclysm''s Edge replaces Warglaive of Azzinoth. Routed by the guild
+  lead, 15 August 2026: the Arms Warrior will never receive the Warglaives, and
+  takes Cataclysm''s Edge. This changes the BUILD from dual wield to a two-hander,
+  which is not a stat swap.'
+- 'off_hand: EMPTY replaces Warglaive of Azzinoth. Cataclysm''s Edge is two-handed,
+  so the off hand the capture lists is displaced rather than kept.'
+outside_items_csv:
+- 'trinket_2: 21670 Badge of the Swarmguard'
+- 'ranged: 30724 Barrel-Blade Longrifle'

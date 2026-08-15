@@ -127,7 +127,7 @@ dev:
 check: regen
     #!/usr/bin/env bash
     set -euo pipefail
-    generated="data/facts/consumable-ids.yaml data/facts/drops.csv data/facts/items.csv data/facts/effect-text.csv data/facts/talent-conversions.yaml data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/unranked.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md"
+    generated="data/facts/consumable-ids.yaml data/facts/drops.csv data/facts/items.csv data/facts/effect-text.csv data/facts/talent-conversions.yaml data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/unranked.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md data/facts/sim-profiles/bis-capture data/sim/gear docs/sims.md docs/sims"
     if ! git diff --quiet -- $generated; then
         echo "ERROR: the generated tables differ after regeneration." >&2
         echo "Either the data changed and you should commit, or a generated file was hand-edited." >&2
@@ -144,6 +144,16 @@ check: regen
     python3 tools/check_raid_buffs.py
     python3 tools/check_weapon_layout.py
     python3 tools/check_workbook_columns.py
+    python3 tools/check_sim_profiles.py
+
+# Run every gear profile through the simulator and rewrite the figures and the
+# pages that read them. NOT part of `just regen` or `just check`: it needs the
+# wowsimcli binary and takes minutes, and a check that reruns a simulation would
+# fail the build on run-to-run noise. Install the binary with
+# tools/install_wowsimcli.sh first.
+sim ITERATIONS="10000":
+    @python3 tools/run_sims.py --iterations {{ITERATIONS}} --out data/facts/sim-figures.yaml
+    @python3 tools/generate_sim_pages.py
 
 # Fail if a sim profile wears a gem or an enchant Phase 3 cannot supply.
 # Runs inside `just check` as well; this is the one-line way to run it alone.
@@ -191,6 +201,16 @@ regen:
     @python3 tools/extract_ladder.py --db "{{wowsims}}/assets/database/db.json" --out theme/filters/ladder.generated.lua
     @python3 tools/index_transcript_mentions.py --out data/facts/transcript-mentions.csv
     @python3 tools/extract_consumable_ids.py --out data/facts/consumable-ids.yaml
+    # The best-in-slot anchor and the profiles that carry it. These are offline
+    # and deterministic, so they belong here rather than beside the simulator
+    # run: `just check` regenerates and diffs, which is what stops a hand edit
+    # to a gear file from surviving.
+    @python3 tools/build_bis_capture.py
+    @python3 tools/export_sim_profiles.py --out data/sim/gear
+    # The pages read the recorded figures. They do NOT run the simulator, so
+    # `just regen` stays offline and reproducible; `just sim` is what produces
+    # new figures.
+    @python3 tools/generate_sim_pages.py
 
 # Check documents against the house writing style in docs/kb/DEVELOPING.md.
 style *PATHS:

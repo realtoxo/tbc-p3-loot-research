@@ -1,0 +1,108 @@
+spec: beast_mastery_hunter
+anchor_built: bis
+built_on: '2026-08-15'
+GENERATED: BY tools/build_bis_capture.py. DO NOT EDIT. It is rebuilt from data/research/wowhead-phase3-bis-full/beast_mastery_hunter.json,
+  which is a capture and is never edited, plus the weapon routing in data/judgments/weapon-routing.yaml,
+  which is a judgment. To change a slot here, change one of those two.
+sources:
+  bis:
+    url: https://www.wowhead.com/tbc/guide/beast-mastery-hunter-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Beast Mastery Hunter DPS Best in Slot (BiS) Phase
+      3 Gear Guide - Wowhead
+    observed: '2026-08-15'
+anchors:
+  bis:
+    hit_by_slot:
+      head:
+        item: Cursed Vision of Sargeras
+        id: 32235
+        hit: 21
+      neck:
+        item: Choker of Serrated Blades
+        id: 32591
+        hit: 0
+      shoulder:
+        item: Gronnstalker's Spaulders
+        id: 31006
+        hit: 0
+      back:
+        item: Thalassian Wildercloak
+        id: 29994
+        hit: 0
+      chest:
+        item: Gronnstalker's Chestguard
+        id: 31004
+        hit: 0
+      wrist:
+        item: Insidious Bands
+        id: 32324
+        hit: 12
+      hands:
+        item: Gronnstalker's Gloves
+        id: 31001
+        hit: 0
+      waist:
+        item: Don Alejandro's Money Belt
+        id: 30879
+        hit: 0
+      legs:
+        item: Gronnstalker's Leggings
+        id: 31005
+        hit: 0
+      feet:
+        item: Shadowmaster's Boots
+        id: 32366
+        hit: 0
+      ring_1:
+        item: Stormrage Signet Ring
+        id: 32497
+        hit: 30
+      ring_2:
+        item: Band of the Eternal Champion
+        id: 29301
+        hit: 0
+        capture_note: second-ranked row, listed as Best 6% and 9%
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+        capture_note: top of two tied 'Best' trinket rows
+      trinket_2:
+        item: Madness of the Betrayer
+        id: 32505
+        hit: 20
+        capture_note: second of two tied 'Best' trinket rows
+      main_hand:
+        item: Boundless Agony
+        id: 30901
+        hit: 0
+        capture_note: top of the Dual-Wield Weapons table, listed as Best MH
+      off_hand:
+        item: Blade of Infamy
+        id: 30881
+        hit: 0
+        capture_note: top-ranked Best OH row in the Dual-Wield Weapons table
+      ranged:
+        item: Bristleblitz Striker
+        id: 30906
+        hit: 0
+        capture_note: top of the Best in Slot Ranged Weapons table
+    total_item_hit: 83
+    tier6_pieces_held:
+    - shoulder
+    - chest
+    - hands
+    - legs
+    tier5_pieces_held: []
+    tier4_pieces_held: []
+    set_pieces_held:
+      Gronnstalker's Armor: 4
+    hit_state:
+      cap: ranged
+      net_target_rating: 142
+      assumed_debuff_rating: 48.0
+      item_hit: 83
+      state: short
+      gap_rating: 11
+      gem_sockets: 12
+      gems_needed: 2

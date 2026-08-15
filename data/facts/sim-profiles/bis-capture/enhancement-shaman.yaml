@@ -1,0 +1,120 @@
+spec: enhancement_shaman
+anchor_built: bis
+built_on: '2026-08-15'
+GENERATED: BY tools/build_bis_capture.py. DO NOT EDIT. It is rebuilt from data/research/wowhead-phase3-bis-full/enhancement_shaman.json,
+  which is a capture and is never edited, plus the weapon routing in data/judgments/weapon-routing.yaml,
+  which is a judgment. To change a slot here, change one of those two.
+sources:
+  bis:
+    url: https://www.wowhead.com/tbc/guide/enhancement-shaman-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Enhancement Shaman DPS Best in Slot (BiS) Phase
+      3 Gear Guide - Wowhead
+    observed: '2026-08-15'
+anchors:
+  bis:
+    hit_by_slot:
+      head:
+        item: Cursed Vision of Sargeras
+        id: 32235
+        hit: 21
+      neck:
+        item: Choker of Endless Nightmares
+        id: 32260
+        hit: 21
+        capture_note: top of two tied 'Best' rows in the Neck Jewelry table; the
+          other was Choker of Serrated Blades, id 32591
+      shoulder:
+        item: Shoulders of Lightning Reflexes
+        id: 32575
+        hit: 0
+        capture_note: top of two tied 'Best' rows in the Shoulder Armor table; the
+          other was Swiftstrike Shoulders, id 32581
+      back:
+        item: Shadowmoon Destroyer's Drape
+        id: 32323
+        hit: 17
+      chest:
+        item: Midnight Chestguard
+        id: 30905
+        hit: 29
+      wrist:
+        item: Bindings of Lightning Reflexes
+        id: 32574
+        hit: 0
+        capture_note: top of three tied 'Best' rows in the Wrist Armor table; the
+          others were Deadly Cuffs id 30863 and Insidious Bands id 32324
+      hands:
+        item: Fists of Mukoa
+        id: 32234
+        hit: 0
+        capture_note: top of two tied 'Best' rows in the Hand Armor table; the other
+          was Grips of Damnation, id 32347
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      legs:
+        item: Bow-stitched Leggings
+        id: 30900
+        hit: 0
+      feet:
+        item: Softstep Boots of Tracking
+        id: 32510
+        hit: 17
+        capture_note: top of two tied 'Best' rows in the Feet Armor table; the other
+          was Shadowmaster's Boots, id 32366
+      ring_1:
+        item: Stormrage Signet Ring
+        id: 32497
+        hit: 30
+        capture_note: first of three tied 'Best' rows in the Ring Jewelry table
+      ring_2:
+        item: Band of the Eternal Champion
+        id: 29301
+        hit: 0
+        capture_note: second of three tied 'Best' rows in the Ring Jewelry table
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+        capture_note: first of two tied 'Best' rows in the Trinkets table
+      trinket_2:
+        item: Madness of the Betrayer
+        id: 32505
+        hit: 20
+        capture_note: second of two tied 'Best' rows in the Trinkets table
+      main_hand:
+        item: Vengeful Gladiator's Cleaver
+        id: 33669
+        hit: 8
+        capture_note: first of two rows ranked 'Best (All)' in the Weapons table;
+          the guide's prose above the table recommends dual-wielding a matching
+          pair of same-speed weapons for Flurry uptime, so this and off_hand are
+          two independently top-ranked options rather than a fixed main/off pairing
+      off_hand:
+        item: Syphon of the Nathrezim
+        id: 32262
+        hit: 0
+        capture_note: second of two rows ranked 'Best (All)' in the Weapons table;
+          see main_hand note on the matching-pair recommendation
+      ranged:
+        item: Totem of the Astral Winds
+        id: 27815
+        hit: 0
+        capture_note: the page has no Ranged/Wand table for this spec; this is the
+          sole row of the Totems (relic) table, categorized as slot type 'Ranged'
+          in items.csv
+    total_item_hit: 163
+    tier6_pieces_held: []
+    tier5_pieces_held: []
+    tier4_pieces_held: []
+    set_pieces_held: {}
+    hit_state:
+      cap: melee_special
+      net_target_rating: 0
+      assumed_debuff_rating: 48.0
+      item_hit: 163
+      state: full
+      gap_rating: 0
+      gem_sockets: 6
+      gems_needed: 0

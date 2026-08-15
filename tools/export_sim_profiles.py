@@ -40,6 +40,15 @@ from pathlib import Path
 import yaml
 
 CAPTURES = Path("data/facts/sim-profiles/hit-capture")
+# THE THIRD ANCHOR LIVES IN ITS OWN DIRECTORY, and that is deliberate. The
+# captures beside it are hand-collected and feed hit-captured.yaml, set-stats
+# and every card in the compendium; the BiS sets are BUILT, by
+# tools/build_bis_capture.py, from a research capture plus the guild lead's
+# weapon routing, and they are SIM SCOPE ONLY. Dropping them into the same
+# directory would give every compendium rollup a third anchor it was never
+# written for, which is the shape of the tier-set rebuild that produced 96
+# findings on 14 August 2026.
+BIS_CAPTURES = Path("data/facts/sim-profiles/bis-capture")
 HIT = Path("data/facts/hit.yaml")
 CAPTURED = Path("data/facts/hit-captured.yaml")
 BY_SPEC = Path("data/facts/enchants-by-spec.yaml")
@@ -295,6 +304,7 @@ def gear_json(block: dict, enchants: dict, gem_prefs: dict, meta_id, items_csv,
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--captures", type=Path, default=CAPTURES)
+    ap.add_argument("--bis-captures", type=Path, default=BIS_CAPTURES)
     ap.add_argument("--hit", type=Path, default=HIT)
     ap.add_argument("--out", type=Path, default=Path("data/sim/gear"))
     args = ap.parse_args()
@@ -332,7 +342,10 @@ def main() -> int:
     skipped: list[str] = []
     dead_meta: list[str] = []
     known_items = {i["id"] for i in db["items"]}
-    for path in sorted(args.captures.glob("*.yaml")):
+    sources = sorted(args.captures.glob("*.yaml"))
+    if args.bis_captures.is_dir():
+        sources += sorted(args.bis_captures.glob("*.yaml"))
+    for path in sources:
         data = yaml.safe_load(path.read_text())
         if not isinstance(data, dict) or "anchors" not in data:
             continue
@@ -370,7 +383,15 @@ def main() -> int:
             # HIT COMES FROM GEMS, NOT FROM AN ENCHANT SWAP. hit-captured.yaml
             # says how many, having already capped the count at the sockets the
             # set carries.
-            state = (captured.get(spec) or {}).get(anchor) or {}
+            # A CAPTURE THAT CARRIES ITS OWN HIT STATE WINS. hit-captured.yaml
+            # is the compendium's rollup and knows two anchors, so a lookup for
+            # `bis` returns an empty block and the set would be gemmed for pure
+            # throughput while sitting short on hit. That failure is silent: the
+            # run succeeds and returns a smaller number. The BiS captures carry
+            # `hit_state`, computed by tools/build_bis_capture.py with the same
+            # arithmetic, and it is read here in preference.
+            state = block.get("hit_state") \
+                or (captured.get(spec) or {}).get(anchor) or {}
             hit_gems = state.get("gems_needed") or 0
             if hit_gems:
                 swapped.append(

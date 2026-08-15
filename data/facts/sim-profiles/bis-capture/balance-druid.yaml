@@ -1,0 +1,118 @@
+spec: balance_druid
+anchor_built: bis
+built_on: '2026-08-15'
+GENERATED: BY tools/build_bis_capture.py. DO NOT EDIT. It is rebuilt from data/research/wowhead-phase3-bis-full/balance_druid.json,
+  which is a capture and is never edited, plus the weapon routing in data/judgments/weapon-routing.yaml,
+  which is a judgment. To change a slot here, change one of those two.
+sources:
+  bis:
+    url: https://www.wowhead.com/tbc/guide/balance-druid-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Balance Druid DPS Best in Slot (BiS) Phase 3
+      Gear Guide - Wowhead
+    observed: '2026-08-15'
+anchors:
+  bis:
+    hit_by_slot:
+      head:
+        item: Thunderheart Headguard
+        id: 31040
+        hit: 13
+      neck:
+        item: The Sun King's Talisman
+        id: 30015
+        hit: 0
+      shoulder:
+        item: Thunderheart Shoulderpads
+        id: 31049
+        hit: 14
+      back:
+        item: Shroud of the Highborne
+        id: 32524
+        hit: 0
+        capture_note: top of two tied 'BiS' rows in the Back Armor table; the other
+          was Cloak of the Illidari Council, id 32331
+      chest:
+        item: Thunderheart Vest
+        id: 31043
+        hit: 17
+      wrist:
+        item: Bracers of Nimble Thought
+        id: 32586
+        hit: 0
+      hands:
+        item: Thunderheart Handguards
+        id: 31035
+        hit: 12
+      waist:
+        item: Belt of the Crescent Moon
+        id: 30914
+        hit: 0
+      legs:
+        item: Leggings of Channeled Elements
+        id: 30916
+        hit: 18
+      feet:
+        item: Slippers of the Seacaller
+        id: 32239
+        hit: 0
+      ring_1:
+        item: Ring of Ancient Knowledge
+        id: 32527
+        hit: 0
+        capture_note: first of two 'BiS' rows in the Ring Jewelry table
+      ring_2:
+        item: Band of the Eternal Sage
+        id: 29305
+        hit: 0
+        capture_note: second of two 'BiS' rows in the Ring Jewelry table
+      trinket_1:
+        item: The Skull of Gul'dan
+        id: 32483
+        hit: 25
+        capture_note: first of two 'BiS' rows in the Trinkets table
+      trinket_2:
+        item: Ashtongue Talisman of Equilibrium
+        id: 32486
+        hit: 0
+        capture_note: second of two 'BiS' rows in the Trinkets table
+      main_hand:
+        item: Zhar'doom, Greatstaff of the Devourer
+        id: 32374
+        hit: 0
+      off_hand:
+        item: null
+        id: null
+        hit: 0
+      ranged:
+        item: Idol of the Raven Goddess
+        id: 32387
+        hit: 0
+        capture_note: the page has no Ranged/Wand table for this spec; this is the
+          top row of the Idols (relic) table, categorized as slot type 'Ranged'
+          in items.csv
+    total_item_hit: 99
+    tier6_pieces_held:
+    - head
+    - shoulder
+    - chest
+    - hands
+    tier5_pieces_held: []
+    tier4_pieces_held: []
+    set_pieces_held:
+      Thunderheart Regalia: 4
+    hit_state:
+      cap: spell
+      net_target_rating: 114
+      assumed_debuff_rating: 0.0
+      item_hit: 99
+      state: short
+      gap_rating: 15
+      gem_sockets: 7
+      gems_needed: 2
+routing_applied:
+- 'main_hand: Zhar''doom, Greatstaff of the Devourer replaces The Maelstrom''s Fury.
+  Routed by the guild lead, 15 August 2026: Zhar''doom goes to the warlocks, the
+  Balance Druid, the Elemental Shaman and the Shadow Priest.'
+- 'off_hand: EMPTY replaces Chronicle of Dark Secrets. Zhar''doom is a two-handed
+  staff and the guild lead ruled that its users hold no off hand. The captured off
+  hand is discarded, not carried.'
