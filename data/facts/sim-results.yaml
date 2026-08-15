@@ -1,0 +1,104 @@
+meta:
+  what: The first simulated figures this project has ever produced, and what causes each
+    delta.
+  produced: '2026-08-15'
+  simulator: wowsims tbc-new, wowsimcli v0.0.116, installed by tools/install_wowsimcli.sh
+  settings: 3000 iterations, seed 1, single target, 180 second encounter
+  run_to_run_spread: 0.3 to 3.5 DPS per profile across seeds 1, 100001 and 200001, so
+    a delta larger than about 5 DPS is signal rather than noise
+  WHAT THESE FIGURES ARE ABOUT: The tier profile is the ENTRY set with only the five token
+    slots reconsidered. Weapons, trinkets and the other twelve slots are IDENTICAL at
+    both anchors on every spec. So a delta here answers 'what do the tier tokens alone
+    do to a Phase 2 raider', NOT 'what is this spec worth in Phase 3'. Six specs still
+    swing Season 2 arena weapons at the tier anchor and the Combat Rogue never holds a
+    Warglaive. A third profile, a full Phase 3 best-in-slot set, is queued to answer the
+    broader question.
+  not_simulated: Tanks, by the ruling of 14 August 2026. The Feral Cat, because no action
+    priority list for it exists in this build. Thirteen specs, not seventeen.
+  one_caveat_on_comparability: The twelve untouched slots are untouched as ITEMS but not
+    as GEMS. A tier set is re-gemmed to re-cap hit, which flatters it slightly against
+    a pure item swap. The Arms Warrior needs four hit gems at its tier anchor.
+figures:
+- spec: affliction_warlock
+  entry: 1709.0
+  tier: 1735.8
+  delta: 26.8
+- spec: arcane_mage
+  entry: 2064.6
+  tier: 2081.2
+  delta: 16.6
+- spec: arms_warrior
+  entry: 1966.8
+  tier: 1944.6
+  delta: -22.2
+- spec: balance_druid
+  entry: 984.4
+  tier: 1061.1
+  delta: 76.7
+- spec: beast_mastery_hunter
+  entry: 1954.6
+  tier: 2062.4
+  delta: 107.8
+- spec: combat_rogue
+  entry: 2352.5
+  tier: 2501.2
+  delta: 148.7
+- spec: destruction_warlock
+  entry: 1935.6
+  tier: 2024.4
+  delta: 88.8
+- spec: elemental_shaman
+  entry: 1144.9
+  tier: 1332.8
+  delta: 187.9
+- spec: enhancement_shaman
+  entry: 2122.9
+  tier: 2122.9
+  delta: 0.0
+- spec: fury_warrior
+  entry: 2130.6
+  tier: 2102.2
+  delta: -28.4
+- spec: retribution_paladin
+  entry: 2027.7
+  tier: 2027.7
+  delta: 0.0
+- spec: shadow_priest
+  entry: 1264.3
+  tier: 1306.4
+  delta: 42.1
+- spec: survival_hunter
+  entry: 2316.7
+  tier: 2394.0
+  delta: 77.3
+why_the_warriors_lose:
+  verdict: Not a defect. A correct result of the construction rule.
+  fury_warrior: 'Entry holds the Destroyer four-piece, which makes Bloodthirst cost 5
+    less rage (sim/warrior/items.go). Two Tier 6 pieces break it. Measured separately:
+    the T6 shoulder alone is -59.2 and the T6 chest alone -68.5, yet both together are
+    only -28.4. Solving that, the bonus swing is worth +99.3, so each piece IS a real
+    stat upgrade and the rage discount is worth about 90 DPS more than both of them.'
+  arms_warrior: 'The harder case, because it GAINS the strong bonus and still loses. It
+    picks up the Onslaught four-piece, +5 percent Mortal Strike, and every individual
+    token is still a downgrade: head -92.2 losing 21 hit on a set already short, hands
+    -38.4 losing 18 expertise to gloves it already owns, shoulder -38.7, chest -39.2.
+    Per the sim it should refuse the whole line: entry 1966.8, refuse-head 1963.4, full
+    four-piece 1944.6.'
+  the_stat_shape: The Onslaught pieces carry no expertise, almost no hit and zero crit
+    rating; they pay in agility and armor penetration. The Destroyer pieces they replace
+    are hit and crit dense. Arms loses 28 expertise and 85 crit rating across the swap.
+why_the_rogue_gains: A clean four-for-four bonus upgrade. Deathmantle four-piece, a 1
+  PPM free finisher, becomes Slayer's, whose two-piece is +5 percent Slice and Dice haste
+  and whose four-piece is +6 percent Sinister Strike and Backstab damage, both permanent
+  and both central to the spec. Plus five real item upgrades. Breaking Slayer's four-piece
+  alone costs -67.8.
+every_intermediate_state_is_a_valley: THE MOST USEFUL THING IN THIS FILE FOR A COUNCIL.
+  Taking a SINGLE token costs the rogue between -65 and -94, because it breaks Deathmantle
+  before completing Slayer's. Fury is -59 or -68 on one token and only -28 on two. Token
+  routing to these specs is sensible only in BLOCKS THAT COMPLETE A BONUS, and the endpoint
+  deltas above hide that entirely.
+the_two_zero_rows: 'The Enhancement Shaman and the Retribution Paladin read exactly 0.0
+  because their entry and tier gear files are byte-identical: their Phase 3 lists wear
+  no token in any of the five slots, so the rule leaves every slot at entry. Both are
+  documented, Enhancement as a token refusal and Retribution in hit-captured.yaml. A reader
+  counting rows would otherwise take these for stuck runs.'

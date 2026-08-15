@@ -1,0 +1,25 @@
+{
+  "spec": "affliction_warlock",
+  "url": "https://www.wowhead.com/tbc/guide/affliction-warlock-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Affliction Warlock DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Hood of the Malefic", "id": 31051},
+    "neck": {"item": "Translucent Spellthread Necklace", "id": 32349},
+    "shoulder": {"item": "Mantle of the Malefic", "id": 31054},
+    "back": {"item": "Nethervoid Cloak", "id": 32590, "note": "listed as Best - Hit, the top of two tied 'Best' rows"},
+    "chest": {"item": "Vestments of the Sea-Witch", "id": 30107},
+    "wrist": {"item": "Bracers of Nimble Thought", "id": 32586},
+    "hands": {"item": "Gloves of the Malefic", "id": 31050},
+    "waist": {"item": "Belt of Blasting", "id": 30038, "note": "listed as Best - Hit(Aff Realistic)"},
+    "legs": {"item": "Leggings of Channeled Elements", "id": 30916},
+    "feet": {"item": "Slippers of the Seacaller", "id": 32239},
+    "ring_1": {"item": "Ring of Ancient Knowledge", "id": 32527, "note": "page lists this ring as 'Best x2', BiS in both ring slots"},
+    "ring_2": {"item": "Ring of Ancient Knowledge", "id": 32527, "note": "page lists this ring as 'Best x2', BiS in both ring slots"},
+    "trinket_1": {"item": "The Skull of Gul'dan", "id": 32483, "note": "listed as Ultimate Best, the top-ranked trinket"},
+    "trinket_2": {"item": "Quagmirran's Eye", "id": 27683, "note": "top of two tied 'Best' rows following the Ultimate Best trinket"},
+    "main_hand": {"item": "Tempest of Chaos", "id": 30910, "note": "top of the One-Handed Weapons table; a Two-Handed alternative (Zhar'doom, Greatstaff of the Devourer, id 32374) is also listed as Best but is not used since an off hand item is captured"},
+    "off_hand": {"item": "Chronicle of Dark Secrets", "id": 30872},
+    "ranged": {"item": "Wand of the Forgotten Star", "id": 29982, "note": "top of the Wands table"}
+  }
+}

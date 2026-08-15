@@ -304,6 +304,70 @@ armor alone is a small net downgrade for them", NOT "warriors are weaker in
 Phase 3", and the two are being confused. A BiS run separates them.
 
 
+## HANDOFF, 15 August 2026: read this first if you are picking the sim work up
+
+The session that built the simulator pipeline ran out of context here. Nothing
+is broken, nothing is half-applied, and every gate is green. This is what is
+done, what is running, and what to do next.
+
+### State
+
+`main` is clean and pushed. `gh-pages` is at 98123eb and carries NO simulator
+work: everything sim-related is repository-only and nothing has been published.
+
+### What works
+
+wowsimcli v0.0.116 is installed by `tools/install_wowsimcli.sh` into a
+gitignored `vendor/wowsims/`, and the version it installed is in
+`vendor/wowsims/VERSION`. `tools/run_sims.py` builds a request per spec per
+anchor with raid buffs, consumables and the simulator's own action priority
+lists, and 26 of 28 profiles produce figures. The results and the analysis of
+them are in `data/facts/sim-results.yaml`.
+
+### What is running and may have landed
+
+A full seventeen-slot Phase 3 best-in-slot capture, four sequential agents, into
+`data/research/wowhead-phase3-bis-full/`. IT FAILED ONCE ALREADY because the
+Chrome extension was disconnected, wrote nothing, and was relaunched. If that
+directory is empty or missing specs, the extension dropped again. Check
+`list_connected_browsers` first, and if agents cannot hold a browser, do the
+extraction directly with `browser_batch`, four specs per call, which worked for
+the five-slot capture on 13 August.
+
+### What to do next, in order
+
+1. ONE ARBITER PER SPEC over the full BiS capture. Every id resolves in
+   items.csv and the name matches, the page was Burning Crusade and not a later
+   expansion, every slot present or recorded missing with a reason. The known
+   trap in this dataset is `Bulwark of the Ancient Kings` 28485 against
+   `Bulwark of Kings` 28484.
+2. ENCODE THE BIS SETS AS DOCUMENTATION so they are readable in the compendium.
+3. EXPORT A THIRD PROFILE AND SIM IT. `tools/export_sim_profiles.py` reads
+   captures under `data/facts/sim-profiles/hit-capture/`, so a BiS anchor has to
+   reach it in that shape or the exporter needs a second source. That is a
+   design choice, not a detail.
+
+### Three things that will bite you
+
+THE SIMULATOR ACCEPTS IDS IT THEN IGNORES. A wrong weapon imbue id, or a field
+sent in the wrong message, produces a SUCCESSFUL run with a silently low number.
+This has happened three times: potId alone drank nothing, the Enhancement
+Shaman swung bare weapons worth 32.6 percent of its damage, and a main-hand
+stone is dropped entirely for anyone in a party with a Windfury Totem. MEASURE
+every change against a baseline on the same seed. Never assert an improvement.
+
+A ZERO IS A RESULT-SHAPED FAILURE. Auto rotation returns 0.0 for casters and a
+plausible figure for physical specs. Six specs read zero before the action
+priority lists were wired.
+
+THE TIER PROFILE IS NOT A PHASE 3 SET. It is the entry set with only the five
+token slots swapped, so weapons and trinkets are identical at both anchors. The
+warriors reading minus 22.2 and minus 28.4 mean the tier ARMOR is a small
+downgrade for them, not that warriors are weak in Phase 3. That third profile
+exists to separate those two readings, and until it lands the distinction has to
+be stated every time these figures are quoted.
+
+
 ## Swept and found clean
 
 Token to slot to boss for all 45 tokens; set bonus verbatim text across files; the conversion constants; the 490, 415, 332, 284 and 102.4 tank thresholds; expertise caps; the generated table counts against `PROVENANCE.md`; `docs/bosses.md` against `drops.csv`; every EPV figure in `docs/conventions.md` against the workbook; `docs/kb/DOMAIN.md`; `enchants-gems.yaml` era claims; all item id and name pairs in the captures; the schedule dates; and `just check` passes.

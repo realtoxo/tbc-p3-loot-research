@@ -1,0 +1,25 @@
+{
+  "spec": "arcane_mage",
+  "url": "https://www.wowhead.com/tbc/guide/arcane-mage-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Arcane Mage DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Cowl of Tirisfal", "id": 30206},
+    "neck": {"item": "The Sun King's Talisman", "id": 30015},
+    "shoulder": {"item": "Mantle of Tirisfal", "id": 30210},
+    "back": {"item": "Cloak of the Illidari Council", "id": 32331},
+    "chest": {"item": "Robes of Tirisfal", "id": 30196},
+    "wrist": {"item": "Cuffs of Devastation", "id": 30870},
+    "hands": {"item": "Gloves of Tirisfal", "id": 30205},
+    "waist": {"item": "Anetheron's Noose", "id": 30888},
+    "legs": {"item": "Leggings of the Tempest", "id": 31058},
+    "feet": {"item": "Slippers of the Seacaller", "id": 32239},
+    "ring_1": {"item": "Band of the Eternal Sage", "id": 29305, "note": "top of two distinct 'BiS' rows in the Ring Jewelry table"},
+    "ring_2": {"item": "Ring of Ancient Knowledge", "id": 32527, "note": "second of two distinct 'BiS' rows in the Ring Jewelry table"},
+    "trinket_1": {"item": "Serpent-Coil Braid", "id": 30720, "note": "top of three tied 'BiS' rows in the Trinkets table"},
+    "trinket_2": {"item": "The Skull of Gul'dan", "id": 32483, "note": "second of three tied 'BiS' rows in the Trinkets table"},
+    "main_hand": {"item": "Zhar'doom, Greatstaff of the Devourer", "id": 32374, "note": "top-ranked row of the Weapons table; this is a two-handed staff, so it and the captured off_hand item would not be worn together in game. A one-handed alternative (Tempest of Chaos, id 30910) is also listed as BiS."},
+    "off_hand": {"item": "Chronicle of Dark Secrets", "id": 30872, "note": "top row of the Offhands table; see main_hand note on the two-hand/off-hand conflict"},
+    "ranged": {"item": "Eredar Wand of Obliteration", "id": 28783}
+  }
+}
