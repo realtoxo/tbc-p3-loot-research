@@ -30,3 +30,8 @@ node_modules/
 
 # Scratch work that is not evidence
 /scratch/
+
+# The wowsims simulator binary, installed by tools/install_wowsimcli.sh.
+# Platform specific and 5 MB, so it is fetched rather than committed. The tag
+# it was built from is recorded in vendor/wowsims/VERSION.
+vendor/

@@ -497,7 +497,13 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--gear", type=Path, default=GEAR)
     ap.add_argument("--cli", type=Path,
-                    default=Path(os.environ.get("WOWSIMCLI", "/tmp/wowsimcli")))
+                    # THE DEFAULT IS WHERE tools/install_wowsimcli.sh PUTS IT. It used to
+                    # be /tmp/wowsimcli, which is a path that survives until the
+                    # next reboot and then produces a missing-binary error that
+                    # reads like a broken tool rather than a cleared temp
+                    # directory. WOWSIMCLI still overrides it.
+                    default=Path(os.environ.get(
+                        "WOWSIMCLI", "vendor/wowsims/wowsimcli")))
     ap.add_argument("--iterations", type=int, default=1000)
     ap.add_argument("--seed", type=int, default=1)
     ap.add_argument("--profile", help="one profile stem, such as "
