@@ -287,3 +287,27 @@ sim_profile_scope:
       Whether Improved Blessing of Might applies. The Retribution build carries
       improvedSealOfTheCrusader, and nothing decoded settles Improved Might, so
       it is left at Regular, which understates rather than overstates.
+
+feral_cat_is_not_simmable:
+  ruled: 2026-08-15
+  by: the guild lead
+  ruling: >-
+    The Feral Cat is not simulated. "We are going to resolve cat as not
+    simmable."
+  why_it_cannot_run: >-
+    The rotation this project uses for every spec is the action priority list
+    the simulator itself ships, and druid/feralcat/apls/default.apl.json does
+    not exist in the v0.0.116 build. Without it the request never builds, so the
+    spec returns no figure at all rather than a low one. That is a property of
+    the simulator and not of the gear.
+  what_was_tried: >-
+    The head slot was first simmed EMPTY, because Wolfshead Helm, item 8345, is
+    a level-40 leatherworking helm absent from the simulator database. That was
+    refused outright. It was then given its own Tier 6 head, Thunderheart Cover
+    31039, which is a loud divergence recorded elsewhere in this file because
+    the compendium says this spec REFUSES that helm. Neither attempt produced a
+    figure, because neither addressed the missing rotation.
+  consequence: >-
+    Any table of simulated figures covers thirteen specs and not fourteen, and
+    must say which one is absent. A reader counting rows will otherwise assume
+    the Cat was omitted by accident.
