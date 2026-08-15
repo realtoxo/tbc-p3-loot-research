@@ -270,3 +270,59 @@ the_profiles_were_validated_against_the_simulator_own_sets:
     Both warrior talent strings are byte-identical to ui/warrior/dps/presets.ts,
     Fury at 3400502130201-05050005505012050115 and Arms at
     32005020352010500221-0550000500521203. Nothing here is our build.
+
+are_the_cooldowns_and_consumables_actually_firing:
+  why_asked: The guild lead asked directly whether the warriors are using Death Wish,
+    Recklessness and a Haste Potion in these runs. It is the right question, because a
+    cooldown that is configured and never fires is exactly the silent failure this project
+    keeps meeting.
+  how_it_was_answered: Not by reading the rotation. The per-action cast counts were read
+    out of a real run, 2000 iterations, and divided by the iteration count.
+  death_wish: FIRING. Exactly 1.00 casts per pull on both warriors, which is correct for
+    a 3 minute cooldown in a 180 second encounter.
+  haste_potion: FIRING. 2.00 casts per pull on both warriors and on the Combat Rogue. This
+    was NOT true before 15 August 2026, when `potId` was sent without the `potions` list
+    and no potion was drunk at all.
+  bloodlust_brooch: FIRING. 2.00 casts per pull on both warriors, which settles that the
+    trinket ruling is measuring a trinket that is actually used.
+  recklessness: NOT FIRING, ZERO casts, and it is the ENGINE'S OWN DEFAULT rather than
+    anything this project configured.
+  how_recklessness_is_switched_off: The shipped warrior rotation carries a named action
+    group, "Recklessness ON/OFF", at priorityList[0] with `hide` set to true, and the actual
+    cast at priorityList[9] is gated on `actionGroupUsed` of that group. A hidden group
+    never runs, so the gate never opens.
+  what_turning_it_on_is_worth: Measured on 15 August 2026 by flipping that one flag, 8000
+    iterations, 180 second encounter. Fury 2286.7 to 2401.0, plus 114.3. Arms 1920.6 to
+    2047.0, plus 126.4. One cast per pull in both cases.
+  why_it_is_probably_not_free_and_needs_a_ruling: 'sim/warrior/recklessness.go gives the
+    ability a THIRTY MINUTE cooldown, a 15 second duration, 100 percent bonus crit on melee
+    specials and a 1.2 multiplier on damage taken. Enabling it in a 180 second encounter
+    therefore assumes it is available on EVERY pull, which the cooldown allows only if
+    pulls are half an hour apart, and it charges the raid 20 percent extra damage taken
+    on the warrior for 15 seconds. Whether this roster actually has it up for a given
+    boss is a fact about how the night runs, not about the spec. GUILD LEAD NEEDED.'
+
+what_a_ninety_second_encounter_does:
+  why_asked: The guild lead asked what changes if every run moves from 180 seconds to 90.
+  measured: '2026-08-15, the full roster at both lengths, 10000 iterations, seed 1, best-in-slot
+    anchor. The figures at 90 seconds are NOT recorded in sim-figures.yaml, because that
+    file holds one encounter and mixing two would make its rows unsubtractable.'
+  the_headline: 'Every spec gains, by a mean of 15.0 percent, and the gains are wildly
+    uneven: from plus 5.1 percent to plus 45.3 percent.'
+  who_gains_most_and_why: 'The mana-constrained casters, by a wide margin. Elemental Shaman
+    plus 45.3 percent, Balance Druid plus 41.3, Retribution Paladin plus 24.2, Arcane Mage
+    plus 15.2. At 180 seconds these specs run their mana pool down and slow; at 90 they
+    never have to, so they cast their best spell throughout. That is the dominant effect
+    of encounter length in this model, and it is a mana effect rather than a cooldown one.'
+  who_gains_least: Shadow Priest plus 5.1 percent, Enhancement Shaman plus 5.2, Arms Warrior
+    plus 6.3. These are the specs with the least to gain from unlimited mana and the fewest
+    long cooldowns.
+  IT_DOES_NOT_CHANGE_THE_WARRIOR_AGAINST_ROGUE_PICTURE_AT_ALL: 'This is what the question
+    was really about and the answer is clean. The Fury Warrior gains 8.1 percent and the
+    Combat Rogue gains 8.1 percent. The ratio between them is 80.4 percent at 180 seconds
+    and 80.4 percent at 90. Shortening the fight would not make the warriors look better;
+    it would make the CASTERS look better and leave the melee ordering untouched.'
+  what_it_would_cost: 'Every figure collected before the change becomes incomparable, which
+    is why tools/run_sims.py stamps the length into the meta block of whatever it writes.
+    ENCOUNTER_SECONDS stays at 180, the ruling of 14 August 2026, until a new ruling replaces
+    it. GUILD LEAD NEEDED if 90 is wanted.'

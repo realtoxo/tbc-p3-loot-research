@@ -276,6 +276,21 @@ NOT_SIMULATABLE = {
 # correct result. This catches collapse, not weakness.
 IMPLAUSIBLE = 300.0
 
+def encounter_for(seconds: int) -> dict:
+    """The fixed encounter, at a stated length.
+
+    THE LENGTH IS A PARAMETER AND IS STILL NOT A KNOB TO TURN CASUALLY. Two
+    figures are subtractable only if they were produced against the same
+    encounter, and a shorter fight systematically favours a spec with long
+    cooldowns: Death Wish is a three minute cooldown that fires ONCE whether the
+    pull lasts 90 seconds or 180, so halving the fight doubles its share of the
+    damage. That is a real effect and not a modelling error, which is exactly
+    why the length has to travel with every figure rather than sit in a comment.
+    `--out` records it in the meta block for that reason.
+    """
+    return dict(ENCOUNTER, duration=seconds)
+
+
 ENCOUNTER = {
     "duration": ENCOUNTER_SECONDS,
     "durationVariation": 0,
@@ -460,7 +475,8 @@ def consumables_for(spec: str, anchor: str) -> dict:
 
 
 def build_request(spec: str, gear: dict, talents: str, iterations: int,
-                  seed: int, buffs: dict, party_of: dict, anchor: str) -> dict:
+                  seed: int, buffs: dict, party_of: dict, anchor: str,
+                  seconds: int = ENCOUNTER_SECONDS) -> dict:
     """One RaidSimRequest: one player, alone, against the fixed encounter.
 
     THE ANCHOR IS NOT DECORATION. It selects the consumables, because the stone
@@ -521,7 +537,7 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
             "buffs": raid_buffs,
             "debuffs": debuffs,
         },
-        "encounter": ENCOUNTER,
+        "encounter": encounter_for(seconds),
         "simOptions": {"iterations": iterations, "randomSeed": str(seed)},
     }
 
@@ -663,7 +679,7 @@ def against(args, strings: dict, iterations: int) -> int:
     def measure(gear):
         dps, _spread, error = run(args.cli, build_request(
             spec, gear, talents, iterations, args.seed, buffs, party_of,
-            anchor))
+            anchor, args.seconds))
         if error:
             raise SystemExit(f"run_sims.py: {error}")
         return dps
@@ -762,7 +778,8 @@ def compare(args, strings: dict, iterations: int) -> int:
             party_of.setdefault(member, group["id"])
     anchor = args.profile.partition(".")[2].replace("-", "_")
     base, _spread, error = run(args.cli, build_request(
-        spec, gear, talents, iterations, args.seed, buffs, party_of, anchor))
+        spec, gear, talents, iterations, args.seed, buffs, party_of, anchor,
+        args.seconds))
     if error:
         print(f"error: the baseline failed: {error}", file=sys.stderr)
         return 1
@@ -777,7 +794,7 @@ def compare(args, strings: dict, iterations: int) -> int:
             candidate = swap_into(candidate, slot, item_id)
         dps, _spread, error = run(args.cli, build_request(
             spec, candidate, talents, iterations, args.seed, buffs, party_of,
-            anchor))
+            anchor, args.seconds))
         if error:
             print(f"  {label_of(ids):<52} FAILED  {error}", file=sys.stderr)
             continue
@@ -808,6 +825,11 @@ def main() -> int:
                     help="an item id to try, or one id per slot separated by "
                          "commas, matching --slot in order. Repeatable. 0 "
                          "empties a slot, which is what a two-hander needs")
+    ap.add_argument("--seconds", type=int, default=ENCOUNTER_SECONDS,
+                    help=f"encounter length. Default {ENCOUNTER_SECONDS}, the "
+                         "ruling of 14 August 2026. A figure produced at any "
+                         "other length is NOT comparable with the recorded ones "
+                         "and --out stamps the length it used")
     ap.add_argument("--against", help="a second profile stem. Prints which "
                                       "slot explains the gap between the two, "
                                       "carrying each slot's enchant and gems")
@@ -859,7 +881,7 @@ def main() -> int:
             continue
         dps, spread, error = run(args.cli, build_request(
             spec, json.loads(path.read_text()), talents, iterations, args.seed,
-            buffs, party_of, anchor.replace("-", "_")))
+            buffs, party_of, anchor.replace("-", "_"), args.seconds))
         if error:
             failures.append((stem, error))
         else:
@@ -894,7 +916,7 @@ def main() -> int:
                               else "unrecorded"),
                 "iterations": iterations,
                 "seed": args.seed,
-                "encounter_seconds": ENCOUNTER_SECONDS,
+                "encounter_seconds": args.seconds,
                 "targets": 1,
                 "target_level": 73,
                 "interval": (
