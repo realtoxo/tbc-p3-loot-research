@@ -87,10 +87,35 @@ META_REQUIREMENT = {
 # THIS IS A KNOWN DIVERGENCE, not a correction. A sim run of this spec is not
 # wearing what its card says it wears, and the substitution is printed on every
 # run so that nobody compares the two without knowing.
-SUBSTITUTIONS = {
-    8345: (28732, "Wolfshead Helm is not in the simulator database; "
-                  "Cowl of Defiance stands in for it"),
+SUBSTITUTIONS: dict[int, tuple[int, str]] = {}
+
+# WOLFSHEAD HELM IS SIMMED AS AN EMPTY HEAD SLOT, ruled by the guild lead on
+# 14 August 2026: "on cat we will sim helmless i guess".
+#
+# It is item 8345, a level-40 leatherworking helm absent from the wowsims
+# database, and it is the Feral Cat head at every anchor. It used to be
+# substituted with Cowl of Defiance, which made the run wear a head the Cat
+# does not wear and quietly answered a different question: Wolfshead is the
+# entire reason the Cat declines its tier head, so standing a normal helm in
+# its place removes the thing under discussion.
+#
+# An empty slot is wrong too, and knowably so: the Cat loses Wolfshead's stats
+# and its shapeshift energy return. But it is wrong in a direction a reader can
+# reason about, an understated Cat, rather than wrong in a direction that looks
+# correct. The absence is reported on every run.
+OMITTED = {
+    8345: "Wolfshead Helm is not in the simulator database, so the slot is "
+          "simmed EMPTY rather than filled with a substitute. The Cat is "
+          "understated by that helm's stats and its energy return.",
 }
+
+# TANKS ARE NOT SIMMED, ruled by the guild lead on 14 August 2026: "we will not
+# sim tanks". A tank run answers survivability questions this project does not
+# ask, and the three tank captures never exported a gear file anyway, which had
+# been failing silently. It is now a stated skip rather than an empty output
+# nobody counted.
+TANK_SPECS = frozenset({"feral_bear", "protection_paladin",
+                        "protection_warrior"})
 
 # proto/common.proto :: ItemSlot, in order. Transcribed, not inferred, which is
 # the same rule the item and class enums in extract_items.py are held to after
@@ -151,6 +176,9 @@ def gear_json(block: dict, enchants: dict, gem_prefs: dict, meta_id, items_csv,
             new_id, why = SUBSTITUTIONS[item_id]
             subbed.append(f"{slot}: {why}")
             item_id = new_id
+        elif item_id in OMITTED:
+            subbed.append(f"{slot}: {OMITTED[item_id]}")
+            item_id = None
         sockets = ((items_csv.get(item_id) or {}).get("sockets") or "").split("|") \
             if item_id else []
         layout.append((slot, item_id, [c.strip().lower() for c in sockets if c.strip()]))
@@ -290,6 +318,7 @@ def main() -> int:
         stale.unlink()
 
     written, problems, swapped, unknown, substituted = 0, [], [], [], []
+    skipped: list[str] = []
     dead_meta: list[str] = []
     known_items = {i["id"] for i in db["items"]}
     for path in sorted(args.captures.glob("*.yaml")):
@@ -298,6 +327,17 @@ def main() -> int:
             continue
         spec = data.get("spec")
         if spec not in dps:
+            # A SKIP THAT SAYS SO. This read `continue` and printed nothing, so
+            # three tank captures produced no gear file and the only way to
+            # notice was to count the output against the captures. The guild
+            # lead ruled on 14 August 2026 that tanks are not simmed; that is a
+            # decision and it should be visible in the run that acts on it.
+            skipped.append(
+                f"{spec}: not simmed. Tanks are out of scope by the ruling of "
+                "14 August 2026, and a tank run answers survivability "
+                "questions this project does not ask."
+                if spec in TANK_SPECS else
+                f"{spec}: no simulator spec is configured for it")
             continue
         conf = by_spec.get(spec) or {}
         prefs_raw = conf.get("gems") or {}
@@ -367,6 +407,8 @@ def main() -> int:
         for line in dead_meta:
             print(f"    {line}")
 
+    for line in skipped:
+        print(f"  {line}")
     if substituted:
         print(f"\n  {len(set(substituted))} substitution(s), profile only. The "
               "compendium is unchanged, so a run of these specs is NOT wearing "
