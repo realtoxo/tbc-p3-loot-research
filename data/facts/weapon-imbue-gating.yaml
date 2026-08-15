@@ -1,0 +1,131 @@
+# WHEN A WEAPON IMBUE REACHES THE WEAPON, and when the simulator drops it.
+#
+# WHY THIS FILE EXISTS. Nothing in this repository stated the rule, and the rule
+# decides whether a whole class of picks is worth anything. Three separate
+# pieces of work have measured a main-hand stone, read a delta of 0.0, and had
+# to derive the gate again from the vendored source before they could tell a
+# dropped imbue from a wrong id. This file is that derivation, written once.
+#
+# It is a FACT about the simulator and about 2.4.3, not a judgment. What the
+# raid does with it, which party each shaman stands in, lives in
+# data/facts/raid-buffs.yaml and data/facts/roster.yaml, and is deliberately not
+# restated here.
+
+meta:
+  what: >-
+    The condition under which sim/core/consumes.go applies a main-hand weapon
+    imbue, the absence of any such condition on the off hand, and which specs
+    that leaves with an inert main-hand pick.
+  authored: 2026-08-15
+  hand_written: >-
+    Not generated. `just regen` does not write this file, because it records
+    what a source SAYS rather than a table derived from one.
+  sources:
+    simulator: >-
+      sim/core/consumes.go in the vendored wowsims-tbc-new checkout, the path
+      the WOWSIMS_TBC environment variable points at. Read on 15 August 2026 at
+      lines 80 to 86.
+    raid: >-
+      data/facts/raid-buffs.yaml, which records which parties carry a Windfury
+      Totem and which spec supplies it. It is NOT copied here.
+    scope: >-
+      The guild lead, 15 August 2026, quoted under `ruling` below.
+
+# ---------------------------------------------------------------------------
+the_gate:
+  rule: >-
+    The main-hand imbue is applied ONLY where the player's party has no
+    Windfury Totem. The off-hand imbue is applied unconditionally.
+  source_lines: |
+    // Static Imbues
+    if consumables.MhImbueId != 0 && partyBuffs.WindfuryTotem == proto.TristateEffect_TristateEffectMissing {
+      registerStaticImbue(agent, consumables.MhImbueId, true)
+    }
+    if consumables.OhImbueId != 0 {
+      registerStaticImbue(agent, consumables.OhImbueId, false)
+    }
+  source_lines_from: sim/core/consumes.go lines 80 to 86, read 15 August 2026
+  why_the_game_works_this_way: >-
+    Windfury Totem overwrites the main-hand weapon enchantment in 2.4.3, so a
+    stone or an oil on that weapon is spent for nothing while the totem is
+    down. The simulator models the outcome rather than the overwrite.
+
+  what_it_looks_like_when_it_bites: >-
+    NOTHING. The request carries the id, the encoder accepts it, the run
+    succeeds, and the DPS is the same as a run with no imbue at all. There is no
+    warning and no field in the output that names the imbue. That is why a
+    measured delta of 0.0 on a main-hand imbue is the expected result for a spec
+    in a Windfury party, and is NOT evidence that the id was wrong.
+
+  the_off_hand_is_not_gated: >-
+    The second branch above has no condition. An off-hand imbue is live damage
+    for every spec that swings a weapon in that hand, whatever the party
+    carries, which is why the two hunter off-hand stones added on 15 August 2026
+    moved the result and the main-hand corrections beside them did not.
+
+# ---------------------------------------------------------------------------
+ruling:
+  by: the guild lead, 15 August 2026
+  quoted: >-
+    "a melee only concern for ret, warrior, rogue"
+  scope:
+    melee_only: >-
+      A caster imbues with an oil and stands in no Windfury party in this
+      roster, so the gate never reaches one. The specs it can reach are the
+      melee specs that sit under the totem.
+    druids_are_out_in_the_game: >-
+      Windfury does not affect druids, so the totem is not what makes a druid's
+      main-hand stone worthless at the raid.
+    but_the_simulator_gates_them_anyway: >-
+      The condition above tests the PARTY buff and nothing about the class, so
+      the Feral Cat and the Feral Bear sit in Windfury parties and have their
+      main-hand stones dropped by the same branch as the warriors. The outcome
+      matches the ruling and the reason does not, and both are written down
+      because a reader checking the ruling against the generated `gate` stamps
+      would otherwise find eight specs where the ruling names three.
+    shamans_are_out_for_a_different_reason: >-
+      A shaman does not use a consumable imbue at all. It uses its own Windfury
+      Weapon, and both hands of the Enhancement Shaman carry it by the ruling of
+      the same day. That reaches the simulator through the class options rather
+      than through ConsumesSpec, so this gate is not the mechanism that decides
+      it. See data/facts/consumable-ids.yaml `unresolved`, and
+      tools/run_sims.py CLASS_OPTIONS and SPEC_OPTIONS.
+
+# ---------------------------------------------------------------------------
+consequences:
+  which_specs: >-
+    Every spec whose party carries a Windfury Totem in
+    data/facts/raid-buffs.yaml. The parties are named THERE and not here,
+    because a second copy of a party list is what goes stale.
+    tools/extract_consumable_ids.py reads that file and roster.yaml and stamps
+    the affected picks, so the list is derived on every regeneration rather than
+    typed.
+  a_correct_id_can_still_be_worth_nothing: >-
+    The Fury Warrior main-hand stone was the Adamantite Sharpening Stone and its
+    main hand is 28439 Dragonstrike, which data/facts/items.csv types as a Mace,
+    so the sharp stone was the wrong type by the guides' own rule. The type was
+    corrected to the Adamantite Weightstone on 15 August 2026. The correction is
+    right and inert, for TWO reasons, and both were measured on 15 August 2026 at
+    5000 iterations, seed 1, on fury-warrior.entry.
+  measured_the_gate: >-
+    With the party Windfury Totem in place, the entry profile returns
+    2130.4 with the Weightstone 34340, 2130.4 with the Sharpening Stone 29453
+    and 2130.4 with no main-hand imbue at all. Three identical figures.
+    With the totem removed from the same request, the imbue becomes live:
+    1969.4 with a stone against 1932.5 without, so the stone is worth 37.0 to
+    this profile the moment the party loses its Windfury Totem.
+  measured_the_two_stones: >-
+    Ungated, 29453 and 34340 both return 1969.4 on this profile. They are ONE
+    CASE in sim/core/consumes.go, at lines 632 to 645: both add 14 melee crit
+    rating and 12 base damage to the imbued hand, and 34340 alone adds 12 to
+    ranged base damage, and only where the character has a ranged auto-attack.
+    A warrior has none. So the type correction is worth 0.0 to a warrior even
+    with the gate open, and the ranged half is the whole of what it buys a
+    hunter. Recorded so that nobody re-measures the Fury Warrior expecting the
+    hunter result.
+  do_not_read_a_zero_as_a_rejection: >-
+    A reader measuring a main-hand imbue for one of these specs and seeing no
+    movement is meeting this gate. An id the simulator rejects looks the same
+    from outside, and the two are told apart by
+    tools/extract_consumable_ids.py::verify_imbues, which checks every id
+    against the switch in registerStaticImbue before it is ever sent.

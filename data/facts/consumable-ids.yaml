@@ -13,9 +13,18 @@ meta:
     weapon imbues: ui/core/components/inputs/consumables.ts, checked against the switch in
       sim/core/consumes.go and the poison ids in sim/rogue/poisons.go. Imbues are NOT in db.json;
       they are spell ids
-  rule: The guides lead with the pick, so the first catalog name in a field is taken and every
-    later one is written out under alternatives_named. Nothing is chosen for being cheaper
-    or conditional.
+  rule: 'The guides lead with the pick, so the first catalog name in a field is taken and
+    every later one is written out under alternatives_named. Nothing is chosen for being cheaper.
+    A name the prose QUALIFIES is passed over when the captured fact rules it out: a stone
+    shows only on a blunt or on a sharp weapon, and a food conditional on the hit cap is read
+    against gap_after_gems.'
+  conditions_read_from:
+    the weapon a spec carries: data/sim/gear, typed by data/facts/items.csv and split blunt
+      from sharp by ui/core/proto_utils/utils.ts
+    whether a spec is hit-capped: data/facts/hit-captured.yaml, gap_after_gems at every anchor
+  main_hand_imbues_are_gated: data/facts/weapon-imbue-gating.yaml. sim/core/consumes.go applies
+    a main-hand imbue only where the party has no Windfury Totem, so a pick carrying `gate`
+    is sent and dropped and is worth 0.0 DPS. Off-hand imbues are not gated.
   specs: 17
 catalog:
   flask_id:
@@ -108,7 +117,7 @@ picks:
       name: Flask of Pure Death
       id: 22866
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Flask of Supreme Power
       prose: 'Flask of Pure Death (2 hours, +80 Shadow/Fire/Frost spell damage). Cheaper alternative:
@@ -117,7 +126,7 @@ picks:
       name: Poached Bluefish
       id: 27665
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Blackened Basilisk
       - Crunchy Serpent
@@ -129,7 +138,7 @@ picks:
       name: Destruction Potion
       id: 22839
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Mana Potion
       prose: Destruction Potion (+120 spell power, +2% spell crit for 15 sec) used on cooldown
@@ -139,7 +148,7 @@ picks:
       name: Brilliant Wizard Oil
       id: 25122
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Superior Wizard Oil
       prose: 'Brilliant Wizard Oil (+36 spell power, +14 spell critical strike rating). Cheaper
@@ -149,7 +158,7 @@ picks:
       name: Flask of Blinding Light
       id: 22861
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Flask of Supreme Power
       - Flask of Distilled Wisdom
@@ -163,7 +172,7 @@ picks:
       name: Blackened Basilisk
       id: 27657
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Poached Bluefish
       - Crunchy Serpent
@@ -174,7 +183,7 @@ picks:
       name: Super Mana Potion
       id: 22832
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Destruction Potion
       prose: Super Mana Potion (1800–3000 Mana) on cooldown — the standard, cheaper choice.
@@ -185,7 +194,7 @@ picks:
       name: Brilliant Wizard Oil
       id: 25122
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Superior Wizard Oil
       prose: Brilliant Wizard Oil (36 Spell Damage, 14 Spell Critical Strike Rating) on the
@@ -196,7 +205,7 @@ picks:
       name: Flask of Relentless Assault
       id: 22854
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Relentless Assault — the default choice for Arms Warrior DPS in Phase
         3/Anniversary content; lasts 2 hours and survives death.
@@ -204,7 +213,7 @@ picks:
       name: Roasted Clefthoof
       id: 27658
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Spicy Hot Talbuk
       prose: Roasted Clefthoof, for +20 Strength. Spicy Hot Talbuk (+20 Hit Rating, ~1.27%
@@ -213,7 +222,7 @@ picks:
       name: Haste Potion
       id: 22838
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Insane Strength Potion
       - Mighty Rage Potion
@@ -224,19 +233,33 @@ picks:
       name: Adamantite Sharpening Stone
       id: 29453
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Adamantite Weightstone
       prose: Adamantite Sharpening Stone (sharp 2H weapons) or Adamantite Weightstone (blunt
         2H weapons), UNLESS the warrior is already receiving Windfury Totem — the stone should
         not be applied to a weapon that is meant to benefit from Windfury, since the two do
         not stack favorably.
+      weapon_class:
+        worn:
+        - Sword
+        counts_as: sharp
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+      gate:
+        applied: false
+        why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem is
+          Missing, and this spec's party carries one
+        party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+          groups
+        rule_from: data/facts/weapon-imbue-gating.yaml
+        so: this id is sent and dropped. It is the right id for the weapon and it is worth
+          0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
   balance_druid:
     flask_id:
       name: Flask of Blinding Light
       id: 22861
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Blinding Light — primary raid flask for Balance Druid DPS, per Icy Veins
         and Warcraft Tavern.
@@ -244,7 +267,7 @@ picks:
       name: Blackened Basilisk
       id: 27657
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Crunchy Serpent
       - Poached Bluefish
@@ -255,7 +278,7 @@ picks:
       name: Destruction Potion
       id: 22839
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Mana Potion
       prose: Destruction Potion on cooldown as the standard combat potion (both sources).
@@ -265,7 +288,7 @@ picks:
       name: Brilliant Wizard Oil
       id: 25122
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Superior Wizard Oil
       prose: Brilliant Wizard Oil, per both sources. Icy Veins also lists Superior Wizard
@@ -275,27 +298,30 @@ picks:
       name: Flask of Relentless Assault
       id: 22854
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Relentless Assault
     food_id:
-      name: Spicy Hot Talbuk
-      id: 33872
+      name: Grilled Mudfish
+      id: 27664
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
-      - Grilled Mudfish
+      - Spicy Hot Talbuk
       - Warp Burger
       prose: 'Sources disagree and the choice is stat-dependent, so both are reported rather
         than picked silently: Icy Veins recommends Spicy Hot Talbuk (Attack Power) if not
         yet hit-capped, or Grilled Mudfish (Agility) once hit-capped. Warcraft Tavern''s table
         instead lists Warp Burger with Grilled Mudfish as an alternate. Grilled Mudfish is
         the one point of agreement between the two.'
+      hit_cap:
+        state: capped
+        from: data/facts/hit-captured.yaml, gap_after_gems at every anchor
     pot_id:
       name: Haste Potion
       id: 22838
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Haste Potion (Alchemy) as the combat cooldown potion — agreed by both sources.
         Dark Rune (BoE drop) or Demonic Rune (BoP drop) used as a secondary mana potion on
@@ -304,29 +330,60 @@ picks:
         and Dark Runes both grant Mana... allow more casts before needing to swap to Aspect
         of the Viper on longer encounters').
     mhImbue_id:
-      name: Adamantite Sharpening Stone
-      id: 29453
+      name: Adamantite Weightstone
+      id: 34340
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
-      - Adamantite Weightstone
+      - Adamantite Sharpening Stone
       prose: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone (blunt
         melee weapon), from Blacksmithing — applied to the Hunter's melee weapon, per Warcraft
         Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly important for
         Hunters').
+      weapon_class:
+        worn:
+        - Fist
+        counts_as: blunt
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+      gate:
+        applied: false
+        why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem is
+          Missing, and this spec's party carries one
+        party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+          groups
+        rule_from: data/facts/weapon-imbue-gating.yaml
+        so: this id is sent and dropped. It is the right id for the weapon and it is worth
+          0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
+    ohImbue_id:
+      name: Adamantite Weightstone
+      id: 34340
+      from: weapon_main_hand, because the off-hand field named no imbue and the captured gear
+        wears a weapon there
+      position: first named in the field the captured facts allow
+      alternatives_named:
+      - Adamantite Sharpening Stone
+      prose: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone (blunt
+        melee weapon), from Blacksmithing — applied to the Hunter's melee weapon, per Warcraft
+        Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly important for
+        Hunters').
+      weapon_class:
+        worn:
+        - Fist
+        counts_as: blunt
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
   combat_rogue:
     flask_id:
       name: Flask of Relentless Assault
       id: 22854
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Relentless Assault
     food_id:
       name: Spicy Hot Talbuk
       id: 33872
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Warp Burger
       - Grilled Mudfish
@@ -335,7 +392,7 @@ picks:
       name: Haste Potion
       id: 22838
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Healing Potion
       prose: Haste Potion, Free Action Potion on stun fights, Super Healing Potion
@@ -343,14 +400,28 @@ picks:
       name: Adamantite Sharpening Stone
       id: 29453
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Windfury Totem where a shaman is in party, otherwise Adamantite Sharpening Stone
+      weapon_class:
+        worn:
+        - Sword
+        counts_as: sharp
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+      gate:
+        applied: false
+        why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem is
+          Missing, and this spec's party carries one
+        party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+          groups
+        rule_from: data/facts/weapon-imbue-gating.yaml
+        so: this id is sent and dropped. It is the right id for the weapon and it is worth
+          0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
     ohImbue_id:
       name: Deadly Poison
       id: 27186
       from: weapon_off_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Adamantite Sharpening Stone
       prose: Deadly Poison VII on fights over thirty seconds, Adamantite Sharpening Stone
@@ -360,7 +431,7 @@ picks:
       name: Flask of Pure Death
       id: 22866
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Flask of Supreme Power
       prose: 'Flask of Pure Death (+80 Spell Power for 2 hours). Cheaper alternative: Flask
@@ -369,7 +440,7 @@ picks:
       name: Poached Bluefish
       id: 27665
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Blackened Basilisk
       - Crunchy Serpent
@@ -379,7 +450,7 @@ picks:
       name: Destruction Potion
       id: 22839
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Mana Potion
       prose: Destruction Potion (+120 Spell Power, +2% Spell Crit for 15 sec) used on cooldown
@@ -390,7 +461,7 @@ picks:
       name: Brilliant Wizard Oil
       id: 25122
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Superior Wizard Oil
       prose: Brilliant Wizard Oil (+36 Spell Power, +14 Crit Rating). Superior Wizard Oil
@@ -400,7 +471,7 @@ picks:
       name: Flask of Blinding Light
       id: 22861
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Blinding Light (Increases Arcane, Holy, and Nature spell power by 80;
         counts as both a Battle and Guardian elixir; persists through death)
@@ -408,7 +479,7 @@ picks:
       name: Blackened Basilisk
       id: 27657
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Poached Bluefish
       - Crunchy Serpent
@@ -418,7 +489,7 @@ picks:
       name: Destruction Potion
       id: 22839
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Mana Potion
       prose: Destruction Potion on cooldown for DPS; substitute Super Mana Potion instead
@@ -427,7 +498,7 @@ picks:
       name: Brilliant Wizard Oil
       id: 25122
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Superior Wizard Oil
       prose: Brilliant Wizard Oil (spell power + spell crit) is the top pick; Superior Wizard
@@ -437,7 +508,7 @@ picks:
       name: Flask of Relentless Assault
       id: 22854
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Relentless Assault (120 Attack Power, persists through death) — the
         standard raid flask for Enhancement.
@@ -445,7 +516,7 @@ picks:
       name: Roasted Clefthoof
       id: 27658
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Roasted Clefthoof — 20 Strength and 20 Spirit, the best food buff available to
         the spec.
@@ -453,7 +524,7 @@ picks:
       name: Haste Potion
       id: 22838
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Mana Potion
       prose: Haste Potion (400 Haste Rating for 15 sec) is the standard DPS combat potion,
@@ -464,14 +535,14 @@ picks:
       name: Flask of Chromatic Wonder
       id: 33208
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Chromatic Wonder
     food_id:
       name: Spicy Crawdad
       id: 27667
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Fisherman's Feast
       - Warp Burger
@@ -483,7 +554,7 @@ picks:
       name: Ironshield Potion
       id: 22849
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Haste Potion
       prose: Ironshield Potion (2500 Armor for 2 min) is the standard defensive combat potion
@@ -492,24 +563,39 @@ picks:
       name: Adamantite Weightstone
       id: 34340
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Adamantite Weightstone. Icy Veins notes this applies even though the visible
         weapon is stowed in Bear Form, because the stat/damage boost carries to the Druid's
         hidden form weapon.
+      weapon_class:
+        worn: []
+        counts_as: blunt
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+        unchecked: no gear is exported for this spec, so the weapon it carries did not decide
+          this stone. The prose order did
+      gate:
+        applied: false
+        why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem is
+          Missing, and this spec's party carries one
+        party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+          groups
+        rule_from: data/facts/weapon-imbue-gating.yaml
+        so: this id is sent and dropped. It is the right id for the weapon and it is worth
+          0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
   feral_cat:
     flask_id:
       name: Flask of Relentless Assault
       id: 22854
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Relentless Assault
     food_id:
       name: Warp Burger
       id: 27659
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Grilled Mudfish
       prose: Warp Burger or Grilled Mudfish — both give the Agility+Spirit food buff cat druids
@@ -518,7 +604,7 @@ picks:
       name: Fel Mana Potion
       id: 31677
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Mana Potion
       - Haste Potion
@@ -530,17 +616,31 @@ picks:
       name: Adamantite Weightstone
       id: 34340
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Adamantite Weightstone, applied to the equipped weapon. In late TBC this buff
         was updated to keep functioning through Cat Form's weapon-hidden shapeshift, so it
         stays active in combat.
+      weapon_class:
+        worn:
+        - Mace
+        counts_as: blunt
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+      gate:
+        applied: false
+        why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem is
+          Missing, and this spec's party carries one
+        party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+          groups
+        rule_from: data/facts/weapon-imbue-gating.yaml
+        so: this id is sent and dropped. It is the right id for the weapon and it is worth
+          0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
   fury_warrior:
     flask_id:
       name: Flask of Relentless Assault
       id: 22854
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Relentless Assault — the standard 2-hour flask for Fury Warrior DPS,
         lasts through death. All three sources agree this is the default pick against non-demon
@@ -549,7 +649,7 @@ picks:
       name: Roasted Clefthoof
       id: 27658
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Spicy Hot Talbuk
       prose: Roasted Clefthoof for +20 Strength (the default). Spicy Hot Talbuk (+20 Hit Rating
@@ -559,7 +659,7 @@ picks:
       name: Haste Potion
       id: 22838
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Insane Strength Potion
       - Mighty Rage Potion
@@ -569,35 +669,54 @@ picks:
         (trash rage burst), Free Action Potion (stun/slow immunity on relevant fights), Swiftness
         Potion (high-movement fights).'
     mhImbue_id:
-      name: Adamantite Sharpening Stone
-      id: 29453
+      name: Adamantite Weightstone
+      id: 34340
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
-      - Adamantite Weightstone
+      - Adamantite Sharpening Stone
       prose: 'Condition-dependent, not a purchasable oil/stone: if the raid has an Enhancement
         Shaman running Windfury Totem, leave the main-hand weapon bare so Windfury can proc
         on it — Wowhead states this is the single best main-hand enhancement and stones should
         not be applied there. Only if no Windfury Totem is present should Adamantite Sharpening
         Stone (sharp weapons) or Adamantite Weightstone (blunt weapons) go on the main hand
         instead.'
+      weapon_class:
+        worn:
+        - Mace
+        counts_as: blunt
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+      gate:
+        applied: false
+        why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem is
+          Missing, and this spec's party carries one
+        party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+          groups
+        rule_from: data/facts/weapon-imbue-gating.yaml
+        so: this id is sent and dropped. It is the right id for the weapon and it is worth
+          0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
     ohImbue_id:
       name: Adamantite Sharpening Stone
       id: 29453
       from: weapon_off_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Adamantite Weightstone
       prose: Adamantite Sharpening Stone (sharp weapons) or Adamantite Weightstone (blunt
         weapons) — used regardless of Windfury Totem presence, since Windfury does not benefit
         from an off-hand stone the same way. Wowhead specifically credits Adamantite Sharpening
         Stone as ~1% stronger than Elemental Sharpening Stone for this slot.
+      weapon_class:
+        worn:
+        - Sword
+        counts_as: sharp
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
   protection_paladin:
     flask_id:
       name: Flask of Fortification
       id: 22851
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Flask of Blinding Light
       prose: Flask of Fortification (survivability/stamina priority; use if not already uncrittable/uncrushable
@@ -607,7 +726,7 @@ picks:
       name: Fisherman's Feast
       id: 33052
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Spicy Crawdad
       - Crunchy Serpent
@@ -620,7 +739,7 @@ picks:
       name: Super Mana Potion
       id: 22832
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Super Mana Potion, used for mana sustain (Paladin threat/heal-driven mana pressure).
         Demonic Rune or Dark Rune are also used to trade health for mana on longer fights,
@@ -629,7 +748,7 @@ picks:
       name: Superior Wizard Oil
       id: 28017
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Superior Wizard Oil — spell power weapon enchant, since Protection Paladin threat
         comes largely from spells.
@@ -638,7 +757,7 @@ picks:
       name: Flask of Fortification
       id: 22851
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Flask of Chromatic Wonder
       prose: Flask of Fortification (Alchemy; the standard tank stamina/defense flask). Flask
@@ -647,7 +766,7 @@ picks:
       name: Fisherman's Feast
       id: 33052
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Spicy Crawdad
       - Spicy Hot Talbuk
@@ -658,7 +777,7 @@ picks:
       name: Mighty Rage Potion
       id: 13442
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Haste Potion
       - Ironshield Potion
@@ -669,7 +788,7 @@ picks:
       name: Adamantite Sharpening Stone
       id: 29453
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Adamantite Weightstone
       prose: 'Adamantite Sharpening Stone (sharp/edged weapons) or Adamantite Weightstone
@@ -677,29 +796,38 @@ picks:
         in the party is already providing Windfury Totem — the temporary weapon enchant and
         the stone occupy the same slot, so the stone would just be wasted or would override
         the totem''s proc weapon.'
+      weapon_class:
+        worn: []
+        counts_as: sharp
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+        unchecked: no gear is exported for this spec, so the weapon it carries did not decide
+          this stone. The prose order did
   retribution_paladin:
     flask_id:
       name: Flask of Relentless Assault
       id: 22854
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Relentless Assault
     food_id:
       name: Roasted Clefthoof
       id: 27658
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Spicy Hot Talbuk
       prose: Condition on hit cap. Roasted Clefthoof (Strength food) once hit-capped; Spicy
         Hot Talbuk (Strength + Hit food) while still short of the 9% melee hit cap. Warcraft
         Tavern also lists Smoked Desert Dumplings as an alternative Strength food.
+      hit_cap:
+        state: capped
+        from: data/facts/hit-captured.yaml, gap_after_gems at every anchor
     pot_id:
       name: Haste Potion
       id: 22838
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Mana Potion
       prose: Haste Potion used on cooldown as the primary combat potion (both sources; Icy
@@ -711,19 +839,33 @@ picks:
       name: Adamantite Sharpening Stone
       id: 29453
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Adamantite Weightstone
       prose: Adamantite Sharpening Stone or Adamantite Weightstone, chosen by weapon type
         (edged vs. blunt), used when no shaman in the raid is providing Windfury Totem — Icy
         Veins states Windfury is the strongest in-combat weapon buff when available, with
         the Blacksmithing-made stone as the personal fallback.
+      weapon_class:
+        worn:
+        - Sword
+        counts_as: sharp
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+      gate:
+        applied: false
+        why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem is
+          Missing, and this spec's party carries one
+        party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+          groups
+        rule_from: data/facts/weapon-imbue-gating.yaml
+        so: this id is sent and dropped. It is the right id for the weapon and it is worth
+          0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
   shadow_priest:
     flask_id:
       name: Flask of Pure Death
       id: 22866
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Flask of Supreme Power
       prose: Flask of Pure Death (best option, highest Spell Power). Flask of Supreme Power
@@ -732,7 +874,7 @@ picks:
       name: Blackened Basilisk
       id: 27657
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Crunchy Serpent
       - Poached Bluefish
@@ -743,7 +885,7 @@ picks:
       name: Destruction Potion
       id: 22839
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Super Mana Potion
       prose: Destruction Potion on short fights where mana is not a concern; Super Mana Potion
@@ -752,7 +894,7 @@ picks:
       name: Superior Wizard Oil
       id: 28017
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Superior Wizard Oil (Enchanting profession consumable, 42 Spell Damage)
   survival_hunter:
@@ -760,25 +902,28 @@ picks:
       name: Flask of Relentless Assault
       id: 22854
       from: flask
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Flask of Relentless Assault
     food_id:
       name: Grilled Mudfish
       id: 27664
       from: food
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Spicy Hot Talbuk
       - Warp Burger
       prose: Grilled Mudfish (Agility) once hit-capped; Spicy Hot Talbuk (Icy Veins) or Warp
         Burger (Warcraft Tavern) if still short of hit before the cap -- sources disagree
         on the exact not-hit-capped food name.
+      hit_cap:
+        state: capped
+        from: data/facts/hit-captured.yaml, gap_after_gems at every anchor
     pot_id:
       name: Haste Potion
       id: 22838
       from: potions
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named: []
       prose: Haste Potion is the combat potion used on cooldown for burst windows. Dark Rune
         (BoE) or Demonic Rune (BoP) is used as a secondary mana-restore consumable on longer
@@ -787,12 +932,44 @@ picks:
       name: Adamantite Sharpening Stone
       id: 29453
       from: weapon_main_hand
-      position: first named in the field
+      position: first named in the field the captured facts allow
       alternatives_named:
       - Adamantite Weightstone
       prose: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
         for a blunt one -- both sources give this as a type-dependent pick, not a single named
         item.
+      weapon_class:
+        worn:
+        - Axe
+        counts_as: sharp
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+      gate:
+        applied: false
+        why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem is
+          Missing, and this spec's party carries one
+        party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+          groups
+        rule_from: data/facts/weapon-imbue-gating.yaml
+        so: this id is sent and dropped. It is the right id for the weapon and it is worth
+          0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
+    ohImbue_id:
+      name: Adamantite Weightstone
+      id: 34340
+      from: weapon_main_hand, because the off-hand field named no imbue and the captured gear
+        wears a weapon there
+      position: first named in the field the captured facts allow
+      alternatives_named:
+      - Adamantite Sharpening Stone
+      prose: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+        for a blunt one -- both sources give this as a type-dependent pick, not a single named
+        item.
+      field_prose_overridden: Not applicable -- Survival Hunter carries one melee weapon plus
+        a ranged weapon, not a dual-wield set, so no off-hand weapon consumable applies.
+      weapon_class:
+        worn:
+        - Fist
+        counts_as: blunt
+        from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
 declined:
   elixirs_instead:
     why: A flask counts as both a battle and a guardian elixir in 2.4.3, and this field names
@@ -865,6 +1042,24 @@ declined:
     specs:
     - combat_rogue
 unresolved:
+- spec: beast_mastery_hunter
+  prose_field: food
+  proto_field: food_id
+  name: Spicy Hot Talbuk
+  why: the prose names this the short pick, and data/facts/hit-captured.yaml reports this
+    spec capped at every anchor
+- spec: beast_mastery_hunter
+  prose_field: weapon_main_hand
+  proto_field: mhImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']
+- spec: beast_mastery_hunter
+  prose_field: weapon_off_hand
+  proto_field: ohImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']
 - spec: enhancement_shaman
   prose_field: weapon_main_hand
   proto_field: mhImbue_id
@@ -872,7 +1067,9 @@ unresolved:
   why: the simulator does not read this value out of ConsumesSpec, so sending it would change
     nothing
   where_it_lives: 'proto/shaman.proto :: ShamanOptions.imbue_mh for the main hand and EnhancementShaman.Options.imbue_oh
-    for the off hand, both class options rather than consumables'
+    for the off hand, both class options rather than consumables. run_sims.py sends both there,
+    in CLASS_OPTIONS and SPEC_OPTIONS, so the imbue is unresolved as a consumable only and
+    is not missing from a run'
 - spec: enhancement_shaman
   prose_field: weapon_off_hand
   proto_field: ohImbue_id
@@ -880,7 +1077,15 @@ unresolved:
   why: the simulator does not read this value out of ConsumesSpec, so sending it would change
     nothing
   where_it_lives: 'proto/shaman.proto :: ShamanOptions.imbue_mh for the main hand and EnhancementShaman.Options.imbue_oh
-    for the off hand, both class options rather than consumables'
+    for the off hand, both class options rather than consumables. run_sims.py sends both there,
+    in CLASS_OPTIONS and SPEC_OPTIONS, so the imbue is unresolved as a consumable only and
+    is not missing from a run'
+- spec: fury_warrior
+  prose_field: weapon_main_hand
+  proto_field: mhImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Mace'] in this
+    slot, which the simulator counts as ['blunt']
 - spec: protection_paladin
   prose_field: weapon_off_hand
   proto_field: ohImbue_id
@@ -892,13 +1097,10 @@ unresolved:
 - spec: shadow_priest
   prose_field: weapon_off_hand
   proto_field: ohImbue_id
-  why: no name in this field is in the catalog. The prose is quoted so a reader can see whether
-    that is a gap or a spec with no such slot
-  prose: N/A — Priests do not dual wield.
+  why: the captured gear wears no weapon in this slot, so no imbue applies to it
 - spec: survival_hunter
   prose_field: weapon_off_hand
   proto_field: ohImbue_id
-  why: no name in this field is in the catalog. The prose is quoted so a reader can see whether
-    that is a gap or a spec with no such slot
-  prose: Not applicable -- Survival Hunter carries one melee weapon plus a ranged weapon,
-    not a dual-wield set, so no off-hand weapon consumable applies.
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']

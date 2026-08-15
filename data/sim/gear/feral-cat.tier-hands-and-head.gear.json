@@ -1,6 +1,12 @@
 {
  "items": [
-  {},
+  {
+   "id": 31039,
+   "enchant": 3003,
+   "gems": [
+    24055
+   ]
+  },
   {
    "id": 24114
   },
@@ -78,5 +84,8 @@
   {
    "id": 30051
   }
+ ],
+ "_divergence": [
+  "head: Wolfshead Helm 8345 is not in the simulator database, so this profile wears Thunderheart Cover 31039, the Feral Cat Tier 6 head, ruled by the guild lead on 15 August 2026. THE CARD DECLINES THAT HELM. Wolfshead is why the Feral Cat takes no tier head at any anchor, so a figure from this profile answers a question the compendium refuses to answer and MUST NOT be compared with the card. Its meta socket is EMPTY, because enchants-by-spec.yaml records no meta gem for this spec on the ground that Wolfshead has no meta socket, so the substituted Cat is understated by one meta gem as well."
  ]
 }

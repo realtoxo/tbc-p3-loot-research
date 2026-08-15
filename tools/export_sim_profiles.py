@@ -78,35 +78,40 @@ META_REQUIREMENT = {
 # ITEMS THE SIMULATOR CANNOT HOLD, and what stands in for them in the profile
 # ONLY. The compendium is unchanged, ruled by the guild lead on 10 August 2026.
 #
-# Wolfshead Helm, 8345, is the Feral Cat head at all three anchors and is absent
-# from the wowsims database, being a level-40 leatherworking helm where the
-# database carries TBC items. Cowl of Defiance is the highest-EPV head on the
-# Cat tab that is legal at every anchor once Wolfshead, the Illidan drop, the
-# Season 3 helm and the Engineering goggles are set aside.
+# WOLFSHEAD HELM WEARS THE TIER 6 HEAD IN THE PROFILE, ruled by the guild lead
+# on 15 August 2026: "put on the t6 helm on the case if we must".
 #
-# THIS IS A KNOWN DIVERGENCE, not a correction. A sim run of this spec is not
-# wearing what its card says it wears, and the substitution is printed on every
-# run so that nobody compares the two without knowing.
-SUBSTITUTIONS: dict[int, tuple[int, str]] = {}
-
-# WOLFSHEAD HELM IS SIMMED AS AN EMPTY HEAD SLOT, ruled by the guild lead on
-# 14 August 2026: "on cat we will sim helmless i guess".
+# Wolfshead Helm, 8345, is the Feral Cat head at every anchor and is absent from
+# the wowsims database, being a level-40 leatherworking helm where the database
+# carries TBC items. It was simmed as an EMPTY head slot from 14 August 2026,
+# which produced a Cat missing a whole slot of stats, so the ruling above
+# replaced the empty slot with the spec's own Tier 6 head.
 #
-# It is item 8345, a level-40 leatherworking helm absent from the wowsims
-# database, and it is the Feral Cat head at every anchor. It used to be
-# substituted with Cowl of Defiance, which made the run wear a head the Cat
-# does not wear and quietly answered a different question: Wolfshead is the
-# entire reason the Cat declines its tier head, so standing a normal helm in
-# its place removes the thing under discussion.
+# Thunderheart Cover, 31039, is the head of the Thunderheart Harness, which
+# data/facts/tokens.yaml spec_to_set gives feral_cat at tier 6, and
+# data/facts/items.csv resolves that set name to this id. It is used at BOTH
+# anchors, in the profile ONLY.
 #
-# An empty slot is wrong too, and knowably so: the Cat loses Wolfshead's stats
-# and its shapeshift energy return. But it is wrong in a direction a reader can
-# reason about, an understated Cat, rather than wrong in a direction that looks
-# correct. The absence is reported on every run.
-OMITTED = {
-    8345: "Wolfshead Helm is not in the simulator database, so the slot is "
-          "simmed EMPTY rather than filled with a substitute. The Cat is "
-          "understated by that helm's stats and its energy return.",
+# THIS IS THE LOUDEST DIVERGENCE IN THIS FILE, and it is not a correction. The
+# Feral Cat DECLINES its Tier 6 head in the compendium, and Wolfshead is the
+# entire reason: data/facts/sim-profiles/hit-capture/feral-cat.yaml records the
+# head slot as never tier at any anchor, on an energy return the EP Workbook
+# ranks first while refusing to score. So a run of this profile ANSWERS A
+# QUESTION THE CARD REFUSES TO ANSWER. Every one of these figures belongs to a
+# character the compendium does not describe, and the divergence is printed on
+# every run and written into the profile itself for that reason.
+SUBSTITUTIONS: dict[int, tuple[int, str]] = {
+    8345: (31039,
+           "Wolfshead Helm 8345 is not in the simulator database, so this "
+           "profile wears Thunderheart Cover 31039, the Feral Cat Tier 6 head, "
+           "ruled by the guild lead on 15 August 2026. THE CARD DECLINES THAT "
+           "HELM. Wolfshead is why the Feral Cat takes no tier head at any "
+           "anchor, so a figure from this profile answers a question the "
+           "compendium refuses to answer and MUST NOT be compared with the "
+           "card. Its meta socket is EMPTY, because enchants-by-spec.yaml "
+           "records no meta gem for this spec on the ground that Wolfshead has "
+           "no meta socket, so the substituted Cat is understated by one meta "
+           "gem as well."),
 }
 
 # TANKS ARE NOT SIMMED, ruled by the guild lead on 14 August 2026: "we will not
@@ -176,9 +181,6 @@ def gear_json(block: dict, enchants: dict, gem_prefs: dict, meta_id, items_csv,
             new_id, why = SUBSTITUTIONS[item_id]
             subbed.append(f"{slot}: {why}")
             item_id = new_id
-        elif item_id in OMITTED:
-            subbed.append(f"{slot}: {OMITTED[item_id]}")
-            item_id = None
         sockets = ((items_csv.get(item_id) or {}).get("sockets") or "").split("|") \
             if item_id else []
         layout.append((slot, item_id, [c.strip().lower() for c in sockets if c.strip()]))
@@ -278,7 +280,16 @@ def gear_json(block: dict, enchants: dict, gem_prefs: dict, meta_id, items_csv,
             notes.append(
                 f"{meta_name} does NOT activate: still needs "
                 + ", ".join(f"{n} more {c}" for c, n in short.items()))
-    return {"items": items}
+    # THE DIVERGENCE TRAVELS WITH THE FILE. A substitution printed only on the
+    # exporter run is invisible to anyone who opens the profile a week later,
+    # imports it, and compares the figure with the spec's card. The key is
+    # named with a leading underscore because it is ours and not the
+    # simulator's; wowsims ignores a field its Equipment message does not
+    # declare, and run_sims.py drops it explicitly rather than relying on that.
+    out: dict = {"items": items}
+    if subbed:
+        out["_divergence"] = list(subbed)
+    return out
 
 
 def main() -> int:
@@ -410,11 +421,19 @@ def main() -> int:
     for line in skipped:
         print(f"  {line}")
     if substituted:
-        print(f"\n  {len(set(substituted))} substitution(s), profile only. The "
-              "compendium is unchanged, so a run of these specs is NOT wearing "
-              "what its card says:")
+        # LOUD ON PURPOSE. The Feral Cat head is not a near miss between two
+        # similar helms: the card refuses the substituted item on the strength
+        # of the item it replaces, so the two figures answer different
+        # questions. A reader who skims this block and then quotes a Cat number
+        # beside a Cat card has combined two characters.
+        print(f"\n  !! {len(set(substituted))} SUBSTITUTION(S), PROFILE ONLY. "
+              "The compendium is unchanged, so a run of these specs is NOT "
+              "wearing what its card says, and these figures MUST NOT be "
+              "compared with a card:")
         for line in sorted(set(substituted)):
-            print(f"    {line}")
+            print(f"    !! {line}")
+        print("    The same warning is written into each affected profile "
+              "under the _divergence key.")
 
     if unknown:
         print(f"\n  {len(unknown)} slot(s) the simulator cannot resolve. These "

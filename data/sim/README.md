@@ -36,25 +36,44 @@ every slot. Five anchors are short on items alone and close it with gems, which
 Every one closes comfortably. The hit gems go in before the throughput ones and
 skip the meta socket, because a shortfall is a constraint and throughput is not.
 
-## One substitution, and it is a known divergence
+## One substitution, and it is the loudest divergence here
 
 **Wolfshead Helm, item 8345, is not in the wowsims database**, and it is the
-Feral Cat's head at all three anchors. It is a level-40 leatherworking helm and
-the database carries TBC items.
+Feral Cat's head at every anchor. It is a level-40 leatherworking helm and the
+database carries TBC items.
 
-Ruled by the guild lead on 10 August 2026: skip it **in the profile only**. Cowl
-of Defiance stands in, being the highest-EPV Cat head legal at every anchor once
-Wolfshead, the Illidan drop, the Season 3 helm and the Engineering goggles are
-set aside. The compendium is unchanged.
+Ruled by the guild lead on 15 August 2026: *"put on the t6 helm on the case if
+we must"*. **Thunderheart Cover, item 31039, stands in at both anchors, in the
+profile only.** It is the head of the Thunderheart Harness, which
+[`../facts/tokens.yaml`](../facts/tokens.yaml) gives this spec at tier 6, and
+[`../facts/items.csv`](../facts/items.csv) resolves the set name to that id. The
+compendium is unchanged. Two earlier answers stand behind this one: Cowl of
+Defiance until 14 August 2026, then an empty head slot, which cost the Cat a
+whole slot of stats.
 
-**So a Feral Cat run is not wearing what its card says it wears.** The exporter
-prints the substitution on every run for that reason. It is a divergence and not
-a correction, and anyone comparing a sim figure to that spec's card is comparing
-two different characters.
+**The card DECLINES that helm, and Wolfshead is the entire reason.** The EP
+Workbook ranks Wolfshead first in the slot at 0.00 EPV, which is a refusal to
+price an energy return rather than a score, and the capture records the head
+slot as never tier at any anchor. So a run of this profile answers a question
+the compendium refuses to answer. **A Feral Cat sim figure and a Feral Cat card
+belong to two different characters and must not be compared.**
 
-That item is also the one the EP Workbook ranks first in the slot while refusing
-to score it, on an energy return the scoring cannot express. So the head hardest
-to price is also the one the simulator cannot hold.
+The warning is in three places, because a run scrolls away and a file does not:
+the exporter prints it on every run, `SUBSTITUTIONS` in
+[`../../tools/export_sim_profiles.py`](../../tools/export_sim_profiles.py)
+carries the text, and each affected profile carries it under a `_divergence`
+key. `tools/run_sims.py` drops that key before sending the request, rather than
+trusting the simulator to ignore a field it does not declare.
+
+The substituted head also has a meta socket that the profile leaves **empty**,
+since [`../facts/enchants-by-spec.yaml`](../facts/enchants-by-spec.yaml) records
+no meta gem for this spec on the ground that Wolfshead has none. The Cat is
+short one meta gem on top of wearing the wrong helm.
+
+**It does not make the spec runnable.** Measured 15 August 2026: with this head,
+with an empty head, with the recorded talents, with no talents and with a
+borrowed rotation, the Feral Cat panics the simulator every time and returns no
+figure. The blocker is the parked feral port described below.
 
 ## What is still missing before a run
 
@@ -183,8 +202,11 @@ which is also why the package was renamed from `feral` to `feralcat` and left
 half-done. Fixing it means removing mechanics TBC does not have and rewriting
 the cat against TBC rules, with nothing to validate the result against.
 
-So the 171 DPS it returns is a cat auto-attacking with no abilities, which is
-about a fifth of a real melee spec, exactly as observed. Feral is a
+It used to return 171 DPS, a cat auto-attacking with no abilities, which is
+about a fifth of a real melee spec. **It now returns nothing at all.** Measured
+15 August 2026 on `wowsimcli` v0.0.116: every request for this spec ends in
+`runtime error: invalid memory address or nil pointer dereference`, with or
+without a rotation and with or without talents. Feral is a
 work-in-progress port parked mid-migration in this snapshot. Fixing it means
 updating the vendored wowsims to a newer commit, which would move every other
 spec's numbers too, so it is a decision rather than a chore.

@@ -199,6 +199,31 @@ CLASS_OPTIONS = {
                            "sacrificeSummon": True},
     "destruction_warlock": {"armor": 1, "summon": 3, "curseOptions": 3,
                             "sacrificeSummon": True},
+    # A WEAPON IMBUE IS A SELF-BUFF, NOT A CONSUMABLE. The guild lead ruled on
+    # 15 August 2026 that the shamans "use dual WF weapon", and Windfury Weapon
+    # reaches the simulator only through the class options: sim/shaman/
+    # enhancement/enhancement.go reads ClassOptions.ImbueMh into SelfBuffs, and
+    # sim/shaman/weapon_imbues.go arms the main hand only when that field says
+    # WindfuryWeapon. An id sent in the ConsumesSpec field mhImbue_id is
+    # accepted by the encoder and dropped, which is why consumable-ids.yaml
+    # leaves both imbues unresolved and why this spec ran bare.
+    #
+    # WindfuryWeapon is 1 in proto/shaman.proto :: ShamanImbue, sent by the
+    # enum name because the encoder rejects a name it does not know and would
+    # accept a wrong number in silence.
+    "enhancement_shaman": {"imbueMh": "WindfuryWeapon"},
+}
+
+# OPTIONS THAT SIT BESIDE classOptions RATHER THAN INSIDE IT. The proto puts
+# the shared shaman fields in ShamanOptions and the off hand in the spec
+# message, so EnhancementShaman.Options.imbue_oh has no home in CLASS_OPTIONS.
+# Writing it there would place it in a message that has no such field, and the
+# encoder would reject it, which is the good case; the bad case is a field name
+# that exists in both and takes effect in the wrong one.
+SPEC_OPTIONS = {
+    # The off hand of the dual Windfury ruling. sim/shaman/enhancement/
+    # enhancement.go reads enhOptions.ImbueOh, one level up from ClassOptions.
+    "enhancement_shaman": {"imbueOh": "WindfuryWeapon"},
 }
 
 # SPECS THIS BUILD OF THE SIMULATOR CANNOT MODEL, and why. Named rather than
@@ -207,12 +232,17 @@ CLASS_OPTIONS = {
 #
 # The Feral Cat preset in this vendored snapshot is a STUB: empty talents, no
 # action priority list, and options carrying one field. It runs, and returns
-# about a fifth of what every other melee spec does. It is also the spec whose
-# head, Wolfshead Helm, is not in the database at all. Two independent reasons
-# not to trust a number from it.
+# about a fifth of what every other melee spec does.
+#
+# THE HEAD SLOT IS NO LONGER ONE OF THE REASONS. It was, while Wolfshead Helm
+# was simmed empty; the ruling of 15 August 2026 puts the Tier 6 head in the
+# profile instead, so the gear is now complete and the rotation is the whole of
+# the blocker. Filling the head therefore does not make this spec simulatable,
+# and saying that plainly is the point: 11 of the 14 files in sim/druid/feralcat
+# are underscore-prefixed and so are not compiled into the binary at all.
 NOT_SIMULATABLE = {
-    "feral_cat": "the preset is a stub in this build: no rotation, no talents, "
-                 "and its head item is absent from the database",
+    "feral_cat": "the preset is a stub in this build: no rotation and no "
+                 "talents, and the cat abilities are not compiled in",
 }
 
 # A FLOOR UNDER WHICH A RESULT IS NOT A RESULT. Nothing enforces that a
@@ -383,6 +413,16 @@ def consumables_for(spec: str) -> dict:
     # the Arms Warrior's entry anchor rose 3.1 percent when the list was sent.
     if "potId" in out:
         out["potions"] = [out["potId"]]
+    # THE MAIN-HAND IMBUE IS DROPPED IN A WINDFURY PARTY, and the off-hand one
+    # is not. sim/core/consumes.go applies MhImbueId only when the party carries
+    # no Windfury Totem, because the totem overwrites the imbue in 2.4.3, while
+    # OhImbueId is applied unconditionally. Every melee spec in g1 and g2 sits
+    # under a Windfury Totem in raid-buffs.yaml, so a main-hand stone changes
+    # nothing for them and an off-hand stone is live damage. Measured on
+    # 15 August 2026: correcting the Beast Mastery main-hand stone to the type
+    # its Fist weapon takes moved the result 0.0, and adding the off-hand stone
+    # both hunters were missing moved it 26.1 and 29.6. A reader measuring a
+    # main-hand imbue and reading zero is meeting this gate, not a rejected id.
     return out
 
 
@@ -415,7 +455,13 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
         "name": spec,
         "race": 1,
         "class": CLASS[klass],
-        "equipment": gear,
+        # ONLY THE ITEMS ARE SENT. A profile carrying a substitution also
+        # carries a `_divergence` list, written by export_sim_profiles.py so the
+        # warning travels with the file. That key belongs to this project and
+        # not to proto Equipment, and it is dropped HERE rather than left to the
+        # simulator to ignore: an encoder that ignores unknown fields today is
+        # not a promise, and a rejected request would read as a broken profile.
+        "equipment": {"items": gear["items"]},
         "talentsString": talents,
         "consumables": consumables_for(spec),
         "buffs": individual,
@@ -424,7 +470,8 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
         # alone panics the simulator with a nil dereference rather than
         # defaulting, which cost an hour to find because the panic names no
         # field. Every spec block the presets ship writes it explicitly.
-        oneof: {"options": {"classOptions": CLASS_OPTIONS.get(spec, {})}},
+        oneof: {"options": {"classOptions": CLASS_OPTIONS.get(spec, {}),
+                            **SPEC_OPTIONS.get(spec, {})}},
     }
     return {
         "raid": {

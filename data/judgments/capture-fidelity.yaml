@@ -179,6 +179,53 @@ sim_profile_scope:
       and not the g4 mages, exactly as hit.yaml already models it, because it is
       party-scoped in 2.4.3. roster.yaml is the source.
 
+  feral_cat_head_is_a_loud_divergence:
+    ruling: >-
+      The Feral Cat sim profile wears Thunderheart Cover, item 31039, in the
+      head slot at BOTH anchors. Ruled by the guild lead on 15 August 2026:
+      "put on the t6 helm on the case if we must".
+    in_the_profile_only: >-
+      The compendium is unchanged. The capture at
+      data/facts/sim-profiles/hit-capture/feral-cat.yaml still records Wolfshead
+      Helm, item 8345, at every anchor, and every card, ladder and hit figure
+      still stands on that.
+    why_a_substitute_is_needed: >-
+      Wolfshead Helm is a level-40 leatherworking helm and the wowsims database
+      carries TBC items, so the simulator cannot hold it. It was substituted
+      with Cowl of Defiance until 14 August 2026 and simmed as an EMPTY head
+      slot after that, which cost the Cat a whole slot of stats.
+    which_item_and_why_that_one: >-
+      data/facts/tokens.yaml spec_to_set gives feral_cat the Thunderheart
+      Harness at tier 6, and data/facts/items.csv resolves the head of that set
+      to 31039. It is the spec's own tier head rather than a helm chosen for
+      being close, which keeps the choice checkable.
+    THE_WARNING: >-
+      THIS FIGURE ANSWERS A QUESTION THE CARD REFUSES TO ANSWER. The Feral Cat
+      DECLINES its Tier 6 head in the compendium, and Wolfshead is the entire
+      reason: the EP Workbook ranks Wolfshead first in the slot at 0.00 EPV,
+      which is a refusal to price an energy return rather than a score, and the
+      capture records the head slot as never tier at any anchor. Putting the
+      declined helm on the character removes the thing under discussion. A sim
+      number from this profile and a number on that spec's card belong to two
+      different characters and MUST NOT be compared.
+    where_the_warning_lives: >-
+      tools/export_sim_profiles.py SUBSTITUTIONS carries the text, the exporter
+      prints it on every run, and it is written into each affected file under
+      the `_divergence` key so it travels with the profile. Three places,
+      because the run output scrolls away and the file does not.
+    it_is_still_understated: >-
+      The substituted head has a meta socket and the profile leaves it empty,
+      because data/facts/enchants-by-spec.yaml records no meta gem for this spec
+      on the ground that Wolfshead has none. So the substituted Cat is short one
+      meta gem as well as wearing the wrong helm.
+    it_does_not_make_the_spec_runnable: >-
+      Measured on 15 August 2026: the Feral Cat returns no figure at all with
+      this head, with an empty head, with the recorded talents, with no talents,
+      and with a borrowed rotation. Every one of those panics the simulator.
+      The blocker is the parked feral port described in data/sim/README.md, not
+      the head, and the head was one of two reasons named in
+      tools/run_sims.py::NOT_SIMULATABLE until this ruling left only one.
+
   hit_consumables_ignored:
     ruling: >-
       No hit consumable is used, because nobody uses them.
