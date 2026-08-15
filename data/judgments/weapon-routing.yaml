@@ -1,0 +1,50 @@
+meta:
+  what: Weapon routing the guild lead settled for the best-in-slot sim profiles. These
+    are ALLOCATION decisions about who gets a contested weapon, not corrections to what
+    Wowhead published.
+  why_here: A published best-in-slot list ranks a weapon for a spec in isolation. A raid
+    has one of each. Where the guild lead routes a weapon away from the spec a list gives
+    it to, that is a judgment and lives in data/judgments/, never in data/facts/.
+  ruled: '2026-08-15'
+  by: the guild lead
+  applies_to: data/research/wowhead-phase3-bis-full/, which is a capture and is NOT edited.
+    The routing is applied when the BiS sim profile is built from it, so the capture keeps
+    saying what the page said and the profile says what this raid will do.
+rulings:
+- weapon: Warglaive of Azzinoth
+  ids:
+  - 32837
+  - 32838
+  ruling: The Arms Warrior will never receive them.
+  verbatim: arms warrior will never get warglaives
+  the_lists_disagree: The Phase 3 lists rank dual Warglaives first for the Combat Rogue
+    AND both warriors. This routes them away from Arms only.
+  consequence: 'The Arms Warrior BiS profile needs a different main hand, and its weapon
+    STYLE changes: the list pairs two one-hand Warglaives where this spec keeps a two-hander.
+    That is a different build, not a stat swap.'
+- weapon: Zhar'doom, Greatstaff of the Devourer
+  ids:
+  - 32374
+  ruling: Goes to the warlocks, the Balance Druid and the Elemental Shaman.
+  verbatim: zhardooms to warlocks boomkins and elementals
+  consequence: Those specs wear a TWO-HANDED staff, so their profile holds no off-hand
+    at all. The captures list both a staff and an off-hand for several specs, which cannot
+    both be worn; this ruling settles that contradiction for these four. The Shadow Priest
+    is NOT on this list and needs a one-hand and off-hand pairing instead.
+- weapon: Tempest of Chaos
+  ids:
+  - 32943
+  ruling: The Arcane Mage takes it first.
+  verbatim: arcane mage will get tempest of chaos first
+  consequence: 'Resolves the Arcane Mage''s staff-against-off-hand contradiction: it wears
+    a one hand and an off hand, not Zhar''doom. It also competes with the warlocks, whose
+    lists rank Tempest of Chaos first, and the word FIRST is the ordering rather than
+    an exclusion.'
+what_still_needs_a_ruling:
+- The Shadow Priest loses Zhar'doom by the second ruling and its capture names no replacement
+  main hand. Somebody has to say what it wears.
+- The Arms Warrior replacement is unstated. Its own page carries a two-handed table headed
+  Phase 2, ranking Cataclysm's Edge 30902, which was recorded as a note rather than a
+  slot because the heading says Phase 2.
+- If the warlocks take Zhar'doom and the Arcane Mage takes Tempest of Chaos first, what
+  the warlocks hold before a Zhar'doom drops is unstated.
