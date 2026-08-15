@@ -167,6 +167,13 @@ sim_profile_scope:
       number answer a different question. Patchwerk holds the encounter still so
       that the only thing varying between two runs is the gear, which is what
       these profiles exist to measure.
+    length: >-
+      Three minute encounters, ruled by the guild lead on 14 August 2026,
+      replacing the shorter one every earlier figure was produced against. The
+      seconds are NOT written here: they are written once, as
+      tools/run_sims.py::ENCOUNTER_SECONDS, because a length stated in two
+      places is a length a change can half-apply to. A figure from before that
+      date is not comparable with one from after it.
     buffs_come_from_the_roster: >-
       Per our composition, not idealised. Totem of Wrath reaches the g3 casters
       and not the g4 mages, exactly as hit.yaml already models it, because it is

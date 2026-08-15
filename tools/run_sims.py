@@ -5,7 +5,8 @@ WHAT THIS IS FOR. The council's question is almost never "what is this spec's
 DPS". It is "what does THIS ITEM do for this spec", which is a difference
 between two runs that are identical but for one slot. So this tool holds
 everything still and varies one thing, and the encounter is fixed at a single
-target for 150 seconds so that two results are always comparable.
+target for the length in ENCOUNTER_SECONDS so that two results are always
+comparable.
 
 WHY THE REQUEST IS BUILT HERE AND NOT STORED. wowsimcli takes a RaidSimRequest,
 which wraps the player, the encounter and the sim options together. Storing 45
@@ -173,10 +174,19 @@ SPECS = {
     "elemental_shaman":     ("shaman",  "elementalShaman"),
 }
 
-# THE ENCOUNTER IS FIXED AND IS NOT A KNOB. Single target, 150 seconds, a level
-# 73 boss. Every result in this project is produced against exactly this, so two
-# numbers can always be subtracted. Changing it invalidates every figure
-# collected before the change, which is why it lives in one place.
+# THE ENCOUNTER IS FIXED AND IS NOT A KNOB. Single target, a level 73 boss, and
+# the length below. Every result in this project is produced against exactly
+# this, so two numbers can always be subtracted. Changing it invalidates every
+# figure collected before the change, which is why the length is written once,
+# here, and read from here by everything that needs it. It was stated in three
+# places until 14 August 2026, so a change could half-apply and leave the prose
+# describing an encounter the runs no longer used.
+#
+# THREE MINUTES, ruled by the guild lead on 14 August 2026, replacing 150
+# seconds. Every figure collected before that date was produced against the
+# shorter encounter and is not comparable with one collected after it.
+ENCOUNTER_SECONDS = 180
+
 # THE CLASS OPTIONS EACH SPEC NEEDS, taken from the DefaultOptions its own
 # preset ships. An empty block is not a safe default: a warlock with no armor,
 # no pet and no curse returns about 65 DPS, which is a tenth of the real figure
@@ -217,7 +227,7 @@ NOT_SIMULATABLE = {
 IMPLAUSIBLE = 300.0
 
 ENCOUNTER = {
-    "duration": 150,
+    "duration": ENCOUNTER_SECONDS,
     "durationVariation": 0,
     "targets": [{
         "level": 73,
@@ -364,6 +374,15 @@ def consumables_for(spec: str) -> dict:
         parts = field.split("_")
         camel = parts[0] + "".join(w.title() for w in parts[1:])
         out[camel] = entry["id"]
+    # `potId` ALONE DRINKS NOTHING. sim/core/consumes.go::registerPotionCD
+    # iterates `consumes.Potions` and registers a cooldown only for an id in
+    # THAT list; potId merely marks which entry of the list is the combat
+    # potion. With `potions` empty the loop body never runs, no potion is ever
+    # drunk, and the run succeeds with a quietly smaller number. The simulator's
+    # own UI fills the list, at ui/core/player.ts. Measured on 15 August 2026:
+    # the Arms Warrior's entry anchor rose 3.1 percent when the list was sent.
+    if "potId" in out:
+        out["potions"] = [out["potId"]]
     return out
 
 
