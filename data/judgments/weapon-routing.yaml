@@ -42,7 +42,14 @@ rulings:
     no alternative. Five specs now wear the staff, and all five hold no off-hand.'
 - weapon: Tempest of Chaos
   ids:
-  - 32943
+  - 30910
+  previously_claimed: 'The id read 32943 from 15 August 2026 until it was corrected the
+    same day. 32943 is Swiftsteel Bludgeon, a one-hand mace, and Tempest of Chaos is 30910,
+    a main-hand sword. Nothing had been built on the wrong id yet. The RULING is unaffected,
+    because the guild lead named the weapon and not the number; only the transcription
+    was wrong. Found while building the best-in-slot sim profiles, by resolving every routed
+    id against items.csv, which is the check AGENTS.md requires and which had not been run
+    on this file.'
   ruling: The Arcane Mage takes it first.
   verbatim: arcane mage will get tempest of chaos first
   consequence: 'Resolves the Arcane Mage''s staff-against-off-hand contradiction: it wears
