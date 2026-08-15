@@ -490,3 +490,83 @@ An earlier reading of the same data also appeared to show Ring and Shoulders thi
 **573 of 856 cards state at least one absent comparison.** That is the designed behaviour rather than a gap: a slot outside the five a tier set covers has no Tier 6 or Tier 5 view to show, and the card says so instead of leaving a blank column.
 
 So the remaining work on this question is not per spec. It is the single decision about what a healer card should summarise, which the guild lead has ruled out of scope.
+
+## The third sim profile landed, 15 August 2026
+
+**All four steps of the queued work are done, and two of them found something.**
+The section above describes what was queued; this describes what happened.
+
+### What landed
+
+`data/facts/sim-figures.yaml` holds 13 specs across three anchors, entry, tier
+and best in slot, at 10000 iterations, seed 1, against the same 180 second
+single-target encounter every earlier figure used. Each row carries its
+`standard_error`. The guild lead ruled that the printed interval is ONE standard
+error and not the 95 percent form, having been shown both.
+
+`docs/sims.md` is the table, and every figure on it links to a page carrying the
+seventeen slots with their enchants and gems, the consumables, the four buff
+blocks, the talent string, the rotation and the encounter. Thirty-nine set pages.
+
+The best-in-slot anchor is built rather than captured.
+`tools/build_bis_capture.py` reads `data/research/wowhead-phase3-bis-full/`,
+which is never edited, applies `data/judgments/weapon-routing.yaml`, and writes
+`data/facts/sim-profiles/bis-capture/`. It is a separate directory from
+`hit-capture/` on purpose: the compendium rollups know two anchors, and giving
+them a third is the shape of the tier-set rebuild that produced 96 findings.
+
+### One defect, in a judgment file
+
+`weapon-routing.yaml` recorded Tempest of Chaos as item **32943**. That id is
+**Swiftsteel Bludgeon**, a one-hand mace. The weapon is **30910**, a main-hand
+sword. Nothing had been built on it, and the ruling was unaffected, because the
+guild lead named a weapon rather than a number.
+
+`tools/check_sim_profiles.py` now resolves every routed id against the name its
+own ruling claims and fails the build when they disagree. It also fails a
+profile no character could wear, meaning a two-handed weapon beside an off hand,
+an Off-Hand-only item in the main hand, or an item the simulator database does
+not know. It deliberately does not fail on two copies of one item, because four
+pages rank a row "Best x2" and two copies of a non-unique item is a legal set.
+
+### One regression, caused by the new anchor, and it was silent
+
+Adding a third anchor broke `tools/extract_consumable_ids.py`. That tool keyed a
+consumable pick on the SPEC, and two of its three inputs are properties of the
+GEAR: the weapon class decides which stone, and the hit cap decides which food.
+Ten of fourteen specs change weapon class between anchors, and the tool
+responded by reporting those picks unresolved, which meant **ten specs lost
+their weapon imbue at every anchor, including the two that had it before.**
+
+The tool's own docstring had predicted this exactly and said it did not happen
+yet. It happens now. Picks are per spec per anchor, `run_sims.py` takes the
+anchor when it builds a request, and the figures were rerun afterwards. The cost
+of the silent version is known: adding the off-hand stone both hunters were
+missing moved them 26.1 and 29.6 DPS.
+
+### Two specs measure LOWER at a better anchor, and neither is a defect
+
+Both were investigated rather than published as they stood, and both reproduce
+with `tools/run_sims.py --profile A --against B`, which dresses one slot at a
+time from the other profile and carries that slot's enchant and gems with it.
+The reasoning is in `data/facts/sim-results.yaml`; the short form is that the
+published Phase 3 list is worse, in this model, than the set it replaces.
+
+The **Beast Mastery Hunter** is one slot. Its Phase 3 page ranks a melee weapon
+carrying no ranged attack power, and a hunter never swings a melee weapon in
+this model, so it is a stat stick and that stat is the one that matters.
+
+The **Arms Warrior** is not one slot, and the obvious explanation is wrong. The
+guild lead routing the Warglaives away looked like the cause, and measuring it
+showed the opposite: the routed two-hander is worth **+77.7** against the dual
+Warglaives the page ranks, because the Arms rotation is written for a
+two-hander.
+
+### Still open, and it is a scope question rather than a defect
+
+**The best-in-slot sets overshoot their hit caps**, because a published list
+ranks each slot in isolation and nothing in it stops the set overcollecting. The
+Combat Rogue carries 195 item hit against a target of 64. Correcting it would
+mean rebuilding the sets to our own rule, at which point the figures stop
+describing the lists players actually follow. **Guild lead needed** if the
+council wants sets built to our rule instead of captured.

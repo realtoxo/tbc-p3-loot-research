@@ -17,6 +17,8 @@ It carries best in slot as reference, because players arrive expecting specific 
 
 A council asks two different questions, so the compendium is entered two ways. When a drop lands the question is who wants it, and [Loot By Boss](bosses.md) leads to that item's page and every claimant on it. When a week is being planned the question is what a player still needs, and [Loot By Spec](specs.md) leads to what one spec wants, slot by slot. Both read the same shortlist, so the two cannot disagree.
 
+A third way in answers a question neither of those asks. [Simulated Throughput](sims.md) reports what each spec measures at three gear anchors, with the spread on every figure, and every figure is a click into the exact set, consumables and buffs behind it. It ranks nothing, and a spec is comparable only with itself.
+
 ## Start here
 
 ::: {.note .brass}

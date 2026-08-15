@@ -64,11 +64,17 @@ just versions
 
 ## Limitations
 
-The project is gathering facts. No priority has been assigned to any item, no
-ruling has been written, and no simulation has been run, so nothing here is
-binding policy yet. The worked example in
+The project is gathering facts. No priority has been assigned to any item, so
+nothing here is binding policy yet. The worked example in
 [`docs/conventions.md`](docs/conventions.md) carries invented upgrade figures
 and says so.
+
+Simulation has begun and is narrow. Thirteen of twenty-one specs measure at
+three gear anchors in [`docs/sims.md`](docs/sims.md), against one target for
+three minutes. The three tanks and the four healers are out of scope by ruling,
+and the Feral Cat cannot be modelled in this build of the simulator. A figure
+there is a spec wearing a stated set, and it is comparable with the same spec at
+another anchor and with nothing else.
 
 ## Credit
 

@@ -1,77 +1,105 @@
 meta:
-  what: The first simulated figures this project has ever produced, and what causes each
-    delta.
+  what: What the simulated figures MEAN. The figures themselves are in
+    data/facts/sim-figures.yaml, which tools/run_sims.py writes, and they are not
+    restated here.
+  why_two_files: This file held its own copy of thirteen figures until 15 August 2026,
+    produced at 3000 iterations across two anchors. A third anchor and a rerun at 10000
+    iterations moved every one of them, and a second copy of a fact is the copy that
+    goes stale. So the figures live in one place now and this file holds only what a
+    reader cannot recompute: which results are surprising, and what was measured to
+    explain them.
   produced: '2026-08-15'
   simulator: wowsims tbc-new, wowsimcli v0.0.116, installed by tools/install_wowsimcli.sh
-  settings: 3000 iterations, seed 1, single target, 180 second encounter
-  run_to_run_spread: 0.3 to 3.5 DPS per profile across seeds 1, 100001 and 200001, so
-    a delta larger than about 5 DPS is signal rather than noise
-  WHAT THESE FIGURES ARE ABOUT: The tier profile is the ENTRY set with only the five token
-    slots reconsidered. Weapons, trinkets and the other twelve slots are IDENTICAL at
-    both anchors on every spec. So a delta here answers 'what do the tier tokens alone
-    do to a Phase 2 raider', NOT 'what is this spec worth in Phase 3'. Six specs still
-    swing Season 2 arena weapons at the tier anchor and the Combat Rogue never holds a
-    Warglaive. A third profile, a full Phase 3 best-in-slot set, is queued to answer the
-    broader question.
+  settings: 10000 iterations, seed 1, single target, 180 second encounter, target level
+    73
+  interval: Every figure in sim-figures.yaml carries `standard_error`, which is ONE standard
+    error on the mean, the spread across iterations divided by the square root of 10000.
+    RULED BY THE GUILD LEAD on 15 August 2026, having been shown both that and the 95
+    percent interval. It covers about 68 percent. It must never be relabelled as a confidence
+    interval, because two figures whose one-sigma bars barely miss each other are not
+    separated at 95 percent.
+  what_the_interval_does_not_cover: The standard error is the uncertainty on the MEAN
+    of one configuration. It says nothing about whether the configuration is right. Every
+    figure below that surprised us was surprising for a gear reason, and the interval
+    on all of them is near one DPS.
   not_simulated: Tanks, by the ruling of 14 August 2026. The Feral Cat, because no action
-    priority list for it exists in this build. Thirteen specs, not seventeen.
-  one_caveat_on_comparability: The twelve untouched slots are untouched as ITEMS but not
-    as GEMS. A tier set is re-gemmed to re-cap hit, which flatters it slightly against
-    a pure item swap. The Arms Warrior needs four hit gems at its tier anchor.
-figures:
-- spec: affliction_warlock
-  entry: 1709.0
-  tier: 1735.8
-  delta: 26.8
-- spec: arcane_mage
-  entry: 2064.6
-  tier: 2081.2
-  delta: 16.6
-- spec: arms_warrior
-  entry: 1966.8
-  tier: 1944.6
-  delta: -22.2
-- spec: balance_druid
-  entry: 984.4
-  tier: 1061.1
-  delta: 76.7
-- spec: beast_mastery_hunter
-  entry: 1954.6
-  tier: 2062.4
-  delta: 107.8
-- spec: combat_rogue
-  entry: 2352.5
-  tier: 2501.2
-  delta: 148.7
-- spec: destruction_warlock
-  entry: 1935.6
-  tier: 2024.4
-  delta: 88.8
-- spec: elemental_shaman
-  entry: 1144.9
-  tier: 1332.8
-  delta: 187.9
-- spec: enhancement_shaman
-  entry: 2122.9
-  tier: 2122.9
-  delta: 0.0
-- spec: fury_warrior
-  entry: 2130.6
-  tier: 2102.2
-  delta: -28.4
-- spec: retribution_paladin
-  entry: 2027.7
-  tier: 2027.7
-  delta: 0.0
-- spec: shadow_priest
-  entry: 1264.3
-  tier: 1306.4
-  delta: 42.1
-- spec: survival_hunter
-  entry: 2316.7
-  tier: 2394.0
-  delta: 77.3
-why_the_warriors_lose:
+    priority list for it exists in this build. The four healers, who have no captured
+    gear set. Thirteen specs, not twenty-one.
+
+the_three_anchors:
+  entry: The spec's Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing.
+  tier: The ENTRY set with only the five token slots reconsidered. Weapons, trinkets and
+    the other twelve slots are IDENTICAL to entry on every spec, six specs still swing
+    Season 2 arena weapons, and the Combat Rogue never holds a Warglaive. A delta from
+    entry to tier answers 'what do the tier tokens alone do to a Phase 2 raider', NOT
+    'what is this spec worth in Phase 3'.
+  bis: The full Phase 3 best-in-slot set, built by tools/build_bis_capture.py from the
+    Wowhead captures in data/research/wowhead-phase3-bis-full/ with the guild lead's weapon
+    routing applied. Added 15 August 2026. It is the anchor that separates the two readings
+    above.
+  one_caveat_on_comparability: The twelve untouched slots at the tier anchor are untouched
+    as ITEMS but not as GEMS. A tier set is re-gemmed to re-cap hit, which flatters it
+    slightly against a pure item swap. The Arms Warrior needs four hit gems at its tier
+    anchor.
+
+two_specs_measure_LOWER_at_a_better_anchor:
+  read_this_first: Both were investigated on 15 August 2026 rather than published as
+    they stood, and NEITHER is a defect in this pipeline. Both are the published Phase
+    3 list being worse, in this model, than the set it replaces. Each is reproducible
+    with tools/run_sims.py --profile A --against B, which dresses one slot at a time from
+    the other profile and carries that slot's enchant and gems with it.
+
+  beast_mastery_hunter:
+    what: The best-in-slot set measures BELOW the tier set.
+    one_slot_explains_almost_all_of_it: The main hand. Restoring the Phase 2 pair moves
+      the whole set by +92.0 and the main hand alone by +98.9, so every other slot together
+      is worth less than nothing here.
+    why: 'A hunter never swings its melee weapons in this model, so a melee weapon is
+      a stat stick and nothing else. Talon of the Phoenix, item 32944, carries 52 attack
+      power, 52 RANGED attack power, 15 melee hit and 19 melee crit. Boundless Agony,
+      item 30901, which the Phase 3 page ranks, carries 24 crit and 210 armor penetration
+      and NO ranged attack power. Ranged attack power is the stat that drives every shot
+      this spec fires.'
+    what_it_is_not: It is not the bow. Bristleblitz Striker against Serpent Spine Longbow
+      is worth -13.1 to the Phase 2 bow, which is the direction the Phase 3 item should
+      move.
+    what_it_means_for_a_council: The Phase 3 page ranks a melee weapon for a Beast Mastery
+      hunter that this model prices about 99 DPS below the Phase 2 pair it replaces. A
+      hunter asking for a Phase 3 dagger is asking for a downgrade unless something outside
+      this model says otherwise. NOT A RULING. The council decides.
+    measured: '2026-08-15, 10000 iterations, seed 1'
+    reproduce: python3 tools/run_sims.py --profile beast-mastery-hunter.bis --against beast-mastery-hunter.tier-hands-and-head
+      --iterations 10000
+
+  arms_warrior:
+    what: The best-in-slot set measures BELOW both other anchors, 108.3 below entry.
+    no_single_slot_explains_it: The largest is the second trinket at 52.7, Badge of the
+      Swarmguard against Tsunami Talisman, then the legs at 22.5, the first ring at 20.8,
+      the ranged at 20.6 and the neck at 20.0. Four Phase 3 picks are worse than the Phase
+      2 items they replace, and the tier armor gains 59 back across seven slots.
+    the_sum_and_the_whole_disagree: The single-slot deltas sum to +54.3 and the whole-set
+      difference is +108.3. Neither figure is wrong. Set bonuses and cap positions are
+      not additive, so a slot list is not a decomposition and must not be presented as
+      one.
+    the_routing_is_NOT_the_cause_and_this_was_checked: 'The Phase 3 page ranks dual Warglaives
+      for this spec and the guild lead routed them away on 15 August 2026, which looked
+      like the obvious explanation. It is the opposite. Measured with the Warglaives in
+      place, the same set reads 1779.6 against 1857.3 with Cataclysm''s Edge, so the routing
+      GAINED this spec 77.7 DPS rather than costing it. The Arms rotation is written for
+      a two-handed weapon.'
+    what_it_means_for_a_council: This model does not support routing Phase 3 upgrades to
+      the Arms Warrior on the strength of its published list. It does support the guild
+      lead's weapon ruling, which was made on other grounds and turns out to be worth
+      +77.7 here. NOT A RULING on anything else. The council decides.
+    measured: '2026-08-15, 10000 iterations, seed 1'
+    reproduce: python3 tools/run_sims.py --profile arms-warrior.bis --against arms-warrior.entry
+      --iterations 10000
+
+why_the_warriors_lose_at_the_TIER_anchor:
+  scope: This section is about ENTRY against TIER and is unaffected by the best-in-slot
+    anchor. Every figure in it was measured at 3000 iterations before the 15 August 2026
+    rerun, so it is quoted to one decimal and should be re-measured before anything turns
+    on a figure smaller than about 5 DPS.
   verdict: Not a defect. A correct result of the construction rule.
   fury_warrior: 'Entry holds the Destroyer four-piece, which makes Bloodthirst cost 5
     less rage (sim/warrior/items.go). Two Tier 6 pieces break it. Measured separately:
@@ -82,23 +110,50 @@ why_the_warriors_lose:
     picks up the Onslaught four-piece, +5 percent Mortal Strike, and every individual
     token is still a downgrade: head -92.2 losing 21 hit on a set already short, hands
     -38.4 losing 18 expertise to gloves it already owns, shoulder -38.7, chest -39.2.
-    Per the sim it should refuse the whole line: entry 1966.8, refuse-head 1963.4, full
-    four-piece 1944.6.'
+    Per the sim it should refuse the whole line.'
   the_stat_shape: The Onslaught pieces carry no expertise, almost no hit and zero crit
     rating; they pay in agility and armor penetration. The Destroyer pieces they replace
     are hit and crit dense. Arms loses 28 expertise and 85 crit rating across the swap.
+
 why_the_rogue_gains: A clean four-for-four bonus upgrade. Deathmantle four-piece, a 1
   PPM free finisher, becomes Slayer's, whose two-piece is +5 percent Slice and Dice haste
   and whose four-piece is +6 percent Sinister Strike and Backstab damage, both permanent
   and both central to the spec. Plus five real item upgrades. Breaking Slayer's four-piece
-  alone costs -67.8.
+  alone costs -67.8. It is also the largest entry-to-BiS movement on the roster.
+
 every_intermediate_state_is_a_valley: THE MOST USEFUL THING IN THIS FILE FOR A COUNCIL.
   Taking a SINGLE token costs the rogue between -65 and -94, because it breaks Deathmantle
   before completing Slayer's. Fury is -59 or -68 on one token and only -28 on two. Token
   routing to these specs is sensible only in BLOCKS THAT COMPLETE A BONUS, and the endpoint
-  deltas above hide that entirely.
-the_two_zero_rows: 'The Enhancement Shaman and the Retribution Paladin read exactly 0.0
-  because their entry and tier gear files are byte-identical: their Phase 3 lists wear
-  no token in any of the five slots, so the rule leaves every slot at entry. Both are
-  documented, Enhancement as a token refusal and Retribution in hit-captured.yaml. A reader
-  counting rows would otherwise take these for stuck runs.'
+  deltas hide that entirely.
+
+the_two_zero_rows: 'The Enhancement Shaman and the Retribution Paladin read exactly the
+  same figure at entry and at tier because their entry and tier gear files are byte-identical:
+  their Phase 3 lists wear no token in any of the five slots, so the rule leaves every
+  slot at entry. Both are documented, Enhancement as a token refusal and Retribution in
+  hit-captured.yaml. A reader counting rows would otherwise take these for stuck runs.
+  Both DO move at the best-in-slot anchor.'
+
+four_specs_want_two_copies_of_one_item: 'Reported by tools/check_sim_profiles.py rather
+  than failed, because it is what the pages say and it is legal on a character. The Affliction
+  Warlock, the Destruction Warlock and the Shadow Priest each wear Ring of Ancient Knowledge
+  in BOTH ring slots, and the Survival Hunter dual wields two copies of Blade of Infamy.
+  The pages rank these rows "Best x2" in their own words. It matters to a council before
+  the drop lands rather than after: three specs are asking for two of one ring.'
+
+the_hit_overshoot_at_the_best_in_slot_anchor: 'A published list ranks each slot in isolation,
+  so nothing in it stops the set overshooting a cap. Measured from the captures on 15
+  August 2026, item hit against the net target: the Combat Rogue carries 195 against a
+  target of 64, the Enhancement Shaman 163 against 0, both warlocks 185 against 165, the
+  Shadow Priest 138 against 76 and the Fury Warrior 171 against 142. That overshoot is
+  a real cost paid in stats these sets could have spent elsewhere, and it is a property
+  of the published lists rather than of this pipeline. NOT CORRECTED, because correcting
+  it would mean rebuilding the sets to our own rule, and then the figures would no longer
+  describe the lists players actually follow.'
+
+one_defect_was_found_and_fixed: 'data/judgments/weapon-routing.yaml recorded Tempest of
+  Chaos as item 32943. That id is Swiftsteel Bludgeon, a one-hand mace; the weapon is
+  30910, a main-hand sword. Nothing had been built on it. The RULING was unaffected, because
+  the guild lead named the weapon and not the number. tools/check_sim_profiles.py now resolves
+  every routed id against the name its ruling claims and fails the build when they disagree,
+  which is AGENTS.md''s existing rule made mechanical.'
