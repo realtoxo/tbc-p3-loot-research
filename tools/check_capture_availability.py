@@ -213,10 +213,20 @@ def main() -> int:
                         problems.append(
                             f"{where} drops in {zone} from {boss}, and the "
                             "entry anchor is the set worn before Phase 3")
-                    if anchor.startswith("tier") and boss in out_of_window:
-                        problems.append(
-                            f"{where} drops from {boss}, which "
-                            f"{args.progression} puts outside the window")
+                    # THE TIER ANCHOR IS NO LONGER CONSTRAINED BY THE WINDOW.
+                    # This rule failed three head slots holding Cursed Vision of
+                    # Sargeras and Faceplate of the Impenetrable, both Illidan
+                    # drops. The guild lead removed the coupling on 14 August
+                    # 2026, "progression is moot as a topic", and AGENTS.md now
+                    # says the tier anchor is the entry set plus the tier pieces
+                    # a Phase 3 best-in-slot list wears. Those lists are written
+                    # for a full clear, so late-boss loot at a tier anchor is
+                    # the rule rather than a violation of it.
+                    #
+                    # THE ENTRY RULE ABOVE STILL STANDS and is the one this
+                    # check exists for: entry is the set worn BEFORE Phase 3,
+                    # so a Mount Hyjal or Black Temple drop there is still a
+                    # defect. Only the tier half is retired.
                     # THE MIDDLE ANCHOR IS GONE. It named the state where
                     # Archimonde was not yet down, and the guild lead removed
                     # the progression split on 13 August 2026. One tier anchor

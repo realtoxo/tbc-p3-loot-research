@@ -189,31 +189,68 @@ cards describe token configurations the rebuilt sets no longer hold. The Arms
 Warrior one repeats a claim already retracted in token-arithmetic.yaml: it says
 the head token costs the Destroyer four-piece when that capture holds two
 Destroyer pieces. The string is hardcoded in tools/extract_hit_captures.py and
-so bypasses tools/check_token_arithmetic.py entirely.
+so bypasses tools/check_token_arithmetic.py entirely. SETTLED on 14 August 2026;
+the section below carries what was done.
 
 
 ## Still open after the tier-set defect pass, 14 August 2026
 
-Published in this state deliberately. Two items remain.
+Published in this state deliberately. Two items remained, and one is now
+settled.
 
-**THE CONTESTED-TOKEN SENTENCES ARE NOT FIXED.** `TOKEN_CONFIGURATION_CONTESTED`
-in `tools/extract_hit_captures.py` is a hardcoded sentence per spec that prints
-on every claimant card, and several describe token configurations the rebuilt
-sets no longer hold. The Arms Warrior one says the head token "costs the
-Destroyer four-piece" where that capture holds two Destroyer pieces, and the
-claim was already retracted in `token-arithmetic.yaml` under
-`head_four_piece_claim_is_CONDITIONAL`. Because the sentence is hardcoded in the
-transform it bypasses `tools/check_token_arithmetic.py`, which is why a
-retracted claim kept printing. The agent assigned to it stalled and the work was
-never started.
+**THE CONTESTED-TOKEN SENTENCES: SETTLED 14 AUGUST 2026.**
+`TOKEN_CONFIGURATION_CONTESTED` in `tools/extract_hit_captures.py` is a sentence
+per spec that prints on every claimant card. It stated piece counts, slots and
+item names of its own, so several described token configurations the rebuilt
+sets no longer held: the Arms Warrior one said the head token "costs the
+Destroyer four-piece" where that capture holds two Destroyer pieces, a claim
+already retracted in `token-arithmetic.yaml` under
+`head_four_piece_claim_is_CONDITIONAL`.
 
-**ONE CAPTURED ROW CANNOT BE SETTLED FROM THIS REPOSITORY.** The Retribution
-Paladin chest in `data/research/wowhead-phase3-bis/retribution_paladin.json`
-records `Bulwark of the Ancient Kings`, item 28485, which appears in no other
-file here, while the guide's own chest section ranks `Bulwark of Kings`, item
-28484. Two ids one digit apart and two names one word apart, which is the exact
-shape of the error this project has shipped four times. Settling it needs the
-page re-read in a browser.
+Every piece count, slot and item name is now filled from the spec's own capture
+by `fill_contested`, so a sentence cannot describe a set the capture does not
+hold, and all six were checked against their rebuilt captures. The Feral Cat
+sentence also derives the conclusion beside the premise: it used to assert
+"neither is a tier piece, so this set takes neither token" as fixed text, and
+that conclusion would have kept printing if a rebuild put a tier piece in either
+slot. It now names the head token and the hands token, because the set it
+describes does wear two other tokens.
+
+What cannot be derived is an EP figure, because a capture records gear and not
+item value. Those are checked instead: `tools/check_token_arithmetic.py` renders
+every contested sentence and reproduces each figure in it on the spec's own
+workbook tab, failing the build on a figure the tab contradicts and on a figure
+quoted for an item the tab does not carry. That closes the hole this entry was
+written about, which was that the sentence lived in a transform and no check
+read it back.
+
+**THIS ENTRY ALSO CLAIMED THE WORK "WAS NEVER STARTED", AND THAT WAS WRONG.**
+The derivation had landed at 7be9bec, in the same commit as this paragraph. What
+had not landed was the check: `check_token_arithmetic.py` imported
+`TOKEN_CONFIGURATION_CONTESTED` and never read it, so the import looked like
+coverage and supplied none. A status line is a claim like any other, which is
+what the header of this file already says.
+
+**THE ONE CAPTURED ROW THAT COULD NOT BE SETTLED HERE IS NOW SETTLED, AND IT WAS
+CORRECT.** The Retribution Paladin chest in
+`data/research/wowhead-phase3-bis/retribution_paladin.json` records `Bulwark of
+the Ancient Kings`, item 28485, which appears in no other file here, while the
+workbook's Ret chest section ranks `Bulwark of Kings`, item 28484, at rank 11.
+Two ids one digit apart and two names one word apart, which is the exact shape of
+the error this project has shipped four times. The 2.4.3 tooltip endpoint was
+read on 14 August 2026 for both ids: 28485 returns `Bulwark of the Ancient
+Kings` and 28484 returns `Bulwark of Kings`. The capture names the item whose id
+it records, so the row stands and nothing was edited. The tooltips also explain
+the workbook gap, because the two are the same crafted Armorsmith line at item
+level 146 and item level 127, and the workbook carries only the lower one. The
+reasoning and the evidence are in the manifest beside the capture, under
+`verification.settled`.
+
+**That row never touched the Retribution Paladin tier set.** A chest reaches a
+tier set only if the Phase 3 list puts a tier piece in the slot, and neither
+candidate is one: 28485 is in no fact table, and `items.csv` gives 28484 source
+`crafted` with no set name, so `is_tier` answers no for both. The entry chest
+stays either way.
 
 **A DIAGNOSIS OF MINE THAT WAS WRONG, recorded so it is not repeated.** The
 Protection Warrior tier shoulder reads Onslaught Shoulderblades, item 30979,

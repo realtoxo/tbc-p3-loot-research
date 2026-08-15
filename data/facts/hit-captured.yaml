@@ -529,7 +529,8 @@ specs:
       - shoulder
     token_configuration_contested: the head slot is Wolfshead Helm and the hands
       slot is Gloves of the Searing Grip, and neither is a tier piece, so this set
-      takes neither token; it holds two Tier 6 pieces, at the shoulder and the legs
+      takes neither the head token nor the hands token; it holds two Tier 6 pieces,
+      at the shoulder and the legs
     workbook_greedy_reference:
       entry: 182
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.

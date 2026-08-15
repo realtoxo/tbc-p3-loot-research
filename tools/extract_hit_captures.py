@@ -74,16 +74,19 @@ ANCHOR_NAMES = ("entry", "tier_hands_and_head")
 #
 # WHAT IS STILL TRANSCRIBED AND WHY. An EP figure and a quotation from a
 # published guide cannot be derived from a capture, because a capture records
-# gear rather than item value or source wording. Both are checked instead:
-# tools/check_token_arithmetic.py reproduces every figure below on the spec's
-# own workbook tab. A set-bonus trade cannot be checked at all, because no fact
-# table prices a set bonus, so no sentence below asserts one is worth more than
-# another.
+# gear rather than item value or source wording. The figure is checked instead:
+# tools/check_token_arithmetic.py renders every sentence below and reproduces
+# each figure in it on the spec's own workbook tab, failing the build on a
+# figure the tab contradicts and on a figure quoted for an item the tab does not
+# carry. The one quotation, on the Enhancement Shaman, is carried verbatim in
+# token-arithmetic.yaml::enhancement_shaman, which is its citation.
+#
+# A set-bonus trade cannot be checked at all, because no fact table prices a set
+# bonus, so no sentence below asserts one is worth more than another.
 TOKEN_CONFIGURATION_CONTESTED = {
     "feral_cat": (
         "the head slot is {tier_head} and the hands slot is {tier_hands}, and "
-        "neither is a tier piece, so this set takes neither token; it holds "
-        "{tier6}"),
+        "{head_and_hands_tokens}; it holds {tier6}"),
     "feral_bear": (
         "a druid has five tier slots, so the Nordrassil four-piece and the "
         "Thunderheart two-piece need six between them and cannot both be "
@@ -143,11 +146,38 @@ def pieces_phrase(slots: list[str], tier: str) -> str:
             + joined([f"the {slot}" for slot in held]))
 
 
-def fill_contested(template: str, data: dict) -> str:
+def head_and_hands_tokens(head_is_tier: bool, hands_is_tier: bool) -> str:
+    """Say which of the two tokens the tier anchor spent, and on what evidence.
+
+    THE PREMISE AND THE CONCLUSION MOVE TOGETHER, which is why both halves are
+    derived and neither is written out. A sentence that read "neither is a tier
+    piece, so this set takes neither token" would keep printing its conclusion
+    if a rebuild put a tier piece in one of the two slots, which is the exact
+    shape of the defect this file already shipped.
+
+    THE TWO TOKENS ARE NAMED rather than counted. A set may hold a Tier 6 piece
+    in another slot, so "takes neither token" alone reads as a claim about every
+    token, and the Feral Cat set it describes wears two of them.
+    """
+    if head_is_tier and hands_is_tier:
+        return "both are tier pieces, so this set takes both tokens"
+    if head_is_tier:
+        return ("the head is a tier piece and the hands is not, so this set "
+                "takes the head token and not the hands token")
+    if hands_is_tier:
+        return ("the hands is a tier piece and the head is not, so this set "
+                "takes the hands token and not the head token")
+    return ("neither is a tier piece, so this set takes neither the head token "
+            "nor the hands token")
+
+
+def fill_contested(template: str, data: dict, is_tier) -> str:
     """Fill a contested sentence from the capture it describes.
 
     Only the placeholders a template uses are read, so a spec whose capture
     lacks a field is only affected if its own sentence names that field.
+    `is_tier` answers, per item id, whether the item is a tier set piece, which
+    no capture field records and only items.csv settles.
     """
     anchors = data.get("anchors") or {}
     entry = anchors.get("entry") or {}
@@ -158,10 +188,16 @@ def fill_contested(template: str, data: dict) -> str:
         row = tier_rows.get(slot)
         return row.get("item") if isinstance(row, dict) else str(row)
 
+    def worn_is_tier(slot: str) -> bool:
+        row = tier_rows.get(slot)
+        return is_tier(row.get("id")) if isinstance(row, dict) else False
+
     sets = tier.get("set_pieces_held") or {}
     return template.format(
         tier_head=item("head"),
         tier_hands=item("hands"),
+        head_and_hands_tokens=head_and_hands_tokens(
+            worn_is_tier("head"), worn_is_tier("hands")),
         tier6=pieces_phrase(tier.get("tier6_pieces_held") or [], "Tier 6"),
         # `tier_pieces_held` on an entry anchor means TIER 5 pieces, which is
         # how this file has always consumed it. It is not every tier piece.
@@ -212,11 +248,24 @@ def main() -> int:
     # every colour inflated every set by at least the one meta socket it
     # carries, and it inflated the Protection Paladin enough to hide that its
     # spell gap is not closeable by gemming at all.
+    item_rows = list(csv.DictReader(args.items.open()))
     sockets_by_id = {
         int(row["item_id"]): len([
             c for c in (row.get("sockets") or "").split("|")
             if c in ("Red", "Yellow")])
-        for row in csv.DictReader(args.items.open())}
+        for row in item_rows}
+
+    # WHICH ITEMS ARE TIER PIECES, for the contested sentences below. A tier
+    # piece is a set piece bought from the token vendor, and BOTH TESTS HAVE TO
+    # PASS: the `tier` column names the raid an item drops in, so an ordinary
+    # Black Temple off-piece also reads T6. Same rule as
+    # tools/check_hit_capture.py::check_derived_fields.
+    tier_ids = {
+        int(row["item_id"]) for row in item_rows
+        if row.get("set_name") and row.get("source") == "tier_vendor"}
+
+    def is_tier(item_id) -> bool:
+        return isinstance(item_id, int) and item_id in tier_ids
 
     hit = yaml.safe_load(args.hit.read_text())
     recorded = {spec["id"]: spec for spec in hit["specs"]}
@@ -284,7 +333,7 @@ def main() -> int:
             entry["basis"] = basis
         if spec in TOKEN_CONFIGURATION_CONTESTED:
             entry["token_configuration_contested"] = fill_contested(
-                TOKEN_CONFIGURATION_CONTESTED[spec], data)
+                TOKEN_CONFIGURATION_CONTESTED[spec], data, is_tier)
         for anchor, name in ANCHORS:
             block = (data.get("anchors") or {}).get(anchor) or {}
             supplied = block.get("total_item_hit")

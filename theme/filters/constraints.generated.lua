@@ -160,7 +160,7 @@ return {
     "",
     "Entry set	10.8%	clear by 4.9%",
     "Tier set, Tier 6 shoulder and legs	10.8%	clear by 4.8%",
-    "The head slot is Wolfshead Helm and the hands slot is Gloves of the Searing Grip, and neither is a tier piece, so this set takes neither token; it holds two Tier 6 pieces, at the shoulder and the legs.",
+    "The head slot is Wolfshead Helm and the hands slot is Gloves of the Searing Grip, and neither is a tier piece, so this set takes neither the head token nor the hands token; it holds two Tier 6 pieces, at the shoulder and the legs.",
     "",
     "White swings stop critting at 69.5%, measured at the special-attack hit cap.",
     "Nothing rostered reaches it this phase, so crit stays linear all tier.",

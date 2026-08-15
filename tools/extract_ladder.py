@@ -38,6 +38,17 @@ categories that are not disjoint produce a collapse that reads as informative
 and is a defect. Excluding tier from both off-piece cells makes the four
 disjoint, so no derived pair can ever resolve to one item.
 
+AN OFF-PIECE SLOT TOPS UP TO FOUR BASELINES, ruled by the guild lead on
+14 August 2026. Neck, Back, Wrist, Waist, Feet, Ring and Trinket hold no tier
+piece, so two of the four cells above can never fill and those cards printed two
+columns beside a four-column neighbor. A fifth view, `topup`, carries the best
+items of the slot across every phase, tier excluded, best first. It ADDS and
+never displaces: `delta.lua` resolves the four cells above first and fills the
+remaining columns from `topup`, skipping every item another column already took.
+Fewer than four is still a legitimate outcome where the workbook ranks too few.
+Ranged is not topped up, because the ruling named the jewelry and armor
+off-pieces and not that slot.
+
 TWO OR MORE CANDIDATES ARE EMITTED PER OFF-PIECE CELL, not one, because the
 item under discussion is itself frequently the best off-piece in its own slot
 and a card must not compare an item with itself. `Cursed Vision of Sargeras` is
@@ -215,6 +226,18 @@ PIECE_TO_SLOT = {
     "legs": "Legs",
 }
 
+# THE SLOTS THAT TOP UP TO FOUR BASELINES, ruled by the guild lead on 14 August
+# 2026. These are the armor slots no tier set covers, so two of the four cells
+# of the two by two can never fill and the card printed two columns.
+#
+# Ranged is an off-piece too and is deliberately absent: the ruling named the
+# jewelry and the armor off-pieces, and adding a slot nobody asked for would
+# change cards on an unrecorded decision. `Weapon` is absent because a weapon
+# slot already carries seven views of its own.
+OFF_PIECE_SLOTS = frozenset({
+    "Neck", "Back", "Wrist", "Waist", "Feet", "Finger", "Trinket",
+})
+
 # The four acquisition routes that decide whether a raider can obtain an item.
 # Four buckets, not one per profession and not one per arena season: the reader
 # needs to know whether the baseline is gated and by what kind of gate, and the
@@ -353,6 +376,15 @@ def read_tab(tab: Path) -> dict[str, list[dict]]:
 # one rank, so two always leave one, and a third would be carried on every
 # entry of the generated table to answer a case that cannot arise.
 CANDIDATES = 2
+
+# HOW MANY COLUMNS AN OFF-PIECE CARD SHOWS AT LEAST, ruled by the guild lead on
+# 14 August 2026, and how deep the pool that fills them runs. The depth is the
+# four columns plus one, because the item under discussion is frequently the
+# best item in its own slot and delta.lua removes it at render time. A pool of
+# four would lose a column on exactly those cards.
+OFF_PIECE_BASELINES = 4
+
+TOP_UP_CANDIDATES = OFF_PIECE_BASELINES + 1
 
 # How deep the per-spec shortlist runs. Five is the count the compendium shows
 # on a spec page and the count that decides which specs earn a card on an item
@@ -656,6 +688,7 @@ def off_pieces(
     level_60: frozenset[str],
     hand: str = "",
     hand_of: dict[int, str] | None = None,
+    limit: int = CANDIDATES,
 ) -> list[dict]:
     """The best non-tier items in one section, in the given phases, best first.
 
@@ -720,7 +753,7 @@ def off_pieces(
                 continue
             seen.add(row["epv"])
         deduped.append(row)
-    return deduped[:CANDIDATES]
+    return deduped[:limit]
 
 
 def tier_pieces(tokens: dict, key: str, tier: int, spec: str) -> dict[str, dict]:
@@ -885,7 +918,8 @@ def render(specs: dict[str, dict]) -> str:
             # quietly stop parsing.
             out.append(f"        [{lua_string(slot)}] = {{")
             # Written in reading order, which is the order the cards print.
-            for view in ("tier6", "phase3", "tier5", "prephase") + WEAPON_VIEWS:
+            for view in ("tier6", "phase3", "tier5", "prephase",
+                         "topup") + WEAPON_VIEWS:
                 held = views.get(view)
                 if not held:
                     continue
@@ -1054,6 +1088,19 @@ def main() -> int:
             if slot in fifth:
                 views["tier5"] = with_epv(fifth[slot])
             views.update(off_piece_views(section))
+            # THE TOP-UP POOL, for a slot no tier set covers. Every phase in one
+            # list, best first, tier excluded exactly as the two cells above
+            # exclude it. It is a pool and not a column: delta.lua fills the
+            # columns beyond the rules from it, so nothing above is displaced
+            # and no item prints in two columns.
+            if slot in OFF_PIECE_SLOTS:
+                pool = [
+                    dict(row) for row in off_pieces(
+                        ladder, section, (1, 2, 3), tier_ids, world_boss,
+                        level_60, limit=TOP_UP_CANDIDATES)]
+                if pool:
+                    views["topup"] = pool
+                    wanted.update(row["item_id"] for row in pool)
             if views:
                 slots[slot] = views
 
@@ -1228,7 +1275,7 @@ def main() -> int:
                 entry for entry in rows
                 if fill(entry, spec, section, check_slot=False, required=False)]
         for slot, views in block["slots"].items():
-            for view in ("phase3", "prephase") + WEAPON_VIEWS:
+            for view in ("phase3", "prephase", "topup") + WEAPON_VIEWS:
                 # THE RETURN IS USED. This called fill and discarded the answer,
                 # so a baseline the hand check rejects stayed on the card.
                 views[view] = [entry for entry in views.get(view, [])

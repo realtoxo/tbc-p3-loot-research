@@ -13,8 +13,8 @@ meta:
 
 # A sweep on 14 August 2026 looked for rows the browser extractor took from the
 # wrong table. It corrected nothing, because it found nothing to correct. The
-# record is kept here so the sweep is not run a second time, and so that the one
-# row it could not settle is not mistaken for a settled one.
+# record is kept here so the sweep is not run a second time. The one row it
+# could not settle was settled on 14 August 2026. See settled below.
 verification:
   swept: '2026-08-14'
   scope: All 17 files, all 5 token slots, 85 rows.
@@ -30,11 +30,13 @@ verification:
     capture records. The other five are absent from items.csv because that file
     holds Phase 3 raid and vendor gear only. Four of the five are confirmed by id
     and by name in the EP Workbook: Wolfshead Helm 8345 in Cat.csv, and the three
-    Vengeful Gladiator plate pieces 33730, 33728 and 33731 in Prot.csv.
+    Vengeful Gladiator plate pieces 33730, 33728 and 33731 in Prot.csv. The
+    fifth, 28485, is confirmed by id and by name at the tooltip endpoint. See
+    settled below.
   result_ranks: >-
     84 of the 85 rows appear in the matching workbook slot section inside the top
     five, 55 of them at rank 1, and the workbook name agrees with the capture
-    name in all 84. One row does not appear at all. See unresolved below.
+    name in all 84. One row does not appear at all. See settled below.
   result_sets: >-
     One tier piece sits in a set that spec_to_set does not give its spec. It is
     the Protection Warrior shoulder, and it is not an extraction error. See
@@ -59,20 +61,42 @@ verification:
       sections, so a Protection Warrior list built on Season 3 plate is what the
       workbook expects, not a sign of a wrong table.
     ref: data/research/epv-workbook/Prot.csv lines 36, 37 and 44
-  unresolved:
+  # The sweep left one row open and named the tooltip endpoint as what would
+  # settle it. That endpoint was read on 14 August 2026. The row stands as
+  # captured, and it is recorded here rather than in the JSON because a capture
+  # is not edited after capture.
+  settled:
     - spec: retribution_paladin
       slot: chest
       recorded_id: '28485'
       recorded_name: Bulwark of the Ancient Kings
-      why_unsettled: >-
-        This is the only row the sweep could not settle. Id 28485 is in no other
-        file in this repository, so neither the id nor the name can be checked
-        here. The Ret chest section of the workbook does not rank it. That
-        section does rank Bulwark of Kings 28484 eleventh, one digit and one word
-        away, which is the shape of the error this project has shipped four
-        times. Nothing available settles which of the two the page carried, so
-        the row is left as captured and is not to be treated as verified.
-      what_would_settle_it: >-
-        The 2.4.3 tooltip endpoint for 28485, for the id and the name, and a
-        second reading of the Retribution page in a browser, for which one it
-        lists.
+      settled_on: '2026-08-14'
+      finding: >-
+        The recorded id and the recorded name agree, and both are correct. The
+        2.4.3 tooltip endpoint returns the name Bulwark of the Ancient Kings for
+        id 28485 and the name Bulwark of Kings for id 28484. They are two
+        different items, and the capture names the one whose id it records. The
+        two-items-one-name suspicion does not hold for this row.
+      why_the_workbook_does_not_carry_it: >-
+        The two tooltips describe the same crafted line at two item levels. Both
+        are Armorsmith plate chest with a blue and two yellow sockets, a socket
+        bonus of 4 critical strike rating and the same Valor use effect, spell
+        34511. Item 28485 is item level 146 with 40 strength, 56 stamina, 25 hit
+        rating and 41 critical strike rating, and item 28484 is item level 127
+        with 35 strength, 55 stamina, 23 hit rating and 37 critical strike
+        rating. So Ret.csv carrying only the lower one at rank 11 is a gap in the
+        workbook, not a wrong id in the capture, and a Phase 3 list ranking the
+        higher one is what the two tooltips lead you to expect.
+      effect_on_the_tier_set: >-
+        None, whichever id the page carried. The chest slot reaches a tier set
+        only if the Phase 3 list puts a tier piece in it, and neither item is
+        one: 28485 is in no fact table, and items.csv gives 28484 source
+        "crafted" with no set_name, so extract_hit_captures.py::is_tier, which
+        requires source "tier_vendor" and a set_name, answers no for both. The
+        entry chest therefore stays, which for this spec is the Crystalforge
+        Breastplate 30129 already held.
+      ref: >-
+        https://nether.wowhead.com/tbc/tooltip/item/28485 and
+        https://nether.wowhead.com/tbc/tooltip/item/28484, both read 14 August
+        2026; data/facts/items.csv item_id 28484;
+        data/research/epv-workbook/Ret.csv line 78

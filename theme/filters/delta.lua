@@ -777,6 +777,30 @@ local BASELINES = {
   { key = "phase3", label = "best Phase 3 off-piece", list = true },
   { key = "tier5", label = "Tier 5", tier = 5 },
   { key = "prephase", label = "best pre-phase off-piece", list = true },
+  -- AN OFF-PIECE SLOT TOPS UP TO FOUR COLUMNS, ruled by the guild lead on
+  -- 14 August 2026. Neck, Back, Wrist, Waist, Feet, Ring and Trinket hold no
+  -- tier piece, so the two tier cells above can never fill and those cards
+  -- printed two columns beside a four-column neighbor.
+  --
+  -- All four read the one `topup` pool the extractor writes, best first, and
+  -- each takes the best item no earlier column took. So the rules above are
+  -- resolved first and nothing they select is displaced, and no item can print
+  -- in two columns. A tier slot carries no `topup` pool, so these cells resolve
+  -- nothing there and its two by two stands.
+  --
+  -- FOUR CELLS AND A CARD OF FOUR COLUMNS ARE NOT THE SAME COUNT. The loop
+  -- stops taking from the pool once the card holds OFF_PIECE_BASELINES columns,
+  -- so a slot where both rules resolve takes two from the pool and a slot where
+  -- neither resolves takes four. All four cells exist for the second case.
+  --
+  -- `topup = true` keeps an unfilled one out of the "no baseline exists"
+  -- sentence below. A workbook that ranks too few items is a shortage and not
+  -- the absence that sentence reports, and saying it four times would claim
+  -- four comparisons exist where the rules name two.
+  { key = "topup", label = "next best off-piece", list = true, topup = true },
+  { key = "topup", label = "next best off-piece", list = true, topup = true },
+  { key = "topup", label = "next best off-piece", list = true, topup = true },
+  { key = "topup", label = "next best off-piece", list = true, topup = true },
 }
 
 -- A WEAPON SLOT COMPARES DIFFERENTLY, ruled by the guild lead on 12 August
@@ -803,12 +827,21 @@ local WEAPON_BASELINES = {
 -- discussion. EXCLUDING THAT ITEM IS NOT OPTIONAL: it is the top Phase 3 head
 -- on seven of the eight ladders the worked example uses, so taking rank one
 -- blindly would print a card comparing an item with itself.
-local function first_other(candidates, item_id)
+-- A candidate another column already took is skipped for the same reason: two
+-- columns holding one item measure the same difference twice and one of them
+-- does no work. `taken` is nil on a weapon card, which is left as it was.
+local function first_other(candidates, item_id, taken)
   for _, candidate in ipairs(candidates or {}) do
-    if tostring(candidate.item_id) ~= item_id then return candidate end
+    local id = tostring(candidate.item_id)
+    if id ~= item_id and not (taken and taken[id]) then return candidate end
   end
   return nil
 end
+
+-- How many columns an off-piece card fills before it stops taking from the
+-- top-up pool. Held beside the cells that read it, and the same count the
+-- extractor sizes the pool from.
+local OFF_PIECE_BASELINES = 4
 
 -- The four views one item earns for one spec. All four derived, none named by
 -- the author. Returns nil after recording why, so nothing renders
@@ -878,10 +911,21 @@ local function views_for(spec, row, where)
   if key:match("^Weapon:") then
     cells = WEAPON_BASELINES
   end
+  -- The items the columns of this card already hold. ARMOR ONLY, and on
+  -- purpose: the guild lead scoped the 14 August 2026 change to off-pieces, and
+  -- a weapon card is allowed its repeat, because the weapon carried into the
+  -- tier is frequently one of the four best weapons and that column says
+  -- something the best-weapon column does not.
+  local taken = cells == BASELINES and {} or nil
   for _, cell in ipairs(cells) do
     local baseline
-    if cell.list then
-      baseline = first_other(slots[cell.key] or {}, row.item_id)
+    -- The pool tops the card up to four columns and no further, so a slot with
+    -- two rule-selected baselines does not print six.
+    local full = cell.topup and #out >= OFF_PIECE_BASELINES
+    if full then
+      baseline = nil
+    elseif cell.list then
+      baseline = first_other(slots[cell.key] or {}, row.item_id, taken)
     elseif slots[cell.key] and tostring(slots[cell.key].item_id) ~= row.item_id then
       baseline = slots[cell.key]
     end
@@ -892,7 +936,15 @@ local function views_for(spec, row, where)
       -- interesting fact of the two: no other Phase 3 leather head exists for a
       -- rogue or a feral outside the tier sets and outside arena, which means
       -- the tier head is unopposed in the slot.
-      absent[#absent + 1] = cell.label
+      --
+      -- A TOP-UP CELL IS THE EXCEPTION AND SAYS NOTHING. It names no category,
+      -- so an empty one reports that the workbook ranks too few items in the
+      -- slot rather than that a named comparison does not exist, and the
+      -- sentence below would print the same phrase up to four times and read as
+      -- four missing comparisons.
+      if not cell.topup then
+        absent[#absent + 1] = cell.label
+      end
     else
       -- The route is on the label of every view, gated or not, because the
       -- baseline a raider cannot obtain must not read as one he holds.
@@ -900,6 +952,7 @@ local function views_for(spec, row, where)
       if baseline.location and baseline.location ~= "" then
         label = label .. ", " .. baseline.location
       end
+      if taken then taken[tostring(baseline.item_id)] = true end
       out[#out + 1] = {
         entry = baseline, label = "Over " .. label,
         route = baseline.route or "drop",
