@@ -2,7 +2,7 @@
 title: Survival Hunter, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2397.6 ± 0.92 damage per second.
+  The whole request behind one figure: 3149.8 ± 1.00 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/survival-hunter.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2397.6**                                                                                                                                    |
-| Standard error on the mean | ± 0.92                                                                                                                                        |
-| Spread across iterations   | 92.3                                                                                                                                          |
+| Damage per second          | **3149.8**                                                                                                                                    |
+| Standard error on the mean | ± 1.00                                                                                                                                        |
+| Spread across iterations   | 99.7                                                                                                                                          |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

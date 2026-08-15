@@ -2,7 +2,7 @@
 title: Survival Hunter, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2318.4 ± 0.90 damage per second.
+  The whole request behind one figure: 3055.1 ± 0.97 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/survival-hunter.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                 |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Damage per second          | **2318.4**                                                                            |
-| Standard error on the mean | ± 0.90                                                                                |
-| Spread across iterations   | 89.8                                                                                  |
+| Damage per second          | **3055.1**                                                                            |
+| Standard error on the mean | ± 0.97                                                                                |
+| Spread across iterations   | 97.0                                                                                  |
 | Anchor                     | Haste Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}

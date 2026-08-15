@@ -32,45 +32,45 @@ results:
 - profile: arcane-mage.bis
   spec: arcane_mage
   anchor: bis
-  dps: 2301.9
-  standard_error: 0.94
-  stdev: 93.8
+  dps: 2391.9
+  standard_error: 0.95
+  stdev: 95.3
 - profile: arcane-mage.entry
   spec: arcane_mage
   anchor: entry
-  dps: 2094.4
-  standard_error: 0.88
-  stdev: 88.4
+  dps: 2171.3
+  standard_error: 0.89
+  stdev: 88.5
 - profile: arcane-mage.tier-hands-and-head
   spec: arcane_mage
   anchor: tier-hands-and-head
-  dps: 2111.6
+  dps: 2190.2
   standard_error: 0.9
-  stdev: 90.4
+  stdev: 90.2
 - profile: arms-warrior.bis
   spec: arms_warrior
   anchor: bis
-  dps: 2264.9
-  standard_error: 1.18
-  stdev: 118.4
+  dps: 2344.6
+  standard_error: 1.19
+  stdev: 118.7
 - profile: arms-warrior.entry
   spec: arms_warrior
   anchor: entry
-  dps: 2289.9
-  standard_error: 1.13
-  stdev: 113.1
+  dps: 2365.4
+  standard_error: 1.16
+  stdev: 116.0
 - profile: arms-warrior.tier-hands-and-head-alternative-refuse-head-token
   spec: arms_warrior
   anchor: tier-hands-and-head-alternative-refuse-head-token
-  dps: 2307.6
-  standard_error: 1.18
-  stdev: 117.8
+  dps: 2385.3
+  standard_error: 1.22
+  stdev: 122.3
 - profile: arms-warrior.tier-hands-and-head
   spec: arms_warrior
   anchor: tier-hands-and-head
-  dps: 2302.6
-  standard_error: 1.15
-  stdev: 115.4
+  dps: 2380.4
+  standard_error: 1.17
+  stdev: 116.8
 - profile: balance-druid.bis
   spec: balance_druid
   anchor: bis
@@ -104,21 +104,21 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 1960.9
-  standard_error: 0.72
-  stdev: 72.4
+  dps: 3469.0
+  standard_error: 1.14
+  stdev: 114.0
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
   anchor: entry
-  dps: 1954.2
-  standard_error: 0.74
-  stdev: 73.5
+  dps: 3393.8
+  standard_error: 1.11
+  stdev: 110.9
 - profile: beast-mastery-hunter.tier-hands-and-head
   spec: beast_mastery_hunter
   anchor: tier-hands-and-head
-  dps: 2063.1
-  standard_error: 0.77
-  stdev: 77.0
+  dps: 3557.5
+  standard_error: 1.11
+  stdev: 111.3
 - profile: combat-rogue.bis
   spec: combat_rogue
   anchor: bis
@@ -194,21 +194,21 @@ results:
 - profile: fury-warrior.bis
   spec: fury_warrior
   anchor: bis
-  dps: 2722.6
-  standard_error: 1.13
-  stdev: 112.8
+  dps: 2797.7
+  standard_error: 1.09
+  stdev: 109.0
 - profile: fury-warrior.entry
   spec: fury_warrior
   anchor: entry
-  dps: 2559.8
-  standard_error: 1.18
-  stdev: 117.6
+  dps: 2642.7
+  standard_error: 1.12
+  stdev: 111.7
 - profile: fury-warrior.tier-hands-and-head
   spec: fury_warrior
   anchor: tier-hands-and-head
-  dps: 2535.7
-  standard_error: 1.18
-  stdev: 118.4
+  dps: 2619.3
+  standard_error: 1.13
+  stdev: 112.7
 - profile: retribution-paladin.bis
   spec: retribution_paladin
   anchor: bis
@@ -230,36 +230,36 @@ results:
 - profile: shadow-priest.bis
   spec: shadow_priest
   anchor: bis
-  dps: 1372.7
-  standard_error: 0.23
-  stdev: 23.2
+  dps: 1553.5
+  standard_error: 0.26
+  stdev: 26.2
 - profile: shadow-priest.entry
   spec: shadow_priest
   anchor: entry
-  dps: 1264.5
-  standard_error: 0.21
-  stdev: 21.1
+  dps: 1434.3
+  standard_error: 0.24
+  stdev: 23.9
 - profile: shadow-priest.tier-hands-and-head
   spec: shadow_priest
   anchor: tier-hands-and-head
-  dps: 1307.4
-  standard_error: 0.23
-  stdev: 23.4
+  dps: 1479.4
+  standard_error: 0.26
+  stdev: 26.4
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 2512.0
-  standard_error: 0.95
-  stdev: 95.3
+  dps: 3280.4
+  standard_error: 1.04
+  stdev: 103.6
 - profile: survival-hunter.entry
   spec: survival_hunter
   anchor: entry
-  dps: 2318.4
-  standard_error: 0.9
-  stdev: 89.8
+  dps: 3055.1
+  standard_error: 0.97
+  stdev: 97.0
 - profile: survival-hunter.tier-hands-and-head
   spec: survival_hunter
   anchor: tier-hands-and-head
-  dps: 2397.6
-  standard_error: 0.92
-  stdev: 92.3
+  dps: 3149.8
+  standard_error: 1.0
+  stdev: 99.7

@@ -2,7 +2,7 @@
 title: Arcane Mage, Super Mana Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2111.6 ± 0.90 damage per second.
+  The whole request behind one figure: 2190.2 ± 0.90 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/arcane-mage.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                              |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2111.6**                                                                                                                                         |
+| Damage per second          | **2190.2**                                                                                                                                         |
 | Standard error on the mean | ± 0.90                                                                                                                                             |
-| Spread across iterations   | 90.4                                                                                                                                               |
+| Spread across iterations   | 90.2                                                                                                                                               |
 | Anchor                     | Super Mana Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

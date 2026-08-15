@@ -2,7 +2,7 @@
 title: Shadow Priest, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1264.5 ± 0.21 damage per second.
+  The whole request behind one figure: 1434.3 ± 0.24 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/shadow-priest.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                       |
 |----------------------------|---------------------------------------------------------------------------------------------|
-| Damage per second          | **1264.5**                                                                                  |
-| Standard error on the mean | ± 0.21                                                                                      |
-| Spread across iterations   | 21.1                                                                                        |
+| Damage per second          | **1434.3**                                                                                  |
+| Standard error on the mean | ± 0.24                                                                                      |
+| Spread across iterations   | 23.9                                                                                        |
 | Anchor                     | Destruction Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}

@@ -20,7 +20,7 @@ meta:
   not_simulated: Tanks, by the ruling of 14 August 2026. The Feral Cat, because no action priority
     list for it exists in this build. The four healers, who have no captured gear set. Thirteen
     specs, not twenty-one.
-  EVERY_FIGURE_BEFORE_15_AUGUST_WAS_PRODUCED_ON_BROKEN_CHARACTERS: tools/run_sims.py sent race
+  EVERY_FIGURE_BEFORE_15_AUGUST_WAS_PRODUCED_ON_BROKEN_CHARACTERS: 'tools/run_sims.py sent race
     1, Blood Elf, for every spec until 15 August 2026. sim/core/base_stats.go registers base stats
     per race AND class, and Blood Elf cannot be a Warrior, a Druid or a Shaman in 2.4.3, so those
     six specs ran with NO base strength, agility or stamina and simply measured smaller. Nothing
@@ -28,7 +28,14 @@ meta:
     in the repository from before it is superseded. The correction was worth 524.5 to the Balance
     Druid, 512.9 to the Elemental Shaman, 435.0 to the Fury Warrior, 344.6 to the Arms Warrior
     and 303.5 to the Enhancement Shaman, against 25.2 for the Combat Rogue and under 10 for every
-    unaffected spec.
+    unaffected spec. A SECOND defect of the same shape was found hours later: the classOptions
+    block was EMPTY for both hunters, so proto/hunter.proto defaulted pet_type to PetNone, ammo
+    to AmmoNone and quiver_bonus to QuiverNone and both hunters ran with no pet, no ammo and no
+    quiver. It was worth 1508.1 to Beast Mastery and 768.4 to Survival. An audit of every spec''s
+    shipped preset then found five smaller gaps: Shadow Priest 180.8 of Shadowform, Arcane Mage
+    90.0 of Mage Armor, Arms 79.7 and Fury 75.1 of stance, shout and starting rage. tools/check_sim_options.py
+    now fails the build on any option the shipped preset sets that this project neither sends
+    nor declines with a reason.'
   races: 'Recorded in data/facts/roster.yaml::races.by_spec, ruled by the guild lead on 15 August
     2026. They are not neutral: Human grants Sword and Mace Specialization, worth 5 expertise,
     and both warriors and the Combat Rogue swing swords.'
@@ -52,10 +59,11 @@ two_specs_measure_LOWER_at_a_better_anchor:
     dresses one slot at a time from the other profile and carries that slot's enchant and gems
     with it.
   beast_mastery_hunter:
-    what: The best-in-slot set measures BELOW the tier set.
-    one_slot_explains_almost_all_of_it: The main hand. Restoring the Phase 2 pair moves the whole
-      set by +93.0 and the main hand alone by +99.0, so every other slot together is worth less
-      than nothing here.
+    what: The best-in-slot set measures BELOW the tier set, 88.5 short. It survived both defect
+      corrections of 15 August 2026 and shrank only slightly.
+    one_slot_explains_almost_all_of_it: The main hand, still, and it needs re-measuring against
+      the corrected profile. Before the pet was restored it was worth +99.0 against a whole-set
+      +93.0. The MECHANISM is unchanged and is stated below.
     why: A hunter never swings its melee weapons in this model, so a melee weapon is a stat stick
       and nothing else. Talon of the Phoenix, item 32944, carries 52 attack power, 52 RANGED attack
       power, 15 melee hit and 19 melee crit. Boundless Agony, item 30901, which the Phase 3 page
@@ -67,12 +75,14 @@ two_specs_measure_LOWER_at_a_better_anchor:
       that this model prices about 99 DPS below the Phase 2 pair it replaces. A hunter asking
       for a Phase 3 dagger is asking for a downgrade unless something outside this model says
       otherwise. NOT A RULING. The council decides.
-    measured: 2026-08-15, 10000 iterations, seed 1, after the race correction
+    measured: 2026-08-15, 10000 iterations, seed 1, after both corrections
     reproduce: python3 tools/run_sims.py --profile beast-mastery-hunter.bis --against beast-mastery-hunter.tier-hands-and-head
       --iterations 10000
   arms_warrior:
-    what: The best-in-slot set measures BELOW the entry set, 25.1 short, and below the tier set.
-      It is the only spec on the roster that does.
+    what: 'The best-in-slot set measures BELOW the entry set, 20.8 short, and below the tier set.
+      It has survived three corrections and shrunk at each: 108.3, then 45.3 after the Ahn''Qiraj
+      trinket was replaced, then 25.1 after the race fix, now 20.8 after the warrior class options
+      were completed.'
     no_single_slot_explains_it_and_the_sum_says_so: The single-slot deltas sum to MINUS 9.1 against
       a whole-set difference of PLUS 25.1. Reverting any one slot to entry is worth nothing on
       average, and reverting all of them is worth 25. The gap is an interaction rather than a
@@ -97,6 +107,9 @@ two_specs_measure_LOWER_at_a_better_anchor:
       of 15 August 2026 removed 63 of that by replacing an Ahn'Qiraj trinket this guild cannot
       obtain. The race correction the same day removed most of the rest. What is left is 25.1,
       against a standard error near 1.2 on each end, so it is real and it is small.
+    the_slot_decomposition_needs_remeasuring: The figures under the two keys below were taken
+      after the race fix and before the class options were completed, so they describe a warrior
+      in the wrong stance. The DIRECTION held through every correction so far.
 the_trinket_ruling_of_15_august_2026:
   what_forced_it: Both warriors were simulated wearing Badge of the Swarmguard, item 21670, which
     drops in Ahn'Qiraj 40. This guild does not run Ahn'Qiraj. It was the only item in any profile
@@ -309,3 +322,28 @@ the_rogue_published_trinket_is_its_weakest_option:
     and no change has been made to the rogue profile.
   reproduce: python3 tools/run_sims.py --profile combat-rogue.bis --iterations 10000 --slot trinket_1,trinket_2
     --swap 28830,30627 --swap 28830,30450
+a_hunter_with_no_pet:
+  what: Both hunters were simulated with no pet, no ammo and no quiver, because their classOptions
+    block was empty and every proto default is a zero.
+  found_by: the guild lead, reading the table and saying Beast Mastery was critically low
+  beast_mastery_hunter:
+    ammo: 91.5
+    quiver: 148.8
+    pet: 1267.7
+    total: 1508.1
+  survival_hunter:
+    ammo: 96.9
+    quiver: 141.3
+    pet: 530.4
+    total: 768.4
+  why_the_two_differ_so_much: Beast Mastery is the pet spec, so an absent pet took about a third
+    of its damage and less than a fifth of Survival's. That asymmetry is what made the table look
+    wrong, and it is why the defect was visible at all.
+  the_rule_now: 'Whatever a spec''s own presets.ts sets, this project sets, unless a ruling declines
+    it and says why. tools/check_sim_options.py enforces presence, not value: a value we deliberately
+    differ on is a modelling choice, an option missing by accident is not.'
+  it_is_the_fifth_time: 'The simulator has now accepted input it then ignored five times: potId
+    without a potions list, the Enhancement Shaman''s bare weapons, a main-hand imbue dropped
+    under a Windfury Totem, an illegal race deleting every base stat, and an empty option block
+    unsummoning two pets. Measure every change against a baseline on the same seed and never assert
+    an improvement.'

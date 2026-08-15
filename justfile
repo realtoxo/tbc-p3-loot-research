@@ -145,6 +145,7 @@ check: regen
     python3 tools/check_weapon_layout.py
     python3 tools/check_workbook_columns.py
     python3 tools/check_sim_profiles.py
+    python3 tools/check_sim_options.py
 
 # Run every gear profile through the simulator and rewrite the figures and the
 # pages that read them. NOT part of `just regen` or `just check`: it needs the

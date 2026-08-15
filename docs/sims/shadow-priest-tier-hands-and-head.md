@@ -2,7 +2,7 @@
 title: Shadow Priest, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1307.4 ± 0.23 damage per second.
+  The whole request behind one figure: 1479.4 ± 0.26 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/shadow-priest.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                               |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **1307.4**                                                                                                                                          |
-| Standard error on the mean | ± 0.23                                                                                                                                              |
-| Spread across iterations   | 23.4                                                                                                                                                |
+| Damage per second          | **1479.4**                                                                                                                                          |
+| Standard error on the mean | ± 0.26                                                                                                                                              |
+| Spread across iterations   | 26.4                                                                                                                                                |
 | Anchor                     | Destruction Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

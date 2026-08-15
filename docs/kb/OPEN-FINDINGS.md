@@ -663,3 +663,61 @@ says elsewhere that hit requirements assume no racial, and that still governs
 `hit.yaml` and every cap state the compendium prints, because those are
 workbook-rule figures rather than simulator ones. The two answer different
 questions and the file now says so in both places.
+
+## A hunter with no pet, and five more empty option blocks, 15 August 2026
+
+**The guild lead read the table, said the Beast Mastery Hunter was critically
+low, and was right by 1508 DPS.**
+
+`tools/run_sims.py` sends a `classOptions` block per spec, and it was EMPTY for
+both hunters. An option that is not sent takes the proto default, and a proto
+default is a zero: `proto/hunter.proto` defaults `pet_type` to `PetNone`, `ammo`
+to `AmmoNone` and `quiver_bonus` to `QuiverNone`. Both hunters were therefore
+simulated **with no pet, no ammo and no quiver**. Every run succeeded.
+
+Priced separately at the best-in-slot anchor, 8000 iterations:
+
+| | Ammo | Quiver | Pet | Total |
+|---|---|---|---|---|
+| Beast Mastery | +91.5 | +148.8 | +1267.7 | **+1508.0** |
+| Survival | +96.9 | +141.3 | +530.4 | **+768.6** |
+
+The pet is why the two specs differ so sharply. Beast Mastery is the pet spec,
+so an absent pet takes roughly a third of its damage, and it took less than a
+fifth of Survival's. That asymmetry is exactly what made the table look wrong.
+
+### The audit that followed found five more
+
+Reading every spec's shipped `DefaultOptions` against what this project sends:
+
+| Spec | What was missing | Worth |
+|---|---|---|
+| Shadow Priest | `preShadowform` | +180.8 |
+| Arcane Mage | `defaultMageArmor` | +89.4 |
+| Arms Warrior | stance, shout, starting rage, `hasBsT2` | +79.9 |
+| Fury Warrior | the same | +73.8 |
+| Elemental and Enhancement Shaman | `shieldProcrate`, already zero | 0.0 |
+
+Berserker stance is the one that matters for the warriors: Recklessness and
+Whirlwind both require it.
+
+### The rule and the guard
+
+Whatever a spec's own `presets.ts` sets, this project now sets, unless a ruling
+declines it and says why. `tools/check_sim_options.py` reads the shipped
+`DefaultOptions` and fails the build on any key we neither send nor decline. Two
+are declined with reasons: the Enhancement Shaman's `syncType`, which the guild
+lead ruled against on 15 August 2026, and the Balance Druid's `innervateTarget`,
+which names another player in a sim that runs one player alone.
+
+**It does not check VALUES**, only presence. A value we deliberately differ on is
+a modelling choice this project is allowed to make; an option missing by
+accident is the failure that does not announce itself.
+
+### This is the fifth time the simulator has accepted input it then ignored
+
+`potId` without a `potions` list drank nothing. The Enhancement Shaman swung
+bare weapons worth 32.6 percent of its damage. A main-hand imbue is dropped
+entirely under a Windfury Totem. An illegal race deleted every base stat. Now an
+empty option block unsummoned two pets. **Measure every change against a
+baseline on the same seed, and never assert an improvement.**

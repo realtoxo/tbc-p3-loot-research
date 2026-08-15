@@ -2,7 +2,7 @@
 title: Survival Hunter, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2512.0 ± 0.95 damage per second.
+  The whole request behind one figure: 3280.4 ± 1.04 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/survival-hunter.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **2512.0**                                                                                     |
-| Standard error on the mean | ± 0.95                                                                                         |
-| Spread across iterations   | 95.3                                                                                           |
+| Damage per second          | **3280.4**                                                                                     |
+| Standard error on the mean | ± 1.04                                                                                         |
+| Spread across iterations   | 103.6                                                                                          |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}
