@@ -251,6 +251,17 @@ without knowing which set it came from is how the two warriors got called weak.
 {rows_table(["Anchor", "What the set is"],
             [[label, why] for _a, label, why in ANCHORS])}
 
+::: {{.note .veto}}
+**No two BiS figures on this page can be true at the same time.** Each set is
+that spec's published best in slot, and a raid holds one of each item, so the
+figures assume every spec wins every contested drop. Two examples of how far
+that goes: **both Warglaives of Azzinoth are worn by the Combat Rogue AND the
+Fury Warrior**, and **seven specs wear Dragonspine Trophy**. A BiS figure is a
+ceiling for one spec, not a description of a raid. The Entry and Tier columns
+do not have this problem in the same degree, because those sets are built from
+what a raider already holds.
+:::
+
 ::: {{.note}}
 **The Tier anchor is not a Phase 3 set.** It is the entry set with only the five
 token slots reconsidered, so weapons and trinkets are identical to entry and six

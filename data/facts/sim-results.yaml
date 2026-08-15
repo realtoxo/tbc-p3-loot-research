@@ -194,3 +194,79 @@ one_defect_was_found_and_fixed: 'data/judgments/weapon-routing.yaml recorded Tem
   the guild lead named the weapon and not the number. tools/check_sim_profiles.py now resolves
   every routed id against the name its ruling claims and fails the build when they disagree,
   which is AGENTS.md''s existing rule made mechanical.'
+
+no_two_bis_figures_can_be_true_at_once:
+  what: >-
+    A best-in-slot set is what one spec would wear if it won every contested
+    drop, and a raid holds one of each item. So the BiS column is thirteen
+    ceilings and not a raid. This is the single most important thing to say
+    before quoting one BiS figure beside another.
+  the_sharpest_case: >-
+    BOTH Warglaives of Azzinoth are worn by the Combat Rogue AND the Fury
+    Warrior. There is one pair. Comparing the Rogue at its BiS figure against
+    the Fury Warrior at its BiS figure compares two characters who cannot both
+    exist, and the guild lead was right to find that reading odd.
+  how_wide_it_goes: >-
+    Seven specs wear Dragonspine Trophy, six wear The Skull of Gul'dan, Ring of
+    Ancient Knowledge and Slippers of the Seacaller, and five wear Zhar'doom,
+    Bracers of Nimble Thought, Leggings of Channeled Elements, Belt of
+    One-Hundred Deaths, Stormrage Signet Ring and Cursed Vision of Sargeras.
+  what_it_does_not_undermine: >-
+    The Entry to BiS movement per spec, which is the comparison the page is
+    built around, because both ends of it belong to the same spec.
+
+what_the_warglaives_are_worth:
+  why_measured: >-
+    The guild lead did not believe the warrior figures against the Rogue and
+    asked whether the Rogue was holding Warglaives. It is, and so is the Fury
+    Warrior, so the question became what each loses without them.
+  method: >-
+    Both weapon slots varied together, 10000 iterations, seed 1. Every candidate
+    runs BARE, because tools/run_sims.py --swap deliberately strips the enchant
+    with the item, so these figures are comparable with each other and NOT with
+    an enchanted profile. The enchant is worth 169.5 on the Rogue pair and 108.5
+    on the Fury pair, which is what the bare Warglaive row measures against the
+    profile it came from.
+  combat_rogue:
+    warglaives_bare: 2675.8
+    best_alternative_bare: 2471.4
+    alternative: Blade of Infamy 30881 main hand, Blade of Savagery 32369 off hand
+    the_premium: 204.4
+  fury_warrior:
+    warglaives_bare: 2179.1
+    best_alternative_bare: 2049.4
+    alternative: Blade of Infamy 30881 in both hands, which needs two copies
+    the_premium: 129.7
+  what_it_says_and_does_not_say: >-
+    The Warglaives are worth about 204 to the Combat Rogue and about 130 to the
+    Fury Warrior, so the Rogue gains more from the same pair. That is a fact
+    about two weapons and two rotations. WHO RECEIVES THEM IS A COUNCIL
+    DECISION and nothing here settles it, because a council weighs more than
+    single-target damage.
+
+the_profiles_were_validated_against_the_simulator_own_sets:
+  why: >-
+    The guild lead asked whether the buffs or the consumables were wrong. The
+    strongest available check is to run the simulator's OWN shipped Phase 3 gear
+    for a spec through our harness: if our profile were mis-buffed or
+    mis-consumed, their gear would land far from ours rather than near it.
+  arms_warrior: >-
+    ui/warrior/dps/gear_sets/p3_arms.gear.json measures 1970.1 in our harness
+    against our 1920.3, a difference of 49.8 and all of it gear. Their set also
+    takes Cataclysm's Edge, independently reaching the same two-hander the guild
+    lead routed to this spec.
+  fury_warrior: >-
+    ui/warrior/dps/gear_sets/p3_fury.gear.json measures 2356.6 against our
+    2287.6, a difference of 69.0. Their set wears ONE tier piece where ours
+    wears four, trading the Onslaught bonus for stronger raw items.
+  buffs_and_consumables_are_not_the_cause: >-
+    Compared field by field against the Combat Rogue, the only differences are
+    ones the roster requires. The Arms Warrior shares party g1 with the Rogue and
+    receives an identical raid, party, individual and debuff block. The Fury
+    Warrior sits in g2 and so takes Ferocious Inspiration instead of Sanctity
+    Aura. Consumables differ only in the food each spec's own guide names and in
+    the off-hand imbue, which the Arms Warrior has no slot for.
+  talents_are_the_engine_own_presets: >-
+    Both warrior talent strings are byte-identical to ui/warrior/dps/presets.ts,
+    Fury at 3400502130201-05050005505012050115 and Arms at
+    32005020352010500221-0550000500521203. Nothing here is our build.
