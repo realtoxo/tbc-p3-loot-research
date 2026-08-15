@@ -456,13 +456,20 @@ def rules_for(spec: str, klass: str, form: str | None, ap: dict, crit: dict,
         #
         # The intent of that ruling is kept: a tank's summary is about the role.
         # That is why the offense conversions above stay out.
-        for stat in PRIMARY_STATS:
-            rule = multiply(stat, stat, 1,
-                            f"{stat} counted as itself for a tank",
-                            "guild lead ruling, 12 August 2026: a tank nets "
-                            "primary stats")
-            rule["net"] = False
-            rules.setdefault(stat, []).append(rule)
+        #
+        # AND THE IDENTITY RULES THEMSELVES ARE GONE, 14 August 2026. They were
+        # emitted here so the tank Net would read "+8 stamina, -13 intellect".
+        # Once they left the sum they converted nothing and summed nothing, and
+        # all they still did was print the Change column a second time: a card
+        # showed "strength -53" beside "-53 strength" in the Converted column,
+        # with the real conversion, -106 attack power, sharing the cell. The
+        # guild lead asked what they were doing there. Nothing.
+        #
+        # A PRIMARY STAT WITH NO OTHER RULE NOW CONVERTS TO NOTHING AND SAYS SO
+        # by leaving the Converted cell empty, which is the honest answer: this
+        # project has no rate for intellect on a Protection Warrior. Strength
+        # still shows attack power, agility still shows attack power and crit,
+        # and stamina still shows health, because those are real conversions.
 
         # DEFENSE SKILL IS NOT A PERCENTAGE, so it divides into points rather
         # than into percent, and the label says so. What a point then buys is
