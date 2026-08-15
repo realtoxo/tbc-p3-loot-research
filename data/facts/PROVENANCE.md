@@ -29,7 +29,7 @@ Some of these files are machine-produced and some are hand-authored. That distin
 
 ## Inventory
 
-24 files and one directory. Every one of them is listed here; if a file exists in this directory and is not in this table, one of the two is wrong.
+25 files and one directory. Every one of them is listed here; if a file exists in this directory and is not in this table, one of the two is wrong.
 
 | File | What it holds | Produced | `just regen` |
 |---|---|---|---|
@@ -38,6 +38,7 @@ Some of these files are machine-produced and some are hand-authored. That distin
 | `item-effects.csv` | On-use and on-equip effects, the stats they grant, and what makes each one fire: on use, or a proc with its chance, its internal cooldown and its procs per minute. 169 rows | Generated from the item database | Overwrites |
 | `effect-text.csv` | What an effect does in words, for the items the item database names but does not describe. 24 lines across 23 items, one per trigger, because an item can carry several | Parsed from the Wowhead tooltips captured under `data/research/wowhead-effects/`, which are never edited after capture | Overwrites |
 | `talent-conversions.yaml` | The eight talents that turn intellect or spirit into spell power, or raise those stats, with the percentage at every rank and the rank each spec's build takes. The four healers' ranks come from published guides rather than from this roster, and each says which | Percentages read from the Wowhead tooltips captured under `data/research/wowhead-talents/`; ranks decoded against the vendored talent trees, from `talents.yaml::wowsims_talent_strings` where wowsims has a build and from the Wowhead guide builds captured under `data/research/wowhead-talents/` where it does not | Overwrites |
+| `consumables.yaml` | The raid consumable set each spec runs: flask or elixir pair, food, weapon enhancement, potions. 16 specs, 43 sources cited, 67 uncertainties recorded rather than resolved. Collected inputs for a simulator run, NOT results: nothing here has been simmed | Sixteen parallel agents over published Burning Crusade Classic guides, each required to cite its pages and to record what it could not source | No |
 | `talents.yaml` | The talent build each spec is modelled on, its source, and every talent in it supplying hit, expertise or defense skill | Three parallel audits against published 2.4.3 build guides, plus roster facts stated by the guild lead | Never |
 | `level-60.yaml` | Level-60 raid content: the four workbook location strings that name it, and all 54 items it ranks | Swept from the Location column of the 21 tabs the extractor reads, ids from each row's own link | Never |
 | `world-bosses.yaml` | The full loot tables of Doomwalker and Doom Lord Kazzak, twenty items over one unbroken id block | Hand-authored from Icy Veins and Wowpedia, corroborated against the whole id range in the wowsims database | Never |
