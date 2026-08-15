@@ -259,6 +259,25 @@ ENCOUNTER_SECONDS = 180
 #
 # Enum values are transcribed from proto/warlock.proto: Armor FelArmor is 1,
 # Summon Succubus is 3, CurseOptions Recklessness is 3.
+# THE CLASS OPTIONS EACH SPEC NEEDS, taken from the DefaultOptions its own
+# preset ships, and taken WHOLESALE rather than key by key.
+#
+# AN EMPTY BLOCK IS NOT A SAFE DEFAULT, and this file has now learned that twice.
+# A warlock with no armor, no pet and no curse returns about 65 DPS, a tenth of
+# the real figure. Worse, on 15 August 2026 the guild lead found the Beast
+# Mastery Hunter "critically low" and the cause was that BOTH hunters were sent
+# an empty block: proto/hunter.proto defaults pet_type to PetNone, ammo to
+# AmmoNone and quiver_bonus to QuiverNone, so they hunted with NO PET, NO AMMO
+# and NO QUIVER. It cost Beast Mastery 1508 DPS and Survival 769.
+#
+# An audit of every spec's shipped preset the same day found five more gaps:
+# both warriors 74 to 80 DPS of stance, shout, starting rage and the Tier 2
+# Battle Shout flag, the Arcane Mage 89 of Mage Armor, and the Shadow Priest
+# 181 of pre-pull Shadowform. Only the two Shaman specs were already complete.
+#
+# THE RULE THIS NOW FOLLOWS: whatever the spec's own presets.ts sets, we set,
+# unless a ruling declines it and says why. tools/check_sim_options.py compares
+# the two and fails the build on a key we neither send nor decline.
 CLASS_OPTIONS = {
     "affliction_warlock": {"armor": 1, "summon": 3, "curseOptions": 3,
                            "sacrificeSummon": True},
@@ -276,7 +295,34 @@ CLASS_OPTIONS = {
     # WindfuryWeapon is 1 in proto/shaman.proto :: ShamanImbue, sent by the
     # enum name because the encoder rejects a name it does not know and would
     # accept a wrong number in silence.
-    "enhancement_shaman": {"imbueMh": "WindfuryWeapon"},
+    "enhancement_shaman": {"imbueMh": "WindfuryWeapon", "shieldProcrate": 0},
+    "elemental_shaman": {"shieldProcrate": 0},
+    # A HUNTER WITHOUT A PET IS NOT A HUNTER, and Beast Mastery least of all:
+    # the pet alone is worth 1268 DPS to it against 531 to Survival, which is
+    # the whole reason the two specs are shaped differently. Ravager at 100
+    # percent uptime, Warden's Arrow and a 15 percent quiver are what the
+    # shipped preset uses; none of the three is our choice.
+    "beast_mastery_hunter": {"ammo": "WardensArrow", "quiverBonus": "Speed15",
+                             "petType": "Ravager", "petUptime": 1.0,
+                             "petSingleAbility": False},
+    "survival_hunter": {"ammo": "WardensArrow", "quiverBonus": "Speed15",
+                        "petType": "Ravager", "petUptime": 1.0,
+                        "petSingleAbility": False},
+    # BERSERKER STANCE IS THE ONE THAT MATTERS HERE. Recklessness and Whirlwind
+    # both require it, and a warrior left in the default stance cannot use
+    # either. `hasBsT2` is the Tier 2 Battle Shout bonus the preset assumes.
+    "arms_warrior": {"queueDelay": 250, "startingRage": 50,
+                     "defaultShout": "WarriorShoutBattle",
+                     "defaultStance": "WarriorStanceBerserker",
+                     "hasBsT2": True, "stanceSnapshot": True},
+    "fury_warrior": {"queueDelay": 250, "startingRage": 50,
+                     "defaultShout": "WarriorShoutBattle",
+                     "defaultStance": "WarriorStanceBerserker",
+                     "hasBsT2": True, "stanceSnapshot": True},
+    "arcane_mage": {"defaultMageArmor": "MageArmorMageArmor"},
+    # Shadowform is a 15 percent shadow damage multiplier and the pre-pull flag
+    # is what puts the priest in it before the first cast.
+    "shadow_priest": {"preShadowform": True},
 }
 
 # OPTIONS THAT SIT BESIDE classOptions RATHER THAN INSIDE IT. The proto puts
