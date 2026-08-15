@@ -91,6 +91,7 @@ APL = {
 TALENTS = Path("data/facts/talents.yaml")
 BUFFS = Path("data/facts/raid-buffs.yaml")
 ROSTER = Path("data/facts/roster.yaml")
+CONSUMABLES = Path("data/facts/consumable-ids.yaml")
 PROTO = WOWSIMS / "proto" / "common.proto"
 
 # COUNTS, NOT SWITCHES, for the fields the proto types as int32. Each is "how
@@ -335,6 +336,37 @@ def buffs_for(spec: str, buffs: dict, party_of: dict) -> tuple[dict, dict, dict]
     return raid, party, debuffs
 
 
+def consumables_for(spec: str) -> dict:
+    """The ConsumesSpec this spec drinks, read from the resolved fact table.
+
+    NO ID IS WRITTEN HERE. `consumable-ids.yaml` holds the name, the id and the
+    file each id was read from, so a reader can check that the flask the run
+    drank is the flask the guide named. An id in this script would be a number
+    nobody can audit, and a wrong one does not fail: the run succeeds and the
+    DPS is quietly wrong.
+
+    A MISSING SPEC STOPS THE RUN rather than running dry. Unbuffed by flask,
+    food and oil, a spec loses roughly a tenth of its damage and still returns
+    a plausible-looking figure, which is the failure this project keeps meeting.
+
+    DRUMS ARE NOT HERE ON PURPOSE. raid-buffs.yaml already gives every party its
+    drums through PartyBuffs, so a drums_id would count them twice.
+    """
+    doc = yaml.safe_load(CONSUMABLES.read_text())
+    picks = (doc.get("picks") or {}).get(spec)
+    if picks is None:
+        raise SystemExit(
+            f"run_sims.py: {spec} has no entry in {CONSUMABLES}. Regenerate it "
+            "with `just regen`; running a spec with no consumables returns a "
+            "smaller number rather than an error.")
+    out = {}
+    for field, entry in picks.items():
+        parts = field.split("_")
+        camel = parts[0] + "".join(w.title() for w in parts[1:])
+        out[camel] = entry["id"]
+    return out
+
+
 def build_request(spec: str, gear: dict, talents: str, iterations: int,
                   seed: int, buffs: dict, party_of: dict) -> dict:
     """One RaidSimRequest: one player, alone, against the fixed encounter."""
@@ -366,7 +398,7 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
         "class": CLASS[klass],
         "equipment": gear,
         "talentsString": talents,
-        "consumables": {},
+        "consumables": consumables_for(spec),
         "buffs": individual,
         "rotation": rotation,
         # `classOptions` MUST BE PRESENT, even empty. Sending `options: {}`

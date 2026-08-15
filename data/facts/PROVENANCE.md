@@ -29,7 +29,7 @@ Some of these files are machine-produced and some are hand-authored. That distin
 
 ## Inventory
 
-25 files and one directory. Every one of them is listed here; if a file exists in this directory and is not in this table, one of the two is wrong.
+29 files and one directory. Every one of them is listed here; if a file exists in this directory and is not in this table, one of the two is wrong.
 
 | File | What it holds | Produced | `just regen` |
 |---|---|---|---|
@@ -39,6 +39,7 @@ Some of these files are machine-produced and some are hand-authored. That distin
 | `effect-text.csv` | What an effect does in words, for the items the item database names but does not describe. 24 lines across 23 items, one per trigger, because an item can carry several | Parsed from the Wowhead tooltips captured under `data/research/wowhead-effects/`, which are never edited after capture | Overwrites |
 | `talent-conversions.yaml` | The eight talents that turn intellect or spirit into spell power, or raise those stats, with the percentage at every rank and the rank each spec's build takes. The four healers' ranks come from published guides rather than from this roster, and each says which | Percentages read from the Wowhead tooltips captured under `data/research/wowhead-talents/`; ranks decoded against the vendored talent trees, from `talents.yaml::wowsims_talent_strings` where wowsims has a build and from the Wowhead guide builds captured under `data/research/wowhead-talents/` where it does not | Overwrites |
 | `consumables.yaml` | The raid consumable set each spec runs: flask or elixir pair, food, weapon enhancement, potions. 16 specs, 43 sources cited, 67 uncertainties recorded rather than resolved. Collected inputs for a simulator run, NOT results: nothing here has been simmed | Sixteen parallel agents over published Burning Crusade Classic guides, each required to cite its pages and to record what it could not source | No |
+| `consumable-ids.yaml` | The simulator id behind every consumable name a run sends, and which name each of the 17 specs sends for which `ConsumesSpec` field, with the sentence the guide put around it. Weapon imbues are spell ids and are NOT in the item database, so theirs come from the simulator source instead and every one is checked to be a value the simulator actually reads | Generated from the prose in `consumables.yaml` and `sim-profiles/combat-rogue.yaml` by `tools/extract_consumable_ids.py` | Overwrites |
 | `talents.yaml` | The talent build each spec is modelled on, its source, and every talent in it supplying hit, expertise or defense skill | Three parallel audits against published 2.4.3 build guides, plus roster facts stated by the guild lead | Never |
 | `level-60.yaml` | Level-60 raid content: the four workbook location strings that name it, and all 54 items it ranks | Swept from the Location column of the 21 tabs the extractor reads, ids from each row's own link | Never |
 | `world-bosses.yaml` | The full loot tables of Doomwalker and Doom Lord Kazzak, twenty items over one unbroken id block | Hand-authored from Icy Veins and Wowpedia, corroborated against the whole id range in the wowsims database | Never |
@@ -64,7 +65,7 @@ Some of these files are machine-produced and some are hand-authored. That distin
 | `sim-profiles/` | The per-spec gear evidence. `token-arithmetic.yaml` holds what each Tier 6 token costs all 21 specs; `hit-capture/` holds 17 captured gear sets, three anchors each, which are the primary evidence behind `hit-captured.yaml` and `set-stats.yaml`; `combat-rogue.yaml` is the one full profile | Hand-collected per spec; see each file's own `sources` block | Never |
 | `progression.yaml` | The encounter order for Mount Hyjal and Black Temple, which tokens sit behind which boss, and which encounters are reachable four to six weeks in. The order is a fact; the window is a forecast, and the file says which is which | Hand-authored; cross-checked against `drops.csv` and `tokens.yaml` by `just check` | Never |
 
-The six generated files are rebuilt by `just regen` and must never be hand-edited. The 16 authored files each carry their own header stating scope, method and confidence, and each carries an `open_questions` block recording what is not settled. Those blocks are the honest edge of this data and are worth reading before citing a number.
+The nine generated files are rebuilt by `just regen` and must never be hand-edited. The 16 authored files each carry their own header stating scope, method and confidence, and each carries an `open_questions` block recording what is not settled. Those blocks are the honest edge of this data and are worth reading before citing a number.
 
 `hit.yaml`, `crit.yaml`, `haste.yaml` and `attack-power.yaml` divide one subject four ways on purpose, so that each file name states exactly which mechanism a reader will find inside. Attack power is neither crit nor hit, so it takes its own file rather than a block inside `crit.yaml`.
 
