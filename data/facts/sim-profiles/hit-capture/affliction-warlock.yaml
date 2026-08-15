@@ -2,228 +2,293 @@ spec: affliction_warlock
 collected_on: 2026-08-09
 sources:
   entry:
-    url: "https://tbc-bis-guide.com/warlock/affliction/phase-2"
-    title: "Affliction Warlock Phase 2 BiS — TBC Classic"
+    url: https://tbc-bis-guide.com/warlock/affliction/phase-2
+    title: Affliction Warlock Phase 2 BiS — TBC Classic
     observed: 2026-08-09
   tier:
-    url: "https://tbc-bis-guide.com/warlock/affliction/phase-3"
-    title: "Affliction Warlock Phase 3 BiS — TBC Classic"
+    url: https://tbc-bis-guide.com/warlock/affliction/phase-3
+    title: Affliction Warlock Phase 3 BiS — TBC Classic
     observed: 2026-08-09
   hit_values_cross_checked:
-    url: "data/research/epv-workbook/Aff.csv"
-    title: "EPV Workbook, Affliction tab (in-repo capture)"
+    url: data/research/epv-workbook/Aff.csv
+    title: EPV Workbook, Affliction tab (in-repo capture)
     observed: 2026-08-09
   set_bonus_text:
-    url: "data/facts/tokens.yaml"
-    title: "Corruptor Raiment / Malefic Raiment set bonus text (in-repo capture)"
+    url: data/facts/tokens.yaml
+    title: Corruptor Raiment / Malefic Raiment set bonus text (in-repo capture)
     observed: 2026-08-09
 anchors:
   entry:
-    tier_pieces_held: [legs]
+    tier_pieces_held:
+    - legs
     set_bonuses_held:
-      - "Voidheart Raiment 2-piece (Tier 4, shoulder 28967 + hands 28968): Your shadow damage spells have a chance to grant you 135 bonus shadow damage for 15 sec, and your fire damage spells have a chance to grant you 135 bonus fire damage for 15 sec."
+    - 'Voidheart Raiment 2-piece (Tier 4, shoulder 28967 + hands 28968): Your shadow damage
+      spells have a chance to grant you 135 bonus shadow damage for 15 sec, and your fire
+      damage spells have a chance to grant you 135 bonus fire damage for 15 sec.'
     hit_by_slot:
-      head: {item: "Destruction Holo-gogs", id: 32494, hit: 0}
-      neck: {item: "Eye of the Night", id: 24116, hit: 16}
-      shoulder: {item: "Voidheart Mantle", id: 28967, hit: 14}
-      back: {item: "Ruby Drape of the Mysticant", id: 28766, hit: 18}
-      chest: {item: "Vestments of the Sea-Witch", id: 30107, hit: 27}
-      wrist: {item: "Mindstorm Wristbands", id: 29918, hit: 0}
-      hands: {item: "Voidheart Gloves", id: 28968, hit: 0}
-      waist: {item: "Belt of Blasting", id: 30038, hit: 23}
-      legs: {item: "Leggings of the Corruptor", id: 30213, hit: 24}
-      feet: {item: "Boots of Blasting", id: 30037, hit: 18}
-      ring_1: {item: "Ring of Endless Coils", id: 30109, hit: 0}
-      ring_2: {item: "Band of Crimson Fury", id: 28793, hit: 16}
-      trinket_1: {item: "Quagmirran's Eye", id: 27683, hit: 0}
-      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Spellblade", id: 32053, hit: 15}
-      off_hand: {item: "Jewel of Infinite Possibilities", id: 28734, hit: 21}
-      ranged: {item: "Wand of the Forgotten Star", id: 29982, hit: 11}
-    weapon_config_note: >-
-      Main hand plus off-hand pair, not a staff. Replaces the source guide's
-      listed pick, Atiesh, Greatstaff of the Guardian, which is not a
-      realistic hold; see notes.downgraded_slots. This is the highest-EPV
-      Phase 1/2 main-hand-plus-off-hand combination in
-      data/research/epv-workbook/Aff.csv (233.87 + 56.98), and it beats the
-      best Phase 1/2 two-hand staff option (Merciless Gladiator's War Staff,
-      280.53) at 290.85 combined.
+      head:
+        item: Destruction Holo-gogs
+        id: 32494
+        hit: 0
+      neck:
+        item: Eye of the Night
+        id: 24116
+        hit: 16
+      shoulder:
+        item: Voidheart Mantle
+        id: 28967
+        hit: 14
+      back:
+        item: Ruby Drape of the Mysticant
+        id: 28766
+        hit: 18
+      chest:
+        item: Vestments of the Sea-Witch
+        id: 30107
+        hit: 27
+      wrist:
+        item: Mindstorm Wristbands
+        id: 29918
+        hit: 0
+      hands:
+        item: Voidheart Gloves
+        id: 28968
+        hit: 0
+      waist:
+        item: Belt of Blasting
+        id: 30038
+        hit: 23
+      legs:
+        item: Leggings of the Corruptor
+        id: 30213
+        hit: 24
+      feet:
+        item: Boots of Blasting
+        id: 30037
+        hit: 18
+      ring_1:
+        item: Ring of Endless Coils
+        id: 30109
+        hit: 0
+      ring_2:
+        item: Band of Crimson Fury
+        id: 28793
+        hit: 16
+      trinket_1:
+        item: Quagmirran's Eye
+        id: 27683
+        hit: 0
+      trinket_2:
+        item: Icon of the Silver Crescent
+        id: 29370
+        hit: 0
+      main_hand:
+        item: Merciless Gladiator's Spellblade
+        id: 32053
+        hit: 15
+      off_hand:
+        item: Jewel of Infinite Possibilities
+        id: 28734
+        hit: 21
+      ranged:
+        item: Wand of the Forgotten Star
+        id: 29982
+        hit: 11
+    weapon_config_note: Main hand plus off-hand pair, not a staff. Replaces the source guide's
+      listed pick, Atiesh, Greatstaff of the Guardian, which is not a realistic hold; see
+      notes.downgraded_slots. This is the highest-EPV Phase 1/2 main-hand-plus-off-hand combination
+      in data/research/epv-workbook/Aff.csv (233.87 + 56.98), and it beats the best Phase
+      1/2 two-hand staff option (Merciless Gladiator's War Staff, 280.53) at 290.85 combined.
     total_item_hit: 203
-  tier_hands_only:
-    tier6_pieces_held: [hands]
-    tier5_pieces_held: [legs]
-    set_bonuses_held: []
-    hit_by_slot:
-      head: {item: "Destruction Holo-gogs", id: 32494, hit: 0}
-      neck: {item: "Translucent Spellthread Necklace", id: 32349, hit: 15}
-      shoulder: {item: "Voidheart Mantle", id: 28967, hit: 14}
-      back: {item: "Nethervoid Cloak", id: 32590, hit: 18}
-      chest: {item: "Vestments of the Sea-Witch", id: 30107, hit: 27}
-      wrist: {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
-      hands: {item: "Gloves of the Malefic", id: 31050, hit: 11}
-      waist: {item: "Anetheron's Noose", id: 30888, hit: 0}
-      legs: {item: "Leggings of the Corruptor", id: 30213, hit: 24}
-      feet: {item: "Slippers of the Seacaller", id: 32239, hit: 0}
-      ring_1: {item: "Ring of Captured Storms", id: 32247, hit: 19}
-      ring_2: {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
-      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      trinket_2: {item: "Quagmirran's Eye", id: 27683, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Spellblade", id: 32053, hit: 15}
-      off_hand: {item: "Jewel of Infinite Possibilities", id: 28734, hit: 21}
-      ranged: {item: "Wand of the Forgotten Star", id: 29982, hit: 11}
-    weapon_config_note: >-
-      Tempest of Chaos (main hand) is a Hyjal drop from Archimonde, who is
-      NOT reliably dead in this state, so the same Phase 1/2 main-hand plus
-      off-hand pair used at Entry is carried forward instead of Atiesh; see
-      notes.downgraded_slots.
-    total_item_hit: 175
   tier_hands_and_head:
-    tier6_pieces_held: [hands, head]
-    tier5_pieces_held: [legs]
-    set_bonuses_held:
-      - "Malefic Raiment 2-piece: Each time one of your Corruption or Immolate spells deals periodic damage, you heal 70 health."
+    tier6_pieces_held:
+    - hands
+    - head
+    - shoulder
+    tier5_pieces_held: []
     hit_by_slot:
-      head: {item: "Hood of the Malefic", id: 31051, hit: 16}
-      neck: {item: "Translucent Spellthread Necklace", id: 32349, hit: 15}
-      shoulder: {item: "Voidheart Mantle", id: 28967, hit: 14}
-      back: {item: "Nethervoid Cloak", id: 32590, hit: 18}
-      chest: {item: "Vestments of the Sea-Witch", id: 30107, hit: 27}
-      wrist: {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
-      hands: {item: "Gloves of the Malefic", id: 31050, hit: 11}
-      waist: {item: "Anetheron's Noose", id: 30888, hit: 0}
-      legs: {item: "Leggings of the Corruptor", id: 30213, hit: 24}
-      feet: {item: "Slippers of the Seacaller", id: 32239, hit: 0}
-      ring_1: {item: "Ring of Captured Storms", id: 32247, hit: 19}
-      ring_2: {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
-      trinket_1: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      trinket_2: {item: "Quagmirran's Eye", id: 27683, hit: 0}
-      main_hand: {item: "Tempest of Chaos", id: 30910, hit: 17}
-      off_hand: {item: "Chronicle of Dark Secrets", id: 30872, hit: 17}
-      ranged: {item: "Wand of the Forgotten Star", id: 29982, hit: 11}
-    total_item_hit: 189
-notes:
-  neck_changed_against_the_workbook: >-
-    CHANGED 9 August 2026 at both tier anchors, following
-    data/research/epv-workbook/Aff.csv. The published Phase 3 list's neck, The
-    Sun King's Talisman (30015: 41 spell damage, 24 spell crit, 0 spell hit
-    per data/facts/items.csv), was replaced with Translucent Spellthread
-    Necklace (32349, Reliquary of Souls: 46 spell damage, 24 spell crit, 15
-    spell hit), which the workbook ranks 21.43 higher (79.03 against 57.60).
-    The swap is mechanically one-sided: the replacement carries at least as
-    much of every stat this spec uses plus 15 spell hit toward the spell cap,
-    and the capture sat 5 rating SHORT of its 165 net target at
-    tier_hands_only before the swap. Reliquary of Souls is position 5 in
-    Black Temple, inside the reliably-down set per data/facts/progression.yaml,
-    and the Destruction and Shadow captures already wear this necklace at the
-    same anchors. No set bonus rides on the slot. tier_hands_only
-    total_item_hit rises from 160 to 175 and tier_hands_and_head from 174 to
-    189. Entry is untouched; the necklace is a Phase 3 drop.
-  hands_held_against_the_workbook: >-
-    CHECKED 9 August 2026 against data/research/epv-workbook/Aff.csv and LEFT
-    AS PUBLISHED. The workbook ranks Anger-Spark Gloves (30725, Doomwalker
-    world boss, Phase 1, 20 spell hit) first at 97.73 and Voidheart Gloves
-    (28968) thirteenth at 54.44, a 43.29 gap, and the entry set wears the
-    Voidheart pair anyway. The reason is a set bonus the workbook cannot see:
-    the entry set wears Voidheart Mantle (28967) AND Voidheart Gloves (28968),
-    which per data/facts/tokens.yaml are two pieces of Voidheart Raiment and
-    hold its 2-piece bonus, and the workbook's own Intro states that set
-    bonuses are not included in any item value. Swapping the gloves to
-    Anger-Spark would leave one Voidheart piece and drop the bonus. This
-    capture previously recorded set_bonuses_held as empty at entry, which was
-    wrong; the bonus was held all along and is now recorded. No total moves,
-    since the pick is unchanged. Whether the 2-piece proc outweighs the 43.29
-    EPV gap plus 20 spell hit is not decided here; both sides are stated so
-    the council can weigh them.
-  availability_corrections: >-
-    Entry ring2: Band of Eternity (friendly) (29302) is a Scale of the Sands
-    reputation reward, and Scale of the Sands is the Mount Hyjal faction, so
-    it cannot be held before Phase 3 opens. Replaced with Band of Crimson
-    Fury (28793, Magtheridon's Lair, Phase 1, 16 spell hit), the top-ranked
-    prephase Finger item in the ladder not already held in ring1 (Ring of
-    Endless Coils). Entry total_item_hit rises from 187 to 203.
-  downgraded_slots: >-
-    Weapon (Entry and tier_hands_only): the source guide's listed pick,
-    Atiesh, Greatstaff of the Guardian, is not a realistic hold and was
-    replaced. Atiesh is assembled from 40 Splinters of Atiesh, a drop from
-    the 40-player Vanilla Naxxramas raid, and data/research/epv-workbook/Aff.csv
-    itself tags the item's source as "Classic" (phase 0), separate from
-    every Phase 1 to 3 raid tier this project covers. Available searches did
-    not settle the exact patch-level history of Naxxramas access during the
-    original Burning Crusade (one source found says the old raid was not
-    closed until Wrath of the Lich King's release, which would mean it was
-    technically enterable throughout Burning Crusade), and no source
-    confirms whether the current TBC Anniversary realms carry old Naxxramas
-    forward at all. That uncertainty does not change the conclusion: a
-    45-week-old vanilla raid requiring a coordinated 40-player clear and a
-    guild-wide splinter turn-in is not a realistic Phase 3 hold for this
-    fact table regardless of the exact toggle, so it is replaced with the
-    best Phase 1/2 main-hand-plus-off-hand pair the workbook ladder
-    supports: Merciless Gladiator's Spellblade (main hand, Season 2 PvP,
-    15 hit) plus Jewel of Infinite Possibilities (off hand, Karazhan,
-    Netherspite, 21 hit). Combined EPV (290.85) beats the best Phase 1/2
-    two-hand staff (Merciless Gladiator's War Staff, 280.53), so this is not
-    a hit-driven pick. Head: Hood of the Malefic (Archimonde) is unavailable
-    in hands_only, so the Entry pick Destruction Holo-gogs (0 hit) is
-    carried forward; the Malefic head slots in once hands_and_head applies.
-    Shoulder: Mantle of the Malefic (Mother Shahraz, late Black Temple) is
-    not available in either tier state, so the Entry piece Voidheart Mantle
-    (Gruul's Lair, 14 hit) is carried forward at both. Legs: Leggings of the
-    Malefic (Illidari Council, late Black Temple) is not available in either
-    tier state, so the Tier 5 piece Leggings of the Corruptor (24 hit),
-    already worn at Entry, is kept at both. Chest stays Vestments of the
-    Sea-Witch (Tier 5 era, Serpentshrine Cavern) at all three anchors; the
-    source list itself never upgrades this slot to Robe of the Malefic.
-    Trinket1: The Skull of Gul'dan (Illidan, last Black Temple boss) is not
-    available in either tier state, so the Entry set's other trinket, Icon
-    of the Silver Crescent, is swapped into trinket1 (0 hit either way) to
-    avoid holding Quagmirran's Eye in both trinket slots at once. Off hand
-    (hands_and_head): Tempest of Chaos and its Chronicle of Dark Secrets
-    off-hand pairing both require the Hyjal progression this state assumes,
-    so they replace the Phase 1/2 main-hand/off-hand pair used at the other
-    two anchors (17 hit each instead of 15 and 21).
+      head:
+        item: Hood of the Malefic
+        id: 31051
+        hit: 16
+      neck:
+        item: Eye of the Night
+        id: 24116
+        hit: 16
+      shoulder:
+        item: Mantle of the Malefic
+        id: 31054
+        hit: 21
+      back:
+        item: Ruby Drape of the Mysticant
+        id: 28766
+        hit: 18
+      chest:
+        item: Vestments of the Sea-Witch
+        id: 30107
+        hit: 27
+      wrist:
+        item: Mindstorm Wristbands
+        id: 29918
+        hit: 0
+      hands:
+        item: Gloves of the Malefic
+        id: 31050
+        hit: 11
+      waist:
+        item: Belt of Blasting
+        id: 30038
+        hit: 23
+      legs:
+        item: Leggings of Channeled Elements
+        id: 30916
+        hit: 18
+      feet:
+        item: Boots of Blasting
+        id: 30037
+        hit: 18
+      ring_1:
+        item: Ring of Endless Coils
+        id: 30109
+        hit: 0
+      ring_2:
+        item: Band of Crimson Fury
+        id: 28793
+        hit: 16
+      trinket_1:
+        item: Quagmirran's Eye
+        id: 27683
+        hit: 0
+      trinket_2:
+        item: Icon of the Silver Crescent
+        id: 29370
+        hit: 0
+      main_hand:
+        item: Merciless Gladiator's Spellblade
+        id: 32053
+        hit: 15
+      off_hand:
+        item: Jewel of Infinite Possibilities
+        id: 28734
+        hit: 21
+      ranged:
+        item: Wand of the Forgotten Star
+        id: 29982
+        hit: 11
+    total_item_hit: 231
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Malefic Raiment: 3
+notes_from_the_previous_construction:
+  READ_THIS_FIRST: 'THESE NOTES WERE WRITTEN FOR A TIER SET BUILT A DIFFERENT WAY, and are
+    kept because the reasoning in them outlives the set. Read nothing here as describing the
+    tier anchor as it now stands.
+
+    The tier set was rebuilt on 14 August 2026 from the entry set plus the tokens the spec''s
+    Phase 3 best-in-slot list actually wears, per the rule in tools/rebuild_tier_sets.py.
+    Every construction note below predates that and several are now false against the file
+    they sit in: one said a shoulder token ''is not available, so Voidheart Mantle is carried
+    forward'' beside a file holding that token.
+
+    THE ENTRY ANCHOR DID NOT CHANGE, so a note about entry gear, an availability correction
+    or a random-suffix ruling still holds. A note about the TIER anchor does not. The anchor''s
+    own `rebuilt` field is the authority on how it was made.'
+  neck_changed_against_the_workbook: 'CHANGED 9 August 2026 at both tier anchors, following
+    data/research/epv-workbook/Aff.csv. The published Phase 3 list''s neck, The Sun King''s
+    Talisman (30015: 41 spell damage, 24 spell crit, 0 spell hit per data/facts/items.csv),
+    was replaced with Translucent Spellthread Necklace (32349, Reliquary of Souls: 46 spell
+    damage, 24 spell crit, 15 spell hit), which the workbook ranks 21.43 higher (79.03 against
+    57.60). The swap is mechanically one-sided: the replacement carries at least as much of
+    every stat this spec uses plus 15 spell hit toward the spell cap, and the capture sat
+    5 rating SHORT of its 165 net target at tier_hands_only before the swap. Reliquary of
+    Souls is position 5 in Black Temple, inside the reliably-down set per data/facts/progression.yaml,
+    and the Destruction and Shadow captures already wear this necklace at the same anchors.
+    No set bonus rides on the slot. tier_hands_only total_item_hit rises from 160 to 175 and
+    tier_hands_and_head from 174 to 189. Entry is untouched; the necklace is a Phase 3 drop.'
+  hands_held_against_the_workbook: 'CHECKED 9 August 2026 against data/research/epv-workbook/Aff.csv
+    and LEFT AS PUBLISHED. The workbook ranks Anger-Spark Gloves (30725, Doomwalker world
+    boss, Phase 1, 20 spell hit) first at 97.73 and Voidheart Gloves (28968) thirteenth at
+    54.44, a 43.29 gap, and the entry set wears the Voidheart pair anyway. The reason is a
+    set bonus the workbook cannot see: the entry set wears Voidheart Mantle (28967) AND Voidheart
+    Gloves (28968), which per data/facts/tokens.yaml are two pieces of Voidheart Raiment and
+    hold its 2-piece bonus, and the workbook''s own Intro states that set bonuses are not
+    included in any item value. Swapping the gloves to Anger-Spark would leave one Voidheart
+    piece and drop the bonus. This capture previously recorded set_bonuses_held as empty at
+    entry, which was wrong; the bonus was held all along and is now recorded. No total moves,
+    since the pick is unchanged. Whether the 2-piece proc outweighs the 43.29 EPV gap plus
+    20 spell hit is not decided here; both sides are stated so the council can weigh them.'
+  availability_corrections: 'Entry ring2: Band of Eternity (friendly) (29302) is a Scale of
+    the Sands reputation reward, and Scale of the Sands is the Mount Hyjal faction, so it
+    cannot be held before Phase 3 opens. Replaced with Band of Crimson Fury (28793, Magtheridon''s
+    Lair, Phase 1, 16 spell hit), the top-ranked prephase Finger item in the ladder not already
+    held in ring1 (Ring of Endless Coils). Entry total_item_hit rises from 187 to 203.'
+  downgraded_slots: 'Weapon (Entry and tier_hands_only): the source guide''s listed pick,
+    Atiesh, Greatstaff of the Guardian, is not a realistic hold and was replaced. Atiesh is
+    assembled from 40 Splinters of Atiesh, a drop from the 40-player Vanilla Naxxramas raid,
+    and data/research/epv-workbook/Aff.csv itself tags the item''s source as "Classic" (phase
+    0), separate from every Phase 1 to 3 raid tier this project covers. Available searches
+    did not settle the exact patch-level history of Naxxramas access during the original Burning
+    Crusade (one source found says the old raid was not closed until Wrath of the Lich King''s
+    release, which would mean it was technically enterable throughout Burning Crusade), and
+    no source confirms whether the current TBC Anniversary realms carry old Naxxramas forward
+    at all. That uncertainty does not change the conclusion: a 45-week-old vanilla raid requiring
+    a coordinated 40-player clear and a guild-wide splinter turn-in is not a realistic Phase
+    3 hold for this fact table regardless of the exact toggle, so it is replaced with the
+    best Phase 1/2 main-hand-plus-off-hand pair the workbook ladder supports: Merciless Gladiator''s
+    Spellblade (main hand, Season 2 PvP, 15 hit) plus Jewel of Infinite Possibilities (off
+    hand, Karazhan, Netherspite, 21 hit). Combined EPV (290.85) beats the best Phase 1/2 two-hand
+    staff (Merciless Gladiator''s War Staff, 280.53), so this is not a hit-driven pick. Head:
+    Hood of the Malefic (Archimonde) is unavailable in hands_only, so the Entry pick Destruction
+    Holo-gogs (0 hit) is carried forward; the Malefic head slots in once hands_and_head applies.
+    Shoulder: Mantle of the Malefic (Mother Shahraz, late Black Temple) is not available in
+    either tier state, so the Entry piece Voidheart Mantle (Gruul''s Lair, 14 hit) is carried
+    forward at both. Legs: Leggings of the Malefic (Illidari Council, late Black Temple) is
+    not available in either tier state, so the Tier 5 piece Leggings of the Corruptor (24
+    hit), already worn at Entry, is kept at both. Chest stays Vestments of the Sea-Witch (Tier
+    5 era, Serpentshrine Cavern) at all three anchors; the source list itself never upgrades
+    this slot to Robe of the Malefic. Trinket1: The Skull of Gul''dan (Illidan, last Black
+    Temple boss) is not available in either tier state, so the Entry set''s other trinket,
+    Icon of the Silver Crescent, is swapped into trinket1 (0 hit either way) to avoid holding
+    Quagmirran''s Eye in both trinket slots at once. Off hand (hands_and_head): Tempest of
+    Chaos and its Chronicle of Dark Secrets off-hand pairing both require the Hyjal progression
+    this state assumes, so they replace the Phase 1/2 main-hand/off-hand pair used at the
+    other two anchors (17 hit each instead of 15 and 21).'
   contested_slots:
     waist:
       slot: waist
       published_pick:
-        item: "Anetheron's Noose"
+        item: Anetheron's Noose
         id: 30888
         hit: 0
-        source: "tbc-bis-guide.com Phase 3 BiS list"
+        source: tbc-bis-guide.com Phase 3 BiS list
       workbook_pick:
-        item: "Belt of Blasting"
+        item: Belt of Blasting
         id: 30038
         hit: 23
-        source: "data/research/epv-workbook/Aff.csv, EPV 121.83 vs 96.19 for Anetheron's Noose"
-      note: >-
-        The published Phase 3 list's pick is the one recorded in
-        hit_by_slot for both tier anchors. The EPV workbook ranks the
-        Entry-anchor belt higher and gives no reason to swap off it, since
-        it is craftable and always available. Not resolved here; both are
-        named so the disagreement stays visible.
-  uncertain: >-
-    Confidence in the Entry set is LOW to MODERATE. Wowhead's own BiS guide
-    pages returned only page chrome when fetched (the gear tables render
-    client-side and were not retrievable), so every item and slot selection
-    was taken from a single secondary compiled source instead:
-    https://tbc-bis-guide.com/warlock/affliction/phase-2 (Entry) and
-    https://tbc-bis-guide.com/warlock/affliction/phase-3 (Tier). That source
-    was not cross-checked against a second independent BiS list, only
-    against this project's own data/research/epv-workbook/Aff.csv for hit
-    values on the items it named. A large part of the 55-point gap to the
-    retired supplied_at_p3_entry figure (242) is expected, since that figure
-    came from a rule that greedily gears by a workbook column already
-    weighting hit; but the remainder is not fully explained, and given the
-    single-source basis for item selection, the Entry total_item_hit of 187
-    should be treated as a reasonable estimate, not a verified figure, until
-    it is checked against Wowhead directly or a second independent guide.
-    BOTH FIGURES IN THIS PARAGRAPH WERE WRONG WHEN WRITTEN. It said a
-    102-point gap against an entry total of 176. The total was 176 at the
-    time and is 187 since the Wand of the Forgotten Star was corrected from
-    0 to its real 11 spell hit, and the gap to 242 was never 102 on either
-    reading. Corrected 9 August 2026.
-    Waist at the Tier anchor is a genuine conflict between sources: see
-    notes.contested_slots. Back (Nethervoid Cloak, Hyjal trash) and Ring2
-    (Ring of Ancient Knowledge, Black Temple trash) are trash drops rather
-    than boss drops; both are treated as available as soon as the raid
-    enters the zone, since trash precedes every boss, but this was not
-    checked against a specific week-4-to-6 trash-clear state.
+        source: data/research/epv-workbook/Aff.csv, EPV 121.83 vs 96.19 for Anetheron's Noose
+      note: The published Phase 3 list's pick is the one recorded in hit_by_slot for both
+        tier anchors. The EPV workbook ranks the Entry-anchor belt higher and gives no reason
+        to swap off it, since it is craftable and always available. Not resolved here; both
+        are named so the disagreement stays visible.
+  uncertain: 'Confidence in the Entry set is LOW to MODERATE. Wowhead''s own BiS guide pages
+    returned only page chrome when fetched (the gear tables render client-side and were not
+    retrievable), so every item and slot selection was taken from a single secondary compiled
+    source instead: https://tbc-bis-guide.com/warlock/affliction/phase-2 (Entry) and https://tbc-bis-guide.com/warlock/affliction/phase-3
+    (Tier). That source was not cross-checked against a second independent BiS list, only
+    against this project''s own data/research/epv-workbook/Aff.csv for hit values on the items
+    it named. A large part of the 55-point gap to the retired supplied_at_p3_entry figure
+    (242) is expected, since that figure came from a rule that greedily gears by a workbook
+    column already weighting hit; but the remainder is not fully explained, and given the
+    single-source basis for item selection, the Entry total_item_hit of 187 should be treated
+    as a reasonable estimate, not a verified figure, until it is checked against Wowhead directly
+    or a second independent guide. BOTH FIGURES IN THIS PARAGRAPH WERE WRONG WHEN WRITTEN.
+    It said a 102-point gap against an entry total of 176. The total was 176 at the time and
+    is 187 since the Wand of the Forgotten Star was corrected from 0 to its real 11 spell
+    hit, and the gap to 242 was never 102 on either reading. Corrected 9 August 2026. Waist
+    at the Tier anchor is a genuine conflict between sources: see notes.contested_slots. Back
+    (Nethervoid Cloak, Hyjal trash) and Ring2 (Ring of Ancient Knowledge, Black Temple trash)
+    are trash drops rather than boss drops; both are treated as available as soon as the raid
+    enters the zone, since trash precedes every boss, but this was not checked against a specific
+    week-4-to-6 trash-clear state.'

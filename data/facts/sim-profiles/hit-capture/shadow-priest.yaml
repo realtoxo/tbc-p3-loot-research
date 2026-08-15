@@ -2,230 +2,296 @@ spec: shadow_priest
 collected_on: 2026-08-09
 sources:
   entry:
-    url: "https://web.archive.org/web/20211027154510/https://tbc.wowhead.com/guides/shadow-priest-dps-tk-ssc-phase-2-best-in-slot-gear-burning-crusade"
-    title: "Burning Crusade Classic Shadow Priest DPS Best in Slot (BiS) Phase 2 Gear Guide - Wowhead"
+    url: https://web.archive.org/web/20211027154510/https://tbc.wowhead.com/guides/shadow-priest-dps-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Shadow Priest DPS Best in Slot (BiS) Phase 2 Gear Guide
+      - Wowhead
     observed: 2026-08-09
-    note: >-
-      Wowhead's guide pages render their gear tables client-side, so a plain
-      fetch of the live page returns only navigation chrome. This archived
-      snapshot happened to carry the pre-rendered guide markup (including the
-      per-slot "Best in slot" / "Great" / "Viable" ranked tables) inline in
-      the page's own JSON payload, which is what was actually read. Item ids,
-      hit ratings and boss/zone sourcing were cross-checked against
-      data/research/epv-workbook/Shad.csv (see tier source note) for every
-      item used below.
+    note: Wowhead's guide pages render their gear tables client-side, so a plain fetch of
+      the live page returns only navigation chrome. This archived snapshot happened to carry
+      the pre-rendered guide markup (including the per-slot "Best in slot" / "Great" / "Viable"
+      ranked tables) inline in the page's own JSON payload, which is what was actually read.
+      Item ids, hit ratings and boss/zone sourcing were cross-checked against data/research/epv-workbook/Shad.csv
+      (see tier source note) for every item used below.
   tier:
-    url: "https://web.archive.org/web/20220530151300/https://tbc.wowhead.com/guides/shadow-priest-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade"
-    title: "Burning Crusade Classic Shadow Priest DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead (attempted, did not resolve)"
+    url: https://web.archive.org/web/20220530151300/https://tbc.wowhead.com/guides/shadow-priest-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Shadow Priest DPS Best in Slot (BiS) Phase 3 Gear Guide
+      - Wowhead (attempted, did not resolve)
     observed: 2026-08-09
-    note: >-
-      This archive snapshot did NOT carry the Phase 3 tables: its embedded
-      payload resolved to the Pre-Raid BiS guide's text instead, an apparent
-      caching mismatch at capture time. No other accessible rendering of the
-      live Phase 3 guide could be produced. The TIER anchor below is
-      therefore built from data/research/epv-workbook/Shad.csv (the in-repo
-      captured EPV ladder, itself sourced from Wowhead item data plus a
-      shadowpriest.com Phase 3 sim doc; see that file's own credit line and
-      data/research/epv-workbook/PROVENANCE.md) rather than from a directly
-      read Wowhead Phase 3 guide page. Selection rule: for each slot, start
-      from the ENTRY pick and only replace it with a Phase 3 item if that
-      item outranks it in the ladder's own EPV ordering AND the item's boss
-      is not one of the excluded late-Black-Temple bosses (Illidan Stormrage,
-      the Illidari Council, Mother Shahraz) and, for Archimonde specifically,
-      only in the hands_and_head state. Hands and Head are additionally
-      force-set to the Absolution Regalia tokens (Handguards of Absolution,
-      Hood of Absolution) per state, because that forcing is the entire
-      content of the hands_only / hands_and_head distinction the brief asks
-      for, not a ladder-rank outcome.
+    note: 'This archive snapshot did NOT carry the Phase 3 tables: its embedded payload resolved
+      to the Pre-Raid BiS guide''s text instead, an apparent caching mismatch at capture time.
+      No other accessible rendering of the live Phase 3 guide could be produced. The TIER
+      anchor below is therefore built from data/research/epv-workbook/Shad.csv (the in-repo
+      captured EPV ladder, itself sourced from Wowhead item data plus a shadowpriest.com Phase
+      3 sim doc; see that file''s own credit line and data/research/epv-workbook/PROVENANCE.md)
+      rather than from a directly read Wowhead Phase 3 guide page. Selection rule: for each
+      slot, start from the ENTRY pick and only replace it with a Phase 3 item if that item
+      outranks it in the ladder''s own EPV ordering AND the item''s boss is not one of the
+      excluded late-Black-Temple bosses (Illidan Stormrage, the Illidari Council, Mother Shahraz)
+      and, for Archimonde specifically, only in the hands_and_head state. Hands and Head are
+      additionally force-set to the Absolution Regalia tokens (Handguards of Absolution, Hood
+      of Absolution) per state, because that forcing is the entire content of the hands_only
+      / hands_and_head distinction the brief asks for, not a ladder-rank outcome.'
 anchors:
   entry:
-    tier_pieces_held: [head, chest]
+    tier_pieces_held:
+    - head
+    - chest
     set_bonuses_held:
-      - "Avatar Regalia 2-piece held (Hood of the Avatar + Shroud of the Avatar). Exact 2.4.3 tooltip wording/values for this bonus could not be independently verified this pass (see notes.uncertain) and are not asserted here."
+    - Avatar Regalia 2-piece held (Hood of the Avatar + Shroud of the Avatar). Exact 2.4.3
+      tooltip wording/values for this bonus could not be independently verified this pass
+      (see notes.uncertain) and are not asserted here.
     hit_by_slot:
-      head: {item: "Hood of the Avatar", id: 30161, hit: 24}
-      neck: {item: "Ritssyn's Lost Pendant (Shadow)", id: 30666, hit: 0}
-      shoulder: {item: "Frozen Shadoweave Shoulders", id: 21869, hit: 0}
-      back: {item: "Royal Cloak of the Sunstriders", id: 29992, hit: 0}
-      chest: {item: "Shroud of the Avatar", id: 30159, hit: 19}
-      wrist: {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
-      hands: {item: "Soul-Eater's Handwraps", id: 28780, hit: 0}
-      waist: {item: "Belt of Blasting", id: 30038, hit: 23}
-      legs: {item: "Trousers of the Astromancer", id: 29972, hit: 0}
-      feet: {item: "Frozen Shadoweave Boots", id: 21870, hit: 0}
-      ring_1: {item: "Ring of Endless Coils", id: 30109, hit: 0}
-      ring_2: {item: "Band of Al'ar", id: 29922, hit: 0}
-      trinket_1: {item: "Darkmoon Card: Crusade", id: 31856, hit: 0}
-      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Spellblade", id: 32053, hit: 15}
-      off_hand: {item: "Orb of the Soul-Eater", id: 29272, hit: 0}
-      ranged: {item: "Wand of the Forgotten Star", id: 29982, hit: 11}
+      head:
+        item: Hood of the Avatar
+        id: 30161
+        hit: 24
+      neck:
+        item: Ritssyn's Lost Pendant (Shadow)
+        id: 30666
+        hit: 0
+      shoulder:
+        item: Frozen Shadoweave Shoulders
+        id: 21869
+        hit: 0
+      back:
+        item: Royal Cloak of the Sunstriders
+        id: 29992
+        hit: 0
+      chest:
+        item: Shroud of the Avatar
+        id: 30159
+        hit: 19
+      wrist:
+        item: Bracers of Nimble Thought
+        id: 32586
+        hit: 0
+      hands:
+        item: Soul-Eater's Handwraps
+        id: 28780
+        hit: 0
+      waist:
+        item: Belt of Blasting
+        id: 30038
+        hit: 23
+      legs:
+        item: Trousers of the Astromancer
+        id: 29972
+        hit: 0
+      feet:
+        item: Frozen Shadoweave Boots
+        id: 21870
+        hit: 0
+      ring_1:
+        item: Ring of Endless Coils
+        id: 30109
+        hit: 0
+      ring_2:
+        item: Band of Al'ar
+        id: 29922
+        hit: 0
+      trinket_1:
+        item: 'Darkmoon Card: Crusade'
+        id: 31856
+        hit: 0
+      trinket_2:
+        item: Icon of the Silver Crescent
+        id: 29370
+        hit: 0
+      main_hand:
+        item: Merciless Gladiator's Spellblade
+        id: 32053
+        hit: 15
+      off_hand:
+        item: Orb of the Soul-Eater
+        id: 29272
+        hit: 0
+      ranged:
+        item: Wand of the Forgotten Star
+        id: 29982
+        hit: 11
     total_item_hit: 92
-  tier_hands_only:
-    tier6_pieces_held: [hands]
-    tier5_pieces_held: [head, chest]
-    set_bonuses_held:
-      - "Avatar Regalia 2-piece held (Hood of the Avatar + Shroud of the Avatar), unchanged from ENTRY."
-      - "Absolution Regalia: only 1 of 5 pieces held (Handguards of Absolution). No Absolution set bonus threshold is met."
-    hit_by_slot:
-      head: {item: "Hood of the Avatar", id: 30161, hit: 24}
-      neck: {item: "Translucent Spellthread Necklace", id: 32349, hit: 15}
-      shoulder: {item: "Hatefury Mantle", id: 30884, hit: 0}
-      back: {item: "Nethervoid Cloak", id: 32590, hit: 18}
-      chest: {item: "Shroud of the Avatar", id: 30159, hit: 19}
-      wrist: {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
-      hands: {item: "Handguards of Absolution", id: 31061, hit: 19}
-      waist: {item: "Belt of Blasting", id: 30038, hit: 23}
-      legs: {item: "Leggings of Channeled Elements", id: 30916, hit: 18}
-      feet: {item: "Frozen Shadoweave Boots", id: 21870, hit: 0}
-      ring_1: {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
-      ring_2: {item: "Ring of Captured Storms", id: 32247, hit: 19}
-      trinket_1: {item: "Darkmoon Card: Crusade", id: 31856, hit: 0}
-      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Gavel", id: 32963, hit: 15}
-      off_hand: {item: "Blind-Seer's Icon", id: 32361, hit: 24}
-      ranged: {item: "Wand of Prismatic Focus", id: 32343, hit: 13}
-    total_item_hit: 207
   tier_hands_and_head:
-    tier6_pieces_held: [hands, head]
-    tier5_pieces_held: [chest]
-    set_bonuses_held:
-      - "Avatar Regalia: only 1 of 5 pieces held (Shroud of the Avatar). No Avatar set bonus threshold is met."
-      - "Absolution Regalia 2-piece held (Handguards of Absolution + Hood of Absolution). Exact 2.4.3 tooltip wording/values for this bonus could not be independently verified this pass (see notes.uncertain) and are not asserted here."
+    tier6_pieces_held:
+    - chest
+    - hands
+    - head
+    - shoulder
+    tier5_pieces_held: []
     hit_by_slot:
-      head: {item: "Hood of Absolution", id: 31064, hit: 0}
-      neck: {item: "Translucent Spellthread Necklace", id: 32349, hit: 15}
-      shoulder: {item: "Hatefury Mantle", id: 30884, hit: 0}
-      back: {item: "Nethervoid Cloak", id: 32590, hit: 18}
-      chest: {item: "Shroud of the Avatar", id: 30159, hit: 19}
-      wrist: {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
-      hands: {item: "Handguards of Absolution", id: 31061, hit: 19}
-      waist: {item: "Belt of Blasting", id: 30038, hit: 23}
-      legs: {item: "Leggings of Channeled Elements", id: 30916, hit: 18}
-      feet: {item: "Frozen Shadoweave Boots", id: 21870, hit: 0}
-      ring_1: {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
-      ring_2: {item: "Ring of Captured Storms", id: 32247, hit: 19}
-      trinket_1: {item: "Darkmoon Card: Crusade", id: 31856, hit: 0}
-      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Gavel", id: 32963, hit: 15}
-      off_hand: {item: "Blind-Seer's Icon", id: 32361, hit: 24}
-      ranged: {item: "Wand of Prismatic Focus", id: 32343, hit: 13}
-    total_item_hit: 183
-notes:
-  downgraded_slots: >-
-    Relative to a full Phase 3 clear, the following slots stay at their
-    Phase 1/2 item in BOTH tier states because no available early-Hyjal or
-    early/mid-Black-Temple item outranks them in the workbook's EPV ordering:
-    head (Hood of the Avatar, T5, until Archimonde is credited), chest
-    (Shroud of the Avatar, T5, throughout), waist (Cord of Screaming
-    Terrors, T5 raid drop, throughout — see notes.tailoring_conflict for why
-    this is no longer the crafted Belt of Blasting), feet (Frozen Shadoweave
-    Boots, crafted), and both trinkets (Darkmoon Card: Crusade, Icon of the
-    Silver Crescent). Shoulders, back, wrist, legs, one-hand, off-hand,
-    ranged and one ring upgrade to early Hyjal / early-to-mid Black Temple
-    items. Hands is force-set to the Azgalor token (Handguards of
-    Absolution) and, in tier_hands_and_head only, head is force-set to the
-    Archimonde token (Hood of Absolution) — per the brief, this forcing is
-    definitional to the two states, not a ladder-rank outcome. Mother
-    Shahraz (shoulder), the Illidari Council (legs) and Illidan Stormrage
-    (chest) tokens for the rest of Absolution Regalia are excluded from both
-    states as late Black Temple.
-  tailoring_conflict_WAS_NOT_REAL: >-
-    RETRACTED 9 August 2026, and the retraction is the record. An audit
-    reported this set holding two Tailoring specialisations on one character:
-    Frozen Shadoweave Shoulders (21869) and Boots (21870), which do require
-    Shadoweave Tailoring, alongside Belt of Blasting (30038), reported as
-    requiring Spellfire Tailoring. Belt of Blasting was replaced at all three
-    anchors on that basis and every total moved by one point of spell hit.
-    BELT OF BLASTING IS NOT A SPELLFIRE ITEM. The Spellfire specialisation
-    belt is a DIFFERENT ITEM, Spellfire Belt, id 21846, which is present in
-    data/facts/items.csv and appears in no capture. The workbook labels 30038
-    plainly as Tailoring, Crafted, the same label it gives every
-    non-specialisation tailoring item. There was never a conflict, so the
-    swap is reverted and the waist returns to Belt of Blasting at 23 spell
-    hit, with totals back to 92, 207 and 183.
-    THIS IS THE FOURTH TIME THIS PROJECT HAS DISPOSITIONED AN ITEM ON ITS
-    NAME, which docs/kb/DOMAIN.md records as a repeated error. Two items
-    sharing a word are not the same item, and the id is the only thing that
-    settles it.
-  random_suffix_items_ENTRY_WAS_NOT_ACTUALLY_FIXED: >-
-    CORRECTED AGAIN 9 August 2026. The first pass RENAMED the two slots rather
-    than replacing them, so the entry anchor kept Illidari Cloak 31201 and
-    Ravager's Cuffs 30684, which resolve in items.csv to 70 and 85 armor and
-    nothing else. Only the two TIER anchors got real items. So the entry set
-    was still counting two equipped slots as carrying no spell damage, no hit,
-    no crit, no intellect and no stamina, and set-stats.yaml still understated
-    it. Neither total_item_hit moved, because both items carry no hit under
-    either reading, which is exactly why the sum check could not see this.
-    THE NOTE'S OWN JUSTIFICATION DID NOT ATTACH TO WHAT WAS WORN. It cited
-    ladder EPVs of 47 for the back and 59 for the wrist, and those price the
-    SUFFIXED rolls, "Illidari Cloak of Wrath" and "Ravager's Cuffs of Wrath",
-    which carry spell damage. The base items do not.
-    Entry now holds Royal Cloak of the Sunstriders 29992, the best legal
-    pre-Phase-3 back on this tab at 45.36, and Bracers of Nimble Thought 32586,
-    the top wrist at 63.24 and the same crafted bracer the two tier anchors
-    already use and that three other caster captures wear.
-  random_suffix_items: >-
-    An audit found two slots naming a random-suffix item ("of Wrath") while
-    carrying the BASE item's id, which items.csv can only represent as the
-    base stat line: back (was "Illidari Cloak of Wrath", id 31201) and wrist
-    (was "Ravager's Cuffs of Wrath", id 30684). Random-suffix items are a
-    real 2.4.3 mechanic but this repository's item table holds base items
-    only, so the suffix cannot be carried here. Both are renamed to their
-    base names (Illidari Cloak; Ravager's Cuffs) with the SAME ids and hit
-    values (0 each) — items.csv already held these as base items, and both
-    are the top-ranked legal prephase pick in the ladder for their slot (Back
-    EPV 47; Wrist EPV 59), so no other item substitution is warranted.
-    Neither total_item_hit changes from this fix. If the "of Wrath" suffix
-    genuinely belongs on this character, this file cannot state that; the
-    fixed base item is what stands here instead.
-  frozen_shadoweave_two_of_three: >-
-    The entry anchor wears two of the three Frozen Shadoweave pieces, the
-    shoulders (21869) and the boots (21870), and records no set bonus. That is
-    correct rather than an omission. Wowhead item-set 553, Shadow's Embrace,
-    which is the set these three items belong to, carries a bonus at three
-    pieces and at no other count, so two pieces convey nothing there is to
-    record (observed 2026-08-09,
-    https://www.wowhead.com/item-set=553/shadows-embrace).
-    The three-piece bonus is also not a damage bonus: it heals the wearer for
-    2 percent of the damage Frost and Shadow spells deal. So the third piece,
-    the robe (21871), is not a damage loss when the chest slot goes to Shroud
-    of the Avatar (30159) for the Avatar Regalia two-piece instead.
-    Recorded because an off-piece audit filed this holding as an unrecorded
-    set bonus, and the same reading would be filed again otherwise.
-  arena_season: >-
-    Vengeful Gladiator's Gavel (33687, Arena Season 3) was found still
-    present in main_hand at both tier anchors; Season 3 opens after Phase 3
-    and is out of scope. Replaced with Merciless Gladiator's Gavel (32963,
-    Arena Season 2), the same weapon family at the prior season, legal
-    throughout. This drops item hit by 2 at each tier anchor (17 to 15).
-  uncertain: >-
-    (1) The live Wowhead Phase 2 guide page could not be fetched directly
-    (JS-rendered; a bare request returns only chrome, and direct requests to
-    wowhead.com returned HTTP 403). The archived snapshot cited under
-    sources.entry happened to carry the guide's pre-rendered markup inline
-    and was read from there; this is unusual and may not be reproducible.
-    (2) No accessible archived rendering of the live Phase 3 guide could be
-    found — the one snapshot located resolved to Pre-Raid BiS content
-    instead. The TIER anchor is therefore sourced from the in-repo EPV
-    workbook (data/research/epv-workbook/Shad.csv) rather than a directly
-    read Wowhead Phase 3 page; see sources.tier.note for the exact selection
-    rule used. (3) Several chosen items carry hit: 0 on the item itself
-    (including both trinkets, both wands are the exception, and most rings)
-    because the Phase 2 guide's own stated philosophy for this spec is to
-    itemize for spell power/crit and take hit from gems, glyphs and gloves
-    enchant instead — all of which this file's counting rule (item hit only)
-    excludes. Item-only totals are therefore expected to sit well under the
-    76 net target; that gap is closed downstream by gems/enchants, not a
-    sign of a miscount. (4) Ring of Ancient Knowledge is sourced from "Black
-    Temple / Trash" in the workbook with no boss or wing named; it could not
-    be confirmed whether that trash is reachable before Illidan's wing.
-    (5) Set-bonus text for Avatar Regalia and Absolution Regalia is stated
-    only qualitatively (piece count held). The one tooltip source reachable
-    this pass (nether.wowhead.com's item endpoint) serves current-retail
-    "Legacy Set" text with rescaled item stats, not verified 2.4.3 wording,
-    so exact bonus effects are deliberately not asserted. (6) Hood of the
-    Avatar's row in Shad.csv carries no boss/zone (blank cells); it is
-    widely known to be a Lady Vashj (Serpentshrine Cavern) drop, but that
-    attribution is not itself sourced from the row and is stated here only
-    as this note, not in the item's data.
+      head:
+        item: Hood of Absolution
+        id: 31064
+        hit: 0
+      neck:
+        item: Ritssyn's Lost Pendant (Shadow)
+        id: 30666
+        hit: 0
+      shoulder:
+        item: Shoulderpads of Absolution
+        id: 31070
+        hit: 12
+      back:
+        item: Royal Cloak of the Sunstriders
+        id: 29992
+        hit: 0
+      chest:
+        item: Shroud of Absolution
+        id: 31065
+        hit: 20
+      wrist:
+        item: Bracers of Nimble Thought
+        id: 32586
+        hit: 0
+      hands:
+        item: Handguards of Absolution
+        id: 31061
+        hit: 19
+      waist:
+        item: Belt of Blasting
+        id: 30038
+        hit: 23
+      legs:
+        item: Trousers of the Astromancer
+        id: 29972
+        hit: 0
+      feet:
+        item: Frozen Shadoweave Boots
+        id: 21870
+        hit: 0
+      ring_1:
+        item: Ring of Endless Coils
+        id: 30109
+        hit: 0
+      ring_2:
+        item: Band of Al'ar
+        id: 29922
+        hit: 0
+      trinket_1:
+        item: 'Darkmoon Card: Crusade'
+        id: 31856
+        hit: 0
+      trinket_2:
+        item: Icon of the Silver Crescent
+        id: 29370
+        hit: 0
+      main_hand:
+        item: Merciless Gladiator's Spellblade
+        id: 32053
+        hit: 15
+      off_hand:
+        item: Orb of the Soul-Eater
+        id: 29272
+        hit: 0
+      ranged:
+        item: Wand of the Forgotten Star
+        id: 29982
+        hit: 11
+    total_item_hit: 100
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Absolution Regalia: 4
+      Shadow's Embrace: 1
+notes_from_the_previous_construction:
+  READ_THIS_FIRST: 'THESE NOTES WERE WRITTEN FOR A TIER SET BUILT A DIFFERENT WAY, and are
+    kept because the reasoning in them outlives the set. Read nothing here as describing the
+    tier anchor as it now stands.
+
+    The tier set was rebuilt on 14 August 2026 from the entry set plus the tokens the spec''s
+    Phase 3 best-in-slot list actually wears, per the rule in tools/rebuild_tier_sets.py.
+    Every construction note below predates that and several are now false against the file
+    they sit in: one said a shoulder token ''is not available, so Voidheart Mantle is carried
+    forward'' beside a file holding that token.
+
+    THE ENTRY ANCHOR DID NOT CHANGE, so a note about entry gear, an availability correction
+    or a random-suffix ruling still holds. A note about the TIER anchor does not. The anchor''s
+    own `rebuilt` field is the authority on how it was made.'
+  downgraded_slots: 'Relative to a full Phase 3 clear, the following slots stay at their Phase
+    1/2 item in BOTH tier states because no available early-Hyjal or early/mid-Black-Temple
+    item outranks them in the workbook''s EPV ordering: head (Hood of the Avatar, T5, until
+    Archimonde is credited), chest (Shroud of the Avatar, T5, throughout), waist (Cord of
+    Screaming Terrors, T5 raid drop, throughout — see notes.tailoring_conflict for why this
+    is no longer the crafted Belt of Blasting), feet (Frozen Shadoweave Boots, crafted), and
+    both trinkets (Darkmoon Card: Crusade, Icon of the Silver Crescent). Shoulders, back,
+    wrist, legs, one-hand, off-hand, ranged and one ring upgrade to early Hyjal / early-to-mid
+    Black Temple items. Hands is force-set to the Azgalor token (Handguards of Absolution)
+    and, in tier_hands_and_head only, head is force-set to the Archimonde token (Hood of Absolution)
+    — per the brief, this forcing is definitional to the two states, not a ladder-rank outcome.
+    Mother Shahraz (shoulder), the Illidari Council (legs) and Illidan Stormrage (chest) tokens
+    for the rest of Absolution Regalia are excluded from both states as late Black Temple.'
+  tailoring_conflict_WAS_NOT_REAL: 'RETRACTED 9 August 2026, and the retraction is the record.
+    An audit reported this set holding two Tailoring specialisations on one character: Frozen
+    Shadoweave Shoulders (21869) and Boots (21870), which do require Shadoweave Tailoring,
+    alongside Belt of Blasting (30038), reported as requiring Spellfire Tailoring. Belt of
+    Blasting was replaced at all three anchors on that basis and every total moved by one
+    point of spell hit. BELT OF BLASTING IS NOT A SPELLFIRE ITEM. The Spellfire specialisation
+    belt is a DIFFERENT ITEM, Spellfire Belt, id 21846, which is present in data/facts/items.csv
+    and appears in no capture. The workbook labels 30038 plainly as Tailoring, Crafted, the
+    same label it gives every non-specialisation tailoring item. There was never a conflict,
+    so the swap is reverted and the waist returns to Belt of Blasting at 23 spell hit, with
+    totals back to 92, 207 and 183. THIS IS THE FOURTH TIME THIS PROJECT HAS DISPOSITIONED
+    AN ITEM ON ITS NAME, which docs/kb/DOMAIN.md records as a repeated error. Two items sharing
+    a word are not the same item, and the id is the only thing that settles it.'
+  random_suffix_items_ENTRY_WAS_NOT_ACTUALLY_FIXED: CORRECTED AGAIN 9 August 2026. The first
+    pass RENAMED the two slots rather than replacing them, so the entry anchor kept Illidari
+    Cloak 31201 and Ravager's Cuffs 30684, which resolve in items.csv to 70 and 85 armor and
+    nothing else. Only the two TIER anchors got real items. So the entry set was still counting
+    two equipped slots as carrying no spell damage, no hit, no crit, no intellect and no stamina,
+    and set-stats.yaml still understated it. Neither total_item_hit moved, because both items
+    carry no hit under either reading, which is exactly why the sum check could not see this.
+    THE NOTE'S OWN JUSTIFICATION DID NOT ATTACH TO WHAT WAS WORN. It cited ladder EPVs of
+    47 for the back and 59 for the wrist, and those price the SUFFIXED rolls, "Illidari Cloak
+    of Wrath" and "Ravager's Cuffs of Wrath", which carry spell damage. The base items do
+    not. Entry now holds Royal Cloak of the Sunstriders 29992, the best legal pre-Phase-3
+    back on this tab at 45.36, and Bracers of Nimble Thought 32586, the top wrist at 63.24
+    and the same crafted bracer the two tier anchors already use and that three other caster
+    captures wear.
+  random_suffix_items: 'An audit found two slots naming a random-suffix item ("of Wrath")
+    while carrying the BASE item''s id, which items.csv can only represent as the base stat
+    line: back (was "Illidari Cloak of Wrath", id 31201) and wrist (was "Ravager''s Cuffs
+    of Wrath", id 30684). Random-suffix items are a real 2.4.3 mechanic but this repository''s
+    item table holds base items only, so the suffix cannot be carried here. Both are renamed
+    to their base names (Illidari Cloak; Ravager''s Cuffs) with the SAME ids and hit values
+    (0 each) — items.csv already held these as base items, and both are the top-ranked legal
+    prephase pick in the ladder for their slot (Back EPV 47; Wrist EPV 59), so no other item
+    substitution is warranted. Neither total_item_hit changes from this fix. If the "of Wrath"
+    suffix genuinely belongs on this character, this file cannot state that; the fixed base
+    item is what stands here instead.'
+  frozen_shadoweave_two_of_three: 'The entry anchor wears two of the three Frozen Shadoweave
+    pieces, the shoulders (21869) and the boots (21870), and records no set bonus. That is
+    correct rather than an omission. Wowhead item-set 553, Shadow''s Embrace, which is the
+    set these three items belong to, carries a bonus at three pieces and at no other count,
+    so two pieces convey nothing there is to record (observed 2026-08-09, https://www.wowhead.com/item-set=553/shadows-embrace).
+    The three-piece bonus is also not a damage bonus: it heals the wearer for 2 percent of
+    the damage Frost and Shadow spells deal. So the third piece, the robe (21871), is not
+    a damage loss when the chest slot goes to Shroud of the Avatar (30159) for the Avatar
+    Regalia two-piece instead. Recorded because an off-piece audit filed this holding as an
+    unrecorded set bonus, and the same reading would be filed again otherwise.'
+  arena_season: Vengeful Gladiator's Gavel (33687, Arena Season 3) was found still present
+    in main_hand at both tier anchors; Season 3 opens after Phase 3 and is out of scope. Replaced
+    with Merciless Gladiator's Gavel (32963, Arena Season 2), the same weapon family at the
+    prior season, legal throughout. This drops item hit by 2 at each tier anchor (17 to 15).
+  uncertain: '(1) The live Wowhead Phase 2 guide page could not be fetched directly (JS-rendered;
+    a bare request returns only chrome, and direct requests to wowhead.com returned HTTP 403).
+    The archived snapshot cited under sources.entry happened to carry the guide''s pre-rendered
+    markup inline and was read from there; this is unusual and may not be reproducible. (2)
+    No accessible archived rendering of the live Phase 3 guide could be found — the one snapshot
+    located resolved to Pre-Raid BiS content instead. The TIER anchor is therefore sourced
+    from the in-repo EPV workbook (data/research/epv-workbook/Shad.csv) rather than a directly
+    read Wowhead Phase 3 page; see sources.tier.note for the exact selection rule used. (3)
+    Several chosen items carry hit: 0 on the item itself (including both trinkets, both wands
+    are the exception, and most rings) because the Phase 2 guide''s own stated philosophy
+    for this spec is to itemize for spell power/crit and take hit from gems, glyphs and gloves
+    enchant instead — all of which this file''s counting rule (item hit only) excludes. Item-only
+    totals are therefore expected to sit well under the 76 net target; that gap is closed
+    downstream by gems/enchants, not a sign of a miscount. (4) Ring of Ancient Knowledge is
+    sourced from "Black Temple / Trash" in the workbook with no boss or wing named; it could
+    not be confirmed whether that trash is reachable before Illidan''s wing. (5) Set-bonus
+    text for Avatar Regalia and Absolution Regalia is stated only qualitatively (piece count
+    held). The one tooltip source reachable this pass (nether.wowhead.com''s item endpoint)
+    serves current-retail "Legacy Set" text with rescaled item stats, not verified 2.4.3 wording,
+    so exact bonus effects are deliberately not asserted. (6) Hood of the Avatar''s row in
+    Shad.csv carries no boss/zone (blank cells); it is widely known to be a Lady Vashj (Serpentshrine
+    Cavern) drop, but that attribution is not itself sourced from the row and is stated here
+    only as this note, not in the item''s data.'

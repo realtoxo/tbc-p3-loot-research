@@ -9,201 +9,271 @@ sources:
     url: https://www.wowhead.com/tbc/guide/elemental-shaman-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
     title: Burning Crusade Classic Elemental Shaman DPS Best in Slot (BiS) Phase 3 Gear Guide
     observed: 2026-08-09
-
 anchors:
-
   entry:
-    tier_pieces_held: [chest, legs]
+    tier_pieces_held:
+    - chest
+    - legs
     set_bonuses_held:
-      - "Cataclysm Regalia 2-piece: each time you cast an offensive spell, there is a chance your next Lesser Healing Wave will cost 380 less mana"
-      - "Cyclone Regalia 2-piece: Your Wrath of Air Totem ability grants an additional 20 spell damage. (Tier 4, held on the worn head plus shoulder; recorded 2026-08-09, closing the set_bonus_bookkeeping_gap noted in the off-piece audit)"
+    - 'Cataclysm Regalia 2-piece: each time you cast an offensive spell, there is a chance
+      your next Lesser Healing Wave will cost 380 less mana'
+    - 'Cyclone Regalia 2-piece: Your Wrath of Air Totem ability grants an additional 20 spell
+      damage. (Tier 4, held on the worn head plus shoulder; recorded 2026-08-09, closing the
+      set_bonus_bookkeeping_gap noted in the off-piece audit)'
     hit_by_slot:
-      head: {item: "Cyclone Faceguard", id: 29035, hit: 0}
-      neck: {item: "The Sun King's Talisman", id: 30015, hit: 0}
-      shoulder: {item: "Cyclone Shoulderguards", id: 29037, hit: 0}
-      back: {item: "Brute Cloak of the Ogre-Magi", id: 28797, hit: 0}
-      chest: {item: "Cataclysm Chestpiece", id: 30169, hit: 0}
-      wrist: {item: "Mindstorm Wristbands", id: 29918, hit: 0}
-      hands: {item: "Soul-Eater's Handwraps", id: 28780, hit: 0}
-      waist: {item: "Belt of Blasting", id: 30038, hit: 23}
-      legs: {item: "Cataclysm Leggings", id: 30172, hit: 14}
-      feet: {item: "Velvet Boots of the Guardian", id: 30067, hit: 0}
-      ring_1: {item: "Ring of Unrelenting Storms", id: 30667, hit: 0}
-      ring_2: {item: "Ring of Endless Coils", id: 30109, hit: 0}
-      trinket_1: {item: "The Lightning Capacitor", id: 28785, hit: 0}
-      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      main_hand: {item: "Merciless Gladiator's Spellblade", id: 32053, hit: 15}
-      off_hand: {item: "Fathomstone", id: 30049, hit: 0}
-      relic: {item: "Totem of the Void", id: 28248, hit: 0}
+      head:
+        item: Cyclone Faceguard
+        id: 29035
+        hit: 0
+      neck:
+        item: The Sun King's Talisman
+        id: 30015
+        hit: 0
+      shoulder:
+        item: Cyclone Shoulderguards
+        id: 29037
+        hit: 0
+      back:
+        item: Brute Cloak of the Ogre-Magi
+        id: 28797
+        hit: 0
+      chest:
+        item: Cataclysm Chestpiece
+        id: 30169
+        hit: 0
+      wrist:
+        item: Mindstorm Wristbands
+        id: 29918
+        hit: 0
+      hands:
+        item: Soul-Eater's Handwraps
+        id: 28780
+        hit: 0
+      waist:
+        item: Belt of Blasting
+        id: 30038
+        hit: 23
+      legs:
+        item: Cataclysm Leggings
+        id: 30172
+        hit: 14
+      feet:
+        item: Velvet Boots of the Guardian
+        id: 30067
+        hit: 0
+      ring_1:
+        item: Ring of Unrelenting Storms
+        id: 30667
+        hit: 0
+      ring_2:
+        item: Ring of Endless Coils
+        id: 30109
+        hit: 0
+      trinket_1:
+        item: The Lightning Capacitor
+        id: 28785
+        hit: 0
+      trinket_2:
+        item: Icon of the Silver Crescent
+        id: 29370
+        hit: 0
+      main_hand:
+        item: Merciless Gladiator's Spellblade
+        id: 32053
+        hit: 15
+      off_hand:
+        item: Fathomstone
+        id: 30049
+        hit: 0
+      relic:
+        item: Totem of the Void
+        id: 28248
+        hit: 0
     total_item_hit: 52
-
-  tier_hands_only:
-    tier6_pieces_held: [hands]
-    tier5_pieces_held: [head]
-    set_bonuses_held: []
-    hit_by_slot:
-      head: {item: "Cataclysm Headpiece", id: 30171, hit: 18}
-      neck: {item: "The Sun King's Talisman", id: 30015, hit: 0}
-      shoulder: {item: "Mantle of Nimble Thought", id: 32587, hit: 0}
-      back: {item: "Brute Cloak of the Ogre-Magi", id: 28797, hit: 0}
-      chest: {item: "Chestguard of Relentless Storms", id: 32592, hit: 0}
-      wrist: {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
-      hands: {item: "Skyshatter Gauntlets", id: 31008, hit: 19}
-      waist: {item: "Flashfire Girdle", id: 32276, hit: 0}
-      legs: {item: "Leggings of Channeled Elements", id: 30916, hit: 18}
-      feet: {item: "Slippers of the Seacaller", id: 32239, hit: 0}
-      ring_1: {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
-      ring_2: {item: "Band of the Eternal Sage", id: 29305, hit: 0}
-      trinket_1: {item: "The Lightning Capacitor", id: 28785, hit: 0}
-      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      main_hand: {item: "The Maelstrom's Fury", id: 32237, hit: 0}
-      off_hand: {item: "Chronicle of Dark Secrets", id: 30872, hit: 17}
-      relic: {item: "Totem of Ancestral Guidance", id: 32330, hit: 0}
-    total_item_hit: 72
-
   tier_hands_and_head:
-    tier6_pieces_held: [hands, head]
+    tier6_pieces_held:
+    - chest
+    - hands
+    - head
+    - shoulder
     tier5_pieces_held: []
-    set_bonuses_held:
-      - "Skyshatter Regalia 2-piece: whenever you have an air totem, an earth totem, a fire totem, and a water totem active at the same time, you gain 15 mana per 5 sec, 35 spell critical strike rating, and up to 45 spell damage"
     hit_by_slot:
-      head: {item: "Skyshatter Headguard", id: 31014, hit: 0}
-      neck: {item: "The Sun King's Talisman", id: 30015, hit: 0}
-      shoulder: {item: "Mantle of Nimble Thought", id: 32587, hit: 0}
-      back: {item: "Brute Cloak of the Ogre-Magi", id: 28797, hit: 0}
-      chest: {item: "Chestguard of Relentless Storms", id: 32592, hit: 0}
-      wrist: {item: "Bracers of Nimble Thought", id: 32586, hit: 0}
-      hands: {item: "Skyshatter Gauntlets", id: 31008, hit: 19}
-      waist: {item: "Flashfire Girdle", id: 32276, hit: 0}
-      legs: {item: "Leggings of Channeled Elements", id: 30916, hit: 18}
-      feet: {item: "Slippers of the Seacaller", id: 32239, hit: 0}
-      ring_1: {item: "Ring of Ancient Knowledge", id: 32527, hit: 0}
-      ring_2: {item: "Band of the Eternal Sage", id: 29305, hit: 0}
-      trinket_1: {item: "The Lightning Capacitor", id: 28785, hit: 0}
-      trinket_2: {item: "Icon of the Silver Crescent", id: 29370, hit: 0}
-      main_hand: {item: "The Maelstrom's Fury", id: 32237, hit: 0}
-      off_hand: {item: "Chronicle of Dark Secrets", id: 30872, hit: 17}
-      relic: {item: "Totem of Ancestral Guidance", id: 32330, hit: 0}
-    total_item_hit: 54
+      head:
+        item: Skyshatter Headguard
+        id: 31014
+        hit: 0
+      neck:
+        item: The Sun King's Talisman
+        id: 30015
+        hit: 0
+      shoulder:
+        item: Skyshatter Mantle
+        id: 31023
+        hit: 11
+      back:
+        item: Brute Cloak of the Ogre-Magi
+        id: 28797
+        hit: 0
+      chest:
+        item: Skyshatter Breastplate
+        id: 31017
+        hit: 17
+      wrist:
+        item: Mindstorm Wristbands
+        id: 29918
+        hit: 0
+      hands:
+        item: Skyshatter Gauntlets
+        id: 31008
+        hit: 19
+      waist:
+        item: Belt of Blasting
+        id: 30038
+        hit: 23
+      legs:
+        item: Leggings of Channeled Elements
+        id: 30916
+        hit: 18
+      feet:
+        item: Velvet Boots of the Guardian
+        id: 30067
+        hit: 0
+      ring_1:
+        item: Ring of Unrelenting Storms
+        id: 30667
+        hit: 0
+      ring_2:
+        item: Ring of Endless Coils
+        id: 30109
+        hit: 0
+      trinket_1:
+        item: The Lightning Capacitor
+        id: 28785
+        hit: 0
+      trinket_2:
+        item: Icon of the Silver Crescent
+        id: 29370
+        hit: 0
+      main_hand:
+        item: Merciless Gladiator's Spellblade
+        id: 32053
+        hit: 15
+      off_hand:
+        item: Fathomstone
+        id: 30049
+        hit: 0
+      relic:
+        item: Totem of the Void
+        id: 28248
+        hit: 0
+    total_item_hit: 103
+    rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
+      piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
+      2026-08-13'
+    set_pieces_held:
+      Skyshatter Regalia: 4
+notes_from_the_previous_construction:
+  READ_THIS_FIRST: 'THESE NOTES WERE WRITTEN FOR A TIER SET BUILT A DIFFERENT WAY, and are
+    kept because the reasoning in them outlives the set. Read nothing here as describing the
+    tier anchor as it now stands.
 
-notes:
-  world_boss_ruling_2026_08_09: >-
-    The guild lead ruled on 9 August 2026 that this guild does not run outdoor
-    world bosses, so no Doom Lord Kazzak or Doomwalker drop may appear at any
-    anchor. See data/judgments/capture-fidelity.yaml. Each replacement is the
-    highest-EPV item in that slot's section of this spec's own workbook tab
-    that is legal at the anchor. The blocklist is enforced at
-    tools/check_capture_availability.py WORLD_BOSS_LOOT, which names both loot
-    tables in full, because drops.csv covers the seven instanced zones only and
-    carries neither boss. That blindness is why these slots passed every check
-    until now.
-    Two slots moved. The entry main hand goes from Talon of the Tempest (30723,
-    Doomwalker, 9 spell hit) to Merciless Gladiator's Spellblade (32053,
-    Season 2 arena, 235.32, 15 spell hit). PvP WEAPONS are allowed at every
-    anchor and PvP armor is not. Merciless Gladiator's Gavel (32963) ties it
-    exactly on EPV and on hit, so either yields the same totals.
-    The back slot at both tier anchors goes to Brute Cloak of the Ogre-Magi
-    (28797, High King Maulgar, 51.74), which carries no hit either way.
-    Entry total_item_hit RISES from 46 to 52, because the replacement carries
-    more hit than the world-boss weapon did.
-    THIS SENTENCE USED TO END "the state does not change: this spec is short of
-    89 at entry before and after", and it was overtaken the same day. The target
-    is 51 rating, not 89, because Nature's Guidance was credited after this note
-    was written, and 52 clears it. This anchor is FULL. See hit.yaml
-    elemental_shaman.additional_talents. Kept rather than silently rewritten,
-    because the swap above did move the figure and the reason it no longer
-    decides anything is worth reading.
-  availability_corrections: >-
-    Entry ring_2: Band of Eternity (friendly) (29302) is a Scale of the
-    Sands reputation reward, and Scale of the Sands is the Mount Hyjal
-    faction, so it cannot be held before Phase 3 opens. Replaced with Ring
-    of Endless Coils (30109, Serpentshrine Cavern, Phase 2), the ladder's
-    next-ranked prephase Finger item after Ring of Unrelenting Storms, which
-    ring_1 already holds. Both items carry 0 hit, so total_item_hit is
-    unchanged.
-  downgraded_slots: >-
-    Both tier states start from the published Phase 3 full-clear list and
-    downgrade every slot the published list fills from a late Black Temple
-    boss (Illidan, Illidari Council, Mother Shahraz) or that carries no
-    non-late alternative. Head: the published Skyshatter Headguard (Archimonde)
-    is held only in tier_hands_and_head; tier_hands_only at first reverted to
-    the Entry head, Cyclone Faceguard, and was then corrected to Cataclysm
-    Headpiece — see notes.off_piece_corrections_2026_08_09. Shoulder: the published Skyshatter Mantle (Mother
-    Shahraz) is replaced by the crafted Mantle of Nimble Thought in both tier
-    states. Back: the published Cloak of the Illidari Council (Illidari
-    Council) is replaced, in both tier states, by Brute Cloak of the Ogre-Magi
-    from High King Maulgar. This sentence named Ancient Spellcloak of the
-    Highborne until 9 August 2026 and argued for it precisely BECAUSE it was an
-    outdoor world-boss drop with no raid-lockout gate; the ruling that day made
-    that the reason it is out. Chest: the published Skyshatter Breastplate
-    (Illidan) is replaced by Chestguard of Relentless Storms, a Mount Hyjal
-    trash drop, in both tier states; this also outranks holding the Entry
-    Cataclysm Chestpiece (Tier 5 token), so no Tier 5 chest is kept. Legs and
-    hands need no downgrade: Leggings of Channeled Elements drops from
-    Kaz'rogal (early Mount Hyjal) and Skyshatter Gauntlets from Azgalor (early
-    Mount Hyjal, the Tier 6 hands token), both reliably dead per the brief.
-    Because the legs upgrade already drops the second Cataclysm Regalia token,
-    no Tier 5 set bonus is held at either tier state; the one Tier 5 piece at
-    tier_hands_only is the corrected head (see
-    notes.off_piece_corrections_2026_08_09), which alone carries no bonus.
-    Ring 1 (Ring of Ancient Knowledge, Black Temple trash) and ring 2 (Band of
-    the Eternal Sage, a Tanaris reputation reward) needed no downgrade; neither
-    depends on a late boss. Off-hand: the published Antonidas's Aegis of Rapt
-    Concentration (Archimonde) is replaced by Chronicle of Dark Secrets, a
-    Rage Winterchill (early Mount Hyjal) drop, in both tier states, since it is
-    available earlier and carries more item hit (17 vs. 0) than the published
-    pick. Waist (Flashfire Girdle, Shade of Akama) and feet (Slippers of the
-    Seacaller, High Warlord Naj'entus) and the relic (Totem of Ancestral
-    Guidance, Teron Gorefiend) are all early Black Temple drops and needed no
-    downgrade, per the brief's ruling that Black Temple bosses before Mother
-    Shahraz are reliably dead by week four to six.
-  uncertain: >-
-    The published Phase 2 and Phase 3 guides both build around a two-hand
-    staff (The Nexus Key at Entry, Zhar'doom, Greatstaff of the Devourer at
-    full Phase 3 clear) with no off-hand item equipped alongside it, confirmed
-    by direct tooltip lookup on both items. That contradicts this task's stated
-    build (main hand plus a shield or off-hand item). This file therefore
-    substitutes the highest-EPV one-hand weapon available at each anchor from
-    data/research/epv-workbook/Ele.csv instead of the guides' own main-hand
-    pick: Talon of the Tempest at Entry, The Maelstrom's Fury at both tier
-    states. The published off-hand choices (Fathomstone at Entry,
-    Antonidas's Aegis of Rapt Concentration in the full Phase 3 clear) are kept
-    or substituted as noted above. Ring 2 at the tier anchor, Band of the
-    Eternal Sage, requires Sage's Covenant reputation; how much grind that
-    takes to reach by week four to six was not independently verified. The
-    Lightning Capacitor trinket and both totems (Totem of the Void, Totem of
-    Ancestral Guidance) carry no hit rating on their Wowhead tooltips, verified
-    directly rather than assumed. Per-item hit values were cross-checked
-    against data/research/epv-workbook/Ele.csv's stat columns and, for the
-    Skyshatter and Cataclysm tier pieces, against the item-set pages directly;
-    both sources agree everywhere checked. Item hit totals differ between the
-    two tier states (72 at tier_hands_only, 54 at tier_hands_and_head)
-    because the corrected hands_only head, Cataclysm Headpiece, carries 18
-    spell hit while the Skyshatter Headguard token carries 0: on this tab,
-    clearing Archimonde COSTS 18 item hit at the head slot. See
-    notes.off_piece_corrections_2026_08_09.
-  off_piece_corrections_2026_08_09: >-
-    ADDED 9 August 2026, resolving entries in
-    data/facts/sim-profiles/hit-capture-review/open-divergences.yaml.
-    HEAD, tier_hands_only only: Cyclone Faceguard (29035, Tier 4, 0 spell
-    hit) is replaced by Cataclysm Headpiece (30171, the Tier 5 head from
-    Lady Vashj, Phase 2, 18 spell hit, Ele.csv 136.91 against 116.01, and
-    still ahead at 130.79 on the tab's own If-Hit-Capped column). At this
-    anchor the Cyclone shoulder is already replaced by Mantle of Nimble
-    Thought, so no Cyclone 2-piece covers the hold, and the spec is 35
-    rating short of its spell hit cap, so the 18 hit is real, not surplus.
-    Total rises 54 to 72. The SAME item at ENTRY is deliberately NOT
-    swapped: there the capture wears Cyclone head plus Cyclone shoulder,
-    which is a held Tier 4 2-piece (now recorded in entry
-    set_bonuses_held) that the workbook's per-item score cannot see, and
-    breaking a held bonus on a score the bonus is invisible to would
-    substitute one uncited reading for another. The audit's claim that
-    "both heads carry 0 spell hit" was itself wrong: items.csv gives
-    Cataclysm Headpiece 18 spell hit, so the entry hold costs 18 hit on a
-    spec 43 short at entry — recorded as the figure the council reads
-    when pricing the Cyclone 2-piece. The trinket_2 divergence (Icon of
-    the Silver Crescent against Sextant of Unstable Currents, all three
-    anchors) was reviewed and left: neither trinket carries hit or a stat
-    the spec cannot use, so no mechanic separates them, and the 21.2
-    delta is proc valuation the two sources price differently; a sim or
-    the guide's stated trinket reasoning would settle it.
+    The tier set was rebuilt on 14 August 2026 from the entry set plus the tokens the spec''s
+    Phase 3 best-in-slot list actually wears, per the rule in tools/rebuild_tier_sets.py.
+    Every construction note below predates that and several are now false against the file
+    they sit in: one said a shoulder token ''is not available, so Voidheart Mantle is carried
+    forward'' beside a file holding that token.
+
+    THE ENTRY ANCHOR DID NOT CHANGE, so a note about entry gear, an availability correction
+    or a random-suffix ruling still holds. A note about the TIER anchor does not. The anchor''s
+    own `rebuilt` field is the authority on how it was made.'
+  world_boss_ruling_2026_08_09: 'The guild lead ruled on 9 August 2026 that this guild does
+    not run outdoor world bosses, so no Doom Lord Kazzak or Doomwalker drop may appear at
+    any anchor. See data/judgments/capture-fidelity.yaml. Each replacement is the highest-EPV
+    item in that slot''s section of this spec''s own workbook tab that is legal at the anchor.
+    The blocklist is enforced at tools/check_capture_availability.py WORLD_BOSS_LOOT, which
+    names both loot tables in full, because drops.csv covers the seven instanced zones only
+    and carries neither boss. That blindness is why these slots passed every check until now.
+    Two slots moved. The entry main hand goes from Talon of the Tempest (30723, Doomwalker,
+    9 spell hit) to Merciless Gladiator''s Spellblade (32053, Season 2 arena, 235.32, 15 spell
+    hit). PvP WEAPONS are allowed at every anchor and PvP armor is not. Merciless Gladiator''s
+    Gavel (32963) ties it exactly on EPV and on hit, so either yields the same totals. The
+    back slot at both tier anchors goes to Brute Cloak of the Ogre-Magi (28797, High King
+    Maulgar, 51.74), which carries no hit either way. Entry total_item_hit RISES from 46 to
+    52, because the replacement carries more hit than the world-boss weapon did. THIS SENTENCE
+    USED TO END "the state does not change: this spec is short of 89 at entry before and after",
+    and it was overtaken the same day. The target is 51 rating, not 89, because Nature''s
+    Guidance was credited after this note was written, and 52 clears it. This anchor is FULL.
+    See hit.yaml elemental_shaman.additional_talents. Kept rather than silently rewritten,
+    because the swap above did move the figure and the reason it no longer decides anything
+    is worth reading.'
+  availability_corrections: 'Entry ring_2: Band of Eternity (friendly) (29302) is a Scale
+    of the Sands reputation reward, and Scale of the Sands is the Mount Hyjal faction, so
+    it cannot be held before Phase 3 opens. Replaced with Ring of Endless Coils (30109, Serpentshrine
+    Cavern, Phase 2), the ladder''s next-ranked prephase Finger item after Ring of Unrelenting
+    Storms, which ring_1 already holds. Both items carry 0 hit, so total_item_hit is unchanged.'
+  downgraded_slots: 'Both tier states start from the published Phase 3 full-clear list and
+    downgrade every slot the published list fills from a late Black Temple boss (Illidan,
+    Illidari Council, Mother Shahraz) or that carries no non-late alternative. Head: the published
+    Skyshatter Headguard (Archimonde) is held only in tier_hands_and_head; tier_hands_only
+    at first reverted to the Entry head, Cyclone Faceguard, and was then corrected to Cataclysm
+    Headpiece — see notes.off_piece_corrections_2026_08_09. Shoulder: the published Skyshatter
+    Mantle (Mother Shahraz) is replaced by the crafted Mantle of Nimble Thought in both tier
+    states. Back: the published Cloak of the Illidari Council (Illidari Council) is replaced,
+    in both tier states, by Brute Cloak of the Ogre-Magi from High King Maulgar. This sentence
+    named Ancient Spellcloak of the Highborne until 9 August 2026 and argued for it precisely
+    BECAUSE it was an outdoor world-boss drop with no raid-lockout gate; the ruling that day
+    made that the reason it is out. Chest: the published Skyshatter Breastplate (Illidan)
+    is replaced by Chestguard of Relentless Storms, a Mount Hyjal trash drop, in both tier
+    states; this also outranks holding the Entry Cataclysm Chestpiece (Tier 5 token), so no
+    Tier 5 chest is kept. Legs and hands need no downgrade: Leggings of Channeled Elements
+    drops from Kaz''rogal (early Mount Hyjal) and Skyshatter Gauntlets from Azgalor (early
+    Mount Hyjal, the Tier 6 hands token), both reliably dead per the brief. Because the legs
+    upgrade already drops the second Cataclysm Regalia token, no Tier 5 set bonus is held
+    at either tier state; the one Tier 5 piece at tier_hands_only is the corrected head (see
+    notes.off_piece_corrections_2026_08_09), which alone carries no bonus. Ring 1 (Ring of
+    Ancient Knowledge, Black Temple trash) and ring 2 (Band of the Eternal Sage, a Tanaris
+    reputation reward) needed no downgrade; neither depends on a late boss. Off-hand: the
+    published Antonidas''s Aegis of Rapt Concentration (Archimonde) is replaced by Chronicle
+    of Dark Secrets, a Rage Winterchill (early Mount Hyjal) drop, in both tier states, since
+    it is available earlier and carries more item hit (17 vs. 0) than the published pick.
+    Waist (Flashfire Girdle, Shade of Akama) and feet (Slippers of the Seacaller, High Warlord
+    Naj''entus) and the relic (Totem of Ancestral Guidance, Teron Gorefiend) are all early
+    Black Temple drops and needed no downgrade, per the brief''s ruling that Black Temple
+    bosses before Mother Shahraz are reliably dead by week four to six.'
+  uncertain: 'The published Phase 2 and Phase 3 guides both build around a two-hand staff
+    (The Nexus Key at Entry, Zhar''doom, Greatstaff of the Devourer at full Phase 3 clear)
+    with no off-hand item equipped alongside it, confirmed by direct tooltip lookup on both
+    items. That contradicts this task''s stated build (main hand plus a shield or off-hand
+    item). This file therefore substitutes the highest-EPV one-hand weapon available at each
+    anchor from data/research/epv-workbook/Ele.csv instead of the guides'' own main-hand pick:
+    Talon of the Tempest at Entry, The Maelstrom''s Fury at both tier states. The published
+    off-hand choices (Fathomstone at Entry, Antonidas''s Aegis of Rapt Concentration in the
+    full Phase 3 clear) are kept or substituted as noted above. Ring 2 at the tier anchor,
+    Band of the Eternal Sage, requires Sage''s Covenant reputation; how much grind that takes
+    to reach by week four to six was not independently verified. The Lightning Capacitor trinket
+    and both totems (Totem of the Void, Totem of Ancestral Guidance) carry no hit rating on
+    their Wowhead tooltips, verified directly rather than assumed. Per-item hit values were
+    cross-checked against data/research/epv-workbook/Ele.csv''s stat columns and, for the
+    Skyshatter and Cataclysm tier pieces, against the item-set pages directly; both sources
+    agree everywhere checked. Item hit totals differ between the two tier states (72 at tier_hands_only,
+    54 at tier_hands_and_head) because the corrected hands_only head, Cataclysm Headpiece,
+    carries 18 spell hit while the Skyshatter Headguard token carries 0: on this tab, clearing
+    Archimonde COSTS 18 item hit at the head slot. See notes.off_piece_corrections_2026_08_09.'
+  off_piece_corrections_2026_08_09: 'ADDED 9 August 2026, resolving entries in data/facts/sim-profiles/hit-capture-review/open-divergences.yaml.
+    HEAD, tier_hands_only only: Cyclone Faceguard (29035, Tier 4, 0 spell hit) is replaced
+    by Cataclysm Headpiece (30171, the Tier 5 head from Lady Vashj, Phase 2, 18 spell hit,
+    Ele.csv 136.91 against 116.01, and still ahead at 130.79 on the tab''s own If-Hit-Capped
+    column). At this anchor the Cyclone shoulder is already replaced by Mantle of Nimble Thought,
+    so no Cyclone 2-piece covers the hold, and the spec is 35 rating short of its spell hit
+    cap, so the 18 hit is real, not surplus. Total rises 54 to 72. The SAME item at ENTRY
+    is deliberately NOT swapped: there the capture wears Cyclone head plus Cyclone shoulder,
+    which is a held Tier 4 2-piece (now recorded in entry set_bonuses_held) that the workbook''s
+    per-item score cannot see, and breaking a held bonus on a score the bonus is invisible
+    to would substitute one uncited reading for another. The audit''s claim that "both heads
+    carry 0 spell hit" was itself wrong: items.csv gives Cataclysm Headpiece 18 spell hit,
+    so the entry hold costs 18 hit on a spec 43 short at entry — recorded as the figure the
+    council reads when pricing the Cyclone 2-piece. The trinket_2 divergence (Icon of the
+    Silver Crescent against Sextant of Unstable Currents, all three anchors) was reviewed
+    and left: neither trinket carries hit or a stat the spec cannot use, so no mechanic separates
+    them, and the 21.2 delta is proc valuation the two sources price differently; a sim or
+    the guide''s stated trinket reasoning would settle it.'
