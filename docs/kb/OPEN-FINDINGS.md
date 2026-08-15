@@ -262,6 +262,48 @@ was surprising, not wrong, and I diagnosed it on its appearance rather than on
 evidence.
 
 
+## The third sim profile, queued 15 August 2026
+
+**A full Phase 3 best-in-slot capture is running, and three steps follow it.**
+Written down because the session that started it is out of context.
+
+WHY. The sim has two profiles per spec. ENTRY is a Phase 2 best-in-slot set.
+TIER is that same set with only the five token slots swapped, so at the tier
+anchor the other twelve slots still hold Phase 2 gear. Every spec therefore sims
+with IDENTICAL weapons and trinkets at both anchors, six of them still swinging
+Season 2 arena weapons, and the Combat Rogue never holding a Warglaive. The
+current figures answer "what do the tier tokens alone do to a Phase 2 raider",
+which is a real question but a narrow one.
+
+A third profile, BIS, answers what a Phase 3 geared spec actually does.
+
+STEP 1, RUNNING. Four sequential agents capture the full seventeen-slot Phase 3
+list for the thirteen simmable specs into `data/research/wowhead-phase3-bis-full/`.
+Sequential because the pages are client-rendered and the agents share one
+browser. Tanks and the Feral Cat are excluded: tanks by the ruling of 14 August,
+the Cat because no rotation exists for it in this build.
+
+STEP 2, ONE ARBITER PER SPEC. Each verifies the capture it did not produce:
+every id resolves in items.csv and the name matches, the page was Burning
+Crusade and not a later expansion, every slot is present or recorded as missing
+with a reason, and no slot holds an item the spec cannot equip. The known trap
+in this dataset is `Bulwark of the Ancient Kings` 28485 against `Bulwark of
+Kings` 28484, one digit and one word apart.
+
+STEP 3, ENCODE THE SETS AS DOCUMENTATION, so the BiS lists are readable in the
+compendium rather than only machine input.
+
+STEP 4, EXPORT WOWSIMS PROFILES for the new anchor and sim it beside entry and
+tier. `tools/export_sim_profiles.py` already writes the wowsims equipment shape;
+it reads captures under `data/facts/sim-profiles/hit-capture/`, so a BiS anchor
+has to reach it in that form or the exporter needs a second source.
+
+WHAT THE THIRD PROFILE SETTLES. The Arms Warrior reads minus 22.2 DPS and the
+Fury Warrior minus 28.4 going from entry to tier. Today that means "the tier
+armor alone is a small net downgrade for them", NOT "warriors are weaker in
+Phase 3", and the two are being confused. A BiS run separates them.
+
+
 ## Swept and found clean
 
 Token to slot to boss for all 45 tokens; set bonus verbatim text across files; the conversion constants; the 490, 415, 332, 284 and 102.4 tank thresholds; expertise caps; the generated table counts against `PROVENANCE.md`; `docs/bosses.md` against `drops.csv`; every EPV figure in `docs/conventions.md` against the workbook; `docs/kb/DOMAIN.md`; `enchants-gems.yaml` era claims; all item id and name pairs in the captures; the schedule dates; and `just check` passes.
