@@ -693,21 +693,47 @@ def against(args, strings: dict, iterations: int) -> int:
 
 
 def compare(args, strings: dict, iterations: int) -> int:
-    """One profile, one slot, several candidates, against the same baseline.
+    """One profile, one or more slots, several candidates, against a baseline.
 
     THE BASELINE IS RUN FIRST AND WITH THE SAME SEED. Two simulations of the
     same gear with different seeds differ by a few DPS, and an item worth a few
     DPS is exactly the kind this is asked about, so the seed is held and the
     difference is attributable to the item alone.
+
+    SEVERAL SLOTS AT ONCE, because some items cannot be valued alone. A trinket
+    is the case that forced it: Dragonspine Trophy is worth one thing beside an
+    attack power trinket and another beside an armor penetration one, so varying
+    the second while holding the first fixed answers a question nobody asked.
+    A two-handed weapon is the other case, since taking one empties the off hand.
+
+    `--slot a,b --swap 1,2 --swap 3,4` fills a with 1 and b with 2, then a with
+    3 and b with 4. THE DOCSTRING PROMISED THIS FOR DAYS AND THE PARSER DID NOT
+    DELIVER IT: `--slot` was single-valued, so `--slot main_hand --slot off_hand`
+    silently kept only the last one and the run measured something other than
+    what was asked. A single slot and a single id still work unchanged.
     """
-    for name, value in (("--profile", args.profile), ("--slot", args.slot)):
-        if not value:
-            print(f"error: {name} is required when swapping", file=sys.stderr)
-            return 1
-    if args.slot not in SLOT_ORDER:
-        print(f"error: {args.slot!r} is not a slot. One of: "
-              f"{', '.join(SLOT_ORDER)}", file=sys.stderr)
+    if not args.profile:
+        print("error: --profile is required when swapping", file=sys.stderr)
         return 1
+    if not args.slot:
+        print("error: --slot is required when swapping", file=sys.stderr)
+        return 1
+    slots = [s.strip() for s in args.slot.split(",") if s.strip()]
+    for slot in slots:
+        if slot not in SLOT_ORDER:
+            print(f"error: {slot!r} is not a slot. One of: "
+                  f"{', '.join(SLOT_ORDER)}", file=sys.stderr)
+            return 1
+    candidates = []
+    for raw in args.swap:
+        ids = [int(x) for x in str(raw).split(",")]
+        if len(ids) != len(slots):
+            print(f"error: --swap {raw!r} names {len(ids)} item(s) for "
+                  f"{len(slots)} slot(s). Every --swap has to fill every slot "
+                  "named in --slot, so that each run is a complete "
+                  "configuration rather than a partial one.", file=sys.stderr)
+            return 1
+        candidates.append(ids)
 
     path = args.gear / f"{args.profile}.gear.json"
     if not path.is_file():
@@ -722,8 +748,11 @@ def compare(args, strings: dict, iterations: int) -> int:
     gear = json.loads(path.read_text())
 
     names = item_names()
-    index = SLOT_ORDER.index(args.slot)
-    worn = (gear["items"][index] or {}).get("id")
+    worn = [(gear["items"][SLOT_ORDER.index(s)] or {}).get("id") for s in slots]
+
+    def label_of(ids):
+        return " + ".join(
+            names.get(i, "empty" if not i else str(i)) for i in ids)
 
     buffs = yaml.safe_load(BUFFS.read_text())
     roster = yaml.safe_load(ROSTER.read_text())
@@ -737,22 +766,24 @@ def compare(args, strings: dict, iterations: int) -> int:
     if error:
         print(f"error: the baseline failed: {error}", file=sys.stderr)
         return 1
-    print(f"{args.profile}, varying {args.slot}, {iterations} iterations\n")
-    print(f"  {'baseline':44s} {base:9.1f}        "
-          f"{names.get(worn, worn or 'empty')}")
+    print(f"{args.profile}, varying {', '.join(slots)}, "
+          f"{iterations} iterations\n")
+    print(f"  {'baseline':52s} {base:9.1f}        {label_of(worn)}")
 
     rows = []
-    for item_id in args.swap:
+    for ids in candidates:
+        candidate = gear
+        for slot, item_id in zip(slots, ids):
+            candidate = swap_into(candidate, slot, item_id)
         dps, _spread, error = run(args.cli, build_request(
-            spec, swap_into(gear, args.slot, item_id), talents, iterations,
-            args.seed, buffs, party_of, anchor))
+            spec, candidate, talents, iterations, args.seed, buffs, party_of,
+            anchor))
         if error:
-            print(f"  {item_id:<44} FAILED  {error}", file=sys.stderr)
+            print(f"  {label_of(ids):<52} FAILED  {error}", file=sys.stderr)
             continue
-        rows.append((item_id, dps, dps - base))
-    for item_id, dps, delta in sorted(rows, key=lambda r: -r[1]):
-        label = names.get(item_id, "empty" if not item_id else str(item_id))
-        print(f"  {label[:44]:44s} {dps:9.1f} {delta:+8.1f}")
+        rows.append((ids, dps, dps - base))
+    for ids, dps, delta in sorted(rows, key=lambda r: -r[1]):
+        print(f"  {label_of(ids)[:52]:52s} {dps:9.1f} {delta:+8.1f}")
     return 0
 
 
@@ -771,11 +802,12 @@ def main() -> int:
     ap.add_argument("--seed", type=int, default=1)
     ap.add_argument("--profile", help="one profile stem, such as "
                                       "combat-rogue.tier-hands-only")
-    ap.add_argument("--slot", help=f"which slot to vary. One of: "
-                                   f"{', '.join(SLOT_ORDER)}")
-    ap.add_argument("--swap", action="append", type=int, default=[],
-                    help="an item id to try in that slot. Repeatable. 0 empties "
-                         "the slot, which is what a two-hander needs")
+    ap.add_argument("--slot", help=f"which slot to vary, or several separated "
+                                   f"by commas. One of: {', '.join(SLOT_ORDER)}")
+    ap.add_argument("--swap", action="append", default=[],
+                    help="an item id to try, or one id per slot separated by "
+                         "commas, matching --slot in order. Repeatable. 0 "
+                         "empties a slot, which is what a two-hander needs")
     ap.add_argument("--against", help="a second profile stem. Prints which "
                                       "slot explains the gap between the two, "
                                       "carrying each slot's enchant and gems")

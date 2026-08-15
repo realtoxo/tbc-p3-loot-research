@@ -50,9 +50,9 @@ results:
 - profile: arms-warrior.bis
   spec: arms_warrior
   anchor: bis
-  dps: 1857.3
-  standard_error: 1.04
-  stdev: 104.1
+  dps: 1920.3
+  standard_error: 1.07
+  stdev: 106.6
 - profile: arms-warrior.entry
   spec: arms_warrior
   anchor: entry
@@ -194,9 +194,9 @@ results:
 - profile: fury-warrior.bis
   spec: fury_warrior
   anchor: bis
-  dps: 2195.7
-  standard_error: 0.95
-  stdev: 95.5
+  dps: 2287.6
+  standard_error: 0.98
+  stdev: 97.9
 - profile: fury-warrior.entry
   spec: fury_warrior
   anchor: entry

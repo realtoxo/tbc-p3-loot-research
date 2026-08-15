@@ -78,15 +78,9 @@ anchors:
         hit: 0
         capture_note: first of three tied 'Best' rows in the Trinkets table
       trinket_2:
-        item: Badge of the Swarmguard
-        id: 21670
+        item: Bloodlust Brooch
+        id: 29383
         hit: 0
-        outside_items_csv: Badge of the Swarmguard is not in data/facts/items.csv,
-          which is scoped to Phase 3 and pre-phase gear. Its hit is read from the
-          simulator database instead. It simulates normally.
-        capture_note: second of three tied 'Best' rows in the Trinkets table; id
-          21670 is ABSENT from data/facts/items.csv, could not be cross-checked
-          against the fact table
       main_hand:
         item: Warglaive of Azzinoth
         id: 32837
@@ -126,6 +120,9 @@ anchors:
       gap_rating: 0
       gem_sockets: 9
       gems_needed: 0
+routing_applied:
+- 'trinket_2: Bloodlust Brooch replaces Badge of the Swarmguard. Routed by the guild
+  lead, 2026-08-15: Both warriors take Bloodlust Brooch in the second trinket slot,
+  replacing Badge of the Swarmguard. Dragonspine Trophy stays in the first slot.'
 outside_items_csv:
-- 'trinket_2: 21670 Badge of the Swarmguard'
 - 'ranged: 30724 Barrel-Blade Longrifle'

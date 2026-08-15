@@ -2,7 +2,7 @@
 title: Arms Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1857.3 ± 1.04 damage per second.
+  The whole request behind one figure: 1920.3 ± 1.07 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/arms-warrior.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **1857.3**                                                                                     |
-| Standard error on the mean | ± 1.04                                                                                         |
-| Spread across iterations   | 104.1                                                                                          |
+| Damage per second          | **1920.3**                                                                                     |
+| Standard error on the mean | ± 1.07                                                                                         |
+| Spread across iterations   | 106.6                                                                                          |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}
@@ -41,6 +41,7 @@ disagree in these slots and only these.
 
 - main_hand: Cataclysm's Edge replaces Warglaive of Azzinoth. Routed by the guild lead, 15 August 2026: the Arms Warrior will never receive the Warglaives, and takes Cataclysm's Edge. This changes the BUILD from dual wield to a two-hander, which is not a stat swap.
 - off_hand: EMPTY replaces Warglaive of Azzinoth. Cataclysm's Edge is two-handed, so the off hand the capture lists is displaced rather than kept.
+- trinket_2: Bloodlust Brooch replaces Badge of the Swarmguard. Routed by the guild lead, 2026-08-15: Both warriors take Bloodlust Brooch in the second trinket slot, replacing Badge of the Swarmguard. Dragonspine Trophy stays in the first slot.
 
 ## The set
 
@@ -63,7 +64,7 @@ the off hand.
 | Ring 1    | `Stormrage Signet Ring`          |                                     |                                                                  |
 | Ring 2    | `Unstoppable Aggressor's Ring`   |                                     |                                                                  |
 | Trinket 1 | `Dragonspine Trophy`             |                                     |                                                                  |
-| Trinket 2 | `Badge of the Swarmguard`        |                                     |                                                                  |
+| Trinket 2 | `Bloodlust Brooch`               |                                     |                                                                  |
 | Main hand | `Cataclysm's Edge`               | `Enchant Weapon - Mongoose`         |                                                                  |
 | Off hand  | *empty*                          |                                     |                                                                  |
 | Ranged    | `Barrel-Blade Longrifle`         | `Khorium Scope`                     |                                                                  |

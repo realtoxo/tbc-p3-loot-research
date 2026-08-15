@@ -2,7 +2,7 @@
 title: Fury Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2195.7 ± 0.95 damage per second.
+  The whole request behind one figure: 2287.6 ± 0.98 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/fury-warrior.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **2195.7**                                                                                     |
-| Standard error on the mean | ± 0.95                                                                                         |
-| Spread across iterations   | 95.5                                                                                           |
+| Damage per second          | **2287.6**                                                                                     |
+| Standard error on the mean | ± 0.98                                                                                         |
+| Spread across iterations   | 97.9                                                                                           |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}
@@ -30,6 +30,16 @@ Back to [Simulated Throughput](../sims.md).
 divided by the square root of 10000. It covers about 68 percent,
 not 95.
 :::
+
+## Where this set differs from the published page
+
+The Phase 3 list was captured from Wowhead and is never edited. A published list
+ranks a weapon for one spec in isolation, and a raid has one of each, so the
+guild lead routed the contested weapons on 15 August 2026. Those rulings are
+applied when this profile is built, which is why the capture and the set below
+disagree in these slots and only these.
+
+- trinket_2: Bloodlust Brooch replaces Badge of the Swarmguard. Routed by the guild lead, 2026-08-15: Both warriors take Bloodlust Brooch in the second trinket slot, replacing Badge of the Swarmguard. Dragonspine Trophy stays in the first slot.
 
 ## The set
 
@@ -52,7 +62,7 @@ the off hand.
 | Ring 1    | `Stormrage Signet Ring`          |                                     |                                                                  |
 | Ring 2    | `Unstoppable Aggressor's Ring`   |                                     |                                                                  |
 | Trinket 1 | `Dragonspine Trophy`             |                                     |                                                                  |
-| Trinket 2 | `Badge of the Swarmguard`        |                                     |                                                                  |
+| Trinket 2 | `Bloodlust Brooch`               |                                     |                                                                  |
 | Main hand | `Warglaive of Azzinoth`          | `Enchant Weapon - Mongoose`         |                                                                  |
 | Off hand  | `Warglaive of Azzinoth`          | `Enchant Weapon - Mongoose`         |                                                                  |
 | Ranged    | `Barrel-Blade Longrifle`         | `Khorium Scope`                     |                                                                  |

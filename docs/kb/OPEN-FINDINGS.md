@@ -570,3 +570,50 @@ Combat Rogue carries 195 item hit against a target of 64. Correcting it would
 mean rebuilding the sets to our own rule, at which point the figures stop
 describing the lists players actually follow. **Guild lead needed** if the
 council wants sets built to our rule instead of captured.
+
+## Ahn'Qiraj is not content this guild runs, found 15 August 2026
+
+**Both warriors were simulated wearing a trinket they cannot obtain**, and the
+guild lead caught it by reading the trinket spread rather than any check
+catching it. Badge of the Swarmguard, item 21670, drops in Ahn'Qiraj 40, and the
+Wowhead Phase 3 pages for Arms and Fury both rank it.
+
+It was the **only item in any profile that predates The Burning Crusade**, which
+is why nothing noticed: every availability check this project has is scoped to
+Phase 3 against later content, and none of them looks backwards.
+
+**Losing it gained the raid damage**, which is the opposite of what an
+unreachable best-in-slot item usually means. Badge of the Swarmguard measured
+LAST of the seven trinkets either warrior could put in that slot. The guild lead
+routed both warriors to Bloodlust Brooch, worth +63.0 on Arms and +91.9 on Fury,
+and it is a Badge of Justice purchase, so it contests nothing and no other spec
+loses anything.
+
+`data/judgments/trinket-routing.yaml` records the ruling and the barred content,
+`tools/build_bis_capture.py` applies it, and `tools/check_sim_profiles.py` fails
+the build on any profile wearing a barred item, independently of whether the
+builder applied the routing.
+
+### The challenge that produced the pair matrix, and it was right to make it
+
+The guild lead doubted that Bloodlust Brooch could beat Madness of the Betrayer
+beside Dragonspine Trophy, and asked whether Madness is better than Dragonspine
+in slot. The first measurement had held trinket 1 fixed and varied only trinket
+2, which cannot answer that.
+
+Two things came out of it. **Dragonspine Trophy is the anchor**: every one of the
+top four pairs on both warriors holds it, and every pair without it measures
+lower, so replacing it with Madness beside the same partner costs Arms 46.9 and
+Fury 57.1. **Madness underperforms on a warrior** because its proc is 300 armor
+penetration and the Tier 6 armor both warriors wear already pays in armor
+penetration, so it stacks into a stat with diminishing returns. It routes
+cleanly to the Beast Mastery Hunter, the Enhancement Shaman and the Survival
+Hunter.
+
+**A defect surfaced while answering it.** `tools/run_sims.py` documented
+`--slot a --slot b` for varying two slots together and did not implement it:
+`--slot` was single-valued, so the parser kept only the last one and the run
+measured something other than what was asked. It now takes
+`--slot trinket_1,trinket_2 --swap 28830,29383`, and a trinket question should
+be asked that way, because a trinket is worth one thing beside an attack power
+partner and another beside an armor penetration one.

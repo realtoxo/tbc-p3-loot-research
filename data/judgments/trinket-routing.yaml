@@ -1,0 +1,88 @@
+meta:
+  what: Trinket routing the guild lead settled for the best-in-slot sim profiles, and
+    the content this guild does not run, which is what forced it.
+  why_here: A published best-in-slot list ranks a trinket for a spec in isolation and assumes
+    every raid in the game is open. This guild does not run Ahn'Qiraj, so an item from
+    there is not a stronger pick, it is not a pick at all. That is a decision about how
+    this guild raids, so it lives in data/judgments/ and never in data/facts/.
+  ruled: '2026-08-15'
+  by: the guild lead
+  applies_to: data/research/wowhead-phase3-bis-full/, which is a capture and is NOT edited.
+    The routing is applied when the BiS sim profile is built from it, so the capture keeps
+    saying what the page said and the profile says what this raid will do. Same rule as
+    data/judgments/weapon-routing.yaml.
+
+unavailable_content:
+- content: Ahn'Qiraj
+  verbatim: We dont have badge of the swamrguards as our guild wont run aq
+  ruling: This guild does not run Ahn'Qiraj, so no item that drops there may appear in
+    a sim profile.
+  barred_items:
+  - item: Badge of the Swarmguard
+    id: 21670
+    where: Ahn'Qiraj 40, the Twin Emperors
+    was_worn_by: Both warriors, at the best-in-slot anchor only, because the Wowhead Phase
+      3 pages for Arms and Fury both rank it.
+  how_it_was_missed: It is the only item in any profile that predates The Burning Crusade,
+    and no check looked. tools/check_sim_profiles.py now bars every id listed here, so a
+    future capture that ranks one fails the build rather than quietly simulating a trinket
+    nobody can obtain.
+  it_cost_the_raid_nothing: 'Measured on 15 August 2026 before the replacement was chosen.
+    Badge of the Swarmguard was the WORST of the seven trinkets either warrior could put
+    in that slot: every alternative measured higher, so losing Ahn''Qiraj gained the Arms
+    Warrior 63.0 DPS and the Fury Warrior 91.9. That is the opposite of what an unreachable
+    best-in-slot item usually means and it is recorded so nobody re-opens the question.'
+
+rulings:
+- slot: trinket_2
+  item: Bloodlust Brooch
+  ids:
+  - 29383
+  specs:
+  - arms_warrior
+  - fury_warrior
+  ruling: Both warriors take Bloodlust Brooch in the second trinket slot, replacing Badge
+    of the Swarmguard. Dragonspine Trophy stays in the first slot.
+  replaces:
+    item: Badge of the Swarmguard
+    id: 21670
+  measured:
+    when: '2026-08-15'
+    how: 10000 iterations, seed 1, both trinket slots varied TOGETHER rather than one at
+      a time, because a trinket is worth one thing beside an attack power partner and another
+      beside an armor penetration one.
+    reproduce: python3 tools/run_sims.py --profile arms-warrior.bis --iterations 10000 --slot
+      trinket_1,trinket_2 --swap 28830,29383 --swap 28830,32505 --swap 32505,29383
+    arms_warrior:
+      dragonspine_plus_bloodlust: 1920.3
+      dragonspine_plus_tsunami: 1909.9
+      dragonspine_plus_madness: 1894.0
+      madness_plus_bloodlust: 1873.4
+      previous_dragonspine_plus_badge: 1857.3
+    fury_warrior:
+      dragonspine_plus_bloodlust: 2287.6
+      dragonspine_plus_tsunami: 2284.8
+      dragonspine_plus_madness: 2256.2
+      madness_plus_bloodlust: 2230.5
+      previous_dragonspine_plus_badge: 2195.7
+  why_it_costs_the_council_nothing: Bloodlust Brooch is a Badge of Justice purchase, so
+    both warriors can hold one, it contests no drop and no other spec loses anything. It
+    is the rare routing decision with no other side.
+  dragonspine_trophy_is_the_anchor_and_this_was_challenged: 'The guild lead doubted that
+    Bloodlust Brooch could beat Madness of the Betrayer beside Dragonspine Trophy, and asked
+    whether Madness is better than Dragonspine in slot. It is not, on either warrior, and
+    the pair matrix is what settles it: every one of the top four pairs holds Dragonspine
+    Trophy and every pair without it measures lower. Dropping Dragonspine for Madness beside
+    the same partner costs the Arms Warrior 46.9 DPS and the Fury Warrior 57.1.'
+  why_madness_underperforms_here: Its proc is 300 armor penetration, and the Tier 6 armor
+    both warriors wear already pays in armor penetration, which data/facts/sim-results.yaml
+    records as the stat shape of the Onslaught set. More of the same stat returns less.
+    Bloodlust Brooch pays in attack power instead, 72 passive and 278 for 20 seconds on
+    a 2 minute cooldown, and BOTH warrior action priority lists activate it, which was checked
+    rather than assumed.
+  what_it_declines: Madness of the Betrayer 32505 is not routed here, and it is wanted by
+    the Beast Mastery Hunter, the Enhancement Shaman and the Survival Hunter, whose own
+    lists rank it. Tsunami Talisman 30627 stays available; it is 2.8 DPS behind on the Fury
+    Warrior, which is inside the run-to-run spread, and 10.4 behind on the Arms Warrior.
+
+what_still_needs_a_ruling: []

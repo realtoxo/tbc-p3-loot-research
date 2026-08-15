@@ -39,6 +39,7 @@ import yaml
 GEAR = Path("data/sim/gear")
 ITEMS = Path("data/facts/items.csv")
 ROUTING = Path("data/judgments/weapon-routing.yaml")
+TRINKETS = Path("data/judgments/trinket-routing.yaml")
 BIS_CAPTURES = Path("data/facts/sim-profiles/bis-capture")
 DB = Path(os.path.expanduser(os.environ.get(
     "WOWSIMS_TBC",
@@ -59,6 +60,29 @@ HAND_NAME = {MAIN_HAND: "Main Hand", ONE_HAND: "One Hand",
              OFF_HAND: "Off Hand", TWO_HAND: "Two Hand"}
 
 
+def every_yaml_parses() -> list[str]:
+    """Every YAML file under data/ loads, because one of them did not.
+
+    ON 15 AUGUST 2026 data/facts/sim-results.yaml WAS COMMITTED BROKEN. A plain
+    multi-line scalar containing ": " is not valid YAML, the file had one, and it
+    survived a full `just check` because no tool in this repository reads that
+    particular file. Every fact table is only as good as something loading it,
+    and a table nothing loads is a table nothing validates.
+
+    THIS IS DELIBERATELY A PARSE CHECK AND NOTHING MORE. It asserts no schema,
+    because a schema per file is a second copy of what each file already says
+    about itself. It asserts that the bytes are YAML.
+    """
+    problems = []
+    for path in sorted(Path("data").rglob("*.yaml")):
+        try:
+            yaml.safe_load(path.read_text())
+        except Exception as exc:  # noqa: BLE001 - the message is the whole point
+            first = str(exc).replace("\n", " ")[:200]
+            problems.append(f"{path}: is not valid YAML. {first}")
+    return problems
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--gear", type=Path, default=GEAR)
@@ -72,7 +96,7 @@ def main() -> int:
     db_items = {i["id"]: i for i in db["items"]}
     items_csv = {int(r["item_id"]): r for r in csv.DictReader(ITEMS.open())}
 
-    failures: list[str] = []
+    failures: list[str] = every_yaml_parses()
     reports: list[str] = []
 
     # ---------------------------------------------------------------- routing
@@ -96,6 +120,31 @@ def main() -> int:
                     f"which is {actual!r}. A ruling names a weapon and the id "
                     "beside it has to be that weapon.")
 
+    # EVERY TRINKET RULING RESOLVES TOO, by the same rule, and the barred list
+    # is read here so the check does not depend on the builder having applied it.
+    trinkets = yaml.safe_load(TRINKETS.read_text())
+    barred = {}
+    for block in trinkets.get("unavailable_content") or []:
+        for item in block.get("barred_items") or []:
+            barred[int(item["id"])] = (block["content"], item["item"])
+    for ruling in trinkets.get("rulings") or []:
+        claimed = (ruling.get("item") or "").strip()
+        for item_id in ruling.get("ids") or []:
+            actual = (items_csv.get(int(item_id)) or {}).get("name") \
+                or (db_items.get(int(item_id)) or {}).get("name")
+            if actual is None or actual.strip().lower() != claimed.lower():
+                failures.append(
+                    f"{TRINKETS}: ruling {claimed!r} routes item {item_id}, "
+                    f"which is {actual!r}. A ruling names an item and the id "
+                    "beside it has to be that item.")
+    for item_id, (content, name) in barred.items():
+        actual = (items_csv.get(item_id) or {}).get("name") \
+            or (db_items.get(item_id) or {}).get("name")
+        if actual is None or actual.strip().lower() != name.strip().lower():
+            failures.append(
+                f"{TRINKETS}: {content} bars item {item_id} as {name!r}, which "
+                f"resolves to {actual!r}. A bar on the wrong id bars nothing.")
+
     # ------------------------------------------------------------------ gear
     for path in sorted(args.gear.glob("*.gear.json")):
         stem = path.name[:-len(".gear.json")]
@@ -112,6 +161,13 @@ def main() -> int:
             item_id = (gear[i] or {}).get("id")
             if not item_id:
                 continue
+            if item_id in barred:
+                content, name = barred[item_id]
+                failures.append(
+                    f"{stem}: {slot} holds {name}, which drops in {content}. "
+                    f"This guild does not run it, ruled by the guild lead in "
+                    f"{TRINKETS}, so the item is not a weaker pick, it is not a "
+                    "pick. The simulator will happily equip it.")
             if item_id not in db_items:
                 failures.append(
                     f"{stem}: {slot} holds item {item_id}, which the simulator "

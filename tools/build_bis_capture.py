@@ -42,6 +42,11 @@ import yaml
 
 RESEARCH = Path("data/research/wowhead-phase3-bis-full")
 ROUTING = Path("data/judgments/weapon-routing.yaml")
+# Trinket routing, plus the content this guild does not run. It is a second file
+# rather than a section of the first because the two answer different questions:
+# one settles who receives a contested weapon, the other settles that an item is
+# not obtainable at all. Both are decisions about how this guild raids.
+TRINKETS = Path("data/judgments/trinket-routing.yaml")
 ENTRY_CAPTURES = Path("data/facts/sim-profiles/hit-capture")
 ITEMS = Path("data/facts/items.csv")
 HIT = Path("data/facts/hit.yaml")
@@ -106,6 +111,17 @@ TEMPEST_SPECS = ("arcane_mage",)
 # swap.
 CATACLYSM_SPECS = ("arms_warrior",)
 
+# TRINKETS ARE ROUTED FROM THE JUDGMENT FILE RATHER THAN TRANSCRIBED HERE,
+# because unlike the weapon rulings each one is a plain slot and item pair with
+# an explicit spec list, and nothing has to be inferred from prose. The file is
+# read and applied; adding a ruling there needs no change to this tool.
+#
+# THE CONSTRAINT BEHIND THE FIRST RULING is that this guild does not run
+# Ahn'Qiraj, so Badge of the Swarmguard is not a weaker pick, it is not a pick.
+# It was the only item in any profile predating The Burning Crusade and no check
+# looked for it.
+
+
 # THE ONE SLOT WITH NO PHASE 3 SOURCE AT ALL. The Wowhead Phase 3 Retribution
 # page carries no Relic section, which is the same cause as the finding already
 # recorded in docs/kb/OPEN-FINDINGS.md: eleven of the twenty-one workbook tabs
@@ -155,6 +171,7 @@ def main() -> int:
     args = ap.parse_args()
 
     routing = yaml.safe_load(ROUTING.read_text())
+    trinkets = yaml.safe_load(TRINKETS.read_text())
     known = routed_ids(routing)
     transcribed = {ZHARDOOM, TEMPEST_OF_CHAOS, CATACLYSMS_EDGE, *WARGLAIVES}
     stray = transcribed - known
@@ -251,6 +268,16 @@ def main() -> int:
                 put("off_hand", None,
                     "Cataclysm's Edge is two-handed, so the off hand the "
                     "capture lists is displaced rather than kept.")
+        for ruling in trinkets.get("rulings") or []:
+            if spec not in (ruling.get("specs") or []):
+                continue
+            item_id = int((ruling.get("ids") or [None])[0])
+            if (slots.get(ruling["slot"]) or {}).get("id") == item_id:
+                continue
+            put(ruling["slot"], item_id,
+                f"Routed by the guild lead, {trinkets['meta']['ruled']}: "
+                + ruling["ruling"])
+
         for slot in CARRY_FORWARD_FROM_ENTRY.get(spec, []):
             if (slots.get(slot) or {}).get("id"):
                 continue
@@ -268,6 +295,18 @@ def main() -> int:
                 "guild lead, 15 August 2026: carry the entry capture's pick "
                 "forward. So one slot of this otherwise Phase 3 set is sourced "
                 f"from a PHASE 2 page, {entry_path}.")
+
+        barred = {int(item["id"]): (block["content"], item["item"])
+                  for block in trinkets.get("unavailable_content") or []
+                  for item in block.get("barred_items") or []}
+        for slot in SLOT_ORDER:
+            item_id = (slots.get(slot) or {}).get("id")
+            if item_id in barred:
+                content, name = barred[item_id]
+                problems.append(
+                    f"{spec}: {slot} still holds {name} after routing, and "
+                    f"{content} is content this guild does not run. A ruling in "
+                    f"{TRINKETS} has to fill this slot with something reachable.")
 
         for bar in WARGLAIVES:
             if spec == "arms_warrior" and bar in {

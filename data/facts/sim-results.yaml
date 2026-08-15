@@ -2,12 +2,13 @@ meta:
   what: What the simulated figures MEAN. The figures themselves are in
     data/facts/sim-figures.yaml, which tools/run_sims.py writes, and they are not
     restated here.
-  why_two_files: This file held its own copy of thirteen figures until 15 August 2026,
-    produced at 3000 iterations across two anchors. A third anchor and a rerun at 10000
-    iterations moved every one of them, and a second copy of a fact is the copy that
-    goes stale. So the figures live in one place now and this file holds only what a
-    reader cannot recompute: which results are surprising, and what was measured to
-    explain them.
+  why_two_files: >-
+    This file held its own copy of thirteen figures until 15 August 2026,
+    produced at 3000 iterations across two anchors. A third anchor and a rerun
+    at 10000 iterations moved every one of them, and a second copy of a fact is
+    the copy that goes stale. So the figures live in one place now and this file
+    holds only what a reader cannot recompute: which results are surprising, and
+    what was measured to explain them.
   produced: '2026-08-15'
   simulator: wowsims tbc-new, wowsimcli v0.0.116, installed by tools/install_wowsimcli.sh
   settings: 10000 iterations, seed 1, single target, 180 second encounter, target level
@@ -72,28 +73,64 @@ two_specs_measure_LOWER_at_a_better_anchor:
       --iterations 10000
 
   arms_warrior:
-    what: The best-in-slot set measures BELOW both other anchors, 108.3 below entry.
-    no_single_slot_explains_it: The largest is the second trinket at 52.7, Badge of the
-      Swarmguard against Tsunami Talisman, then the legs at 22.5, the first ring at 20.8,
-      the ranged at 20.6 and the neck at 20.0. Four Phase 3 picks are worse than the Phase
-      2 items they replace, and the tier armor gains 59 back across seven slots.
-    the_sum_and_the_whole_disagree: The single-slot deltas sum to +54.3 and the whole-set
-      difference is +108.3. Neither figure is wrong. Set bonuses and cap positions are
-      not additive, so a slot list is not a decomposition and must not be presented as
-      one.
+    what: The best-in-slot set measures BELOW the entry set, 45.3 short, and below the
+      tier set. It is the only spec on the roster that does.
+    it_was_108_3_until_the_trinket_ruling: 'The first measurement read minus 108.3, and
+      63.0 of that was Badge of the Swarmguard, a trinket from content this guild does not
+      run. The guild lead routed both warriors to Bloodlust Brooch on 15 August 2026 and
+      the Fury Warrior stopped being an anomaly entirely. Arms did not. What is left is
+      recorded below and it is a different shape from what the trinket was hiding.'
+    no_single_slot_explains_it_and_the_sum_says_so: 'The single-slot deltas now sum to
+      MINUS 1.1 against a whole-set difference of PLUS 45.3. Read plainly: reverting any
+      one slot to entry is worth nothing on average, and reverting all of them is worth
+      45. The gap is an interaction rather than a slot, which is what set bonuses and cap
+      positions do.'
+    four_slots_the_page_ranks_worse_than_the_phase_2_item: 'Legs 23.4, neck 21.7, first
+      ring 21.4 and ranged 19.3, each measured by dressing that one slot from the entry
+      profile and carrying its enchant and gems. Against them the Tier 6 armor gains about
+      82 back across seven slots, and the two-hander and the cloak are flat.'
     the_routing_is_NOT_the_cause_and_this_was_checked: 'The Phase 3 page ranks dual Warglaives
-      for this spec and the guild lead routed them away on 15 August 2026, which looked
-      like the obvious explanation. It is the opposite. Measured with the Warglaives in
-      place, the same set reads 1779.6 against 1857.3 with Cataclysm''s Edge, so the routing
-      GAINED this spec 77.7 DPS rather than costing it. The Arms rotation is written for
-      a two-handed weapon.'
+      for this spec and the guild lead routed them away, which looked like the obvious
+      explanation. It is the opposite. Measured with the Warglaives in place, the same set
+      reads 1779.6 against 1857.3 with Cataclysm''s Edge on the profile of the day, so the
+      routing GAINED this spec 77.7 DPS rather than costing it. The Arms rotation is written
+      for a two-handed weapon.'
     what_it_means_for_a_council: This model does not support routing Phase 3 upgrades to
-      the Arms Warrior on the strength of its published list. It does support the guild
-      lead's weapon ruling, which was made on other grounds and turns out to be worth
-      +77.7 here. NOT A RULING on anything else. The council decides.
+      the Arms Warrior on the strength of its published list, and it supports both of the
+      guild lead's weapon and trinket rulings, each of which was made on other grounds and
+      each of which measures as a gain. NOT A RULING on anything else. The council decides.
     measured: '2026-08-15, 10000 iterations, seed 1'
     reproduce: python3 tools/run_sims.py --profile arms-warrior.bis --against arms-warrior.entry
       --iterations 10000
+
+the_trinket_ruling_of_15_august_2026:
+  what_forced_it: Both warriors were simulated wearing Badge of the Swarmguard, item 21670,
+    which drops in Ahn'Qiraj 40. This guild does not run Ahn'Qiraj. It was the only item
+    in any profile predating The Burning Crusade, and every availability check this project
+    holds is scoped to Phase 3 against LATER content, so none of them looks backwards.
+  it_gained_the_raid_damage: Badge of the Swarmguard measured LAST of the seven trinkets
+    either warrior could hold in that slot, so losing Ahn'Qiraj was worth plus 63.0 to the
+    Arms Warrior and plus 91.9 to the Fury Warrior. An unreachable best-in-slot item usually
+    costs something. This one did not.
+  dragonspine_trophy_is_the_anchor: 'Challenged by the guild lead, who doubted Bloodlust
+    Brooch could beat Madness of the Betrayer beside it and asked whether Madness is better
+    than Dragonspine in slot. It is not. Varying BOTH trinket slots together, every one
+    of the top four pairs on both warriors holds Dragonspine Trophy and every pair without
+    it measures lower: replacing it with Madness beside the same partner costs Arms 46.9
+    and Fury 57.1.'
+  why_madness_underperforms_on_a_warrior: Its proc is 300 armor penetration, and the Tier
+    6 armor both warriors wear already pays in armor penetration, which is the stat shape
+    recorded below for the Onslaught set. More of the same stat returns less. Bloodlust
+    Brooch pays in attack power, 72 passive and 278 for 20 seconds on a 2 minute cooldown,
+    and BOTH warrior action priority lists activate it, which was checked in the shipped
+    lists rather than assumed.
+  a_trinket_must_be_measured_in_pairs: The first measurement held trinket 1 fixed and varied
+    trinket 2, which cannot answer whether trinket 1 is right. tools/run_sims.py documented
+    varying two slots at once and did not implement it; it does now, and a trinket question
+    should be asked that way.
+  the_ruling_lives_in: data/judgments/trinket-routing.yaml, with the barred content beside
+    it. tools/check_sim_profiles.py fails the build on any profile wearing a barred item,
+    independently of whether the builder applied the routing.
 
 why_the_warriors_lose_at_the_TIER_anchor:
   scope: This section is about ENTRY against TIER and is unaffected by the best-in-slot
