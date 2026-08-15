@@ -25,7 +25,8 @@ rulings:
 - weapon: Zhar'doom, Greatstaff of the Devourer
   ids:
   - 32374
-  ruling: Goes to the warlocks, the Balance Druid and the Elemental Shaman.
+  ruling: Goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow
+    Priest.
   verbatim: zhardooms to warlocks boomkins and elementals
   consequence: Those specs wear a TWO-HANDED staff, so their profile holds no off-hand
     at all. The captures list both a staff and an off-hand for several specs, which cannot
@@ -35,6 +36,10 @@ rulings:
     not have offhands also". A two-handed staff occupies both hands, so the off-hand slot
     is EMPTY for these four specs. The captures list an off-hand for several of them,
     and it is discarded when the profile is built rather than carried.'
+  shadow_priest_added: 'Added 15 August 2026: "spriest wears zhardoom". The first statement
+    of this ruling named warlocks, boomkins and elementals only, which left the Shadow
+    Priest with no main hand at all because its capture ranks Zhar''doom first and names
+    no alternative. Five specs now wear the staff, and all five hold no off-hand.'
 - weapon: Tempest of Chaos
   ids:
   - 32943
@@ -44,16 +49,21 @@ rulings:
     a one hand and an off hand, not Zhar''doom. It also competes with the warlocks, whose
     lists rank Tempest of Chaos first, and the word FIRST is the ordering rather than
     an exclusion.'
-what_still_needs_a_ruling:
-- 'THE ARMS WARRIOR TWO-HANDER. The guild lead asked whether Arms takes Torch of the Damned.
-  The Wowhead page does NOT give it that weapon: it ranks only dual Warglaives for Phase
-  3, plus a two-hand table whose heading says PHASE 2, topped by Cataclysm''s Edge 30902.
-  Torch of the Damned 32332 is a real Phase 3 two-hand mace but is the Retribution Paladin''s
-  own best-in-slot main hand, so routing it to Arms contests that spec. Three candidates:
-  Cataclysm''s Edge 30902, what the page offers under a Phase 2 heading; Torch of the
-  Damned 32332, contested with Retribution; Twinblade of the Phoenix 29993, what Arms
-  sims with today. UNRESOLVED.'
-- The Shadow Priest loses Zhar'doom by the routing ruling and its capture names no replacement
-  main hand.
-- If the warlocks take Zhar'doom and the Arcane Mage takes Tempest of Chaos first, what
-  the warlocks hold before a Zhar'doom drops is unstated.
+- weapon: Cataclysm's Edge
+  ids:
+  - 30902
+  ruling: The Arms Warrior takes it.
+  verbatim: yes arms take cataclysm edge
+  why_it_needed_a_ruling: The Arms page ranks only dual Warglaives for Phase 3, which
+    the guild lead routed away from this spec, and its two-hand table carries a heading
+    that says PHASE 2. So the spec had no Phase 3 two-hander of its own and the choice
+    could not be read off the page.
+  what_it_declines: Torch of the Damned 32332, the other candidate, stays with the Retribution
+    Paladin whose own list ranks it first. Routing it to Arms would have taken it from
+    a spec that has no second option.
+what_still_needs_a_ruling: []
+warlocks_before_zhardoom: 'NOT A QUESTION FOR THE SIM, closed by the guild lead on 15
+  August 2026: "dont worry about what warlocks wear before zhardoom, just sim our bis
+  warlocks with zhardoom". A best-in-slot profile is the finished set, so what a spec
+  holds on the way to it is a routing question for the council and not a state this profile
+  models.'
