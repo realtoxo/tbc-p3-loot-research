@@ -1,0 +1,25 @@
+{
+  "spec": "arms_warrior",
+  "url": "https://www.wowhead.com/tbc/guide/arms-warrior-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Arms Warrior DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Onslaught Battle-Helm", "id": 30972},
+    "neck": {"item": "Choker of Serrated Blades", "id": 32591},
+    "shoulder": {"item": "Onslaught Shoulderblades", "id": 30979},
+    "back": {"item": "Cloak of Darkness", "id": 33122, "note": "first of two tied 'Best' rows in the Back Armor table; the other was Vengeance Wrap, id 24259"},
+    "chest": {"item": "Onslaught Breastplate", "id": 30975, "note": "table also listed Destroyer Breastplate, id 30118, ranked 'P2 Best' (a lower, non-tied rank), so it is not a tie"},
+    "wrist": {"item": "Deadly Cuffs", "id": 30863, "note": "first of four tied 'Best' rows in the Wrist Armor table; the others were Bindings of Lightning Reflexes id 32574, Bladespire Warbands id 28795, and Furious Shackles id 30861"},
+    "hands": {"item": "Onslaught Gauntlets", "id": 30969},
+    "waist": {"item": "Belt of One-Hundred Deaths", "id": 30106},
+    "legs": {"item": "Leggings of Divine Retribution", "id": 32341},
+    "feet": {"item": "Dreadboots of the Legion", "id": 32345, "note": "first of two tied 'Best' rows in the Feet Armor table; the other was Shadowmaster's Boots, id 32366"},
+    "ring_1": {"item": "Stormrage Signet Ring", "id": 32497, "note": "first of two tied 'Best' rows in the Ring Jewelry table"},
+    "ring_2": {"item": "Unstoppable Aggressor's Ring", "id": 32335, "note": "second of two tied 'Best' rows in the Ring Jewelry table"},
+    "trinket_1": {"item": "Dragonspine Trophy", "id": 28830, "note": "first of four tied 'Best' rows in the Trinkets table"},
+    "trinket_2": {"item": "Badge of the Swarmguard", "id": 21670, "note": "second of four tied 'Best' rows in the Trinkets table; id 21670 is ABSENT from data/facts/items.csv, could not be cross-checked against the fact table"},
+    "main_hand": {"item": "Warglaive of Azzinoth", "id": 32837, "note": "sole 'Best All Game' row in the Main Hand Weapons table; the page also carries a separate 'Best in Slot Two-Handed Weapons for Arms Warrior in TBC Classic Phase 2' table (heading says Phase 2, not Phase 3) topped by Cataclysm's Edge, id 30902, as an alternate non-dual-wield build; not captured as it is not one of the requested slots and the dual-wield Main/Off Hand tables are the ones explicitly labeled Phase 3"},
+    "off_hand": {"item": "Warglaive of Azzinoth", "id": 32838, "note": "sole 'Best All Game' row in the Off Hand Weapons table; Off Hand hand_type per items.csv"},
+    "ranged": {"item": "Barrel-Blade Longrifle", "id": 30724, "note": "first of three tied 'Best' rows in the Ranged Weapons table; the others were Twisted Blades of Zarak id 32326 and Serpent Spine Longbow id 30105; id 30724 is ABSENT from data/facts/items.csv, could not be cross-checked against the fact table"}
+  }
+}

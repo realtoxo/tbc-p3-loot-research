@@ -1,0 +1,25 @@
+{
+  "spec": "elemental_shaman",
+  "url": "https://www.wowhead.com/tbc/guide/elemental-shaman-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Elemental Shaman DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Skyshatter Headguard", "id": 31014},
+    "neck": {"item": "The Sun King's Talisman", "id": 30015},
+    "shoulder": {"item": "Skyshatter Mantle", "id": 31023, "note": "top of two tied 'Best' rows in the Shoulder Armor table; the other was Mantle of Nimble Thought, id 32587"},
+    "back": {"item": "Shroud of the Highborne", "id": 32524, "note": "top of two tied 'Best' rows in the Back Armor table; the other was Cloak of the Illidari Council, id 32331"},
+    "chest": {"item": "Skyshatter Breastplate", "id": 31017},
+    "wrist": {"item": "Bracers of Nimble Thought", "id": 32586},
+    "hands": {"item": "Skyshatter Gauntlets", "id": 31008},
+    "waist": {"item": "Flashfire Girdle", "id": 32276},
+    "legs": {"item": "Leggings of Channeled Elements", "id": 30916, "note": "top of two tied 'Best' rows in the Leg Armor table; the other was Skyshatter Legguards, id 31020"},
+    "feet": {"item": "Slippers of the Seacaller", "id": 32239, "note": "top of two tied 'Best' rows in the Feet Armor table; the other was Naturewarden's Treads, id 32352"},
+    "ring_1": {"item": "Ring of Ancient Knowledge", "id": 32527, "note": "first of two 'Best' rows in the Ring Jewelry table"},
+    "ring_2": {"item": "Band of the Eternal Sage", "id": 29305, "note": "second of two 'Best' rows in the Ring Jewelry table"},
+    "trinket_1": {"item": "The Skull of Gul'dan", "id": 32483, "note": "first of three tied 'Best' rows in the Trinkets table"},
+    "trinket_2": {"item": "The Lightning Capacitor", "id": 28785, "note": "second of three tied 'Best' rows in the Trinkets table"},
+    "main_hand": {"item": "Zhar'doom, Greatstaff of the Devourer", "id": 32374, "note": "sole row of a single combined Weapons table (no separate 1H/2H tables on this page); this is a two-handed staff, so it and the captured off_hand item would not be worn together in game"},
+    "off_hand": {"item": "Antonidas's Aegis of Rapt Concentration", "id": 30909, "note": "top of two tied 'Best' rows in the Offhands table; see main_hand note on the two-hand/off-hand conflict"},
+    "ranged": {"item": "Totem of Ancestral Guidance", "id": 32330, "note": "the page has no Ranged/Wand table for this spec; this is the sole row of the Totems (relic) table, categorized as slot type 'Ranged' in items.csv"}
+  }
+}

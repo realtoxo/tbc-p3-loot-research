@@ -1,0 +1,25 @@
+{
+  "spec": "beast_mastery_hunter",
+  "url": "https://www.wowhead.com/tbc/guide/beast-mastery-hunter-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Beast Mastery Hunter DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Cursed Vision of Sargeras", "id": 32235},
+    "neck": {"item": "Choker of Serrated Blades", "id": 32591},
+    "shoulder": {"item": "Gronnstalker's Spaulders", "id": 31006},
+    "back": {"item": "Thalassian Wildercloak", "id": 29994},
+    "chest": {"item": "Gronnstalker's Chestguard", "id": 31004},
+    "wrist": {"item": "Insidious Bands", "id": 32324},
+    "hands": {"item": "Gronnstalker's Gloves", "id": 31001},
+    "waist": {"item": "Don Alejandro's Money Belt", "id": 30879},
+    "legs": {"item": "Gronnstalker's Leggings", "id": 31005},
+    "feet": {"item": "Shadowmaster's Boots", "id": 32366},
+    "ring_1": {"item": "Stormrage Signet Ring", "id": 32497},
+    "ring_2": {"item": "Band of the Eternal Champion", "id": 29301, "note": "second-ranked row, listed as Best 6% and 9%"},
+    "trinket_1": {"item": "Dragonspine Trophy", "id": 28830, "note": "top of two tied 'Best' trinket rows"},
+    "trinket_2": {"item": "Madness of the Betrayer", "id": 32505, "note": "second of two tied 'Best' trinket rows"},
+    "main_hand": {"item": "Boundless Agony", "id": 30901, "note": "top of the Dual-Wield Weapons table, listed as Best MH"},
+    "off_hand": {"item": "Blade of Infamy", "id": 30881, "note": "top-ranked Best OH row in the Dual-Wield Weapons table"},
+    "ranged": {"item": "Bristleblitz Striker", "id": 30906, "note": "top of the Best in Slot Ranged Weapons table"}
+  }
+}

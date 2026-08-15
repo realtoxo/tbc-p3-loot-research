@@ -1,0 +1,25 @@
+{
+  "spec": "balance_druid",
+  "url": "https://www.wowhead.com/tbc/guide/balance-druid-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Balance Druid DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Thunderheart Headguard", "id": 31040},
+    "neck": {"item": "The Sun King's Talisman", "id": 30015},
+    "shoulder": {"item": "Thunderheart Shoulderpads", "id": 31049},
+    "back": {"item": "Shroud of the Highborne", "id": 32524, "note": "top of two tied 'BiS' rows in the Back Armor table; the other was Cloak of the Illidari Council, id 32331"},
+    "chest": {"item": "Thunderheart Vest", "id": 31043},
+    "wrist": {"item": "Bracers of Nimble Thought", "id": 32586},
+    "hands": {"item": "Thunderheart Handguards", "id": 31035},
+    "waist": {"item": "Belt of the Crescent Moon", "id": 30914},
+    "legs": {"item": "Leggings of Channeled Elements", "id": 30916},
+    "feet": {"item": "Slippers of the Seacaller", "id": 32239},
+    "ring_1": {"item": "Ring of Ancient Knowledge", "id": 32527, "note": "first of two 'BiS' rows in the Ring Jewelry table"},
+    "ring_2": {"item": "Band of the Eternal Sage", "id": 29305, "note": "second of two 'BiS' rows in the Ring Jewelry table"},
+    "trinket_1": {"item": "The Skull of Gul'dan", "id": 32483, "note": "first of two 'BiS' rows in the Trinkets table"},
+    "trinket_2": {"item": "Ashtongue Talisman of Equilibrium", "id": 32486, "note": "second of two 'BiS' rows in the Trinkets table"},
+    "main_hand": {"item": "The Maelstrom's Fury", "id": 32237, "note": "top row of the One-Handed Weapons table; the page also lists a competing Two-Handed BiS, Zhar'doom Greatstaff of the Devourer id 32374, which would replace both main_hand and off_hand if worn instead"},
+    "off_hand": {"item": "Chronicle of Dark Secrets", "id": 30872, "note": "top row of the Offhands table; see main_hand note on the two-hand/one-hand+offhand alternative"},
+    "ranged": {"item": "Idol of the Raven Goddess", "id": 32387, "note": "the page has no Ranged/Wand table for this spec; this is the top row of the Idols (relic) table, categorized as slot type 'Ranged' in items.csv"}
+  }
+}

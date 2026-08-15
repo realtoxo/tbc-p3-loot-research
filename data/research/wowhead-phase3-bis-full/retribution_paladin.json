@@ -1,0 +1,25 @@
+{
+  "spec": "retribution_paladin",
+  "url": "https://www.wowhead.com/tbc/guide/retribution-paladin-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Retribution Paladin DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Cursed Vision of Sargeras", "id": 32235},
+    "neck": {"item": "Choker of Endless Nightmares", "id": 32260, "note": "listed as Best - Hit"},
+    "shoulder": {"item": "Shoulderpads of the Stranger", "id": 30055},
+    "back": {"item": "Shadowmoon Destroyer's Drape", "id": 32323, "note": "listed as Best - Hit"},
+    "chest": {"item": "Bulwark of the Ancient Kings", "id": 28485, "note": "listed as Best - CD Ready. id 28485 is NOT present in data/facts/items.csv; only id 28484 'Bulwark of Kings' (a different, crafted plate item) is present. This is the same distinct-item confusion already known from the 28484/28485 pair - verify before use"},
+    "wrist": {"item": "Bindings of Lightning Reflexes", "id": 32574},
+    "hands": {"item": "Gloves of the Searing Grip", "id": 29947},
+    "waist": {"item": "Belt of One-Hundred Deaths", "id": 30106},
+    "legs": {"item": "Bow-stitched Leggings", "id": 30900},
+    "feet": {"item": "Shadowmaster's Boots", "id": 32366},
+    "ring_1": {"item": "Shapeshifter's Signet", "id": 30834, "note": "top-ranked of three tied 'Best' ring rows (Shapeshifter's Signet, Band of Devastation, Unstoppable Aggressor's Ring); rings 1 and 2 taken as the first two"},
+    "ring_2": {"item": "Band of Devastation", "id": 32526, "note": "second of three tied 'Best' ring rows"},
+    "trinket_1": {"item": "Dragonspine Trophy", "id": 28830, "note": "listed as Best - Passive, the top-ranked trinket row"},
+    "trinket_2": {"item": "Bloodlust Brooch", "id": 29383, "note": "listed as Best - Active, the second-ranked trinket row"},
+    "main_hand": {"item": "Torch of the Damned", "id": 32332, "note": "top of the Weapons table, a Two-Handed weapon; page lists no separate Main Hand/Off Hand/One-Handed tables for this spec"},
+    "off_hand": {"item": null, "id": null, "note": "not applicable - Torch of the Damned is a Two-Handed weapon, no off hand slot"},
+    "ranged": {"item": null, "id": null, "note": "missing - page has no Best in Slot Ranged/Relic section for this spec"}
+  }
+}

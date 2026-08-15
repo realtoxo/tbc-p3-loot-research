@@ -1,0 +1,25 @@
+{
+  "spec": "fury_warrior",
+  "url": "https://www.wowhead.com/tbc/guide/fury-warrior-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Fury Warrior DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Cursed Vision of Sargeras", "id": 32235, "note": "first of two tied 'Best' rows in the Head Armor table; the other was Onslaught Battle-Helm, id 30972"},
+    "neck": {"item": "Choker of Endless Nightmares", "id": 32260, "note": "first of two tied 'Best' rows in the Neck Jewelry table; the other was Choker of Serrated Blades, id 32591"},
+    "shoulder": {"item": "Onslaught Shoulderblades", "id": 30979},
+    "back": {"item": "Shadowmoon Destroyer's Drape", "id": 32323},
+    "chest": {"item": "Onslaught Breastplate", "id": 30975},
+    "wrist": {"item": "Deadly Cuffs", "id": 30863, "note": "first of four tied 'Best' rows in the Wrist Armor table; the others were Bindings of Lightning Reflexes id 32574, Furious Shackles id 30861, and Bladespire Warbands id 28795"},
+    "hands": {"item": "Grips of Silent Justice", "id": 32278, "note": "first of two tied 'Best' rows in the Hand Armor table; the other was Onslaught Gauntlets, id 30969"},
+    "waist": {"item": "Belt of One-Hundred Deaths", "id": 30106},
+    "legs": {"item": "Leggings of Divine Retribution", "id": 32341},
+    "feet": {"item": "Dreadboots of the Legion", "id": 32345},
+    "ring_1": {"item": "Stormrage Signet Ring", "id": 32497, "note": "first of two tied 'Best' rows in the Ring Jewelry table"},
+    "ring_2": {"item": "Unstoppable Aggressor's Ring", "id": 32335, "note": "second of two tied 'Best' rows in the Ring Jewelry table"},
+    "trinket_1": {"item": "Dragonspine Trophy", "id": 28830, "note": "first of three tied 'Best' rows in the Trinkets table"},
+    "trinket_2": {"item": "Badge of the Swarmguard", "id": 21670, "note": "second of three tied 'Best' rows in the Trinkets table; id 21670 is ABSENT from data/facts/items.csv, could not be cross-checked against the fact table"},
+    "main_hand": {"item": "Warglaive of Azzinoth", "id": 32837, "note": "sole 'Best All Game' row in the Main Hand Weapons table"},
+    "off_hand": {"item": "Warglaive of Azzinoth", "id": 32838, "note": "sole 'Best All Game' row in the Off Hand Weapons table; Off Hand hand_type per items.csv"},
+    "ranged": {"item": "Barrel-Blade Longrifle", "id": 30724, "note": "first of three tied 'Best' rows in the Ranged Weapons table; the others were Twisted Blades of Zarak id 32326 and Serpent Spine Longbow id 30105; id 30724 is ABSENT from data/facts/items.csv, could not be cross-checked against the fact table"}
+  }
+}

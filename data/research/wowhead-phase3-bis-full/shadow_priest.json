@@ -1,0 +1,25 @@
+{
+  "spec": "shadow_priest",
+  "url": "https://www.wowhead.com/tbc/guide/shadow-priest-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Shadow Priest DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Hood of Absolution", "id": 31064},
+    "neck": {"item": "Translucent Spellthread Necklace", "id": 32349},
+    "shoulder": {"item": "Shoulderpads of Absolution", "id": 31070},
+    "back": {"item": "Nethervoid Cloak", "id": 32590},
+    "chest": {"item": "Shroud of Absolution", "id": 31065},
+    "wrist": {"item": "Bracers of Nimble Thought", "id": 32586},
+    "hands": {"item": "Handguards of Absolution", "id": 31061},
+    "waist": {"item": "Waistwrap of Infinity", "id": 32256},
+    "legs": {"item": "Leggings of Channeled Elements", "id": 30916},
+    "feet": {"item": "Slippers of the Seacaller", "id": 32239},
+    "ring_1": {"item": "Ring of Ancient Knowledge", "id": 32527, "note": "only ring in the Ring Jewelry table ranked 'BiS'; every other row is 'Option'"},
+    "ring_2": {"item": "Ring of Ancient Knowledge", "id": 32527, "note": "only ring in the Ring Jewelry table ranked 'BiS'; used for both ring slots since no second BiS ring is listed"},
+    "trinket_1": {"item": "The Skull of Gul'dan", "id": 32483, "note": "top of five tied 'BiS' rows in the Trinkets table"},
+    "trinket_2": {"item": "Darkmoon Card: Crusade", "id": 31856, "note": "second of five tied 'BiS' rows in the Trinkets table"},
+    "main_hand": {"item": "Zhar'doom, Greatstaff of the Devourer", "id": 32374, "note": "top-ranked row of the Weapons table; this is a two-handed staff, so it and the captured off_hand item would not be worn together in game"},
+    "off_hand": {"item": "Orb of the Soul-Eater", "id": 29272, "note": "top row of the Offhands table; see main_hand note on the two-hand/off-hand conflict"},
+    "ranged": {"item": "Wand of the Forgotten Star", "id": 29982}
+  }
+}

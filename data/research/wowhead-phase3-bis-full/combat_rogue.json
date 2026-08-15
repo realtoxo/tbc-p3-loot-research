@@ -1,0 +1,25 @@
+{
+  "spec": "combat_rogue",
+  "url": "https://www.wowhead.com/tbc/guide/rogue-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade",
+  "captured": "2026-08-15",
+  "title": "Burning Crusade Classic Rogue DPS Best in Slot (BiS) Phase 3 Gear Guide - Wowhead",
+  "slots": {
+    "head": {"item": "Cursed Vision of Sargeras", "id": 32235},
+    "neck": {"item": "Choker of Endless Nightmares", "id": 32260},
+    "shoulder": {"item": "Slayer's Shoulderpads", "id": 31030},
+    "back": {"item": "Shadowmoon Destroyer's Drape", "id": 32323},
+    "chest": {"item": "Slayer's Chestguard", "id": 31028},
+    "wrist": {"item": "Insidious Bands", "id": 32324},
+    "hands": {"item": "Slayer's Handguards", "id": 31026},
+    "waist": {"item": "Belt of One-Hundred Deaths", "id": 30106},
+    "legs": {"item": "Slayer's Legguards", "id": 31029},
+    "feet": {"item": "Shadowmaster's Boots", "id": 32366},
+    "ring_1": {"item": "Stormrage Signet Ring", "id": 32497, "note": "first of two tied 'BiS' rows in the Ring Jewelry table"},
+    "ring_2": {"item": "Band of the Eternal Champion", "id": 29301, "note": "second of two tied 'BiS' rows in the Ring Jewelry table"},
+    "trinket_1": {"item": "Dragonspine Trophy", "id": 28830, "note": "first of two tied 'BiS' rows in the Trinkets table"},
+    "trinket_2": {"item": "Warp-Spring Coil", "id": 30450, "note": "second of two tied 'BiS' rows in the Trinkets table"},
+    "main_hand": {"item": "Warglaive of Azzinoth", "id": 32837, "note": "Main Hand hand_type per items.csv"},
+    "off_hand": {"item": "Warglaive of Azzinoth", "id": 32838, "note": "first of two tied 'BiS' rows in the Offhands table; Off Hand hand_type per items.csv; the second BiS row was Blade of Savagery, id 32369, took first ranked row per capture rules"},
+    "ranged": {"item": "Arcanite Steam-Pistol", "id": 29949}
+  }
+}
