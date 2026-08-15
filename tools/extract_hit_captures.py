@@ -60,30 +60,120 @@ ANCHOR_NAMES = ("entry", "tier_hands_and_head")
 #
 # Transcribed rather than pattern-matched, so a reworded fact cannot silently
 # drop a spec from the list.
+#
+# EVERY PIECE COUNT, SLOT AND ITEM NAME IS A PLACEHOLDER FILLED FROM THE SPEC'S
+# OWN CAPTURE. `fill_contested` below supplies them. THE FULLY HARDCODED
+# VERSION WENT STALE THE MOMENT tools/rebuild_tier_sets.py CHANGED WHAT A TIER
+# SET IS, and because the sentence never touched token-arithmetic.yaml it
+# bypassed tools/check_token_arithmetic.py, so a claim already retracted there
+# kept printing on a card. Three of the six were wrong when they were found:
+# the Arms Warrior said the head token cost a Destroyer four-piece against a
+# capture holding two Destroyer pieces, the Feral Cat said the hands token left
+# one Tier 6 piece against a set holding two and no hands tier at all, and the
+# Balance Druid described a Tier 5 four-piece the tier set no longer wears.
+#
+# WHAT IS STILL TRANSCRIBED AND WHY. An EP figure and a quotation from a
+# published guide cannot be derived from a capture, because a capture records
+# gear rather than item value or source wording. Both are checked instead:
+# tools/check_token_arithmetic.py reproduces every figure below on the spec's
+# own workbook tab. A set-bonus trade cannot be checked at all, because no fact
+# table prices a set bonus, so no sentence below asserts one is worth more than
+# another.
 TOKEN_CONFIGURATION_CONTESTED = {
     "feral_cat": (
-        "the head slot is Wolfshead Helm, which is not tier, and the hands "
-        "token alone leaves one Tier 6 piece and so no Tier 6 bonus while "
-        "cutting Nordrassil from four pieces to three"),
+        "the head slot is {tier_head} and the hands slot is {tier_hands}, and "
+        "neither is a tier piece, so this set takes neither token; it holds "
+        "{tier6}"),
     "feral_bear": (
-        "a druid has five tier slots, and the Nordrassil four-piece plus the "
-        "Thunderheart two-piece need six"),
+        "a druid has five tier slots, so the Nordrassil four-piece and the "
+        "Thunderheart two-piece need six between them and cannot both be "
+        "worn; this set wears {tier_sets}, which leaves it no Nordrassil "
+        "piece"),
     "enhancement_shaman": (
         "the published guide states in its own words that neither Tier 6 set "
-        "bonus is worth chasing for this spec"),
+        "bonus is worth chasing for this spec, and this set holds {tier6}"),
     "retribution_paladin": (
-        "Lightbringer Gauntlets are 56.46 EPV against 65.57 on the non-tier "
-        "gloves they displace, and no Retribution set bonus in either tier is "
-        "a damage bonus"),
+        "Lightbringer Gauntlets 56.46 EPV against Gloves of the Searing Grip "
+        "65.57, and no Retribution set bonus in either tier is a damage "
+        "bonus; this set holds {tier6} and keeps {tier_hands} at the hands"),
     "balance_druid": (
-        "either token breaks the Tier 5 four-piece, whose slots are head, "
-        "shoulder, chest and hands; both tokens are raw EPV gains, so the "
-        "collision is the bonus and not the items"),
+        "the entry set holds {entry_tier5}, which is the Tier 5 four-piece, "
+        "so either token breaks it; both tokens are raw EPV gains, and this "
+        "set trades those four for {tier6}"),
     "arms_warrior": (
-        "Onslaught Gauntlets are 87.78 EPV against 101.88 on the Shade of "
-        "Akama gloves they displace, and the head token costs the Destroyer "
-        "four-piece"),
+        "Onslaught Gauntlets 87.78 EPV against Grips of Silent Justice "
+        "101.88 from Shade of Akama, and the entry set holds {entry_tier5}, "
+        "so the head token costs the Destroyer two-piece and not the "
+        "four-piece; this set holds {tier6}"),
 }
+
+# Slot order for a piece list, so two sentences never name the same set in two
+# orders. It is the order tokens.yaml records the five tier slots in.
+PIECE_ORDER = ("head", "shoulder", "chest", "hands", "legs")
+
+# Counts run from zero to the five tier slots a class has, so no phrase below
+# ever needs a sixth word.
+COUNT_WORDS = ("no", "one", "two", "three", "four", "five")
+
+
+def joined(parts: list[str]) -> str:
+    """Name a list in prose, with `and` before the last part and no comma."""
+    if not parts:
+        return ""
+    if len(parts) == 1:
+        return parts[0]
+    return ", ".join(parts[:-1]) + " and " + parts[-1]
+
+
+def pieces_phrase(slots: list[str], tier: str) -> str:
+    """Say how many pieces of one tier a set holds, and in which slots.
+
+    A COUNT ALONE IS WHAT WENT WRONG BEFORE, so the slots are named beside it.
+    A reader who sees "two Tier 6 pieces, at the shoulder and the legs" can
+    check the claim against the set printed on the same card; a reader who saw
+    only "one Tier 6 piece" could not, and did not.
+    """
+    held = [slot for slot in PIECE_ORDER if slot in slots]
+    count = COUNT_WORDS[len(held)] if len(held) < len(COUNT_WORDS) else str(
+        len(held))
+    if not held:
+        return f"no {tier} piece"
+    noun = "piece" if len(held) == 1 else "pieces"
+    return (f"{count} {tier} {noun}, at "
+            + joined([f"the {slot}" for slot in held]))
+
+
+def fill_contested(template: str, data: dict) -> str:
+    """Fill a contested sentence from the capture it describes.
+
+    Only the placeholders a template uses are read, so a spec whose capture
+    lacks a field is only affected if its own sentence names that field.
+    """
+    anchors = data.get("anchors") or {}
+    entry = anchors.get("entry") or {}
+    tier = anchors.get("tier_hands_and_head") or {}
+    tier_rows = tier.get("hit_by_slot") or {}
+
+    def item(slot: str) -> str:
+        row = tier_rows.get(slot)
+        return row.get("item") if isinstance(row, dict) else str(row)
+
+    sets = tier.get("set_pieces_held") or {}
+    return template.format(
+        tier_head=item("head"),
+        tier_hands=item("hands"),
+        tier6=pieces_phrase(tier.get("tier6_pieces_held") or [], "Tier 6"),
+        # `tier_pieces_held` on an entry anchor means TIER 5 pieces, which is
+        # how this file has always consumed it. It is not every tier piece.
+        entry_tier5=pieces_phrase(
+            entry.get("tier5_pieces_held") or entry.get("tier_pieces_held")
+            or [], "Tier 5"),
+        tier_sets=joined([
+            f"{COUNT_WORDS[count] if count < len(COUNT_WORDS) else count} "
+            f"{'piece' if count == 1 else 'pieces'} of {name}"
+            for name, count in sorted(sets.items())]),
+    )
+
 
 BANNER = """\
 # GENERATED BY tools/extract_hit_captures.py. DO NOT EDIT.
@@ -193,8 +283,8 @@ def main() -> int:
         if basis:
             entry["basis"] = basis
         if spec in TOKEN_CONFIGURATION_CONTESTED:
-            entry["token_configuration_contested"] = \
-                TOKEN_CONFIGURATION_CONTESTED[spec]
+            entry["token_configuration_contested"] = fill_contested(
+                TOKEN_CONFIGURATION_CONTESTED[spec], data)
         for anchor, name in ANCHORS:
             block = (data.get("anchors") or {}).get(anchor) or {}
             supplied = block.get("total_item_hit")

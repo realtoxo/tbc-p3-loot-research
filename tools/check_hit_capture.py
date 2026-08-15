@@ -54,6 +54,12 @@ ANCHORS = ("entry", "tier_hands_and_head")
 # Spell hit is a separate stat from melee hit in 2.4.3 and one spec needs both.
 TOTALS = {"total_item_hit": "hit", "total_item_spell_hit": "spell_hit"}
 
+# Which raid tier each membership field claims. `tier_pieces_held` is the entry
+# anchor's name for the same claim the tier anchors write as
+# `tier5_pieces_held`, and extract_hit_captures.py reads it as that.
+TIER_FIELDS = {"tier6_pieces_held": "T6", "tier5_pieces_held": "T5",
+               "tier_pieces_held": "T5"}
+
 
 # Which assumed buff each cap receives. Improved Faerie Fire supplies melee and
 # ranged hit only in 2.4.3, so a caster gets nothing from it, and the fact file
@@ -185,6 +191,80 @@ def check_against_items(captures: Path, items_csv: Path,
     return problems
 
 
+def check_derived_fields(captures: Path, items_csv: Path) -> list[str]:
+    """Every derived field on every anchor, against the anchor's own rows.
+
+    WHY EVERY ANCHOR AND NOT THE TWO NAMED ONES. The totals were checked for
+    `entry` and `tier_hands_and_head` only, so the three alternative anchors,
+    such as the Arms Warrior's refuse-the-head-token set, stated figures nothing
+    read back. An anchor nobody checks is where a stale figure survives.
+
+    WHY THE MEMBERSHIP FIELDS AND NOT THE TOTALS ALONE. tools/rebuild_tier_sets
+    writes a tier anchor by editing the block in place, so a derived field it
+    did not rewrite kept the figure the previous tier set earned.
+    `total_item_spell_hit` did that on the Protection Paladin, stating 17 where
+    every row read zero, and `set_pieces_held` did it on four specs, omitting
+    the token the rebuild had just put on. Both are the same defect and both are
+    checkable against the gear, so both are checked.
+    """
+    import csv
+
+    table = {int(row["item_id"]): row for row in csv.DictReader(items_csv.open())}
+
+    def is_tier(item_id) -> bool:
+        # Set membership is `source == tier_vendor`. The `tier` column says
+        # which raid an item drops in, so an ordinary Black Temple off-piece
+        # also reads T6 and both tests have to pass.
+        record = table.get(item_id) if isinstance(item_id, int) else None
+        return bool(record and record.get("set_name")
+                    and record.get("source") == "tier_vendor")
+
+    problems: list[str] = []
+    for path in sorted(captures.glob("*.yaml")):
+        data = yaml.safe_load(path.read_text())
+        if not isinstance(data, dict) or "anchors" not in data:
+            continue
+        for name, block in (data.get("anchors") or {}).items():
+            if not isinstance(block, dict):
+                continue
+            rows = {slot: row for slot, row in
+                    (block.get("hit_by_slot") or {}).items()
+                    if isinstance(row, dict)}
+            for total_key, row_key in TOTALS.items():
+                if total_key not in block:
+                    continue
+                summed = sum(int(row.get(row_key) or 0) for row in rows.values())
+                if int(block[total_key]) != summed:
+                    problems.append(
+                        f"{path}: {name}.{total_key} states {block[total_key]} "
+                        f"but its own rows sum to {summed}")
+            for field, raid_tier in TIER_FIELDS.items():
+                if field not in block:
+                    continue
+                held = sorted(slot for slot, row in rows.items()
+                              if is_tier(row.get("id"))
+                              and (table.get(row.get("id")) or {}).get("tier")
+                              == raid_tier)
+                if sorted(block[field] or []) != held:
+                    problems.append(
+                        f"{path}: {name}.{field} states "
+                        f"{sorted(block[field] or [])} and its own rows hold "
+                        f"{held}")
+            if "set_pieces_held" in block:
+                counts: dict[str, int] = {}
+                for row in rows.values():
+                    record = table.get(row.get("id"))
+                    if record and record.get("set_name"):
+                        counts[record["set_name"]] = (
+                            counts.get(record["set_name"], 0) + 1)
+                if dict(block["set_pieces_held"] or {}) != counts:
+                    problems.append(
+                        f"{path}: {name}.set_pieces_held states "
+                        f"{dict(block['set_pieces_held'] or {})} and its own "
+                        f"rows hold {counts}")
+    return problems
+
+
 def check_progression(progression: Path, drops: Path, tokens: Path) -> list[str]:
     """The premise every tier figure rests on, checked against the drop table.
 
@@ -283,6 +363,19 @@ def main() -> int:
               "the table wins. Correct the capture.", file=sys.stderr)
         return 1
     print(f"every capture row agrees with {ITEMS} on what its items carry")
+
+    derived = check_derived_fields(args.captures, ITEMS)
+    if derived:
+        print(f"{len(derived)} derived field(s) disagree with their own gear:",
+              file=sys.stderr)
+        for line in derived:
+            print(f"  {line}", file=sys.stderr)
+        print("\nA derived field is summed or counted from hit_by_slot. Fix the "
+              "gear or rerun tools/rebuild_tier_sets.py, never the figure.",
+              file=sys.stderr)
+        return 1
+    print("every derived field agrees with the gear it is derived from")
+
     files = sorted(args.captures.glob("*.yaml"))
     if not files:
         print(f"no captures under {args.captures}")
@@ -342,12 +435,11 @@ def main() -> int:
                     continue
                 # The row key is absent on specs that carry only one kind of
                 # hit, which is every spec but the Protection Paladin.
+                # THE SUM IS TESTED IN check_derived_fields, which covers every
+                # anchor rather than the two named here. It is summed again
+                # because the table below prints it beside the stated figure.
                 summed = sum(int(row.get(row_key) or 0) for row in rows.values())
                 stated = int(block[total_key])
-                if summed != stated:
-                    problems.append(
-                        f"{path}: {anchor}.{total_key} states {stated} but its "
-                        f"own rows sum to {summed}")
                 if total_key != "total_item_hit":
                     continue
                 was = old_entry if anchor == "entry" else old_tier

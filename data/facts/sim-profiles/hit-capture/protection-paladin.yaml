@@ -132,6 +132,7 @@ anchors:
         item: Faceplate of the Impenetrable
         id: 32521
         hit: 0
+        spell_hit: 0
       neck:
         item: The Darkener's Grasp
         id: 30007
@@ -141,6 +142,7 @@ anchors:
         item: Lightbringer Shoulderguards
         id: 30998
         hit: 0
+        spell_hit: 0
       back:
         item: Phoenix-Wing Cloak
         id: 29925
@@ -150,6 +152,7 @@ anchors:
         item: Lightbringer Chestguard
         id: 30991
         hit: 0
+        spell_hit: 0
       wrist:
         item: Wristguards of Determination
         id: 32515
@@ -159,6 +162,7 @@ anchors:
         item: Lightbringer Handguards
         id: 30985
         hit: 0
+        spell_hit: 0
       waist:
         item: Girdle of the Invulnerable
         id: 30096
@@ -168,6 +172,7 @@ anchors:
         item: Lightbringer Legguards
         id: 30995
         hit: 0
+        spell_hit: 0
       feet:
         item: Boots of the Resilient
         id: 32267
@@ -209,7 +214,7 @@ anchors:
         hit: 0
         spell_hit: 0
     total_item_hit: 15
-    total_item_spell_hit: 17
+    total_item_spell_hit: 0
     rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
       piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
       2026-08-13'

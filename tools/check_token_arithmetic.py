@@ -41,6 +41,8 @@ WORKBOOK = Path("data/research/epv-workbook")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_ladder import SPECS  # noqa: E402
+from extract_hit_captures import (  # noqa: E402
+    TOKEN_CONFIGURATION_CONTESTED)
 
 # An item name followed by a score. Names run from a capital through letters,
 # apostrophes, hyphens and spaces; scores carry one or two decimal places.

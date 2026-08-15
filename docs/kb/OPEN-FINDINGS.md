@@ -155,10 +155,17 @@ wrong table. `check_tank_defense` still passes because the defense shortfall
 sits inside the gem and enchant budget, so nothing caught it. EVERY captured
 list needs re-checking against the spec's own set before the rebuild is trusted.
 
-**A DERIVED FIELD WAS NOT RECOMPUTED.** The Protection Paladin tier anchor
-carries `total_item_spell_hit: 17` while no item in the set has any spell hit.
-The rebuild recomputed `total_item_hit` and missed its sibling, and the stale 17
-has already reached hit-captured.yaml and the spell line derived from it.
+**A DERIVED FIELD WAS NOT RECOMPUTED: FIXED 14 AUGUST 2026.** The Protection
+Paladin tier anchor carried `total_item_spell_hit: 17` while no item in the set
+has any spell hit. The rebuild recomputed `total_item_hit` and missed its
+siblings, because it edits the anchor block in place and every field it does not
+write keeps what the previous tier set earned. A sweep of all thirty-seven
+anchors found one more stale field of the same kind: `set_pieces_held` omitted
+the token the rebuild had just put on, on four specs. The rebuild now computes
+`total_item_hit`, `total_item_spell_hit`, `tier6_pieces_held`,
+`tier5_pieces_held` and `set_pieces_held` from the gear it writes, and
+`check_hit_capture.py` tests all five on EVERY anchor, including the three
+alternative anchors nothing used to read back.
 
 ### Two things that are contested rather than wrong
 
@@ -183,6 +190,39 @@ Warrior one repeats a claim already retracted in token-arithmetic.yaml: it says
 the head token costs the Destroyer four-piece when that capture holds two
 Destroyer pieces. The string is hardcoded in tools/extract_hit_captures.py and
 so bypasses tools/check_token_arithmetic.py entirely.
+
+
+## Still open after the tier-set defect pass, 14 August 2026
+
+Published in this state deliberately. Two items remain.
+
+**THE CONTESTED-TOKEN SENTENCES ARE NOT FIXED.** `TOKEN_CONFIGURATION_CONTESTED`
+in `tools/extract_hit_captures.py` is a hardcoded sentence per spec that prints
+on every claimant card, and several describe token configurations the rebuilt
+sets no longer hold. The Arms Warrior one says the head token "costs the
+Destroyer four-piece" where that capture holds two Destroyer pieces, and the
+claim was already retracted in `token-arithmetic.yaml` under
+`head_four_piece_claim_is_CONDITIONAL`. Because the sentence is hardcoded in the
+transform it bypasses `tools/check_token_arithmetic.py`, which is why a
+retracted claim kept printing. The agent assigned to it stalled and the work was
+never started.
+
+**ONE CAPTURED ROW CANNOT BE SETTLED FROM THIS REPOSITORY.** The Retribution
+Paladin chest in `data/research/wowhead-phase3-bis/retribution_paladin.json`
+records `Bulwark of the Ancient Kings`, item 28485, which appears in no other
+file here, while the guide's own chest section ranks `Bulwark of Kings`, item
+28484. Two ids one digit apart and two names one word apart, which is the exact
+shape of the error this project has shipped four times. Settling it needs the
+page re-read in a browser.
+
+**A DIAGNOSIS OF MINE THAT WAS WRONG, recorded so it is not repeated.** The
+Protection Warrior tier shoulder reads Onslaught Shoulderblades, item 30979,
+which is the DPS set: 0 defense and 39 strength against the tank shoulder's 29
+defense. I called that a bad extraction. The sweep of all seventeen lists and
+eighty-five rows found the extraction correct: a Protection Warrior really does
+take that shoulder for threat, and the tank guide really does list it. The row
+was surprising, not wrong, and I diagnosed it on its appearance rather than on
+evidence.
 
 
 ## Swept and found clean

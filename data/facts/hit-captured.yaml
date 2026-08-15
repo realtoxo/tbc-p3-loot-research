@@ -165,9 +165,11 @@ specs:
       - hands
       - head
       - shoulder
-    token_configuration_contested: Onslaught Gauntlets are 87.78 EPV against 101.88
-      on the Shade of Akama gloves they displace, and the head token costs the Destroyer
-      four-piece
+    token_configuration_contested: Onslaught Gauntlets 87.78 EPV against Grips of
+      Silent Justice 101.88 from Shade of Akama, and the entry set holds two Tier
+      5 pieces, at the head and the chest, so the head token costs the Destroyer
+      two-piece and not the four-piece; this set holds four Tier 6 pieces, at the
+      head, the shoulder, the chest and the hands
     workbook_greedy_reference:
       entry: 155
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -211,9 +213,11 @@ specs:
       - hands
       - head
       - shoulder
-    token_configuration_contested: either token breaks the Tier 5 four-piece, whose
-      slots are head, shoulder, chest and hands; both tokens are raw EPV gains,
-      so the collision is the bonus and not the items
+    token_configuration_contested: the entry set holds four Tier 5 pieces, at the
+      head, the shoulder, the chest and the hands, which is the Tier 5 four-piece,
+      so either token breaks it; both tokens are raw EPV gains, and this set trades
+      those four for four Tier 6 pieces, at the head, the shoulder, the chest and
+      the hands
     workbook_greedy_reference:
       entry: 217
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -435,7 +439,8 @@ specs:
       - legs
       tier6_pieces_held: []
     token_configuration_contested: the published guide states in its own words that
-      neither Tier 6 set bonus is worth chasing for this spec
+      neither Tier 6 set bonus is worth chasing for this spec, and this set holds
+      no Tier 6 piece
     workbook_greedy_reference:
       entry: 129
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -481,8 +486,10 @@ specs:
       - head
       - legs
       - shoulder
-    token_configuration_contested: a druid has five tier slots, and the Nordrassil
-      four-piece plus the Thunderheart two-piece need six
+    token_configuration_contested: a druid has five tier slots, so the Nordrassil
+      four-piece and the Thunderheart two-piece need six between them and cannot
+      both be worn; this set wears five pieces of Thunderheart Harness, which leaves
+      it no Nordrassil piece
     workbook_greedy_reference:
       entry: 60
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -520,9 +527,9 @@ specs:
       tier6_pieces_held:
       - legs
       - shoulder
-    token_configuration_contested: the head slot is Wolfshead Helm, which is not
-      tier, and the hands token alone leaves one Tier 6 piece and so no Tier 6 bonus
-      while cutting Nordrassil from four pieces to three
+    token_configuration_contested: the head slot is Wolfshead Helm and the hands
+      slot is Gloves of the Searing Grip, and neither is a tier piece, so this set
+      takes neither token; it holds two Tier 6 pieces, at the shoulder and the legs
     workbook_greedy_reference:
       entry: 182
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.
@@ -608,12 +615,12 @@ specs:
       gems_after_enchants: 0
       gems_needed: 4
       item_hit: 15
-      item_spell_hit: 17
+      item_spell_hit: 0
       net_spell_target_rating: 165
       spell_enchant_rating_available: 29
-      spell_gap_after_enchants: 119
-      spell_gap_rating: 148
-      spell_gems_after_enchants: 12
+      spell_gap_after_enchants: 136
+      spell_gap_rating: 165
+      spell_gems_after_enchants: 14
       spell_state: short
       state: short
       tier5_pieces_held: []
@@ -704,9 +711,10 @@ specs:
       - chest
       - head
       tier6_pieces_held: []
-    token_configuration_contested: Lightbringer Gauntlets are 56.46 EPV against
-      65.57 on the non-tier gloves they displace, and no Retribution set bonus in
-      either tier is a damage bonus
+    token_configuration_contested: Lightbringer Gauntlets 56.46 EPV against Gloves
+      of the Searing Grip 65.57, and no Retribution set bonus in either tier is
+      a damage bonus; this set holds no Tier 6 piece and keeps Gloves of the Searing
+      Grip at the hands
     workbook_greedy_reference:
       entry: 71
       note: The retired rule. See hit.yaml.method.tier_anchor_rule_RETIRED.

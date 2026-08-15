@@ -10,3 +10,69 @@ meta:
     See docs/kb/OPEN-FINDINGS.md. The capture is kept so a second attempt does not have
     to re-read seventeen client-rendered pages.
   specs: 17
+
+# A sweep on 14 August 2026 looked for rows the browser extractor took from the
+# wrong table. It corrected nothing, because it found nothing to correct. The
+# record is kept here so the sweep is not run a second time, and so that the one
+# row it could not settle is not mistaken for a settled one.
+verification:
+  swept: '2026-08-14'
+  scope: All 17 files, all 5 token slots, 85 rows.
+  method: >-
+    Each recorded id was resolved in data/facts/items.csv, and each recorded name
+    compared with the name that file gives the id. Each id that names a tier
+    piece was compared with the set data/facts/tokens.yaml::spec_to_set gives
+    that spec for that tier. Each row was then looked up in the matching spec tab
+    of data/research/epv-workbook/, in the section for the same slot, which is an
+    independent source for what a Phase 3 list ranks in that slot.
+  result_ids: >-
+    80 of the 85 ids resolve in items.csv and every one carries the name the
+    capture records. The other five are absent from items.csv because that file
+    holds Phase 3 raid and vendor gear only. Four of the five are confirmed by id
+    and by name in the EP Workbook: Wolfshead Helm 8345 in Cat.csv, and the three
+    Vengeful Gladiator plate pieces 33730, 33728 and 33731 in Prot.csv.
+  result_ranks: >-
+    84 of the 85 rows appear in the matching workbook slot section inside the top
+    five, 55 of them at rank 1, and the workbook name agrees with the capture
+    name in all 84. One row does not appear at all. See unresolved below.
+  result_sets: >-
+    One tier piece sits in a set that spec_to_set does not give its spec. It is
+    the Protection Warrior shoulder, and it is not an extraction error. See
+    onslaught_shoulderblades below.
+  onslaught_shoulderblades:
+    claim_tested: >-
+      That protection_warrior.json records shoulder 30979 Onslaught
+      Shoulderblades, a piece of Onslaught Battlegear, where spec_to_set gives
+      the Protection Warrior Onslaught Armor, and that a tank list would not rank
+      the damage shoulder, so the extractor read a damage row.
+    finding: >-
+      The claim does not hold. Prot.csv, the Protection tab of the EP Workbook,
+      ranks Onslaught Shoulderblades 30979 second at EPV 169.64 and the tank set
+      shoulder Onslaught Shoulderguards 30980 ninth at EPV 148.53. That tab is
+      threat weighted, at 1.2 threat to 1 damage taken by its own header, so it
+      does rank the damage shoulder above the tank shoulder. A Phase 3 list can
+      therefore put 30979 in a Protection Warrior shoulder slot on purpose.
+      The row stands as captured.
+    also: >-
+      The same file records 33730, 33728 and 33731 in the head, chest and leg
+      slots. Prot.csv ranks those three second, second and fourth in their own
+      sections, so a Protection Warrior list built on Season 3 plate is what the
+      workbook expects, not a sign of a wrong table.
+    ref: data/research/epv-workbook/Prot.csv lines 36, 37 and 44
+  unresolved:
+    - spec: retribution_paladin
+      slot: chest
+      recorded_id: '28485'
+      recorded_name: Bulwark of the Ancient Kings
+      why_unsettled: >-
+        This is the only row the sweep could not settle. Id 28485 is in no other
+        file in this repository, so neither the id nor the name can be checked
+        here. The Ret chest section of the workbook does not rank it. That
+        section does rank Bulwark of Kings 28484 eleventh, one digit and one word
+        away, which is the shape of the error this project has shipped four
+        times. Nothing available settles which of the two the page carried, so
+        the row is left as captured and is not to be treated as verified.
+      what_would_settle_it: >-
+        The 2.4.3 tooltip endpoint for 28485, for the id and the name, and a
+        second reading of the Retribution page in a browser, for which one it
+        lists.

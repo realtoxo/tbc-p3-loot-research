@@ -59,8 +59,12 @@ TOKEN_SLOTS = {"head": "head", "shoulder": "shoulder", "chest": "chest",
                "hand": "hands", "leg": "legs"}
 
 # Which hit column on the item answers for a spec, by the cap hit-captured.yaml
-# records. A spec capped on both takes the larger, because the capture records
-# one figure per slot and the constraint block states each cap separately.
+# records. A spec capped on both keeps the two apart, in a `hit` field and a
+# `spell_hit` field, because that is how the captures themselves record it: the
+# Protection Paladin entry set carries a spell_hit field on every row. Taking
+# the larger of the two instead put melee hit and spell hit in one field and
+# left total_item_spell_hit stating a figure no row supported, which is what
+# check_hit_capture.py failed on.
 HIT_COLUMN = {"melee_special": ("melee_hit",), "ranged": ("melee_hit",),
               "spell": ("spell_hit",),
               "melee_special_and_spell": ("melee_hit", "spell_hit")}
@@ -108,13 +112,46 @@ def main() -> int:
         return bool(row and row.get("set_name")
                     and row.get("source") == "tier_vendor")
 
-    def hit_of(item_id: str, spec: str) -> int:
-        row = items.get(str(item_id))
-        if not row:
-            return 0
-        return max(number(row.get(c, 0))
-                   for c in HIT_COLUMN.get(caps.get(spec, "spell"),
-                                           ("spell_hit",)))
+    def tier_pieces(built: dict, raid_tier: str) -> list[str]:
+        """The slots holding a tier piece from one raid tier, read off the gear.
+
+        Every slot is examined rather than the five token slots alone. A tier
+        piece can only sit in a token slot today, but a field derived from the
+        whole set cannot go wrong if that ever stops being true.
+        """
+        return sorted(slot for slot, row in built.items()
+                      if is_tier((row or {}).get("id"))
+                      and (items.get(str((row or {}).get("id")))
+                           or {}).get("tier") == raid_tier)
+
+    def set_counts(built: dict) -> dict[str, int]:
+        """How many pieces of each set the gear holds, tier set or crafted.
+
+        A CRAFTED SET COUNTS. The Balance Druid wears Spellstrike Pants and the
+        Shadow Priest wears a Shadow's Embrace piece, and a reader asking which
+        set bonuses a set holds needs both, not the tier set alone.
+        """
+        counts = Counter()
+        for row in built.values():
+            item = items.get(str((row or {}).get("id")))
+            if item and item.get("set_name"):
+                counts[item["set_name"]] += 1
+        return dict(sorted(counts.items()))
+
+    def hit_fields(item_id: str, spec: str) -> dict[str, int]:
+        """The hit fields one rebuilt row carries, in the capture's own shape.
+
+        A spec capped on one school carries a single `hit` field holding that
+        school's rating. A spec capped on both carries `hit` for melee and
+        `spell_hit` for spell, kept apart so both totals can be summed from the
+        rows they claim to total.
+        """
+        row = items.get(str(item_id)) or {}
+        columns = HIT_COLUMN.get(caps.get(spec, "spell"), ("spell_hit",))
+        if len(columns) == 1:
+            return {"hit": number(row.get(columns[0], 0))}
+        return {"hit": number(row.get("melee_hit", 0)),
+                "spell_hit": number(row.get("spell_hit", 0))}
 
     changed, report = 0, []
     for path in sorted(args.captures.glob("*.yaml")):
@@ -142,7 +179,7 @@ def main() -> int:
             was = (built.get(slot) or {}).get("item", "nothing")
             built[slot] = {"item": row["name"] if row else pick["item"],
                            "id": int(pick["id"]),
-                           "hit": hit_of(pick["id"], spec)}
+                           **hit_fields(pick["id"], spec)}
             taken_by_rule_one.add(slot)
             if was != built[slot]["item"]:
                 moves.append(f"{slot}: {was} -> {built[slot]['item']} (token)")
@@ -187,27 +224,46 @@ def main() -> int:
             best = options[0]
             sets[item["set_name"]] -= 1
             built[slot] = {"item": best[1], "id": int(best[0]),
-                           "hit": hit_of(best[0], spec)}
+                           **hit_fields(best[0], spec)}
             moves.append(f"{slot}: {item['name']} orphaned, no set bonus "
                          f"-> {best[1]} (best off-piece, EPV {best[2]})")
 
+        # EVERY DERIVED FIELD ON THIS ANCHOR IS COMPUTED FROM THE GEAR ABOVE,
+        # AND ALL OF THEM ARE WRITTEN. The anchor block is kept rather than
+        # replaced, so any derived field this tool left alone went on stating
+        # what the PREVIOUS tier set earned. Two fields did: the Protection
+        # Paladin kept total_item_spell_hit at 17, the spell hit of a main hand
+        # the rebuild no longer wears, while every row read zero; and
+        # set_pieces_held omitted the very token the rebuild had just put on,
+        # so the Arcane Mage read "Tirisfal Regalia: 4" beside Tier 6 legs.
+        #
         # A TIER COLUMN IS A RAID, NOT A SET. `items.csv::tier` says which raid
         # tier an item drops in, so Leggings of Channeled Elements reads T6
         # while being an ordinary Black Temple off-piece. Counting on that alone
         # credited the Affliction Warlock with four Tier 6 pieces when its list
         # gives it three. Set membership is `source == tier_vendor`, and both
         # tests have to pass.
-        tier6 = sorted(s for s in TOKEN_SLOTS.values()
-                       if is_tier((built.get(s) or {}).get("id"))
-                       and (items.get(str((built.get(s) or {}).get("id")))
-                            or {}).get("tier") == "T6")
+        tier6 = tier_pieces(built, "T6")
+        tier5 = tier_pieces(built, "T5")
+        sets_held = set_counts(built)
+        # BOTH TOTALS ARE SUMMED FROM THE ROWS, never carried across from the
+        # set that stood here before. The spell key is written only where the
+        # capture already states it, because a caster's rows carry no spell_hit
+        # field at all.
         total = sum(int(r.get("hit") or 0) for r in built.values())
+        spell_total = sum(int(r.get("spell_hit") or 0) for r in built.values())
         report.append((spec, len(tier6), total, moves))
         if args.apply:
             block = doc["anchors"].setdefault("tier_hands_and_head", {})
+            states_spell = ("total_item_spell_hit" in block
+                            or "total_item_spell_hit" in doc["anchors"]["entry"])
             block["hit_by_slot"] = built
             block["tier6_pieces_held"] = tier6
+            block["tier5_pieces_held"] = tier5
+            block["set_pieces_held"] = sets_held
             block["total_item_hit"] = total
+            if states_spell:
+                block["total_item_spell_hit"] = spell_total
             block["rebuilt"] = (
                 "Entry set with the token slots the Phase 3 best-in-slot list "
                 "devotes to a tier piece, per the rule in "

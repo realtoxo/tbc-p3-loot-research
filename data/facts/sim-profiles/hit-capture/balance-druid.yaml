@@ -187,6 +187,7 @@ anchors:
       piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
       2026-08-13'
     set_pieces_held:
+      Spellstrike Infusion: 1
       Thunderheart Regalia: 4
   tier_hands_only_alternative_hold_tier5_four_piece:
     tier6_pieces_held: []
