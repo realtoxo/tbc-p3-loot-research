@@ -31,6 +31,10 @@ rulings:
     at all. The captures list both a staff and an off-hand for several specs, which cannot
     both be worn; this ruling settles that contradiction for these four. The Shadow Priest
     is NOT on this list and needs a one-hand and off-hand pairing instead.
+  no_off_hand: 'STATED EXPLICITLY BY THE GUILD LEAD, 15 August 2026: "Zhardoom users should
+    not have offhands also". A two-handed staff occupies both hands, so the off-hand slot
+    is EMPTY for these four specs. The captures list an off-hand for several of them,
+    and it is discarded when the profile is built rather than carried.'
 - weapon: Tempest of Chaos
   ids:
   - 32943
@@ -41,10 +45,15 @@ rulings:
     lists rank Tempest of Chaos first, and the word FIRST is the ordering rather than
     an exclusion.'
 what_still_needs_a_ruling:
-- The Shadow Priest loses Zhar'doom by the second ruling and its capture names no replacement
-  main hand. Somebody has to say what it wears.
-- The Arms Warrior replacement is unstated. Its own page carries a two-handed table headed
-  Phase 2, ranking Cataclysm's Edge 30902, which was recorded as a note rather than a
-  slot because the heading says Phase 2.
+- 'THE ARMS WARRIOR TWO-HANDER. The guild lead asked whether Arms takes Torch of the Damned.
+  The Wowhead page does NOT give it that weapon: it ranks only dual Warglaives for Phase
+  3, plus a two-hand table whose heading says PHASE 2, topped by Cataclysm''s Edge 30902.
+  Torch of the Damned 32332 is a real Phase 3 two-hand mace but is the Retribution Paladin''s
+  own best-in-slot main hand, so routing it to Arms contests that spec. Three candidates:
+  Cataclysm''s Edge 30902, what the page offers under a Phase 2 heading; Torch of the
+  Damned 32332, contested with Retribution; Twinblade of the Phoenix 29993, what Arms
+  sims with today. UNRESOLVED.'
+- The Shadow Priest loses Zhar'doom by the routing ruling and its capture names no replacement
+  main hand.
 - If the warlocks take Zhar'doom and the Arcane Mage takes Tempest of Chaos first, what
   the warlocks hold before a Zhar'doom drops is unstated.
