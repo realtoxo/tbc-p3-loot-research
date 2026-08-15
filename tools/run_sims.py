@@ -224,6 +224,25 @@ SPEC_OPTIONS = {
     # The off hand of the dual Windfury ruling. sim/shaman/enhancement/
     # enhancement.go reads enhOptions.ImbueOh, one level up from ClassOptions.
     "enhancement_shaman": {"imbueOh": "WindfuryWeapon"},
+    # syncType IS DELIBERATELY ABSENT, and it must stay absent.
+    #
+    # proto/shaman.proto ShamanSyncType offers NoSync, SyncMainhandOffhandSwings,
+    # DelayOffhandSwings and Auto. Sending nothing falls to the default branch of
+    # sim/shaman/enhancement/enhancement.go::ApplySyncType, which clears the
+    # swing replacement, and that is unsynced. The guild lead ruled on 15 August
+    # 2026: "enhancement shaman DO NOT want weapons synced".
+    #
+    # THIS IS WRITTEN DOWN BECAUSE THE OPPOSITE LOOKS LIKE AN IMPROVEMENT. The
+    # shipped preset at ui/shaman/enhancement/presets.ts sets DelayOffhandSwings,
+    # and it measures 16.5 DPS higher on the entry anchor, so a reader comparing
+    # our request against the preset finds a number sitting on the table and
+    # reaches for it. It is declined, not overlooked.
+    #
+    # What the option does is space the off-hand around Flurry, whose internal
+    # cooldown is the 500 ms constant ApplySyncType passes: two crits inside one
+    # window waste the second. Auto selects DelayOffhandSwings for matched weapon
+    # speeds, which is the pairing this spec runs, so Auto is not a neutral
+    # choice here either. Both are sync, and both are declined.
 }
 
 # SPECS THIS BUILD OF THE SIMULATOR CANNOT MODEL, and why. Named rather than
