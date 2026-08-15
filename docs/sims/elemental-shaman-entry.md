@@ -2,7 +2,7 @@
 title: Elemental Shaman, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1144.5 ± 1.06 damage per second.
+  The whole request behind one figure: 1577.2 ± 1.19 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/elemental-shaman.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                       |
 |----------------------------|---------------------------------------------------------------------------------------------|
-| Damage per second          | **1144.5**                                                                                  |
-| Standard error on the mean | ± 1.06                                                                                      |
-| Spread across iterations   | 105.6                                                                                       |
+| Damage per second          | **1577.2**                                                                                  |
+| Standard error on the mean | ± 1.19                                                                                      |
+| Spread across iterations   | 118.6                                                                                       |
 | Anchor                     | Destruction Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}

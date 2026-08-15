@@ -617,3 +617,49 @@ measured something other than what was asked. It now takes
 `--slot trinket_1,trinket_2 --swap 28830,29383`, and a trinket question should
 be asked that way, because a trinket is worth one thing beside an attack power
 partner and another beside an armor penetration one.
+
+## Every simulated character was the wrong race, found 15 August 2026
+
+**Six of thirteen simulated specs ran with no base strength, agility or
+stamina, and nothing failed.** The guild lead found it by refusing to accept
+that the Combat Rogue was outperforming every other class, and asking whether
+the rogue was using cooldowns nobody else had. It was not the cooldowns.
+
+`tools/run_sims.py` sent `"race": 1` for every spec. Race 1 is Blood Elf.
+`sim/core/base_stats.go` registers base stats through `AddBaseStatsCombo`, once
+per race and class pairing that actually exists, and **Blood Elf cannot be a
+Warrior, a Druid or a Shaman in 2.4.3**. A missing key in a Go map returns the
+zero value, so those characters were built with nothing underneath their gear.
+
+The specs affected were the Arms Warrior, the Fury Warrior, the Balance Druid,
+the Elemental Shaman, the Enhancement Shaman and the Feral Cat. Every spec that
+looked implausibly low was on that list, and every spec that looked reasonable
+was a class Blood Elf can actually be.
+
+Measured before the fix, at the best-in-slot anchor: the Fury Warrior gained
+472.1 DPS from being any legal race and the Arms Warrior 335.1, while the
+Combat Rogue moved 30.8 and the Affliction Warlock 21.2. That gap between the
+two groups is the defect, not a racial.
+
+**What made it invisible.** Nothing in the pipeline asserted that a character
+could exist. `just check` never runs a simulation, the run itself exited zero,
+the DPS was plausible rather than absurd, and the `IMPLAUSIBLE` floor at 300 is
+built to catch collapse rather than a fifth of a spec's damage. It is the same
+failure mode already recorded three times here: the simulator accepts input it
+then ignores.
+
+**The fix.** Races are recorded in `roster.yaml::races.by_spec`, ruled by the
+guild lead on 15 August 2026: Human for melee, Gnome for casters, Night Elf for
+hunters, Draenei for shamans. Two are forced away from that rule because Night
+Elf is the only Alliance druid race, so the Balance Druid and the Feral Cat take
+it instead. `tools/run_sims.py` reads the race and STOPS on an illegal pairing
+rather than running, and `tools/check_sim_profiles.py` rejects one without
+running a simulation at all.
+
+**A consequence worth knowing.** These races are not neutral. `sim/core/racials.go`
+gives Human Sword and Mace Specialization, which is 5 expertise and live damage
+for both warriors and the rogue, all of whom swing swords. `roster.yaml` still
+says elsewhere that hit requirements assume no racial, and that still governs
+`hit.yaml` and every cap state the compendium prints, because those are
+workbook-rule figures rather than simulator ones. The two answer different
+questions and the file now says so in both places.

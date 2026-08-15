@@ -2,7 +2,7 @@
 title: Fury Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2104.3 ± 1.03 damage per second.
+  The whole request behind one figure: 2535.7 ± 1.18 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/fury-warrior.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2104.3**                                                                                                                                    |
-| Standard error on the mean | ± 1.03                                                                                                                                        |
-| Spread across iterations   | 103.2                                                                                                                                         |
+| Damage per second          | **2535.7**                                                                                                                                    |
+| Standard error on the mean | ± 1.18                                                                                                                                        |
+| Spread across iterations   | 118.4                                                                                                                                         |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

@@ -2,7 +2,7 @@
 title: Combat Rogue, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2501.8 ± 0.98 damage per second.
+  The whole request behind one figure: 2522.1 ± 0.97 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/combat-rogue.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2501.8**                                                                                                                                    |
-| Standard error on the mean | ± 0.98                                                                                                                                        |
-| Spread across iterations   | 98.1                                                                                                                                          |
+| Damage per second          | **2522.1**                                                                                                                                    |
+| Standard error on the mean | ± 0.97                                                                                                                                        |
+| Spread across iterations   | 96.5                                                                                                                                          |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

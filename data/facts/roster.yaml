@@ -41,6 +41,71 @@ buffs:
     be computed against this baseline before any priority that depends on a hit
     column is trusted.
 
+races:
+  # RULED BY THE GUILD LEAD, 15 August 2026, verbatim: "assume human for melee,
+  # gnome for casters...assume NE for hunters and dranei for shaman".
+  #
+  # WHY THIS EXISTS AT ALL. tools/run_sims.py sent race 1, Blood Elf, for every
+  # spec. sim/core/base_stats.go registers base stats ONLY for race and class
+  # combinations that exist, and Blood Elf Warrior, Druid and Shaman do not, so
+  # a missing map key returned Go's zero value and SIX SPECS WERE SIMULATED WITH
+  # NO BASE STRENGTH, AGILITY OR STAMINA AT ALL. It did not error. It returned a
+  # smaller number.
+  #
+  # EVERY RACE BELOW IS ALLIANCE, which is what the ruling implies and what this
+  # file now records.
+  #
+  # TWO ARE NOT WHAT WAS ASKED FOR, and both are forced. Night Elf is the only
+  # Alliance druid race in 2.4.3, so the Balance Druid cannot be a Gnome and the
+  # Feral Cat cannot be a Human.
+  ruled: '2026-08-15'
+  verbatim: assume human for melee, gnome for casters...assume NE for hunters and dranei for shaman
+  by_spec:
+    combat_rogue: Human
+    arms_warrior: Human
+    fury_warrior: Human
+    retribution_paladin: Human
+    protection_warrior: Human
+    protection_paladin: Human
+    holy_paladin: Human
+    arcane_mage: Gnome
+    affliction_warlock: Gnome
+    destruction_warlock: Gnome
+    shadow_priest: Gnome
+    priest_healer: Gnome
+    beast_mastery_hunter: NightElf
+    survival_hunter: NightElf
+    elemental_shaman: Draenei
+    enhancement_shaman: Draenei
+    restoration_shaman: Draenei
+    balance_druid: NightElf
+    feral_cat: NightElf
+    feral_bear: NightElf
+    restoration_druid: NightElf
+  forced_substitutions:
+    balance_druid: >-
+      Asked for Gnome. Night Elf is the ONLY Alliance druid race in 2.4.3, so
+      Gnome is not available. Night Elf grants 1 percent dodge and 10 nature
+      resistance and no throughput racial.
+    feral_cat: >-
+      Asked for Human, by the melee half of the rule. Same reason: Night Elf is
+      the only Alliance druid race. This spec is not simulated in this build
+      anyway.
+  what_each_race_actually_grants: >-
+    Read from sim/core/racials.go rather than assumed. Human multiplies spirit
+    by 1.10 and grants Sword and Mace Specialization, which is 5 expertise with
+    those weapons and is LIVE DAMAGE for both warriors and the rogue, all of
+    whom swing swords. Gnome multiplies intellect by 1.05. Night Elf grants 1
+    percent base dodge. Draenei grants shadow resistance and the Draenei racial
+    aura, whose scope in this build is read from that file and not assumed here.
+  the_no_racial_note_below_is_now_SUPERSEDED_for_the_simulator: >-
+    `buffs.note` says every hit requirement is computed with no racial assumed.
+    That still governs hit.yaml and every cap state the compendium prints,
+    because those are workbook-rule figures. It does NOT govern a simulator run
+    any more: a run has to give the character a race, and now it gives it this
+    one. The two answer different questions and must not be reconciled by
+    changing either.
+
 groups:
   - id: g1
     members: [combat_rogue, arms_warrior, feral_cat, retribution_paladin, enhancement_shaman]

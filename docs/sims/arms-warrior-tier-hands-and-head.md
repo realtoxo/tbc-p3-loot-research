@@ -2,7 +2,7 @@
 title: Arms Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1946.9 ± 1.06 damage per second.
+  The whole request behind one figure: 2302.6 ± 1.15 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/arms-warrior.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **1946.9**                                                                                                                                    |
-| Standard error on the mean | ± 1.06                                                                                                                                        |
-| Spread across iterations   | 105.7                                                                                                                                         |
+| Damage per second          | **2302.6**                                                                                                                                    |
+| Standard error on the mean | ± 1.15                                                                                                                                        |
+| Spread across iterations   | 115.4                                                                                                                                         |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

@@ -69,19 +69,19 @@ applied, the talent string and the rotation.
 
 | Spec                 | Entry                                               | Tier                                                              | BiS                                               | Entry to BiS |
 |----------------------|-----------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------|--------------|
-| Affliction Warlock   | [1708.9 ± 0.83](sims/affliction-warlock-entry.md)   | [1734.4 ± 0.83](sims/affliction-warlock-tier-hands-and-head.md)   | [1964.4 ± 0.92](sims/affliction-warlock-bis.md)   | +255.5       |
-| Arcane Mage          | [2064.6 ± 0.88](sims/arcane-mage-entry.md)          | [2081.7 ± 0.89](sims/arcane-mage-tier-hands-and-head.md)          | [2269.9 ± 0.95](sims/arcane-mage-bis.md)          | +205.3       |
-| Arms Warrior         | [1965.6 ± 1.02](sims/arms-warrior-entry.md)         | [1946.9 ± 1.06](sims/arms-warrior-tier-hands-and-head.md)         | [1920.3 ± 1.07](sims/arms-warrior-bis.md)         | -45.3        |
-| Balance Druid        | [983.8 ± 0.61](sims/balance-druid-entry.md)         | [1060.8 ± 0.63](sims/balance-druid-tier-hands-and-head.md)        | [1258.0 ± 0.71](sims/balance-druid-bis.md)        | +274.2       |
-| Beast Mastery Hunter | [1954.3 ± 0.73](sims/beast-mastery-hunter-entry.md) | [2062.5 ± 0.77](sims/beast-mastery-hunter-tier-hands-and-head.md) | [1961.2 ± 0.73](sims/beast-mastery-hunter-bis.md) | +6.9         |
-| Combat Rogue         | [2352.4 ± 0.94](sims/combat-rogue-entry.md)         | [2501.8 ± 0.98](sims/combat-rogue-tier-hands-and-head.md)         | [2845.3 ± 1.11](sims/combat-rogue-bis.md)         | +492.9       |
-| Destruction Warlock  | [1937.7 ± 1.04](sims/destruction-warlock-entry.md)  | [2024.8 ± 1.07](sims/destruction-warlock-tier-hands-and-head.md)  | [2350.1 ± 1.16](sims/destruction-warlock-bis.md)  | +412.4       |
-| Elemental Shaman     | [1144.5 ± 1.06](sims/elemental-shaman-entry.md)     | [1332.8 ± 1.14](sims/elemental-shaman-tier-hands-and-head.md)     | [1512.1 ± 1.25](sims/elemental-shaman-bis.md)     | +367.6       |
-| Enhancement Shaman   | [2122.5 ± 0.90](sims/enhancement-shaman-entry.md)   | [2122.5 ± 0.90](sims/enhancement-shaman-tier-hands-and-head.md)   | [2253.2 ± 0.92](sims/enhancement-shaman-bis.md)   | +130.7       |
-| Fury Warrior         | [2130.0 ± 1.01](sims/fury-warrior-entry.md)         | [2104.3 ± 1.03](sims/fury-warrior-tier-hands-and-head.md)         | [2287.6 ± 0.98](sims/fury-warrior-bis.md)         | +157.6       |
-| Retribution Paladin  | [2026.9 ± 1.35](sims/retribution-paladin-entry.md)  | [2026.9 ± 1.35](sims/retribution-paladin-tier-hands-and-head.md)  | [2116.2 ± 1.38](sims/retribution-paladin-bis.md)  | +89.3        |
-| Shadow Priest        | [1264.0 ± 0.21](sims/shadow-priest-entry.md)        | [1306.8 ± 0.23](sims/shadow-priest-tier-hands-and-head.md)        | [1372.0 ± 0.23](sims/shadow-priest-bis.md)        | +108.0       |
-| Survival Hunter      | [2317.7 ± 0.90](sims/survival-hunter-entry.md)      | [2396.7 ± 0.92](sims/survival-hunter-tier-hands-and-head.md)      | [2510.7 ± 0.95](sims/survival-hunter-bis.md)      | +193.0       |
+| Affliction Warlock   | [1713.9 ± 0.83](sims/affliction-warlock-entry.md)   | [1738.4 ± 0.83](sims/affliction-warlock-tier-hands-and-head.md)   | [1970.8 ± 0.91](sims/affliction-warlock-bis.md)   | +256.9       |
+| Arcane Mage          | [2094.4 ± 0.88](sims/arcane-mage-entry.md)          | [2111.6 ± 0.90](sims/arcane-mage-tier-hands-and-head.md)          | [2301.9 ± 0.94](sims/arcane-mage-bis.md)          | +207.5       |
+| Arms Warrior         | [2289.9 ± 1.13](sims/arms-warrior-entry.md)         | [2302.6 ± 1.15](sims/arms-warrior-tier-hands-and-head.md)         | [2264.9 ± 1.18](sims/arms-warrior-bis.md)         | -25.0        |
+| Balance Druid        | [1455.0 ± 0.74](sims/balance-druid-entry.md)        | [1549.4 ± 0.77](sims/balance-druid-tier-hands-and-head.md)        | [1782.5 ± 0.84](sims/balance-druid-bis.md)        | +327.5       |
+| Beast Mastery Hunter | [1954.2 ± 0.74](sims/beast-mastery-hunter-entry.md) | [2063.1 ± 0.77](sims/beast-mastery-hunter-tier-hands-and-head.md) | [1960.9 ± 0.72](sims/beast-mastery-hunter-bis.md) | +6.7         |
+| Combat Rogue         | [2374.2 ± 0.94](sims/combat-rogue-entry.md)         | [2522.1 ± 0.97](sims/combat-rogue-tier-hands-and-head.md)         | [2870.5 ± 1.09](sims/combat-rogue-bis.md)         | +496.3       |
+| Destruction Warlock  | [1945.5 ± 1.04](sims/destruction-warlock-entry.md)  | [2035.0 ± 1.07](sims/destruction-warlock-tier-hands-and-head.md)  | [2358.6 ± 1.15](sims/destruction-warlock-bis.md)  | +413.1       |
+| Elemental Shaman     | [1577.2 ± 1.19](sims/elemental-shaman-entry.md)     | [1803.7 ± 1.22](sims/elemental-shaman-tier-hands-and-head.md)     | [2025.0 ± 1.35](sims/elemental-shaman-bis.md)     | +447.8       |
+| Enhancement Shaman   | [2418.5 ± 0.99](sims/enhancement-shaman-entry.md)   | [2418.5 ± 0.99](sims/enhancement-shaman-tier-hands-and-head.md)   | [2556.7 ± 1.01](sims/enhancement-shaman-bis.md)   | +138.2       |
+| Fury Warrior         | [2559.8 ± 1.18](sims/fury-warrior-entry.md)         | [2535.7 ± 1.18](sims/fury-warrior-tier-hands-and-head.md)         | [2722.6 ± 1.13](sims/fury-warrior-bis.md)         | +162.8       |
+| Retribution Paladin  | [2057.5 ± 1.35](sims/retribution-paladin-entry.md)  | [2057.5 ± 1.35](sims/retribution-paladin-tier-hands-and-head.md)  | [2151.7 ± 1.37](sims/retribution-paladin-bis.md)  | +94.2        |
+| Shadow Priest        | [1264.5 ± 0.21](sims/shadow-priest-entry.md)        | [1307.4 ± 0.23](sims/shadow-priest-tier-hands-and-head.md)        | [1372.7 ± 0.23](sims/shadow-priest-bis.md)        | +108.2       |
+| Survival Hunter      | [2318.4 ± 0.90](sims/survival-hunter-entry.md)      | [2397.6 ± 0.92](sims/survival-hunter-tier-hands-and-head.md)      | [2512.0 ± 0.95](sims/survival-hunter-bis.md)      | +193.6       |
 
 ## How every figure was produced
 

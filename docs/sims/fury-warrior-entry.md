@@ -2,7 +2,7 @@
 title: Fury Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2130.0 ± 1.01 damage per second.
+  The whole request behind one figure: 2559.8 ± 1.18 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/fury-warrior.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                 |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Damage per second          | **2130.0**                                                                            |
-| Standard error on the mean | ± 1.01                                                                                |
-| Spread across iterations   | 100.5                                                                                 |
+| Damage per second          | **2559.8**                                                                            |
+| Standard error on the mean | ± 1.18                                                                                |
+| Spread across iterations   | 117.6                                                                                 |
 | Anchor                     | Haste Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}

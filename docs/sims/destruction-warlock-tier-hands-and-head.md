@@ -2,7 +2,7 @@
 title: Destruction Warlock, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2024.8 ± 1.07 damage per second.
+  The whole request behind one figure: 2035.0 ± 1.07 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/destruction-warlock.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                               |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2024.8**                                                                                                                                          |
+| Damage per second          | **2035.0**                                                                                                                                          |
 | Standard error on the mean | ± 1.07                                                                                                                                              |
-| Spread across iterations   | 107.2                                                                                                                                               |
+| Spread across iterations   | 107.3                                                                                                                                               |
 | Anchor                     | Destruction Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

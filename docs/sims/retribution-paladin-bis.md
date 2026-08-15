@@ -2,7 +2,7 @@
 title: Retribution Paladin, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2116.2 ± 1.38 damage per second.
+  The whole request behind one figure: 2151.7 ± 1.37 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/retribution-paladin.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **2116.2**                                                                                     |
-| Standard error on the mean | ± 1.38                                                                                         |
-| Spread across iterations   | 138.2                                                                                          |
+| Damage per second          | **2151.7**                                                                                     |
+| Standard error on the mean | ± 1.37                                                                                         |
+| Spread across iterations   | 136.8                                                                                          |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}

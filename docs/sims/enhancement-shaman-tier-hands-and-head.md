@@ -2,7 +2,7 @@
 title: Enhancement Shaman, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2122.5 ± 0.90 damage per second.
+  The whole request behind one figure: 2418.5 ± 0.99 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/enhancement-shaman.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2122.5**                                                                                                                                    |
-| Standard error on the mean | ± 0.90                                                                                                                                        |
-| Spread across iterations   | 89.9                                                                                                                                          |
+| Damage per second          | **2418.5**                                                                                                                                    |
+| Standard error on the mean | ± 0.99                                                                                                                                        |
+| Spread across iterations   | 99.4                                                                                                                                          |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

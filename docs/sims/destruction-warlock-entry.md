@@ -2,7 +2,7 @@
 title: Destruction Warlock, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1937.7 ± 1.04 damage per second.
+  The whole request behind one figure: 1945.5 ± 1.04 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/destruction-warlock.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                       |
 |----------------------------|---------------------------------------------------------------------------------------------|
-| Damage per second          | **1937.7**                                                                                  |
+| Damage per second          | **1945.5**                                                                                  |
 | Standard error on the mean | ± 1.04                                                                                      |
-| Spread across iterations   | 104.0                                                                                       |
+| Spread across iterations   | 104.2                                                                                       |
 | Anchor                     | Destruction Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}

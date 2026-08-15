@@ -2,7 +2,7 @@
 title: Balance Druid, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 983.8 ± 0.61 damage per second.
+  The whole request behind one figure: 1455.0 ± 0.74 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/balance-druid.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                       |
 |----------------------------|---------------------------------------------------------------------------------------------|
-| Damage per second          | **983.8**                                                                                   |
-| Standard error on the mean | ± 0.61                                                                                      |
-| Spread across iterations   | 61.5                                                                                        |
+| Damage per second          | **1455.0**                                                                                  |
+| Standard error on the mean | ± 0.74                                                                                      |
+| Spread across iterations   | 73.7                                                                                        |
 | Anchor                     | Destruction Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}

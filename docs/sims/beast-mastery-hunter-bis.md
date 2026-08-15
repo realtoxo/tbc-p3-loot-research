@@ -2,7 +2,7 @@
 title: Beast Mastery Hunter, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1961.2 ± 0.73 damage per second.
+  The whole request behind one figure: 1960.9 ± 0.72 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/beast-mastery-hunter.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **1961.2**                                                                                     |
-| Standard error on the mean | ± 0.73                                                                                         |
-| Spread across iterations   | 72.7                                                                                           |
+| Damage per second          | **1960.9**                                                                                     |
+| Standard error on the mean | ± 0.72                                                                                         |
+| Spread across iterations   | 72.4                                                                                           |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}

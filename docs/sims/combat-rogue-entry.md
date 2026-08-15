@@ -2,7 +2,7 @@
 title: Combat Rogue, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2352.4 ± 0.94 damage per second.
+  The whole request behind one figure: 2374.2 ± 0.94 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/combat-rogue.entry.gear.json
@@ -20,7 +20,7 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                 |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Damage per second          | **2352.4**                                                                            |
+| Damage per second          | **2374.2**                                                                            |
 | Standard error on the mean | ± 0.94                                                                                |
 | Spread across iterations   | 94.2                                                                                  |
 | Anchor                     | Haste Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |

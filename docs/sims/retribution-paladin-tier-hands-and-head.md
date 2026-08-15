@@ -2,7 +2,7 @@
 title: Retribution Paladin, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2026.9 ± 1.35 damage per second.
+  The whole request behind one figure: 2057.5 ± 1.35 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/retribution-paladin.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2026.9**                                                                                                                                    |
+| Damage per second          | **2057.5**                                                                                                                                    |
 | Standard error on the mean | ± 1.35                                                                                                                                        |
-| Spread across iterations   | 135.4                                                                                                                                         |
+| Spread across iterations   | 134.9                                                                                                                                         |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

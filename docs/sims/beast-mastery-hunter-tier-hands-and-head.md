@@ -2,7 +2,7 @@
 title: Beast Mastery Hunter, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2062.5 ± 0.77 damage per second.
+  The whole request behind one figure: 2063.1 ± 0.77 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/beast-mastery-hunter.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2062.5**                                                                                                                                    |
+| Damage per second          | **2063.1**                                                                                                                                    |
 | Standard error on the mean | ± 0.77                                                                                                                                        |
-| Spread across iterations   | 77.2                                                                                                                                          |
+| Spread across iterations   | 77.0                                                                                                                                          |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

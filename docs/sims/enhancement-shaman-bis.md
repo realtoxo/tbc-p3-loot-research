@@ -2,7 +2,7 @@
 title: Enhancement Shaman, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2253.2 ± 0.92 damage per second.
+  The whole request behind one figure: 2556.7 ± 1.01 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/enhancement-shaman.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **2253.2**                                                                                     |
-| Standard error on the mean | ± 0.92                                                                                         |
-| Spread across iterations   | 92.1                                                                                           |
+| Damage per second          | **2556.7**                                                                                     |
+| Standard error on the mean | ± 1.01                                                                                         |
+| Spread across iterations   | 101.4                                                                                          |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}

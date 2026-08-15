@@ -41,6 +41,7 @@ ITEMS = Path("data/facts/items.csv")
 ROUTING = Path("data/judgments/weapon-routing.yaml")
 TRINKETS = Path("data/judgments/trinket-routing.yaml")
 BIS_CAPTURES = Path("data/facts/sim-profiles/bis-capture")
+ROSTER = Path("data/facts/roster.yaml")
 DB = Path(os.path.expanduser(os.environ.get(
     "WOWSIMS_TBC",
     "../tbc-phase-research-recovered/data/raw/vendor/wowsims-tbc-new-master",
@@ -144,6 +145,29 @@ def main() -> int:
             failures.append(
                 f"{TRINKETS}: {content} bars item {item_id} as {name!r}, which "
                 f"resolves to {actual!r}. A bar on the wrong id bars nothing.")
+
+    # EVERY SIMULATED SPEC HAS A RACE ITS CLASS CAN ACTUALLY BE. Checked here as
+    # well as in run_sims.py, because `just check` never runs a simulation and
+    # this is the defect that most needs catching without one: an illegal
+    # pairing has no entry in sim/core/base_stats.go, so the character loses
+    # every base stat and the run still succeeds. It cost the Fury Warrior 472
+    # DPS and the Arms Warrior 335 before it was found on 15 August 2026.
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import run_sims  # noqa: PLC0415 - imported here so the module stays optional
+    roster = yaml.safe_load(ROSTER.read_text())
+    by_spec = (roster.get("races") or {}).get("by_spec") or {}
+    for spec, (klass, _oneof) in sorted(run_sims.SPECS.items()):
+        name = by_spec.get(spec)
+        if name is None:
+            failures.append(
+                f"{ROSTER}: {spec} has no race under races.by_spec, so a run "
+                "would fall back to whatever the tool defaults to.")
+        elif name not in run_sims.LEGAL_RACES[klass]:
+            failures.append(
+                f"{ROSTER}: {spec} is a {klass} recorded as {name}, which is "
+                f"not a {klass} race in 2.4.3. That pairing has no base stats "
+                "in the simulator, so the run succeeds and returns a character "
+                "with no base strength, agility or stamina.")
 
     # ------------------------------------------------------------------ gear
     for path in sorted(args.gear.glob("*.gear.json")):

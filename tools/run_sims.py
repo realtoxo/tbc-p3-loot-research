@@ -154,6 +154,70 @@ CLASS = {
     "shaman": 7, "mage": 8, "warlock": 9, "druid": 11,
 }
 
+# proto/common.proto :: enum Race. Transcribed, not inferred.
+RACE = {
+    "BloodElf": 1, "Draenei": 2, "Dwarf": 3, "Gnome": 4, "Human": 5,
+    "NightElf": 6, "Orc": 7, "Tauren": 8, "Troll": 9, "Undead": 10,
+}
+
+# WHICH RACE MAY PLAY WHICH CLASS, transcribed from the AddBaseStatsCombo calls
+# in sim/core/base_stats.go. That function is the ONLY place base stats are
+# registered, so a combination absent from it has no entry in the BaseStats map.
+#
+# THIS IS THE MOST EXPENSIVE DEFECT THIS PROJECT HAS SHIPPED, and it shipped
+# because Go does not error on a missing map key. `run_sims.py` sent race 1,
+# Blood Elf, for every spec. Blood Elf cannot be a Warrior, a Druid or a Shaman
+# in 2.4.3, so the lookup returned the zero value and six specs ran with NO BASE
+# STRENGTH, AGILITY OR STAMINA. Nothing failed. Every affected figure was simply
+# smaller: the Fury Warrior by 472 DPS, the Arms Warrior by 335.
+#
+# So an illegal pairing now STOPS THE RUN. A wrong race that is legal is a
+# modelling choice someone can argue with; an illegal one is a character that
+# does not exist, and it does not announce itself.
+LEGAL_RACES = {
+    "warrior": {"Draenei", "Dwarf", "Gnome", "Human", "NightElf", "Orc",
+                "Tauren", "Troll", "Undead"},
+    "paladin": {"BloodElf", "Draenei", "Dwarf", "Human"},
+    "hunter":  {"BloodElf", "Draenei", "Dwarf", "NightElf", "Orc", "Tauren",
+                "Troll"},
+    "rogue":   {"BloodElf", "Dwarf", "Gnome", "Human", "NightElf", "Orc",
+                "Troll", "Undead"},
+    "priest":  {"BloodElf", "Draenei", "Dwarf", "Gnome", "Human", "NightElf",
+                "Troll", "Undead"},
+    "shaman":  {"Draenei", "Orc", "Tauren", "Troll"},
+    "mage":    {"BloodElf", "Draenei", "Dwarf", "Gnome", "Human", "Troll",
+                "Undead"},
+    "warlock": {"BloodElf", "Gnome", "Human", "Orc", "Undead"},
+    "druid":   {"NightElf", "Tauren"},
+}
+
+
+_ROSTER_CACHE: dict = {}
+
+
+def race_of(spec: str, klass: str, roster: dict) -> int:
+    """The race this spec is simulated as, from the roster, checked for legality."""
+    by_spec = ((roster.get("races") or {}).get("by_spec") or {})
+    name = by_spec.get(spec)
+    if name is None:
+        raise SystemExit(
+            f"run_sims.py: {spec} has no race in roster.yaml::races.by_spec. A "
+            "race is not optional: sim/core/base_stats.go keys base stats on "
+            "race AND class, and an unset race is Blood Elf, which for a "
+            "warrior, a druid or a shaman means no base stats at all.")
+    if name not in RACE:
+        raise SystemExit(
+            f"run_sims.py: {spec} is recorded as race {name!r}, which is not a "
+            f"value of proto Race. One of: {', '.join(sorted(RACE))}.")
+    if name not in LEGAL_RACES[klass]:
+        raise SystemExit(
+            f"run_sims.py: {spec} is a {klass} recorded as {name}, which is not "
+            f"a {klass} race in 2.4.3. sim/core/base_stats.go registers no base "
+            "stats for that pairing, so the run would SUCCEED and return a "
+            "character with no base strength, agility or stamina. Legal: "
+            f"{', '.join(sorted(LEGAL_RACES[klass]))}.")
+    return RACE[name]
+
 # Which class each spec is, and which field of the Player `spec` oneof it fills.
 # The oneof name is NOT always the spec name: both warriors share dps_warrior,
 # both hunters share hunter, both warlocks share warlock, and the Feral Cat is
@@ -507,7 +571,11 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
             individual[field] = value
     player = {
         "name": spec,
-        "race": 1,
+        # THE ROSTER IS READ ONCE. This used to parse roster.yaml on every
+        # request, which a --swap sweep issues once per candidate.
+        "race": race_of(spec, klass, _ROSTER_CACHE.get("doc") or
+                        _ROSTER_CACHE.setdefault(
+                            "doc", yaml.safe_load(ROSTER.read_text()))),
         "class": CLASS[klass],
         # ONLY THE ITEMS ARE SENT. A profile carrying a substitution also
         # carries a `_divergence` list, written by export_sim_profiles.py so the

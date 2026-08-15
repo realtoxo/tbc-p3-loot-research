@@ -2,7 +2,7 @@
 title: Affliction Warlock, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1964.4 ± 0.92 damage per second.
+  The whole request behind one figure: 1970.8 ± 0.91 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/affliction-warlock.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                |
 |----------------------------|------------------------------------------------------------------------------------------------------|
-| Damage per second          | **1964.4**                                                                                           |
-| Standard error on the mean | ± 0.92                                                                                               |
-| Spread across iterations   | 91.6                                                                                                 |
+| Damage per second          | **1970.8**                                                                                           |
+| Standard error on the mean | ± 0.91                                                                                               |
+| Spread across iterations   | 90.9                                                                                                 |
 | Anchor                     | Destruction Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}

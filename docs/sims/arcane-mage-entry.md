@@ -2,7 +2,7 @@
 title: Arcane Mage, Super Mana Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2064.6 ± 0.88 damage per second.
+  The whole request behind one figure: 2094.4 ± 0.88 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/arcane-mage.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                      |
 |----------------------------|--------------------------------------------------------------------------------------------|
-| Damage per second          | **2064.6**                                                                                 |
+| Damage per second          | **2094.4**                                                                                 |
 | Standard error on the mean | ± 0.88                                                                                     |
-| Spread across iterations   | 87.7                                                                                       |
+| Spread across iterations   | 88.4                                                                                       |
 | Anchor                     | Super Mana Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}

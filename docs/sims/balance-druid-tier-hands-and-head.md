@@ -2,7 +2,7 @@
 title: Balance Druid, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1060.8 ± 0.63 damage per second.
+  The whole request behind one figure: 1549.4 ± 0.77 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/balance-druid.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                               |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **1060.8**                                                                                                                                          |
-| Standard error on the mean | ± 0.63                                                                                                                                              |
-| Spread across iterations   | 62.8                                                                                                                                                |
+| Damage per second          | **1549.4**                                                                                                                                          |
+| Standard error on the mean | ± 0.77                                                                                                                                              |
+| Spread across iterations   | 76.9                                                                                                                                                |
 | Anchor                     | Destruction Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}

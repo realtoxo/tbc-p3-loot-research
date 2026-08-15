@@ -2,7 +2,7 @@
 title: Arms Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1965.6 ± 1.02 damage per second.
+  The whole request behind one figure: 2289.9 ± 1.13 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/arms-warrior.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                 |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Damage per second          | **1965.6**                                                                            |
-| Standard error on the mean | ± 1.02                                                                                |
-| Spread across iterations   | 102.0                                                                                 |
+| Damage per second          | **2289.9**                                                                            |
+| Standard error on the mean | ± 1.13                                                                                |
+| Spread across iterations   | 113.1                                                                                 |
 | Anchor                     | Haste Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}

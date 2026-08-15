@@ -2,7 +2,7 @@
 title: Elemental Shaman, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1332.8 ± 1.14 damage per second.
+  The whole request behind one figure: 1803.7 ± 1.22 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/elemental-shaman.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                               |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **1332.8**                                                                                                                                          |
-| Standard error on the mean | ± 1.14                                                                                                                                              |
-| Spread across iterations   | 114.1                                                                                                                                               |
+| Damage per second          | **1803.7**                                                                                                                                          |
+| Standard error on the mean | ± 1.22                                                                                                                                              |
+| Spread across iterations   | 122.5                                                                                                                                               |
 | Anchor                     | Destruction Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}
