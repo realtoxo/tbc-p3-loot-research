@@ -103,6 +103,12 @@ ROGUE = Path("data/facts/sim-profiles/combat-rogue.yaml")
 GEAR = Path("data/sim/gear")
 ITEMS = Path("data/facts/items.csv")
 HIT = Path("data/facts/hit-captured.yaml")
+# The third anchor's hit state, which hit-captured.yaml deliberately does not
+# carry. See hit_states() for why the two files split this.
+BIS_CAPTURES = Path("data/facts/sim-profiles/bis-capture")
+# One hit gem is 10 rating, the constant hit.yaml.discretionary_hit_budget sets
+# and tools/extract_hit_captures.py::RATING_PER_GEM uses.
+RATING_PER_HIT_GEM = 10
 # WHICH PARTY CARRIES A WINDFURY TOTEM, and who stands in it. Read rather than
 # listed, because a party list typed into this file is a second copy of one that
 # already exists, and the copy is what goes stale when the roster moves.
@@ -365,12 +371,24 @@ def verify_weapon_classes() -> None:
 
 
 def weapon_types() -> dict:
-    """Per spec, the weapon type worn in each imbued slot, across every anchor.
+    """Per spec, PER ANCHOR, the weapon type worn in each imbued slot.
 
-    ONE SPEC, ONE PICK. This file records a consumable per spec and not per
-    anchor, so a spec whose anchors carry different weapon CLASSES has no single
-    answer. That does not happen today, and if it starts to happen the pick is
-    reported unresolved rather than settled on whichever anchor sorted first.
+    IT USED TO BE PER SPEC, AND THAT BROKE ON 15 AUGUST 2026. This function
+    merged every anchor into one set per slot, and its own docstring said a spec
+    whose anchors carry different weapon classes has no single answer and would
+    be reported unresolved, adding that it did not happen. The best-in-slot
+    anchor made it happen for TEN of the fourteen specs: a warlock swinging a
+    dagger and a tome at entry holds a two-handed staff at best in slot, and
+    both hunters change every weapon they carry.
+
+    The consequence was not a warning. It was ten specs silently losing their
+    weapon imbue in EVERY anchor, including the two that had it before, because
+    an unresolved pick is not sent at all. This project has already measured
+    what that costs: adding the off-hand stone both hunters were missing moved
+    them 26.1 and 29.6 DPS.
+
+    So the answer is per anchor, because the weapon is per anchor. A caller that
+    wants one spec's imbue has to say which anchor it means.
     """
     if not ITEMS.is_file():
         raise SystemExit(
@@ -383,12 +401,15 @@ def weapon_types() -> dict:
              "weapon_off_hand": SLOT_ORDER.index("off_hand")}
     out: dict = {}
     for path in sorted(GEAR.glob("*.gear.json")):
-        spec = path.name.partition(".")[0].replace("-", "_")
+        stem = path.name[:-len(".gear.json")]
+        spec = stem.partition(".")[0].replace("-", "_")
+        anchor = stem.partition(".")[2].replace("-", "_")
         items = json.loads(path.read_text())["items"]
         for field, index in slots.items():
             item_id = (items[index] or {}).get("id")
             if not item_id:
-                out.setdefault(spec, {}).setdefault(field, set())
+                out.setdefault(spec, {}).setdefault(anchor, {}).setdefault(
+                    field, set())
                 continue
             kind = kinds.get(item_id)
             if kind is None:
@@ -402,35 +423,54 @@ def weapon_types() -> dict:
                     f"{kind!r}, which is neither blunt, sharp, nor an off-hand "
                     "item. Guessing which stone it takes is the defect this "
                     "check exists for.")
-            out.setdefault(spec, {}).setdefault(field, set())
+            out.setdefault(spec, {}).setdefault(anchor, {}).setdefault(
+                field, set())
             if kind and kind not in NOT_A_WEAPON:
-                out[spec][field].add(kind)
+                out[spec][anchor][field].add(kind)
     return out
 
 
 def hit_states() -> dict:
-    """Per spec, whether the captured sets close the hit gap at every anchor.
+    """Per spec, PER ANCHOR, whether the set closes the hit gap.
 
     `gap_after_gems` is the rating still missing once the discretionary gems are
-    spent, so zero at every anchor is the "hit-capped" the guides write their
-    food rule against. A spec whose anchors disagree gets None, because one pick
-    cannot answer two anchors.
+    spent, so zero is the "hit-capped" the guides write their food rule against.
+
+    IT USED TO COLLAPSE EVERY ANCHOR INTO ONE ANSWER and drop the spec entirely
+    where the anchors disagreed. With two anchors that was tolerable. With the
+    best-in-slot anchor added it is not: four specs are short there and capped
+    earlier, so collapsing would have removed the food pick from all three of
+    their anchors rather than answering each one.
+
+    THE BIS ANCHOR IS NOT IN hit-captured.yaml, deliberately. That file is the
+    compendium's rollup and knows two anchors; the third carries its own
+    `hit_state`, written by tools/build_bis_capture.py with the same arithmetic.
+    Both are read here so this file answers for every anchor a run exists for.
     """
     if not HIT.is_file():
         raise SystemExit(
             f"extract_consumable_ids.py: no hit capture at {HIT}. Several "
             "guides make the food conditional on the hit cap, and that file is "
             "where this project records whether the cap is met.")
-    out = {}
+    out: dict = {}
     for spec, entry in (yaml.safe_load(HIT.read_text()).get("specs") or {}).items():
-        gaps = [anchor["gap_after_gems"] for anchor in entry.values()
-                if isinstance(anchor, dict) and "gap_after_gems" in anchor]
-        if not gaps:
+        for anchor, block in entry.items():
+            if not isinstance(block, dict) or "gap_after_gems" not in block:
+                continue
+            out.setdefault(spec, {})[anchor] = \
+                "capped" if block["gap_after_gems"] == 0 else "short"
+    for path in sorted(BIS_CAPTURES.glob("*.yaml")):
+        doc = yaml.safe_load(path.read_text())
+        state = ((doc.get("anchors") or {}).get("bis") or {}).get("hit_state")
+        if not state:
             continue
-        if all(gap == 0 for gap in gaps):
-            out[spec] = "capped"
-        elif all(gap > 0 for gap in gaps):
-            out[spec] = "short"
+        # The best-in-slot capture states the gap BEFORE gems and the count of
+        # gems that close it, so the gap after gems is what remains once those
+        # are spent, the same quantity hit-captured.yaml records.
+        after = max(0, state.get("gap_rating", 0)
+                    - state.get("gems_needed", 0) * RATING_PER_HIT_GEM)
+        out.setdefault(doc["spec"], {})["bis"] = \
+            "capped" if after == 0 else "short"
     return out
 
 
@@ -737,21 +777,37 @@ def main() -> int:
     # DECLINED IS KEYED ON THE FIELD, NOT THE SPEC. The reason is the same for
     # all seventeen, and seventeen copies of one sentence is the second copy
     # problem this project keeps out of its fact files.
+    # ONE PICK SET PER SPEC PER ANCHOR, because two of the three inputs are
+    # per anchor: the weapon class decides the stone and the hit cap decides the
+    # food, and both move when the gear moves. A spec with no exported gear at
+    # all still gets one entry under `no_gear`, so its flask and potion are
+    # resolved and the absence of a gear-dependent pick is visible rather than
+    # silent.
     picks, declined, unresolved = {}, {}, []
     for spec in sorted(blocks):
-        spec_picks, spec_declined, spec_unresolved = resolve(
-            spec, blocks[spec], db, imbues, worn.get(spec, {}), hit.get(spec),
-            spec in windfury)
-        picks[spec] = spec_picks
-        for prose_field in spec_declined:
-            declined.setdefault(prose_field, {"why": DECLINED[prose_field],
-                                              "specs": []})["specs"].append(spec)
-        unresolved.extend(spec_unresolved)
+        anchors = sorted(worn.get(spec) or {}) or ["no_gear"]
+        for anchor in anchors:
+            spec_picks, spec_declined, spec_unresolved = resolve(
+                spec, blocks[spec], db, imbues,
+                (worn.get(spec) or {}).get(anchor, {}),
+                (hit.get(spec) or {}).get(anchor),
+                spec in windfury)
+            picks.setdefault(spec, {})[anchor] = spec_picks
+            for entry in spec_unresolved:
+                entry["anchor"] = anchor
+            unresolved.extend(spec_unresolved)
+            if anchor == anchors[0]:
+                for prose_field in spec_declined:
+                    declined.setdefault(
+                        prose_field,
+                        {"why": DECLINED[prose_field],
+                         "specs": []})["specs"].append(spec)
 
     # Only the names something actually took are written out. The whole 105-row
     # database is not a fact about this raid, and copying it here would be a
     # second copy of a file that regenerates.
-    taken = {p["name"] for spec in picks.values() for p in spec.values()}
+    taken = {p["name"] for spec in picks.values() for anchor in spec.values()
+             for p in anchor.values()}
     catalog = {}
     for prose_field, proto_field, want_type in WIRED:
         if want_type is None:
@@ -822,15 +878,22 @@ def main() -> int:
     }
     args.out.write_text(yaml.safe_dump(out, sort_keys=False, width=88,
                                        allow_unicode=True))
-    with_flask = sum(1 for p in picks.values() if "flask_id" in p)
-    with_food = sum(1 for p in picks.values() if "food_id" in p)
-    with_mh = sum(1 for p in picks.values() if "mhImbue_id" in p)
-    gated = sum(1 for p in picks.values()
+    # COUNTED PER ANCHOR, because the picks are per anchor now. Counting per
+    # spec against a two-level structure returned zero for every field and
+    # printed a clean-looking summary line saying nothing was resolved.
+    every = [(spec, anchor, p) for spec, anchors in picks.items()
+             for anchor, p in anchors.items()]
+    with_flask = sum(1 for _s, _a, p in every if "flask_id" in p)
+    with_food = sum(1 for _s, _a, p in every if "food_id" in p)
+    with_mh = sum(1 for _s, _a, p in every if "mhImbue_id" in p)
+    with_oh = sum(1 for _s, _a, p in every if "ohImbue_id" in p)
+    gated = sum(1 for _s, _a, p in every
                 if "gate" in (p.get("mhImbue_id") or {}))
-    print(f"wrote {args.out}: {len(picks)} spec(s), {with_flask} with a flask, "
-          f"{with_food} with food, {with_mh} with a main-hand imbue "
+    print(f"wrote {args.out}: {len(picks)} spec(s) across {len(every)} anchor(s), "
+          f"{with_flask} with a flask, {with_food} with food, "
+          f"{with_mh} with a main-hand imbue "
           f"({gated} of them inert under the Windfury gate), "
-          f"{len(unresolved)} unresolved")
+          f"{with_oh} with an off-hand imbue, {len(unresolved)} unresolved")
     return 0
 
 

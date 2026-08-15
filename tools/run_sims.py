@@ -38,6 +38,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import math
 import os
 import re
 import subprocess
@@ -395,7 +396,7 @@ def buffs_for(spec: str, buffs: dict, party_of: dict) -> tuple[dict, dict, dict]
     return raid, party, debuffs
 
 
-def consumables_for(spec: str) -> dict:
+def consumables_for(spec: str, anchor: str) -> dict:
     """The ConsumesSpec this spec drinks, read from the resolved fact table.
 
     NO ID IS WRITTEN HERE. `consumable-ids.yaml` holds the name, the id and the
@@ -412,12 +413,25 @@ def consumables_for(spec: str) -> dict:
     drums through PartyBuffs, so a drums_id would count them twice.
     """
     doc = yaml.safe_load(CONSUMABLES.read_text())
-    picks = (doc.get("picks") or {}).get(spec)
-    if picks is None:
+    # THE PICK IS PER ANCHOR, because two of its three inputs are. The weapon
+    # class decides which stone, and the hit cap decides which food, and both
+    # move with the gear: this roster's Beast Mastery hunter swings Fist weapons
+    # at entry and a dagger and a sword at best in slot, which is a Weightstone
+    # in one and a Sharpening Stone in the other. A per-spec lookup answered one
+    # anchor and was silently wrong for the others.
+    by_anchor = (doc.get("picks") or {}).get(spec)
+    if by_anchor is None:
         raise SystemExit(
             f"run_sims.py: {spec} has no entry in {CONSUMABLES}. Regenerate it "
             "with `just regen`; running a spec with no consumables returns a "
             "smaller number rather than an error.")
+    picks = by_anchor.get(anchor)
+    if picks is None:
+        raise SystemExit(
+            f"run_sims.py: {spec} has no consumables recorded for the anchor "
+            f"{anchor!r} in {CONSUMABLES}, which holds "
+            f"{sorted(by_anchor)}. Regenerate with `just regen` so the "
+            "consumable table covers every exported profile.")
     out = {}
     for field, entry in picks.items():
         parts = field.split("_")
@@ -446,8 +460,13 @@ def consumables_for(spec: str) -> dict:
 
 
 def build_request(spec: str, gear: dict, talents: str, iterations: int,
-                  seed: int, buffs: dict, party_of: dict) -> dict:
-    """One RaidSimRequest: one player, alone, against the fixed encounter."""
+                  seed: int, buffs: dict, party_of: dict, anchor: str) -> dict:
+    """One RaidSimRequest: one player, alone, against the fixed encounter.
+
+    THE ANCHOR IS NOT DECORATION. It selects the consumables, because the stone
+    a spec takes follows the weapon it holds and the food follows whether that
+    set is hit-capped. Both are properties of the gear, so both are per anchor.
+    """
     klass, oneof = SPECS[spec]
     rotation = rotation_for(spec)
     raid_buffs, party_buffs, debuffs = buffs_for(spec, buffs, party_of)
@@ -482,7 +501,7 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
         # not a promise, and a rejected request would read as a broken profile.
         "equipment": {"items": gear["items"]},
         "talentsString": talents,
-        "consumables": consumables_for(spec),
+        "consumables": consumables_for(spec, anchor),
         "buffs": individual,
         "rotation": rotation,
         # `classOptions` MUST BE PRESENT, even empty. Sending `options: {}`
@@ -507,6 +526,48 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
     }
 
 
+def item_names() -> dict:
+    """Every item id this tool can name, from both tables that hold names.
+
+    items.csv IS SCOPED TO PHASE 3 AND PRE-PHASE GEAR, so three best-in-slot
+    items are absent from it: `Badge of the Swarmguard` is an AQ40 trinket and
+    `Barrel-Blade Longrifle` is outside the compendium's slot scope. Read from
+    items.csv alone they printed as bare ids in a diagnostic whose whole purpose
+    is telling a reader which item moved a figure, and a bare id is how this
+    project dispositioned an item on its name four times.
+    """
+    names = {int(r["item_id"]): r["name"]
+             for r in csv.DictReader(ITEMS.open())} if ITEMS.is_file() else {}
+    db = WOWSIMS / "assets" / "database" / "db.json"
+    if db.is_file():
+        for item in json.loads(db.read_text()).get("items") or []:
+            names.setdefault(item["id"], item["name"])
+    return names
+
+
+def dress_from(gear: dict, other: dict, slots: list[str]) -> dict:
+    """A copy of the gear wearing another profile's slots, enchants and all.
+
+    THIS IS THE OPPOSITE CHOICE FROM `swap_into`, AND BOTH ARE RIGHT. `--swap`
+    answers "what is this item worth", so the candidate arrives bare and the
+    enchant question is kept separate. This answers "which SLOT explains the
+    difference between two whole sets", and there the enchant and the gems
+    belong to the slot: dressing one side and not the other would credit a
+    Mongoose enchant to the item that happened to be underneath it. Measured on
+    15 August 2026, replacing an item with ITSELF through `--swap` read minus
+    56.1 DPS on the Arms Warrior main hand, which is the enchant, not the item.
+
+    A slot the other profile leaves empty is emptied here, because a two-handed
+    weapon displacing an off hand is precisely one of the differences this is
+    asked to price.
+    """
+    out = {"items": [dict(entry) for entry in gear["items"]]}
+    for slot in slots:
+        index = SLOT_ORDER.index(slot)
+        out["items"][index] = dict(other["items"][index])
+    return out
+
+
 def swap_into(gear: dict, slot: str, item_id: int) -> dict:
     """A copy of the gear with one slot replaced.
 
@@ -526,8 +587,16 @@ def swap_into(gear: dict, slot: str, item_id: int) -> dict:
     return out
 
 
-def run(cli: Path, request: dict) -> tuple[float | None, str | None]:
-    """One simulation. Returns the DPS, or the error the simulator gave."""
+def run(cli: Path, request: dict) -> tuple[float | None, float | None, str | None]:
+    """One simulation. Returns the DPS and its spread, or the simulator's error.
+
+    THE SPREAD IS THE POINT OF THE SECOND FIGURE. `avg` alone invites a reader
+    to treat a 4 DPS gap as a result. `stdev` is the spread ACROSS ITERATIONS,
+    which is how much one pull of this encounter varies, and the uncertainty on
+    the MEAN of `n` of them is that divided by the square root of `n`. Both are
+    returned raw and neither is combined here, because the number of iterations
+    belongs to the caller.
+    """
     with tempfile.TemporaryDirectory() as tmp:
         infile = Path(tmp) / "in.json"
         outfile = Path(tmp) / "out.json"
@@ -536,14 +605,91 @@ def run(cli: Path, request: dict) -> tuple[float | None, str | None]:
             [str(cli), "sim", "--infile", str(infile), "--outfile", str(outfile)],
             capture_output=True, text=True)
         if not outfile.is_file():
-            return None, (proc.stderr or proc.stdout or "no output").strip()[:200]
+            return None, None, (proc.stderr or proc.stdout
+                                or "no output").strip()[:200]
         result = json.loads(outfile.read_text())
     if result.get("error"):
         # The stack trace is the least useful part of a simulator error, and the
         # first line is nearly always the whole answer.
-        return None, str(result["error"].get("message", "")).split("\n")[0]
+        return None, None, str(result["error"].get("message", "")).split("\n")[0]
     metrics = (result.get("raidMetrics") or {}).get("dps") or {}
-    return metrics.get("avg"), None
+    return metrics.get("avg"), metrics.get("stdev"), None
+
+
+def against(args, strings: dict, iterations: int) -> int:
+    """Two whole profiles, and which slot explains the gap between them.
+
+    THE WHOLE-SET DIFFERENCE IS PRINTED BESIDE THE SUM OF THE PARTS, and they do
+    not agree. Set bonuses, hit caps and crit suppression are not additive, so a
+    slot list that sums to plus 48.8 against a whole-set difference of plus
+    108.4 is telling the truth about both: no single slot is the answer, and the
+    set is worth more than its slots. Printing only one of the two figures would
+    invite a reader to treat the slot list as a decomposition, which it is not.
+    """
+    a_path = args.gear / f"{args.profile}.gear.json"
+    b_path = args.gear / f"{args.against}.gear.json"
+    for path in (a_path, b_path):
+        if not path.is_file():
+            print(f"error: no profile at {path}", file=sys.stderr)
+            return 1
+    spec = args.profile.partition(".")[0].replace("-", "_")
+    if spec != args.against.partition(".")[0].replace("-", "_"):
+        print("error: --profile and --against name two different specs. A "
+              "cross-spec comparison is not a slot question and this project "
+              "does not rank one spec against another.", file=sys.stderr)
+        return 1
+    if spec in NOT_SIMULATABLE:
+        print(f"error: {spec} cannot be simulated in this build: "
+              f"{NOT_SIMULATABLE[spec]}", file=sys.stderr)
+        return 1
+
+    talents = (strings.get(spec) or {}).get("string")
+    a = json.loads(a_path.read_text())
+    b = json.loads(b_path.read_text())
+    names = item_names()
+    buffs = yaml.safe_load(BUFFS.read_text())
+    roster = yaml.safe_load(ROSTER.read_text())
+    party_of = {}
+    for group in roster.get("groups") or []:
+        for member in group.get("members") or []:
+            party_of.setdefault(member, group["id"])
+
+    # BOTH SIDES DRINK THE BASELINE'S CONSUMABLES. This measures which SLOT
+    # explains a gap, so the consumables are part of what is held still; letting
+    # each side take its own anchor's stone would fold a consumable difference
+    # into whichever slot happened to carry the weapon.
+    anchor = args.profile.partition(".")[2].replace("-", "_")
+
+    def measure(gear):
+        dps, _spread, error = run(args.cli, build_request(
+            spec, gear, talents, iterations, args.seed, buffs, party_of,
+            anchor))
+        if error:
+            raise SystemExit(f"run_sims.py: {error}")
+        return dps
+
+    slots = [s for s in (args.slot.split(",") if args.slot else SLOT_ORDER)
+             if a["items"][SLOT_ORDER.index(s)]
+             != b["items"][SLOT_ORDER.index(s)]]
+    base = measure(a)
+    whole = measure(b)
+    print(f"{args.profile} against {args.against}, {iterations} iterations\n")
+    print(f"  {'baseline':44s} {base:9.1f}")
+    rows = []
+    for slot in slots:
+        rows.append((measure(dress_from(a, b, [slot])) - base, slot))
+    for delta, slot in sorted(rows):
+        index = SLOT_ORDER.index(slot)
+        was = (a["items"][index] or {}).get("id")
+        now = (b["items"][index] or {}).get("id")
+        print(f"  {slot:11s} {delta:+8.1f}   "
+              f"{names.get(was, 'empty' if not was else was)} -> "
+              f"{names.get(now, 'empty' if not now else now)}")
+    print(f"\n  sum of the single-slot deltas {sum(r[0] for r in rows):+8.1f}")
+    print(f"  whole-set difference          {whole - base:+8.1f}")
+    print("  The two do not agree, and neither is wrong. Set bonuses and cap "
+          "positions are not additive.")
+    return 0
 
 
 def compare(args, strings: dict, iterations: int) -> int:
@@ -575,8 +721,7 @@ def compare(args, strings: dict, iterations: int) -> int:
     talents = (strings.get(spec) or {}).get("string")
     gear = json.loads(path.read_text())
 
-    names = {int(r["item_id"]): r["name"]
-             for r in csv.DictReader(ITEMS.open())} if ITEMS.is_file() else {}
+    names = item_names()
     index = SLOT_ORDER.index(args.slot)
     worn = (gear["items"][index] or {}).get("id")
 
@@ -586,8 +731,9 @@ def compare(args, strings: dict, iterations: int) -> int:
     for group in roster.get("groups") or []:
         for member in group.get("members") or []:
             party_of.setdefault(member, group["id"])
-    base, error = run(args.cli, build_request(
-        spec, gear, talents, iterations, args.seed, buffs, party_of))
+    anchor = args.profile.partition(".")[2].replace("-", "_")
+    base, _spread, error = run(args.cli, build_request(
+        spec, gear, talents, iterations, args.seed, buffs, party_of, anchor))
     if error:
         print(f"error: the baseline failed: {error}", file=sys.stderr)
         return 1
@@ -597,9 +743,9 @@ def compare(args, strings: dict, iterations: int) -> int:
 
     rows = []
     for item_id in args.swap:
-        dps, error = run(args.cli, build_request(
+        dps, _spread, error = run(args.cli, build_request(
             spec, swap_into(gear, args.slot, item_id), talents, iterations,
-            args.seed, buffs, party_of))
+            args.seed, buffs, party_of, anchor))
         if error:
             print(f"  {item_id:<44} FAILED  {error}", file=sys.stderr)
             continue
@@ -630,6 +776,12 @@ def main() -> int:
     ap.add_argument("--swap", action="append", type=int, default=[],
                     help="an item id to try in that slot. Repeatable. 0 empties "
                          "the slot, which is what a two-hander needs")
+    ap.add_argument("--against", help="a second profile stem. Prints which "
+                                      "slot explains the gap between the two, "
+                                      "carrying each slot's enchant and gems")
+    ap.add_argument("--out", type=Path,
+                    help="write every result, with its spread, to this YAML "
+                         "file. Omitted, the run only prints")
     ap.add_argument("--check", action="store_true",
                     help="run every profile once, cheaply, and report only "
                          "whether it runs")
@@ -653,6 +805,8 @@ def main() -> int:
             party_of.setdefault(member, group["id"])
     iterations = 100 if args.check else args.iterations
 
+    if args.against:
+        return against(args, strings, iterations)
     if args.swap or args.slot or args.profile:
         return compare(args, strings, iterations)
 
@@ -671,21 +825,56 @@ def main() -> int:
         if not talents:
             failures.append((stem, "no talent string recorded"))
             continue
-        dps, error = run(args.cli, build_request(
+        dps, spread, error = run(args.cli, build_request(
             spec, json.loads(path.read_text()), talents, iterations, args.seed,
-            buffs, party_of))
+            buffs, party_of, anchor.replace("-", "_")))
         if error:
             failures.append((stem, error))
         else:
-            rows.append((stem, dps))
+            # ONE STANDARD ERROR, RULED BY THE GUILD LEAD ON 15 AUGUST 2026,
+            # shown both options. It is stdev over the square root of the
+            # iteration count, and it covers about 68 percent rather than 95.
+            # THAT LABEL MATTERS: calling this "the confidence interval" would
+            # let a reader read two barely-overlapping figures as settled when
+            # the 95 percent intervals would still overlap by a wide margin. It
+            # is printed and recorded as `standard_error` for that reason and is
+            # never to be called a 95 percent interval.
+            stderr = (spread / math.sqrt(iterations)) if spread else None
+            rows.append({"profile": stem, "spec": spec, "anchor": anchor,
+                         "dps": round(dps, 1),
+                         "standard_error": round(stderr, 2) if stderr else None,
+                         "stdev": round(spread, 1) if spread else None})
             flag = "   <-- IMPLAUSIBLE" if dps < IMPLAUSIBLE else ""
-            print(f"  {stem:52s} {dps:9.1f}{flag}")
+            pm = f" +/- {stderr:5.2f}" if stderr else " " * 11
+            print(f"  {stem:52s} {dps:9.1f}{pm}{flag}")
 
     if skipped:
         print(f"\n{len(skipped)} profile(s) skipped as not simulatable:")
         for line in skipped:
             print(f"  {line}")
-    low = [(stem, dps) for stem, dps in rows if dps < IMPLAUSIBLE]
+    low = [(r["profile"], r["dps"]) for r in rows if r["dps"] < IMPLAUSIBLE]
+    if args.out:
+        args.out.write_text(yaml.safe_dump({
+            "meta": {
+                "generated_by": "tools/run_sims.py",
+                "simulator": (Path("vendor/wowsims/VERSION").read_text().strip()
+                              if Path("vendor/wowsims/VERSION").is_file()
+                              else "unrecorded"),
+                "iterations": iterations,
+                "seed": args.seed,
+                "encounter_seconds": ENCOUNTER_SECONDS,
+                "targets": 1,
+                "target_level": 73,
+                "interval": (
+                    "`standard_error` is ONE standard error on the mean, stdev "
+                    f"over the square root of {iterations}. It covers about 68 "
+                    "percent, NOT 95. Ruled by the guild lead on 15 August "
+                    "2026, shown both options. Do not relabel it as a "
+                    "confidence interval."),
+            },
+            "results": rows,
+        }, sort_keys=False, width=78))
+        print(f"\n{len(rows)} result(s) -> {args.out}")
     print(f"\n{len(rows)} profile(s) ran, {len(failures)} failed")
     if low:
         print(f"\n{len(low)} result(s) below {IMPLAUSIBLE:g} DPS. A profile that "
