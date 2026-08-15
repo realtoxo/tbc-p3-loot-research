@@ -1,16 +1,28 @@
 # Simulator profiles, one per rostered spec. Hand-authored.
 #
-# HOLDS   The gear, enchants and gems each spec is simulated in, at both gear
-#         anchors, and the talent build and rotation the run assumes.
+# HOLDS   The SHAPE a hand-collected profile would take: the gear, enchants and
+#         gems per anchor, and the talent build and rotation the run assumes.
 # NOT HERE  Buffs are in roster.yaml, cap positions in hit.yaml, crit.yaml and
 #         haste.yaml, and the items themselves in items.csv.
 #
 # BEFORE YOU USE A FIGURE
-#   NOTHING IS COLLECTED YET. Every spec below is an empty shell with the fields
-#   named and no values in them. Collection is deferred and this file exists so
-#   the shape is agreed before anyone starts.
-#   A run is only comparable with another run if both were configured from this
-#   file. A figure produced from an ad hoc profile is not comparable with
+#   THIS FILE IS NOT WHERE THE RUNS COME FROM, and it never became that. It
+#   describes a HAND-COLLECTED profile, one spec at a time, and the shape was
+#   agreed before anyone started collecting. Nobody ever did.
+#   WHAT HAPPENED INSTEAD, on 15 August 2026: the profiles are GENERATED. The
+#   gear comes from the captures under sim-profiles/hit-capture and
+#   sim-profiles/bis-capture, tools/export_sim_profiles.py assigns the enchants
+#   and gems, and tools/run_sims.py assembles the buffs, consumables, talents
+#   and rotation at run time from the fact files. The result is data/sim/gear,
+#   and that is what a run reads.
+#   SO EVERY `not_collected` BELOW IS ACCURATE AND ALSO IRRELEVANT. It records
+#   that this hand-collection route was not taken. It does NOT mean no figure
+#   exists: data/facts/sim-figures.yaml holds 13 specs across three anchors.
+#   THE FILE IS KEPT rather than deleted because the schema states what a
+#   profile has to pin down, and the generated route has to satisfy the same
+#   list. Its `slots` block and its `schema` block are still the checklist.
+#   A run is only comparable with another run if both were configured the same
+#   way. A figure produced from an ad hoc profile is not comparable with
 #   anything and must not be recorded beside one that was.
 #   Consumables ARE assumed in a run, per the framework, and are NOT counted in
 #   hit.yaml cap states. The two settings answer different questions and must
@@ -23,21 +35,31 @@
 #   rebuilt by someone checking the run.
 
 meta:
-  status: schema_only_for_the_planned_runs
+  status: superseded_by_the_generated_route
   specs_defined: 21
-  specs_collected: 0
+  specs_hand_collected: 0
+  previously_claimed: >-
+    Until 15 August 2026 this block said NO SIMULATION HAS BEEN RUN AT THESE
+    ANCHORS. That was true when written and is now false. Runs at our anchors
+    exist for 13 specs at three anchors, in data/facts/sim-figures.yaml, and
+    what they mean is in data/facts/sim-results.yaml. The quoted claim is kept
+    because AGENTS.md cited it for a week and a reader meeting the old sentence
+    elsewhere should be able to find where it was retracted.
   what_that_does_and_does_not_mean: >-
-    NO SIMULATION HAS BEEN RUN AT THESE ANCHORS, which is what this counter
-    tracks, and no set bonus has been priced anywhere in the repository. It does
-    NOT mean nothing has been collected: seventeen gear captures live under
-    sim-profiles/hit-capture, rolled up into hit-captured.yaml and set-stats.yaml
-    and checked by just check, and crit.yaml records four crit figures from a
-    wowsims run against that engine's OWN presets rather than ours. This
-    counter read as though the directory beside it were empty.
-  anchors: [entry, tier]
+    `specs_hand_collected: 0` counts the route this file describes, and it is
+    still zero because that route was never taken. The runs are configured from
+    generated profiles instead. What remains genuinely unmeasured is a PRICE FOR
+    A SET BONUS in general: sim-results.yaml prices three of them by measurement,
+    the Fury Destroyer four-piece, the Rogue Slayer four-piece and the single
+    token valleys, and no other set bonus in the repository has a figure.
+  anchors: [entry, tier, bis]
   note: >-
-    Two anchors per spec, and both describe gear a real player has. RULED on
-    9 August 2026.
+    Two anchors were RULED on 9 August 2026 and a third was added on 15 August
+    2026. All three describe gear a real player has.
+    BIS is the full Phase 3 best-in-slot set, built from the Wowhead captures in
+    data/research/wowhead-phase3-bis-full/ with the guild lead's weapon routing
+    applied. It exists because ENTRY and TIER share every weapon and trinket, so
+    neither answers what a Phase 3 geared spec does.
     ENTRY is the spec's Tier 5 best-in-slot set: what a raider walks into Phase
     3 wearing. Season 2 is in, Season 3 is out, because Season 3 arrives five
     days after the phase opens.
@@ -55,8 +77,11 @@ meta:
   split_combinations: >-
     A configuration mixing two tiers, such as two Tier 6 pieces beside two Tier
     5 pieces, is supported by this schema because a slot names its own item and
-    its own tier. None is confirmed for any spec yet, so none is enumerated. It
-    is recorded here so the shape does not have to change when one is found.
+    its own tier.
+    ONE IS NOW CONFIRMED. The Arcane Mage best-in-slot capture holds four Tier 5
+    pieces beside one Tier 6, which is the first split this project has met in a
+    published list. It needed no schema change, which is what this paragraph
+    was written to guarantee.
 
 # The fields every spec entry carries, so a collection session has a checklist
 # and two people collecting separately produce the same shape.
@@ -156,10 +181,16 @@ profiles:
   - spec: priest_healer
     status: not_collected
 
-open_questions:
+# NOTHING BELOW IS OPEN. All three were settled on 15 August 2026 by the
+# generated route taking over, and they are kept because the reasoning is the
+# useful part and because one of them turned out to be the sharpest constraint
+# on how these figures may be read.
+settled_questions:
 
   collection_order:
-    blocks: Every throughput figure the compendium would quote.
+    settled: Moot. Nothing is hand-collected in the order this describes, because
+      nothing is hand-collected. The generated route produces every spec at once.
+    was_blocking: Every throughput figure the compendium would quote.
     detail: >-
       Nothing is collected. Order by what a figure would decide. The three specs
       hit.yaml records as short come first, feral_bear, protection_paladin and
@@ -171,7 +202,15 @@ open_questions:
       contest the same pieces.
 
   gear_for_the_entry_anchor:
-    blocks: The entry profile for every spec.
+    settled: >-
+      Answered a different way than this anticipated. The entry gear never came
+      from extract_ladder.py and was never assembled by hand from the workbook.
+      It comes from the per-spec captures under sim-profiles/hit-capture, which
+      record published gear lists, and tools/export_sim_profiles.py turns those
+      into data/sim/gear. So the entry profile does NOT follow the workbook
+      greedy rule and is not expected to agree with the supply figures; the two
+      rules are named and separated in hit-captured.yaml.
+    was_blocking: The entry profile for every spec.
     detail: >-
       The entry gear set is currently computed inside tools/extract_ladder.py to
       derive a supply figure and then discarded, so there is no list to copy
@@ -181,7 +220,23 @@ open_questions:
       followed.
 
   rotation_source:
-    blocks: Comparability between specs.
+    settled: >-
+      DECIDED, and it is the same choice for every spec: the action priority
+      list the simulator itself ships, at ui/<class>/<spec>/apls/. Writing our
+      own would be a modelling choice we could not defend and taking a community
+      one carries that source's assumptions, so the engine's own list is the
+      only option that is both uniform and citable. tools/run_sims.py::APL names
+      the file per spec and STOPS rather than falling back, because the fallback
+      rotation returns 0.0 for every caster and a plausible smaller number for
+      every physical spec.
+    the_concern_it_raised_still_stands: >-
+      THIS IS WHY docs/sims.md REFUSES TO RANK SPECS. Choosing one source
+      uniformly makes the choice defensible; it does not make rotation quality
+      equal between specs. It is not, and it distorts absolute damage far more
+      than it distorts what a stat is worth inside one spec. So a figure is
+      comparable with the same spec at another anchor and with nothing else,
+      which the page states in its own words.
+    was_blocking: Comparability between specs.
     detail: >-
       Rotation quality varies sharply between specs in a simulator and distorts
       absolute damage far more than it distorts what one point of a stat is
