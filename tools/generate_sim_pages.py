@@ -288,11 +288,10 @@ of tens or hundreds is real.** Ruled by the guild lead on 15 August 2026.
 
 ## What each spec measures
 
-Each spec is simulated in three complete sets of gear, and reading a figure
-without knowing which set produced it is how both warriors came to be called
-weak. Every figure is a link into that exact set: seventeen slots with their
-enchants and gems, the consumables drunk, the buffs and debuffs applied, the
-talent string and the rotation.
+Each spec is simulated in three complete sets of gear, and a figure means
+nothing without knowing which set produced it. Every figure is a link into that
+exact set: seventeen slots with their enchants and gems, the consumables drunk,
+the buffs and debuffs applied, the talent string and the rotation.
 
 **Entry** is the spec's Phase 2 best-in-slot set, captured from the published
 list for that spec. It is what a raider walks into Phase 3 already wearing, so

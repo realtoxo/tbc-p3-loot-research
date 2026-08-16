@@ -27,8 +27,8 @@ Which words carry a fixed technical meaning, and what each one means.
 | **Claimant** | A spec with a real case for an item. Armor type is a ceiling rather than a match, so it excludes little; stat relevance does the filtering. |
 | **Priority** | How strongly one spec wants one item, on the four-step scale below. The unit of output. |
 | **Blocker** | A specific, named reason a tier piece cannot or should not be equipped yet, such as an active set bonus it would break. |
-| **Gear anchor** | A defined gear baseline that our own simulator runs are executed at. Two are used per spec: **Entry**, meaning the best gear a raider can hold before this raid opens, with no Tier 6 in it, and **Tier**, meaning that same gear with the spec's Tier 6 pieces obtainable this phase put into it, set bonuses active and no off-pieces. Cards spell both of these out rather than naming them. |
-| **Rank-unstable** | An item whose standing changes between the two gear anchors. Its ordering is provisional, and it moves as the raid gears up. |
+| **Gear anchor** | A defined gear baseline that our own simulator runs are executed at. Three are used per spec: **Entry**, the best gear a raider can hold before this raid opens, with no Tier 6 in it; **Tier**, that same gear with only the five tier token slots reconsidered; and **BiS**, the full Phase 3 best-in-slot set. Cards spell these out rather than naming them. Which specs are run at which, and the figures, are in [Simulated Throughput](sims.md). |
+| **Rank-unstable** | An item whose standing changes between gear anchors. Its ordering is provisional, and it moves as the raid gears up. |
 
 ## Priorities
 

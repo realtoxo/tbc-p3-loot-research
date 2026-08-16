@@ -179,9 +179,10 @@ discretionary_hit_budget:
       Ferocity on head and Falcon's Call on legs at once. But both ZG enchants
       are strictly dominated in the head slot: Glyph of Ferocity beats Falcon's
       Call on attack power and on hit, and Glyph of Power beats Presence of
-      Sight on spell damage and on spell hit. The only sane configuration is
-      the Glyph on head and the ZG enchant on legs.
-    verdict: >-
+      Sight on spell damage and on spell hit. Given that dominance, one
+      configuration keeps both slots at their best available: the Glyph on head
+      and the ZG enchant on legs.
+    trade_off: >-
       Both are losing trades on raw throughput and are correct only where the
       last fraction of a percent crosses a hard cap. This bears most on
       arcane_mage, which is called short here and has no spell hit consumable
@@ -851,8 +852,8 @@ specs:
     score_column: epv
     gap_closeable_by_gems_and_enchants: "yes"
     gap_note: >-
-      Gap is 24. Hit enchants alone supply 26, and the food supplies 20. T
-      his is housekeeping, not a loot claim.
+      Gap is 24. Hit enchants alone supply 26, and the food supplies 20.
+      This is housekeeping, not a loot claim.
     ladder_second_column_coverage: 78 of 225
     confidence: conservative
     note: >-
@@ -984,9 +985,8 @@ specs:
     ladder_second_column_coverage: 105 of 240
     confidence: conservative
     note: >-
-      Short by 36 rating on gear alone. Hit-bearing off-pieces are a strong
-      claim for this spec through Phase 3 entry.
-      This is the spec most sensitive to the improved_faerie_fire assumption:
+      Short by 36 rating on gear alone. This is the spec most sensitive to the
+      improved_faerie_fire assumption:
       the state is full only because the 48 rating of debuff hit is credited,
       per the fields above.
 
@@ -1055,9 +1055,7 @@ specs:
     gap_closeable_by_gems_and_enchants: "partly"
     gap_note: >-
       Gap is 82, against a realistic budget of 50 to 70. Most of it closes
-      with committed gemming, and the remainder is real. This is the only
-      damage-side short state that a hit-bearing off-piece genuinely help
-      s.
+      with committed gemming, and the remainder is real.
     ladder_second_column_coverage: 68 of 210
     confidence: conservative
     note: >-
@@ -1128,9 +1126,9 @@ specs:
     score_column: epv
     gap_closeable_by_gems_and_enchants: "no"
     gap_note: >-
-      Gap is 95 on melee and 150 on spell, well beyond the whole budget. S
-      tructural. It is also the least urgent, because the framework ranks
-      this tank's threat floor below its constraints.
+      Gap is 95 on melee and 150 on spell, well beyond the whole budget.
+      Structural. The framework records this tank's threat floor and its
+      constraints separately and does not order them.
     ladder_second_column_coverage: 28 of 210
     confidence: conservative
     note: >-
@@ -1317,9 +1315,8 @@ specs:
     score_column: epv
     gap_closeable_by_gems_and_enchants: "yes"
     gap_note: >-
-      Gap is 23, against 29 from spell hit enchants alone. Housekeeping, w
-      ith the caveat that no consumable exists as a fallback for this spec
-      .
+      Gap is 23, against 29 from spell hit enchants alone. Housekeeping, with
+      the caveat that no consumable exists as a fallback for this spec.
     ladder_second_column_coverage: 59 of 240
     confidence: conservative
     note: >-
