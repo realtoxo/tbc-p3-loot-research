@@ -2,7 +2,7 @@
 title: Beast Mastery Hunter, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 3523.6 ± 1.01 damage per second.
+  The whole request behind one figure: 3523.1 ± 1.00 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/beast-mastery-hunter.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **3523.6**                                                                                                                                    |
-| Standard error on the mean | ± 1.01                                                                                                                                        |
-| Spread across iterations   | 100.7                                                                                                                                         |
+| Damage per second          | **3523.1**                                                                                                                                    |
+| Standard error on the mean | ± 1.00                                                                                                                                        |
+| Spread across iterations   | 99.5                                                                                                                                          |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 3170.2 ± 0.90     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 3523.6 ± 1.01     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 4168.1 ± 1.20     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 3169.8 ± 0.89     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 3523.1 ± 1.00     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 4167.4 ± 1.18     | Essence of Suffering                                       |
 
 ## The set
 
@@ -132,8 +132,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

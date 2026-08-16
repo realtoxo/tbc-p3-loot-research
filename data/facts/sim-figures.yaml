@@ -42,279 +42,283 @@ meta:
   the_zero_tier_is_one_target: Essence of Suffering alone, plus Veras Darkshadow,
     whose armor is near-zero with the digits unestablished. Run because the guild
     lead ruled per boss, and a target with no armor is a real part of two encounters.
+  expose_weakness: The Survival Hunter's agility is MEASURED per anchor by bisection,
+    1119 entry, 1105 tier, 1152 best in slot, with the uptime measured at 0.98.
+    See data/facts/raid-buffs.yaml. It was the simulator's generic 1210 for a few
+    hours on 15 August 2026 and that was 5 to 9 percent high for this roster.
 results:
 - profile: affliction-warlock.bis
   spec: affliction_warlock
   anchor: bis
-  dps: 2226.5
+  dps: 2227.6
   standard_error: 1.04
-  stdev: 103.9
+  stdev: 103.5
   boss_armor: 6193
 - profile: affliction-warlock.entry
   spec: affliction_warlock
   anchor: entry
-  dps: 1947.3
+  dps: 1947.4
   standard_error: 0.96
-  stdev: 96.1
+  stdev: 95.5
   boss_armor: 6193
 - profile: affliction-warlock.tier-hands-and-head
   spec: affliction_warlock
   anchor: tier-hands-and-head
-  dps: 1979.0
+  dps: 1978.9
   standard_error: 0.95
   stdev: 95.4
   boss_armor: 6193
 - profile: arcane-mage.bis
   spec: arcane_mage
   anchor: bis
-  dps: 2534.8
+  dps: 2534.4
   standard_error: 1.07
-  stdev: 106.5
+  stdev: 106.8
   boss_armor: 6193
 - profile: arcane-mage.entry
   spec: arcane_mage
   anchor: entry
-  dps: 2301.9
+  dps: 2301.2
   standard_error: 1.0
-  stdev: 100.2
+  stdev: 99.7
   boss_armor: 6193
 - profile: arcane-mage.tier-hands-and-head
   spec: arcane_mage
   anchor: tier-hands-and-head
-  dps: 2321.6
+  dps: 2320.7
   standard_error: 1.01
-  stdev: 101.4
+  stdev: 100.9
   boss_armor: 6193
 - profile: arms-warrior.bis
   spec: arms_warrior
   anchor: bis
-  dps: 2421.4
+  dps: 2426.4
   standard_error: 1.36
-  stdev: 135.7
+  stdev: 136.4
   boss_armor: 6193
 - profile: arms-warrior.entry
   spec: arms_warrior
   anchor: entry
-  dps: 2148.8
+  dps: 2149.8
   standard_error: 1.16
-  stdev: 115.6
+  stdev: 115.7
   boss_armor: 6193
 - profile: arms-warrior.tier-hands-and-head-alternative-refuse-head-token
   spec: arms_warrior
   anchor: tier-hands-and-head-alternative-refuse-head-token
-  dps: 2322.3
-  standard_error: 1.31
-  stdev: 131.2
+  dps: 2328.5
+  standard_error: 1.3
+  stdev: 130.3
   boss_armor: 6193
 - profile: arms-warrior.tier-hands-and-head
   spec: arms_warrior
   anchor: tier-hands-and-head
-  dps: 2239.6
+  dps: 2239.8
   standard_error: 1.22
-  stdev: 122.5
+  stdev: 121.8
   boss_armor: 6193
 - profile: balance-druid.bis
   spec: balance_druid
   anchor: bis
-  dps: 1951.9
+  dps: 1952.7
   standard_error: 0.94
-  stdev: 93.7
+  stdev: 93.9
   boss_armor: 6193
 - profile: balance-druid.entry
   spec: balance_druid
   anchor: entry
-  dps: 1671.1
+  dps: 1671.3
   standard_error: 0.86
   stdev: 86.4
   boss_armor: 6193
 - profile: balance-druid.tier-hands-and-head-alternative-hold-tier5-four-piece
   spec: balance_druid
   anchor: tier-hands-and-head-alternative-hold-tier5-four-piece
-  dps: 1839.1
+  dps: 1840.0
   standard_error: 0.95
-  stdev: 95.0
+  stdev: 95.4
   boss_armor: 6193
 - profile: balance-druid.tier-hands-and-head
   spec: balance_druid
   anchor: tier-hands-and-head
-  dps: 1716.9
+  dps: 1715.8
   standard_error: 0.83
-  stdev: 83.2
+  stdev: 83.4
   boss_armor: 6193
 - profile: balance-druid.tier-hands-only-alternative-hold-tier5-four-piece
   spec: balance_druid
   anchor: tier-hands-only-alternative-hold-tier5-four-piece
-  dps: 1839.1
+  dps: 1840.0
   standard_error: 0.95
-  stdev: 95.0
+  stdev: 95.4
   boss_armor: 6193
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 3572.9
+  dps: 3580.7
   standard_error: 1.01
-  stdev: 101.3
+  stdev: 100.9
   boss_armor: 6193
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
   anchor: entry
-  dps: 3340.6
-  standard_error: 0.96
-  stdev: 96.0
+  dps: 3342.3
+  standard_error: 0.95
+  stdev: 94.9
   boss_armor: 6193
 - profile: beast-mastery-hunter.tier-hands-and-head
   spec: beast_mastery_hunter
   anchor: tier-hands-and-head
-  dps: 3523.6
-  standard_error: 1.01
-  stdev: 100.7
+  dps: 3523.1
+  standard_error: 1.0
+  stdev: 99.5
   boss_armor: 6193
 - profile: combat-rogue.bis
   spec: combat_rogue
   anchor: bis
-  dps: 2912.8
+  dps: 2918.2
   standard_error: 1.21
-  stdev: 121.5
+  stdev: 120.6
   boss_armor: 6193
 - profile: combat-rogue.entry
   spec: combat_rogue
   anchor: entry
-  dps: 2329.4
-  standard_error: 0.99
-  stdev: 99.0
+  dps: 2329.8
+  standard_error: 0.98
+  stdev: 98.3
   boss_armor: 6193
 - profile: combat-rogue.tier-hands-and-head
   spec: combat_rogue
   anchor: tier-hands-and-head
-  dps: 2542.3
-  standard_error: 1.07
-  stdev: 107.4
+  dps: 2542.0
+  standard_error: 1.06
+  stdev: 106.4
   boss_armor: 6193
 - profile: destruction-warlock.bis
   spec: destruction_warlock
   anchor: bis
   dps: 2493.8
   standard_error: 1.3
-  stdev: 130.4
+  stdev: 130.1
   boss_armor: 6193
 - profile: destruction-warlock.entry
   spec: destruction_warlock
   anchor: entry
-  dps: 2051.6
+  dps: 2051.4
   standard_error: 1.13
   stdev: 112.9
   boss_armor: 6193
 - profile: destruction-warlock.tier-hands-and-head
   spec: destruction_warlock
   anchor: tier-hands-and-head
-  dps: 2142.4
-  standard_error: 1.2
-  stdev: 119.7
+  dps: 2142.8
+  standard_error: 1.19
+  stdev: 119.5
   boss_armor: 6193
 - profile: elemental-shaman.bis
   spec: elemental_shaman
   anchor: bis
-  dps: 2129.9
-  standard_error: 0.96
-  stdev: 96.4
+  dps: 2130.0
+  standard_error: 0.97
+  stdev: 96.6
   boss_armor: 6193
 - profile: elemental-shaman.entry
   spec: elemental_shaman
   anchor: entry
-  dps: 1719.5
+  dps: 1718.8
   standard_error: 0.89
-  stdev: 88.9
+  stdev: 89.3
   boss_armor: 6193
 - profile: elemental-shaman.tier-hands-and-head
   spec: elemental_shaman
   anchor: tier-hands-and-head
-  dps: 1894.2
+  dps: 1893.9
   standard_error: 0.94
-  stdev: 93.9
+  stdev: 93.5
   boss_armor: 6193
 - profile: enhancement-shaman.bis
   spec: enhancement_shaman
   anchor: bis
-  dps: 2382.7
-  standard_error: 1.01
-  stdev: 101.3
+  dps: 2387.4
+  standard_error: 1.02
+  stdev: 101.7
   boss_armor: 6193
 - profile: enhancement-shaman.entry
   spec: enhancement_shaman
   anchor: entry
-  dps: 2215.5
+  dps: 2216.4
   standard_error: 0.97
-  stdev: 97.3
+  stdev: 97.0
   boss_armor: 6193
 - profile: enhancement-shaman.tier-hands-and-head
   spec: enhancement_shaman
   anchor: tier-hands-and-head
-  dps: 2215.5
+  dps: 2215.3
   standard_error: 0.97
-  stdev: 97.3
+  stdev: 96.9
   boss_armor: 6193
 - profile: fury-warrior.bis
   spec: fury_warrior
   anchor: bis
-  dps: 2856.4
-  standard_error: 1.24
-  stdev: 124.1
+  dps: 2862.1
+  standard_error: 1.23
+  stdev: 123.4
   boss_armor: 6193
 - profile: fury-warrior.entry
   spec: fury_warrior
   anchor: entry
-  dps: 2479.5
-  standard_error: 1.18
-  stdev: 117.7
+  dps: 2479.3
+  standard_error: 1.16
+  stdev: 116.2
   boss_armor: 6193
 - profile: fury-warrior.tier-hands-and-head
   spec: fury_warrior
   anchor: tier-hands-and-head
-  dps: 2505.3
-  standard_error: 1.19
-  stdev: 119.5
+  dps: 2505.8
+  standard_error: 1.21
+  stdev: 120.5
   boss_armor: 6193
 - profile: retribution-paladin.bis
   spec: retribution_paladin
   anchor: bis
-  dps: 2371.6
+  dps: 2374.4
   standard_error: 1.46
   stdev: 145.7
   boss_armor: 6193
 - profile: retribution-paladin.entry
   spec: retribution_paladin
   anchor: entry
-  dps: 2180.8
-  standard_error: 1.34
-  stdev: 133.8
+  dps: 2181.3
+  standard_error: 1.33
+  stdev: 133.4
   boss_armor: 6193
 - profile: retribution-paladin.tier-hands-and-head
   spec: retribution_paladin
   anchor: tier-hands-and-head
-  dps: 2180.8
-  standard_error: 1.34
-  stdev: 133.8
+  dps: 2180.3
+  standard_error: 1.33
+  stdev: 133.4
   boss_armor: 6193
 - profile: shadow-priest.bis
   spec: shadow_priest
   anchor: bis
-  dps: 1577.8
+  dps: 1577.9
   standard_error: 0.29
-  stdev: 29.2
+  stdev: 29.3
   boss_armor: 6193
 - profile: shadow-priest.entry
   spec: shadow_priest
   anchor: entry
   dps: 1452.1
   standard_error: 0.26
-  stdev: 26.5
+  stdev: 26.4
   boss_armor: 6193
 - profile: shadow-priest.tier-hands-and-head
   spec: shadow_priest
   anchor: tier-hands-and-head
-  dps: 1497.9
+  dps: 1497.8
   standard_error: 0.29
-  stdev: 28.8
+  stdev: 28.9
   boss_armor: 6193
 - profile: survival-hunter.bis
   spec: survival_hunter
@@ -340,16 +344,16 @@ results:
 - profile: affliction-warlock.bis
   spec: affliction_warlock
   anchor: bis
-  dps: 2211.6
-  standard_error: 1.04
-  stdev: 103.8
+  dps: 2212.7
+  standard_error: 1.03
+  stdev: 103.5
   boss_armor: 7684
 - profile: affliction-warlock.entry
   spec: affliction_warlock
   anchor: entry
-  dps: 1932.7
-  standard_error: 0.96
-  stdev: 96.0
+  dps: 1932.8
+  standard_error: 0.95
+  stdev: 95.4
   boss_armor: 7684
 - profile: affliction-warlock.tier-hands-and-head
   spec: affliction_warlock
@@ -361,254 +365,254 @@ results:
 - profile: arcane-mage.bis
   spec: arcane_mage
   anchor: bis
-  dps: 2534.8
+  dps: 2534.4
   standard_error: 1.07
-  stdev: 106.5
+  stdev: 106.8
   boss_armor: 7684
 - profile: arcane-mage.entry
   spec: arcane_mage
   anchor: entry
-  dps: 2301.9
+  dps: 2301.2
   standard_error: 1.0
-  stdev: 100.2
+  stdev: 99.7
   boss_armor: 7684
 - profile: arcane-mage.tier-hands-and-head
   spec: arcane_mage
   anchor: tier-hands-and-head
-  dps: 2321.6
+  dps: 2320.7
   standard_error: 1.01
-  stdev: 101.4
+  stdev: 100.9
   boss_armor: 7684
 - profile: arms-warrior.bis
   spec: arms_warrior
   anchor: bis
-  dps: 2121.8
+  dps: 2126.7
   standard_error: 1.22
-  stdev: 122.3
+  stdev: 122.0
   boss_armor: 7684
 - profile: arms-warrior.entry
   spec: arms_warrior
   anchor: entry
-  dps: 1909.1
+  dps: 1909.9
   standard_error: 1.06
-  stdev: 106.0
+  stdev: 106.1
   boss_armor: 7684
 - profile: arms-warrior.tier-hands-and-head-alternative-refuse-head-token
   spec: arms_warrior
   anchor: tier-hands-and-head-alternative-refuse-head-token
-  dps: 2047.8
+  dps: 2050.2
   standard_error: 1.18
-  stdev: 118.2
+  stdev: 118.3
   boss_armor: 7684
 - profile: arms-warrior.tier-hands-and-head
   spec: arms_warrior
   anchor: tier-hands-and-head
-  dps: 1985.9
-  standard_error: 1.11
-  stdev: 110.8
+  dps: 1984.1
+  standard_error: 1.1
+  stdev: 109.6
   boss_armor: 7684
 - profile: balance-druid.bis
   spec: balance_druid
   anchor: bis
-  dps: 1941.2
+  dps: 1942.0
   standard_error: 0.94
-  stdev: 93.7
+  stdev: 93.9
   boss_armor: 7684
 - profile: balance-druid.entry
   spec: balance_druid
   anchor: entry
-  dps: 1660.3
+  dps: 1660.6
   standard_error: 0.86
-  stdev: 86.3
+  stdev: 86.4
   boss_armor: 7684
 - profile: balance-druid.tier-hands-and-head-alternative-hold-tier5-four-piece
   spec: balance_druid
   anchor: tier-hands-and-head-alternative-hold-tier5-four-piece
-  dps: 1828.3
+  dps: 1829.1
   standard_error: 0.95
-  stdev: 94.9
+  stdev: 95.3
   boss_armor: 7684
 - profile: balance-druid.tier-hands-and-head
   spec: balance_druid
   anchor: tier-hands-and-head
-  dps: 1706.1
+  dps: 1705.0
   standard_error: 0.83
-  stdev: 83.2
+  stdev: 83.4
   boss_armor: 7684
 - profile: balance-druid.tier-hands-only-alternative-hold-tier5-four-piece
   spec: balance_druid
   anchor: tier-hands-only-alternative-hold-tier5-four-piece
-  dps: 1828.3
+  dps: 1829.1
   standard_error: 0.95
-  stdev: 94.9
+  stdev: 95.3
   boss_armor: 7684
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 3201.4
+  dps: 3208.3
   standard_error: 0.9
-  stdev: 90.0
+  stdev: 89.6
   boss_armor: 7684
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
   anchor: entry
-  dps: 3010.3
-  standard_error: 0.86
-  stdev: 86.2
+  dps: 3011.8
+  standard_error: 0.85
+  stdev: 85.2
   boss_armor: 7684
 - profile: beast-mastery-hunter.tier-hands-and-head
   spec: beast_mastery_hunter
   anchor: tier-hands-and-head
-  dps: 3170.2
-  standard_error: 0.9
-  stdev: 90.1
+  dps: 3169.8
+  standard_error: 0.89
+  stdev: 89.1
   boss_armor: 7684
 - profile: combat-rogue.bis
   spec: combat_rogue
   anchor: bis
-  dps: 2592.8
-  standard_error: 1.08
-  stdev: 107.7
+  dps: 2597.6
+  standard_error: 1.07
+  stdev: 106.9
   boss_armor: 7684
 - profile: combat-rogue.entry
   spec: combat_rogue
   anchor: entry
-  dps: 2085.5
+  dps: 2085.9
   standard_error: 0.88
-  stdev: 88.3
+  stdev: 87.7
   boss_armor: 7684
 - profile: combat-rogue.tier-hands-and-head
   spec: combat_rogue
   anchor: tier-hands-and-head
-  dps: 2267.2
+  dps: 2266.9
   standard_error: 0.95
-  stdev: 95.4
+  stdev: 94.5
   boss_armor: 7684
 - profile: destruction-warlock.bis
   spec: destruction_warlock
   anchor: bis
   dps: 2493.8
   standard_error: 1.3
-  stdev: 130.4
+  stdev: 130.1
   boss_armor: 7684
 - profile: destruction-warlock.entry
   spec: destruction_warlock
   anchor: entry
-  dps: 2051.6
+  dps: 2051.4
   standard_error: 1.13
   stdev: 112.9
   boss_armor: 7684
 - profile: destruction-warlock.tier-hands-and-head
   spec: destruction_warlock
   anchor: tier-hands-and-head
-  dps: 2142.4
-  standard_error: 1.2
-  stdev: 119.7
+  dps: 2142.8
+  standard_error: 1.19
+  stdev: 119.5
   boss_armor: 7684
 - profile: elemental-shaman.bis
   spec: elemental_shaman
   anchor: bis
-  dps: 2129.9
-  standard_error: 0.96
-  stdev: 96.4
+  dps: 2130.0
+  standard_error: 0.97
+  stdev: 96.6
   boss_armor: 7684
 - profile: elemental-shaman.entry
   spec: elemental_shaman
   anchor: entry
-  dps: 1719.5
+  dps: 1718.8
   standard_error: 0.89
-  stdev: 88.9
+  stdev: 89.3
   boss_armor: 7684
 - profile: elemental-shaman.tier-hands-and-head
   spec: elemental_shaman
   anchor: tier-hands-and-head
-  dps: 1894.2
+  dps: 1893.9
   standard_error: 0.94
-  stdev: 93.9
+  stdev: 93.5
   boss_armor: 7684
 - profile: enhancement-shaman.bis
   spec: enhancement_shaman
   anchor: bis
-  dps: 2162.8
+  dps: 2167.0
   standard_error: 0.91
-  stdev: 90.8
+  stdev: 91.2
   boss_armor: 7684
 - profile: enhancement-shaman.entry
   spec: enhancement_shaman
   anchor: entry
-  dps: 2017.0
-  standard_error: 0.88
-  stdev: 87.5
+  dps: 2017.8
+  standard_error: 0.87
+  stdev: 87.2
   boss_armor: 7684
 - profile: enhancement-shaman.tier-hands-and-head
   spec: enhancement_shaman
   anchor: tier-hands-and-head
-  dps: 2017.0
-  standard_error: 0.88
-  stdev: 87.5
+  dps: 2016.8
+  standard_error: 0.87
+  stdev: 87.2
   boss_armor: 7684
 - profile: fury-warrior.bis
   spec: fury_warrior
   anchor: bis
-  dps: 2512.5
-  standard_error: 1.12
-  stdev: 112.3
+  dps: 2516.5
+  standard_error: 1.13
+  stdev: 112.9
   boss_armor: 7684
 - profile: fury-warrior.entry
   spec: fury_warrior
   anchor: entry
-  dps: 2196.6
+  dps: 2199.5
   standard_error: 1.06
-  stdev: 106.1
+  stdev: 105.7
   boss_armor: 7684
 - profile: fury-warrior.tier-hands-and-head
   spec: fury_warrior
   anchor: tier-hands-and-head
-  dps: 2216.4
-  standard_error: 1.1
-  stdev: 109.9
+  dps: 2216.2
+  standard_error: 1.08
+  stdev: 108.3
   boss_armor: 7684
 - profile: retribution-paladin.bis
   spec: retribution_paladin
   anchor: bis
-  dps: 2220.6
+  dps: 2223.2
   standard_error: 1.38
-  stdev: 138.2
+  stdev: 138.3
   boss_armor: 7684
 - profile: retribution-paladin.entry
   spec: retribution_paladin
   anchor: entry
-  dps: 2040.9
-  standard_error: 1.27
-  stdev: 126.8
+  dps: 2041.3
+  standard_error: 1.26
+  stdev: 126.4
   boss_armor: 7684
 - profile: retribution-paladin.tier-hands-and-head
   spec: retribution_paladin
   anchor: tier-hands-and-head
-  dps: 2040.9
-  standard_error: 1.27
-  stdev: 126.8
+  dps: 2040.4
+  standard_error: 1.26
+  stdev: 126.3
   boss_armor: 7684
 - profile: shadow-priest.bis
   spec: shadow_priest
   anchor: bis
-  dps: 1577.8
+  dps: 1577.9
   standard_error: 0.29
-  stdev: 29.2
+  stdev: 29.3
   boss_armor: 7684
 - profile: shadow-priest.entry
   spec: shadow_priest
   anchor: entry
   dps: 1452.1
   standard_error: 0.26
-  stdev: 26.5
+  stdev: 26.4
   boss_armor: 7684
 - profile: shadow-priest.tier-hands-and-head
   spec: shadow_priest
   anchor: tier-hands-and-head
-  dps: 1497.9
+  dps: 1497.8
   standard_error: 0.29
-  stdev: 28.8
+  stdev: 28.9
   boss_armor: 7684
 - profile: survival-hunter.bis
   spec: survival_hunter
@@ -634,275 +638,275 @@ results:
 - profile: affliction-warlock.bis
   spec: affliction_warlock
   anchor: bis
-  dps: 2256.8
+  dps: 2258.0
   standard_error: 1.04
-  stdev: 104.0
+  stdev: 103.7
   boss_armor: 0
 - profile: affliction-warlock.entry
   spec: affliction_warlock
   anchor: entry
-  dps: 1977.2
+  dps: 1977.4
   standard_error: 0.96
-  stdev: 96.3
+  stdev: 95.7
   boss_armor: 0
 - profile: affliction-warlock.tier-hands-and-head
   spec: affliction_warlock
   anchor: tier-hands-and-head
-  dps: 2008.9
+  dps: 2008.8
   standard_error: 0.96
   stdev: 95.6
   boss_armor: 0
 - profile: arcane-mage.bis
   spec: arcane_mage
   anchor: bis
-  dps: 2534.8
+  dps: 2534.4
   standard_error: 1.07
-  stdev: 106.5
+  stdev: 106.8
   boss_armor: 0
 - profile: arcane-mage.entry
   spec: arcane_mage
   anchor: entry
-  dps: 2301.9
+  dps: 2301.2
   standard_error: 1.0
-  stdev: 100.2
+  stdev: 99.7
   boss_armor: 0
 - profile: arcane-mage.tier-hands-and-head
   spec: arcane_mage
   anchor: tier-hands-and-head
-  dps: 2321.6
+  dps: 2320.7
   standard_error: 1.01
-  stdev: 101.4
+  stdev: 100.9
   boss_armor: 0
 - profile: arms-warrior.bis
   spec: arms_warrior
   anchor: bis
-  dps: 2613.1
-  standard_error: 1.46
-  stdev: 145.8
+  dps: 2619.7
+  standard_error: 1.45
+  stdev: 145.0
   boss_armor: 0
 - profile: arms-warrior.entry
   spec: arms_warrior
   anchor: entry
-  dps: 2622.7
+  dps: 2624.7
   standard_error: 1.4
-  stdev: 140.3
+  stdev: 140.1
   boss_armor: 0
 - profile: arms-warrior.tier-hands-and-head-alternative-refuse-head-token
   spec: arms_warrior
   anchor: tier-hands-and-head-alternative-refuse-head-token
-  dps: 2634.2
+  dps: 2640.3
   standard_error: 1.46
-  stdev: 145.7
+  stdev: 146.2
   boss_armor: 0
 - profile: arms-warrior.tier-hands-and-head
   spec: arms_warrior
   anchor: tier-hands-and-head
-  dps: 2643.1
+  dps: 2641.0
   standard_error: 1.42
-  stdev: 142.4
+  stdev: 141.9
   boss_armor: 0
 - profile: balance-druid.bis
   spec: balance_druid
   anchor: bis
-  dps: 1973.7
+  dps: 1974.6
   standard_error: 0.94
-  stdev: 93.9
+  stdev: 94.1
   boss_armor: 0
 - profile: balance-druid.entry
   spec: balance_druid
   anchor: entry
-  dps: 1692.9
+  dps: 1693.2
   standard_error: 0.87
-  stdev: 86.5
+  stdev: 86.6
   boss_armor: 0
 - profile: balance-druid.tier-hands-and-head-alternative-hold-tier5-four-piece
   spec: balance_druid
   anchor: tier-hands-and-head-alternative-hold-tier5-four-piece
-  dps: 1861.0
+  dps: 1862.0
   standard_error: 0.95
-  stdev: 95.1
+  stdev: 95.5
   boss_armor: 0
 - profile: balance-druid.tier-hands-and-head
   spec: balance_druid
   anchor: tier-hands-and-head
-  dps: 1738.8
-  standard_error: 0.83
-  stdev: 83.4
+  dps: 1737.7
+  standard_error: 0.84
+  stdev: 83.6
   boss_armor: 0
 - profile: balance-druid.tier-hands-only-alternative-hold-tier5-four-piece
   spec: balance_druid
   anchor: tier-hands-only-alternative-hold-tier5-four-piece
-  dps: 1861.0
+  dps: 1862.0
   standard_error: 0.95
-  stdev: 95.1
+  stdev: 95.5
   boss_armor: 0
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 4076.6
-  standard_error: 1.15
-  stdev: 114.5
+  dps: 4085.6
+  standard_error: 1.14
+  stdev: 113.9
   boss_armor: 0
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
   anchor: entry
-  dps: 4006.9
-  standard_error: 1.16
-  stdev: 115.9
+  dps: 4008.9
+  standard_error: 1.15
+  stdev: 114.6
   boss_armor: 0
 - profile: beast-mastery-hunter.tier-hands-and-head
   spec: beast_mastery_hunter
   anchor: tier-hands-and-head
-  dps: 4168.1
-  standard_error: 1.2
-  stdev: 119.7
+  dps: 4167.4
+  standard_error: 1.18
+  stdev: 118.3
   boss_armor: 0
 - profile: combat-rogue.bis
   spec: combat_rogue
   anchor: bis
-  dps: 3150.2
-  standard_error: 1.3
-  stdev: 129.9
+  dps: 3156.0
+  standard_error: 1.29
+  stdev: 128.9
   boss_armor: 0
 - profile: combat-rogue.entry
   spec: combat_rogue
   anchor: entry
-  dps: 2616.1
-  standard_error: 1.1
-  stdev: 110.0
+  dps: 2616.6
+  standard_error: 1.09
+  stdev: 109.2
   boss_armor: 0
 - profile: combat-rogue.tier-hands-and-head
   spec: combat_rogue
   anchor: tier-hands-and-head
-  dps: 2778.3
-  standard_error: 1.16
-  stdev: 116.0
+  dps: 2778.0
+  standard_error: 1.15
+  stdev: 115.0
   boss_armor: 0
 - profile: destruction-warlock.bis
   spec: destruction_warlock
   anchor: bis
   dps: 2493.8
   standard_error: 1.3
-  stdev: 130.4
+  stdev: 130.1
   boss_armor: 0
 - profile: destruction-warlock.entry
   spec: destruction_warlock
   anchor: entry
-  dps: 2051.6
+  dps: 2051.4
   standard_error: 1.13
   stdev: 112.9
   boss_armor: 0
 - profile: destruction-warlock.tier-hands-and-head
   spec: destruction_warlock
   anchor: tier-hands-and-head
-  dps: 2142.4
-  standard_error: 1.2
-  stdev: 119.7
+  dps: 2142.8
+  standard_error: 1.19
+  stdev: 119.5
   boss_armor: 0
 - profile: elemental-shaman.bis
   spec: elemental_shaman
   anchor: bis
-  dps: 2129.9
-  standard_error: 0.96
-  stdev: 96.4
+  dps: 2130.0
+  standard_error: 0.97
+  stdev: 96.6
   boss_armor: 0
 - profile: elemental-shaman.entry
   spec: elemental_shaman
   anchor: entry
-  dps: 1719.5
+  dps: 1718.8
   standard_error: 0.89
-  stdev: 88.9
+  stdev: 89.3
   boss_armor: 0
 - profile: elemental-shaman.tier-hands-and-head
   spec: elemental_shaman
   anchor: tier-hands-and-head
-  dps: 1894.2
+  dps: 1893.9
   standard_error: 0.94
-  stdev: 93.9
+  stdev: 93.5
   boss_armor: 0
 - profile: enhancement-shaman.bis
   spec: enhancement_shaman
   anchor: bis
-  dps: 2756.7
-  standard_error: 1.18
-  stdev: 118.4
+  dps: 2762.2
+  standard_error: 1.19
+  stdev: 118.9
   boss_armor: 0
 - profile: enhancement-shaman.entry
   spec: enhancement_shaman
   anchor: entry
-  dps: 2621.3
+  dps: 2622.3
   standard_error: 1.17
-  stdev: 117.4
+  stdev: 117.0
   boss_armor: 0
 - profile: enhancement-shaman.tier-hands-and-head
   spec: enhancement_shaman
   anchor: tier-hands-and-head
-  dps: 2621.3
+  dps: 2621.0
   standard_error: 1.17
-  stdev: 117.4
+  stdev: 116.9
   boss_armor: 0
 - profile: fury-warrior.bis
   spec: fury_warrior
   anchor: bis
-  dps: 3244.1
+  dps: 3248.6
   standard_error: 1.37
   stdev: 137.4
   boss_armor: 0
 - profile: fury-warrior.entry
   spec: fury_warrior
   anchor: entry
-  dps: 3045.0
-  standard_error: 1.4
-  stdev: 139.8
+  dps: 3043.4
+  standard_error: 1.39
+  stdev: 139.0
   boss_armor: 0
 - profile: fury-warrior.tier-hands-and-head
   spec: fury_warrior
   anchor: tier-hands-and-head
-  dps: 3024.5
-  standard_error: 1.41
-  stdev: 141.5
+  dps: 3023.1
+  standard_error: 1.42
+  stdev: 141.9
   boss_armor: 0
 - profile: retribution-paladin.bis
   spec: retribution_paladin
   anchor: bis
-  dps: 2675.4
+  dps: 2678.7
   standard_error: 1.61
-  stdev: 161.4
+  stdev: 161.3
   boss_armor: 0
 - profile: retribution-paladin.entry
   spec: retribution_paladin
   anchor: entry
-  dps: 2462.3
-  standard_error: 1.49
-  stdev: 148.6
+  dps: 2462.9
+  standard_error: 1.48
+  stdev: 148.1
   boss_armor: 0
 - profile: retribution-paladin.tier-hands-and-head
   spec: retribution_paladin
   anchor: tier-hands-and-head
-  dps: 2462.3
-  standard_error: 1.49
-  stdev: 148.6
+  dps: 2461.7
+  standard_error: 1.48
+  stdev: 148.1
   boss_armor: 0
 - profile: shadow-priest.bis
   spec: shadow_priest
   anchor: bis
-  dps: 1577.8
+  dps: 1577.9
   standard_error: 0.29
-  stdev: 29.2
+  stdev: 29.3
   boss_armor: 0
 - profile: shadow-priest.entry
   spec: shadow_priest
   anchor: entry
   dps: 1452.1
   standard_error: 0.26
-  stdev: 26.5
+  stdev: 26.4
   boss_armor: 0
 - profile: shadow-priest.tier-hands-and-head
   spec: shadow_priest
   anchor: tier-hands-and-head
-  dps: 1497.9
+  dps: 1497.8
   standard_error: 0.29
-  stdev: 28.8
+  stdev: 28.9
   boss_armor: 0
 - profile: survival-hunter.bis
   spec: survival_hunter

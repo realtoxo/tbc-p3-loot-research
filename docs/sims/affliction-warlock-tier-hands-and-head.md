@@ -2,7 +2,7 @@
 title: Affliction Warlock, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1979.0 ± 0.95 damage per second.
+  The whole request behind one figure: 1978.9 ± 0.95 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/affliction-warlock.tier-hands-and-head.gear.json
@@ -20,7 +20,7 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                               |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **1979.0**                                                                                                                                          |
+| Damage per second          | **1978.9**                                                                                                                                          |
 | Standard error on the mean | ± 0.95                                                                                                                                              |
 | Spread across iterations   | 95.4                                                                                                                                                |
 | Anchor                     | Destruction Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
@@ -38,8 +38,8 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
 | 7684       | 42.12%     | 1964.3 ± 0.95     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 1979.0 ± 0.95     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 2008.9 ± 0.96     | Essence of Suffering                                       |
+| 6193       | 36.97%     | 1978.9 ± 0.95     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2008.8 ± 0.96     | Essence of Suffering                                       |
 
 ## The set
 
@@ -126,8 +126,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

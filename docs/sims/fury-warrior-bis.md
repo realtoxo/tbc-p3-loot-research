@@ -2,7 +2,7 @@
 title: Fury Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2856.4 ± 1.24 damage per second.
+  The whole request behind one figure: 2862.1 ± 1.23 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/fury-warrior.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **2856.4**                                                                                     |
-| Standard error on the mean | ± 1.24                                                                                         |
-| Spread across iterations   | 124.1                                                                                          |
+| Damage per second          | **2862.1**                                                                                     |
+| Standard error on the mean | ± 1.23                                                                                         |
+| Spread across iterations   | 123.4                                                                                          |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2512.5 ± 1.12     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 2856.4 ± 1.24     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 3244.1 ± 1.37     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2516.5 ± 1.13     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2862.1 ± 1.23     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 3248.6 ± 1.37     | Essence of Suffering                                       |
 
 ## Where this set differs from the published page
 
@@ -139,8 +139,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

@@ -2,7 +2,7 @@
 title: Fury Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2505.3 ± 1.19 damage per second.
+  The whole request behind one figure: 2505.8 ± 1.21 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/fury-warrior.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2505.3**                                                                                                                                    |
-| Standard error on the mean | ± 1.19                                                                                                                                        |
-| Spread across iterations   | 119.5                                                                                                                                         |
+| Damage per second          | **2505.8**                                                                                                                                    |
+| Standard error on the mean | ± 1.21                                                                                                                                        |
+| Spread across iterations   | 120.5                                                                                                                                         |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2216.4 ± 1.10     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 2505.3 ± 1.19     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 3024.5 ± 1.41     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2216.2 ± 1.08     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2505.8 ± 1.21     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 3023.1 ± 1.42     | Essence of Suffering                                       |
 
 ## The set
 
@@ -129,8 +129,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

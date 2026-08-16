@@ -2,7 +2,7 @@
 title: Shadow Priest, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1497.9 ± 0.29 damage per second.
+  The whole request behind one figure: 1497.8 ± 0.29 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/shadow-priest.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                               |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **1497.9**                                                                                                                                          |
+| Damage per second          | **1497.8**                                                                                                                                          |
 | Standard error on the mean | ± 0.29                                                                                                                                              |
-| Spread across iterations   | 28.8                                                                                                                                                |
+| Spread across iterations   | 28.9                                                                                                                                                |
 | Anchor                     | Destruction Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 1497.9 ± 0.29     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 1497.9 ± 0.29     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 1497.9 ± 0.29     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 1497.8 ± 0.29     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 1497.8 ± 0.29     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 1497.8 ± 0.29     | Essence of Suffering                                       |
 
 ## The set
 
@@ -123,8 +123,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

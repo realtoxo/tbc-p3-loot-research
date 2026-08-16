@@ -22,7 +22,7 @@ Back to [Simulated Throughput](../sims.md).
 |----------------------------|---------------------------------------------------------------------------------------------|
 | Damage per second          | **1452.1**                                                                                  |
 | Standard error on the mean | ± 0.26                                                                                      |
-| Spread across iterations   | 26.5                                                                                        |
+| Spread across iterations   | 26.4                                                                                        |
 | Anchor                     | Destruction Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}
@@ -123,8 +123,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

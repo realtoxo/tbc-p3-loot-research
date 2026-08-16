@@ -170,8 +170,50 @@ IMPROVED = {
 # zeroes the raid debuff for any hunter that has the talent, because it self
 # applies. It measures +0.0 and every other physical spec gains.
 DOUBLE_FIELDS = {
-    "exposeWeaknessUptime": 0.9,
-    "exposeWeaknessHunterAgility": 1210.0,
+    # MEASURED, not assumed. See EXPOSE_WEAKNESS_AGILITY below for how.
+    "exposeWeaknessUptime": 0.98,
+    "exposeWeaknessHunterAgility": 1152.0,
+}
+
+# OUR SURVIVAL HUNTER'S AGILITY, MEASURED PER ANCHOR RATHER THAN ASSUMED.
+#
+# THIS STARTED AS THE SIMULATOR'S NUMBER AND IS NOW OURS. Expose Weakness gives
+# the raid attack power equal to a quarter of the Survival Hunter's agility, and
+# the effect is exactly linear, so the value is not a detail: measured on the
+# Combat Rogue, an agility of 605 is worth +63.8 and 1210 is worth +129.4.
+# ui/core/proto_utils/utils.ts ships 1210 for Phase 3, and that was sent for a
+# few hours on 15 August 2026 while this comment said plainly that it was the
+# simulator's assumption and not our hunter's agility.
+#
+# IT COULD NOT BE READ OUT OF A RUN. wowsimcli has no stats subcommand, its
+# result exposes no final player stats, and its target auras carry uptime and
+# procs but no stacks. set-stats.yaml holds only ITEM agility, 419 to 447, which
+# excludes base stats, Gift of the Wild, Grace of Air, Blessing of Kings,
+# Lightning Reflexes, the scroll and the food, and is wrong by more than a factor
+# of two.
+#
+# SO IT WAS MEASURED BY BISECTION. sim/hunter/hunter.go zeroes BOTH debuff fields
+# for any hunter holding the talent, which is why the hunter is immune to the
+# external value: even 20000 agility moves it exactly 0.0. Removing the talent
+# from its string lifts that immunity, so the external agility that reproduces
+# the hunter's own self-applied result IS its agility. Nine bisection steps at
+# 10000 iterations per anchor, against the measured self-uptime of 0.98.
+#
+# CROSS-CHECKED BY HAND, independently: base 151 plus 4 for Night Elf, item and
+# gem and enchant agility from the gear files, plus 20 scroll and 20 food, plus
+# Gift of the Wild at 14 times 1.35 and Grace of Air at 77 times 1.15, all
+# multiplied by 1.1 for Blessing of Kings and 1.15 for Lightning Reflexes 5 of 5,
+# gives 1131 at best in slot against the measured 1152. Agreement to 1.8 percent
+# by two methods that share no step.
+#
+# THE UPTIME IS MEASURED TOO. The hunter's own Expose Weakness debuff sits on the
+# target for 147.0 seconds of 150, which is 0.98 and not the 0.9 the preset
+# assumes. The pair is calibrated TOGETHER: each agility below was solved with
+# the uptime held at 0.98, so the two must be changed together or not at all.
+EXPOSE_WEAKNESS_AGILITY = {
+    "entry": 1119.0,
+    "tier_hands_and_head": 1105.0,
+    "bis": 1152.0,
 }
 
 # WINDFURY IS DELIBERATELY NOT HERE. Enhancement decodes improvedWeaponTotems at
@@ -906,6 +948,14 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
     klass, oneof = SPECS[spec]
     rotation = rotation_for(spec)
     raid_buffs, party_buffs, debuffs = buffs_for(spec, buffs, party_of)
+    # THE HUNTER SUPPLYING EXPOSE WEAKNESS IS AT THE SAME ANCHOR AS EVERYONE
+    # ELSE, so its agility moves with the anchor and the debuff moves with it.
+    # An anchor with no measured figure keeps the default rather than inventing
+    # one, which is what an alternative profile such as the Arms refuse-head run
+    # takes.
+    if "exposeWeaknessHunterAgility" in debuffs:
+        debuffs["exposeWeaknessHunterAgility"] = EXPOSE_WEAKNESS_AGILITY.get(
+            anchor, DOUBLE_FIELDS["exposeWeaknessHunterAgility"])
     # Kings to everyone, and the split blessing by what the spec can use. These
     # go through the same typed builder as the rest: Kings is a bool and the
     # other two are tristates, and sending true to a tristate is rejected.

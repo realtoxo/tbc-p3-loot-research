@@ -2,7 +2,7 @@
 title: Retribution Paladin, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2371.6 ± 1.46 damage per second.
+  The whole request behind one figure: 2374.4 ± 1.46 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/retribution-paladin.bis.gear.json
@@ -20,7 +20,7 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **2371.6**                                                                                     |
+| Damage per second          | **2374.4**                                                                                     |
 | Standard error on the mean | ± 1.46                                                                                         |
 | Spread across iterations   | 145.7                                                                                          |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2220.6 ± 1.38     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 2371.6 ± 1.46     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 2675.4 ± 1.61     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2223.2 ± 1.38     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2374.4 ± 1.46     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2678.7 ± 1.61     | Essence of Suffering                                       |
 
 ## Where this set differs from the published page
 
@@ -138,8 +138,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

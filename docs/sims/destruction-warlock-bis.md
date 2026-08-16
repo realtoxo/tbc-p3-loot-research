@@ -22,7 +22,7 @@ Back to [Simulated Throughput](../sims.md).
 |----------------------------|------------------------------------------------------------------------------------------------------|
 | Damage per second          | **2493.8**                                                                                           |
 | Standard error on the mean | ± 1.30                                                                                               |
-| Spread across iterations   | 130.4                                                                                                |
+| Spread across iterations   | 130.1                                                                                                |
 | Anchor                     | Destruction Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}
@@ -137,8 +137,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

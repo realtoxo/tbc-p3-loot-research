@@ -2,7 +2,7 @@
 title: Destruction Warlock, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2051.6 ± 1.13 damage per second.
+  The whole request behind one figure: 2051.4 ± 1.13 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/destruction-warlock.entry.gear.json
@@ -20,7 +20,7 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                       |
 |----------------------------|---------------------------------------------------------------------------------------------|
-| Damage per second          | **2051.6**                                                                                  |
+| Damage per second          | **2051.4**                                                                                  |
 | Standard error on the mean | ± 1.13                                                                                      |
 | Spread across iterations   | 112.9                                                                                       |
 | Anchor                     | Destruction Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2051.6 ± 1.13     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 2051.6 ± 1.13     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 2051.6 ± 1.13     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2051.4 ± 1.13     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2051.4 ± 1.13     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2051.4 ± 1.13     | Essence of Suffering                                       |
 
 ## The set
 
@@ -126,8 +126,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |

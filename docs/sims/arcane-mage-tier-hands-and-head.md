@@ -2,7 +2,7 @@
 title: Arcane Mage, Super Mana Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2321.6 ± 1.01 damage per second.
+  The whole request behind one figure: 2320.7 ± 1.01 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/arcane-mage.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                              |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2321.6**                                                                                                                                         |
+| Damage per second          | **2320.7**                                                                                                                                         |
 | Standard error on the mean | ± 1.01                                                                                                                                             |
-| Spread across iterations   | 101.4                                                                                                                                              |
+| Spread across iterations   | 100.9                                                                                                                                              |
 | Anchor                     | Super Mana Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2321.6 ± 1.01     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 2321.6 ± 1.01     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 2321.6 ± 1.01     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2320.7 ± 1.01     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2320.7 ± 1.01     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2320.7 ± 1.01     | Essence of Suffering                                       |
 
 ## The set
 
@@ -123,8 +123,8 @@ The debuffs applied to the target.
 | `curseOfElements`             | `TristateEffectImproved` |
 | `curseOfRecklessness`         | `True`                   |
 | `demoralizingShout`           | `TristateEffectRegular`  |
-| `exposeWeaknessHunterAgility` | `1210.0`                 |
-| `exposeWeaknessUptime`        | `0.9`                    |
+| `exposeWeaknessHunterAgility` | `1152.0`                 |
+| `exposeWeaknessUptime`        | `0.98`                   |
 | `faerieFire`                  | `TristateEffectImproved` |
 | `huntersMark`                 | `TristateEffectImproved` |
 | `improvedSealOfTheCrusader`   | `TristateEffectImproved` |
