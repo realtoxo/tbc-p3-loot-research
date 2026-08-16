@@ -1,0 +1,973 @@
+meta:
+  what: The raid consumable set each spec runs, for the simulator runs. Flask or elixir pair,
+    food, weapon enhancement, potions and anything else standard.
+  collected: '2026-08-14'
+  method: Sixteen parallel Sonnet agents, one per spec, reading published Burning Crusade
+    Classic guides. Every agent was required to return exact in-game names, cite the pages
+    it used, and put anything it could not source under `uncertain` rather than guess it from
+    class intuition.
+  why_exact_names: These become simulator inputs. An approximate name is worse than an absent
+    one, because it fails at the point where a run is already underway.
+  the_expansion_trap: Wowhead serves later-expansion guides at nearly identical URLs, so an
+    agent that does not check the page can return a Wrath consumable that reads perfectly
+    plausible. Each agent was told to confirm the expansion, and several recorded doubt about
+    a page's client version under `uncertain` rather than resolving it silently.
+  not_simmed_yet: Nothing here has been through a simulator. wowsimcli is not installed on
+    this machine, so these are collected inputs and not results.
+  combat_rogue_lives_elsewhere: Collected on 9 August and left in data/facts/sim-profiles/combat-rogue.yaml,
+    which holds its gear, talents and gems beside it. Not copied here, because a second copy
+    is what goes stale.
+  specs: 16
+specs:
+  affliction_warlock:
+    consumables:
+      flask: 'Flask of Pure Death (2 hours, +80 Shadow/Fire/Frost spell damage). Cheaper alternative:
+        Flask of Supreme Power (+70 spell damage, all schools).'
+      elixirs_instead: 'Where the flask is not affordable: Elixir of Major Shadow Power (Battle
+        Elixir) paired with Elixir of Draenic Wisdom (Guardian Elixir, +30 Intellect and Spirit).
+        Elixir of Major Firepower is the Fire-school equivalent if the raid is fighting fire-vulnerable
+        targets instead; both sources agree the flask beats this pairing because elixirs commit
+        to a single school while the flask covers Shadow, Fire and Frost together.'
+      food: Poached Bluefish, Blackened Basilisk, or Crunchy Serpent — all identical, +23
+        Spell Power and +20 Spirit; pick whichever is cheapest. Wowhead additionally lists
+        Oronok's Tuber of Spell Power as an equal-stat option.
+      weapon_main_hand: 'Brilliant Wizard Oil (+36 spell power, +14 spell critical strike
+        rating). Cheaper alternative with no crit: Superior Wizard Oil (+42 spell power only).'
+      scrolls: 'Situational only, per Wowhead: Scroll of Intellect V if the raid is missing
+        Arcane Intellect/Brilliance entirely; Scroll of Protection V occasionally for the
+        extra armor. Neither is standard when a Mage is present.'
+      potions: Destruction Potion (+120 spell power, +2% spell crit for 15 sec) used on cooldown
+        alongside other damage cooldowns when mana allows. Super Mana Potion instead on longer
+        fights or heavy AoE, when it saves more DPS than a Life Tap would cost.
+      other: Dark Rune or Demonic Rune for mana instead of Life Tap (Demonic Rune is BoP,
+        Dark Rune is BoE; both share a cooldown with Healthstones). Drums of Battle from a
+        Leatherworker in the group, usually provided by someone else, not the warlock. Greater
+        Rune of Warding as a chestplate imbue (25% chance to absorb 400 physical damage) is
+        the only temporary chest enhancement Wowhead lists for the spec. Free Action Potion
+        is situational (e.g. movement-impairing mechanics like Kael'thas), not a per-pull
+        staple.
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/affliction-warlock-dps-pve-enchants-consumables
+      title: TBC Classic Affliction Warlock Enchants and Consumables - Icy Veins (updated
+        for TBC Anniversary/Phase 3, 12 Jan 2026)
+    - url: https://www.wowhead.com/tbc/guide/classes/warlock/dps-consumables-raid-buffs-pve
+      title: TBC Warlock DPS Buffs & Consumables Guide - Wowhead (updated 10 Feb 2026, labeled
+        client 2.5.1 — the Anniversary-era Burning Crusade Classic client, same Phase 3 content
+        window as this project's 2.4.3 reference)
+    - url: file:///Users/davidking/src/github.com/realtoxo/tbc-p3-loot-research/data/facts/enchants-gems.yaml
+      title: 'This repo''s own gating fact file — used to confirm Flask of Pure Death (item
+        22866), Elixir of Draenic Wisdom (item 32067), Brilliant/Superior Wizard Oil (items
+        20749/22522) and Scroll of Intellect V (item 27499) carry no phase_3_available: false
+        flag'
+    uncertain:
+    - Which of Elixir of Major Shadow Power vs. Elixir of Major Firepower is the 'go-to' Battle
+      Elixir depends on encounter school mix; neither source gives a per-boss breakdown for
+      Mount Hyjal/Black Temple specifically, so this is stated as a general Shadow-first choice
+      for an Affliction Warlock rather than a per-fight recommendation.
+    - The Wowhead guide's URL/page renders as client version 2.5.1 rather than 2.4.3. Content
+      (Phase 3, Black Temple/Hyjal-era raid buff list, Fel Lotus-tier flasks) matches this
+      project's Phase 3 window and agrees closely with the Icy Veins TBC Classic page, so
+      it was used, but the exact patch-numbering correspondence to this project's 2.4.3 convention
+      was not independently verified.
+    - Neither source states whether Affliction specifically (vs. Destruction) changes potion
+      or flask choice at all -- both guides treat 'Warlock DPS' as a single spec-agnostic
+      set. No affliction-specific divergence was found; if one exists it is not covered by
+      these sources.
+    - Whether Drums of Battle is genuinely 'standard' for this spec, or just generic raid-wide
+      utility unrelated to Warlock choice, was not verified beyond Wowhead listing it as a
+      checklist item conditioned on 'if Leatherworker' being present in party.
+    notes: 'Both Icy Veins and Wowhead agree closely on the core kit: Flask of Pure Death
+      > elixir pair, Brilliant Wizard Oil, Destruction Potion / Super Mana Potion, and the
+      same three-food tier. Flame Cap and fire-specific items were omitted since those apply
+      to a Destruction (fire) build, not Affliction (shadow). Greater Rune of Warding (chest
+      imbue) only appears on Wowhead, not Icy Veins, but is uncontested and sourced.'
+  arcane_mage:
+    consumables:
+      flask: Flask of Blinding Light (80 Arcane/Holy/Nature Spell Damage). Used instead of
+        the Adept's Elixir + Elixir of Draenic Wisdom pair specifically when the mage's mana
+        support is strong enough that they never run out of mana during a fight, and is also
+        favored on AoE fights. Flask of Supreme Power (70 Spell Damage) is a close second
+        choice with the same upsides/downsides; Flask of Distilled Wisdom (65 Intellect) is
+        generally passed over in favor of the elixir pair.
+      elixirs_instead: 'Adept''s Elixir (Battle Elixir: 24 Spell Damage, 24 Spell Critical
+        Strike Rating) + Elixir of Draenic Wisdom (Guardian Elixir: 30 Intellect, 30 Spirit).
+        Per Icy Veins this pair is the strongest overall consumable combination for an Arcane
+        Mage, and is the DEFAULT choice unless the mage never runs out of mana in the given
+        raid environment, in which case Flask of Blinding Light is used instead. This is the
+        reverse of a typical flask-first setup: the elixir pair, not the flask, is the primary
+        recommendation here.'
+      food: 'Spell Power food: Blackened Basilisk, Poached Bluefish, or Crunchy Serpent —
+        all three give the identical buff (23 Spell Power, 20 Spirit) and are interchangeable;
+        used for sustained spell damage plus mana regen support.'
+      weapon_main_hand: Brilliant Wizard Oil (36 Spell Damage, 14 Spell Critical Strike Rating)
+        on the staff. Superior Wizard Oil (42 Spell Damage, no crit) is the budget alternative,
+        used only when Brilliant Wizard Oil is unavailable.
+      scrolls: None found. TBC Classic's consumable scroll line (Scroll of Agility V, Scroll
+        of Strength V per the Warcraft Tavern consumables list) covers only Agility/Strength;
+        no Intellect or Spirit scroll is listed for the patch, so none applies to an Arcane
+        Mage. Left blank rather than guessed — see uncertain.
+      potions: Super Mana Potion (1800–3000 Mana) on cooldown — the standard, cheaper choice.
+        Destruction Potion (120 Spell Damage, 2% Spell Critical for 15 sec) is used instead
+        specifically when the mage's mana support is strong enough to never run oom; it is
+        also good on AoE fights but costs more than Super Mana Potion.
+      other: Kreeg's Stout Beatdown (25 Spirit, -5 Intellect, 15 min, stacks with everything)
+        is called out by Icy Veins as a niche extra for mana-constrained fights, but it requires
+        access to a Dire Maul North Tribute Run vendor, so it is not something every raid
+        can reliably supply — treat as optional, not standard. Faction-specific 30-min spell-damage-vs-undead/int
+        buffs exist (Scourgebane Infusion for Horde, Crystal of Insight for Alliance) but
+        are one-time quest rewards, not repeatable raid consumables, so they are not included
+        as a standing loadout item.
+    sources:
+    - title: TBC Classic Arcane Mage Enchants and Consumables - Icy Veins
+      url: https://www.icy-veins.com/tbc-classic/arcane-mage-dps-pve-enchants-consumables
+    - title: TBC Classic Consumables List - Warcraft Tavern
+      url: https://www.warcrafttavern.com/tbc/tools/consumables/
+    - title: Arcane Mage PvE Phase 3 Best-in-Slot (BiS) - TBC Classic - Warcraft Tavern
+      url: https://www.warcrafttavern.com/tbc/guides/arcane-mage-pve-phase-3-best-in-slot-bis/
+    uncertain:
+    - 'Scrolls: no Intellect/Spirit scroll was found in the sourced 2.4.3 consumable list
+      (only Scroll of Agility V and Scroll of Strength V exist), so no scroll entry is given
+      for this spec rather than guessing one from Classic-era memory.'
+    - 'Drums (Drums of War: 60 AP, 30 Spell Damage to the party) benefit an Arcane Mage but
+      are a raid-wide Leatherworking consumable someone else in the raid brings, not a personal
+      loadout item for the mage; not included as ''other'' because no Arcane-Mage-specific
+      source called it out as something the mage personally carries.'
+    - Icy Veins' page carries a 'last updated Jan 12, 2026' and a 'Updated for TBC Anniversary
+      — 24 Jul 2025' changelog entry and explicitly states it covers Phase 3, which is why
+      it was trusted for 2.4.3; it does not print a literal '2.4.3' patch string, so this
+      is an inference from its changelog and content, not a directly quoted patch number.
+    - Wowhead's own 'TBC Mage DPS Buffs & Consumables Guide' was found but its page header
+      states patch 2.5.1/2.5.5, which is later than this project's 2.4.3, so it was deliberately
+      excluded rather than used as a source, per the wrong-expansion/wrong-patch caution in
+      the task instructions.
+    notes: 'Field mapping note: the project''s `flask` field is filled with Flask of Blinding
+      Light, but per the primary source (Icy Veins) the elixir pair in `elixirs_instead` is
+      actually the stronger DEFAULT recommendation, not the fallback — the flask is the situational/alternative
+      pick here (used only when mana is a non-issue), the reverse of the field''s usual polarity.
+      Called out explicitly in both fields'' text so the simulator-run consumer doesn''t silently
+      treat `flask` as the primary choice.
+
+
+      Arcane Mage''s 2H staff means no off-hand weapon slot for oils/stones, so weapon_off_hand
+      is left empty per the task''s own omission rule.'
+  arms_warrior:
+    consumables:
+      flask: Flask of Relentless Assault — the default choice for Arms Warrior DPS in Phase
+        3/Anniversary content; lasts 2 hours and survives death.
+      elixirs_instead: 'Not the default (the flask is the standard play), but the cheaper
+        elixir route is Battle: Elixir of Major Agility (or Elixir of the Mongoose, roughly
+        equal/slightly better crit, cost-dependent) + Guardian: Elixir of Major Fortitude.
+        Separately, Elixir of Demonslaying is a situational swap for the battle-elixir slot
+        (or in place of the flask) specifically against demon bosses — it out-damages the
+        flask by about 2% but only lasts 5 minutes against the flask''s 2 hours, so it is
+        used per-pull, not raid-wide.'
+      food: Roasted Clefthoof, for +20 Strength. Spicy Hot Talbuk (+20 Hit Rating, ~1.27%
+        hit) is the standard swap when the raider is short of the hit cap instead.
+      weapon_main_hand: Adamantite Sharpening Stone (sharp 2H weapons) or Adamantite Weightstone
+        (blunt 2H weapons), UNLESS the warrior is already receiving Windfury Totem — the stone
+        should not be applied to a weapon that is meant to benefit from Windfury, since the
+        two do not stack favorably.
+      scrolls: Scroll of Strength V and Scroll of Agility V, used together — they do not compete
+        with any raid buff and stack freely with elixirs/flask.
+      potions: Haste Potion is the primary on-cooldown combat potion (400 Haste Rating for
+        15s, best popped alongside other cooldowns/Bloodlust). Insane Strength Potion and
+        Mighty Rage Potion are cited as alternative/situational combat potions.
+      other: Flame Cap (Herbalism) is listed as a low-priority secondary damage consumable
+        — rare/expensive relative to its payoff, so not a strong standard pick. Free Action
+        Potion is carried defensively (not a DPS cooldown) for stun/slow-immunity mechanics.
+    sources:
+    - title: TBC Classic Arms Warrior Enchants and Consumables - Icy Veins
+      url: https://www.icy-veins.com/tbc-classic/arms-warrior-dps-pve-enchants-consumables
+    - title: Arms Warrior PvE Gems, Enchants & Consumables - TBC Classic - Warcraft Tavern
+      url: https://www.warcrafttavern.com/tbc/guides/pve-arms-warrior-gems-enchants-consumables/
+    - title: TBC Warrior DPS Buffs & Consumables Guide - Burning Crusade Classic - Wowhead
+      url: https://www.wowhead.com/tbc/guide/classes/warrior/dps-consumables-raid-buffs-pve
+    uncertain:
+    - 'weapon_off_hand: Arms Warrior in TBC is conventionally a single two-hand weapon spec,
+      so no off-hand oil/stone applies. Warcraft Tavern''s enchant table does list an ''Off
+      Hand'' row (Mongoose/Potency) in its Arms Warrior page, but this looks like a shared
+      class-guide template rather than an Arms-specific recommendation — Icy Veins'' Arms-specific
+      page lists only a single ''Weapon'' enchant slot. Left blank rather than guessed; flag
+      if this project''s Arms build is confirmed to dual-wield.'
+    - 'Drums (e.g. Drums of Battle/War): not listed as something the Arms Warrior personally
+      carries in any of the three sources consulted — Wowhead''s raid-group section frames
+      drums as something the raid''s Leatherworker (often the shaman) provides to the group,
+      not a per-warrior consumable. Omitted from ''other'' rather than guessed as standard.'
+    - 'Scroll of Protection V: mentioned in Wowhead''s general Warrior DPS consumables checklist
+      alongside Scroll of Strength V / Agility V, but not present in either Arms-specific
+      source (Icy Veins, Warcraft Tavern). Left out of the scrolls answer since it isn''t
+      corroborated for Arms specifically.'
+    - The Wowhead source's own page title reads 'Burning Crusade Classic 2.5.1,' a later original-timeline
+      patch than 2.4.3/Phase 3. Its item-level content (Flask of Relentless Assault, Haste
+      Potion, Adamantite stones, Windfury interaction) matches the Anniversary-updated Icy
+      Veins/Warcraft Tavern pages and was only used for corroboration, not as a standalone
+      source, given the patch-mismatch risk called out in the task instructions.
+    - 'Elixir of the Mongoose vs. Elixir of Major Agility as the battle-elixir alternative:
+      sources disagree slightly on which is marginally better (price-dependent), so both are
+      named rather than picking one.'
+    notes: Icy Veins (updated 31 Dec 2025 'for TBC Anniversary') and Warcraft Tavern (image
+      path dated March 2026, Anniversary branding) were treated as the primary, spec-specific,
+      patch-current sources. Wowhead's general Warrior DPS page was used only to corroborate
+      details already present in the other two, because its own title strings the page to
+      patch 2.5.1 rather than 2.4.3.
+  balance_druid:
+    consumables:
+      flask: Flask of Blinding Light — primary raid flask for Balance Druid DPS, per Icy Veins
+        and Warcraft Tavern.
+      elixirs_instead: Adept's Elixir (battle elixir) plus Elixir of Draenic Wisdom or Elixir
+        of Major Mageblood (guardian elixir), per Icy Veins. Icy Veins states this pairing
+        is on par with the flask in raw output but cheaper for progression pulls since elixirs
+        are lost on death and the flask is not — so the flask is the standard pick and this
+        pair is the fallback when mana, not damage, is the binding constraint.
+      food: Blackened Basilisk, Crunchy Serpent, or Poached Bluefish — all grant Spell Damage
+        and are listed as equally best by both Icy Veins and Warcraft Tavern; no source ranks
+        one above the others.
+      weapon_main_hand: Brilliant Wizard Oil, per both sources. Icy Veins also lists Superior
+        Wizard Oil as an alternative; Warcraft Tavern names only Brilliant Wizard Oil.
+      scrolls: Not found as a standard item in either spec-specific guide (Icy Veins, Warcraft
+        Tavern). Not asserting one.
+      potions: Destruction Potion on cooldown as the standard combat potion (both sources).
+        Super Mana Potion is the substitute when mana, not damage, is the fight's constraint
+        (both sources).
+      other: Dark Rune or Demonic Rune as a secondary mana potion, per both sources. Icy Veins
+        additionally notes Drums of Battle (Spell Haste) as standard if the Balance Druid
+        is also a Leatherworker — conditional on that profession, not a general raid pick.
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/balance-druid-dps-pve-enchants-consumables
+      title: TBC Classic Balance Druid Enchants and Consumables — Icy Veins (updated Jan 12,
+        2026, for Phase 3)
+    - url: https://www.warcrafttavern.com/tbc/guides/pve-balance-druid-boomkin-gems-enchants-consumables/
+      title: Balance Druid Boomkin PvE Gems, Enchants & Consumables — TBC Classic Anniversary
+        Edition, Warcraft Tavern
+    uncertain:
+    - Wowhead's own spec-specific consumables guide (https://www.wowhead.com/tbc/guide/classes/druid/balance/dps-consumables-raid-buffs-pve)
+      returned no usable prose — it is a client-side-rendered table page and additionally
+      headers itself 'Patch 2.5.5', a version past 2.4.3, so it was not used as a source here
+      even though it appeared in search results.
+    - 'Scrolls of Intellect/Spirit: neither spec guide lists a scroll as a standard Balance
+      Druid consumable. This is plausibly because raid Arcane Intellect and Spirit buffs from
+      other classes already exceed the scroll''s value, but neither source states that reasoning
+      explicitly, so no scroll is being asserted and no reason is being invented.'
+    - Warcraft Tavern's page also lists Kreeg's Stout Beatdown and Purified Draenic Water
+      under 'Other' with no explanation of their function or why they are standard for this
+      spec; they are left out of the answer because their relevance to a Balance Druid DPS
+      profile could not be confirmed.
+    - Whether Elixir of Draenic Wisdom or Elixir of Major Mageblood is the better guardian-elixir
+      choice between the two is not resolved by Icy Veins — it names both as co-best without
+      a tiebreaker.
+    notes: Icy Veins and Warcraft Tavern agree on every consumable slot they both cover (flask,
+      food, oil, combat potion, secondary potion, secondary mana source). No conflict between
+      sources was found for this spec, so no disagreement needed to be flagged beyond what's
+      in `uncertain`.
+  beast_mastery_hunter:
+    consumables:
+      flask: Flask of Relentless Assault
+      elixirs_instead: 'Elixir of Major Agility (battle) + Elixir of Major Mageblood (guardian)
+        — Icy Veins states this pair out-performs Flask of Relentless Assault ''in most situations,''
+        with the caveat that elixirs are lost on death (making them costlier across wipes)
+        while a flask survives death. Condition: against a Demon-type target (e.g. Magtheridon),
+        swap the battle elixir for Elixir of Demonslaying instead of Major Agility — both
+        sources agree Demonslaying is ''significantly stronger'' there.'
+      food: 'Sources disagree and the choice is stat-dependent, so both are reported rather
+        than picked silently: Icy Veins recommends Spicy Hot Talbuk (Attack Power) if not
+        yet hit-capped, or Grilled Mudfish (Agility) once hit-capped. Warcraft Tavern''s table
+        instead lists Warp Burger with Grilled Mudfish as an alternate. Grilled Mudfish is
+        the one point of agreement between the two.'
+      weapon_main_hand: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+        (blunt melee weapon), from Blacksmithing — applied to the Hunter's melee weapon, per
+        Warcraft Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly important
+        for Hunters').
+      scrolls: Scroll of Agility V (world drop), per Warcraft Tavern's consumables table;
+        Icy Veins corroborates only in general terms ('Any Scrolls of Agility/Intellect are
+        also nice buffs and worth using') without singling out the Roman-numeral tier. Warcraft
+        Tavern's table also lists Scroll of Strength V and Scroll of Protection V, but neither
+        Strength nor Armor/Defense serves a BM Hunter DPS's stat priority, so only the Agility
+        scroll is reported as standard.
+      potions: Haste Potion (Alchemy) as the combat cooldown potion — agreed by both sources.
+        Dark Rune (BoE drop) or Demonic Rune (BoP drop) used as a secondary mana potion on
+        longer fights, since even Beast Mastery Hunters manage mana via Aspect of the Viper
+        between Rune uses — per Warcraft Tavern's table, echoed by Icy Veins ('Demonic Runes
+        and Dark Runes both grant Mana... allow more casts before needing to swap to Aspect
+        of the Viper on longer encounters').
+      other: 'Ammo (functionally mandatory for a Hunter, reported under ''other'' since the
+        requested shape has no ammo field): Warden''s Arrow (Cenarion Expedition — Revered)
+        as the general-purpose choice, or Hellfire Shot / Felbane Slugs (Thrallmar/Honor Hold
+        — Revered) as reputation-gated alternates, per Warcraft Tavern. Kibler''s Bits (Cooking)
+        is also listed there as standard pet food for the Hunter''s pet.'
+    sources:
+    - title: Beast Mastery Hunter PvE Gems, Enchants & Consumables - TBC Classic - Warcraft
+        Tavern
+      url: https://www.warcrafttavern.com/tbc/guides/pve-beast-mastery-hunter-gems-enchants-consumables/
+    - title: TBC Classic Beast Mastery Hunter Enchants and Consumables - Icy Veins
+      url: https://www.icy-veins.com/tbc-classic/beast-mastery-hunter-dps-pve-enchants-consumables
+    uncertain:
+    - 'Food buff: the two sourced guides disagree (Spicy Hot Talbuk vs Warp Burger as the
+      primary AP food), and neither confirms this against a hit-cap threshold specific to
+      a Phase 3 raid comp — resolve by checking the raid''s actual buff/debuff coverage before
+      locking a simulator input.'
+    - Whether 'Elixir of Major Agility' and 'Elixir of Major Mageblood' are respectively the
+      Battle and Guardian elixir slots is stated from general TBC elixir-category knowledge,
+      not an explicit label in either fetched source — worth confirming against Wowhead's
+      item tooltip before treating as sourced.
+    - The Wowhead TBC Hunter DPS Consumables guide (a natural third corroborating source)
+      returned a CDN error on fetch and could not be checked; only two independent sources
+      back this answer instead of three.
+    - No wowsims/simc-style simulated consumable comparison exists in this repository's data
+      for Beast Mastery Hunter — per project rules, only the four crit.yaml figures qualify
+      as 'our own simulation,' and this consumable set is not among them.
+    notes: 'Both sourced guides are explicitly TBC Classic / TBC Classic Anniversary content
+      (Warcraft Tavern''s page targets ''TBC Classic Anniversary Edition''; Icy Veins'' page
+      carries a changelog entry ''14 Jan. 2022: Updated for Phase 3'' and a further ''31 Dec.
+      2025: Reviewed and Updated for TBC Anniversary Realms'' revision), so neither is a later-expansion
+      page mistakenly served at a TBC-shaped URL. Hunter has no off-hand weapon slot to enchant
+      (Hunters do not dual-wield in TBC; they carry one melee weapon plus a ranged weapon),
+      so weapon_off_hand is left empty rather than guessed. Ammo (Warden''s Arrow / Hellfire
+      Shot / Felbane Slugs) does not fit any of the requested field names cleanly and was
+      placed under ''other'' rather than omitted, since ammo is a genuinely standard Hunter
+      consumable.'
+  destruction_warlock:
+    consumables:
+      flask: 'Flask of Pure Death (+80 Spell Power for 2 hours). Cheaper alternative: Flask
+        of Supreme Power (+70 Spell Power).'
+      elixirs_instead: Elixir of Major Shadow Power or Elixir of Major Firepower (Battle Elixir,
+        pick per spell school used) paired with Elixir of Draenic Wisdom (Guardian Elixir).
+        Used only when the flask is unaffordable or not farmed; the flask is the stronger
+        and generally recommended option since it covers both fire and shadow damage where
+        an elixir covers only one school.
+      food: Poached Bluefish, Blackened Basilisk, or Crunchy Serpent (+23 Spell Power, +20
+        Spirit) -- all three give identical stats, pick the cheapest available.
+      weapon_main_hand: Brilliant Wizard Oil (+36 Spell Power, +14 Crit Rating). Superior
+        Wizard Oil is inferior (Spell Power only, no crit) so Brilliant remains preferred.
+      scrolls: Not standard. Scroll of Intellect V is a fallback only if the raid is missing
+        Arcane Brilliance/Intellect entirely; Scroll of Protection V is an occasional extra-armor
+        option. Neither is a default part of the set.
+      potions: Destruction Potion (+120 Spell Power, +2% Spell Crit for 15 sec) used on cooldown
+        alongside other cooldowns (e.g. Bloodlust/Blood Fury/on-use trinkets). Super Mana
+        Potion is used instead on longer fights or heavy-AoE phases where it saves more DPS
+        by avoiding Life Tap than the damage potion would provide.
+      other: Dark Rune or Demonic Rune for burst mana without Life Tapping (shares cooldown
+        with Healthstone and Flame Cap). Flame Cap (+80 Fire spell damage, 1 min, 3 min cooldown)
+        only for a Fire-build Destruction Warlock -- shares cooldown with the Runes, so it
+        is a choice between Flame Cap and Rune use on cooldown, not both. Drums of Battle
+        -- typically brought by a party Leatherworker rather than the Warlock themself, so
+        it is a raid-provided buff rather than a personal consumable.
+    sources:
+    - title: TBC Classic Destruction Warlock Enchants and Consumables - Icy Veins
+      url: https://www.icy-veins.com/tbc-classic/destruction-warlock-dps-pve-enchants-consumables
+    - title: Destruction Warlock Gems, Enchants & Consumables - Warcraft Tavern
+      url: https://www.warcrafttavern.com/tbc/guides/pve-destruction-warlock-gems-enchants-consumables/
+    - title: TBC Warlock DPS Buffs & Consumables Guide - Wowhead
+      url: https://www.wowhead.com/tbc/guide/classes/warlock/dps-consumables-raid-buffs-pve
+    uncertain:
+    - Whether Destruction Warlock dual-wields is not applicable -- Warlocks are single main-hand
+      casters, so weapon_off_hand is correctly omitted, not unsourced.
+    - None of the three sources explicitly restate that Flask of Pure Death and Destruction
+      Potion are Black Temple/Phase 3 Alchemy recipes rather than earlier-phase items; this
+      project's own kb should confirm gating per enchants-gems.yaml before treating this as
+      settled for Phase 3 anniversary specifically.
+    - Scroll of Intellect V and Drums are situational/fallback rather than a standard raid
+      loadout item for this spec; flagged as conditional in the answer rather than asserted
+      as standard.
+    notes: All three sources (Icy Veins, Warcraft Tavern, Wowhead) independently agree on
+      Flask of Pure Death, Brilliant Wizard Oil, Destruction Potion, and the three interchangeable
+      food options, giving strong corroboration. Icy Veins page is explicitly labeled "Updated
+      for TBC Anniversary" and "Guide updated for Phase 3," and Wowhead's page is versioned
+      "2.5.1" (a later patch than 2.4.3) but its Phase 3-era consumable recommendations match
+      the other two sources exactly, so cross-source agreement was used to confirm the items
+      are not a later-expansion artifact. No simulator-verified figures exist in this project's
+      data/facts for these consumables; the numbers quoted here come solely from the three
+      guide pages above.
+  elemental_shaman:
+    consumables:
+      flask: Flask of Blinding Light (Increases Arcane, Holy, and Nature spell power by 80;
+        counts as both a Battle and Guardian elixir; persists through death)
+      elixirs_instead: Where a flask is not warranted (e.g., a farm night with low death risk,
+        to save cost), the elixir pair is Adept's Elixir (Battle, spell power) plus Elixir
+        of Draenic Wisdom (Guardian, mana/intellect/spirit) or Elixir of Major Mageblood (Guardian,
+        mp5) if mana is the binding constraint over a longer fight. Icy Veins states these
+        two elixirs together are roughly on par with Flask of Blinding Light in raw output,
+        with the flask preferred mainly because it survives death.
+      food: Blackened Basilisk, Poached Bluefish, or Crunchy Serpent — all Spell Power food
+        buffs, listed as interchangeable best-in-slot by both sources
+      weapon_main_hand: Brilliant Wizard Oil (spell power + spell crit) is the top pick; Superior
+        Wizard Oil (spell power only) is the budget alternative
+      scrolls: Not mentioned as standard by any source consulted; omitted rather than guessed
+      potions: Destruction Potion on cooldown for DPS; substitute Super Mana Potion instead
+        on fights where mana, not damage, is the binding constraint
+      other: Drums of Battle (Leatherworking, spell haste, self and group) recommended if
+        the raider has Leatherworking. Ankh kept on hand as a self-resurrection reagent. Dark
+        Rune / Demonic Rune as supplemental mana potions outside the Destruction/Super Mana
+        Potion's shared cooldown.
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/elemental-shaman-dps-pve-enchants-consumables
+      title: TBC Classic Elemental Shaman Enchants and Consumables - Icy Veins (updated Jan
+        12, 2026, TBC Classic)
+    - url: https://www.warcrafttavern.com/tbc/guides/pve-elemental-shaman-gems-enchants-consumables/
+      title: Elemental Shaman Gems, Enchants & Consumables - TBC Classic - Warcraft Tavern
+    - url: https://warcraft.wiki.gg/wiki/Flask_of_Blinding_Light_(recipe)
+      title: Flask of Blinding Light (recipe) - Warcraft Wiki (confirms item added in patch
+        2.0.1, available from original TBC launch, well before Phase 3)
+    uncertain:
+    - No source specified an off-hand consumable, and Elemental Shaman does not dual-wield,
+      so weapon_off_hand is left blank rather than guessed.
+    - No scroll (e.g., Scroll of Intellect/Spirit/Protection) was called out as standard for
+      this spec by either guide; scrolls are situational raid-provided buffs and were not
+      confirmed as a specific named consumable this spec brings for itself.
+    - The choice between Flask of Blinding Light and Flask of Supreme Power is genuinely disputed
+      between the two sources consulted (Icy Veins favors Blinding Light outright; Warcraft
+      Tavern lists both, noting Supreme Power may be superior for AoE due to totem scaling)
+      — reported as a stated disagreement rather than resolved.
+    - Whether Drums of Battle or a newer drum variant (e.g., Drums of War) is current for
+      2.4.3 specifically was not independently verified beyond the Icy Veins mention; included
+      as 'other' but with lower confidence than the flask/food/oil/potion picks.
+    notes: Two independent guides (Icy Veins, Warcraft Tavern) agree on Flask of Blinding
+      Light as the flask, Blackened Basilisk/Poached Bluefish/Crunchy Serpent as the food
+      tier, Brilliant/Superior Wizard Oil as the weapon oil, and Destruction Potion/Super
+      Mana Potion as the potion choice. Both explicitly warn Elemental Shaman should never
+      use Haste Potion (it affects weapon speed only, not spellcasting) — noted as a standard
+      exclusion, not a recommendation. Warcraft Tavern separately lists Flask of Supreme Power
+      as a viable alternate flask (also boosts fire totems, arguably better for AoE), which
+      Icy Veins does not mention; flagged as a disagreement between sources rather than picked
+      silently. Icy Veins' page carries a changelog entry \"Updated for Phase 5\" and mentions
+      a shoulder enchant \"from Sapphiron in Naxxramas,\" which is not Phase 3 content — that
+      specific enchant claim was excluded from this answer since it postdates Mount Hyjal/Black
+      Temple, but the consumable recommendations on the same page (flask, food, oil, potion)
+      are all items sourced from Phase 1 Alchemy/Cooking/Enchanting and were still cross-checked
+      as reachable by Phase 3. No shaman-specific weapon imbue (Windfury/Flametongue) was
+      mentioned by either guide for the Elemental spec's main-hand slot — Elemental Shamans
+      typically use a weapon oil rather than a self-imbue, consistent with both sources listing
+      only Wizard Oil.
+  enhancement_shaman:
+    consumables:
+      flask: Flask of Relentless Assault (120 Attack Power, persists through death) — the
+        standard raid flask for Enhancement.
+      elixirs_instead: 'Elixir of Major Agility (Battle, 35 Agility + 20 Critical Strike Rating)
+        paired with a Guardian elixir: Elixir of Major Mageblood (16 mana per 5 sec) on long
+        fights, or Elixir of Draenic Wisdom (30 Intellect + 30 Spirit) on short fights. This
+        pair is the cheaper play when the raid is not on a death-prone progression pull, since
+        unlike the flask these do not persist through death. On fights against demons, swap
+        the battle elixir for Elixir of Demonslaying (265 Attack Power vs. Demons) instead
+        of Major Agility.'
+      food: Roasted Clefthoof — 20 Strength and 20 Spirit, the best food buff available to
+        the spec.
+      weapon_main_hand: Windfury Weapon (shaman self-imbue), kept up continuously.
+      weapon_off_hand: Windfury Weapon (shaman self-imbue) on the off-hand as well — Enhancement
+        dual-wields and imbues both weapons with Windfury.
+      scrolls: Scroll of Strength V (20 Strength) and Scroll of Agility V (20 Agility) — both
+        stack with elixirs and food, used when available.
+      potions: Haste Potion (400 Haste Rating for 15 sec) is the standard DPS combat potion,
+        used on cooldown. Super Mana Potion is the substitute when mana is the limiting factor
+        (heavy totem twisting).
+      other: Dark Rune or Demonic Rune for extra mana outside the normal potion cooldown,
+        treated as a real raid resource rather than spammed. Drums of Battle (Leatherworking,
+        80 Haste Rating to the party for 30 sec) used on cooldown by a raid Leatherworker.
+    sources:
+    - title: TBC Classic Enhancement Shaman Enchants and Consumables - Icy Veins
+      url: https://www.icy-veins.com/tbc-classic/enhancement-shaman-dps-pve-enchants-consumables
+    - title: Enhancement Shaman Rotation & Talent Build - TBC Classic - wowtbc.gg
+      url: https://wowtbc.gg/class-guides/enhancement-shaman/
+    - title: TBC Classic Consumables List - Warcraft Tavern
+      url: https://www.warcrafttavern.com/tbc/tools/consumables/
+    uncertain:
+    - No source gave a spec-specific recommendation on a weapon oil or sharpening stone as
+      an alternative to Windfury Weapon; Enhancement's standard practice per both Icy Veins
+      and wowtbc.gg is Windfury Weapon on both weapons, so oils/stones were not pursued further.
+    - Wowhead's own Enhancement Shaman consumables guide page did not extract (client-side
+      rendered table), so it was not used as a direct source, though its listed author/date
+      (updated 2026/02/10) is consistent with the Icy Veins and wowtbc.gg guidance used here.
+    - Archon.gg's 'Enhancement Shaman Raid Consumables' page returned Season of Discovery
+      / Classic Fresh items (Flaskataur's Tears, Oronok's Tuber of Strength) rather than TBC
+      2.4.3 consumables, and was discarded as the wrong-expansion source the task warned against.
+    - Could not confirm whether Elixir of Demonslaying is worth it against Mount Hyjal/Black
+      Temple targets specifically (the mmojugg Phase 3 article calls it out generically for
+      'Phase 3 demon targets' without naming bosses), so its exact encounter applicability
+      within this tier is unconfirmed.
+    notes: All three cited guides describe original/current TBC Classic (2.4.3-era) content
+      and are consistent with each other on flask, elixir, food, potion, and scroll choices;
+      no source conflicts were found among them. The mmojugg Phase 3 Anniversary article was
+      consulted for phase framing but is a generic, non-spec-specific consumable overview
+      and was not used to source individual item names.
+  feral_bear:
+    consumables:
+      flask: Flask of Chromatic Wonder
+      elixirs_instead: 'Battle elixir: Elixir of Demonslaying against demon fights, otherwise
+        Elixir of Major Agility. Guardian elixir: Spirit of Zanza is the top pick (Druid Stamina
+        scaling makes it outperform Major Fortitude); if unavailable, Elixir of Major Defense
+        when not armor-capped, or Elixir of Major Fortitude otherwise. Icy Veins states the
+        elixir pair beats the flask for a Feral Tank, with the flask reserved for progression
+        pulls where a death would strip the buff.'
+      food: Spicy Crawdad or Fisherman's Feast for Stamina/survivability; Warp Burger or Grilled
+        Mudfish for Agility/threat when survival headroom allows. Which one is standard depends
+        on the fight's damage profile, per Icy Veins and wowtbc.gg.
+      weapon_main_hand: Adamantite Weightstone. Icy Veins notes this applies even though the
+        visible weapon is stowed in Bear Form, because the stat/damage boost carries to the
+        Druid's hidden form weapon.
+      scrolls: Scroll of Agility V (Icy Veins, 'other' list; wowtbc.gg lists it under Miscellaneous
+        alongside Scroll of Strength V and Scroll of Protection V, without stating which is
+        preferred).
+      potions: Ironshield Potion (2500 Armor for 2 min) is the standard defensive combat potion
+        when not armor-capped. Haste Potion is used as the threat/DPS potion per Icy Veins.
+      other: Elixir of Ironskin can be added as an extra push toward crit immunity. Drums
+        of Battle (Leatherworking) if the tank has the profession. Nightmare Seed for an emergency
+        30-second health buffer. Stratholme Holy Water specifically for undead trash packs
+        (e.g., Nightbane's skeletons), not a raid-wide standard.
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/feral-druid-tank-pve-enchants-consumables
+      title: TBC Classic Feral Druid Tank Enchants and Consumables - Icy Veins
+    - url: https://wowtbc.gg/class-guides/feral-tank-druid/
+      title: Feral Tank Druid Rotation & Talent Build - TBC Classic · wowtbc.gg
+    uncertain:
+    - Icy Veins' guide carries a 'Last updated Jan 12, 2026' stamp but its visible changelog
+      only runs through 'Phase 5' (02 May 2022) and 'Phase 3' (14 Jan 2022) entries from the
+      original TBC Classic release; no changelog line confirms an Anniversary Phase 3 (Hyjal/BT)
+      pass specifically. Item names match known TBC 2.4.3 itemization (Flask of Chromatic
+      Wonder, Spirit of Zanza, etc.), so I'm treating it as valid for 2.4.3, but flagging
+      that the update date on the byline outruns its own changelog.
+    - wowtbc.gg's page renders its BiS-list tables client-side, so I could not confirm which
+      single food/elixir/potion it marks as the definitive 'Best' versus 'Alternative' beyond
+      what the extracted prose implies; I inferred ranking from list order and cross-referenced
+      against Icy Veins where the two agreed.
+    - 'A third source, ezg.com, surfaced in search results and claims a Bear Tank elixir pair
+      of ''Gift of Arthas + Elixir of Major Agility'' instead of a flask. I did not include
+      this: ''Gift of Arthas'' is not a Burning Crusade consumable (it is a Wrath of the Lich
+      King weapon-enchant proc), and the rest of that page contains other clear errors (references
+      to a ''Wizard'' class and a ''Kebab Arms'' warrior spec) that mark it as unreliable,
+      likely AI-generated marketing content. Flagging in case another source contradicts my
+      exclusion.'
+    - Whether Nightmare Seed, Stratholme Holy Water, and Drums of Battle count as 'genuinely
+      standard' raid-night consumables versus situational/optional extras is a judgment call
+      the sources themselves leave soft (Icy Veins lists them under a catch-all 'Other' section
+      without ranking); included them but flagged the softness.
+    - No source stated a weapon oil/stone alternative to Adamantite Weightstone (e.g., for
+      progression vs. farm content), so only the one option is given.
+    - Feral Bear tanks wield a single two-handed weapon in Bear Form, so weapon_off_hand is
+      left blank rather than 'not applicable' being asserted from class intuition alone —
+      Icy Veins' enchant table lists only one 'Weapon' row, which supports this.
+    notes: 'Sourced primarily from Icy Veins (TBC Classic Feral Druid Tank Enchants and Consumables)
+      and wowtbc.gg (Feral Tank Druid PvE Guide), both of which agree on core items: Flask
+      of Chromatic Wonder or the elixir pair, Spicy Crawdad/Fisherman''s Feast vs Warp Burger/Grilled
+      Mudfish for food, Ironshield Potion, and Adamantite Weightstone. A third search result
+      (ezg.com) was excluded as unreliable due to internal factual errors. Wowhead''s own
+      consumables guide page for this build failed to load (CDN error) and was not usable
+      as a source.'
+  feral_cat:
+    consumables:
+      flask: Flask of Relentless Assault
+      elixirs_instead: Elixir of Major Agility (battle elixir) + Elixir of Draenic Wisdom
+        (guardian elixir) is the higher-DPS combo than the flask, and is the standard raid
+        loadout when the group can afford the risk of losing both buffs on death. Against
+        demon targets, swap the battle elixir to Elixir of Demonslaying. One source (Icy Veins)
+        names Elixir of Major Mageblood as the guardian-elixir pick specifically on long fights,
+        with Draenic Wisdom reserved for short ones; the other two sources sourced here name
+        only Draenic Wisdom and do not mention Mageblood, so treat Mageblood as the weaker-sourced
+        of the two guardian options.
+      food: Warp Burger or Grilled Mudfish — both give the Agility+Spirit food buff cat druids
+        want (Spirit feeds the mana-heavy powershifting rotation).
+      weapon_main_hand: Adamantite Weightstone, applied to the equipped weapon. In late TBC
+        this buff was updated to keep functioning through Cat Form's weapon-hidden shapeshift,
+        so it stays active in combat.
+      scrolls: Scroll of Agility V and Scroll of Strength V — scrolls are not elixirs so they
+        stack freely alongside the flask/elixir choice above.
+      potions: Fel Mana Potion is the primary DPS potion on cooldown (its spell-damage-taken
+        penalty is irrelevant to a physical-damage cat); Super Mana Potion is the budget substitute.
+        On fights short enough that mana is not a concern, Haste Potion replaces it for more
+        raw damage.
+      other: Dark Rune or Demonic Rune as extra mana restoration (both are vanilla-sourced
+        items still farmed and used in TBC). Drums of Battle from a raid Leatherworker for
+        group spell haste, used on cooldown. Flame Cap for a small damage increase (Icy Veins
+        only; not corroborated by the other two sources, so treat as secondary).
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/feral-druid-dps-pve-enchants-consumables
+      title: TBC Classic Feral Druid DPS Enchants and Consumables - Icy Veins (last updated
+        Jan 12, 2026, confirmed TBC Classic, Phase 3 changelog entry present)
+    - url: https://www.lootxphub.com/tbc-classic-feral-druid-dps-guide-optimal-consumables-and-raid-buffs/
+      title: 'TBC Classic Feral Druid DPS Guide: Optimal Consumables and Raid Buffs - LootXP
+        Hub (Feb 17, 2026)'
+    - url: https://wowtbc.gg/class-guides/feral-dps-druid/
+      title: Feral DPS Druid PvE Guide - TBC Classic - wowtbc.gg
+    uncertain:
+    - Whether Elixir of Major Mageblood is genuinely standard for long Phase 3 fights, or
+      an Icy Veins-only recommendation not shared by the other two sources checked — only
+      one of three sources names it.
+    - Flame Cap is named only by Icy Veins among the sources checked; the other two omit it
+      entirely, so it is not corroborated as standard rather than optional.
+    - None of the sources found were Phase-3-specific (Mount Hyjal/Black Temple) pages by
+      name — they are general TBC Classic Feral DPS consumable guides current as of 2026,
+      which should cover Phase 3 but was not confirmed against a page titled specifically
+      for Phase 3 content.
+    - The Wowhead TBC guide page (https://www.wowhead.com/tbc/guide/classes/druid/feral/dps-consumables-raid-buffs-pve)
+      could not be read — its consumables table renders client-side and both the exa-search
+      text extraction and WebFetch returned only the page header/navigation, no item data.
+      It was not used as a source for any claim above.
+    notes: Feral cat druids have one weapon slot (no dual wield in Cat Form), so weapon_off_hand
+      is empty by spec design, not an omission. All three sources agree Flask of Relentless
+      Assault is the flask pick and that swapping to the Major Agility (or Demonslaying vs.
+      demons) + guardian elixir pair is the stronger but death-fragile alternative — this
+      consensus is reflected in elixirs_instead. Food, weapon consumable, scrolls, and Dark/Demonic
+      Rune usage were corroborated across at least two of the three sources.
+  fury_warrior:
+    consumables:
+      flask: Flask of Relentless Assault — the standard 2-hour flask for Fury Warrior DPS,
+        lasts through death. All three sources agree this is the default pick against non-demon
+        bosses.
+      elixirs_instead: 'Used only when not flasking (budget reasons) or against demons: Battle
+        — Elixir of Demonslaying (demon fights only, +2% damage over the flask but only 5-minute
+        duration, so it is reapplied per-pull rather than worn continuously) or, as a general-purpose
+        battle elixir, Elixir of Major Agility or Elixir of the Mongoose (Wowhead''s comment
+        thread notes Mongoose edges out Major Agility slightly on crit but with more RNG variance).
+        Guardian — Elixir of Major Fortitude. Icy-Veins and Warcraft Tavern both list Elixir
+        of Major Agility/Mongoose plus Major Fortitude as the elixir pair; Wowhead frames
+        Demonslaying as strictly a vs-demons swap-in over the flask.'
+      food: Roasted Clefthoof for +20 Strength (the default). Spicy Hot Talbuk (+20 Hit Rating
+        / ~1.27% hit) is the situational swap when the raider needs help reaching the hit
+        cap instead of raw Strength — all three sources state this condition explicitly.
+      weapon_main_hand: 'Condition-dependent, not a purchasable oil/stone: if the raid has
+        an Enhancement Shaman running Windfury Totem, leave the main-hand weapon bare so Windfury
+        can proc on it — Wowhead states this is the single best main-hand enhancement and
+        stones should not be applied there. Only if no Windfury Totem is present should Adamantite
+        Sharpening Stone (sharp weapons) or Adamantite Weightstone (blunt weapons) go on the
+        main hand instead.'
+      weapon_off_hand: Adamantite Sharpening Stone (sharp weapons) or Adamantite Weightstone
+        (blunt weapons) — used regardless of Windfury Totem presence, since Windfury does
+        not benefit from an off-hand stone the same way. Wowhead specifically credits Adamantite
+        Sharpening Stone as ~1% stronger than Elemental Sharpening Stone for this slot.
+      scrolls: Scroll of Strength V and Scroll of Agility V, used together (Icy-Veins, Warcraft
+        Tavern). Wowhead's checklist also adds Scroll of Protection V to the trio, noting
+        scrolls don't compete with the Battle/Guardian elixir slots or the raid-buff stacking
+        rules, so all three can be run alongside a flask or elixir pair for free.
+      potions: 'Haste Potion is the primary on-cooldown combat potion, ideally popped alongside
+        Bloodlust/other cooldowns (all three sources). Situational/secondary options named
+        by Icy-Veins and Wowhead: Insane Strength Potion (burst Strength), Mighty Rage Potion
+        (trash rage burst), Free Action Potion (stun/slow immunity on relevant fights), Swiftness
+        Potion (high-movement fights).'
+      other: 'Drums of Battle — a Leatherworking-crafted party buff Wowhead calls out as standard
+        for one player per party (usually the raid''s shaman) to bring, distinct from a warrior''s
+        own personal consumables but part of the expected raid setup. Engineering-only burst
+        options if the player has the profession: Super Sapper Charge (5-min CD AoE burst,
+        primary), backed up by Adamantite Grenade (1-min CD) between Sapper charges — Wowhead''s
+        checklist and Icy-Veins both list this pairing, but it is profession-gated, not universal.
+        Flame Cap (Herbalism) is named by all three sources as a low-priority, marginal-DPS
+        option due to rarity/cost of its Fel Lotus-line reagent — optional rather than standard.'
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/fury-warrior-dps-pve-enchants-consumables
+      title: TBC Classic Fury Warrior Enchants and Consumables - Icy Veins
+    - url: https://www.warcrafttavern.com/tbc/guides/pve-fury-warrior-gems-enchants-consumables/
+      title: Fury Warrior PvE Gems, Enchants & Consumables - TBC Classic - Warcraft Tavern
+    - url: https://www.wowhead.com/tbc/guide/classes/warrior/dps-consumables-raid-buffs-pve
+      title: TBC Warrior DPS Buffs & Consumables Guide - Burning Crusade Classic - Wowhead
+    uncertain:
+    - Whether Elixir of Major Strength or Fel Strength Elixir (both listed only by Warcraft
+      Tavern, not by Icy-Veins or Wowhead) are genuinely standard picks or just exist-in-the-game
+      options included for completeness — Warcraft Tavern's page reads more like an exhaustive
+      per-slot table than a 'what a raider actually consumes' recommendation, so I did not
+      include them in elixirs_instead.
+    - Exact BT/MH raid-buffed DPS delta between Elixir of Major Agility and Elixir of the
+      Mongoose was not independently verified beyond a user comment on the Wowhead page (not
+      the guide body itself), so I noted it as a comment-level claim rather than an authoritative
+      one.
+    - No source gave Phase-3-specific (Mount Hyjal/Black Temple) consumable changes distinct
+      from general TBC Classic guidance; if this project needs a Phase 3-specific citation
+      (e.g., for gear/enchant availability gating per data/facts/enchants-gems.yaml), that
+      check was out of scope for this consumables-only task and should be cross-checked separately
+      against that file.
+    notes: 'All three sources are confirmed TBC Classic (not retail/Wrath) pages and corroborate
+      each other closely; the Icy-Veins and Wowhead pages carry visible 2025/2026 update timestamps
+      consistent with the TBC Anniversary re-release, and their content (Phase 3 gems, TBC-only
+      items like Nethercobra Leg Armor, Glyph of Ferocity from Cenarion Expedition) is 2.4.3-appropriate,
+      not later-expansion content. No source broke figures out specifically for Mount Hyjal/Black
+      Temple (Phase 3) versus other TBC phases beyond gems — the consumable list itself does
+      not change by raid tier in TBC, only availability of items like Nethercobra Leg Armor
+      (Phase 3 recipe) does, and that is an enchant, not a consumable. Weapon-hand fields
+      for Fury are unusual: the strongest main-hand \"enhancement\" is not a purchasable consumable
+      at all but simply staying unenchanted with a stone so a shaman''s Windfury Totem can
+      proc on it — this is a raid-composition condition, not a shopping-list item, and I called
+      that out rather than picking a single item name.'
+  protection_paladin:
+    consumables:
+      flask: Flask of Fortification (survivability/stamina priority; use if not already uncrittable/uncrushable
+        from gear). Flask of Blinding Light is the alternative pick when threat, not survivability,
+        is the concern (adds spell damage).
+      elixirs_instead: Not sourced with exact names. Icy Veins and Warcraft Tavern both frame
+        the choice as flask-vs-flask (Fortification vs Blinding Light), not a battle/guardian
+        elixir pair. No source gave an exact battle+guardian elixir combo for this spec, so
+        left uncertain rather than guessed.
+      food: Fisherman's Feast or Spicy Crawdad for stamina (survivability priority). If threat
+        is the bigger problem than survival, Crunchy Serpent, Poached Bluefish, or Blackened
+        Basilisk instead — these give a 23 spell power well-fed buff rather than stamina.
+      weapon_main_hand: Superior Wizard Oil — spell power weapon enchant, since Protection
+        Paladin threat comes largely from spells.
+      weapon_off_hand: Not applicable. Protection Paladin tanks a shield, not a second weapon;
+        the shield itself takes a permanent enchant (Enchant Shield – Major Stamina or Enchant
+        Shield – Shield Block), not a consumable oil.
+      scrolls: 'Icy Veins names only the category, not an exact item: "Any Scrolls of Strength/Agility/Intellect
+        are just an added benefit." No specific scroll name confirmed, so no exact scroll
+        is asserted here — see uncertain.'
+      potions: Super Mana Potion, used for mana sustain (Paladin threat/heal-driven mana pressure).
+        Demonic Rune or Dark Rune are also used to trade health for mana on longer fights,
+        with the caveat that trading health while tanking is risky and must be timed carefully.
+      other: None confirmed as standard for this spec specifically. No source named drums,
+        a specific scroll, or a battle/guardian elixir pair for Protection Paladin, so nothing
+        is added here beyond what is listed above.
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/protection-paladin-tank-pve-enchants-consumables
+      title: TBC Classic Protection Paladin Enchants and Consumables - Icy Veins (confirmed
+        Burning Crusade Classic guide, last updated Jan 12, 2026)
+    - url: https://www.warcrafttavern.com/tbc/guides/pve-protection-paladin-tank-gems-enchants-consumables/
+      title: Protection Paladin Tank Gems, Enchants & Consumables - TBC Classic - Warcraft
+        Tavern (used to corroborate the shield/weapon enchant slot structure; its own Consumables
+        section rendered empty client-side)
+    uncertain:
+    - Exact battle/guardian elixir pair as a flask alternative — not named by any source checked;
+      both sources frame the flask choice as Fortification vs Blinding Light instead, so `elixirs_instead`
+      is left without an exact combo.
+    - Exact scroll item name — Icy Veins only says "Any Scrolls of Strength/Agility/Intellect,"
+      not a specific scroll (e.g. which tier or exact in-game name), so no scroll name is
+      asserted.
+    - Whether drums (e.g. a Drums of Battle/War-class item) are standard for this spec — no
+      source checked named drums for Protection Paladin specifically; typically a raid-wide
+      provision from another class, not a personal Paladin consumable, so omitted rather than
+      assumed.
+    - The Wowhead TBC Protection Paladin consumables guide page (wowhead.com/tbc/guide/classes/paladin/tank-consumables-raid-buffs-pve)
+      could not be read — its tables/prose render client-side and did not extract via text
+      fetch, so it was not used as a source despite being confirmed as a 2.4.3/2.5.1-era BC
+      Classic page by its own header.
+    notes: 'Cross-checked two independent BC-Classic-specific sources (Icy Veins, updated
+      Jan 2026; Warcraft Tavern) that agree on structure: Protection Paladin threat is spell-driven,
+      so weapon oil and food/flask choices split along a survivability-vs-threat axis rather
+      than having one unconditional answer. Flask of Fortification and stamina food (Fisherman''s
+      Feast/Spicy Crawdad) are the default when defense/avoidance targets (uncrittable, uncrushable)
+      are already met from gear; Flask of Blinding Light and spell-power food (Blackened Basilisk/Crunchy
+      Serpent/Poached Bluefish) are the swap when threat generation is the bottleneck instead.
+      This condition is stated per RULE 4 rather than picked silently. Off-hand weapon oil
+      is genuinely not applicable to this spec (shield, not a weapon) rather than an omission.'
+  protection_warrior:
+    consumables:
+      flask: Flask of Fortification (Alchemy; the standard tank stamina/defense flask). Flask
+        of Chromatic Wonder is the swap on fights with heavy elemental/magic damage.
+      elixirs_instead: 'Both sources say Protection Warriors more commonly run the battle+guardian
+        elixir pair rather than a flask (cheaper per raid night, and the pair beats one flask
+        on stats even though it does not survive death). Battle Elixir: Elixir of Major Agility
+        as the default, or Elixir of Demonslaying specifically against demon bosses (relevant
+        across Black Temple''s demon encounters — Illidari Council, Illidan, Reliquary of
+        Souls, etc.). Guardian Elixir: Elixir of Major Fortitude as the default; Elixir of
+        Major Defense is the stronger pick on fights that are purely physical damage; Elixir
+        of Ironskin is used if the tank is not yet crit-immune.'
+      food: Fisherman's Feast (Cooking) is the recommended food buff. Spicy Crawdad is the
+        fallback. Spicy Hot Talbuk is used instead when the tank still needs help reaching
+        the hit cap or wants extra threat.
+      weapon_main_hand: 'Adamantite Sharpening Stone (sharp/edged weapons) or Adamantite Weightstone
+        (blunt weapons), from Blacksmithing. Condition: skip the stone if an Enhancement Shaman
+        in the party is already providing Windfury Totem — the temporary weapon enchant and
+        the stone occupy the same slot, so the stone would just be wasted or would override
+        the totem''s proc weapon.'
+      scrolls: Scroll of Strength V, Scroll of Protection V, and Scroll of Agility V — used
+        together when available cheaply on the auction house or from a Field Repair Bot 110G
+        vendor.
+      potions: Mighty Rage Potion, used liberally on trash. Haste Potion, used on boss pulls
+        for threat. Ironshield Potion, used as the survivability potion when incoming damage
+        spikes. Free Action Potion is situational, for fights with stuns/slows to dodge.
+      other: Nightmare Seed (Herbalism only) is called out as a low-cooldown mini Last Stand
+        worth always carrying, but it is profession-gated, not something every tank has access
+        to. Super Sapper Charge / Adamantite Grenade (Engineering only) are AoE-threat tools
+        on trash, also profession-gated rather than a universal standard.
+    sources:
+    - url: https://www.warcrafttavern.com/tbc/guides/pve-protection-warrior-enchants-gems-consumables/
+      title: Protection Warrior PvE Gems, Enchants & Consumables - TBC Classic - Warcraft
+        Tavern
+    - url: https://www.icy-veins.com/tbc-classic/protection-warrior-tank-pve-enchants-consumables
+      title: TBC Classic Protection Warrior Enchants and Consumables - Icy Veins
+    uncertain:
+    - Neither source phase-gates the flask/elixir/food/potion list specifically to Phase 3
+      (Mount Hyjal/Black Temple) versus earlier or later TBC Classic phases; they present
+      these as the standing recommendation across the expansion, so I could not confirm any
+      of these consumables were newly unlocked in, or restricted to, Phase 3 specifically.
+    - The Wowhead guide page (https://www.wowhead.com/tbc/guide/classes/warrior/protection/tank-consumables-raid-buffs-pve)
+      renders its consumable table client-side and returned no usable text, so it was not
+      used as a corroborating source beyond confirming the two sources above agree with each
+      other.
+    - Could not source whether drums (e.g., Drums of Battle/War) are considered standard for
+      the tank to bring personally versus provided by another raid member with Leatherworking;
+      omitted rather than guessed.
+    - Elixir of Major Defense vs Elixir of Major Fortitude as guardian elixir depends on whether
+      the fight is pure physical damage — Icy Veins states the condition but does not quantify
+      the threshold.
+  retribution_paladin:
+    consumables:
+      flask: Flask of Relentless Assault
+      elixirs_instead: Elixir of Demonslaying (battle elixir) paired with a Guardian Elixir
+        of choice — used instead of the flask only against demon-type targets (sources cite
+        Magtheridon and Prince Malchezaar as the class of fight this applies to; Warcraft
+        Tavern and Icy Veins both state Demonslaying alone outperforms any flask on such pulls).
+        No sourced non-demon battle+guardian elixir pair was found to recommend over the flask
+        for standard trash/bosses.
+      food: Condition on hit cap. Roasted Clefthoof (Strength food) once hit-capped; Spicy
+        Hot Talbuk (Strength + Hit food) while still short of the 9% melee hit cap. Warcraft
+        Tavern also lists Smoked Desert Dumplings as an alternative Strength food.
+      weapon_main_hand: Adamantite Sharpening Stone or Adamantite Weightstone, chosen by weapon
+        type (edged vs. blunt), used when no shaman in the raid is providing Windfury Totem
+        — Icy Veins states Windfury is the strongest in-combat weapon buff when available,
+        with the Blacksmithing-made stone as the personal fallback.
+      scrolls: Scroll of Strength V, Scroll of Agility V, and Scroll of Protection V (Warcraft
+        Tavern). Icy Veins corroborates using Strength/Agility/Intellect scrolls generally
+        as a minor added benefit but does not give exact ranks.
+      potions: Haste Potion used on cooldown as the primary combat potion (both sources; Icy
+        Veins notes the extra haste feeds more Seal of Blood swings). Dark Rune or Demonic
+        Rune used as a secondary/mana-sustain potion on longer fights — Icy Veins explains
+        the mana-for-health trade double-dips with Spiritual Attunement healing return. Warcraft
+        Tavern additionally lists Super Mana Potion.
+      other: Flame Cap (Herbalism-crafted fire-damage trinket-slot buff, Warcraft Tavern only
+        — not mentioned by Icy Veins). Symbol of Kings is listed by Warcraft Tavern as a required
+        reagent (to cast Blessing of Kings on self/others), not a consumable buff itself.
+        Purified Draenic Water is listed as a reagent-water vendor item, not a combat buff.
+    sources:
+    - url: https://www.warcrafttavern.com/tbc/guides/pve-retribution-paladin-gems-enchants-consumables/
+      title: Retribution Paladin PvE Gems, Enchants & Consumables - TBC Classic Anniversary
+        Edition - Warcraft Tavern
+    - url: https://www.icy-veins.com/tbc-classic/retribution-paladin-dps-pve-enchants-consumables
+      title: TBC Classic Retribution Paladin Enchants and Consumables - Icy Veins (last updated
+        Jan 12, 2026)
+    - url: https://www.wowhead.com/tbc/item=22854/flask-of-relentless-assault
+      title: Flask of Relentless Assault - Item - TBC Classic (Wowhead, confirms exact item
+        name)
+    - url: https://wowtbc.gg/bis-list/retribution-paladin/
+      title: Retribution Paladin Best in Slot (BiS) Gear List - TBC Classic (wowtbc.gg, used
+        only to confirm weapon slot is a single two-hand weapon, no off-hand)
+    uncertain:
+    - No standard non-demon battle+guardian elixir pairing (an alternative to the flask on
+      ordinary trash/bosses) was found in any source — only the demon-specific Elixir of Demonslaying
+      case is documented, so elixirs_instead is conditional/partial rather than a general
+      answer.
+    - Whether Drums (e.g. Drums of Battle) are a standard personal-consumable expectation
+      for this spec was not addressed by either source — omitted from 'other' rather than
+      guessed.
+    - The dedicated Wowhead TBC Retribution Paladin consumables guide page (https://www.wowhead.com/tbc/guide/classes/paladin/retribution/dps-consumables-raid-buffs-pve)
+      renders its consumable table client-side and returned no usable text, so it could not
+      be used to corroborate or contest the two sources actually cited.
+    - Which weapon-type tier (sharpening stone vs. weightstone) applies depends on whether
+      the raider's actual two-hand weapon is edged or blunt; sources give the rule but not
+      a single fixed answer, since Phase 3 BiS two-hand weapons vary by weapon type across
+      guides.
+    - Icy Veins page and Warcraft Tavern page are both written for 'TBC Classic' generally;
+      Warcraft Tavern explicitly labels itself Anniversary Edition and phase-splits its gem
+      table (confirming Phase 3 relevance), but neither page states 'Phase 3' specifically
+      on the consumables section itself, so the phase-currency of the consumables table (as
+      opposed to the gem table) rests on the pages being live/maintained TBC Classic Anniversary
+      guides rather than an explicit phase label.
+    notes: Two independent guides (Warcraft Tavern, Icy Veins) agree on Flask of Relentless
+      Assault, Elixir of Demonslaying as the demon-fight flask replacement, Haste Potion,
+      Enchant Weapon - Mongoose (permanent enchant, not a consumable oil, so not listed under
+      weapon_main_hand), and the Roasted Clefthoof/Spicy Hot Talbuk hit-cap-dependent food
+      choice. Ret Paladin in Phase 3 wields a single two-hand weapon per wowtbc.gg's current
+      BiS list, so weapon_off_hand is left empty per the task's own instruction to omit it
+      when the spec does not dual-wield.
+  shadow_priest:
+    consumables:
+      flask: Flask of Pure Death (best option, highest Spell Power). Flask of Supreme Power
+        is a cheaper substitute where server prices favor it, at a small Spell Power loss.
+      elixirs_instead: Not used. Sourced guidance states flasks are the only real option for
+        Shadow Priest DPS — no Battle+Guardian elixir pairing is called out as stronger or
+        cheaper for this spec.
+      food: Blackened Basilisk, Crunchy Serpent, or Poached Bluefish — all three give the
+        identical buff (23 Spell Damage and 20 Spirit) and are interchangeable; pick whichever
+        is cheapest/available.
+      weapon_main_hand: Superior Wizard Oil (Enchanting profession consumable, 42 Spell Damage)
+      weapon_off_hand: N/A — Priests do not dual wield.
+      scrolls: None found in sourced Shadow Priest guidance. Not confirmed as standard for
+        this spec.
+      potions: Destruction Potion on short fights where mana is not a concern; Super Mana
+        Potion on longer fights needing mana sustain.
+      other: Dark Rune or Demonic Rune (mana restoration at a Health cost, carried over from
+        Classic); Stratholme Holy Water (situational, only for AoE against Undead packs);
+        Sacred Candle (bring in quantity to allow free rebuffing).
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/shadow-priest-dps-pve-enchants-consumables
+      title: TBC Classic Shadow Priest Enchants and Consumables - Icy Veins (updated Jan 12,
+        2026, for TBC Anniversary)
+    - url: https://www.warcrafttavern.com/tbc/tools/consumables/
+      title: 'TBC Classic Consumables List - Warcraft Tavern (used to confirm exact item names/effects:
+        Flask of Pure Death, Flask of Supreme Power, Destruction Potion, Super Mana Potion,
+        Superior Wizard Oil, food buff stats)'
+    uncertain:
+    - 'Scrolls: no source calls out a scroll (e.g. Scroll of Intellect/Spirit) as standard
+      raid prep for Shadow Priest specifically — left blank rather than guessed.'
+    - 'Elixir alternative to flask: sourced guidance (Icy Veins) states flasks are the only
+      real option for this spec, so no Battle+Guardian pairing is given as a cheaper/equal
+      alternative. Not independently verified against a second Shadow Priest-specific source.'
+    - The Wowhead 'TBC Shadow Priest DPS Buffs & Consumables Guide' page (https://www.wowhead.com/tbc/guide/classes/priest/shadow/dps-consumables-raid-buffs-pve)
+      is titled correctly for 2.4.3-equivalent TBC Classic/Anniversary content and confirms
+      the guide exists and is current, but its table content renders client-side and could
+      not be extracted as text, so it was not used as a source for specific item names.
+    - Drums (e.g. Drums of Battle/War) were not confirmed in any Shadow Priest-specific source
+      as something the priest personally brings, and are typically supplied by a Leatherworker
+      in the raid rather than the priest, so they are omitted from 'other' rather than assumed.
+    notes: 'Food buff has three interchangeable options (Blackened Basilisk, Crunchy Serpent,
+      Poached Bluefish) — all identical stats, pick by price/availability, not a ranked preference.
+      Elixir vs. flask: sourced guidance treats this spec as flask-only, unlike physical DPS
+      specs where a Battle+Guardian elixir pair is a live alternative — stated explicitly
+      per rule 4 rather than silently omitted. Both Icy Veins and Warcraft Tavern pages are
+      confirmed as current TBC Classic/Anniversary content (not a later-expansion page); Warcraft
+      Tavern''s list is TBC-wide (not Shadow-Priest-specific) and was used only to verify
+      exact names/effects of items Icy Veins already named for this spec.'
+  survival_hunter:
+    consumables:
+      flask: Flask of Relentless Assault
+      elixirs_instead: Elixir of Major Agility + Elixir of Major Mageblood is the stronger/cheaper
+        pairing over the flask in most fights (Icy Veins). Warcraft Tavern instead lists Elixir
+        of Demonslaying + Elixir of Major Mageblood as its default pairing. Both sources agree
+        Elixir of Demonslaying specifically outperforms everything else, flask included, on
+        demon targets (e.g. Magtheridon-type fights). Elixirs are lost on death, so the flask
+        is the safer/cheaper choice on wipe-prone progression pulls.
+      food: Grilled Mudfish (Agility) once hit-capped; Spicy Hot Talbuk (Icy Veins) or Warp
+        Burger (Warcraft Tavern) if still short of hit before the cap -- sources disagree
+        on the exact not-hit-capped food name.
+      weapon_main_hand: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite
+        Weightstone for a blunt one -- both sources give this as a type-dependent pick, not
+        a single named item.
+      weapon_off_hand: Not applicable -- Survival Hunter carries one melee weapon plus a ranged
+        weapon, not a dual-wield set, so no off-hand weapon consumable applies.
+      scrolls: Scroll of Agility V and Scroll of Strength V (world drop) used where available;
+        Warcraft Tavern also lists Scroll of Protection V.
+      potions: Haste Potion is the combat potion used on cooldown for burst windows. Dark
+        Rune (BoE) or Demonic Rune (BoP) is used as a secondary mana-restore consumable on
+        longer fights before falling back to Aspect of the Viper.
+      other: 'Ranged ammo is a genuinely standard hunter-specific consumable: Warden''s Arrow
+        (Cenarion Expedition, Revered) or Hellfire Shot / Felbane Slugs (Thrallmar/Honor Hold,
+        Revered), per Warcraft Tavern. Purified Draenic Water is also listed by Warcraft Tavern
+        as the standard raid water.'
+    sources:
+    - url: https://www.icy-veins.com/tbc-classic/survival-hunter-dps-pve-enchants-consumables
+      title: TBC Classic Survival Hunter Enchants and Consumables - Icy Veins (updated 12
+        Jan 2026, reviewed for TBC Anniversary Realms 31 Dec 2025)
+    - url: https://www.warcrafttavern.com/tbc/guides/pve-survival-hunter-gems-enchants-consumables/
+      title: Survival Hunter PvE Gems, Enchants & Consumables - TBC Classic Anniversary Edition
+        - Warcraft Tavern
+    - url: https://www.mmojugg.com/news/inflation-warning-every-consumable-you-need-in-tbc-classic-anniversary.html
+      title: 'WoW TBC Anniversary Phase 3 Consumables Guide: What to Prepare Before Black
+        Temple - MMOJUGG (used only to corroborate Flask of Relentless Assault and Elixir
+        of Demonslaying as Phase 3-current, general raid-wide consumable prep, not a Survival
+        Hunter-specific source)'
+    uncertain:
+    - Wowhead's own Hunter DPS Buffs & Consumables Guide could not be fetched (site returned
+      a CDN error page), so it was not used to corroborate or contradict the two class-specific
+      sources.
+    - The two class-specific sources disagree on the exact battle elixir/flask default (Elixir
+      of Major Agility per Icy Veins vs. Elixir of Demonslaying per Warcraft Tavern) and on
+      the not-hit-capped food (Spicy Hot Talbuk vs. Warp Burger); both are reported above
+      rather than picked silently.
+    - Which of Adamantite Sharpening Stone or Adamantite Weightstone applies depends on the
+      specific melee weapon (bladed vs. blunt) equipped, which neither source ties to a specific
+      Phase 3 weapon -- so no single weapon-oil name is given.
+    - Neither source states whether a shaman's Windfury/other imbue in the raid or a Draenei's
+      hit aura changes this hunter's own consumable choices beyond the hit-cap threshold already
+      noted for food; not confirmed either way.
+    - Drums (e.g. Drums of Battle) are a raid-wide Leatherworking consumable, not something
+      this spec personally carries or triggers; the general Phase 3 prep source mentions them
+      only as a group coordination item, not as standard for this spec specifically, so they
+      were not included as a firm answer.
+    notes: Both class-specific guides confirm they are TBC Classic (Warcraft Tavern explicitly
+      says "TBC Classic Anniversary Edition"; Icy Veins was reviewed and updated for TBC Anniversary
+      Realms on 31 Dec 2025), which matches the requested Phase 3 (Mount Hyjal / Black Temple)
+      timeframe. The mmojugg source is Phase-3-dated (published 24 Jul 2026, referencing the
+      27 Aug 2026 Phase 3 launch) but is a general raid-consumables piece, not Survival Hunter-specific,
+      so it was used only to corroborate the flask and demon-elixir picks, not as a primary
+      source for the full kit.

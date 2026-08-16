@@ -31,6 +31,7 @@
       <a href="../index.html">Overview</a>
       <a href="../bosses.html">By Boss</a>
       <a href="../specs.html">By Spec</a>
+      <a href="../sims.html">Throughput</a>
       <a href="../framework.html">Framework</a>
       <a href="../conventions.html">Conventions</a>
     </nav>
@@ -415,6 +416,83 @@ penetration counted as itself</a>
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('tbc-theme', next); } catch (e) {}
     });
+  })();
+</script>
+
+<script>
+  // Make a table sortable by clicking its headings.
+  //
+  // OPT IN, NOT EVERYWHERE. Only a table inside `::: {.sortable}` gets this, so
+  // a table whose row order carries meaning, such as bosses in pull order, can
+  // never be scrambled by a stray click.
+  //
+  // THE PAGE NEVER LOADS PRE-SORTED. docs/sims.md is written in spec order
+  // because a table of thirteen damage figures sorted by damage reads as a
+  // league table, and those specs run rotations written by different authors.
+  // Sorting is something a reader asks for.
+  //
+  // NUMBERS ARE READ OUT OF THE TEXT rather than carried in an attribute,
+  // because pandoc pipe tables cannot hold per-cell attributes. A cell reads
+  // "1947.4 ± 0.96" or "+280.2" or "not comparable", so the first number wins,
+  // a leading sign is kept, and anything with no number sorts last in either
+  // direction rather than pretending to be zero.
+  (function () {
+    function value(cell) {
+      var m = (cell.textContent || '').replace(/,/g, '')
+        .match(/[+-]?\d+(?:\.\d+)?/);
+      return m ? parseFloat(m[0]) : null;
+    }
+    function numeric(rows, i) {
+      var seen = 0;
+      for (var r = 0; r < rows.length; r++) {
+        if (value(rows[r].cells[i]) !== null) seen++;
+      }
+      return seen > rows.length / 2;
+    }
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.sortable table'), function (table) {
+        var head = table.tHead && table.tHead.rows[0];
+        var body = table.tBodies[0];
+        if (!head || !body) return;
+        var rows = Array.prototype.slice.call(body.rows);
+        Array.prototype.forEach.call(head.cells, function (th, i) {
+          var isNum = numeric(rows, i);
+          th.setAttribute('tabindex', '0');
+          th.setAttribute('role', 'button');
+          th.setAttribute('aria-sort', 'none');
+          th.classList.add('sort-col');
+          function sort() {
+            // A third click does NOT restore the original order. Two states are
+            // enough and a hidden third one is a control nobody discovers.
+            var desc = th.getAttribute('aria-sort') !== 'descending';
+            Array.prototype.forEach.call(head.cells, function (other) {
+              other.setAttribute('aria-sort', 'none');
+            });
+            th.setAttribute('aria-sort', desc ? 'descending' : 'ascending');
+            var sorted = rows.slice().sort(function (a, b) {
+              var x, y;
+              if (isNum) {
+                x = value(a.cells[i]);
+                y = value(b.cells[i]);
+                if (x === null && y === null) return 0;
+                if (x === null) return 1;   // no number sorts last, always
+                if (y === null) return -1;
+              } else {
+                x = (a.cells[i].textContent || '').trim().toLowerCase();
+                y = (b.cells[i].textContent || '').trim().toLowerCase();
+              }
+              if (x < y) return desc ? 1 : -1;
+              if (x > y) return desc ? -1 : 1;
+              return 0;
+            });
+            sorted.forEach(function (row) { body.appendChild(row); });
+          }
+          th.addEventListener('click', sort);
+          th.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); sort(); }
+          });
+        });
+      });
   })();
 </script>
 

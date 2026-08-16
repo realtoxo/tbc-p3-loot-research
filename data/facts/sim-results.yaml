@@ -1,0 +1,118 @@
+meta:
+  what: What the simulated figures MEAN. The figures themselves are in data/facts/sim-figures.yaml
+    and are not restated here.
+  produced: '2026-08-15'
+  settings: 10000 iterations, seed 1, single target at level 73, 150 second encounter, run against
+    each of the three Phase 3 boss armor tiers. Every figure quoted below is at armor 6193 unless
+    it says otherwise.
+  EVERYTHING_IN_THIS_FILE_BEFORE_15_AUGUST_2026_IS_SUPERSEDED: Five independent audits and four
+    arbiters reviewed the simulator configuration that day and found nine live defects. Three
+    of them moved every figure this project had ever published, so no number from before that
+    date survives and none is quoted here except as a retraction.
+  the_three_that_moved_everything:
+    the_boss_had_no_armor: The target was sent forty-eight zeros. Physical specs were inflated
+      17 to 23 percent and casters not at all, so no comparison between the two was valid. Worse,
+      mitigation is max(armor minus debuffs minus armor penetration, 0), so at zero armor EVERY
+      armor debuff this raid supplies and EVERY point of armor penetration on every item was worth
+      exactly nothing.
+    every_character_was_an_illegal_race: race was hardcoded to Blood Elf, which cannot be a Warrior,
+      Druid or Shaman in 2.4.3, and sim/core/base_stats.go registers base stats only for pairings
+      that exist. Six specs ran with no base strength, agility or stamina at all.
+    two_hunters_had_no_pet: classOptions was empty for both, so proto defaults gave them no pet,
+      no ammo and no quiver. Worth 1508 DPS to Beast Mastery.
+  not_simulated: Tanks, by the ruling of 14 August 2026. The Feral Cat, because no action priority
+    list for it exists in this build. The four healers, who have no captured gear set.
+every_spec_now_improves_monotonically:
+  what: entry is lower than tier and tier is lower than best in slot, for all thirteen specs,
+    at every armor tier. That was NOT true before 15 August 2026 and the two exceptions were read
+    for days as facts about gear.
+  the_arms_warrior_anomaly_is_gone: 'It measured BELOW its own entry set by 108.3, then 45.3,
+    then 25.1, then 20.8 as four separate defects were fixed. It now reads entry 2148.8, tier
+    2239.6, best in slot 2421.4. THE PUBLISHED LIST WAS NEVER THE PROBLEM: the missing boss armor
+    was, because the Onslaught set pays in armor penetration and armor penetration was worth zero.'
+  the_beast_mastery_anomaly_is_gone: It measured below its own tier set by 88.5. It now reads
+    3340.6, 3523.6, 3572.9. The cause was the same class of defect, an empty class options block
+    leaving it with no pet.
+  what_this_says_about_the_earlier_analysis: Both anomalies were investigated at length and explained
+    in gear terms, and both explanations were wrong. A surprising result is worth investigating;
+    an explanation that fits a surprising result is not evidence that the configuration underneath
+    it is sound.
+the_encounter_is_not_a_neutral_knob:
+  length: '150 seconds, ruled 15 August 2026. Measured at 90 against 180 the same day: EVERY spec
+    gained, but the mana-constrained casters gained 41 to 45 percent because they stop running
+    dry while the melee gained 5 to 8. Shortening a fight moves specs RELATIVE TO EACH OTHER.'
+  boss_armor: Phase 3 spans two tiers, 7684 and 6193, and ten of the fourteen bosses sit in the
+    lower one. The same Fury Warrior measures 2856.4 against a 6193 boss and 2512.5 against a
+    7684 one, a 344 DPS swing from the boss alone. A figure at one tier is not comparable with
+    a figure at the other, which is why every row of sim-figures.yaml carries its armor.
+  casters_do_not_move_with_armor_at_all: The Arcane Mage, both Warlocks, the Elemental Shaman
+    and the Shadow Priest read the same figure at every tier, which is the correct behaviour and
+    a useful check that the armor change is doing what it claims.
+the_rogue_published_trinket_was_RIGHT_and_this_file_said_otherwise:
+  retracted: On 15 August 2026 this file recorded that the Combat Rogue's own Phase 3 page ranks
+    the weakest of its four Dragonspine pairings, and that Tsunami Talisman was worth 67.0 more
+    than the published Warp-Spring Coil. THAT IS RETRACTED.
+  why_it_was_wrong: It was measured against a boss with no armor. Warp-Spring Coil is an armor
+    penetration trinket, so it was being priced at close to nothing.
+  corrected: At armor 6193, Dragonspine Trophy plus Warp-Spring Coil is the BEST of the four at
+    2912.8, ahead of Madness by 20.2, Tsunami by 38.0 and Bloodlust Brooch by 43.0. The published
+    list was right and this project was wrong.
+  the_lesson: A finding that a published best-in-slot list is mistaken deserves more scepticism
+    than a finding that agrees with it, not less.
+what_the_warglaives_are_worth:
+  measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
+  note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the
+    item, so these compare with each other and NOT with an enchanted profile.
+  combat_rogue:
+    warglaives_bare: 2741.0
+    best_alternative_bare: 2536.9
+    the_premium: 204.1
+    alternative: Blade of Infamy 30881 main hand, Blade of Savagery 32369 off hand
+  fury_warrior:
+    warglaives_bare: 2723.1
+    best_alternative_bare: 2581.8
+    the_premium: 141.3
+    alternative: Blade of Infamy 30881 in both hands, which needs two copies
+  the_council_arithmetic: Both profiles currently hold the same unique pair and only one can.
+    Routing them to the rogue leaves the raid at roughly 5628 against roughly 5565 the other way,
+    so the rogue is worth about 63 more BECAUSE IT EXTRACTS MORE FROM THE SAME WEAPONS, 204 against
+    141. Whoever does not get them lands near 2710 either way, which is to say the two specs are
+    level without the glaives. NOT A RULING. The council decides.
+no_two_bis_figures_can_be_true_at_once:
+  what: A best-in-slot set is what one spec would wear having won every contested drop, and a
+    raid holds one of each item. The best-in-slot column is thirteen ceilings, not a raid.
+  the_sharpest_case: BOTH Warglaives of Azzinoth are worn by the Combat Rogue AND the Fury Warrior.
+    There is one pair.
+  how_wide_it_goes: Seven specs wear Dragonspine Trophy, six wear The Skull of Gul'dan, Ring of
+    Ancient Knowledge and Slippers of the Seacaller, and five wear Zhar'doom.
+  what_it_does_not_undermine: The entry to best-in-slot movement per spec, because both ends of
+    it belong to the same spec.
+four_specs_want_two_copies_of_one_item: Reported by tools/check_sim_profiles.py rather than failed,
+  because it is what the pages say and two copies of a non-unique item is a legal set. The Affliction
+  Warlock, the Destruction Warlock and the Shadow Priest each wear Ring of Ancient Knowledge in
+  BOTH ring slots, and the Survival Hunter dual wields two copies of Blade of Infamy. The pages
+  rank these rows 'Best x2' in their own words.
+retribution_and_enhancement_read_identical_entry_and_tier_figures: 'Their gear files are byte-identical,
+  verified by hash rather than assumed: neither spec''s Phase 3 list wears a tier token in any
+  of the five slots, so the tier anchor collapses onto entry by construction. A reader counting
+  rows would otherwise take these for stuck runs.'
+the_hit_overshoot_at_the_best_in_slot_anchor: 'A published list ranks each slot in isolation,
+  so nothing stops the set overshooting a cap. The Combat Rogue carries 195 item hit against a
+  melee-special target of 64, and the Enhancement Shaman 163 against 0. FOR THE ROGUE THIS IS
+  NOT WASTE: a dual wielder keeps benefiting from hit up to the roughly 28 percent white-swing
+  cap, and its whites still miss 3.7 percent. For the casters and Enhancement it is real waste,
+  and it is a property of the published lists rather than of this pipeline. NOT CORRECTED, because
+  correcting it would mean rebuilding the sets to our own rule and the figures would stop describing
+  the lists players follow.'
+what_is_still_open:
+  expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
+    measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
+    cannot be read out of a run. Marked Conservative in raid-buffs.yaml.
+  epic_gems: Confirmed Phase 3 legal by this repository's own Blizzard-sourced enchants-gems.yaml
+    and worth 7 to 16 DPS per spec, deliberately deferred because it touches every spec's gem
+    preferences and deserves its own pass.
+  engineering: Sappers and explosives are worth 9 to 16 DPS but are inert without profession1,
+    and roster.yaml records no professions for anyone. GUILD LEAD NEEDED.
+  retribution_hammer_of_wrath: The shipped Retribution rotation omits Hammer of Wrath entirely,
+    which is why this spec gains nothing from the execute phase every other execute user gains
+    from. Its figures are the least trustworthy in the set.

@@ -1,0 +1,360 @@
+# Base armor for every Phase 3 boss, and the mitigation it applies.
+#
+# HOLDS   What each boss's armor is, pre-debuff, with the source per row.
+# NOT HERE  What a debuff removes from it, which is recorded once at the bottom
+#   rather than per boss, and what any spec measures against it, which is
+#   data/facts/sim-figures.yaml.
+#
+# WHY THIS FILE EXISTS AT ALL. Until 15 August 2026 tools/run_sims.py sent the
+# target a stats array of forty-eight zeros, so EVERY SIMULATION THIS PROJECT
+# HAS EVER RUN WAS AGAINST A BOSS WITH NO ARMOR. Physical specs were inflated
+# between 17 and 23 percent, every armor debuff the raid supplies was worth
+# exactly nothing, and armor penetration on an item was worth exactly nothing.
+# Ruled by the guild lead the same day: model armor PER BOSS, and look the value
+# up rather than copy one.
+
+meta:
+  ruled: '2026-08-15'
+  by: the guild lead
+  verbatim: Per boss but we should look up the armor on each boss
+  convention: >-
+    7684 and 6193, the wowsims convention, and every number below is in it. It
+    is preferred over the community 7700 and 6200 because it matches the
+    simulator this project vendors, so a sim result and this table cannot
+    silently disagree, and because the values are exact integers from the game's
+    own class table rather than era measurements rounded to two significant
+    figures. The two conventions describe the same data and differ by 0.05
+    percentage points of mitigation, which is far below anything that could
+    reorder a loot decision. A reader meeting 7700 elsewhere is meeting the same
+    fact reported coarsely.
+  the_raw_class_value_is_6194: >-
+    The class table's level 73 class-2 entry is 6194, and some emulator
+    databases yield 6194 for Kaz'rogal and Teron Gorefiend through ArmorMultiplier
+    rounding while others yield 6193. The difference is 0.005 percent mitigation.
+    6193 is used uniformly here for consistency, and the discrepancy is recorded
+    rather than hidden.
+  mitigation_formula: >-
+    mitigation = armor / (armor + 10557.5), where the constant is
+    467.5 times ATTACKER level minus 22167.5, at attacker level 70. THE LEVEL IS
+    THE ATTACKER'S, NOT THE TARGET'S. The common error is to use 11960, which is
+    the level 73 constant and governs damage the boss deals to a player rather
+    than damage a player deals to the boss.
+  unit_class_is_inferred: >-
+    The class TABLE was verified directly, level 73 class 1 at 7684 and class 2
+    at 6194. Twenty individual creature_template rows were NOT read. Each boss's
+    class below is inferred backwards from which bucket its measured armor falls
+    in, and it says so in its own column rather than presenting an inference as a
+    lookup.
+  all_figures_are_pre_debuff: Base armor. What the raid's debuffs remove is at
+    the bottom of this file, once.
+
+bosses:
+
+# ---------------------------------------------------------------- Mount Hyjal
+# NO SIMULATOR HAS EVER SHIPPED A MOUNT HYJAL ENCOUNTER, in either the vendored
+# checkout or the legacy wowsims repository. These five rows rest on the era
+# measurements plus the class table, which is sufficient, and it is stated here
+# so no reader assumes a preset exists to check them against.
+- boss: Rage Winterchill
+  zone: Mount Hyjal
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  source: EJ-DAYVE + TBCDB-CLS
+  confidence: High
+- boss: Anetheron
+  zone: Mount Hyjal
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  source: EJ-DAYVE + TBCDB-CLS
+  confidence: High
+- boss: Kaz'rogal
+  zone: Mount Hyjal
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  source: EJ-DAYVE + TBCDB-CLS
+  confidence: High
+  note: One of the two bosses some databases give 6194 through rounding. See
+    meta.the_raw_class_value_is_6194.
+- boss: Azgalor
+  zone: Mount Hyjal
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  source: EJ-DAYVE + TBCDB-CLS
+  confidence: High
+- boss: Archimonde
+  zone: Mount Hyjal
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  source: EJ-DAYVE + TBCDB-CLS
+  confidence: High
+
+# -------------------------------------------------------------- Black Temple
+- boss: High Warlord Naj'entus
+  zone: Black Temple
+  level: 73
+  unit_class: 1 (inferred)
+  armor: 7684
+  mitigation_percent_vs_level_70: 42.12
+  source: EJ-DAYVE + WOWSIMS-BT:23
+  confidence: High
+- boss: Supremus
+  zone: Black Temple
+  level: 73
+  unit_class: 1 (inferred)
+  armor: 7684
+  mitigation_percent_vs_level_70: 42.12
+  source: EJ-DAYVE + WOWSIMS-BT:49
+  confidence: High
+- boss: Shade of Akama
+  zone: Black Temple
+  level: 73
+  unit_class: 1 (inferred)
+  armor: 7684
+  mitigation_percent_vs_level_70: 42.12
+  source: EJ-DAYVE + WOWSIMS-BT:75
+  confidence: High
+- boss: Teron Gorefiend
+  zone: Black Temple
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  source: EJ-DAYVE + WOWSIMS-BT:101
+  confidence: High
+  note: The second boss some databases give 6194 through rounding.
+- boss: Gurtogg Bloodboil
+  zone: Black Temple
+  level: 73
+  unit_class: 1 (inferred)
+  armor: 7684
+  mitigation_percent_vs_level_70: 42.12
+  source: EJ-DAYVE + WOWSIMS-BT:127
+  confidence: High
+- boss: Reliquary of Souls
+  zone: Black Temple
+  armor: see_parts
+  note: >-
+    THERE IS NO NPC OF THIS NAME. It is the encounter name, and drops.csv keys it
+    to npc 22856, which is "Reliquary of the Lost", a controller with no level,
+    no creature type and no zone. The armor rows are keyed on the three Essence
+    ids instead, per this project's rule that only the id settles which thing is
+    meant.
+- boss: Mother Shahraz
+  zone: Black Temple
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  source: EJ-DAYVE + WOWSIMS-BT:236
+  confidence: High
+- boss: The Illidari Council
+  zone: Black Temple
+  armor: see_parts
+  note: Four members sharing one health pool. Focus order varies by strategy, so
+    every member is attacked and every part row below is live.
+- boss: Illidan Stormrage
+  zone: Black Temple
+  level: 73
+  unit_class: 1 (inferred)
+  armor: 7684
+  mitigation_percent_vs_level_70: 42.12
+  source: EJ-DAYVE + WOWSIMS-BT:374
+  confidence: High
+
+parts:
+
+- part: Essence of Suffering
+  npc: 23418
+  encounter: Reliquary of Souls
+  level: 73
+  armor: 0
+  mitigation_percent_vs_level_70: 0.0
+  dps_attacks_it: true
+  source: EJ-DAYVE + WOWSIMS-BT:153
+  confidence: Conservative
+  why_not_high: >-
+    Zero rests on one era measurement and two corroborating emulator sources,
+    and cmangos and TBC-DB instead carry 7684, which looks like the class default
+    filling a field nobody set. The three Essences are fought in sequence, so
+    this row is live rather than theoretical.
+- part: Essence of Desire
+  npc: 23419
+  encounter: Reliquary of Souls
+  level: 73
+  unit_class: 1 (inferred)
+  armor: 7684
+  mitigation_percent_vs_level_70: 42.12
+  dps_attacks_it: true
+  source: EJ-DAYVE + WOWSIMS-BT:180
+  confidence: High
+- part: Essence of Anger
+  npc: 23420
+  encounter: Reliquary of Souls
+  level: 73
+  unit_class: 1 (inferred)
+  armor: 7684
+  mitigation_percent_vs_level_70: 42.12
+  dps_attacks_it: true
+  source: EJ-DAYVE + WOWSIMS-BT:205
+  confidence: High
+- part: Gathios the Shatterer
+  npc: 22949
+  encounter: The Illidari Council
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  dps_attacks_it: true
+  source: EJ-DAYVE + WOWSIMS-BT:262
+  confidence: High
+  note: The ONLY Council member ever measured in the TBC era, which is why the
+    other three rank below him.
+- part: High Nethermancer Zerevor
+  npc: 22950
+  encounter: The Illidari Council
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  dps_attacks_it: true
+  source: WOWSIMS-BT:342
+  confidence: Good
+  why_not_high: Rests on the class curve and wowsims alone. Never measured in the
+    TBC era.
+- part: Lady Malande
+  npc: 22951
+  encounter: The Illidari Council
+  level: 73
+  unit_class: 2 (inferred)
+  armor: 6193
+  mitigation_percent_vs_level_70: 36.97
+  dps_attacks_it: true
+  source: WOWSIMS-BT:317
+  confidence: Good
+  why_not_high: The same. Never measured in the TBC era.
+- part: Veras Darkshadow
+  npc: 22952
+  encounter: The Illidari Council
+  level: 73
+  armor: null
+  dps_attacks_it: true
+  source: WT-COUNCIL + WOWSIMS-BT:287
+  confidence: Conservative
+  armor_note: >-
+    Near-zero, approximately 137 to 146. EXACT VALUE UNESTABLISHED, and the file
+    carries no digit rather than imply a precision nobody has. Never measured in
+    the TBC era. wowsims uses 137; Warcraft Tavern's Illidari Council guide
+    states approximately 146; TBC-DB carries 7684, which is wrong for this
+    creature. Effectively unarmored for loot purposes, since he reaches 0 armor
+    after a single Sunder Armor. SETTLED BY a 2.4.3 combat log using a
+    fixed-damage physical ability on Veras.
+- part: Flame of Azzinoth
+  npc: 22997
+  encounter: Illidan Stormrage
+  level: 73
+  unit_class: 1 (inferred)
+  armor: 7684
+  mitigation_percent_vs_level_70: 42.12
+  dps_attacks_it: true
+  source: WOWSIMS-BT:400
+  confidence: Good
+  note: Two of them, tanked and killed during Illidan's second phase.
+
+armor_debuffs_this_raid_supplies:
+  note: >-
+    Recorded once rather than per boss. These are subtracted from the base armor
+    above, and the result is floored at zero, which is why every one of them was
+    worth EXACTLY nothing while the boss had no armor.
+  sunder_armor_five_stacks: -2600
+  faerie_fire: -610
+  curse_of_recklessness: -800
+  total: -4010
+  source: EJ-DAYVE, contemporaneous with the boss measurements
+  verified_in_the_simulator: >-
+    Confirmed by a clamp sweep on the Retribution Paladin, which self-applies no
+    armor debuff: damage is flat as boss armor rises to 4010 and breaks away at
+    4020. The three use three separate exclusive-effect categories, so they are
+    additive and none double counts. Improved Faerie Fire contributes NO armor in
+    2.4.3; it is 3 percent physical hit, and the simulator models exactly that.
+
+sources:
+  EJ-DAYWE_TYPO_GUARD: The citation key is EJ-DAYVE. Recorded because a
+    transposed spelling would break a reader's search.
+  EJ-DAYVE: >-
+    Elitist Jerks forum, "[RAID] Boss armor values", thread f31/t16629, post 8 by
+    Dayve, Dwarf Warrior of Eternity, Gorgonnash. The boss table was complete for
+    Black Temple and Mount Hyjal by 19 October 2007 per the thread's own edit
+    stamp. Measured in game by parsing improved Thunder Clap damage, author
+    stated accuracy plus or minus 30. Retrieved from
+    http://web.archive.org/web/20080728074357/http://elitistjerks.com/f31/t16629-raid_boss_armor_values/
+    observed 2026-08-15. It reports 6200 and 7700, which are the class table
+    values rounded to two significant figures.
+  TBCDB-CLS: >-
+    TBC-DB/Database, Archived_Releases/1.4.0/Updates/1.4.3_Updates/003_TBC_ClassLevelStats.sql,
+    table creature_template_classlevelstats, column BaseArmor. Level 73: class 1
+    is 7684, class 2 is 6194, class 8 is 3878. Retrieved from
+    https://raw.githubusercontent.com/TBC-DB/Database/master/Archived_Releases/1.4.0/Updates/1.4.3_Updates/003_TBC_ClassLevelStats.sql
+    observed 2026-08-15.
+  WOWSIMS-BT: >-
+    wowsims/tbc, sim/encounters/black_temple.go at commit
+    3301fca59306a747e521274c36e073e69acc7b77 dated 2026-08-06, cited per line as
+    WOWSIMS-BT:<line>. All fifteen target definitions carry Level 73. Retrieved
+    from https://raw.githubusercontent.com/wowsims/tbc/master/sim/encounters/black_temple.go
+    observed 2026-08-15. THIS IS THE LEGACY REPOSITORY, not the simulator this
+    project vendors. See cautions.our_simulator_cannot_produce_these_numbers.
+  WOWWIKI-DR: >-
+    WoWWiki "Damage reduction", revision 509013, 21 February 2007: "For level 70
+    enemies, this simplifies to %Reduction = (Armor / (Armor + 10557.5)) * 100."
+    https://wowwiki-archive.fandom.com/wiki/Damage_reduction?oldid=509013
+    Revision 1489385 of 3 July 2008 adds the warning that the constant derives
+    from the attacker's level rather than the target's.
+  WT-COUNCIL: >-
+    Warcraft Tavern, Illidari Council guide: "He has an extremely low amount of
+    armor (~146) and thus will take the most damage out of any target."
+    https://www.warcrafttavern.com/tbc/guides/illidari-council/ A modern guide
+    rather than an era source, used for magnitude only.
+
+the_strongest_corroboration:
+  what: >-
+    Dayve's 2007 in-game measurements against the emulator class table he could
+    not have seen. Every measured value falls inside his stated plus or minus 30,
+    at four levels and both classes.
+  table: >-
+    Level 70 measured 5475 against class 2 at 5474, and 6800 against class 1 at
+    6792. Level 71: 5700 against 5714, and 7100 against 7089. Level 72: 5950
+    against 5954, and 7400 against 7387. Level 73: 6200 against 6194, and 7700
+    against 7684.
+  what_it_means: Independent observation and the emulator table are describing
+    the same underlying data. This is as close to settled as the question gets.
+
+cautions:
+  the_6600_transcription_error: >-
+    Elitist Jerks thread t25877, the armor penetration spreadsheet thread of May
+    2008, states that bosses have approximately 6600 or 7700 armor, and the
+    documentation for Landsoul's spreadsheet repeats it. The source thread says
+    6200. ANY 6600 ENCOUNTERED ANYWHERE IS THIS TRANSCRIPTION ERROR PROPAGATING,
+    not a measurement.
+  our_simulator_cannot_produce_these_numbers: >-
+    The vendored wowsimcli, VERSION v0.0.116 built from wowsims/tbc-new, ships
+    encounter presets only for Magtheridon's Lair and Serpent Shrine Cavern. It
+    has NO Mount Hyjal and NO Black Temple encounter, so left to itself every
+    Phase 3 simulation silently uses the generic level 73 Raid Target at 7685 and
+    overstates mitigation by about 5.15 percentage points across the entire 6193
+    tier: all five Mount Hyjal bosses, Teron Gorefiend, Mother Shahraz and three
+    Illidari Council members. tools/run_sims.py sets the armor itself from this
+    file for that reason.
+  no_boss_deviates_from_its_class_curve_IN_PHASE_3: >-
+    An empirical finding rather than a structural guarantee. The mechanism to
+    override a boss's armor exists and was used elsewhere in TBC: Void Reaver
+    carries a deliberate ArmorMultiplier of 1.4217, giving 8806 and 45.5 percent.
+    No Phase 3 boss does.

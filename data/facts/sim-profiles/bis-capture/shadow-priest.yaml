@@ -1,0 +1,115 @@
+spec: shadow_priest
+anchor_built: bis
+built_on: '2026-08-15'
+GENERATED: BY tools/build_bis_capture.py. DO NOT EDIT. It is rebuilt from data/research/wowhead-phase3-bis-full/shadow_priest.json,
+  which is a capture and is never edited, plus the weapon routing in data/judgments/weapon-routing.yaml,
+  which is a judgment. To change a slot here, change one of those two.
+sources:
+  bis:
+    url: https://www.wowhead.com/tbc/guide/shadow-priest-dps-bt-hyjal-phase-3-best-in-slot-gear-burning-crusade
+    title: Burning Crusade Classic Shadow Priest DPS Best in Slot (BiS) Phase 3
+      Gear Guide - Wowhead
+    observed: '2026-08-15'
+anchors:
+  bis:
+    hit_by_slot:
+      head:
+        item: Hood of Absolution
+        id: 31064
+        hit: 0
+      neck:
+        item: Translucent Spellthread Necklace
+        id: 32349
+        hit: 15
+      shoulder:
+        item: Shoulderpads of Absolution
+        id: 31070
+        hit: 12
+      back:
+        item: Nethervoid Cloak
+        id: 32590
+        hit: 18
+      chest:
+        item: Shroud of Absolution
+        id: 31065
+        hit: 20
+      wrist:
+        item: Bracers of Nimble Thought
+        id: 32586
+        hit: 0
+      hands:
+        item: Handguards of Absolution
+        id: 31061
+        hit: 19
+      waist:
+        item: Waistwrap of Infinity
+        id: 32256
+        hit: 0
+      legs:
+        item: Leggings of Channeled Elements
+        id: 30916
+        hit: 18
+      feet:
+        item: Slippers of the Seacaller
+        id: 32239
+        hit: 0
+      ring_1:
+        item: Ring of Ancient Knowledge
+        id: 32527
+        hit: 0
+        capture_note: only ring in the Ring Jewelry table ranked 'BiS'; every other
+          row is 'Option'
+      ring_2:
+        item: Ring of Ancient Knowledge
+        id: 32527
+        hit: 0
+        capture_note: only ring in the Ring Jewelry table ranked 'BiS'; used for
+          both ring slots since no second BiS ring is listed
+      trinket_1:
+        item: The Skull of Gul'dan
+        id: 32483
+        hit: 25
+        capture_note: top of five tied 'BiS' rows in the Trinkets table
+      trinket_2:
+        item: 'Darkmoon Card: Crusade'
+        id: 31856
+        hit: 0
+        capture_note: second of five tied 'BiS' rows in the Trinkets table
+      main_hand:
+        item: Zhar'doom, Greatstaff of the Devourer
+        id: 32374
+        hit: 0
+        capture_note: top-ranked row of the Weapons table; this is a two-handed
+          staff, so it and the captured off_hand item would not be worn together
+          in game
+      off_hand:
+        item: null
+        id: null
+        hit: 0
+      ranged:
+        item: Wand of the Forgotten Star
+        id: 29982
+        hit: 11
+    total_item_hit: 138
+    tier6_pieces_held:
+    - head
+    - shoulder
+    - chest
+    - hands
+    tier5_pieces_held: []
+    tier4_pieces_held: []
+    set_pieces_held:
+      Absolution Regalia: 4
+    hit_state:
+      cap: spell
+      net_target_rating: 76
+      assumed_debuff_rating: 0.0
+      item_hit: 138
+      state: full
+      gap_rating: 0
+      gem_sockets: 7
+      gems_needed: 0
+routing_applied:
+- 'off_hand: EMPTY replaces Orb of the Soul-Eater. Zhar''doom is a two-handed staff
+  and the guild lead ruled that its users hold no off hand. The captured off hand
+  is discarded, not carried.'

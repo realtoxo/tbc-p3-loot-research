@@ -230,8 +230,17 @@ specs:
       legs: Runic Spellthread
       feet: Enchant Boots - Boar's Speed
       main_hand: Enchant Weapon - Major Spellpower
-      off_hand: Enchant Shield - Intellect
+      off_hand: none
       ranged: none
+    why_the_off_hand_is_unenchanted: >-
+      IT WAS AN ILLEGAL ENCHANT AND THE SIMULATOR APPLIED IT ANYWAY. Fathomstone
+      30049 is weaponType 5, WeaponTypeOffHand, and handType 3, not a shield,
+      and the enchant carried here was 2654 "Enchant Shield - Intellect", which
+      2.4.3 permits only on a shield. An ordinary held-in-off-hand item cannot be
+      enchanted at all in TBC. The simulator validates neither the slot nor the
+      enchant type, so it granted 12 intellect the character could never have.
+      Removing it costs 19.9 DPS at entry and 19.3 at tier, and that is an
+      over-credit being given back rather than a loss. Found 15 August 2026.
     gems:
       meta: Chaotic Skyfire Diamond
       red: Runed Crimson Spinel
@@ -257,7 +266,29 @@ specs:
       hands: Enchant Gloves - Superior Agility
       legs: Nethercobra Leg Armor
       feet: Enchant Boots - Dexterity
-      ranged: Stabilized Eternium Scope
+      ranged: Stabilitzed Eternium Scope
+      main_hand: Enchant Weapon - Greater Agility
+      off_hand: Enchant Weapon - Greater Agility
+    enchant_ids:
+      ranged: 2724
+    why_the_scope_is_pinned_by_id: >-
+      THE NAME REACHES A DEAD ROW. The simulator database holds TWO enchants at
+      effectId 2523, one of them named "Stabilized Eternium Scope" carrying no
+      stats and no item id, and the LIVE scope is effectId 2724, which the
+      database misspells "Stabilitzed Eternium Scope". A name lookup therefore
+      resolved to 2523, and both hunters wore a scope worth exactly 0.0 DPS,
+      proven by removing it entirely and measuring no change. 2724 grants 28
+      ranged CRIT rating through a code effect at sim/common/tbc/enchants.go
+      rather than through a stat line, so it looks equally empty in the database
+      and is not. Worth 24.8 DPS to Beast Mastery and 25.2 to Survival, measured
+      15 August 2026. Biznicks 247x128 Accurascope is the alternative and grants
+      ranged HIT; both hunters already read 0.000 percent ranged miss, so the
+      crit scope is the right one.
+    why_the_weapons_are_enchanted: >-
+      Neither hunter carried any main-hand or off-hand enchant until 15 August
+      2026, while the simulator's own Phase 3 dual-wield hunter sets put Enchant
+      Weapon - Greater Agility on both. The shipped rotation melee weaves, so it
+      is live damage: 48.7 DPS to Beast Mastery and 64.3 to Survival.
     gems:
       meta: Relentless Earthstorm Diamond
       red: Delicate Living Ruby
@@ -293,7 +324,15 @@ specs:
     gems:
       meta: Chaotic Skyfire Diamond
       red: Runed Living Ruby
-      yellow: Veiled Noble Topaz
+      yellow: Potent Noble Topaz
+      # WAS Veiled Noble Topaz, 5 spell power and 4 SPELL HIT, until 15 August
+      # 2026. Both warlocks are AT the 1 percent spell miss floor with every hit
+      # gem removed entirely, measured, so 32 to 36 rating of that hit bought
+      # nothing. Potent Noble Topaz is the same ORANGE colour, so every socket
+      # bonus and the meta requirement are untouched, and it pays in spell crit
+      # instead: 22.8 DPS to Affliction and 31.0 to Destruction. The guide's own
+      # rule is conditional, "hit gems beat spell power UNTIL the cap", and this
+      # file had implemented the condition as unconditional.
       blue: Glowing Nightseye
       hit_dial: >-
         Veiled Noble Topaz, and Great Dawnstone at 8 spell hit where the guide's

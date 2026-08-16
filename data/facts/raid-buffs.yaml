@@ -172,10 +172,69 @@ debuffs:
       omission an adversarial review found on 10 August 2026.
   expose_weakness_uptime:
     from: survival_hunter
-    NOT_SENT: >-
-      Also a double, and the same reasoning. It depends on the hunter's agility
-      AND on how much of the fight the debuff is up, and the second half is a
-      rotation outcome this project has not measured.
+    value: 0.98, measured rather than the preset's 0.9
+    ruled_in: >-
+      SENT FROM 15 August 2026, by the guild lead: "we must absolutely have
+      expose weakness". It is worth 98.6 to 130.7 DPS to every physical spec in
+      the raid except the Survival Hunter itself, which self-applies.
+    previously_claimed: >-
+      Until 15 August 2026 this key carried NOT_SENT, reading: "Also a double,
+      and the same reasoning. It depends on the hunter's agility AND on how much
+      of the fight the debuff is up, and the second half is a rotation outcome
+      this project has not measured." The reason no longer holds, because the
+      simulator ships a phase-specific answer at ui/core/proto_utils/utils.ts,
+      Phase 3 being an uptime of 0.9 with a hunter agility of 1210.
+    it_was_also_UNSENDABLE_not_merely_unsent: >-
+      tools/run_sims.py::typed returned None for every field the proto types as
+      a double, so this key could not have reached the simulator whatever this
+      file said. A declined value and an impossible one looked identical from
+      here. Both are fixed together.
+    the_survival_hunter_gets_nothing_from_it_and_that_is_correct: >-
+      sim/hunter/hunter.go zeroes the raid debuff for any hunter holding the
+      talent, because that hunter applies it itself. It measures exactly 0.0 for
+      this spec and every other physical spec gains.
+  expose_weakness_hunter_agility:
+    from: survival_hunter
+    value: measured per anchor, 1119 entry, 1105 tier, 1152 best in slot
+    ADDED: >-
+      15 August 2026, WITH the uptime above and never without it.
+      sim/core/debuffs.go gates the effect on uptime greater than zero and then
+      derives the attack power as agility times 0.25, so an uptime sent alone
+      buys EXACTLY NOTHING. This file named only the uptime, so patching the
+      runner alone would have looked like a fix and delivered no damage.
+    confidence: Good
+    previously_claimed: >-
+      1210 for a few hours on 15 August 2026, which is the simulator's own Phase
+      3 figure at ui/core/proto_utils/utils.ts and was recorded at the time as
+      an assumption rather than our hunter's agility. It is 5 to 9 percent high
+      for this roster, and because the effect is exactly linear that is a direct
+      over-credit to every physical spec.
+    how_it_was_measured: >-
+      BY BISECTION, because it cannot be read out of a run: wowsimcli has no
+      stats subcommand, exposes no final player stats, and its target auras carry
+      uptime and procs but no stacks. sim/hunter/hunter.go zeroes BOTH debuff
+      fields for a hunter holding the talent, which is why our Survival Hunter is
+      immune to the external value at any size, verified at 20000 agility for
+      exactly 0.0. Removing the talent from its string lifts that immunity, so
+      the external agility that reproduces the hunter's own self-applied result
+      is its agility. Nine steps at 10000 iterations, per anchor.
+    cross_checked_by_hand: >-
+      Independently, sharing no step with the bisection: base 151 plus 4 for
+      Night Elf, item and gem and enchant agility from the gear files, plus 20
+      scroll and 20 food, plus Gift of the Wild at 14 times 1.35 and Grace of Air
+      at 77 times 1.15, all multiplied by 1.1 for Blessing of Kings and 1.15 for
+      Lightning Reflexes 5 of 5. That gives 1131 at best in slot against the
+      measured 1152, agreement to 1.8 percent.
+    the_uptime_and_the_agility_are_calibrated_TOGETHER: >-
+      Each agility was solved with the uptime held at 0.98, which is itself
+      measured: the hunter's own Expose Weakness debuff sits on the target for
+      147.0 seconds of 150. The preset assumes 0.9. THE TWO MUST BE CHANGED
+      TOGETHER OR NOT AT ALL, because only the pair reproduces what the hunter
+      actually delivers.
+    why_it_is_per_anchor: >-
+      The hunter supplying the debuff is at the same gear anchor as everyone
+      receiving it, so its agility moves with the anchor. tools/run_sims.py picks
+      the figure from the anchor it is running.
   hunters_mark: {from: either hunter}
   improved_seal_of_the_crusader:
     from: retribution_paladin
