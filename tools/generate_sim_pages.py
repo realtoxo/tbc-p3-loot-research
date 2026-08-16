@@ -309,13 +309,24 @@ Phase 3 spans two boss armor tiers, and armor is subtracted before any physical
 damage lands, so a physical spec measures materially lower against the higher
 one while a pure caster does not move at all. The table above is the LOWER tier,
 because ten of the fourteen bosses sit in it. This is the same specs against
-each tier at best in slot.
+each tier at best in slot, and it sorts too.
 
-{rows_table(["Spec"] + [f"Armor {a}" for a in tiers],
+The last column is what the higher-armor bosses cost each spec. Sort by it and
+the roster splits cleanly in two: every physical spec pays, and the five pure
+casters pay nothing at all, which is the correct behaviour and a standing check
+that the armor model is doing what it claims.
+
+::: {{.sortable}}
+{rows_table(["Spec"] + [f"Armor {a}" for a in tiers]
+            + ["Cost of the harder boss"],
             [[SPEC_LABEL.get(s, s)]
              + [(f"{by_key[(s, 'bis', a)]['dps']:.1f}"
                  if (s, 'bis', a) in by_key else "-") for a in tiers]
+             + [(f"{by_key[(s, 'bis', max(tiers))]['dps'] - by_key[(s, 'bis', default_armor)]['dps']:+.1f}"
+                if (s, 'bis', max(tiers)) in by_key
+                and (s, 'bis', default_armor) in by_key else "-")]
              for s in specs])}
+:::
 
 Which boss sits in which tier is [`boss-armor.yaml`](../data/facts/boss-armor.yaml),
 one row per boss with its own source and confidence.
