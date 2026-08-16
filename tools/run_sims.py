@@ -36,6 +36,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import json
 import math
@@ -455,7 +456,23 @@ NOT_SIMULATABLE = {
 # correct result. This catches collapse, not weakness.
 IMPLAUSIBLE = 300.0
 
-def encounter_for(seconds: int) -> dict:
+ARMOR_INDEX = 31
+DEFAULT_ARMOR = 6193
+
+# proto/common.proto stat indices for the three inert fields, transcribed.
+AP_INDEX, BLOCK_VALUE_INDEX, HEALTH_INDEX = 17, 27, 33
+
+
+def target_stats(armor: int) -> list:
+    stats = [0] * 48
+    stats[ARMOR_INDEX] = armor
+    stats[AP_INDEX] = 320
+    stats[BLOCK_VALUE_INDEX] = 54
+    stats[HEALTH_INDEX] = 6070400
+    return stats
+
+
+def encounter_for(seconds: int, armor: int = DEFAULT_ARMOR) -> dict:
     """The fixed encounter, at a stated length.
 
     THE LENGTH IS A PARAMETER AND IS STILL NOT A KNOB TO TURN CASUALLY. Two
@@ -467,16 +484,66 @@ def encounter_for(seconds: int) -> dict:
     why the length has to travel with every figure rather than sit in a comment.
     `--out` records it in the meta block for that reason.
     """
-    return dict(ENCOUNTER, duration=seconds)
+    # A DEEP COPY, NOT A SHALLOW ONE. `dict(ENCOUNTER, ...)` shares the SAME
+    # targets list and the SAME stats array with every other request, so any
+    # caller varying the encounter silently mutates every run that follows. It
+    # has already produced false measurements for two independent reviewers.
+    out = copy.deepcopy(ENCOUNTER)
+    out["duration"] = seconds
+    out["targets"][0]["stats"] = target_stats(armor)
+    return out
 
 
+# THE BOSS HAS ARMOR, AND IT IS PER BOSS. Until 15 August 2026 this array was
+# forty-eight zeros, so every simulation this project ever ran was against a boss
+# with NO ARMOR. Index 31 is stats.Armor, per the Stat iota in
+# sim/core/stats/stats.go, counted rather than assumed and corroborated against a
+# shipped build file that carries 7685 at that position.
+#
+# WHAT IT COST. Physical specs were inflated 17 to 23 percent and casters not at
+# all, so no comparison between the two survived. Worse, mitigation is
+# max(armor - debuffs - armorPen, 0), so at zero armor EVERY armor debuff this
+# raid supplies was worth exactly nothing and so was every point of armor
+# penetration on every item. Sunder Armor, Faerie Fire and Curse of Recklessness
+# together are worth 304 DPS on a corrected encounter and 0.0 on the old one.
+#
+# THE VALUE IS NOT A CONSTANT AND MUST NOT BE COPIED. data/facts/boss-armor.yaml
+# holds one row per Phase 3 boss with a source each. Phase 3 spans two tiers,
+# 7684 and 6193, and a single global figure misprices ten of the fourteen bosses
+# by 120 to 315 DPS per physical spec. `--armor` selects which, `--out` stamps it
+# into the meta block, and the DEFAULT IS THE LOWER TIER because ten of fourteen
+# Phase 3 bosses sit in it.
+#
+# The other three fields come from the simulator's own default target at
+# sim/encounters/register_all.go. Only armor moves DPS; attack power, health and
+# block value all measured 0.0 against these profiles, which take no damage.
+# Sending the preset's target whole is cheaper to defend than sending one field
+# of it.
 ENCOUNTER = {
     "duration": ENCOUNTER_SECONDS,
     "durationVariation": 0,
+    # THE EXECUTE PHASE NEVER HAPPENED WITHOUT THESE. proto/common.proto declares
+    # five executeProportion fields and sim/core/sim.go computes the phase from
+    # them; all zero means the fight never enters execute range and Execute is
+    # cast ZERO times. Worth 133.1 to the Fury Warrior and 43.6 to Arms, and
+    # exactly 0.0 to all eleven other specs. The values are the simulator's own
+    # preset, so they are citable rather than invented.
+    #
+    # RETRIBUTION MEASURES 0.0 HERE AND SHOULD NOT. Hammer of Wrath is an execute
+    # ability the simulator implements at sim/paladin/hammer_of_wrath.go, and the
+    # shipped Retribution action priority list does not contain it. So this spec
+    # is under-credited for a reason that is in the rotation rather than here,
+    # and that is recorded so nobody reads its flat result as a fact about the
+    # spec.
+    "executeProportion20": 0.2,
+    "executeProportion25": 0.25,
+    "executeProportion35": 0.35,
+    "executeProportion45": 0.45,
+    "executeProportion90": 0.9,
     "targets": [{
         "level": 73,
         "mobType": 0,
-        "stats": [0] * 48,
+        "stats": target_stats(DEFAULT_ARMOR),
         "minBaseDamage": 10000,
         "damageSpread": 0.3333,
         "swingSpeed": 2.0,
@@ -664,7 +731,8 @@ def consumables_for(spec: str, anchor: str) -> dict:
 
 def build_request(spec: str, gear: dict, talents: str, iterations: int,
                   seed: int, buffs: dict, party_of: dict, anchor: str,
-                  seconds: int = ENCOUNTER_SECONDS) -> dict:
+                  seconds: int = ENCOUNTER_SECONDS,
+                  armor: int = DEFAULT_ARMOR) -> dict:
     """One RaidSimRequest: one player, alone, against the fixed encounter.
 
     THE ANCHOR IS NOT DECORATION. It selects the consumables, because the stone
@@ -709,6 +777,15 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
         # not a promise, and a rejected request would read as a broken profile.
         "equipment": {"items": gear["items"]},
         "talentsString": talents,
+        # 100 MILLISECONDS, NOT ZERO. sim/core/character.go:109 reads
+        # max(ReactionTimeMs, 10), so an unset field is a 10 ms reaction rather
+        # than a human one, and 100 is the wowsims universal UI default for every
+        # spec rather than a hunter quirk. THE EFFECT IS BIDIRECTIONAL and is not
+        # a uniform realism tax: Survival loses 23.7 and Retribution GAINS 31.0,
+        # reproducibly across three seeds. A spec that gains DPS from a slower
+        # reaction has a timing-fragile rotation, which is worth knowing about
+        # Retribution in particular, whose list also omits Hammer of Wrath.
+        "reactionTimeMs": 100,
         "consumables": consumables_for(spec, anchor),
         "buffs": individual,
         "rotation": rotation,
@@ -729,7 +806,7 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
             "buffs": raid_buffs,
             "debuffs": debuffs,
         },
-        "encounter": encounter_for(seconds),
+        "encounter": encounter_for(seconds, armor),
         "simOptions": {"iterations": iterations, "randomSeed": str(seed)},
     }
 
@@ -871,7 +948,7 @@ def against(args, strings: dict, iterations: int) -> int:
     def measure(gear):
         dps, _spread, error = run(args.cli, build_request(
             spec, gear, talents, iterations, args.seed, buffs, party_of,
-            anchor, args.seconds))
+            anchor, args.seconds, args.armor))
         if error:
             raise SystemExit(f"run_sims.py: {error}")
         return dps
@@ -971,7 +1048,7 @@ def compare(args, strings: dict, iterations: int) -> int:
     anchor = args.profile.partition(".")[2].replace("-", "_")
     base, _spread, error = run(args.cli, build_request(
         spec, gear, talents, iterations, args.seed, buffs, party_of, anchor,
-        args.seconds))
+        args.seconds, args.armor))
     if error:
         print(f"error: the baseline failed: {error}", file=sys.stderr)
         return 1
@@ -986,7 +1063,7 @@ def compare(args, strings: dict, iterations: int) -> int:
             candidate = swap_into(candidate, slot, item_id)
         dps, _spread, error = run(args.cli, build_request(
             spec, candidate, talents, iterations, args.seed, buffs, party_of,
-            anchor, args.seconds))
+            anchor, args.seconds, args.armor))
         if error:
             print(f"  {label_of(ids):<52} FAILED  {error}", file=sys.stderr)
             continue
@@ -1017,6 +1094,11 @@ def main() -> int:
                     help="an item id to try, or one id per slot separated by "
                          "commas, matching --slot in order. Repeatable. 0 "
                          "empties a slot, which is what a two-hander needs")
+    ap.add_argument("--armor", type=int, default=DEFAULT_ARMOR,
+                    help=f"boss armor. Default {DEFAULT_ARMOR}, the lower of the "
+                         "two Phase 3 tiers, which ten of the fourteen bosses "
+                         "sit in. data/facts/boss-armor.yaml holds one row per "
+                         "boss with a source each. --out stamps the value used")
     ap.add_argument("--seconds", type=int, default=ENCOUNTER_SECONDS,
                     help=f"encounter length. Default {ENCOUNTER_SECONDS}, the "
                          "ruling of 14 August 2026. A figure produced at any "
@@ -1073,7 +1155,8 @@ def main() -> int:
             continue
         dps, spread, error = run(args.cli, build_request(
             spec, json.loads(path.read_text()), talents, iterations, args.seed,
-            buffs, party_of, anchor.replace("-", "_"), args.seconds))
+            buffs, party_of, anchor.replace("-", "_"), args.seconds,
+            args.armor))
         if error:
             failures.append((stem, error))
         else:
@@ -1109,6 +1192,11 @@ def main() -> int:
                 "iterations": iterations,
                 "seed": args.seed,
                 "encounter_seconds": args.seconds,
+                "boss_armor": args.armor,
+                "boss_armor_source": (
+                    "data/facts/boss-armor.yaml. Phase 3 spans two tiers, 7684 "
+                    "and 6193; a figure at one is NOT comparable with a figure "
+                    "at the other."),
                 "targets": 1,
                 "target_level": 73,
                 "interval": (
