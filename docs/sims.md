@@ -30,17 +30,6 @@ whose intervals do not quite overlap are not thereby separated. Ruled by the
 guild lead on 15 August 2026.
 :::
 
-## The three anchors
-
-Every figure on this page belongs to one of three sets, and reading a figure
-without knowing which set it came from is how the two warriors got called weak.
-
-| Anchor | What the set is                                                                                                                 |
-|--------|---------------------------------------------------------------------------------------------------------------------------------|
-| Entry  | The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing.                                                         |
-| Tier   | The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
-| BiS    | The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied.                                                |
-
 ::: {.note .veto}
 **No two BiS figures on this page can be true at the same time.** Each set is
 that spec's published best in slot, and a raid holds one of each item, so the
@@ -63,9 +52,31 @@ those two readings.
 
 ## What each spec measures
 
-Every figure below is a click into the set that produced it: seventeen slots
-with their enchants and gems, the consumables drunk, the buffs and debuffs
-applied, the talent string and the rotation.
+Each spec is simulated in three complete sets of gear, and reading a figure
+without knowing which set produced it is how both warriors came to be called
+weak. Every figure is a link into that exact set: seventeen slots with their
+enchants and gems, the consumables drunk, the buffs and debuffs applied, the
+talent string and the rotation.
+
+**Entry** is the spec's Phase 2 best-in-slot set, captured from the published
+list for that spec. It is what a raider walks into Phase 3 already wearing, so
+it is the floor every Phase 3 drop is measured against. Season 2 arena gear is
+in it and Season 3 is not, because Season 3 opens five days after the phase.
+
+**Tier** is the entry set with ONLY the five tier token slots reconsidered.
+Nothing else moves: the weapons, the trinkets and the other twelve slots are the
+same items the entry set wears. It exists to answer one narrow question, what
+the tier tokens alone are worth to a raider who has just walked in, and it
+answers nothing else.
+
+**BiS** is the full Phase 3 best-in-slot set, every slot, captured from that
+spec's published Phase 3 list and then adjusted by the guild lead's weapon and
+trinket routing where a published list gives a spec something this raid will not
+give it. It is the ceiling for one spec rather than a description of the raid.
+
+**Entry to Tier** is therefore what the tokens are worth, and **Tier to BiS** is
+what everything else is worth once the weapons and trinkets finally move. The
+two are wildly uneven per spec, which is why they are separate columns.
 
 **Every column sorts.** Click a heading to order by it, click again to reverse.
 The page loads in spec order on purpose: a table of thirteen numbers sorted by
@@ -73,35 +84,43 @@ damage reads as a league table, and these specs run rotations written by
 different authors. Sorting is yours to ask for rather than the default.
 
 ::: {.sortable}
-| Spec                 | Entry                                               | Tier                                                              | BiS                                               | Entry to Tier | Tier to BiS | Entry to BiS |
-|----------------------|-----------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------|---------------|-------------|--------------|
-| Affliction Warlock   | [1947.4 ± 0.96](sims/affliction-warlock-entry.md)   | [1978.9 ± 0.95](sims/affliction-warlock-tier-hands-and-head.md)   | [2227.6 ± 1.04](sims/affliction-warlock-bis.md)   | +31.5         | +248.7      | +280.2       |
-| Arcane Mage          | [2301.2 ± 1.00](sims/arcane-mage-entry.md)          | [2320.7 ± 1.01](sims/arcane-mage-tier-hands-and-head.md)          | [2534.4 ± 1.07](sims/arcane-mage-bis.md)          | +19.5         | +213.7      | +233.2       |
-| Arms Warrior         | [2149.8 ± 1.16](sims/arms-warrior-entry.md)         | [2239.8 ± 1.22](sims/arms-warrior-tier-hands-and-head.md)         | [2426.4 ± 1.36](sims/arms-warrior-bis.md)         | +90.0         | +186.6      | +276.6       |
-| Balance Druid        | [1671.3 ± 0.86](sims/balance-druid-entry.md)        | [1715.8 ± 0.83](sims/balance-druid-tier-hands-and-head.md)        | [1952.7 ± 0.94](sims/balance-druid-bis.md)        | +44.5         | +236.9      | +281.4       |
-| Beast Mastery Hunter | [3342.3 ± 0.95](sims/beast-mastery-hunter-entry.md) | [3523.1 ± 1.00](sims/beast-mastery-hunter-tier-hands-and-head.md) | [3580.7 ± 1.01](sims/beast-mastery-hunter-bis.md) | +180.8        | +57.6       | +238.4       |
-| Combat Rogue         | [2329.8 ± 0.98](sims/combat-rogue-entry.md)         | [2542.0 ± 1.06](sims/combat-rogue-tier-hands-and-head.md)         | [2918.2 ± 1.21](sims/combat-rogue-bis.md)         | +212.2        | +376.2      | +588.4       |
-| Destruction Warlock  | [2051.4 ± 1.13](sims/destruction-warlock-entry.md)  | [2142.8 ± 1.19](sims/destruction-warlock-tier-hands-and-head.md)  | [2493.8 ± 1.30](sims/destruction-warlock-bis.md)  | +91.4         | +351.0      | +442.4       |
-| Elemental Shaman     | [1718.8 ± 0.89](sims/elemental-shaman-entry.md)     | [1893.9 ± 0.94](sims/elemental-shaman-tier-hands-and-head.md)     | [2130.0 ± 0.97](sims/elemental-shaman-bis.md)     | +175.1        | +236.1      | +411.2       |
-| Enhancement Shaman   | [2216.4 ± 0.97](sims/enhancement-shaman-entry.md)   | [2215.3 ± 0.97](sims/enhancement-shaman-tier-hands-and-head.md)   | [2387.4 ± 1.02](sims/enhancement-shaman-bis.md)   | -1.1          | +172.1      | +171.0       |
-| Fury Warrior         | [2479.3 ± 1.16](sims/fury-warrior-entry.md)         | [2505.8 ± 1.21](sims/fury-warrior-tier-hands-and-head.md)         | [2862.1 ± 1.23](sims/fury-warrior-bis.md)         | +26.5         | +356.3      | +382.8       |
-| Retribution Paladin  | [2181.3 ± 1.33](sims/retribution-paladin-entry.md)  | [2180.3 ± 1.33](sims/retribution-paladin-tier-hands-and-head.md)  | [2374.4 ± 1.46](sims/retribution-paladin-bis.md)  | -1.0          | +194.1      | +193.1       |
-| Shadow Priest        | [1452.1 ± 0.26](sims/shadow-priest-entry.md)        | [1497.8 ± 0.29](sims/shadow-priest-tier-hands-and-head.md)        | [1577.9 ± 0.29](sims/shadow-priest-bis.md)        | +45.7         | +80.1       | +125.8       |
-| Survival Hunter      | [2797.4 ± 0.87](sims/survival-hunter-entry.md)      | [2961.0 ± 0.94](sims/survival-hunter-tier-hands-and-head.md)      | [3074.2 ± 0.95](sims/survival-hunter-bis.md)      | +163.6        | +113.2      | +276.8       |
+| Spec                 | Entry                                               | Entry to Tier | Tier                                                              | Tier to BiS | BiS                                               | Entry to BiS |
+|----------------------|-----------------------------------------------------|---------------|-------------------------------------------------------------------|-------------|---------------------------------------------------|--------------|
+| Affliction Warlock   | [1947.4 ± 0.96](sims/affliction-warlock-entry.md)   | +31.5         | [1978.9 ± 0.95](sims/affliction-warlock-tier-hands-and-head.md)   | +248.7      | [2227.6 ± 1.04](sims/affliction-warlock-bis.md)   | +280.2       |
+| Arcane Mage          | [2301.2 ± 1.00](sims/arcane-mage-entry.md)          | +19.5         | [2320.7 ± 1.01](sims/arcane-mage-tier-hands-and-head.md)          | +213.7      | [2534.4 ± 1.07](sims/arcane-mage-bis.md)          | +233.2       |
+| Arms Warrior         | [2149.8 ± 1.16](sims/arms-warrior-entry.md)         | +90.0         | [2239.8 ± 1.22](sims/arms-warrior-tier-hands-and-head.md)         | +186.6      | [2426.4 ± 1.36](sims/arms-warrior-bis.md)         | +276.6       |
+| Balance Druid        | [1671.3 ± 0.86](sims/balance-druid-entry.md)        | +44.5         | [1715.8 ± 0.83](sims/balance-druid-tier-hands-and-head.md)        | +236.9      | [1952.7 ± 0.94](sims/balance-druid-bis.md)        | +281.4       |
+| Beast Mastery Hunter | [3342.3 ± 0.95](sims/beast-mastery-hunter-entry.md) | +180.8        | [3523.1 ± 1.00](sims/beast-mastery-hunter-tier-hands-and-head.md) | +57.6       | [3580.7 ± 1.01](sims/beast-mastery-hunter-bis.md) | +238.4       |
+| Combat Rogue         | [2329.8 ± 0.98](sims/combat-rogue-entry.md)         | +212.2        | [2542.0 ± 1.06](sims/combat-rogue-tier-hands-and-head.md)         | +376.2      | [2918.2 ± 1.21](sims/combat-rogue-bis.md)         | +588.4       |
+| Destruction Warlock  | [2051.4 ± 1.13](sims/destruction-warlock-entry.md)  | +91.4         | [2142.8 ± 1.19](sims/destruction-warlock-tier-hands-and-head.md)  | +351.0      | [2493.8 ± 1.30](sims/destruction-warlock-bis.md)  | +442.4       |
+| Elemental Shaman     | [1718.8 ± 0.89](sims/elemental-shaman-entry.md)     | +175.1        | [1893.9 ± 0.94](sims/elemental-shaman-tier-hands-and-head.md)     | +236.1      | [2130.0 ± 0.97](sims/elemental-shaman-bis.md)     | +411.2       |
+| Enhancement Shaman   | [2216.4 ± 0.97](sims/enhancement-shaman-entry.md)   | -1.1          | [2215.3 ± 0.97](sims/enhancement-shaman-tier-hands-and-head.md)   | +172.1      | [2387.4 ± 1.02](sims/enhancement-shaman-bis.md)   | +171.0       |
+| Fury Warrior         | [2479.3 ± 1.16](sims/fury-warrior-entry.md)         | +26.5         | [2505.8 ± 1.21](sims/fury-warrior-tier-hands-and-head.md)         | +356.3      | [2862.1 ± 1.23](sims/fury-warrior-bis.md)         | +382.8       |
+| Retribution Paladin  | [2181.3 ± 1.33](sims/retribution-paladin-entry.md)  | -1.0          | [2180.3 ± 1.33](sims/retribution-paladin-tier-hands-and-head.md)  | +194.1      | [2374.4 ± 1.46](sims/retribution-paladin-bis.md)  | +193.1       |
+| Shadow Priest        | [1452.1 ± 0.26](sims/shadow-priest-entry.md)        | +45.7         | [1497.8 ± 0.29](sims/shadow-priest-tier-hands-and-head.md)        | +80.1       | [1577.9 ± 0.29](sims/shadow-priest-bis.md)        | +125.8       |
+| Survival Hunter      | [2797.4 ± 0.87](sims/survival-hunter-entry.md)      | +163.6        | [2961.0 ± 0.94](sims/survival-hunter-tier-hands-and-head.md)      | +113.2      | [3074.2 ± 0.95](sims/survival-hunter-bis.md)      | +276.8       |
 :::
 
 ## The same spec against a harder boss
 
-Phase 3 spans two boss armor tiers, and armor is subtracted before any physical
-damage lands, so a physical spec measures materially lower against the higher
-one while a pure caster does not move at all. The table above is the LOWER tier,
-because ten of the fourteen bosses sit in it. This is the same specs against
-each tier at best in slot, and it sorts too.
+**This section answers where a drop will actually be used.** Every figure above
+is against one boss armor value, and Phase 3 does not have one: it has two.
+Armor is subtracted before any physical damage lands, so the same spec in the
+same gear measures materially lower on a high-armor boss and a pure caster does
+not move at all. A council weighing a physical item for Black Temple is weighing
+it in a harder world than the same item for Mount Hyjal.
 
-The last column is what the higher-armor bosses cost each spec. Sort by it and
-the roster splits cleanly in two: every physical spec pays, and the five pure
-casters pay nothing at all, which is the correct behaviour and a standing check
-that the armor model is doing what it claims.
+**The gear does not change here. Only the boss does.** Every row below is that
+spec's BIS SET, exactly as the table above simulates it, re-run unchanged
+against each armor value Phase 3 contains. Nothing about the character is
+different between the three columns, so the whole spread is the boss.
+
+The table above is the 6193 column, because ten of the fourteen bosses sit in
+that tier. The last column is what the higher-armor bosses cost each spec, and
+this table sorts too: order by it and the roster splits cleanly in two. Every
+physical spec pays, and the five pure casters pay nothing at all, which is the
+correct behaviour and a standing check that the armor model does what it
+claims.
 
 ::: {.sortable}
 | Spec                 | Armor 7684 | Armor 6193 | Armor 0 | Cost of the harder boss |

@@ -210,25 +210,33 @@ def write_index(path: Path, specs: list[str], by_key: dict, meta: dict,
     # Tier to BiS is what the other twelve slots are worth once the weapons and
     # trinkets finally move. A single Entry to BiS figure hides which of the two
     # a spec's gain came from, and for several specs the split is very uneven.
-    header = ["Spec"] + [label for _a, label, _w in ANCHORS] \
-        + ["Entry to Tier", "Tier to BiS", "Entry to BiS"]
+    # EACH DELTA SITS BETWEEN THE TWO FIGURES IT MEASURES, not in a block at the
+    # end. A reader following one spec's row left to right then meets the set,
+    # what the next step of gearing is worth, the next set, and so on, instead of
+    # having to track back across three columns to find which pair a delta
+    # belongs to. The overall Entry to BiS total closes the row.
+    header = ["Spec", "Entry", "Entry to Tier", "Tier", "Tier to BiS", "BiS",
+              "Entry to BiS"]
     rows = []
     for spec in specs:
-        cells = [SPEC_LABEL.get(spec, spec)]
-        for anchor, label, _why in ANCHORS:
-            row = by_key.get((spec, anchor, default_armor))
-            if row is None:
-                cells.append("not simulated")
-                continue
-            cells.append(f"[{figure(row)}](sims/{slug(spec, anchor)}.md)")
         got = {a: by_key.get((spec, a, default_armor)) for a, _l, _w in ANCHORS}
         entry = got.get("entry")
         tier = got.get("tier-hands-and-head")
         bis = got.get("bis")
-        for a, b in ((entry, tier), (tier, bis), (entry, bis)):
-            cells.append(f"{b['dps'] - a['dps']:+.1f}"
-                         if a and b else "not comparable")
-        rows.append(cells)
+
+        def cell(anchor, row):
+            return (f"[{figure(row)}](sims/{slug(spec, anchor)}.md)"
+                    if row else "not simulated")
+
+        def delta(a, b):
+            return f"{b['dps'] - a['dps']:+.1f}" if a and b else "not comparable"
+
+        rows.append([
+            SPEC_LABEL.get(spec, spec),
+            cell("entry", entry), delta(entry, tier),
+            cell("tier-hands-and-head", tier), delta(tier, bis),
+            cell("bis", bis), delta(entry, bis),
+        ])
 
     body = f"""---
 title: Simulated Throughput
@@ -260,14 +268,6 @@ whose intervals do not quite overlap are not thereby separated. Ruled by the
 guild lead on 15 August 2026.
 :::
 
-## The three anchors
-
-Every figure on this page belongs to one of three sets, and reading a figure
-without knowing which set it came from is how the two warriors got called weak.
-
-{rows_table(["Anchor", "What the set is"],
-            [[label, why] for _a, label, why in ANCHORS])}
-
 ::: {{.note .veto}}
 **No two BiS figures on this page can be true at the same time.** Each set is
 that spec's published best in slot, and a raid holds one of each item, so the
@@ -290,9 +290,31 @@ those two readings.
 
 ## What each spec measures
 
-Every figure below is a click into the set that produced it: seventeen slots
-with their enchants and gems, the consumables drunk, the buffs and debuffs
-applied, the talent string and the rotation.
+Each spec is simulated in three complete sets of gear, and reading a figure
+without knowing which set produced it is how both warriors came to be called
+weak. Every figure is a link into that exact set: seventeen slots with their
+enchants and gems, the consumables drunk, the buffs and debuffs applied, the
+talent string and the rotation.
+
+**Entry** is the spec's Phase 2 best-in-slot set, captured from the published
+list for that spec. It is what a raider walks into Phase 3 already wearing, so
+it is the floor every Phase 3 drop is measured against. Season 2 arena gear is
+in it and Season 3 is not, because Season 3 opens five days after the phase.
+
+**Tier** is the entry set with ONLY the five tier token slots reconsidered.
+Nothing else moves: the weapons, the trinkets and the other twelve slots are the
+same items the entry set wears. It exists to answer one narrow question, what
+the tier tokens alone are worth to a raider who has just walked in, and it
+answers nothing else.
+
+**BiS** is the full Phase 3 best-in-slot set, every slot, captured from that
+spec's published Phase 3 list and then adjusted by the guild lead's weapon and
+trinket routing where a published list gives a spec something this raid will not
+give it. It is the ceiling for one spec rather than a description of the raid.
+
+**Entry to Tier** is therefore what the tokens are worth, and **Tier to BiS** is
+what everything else is worth once the weapons and trinkets finally move. The
+two are wildly uneven per spec, which is why they are separate columns.
 
 **Every column sorts.** Click a heading to order by it, click again to reverse.
 The page loads in spec order on purpose: a table of thirteen numbers sorted by
@@ -305,16 +327,24 @@ different authors. Sorting is yours to ask for rather than the default.
 
 ## The same spec against a harder boss
 
-Phase 3 spans two boss armor tiers, and armor is subtracted before any physical
-damage lands, so a physical spec measures materially lower against the higher
-one while a pure caster does not move at all. The table above is the LOWER tier,
-because ten of the fourteen bosses sit in it. This is the same specs against
-each tier at best in slot, and it sorts too.
+**This section answers where a drop will actually be used.** Every figure above
+is against one boss armor value, and Phase 3 does not have one: it has two.
+Armor is subtracted before any physical damage lands, so the same spec in the
+same gear measures materially lower on a high-armor boss and a pure caster does
+not move at all. A council weighing a physical item for Black Temple is weighing
+it in a harder world than the same item for Mount Hyjal.
 
-The last column is what the higher-armor bosses cost each spec. Sort by it and
-the roster splits cleanly in two: every physical spec pays, and the five pure
-casters pay nothing at all, which is the correct behaviour and a standing check
-that the armor model is doing what it claims.
+**The gear does not change here. Only the boss does.** Every row below is that
+spec's BIS SET, exactly as the table above simulates it, re-run unchanged
+against each armor value Phase 3 contains. Nothing about the character is
+different between the three columns, so the whole spread is the boss.
+
+The table above is the 6193 column, because ten of the fourteen bosses sit in
+that tier. The last column is what the higher-armor bosses cost each spec, and
+this table sorts too: order by it and the roster splits cleanly in two. Every
+physical spec pays, and the five pure casters pay nothing at all, which is the
+correct behaviour and a standing check that the armor model does what it
+claims.
 
 ::: {{.sortable}}
 {rows_table(["Spec"] + [f"Armor {a}" for a in tiers]
