@@ -724,7 +724,7 @@ open_questions:
       records all three at the same time as the words. Produced by tools/fetch_transcripts.py.
   attribution_rule:
     blocks: Nothing today, but it will matter at the first capture.
-    detail: A creator's own spec is the one they will overrate, and it is also the spec whose
-      claims will be contested hardest at the council table. The framework already requires
+    detail: A creator's own spec is the one whose claims will be contested hardest at the
+      council table, and it is the one the second-source rule already covers. The framework already requires
       a second source for a claim that flatters the author's own spec. Whether that rule should
       extend to a claim that flatters the author's own GUILD or faction is not decided.

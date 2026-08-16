@@ -325,10 +325,10 @@ most reliable of the two. And class-specific guides, which carry
 per-item reasoning no table can hold</td>
 <td>Explains mechanisms; never moves a number on its own. Class-specific
 coverage is spotty in both availability and quality: some specs have
-nothing current, and an author with a main is rarely neutral about it.
-Record the author and the date with every claim taken from one, and
-treat a claim that flatters the author’s own spec as needing a second
-source</td>
+nothing current, and a guide written by an author who plays the spec it
+covers is not an independent source for it. Record the author and the
+date with every claim taken from one, and treat a claim that flatters
+the author’s own spec as needing a second source</td>
 </tr>
 <tr>
 <td><strong>Our own simulator runs</strong></td>
@@ -351,14 +351,16 @@ this raid rather than a generic one.</p>
 <p>The inputs supply weights. They do not supply a baseline to derive
 them at, so we add one.</p>
 <p><strong>A shared gear baseline, for our own simulator runs.</strong>
-These two variants are the gear configurations our own runs are executed
-at. They are the specification a simulator profile is built from, and
-they do not apply to the imported inputs, which arrive with whatever
-baseline their author chose. Weights are derived at Phase 3 entry rather
-than at full Tier 6, because rulings happen while raiders wear Phase 2
-gear and weights derived at best-in-slot price a margin nobody is
-standing on. Every spec is run at both variants, and any item whose
-priority moves between them is flagged rank-unstable.</p>
+These three variants are the gear configurations our own runs are
+executed at. They are the specification a simulator profile is built
+from, and they do not apply to the imported inputs, which arrive with
+whatever baseline their author chose. Weights are derived at Phase 3
+entry rather than at full Tier 6, because rulings happen while raiders
+wear Phase 2 gear and weights derived at best-in-slot price a margin
+nobody is standing on. Thirteen of the twenty-one rostered specs are run
+at all three, and which are absent and why is on <a
+href="sims.html">Simulated Throughput</a>. Any item whose priority moves
+between anchors is flagged rank-unstable.</p>
 <div class="table-wrap">
 <table>
 <colgroup>
@@ -384,11 +386,18 @@ rulings are made</td>
 <td><strong>Tier</strong></td>
 <td>A set a player could hold four to six weeks in: the Tier 6 pieces
 reachable by then, worn beside the early Hyjal and Black Temple
-off-pieces a raid has actually collected. Two figures, because only the
-hands token is reliably reachable and the head token waits on
-Archimonde</td>
+off-pieces a raid has actually collected.</td>
 <td>Mid-tier itemization shifts. Tier 6 changes a spec’s cap position,
 and a weight derived only at entry is blind to that</td>
+</tr>
+<tr>
+<td><strong>BiS</strong></td>
+<td>The full Phase 3 best-in-slot set, every slot, with the guild lead’s
+weapon and trinket routing applied where a published list gives a spec
+something this raid will not</td>
+<td>What a spec is worth fully geared, which is what the Tier variant
+cannot show because its weapons and trinkets are still the entry
+ones</td>
 </tr>
 </tbody>
 </table>
