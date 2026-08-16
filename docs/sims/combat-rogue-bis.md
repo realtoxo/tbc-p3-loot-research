@@ -63,13 +63,14 @@ Consumables are assumed in every run, per the framework, and they are not
 counted in the hit cap states, because those two settings answer different
 questions.
 
-| Field       | Consumable                    | Item id |
-|-------------|-------------------------------|---------|
-| `flaskId`   | `Flask of Relentless Assault` | 22854   |
-| `foodId`    | `Spicy Hot Talbuk`            | 33872   |
-| `mhImbueId` | `Adamantite Sharpening Stone` | 29453   |
-| `ohImbueId` | `Deadly Poison`               | 27186   |
-| `potId`     | `Haste Potion`                | 22838   |
+| Field        | Consumable                    | Item id |
+|--------------|-------------------------------|---------|
+| `conjuredId` | `7676`                        | 7676    |
+| `flaskId`    | `Flask of Relentless Assault` | 22854   |
+| `foodId`     | `Spicy Hot Talbuk`            | 33872   |
+| `mhImbueId`  | `Adamantite Sharpening Stone` | 26891   |
+| `ohImbueId`  | `Deadly Poison`               | 27186   |
+| `potId`      | `Haste Potion`                | 22838   |
 
 ## Buffs and debuffs
 

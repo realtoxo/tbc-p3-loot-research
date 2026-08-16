@@ -159,8 +159,9 @@ def meta_shortfall(placed: dict, requirement) -> dict:
             if n - placed.get(c, 0) > 0}
 
 
-def gear_json(block: dict, enchants: dict, gem_prefs: dict, meta_id, items_csv,
-              by_name_enchant: dict, by_name_gem: dict, hit_gems: int,
+def gear_json(block: dict, enchants: dict, enchant_ids: dict, gem_prefs: dict, meta_id, items_csv,
+              by_name_enchant: dict, by_effect_enchant: dict,
+              by_name_gem: dict, hit_gems: int,
               hit_gem_id, subbed: list, meta_name: str, gem_colors: dict,
               notes: list) -> dict:
     """One anchor as a wowsims equipment spec.
@@ -261,9 +262,29 @@ def gear_json(block: dict, enchants: dict, gem_prefs: dict, meta_id, items_csv,
         entry: dict = {"id": item_id}
         name = enchants.get(slot)
         if name and name != "none":
-            found = by_name_enchant.get(name)
-            if found:
-                entry["enchant"] = found["effectId"]
+            # AN ENCHANT NAME IS NOT AN ID, AND THE DATABASE PROVES IT. Two rows
+            # share effectId 2523 and one of them is named "Stabilized Eternium
+            # Scope" while carrying no stats and no item; the LIVE scope is 2724
+            # and the database misspells it "Stabilitzed", so a name lookup can
+            # never reach it. Both hunters therefore wore a scope worth exactly
+            # 0.0 DPS, proven by removing it entirely and measuring no change.
+            #
+            # So a spec may pin the effectId beside the name under
+            # `enchant_ids`, and the name is then checked against the row that
+            # id resolves to. The same rule AGENTS.md already states for items:
+            # only the id settles which one is meant.
+            pinned = (enchant_ids or {}).get(slot)
+            if pinned is not None:
+                row = by_effect_enchant.get(pinned)
+                if row is None:
+                    raise SystemExit(
+                        f"export_sim_profiles.py: {slot} pins enchant effect "
+                        f"{pinned}, which is not in the simulator database.")
+                entry["enchant"] = pinned
+            else:
+                found = by_name_enchant.get(name)
+                if found:
+                    entry["enchant"] = found["effectId"]
         gems = []
         for j, color in enumerate(colors):
             gem = plan.get((i, j))
@@ -315,6 +336,8 @@ def main() -> int:
     items_csv = {int(r["item_id"]): r for r in csv.DictReader(ITEMS.open())}
     db = json.loads(DB.read_text())
     by_name_enchant = {e["name"]: e for e in db["enchants"]}
+    # BY EFFECT ID AS WELL, because a name is ambiguous and an id is not.
+    by_effect_enchant = {e["effectId"]: e for e in db["enchants"]}
     by_name_gem = {g["name"]: g for g in db["gems"]}
     # WHICH COLOURS A GEM COUNTS AS, and a hybrid counts as BOTH. That is the
     # rule meta activation runs on, and missing it made this check report 42
@@ -399,8 +422,10 @@ def main() -> int:
                     f"{state.get('gap_rating')} rating gap")
             subbed: list[str] = []
             notes: list[str] = []
-            spec_json = gear_json(block, enchants, gem_prefs, meta_id,
-                                  items_csv, by_name_enchant, by_name_gem,
+            spec_json = gear_json(block, enchants,
+                                  conf.get("enchant_ids") or {}, gem_prefs,
+                                  meta_id, items_csv, by_name_enchant,
+                                  by_effect_enchant, by_name_gem,
                                   hit_gems, hit_gem_id, subbed, meta_name,
                                   gem_colors, notes)
             for line in notes:

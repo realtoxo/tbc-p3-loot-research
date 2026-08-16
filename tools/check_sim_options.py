@@ -72,6 +72,54 @@ DECLINED = {
 }
 
 
+# CONSUMABLE KEYS UNDER ARBITRATION AS OF 15 AUGUST 2026, and the reason each is
+# not yet sent or declined. THIS LIST MUST EMPTY. It exists because the guard was
+# widened to the consumables block on the same day five audits reported against
+# it, and the honest state of those keys is "measured, not yet ruled on" rather
+# than either "sent" or "declined".
+#
+# Each was measured by an audit and is waiting on an independent arbiter:
+#   scrollAgi / scrollStr        37.7 to 49.5 DPS on the warriors and hybrids
+#   superSapper / goblinSapper / explosiveId
+#                                inert without profession1 Engineering, which
+#                                this project has never sent and which is an
+#                                unrecorded roster fact
+#   conjuredId                   worth 15 to 25 to the warlocks, 3 to 6 to the
+#                                warriors, and EXACTLY 0.0 to the Shadow Priest,
+#                                which never runs out of mana
+#   drumsId                      raid-buffs.yaml already gives every party its
+#                                drums through PartyBuffs; sending an id here
+#                                would count them twice
+#   battleElixirId / guardianElixirId
+#                                this project sends a FLASK, which occupies both
+#                                elixir slots, so the pair is mutually exclusive
+#                                with what consumable-ids.yaml already resolves
+PENDING_ARBITRATION = {
+    "scrollAgi", "scrollStr", "superSapper", "goblinSapper", "explosiveId",
+    "conjuredId", "drumsId", "battleElixirId", "guardianElixirId",
+}
+
+
+def shipped_consumables(path: Path) -> set[str]:
+    """The DefaultConsumables keys a preset sets.
+
+    THE GUARD USED TO STOP AT DefaultOptions, AND THAT IS WHERE THE NEXT FOUR
+    DEFECTS LIVED. On 15 August 2026 five audits found, in the consumables block
+    alone: a conjured mana item worth 94.3 DPS to the Beast Mastery Hunter, pet
+    food and pet scrolls worth 39.2, and character scrolls worth 37.7 to 49.5 on
+    the warriors and hybrids. Every one of them was a key the shipped preset sets
+    and this project never sent. The check written after the empty-classOptions
+    defect could not see any of them, one message over.
+    """
+    text = path.read_text()
+    match = re.search(
+        r"export const DefaultConsumables\s*=\s*\w+\.create\(\{(.*?)\n\}\);",
+        text, re.S)
+    if not match:
+        return set()
+    return set(re.findall(r"^\s*(\w+):", match.group(1), re.M))
+
+
 def shipped_options(path: Path) -> set[str]:
     """The classOptions keys a preset sets, read from its own presets.ts."""
     text = path.read_text()
@@ -116,9 +164,29 @@ def main() -> int:
                 "declining it. An unsent option takes the proto default, which "
                 "is a zero, and the run SUCCEEDS with a smaller number.")
 
+        # THE SAME RULE FOR THE CONSUMABLES BLOCK. Ours come from two places:
+        # consumable-ids.yaml resolves what the spec's GUIDE names, and
+        # run_sims.py::PRESET_CONSUMABLES carries what only the preset sets.
+        # Both count as sent.
+        sent = set(run_sims.consumables_for(spec, "bis"))
+        # `potions` and `conjuredItems` are the list halves of two-field pairs
+        # and have no preset key of their own; the id half is what is compared.
+        for key in sorted(shipped_consumables(path) - sent):
+            if (spec, key) in DECLINED or key in PENDING_ARBITRATION:
+                continue
+            failures.append(
+                f"{spec}: the shipped preset at ui/{ui}/presets.ts sets the "
+                f"consumable `{key}` and run_sims.py sends neither it nor a "
+                "reason for declining it. This is where four defects hid until "
+                "15 August 2026, the largest worth 94.3 DPS.")
+
     declined = len(DECLINED)
     print(f"sim options: {checked} preset(s) checked, {declined} option(s) "
-          "declined with a stated reason")
+          f"declined with a stated reason, {len(PENDING_ARBITRATION)} "
+          "consumable key(s) under arbitration")
+    if PENDING_ARBITRATION:
+        print("  under arbitration, and this list must empty: "
+              + ", ".join(sorted(PENDING_ARBITRATION)))
     for (spec, key), why in sorted(DECLINED.items()):
         print(f"  declined {spec}.{key}: {why.split('.')[0]}.")
     if failures:

@@ -359,7 +359,17 @@ def write_detail(directory: Path, spec: str, anchor: str, label: str,
         named[camel] = entry.get("name")
     consumable_rows = []
     for field, value in sorted(consumables.items()):
-        if field == "potions":
+        # THE LIST HALF OF A TWO-FIELD PAIR IS NOT ITS OWN CONSUMABLE.
+        # `potions` and `conjuredItems` exist only because the simulator
+        # registers a cooldown by iterating a list while the id beside it
+        # selects which entry to drink. Printing both would show one consumable
+        # twice, and a list is not hashable so it also crashed the name lookup.
+        if isinstance(value, list):
+            continue
+        if isinstance(value, bool):
+            # A scroll is a flag rather than an id, so it has no name to resolve.
+            consumable_rows.append([f"`{field}`", "`yes`" if value else "`no`",
+                                    ""])
             continue
         label = named.get(field) or consumable_name.get(value) or str(value)
         consumable_rows.append([f"`{field}`", f"`{label}`", str(value)])

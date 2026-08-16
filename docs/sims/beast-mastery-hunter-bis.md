@@ -53,9 +53,9 @@ the off hand.
 | Ring 2    | `Band of the Eternal Champion` |                                     |                                                                  |
 | Trinket 1 | `Dragonspine Trophy`           |                                     |                                                                  |
 | Trinket 2 | `Madness of the Betrayer`      |                                     |                                                                  |
-| Main hand | `Boundless Agony`              |                                     |                                                                  |
-| Off hand  | `Blade of Infamy`              |                                     |                                                                  |
-| Ranged    | `Bristleblitz Striker`         | `Stabilized Eternium Scope`         |                                                                  |
+| Main hand | `Boundless Agony`              | `Enchant Weapon - Greater Agility`  |                                                                  |
+| Off hand  | `Blade of Infamy`              | `Enchant Weapon - Greater Agility`  |                                                                  |
+| Ranged    | `Bristleblitz Striker`         | `Stabilitzed Eternium Scope`        |                                                                  |
 
 ## Consumables
 
@@ -63,13 +63,17 @@ Consumables are assumed in every run, per the framework, and they are not
 counted in the hit cap states, because those two settings answer different
 questions.
 
-| Field       | Consumable                    | Item id |
-|-------------|-------------------------------|---------|
-| `flaskId`   | `Flask of Relentless Assault` | 22854   |
-| `foodId`    | `Grilled Mudfish`             | 27664   |
-| `mhImbueId` | `Adamantite Sharpening Stone` | 29453   |
-| `ohImbueId` | `Adamantite Sharpening Stone` | 29453   |
-| `potId`     | `Haste Potion`                | 22838   |
+| Field          | Consumable                    | Item id |
+|----------------|-------------------------------|---------|
+| `conjuredId`   | `12662`                       | 12662   |
+| `flaskId`      | `Flask of Relentless Assault` | 22854   |
+| `foodId`       | `Grilled Mudfish`             | 27664   |
+| `mhImbueId`    | `Adamantite Sharpening Stone` | 29453   |
+| `ohImbueId`    | `Adamantite Sharpening Stone` | 29453   |
+| `petFoodId`    | `33874`                       | 33874   |
+| `petScrollAgi` | `yes`                         |         |
+| `petScrollStr` | `yes`                         |         |
+| `potId`        | `Haste Potion`                | 22838   |
 
 ## Buffs and debuffs
 

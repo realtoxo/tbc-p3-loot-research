@@ -74,12 +74,14 @@ Consumables are assumed in every run, per the framework, and they are not
 counted in the hit cap states, because those two settings answer different
 questions.
 
-| Field       | Consumable             | Item id |
-|-------------|------------------------|---------|
-| `flaskId`   | `Flask of Pure Death`  | 22866   |
-| `foodId`    | `Poached Bluefish`     | 27665   |
-| `mhImbueId` | `Brilliant Wizard Oil` | 25122   |
-| `potId`     | `Destruction Potion`   | 22839   |
+| Field          | Consumable             | Item id |
+|----------------|------------------------|---------|
+| `flaskId`      | `Flask of Pure Death`  | 22866   |
+| `foodId`       | `Poached Bluefish`     | 27665   |
+| `mhImbueId`    | `Brilliant Wizard Oil` | 25122   |
+| `petScrollAgi` | `yes`                  |         |
+| `petScrollStr` | `yes`                  |         |
+| `potId`        | `Destruction Potion`   | 22839   |
 
 ## Buffs and debuffs
 

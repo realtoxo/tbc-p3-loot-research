@@ -325,6 +325,75 @@ CLASS_OPTIONS = {
     "shadow_priest": {"preShadowform": True},
 }
 
+# CONSUMABLES THE SHIPPED PRESET SETS AND NO GUIDE PROSE NAMES.
+#
+# data/facts/consumable-ids.yaml resolves the flask, food, potion and weapon
+# imbue each spec's GUIDE names. It cannot resolve a field no guide writes about,
+# and the shipped presets set several: a conjured mana item, pet food, pet
+# scrolls and character scrolls. Those are the simulator's own defaults, cited
+# the same way the action priority lists and the class options are.
+#
+# THE CONJURED FIELD IS THE potId TRAP AGAIN, ONE FIELD OVER. sim/core/
+# consumes.go:285 registers the cooldown by iterating `conjuredItems`, and :339
+# gates activation on `conjuredId` matching an entry of that list. Sending
+# either one alone measures EXACTLY +0.0, which was confirmed by control run
+# before the fix was accepted. Sending both is worth 94.3 to the Beast Mastery
+# Hunter, 86.7 to Survival and 12.5 to the Combat Rogue, and it collapses the
+# hunters' mana problem: seconds out of mana falls from 34.05 to 6.27 and Aspect
+# of the Viper uptime from 54.6 seconds to 28.3 of a 180 second fight.
+#
+# `data/facts/consumable-ids.yaml::declined.other` declined these for the
+# hunters on the ground that "No single ConsumesSpec field answers it". Two
+# fields answer it. That entry is corrected there rather than here.
+#
+# NOT SENT FOR THE CASTERS. The Shadow Priest never runs out of mana in this
+# encounter, so a rune measures +0.0 for it; the warlocks do gain and are added
+# when their own audit is applied.
+PRESET_CONSUMABLES = {
+    # ui/hunter/dps/presets.ts :: DefaultConsumables
+    "beast_mastery_hunter": {"conjuredId": 12662, "conjuredItems": [12662],
+                             "petFoodId": 33874, "petScrollAgi": True,
+                             "petScrollStr": True},
+    "survival_hunter": {"conjuredId": 12662, "conjuredItems": [12662],
+                        "petFoodId": 33874, "petScrollAgi": True,
+                        "petScrollStr": True},
+    # ui/rogue/dps/presets.ts :: DefaultConsumables. Thistle Tea, the second
+    # action of swords.apl.json.
+    "combat_rogue": {"conjuredId": 7676, "conjuredItems": [7676]},
+    # FOUND BY THE GUARD ITSELF, not by any of the five audits, on the day it
+    # was widened to read DefaultConsumables. ui/warlock/dps/presets.ts sets pet
+    # scrolls for both warlocks. They are inert while a warlock sacrifices its
+    # pet, which is why no audit noticed, and they become live for Affliction the
+    # moment that sacrifice is corrected.
+    "affliction_warlock": {"petScrollAgi": True, "petScrollStr": True},
+    "destruction_warlock": {"petScrollAgi": True, "petScrollStr": True},
+}
+
+# THE ROGUE'S MAIN HAND IS EMPTY WITHOUT THIS, and the guide prose cannot say so.
+#
+# consumable-ids.yaml resolves the rogue's main-hand imbue to Adamantite
+# Sharpening Stone 29453 from its guide. sim/core/consumes.go:80-86 applies
+# MhImbueId ONLY where the party carries no Windfury Totem, and the rogue sits
+# in g1 with the Enhancement Shaman, so the stone is dropped and the slot is
+# bare for the whole fight. Setting the id to 0 measures exactly +0.0, which is
+# the control proving it.
+#
+# A POISON IN THAT FIELD IS NOT GATED. sim/rogue/poisons.go:182-191 reads
+# Consumables.MhImbueId directly, so Instant Poison VII lands and measures
+# +36.6. Deadly Poison in the main hand measures only +9.9, and Wound Poison
+# +21.7, so the pairing below is the best of the three by measurement as well as
+# by the sources: Icy Veins and Warcraft Tavern both put Instant Poison on the
+# main hand and Deadly on the off hand for a TBC combat rogue.
+#
+# THE OFF HAND IS ALREADY DEADLY POISON and is left alone; it is applied
+# unconditionally and is already live.
+IMBUE_OVERRIDE = {
+    ("combat_rogue", "mhImbueId"): (
+        26891, "Instant Poison VII. The guide's sharpening stone is silently "
+               "dropped by the Windfury Totem gate and measures +0.0; a poison "
+               "in the same field bypasses that gate and measures +36.6."),
+}
+
 # OPTIONS THAT SIT BESIDE classOptions RATHER THAN INSIDE IT. The proto puts
 # the shared shaman fields in ShamanOptions and the off hand in the spec
 # message, so EnhancementShaman.Options.imbue_oh has no home in CLASS_OPTIONS.
@@ -571,6 +640,15 @@ def consumables_for(spec: str, anchor: str) -> dict:
     # the Arms Warrior's entry anchor rose 3.1 percent when the list was sent.
     if "potId" in out:
         out["potions"] = [out["potId"]]
+    # THE PRESET'S OWN CONSUMABLES, added after the guide-sourced picks so a
+    # guide never loses to a preset. Nothing here overlaps a guide field today.
+    for field, value in PRESET_CONSUMABLES.get(spec, {}).items():
+        out.setdefault(field, value)
+    # AND THE ONE PLACE A GUIDE PICK IS OVERRIDDEN, loudly and with its reason
+    # carried in the table rather than here.
+    for (that_spec, field), (value, _why) in IMBUE_OVERRIDE.items():
+        if that_spec == spec:
+            out[field] = value
     # THE MAIN-HAND IMBUE IS DROPPED IN A WINDFURY PARTY, and the off-hand one
     # is not. sim/core/consumes.go applies MhImbueId only when the party carries
     # no Windfury Totem, because the totem overwrites the imbue in 2.4.3, while
