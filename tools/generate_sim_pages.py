@@ -492,10 +492,13 @@ def write_detail(directory: Path, spec: str, anchor: str, label: str,
         return [[f"`{k}`", f"`{v}`"] for k, v in sorted(block.items())]
 
     divergence = gear.get("_divergence") or []
-    routing = []
-    capture = BIS_CAPTURES / f"{spec.replace('_', '-')}.yaml"
-    if anchor == "bis" and capture.is_file():
-        routing = yaml.safe_load(capture.read_text()).get("routing_applied") or []
+    # THE ROUTING DIVERGENCES ARE NOT PRINTED HERE. Removed on the guild lead's
+    # instruction, 15 August 2026. Every slot the guild lead routed away from
+    # what a published page ranks is recorded in that spec's own capture, under
+    # `routing_applied` in data/facts/sim-profiles/bis-capture/, and the ruling
+    # behind each is in data/judgments/weapon-routing.yaml and
+    # trinket-routing.yaml. Nothing is lost by leaving it off the page; it is
+    # stated where a reader checking a decision would look for it.
 
     spec_label = SPEC_LABEL.get(spec, spec)
     body = f"""---
@@ -551,34 +554,6 @@ damage lands, so a physical spec moves between them and a pure caster does not.
         for line in divergence:
             body += f"- {line}\n"
         body += ":::\n"
-
-    if routing:
-        # COMPRESSED TO A TABLE ON PURPOSE. This was four lines of prose and a
-        # bullet per slot repeating the full ruling text, which pushed the set
-        # itself below the fold on a page whose whole job is showing the set.
-        # The reasoning is not lost, it is one link away in the judgment files,
-        # which is where a ruling belongs. What the page must still say is that
-        # these slots are NOT what the published list ranks, because that is the
-        # one thing a reader cannot see by looking at the table below.
-        moved = []
-        for line in routing:
-            slot, _, rest = line.partition(": ")
-            now, _, was = rest.partition(" replaces ")
-            was = was.split(". ")[0].strip() or "nothing"
-            moved.append([SLOT_LABEL.get(slot, slot), f"`{now.strip()}`",
-                          f"`{was}`"])
-        body += f"""
-## Three slots the published list does not rank this way
-
-A published list ranks an item for one spec in isolation and a raid holds one of
-each, so the guild lead routed the contested ones. The capture itself is never
-edited; the routing is applied when this profile is built, and it touches these
-slots and no others. The reasoning is in
-[`weapon-routing.yaml`](../../data/judgments/weapon-routing.yaml) and
-[`trinket-routing.yaml`](../../data/judgments/trinket-routing.yaml).
-
-{rows_table(["Slot", "This set wears", "Where the page ranks"], moved)}
-""".replace("Three slots", f"{len(moved)} slot" + ("s" if len(moved) != 1 else ""))
 
     body += f"""
 ## The set

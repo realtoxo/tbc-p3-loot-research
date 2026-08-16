@@ -40,20 +40,6 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2227.6 ± 1.04     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2258.0 ± 1.04     | Essence of Suffering                                       |
 
-## 2 slots the published list does not rank this way
-
-A published list ranks an item for one spec in isolation and a raid holds one of
-each, so the guild lead routed the contested ones. The capture itself is never
-edited; the routing is applied when this profile is built, and it touches these
-slots and no others. The reasoning is in
-[`weapon-routing.yaml`](../../data/judgments/weapon-routing.yaml) and
-[`trinket-routing.yaml`](../../data/judgments/trinket-routing.yaml).
-
-| Slot      | This set wears                          | Where the page ranks        |
-|-----------|-----------------------------------------|-----------------------------|
-| Main hand | `Zhar'doom, Greatstaff of the Devourer` | `Tempest of Chaos`          |
-| Off hand  | `EMPTY`                                 | `Chronicle of Dark Secrets` |
-
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
