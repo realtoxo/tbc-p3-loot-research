@@ -1478,10 +1478,12 @@ rating per 1% melee crit</a>
   // a table whose row order carries meaning, such as bosses in pull order, can
   // never be scrambled by a stray click.
   //
-  // THE PAGE NEVER LOADS PRE-SORTED. docs/sims.md is written in spec order
-  // because a table of thirteen damage figures sorted by damage reads as a
-  // league table, and those specs run rotations written by different authors.
-  // Sorting is something a reader asks for.
+  // SORTING HERE NEVER REORDERS THE PAGE ON LOAD. A table arrives in the order
+  // its Markdown source is written, and that order is the generator's business,
+  // not this script's. A container may declare `default-sort="N"` to say its
+  // rows are ALREADY sorted descending by column N; all that does is mark the
+  // heading, so the arrow matches what the reader sees and the first click
+  // reverses rather than appearing to do nothing.
   //
   // NUMBERS ARE READ OUT OF THE TEXT rather than carried in an attribute,
   // because pandoc pipe tables cannot hold per-cell attributes. A cell reads
@@ -1507,11 +1509,13 @@ rating per 1% melee crit</a>
         var body = table.tBodies[0];
         if (!head || !body) return;
         var rows = Array.prototype.slice.call(body.rows);
+        var box = table.closest ? table.closest('.sortable') : null;
+        var pre = box ? parseInt(box.getAttribute('data-default-sort'), 10) : NaN;
         Array.prototype.forEach.call(head.cells, function (th, i) {
           var isNum = numeric(rows, i);
           th.setAttribute('tabindex', '0');
           th.setAttribute('role', 'button');
-          th.setAttribute('aria-sort', 'none');
+          th.setAttribute('aria-sort', i === pre ? 'descending' : 'none');
           th.classList.add('sort-col');
           function sort() {
             // A third click does NOT restore the original order. Two states are

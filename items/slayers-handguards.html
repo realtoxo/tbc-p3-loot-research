@@ -55,7 +55,7 @@
      data/judgments. To change what it says, change the data. -->
 <section class="subject">
 <h4><span class="subject-icon"><img src="../icons/inv_gauntlets_65.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" /></span><span
+class="item-icon" aria-hidden="true" loading="lazy" /></span><span
 class="item-ref"><a href="https://www.wowhead.com/tbc/item=31026"
 class="item-link" target="_blank" aria-describedby="item-tip-31026-1"
 rel="noopener noreferrer">Slayer's Handguards</a><span
@@ -158,7 +158,7 @@ Delta
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=31026"
 class="item-link" target="_blank" aria-describedby="item-tip-31026-2"
 rel="noopener noreferrer"><img src="../icons/inv_gauntlets_65.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" />Slayer's
+class="item-icon" aria-hidden="true" loading="lazy" />Slayer's
 Handguards</a><span id="item-tip-31026-2" class="item-tip"
 role="tooltip"><span class="item-tip-name">Slayer's
 Handguards</span><span class="item-tip-meta">Tier 6 · hands ·
@@ -183,7 +183,7 @@ Temple</span>
 <span class="item-ref"><a href="../items/grips-of-damnation.html"
 class="item-link" target="_blank" aria-describedby="item-tip-32347-3"
 rel="noopener noreferrer"><img src="../icons/inv_gauntlets_65.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" />Grips of
+class="item-icon" aria-hidden="true" loading="lazy" />Grips of
 Damnation</a><span id="item-tip-32347-3" class="item-tip"
 role="tooltip"><span class="item-tip-name">Grips of
 Damnation</span><span class="item-tip-meta">Tier 6 · hands ·
@@ -198,7 +198,7 @@ Cavern</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30145"
 class="item-link" target="_blank" aria-describedby="item-tip-30145-4"
 rel="noopener noreferrer"><img src="../icons/inv_gauntlets_28.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" />Deathmantle
+class="item-icon" aria-hidden="true" loading="lazy" />Deathmantle
 Handguards</a><span id="item-tip-30145-4" class="item-tip"
 role="tooltip"><span class="item-tip-name">Deathmantle
 Handguards</span><span class="item-tip-meta">Tier 5 · hands ·
@@ -213,7 +213,7 @@ Tempest Keep</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=29947"
 class="item-link" target="_blank" aria-describedby="item-tip-29947-5"
 rel="noopener noreferrer"><img src="../icons/inv_gauntlets_28.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" />Gloves of the
+class="item-icon" aria-hidden="true" loading="lazy" />Gloves of the
 Searing Grip</a><span id="item-tip-29947-5" class="item-tip"
 role="tooltip"><span class="item-tip-name">Gloves of the Searing
 Grip</span><span class="item-tip-meta">Tier 5 · hands ·
@@ -416,10 +416,12 @@ rating counted as itself</a>
   // a table whose row order carries meaning, such as bosses in pull order, can
   // never be scrambled by a stray click.
   //
-  // THE PAGE NEVER LOADS PRE-SORTED. docs/sims.md is written in spec order
-  // because a table of thirteen damage figures sorted by damage reads as a
-  // league table, and those specs run rotations written by different authors.
-  // Sorting is something a reader asks for.
+  // SORTING HERE NEVER REORDERS THE PAGE ON LOAD. A table arrives in the order
+  // its Markdown source is written, and that order is the generator's business,
+  // not this script's. A container may declare `default-sort="N"` to say its
+  // rows are ALREADY sorted descending by column N; all that does is mark the
+  // heading, so the arrow matches what the reader sees and the first click
+  // reverses rather than appearing to do nothing.
   //
   // NUMBERS ARE READ OUT OF THE TEXT rather than carried in an attribute,
   // because pandoc pipe tables cannot hold per-cell attributes. A cell reads
@@ -445,11 +447,13 @@ rating counted as itself</a>
         var body = table.tBodies[0];
         if (!head || !body) return;
         var rows = Array.prototype.slice.call(body.rows);
+        var box = table.closest ? table.closest('.sortable') : null;
+        var pre = box ? parseInt(box.getAttribute('data-default-sort'), 10) : NaN;
         Array.prototype.forEach.call(head.cells, function (th, i) {
           var isNum = numeric(rows, i);
           th.setAttribute('tabindex', '0');
           th.setAttribute('role', 'button');
-          th.setAttribute('aria-sort', 'none');
+          th.setAttribute('aria-sort', i === pre ? 'descending' : 'none');
           th.classList.add('sort-col');
           function sort() {
             // A third click does NOT restore the original order. Two states are

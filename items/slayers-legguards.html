@@ -58,12 +58,13 @@
 src="../icons/inv_pants_leather_27.jpg" class="item-icon" loading="lazy"
 aria-hidden="true" /></span><span class="item-ref"><a
 href="https://www.wowhead.com/tbc/item=31029" class="item-link"
-rel="noopener noreferrer" aria-describedby="item-tip-31029-1"
-target="_blank">Slayer's Legguards</a><span id="item-tip-31029-1"
-class="item-tip" role="tooltip"><span class="item-tip-name">Slayer's
-Legguards</span><span class="item-tip-meta">Tier 6 · legs ·
-leather</span><span class="item-tip-stats">401 armor, 46 agility, 54
-stamina, 94 attack power, 45 crit rating (2.04%)</span><span
+rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-31029-1">Slayer's Legguards</a><span
+id="item-tip-31029-1" class="item-tip" role="tooltip"><span
+class="item-tip-name">Slayer's Legguards</span><span
+class="item-tip-meta">Tier 6 · legs · leather</span><span
+class="item-tip-stats">401 armor, 46 agility, 54 stamina, 94 attack
+power, 45 crit rating (2.04%)</span><span
 class="item-tip-sockets">Sockets blue · Socket bonus 4 attack power, 4
 ranged attack power</span><span class="item-tip-source">Tier set piece,
 Slayer's Armor. Bought with a token, never a raid
@@ -156,8 +157,8 @@ Delta
 <div class="delta-block">
 <div class="delta-head">
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=31029"
-class="item-link" rel="noopener noreferrer"
-aria-describedby="item-tip-31029-2" target="_blank"><img
+class="item-link" rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-31029-2"><img
 src="../icons/inv_pants_leather_27.jpg" class="item-icon" loading="lazy"
 aria-hidden="true" />Slayer's Legguards</a><span id="item-tip-31029-2"
 class="item-tip" role="tooltip"><span class="item-tip-name">Slayer's
@@ -180,8 +181,8 @@ style="text-align: left;">Stat</th>
 class="delta-view delta-route-drop">Over best pre-phase off-piece,
 Karazhan</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=28741"
-class="item-link" rel="noopener noreferrer"
-aria-describedby="item-tip-28741-3" target="_blank"><img
+class="item-link" rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-28741-3"><img
 src="../icons/inv_pants_leather_13.jpg" class="item-icon" loading="lazy"
 aria-hidden="true" />Skulker's Greaves</a><span id="item-tip-28741-3"
 class="item-tip" role="tooltip"><span class="item-tip-name">Skulker's
@@ -196,8 +197,8 @@ Karazhan</span></span></span>
 class="delta-view delta-route-drop">Over best Phase 3 off-piece, Hyjal
 Summit</span>
 <span class="item-ref"><a href="../items/shady-dealers-pantaloons.html"
-class="item-link" rel="noopener noreferrer"
-aria-describedby="item-tip-30898-4" target="_blank"><img
+class="item-link" rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-30898-4"><img
 src="../icons/inv_pants_leather_25.jpg" class="item-icon" loading="lazy"
 aria-hidden="true" />Shady Dealer's Pantaloons</a><span
 id="item-tip-30898-4" class="item-tip" role="tooltip"><span
@@ -212,8 +213,8 @@ Hyjal</span></span></span>
 class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
 Cavern</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30148"
-class="item-link" rel="noopener noreferrer"
-aria-describedby="item-tip-30148-5" target="_blank"><img
+class="item-link" rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-30148-5"><img
 src="../icons/inv_pants_plate_05.jpg" class="item-icon" loading="lazy"
 aria-hidden="true" />Deathmantle Legguards</a><span
 id="item-tip-30148-5" class="item-tip" role="tooltip"><span
@@ -407,10 +408,12 @@ penetration counted as itself</a>
   // a table whose row order carries meaning, such as bosses in pull order, can
   // never be scrambled by a stray click.
   //
-  // THE PAGE NEVER LOADS PRE-SORTED. docs/sims.md is written in spec order
-  // because a table of thirteen damage figures sorted by damage reads as a
-  // league table, and those specs run rotations written by different authors.
-  // Sorting is something a reader asks for.
+  // SORTING HERE NEVER REORDERS THE PAGE ON LOAD. A table arrives in the order
+  // its Markdown source is written, and that order is the generator's business,
+  // not this script's. A container may declare `default-sort="N"` to say its
+  // rows are ALREADY sorted descending by column N; all that does is mark the
+  // heading, so the arrow matches what the reader sees and the first click
+  // reverses rather than appearing to do nothing.
   //
   // NUMBERS ARE READ OUT OF THE TEXT rather than carried in an attribute,
   // because pandoc pipe tables cannot hold per-cell attributes. A cell reads
@@ -436,11 +439,13 @@ penetration counted as itself</a>
         var body = table.tBodies[0];
         if (!head || !body) return;
         var rows = Array.prototype.slice.call(body.rows);
+        var box = table.closest ? table.closest('.sortable') : null;
+        var pre = box ? parseInt(box.getAttribute('data-default-sort'), 10) : NaN;
         Array.prototype.forEach.call(head.cells, function (th, i) {
           var isNum = numeric(rows, i);
           th.setAttribute('tabindex', '0');
           th.setAttribute('role', 'button');
-          th.setAttribute('aria-sort', 'none');
+          th.setAttribute('aria-sort', i === pre ? 'descending' : 'none');
           th.classList.add('sort-col');
           function sort() {
             // A third click does NOT restore the original order. Two states are

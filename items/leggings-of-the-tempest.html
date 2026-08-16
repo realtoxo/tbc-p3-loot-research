@@ -58,17 +58,17 @@
 src="../icons/inv_pants_cloth_28.jpg" class="item-icon"
 aria-hidden="true" loading="lazy" /></span><span class="item-ref"><a
 href="https://www.wowhead.com/tbc/item=31058" class="item-link"
-rel="noopener noreferrer" aria-describedby="item-tip-31058-1"
-target="_blank">Leggings of the Tempest</a><span id="item-tip-31058-1"
-class="item-tip" role="tooltip"><span class="item-tip-name">Leggings of
-the Tempest</span><span class="item-tip-meta">Tier 6 · legs ·
-cloth</span><span class="item-tip-stats">214 armor, 36 stamina, 47
-intellect, 29 spirit, 62 spell damage, 62 healing power, 20 spell hit
-rating (1.58%), 29 spell crit rating (1.31%)</span><span
-class="item-tip-sockets">Sockets blue · Socket bonus 2 healing power, 2
-spell damage</span><span class="item-tip-source">Tier set piece, Tempest
-Regalia. Bought with a token, never a raid
-drop</span></span></span></h4>
+rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-31058-1">Leggings of the Tempest</a><span
+id="item-tip-31058-1" class="item-tip" role="tooltip"><span
+class="item-tip-name">Leggings of the Tempest</span><span
+class="item-tip-meta">Tier 6 · legs · cloth</span><span
+class="item-tip-stats">214 armor, 36 stamina, 47 intellect, 29 spirit,
+62 spell damage, 62 healing power, 20 spell hit rating (1.58%), 29 spell
+crit rating (1.31%)</span><span class="item-tip-sockets">Sockets blue ·
+Socket bonus 2 healing power, 2 spell damage</span><span
+class="item-tip-source">Tier set piece, Tempest Regalia. Bought with a
+token, never a raid drop</span></span></span></h4>
 <div class="subject-lines">
 <div class="subject-meta">
 Tier 6 · legs · cloth
@@ -146,8 +146,8 @@ Delta
 <div class="delta-block">
 <div class="delta-head">
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=31058"
-class="item-link" rel="noopener noreferrer"
-aria-describedby="item-tip-31058-2" target="_blank"><img
+class="item-link" rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-31058-2"><img
 src="../icons/inv_pants_cloth_28.jpg" class="item-icon"
 aria-hidden="true" loading="lazy" />Leggings of the Tempest</a><span
 id="item-tip-31058-2" class="item-tip" role="tooltip"><span
@@ -173,10 +173,11 @@ class="delta-view delta-route-drop">Over best Phase 3 off-piece, Hyjal
 Summit</span>
 <span class="item-ref"><a
 href="../items/leggings-of-channeled-elements.html" class="item-link"
-rel="noopener noreferrer" aria-describedby="item-tip-30916-3"
-target="_blank"><img src="../icons/inv_pants_cloth_27.jpg"
-class="item-icon" aria-hidden="true" loading="lazy" />Leggings of
-Channeled Elements</a><span id="item-tip-30916-3" class="item-tip"
+rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-30916-3"><img
+src="../icons/inv_pants_cloth_27.jpg" class="item-icon"
+aria-hidden="true" loading="lazy" />Leggings of Channeled
+Elements</a><span id="item-tip-30916-3" class="item-tip"
 role="tooltip"><span class="item-tip-name">Leggings of Channeled
 Elements</span><span class="item-tip-meta">Tier 6 · legs ·
 cloth</span><span class="item-tip-stats">207 armor, 25 stamina, 28
@@ -190,8 +191,8 @@ from Kaz'rogal, Mount Hyjal</span></span></span>
 class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
 Cavern</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30207"
-class="item-link" rel="noopener noreferrer"
-aria-describedby="item-tip-30207-4" target="_blank"><img
+class="item-link" rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-30207-4"><img
 src="../icons/inv_pants_cloth_05.jpg" class="item-icon"
 aria-hidden="true" loading="lazy" />Leggings of Tirisfal</a><span
 id="item-tip-30207-4" class="item-tip" role="tooltip"><span
@@ -208,8 +209,8 @@ token, never a raid drop</span></span></span>
 class="delta-view delta-route-drop">Over best pre-phase off-piece,
 Tempest Keep</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=29972"
-class="item-link" rel="noopener noreferrer"
-aria-describedby="item-tip-29972-5" target="_blank"><img
+class="item-link" rel="noopener noreferrer" target="_blank"
+aria-describedby="item-tip-29972-5"><img
 src="../icons/inv_pants_cloth_05.jpg" class="item-icon"
 aria-hidden="true" loading="lazy" />Trousers of the Astromancer</a><span
 id="item-tip-29972-5" class="item-tip" role="tooltip"><span
@@ -401,10 +402,12 @@ rating per 1% spell crit</a>
   // a table whose row order carries meaning, such as bosses in pull order, can
   // never be scrambled by a stray click.
   //
-  // THE PAGE NEVER LOADS PRE-SORTED. docs/sims.md is written in spec order
-  // because a table of thirteen damage figures sorted by damage reads as a
-  // league table, and those specs run rotations written by different authors.
-  // Sorting is something a reader asks for.
+  // SORTING HERE NEVER REORDERS THE PAGE ON LOAD. A table arrives in the order
+  // its Markdown source is written, and that order is the generator's business,
+  // not this script's. A container may declare `default-sort="N"` to say its
+  // rows are ALREADY sorted descending by column N; all that does is mark the
+  // heading, so the arrow matches what the reader sees and the first click
+  // reverses rather than appearing to do nothing.
   //
   // NUMBERS ARE READ OUT OF THE TEXT rather than carried in an attribute,
   // because pandoc pipe tables cannot hold per-cell attributes. A cell reads
@@ -430,11 +433,13 @@ rating per 1% spell crit</a>
         var body = table.tBodies[0];
         if (!head || !body) return;
         var rows = Array.prototype.slice.call(body.rows);
+        var box = table.closest ? table.closest('.sortable') : null;
+        var pre = box ? parseInt(box.getAttribute('data-default-sort'), 10) : NaN;
         Array.prototype.forEach.call(head.cells, function (th, i) {
           var isNum = numeric(rows, i);
           th.setAttribute('tabindex', '0');
           th.setAttribute('role', 'button');
-          th.setAttribute('aria-sort', 'none');
+          th.setAttribute('aria-sort', i === pre ? 'descending' : 'none');
           th.classList.add('sort-col');
           function sort() {
             // A third click does NOT restore the original order. Two states are

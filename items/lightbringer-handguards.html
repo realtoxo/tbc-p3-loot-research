@@ -55,9 +55,9 @@
      data/judgments. To change what it says, change the data. -->
 <section class="subject">
 <h4><span class="subject-icon"><img src="../icons/inv_gauntlets_60.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" /></span><span
+class="item-icon" aria-hidden="true" loading="lazy" /></span><span
 class="item-ref"><a href="https://www.wowhead.com/tbc/item=30985"
-class="item-link" target="_blank" aria-describedby="item-tip-30985-1"
+class="item-link" aria-describedby="item-tip-30985-1" target="_blank"
 rel="noopener noreferrer">Lightbringer Handguards</a><span
 id="item-tip-30985-1" class="item-tip" role="tooltip"><span
 class="item-tip-name">Lightbringer Handguards</span><span
@@ -200,9 +200,9 @@ Delta
 <div class="delta-block">
 <div class="delta-head">
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30985"
-class="item-link" target="_blank" aria-describedby="item-tip-30985-2"
+class="item-link" aria-describedby="item-tip-30985-2" target="_blank"
 rel="noopener noreferrer"><img src="../icons/inv_gauntlets_60.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" />Lightbringer
+class="item-icon" aria-hidden="true" loading="lazy" />Lightbringer
 Handguards</a><span id="item-tip-30985-2" class="item-tip"
 role="tooltip"><span class="item-tip-name">Lightbringer
 Handguards</span><span class="item-tip-meta">Tier 6 · hands ·
@@ -225,9 +225,9 @@ style="text-align: left;">Stat</th>
 class="delta-view delta-route-drop">Over best pre-phase off-piece,
 Tempest Keep</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=29998"
-class="item-link" target="_blank" aria-describedby="item-tip-29998-3"
+class="item-link" aria-describedby="item-tip-29998-3" target="_blank"
 rel="noopener noreferrer"><img src="../icons/inv_gauntlets_29.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" />Royal Gauntlets of
+class="item-icon" aria-hidden="true" loading="lazy" />Royal Gauntlets of
 Silvermoon</a><span id="item-tip-29998-3" class="item-tip"
 role="tooltip"><span class="item-tip-name">Royal Gauntlets of
 Silvermoon</span><span class="item-tip-meta">Tier 5 · hands ·
@@ -241,9 +241,9 @@ Sunstrider, Tempest Keep</span></span></span>
 class="delta-view delta-route-drop">Over best Phase 3 off-piece, Black
 Temple</span>
 <span class="item-ref"><a href="../items/gauntlets-of-enforcement.html"
-class="item-link" target="_blank" aria-describedby="item-tip-32280-4"
+class="item-link" aria-describedby="item-tip-32280-4" target="_blank"
 rel="noopener noreferrer"><img src="../icons/inv_gauntlets_62.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" />Gauntlets of
+class="item-icon" aria-hidden="true" loading="lazy" />Gauntlets of
 Enforcement</a><span id="item-tip-32280-4" class="item-tip"
 role="tooltip"><span class="item-tip-name">Gauntlets of
 Enforcement</span><span class="item-tip-meta">Tier 6 · hands ·
@@ -256,9 +256,9 @@ Temple</span></span></span>
 class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
 Cavern</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30124"
-class="item-link" target="_blank" aria-describedby="item-tip-30124-5"
+class="item-link" aria-describedby="item-tip-30124-5" target="_blank"
 rel="noopener noreferrer"><img src="../icons/inv_gauntlets_25.jpg"
-class="item-icon" loading="lazy" aria-hidden="true" />Crystalforge
+class="item-icon" aria-hidden="true" loading="lazy" />Crystalforge
 Handguards</a><span id="item-tip-30124-5" class="item-tip"
 role="tooltip"><span class="item-tip-name">Crystalforge
 Handguards</span><span class="item-tip-meta">Tier 5 · hands ·
@@ -484,10 +484,12 @@ rating per 1% block</a>
   // a table whose row order carries meaning, such as bosses in pull order, can
   // never be scrambled by a stray click.
   //
-  // THE PAGE NEVER LOADS PRE-SORTED. docs/sims.md is written in spec order
-  // because a table of thirteen damage figures sorted by damage reads as a
-  // league table, and those specs run rotations written by different authors.
-  // Sorting is something a reader asks for.
+  // SORTING HERE NEVER REORDERS THE PAGE ON LOAD. A table arrives in the order
+  // its Markdown source is written, and that order is the generator's business,
+  // not this script's. A container may declare `default-sort="N"` to say its
+  // rows are ALREADY sorted descending by column N; all that does is mark the
+  // heading, so the arrow matches what the reader sees and the first click
+  // reverses rather than appearing to do nothing.
   //
   // NUMBERS ARE READ OUT OF THE TEXT rather than carried in an attribute,
   // because pandoc pipe tables cannot hold per-cell attributes. A cell reads
@@ -513,11 +515,13 @@ rating per 1% block</a>
         var body = table.tBodies[0];
         if (!head || !body) return;
         var rows = Array.prototype.slice.call(body.rows);
+        var box = table.closest ? table.closest('.sortable') : null;
+        var pre = box ? parseInt(box.getAttribute('data-default-sort'), 10) : NaN;
         Array.prototype.forEach.call(head.cells, function (th, i) {
           var isNum = numeric(rows, i);
           th.setAttribute('tabindex', '0');
           th.setAttribute('role', 'button');
-          th.setAttribute('aria-sort', 'none');
+          th.setAttribute('aria-sort', i === pre ? 'descending' : 'none');
           th.classList.add('sort-col');
           function sort() {
             // A third click does NOT restore the original order. Two states are
