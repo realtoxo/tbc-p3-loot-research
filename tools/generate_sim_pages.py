@@ -283,21 +283,7 @@ better, and the numbers below must not be read that way. Two rows are two
 classes running two rotations written by other people, and the rotation quality
 varies between specs far more than it varies within one. **The comparison that
 carries meaning is a spec against ITSELF at another anchor**, which is why the
-last column exists and why nothing here is sorted by damage.
-
-::: {{.note}}
-**What the plus or minus means.** It is DPS, and it is NOT the range a raider
-sees on a given night.
-
-Each figure is the average of {meta['iterations']} simulated pulls. The plus or
-minus is how precisely that average is known: run the whole thing again with
-different dice and the average lands within it. So 3580.7 ± 1.01 means the
-average really is about 3580.7, give or take a point.
-
-**One pull varies far more than that.** For the Beast Mastery Hunter a single
-150 second pull swings by roughly 100 DPS either way. Averaging ten thousand of
-them is what shrinks the uncertainty to one.
-:::
+last column exists, and it is why the order of the rows is not a ranking.
 
 ## What each spec measures
 
