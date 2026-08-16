@@ -267,26 +267,6 @@ whose intervals do not quite overlap are not thereby separated. Ruled by the
 guild lead on 15 August 2026.
 :::
 
-::: {{.note .veto}}
-**No two BiS figures on this page can be true at the same time.** Each set is
-that spec's published best in slot, and a raid holds one of each item, so the
-figures assume every spec wins every contested drop. Two examples of how far
-that goes: **both Warglaives of Azzinoth are worn by the Combat Rogue AND the
-Fury Warrior**, and **seven specs wear Dragonspine Trophy**. A BiS figure is a
-ceiling for one spec, not a description of a raid. The Entry and Tier columns
-do not have this problem in the same degree, because those sets are built from
-what a raider already holds.
-:::
-
-::: {{.note}}
-**The Tier anchor is not a Phase 3 set.** It is the entry set with only the five
-token slots reconsidered, so weapons and trinkets are identical to entry and six
-specs still swing Season 2 arena weapons there. A negative Entry to Tier
-movement means the tier ARMOR is a small net downgrade for that spec, and it
-does not mean the spec is weak in Phase 3. The BiS column is what separates
-those two readings.
-:::
-
 ## What each spec measures
 
 Each spec is simulated in three complete sets of gear, and reading a figure
