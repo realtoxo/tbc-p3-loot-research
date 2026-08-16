@@ -70,11 +70,18 @@ nothing here is binding policy yet. The worked example in
 and says so.
 
 Simulation has begun and is narrow. Thirteen of twenty-one specs measure at
-three gear anchors in [`docs/sims.md`](docs/sims.md), against one target for
-three minutes. The three tanks and the four healers are out of scope by ruling,
-and the Feral Cat cannot be modelled in this build of the simulator. A figure
-there is a spec wearing a stated set, and it is comparable with the same spec at
-another anchor and with nothing else.
+three gear anchors in [`docs/sims.md`](docs/sims.md), against one target for two
+and a half minutes, at each of the boss armor tiers Phase 3 contains. The three
+tanks and the four healers are out of scope by ruling, and the Feral Cat cannot
+be modelled in this build of the simulator. A figure there is a spec wearing a
+stated set, and it is comparable with the same spec at another anchor, at the
+same boss armor, and with nothing else.
+
+Every figure in it was produced after 15 August 2026, when five independent
+audits and four arbiters found nine defects in the simulator configuration. The
+largest were a boss with no armor at all, two hunters with no pet, and six specs
+built with no base stats because every character was an illegal race. Any figure
+quoted from this project before that date is superseded.
 
 ## Credit
 

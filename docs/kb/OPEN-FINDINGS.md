@@ -721,3 +721,62 @@ bare weapons worth 32.6 percent of its damage. A main-hand imbue is dropped
 entirely under a Windfury Totem. An illegal race deleted every base stat. Now an
 empty option block unsummoned two pets. **Measure every change against a
 baseline on the same seed, and never assert an improvement.**
+
+
+## The 15 August 2026 review, and what it overturned
+
+**Five independent audits and four arbiters went over the simulator
+configuration in one day.** Nine defects survived arbitration and were applied.
+Four claims were refuted and NOT applied, and at least two of those would have
+made the figures worse.
+
+### What the arbiters caught that the audits got wrong
+
+**`Blessing of Might` sent as Improved**, worth +25 to +41 on all eight physical
+specs.
+The arbiter decoded the Retribution talent string positionally against proto
+field numbers rather than a tree diagram and got **0/5**, with three
+corroborations. In its own words the change "would have injected a fabricated 44
+attack power into all eight physical specs", and because the audit framed it as
+its highest-stakes item it would likely have shipped unchallenged.
+
+**Turning off `hasBsT2`.** The audit read it as a level-60 PvP set bonus. It is
+Enhanced Battle Shout from the Battlegear of Wrath raid set, and the simulator
+applies it **pre-pull only**, precisely to model the documented TBC
+gear-swap-and-snapshot. Turning it off would have discarded 11 to 17 real DPS
+per warrior.
+
+**Aspect of the Viper's missing damage penalty.** TBC had none; the minus 50
+percent is a Wrath 3.0.2 change. **Poisons rolling the spell hit table** at 16.9
+percent miss is likewise era-correct.
+
+The boss armor value was also refuted: the proposed single constant of 7685
+misprices ten of the fourteen Phase 3 bosses, which is why
+`data/facts/boss-armor.yaml` is per boss.
+
+### Two findings of our own that the armor fix then overturned
+
+**The Combat Rogue's published trinket was right and we said it was wrong.** This
+project recorded that its Phase 3 page ranks the weakest of four pairings and
+that Tsunami Talisman was worth 67.0 more. Warp-Spring Coil is an armor
+penetration trinket and armor penetration was worth zero, so it was being priced
+at nothing. Corrected, the published pairing is the BEST of the four.
+
+**Madness of the Betrayer does not underperform on warriors.** This project
+explained a 29 to 33 DPS deficit as armor penetration stacking into diminishing
+returns against the Tier 6 set. No amount of armor penetration could stack into
+anything, because it was worth zero. Corrected, Madness is 4.5 behind on Arms
+and 6.4 AHEAD on Fury.
+
+**The lesson worth keeping.** A finding that a published best-in-slot list is
+mistaken deserves MORE scepticism than one that agrees with it, not less. Both
+of the above were surprising, both were investigated at length, both were
+explained confidently in gear terms, and both explanations were artefacts of a
+configuration defect nobody had looked for yet.
+
+### Both long-standing anomalies were configuration, not gear
+
+The Arms Warrior measuring below its own entry set, and Beast Mastery measuring
+below its own tier set, were each investigated and each explained in gear terms.
+Both explanations were wrong. Every spec now improves monotonically from entry to
+tier to best in slot, at every armor tier.

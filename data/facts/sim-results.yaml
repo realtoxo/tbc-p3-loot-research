@@ -1,349 +1,118 @@
 meta:
-  what: What the simulated figures MEAN. The figures themselves are in data/facts/sim-figures.yaml,
-    which tools/run_sims.py writes, and they are not restated here.
-  why_two_files: 'This file held its own copy of thirteen figures until 15 August 2026, produced
-    at 3000 iterations across two anchors. A third anchor and a rerun at 10000 iterations moved
-    every one of them, and a second copy of a fact is the copy that goes stale. So the figures
-    live in one place now and this file holds only what a reader cannot recompute: which results
-    are surprising, and what was measured to explain them.'
+  what: What the simulated figures MEAN. The figures themselves are in data/facts/sim-figures.yaml
+    and are not restated here.
   produced: '2026-08-15'
-  simulator: wowsims tbc-new, wowsimcli v0.0.116, installed by tools/install_wowsimcli.sh
-  settings: 10000 iterations, seed 1, single target, 180 second encounter, target level 73
-  interval: Every figure in sim-figures.yaml carries `standard_error`, which is ONE standard error
-    on the mean, the spread across iterations divided by the square root of 10000. RULED BY THE
-    GUILD LEAD on 15 August 2026, having been shown both that and the 95 percent interval. It
-    covers about 68 percent. It must never be relabelled as a confidence interval, because two
-    figures whose one-sigma bars barely miss each other are not separated at 95 percent.
-  what_the_interval_does_not_cover: The standard error is the uncertainty on the MEAN of one configuration.
-    It says nothing about whether the configuration is right. Every figure below that surprised
-    us was surprising for a gear reason, and the interval on all of them is near one DPS.
+  settings: 10000 iterations, seed 1, single target at level 73, 150 second encounter, run against
+    each of the three Phase 3 boss armor tiers. Every figure quoted below is at armor 6193 unless
+    it says otherwise.
+  EVERYTHING_IN_THIS_FILE_BEFORE_15_AUGUST_2026_IS_SUPERSEDED: Five independent audits and four
+    arbiters reviewed the simulator configuration that day and found nine live defects. Three
+    of them moved every figure this project had ever published, so no number from before that
+    date survives and none is quoted here except as a retraction.
+  the_three_that_moved_everything:
+    the_boss_had_no_armor: The target was sent forty-eight zeros. Physical specs were inflated
+      17 to 23 percent and casters not at all, so no comparison between the two was valid. Worse,
+      mitigation is max(armor minus debuffs minus armor penetration, 0), so at zero armor EVERY
+      armor debuff this raid supplies and EVERY point of armor penetration on every item was worth
+      exactly nothing.
+    every_character_was_an_illegal_race: race was hardcoded to Blood Elf, which cannot be a Warrior,
+      Druid or Shaman in 2.4.3, and sim/core/base_stats.go registers base stats only for pairings
+      that exist. Six specs ran with no base strength, agility or stamina at all.
+    two_hunters_had_no_pet: classOptions was empty for both, so proto defaults gave them no pet,
+      no ammo and no quiver. Worth 1508 DPS to Beast Mastery.
   not_simulated: Tanks, by the ruling of 14 August 2026. The Feral Cat, because no action priority
-    list for it exists in this build. The four healers, who have no captured gear set. Thirteen
-    specs, not twenty-one.
-  EVERY_FIGURE_BEFORE_15_AUGUST_WAS_PRODUCED_ON_BROKEN_CHARACTERS: 'tools/run_sims.py sent race
-    1, Blood Elf, for every spec until 15 August 2026. sim/core/base_stats.go registers base stats
-    per race AND class, and Blood Elf cannot be a Warrior, a Druid or a Shaman in 2.4.3, so those
-    six specs ran with NO base strength, agility or stamina and simply measured smaller. Nothing
-    errored. Every figure in this file has been re-measured since the fix; anything quoted elsewhere
-    in the repository from before it is superseded. The correction was worth 524.5 to the Balance
-    Druid, 512.9 to the Elemental Shaman, 435.0 to the Fury Warrior, 344.6 to the Arms Warrior
-    and 303.5 to the Enhancement Shaman, against 25.2 for the Combat Rogue and under 10 for every
-    unaffected spec. A SECOND defect of the same shape was found hours later: the classOptions
-    block was EMPTY for both hunters, so proto/hunter.proto defaulted pet_type to PetNone, ammo
-    to AmmoNone and quiver_bonus to QuiverNone and both hunters ran with no pet, no ammo and no
-    quiver. It was worth 1508.1 to Beast Mastery and 768.4 to Survival. An audit of every spec''s
-    shipped preset then found five smaller gaps: Shadow Priest 180.8 of Shadowform, Arcane Mage
-    90.0 of Mage Armor, Arms 79.7 and Fury 75.1 of stance, shout and starting rage. tools/check_sim_options.py
-    now fails the build on any option the shipped preset sets that this project neither sends
-    nor declines with a reason.'
-  races: 'Recorded in data/facts/roster.yaml::races.by_spec, ruled by the guild lead on 15 August
-    2026. They are not neutral: Human grants Sword and Mace Specialization, worth 5 expertise,
-    and both warriors and the Combat Rogue swing swords.'
-the_three_anchors:
-  entry: The spec's Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing.
-  tier: The ENTRY set with only the five token slots reconsidered. Weapons, trinkets and the other
-    twelve slots are IDENTICAL to entry on every spec, six specs still swing Season 2 arena weapons,
-    and the Combat Rogue never holds a Warglaive. A delta from entry to tier answers 'what do
-    the tier tokens alone do to a Phase 2 raider', NOT 'what is this spec worth in Phase 3'.
-  bis: The full Phase 3 best-in-slot set, built by tools/build_bis_capture.py from the Wowhead
-    captures in data/research/wowhead-phase3-bis-full/ with the guild lead's weapon routing applied.
-    Added 15 August 2026. It is the anchor that separates the two readings above.
-  one_caveat_on_comparability: The twelve untouched slots at the tier anchor are untouched as
-    ITEMS but not as GEMS. A tier set is re-gemmed to re-cap hit, which flatters it slightly against
-    a pure item swap. The Arms Warrior needs four hit gems at its tier anchor.
-two_specs_measure_LOWER_at_a_better_anchor:
-  read_this_first: Both were investigated on 15 August 2026 rather than published as they stood,
-    both were RE-MEASURED after the race defect was fixed, and both survived. NEITHER is a defect
-    in this pipeline. Both are the published Phase 3 list being worse, in this model, than the
-    set it replaces. Each is reproducible with tools/run_sims.py --profile A --against B, which
-    dresses one slot at a time from the other profile and carries that slot's enchant and gems
-    with it.
-  beast_mastery_hunter:
-    what: The best-in-slot set measures BELOW the tier set, 88.5 short. It survived both defect
-      corrections of 15 August 2026 and shrank only slightly.
-    one_slot_explains_almost_all_of_it: The main hand, still, and it needs re-measuring against
-      the corrected profile. Before the pet was restored it was worth +99.0 against a whole-set
-      +93.0. The MECHANISM is unchanged and is stated below.
-    why: A hunter never swings its melee weapons in this model, so a melee weapon is a stat stick
-      and nothing else. Talon of the Phoenix, item 32944, carries 52 attack power, 52 RANGED attack
-      power, 15 melee hit and 19 melee crit. Boundless Agony, item 30901, which the Phase 3 page
-      ranks, carries 24 crit and 210 armor penetration and NO ranged attack power. Ranged attack
-      power is the stat that drives every shot this spec fires.
-    what_it_is_not: It is not the bow. Bristleblitz Striker against Serpent Spine Longbow is worth
-      -13.1 to the Phase 2 bow, which is the direction the Phase 3 item should move.
-    what_it_means_for_a_council: The Phase 3 page ranks a melee weapon for a Beast Mastery hunter
-      that this model prices about 99 DPS below the Phase 2 pair it replaces. A hunter asking
-      for a Phase 3 dagger is asking for a downgrade unless something outside this model says
-      otherwise. NOT A RULING. The council decides.
-    measured: 2026-08-15, 10000 iterations, seed 1, after both corrections
-    reproduce: python3 tools/run_sims.py --profile beast-mastery-hunter.bis --against beast-mastery-hunter.tier-hands-and-head
-      --iterations 10000
-  arms_warrior:
-    what: 'The best-in-slot set measures BELOW the entry set, 20.8 short, and below the tier set.
-      It has survived three corrections and shrunk at each: 108.3, then 45.3 after the Ahn''Qiraj
-      trinket was replaced, then 25.1 after the race fix, now 20.8 after the warrior class options
-      were completed.'
-    no_single_slot_explains_it_and_the_sum_says_so: The single-slot deltas sum to MINUS 9.1 against
-      a whole-set difference of PLUS 25.1. Reverting any one slot to entry is worth nothing on
-      average, and reverting all of them is worth 25. The gap is an interaction rather than a
-      slot, which is what set bonuses and cap positions do.
-    four_slots_the_page_ranks_worse_than_the_phase_2_item: Legs 26.0, first ring 23.6, neck 22.8
-      and ranged 19.9, each measured by dressing that one slot from the entry profile and carrying
-      its enchant and gems. Against them the Tier 6 armor gains about 105 back across eight slots,
-      and the two-hander and the cloak are flat.
-    the_routing_is_NOT_the_cause_and_this_was_checked: 'The Phase 3 page ranks dual Warglaives
-      for this spec and the guild lead routed them away, which looked like the obvious explanation.
-      It is the opposite: dressing the main hand back to the entry two-hander is worth only +2.6,
-      and the Warglaive comparison was re-run after the race fix as well. The Arms rotation is
-      written for a two-handed weapon.'
-    what_it_means_for_a_council: This model does not support routing Phase 3 upgrades to the Arms
-      Warrior on the strength of its published list, and it supports both of the guild lead's
-      weapon and trinket rulings, each of which was made on other grounds and each of which measures
-      as a gain. NOT A RULING on anything else. The council decides.
-    measured: 2026-08-15, 10000 iterations, seed 1, after the race correction
-    reproduce: python3 tools/run_sims.py --profile arms-warrior.bis --against arms-warrior.entry
-      --iterations 10000
-    it_shrank_twice_as_defects_were_fixed: Minus 108.3 when first measured. The trinket ruling
-      of 15 August 2026 removed 63 of that by replacing an Ahn'Qiraj trinket this guild cannot
-      obtain. The race correction the same day removed most of the rest. What is left is 25.1,
-      against a standard error near 1.2 on each end, so it is real and it is small.
-    the_slot_decomposition_needs_remeasuring: The figures under the two keys below were taken
-      after the race fix and before the class options were completed, so they describe a warrior
-      in the wrong stance. The DIRECTION held through every correction so far.
-the_trinket_ruling_of_15_august_2026:
-  what_forced_it: Both warriors were simulated wearing Badge of the Swarmguard, item 21670, which
-    drops in Ahn'Qiraj 40. This guild does not run Ahn'Qiraj. It was the only item in any profile
-    predating The Burning Crusade, and every availability check this project holds is scoped to
-    Phase 3 against LATER content, so none of them looks backwards.
-  it_gained_the_raid_damage: Badge of the Swarmguard measured LAST of the seven trinkets either
-    warrior could hold in that slot, so losing Ahn'Qiraj was worth plus 63.0 to the Arms Warrior
-    and plus 91.9 to the Fury Warrior. An unreachable best-in-slot item usually costs something.
-    This one did not.
-  dragonspine_trophy_is_the_anchor: 'Challenged by the guild lead, who doubted Bloodlust Brooch
-    could beat Madness of the Betrayer beside it and asked whether Madness is better than Dragonspine
-    in slot. It is not. Varying BOTH trinket slots together, every one of the top four pairs on
-    both warriors holds Dragonspine Trophy and every pair without it measures lower: replacing
-    it with Madness beside the same partner costs Arms 46.9 and Fury 57.1.'
-  why_madness_underperforms_on_a_warrior: Its proc is 300 armor penetration, and the Tier 6 armor
-    both warriors wear already pays in armor penetration, which is the stat shape recorded below
-    for the Onslaught set. More of the same stat returns less. Bloodlust Brooch pays in attack
-    power, 72 passive and 278 for 20 seconds on a 2 minute cooldown, and BOTH warrior action priority
-    lists activate it, which was checked in the shipped lists rather than assumed.
-  a_trinket_must_be_measured_in_pairs: The first measurement held trinket 1 fixed and varied trinket
-    2, which cannot answer whether trinket 1 is right. tools/run_sims.py documented varying two
-    slots at once and did not implement it; it does now, and a trinket question should be asked
-    that way.
-  the_ruling_lives_in: data/judgments/trinket-routing.yaml, with the barred content beside it.
-    tools/check_sim_profiles.py fails the build on any profile wearing a barred item, independently
-    of whether the builder applied the routing.
-why_the_warriors_lose_at_the_TIER_anchor:
-  scope: This section is about ENTRY against TIER and is unaffected by the best-in-slot anchor.
-    Every figure in it was measured at 3000 iterations before the 15 August 2026 rerun, so it
-    is quoted to one decimal and should be re-measured before anything turns on a figure smaller
-    than about 5 DPS.
-  verdict: Not a defect. A correct result of the construction rule.
-  fury_warrior: 'Entry holds the Destroyer four-piece, which makes Bloodthirst cost 5 less rage
-    (sim/warrior/items.go). Two Tier 6 pieces break it. Measured separately: the T6 shoulder alone
-    is -59.2 and the T6 chest alone -68.5, yet both together are only -28.4. Solving that, the
-    bonus swing is worth +99.3, so each piece IS a real stat upgrade and the rage discount is
-    worth about 90 DPS more than both of them.'
-  arms_warrior: 'The harder case, because it GAINS the strong bonus and still loses. It picks
-    up the Onslaught four-piece, +5 percent Mortal Strike, and every individual token is still
-    a downgrade: head -92.2 losing 21 hit on a set already short, hands -38.4 losing 18 expertise
-    to gloves it already owns, shoulder -38.7, chest -39.2. Per the sim it should refuse the whole
-    line.'
-  the_stat_shape: The Onslaught pieces carry no expertise, almost no hit and zero crit rating;
-    they pay in agility and armor penetration. The Destroyer pieces they replace are hit and crit
-    dense. Arms loses 28 expertise and 85 crit rating across the swap.
-why_the_rogue_gains: A clean four-for-four bonus upgrade. Deathmantle four-piece, a 1 PPM free
-  finisher, becomes Slayer's, whose two-piece is +5 percent Slice and Dice haste and whose four-piece
-  is +6 percent Sinister Strike and Backstab damage, both permanent and both central to the spec.
-  Plus five real item upgrades. Breaking Slayer's four-piece alone costs -67.8. It is also the
-  largest entry-to-BiS movement on the roster.
-every_intermediate_state_is_a_valley: THE MOST USEFUL THING IN THIS FILE FOR A COUNCIL. Taking
-  a SINGLE token costs the rogue between -65 and -94, because it breaks Deathmantle before completing
-  Slayer's. Fury is -59 or -68 on one token and only -28 on two. Token routing to these specs
-  is sensible only in BLOCKS THAT COMPLETE A BONUS, and the endpoint deltas hide that entirely.
-the_two_zero_rows: 'The Enhancement Shaman and the Retribution Paladin read exactly the same figure
-  at entry and at tier because their entry and tier gear files are byte-identical: their Phase
-  3 lists wear no token in any of the five slots, so the rule leaves every slot at entry. Both
-  are documented, Enhancement as a token refusal and Retribution in hit-captured.yaml. A reader
-  counting rows would otherwise take these for stuck runs. Both DO move at the best-in-slot anchor.'
-four_specs_want_two_copies_of_one_item: 'Reported by tools/check_sim_profiles.py rather than failed,
-  because it is what the pages say and it is legal on a character. The Affliction Warlock, the
-  Destruction Warlock and the Shadow Priest each wear Ring of Ancient Knowledge in BOTH ring slots,
-  and the Survival Hunter dual wields two copies of Blade of Infamy. The pages rank these rows
-  "Best x2" in their own words. It matters to a council before the drop lands rather than after:
-  three specs are asking for two of one ring.'
-the_hit_overshoot_at_the_best_in_slot_anchor: 'A published list ranks each slot in isolation,
-  so nothing in it stops the set overshooting a cap. Measured from the captures on 15 August 2026,
-  item hit against the net target: the Combat Rogue carries 195 against a target of 64, the Enhancement
-  Shaman 163 against 0, both warlocks 185 against 165, the Shadow Priest 138 against 76 and the
-  Fury Warrior 171 against 142. That overshoot is a real cost paid in stats these sets could have
-  spent elsewhere, and it is a property of the published lists rather than of this pipeline. NOT
-  CORRECTED, because correcting it would mean rebuilding the sets to our own rule, and then the
-  figures would no longer describe the lists players actually follow.'
-one_defect_was_found_and_fixed: data/judgments/weapon-routing.yaml recorded Tempest of Chaos as
-  item 32943. That id is Swiftsteel Bludgeon, a one-hand mace; the weapon is 30910, a main-hand
-  sword. Nothing had been built on it. The RULING was unaffected, because the guild lead named
-  the weapon and not the number. tools/check_sim_profiles.py now resolves every routed id against
-  the name its ruling claims and fails the build when they disagree, which is AGENTS.md's existing
-  rule made mechanical.
-no_two_bis_figures_can_be_true_at_once:
-  what: A best-in-slot set is what one spec would wear if it won every contested drop, and a raid
-    holds one of each item. So the BiS column is thirteen ceilings and not a raid. This is the
-    single most important thing to say before quoting one BiS figure beside another.
-  the_sharpest_case: BOTH Warglaives of Azzinoth are worn by the Combat Rogue AND the Fury Warrior.
-    There is one pair. Comparing the Rogue at its BiS figure against the Fury Warrior at its BiS
-    figure compares two characters who cannot both exist, and the guild lead was right to find
-    that reading odd.
-  how_wide_it_goes: Seven specs wear Dragonspine Trophy, six wear The Skull of Gul'dan, Ring of
-    Ancient Knowledge and Slippers of the Seacaller, and five wear Zhar'doom, Bracers of Nimble
-    Thought, Leggings of Channeled Elements, Belt of One-Hundred Deaths, Stormrage Signet Ring
-    and Cursed Vision of Sargeras.
-  what_it_does_not_undermine: The Entry to BiS movement per spec, which is the comparison the
-    page is built around, because both ends of it belong to the same spec.
+    list for it exists in this build. The four healers, who have no captured gear set.
+every_spec_now_improves_monotonically:
+  what: entry is lower than tier and tier is lower than best in slot, for all thirteen specs,
+    at every armor tier. That was NOT true before 15 August 2026 and the two exceptions were read
+    for days as facts about gear.
+  the_arms_warrior_anomaly_is_gone: 'It measured BELOW its own entry set by 108.3, then 45.3,
+    then 25.1, then 20.8 as four separate defects were fixed. It now reads entry 2148.8, tier
+    2239.6, best in slot 2421.4. THE PUBLISHED LIST WAS NEVER THE PROBLEM: the missing boss armor
+    was, because the Onslaught set pays in armor penetration and armor penetration was worth zero.'
+  the_beast_mastery_anomaly_is_gone: It measured below its own tier set by 88.5. It now reads
+    3340.6, 3523.6, 3572.9. The cause was the same class of defect, an empty class options block
+    leaving it with no pet.
+  what_this_says_about_the_earlier_analysis: Both anomalies were investigated at length and explained
+    in gear terms, and both explanations were wrong. A surprising result is worth investigating;
+    an explanation that fits a surprising result is not evidence that the configuration underneath
+    it is sound.
+the_encounter_is_not_a_neutral_knob:
+  length: '150 seconds, ruled 15 August 2026. Measured at 90 against 180 the same day: EVERY spec
+    gained, but the mana-constrained casters gained 41 to 45 percent because they stop running
+    dry while the melee gained 5 to 8. Shortening a fight moves specs RELATIVE TO EACH OTHER.'
+  boss_armor: Phase 3 spans two tiers, 7684 and 6193, and ten of the fourteen bosses sit in the
+    lower one. The same Fury Warrior measures 2856.4 against a 6193 boss and 2512.5 against a
+    7684 one, a 344 DPS swing from the boss alone. A figure at one tier is not comparable with
+    a figure at the other, which is why every row of sim-figures.yaml carries its armor.
+  casters_do_not_move_with_armor_at_all: The Arcane Mage, both Warlocks, the Elemental Shaman
+    and the Shadow Priest read the same figure at every tier, which is the correct behaviour and
+    a useful check that the armor change is doing what it claims.
+the_rogue_published_trinket_was_RIGHT_and_this_file_said_otherwise:
+  retracted: On 15 August 2026 this file recorded that the Combat Rogue's own Phase 3 page ranks
+    the weakest of its four Dragonspine pairings, and that Tsunami Talisman was worth 67.0 more
+    than the published Warp-Spring Coil. THAT IS RETRACTED.
+  why_it_was_wrong: It was measured against a boss with no armor. Warp-Spring Coil is an armor
+    penetration trinket, so it was being priced at close to nothing.
+  corrected: At armor 6193, Dragonspine Trophy plus Warp-Spring Coil is the BEST of the four at
+    2912.8, ahead of Madness by 20.2, Tsunami by 38.0 and Bloodlust Brooch by 43.0. The published
+    list was right and this project was wrong.
+  the_lesson: A finding that a published best-in-slot list is mistaken deserves more scepticism
+    than a finding that agrees with it, not less.
 what_the_warglaives_are_worth:
-  why_measured: The guild lead did not believe the warrior figures against the Rogue and asked
-    whether the Rogue was holding Warglaives. It is, and so is the Fury Warrior, so the question
-    became what each loses without them.
-  method: Both weapon slots varied together, 10000 iterations, seed 1, RE-MEASURED after the race
-    correction. Every candidate runs BARE, because tools/run_sims.py --swap deliberately strips
-    the enchant with the item, so these figures are comparable with each other and NOT with an
-    enchanted profile.
+  measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
+  note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the
+    item, so these compare with each other and NOT with an enchanted profile.
   combat_rogue:
-    warglaives_bare: 2699.3
-    best_alternative_bare: 2493.2
+    warglaives_bare: 2741.0
+    best_alternative_bare: 2536.9
+    the_premium: 204.1
     alternative: Blade of Infamy 30881 main hand, Blade of Savagery 32369 off hand
-    the_premium: 206.1
   fury_warrior:
-    warglaives_bare: 2597.8
-    best_alternative_bare: 2450.9
+    warglaives_bare: 2723.1
+    best_alternative_bare: 2581.8
+    the_premium: 141.3
     alternative: Blade of Infamy 30881 in both hands, which needs two copies
-    the_premium: 146.9
-  what_it_says_and_does_not_say: The Warglaives are worth about 206 to the Combat Rogue and about
-    147 to the Fury Warrior, so the Rogue gains more from the same pair. That is a fact about
-    two weapons and two rotations. WHO RECEIVES THEM IS A COUNCIL DECISION and nothing here settles
-    it, because a council weighs more than single-target damage.
-the_profiles_were_validated_against_the_simulator_own_sets:
-  why: 'The guild lead asked whether the buffs or the consumables were wrong. The strongest available
-    check is to run the simulator''s OWN shipped Phase 3 gear for a spec through our harness:
-    if our profile were mis-buffed or mis-consumed, their gear would land far from ours rather
-    than near it.'
-  arms_warrior: ui/warrior/dps/gear_sets/p3_arms.gear.json measures 1970.1 in our harness against
-    our 1920.3, a difference of 49.8 and all of it gear. Their set also takes Cataclysm's Edge,
-    independently reaching the same two-hander the guild lead routed to this spec.
-  fury_warrior: ui/warrior/dps/gear_sets/p3_fury.gear.json measures 2356.6 against our 2287.6,
-    a difference of 69.0. Their set wears ONE tier piece where ours wears four, trading the Onslaught
-    bonus for stronger raw items.
-  buffs_and_consumables_are_not_the_cause: Compared field by field against the Combat Rogue, the
-    only differences are ones the roster requires. The Arms Warrior shares party g1 with the Rogue
-    and receives an identical raid, party, individual and debuff block. The Fury Warrior sits
-    in g2 and so takes Ferocious Inspiration instead of Sanctity Aura. Consumables differ only
-    in the food each spec's own guide names and in the off-hand imbue, which the Arms Warrior
-    has no slot for.
-  talents_are_the_engine_own_presets: Both warrior talent strings are byte-identical to ui/warrior/dps/presets.ts,
-    Fury at 3400502130201-05050005505012050115 and Arms at 32005020352010500221-0550000500521203.
-    Nothing here is our build.
-  SUPERSEDED_BY_THE_RACE_CORRECTION: Every figure in this section was produced before the race
-    defect was fixed on 15 August 2026, so the absolute numbers are wrong for the six affected
-    specs. The MECHANISM each section describes is unaffected and still holds. Re-measure before
-    quoting any number from here.
-are_the_cooldowns_and_consumables_actually_firing:
-  why_asked: The guild lead asked directly whether the warriors are using Death Wish, Recklessness
-    and a Haste Potion in these runs. It is the right question, because a cooldown that is configured
-    and never fires is exactly the silent failure this project keeps meeting.
-  how_it_was_answered: Not by reading the rotation. The per-action cast counts were read out of
-    a real run, 2000 iterations, and divided by the iteration count.
-  death_wish: FIRING. Exactly 1.00 casts per pull on both warriors, which is correct for a 3 minute
-    cooldown in a 180 second encounter.
-  haste_potion: FIRING. 2.00 casts per pull on both warriors and on the Combat Rogue. This was
-    NOT true before 15 August 2026, when `potId` was sent without the `potions` list and no potion
-    was drunk at all.
-  bloodlust_brooch: FIRING. 2.00 casts per pull on both warriors, which settles that the trinket
-    ruling is measuring a trinket that is actually used.
-  recklessness: NOT FIRING, ZERO casts, and it is the ENGINE'S OWN DEFAULT rather than anything
-    this project configured.
-  how_recklessness_is_switched_off: The shipped warrior rotation carries a named action group,
-    "Recklessness ON/OFF", at priorityList[0] with `hide` set to true, and the actual cast at
-    priorityList[9] is gated on `actionGroupUsed` of that group. A hidden group never runs, so
-    the gate never opens.
-  what_turning_it_on_is_worth: Measured on 15 August 2026 by flipping that one flag, 8000 iterations,
-    180 second encounter. Fury 2286.7 to 2401.0, plus 114.3. Arms 1920.6 to 2047.0, plus 126.4.
-    One cast per pull in both cases.
-  why_it_is_probably_not_free_and_needs_a_ruling: sim/warrior/recklessness.go gives the ability
-    a THIRTY MINUTE cooldown, a 15 second duration, 100 percent bonus crit on melee specials and
-    a 1.2 multiplier on damage taken. Enabling it in a 180 second encounter therefore assumes
-    it is available on EVERY pull, which the cooldown allows only if pulls are half an hour apart,
-    and it charges the raid 20 percent extra damage taken on the warrior for 15 seconds. Whether
-    this roster actually has it up for a given boss is a fact about how the night runs, not about
-    the spec. GUILD LEAD NEEDED.
-  SUPERSEDED_BY_THE_RACE_CORRECTION: Every figure in this section was produced before the race
-    defect was fixed on 15 August 2026, so the absolute numbers are wrong for the six affected
-    specs. The MECHANISM each section describes is unaffected and still holds. Re-measure before
-    quoting any number from here.
-what_a_ninety_second_encounter_does:
-  why_asked: The guild lead asked what changes if every run moves from 180 seconds to 90.
-  measured: 2026-08-15, the full roster at both lengths, 10000 iterations, seed 1, best-in-slot
-    anchor. The figures at 90 seconds are NOT recorded in sim-figures.yaml, because that file
-    holds one encounter and mixing two would make its rows unsubtractable.
-  the_headline: 'Every spec gains, by a mean of 15.0 percent, and the gains are wildly uneven:
-    from plus 5.1 percent to plus 45.3 percent.'
-  who_gains_most_and_why: The mana-constrained casters, by a wide margin. Elemental Shaman plus
-    45.3 percent, Balance Druid plus 41.3, Retribution Paladin plus 24.2, Arcane Mage plus 15.2.
-    At 180 seconds these specs run their mana pool down and slow; at 90 they never have to, so
-    they cast their best spell throughout. That is the dominant effect of encounter length in
-    this model, and it is a mana effect rather than a cooldown one.
-  who_gains_least: Shadow Priest plus 5.1 percent, Enhancement Shaman plus 5.2, Arms Warrior plus
-    6.3. These are the specs with the least to gain from unlimited mana and the fewest long cooldowns.
-  IT_DOES_NOT_CHANGE_THE_WARRIOR_AGAINST_ROGUE_PICTURE_AT_ALL: This is what the question was really
-    about and the answer is clean. The Fury Warrior gains 8.1 percent and the Combat Rogue gains
-    8.1 percent. The ratio between them is 80.4 percent at 180 seconds and 80.4 percent at 90.
-    Shortening the fight would not make the warriors look better; it would make the CASTERS look
-    better and leave the melee ordering untouched.
-  what_it_would_cost: Every figure collected before the change becomes incomparable, which is
-    why tools/run_sims.py stamps the length into the meta block of whatever it writes. ENCOUNTER_SECONDS
-    stays at 180, the ruling of 14 August 2026, until a new ruling replaces it. GUILD LEAD NEEDED
-    if 90 is wanted.
-  SUPERSEDED_BY_THE_RACE_CORRECTION: Every figure in this section was produced before the race
-    defect was fixed on 15 August 2026, so the absolute numbers are wrong for the six affected
-    specs. The MECHANISM each section describes is unaffected and still holds. Re-measure before
-    quoting any number from here.
-the_rogue_published_trinket_is_its_weakest_option:
-  what: The Combat Rogue's Phase 3 page ranks Warp-Spring Coil in the second trinket slot, and
-    it is the worst of the four pairings that hold Dragonspine Trophy.
-  measured: 2026-08-15, 10000 iterations, seed 1, after the race correction
-  dragonspine_plus_tsunami_talisman: 2937.5
-  dragonspine_plus_bloodlust_brooch: 2925.7
-  dragonspine_plus_madness_of_the_betrayer: 2915.7
-  dragonspine_plus_warp_spring_coil_the_published_pick: 2870.5
-  what_it_means_for_a_council: Tsunami Talisman is 67.0 higher than the published pick and is
-    uncontested now that both warriors take Bloodlust Brooch. NOT A RULING. The council decides,
-    and no change has been made to the rogue profile.
-  reproduce: python3 tools/run_sims.py --profile combat-rogue.bis --iterations 10000 --slot trinket_1,trinket_2
-    --swap 28830,30627 --swap 28830,30450
-a_hunter_with_no_pet:
-  what: Both hunters were simulated with no pet, no ammo and no quiver, because their classOptions
-    block was empty and every proto default is a zero.
-  found_by: the guild lead, reading the table and saying Beast Mastery was critically low
-  beast_mastery_hunter:
-    ammo: 91.5
-    quiver: 148.8
-    pet: 1267.7
-    total: 1508.1
-  survival_hunter:
-    ammo: 96.9
-    quiver: 141.3
-    pet: 530.4
-    total: 768.4
-  why_the_two_differ_so_much: Beast Mastery is the pet spec, so an absent pet took about a third
-    of its damage and less than a fifth of Survival's. That asymmetry is what made the table look
-    wrong, and it is why the defect was visible at all.
-  the_rule_now: 'Whatever a spec''s own presets.ts sets, this project sets, unless a ruling declines
-    it and says why. tools/check_sim_options.py enforces presence, not value: a value we deliberately
-    differ on is a modelling choice, an option missing by accident is not.'
-  it_is_the_fifth_time: 'The simulator has now accepted input it then ignored five times: potId
-    without a potions list, the Enhancement Shaman''s bare weapons, a main-hand imbue dropped
-    under a Windfury Totem, an illegal race deleting every base stat, and an empty option block
-    unsummoning two pets. Measure every change against a baseline on the same seed and never assert
-    an improvement.'
+  the_council_arithmetic: Both profiles currently hold the same unique pair and only one can.
+    Routing them to the rogue leaves the raid at roughly 5628 against roughly 5565 the other way,
+    so the rogue is worth about 63 more BECAUSE IT EXTRACTS MORE FROM THE SAME WEAPONS, 204 against
+    141. Whoever does not get them lands near 2710 either way, which is to say the two specs are
+    level without the glaives. NOT A RULING. The council decides.
+no_two_bis_figures_can_be_true_at_once:
+  what: A best-in-slot set is what one spec would wear having won every contested drop, and a
+    raid holds one of each item. The best-in-slot column is thirteen ceilings, not a raid.
+  the_sharpest_case: BOTH Warglaives of Azzinoth are worn by the Combat Rogue AND the Fury Warrior.
+    There is one pair.
+  how_wide_it_goes: Seven specs wear Dragonspine Trophy, six wear The Skull of Gul'dan, Ring of
+    Ancient Knowledge and Slippers of the Seacaller, and five wear Zhar'doom.
+  what_it_does_not_undermine: The entry to best-in-slot movement per spec, because both ends of
+    it belong to the same spec.
+four_specs_want_two_copies_of_one_item: Reported by tools/check_sim_profiles.py rather than failed,
+  because it is what the pages say and two copies of a non-unique item is a legal set. The Affliction
+  Warlock, the Destruction Warlock and the Shadow Priest each wear Ring of Ancient Knowledge in
+  BOTH ring slots, and the Survival Hunter dual wields two copies of Blade of Infamy. The pages
+  rank these rows 'Best x2' in their own words.
+retribution_and_enhancement_read_identical_entry_and_tier_figures: 'Their gear files are byte-identical,
+  verified by hash rather than assumed: neither spec''s Phase 3 list wears a tier token in any
+  of the five slots, so the tier anchor collapses onto entry by construction. A reader counting
+  rows would otherwise take these for stuck runs.'
+the_hit_overshoot_at_the_best_in_slot_anchor: 'A published list ranks each slot in isolation,
+  so nothing stops the set overshooting a cap. The Combat Rogue carries 195 item hit against a
+  melee-special target of 64, and the Enhancement Shaman 163 against 0. FOR THE ROGUE THIS IS
+  NOT WASTE: a dual wielder keeps benefiting from hit up to the roughly 28 percent white-swing
+  cap, and its whites still miss 3.7 percent. For the casters and Enhancement it is real waste,
+  and it is a property of the published lists rather than of this pipeline. NOT CORRECTED, because
+  correcting it would mean rebuilding the sets to our own rule and the figures would stop describing
+  the lists players follow.'
+what_is_still_open:
+  expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
+    measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
+    cannot be read out of a run. Marked Conservative in raid-buffs.yaml.
+  epic_gems: Confirmed Phase 3 legal by this repository's own Blizzard-sourced enchants-gems.yaml
+    and worth 7 to 16 DPS per spec, deliberately deferred because it touches every spec's gem
+    preferences and deserves its own pass.
+  engineering: Sappers and explosives are worth 9 to 16 DPS but are inert without profession1,
+    and roster.yaml records no professions for anyone. GUILD LEAD NEEDED.
+  retribution_hammer_of_wrath: The shipped Retribution rotation omits Hammer of Wrath entirely,
+    which is why this spec gains nothing from the execute phase every other execute user gains
+    from. Its figures are the least trustworthy in the set.
