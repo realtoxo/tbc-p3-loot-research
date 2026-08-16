@@ -77,8 +77,8 @@ reproduced or disproved.</p>
 <div class="table-wrap">
 <table>
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 82%" />
+<col style="width: 25%" />
+<col style="width: 74%" />
 </colgroup>
 <thead>
 <tr>
@@ -88,16 +88,16 @@ reproduced or disproved.</p>
 </thead>
 <tbody>
 <tr>
-<td>Damage per second</td>
+<td>Damage per second, averaged over 10000 pulls</td>
 <td><strong>1893.9</strong></td>
 </tr>
 <tr>
-<td>Standard error on the mean</td>
-<td>± 0.94</td>
+<td>How precisely that average is known</td>
+<td>± 0.94 DPS</td>
 </tr>
 <tr>
-<td>Spread across iterations</td>
-<td>93.5</td>
+<td>How much a SINGLE pull varies</td>
+<td>± 93.5 DPS</td>
 </tr>
 <tr>
 <td>Anchor</td>
@@ -108,10 +108,11 @@ entry.</td>
 </tbody>
 </table>
 </div>
-<div class="note veto">
-<p><strong>The plus or minus is ONE standard error</strong>, the spread
-across iterations divided by the square root of 10000. It covers about
-68 percent, not 95.</p>
+<div class="note">
+<p><strong>The plus or minus is DPS</strong>, and it says how precisely
+the average is known rather than how much a pull varies. The average of
+10000 pulls is pinned to that many DPS; a single pull swings by the
+figure in the row below it, which is far larger.</p>
 </div>
 <p>The figure above is against boss armor 6193. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any
