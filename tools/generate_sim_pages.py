@@ -61,7 +61,16 @@ ANCHORS = [
      "trinkets and the other twelve slots are identical to entry."),
     ("bis", "BiS", "The full Phase 3 best-in-slot set, with the guild lead's "
                    "weapon routing applied."),
+    # A FOURTH ANCHOR THAT ONLY TWO SPECS HAVE. It is not a column in the main
+    # table, because eleven specs would carry a blank; it gets its own section
+    # and its own set pages.
+    ("bis-no-glaives", "BiS without Warglaives",
+     "The same best-in-slot set with the next best weapons this spec can get "
+     "instead of the Warglaives of Azzinoth."),
 ]
+
+# The three every spec has, which is what the summary table shows.
+MAIN_ANCHORS = ANCHORS[:3]
 
 SLOT_LABEL = {
     "head": "Head", "neck": "Neck", "shoulder": "Shoulder", "back": "Back",
@@ -219,7 +228,8 @@ def write_index(path: Path, specs: list[str], by_key: dict, meta: dict,
               "Entry to BiS"]
     rows = []
     for spec in specs:
-        got = {a: by_key.get((spec, a, default_armor)) for a, _l, _w in ANCHORS}
+        got = {a: by_key.get((spec, a, default_armor))
+               for a, _l, _w in MAIN_ANCHORS}
         entry = got.get("entry")
         tier = got.get("tier-hands-and-head")
         bis = got.get("bis")
@@ -312,6 +322,32 @@ different authors. Sorting is yours to ask for rather than the default.
 ::: {{.sortable}}
 {rows_table(header, rows)}
 :::
+
+## Only one of them gets the Warglaives
+
+The Combat Rogue's published Phase 3 list and the Fury Warrior's both rank dual
+Warglaives of Azzinoth, and the raid holds one pair. So the BiS row above is
+true for at most one of these two, and this is what the other one does instead.
+
+The replacement weapons were not chosen. Every one-hand, main-hand and off-hand
+weapon Phase 3 can supply that either spec could hold, 33 of them, was run in a
+two-pass search: vary the main hand against a fixed off hand, then vary the off
+hand against the winner.
+
+{rows_table(["Spec", "With the Warglaives", "Without them", "What they are worth"],
+            [[SPEC_LABEL.get(s, s),
+              f"{by_key[(s, 'bis', default_armor)]['dps']:.1f}",
+              f"[{by_key[(s, 'bis-no-glaives', default_armor)]['dps']:.1f}]"
+              f"(sims/{slug(s, 'bis-no-glaives')}.md)",
+              f"{by_key[(s, 'bis', default_armor)]['dps'] - by_key[(s, 'bis-no-glaives', default_armor)]['dps']:+.1f}"]
+             for s in ("combat_rogue", "fury_warrior")
+             if (s, 'bis-no-glaives', default_armor) in by_key])}
+
+Two things follow, and neither is a ruling. **The rogue gets more out of the same
+pair**, so routing them to the rogue leaves the raid higher by about 75 damage
+per second than routing them to the warrior. And **without them the two specs
+are level**, with the Fury Warrior a shade ahead, so the gap in the table above
+is the weapons rather than the classes.
 
 ## The same spec against a harder boss
 

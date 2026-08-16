@@ -134,6 +134,45 @@ CATACLYSM_SPECS = ("arms_warrior",)
 # into the output rather than only printed here.
 CARRY_FORWARD_FROM_ENTRY = {"retribution_paladin": ["ranged"]}
 
+# THE SAME SPEC WITHOUT THE WARGLAIVES, as a second best-in-slot profile.
+#
+# WHY IT EXISTS. Both Warglaives of Azzinoth are ranked by the Combat Rogue's
+# and the Fury Warrior's published Phase 3 lists, and there is ONE pair in the
+# raid. So at most one of those two characters can be the profile the compendium
+# already carries, and the other one is this. Without it the council has a
+# figure for the winner and nothing at all for the loser.
+#
+# THE PAIRS WERE MEASURED, not chosen. Every one-hand, main-hand and off-hand
+# weapon in items.csv that a warrior or a rogue could hold and that Phase 3 can
+# supply, 33 candidates, was run in a two-pass search: vary the main hand
+# against a fixed off hand, then vary the off hand against the winner. 4000
+# iterations per candidate, confirmed at 10000, armor 6193, 150 seconds.
+#
+# NO DUPLICATE ITEM IS USED, deliberately. The best Fury pair by raw damage is
+# two copies of Vengeful Gladiator's Slicer at 2609.9, and the pair below is
+# 2606.1, which is 3.8 DPS behind and inside two standard errors. A profile
+# whose whole purpose is to answer "what if this spec does not win the contested
+# weapon" should not answer it by assuming the spec wins two of something else.
+# The guild lead can overturn that: the figure for the duplicate pair is
+# recorded here so the trade is visible rather than hidden.
+NO_GLAIVE_ALTERNATIVE = {
+    "fury_warrior": {
+        "main_hand": 33762,   # Vengeful Gladiator's Slicer, One Hand sword
+        "off_hand": 34015,    # Vengeful Gladiator's Chopper, Off Hand axe
+        "measured": "2606.1 bare against 2727.4 for the bare Warglaives, so the "
+                    "pair costs this spec 121.3. Two Slicers measure 2609.9 and "
+                    "need two copies of one arena weapon.",
+    },
+    "combat_rogue": {
+        "main_hand": 33762,   # Vengeful Gladiator's Slicer, One Hand sword
+        "off_hand": 32369,    # Blade of Savagery, One Hand sword
+        "measured": "2552.4 bare against 2745.3 for the bare Warglaives, so the "
+                    "pair costs this spec 192.9. Both are swords, which the "
+                    "rogue's shipped rotation and the Human sword specialization "
+                    "both want.",
+    },
+}
+
 
 def routed_ids(doc: dict) -> set[int]:
     """Every item id the judgment file routes, so a transcription can be checked."""
@@ -405,6 +444,48 @@ def main() -> int:
             document["routing_applied"] = applied
         if unresolved:
             document["outside_items_csv"] = unresolved
+        # A SECOND ANCHOR FOR THE TWO SPECS THAT CONTEST THE WARGLAIVES. It is
+        # the same set in every other slot, so a reader comparing the two rows
+        # is reading the weapons and nothing else.
+        alt = NO_GLAIVE_ALTERNATIVE.get(spec)
+        if alt:
+            rows_alt = {k: dict(v) for k, v in rows.items()}
+            for slot in ("main_hand", "off_hand"):
+                item_id = alt[slot]
+                rows_alt[slot] = {
+                    "item": (items_csv.get(item_id) or {}).get("name")
+                            or db_names.get(item_id),
+                    "id": item_id,
+                    "hit": hit_of(item_id, kind, items_csv, db_stats),
+                }
+            total_alt = sum(r["hit"] for r in rows_alt.values())
+            gap_alt = max(0.0, target - (total_alt + debuff))
+            document["anchors"]["bis_no_glaives"] = {
+                "hit_by_slot": rows_alt,
+                "total_item_hit": total_alt,
+                "tier6_pieces_held": by_tier.get("T6", []),
+                "tier5_pieces_held": by_tier.get("T5", []),
+                "tier4_pieces_held": by_tier.get("T4", []),
+                "set_pieces_held": set_names,
+                "why_this_anchor_exists": (
+                    "The Warglaives of Azzinoth are ranked by BOTH this spec's "
+                    "published Phase 3 list and the other contender's, and the "
+                    "raid holds one pair. This is the same best-in-slot set "
+                    "with the next best weapons this spec can actually get. "
+                    + alt["measured"]),
+                "hit_state": {
+                    "cap": caps.get(spec),
+                    "net_target_rating": target,
+                    "assumed_debuff_rating": debuff,
+                    "item_hit": total_alt,
+                    "state": "full" if gap_alt <= 0 else "short",
+                    "gap_rating": int(gap_alt),
+                    "gem_sockets": sockets,
+                    "gems_needed": min(
+                        int(-(-gap_alt // RATING_PER_GEM)) if gap_alt > 0 else 0,
+                        sockets),
+                },
+            }
         (args.out / f"{spec.replace('_', '-')}.yaml").write_text(
             yaml.safe_dump(document, sort_keys=False, width=78,
                            allow_unicode=True))

@@ -13,6 +13,16 @@ meta:
     square root of 10000. It covers about 68 percent, NOT 95. Ruled by the guild
     lead on 15 August 2026, shown both options. Do not relabel it as a confidence
     interval.'
+  default_tier: '6193, because ten of the fourteen Phase 3 bosses sit in it: all
+    five Mount Hyjal, Teron Gorefiend, Mother Shahraz, and three of the four Illidari
+    Council.'
+  the_zero_tier_is_one_target: Essence of Suffering alone, plus Veras Darkshadow,
+    whose armor is near-zero with the digits unestablished. Run because the guild
+    lead ruled per boss, and a target with no armor is a real part of two encounters.
+  expose_weakness: The Survival Hunter's agility is MEASURED per anchor by bisection,
+    1119 entry, 1105 tier, 1152 best in slot, with the uptime measured at 0.98.
+    See data/facts/raid-buffs.yaml. It was the simulator's generic 1210 for a few
+    hours on 15 August 2026 and that was 5 to 9 percent high for this roster.
   armor_tiers_run:
     6193:
     - Anetheron
@@ -36,16 +46,12 @@ meta:
     - Supremus
     0:
     - Essence of Suffering
-  default_tier: '6193, because ten of the fourteen Phase 3 bosses sit in it: all
-    five Mount Hyjal, Teron Gorefiend, Mother Shahraz, and three of the four Illidari
-    Council.'
-  the_zero_tier_is_one_target: Essence of Suffering alone, plus Veras Darkshadow,
-    whose armor is near-zero with the digits unestablished. Run because the guild
-    lead ruled per boss, and a target with no armor is a real part of two encounters.
-  expose_weakness: The Survival Hunter's agility is MEASURED per anchor by bisection,
-    1119 entry, 1105 tier, 1152 best in slot, with the uptime measured at 0.98.
-    See data/facts/raid-buffs.yaml. It was the simulator's generic 1210 for a few
-    hours on 15 August 2026 and that was 5 to 9 percent high for this roster.
+  the_no_glaive_anchor: fury_warrior and combat_rogue each carry a second best-in-slot
+    profile, bis_no_glaives, identical in every slot except the two weapons. Both
+    specs' published Phase 3 lists rank the Warglaives of Azzinoth and the raid
+    holds one pair, so at most one of them can be the `bis` row and the other is
+    this one. The replacement weapons were found by running all 33 candidates Phase
+    3 can supply, not chosen.
 results:
 - profile: affliction-warlock.bis
   spec: affliction_warlock
@@ -173,6 +179,13 @@ results:
   standard_error: 1.0
   stdev: 99.5
   boss_armor: 6193
+- profile: combat-rogue.bis-no-glaives
+  spec: combat_rogue
+  anchor: bis-no-glaives
+  dps: 2708.2
+  standard_error: 1.11
+  stdev: 111.1
+  boss_armor: 6193
 - profile: combat-rogue.bis
   spec: combat_rogue
   anchor: bis
@@ -256,6 +269,13 @@ results:
   dps: 2215.3
   standard_error: 0.97
   stdev: 96.9
+  boss_armor: 6193
+- profile: fury-warrior.bis-no-glaives
+  spec: fury_warrior
+  anchor: bis-no-glaives
+  dps: 2727.1
+  standard_error: 1.24
+  stdev: 123.6
   boss_armor: 6193
 - profile: fury-warrior.bis
   spec: fury_warrior
@@ -467,6 +487,13 @@ results:
   standard_error: 0.89
   stdev: 89.1
   boss_armor: 7684
+- profile: combat-rogue.bis-no-glaives
+  spec: combat_rogue
+  anchor: bis-no-glaives
+  dps: 2410.6
+  standard_error: 0.98
+  stdev: 98.4
+  boss_armor: 7684
 - profile: combat-rogue.bis
   spec: combat_rogue
   anchor: bis
@@ -550,6 +577,13 @@ results:
   dps: 2016.8
   standard_error: 0.87
   stdev: 87.2
+  boss_armor: 7684
+- profile: fury-warrior.bis-no-glaives
+  spec: fury_warrior
+  anchor: bis-no-glaives
+  dps: 2397.4
+  standard_error: 1.09
+  stdev: 108.7
   boss_armor: 7684
 - profile: fury-warrior.bis
   spec: fury_warrior
@@ -761,6 +795,13 @@ results:
   standard_error: 1.18
   stdev: 118.3
   boss_armor: 0
+- profile: combat-rogue.bis-no-glaives
+  spec: combat_rogue
+  anchor: bis-no-glaives
+  dps: 2917.4
+  standard_error: 1.18
+  stdev: 118.2
+  boss_armor: 0
 - profile: combat-rogue.bis
   spec: combat_rogue
   anchor: bis
@@ -844,6 +885,13 @@ results:
   dps: 2621.0
   standard_error: 1.17
   stdev: 116.9
+  boss_armor: 0
+- profile: fury-warrior.bis-no-glaives
+  spec: fury_warrior
+  anchor: bis-no-glaives
+  dps: 3075.3
+  standard_error: 1.38
+  stdev: 137.8
   boss_armor: 0
 - profile: fury-warrior.bis
   spec: fury_warrior

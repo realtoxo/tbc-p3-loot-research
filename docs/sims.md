@@ -89,6 +89,28 @@ different authors. Sorting is yours to ask for rather than the default.
 | Survival Hunter      | [2797.4 ± 0.87](sims/survival-hunter-entry.md)      | +163.6        | [2961.0 ± 0.94](sims/survival-hunter-tier-hands-and-head.md)      | +113.2      | [3074.2 ± 0.95](sims/survival-hunter-bis.md)      | +276.8       |
 :::
 
+## Only one of them gets the Warglaives
+
+The Combat Rogue's published Phase 3 list and the Fury Warrior's both rank dual
+Warglaives of Azzinoth, and the raid holds one pair. So the BiS row above is
+true for at most one of these two, and this is what the other one does instead.
+
+The replacement weapons were not chosen. Every one-hand, main-hand and off-hand
+weapon Phase 3 can supply that either spec could hold, 33 of them, was run in a
+two-pass search: vary the main hand against a fixed off hand, then vary the off
+hand against the winner.
+
+| Spec         | With the Warglaives | Without them                                  | What they are worth |
+|--------------|---------------------|-----------------------------------------------|---------------------|
+| Combat Rogue | 2918.2              | [2708.2](sims/combat-rogue-bis-no-glaives.md) | +210.0              |
+| Fury Warrior | 2862.1              | [2727.1](sims/fury-warrior-bis-no-glaives.md) | +135.0              |
+
+Two things follow, and neither is a ruling. **The rogue gets more out of the same
+pair**, so routing them to the rogue leaves the raid higher by about 75 damage
+per second than routing them to the warrior. And **without them the two specs
+are level**, with the Fury Warrior a shade ahead, so the gap in the table above
+is the weapons rather than the classes.
+
 ## The same spec against a harder boss
 
 **This section answers where a drop will actually be used.** Every figure above

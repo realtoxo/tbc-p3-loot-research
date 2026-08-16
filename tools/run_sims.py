@@ -214,6 +214,10 @@ EXPOSE_WEAKNESS_AGILITY = {
     "entry": 1119.0,
     "tier_hands_and_head": 1105.0,
     "bis": 1152.0,
+    # The no-glaive profiles differ from `bis` only in the two weapon slots of
+    # the spec being simulated, and the hunter supplying this debuff is not that
+    # spec, so its agility is the best-in-slot figure unchanged.
+    "bis_no_glaives": 1152.0,
 }
 
 # WINDFURY IS DELIBERATELY NOT HERE. Enhancement decodes improvedWeaponTotems at
