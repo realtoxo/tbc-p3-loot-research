@@ -328,15 +328,17 @@ against each armor value Phase 3 contains. Nothing about the character is
 different between the three columns, so the whole spread is the boss.
 
 The table above is the 6193 column, because ten of the fourteen bosses sit in
-that tier. The last column is what the higher-armor bosses cost each spec, and
-this table sorts too: order by it and the roster splits cleanly in two. Every
-physical spec pays, and the five pure casters pay nothing at all, which is the
-correct behaviour and a standing check that the armor model does what it
-claims.
+that tier.
+
+**The last column is simply the 7684 figure minus the 6193 figure**: how much
+damage that spec gives up when the boss is one of the armoured ones. It sorts,
+and sorting by it splits the roster cleanly in two. Every physical spec pays,
+and the five pure casters pay nothing at all, which is the correct behaviour and
+a standing check that the armor model does what it claims.
 
 ::: {{.sortable}}
 {rows_table(["Spec"] + [f"Armor {a}" for a in tiers]
-            + ["Cost of the harder boss"],
+            + [f"Lost on a {max(tiers)} boss"],
             [[SPEC_LABEL.get(s, s)]
              + [(f"{by_key[(s, 'bis', a)]['dps']:.1f}"
                  if (s, 'bis', a) in by_key else "-") for a in tiers]

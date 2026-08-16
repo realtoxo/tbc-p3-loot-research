@@ -104,28 +104,30 @@ against each armor value Phase 3 contains. Nothing about the character is
 different between the three columns, so the whole spread is the boss.
 
 The table above is the 6193 column, because ten of the fourteen bosses sit in
-that tier. The last column is what the higher-armor bosses cost each spec, and
-this table sorts too: order by it and the roster splits cleanly in two. Every
-physical spec pays, and the five pure casters pay nothing at all, which is the
-correct behaviour and a standing check that the armor model does what it
-claims.
+that tier.
+
+**The last column is simply the 7684 figure minus the 6193 figure**: how much
+damage that spec gives up when the boss is one of the armoured ones. It sorts,
+and sorting by it splits the roster cleanly in two. Every physical spec pays,
+and the five pure casters pay nothing at all, which is the correct behaviour and
+a standing check that the armor model does what it claims.
 
 ::: {.sortable}
-| Spec                 | Armor 7684 | Armor 6193 | Armor 0 | Cost of the harder boss |
-|----------------------|------------|------------|---------|-------------------------|
-| Affliction Warlock   | 2212.7     | 2227.6     | 2258.0  | -14.9                   |
-| Arcane Mage          | 2534.4     | 2534.4     | 2534.4  | +0.0                    |
-| Arms Warrior         | 2126.7     | 2426.4     | 2619.7  | -299.7                  |
-| Balance Druid        | 1942.0     | 1952.7     | 1974.6  | -10.7                   |
-| Beast Mastery Hunter | 3208.3     | 3580.7     | 4085.6  | -372.4                  |
-| Combat Rogue         | 2597.6     | 2918.2     | 3156.0  | -320.6                  |
-| Destruction Warlock  | 2493.8     | 2493.8     | 2493.8  | +0.0                    |
-| Elemental Shaman     | 2130.0     | 2130.0     | 2130.0  | +0.0                    |
-| Enhancement Shaman   | 2167.0     | 2387.4     | 2762.2  | -220.4                  |
-| Fury Warrior         | 2516.5     | 2862.1     | 3248.6  | -345.6                  |
-| Retribution Paladin  | 2223.2     | 2374.4     | 2678.7  | -151.2                  |
-| Shadow Priest        | 1577.9     | 1577.9     | 1577.9  | +0.0                    |
-| Survival Hunter      | 2771.3     | 3074.2     | 3581.4  | -302.9                  |
+| Spec                 | Armor 7684 | Armor 6193 | Armor 0 | Lost on a 7684 boss |
+|----------------------|------------|------------|---------|---------------------|
+| Affliction Warlock   | 2212.7     | 2227.6     | 2258.0  | -14.9               |
+| Arcane Mage          | 2534.4     | 2534.4     | 2534.4  | +0.0                |
+| Arms Warrior         | 2126.7     | 2426.4     | 2619.7  | -299.7              |
+| Balance Druid        | 1942.0     | 1952.7     | 1974.6  | -10.7               |
+| Beast Mastery Hunter | 3208.3     | 3580.7     | 4085.6  | -372.4              |
+| Combat Rogue         | 2597.6     | 2918.2     | 3156.0  | -320.6              |
+| Destruction Warlock  | 2493.8     | 2493.8     | 2493.8  | +0.0                |
+| Elemental Shaman     | 2130.0     | 2130.0     | 2130.0  | +0.0                |
+| Enhancement Shaman   | 2167.0     | 2387.4     | 2762.2  | -220.4              |
+| Fury Warrior         | 2516.5     | 2862.1     | 3248.6  | -345.6              |
+| Retribution Paladin  | 2223.2     | 2374.4     | 2678.7  | -151.2              |
+| Shadow Priest        | 1577.9     | 1577.9     | 1577.9  | +0.0                |
+| Survival Hunter      | 2771.3     | 3074.2     | 3581.4  | -302.9              |
 :::
 
 Which boss sits in which tier is [`boss-armor.yaml`](../data/facts/boss-armor.yaml),
