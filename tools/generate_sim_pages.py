@@ -226,7 +226,7 @@ def write_index(path: Path, specs: list[str], by_key: dict, meta: dict,
     # belongs to. The overall Entry to BiS total closes the row.
     header = ["Spec", "Entry", "Entry to Tier", "Tier", "Tier to BiS", "BiS",
               "Entry to BiS"]
-    rows = []
+    rows, order = [], []
     for spec in specs:
         got = {a: by_key.get((spec, a, default_armor))
                for a, _l, _w in MAIN_ANCHORS}
@@ -256,6 +256,13 @@ def write_index(path: Path, specs: list[str], by_key: dict, meta: dict,
                 cell("tier-hands-and-head", tier), delta(tier, bis),
                 cell(anchor, bis), delta(entry, bis),
             ])
+            order.append(bis["dps"] if bis else float("-inf"))
+
+    # THE PAGE LOADS SORTED BY BEST-IN-SLOT, HIGHEST FIRST. Ruled by the guild
+    # lead on 16 August 2026, replacing spec order. A row with no best-in-slot
+    # figure sorts last rather than acting like a zero, which is the same rule
+    # the sorting script applies to a cell holding no number.
+    rows = [r for _k, r in sorted(zip(order, rows), key=lambda p: -p[0])]
 
     body = f"""---
 title: Simulated Throughput
@@ -290,9 +297,6 @@ average really is about 3580.7, give or take a point.
 **One pull varies far more than that.** For the Beast Mastery Hunter a single
 150 second pull swings by roughly 100 DPS either way. Averaging ten thousand of
 them is what shrinks the uncertainty to one.
-
-The practical rule: **a gap of a few DPS between two figures is noise, and a gap
-of tens or hundreds is real.** Ruled by the guild lead on 15 August 2026.
 :::
 
 ## What each spec measures
@@ -323,37 +327,14 @@ what everything else is worth once the weapons and trinkets finally move. The
 two are wildly uneven per spec, which is why they are separate columns.
 
 **Every column sorts.** Click a heading to order by it, click again to reverse.
-The page loads in spec order on purpose: a table of thirteen numbers sorted by
-damage reads as a league table, and these specs run rotations written by
-different authors. Sorting is yours to ask for rather than the default.
+The page loads ordered by the best-in-slot figure, highest first. Read that
+order as what each set measured and not as a ranking of the players: these
+specs run rotations written by different authors, and a spec is only strictly
+comparable with itself at another anchor.
 
-::: {{.sortable}}
+::: {{.sortable default-sort="5"}}
 {rows_table(header, rows)}
 :::
-
-## Only one of them gets the Warglaives
-
-The Combat Rogue's published Phase 3 list and the Fury Warrior's both rank dual
-Warglaives of Azzinoth, and the raid holds one pair. Both appear twice in the
-table above for that reason: at most one of those two characters can be the row
-with the Warglaives in it, and the other is the row without.
-
-The replacement weapons were not chosen. Every one-hand, main-hand and off-hand
-weapon Phase 3 can supply that either spec could hold, 33 of them, was run in a
-two-pass search: vary the main hand against a fixed off hand, then vary the off
-hand against the winner.
-
-{rows_table(["Spec", "What the pair is worth to them"],
-            [[SPEC_LABEL.get(s, s),
-              f"{by_key[(s, 'bis', default_armor)]['dps'] - by_key[(s, 'bis-no-glaives', default_armor)]['dps']:+.1f}"]
-             for s in ("combat_rogue", "fury_warrior")
-             if (s, 'bis-no-glaives', default_armor) in by_key])}
-
-Two things follow, and neither is a ruling. **The rogue gets more out of the same
-pair**, so routing them to the rogue leaves the raid higher by about 75 damage
-per second than routing them to the warrior. And **without them the two specs
-are level**, with the Fury Warrior a shade ahead, so the gap between them in the
-table above is the weapons rather than the classes.
 
 ## The same spec against a harder boss
 
