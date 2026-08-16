@@ -205,8 +205,13 @@ def main() -> int:
 def write_index(path: Path, specs: list[str], by_key: dict, meta: dict,
                 tiers: list, default_armor: int) -> None:
     """The one table, and the warnings that have to travel with it."""
+    # EACH STEP GETS ITS OWN COLUMN, because the two halves answer different
+    # questions. Entry to Tier is what the five tier tokens alone are worth, and
+    # Tier to BiS is what the other twelve slots are worth once the weapons and
+    # trinkets finally move. A single Entry to BiS figure hides which of the two
+    # a spec's gain came from, and for several specs the split is very uneven.
     header = ["Spec"] + [label for _a, label, _w in ANCHORS] \
-        + ["Entry to BiS"]
+        + ["Entry to Tier", "Tier to BiS", "Entry to BiS"]
     rows = []
     for spec in specs:
         cells = [SPEC_LABEL.get(spec, spec)]
@@ -216,10 +221,13 @@ def write_index(path: Path, specs: list[str], by_key: dict, meta: dict,
                 cells.append("not simulated")
                 continue
             cells.append(f"[{figure(row)}](sims/{slug(spec, anchor)}.md)")
-        entry = by_key.get((spec, "entry", default_armor))
-        bis = by_key.get((spec, "bis", default_armor))
-        cells.append(f"{bis['dps'] - entry['dps']:+.1f}"
-                     if entry and bis else "not comparable")
+        got = {a: by_key.get((spec, a, default_armor)) for a, _l, _w in ANCHORS}
+        entry = got.get("entry")
+        tier = got.get("tier-hands-and-head")
+        bis = got.get("bis")
+        for a, b in ((entry, tier), (tier, bis), (entry, bis)):
+            cells.append(f"{b['dps'] - a['dps']:+.1f}"
+                         if a and b else "not comparable")
         rows.append(cells)
 
     body = f"""---
@@ -286,7 +294,14 @@ Every figure below is a click into the set that produced it: seventeen slots
 with their enchants and gems, the consumables drunk, the buffs and debuffs
 applied, the talent string and the rotation.
 
+**Every column sorts.** Click a heading to order by it, click again to reverse.
+The page loads in spec order on purpose: a table of thirteen numbers sorted by
+damage reads as a league table, and these specs run rotations written by
+different authors. Sorting is yours to ask for rather than the default.
+
+::: {{.sortable}}
 {rows_table(header, rows)}
+:::
 
 ## The same spec against a harder boss
 
