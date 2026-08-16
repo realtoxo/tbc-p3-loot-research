@@ -153,7 +153,7 @@ This is what turns a generic weight into a claim about our raid. The mechanics a
 
 Each carries its own scope, sources and open questions at the top. For each spec we record the following at both gear anchors.
 
-**No simulator run has produced any figure here.** The anchors are defined so that runs can be executed at them later, and `data/facts/sim-profiles.yaml` records that collection has not started. Every figure below comes from captured gear lists joined to the item table.
+**No simulator run has produced any figure in this section.** Every figure below comes from captured gear lists joined to the item table. Simulated figures do exist, for thirteen specs at three gear anchors against each Phase 3 boss armor tier, and they live in [Simulated Throughput](sims.md) and `data/facts/sim-figures.yaml`. The two are kept apart because they answer different questions: a cap state here is what a published gear list carries, and a figure there is what a spec measures wearing it.
 
 | Recorded | Why |
 |---|---|

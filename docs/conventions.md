@@ -186,7 +186,7 @@ These priorities are an illustration of the shape a reason should take, not a ru
 
 What is real here: every stat line, every delta table, every conversion rate, every cap figure, and all four derived baselines and their acquisition routes on every card, taken from `data/facts/items.csv`, `data/facts/hit.yaml`, `data/facts/crit.yaml`, `data/facts/attack-power.yaml`, `data/facts/tokens.yaml` and the EP Workbook in `data/research/epv-workbook/`. Every creator remark is real and carries a link to the second it was said. What is illustrative: the priorities themselves, which no council has settled.
 
-Throughput figures are absent by choice. A card previously led with a line like "plus 41 damage per second", which had no source, because no simulation has been run. An invented headline sitting above a sourced table is worse than no headline, since it is the number a reader carries away.
+Throughput figures are absent from these cards by choice. A card previously led with a line like "plus 41 damage per second", which had no source at the time. Simulated figures now exist, in [Simulated Throughput](sims.md), and they are not restated on a card: a card compares one item against a baseline, and a simulated figure is a whole set against an encounter.
 
 The pattern each reason follows: state the constraint the spec is under, name the gear that constraint is measured in and what the numbers mean for the spec, show the delta, then argue both directions and land. A reason that only argues one way is not finished.
 
