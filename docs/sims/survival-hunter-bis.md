@@ -2,7 +2,7 @@
 title: Survival Hunter, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 3280.4 ± 1.04 damage per second.
+  The whole request behind one figure: 3074.2 ± 0.95 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/survival-hunter.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **3280.4**                                                                                     |
-| Standard error on the mean | ± 1.04                                                                                         |
-| Spread across iterations   | 103.6                                                                                          |
+| Damage per second          | **3074.2**                                                                                     |
+| Standard error on the mean | ± 0.95                                                                                         |
+| Spread across iterations   | 95.1                                                                                           |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}
@@ -30,6 +30,16 @@ Back to [Simulated Throughput](../sims.md).
 divided by the square root of 10000. It covers about 68 percent,
 not 95.
 :::
+
+The figure above is against boss armor 6193. This same set was run
+against every Phase 3 armor tier, and armor is subtracted before any physical
+damage lands, so a physical spec moves between them and a pure caster does not.
+
+| Boss armor | Mitigation | This set measures | Targets at that armor                                      |
+|------------|------------|-------------------|------------------------------------------------------------|
+| 7684       | 42.12%     | 2771.3 ± 0.85     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 3074.2 ± 0.95     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 3581.4 ± 1.10     | Essence of Suffering                                       |
 
 ## The set
 
@@ -74,6 +84,8 @@ questions.
 | `petScrollAgi` | `yes`                         |         |
 | `petScrollStr` | `yes`                         |         |
 | `potId`        | `Haste Potion`                | 22838   |
+| `scrollAgi`    | `yes`                         |         |
+| `scrollStr`    | `yes`                         |         |
 
 ## Buffs and debuffs
 
@@ -114,21 +126,23 @@ The buffs applied to this player alone.
 
 The debuffs applied to the target.
 
-| Field                       | Value                    |
-|-----------------------------|--------------------------|
-| `bloodFrenzy`               | `True`                   |
-| `curseOfElements`           | `TristateEffectImproved` |
-| `curseOfRecklessness`       | `True`                   |
-| `demoralizingShout`         | `TristateEffectRegular`  |
-| `faerieFire`                | `TristateEffectImproved` |
-| `huntersMark`               | `TristateEffectImproved` |
-| `improvedSealOfTheCrusader` | `TristateEffectImproved` |
-| `judgementOfWisdom`         | `True`                   |
-| `mangle`                    | `True`                   |
-| `misery`                    | `True`                   |
-| `shadowWeaving`             | `True`                   |
-| `sunderArmor`               | `True`                   |
-| `thunderClap`               | `TristateEffectRegular`  |
+| Field                         | Value                    |
+|-------------------------------|--------------------------|
+| `bloodFrenzy`                 | `True`                   |
+| `curseOfElements`             | `TristateEffectImproved` |
+| `curseOfRecklessness`         | `True`                   |
+| `demoralizingShout`           | `TristateEffectRegular`  |
+| `exposeWeaknessHunterAgility` | `1210.0`                 |
+| `exposeWeaknessUptime`        | `0.9`                    |
+| `faerieFire`                  | `TristateEffectImproved` |
+| `huntersMark`                 | `TristateEffectImproved` |
+| `improvedSealOfTheCrusader`   | `TristateEffectImproved` |
+| `judgementOfWisdom`           | `True`                   |
+| `mangle`                      | `True`                   |
+| `misery`                      | `True`                   |
+| `shadowWeaving`               | `True`                   |
+| `sunderArmor`                 | `True`                   |
+| `thunderClap`                 | `TristateEffectRegular`  |
 
 ## Talents, rotation and encounter
 
@@ -143,4 +157,4 @@ taking theirs is one we can cite.
 | Simulator     | v0.0.116                               |
 | Iterations    | 10000                                  |
 | Random seed   | 1                                      |
-| Encounter     | 180 seconds, 1 target at level 73      |
+| Encounter     | 150 seconds, 1 target at level 73      |

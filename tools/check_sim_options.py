@@ -60,6 +60,12 @@ PRESETS = {
 # with the ruling that declined it. A key here is a DECISION and is expected to
 # be argued with; a key in neither place is an accident.
 DECLINED = {
+    ("shadow_priest", "conjuredId"):
+        "A conjured mana item measures EXACTLY 0.0 for this spec, because its "
+        "secondsOomAvg is 0.00 in this encounter: it never runs out of mana, so "
+        "there is nothing for a rune to restore. Sent for the warlocks and both "
+        "hunters, who do go out of mana, and declined here rather than sent for "
+        "symmetry. Re-measure if the encounter length changes.",
     ("enhancement_shaman", "syncType"):
         "The guild lead ruled on 15 August 2026 that the Enhancement Shaman's "
         "weapons are NOT synced. The preset sets DelayOffhandSwings and it "
@@ -94,9 +100,24 @@ DECLINED = {
 #                                this project sends a FLASK, which occupies both
 #                                elixir slots, so the pair is mutually exclusive
 #                                with what consumable-ids.yaml already resolves
-PENDING_ARBITRATION = {
-    "scrollAgi", "scrollStr", "superSapper", "goblinSapper", "explosiveId",
-    "conjuredId", "drumsId", "battleElixirId", "guardianElixirId",
+PENDING_ARBITRATION: set[str] = set()
+
+# ARBITRATED AND DECLINED, 15 August 2026, each with the reason.
+DECLINED_CONSUMABLES = {
+    "superSapper": "inert without profession1 Engineering, which is an "
+                   "UNRECORDED ROSTER FACT. Both together are worth 8.6 to 16.0 "
+                   "DPS; profession alone and sappers alone each measure exactly "
+                   "0.0, because sim/core/consumes.go gates on both. Sending it "
+                   "would assert that these players are Engineers. Guild lead "
+                   "needed.",
+    "goblinSapper": "the same gate and the same unrecorded roster fact.",
+    "explosiveId": "the same.",
+    "drumsId": "raid-buffs.yaml already gives every party its drums through "
+               "PartyBuffs, so an id here would count them twice.",
+    "battleElixirId": "this project sends a FLASK, which occupies both elixir "
+                      "slots, so the pair is mutually exclusive with what "
+                      "consumable-ids.yaml already resolves.",
+    "guardianElixirId": "the same.",
 }
 
 
@@ -172,7 +193,8 @@ def main() -> int:
         # `potions` and `conjuredItems` are the list halves of two-field pairs
         # and have no preset key of their own; the id half is what is compared.
         for key in sorted(shipped_consumables(path) - sent):
-            if (spec, key) in DECLINED or key in PENDING_ARBITRATION:
+            if (spec, key) in DECLINED or key in PENDING_ARBITRATION \
+                    or key in DECLINED_CONSUMABLES:
                 continue
             failures.append(
                 f"{spec}: the shipped preset at ui/{ui}/presets.ts sets the "
@@ -182,10 +204,10 @@ def main() -> int:
 
     declined = len(DECLINED)
     print(f"sim options: {checked} preset(s) checked, {declined} option(s) "
-          f"declined with a stated reason, {len(PENDING_ARBITRATION)} "
-          "consumable key(s) under arbitration")
+          f"declined with a stated reason, {len(DECLINED_CONSUMABLES)} "
+          "consumable key(s) declined")
     if PENDING_ARBITRATION:
-        print("  under arbitration, and this list must empty: "
+        print("  STILL UNDER ARBITRATION, and this list must empty: "
               + ", ".join(sorted(PENDING_ARBITRATION)))
     for (spec, key), why in sorted(DECLINED.items()):
         print(f"  declined {spec}.{key}: {why.split('.')[0]}.")

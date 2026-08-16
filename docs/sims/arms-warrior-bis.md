@@ -2,7 +2,7 @@
 title: Arms Warrior, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2344.6 ± 1.19 damage per second.
+  The whole request behind one figure: 2421.4 ± 1.36 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/arms-warrior.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                          |
 |----------------------------|------------------------------------------------------------------------------------------------|
-| Damage per second          | **2344.6**                                                                                     |
-| Standard error on the mean | ± 1.19                                                                                         |
-| Spread across iterations   | 118.7                                                                                          |
+| Damage per second          | **2421.4**                                                                                     |
+| Standard error on the mean | ± 1.36                                                                                         |
+| Spread across iterations   | 135.7                                                                                          |
 | Anchor                     | Haste Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}
@@ -30,6 +30,16 @@ Back to [Simulated Throughput](../sims.md).
 divided by the square root of 10000. It covers about 68 percent,
 not 95.
 :::
+
+The figure above is against boss armor 6193. This same set was run
+against every Phase 3 armor tier, and armor is subtracted before any physical
+damage lands, so a physical spec moves between them and a pure caster does not.
+
+| Boss armor | Mitigation | This set measures | Targets at that armor                                      |
+|------------|------------|-------------------|------------------------------------------------------------|
+| 7684       | 42.12%     | 2121.8 ± 1.22     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2421.4 ± 1.36     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2613.1 ± 1.46     | Essence of Suffering                                       |
 
 ## Where this set differs from the published page
 
@@ -67,7 +77,7 @@ the off hand.
 | Trinket 2 | `Bloodlust Brooch`               |                                     |                                                                  |
 | Main hand | `Cataclysm's Edge`               | `Enchant Weapon - Mongoose`         |                                                                  |
 | Off hand  | *empty*                          |                                     |                                                                  |
-| Ranged    | `Barrel-Blade Longrifle`         | `Khorium Scope`                     |                                                                  |
+| Ranged    | `Barrel-Blade Longrifle`         | `Khorium Scope`                     | `Bold Living Ruby`, `Bold Living Ruby`                           |
 
 ## Consumables
 
@@ -75,12 +85,15 @@ Consumables are assumed in every run, per the framework, and they are not
 counted in the hit cap states, because those two settings answer different
 questions.
 
-| Field       | Consumable                    | Item id |
-|-------------|-------------------------------|---------|
-| `flaskId`   | `Flask of Relentless Assault` | 22854   |
-| `foodId`    | `Roasted Clefthoof`           | 27658   |
-| `mhImbueId` | `Adamantite Sharpening Stone` | 29453   |
-| `potId`     | `Haste Potion`                | 22838   |
+| Field        | Consumable                    | Item id |
+|--------------|-------------------------------|---------|
+| `conjuredId` | `22788`                       | 22788   |
+| `flaskId`    | `Flask of Relentless Assault` | 22854   |
+| `foodId`     | `Roasted Clefthoof`           | 27658   |
+| `mhImbueId`  | `Adamantite Sharpening Stone` | 29453   |
+| `potId`      | `Haste Potion`                | 22838   |
+| `scrollAgi`  | `yes`                         |         |
+| `scrollStr`  | `yes`                         |         |
 
 ## Buffs and debuffs
 
@@ -121,21 +134,23 @@ The buffs applied to this player alone.
 
 The debuffs applied to the target.
 
-| Field                       | Value                    |
-|-----------------------------|--------------------------|
-| `bloodFrenzy`               | `True`                   |
-| `curseOfElements`           | `TristateEffectImproved` |
-| `curseOfRecklessness`       | `True`                   |
-| `demoralizingShout`         | `TristateEffectRegular`  |
-| `faerieFire`                | `TristateEffectImproved` |
-| `huntersMark`               | `TristateEffectImproved` |
-| `improvedSealOfTheCrusader` | `TristateEffectImproved` |
-| `judgementOfWisdom`         | `True`                   |
-| `mangle`                    | `True`                   |
-| `misery`                    | `True`                   |
-| `shadowWeaving`             | `True`                   |
-| `sunderArmor`               | `True`                   |
-| `thunderClap`               | `TristateEffectRegular`  |
+| Field                         | Value                    |
+|-------------------------------|--------------------------|
+| `bloodFrenzy`                 | `True`                   |
+| `curseOfElements`             | `TristateEffectImproved` |
+| `curseOfRecklessness`         | `True`                   |
+| `demoralizingShout`           | `TristateEffectRegular`  |
+| `exposeWeaknessHunterAgility` | `1210.0`                 |
+| `exposeWeaknessUptime`        | `0.9`                    |
+| `faerieFire`                  | `TristateEffectImproved` |
+| `huntersMark`                 | `TristateEffectImproved` |
+| `improvedSealOfTheCrusader`   | `TristateEffectImproved` |
+| `judgementOfWisdom`           | `True`                   |
+| `mangle`                      | `True`                   |
+| `misery`                      | `True`                   |
+| `shadowWeaving`               | `True`                   |
+| `sunderArmor`                 | `True`                   |
+| `thunderClap`                 | `TristateEffectRegular`  |
 
 ## Talents, rotation and encounter
 
@@ -150,4 +165,4 @@ taking theirs is one we can cite.
 | Simulator     | v0.0.116                                |
 | Iterations    | 10000                                   |
 | Random seed   | 1                                       |
-| Encounter     | 180 seconds, 1 target at level 73       |
+| Encounter     | 150 seconds, 1 target at level 73       |

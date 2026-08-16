@@ -2,7 +2,7 @@
 title: Balance Druid, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1455.0 ± 0.74 damage per second.
+  The whole request behind one figure: 1671.1 ± 0.86 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/balance-druid.entry.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                       |
 |----------------------------|---------------------------------------------------------------------------------------------|
-| Damage per second          | **1455.0**                                                                                  |
-| Standard error on the mean | ± 0.74                                                                                      |
-| Spread across iterations   | 73.7                                                                                        |
+| Damage per second          | **1671.1**                                                                                  |
+| Standard error on the mean | ± 0.86                                                                                      |
+| Spread across iterations   | 86.4                                                                                        |
 | Anchor                     | Destruction Potion. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note .veto}
@@ -30,6 +30,16 @@ Back to [Simulated Throughput](../sims.md).
 divided by the square root of 10000. It covers about 68 percent,
 not 95.
 :::
+
+The figure above is against boss armor 6193. This same set was run
+against every Phase 3 armor tier, and armor is subtracted before any physical
+damage lands, so a physical spec moves between them and a pure caster does not.
+
+| Boss armor | Mitigation | This set measures | Targets at that armor                                      |
+|------------|------------|-------------------|------------------------------------------------------------|
+| 7684       | 42.12%     | 1660.3 ± 0.86     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 1671.1 ± 0.86     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 1692.9 ± 0.87     | Essence of Suffering                                       |
 
 ## The set
 
@@ -63,12 +73,13 @@ Consumables are assumed in every run, per the framework, and they are not
 counted in the hit cap states, because those two settings answer different
 questions.
 
-| Field       | Consumable                | Item id |
-|-------------|---------------------------|---------|
-| `flaskId`   | `Flask of Blinding Light` | 22861   |
-| `foodId`    | `Blackened Basilisk`      | 27657   |
-| `mhImbueId` | `Brilliant Wizard Oil`    | 25122   |
-| `potId`     | `Destruction Potion`      | 22839   |
+| Field        | Consumable                | Item id |
+|--------------|---------------------------|---------|
+| `conjuredId` | `12662`                   | 12662   |
+| `flaskId`    | `Flask of Blinding Light` | 22861   |
+| `foodId`     | `Blackened Basilisk`      | 27657   |
+| `mhImbueId`  | `Brilliant Wizard Oil`    | 25122   |
+| `potId`      | `Destruction Potion`      | 22839   |
 
 ## Buffs and debuffs
 
@@ -89,14 +100,14 @@ The raid-wide buffs every party receives.
 
 The party buffs this spec receives, from party `g3`.
 
-| Field             | Value                   |
-|-------------------|-------------------------|
-| `bloodPact`       | `TristateEffectRegular` |
-| `drums`           | `GreaterDrumsOfBattle`  |
-| `manaSpringTotem` | `TristateEffectRegular` |
-| `moonkinAura`     | `TristateEffectRegular` |
-| `totemOfWrath`    | `1`                     |
-| `wrathOfAirTotem` | `TristateEffectRegular` |
+| Field             | Value                    |
+|-------------------|--------------------------|
+| `bloodPact`       | `TristateEffectRegular`  |
+| `drums`           | `GreaterDrumsOfBattle`   |
+| `manaSpringTotem` | `TristateEffectRegular`  |
+| `moonkinAura`     | `TristateEffectImproved` |
+| `totemOfWrath`    | `1`                      |
+| `wrathOfAirTotem` | `TristateEffectRegular`  |
 
 The buffs applied to this player alone.
 
@@ -107,21 +118,22 @@ The buffs applied to this player alone.
 
 The debuffs applied to the target.
 
-| Field                       | Value                    |
-|-----------------------------|--------------------------|
-| `bloodFrenzy`               | `True`                   |
-| `curseOfElements`           | `TristateEffectImproved` |
-| `curseOfRecklessness`       | `True`                   |
-| `demoralizingShout`         | `TristateEffectRegular`  |
-| `faerieFire`                | `TristateEffectImproved` |
-| `huntersMark`               | `TristateEffectImproved` |
-| `improvedSealOfTheCrusader` | `TristateEffectImproved` |
-| `judgementOfWisdom`         | `True`                   |
-| `mangle`                    | `True`                   |
-| `misery`                    | `True`                   |
-| `shadowWeaving`             | `True`                   |
-| `sunderArmor`               | `True`                   |
-| `thunderClap`               | `TristateEffectRegular`  |
+| Field                         | Value                    |
+|-------------------------------|--------------------------|
+| `bloodFrenzy`                 | `True`                   |
+| `curseOfElements`             | `TristateEffectImproved` |
+| `curseOfRecklessness`         | `True`                   |
+| `demoralizingShout`           | `TristateEffectRegular`  |
+| `exposeWeaknessHunterAgility` | `1210.0`                 |
+| `exposeWeaknessUptime`        | `0.9`                    |
+| `huntersMark`                 | `TristateEffectImproved` |
+| `improvedSealOfTheCrusader`   | `TristateEffectImproved` |
+| `judgementOfWisdom`           | `True`                   |
+| `mangle`                      | `True`                   |
+| `misery`                      | `True`                   |
+| `shadowWeaving`               | `True`                   |
+| `sunderArmor`                 | `True`                   |
+| `thunderClap`                 | `TristateEffectRegular`  |
 
 ## Talents, rotation and encounter
 
@@ -136,4 +148,4 @@ taking theirs is one we can cite.
 | Simulator     | v0.0.116                                 |
 | Iterations    | 10000                                    |
 | Random seed   | 1                                        |
-| Encounter     | 180 seconds, 1 target at level 73        |
+| Encounter     | 150 seconds, 1 target at level 73        |

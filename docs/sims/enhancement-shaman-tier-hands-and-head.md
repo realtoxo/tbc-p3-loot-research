@@ -2,7 +2,7 @@
 title: Enhancement Shaman, Haste Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2418.5 ± 0.99 damage per second.
+  The whole request behind one figure: 2215.5 ± 0.97 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/enhancement-shaman.tier-hands-and-head.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2418.5**                                                                                                                                    |
-| Standard error on the mean | ± 0.99                                                                                                                                        |
-| Spread across iterations   | 99.4                                                                                                                                          |
+| Damage per second          | **2215.5**                                                                                                                                    |
+| Standard error on the mean | ± 0.97                                                                                                                                        |
+| Spread across iterations   | 97.3                                                                                                                                          |
 | Anchor                     | Haste Potion. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note .veto}
@@ -30,6 +30,16 @@ Back to [Simulated Throughput](../sims.md).
 divided by the square root of 10000. It covers about 68 percent,
 not 95.
 :::
+
+The figure above is against boss armor 6193. This same set was run
+against every Phase 3 armor tier, and armor is subtracted before any physical
+damage lands, so a physical spec moves between them and a pure caster does not.
+
+| Boss armor | Mitigation | This set measures | Targets at that armor                                      |
+|------------|------------|-------------------|------------------------------------------------------------|
+| 7684       | 42.12%     | 2017.0 ± 0.88     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2215.5 ± 0.97     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2621.3 ± 1.17     | Essence of Suffering                                       |
 
 ## The set
 
@@ -63,11 +73,14 @@ Consumables are assumed in every run, per the framework, and they are not
 counted in the hit cap states, because those two settings answer different
 questions.
 
-| Field     | Consumable                    | Item id |
-|-----------|-------------------------------|---------|
-| `flaskId` | `Flask of Relentless Assault` | 22854   |
-| `foodId`  | `Roasted Clefthoof`           | 27658   |
-| `potId`   | `Haste Potion`                | 22838   |
+| Field        | Consumable                    | Item id |
+|--------------|-------------------------------|---------|
+| `conjuredId` | `12662`                       | 12662   |
+| `flaskId`    | `Flask of Relentless Assault` | 22854   |
+| `foodId`     | `Roasted Clefthoof`           | 27658   |
+| `potId`      | `Haste Potion`                | 22838   |
+| `scrollAgi`  | `yes`                         |         |
+| `scrollStr`  | `yes`                         |         |
 
 ## Buffs and debuffs
 
@@ -92,7 +105,6 @@ The party buffs this spec receives, from party `g1`.
 |------------------------|--------------------------|
 | `battleShout`          | `TristateEffectImproved` |
 | `drums`                | `GreaterDrumsOfBattle`   |
-| `graceOfAirTotem`      | `TristateEffectImproved` |
 | `leaderOfThePack`      | `TristateEffectRegular`  |
 | `sanctityAura`         | `TristateEffectImproved` |
 | `strengthOfEarthTotem` | `TristateEffectImproved` |
@@ -108,21 +120,23 @@ The buffs applied to this player alone.
 
 The debuffs applied to the target.
 
-| Field                       | Value                    |
-|-----------------------------|--------------------------|
-| `bloodFrenzy`               | `True`                   |
-| `curseOfElements`           | `TristateEffectImproved` |
-| `curseOfRecklessness`       | `True`                   |
-| `demoralizingShout`         | `TristateEffectRegular`  |
-| `faerieFire`                | `TristateEffectImproved` |
-| `huntersMark`               | `TristateEffectImproved` |
-| `improvedSealOfTheCrusader` | `TristateEffectImproved` |
-| `judgementOfWisdom`         | `True`                   |
-| `mangle`                    | `True`                   |
-| `misery`                    | `True`                   |
-| `shadowWeaving`             | `True`                   |
-| `sunderArmor`               | `True`                   |
-| `thunderClap`               | `TristateEffectRegular`  |
+| Field                         | Value                    |
+|-------------------------------|--------------------------|
+| `bloodFrenzy`                 | `True`                   |
+| `curseOfElements`             | `TristateEffectImproved` |
+| `curseOfRecklessness`         | `True`                   |
+| `demoralizingShout`           | `TristateEffectRegular`  |
+| `exposeWeaknessHunterAgility` | `1210.0`                 |
+| `exposeWeaknessUptime`        | `0.9`                    |
+| `faerieFire`                  | `TristateEffectImproved` |
+| `huntersMark`                 | `TristateEffectImproved` |
+| `improvedSealOfTheCrusader`   | `TristateEffectImproved` |
+| `judgementOfWisdom`           | `True`                   |
+| `mangle`                      | `True`                   |
+| `misery`                      | `True`                   |
+| `shadowWeaving`               | `True`                   |
+| `sunderArmor`                 | `True`                   |
+| `thunderClap`                 | `TristateEffectRegular`  |
 
 ## Talents, rotation and encounter
 
@@ -137,4 +151,4 @@ taking theirs is one we can cite.
 | Simulator     | v0.0.116                                      |
 | Iterations    | 10000                                         |
 | Random seed   | 1                                             |
-| Encounter     | 180 seconds, 1 target at level 73             |
+| Encounter     | 150 seconds, 1 target at level 73             |

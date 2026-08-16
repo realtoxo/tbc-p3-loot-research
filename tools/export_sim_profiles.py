@@ -144,6 +144,13 @@ SLOT_ORDER = [
 # capture recording `relic` fills position 16.
 ALIASES = {"relic": "ranged"}
 
+# proto/common.proto :: GemColor, transcribed. The simulator database stores a
+# socket as this enum where items.csv stores a colour name, so the fallback in
+# gear_json has to translate. Meta is deliberately mapped, because a meta socket
+# an item table does not know about is still a meta socket.
+DB_GEM_COLOR = {1: "meta", 2: "red", 3: "blue", 4: "yellow", 5: "green",
+                6: "orange", 7: "purple", 8: "prismatic"}
+
 
 def meta_shortfall(placed: dict, requirement) -> dict:
     """How many more of each colour the meta still needs."""
@@ -159,7 +166,7 @@ def meta_shortfall(placed: dict, requirement) -> dict:
             if n - placed.get(c, 0) > 0}
 
 
-def gear_json(block: dict, enchants: dict, enchant_ids: dict, gem_prefs: dict, meta_id, items_csv,
+def gear_json(block: dict, enchants: dict, enchant_ids: dict, gem_prefs: dict, meta_id, items_csv, db_sockets: dict,
               by_name_enchant: dict, by_effect_enchant: dict,
               by_name_gem: dict, hit_gems: int,
               hit_gem_id, subbed: list, meta_name: str, gem_colors: dict,
@@ -191,9 +198,22 @@ def gear_json(block: dict, enchants: dict, enchant_ids: dict, gem_prefs: dict, m
             new_id, why = SUBSTITUTIONS[item_id]
             subbed.append(f"{slot}: {why}")
             item_id = new_id
-        sockets = ((items_csv.get(item_id) or {}).get("sockets") or "").split("|") \
-            if item_id else []
-        layout.append((slot, item_id, [c.strip().lower() for c in sockets if c.strip()]))
+        # SOCKETS COME FROM items.csv FIRST AND THE SIMULATOR DATABASE SECOND.
+        # items.csv is scoped to Phase 3 and pre-phase gear, so an item outside
+        # that scope had no socket row and was silently left UNGEMMED. That is
+        # not hypothetical and it was not rare: it is exactly why Barrel-Blade
+        # Longrifle sat bare in both warrior best-in-slot profiles and Bulwark
+        # of the Ancient Kings sat bare in the Retribution one, together with
+        # their socket bonuses, because sim/core/database.go grants the bonus
+        # only when every socket is filled. Worth 16 to 25 DPS per profile.
+        row = items_csv.get(item_id) or {}
+        raw = (row.get("sockets") or "").split("|") if item_id else []
+        colors = [c.strip().lower() for c in raw if c.strip()]
+        if item_id and not colors:
+            colors = [DB_GEM_COLOR.get(c, "") for c in
+                      (db_sockets.get(item_id) or [])]
+            colors = [c for c in colors if c]
+        layout.append((slot, item_id, colors))
 
     # Pass two: decide what goes in each socket before writing any of them.
     plan = {}
@@ -338,6 +358,7 @@ def main() -> int:
     by_name_enchant = {e["name"]: e for e in db["enchants"]}
     # BY EFFECT ID AS WELL, because a name is ambiguous and an id is not.
     by_effect_enchant = {e["effectId"]: e for e in db["enchants"]}
+    db_sockets = {i["id"]: (i.get("gemSockets") or []) for i in db["items"]}
     by_name_gem = {g["name"]: g for g in db["gems"]}
     # WHICH COLOURS A GEM COUNTS AS, and a hybrid counts as BOTH. That is the
     # rule meta activation runs on, and missing it made this check report 42
@@ -424,7 +445,7 @@ def main() -> int:
             notes: list[str] = []
             spec_json = gear_json(block, enchants,
                                   conf.get("enchant_ids") or {}, gem_prefs,
-                                  meta_id, items_csv, by_name_enchant,
+                                  meta_id, items_csv, db_sockets, by_name_enchant,
                                   by_effect_enchant, by_name_gem,
                                   hit_gems, hit_gem_id, subbed, meta_name,
                                   gem_colors, notes)

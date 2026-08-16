@@ -69,19 +69,59 @@ applied, the talent string and the rotation.
 
 | Spec                 | Entry                                               | Tier                                                              | BiS                                               | Entry to BiS |
 |----------------------|-----------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------|--------------|
-| Affliction Warlock   | [1713.9 ± 0.83](sims/affliction-warlock-entry.md)   | [1738.4 ± 0.83](sims/affliction-warlock-tier-hands-and-head.md)   | [1970.8 ± 0.91](sims/affliction-warlock-bis.md)   | +256.9       |
-| Arcane Mage          | [2171.3 ± 0.89](sims/arcane-mage-entry.md)          | [2190.2 ± 0.90](sims/arcane-mage-tier-hands-and-head.md)          | [2391.9 ± 0.95](sims/arcane-mage-bis.md)          | +220.6       |
-| Arms Warrior         | [2365.4 ± 1.16](sims/arms-warrior-entry.md)         | [2380.4 ± 1.17](sims/arms-warrior-tier-hands-and-head.md)         | [2344.6 ± 1.19](sims/arms-warrior-bis.md)         | -20.8        |
-| Balance Druid        | [1455.0 ± 0.74](sims/balance-druid-entry.md)        | [1549.4 ± 0.77](sims/balance-druid-tier-hands-and-head.md)        | [1782.5 ± 0.84](sims/balance-druid-bis.md)        | +327.5       |
-| Beast Mastery Hunter | [3393.8 ± 1.11](sims/beast-mastery-hunter-entry.md) | [3557.5 ± 1.11](sims/beast-mastery-hunter-tier-hands-and-head.md) | [3469.0 ± 1.14](sims/beast-mastery-hunter-bis.md) | +75.2        |
-| Combat Rogue         | [2374.2 ± 0.94](sims/combat-rogue-entry.md)         | [2522.1 ± 0.97](sims/combat-rogue-tier-hands-and-head.md)         | [2870.5 ± 1.09](sims/combat-rogue-bis.md)         | +496.3       |
-| Destruction Warlock  | [1945.5 ± 1.04](sims/destruction-warlock-entry.md)  | [2035.0 ± 1.07](sims/destruction-warlock-tier-hands-and-head.md)  | [2358.6 ± 1.15](sims/destruction-warlock-bis.md)  | +413.1       |
-| Elemental Shaman     | [1577.2 ± 1.19](sims/elemental-shaman-entry.md)     | [1803.7 ± 1.22](sims/elemental-shaman-tier-hands-and-head.md)     | [2025.0 ± 1.35](sims/elemental-shaman-bis.md)     | +447.8       |
-| Enhancement Shaman   | [2418.5 ± 0.99](sims/enhancement-shaman-entry.md)   | [2418.5 ± 0.99](sims/enhancement-shaman-tier-hands-and-head.md)   | [2556.7 ± 1.01](sims/enhancement-shaman-bis.md)   | +138.2       |
-| Fury Warrior         | [2642.7 ± 1.12](sims/fury-warrior-entry.md)         | [2619.3 ± 1.13](sims/fury-warrior-tier-hands-and-head.md)         | [2797.7 ± 1.09](sims/fury-warrior-bis.md)         | +155.0       |
-| Retribution Paladin  | [2057.5 ± 1.35](sims/retribution-paladin-entry.md)  | [2057.5 ± 1.35](sims/retribution-paladin-tier-hands-and-head.md)  | [2151.7 ± 1.37](sims/retribution-paladin-bis.md)  | +94.2        |
-| Shadow Priest        | [1434.3 ± 0.24](sims/shadow-priest-entry.md)        | [1479.4 ± 0.26](sims/shadow-priest-tier-hands-and-head.md)        | [1553.5 ± 0.26](sims/shadow-priest-bis.md)        | +119.2       |
-| Survival Hunter      | [3055.1 ± 0.97](sims/survival-hunter-entry.md)      | [3149.8 ± 1.00](sims/survival-hunter-tier-hands-and-head.md)      | [3280.4 ± 1.04](sims/survival-hunter-bis.md)      | +225.3       |
+| Affliction Warlock   | [1947.3 ± 0.96](sims/affliction-warlock-entry.md)   | [1979.0 ± 0.95](sims/affliction-warlock-tier-hands-and-head.md)   | [2226.5 ± 1.04](sims/affliction-warlock-bis.md)   | +279.2       |
+| Arcane Mage          | [2301.9 ± 1.00](sims/arcane-mage-entry.md)          | [2321.6 ± 1.01](sims/arcane-mage-tier-hands-and-head.md)          | [2534.8 ± 1.07](sims/arcane-mage-bis.md)          | +232.9       |
+| Arms Warrior         | [2148.8 ± 1.16](sims/arms-warrior-entry.md)         | [2239.6 ± 1.22](sims/arms-warrior-tier-hands-and-head.md)         | [2421.4 ± 1.36](sims/arms-warrior-bis.md)         | +272.6       |
+| Balance Druid        | [1671.1 ± 0.86](sims/balance-druid-entry.md)        | [1716.9 ± 0.83](sims/balance-druid-tier-hands-and-head.md)        | [1951.9 ± 0.94](sims/balance-druid-bis.md)        | +280.8       |
+| Beast Mastery Hunter | [3340.6 ± 0.96](sims/beast-mastery-hunter-entry.md) | [3523.6 ± 1.01](sims/beast-mastery-hunter-tier-hands-and-head.md) | [3572.9 ± 1.01](sims/beast-mastery-hunter-bis.md) | +232.3       |
+| Combat Rogue         | [2329.4 ± 0.99](sims/combat-rogue-entry.md)         | [2542.3 ± 1.07](sims/combat-rogue-tier-hands-and-head.md)         | [2912.8 ± 1.21](sims/combat-rogue-bis.md)         | +583.4       |
+| Destruction Warlock  | [2051.6 ± 1.13](sims/destruction-warlock-entry.md)  | [2142.4 ± 1.20](sims/destruction-warlock-tier-hands-and-head.md)  | [2493.8 ± 1.30](sims/destruction-warlock-bis.md)  | +442.2       |
+| Elemental Shaman     | [1719.5 ± 0.89](sims/elemental-shaman-entry.md)     | [1894.2 ± 0.94](sims/elemental-shaman-tier-hands-and-head.md)     | [2129.9 ± 0.96](sims/elemental-shaman-bis.md)     | +410.4       |
+| Enhancement Shaman   | [2215.5 ± 0.97](sims/enhancement-shaman-entry.md)   | [2215.5 ± 0.97](sims/enhancement-shaman-tier-hands-and-head.md)   | [2382.7 ± 1.01](sims/enhancement-shaman-bis.md)   | +167.2       |
+| Fury Warrior         | [2479.5 ± 1.18](sims/fury-warrior-entry.md)         | [2505.3 ± 1.19](sims/fury-warrior-tier-hands-and-head.md)         | [2856.4 ± 1.24](sims/fury-warrior-bis.md)         | +376.9       |
+| Retribution Paladin  | [2180.8 ± 1.34](sims/retribution-paladin-entry.md)  | [2180.8 ± 1.34](sims/retribution-paladin-tier-hands-and-head.md)  | [2371.6 ± 1.46](sims/retribution-paladin-bis.md)  | +190.8       |
+| Shadow Priest        | [1452.1 ± 0.26](sims/shadow-priest-entry.md)        | [1497.9 ± 0.29](sims/shadow-priest-tier-hands-and-head.md)        | [1577.8 ± 0.29](sims/shadow-priest-bis.md)        | +125.7       |
+| Survival Hunter      | [2797.4 ± 0.87](sims/survival-hunter-entry.md)      | [2961.0 ± 0.94](sims/survival-hunter-tier-hands-and-head.md)      | [3074.2 ± 0.95](sims/survival-hunter-bis.md)      | +276.8       |
+
+## The same spec against a harder boss
+
+Phase 3 spans two boss armor tiers, and armor is subtracted before any physical
+damage lands, so a physical spec measures materially lower against the higher
+one while a pure caster does not move at all. The table above is the LOWER tier,
+because ten of the fourteen bosses sit in it. This is the same specs against
+each tier at best in slot.
+
+| Spec                 | Armor 7684 | Armor 6193 | Armor 0 |
+|----------------------|------------|------------|---------|
+| Affliction Warlock   | 2211.6     | 2226.5     | 2256.8  |
+| Arcane Mage          | 2534.8     | 2534.8     | 2534.8  |
+| Arms Warrior         | 2121.8     | 2421.4     | 2613.1  |
+| Balance Druid        | 1941.2     | 1951.9     | 1973.7  |
+| Beast Mastery Hunter | 3201.4     | 3572.9     | 4076.6  |
+| Combat Rogue         | 2592.8     | 2912.8     | 3150.2  |
+| Destruction Warlock  | 2493.8     | 2493.8     | 2493.8  |
+| Elemental Shaman     | 2129.9     | 2129.9     | 2129.9  |
+| Enhancement Shaman   | 2162.8     | 2382.7     | 2756.7  |
+| Fury Warrior         | 2512.5     | 2856.4     | 3244.1  |
+| Retribution Paladin  | 2220.6     | 2371.6     | 2675.4  |
+| Shadow Priest        | 1577.8     | 1577.8     | 1577.8  |
+| Survival Hunter      | 2771.3     | 3074.2     | 3581.4  |
+
+Which boss sits in which tier is [`boss-armor.yaml`](../data/facts/boss-armor.yaml),
+one row per boss with its own source and confidence.
+
+| Armor | Mitigation | Targets                                                                                                                                                      |
+|-------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7684  | 42.12%     | Essence of Anger, Essence of Desire, Flame of Azzinoth, Gurtogg Bloodboil, High Warlord Naj'entus, Illidan Stormrage, Shade of Akama, Supremus               |
+| 6193  | 36.97%     | Anetheron, Archimonde, Azgalor, Gathios the Shatterer, High Nethermancer Zerevor, Kaz'rogal, Lady Malande, Mother Shahraz, Rage Winterchill, Teron Gorefiend |
+| 0     | 0.00%      | Essence of Suffering                                                                                                                                         |
+
+::: {.note}
+**Veras Darkshadow carries no figure**, and that is deliberate. His armor is
+near-zero, approximately 137 to 146, and the exact value was never measured in
+the TBC era, so `boss-armor.yaml` records the magnitude and no digits rather
+than implying a precision nobody has. Read him against the zero column.
+:::
 
 ## How every figure was produced
 
@@ -93,7 +133,7 @@ This table states what was held still, and it is the same for every row above.
 | Simulator   | v0.0.116                          |
 | Iterations  | 10000                             |
 | Random seed | 1                                 |
-| Encounter   | 180 seconds, 1 target at level 73 |
+| Encounter   | 150 seconds, 1 target at level 73 |
 | Interval    | one standard error on the mean    |
 
 ## What is not on this page

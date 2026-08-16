@@ -172,10 +172,47 @@ debuffs:
       omission an adversarial review found on 10 August 2026.
   expose_weakness_uptime:
     from: survival_hunter
-    NOT_SENT: >-
-      Also a double, and the same reasoning. It depends on the hunter's agility
-      AND on how much of the fight the debuff is up, and the second half is a
-      rotation outcome this project has not measured.
+    value: 0.9
+    ruled_in: >-
+      SENT FROM 15 August 2026, by the guild lead: "we must absolutely have
+      expose weakness". It is worth 98.6 to 130.7 DPS to every physical spec in
+      the raid except the Survival Hunter itself, which self-applies.
+    previously_claimed: >-
+      Until 15 August 2026 this key carried NOT_SENT, reading: "Also a double,
+      and the same reasoning. It depends on the hunter's agility AND on how much
+      of the fight the debuff is up, and the second half is a rotation outcome
+      this project has not measured." The reason no longer holds, because the
+      simulator ships a phase-specific answer at ui/core/proto_utils/utils.ts,
+      Phase 3 being an uptime of 0.9 with a hunter agility of 1210.
+    it_was_also_UNSENDABLE_not_merely_unsent: >-
+      tools/run_sims.py::typed returned None for every field the proto types as
+      a double, so this key could not have reached the simulator whatever this
+      file said. A declined value and an impossible one looked identical from
+      here. Both are fixed together.
+    the_survival_hunter_gets_nothing_from_it_and_that_is_correct: >-
+      sim/hunter/hunter.go zeroes the raid debuff for any hunter holding the
+      talent, because that hunter applies it itself. It measures exactly 0.0 for
+      this spec and every other physical spec gains.
+  expose_weakness_hunter_agility:
+    from: survival_hunter
+    value: 1210
+    ADDED: >-
+      15 August 2026, WITH the uptime above and never without it.
+      sim/core/debuffs.go gates the effect on uptime greater than zero and then
+      derives the attack power as agility times 0.25, so an uptime sent alone
+      buys EXACTLY NOTHING. This file named only the uptime, so patching the
+      runner alone would have looked like a fix and delivered no damage.
+    confidence: Conservative
+    what_this_number_is_and_is_not: >-
+      IT IS THE SIMULATOR'S PHASE 3 ASSUMPTION, not our hunter's measured
+      agility, and the difference is recorded rather than smoothed over.
+      set-stats.yaml holds 419 to 442 of ITEM agility for this spec, which
+      excludes base stats, Gift of the Wild, Blessing of Kings, Grace of Air,
+      scrolls and food, so it is the wrong quantity by roughly a factor of three
+      and must not be substituted. wowsimcli reports neither final player stats
+      nor target aura stacks, so the true figure cannot be read out of a run
+      either. SETTLED BY a build of the simulator that reports final stats, or by
+      deriving the total from sim/core and checking it against one.
   hunters_mark: {from: either hunter}
   improved_seal_of_the_crusader:
     from: retribution_paladin

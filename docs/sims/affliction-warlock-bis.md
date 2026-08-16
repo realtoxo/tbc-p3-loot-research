@@ -2,7 +2,7 @@
 title: Affliction Warlock, Destruction Potion Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 1970.8 ± 0.91 damage per second.
+  The whole request behind one figure: 2226.5 ± 1.04 damage per second.
 status: draft
 updated: 2026-08-15
 generated: data/sim/gear/affliction-warlock.bis.gear.json
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                     | Value                                                                                                |
 |----------------------------|------------------------------------------------------------------------------------------------------|
-| Damage per second          | **1970.8**                                                                                           |
-| Standard error on the mean | ± 0.91                                                                                               |
-| Spread across iterations   | 90.9                                                                                                 |
+| Damage per second          | **2226.5**                                                                                           |
+| Standard error on the mean | ± 1.04                                                                                               |
+| Spread across iterations   | 103.9                                                                                                |
 | Anchor                     | Destruction Potion. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note .veto}
@@ -30,6 +30,16 @@ Back to [Simulated Throughput](../sims.md).
 divided by the square root of 10000. It covers about 68 percent,
 not 95.
 :::
+
+The figure above is against boss armor 6193. This same set was run
+against every Phase 3 armor tier, and armor is subtracted before any physical
+damage lands, so a physical spec moves between them and a pure caster does not.
+
+| Boss armor | Mitigation | This set measures | Targets at that armor                                      |
+|------------|------------|-------------------|------------------------------------------------------------|
+| 7684       | 42.12%     | 2211.6 ± 1.04     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2226.5 ± 1.04     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2256.8 ± 1.04     | Essence of Suffering                                       |
 
 ## Where this set differs from the published page
 
@@ -50,16 +60,16 @@ the off hand.
 
 | Slot      | Item                                    | Enchant                             | Gems                                                            |
 |-----------|-----------------------------------------|-------------------------------------|-----------------------------------------------------------------|
-| Head      | `Hood of the Malefic`                   | `Glyph of Power`                    | `Chaotic Skyfire Diamond`, `Veiled Noble Topaz`                 |
+| Head      | `Hood of the Malefic`                   | `Glyph of Power`                    | `Chaotic Skyfire Diamond`, `Potent Noble Topaz`                 |
 | Neck      | `Translucent Spellthread Necklace`      |                                     |                                                                 |
-| Shoulder  | `Mantle of the Malefic`                 | `Greater Inscription of Discipline` | `Glowing Nightseye`, `Veiled Noble Topaz`                       |
+| Shoulder  | `Mantle of the Malefic`                 | `Greater Inscription of Discipline` | `Glowing Nightseye`, `Potent Noble Topaz`                       |
 | Back      | `Nethervoid Cloak`                      | `Enchant Cloak - Subtlety`          |                                                                 |
-| Chest     | `Vestments of the Sea-Witch`            | `Enchant Chest - Exceptional Stats` | `Veiled Noble Topaz`, `Veiled Noble Topaz`, `Glowing Nightseye` |
+| Chest     | `Vestments of the Sea-Witch`            | `Enchant Chest - Exceptional Stats` | `Potent Noble Topaz`, `Potent Noble Topaz`, `Glowing Nightseye` |
 | Wrist     | `Bracers of Nimble Thought`             | `Enchant Bracer - Spellpower`       |                                                                 |
-| Hands     | `Gloves of the Malefic`                 | `Enchant Gloves - Major Spellpower` | `Veiled Noble Topaz`                                            |
-| Waist     | `Belt of Blasting`                      |                                     | `Glowing Nightseye`, `Veiled Noble Topaz`                       |
-| Legs      | `Leggings of Channeled Elements`        | `Runic Spellthread`                 | `Veiled Noble Topaz`, `Veiled Noble Topaz`, `Glowing Nightseye` |
-| Feet      | `Slippers of the Seacaller`             | `Enchant Boots - Boar's Speed`      | `Veiled Noble Topaz`, `Glowing Nightseye`                       |
+| Hands     | `Gloves of the Malefic`                 | `Enchant Gloves - Major Spellpower` | `Potent Noble Topaz`                                            |
+| Waist     | `Belt of Blasting`                      |                                     | `Glowing Nightseye`, `Potent Noble Topaz`                       |
+| Legs      | `Leggings of Channeled Elements`        | `Runic Spellthread`                 | `Potent Noble Topaz`, `Potent Noble Topaz`, `Glowing Nightseye` |
+| Feet      | `Slippers of the Seacaller`             | `Enchant Boots - Boar's Speed`      | `Potent Noble Topaz`, `Glowing Nightseye`                       |
 | Ring 1    | `Ring of Ancient Knowledge`             |                                     |                                                                 |
 | Ring 2    | `Ring of Ancient Knowledge`             |                                     |                                                                 |
 | Trinket 1 | `The Skull of Gul'dan`                  |                                     |                                                                 |
@@ -76,6 +86,7 @@ questions.
 
 | Field          | Consumable             | Item id |
 |----------------|------------------------|---------|
+| `conjuredId`   | `12662`                | 12662   |
 | `flaskId`      | `Flask of Pure Death`  | 22866   |
 | `foodId`       | `Poached Bluefish`     | 27665   |
 | `mhImbueId`    | `Brilliant Wizard Oil` | 25122   |
@@ -102,14 +113,14 @@ The raid-wide buffs every party receives.
 
 The party buffs this spec receives, from party `g3`.
 
-| Field             | Value                   |
-|-------------------|-------------------------|
-| `bloodPact`       | `TristateEffectRegular` |
-| `drums`           | `GreaterDrumsOfBattle`  |
-| `manaSpringTotem` | `TristateEffectRegular` |
-| `moonkinAura`     | `TristateEffectRegular` |
-| `totemOfWrath`    | `1`                     |
-| `wrathOfAirTotem` | `TristateEffectRegular` |
+| Field             | Value                    |
+|-------------------|--------------------------|
+| `bloodPact`       | `TristateEffectRegular`  |
+| `drums`           | `GreaterDrumsOfBattle`   |
+| `manaSpringTotem` | `TristateEffectRegular`  |
+| `moonkinAura`     | `TristateEffectImproved` |
+| `totemOfWrath`    | `1`                      |
+| `wrathOfAirTotem` | `TristateEffectRegular`  |
 
 The buffs applied to this player alone.
 
@@ -120,21 +131,23 @@ The buffs applied to this player alone.
 
 The debuffs applied to the target.
 
-| Field                       | Value                    |
-|-----------------------------|--------------------------|
-| `bloodFrenzy`               | `True`                   |
-| `curseOfElements`           | `TristateEffectImproved` |
-| `curseOfRecklessness`       | `True`                   |
-| `demoralizingShout`         | `TristateEffectRegular`  |
-| `faerieFire`                | `TristateEffectImproved` |
-| `huntersMark`               | `TristateEffectImproved` |
-| `improvedSealOfTheCrusader` | `TristateEffectImproved` |
-| `judgementOfWisdom`         | `True`                   |
-| `mangle`                    | `True`                   |
-| `misery`                    | `True`                   |
-| `shadowWeaving`             | `True`                   |
-| `sunderArmor`               | `True`                   |
-| `thunderClap`               | `TristateEffectRegular`  |
+| Field                         | Value                    |
+|-------------------------------|--------------------------|
+| `bloodFrenzy`                 | `True`                   |
+| `curseOfElements`             | `TristateEffectImproved` |
+| `curseOfRecklessness`         | `True`                   |
+| `demoralizingShout`           | `TristateEffectRegular`  |
+| `exposeWeaknessHunterAgility` | `1210.0`                 |
+| `exposeWeaknessUptime`        | `0.9`                    |
+| `faerieFire`                  | `TristateEffectImproved` |
+| `huntersMark`                 | `TristateEffectImproved` |
+| `improvedSealOfTheCrusader`   | `TristateEffectImproved` |
+| `judgementOfWisdom`           | `True`                   |
+| `mangle`                      | `True`                   |
+| `misery`                      | `True`                   |
+| `shadowWeaving`               | `True`                   |
+| `sunderArmor`                 | `True`                   |
+| `thunderClap`                 | `TristateEffectRegular`  |
 
 ## Talents, rotation and encounter
 
@@ -149,4 +162,4 @@ taking theirs is one we can cite.
 | Simulator     | v0.0.116                                  |
 | Iterations    | 10000                                     |
 | Random seed   | 1                                         |
-| Encounter     | 180 seconds, 1 target at level 73         |
+| Encounter     | 150 seconds, 1 target at level 73         |

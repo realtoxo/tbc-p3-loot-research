@@ -147,7 +147,13 @@ def main() -> int:
 
     doc = yaml.safe_load(args.figures.read_text())
     meta = doc["meta"]
-    by_key = {(r["spec"], r["anchor"]): r for r in doc["results"]}
+    # KEYED ON ARMOR AS WELL, because a figure at one boss armor tier is not
+    # comparable with a figure at another. DEFAULT_ARMOR is the tier ten of the
+    # fourteen Phase 3 bosses sit in, and it is what the summary table shows.
+    tiers = sorted({r.get("boss_armor", 0) for r in doc["results"]}, reverse=True)
+    default_armor = 6193 if 6193 in tiers else tiers[0]
+    by_key = {(r["spec"], r["anchor"], r.get("boss_armor", 0)): r
+              for r in doc["results"]}
     specs = sorted({r["spec"] for r in doc["results"]},
                    key=lambda s: SPEC_LABEL.get(s, s))
 
@@ -180,22 +186,24 @@ def main() -> int:
     written = 0
     for spec in specs:
         for anchor, label, _why in ANCHORS:
-            row = by_key.get((spec, anchor))
+            row = by_key.get((spec, anchor, default_armor))
             if row is None:
                 continue
             written += write_detail(
                 detail_dir, spec, anchor, label, row, meta, items_csv,
+                by_key, tiers, default_armor,
                 db_items, gems_by_id, enchant_by_effect, consumable_name,
                 buffs_doc, party_of, talents)
 
-    write_index(args.out / "sims.md", specs, by_key, meta)
+    write_index(args.out / "sims.md", specs, by_key, meta, tiers,
+                default_armor)
     print(f"1 index and {written} set page(s) -> {args.out}/sims.md, "
           f"{detail_dir}/")
     return 0
 
 
-def write_index(path: Path, specs: list[str], by_key: dict,
-                meta: dict) -> None:
+def write_index(path: Path, specs: list[str], by_key: dict, meta: dict,
+                tiers: list, default_armor: int) -> None:
     """The one table, and the warnings that have to travel with it."""
     header = ["Spec"] + [label for _a, label, _w in ANCHORS] \
         + ["Entry to BiS"]
@@ -203,12 +211,13 @@ def write_index(path: Path, specs: list[str], by_key: dict,
     for spec in specs:
         cells = [SPEC_LABEL.get(spec, spec)]
         for anchor, label, _why in ANCHORS:
-            row = by_key.get((spec, anchor))
+            row = by_key.get((spec, anchor, default_armor))
             if row is None:
                 cells.append("not simulated")
                 continue
             cells.append(f"[{figure(row)}](sims/{slug(spec, anchor)}.md)")
-        entry, bis = by_key.get((spec, "entry")), by_key.get((spec, "bis"))
+        entry = by_key.get((spec, "entry", default_armor))
+        bis = by_key.get((spec, "bis", default_armor))
         cells.append(f"{bis['dps'] - entry['dps']:+.1f}"
                      if entry and bis else "not comparable")
         rows.append(cells)
@@ -279,6 +288,35 @@ applied, the talent string and the rotation.
 
 {rows_table(header, rows)}
 
+## The same spec against a harder boss
+
+Phase 3 spans two boss armor tiers, and armor is subtracted before any physical
+damage lands, so a physical spec measures materially lower against the higher
+one while a pure caster does not move at all. The table above is the LOWER tier,
+because ten of the fourteen bosses sit in it. This is the same specs against
+each tier at best in slot.
+
+{rows_table(["Spec"] + [f"Armor {a}" for a in tiers],
+            [[SPEC_LABEL.get(s, s)]
+             + [(f"{by_key[(s, 'bis', a)]['dps']:.1f}"
+                 if (s, 'bis', a) in by_key else "-") for a in tiers]
+             for s in specs])}
+
+Which boss sits in which tier is [`boss-armor.yaml`](../data/facts/boss-armor.yaml),
+one row per boss with its own source and confidence.
+
+{rows_table(["Armor", "Mitigation", "Targets"],
+            [[str(a), f"{100 * a / (a + 10557.5):.2f}%",
+              ", ".join(meta["armor_tiers_run"].get(a, [])) or "none"]
+             for a in tiers])}
+
+::: {{.note}}
+**Veras Darkshadow carries no figure**, and that is deliberate. His armor is
+near-zero, approximately 137 to 146, and the exact value was never measured in
+the TBC era, so `boss-armor.yaml` records the magnitude and no digits rather
+than implying a precision nobody has. Read him against the zero column.
+:::
+
 ## How every figure was produced
 
 Two runs are subtractable only when everything around the gear was held still.
@@ -312,7 +350,8 @@ Four specs are absent, and each for a stated reason rather than an oversight.
 
 
 def write_detail(directory: Path, spec: str, anchor: str, label: str,
-                 row: dict, meta: dict, items_csv: dict, db_items: dict,
+                 row: dict, meta: dict, items_csv: dict,
+                 by_key: dict, tiers: list, default_armor: int, db_items: dict,
                  gems_by_id: dict, enchant_by_effect: dict,
                  consumable_name: dict, buffs_doc: dict, party_of: dict,
                  talents: dict) -> int:
@@ -432,6 +471,19 @@ Back to [Simulated Throughput](../sims.md).
 divided by the square root of {meta['iterations']}. It covers about 68 percent,
 not 95.
 :::
+
+The figure above is against boss armor {default_armor}. This same set was run
+against every Phase 3 armor tier, and armor is subtracted before any physical
+damage lands, so a physical spec moves between them and a pure caster does not.
+
+{rows_table(["Boss armor", "Mitigation", "This set measures", "Targets at that armor"],
+            [[str(a), f"{100 * a / (a + 10557.5):.2f}%",
+              (f"{by_key[(spec, anchor, a)]['dps']:.1f} "
+               f"± {by_key[(spec, anchor, a)]['standard_error']:.2f}"
+               if (spec, anchor, a) in by_key else "not run"),
+              ", ".join(meta["armor_tiers_run"].get(a, [])[:3])
+              + (" ..." if len(meta["armor_tiers_run"].get(a, [])) > 3 else "")]
+             for a in tiers])}
 """
 
     if divergence:

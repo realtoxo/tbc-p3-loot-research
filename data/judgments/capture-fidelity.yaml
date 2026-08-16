@@ -269,8 +269,28 @@ sim_profile_scope:
 
   blessings:
     ruling: >-
-      Every DPS spec takes Blessing of Kings, plus Might if it is physical and
-      Wisdom if it is a caster. Salvation goes to none of them.
+      Every DPS spec takes ALL THREE of Blessing of Kings, Blessing of Might and
+      Blessing of Wisdom. Salvation goes to none of them.
+    superseded_ruling: >-
+      "Every DPS spec takes Blessing of Kings, plus Might if it is physical and
+      Wisdom if it is a caster." Held from 10 August to 15 August 2026, when the
+      guild lead replaced it: "include paladin blessings ofc".
+    why_the_split_was_wrong: >-
+      IT CONTRADICTED ITS OWN PREMISE. The `why` below says three paladins can
+      maintain three blessings, and the rule then handed each spec two. For a
+      mage the missing Might is dead weight and for a rogue the missing Wisdom
+      is, so the split cost nothing on eleven of thirteen specs and was never
+      noticed. THE RETRIBUTION PALADIN USES BOTH, and it was the spec the split
+      actually taxed: it sat 57.9 seconds out of mana in a 150 second encounter,
+      and Blessing of Wisdom alone is worth 91 to 97 DPS to it. Found by an audit
+      on 15 August 2026 and confirmed by an independent arbiter.
+    both_are_REGULAR_and_not_improved: >-
+      Improved Blessing of Might is a Retribution talent and this roster's
+      paladin decodes it 0 of 5, verified independently by two arbiters against
+      the proto field numbers rather than against a tree diagram. Improved
+      Blessing of Wisdom is a HOLY talent and this project has never decoded the
+      Holy Paladin's build at all, so claiming it would invent a roster fact.
+      Sending Regular is what the evidence supports.
     why: >-
       Three paladins can maintain three blessings, and Kings at 10 percent to
       all attributes is the one nobody argues about. Might is attack power,

@@ -134,6 +134,44 @@ IMPROVED = {
     # this tristate as 0 points on Regular and 3 on Improved, so Regular would
     # credit the base judgement and none of the talent.
     "improvedSealOfTheCrusader",
+    # sim/druid/druid.go makes Moonkin Aura Improved when the Balance Druid holds
+    # Idol of the Raven Goddess, item 32387, in the ranged slot, and ours holds
+    # it at ALL THREE anchors, verified in the gear files. Improved adds 20 spell
+    # crit rating on top of the base 5 percent. Worth 17.8 to 22.1 DPS to the
+    # Elemental Shaman, which shares g3. The Balance Druid itself measures 0.0,
+    # because druid.go sets its own party buff from the idol regardless of what
+    # this tool sends.
+    "moonkinAura",
+}
+
+# THE TWO DOUBLE-TYPED FIELDS THIS RAID SUPPLIES, and both must be sent or
+# neither is worth anything. sim/core/debuffs.go gates Expose Weakness on
+# Uptime > 0 and then sets the attack power from agility times 0.25, so an uptime
+# with no agility beside it buys exactly zero. Sending one alone is the failure
+# this pair is written to prevent.
+#
+# EXPOSE WEAKNESS WAS RULED IN by the guild lead on 15 August 2026, overriding
+# the NOT_SENT note in raid-buffs.yaml, whose stated reason was that an uptime is
+# a rotation outcome this project has not measured. The simulator now ships a
+# phase-specific answer, so that reason no longer holds.
+#
+# 1210 IS THE SIMULATOR'S PHASE 3 FIGURE, NOT OUR HUNTER'S MEASURED AGILITY, and
+# that distinction is the honest part of this entry. ui/core/proto_utils/utils.ts
+# gives Phase 3 an uptime of 0.9 and a hunter agility of 1210. Our own Survival
+# Hunter's raid-buffed agility is NOT KNOWN: set-stats.yaml records 419 to 442 of
+# ITEM agility, which excludes base stats, Gift of the Wild, Blessing of Kings,
+# Grace of Air, scrolls and food, and wowsimcli exposes neither final player
+# stats nor target aura stacks, so it cannot be read out of a run either.
+# SETTLED BY a build of the simulator that reports final stats, or by deriving
+# the total from sim/core and checking it against one. Until then this is the
+# simulator's assumption, cited as such.
+#
+# THE SURVIVAL HUNTER ITSELF IS UNAFFECTED, correctly: sim/hunter/hunter.go
+# zeroes the raid debuff for any hunter that has the talent, because it self
+# applies. It measures +0.0 and every other physical spec gains.
+DOUBLE_FIELDS = {
+    "exposeWeaknessUptime": 0.9,
+    "exposeWeaknessHunterAgility": 1210.0,
 }
 
 # WINDFURY IS DELIBERATELY NOT HERE. Enhancement decodes improvedWeaponTotems at
@@ -248,10 +286,19 @@ SPECS = {
 # places until 14 August 2026, so a change could half-apply and leave the prose
 # describing an encounter the runs no longer used.
 #
-# THREE MINUTES, ruled by the guild lead on 14 August 2026, replacing 150
-# seconds. Every figure collected before that date was produced against the
-# shorter encounter and is not comparable with one collected after it.
-ENCOUNTER_SECONDS = 180
+# TWO AND A HALF MINUTES, ruled by the guild lead on 15 August 2026, replacing
+# the 180 seconds ruled on 14 August, which had itself replaced 150. Every figure
+# collected before this date was produced against a different encounter and is
+# not comparable with one collected after it.
+#
+# SHORTENING THE FIGHT IS NOT NEUTRAL ACROSS SPECS AND NEVER WAS. Measured at 90
+# seconds against 180 on 15 August 2026, every spec gained but by wildly
+# different amounts: the mana-constrained casters gained 41 to 45 percent because
+# they stop running dry, while the melee gained 5 to 8. At 150 seconds the effect
+# is milder and the same shape. It is a real property of the encounter rather
+# than a modelling error, and it is why `--out` stamps the length into the meta
+# block of whatever it writes.
+ENCOUNTER_SECONDS = 150
 
 # THE CLASS OPTIONS EACH SPEC NEEDS, taken from the DefaultOptions its own
 # preset ships. An empty block is not a safe default: a warlock with no armor,
@@ -280,8 +327,20 @@ ENCOUNTER_SECONDS = 180
 # unless a ruling declines it and says why. tools/check_sim_options.py compares
 # the two and fails the build on a key we neither send nor decline.
 CLASS_OPTIONS = {
+    # SACRIFICE IS OFF FOR AFFLICTION AND ON FOR DESTRUCTION, and the same flag
+    # is right for one and wrong for the other. Demonic Sacrifice is a DEMONOLOGY
+    # talent; the Affliction build is 40/0/21 with an EMPTY Demonology tree, so
+    # sim/warlock/talents.go returns early and grants no shadow multiplier, while
+    # sim/warlock/warlock.go destroys the pet regardless. Affliction was
+    # sacrificing its Succubus for nothing. Worth 150 to 154 DPS, re-measured by
+    # an arbiter across three seeds after the audit's own +168.1 failed to
+    # reproduce. Destruction decodes the talent 1/1 and LOSES 66 to 126 with
+    # sacrifice off, which is the asymmetry that proves the diagnosis.
+    #
+    # `summon` STAYS SUCCUBUS. Voidwalker crashes this build of the simulator
+    # with a nil CritMultiplier.
     "affliction_warlock": {"armor": 1, "summon": 3, "curseOptions": 3,
-                           "sacrificeSummon": True},
+                           "sacrificeSummon": False},
     "destruction_warlock": {"armor": 1, "summon": 3, "curseOptions": 3,
                             "sacrificeSummon": True},
     # A WEAPON IMBUE IS A SELF-BUFF, NOT A CONSUMABLE. The guild lead ruled on
@@ -354,10 +413,12 @@ PRESET_CONSUMABLES = {
     # ui/hunter/dps/presets.ts :: DefaultConsumables
     "beast_mastery_hunter": {"conjuredId": 12662, "conjuredItems": [12662],
                              "petFoodId": 33874, "petScrollAgi": True,
-                             "petScrollStr": True},
+                             "petScrollStr": True,
+                             "scrollAgi": True, "scrollStr": True},
     "survival_hunter": {"conjuredId": 12662, "conjuredItems": [12662],
                         "petFoodId": 33874, "petScrollAgi": True,
-                        "petScrollStr": True},
+                        "petScrollStr": True,
+                        "scrollAgi": True, "scrollStr": True},
     # ui/rogue/dps/presets.ts :: DefaultConsumables. Thistle Tea, the second
     # action of swords.apl.json.
     "combat_rogue": {"conjuredId": 7676, "conjuredItems": [7676]},
@@ -366,8 +427,45 @@ PRESET_CONSUMABLES = {
     # scrolls for both warlocks. They are inert while a warlock sacrifices its
     # pet, which is why no audit noticed, and they become live for Affliction the
     # moment that sacrifice is corrected.
-    "affliction_warlock": {"petScrollAgi": True, "petScrollStr": True},
-    "destruction_warlock": {"petScrollAgi": True, "petScrollStr": True},
+    # THE WARLOCKS' CONJURED RUNE, worth 15 to 25 DPS each. The Shadow Priest is
+    # deliberately absent: it measures EXACTLY 0.0 there, because it never runs
+    # out of mana in this encounter.
+    "affliction_warlock": {"petScrollAgi": True, "petScrollStr": True,
+                           "conjuredId": 12662, "conjuredItems": [12662]},
+    "destruction_warlock": {"petScrollAgi": True, "petScrollStr": True,
+                            "conjuredId": 12662, "conjuredItems": [12662]},
+    # SCROLLS ARE FLAT AND UNCONDITIONAL, +20 strength and +20 agility from
+    # sim/core/consumes.go, in their own buff slot so they stack with the
+    # blessings. Every preset that ships them is listed; worth 28.6 to 47.5 on
+    # the warriors and 34.6 to 40.4 on the two hybrids.
+    #
+    # THE WARRIORS' CONJURED ITEM IS FLAME CAP, 22788, not a mana rune, and both
+    # warrior rotations cast it pre-pull and again in the priority list, so both
+    # actions did nothing at all. Worth 2.3 to 5.9, quoted at the arbiter's
+    # floor rather than the audit's.
+    "arms_warrior": {"scrollAgi": True, "scrollStr": True,
+                     "conjuredId": 22788, "conjuredItems": [22788]},
+    "fury_warrior": {"scrollAgi": True, "scrollStr": True,
+                     "conjuredId": 22788, "conjuredItems": [22788]},
+    # THE FOUR REMAINING MANA USERS GET THE PRESET'S RUNE TOO, and three of them
+    # were badly mana-starved without it. Measured 15 August 2026, 8000
+    # iterations seed 1 at the best-in-slot anchor against boss armor 6193, with
+    # seconds out of mana beside each: the Retribution Paladin gains 144.1 and
+    # falls from 57.9 seconds to 20.1, the Balance Druid gains 151.0 and falls
+    # from 21.5 to 5.4, the Elemental Shaman gains 110.7 and falls from 10.8 to
+    # 0.3. The Enhancement Shaman gains 3.1 because it was barely short, and it
+    # is sent anyway because the preset sets it and consistency is cheaper than a
+    # special case.
+    #
+    # A rune and a potion are separate cooldowns, so this is additive with the
+    # mana potion question the Retribution audit raised rather than an
+    # alternative to it.
+    "retribution_paladin": {"scrollAgi": True, "scrollStr": True,
+                            "conjuredId": 12662, "conjuredItems": [12662]},
+    "enhancement_shaman": {"scrollAgi": True, "scrollStr": True,
+                           "conjuredId": 12662, "conjuredItems": [12662]},
+    "balance_druid": {"conjuredId": 12662, "conjuredItems": [12662]},
+    "elemental_shaman": {"conjuredId": 12662, "conjuredItems": [12662]},
 }
 
 # THE ROGUE'S MAIN HAND IS EMPTY WITHOUT THIS, and the guide prose cannot say so.
@@ -413,17 +511,34 @@ SPEC_OPTIONS = {
     # swing replacement, and that is unsynced. The guild lead ruled on 15 August
     # 2026: "enhancement shaman DO NOT want weapons synced".
     #
-    # THIS IS WRITTEN DOWN BECAUSE THE OPPOSITE LOOKS LIKE AN IMPROVEMENT. The
-    # shipped preset at ui/shaman/enhancement/presets.ts sets DelayOffhandSwings,
-    # and it measures 16.5 DPS higher on the entry anchor, so a reader comparing
-    # our request against the preset finds a number sitting on the table and
-    # reaches for it. It is declined, not overlooked.
+    # THIS IS WRITTEN DOWN BECAUSE THE OPPOSITE LOOKS LIKE AN IMPROVEMENT, and
+    # the paragraph that used to sit here was wrong in three separate places. It
+    # is corrected rather than deleted, because the wrong version was cited.
     #
-    # What the option does is space the off-hand around Flurry, whose internal
-    # cooldown is the 500 ms constant ApplySyncType passes: two crits inside one
-    # window waste the second. Auto selects DelayOffhandSwings for matched weapon
-    # speeds, which is the pairing this spec runs, so Auto is not a neutral
-    # choice here either. Both are sync, and both are declined.
+    # PREVIOUSLY CLAIMED: DelayOffhandSwings "measures 16.5 DPS higher on the
+    # entry anchor", and "Auto selects DelayOffhandSwings for matched weapon
+    # speeds, which is the pairing this spec runs", and "Both are sync, and both
+    # are declined".
+    #
+    # MEASURED, 10000 iterations seed 1, 15 August 2026:
+    #   DelayOffhandSwings        entry +13.3   bis -51.0
+    #   Auto                      entry  -2.2   bis  -0.3
+    #   SyncMainhandOffhandSwings entry -34.7   bis +25.0
+    #
+    # So the entry figure was 13.3 rather than 16.5; AUTO IS NOT DELAY here,
+    # because sim/shaman/enhancement/enhancement.go::AutoSyncWeapons delays the
+    # off hand only when the two weapon speeds are EQUAL and this spec's are
+    # mismatched at both anchors, 2.7 against 2.6 at entry and 2.6 against 2.8 at
+    # best in slot; and a THIRD mode nobody discussed, SyncMainhandOffhandSwings,
+    # is worth plus 25.0 at best in slot.
+    #
+    # THE RULING IS UNAFFECTED. The guild lead ruled the weapons unsynced on
+    # 15 August 2026 and this file sends nothing, which reaches the default
+    # branch and clears the swing replacement. What changes is that a reader can
+    # now see the third mode exists and was not measured when the ruling was
+    # made. What the option does is space the off hand around Flurry, whose
+    # internal cooldown is the 500 ms constant ApplySyncType passes: two crits
+    # inside one window waste the second.
 }
 
 # SPECS THIS BUILD OF THE SIMULATOR CANNOT MODEL, and why. Named rather than
@@ -616,10 +731,57 @@ def typed(name: str, kind: str):
     if kind == "Drums":
         return COUNTS.get("drums")
     if kind == "double":
-        # An uptime is a rotation outcome rather than a switch, so it is left
-        # unset rather than invented. raid-buffs.yaml records which these are.
-        return None
+        # A DOUBLE USED TO BE UNSENDABLE BY CONSTRUCTION, and that silently
+        # decided a question rather than deferring it. Returning None here meant
+        # `expose_weakness_uptime` and `expose_weakness_hunter_agility` could
+        # never reach the simulator no matter what raid-buffs.yaml said, so the
+        # raid's Survival Hunter contributed nothing to anyone else all along.
+        # RULED IN by the guild lead on 15 August 2026.
+        return DOUBLE_FIELDS.get(name)
     return None
+
+
+# A SPEC MAY NOT BE HANDED A BUFF IT IS ITSELF THE SOURCE OF.
+#
+# raid-buffs.yaml names which spec supplies each party buff and each debuff, and
+# run_sims.py then delivered every one of them to every member of the party
+# INCLUDING the supplier. That is wrong in two different ways depending on the
+# buff, and both were measured on 15 August 2026.
+#
+# A STAT DOUBLE COUNT, where the simulator declares no exclusive category, so the
+# supplier receives the effect twice. Totem of Wrath is the case: sim/core/
+# buffs.go declares an ExclusiveCategory for Strength of Earth, Grace of Air,
+# Mana Spring and Wrath of Air, and NOT for Totem of Wrath, so the Elemental
+# Shaman took 6 percent spell hit and crit where it earns 3. Worth 62 to 75 DPS
+# of pure over-credit.
+#
+# A GCD SUBSIDY, where the category does exist so the stats do not stack, but the
+# supplier never has to spend the global cooldown supplying it. The Balance
+# Druid casts Faerie Fire 5.56 times a pull when it is not handed the debuff and
+# 0.00 times when it is, and the Enhancement Shaman twists Grace of Air the same
+# way. Worth 55.3 and 11.2.
+#
+# EVERY OTHER MEMBER OF THE PARTY STILL RECEIVES ALL OF THEM. Only the supplier
+# is skipped, which is what makes this a correction rather than a nerf.
+SELF_SUPPLIED = {
+    ("elemental_shaman", "totemOfWrath"):
+        "no ExclusiveCategory in sim/core/buffs.go, so the supplier stacked it "
+        "with its own cast: 62 to 75 DPS of double count",
+    ("balance_druid", "faerieFire"):
+        "a GCD subsidy: handed the debuff the druid casts it 0.00 times a pull, "
+        "denied it 5.56 times, worth 55.3 DPS it never paid for",
+    ("enhancement_shaman", "graceOfAirTotem"):
+        "the same, for the totem this spec twists itself: 11.2 DPS",
+    # THE SHADOW PRIEST IS ITS OWN MANA DONOR. run_sims.py grants
+    # shadowPriestDps to everyone in g4 and the Shadow Priest sits in g4, so it
+    # credited itself 287.5 MP5 of its own Vampiric Touch on top of the
+    # Vampiric Touch its rotation already casts. It measures 0.0 today ONLY
+    # because this spec never runs out of mana in this encounter, so it is a
+    # correctness fix taken before some future change makes it bite.
+    ("shadow_priest", "shadowPriestDps"):
+        "the priest is the donor; measured 0.0 today because it never goes out "
+        "of mana, and wrong regardless",
+}
 
 
 def buffs_for(spec: str, buffs: dict, party_of: dict) -> tuple[dict, dict, dict]:
@@ -645,6 +807,8 @@ def buffs_for(spec: str, buffs: dict, party_of: dict) -> tuple[dict, dict, dict]
                     f"run_sims.py: raid-buffs.yaml names {raw!r}, which is not "
                     f"a field of {message} in {PROTO}. A buff this raid cannot "
                     "express is a mistake in one of the two files.")
+            if (spec, camel) in SELF_SUPPLIED:
+                continue
             value = typed(camel, kind)
             if value is not None:
                 out[camel] = value
@@ -751,13 +915,33 @@ def build_request(spec: str, gear: dict, talents: str, iterations: int,
     # the Arcane Mages lost their Shadow Priest mana. Found on 10 August 2026.
     types = proto_field_types()
     individual = {}
-    wanted = ["blessingOfKings",
-              "blessingOfMight" if spec in PHYSICAL else "blessingOfWisdom"]
+    # THREE PALADINS MAINTAIN THREE BLESSINGS, so every spec receives all three.
+    # RULED by the guild lead on 15 August 2026: "include paladin blessings ofc".
+    #
+    # THIS REPLACES AN EITHER/OR SPLIT THAT CONTRADICTED ITS OWN PREMISE. The
+    # ruling recorded in capture-fidelity.yaml says in its own words that three
+    # paladins can maintain three blessings, and the code then handed each spec
+    # Kings plus exactly ONE of Might and Wisdom, chosen by whether the spec was
+    # physical. For a mage that is harmless, because Might is dead weight on a
+    # caster, and for a rogue Wisdom is dead weight on an energy user. FOR THE
+    # RETRIBUTION PALADIN BOTH ARE LIVE, and it was the one spec the split
+    # actually cost: it sat 57.9 seconds out of mana of a 150 second fight, and
+    # Blessing of Wisdom alone is worth 91 to 97 DPS to it.
+    #
+    # BOTH ARE SENT AS REGULAR, NOT IMPROVED, and that is deliberate. Improved
+    # Blessing of Might is a Retribution talent and this roster's paladin decodes
+    # it 0 of 5, verified independently by two arbiters against the proto field
+    # numbers. Improved Blessing of Wisdom is a HOLY talent and this project has
+    # never decoded the Holy Paladin's build at all, so claiming it would be
+    # inventing a roster fact.
+    wanted = ["blessingOfKings", "blessingOfMight", "blessingOfWisdom"]
     if spec in PHYSICAL and party_of.get(spec) in ("g1", "g2"):
         wanted.append("unleashedRage")   # Enhancement decodes unleashedRage 5/5
     if party_of.get(spec) == "g4":
         wanted.append("shadowPriestDps")  # the Shadow Priest shares g4
     for field in wanted:
+        if (spec, field) in SELF_SUPPLIED:
+            continue
         value = typed(field, types["IndividualBuffs"][field])
         if value is not None:
             individual[field] = value
@@ -1126,7 +1310,19 @@ def main() -> int:
     roster = yaml.safe_load(ROSTER.read_text())
     # WHICH PARTY EACH SPEC SITS IN, read from the roster rather than restated.
     # A spec appearing in two parties, as the Enhancement Shaman does, takes the
-    # first, and both its parties carry the same totems so nothing turns on it.
+    # first.
+    #
+    # SOMETHING DOES TURN ON IT, and this comment used to say otherwise. The
+    # totems ARE the same in g1 and g2, which is what the old wording checked,
+    # but g1 carries Sanctity Aura and g2 carries Ferocious Inspiration. Sanctity
+    # Aura is holy damage and worth nothing to a shaman; Ferocious Inspiration is
+    # 3 percent to all damage. Measured 15 August 2026: g2 is worth plus 25.1 DPS
+    # over g1 at best in slot, and plus 23.7 at entry.
+    #
+    # WHICH PARTY THE SHAMAN ACTUALLY SITS IN IS A ROSTER FACT, not a modelling
+    # choice, so this tool keeps taking the first and the question goes to the
+    # guild lead rather than being settled here. The old comment told a reader
+    # not to look.
     party_of = {}
     for group in roster.get("groups") or []:
         for member in group.get("members") or []:
