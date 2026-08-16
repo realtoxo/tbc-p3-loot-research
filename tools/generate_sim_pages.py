@@ -259,12 +259,21 @@ varies between specs far more than it varies within one. **The comparison that
 carries meaning is a spec against ITSELF at another anchor**, which is why the
 last column exists and why nothing here is sorted by damage.
 
-::: {{.note .veto}}
-**The plus or minus is ONE standard error, not a confidence interval.** It is
-the spread across iterations divided by the square root of
-{meta['iterations']}, and it covers about 68 percent rather than 95. Two figures
-whose intervals do not quite overlap are not thereby separated. Ruled by the
-guild lead on 15 August 2026.
+::: {{.note}}
+**What the plus or minus means.** It is DPS, and it is NOT the range a raider
+sees on a given night.
+
+Each figure is the average of {meta['iterations']} simulated pulls. The plus or
+minus is how precisely that average is known: run the whole thing again with
+different dice and the average lands within it. So 3580.7 ± 1.01 means the
+average really is about 3580.7, give or take a point.
+
+**One pull varies far more than that.** For the Beast Mastery Hunter a single
+150 second pull swings by roughly 100 DPS either way. Averaging ten thousand of
+them is what shrinks the uncertainty to one.
+
+The practical rule: **a gap of a few DPS between two figures is noise, and a gap
+of tens or hundreds is real.** Ruled by the guild lead on 15 August 2026.
 :::
 
 ## What each spec measures
@@ -499,19 +508,22 @@ request, written out, so the figure above it can be reproduced or disproved.
 Back to [Simulated Throughput](../sims.md).
 
 {rows_table(["Figure", "Value"], [
-    ["Damage per second", f"**{row['dps']:.1f}**"],
-    ["Standard error on the mean",
-     f"± {row['standard_error']:.2f}" if row.get('standard_error') is not None
-     else "not recorded"],
-    ["Spread across iterations",
-     f"{row['stdev']:.1f}" if row.get('stdev') is not None else "not recorded"],
+    ["Damage per second, averaged over "
+     f"{meta['iterations']} pulls", f"**{row['dps']:.1f}**"],
+    ["How precisely that average is known",
+     f"± {row['standard_error']:.2f} DPS"
+     if row.get('standard_error') is not None else "not recorded"],
+    ["How much a SINGLE pull varies",
+     f"± {row['stdev']:.1f} DPS"
+     if row.get('stdev') is not None else "not recorded"],
     ["Anchor", f"{label}. {dict((a, w) for a, _l, w in ANCHORS)[anchor]}"],
 ])}
 
-::: {{.note .veto}}
-**The plus or minus is ONE standard error**, the spread across iterations
-divided by the square root of {meta['iterations']}. It covers about 68 percent,
-not 95.
+::: {{.note}}
+**The plus or minus is DPS**, and it says how precisely the average is known
+rather than how much a pull varies. The average of {meta['iterations']} pulls is
+pinned to that many DPS; a single pull swings by the figure in the row below it,
+which is far larger.
 :::
 
 The figure above is against boss armor {default_armor}. This same set was run

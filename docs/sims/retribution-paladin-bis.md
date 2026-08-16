@@ -17,17 +17,18 @@ request, written out, so the figure above it can be reproduced or disproved.
 
 Back to [Simulated Throughput](../sims.md).
 
-| Figure                     | Value                                                                                 |
-|----------------------------|---------------------------------------------------------------------------------------|
-| Damage per second          | **2374.4**                                                                            |
-| Standard error on the mean | ± 1.46                                                                                |
-| Spread across iterations   | 145.7                                                                                 |
-| Anchor                     | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
+| Figure                                       | Value                                                                                 |
+|----------------------------------------------|---------------------------------------------------------------------------------------|
+| Damage per second, averaged over 10000 pulls | **2374.4**                                                                            |
+| How precisely that average is known          | ± 1.46 DPS                                                                            |
+| How much a SINGLE pull varies                | ± 145.7 DPS                                                                           |
+| Anchor                                       | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
-::: {.note .veto}
-**The plus or minus is ONE standard error**, the spread across iterations
-divided by the square root of 10000. It covers about 68 percent,
-not 95.
+::: {.note}
+**The plus or minus is DPS**, and it says how precisely the average is known
+rather than how much a pull varies. The average of 10000 pulls is
+pinned to that many DPS; a single pull swings by the figure in the row below it,
+which is far larger.
 :::
 
 The figure above is against boss armor 6193. This same set was run

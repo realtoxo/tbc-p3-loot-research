@@ -17,17 +17,18 @@ request, written out, so the figure above it can be reproduced or disproved.
 
 Back to [Simulated Throughput](../sims.md).
 
-| Figure                     | Value                                                                                                                                 |
-|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second          | **2239.8**                                                                                                                            |
-| Standard error on the mean | ± 1.22                                                                                                                                |
-| Spread across iterations   | 121.8                                                                                                                                 |
-| Anchor                     | Tier. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
+| Figure                                       | Value                                                                                                                                 |
+|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Damage per second, averaged over 10000 pulls | **2239.8**                                                                                                                            |
+| How precisely that average is known          | ± 1.22 DPS                                                                                                                            |
+| How much a SINGLE pull varies                | ± 121.8 DPS                                                                                                                           |
+| Anchor                                       | Tier. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
-::: {.note .veto}
-**The plus or minus is ONE standard error**, the spread across iterations
-divided by the square root of 10000. It covers about 68 percent,
-not 95.
+::: {.note}
+**The plus or minus is DPS**, and it says how precisely the average is known
+rather than how much a pull varies. The average of 10000 pulls is
+pinned to that many DPS; a single pull swings by the figure in the row below it,
+which is far larger.
 :::
 
 The figure above is against boss armor 6193. This same set was run

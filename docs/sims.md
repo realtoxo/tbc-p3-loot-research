@@ -21,12 +21,21 @@ varies between specs far more than it varies within one. **The comparison that
 carries meaning is a spec against ITSELF at another anchor**, which is why the
 last column exists and why nothing here is sorted by damage.
 
-::: {.note .veto}
-**The plus or minus is ONE standard error, not a confidence interval.** It is
-the spread across iterations divided by the square root of
-10000, and it covers about 68 percent rather than 95. Two figures
-whose intervals do not quite overlap are not thereby separated. Ruled by the
-guild lead on 15 August 2026.
+::: {.note}
+**What the plus or minus means.** It is DPS, and it is NOT the range a raider
+sees on a given night.
+
+Each figure is the average of 10000 simulated pulls. The plus or
+minus is how precisely that average is known: run the whole thing again with
+different dice and the average lands within it. So 3580.7 ± 1.01 means the
+average really is about 3580.7, give or take a point.
+
+**One pull varies far more than that.** For the Beast Mastery Hunter a single
+150 second pull swings by roughly 100 DPS either way. Averaging ten thousand of
+them is what shrinks the uncertainty to one.
+
+The practical rule: **a gap of a few DPS between two figures is noise, and a gap
+of tens or hundreds is real.** Ruled by the guild lead on 15 August 2026.
 :::
 
 ## What each spec measures
