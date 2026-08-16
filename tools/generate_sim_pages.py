@@ -232,21 +232,30 @@ def write_index(path: Path, specs: list[str], by_key: dict, meta: dict,
                for a, _l, _w in MAIN_ANCHORS}
         entry = got.get("entry")
         tier = got.get("tier-hands-and-head")
-        bis = got.get("bis")
 
-        def cell(anchor, row):
-            return (f"[{figure(row)}](sims/{slug(spec, anchor)}.md)"
+        def cell(anchor, row, s=spec):
+            return (f"[{figure(row)}](sims/{slug(s, anchor)}.md)"
                     if row else "not simulated")
 
         def delta(a, b):
             return f"{b['dps'] - a['dps']:+.1f}" if a and b else "not comparable"
 
-        rows.append([
-            SPEC_LABEL.get(spec, spec),
-            cell("entry", entry), delta(entry, tier),
-            cell("tier-hands-and-head", tier), delta(tier, bis),
-            cell("bis", bis), delta(entry, bis),
-        ])
+        # A SPEC WITH A SECOND BEST-IN-SLOT SET GETS A SECOND ROW, so it sorts
+        # into the table beside everyone else rather than sitting in a section
+        # below it. Entry and Tier are the SAME runs in both rows, because the
+        # variant differs only in the two weapon slots of the best-in-slot set.
+        variants = [("bis", SPEC_LABEL.get(spec, spec))]
+        if (spec, "bis-no-glaives", default_armor) in by_key:
+            variants.append(("bis-no-glaives",
+                             SPEC_LABEL.get(spec, spec) + ", no Warglaives"))
+        for anchor, label in variants:
+            bis = by_key.get((spec, anchor, default_armor))
+            rows.append([
+                label,
+                cell("entry", entry), delta(entry, tier),
+                cell("tier-hands-and-head", tier), delta(tier, bis),
+                cell(anchor, bis), delta(entry, bis),
+            ])
 
     body = f"""---
 title: Simulated Throughput
@@ -325,19 +334,17 @@ different authors. Sorting is yours to ask for rather than the default.
 ## Only one of them gets the Warglaives
 
 The Combat Rogue's published Phase 3 list and the Fury Warrior's both rank dual
-Warglaives of Azzinoth, and the raid holds one pair. So the BiS row above is
-true for at most one of these two, and this is what the other one does instead.
+Warglaives of Azzinoth, and the raid holds one pair. Both appear twice in the
+table above for that reason: at most one of those two characters can be the row
+with the Warglaives in it, and the other is the row without.
 
 The replacement weapons were not chosen. Every one-hand, main-hand and off-hand
 weapon Phase 3 can supply that either spec could hold, 33 of them, was run in a
 two-pass search: vary the main hand against a fixed off hand, then vary the off
 hand against the winner.
 
-{rows_table(["Spec", "With the Warglaives", "Without them", "What they are worth"],
+{rows_table(["Spec", "What the pair is worth to them"],
             [[SPEC_LABEL.get(s, s),
-              f"{by_key[(s, 'bis', default_armor)]['dps']:.1f}",
-              f"[{by_key[(s, 'bis-no-glaives', default_armor)]['dps']:.1f}]"
-              f"(sims/{slug(s, 'bis-no-glaives')}.md)",
               f"{by_key[(s, 'bis', default_armor)]['dps'] - by_key[(s, 'bis-no-glaives', default_armor)]['dps']:+.1f}"]
              for s in ("combat_rogue", "fury_warrior")
              if (s, 'bis-no-glaives', default_armor) in by_key])}
@@ -345,8 +352,8 @@ hand against the winner.
 Two things follow, and neither is a ruling. **The rogue gets more out of the same
 pair**, so routing them to the rogue leaves the raid higher by about 75 damage
 per second than routing them to the warrior. And **without them the two specs
-are level**, with the Fury Warrior a shade ahead, so the gap in the table above
-is the weapons rather than the classes.
+are level**, with the Fury Warrior a shade ahead, so the gap between them in the
+table above is the weapons rather than the classes.
 
 ## The same spec against a harder boss
 
