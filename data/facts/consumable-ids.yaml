@@ -1083,6 +1083,62 @@ picks:
         - Adamantite Sharpening Stone
         prose: Deadly Poison VII on fights over thirty seconds, Adamantite Sharpening Stone
           on shorter ones
+    bis_no_glaives:
+      flask_id:
+        name: Flask of Relentless Assault
+        id: 22854
+        from: flask
+        position: first named in the field the captured facts allow
+        alternatives_named: []
+        prose: Flask of Relentless Assault
+      food_id:
+        name: Spicy Hot Talbuk
+        id: 33872
+        from: food
+        position: first named in the field the captured facts allow
+        alternatives_named:
+        - Warp Burger
+        - Grilled Mudfish
+        prose: Spicy Hot Talbuk for hit, or Warp Burger and Grilled Mudfish for agility
+      pot_id:
+        name: Haste Potion
+        id: 22838
+        from: potions
+        position: first named in the field the captured facts allow
+        alternatives_named:
+        - Super Healing Potion
+        prose: Haste Potion, Free Action Potion on stun fights, Super Healing Potion
+      mhImbue_id:
+        name: Adamantite Sharpening Stone
+        id: 29453
+        from: weapon_main_hand
+        position: first named in the field the captured facts allow
+        alternatives_named: []
+        prose: Windfury Totem where a shaman is in party, otherwise Adamantite Sharpening
+          Stone
+        weapon_class:
+          worn:
+          - Sword
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+        gate:
+          applied: false
+          why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem
+            is Missing, and this spec's party carries one
+          party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+            groups
+          rule_from: data/facts/weapon-imbue-gating.yaml
+          so: this id is sent and dropped. It is the right id for the weapon and it is worth
+            0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
+      ohImbue_id:
+        name: Deadly Poison
+        id: 27186
+        from: weapon_off_hand
+        position: first named in the field the captured facts allow
+        alternatives_named:
+        - Adamantite Sharpening Stone
+        prose: Deadly Poison VII on fights over thirty seconds, Adamantite Sharpening Stone
+          on shorter ones
     entry:
       flask_id:
         name: Flask of Relentless Assault
@@ -1744,6 +1800,82 @@ picks:
         weapon_class:
           worn:
           - Sword
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+    bis_no_glaives:
+      flask_id:
+        name: Flask of Relentless Assault
+        id: 22854
+        from: flask
+        position: first named in the field the captured facts allow
+        alternatives_named: []
+        prose: Flask of Relentless Assault — the standard 2-hour flask for Fury Warrior DPS,
+          lasts through death. All three sources agree this is the default pick against non-demon
+          bosses.
+      food_id:
+        name: Roasted Clefthoof
+        id: 27658
+        from: food
+        position: first named in the field the captured facts allow
+        alternatives_named:
+        - Spicy Hot Talbuk
+        prose: Roasted Clefthoof for +20 Strength (the default). Spicy Hot Talbuk (+20 Hit
+          Rating / ~1.27% hit) is the situational swap when the raider needs help reaching
+          the hit cap instead of raw Strength — all three sources state this condition explicitly.
+      pot_id:
+        name: Haste Potion
+        id: 22838
+        from: potions
+        position: first named in the field the captured facts allow
+        alternatives_named:
+        - Insane Strength Potion
+        - Mighty Rage Potion
+        prose: 'Haste Potion is the primary on-cooldown combat potion, ideally popped alongside
+          Bloodlust/other cooldowns (all three sources). Situational/secondary options named
+          by Icy-Veins and Wowhead: Insane Strength Potion (burst Strength), Mighty Rage Potion
+          (trash rage burst), Free Action Potion (stun/slow immunity on relevant fights),
+          Swiftness Potion (high-movement fights).'
+      mhImbue_id:
+        name: Adamantite Sharpening Stone
+        id: 29453
+        from: weapon_main_hand
+        position: first named in the field the captured facts allow
+        alternatives_named:
+        - Adamantite Weightstone
+        prose: 'Condition-dependent, not a purchasable oil/stone: if the raid has an Enhancement
+          Shaman running Windfury Totem, leave the main-hand weapon bare so Windfury can proc
+          on it — Wowhead states this is the single best main-hand enhancement and stones
+          should not be applied there. Only if no Windfury Totem is present should Adamantite
+          Sharpening Stone (sharp weapons) or Adamantite Weightstone (blunt weapons) go on
+          the main hand instead.'
+        weapon_class:
+          worn:
+          - Sword
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
+        gate:
+          applied: false
+          why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem
+            is Missing, and this spec's party carries one
+          party_from: data/facts/raid-buffs.yaml, party.*.windfury_totem, joined to data/facts/roster.yaml
+            groups
+          rule_from: data/facts/weapon-imbue-gating.yaml
+          so: this id is sent and dropped. It is the right id for the weapon and it is worth
+            0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
+      ohImbue_id:
+        name: Adamantite Sharpening Stone
+        id: 29453
+        from: weapon_off_hand
+        position: first named in the field the captured facts allow
+        alternatives_named:
+        - Adamantite Weightstone
+        prose: Adamantite Sharpening Stone (sharp weapons) or Adamantite Weightstone (blunt
+          weapons) — used regardless of Windfury Totem presence, since Windfury does not benefit
+          from an off-hand stone the same way. Wowhead specifically credits Adamantite Sharpening
+          Stone as ~1% stronger than Elemental Sharpening Stone for this slot.
+        weapon_class:
+          worn:
+          - Axe
           counts_as: sharp
           from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
     entry:

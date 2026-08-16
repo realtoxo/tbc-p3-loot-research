@@ -104,18 +104,127 @@ anchors:
           id 30105; id 30724 is ABSENT from data/facts/items.csv, could not be cross-checked
           against the fact table
     total_item_hit: 171
-    tier6_pieces_held:
+    tier6_pieces_held: &id001
     - shoulder
     - chest
     tier5_pieces_held: []
     tier4_pieces_held: []
-    set_pieces_held:
+    set_pieces_held: &id002
       Onslaught Battlegear: 2
     hit_state:
       cap: melee_special
       net_target_rating: 142
       assumed_debuff_rating: 48.0
       item_hit: 171
+      state: full
+      gap_rating: 0
+      gem_sockets: 9
+      gems_needed: 0
+  bis_no_glaives:
+    hit_by_slot:
+      head:
+        item: Cursed Vision of Sargeras
+        id: 32235
+        hit: 21
+        capture_note: first of two tied 'Best' rows in the Head Armor table; the
+          other was Onslaught Battle-Helm, id 30972
+      neck:
+        item: Choker of Endless Nightmares
+        id: 32260
+        hit: 21
+        capture_note: first of two tied 'Best' rows in the Neck Jewelry table; the
+          other was Choker of Serrated Blades, id 32591
+      shoulder:
+        item: Onslaught Shoulderblades
+        id: 30979
+        hit: 0
+      back:
+        item: Shadowmoon Destroyer's Drape
+        id: 32323
+        hit: 17
+      chest:
+        item: Onslaught Breastplate
+        id: 30975
+        hit: 16
+      wrist:
+        item: Deadly Cuffs
+        id: 30863
+        hit: 12
+        capture_note: first of four tied 'Best' rows in the Wrist Armor table; the
+          others were Bindings of Lightning Reflexes id 32574, Furious Shackles
+          id 30861, and Bladespire Warbands id 28795
+      hands:
+        item: Grips of Silent Justice
+        id: 32278
+        hit: 15
+        capture_note: first of two tied 'Best' rows in the Hand Armor table; the
+          other was Onslaught Gauntlets, id 30969
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      legs:
+        item: Leggings of Divine Retribution
+        id: 32341
+        hit: 0
+      feet:
+        item: Dreadboots of the Legion
+        id: 32345
+        hit: 18
+      ring_1:
+        item: Stormrage Signet Ring
+        id: 32497
+        hit: 30
+        capture_note: first of two tied 'Best' rows in the Ring Jewelry table
+      ring_2:
+        item: Unstoppable Aggressor's Ring
+        id: 32335
+        hit: 0
+        capture_note: second of two tied 'Best' rows in the Ring Jewelry table
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+        capture_note: first of three tied 'Best' rows in the Trinkets table
+      trinket_2:
+        item: Bloodlust Brooch
+        id: 29383
+        hit: 0
+      main_hand:
+        item: Vengeful Gladiator's Slicer
+        id: 33762
+        hit: 8
+      off_hand:
+        item: Vengeful Gladiator's Chopper
+        id: 34015
+        hit: 8
+      ranged:
+        item: Barrel-Blade Longrifle
+        id: 30724
+        hit: 0
+        outside_items_csv: Barrel-Blade Longrifle is not in data/facts/items.csv,
+          which is scoped to Phase 3 and pre-phase gear. Its hit is read from the
+          simulator database instead. It simulates normally.
+        capture_note: first of three tied 'Best' rows in the Ranged Weapons table;
+          the others were Twisted Blades of Zarak id 32326 and Serpent Spine Longbow
+          id 30105; id 30724 is ABSENT from data/facts/items.csv, could not be cross-checked
+          against the fact table
+    total_item_hit: 166
+    tier6_pieces_held: *id001
+    tier5_pieces_held: []
+    tier4_pieces_held: []
+    set_pieces_held: *id002
+    why_this_anchor_exists: The Warglaives of Azzinoth are ranked by BOTH this spec's
+      published Phase 3 list and the other contender's, and the raid holds one pair.
+      This is the same best-in-slot set with the next best weapons this spec can
+      actually get. 2606.1 bare against 2727.4 for the bare Warglaives, so the pair
+      costs this spec 121.3. Two Slicers measure 2609.9 and need two copies of one
+      arena weapon.
+    hit_state:
+      cap: melee_special
+      net_target_rating: 142
+      assumed_debuff_rating: 48.0
+      item_hit: 166
       state: full
       gap_rating: 0
       gem_sockets: 9

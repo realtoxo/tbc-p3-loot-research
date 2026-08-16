@@ -90,20 +90,114 @@ anchors:
         id: 29949
         hit: 19
     total_item_hit: 195
-    tier6_pieces_held:
+    tier6_pieces_held: &id001
     - shoulder
     - chest
     - hands
     - legs
     tier5_pieces_held: []
     tier4_pieces_held: []
-    set_pieces_held:
+    set_pieces_held: &id002
       Slayer's Armor: 4
     hit_state:
       cap: melee_special
       net_target_rating: 64
       assumed_debuff_rating: 48.0
       item_hit: 195
+      state: full
+      gap_rating: 0
+      gem_sockets: 8
+      gems_needed: 0
+  bis_no_glaives:
+    hit_by_slot:
+      head:
+        item: Cursed Vision of Sargeras
+        id: 32235
+        hit: 21
+      neck:
+        item: Choker of Endless Nightmares
+        id: 32260
+        hit: 21
+      shoulder:
+        item: Slayer's Shoulderpads
+        id: 31030
+        hit: 0
+      back:
+        item: Shadowmoon Destroyer's Drape
+        id: 32323
+        hit: 17
+      chest:
+        item: Slayer's Chestguard
+        id: 31028
+        hit: 15
+      wrist:
+        item: Insidious Bands
+        id: 32324
+        hit: 12
+      hands:
+        item: Slayer's Handguards
+        id: 31026
+        hit: 18
+      waist:
+        item: Belt of One-Hundred Deaths
+        id: 30106
+        hit: 0
+      legs:
+        item: Slayer's Legguards
+        id: 31029
+        hit: 0
+      feet:
+        item: Shadowmaster's Boots
+        id: 32366
+        hit: 0
+      ring_1:
+        item: Stormrage Signet Ring
+        id: 32497
+        hit: 30
+        capture_note: first of two tied 'BiS' rows in the Ring Jewelry table
+      ring_2:
+        item: Band of the Eternal Champion
+        id: 29301
+        hit: 0
+        capture_note: second of two tied 'BiS' rows in the Ring Jewelry table
+      trinket_1:
+        item: Dragonspine Trophy
+        id: 28830
+        hit: 0
+        capture_note: first of two tied 'BiS' rows in the Trinkets table
+      trinket_2:
+        item: Warp-Spring Coil
+        id: 30450
+        hit: 21
+        capture_note: second of two tied 'BiS' rows in the Trinkets table
+      main_hand:
+        item: Vengeful Gladiator's Slicer
+        id: 33762
+        hit: 8
+      off_hand:
+        item: Blade of Savagery
+        id: 32369
+        hit: 15
+      ranged:
+        item: Arcanite Steam-Pistol
+        id: 29949
+        hit: 19
+    total_item_hit: 197
+    tier6_pieces_held: *id001
+    tier5_pieces_held: []
+    tier4_pieces_held: []
+    set_pieces_held: *id002
+    why_this_anchor_exists: The Warglaives of Azzinoth are ranked by BOTH this spec's
+      published Phase 3 list and the other contender's, and the raid holds one pair.
+      This is the same best-in-slot set with the next best weapons this spec can
+      actually get. 2552.4 bare against 2745.3 for the bare Warglaives, so the pair
+      costs this spec 192.9. Both are swords, which the rogue's shipped rotation
+      and the Human sword specialization both want.
+    hit_state:
+      cap: melee_special
+      net_target_rating: 64
+      assumed_debuff_rating: 48.0
+      item_hit: 197
       state: full
       gap_rating: 0
       gem_sockets: 8
