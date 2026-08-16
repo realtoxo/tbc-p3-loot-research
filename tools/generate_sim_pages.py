@@ -246,7 +246,6 @@ subtitle: >-
   figure, and the exact set behind each one.
 status: draft
 updated: 2026-08-15
-generated: data/facts/sim-figures.yaml
 ---
 
 {BANNER}
@@ -466,8 +465,13 @@ def write_detail(directory: Path, spec: str, anchor: str, label: str,
             consumable_rows.append([f"`{field}`", "`yes`" if value else "`no`",
                                     ""])
             continue
-        label = named.get(field) or consumable_name.get(value) or str(value)
-        consumable_rows.append([f"`{field}`", f"`{label}`", str(value)])
+        # NOT `label`. That is this function's anchor-name parameter, and
+        # reassigning it here retitled every set page after whichever
+        # consumable sorted last: "Arms Warrior, Haste Potion Set" instead of
+        # "Arms Warrior, BiS Set". It shipped to the published site because the
+        # title is built further down and nothing reads it in between.
+        name_of = named.get(field) or consumable_name.get(value) or str(value)
+        consumable_rows.append([f"`{field}`", f"`{name_of}`", str(value)])
 
     raid, party, debuffs = run_sims.buffs_for(spec, buffs_doc, party_of)
     types = run_sims.proto_field_types()
@@ -501,7 +505,6 @@ subtitle: >-
   The whole request behind one figure: {figure(row)} damage per second.
 status: draft
 updated: 2026-08-15
-generated: data/sim/gear/{gear_stem(spec, anchor)}.gear.json
 ---
 
 {BANNER}
@@ -550,18 +553,32 @@ damage lands, so a physical spec moves between them and a pure caster does not.
         body += ":::\n"
 
     if routing:
-        body += """
-## Where this set differs from the published page
-
-The Phase 3 list was captured from Wowhead and is never edited. A published list
-ranks a weapon for one spec in isolation, and a raid has one of each, so the
-guild lead routed the contested weapons on 15 August 2026. Those rulings are
-applied when this profile is built, which is why the capture and the set below
-disagree in these slots and only these.
-
-"""
+        # COMPRESSED TO A TABLE ON PURPOSE. This was four lines of prose and a
+        # bullet per slot repeating the full ruling text, which pushed the set
+        # itself below the fold on a page whose whole job is showing the set.
+        # The reasoning is not lost, it is one link away in the judgment files,
+        # which is where a ruling belongs. What the page must still say is that
+        # these slots are NOT what the published list ranks, because that is the
+        # one thing a reader cannot see by looking at the table below.
+        moved = []
         for line in routing:
-            body += f"- {line}\n"
+            slot, _, rest = line.partition(": ")
+            now, _, was = rest.partition(" replaces ")
+            was = was.split(". ")[0].strip() or "nothing"
+            moved.append([SLOT_LABEL.get(slot, slot), f"`{now.strip()}`",
+                          f"`{was}`"])
+        body += f"""
+## Three slots the published list does not rank this way
+
+A published list ranks an item for one spec in isolation and a raid holds one of
+each, so the guild lead routed the contested ones. The capture itself is never
+edited; the routing is applied when this profile is built, and it touches these
+slots and no others. The reasoning is in
+[`weapon-routing.yaml`](../../data/judgments/weapon-routing.yaml) and
+[`trinket-routing.yaml`](../../data/judgments/trinket-routing.yaml).
+
+{rows_table(["Slot", "This set wears", "Where the page ranks"], moved)}
+""".replace("Three slots", f"{len(moved)} slot" + ("s" if len(moved) != 1 else ""))
 
     body += f"""
 ## The set
