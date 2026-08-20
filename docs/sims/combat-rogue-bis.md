@@ -65,6 +65,27 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, the raids above it and the badge vendor, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Warp-Spring Coil and Madness of the Betrayer carry armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+
+The ten best of the 28 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                 | DPS           | Against this set |
+|---------------------------------|-------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Warp-Spring Coil        | 2918.2 ± 1.21 | +0.0             |
+| Dragonspine Trophy              | Madness of the Betrayer | 2897.6 ± 1.22 | -20.6            |
+| Dragonspine Trophy              | Tsunami Talisman        | 2880.4 ± 1.19 | -37.8            |
+| Dragonspine Trophy              | Bloodlust Brooch        | 2874.6 ± 1.19 | -43.6            |
+| Warp-Spring Coil                | Madness of the Betrayer | 2874.3 ± 1.17 | -43.9            |
+| Warp-Spring Coil                | Tsunami Talisman        | 2859.7 ± 1.17 | -58.5            |
+| Dragonspine Trophy              | Romulo's Poison Vial    | 2857.3 ± 1.15 | -60.9            |
+| Warp-Spring Coil                | Bloodlust Brooch        | 2855.1 ± 1.18 | -63.1            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2846.7 ± 1.18 | -71.5            |
+| Madness of the Betrayer         | Tsunami Talisman        | 2839.8 ± 1.18 | -78.4            |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

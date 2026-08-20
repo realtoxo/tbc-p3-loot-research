@@ -323,6 +323,52 @@ ROUNDS: dict[str, dict] = {
             {"mh": 32052, "oh": 32027, "phase3": False},
             {"mh": 30082, "oh": 32052, "phase3": False},
         ],
+        # THE TRINKET POOL, the pilot of the enumerative trinket rounds
+        # ruled on 20 August 2026: every max-level trinket the Rog tab's
+        # Trinket ladder ranks, with anything from Karazhan and the badge
+        # vendor onward acceptable, and the runner generates every
+        # unordered pair itself. The ladder ranks fifteen; seven are out
+        # on the standing exclusions, all availability rather than
+        # routing: Mark of the Champion, Slayer's Crest, Kiss of the
+        # Spider and Drake Fang Talisman drop in level-60 raids, and the
+        # Abacus of Violent Odds, Icon of Unyielding Courage and
+        # Hourglass of the Unraveller drop in five-man dungeons below
+        # Karazhan. No Ahn'Qiraj and no world-boss trinket is on the tab.
+        # All four anchors wear Dragonspine Trophy with Warp-Spring Coil,
+        # both in the pool, so no worn item needed adding. `phase3` marks
+        # what the entry anchor cannot reach: Madness of the Betrayer is
+        # a Black Temple drop and the Ashtongue Talisman of Lethality is
+        # Ashtongue Deathsworn Exalted, a reputation earned in Black
+        # Temple and Mount Hyjal.
+        "trinket_pool": [
+            {"id": 28830, "phase3": False},  # Dragonspine Trophy
+            {"id": 30450, "phase3": False},  # Warp-Spring Coil
+            {"id": 32492, "phase3": True},   # Ashtongue Tal. of Lethality
+            {"id": 32505, "phase3": True},   # Madness of the Betrayer
+            {"id": 30627, "phase3": False},  # Tsunami Talisman
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 29383, "phase3": False},  # Bloodlust Brooch
+            {"id": 28579, "phase3": False},  # Romulo's Poison Vial
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside an attack power "
+            "partner and another beside an armor penetration one, so "
+            "the two slots are measured together: every row below is "
+            "THIS PROFILE with only the two trinket ids replaced, and "
+            "a trinket carries no enchant and no gem, so the "
+            "consumables, buffs and seed hold still and every figure "
+            "is directly comparable with the one at the top of this "
+            "page. The candidates are every max-level trinket on the "
+            "EP Workbook's Trinket ladder for this spec, from Karazhan, "
+            "the raids above it and the badge vendor, and every pair "
+            "from that pool was measured, so the table is an "
+            "enumeration rather than a selection; the ten best appear "
+            "below, with the worn pair beside them. An on-use trinket "
+            "is activated on the simulator's own schedule. Warp-Spring "
+            "Coil and Madness of the Betrayer carry armor penetration, "
+            "which moves with the boss's armor, and these figures are "
+            "at the armor tier ten of the fourteen bosses sit in.")),
     },
     # ARMS: two-handers only, per the 20 August 2026 ruling. The published
     # Phase 3 page ranks only dual Warglaives, which the guild lead routed
@@ -1448,6 +1494,11 @@ def main() -> int:
                 trinket_anchors[anchor] = results
             specs_out[spec]["trinkets_why"] = round_["trinkets_why"]
             specs_out[spec]["trinket_anchors"] = trinket_anchors
+
+    # THE FILE KEEPS THE REGISTRY'S ORDER regardless of which spec a --spec
+    # run reran, or every partial run reorders the file and its diff reads
+    # far larger than it is.
+    specs_out = {spec: specs_out[spec] for spec in ROUNDS if spec in specs_out}
 
     document = {
         "meta": {
