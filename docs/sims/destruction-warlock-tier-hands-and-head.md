@@ -48,19 +48,19 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 A Destruction Warlock can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and dagger alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty. Tempest of Chaos is taken first by the Arcane Mage, and first is an ordering rather than an exclusion: the warlocks' lists rank it too, so its rows measure what this spec holds once the mage is served.
 
-| Main hand                             | Off hand                  | DPS           | Against this set |
-|---------------------------------------|---------------------------|---------------|------------------|
-| Zhar'doom, Greatstaff of the Devourer | *empty, two-hander*       | 2281.0 ± 1.25 | +138.2           |
-| Tempest of Chaos                      | Chronicle of Dark Secrets | 2258.6 ± 1.25 | +115.8           |
-| Tempest of Chaos                      | Blind-Seers Icon          | 2241.8 ± 1.24 | +99.0            |
-| The Maelstrom's Fury                  | Chronicle of Dark Secrets | 2230.2 ± 1.24 | +87.4            |
-| Vengeful Gladiator's Spellblade       | Chronicle of Dark Secrets | 2224.4 ± 1.24 | +81.6            |
-| Vengeful Gladiator's Battle Staff     | *empty, two-hander*       | 2202.9 ± 1.20 | +60.1            |
-| Tempest of Chaos                      | Flametongue Seal          | 2202.4 ± 1.22 | +59.6            |
-| Merciless Gladiator's Spellblade      | Chronicle of Dark Secrets | 2199.2 ± 1.22 | +56.4            |
-| The Nexus Key                         | *empty, two-hander*       | 2199.0 ± 1.21 | +56.2            |
-| Merciless Gladiator's War Staff       | *empty, two-hander*       | 2172.2 ± 1.20 | +29.4            |
-| Merciless Gladiator's Spellblade      | Flametongue Seal          | 2142.8 ± 1.19 | +0.0             |
+| Main hand                                     | Off hand                  | DPS           | Against this set |
+|-----------------------------------------------|---------------------------|---------------|------------------|
+| Zhar'doom, Greatstaff of the Devourer         | *empty, two-hander*       | 2281.0 ± 1.25 | +138.2           |
+| Tempest of Chaos                              | Chronicle of Dark Secrets | 2258.6 ± 1.25 | +115.8           |
+| Tempest of Chaos                              | Blind-Seers Icon          | 2241.8 ± 1.24 | +99.0            |
+| The Maelstrom's Fury                          | Chronicle of Dark Secrets | 2230.2 ± 1.24 | +87.4            |
+| Vengeful Gladiator's Spellblade               | Chronicle of Dark Secrets | 2224.4 ± 1.24 | +81.6            |
+| Vengeful Gladiator's Battle Staff             | *empty, two-hander*       | 2202.9 ± 1.20 | +60.1            |
+| Tempest of Chaos                              | Flametongue Seal          | 2202.4 ± 1.22 | +59.6            |
+| Merciless Gladiator's Spellblade              | Chronicle of Dark Secrets | 2199.2 ± 1.22 | +56.4            |
+| The Nexus Key                                 | *empty, two-hander*       | 2199.0 ± 1.21 | +56.2            |
+| Merciless Gladiator's War Staff               | *empty, two-hander*       | 2172.2 ± 1.20 | +29.4            |
+| Merciless Gladiator's Spellblade *(this set)* | Flametongue Seal          | 2142.8 ± 1.19 | +0.0             |
 
 The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +138.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

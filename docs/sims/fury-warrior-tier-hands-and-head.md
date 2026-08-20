@@ -53,7 +53,7 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 | Warglaive of Azzinoth             | Warglaive of Azzinoth        | 2644.0 ± 1.15 | +138.2           |
 | Vengeful Gladiator's Slicer       | Vengeful Gladiator's Slicer  | 2516.2 ± 1.18 | +10.4            |
 | Vengeful Gladiator's Slicer       | Vengeful Gladiator's Chopper | 2511.2 ± 1.18 | +5.4             |
-| Dragonstrike                      | Talon of Azshara             | 2505.8 ± 1.21 | +0.0             |
+| Dragonstrike *(this set)*         | Talon of Azshara             | 2505.8 ± 1.21 | +0.0             |
 | Dragonstrike                      | Rod of the Sun King          | 2497.7 ± 1.23 | -8.1             |
 | Blade of Infamy                   | Blade of Infamy              | 2494.7 ± 1.17 | -11.1            |
 | Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Chopper | 2490.6 ± 1.18 | -15.2            |

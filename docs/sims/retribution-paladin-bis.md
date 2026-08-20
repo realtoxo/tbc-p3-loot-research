@@ -50,7 +50,7 @@ A Retribution Paladin always carries a two-hander, so every row below is a singl
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
-| Torch of the Damned               | *empty, two-hander* | 2374.4 ± 1.46 | +0.0             |
+| Torch of the Damned *(this set)*  | *empty, two-hander* | 2374.4 ± 1.46 | +0.0             |
 | Cataclysm's Edge                  | *empty, two-hander* | 2345.4 ± 1.43 | -29.0            |
 | Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 2319.9 ± 1.42 | -54.5            |
 | Lionheart Executioner             | *empty, two-hander* | 2308.3 ± 1.44 | -66.1            |
@@ -59,7 +59,7 @@ A Retribution Paladin always carries a two-hander, so every row below is a singl
 | Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2263.0 ± 1.38 | -111.4           |
 | Halberd of Desolation             | *empty, two-hander* | 2230.1 ± 1.40 | -144.3           |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

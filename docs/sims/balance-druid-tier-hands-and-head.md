@@ -56,7 +56,7 @@ A Balance Druid can carry a staff or a one-hander with a held frill, and both st
 | Hammer of Judgement                   | Chronicle of Dark Secrets       | 1724.7 ± 0.85 | +8.9             |
 | Vengeful Gladiator's Gavel            | Blind-Seers Icon                | 1723.3 ± 0.85 | +7.5             |
 | Vengeful Gladiator's Battle Staff     | *empty, two-hander*             | 1720.2 ± 0.84 | +4.4             |
-| The Nexus Key                         | *empty, two-hander*             | 1715.8 ± 0.83 | +0.0             |
+| The Nexus Key *(this set)*            | *empty, two-hander*             | 1715.8 ± 0.83 | +0.0             |
 | Merciless Gladiator's Spellblade      | Chronicle of Dark Secrets       | 1711.8 ± 0.85 | -4.0             |
 | Vengeful Gladiator's Gavel            | Jewel of Infinite Possibilities | 1710.2 ± 0.84 | -5.6             |
 | Merciless Gladiator's War Staff       | *empty, two-hander*             | 1698.7 ± 0.83 | -17.1            |

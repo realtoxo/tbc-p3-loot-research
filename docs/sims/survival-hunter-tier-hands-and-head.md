@@ -59,7 +59,7 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Blade of Infamy                   | Messenger of Fate                | 2979.7 ± 0.95 | +18.7            |
 | Blade of Infamy                   | Claw of the Phoenix              | 2976.7 ± 0.95 | +15.7            |
 | Netherbane                        | Talon of Azshara                 | 2963.9 ± 0.93 | +2.9             |
-| Netherbane                        | Claw of the Phoenix              | 2961.0 ± 0.94 | +0.0             |
+| Netherbane *(this set)*           | Claw of the Phoenix              | 2961.0 ± 0.94 | +0.0             |
 | Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 2956.7 ± 0.94 | -4.3             |
 
 The best combination, Halberd of Desolation alone, a two-hander, measures +78.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
@@ -68,14 +68,14 @@ The best combination, Halberd of Desolation alone, a two-hander, measures +78.2 
 
 The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
 
-| Ranged                     | DPS           | Against this set |
-|----------------------------|---------------|------------------|
-| Bristleblitz Striker       | 2974.5 ± 0.95 | +13.5            |
-| Black Bow of the Betrayer  | 2970.1 ± 0.93 | +9.1             |
-| Serpent Spine Longbow      | 2961.0 ± 0.94 | +0.0             |
-| Legionkiller               | 2891.6 ± 0.96 | -69.4            |
-| Arcanite Steam-Pistol      | 2877.3 ± 0.95 | -83.7            |
-| Sunfury Bow of the Phoenix | 2871.5 ± 0.96 | -89.5            |
+| Ranged                             | DPS           | Against this set |
+|------------------------------------|---------------|------------------|
+| Bristleblitz Striker               | 2974.5 ± 0.95 | +13.5            |
+| Black Bow of the Betrayer          | 2970.1 ± 0.93 | +9.1             |
+| Serpent Spine Longbow *(this set)* | 2961.0 ± 0.94 | +0.0             |
+| Legionkiller                       | 2891.6 ± 0.96 | -69.4            |
+| Arcanite Steam-Pistol              | 2877.3 ± 0.95 | -83.7            |
+| Sunfury Bow of the Phoenix         | 2871.5 ± 0.96 | -89.5            |
 
 The best ranged weapon, Bristleblitz Striker, measures +13.5 against this set's own, so the upgrade path at this anchor runs through it.
 

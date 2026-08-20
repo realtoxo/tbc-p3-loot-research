@@ -48,13 +48,13 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 An Arms Warrior considers only two-handers, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The published Phase 3 page ranks only dual Warglaives, which this spec will not receive, so the Phase 3 candidates are the drop table's two-handers in the weapon classes a warrior wields, and the earlier candidates are the top of the EP Workbook's Two Hand ladder for this spec. This spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: it stays with the Retribution Paladin.
 
-| Main hand                         | Off hand            | DPS           | Against this set |
-|-----------------------------------|---------------------|---------------|------------------|
-| Twinblade of the Phoenix          | *empty, two-hander* | 2149.8 ± 1.16 | +0.0             |
-| Lionheart Executioner             | *empty, two-hander* | 2145.3 ± 1.17 | -4.5             |
-| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 1977.5 ± 1.02 | -172.3           |
+| Main hand                             | Off hand            | DPS           | Against this set |
+|---------------------------------------|---------------------|---------------|------------------|
+| Twinblade of the Phoenix *(this set)* | *empty, two-hander* | 2149.8 ± 1.16 | +0.0             |
+| Lionheart Executioner                 | *empty, two-hander* | 2145.3 ± 1.17 | -4.5             |
+| Merciless Gladiator's Bonegrinder     | *empty, two-hander* | 1977.5 ± 1.02 | -172.3           |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

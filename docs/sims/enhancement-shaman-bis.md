@@ -48,25 +48,26 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
 
-| Main hand                         | Off hand                      | Pair speed | DPS           | Against this set |
-|-----------------------------------|-------------------------------|------------|---------------|------------------|
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Cleaver  | 2.6        | 2352.8 ± 1.03 | -34.6            |
-| Vengeful Gladiator's Cleaver      | Vengeful Gladiator's Chopper  | 2.6        | 2352.8 ± 1.03 | -34.6            |
-| Syphon of the Nathrezim           | Syphon of the Nathrezim       | 2.8        | 2350.3 ± 1.08 | -37.1            |
-| Dragonstrike                      | Rod of the Sun King           | 2.7        | 2335.2 ± 1.08 | -52.2            |
-| Talon of the Phoenix              | Rod of the Sun King           | 2.7        | 2326.0 ± 1.03 | -61.4            |
-| Claw of Molten Fury               | Rod of the Sun King           | 2.7        | 2322.0 ± 1.04 | -65.4            |
-| Wicked Edge of the Planes         | Rod of the Sun King           | 2.7        | 2319.9 ± 1.04 | -67.5            |
-| Rising Tide                       | Rising Tide                   | 2.6        | 2315.6 ± 1.00 | -71.8            |
-| Rod of the Sun King               | Rod of the Sun King           | 2.7        | 2312.3 ± 1.04 | -75.1            |
-| Dragonmaw                         | Rod of the Sun King           | 2.7        | 2311.2 ± 1.06 | -76.2            |
-| Rising Tide                       | Netherbane                    | 2.6        | 2310.9 ± 1.01 | -76.5            |
-| Merciless Gladiator's Cleaver     | Merciless Gladiator's Cleaver | 2.6        | 2302.7 ± 1.00 | -84.7            |
-| Netherbane                        | Netherbane                    | 2.6        | 2299.3 ± 1.02 | -88.1            |
-| Black Planar Edge                 | Rod of the Sun King           | 2.7        | 2292.5 ± 1.02 | -94.9            |
-| Drakefist Hammer                  | Rod of the Sun King           | 2.7        | 2285.8 ± 1.04 | -101.6           |
+| Main hand                                 | Off hand                      | Pair speed  | DPS           | Against this set |
+|-------------------------------------------|-------------------------------|-------------|---------------|------------------|
+| Vengeful Gladiator's Cleaver *(this set)* | Syphon of the Nathrezim       | 2.6 and 2.8 | 2387.4 ± 1.02 | +0.0             |
+| Vengeful Gladiator's Right Ripper         | Vengeful Gladiator's Cleaver  | 2.6         | 2352.8 ± 1.03 | -34.6            |
+| Vengeful Gladiator's Cleaver              | Vengeful Gladiator's Chopper  | 2.6         | 2352.8 ± 1.03 | -34.6            |
+| Syphon of the Nathrezim                   | Syphon of the Nathrezim       | 2.8         | 2350.3 ± 1.08 | -37.1            |
+| Dragonstrike                              | Rod of the Sun King           | 2.7         | 2335.2 ± 1.08 | -52.2            |
+| Talon of the Phoenix                      | Rod of the Sun King           | 2.7         | 2326.0 ± 1.03 | -61.4            |
+| Claw of Molten Fury                       | Rod of the Sun King           | 2.7         | 2322.0 ± 1.04 | -65.4            |
+| Wicked Edge of the Planes                 | Rod of the Sun King           | 2.7         | 2319.9 ± 1.04 | -67.5            |
+| Rising Tide                               | Rising Tide                   | 2.6         | 2315.6 ± 1.00 | -71.8            |
+| Rod of the Sun King                       | Rod of the Sun King           | 2.7         | 2312.3 ± 1.04 | -75.1            |
+| Dragonmaw                                 | Rod of the Sun King           | 2.7         | 2311.2 ± 1.06 | -76.2            |
+| Rising Tide                               | Netherbane                    | 2.6         | 2310.9 ± 1.01 | -76.5            |
+| Merciless Gladiator's Cleaver             | Merciless Gladiator's Cleaver | 2.6         | 2302.7 ± 1.00 | -84.7            |
+| Netherbane                                | Netherbane                    | 2.6         | 2299.3 ± 1.02 | -88.1            |
+| Black Planar Edge                         | Rod of the Sun King           | 2.7         | 2292.5 ± 1.02 | -94.9            |
+| Drakefist Hammer                          | Rod of the Sun King           | 2.7         | 2285.8 ± 1.04 | -101.6           |
 
-Every combination below measures UNDER this set's own weapons, the best of them by 34.6 DPS, so the round found no weapon upgrade at this anchor.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

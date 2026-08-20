@@ -50,7 +50,7 @@ An Arcane Mage can carry a staff or a one-hander with a held frill, and both sty
 
 | Main hand                             | Off hand                  | DPS           | Against this set |
 |---------------------------------------|---------------------------|---------------|------------------|
-| Tempest of Chaos                      | Chronicle of Dark Secrets | 2534.4 ± 1.07 | +0.0             |
+| Tempest of Chaos *(this set)*         | Chronicle of Dark Secrets | 2534.4 ± 1.07 | +0.0             |
 | Zhar'doom, Greatstaff of the Devourer | *empty, two-hander*       | 2533.0 ± 1.07 | -1.4             |
 | Tempest of Chaos                      | Blind-Seers Icon          | 2523.8 ± 1.06 | -10.6            |
 | Tempest of Chaos                      | Talisman of Kalecgos      | 2514.8 ± 1.07 | -19.6            |
@@ -63,7 +63,7 @@ An Arcane Mage can carry a staff or a one-hander with a held frill, and both sty
 | Merciless Gladiator's War Staff       | *empty, two-hander*       | 2466.3 ± 1.05 | -68.1            |
 | Merciless Gladiator's Spellblade      | Talisman of Kalecgos      | 2458.1 ± 1.06 | -76.3            |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

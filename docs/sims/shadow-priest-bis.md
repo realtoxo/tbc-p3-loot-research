@@ -48,21 +48,21 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 A Shadow Priest can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Superior Wizard Oil applies to any weapon, staff and mace alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. A priest wields daggers, one- hand maces and staves and holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here: the warlocks hold it in principle and concede it to the Arcane Mage, where this spec cannot equip it at all, so its one-hand rows draw on maces and daggers instead. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
 
-| Main hand                             | Off hand                  | DPS           | Against this set |
-|---------------------------------------|---------------------------|---------------|------------------|
-| Zhar'doom, Greatstaff of the Devourer | *empty, two-hander*       | 1577.9 ± 0.29 | +0.0             |
-| Vengeful Gladiator's Gavel            | Orb of the Soul-Eater     | 1565.8 ± 0.29 | -12.1            |
-| Vengeful Gladiator's Gavel            | Chronicle of Dark Secrets | 1563.4 ± 0.29 | -14.5            |
-| Vengeful Gladiator's Gavel            | Blind-Seers Icon          | 1561.1 ± 0.29 | -16.8            |
-| The Maelstrom's Fury                  | Blind-Seers Icon          | 1557.0 ± 0.29 | -20.9            |
-| Hammer of Judgement                   | Blind-Seers Icon          | 1554.7 ± 0.29 | -23.2            |
-| Merciless Gladiator's Spellblade      | Orb of the Soul-Eater     | 1552.9 ± 0.29 | -25.0            |
-| Merciless Gladiator's Spellblade      | Blind-Seers Icon          | 1548.2 ± 0.29 | -29.7            |
-| Vengeful Gladiator's Battle Staff     | *empty, two-hander*       | 1541.6 ± 0.29 | -36.3            |
-| The Nexus Key                         | *empty, two-hander*       | 1535.9 ± 0.29 | -42.0            |
-| Merciless Gladiator's War Staff       | *empty, two-hander*       | 1528.2 ± 0.29 | -49.7            |
+| Main hand                                          | Off hand                  | DPS           | Against this set |
+|----------------------------------------------------|---------------------------|---------------|------------------|
+| Zhar'doom, Greatstaff of the Devourer *(this set)* | *empty, two-hander*       | 1577.9 ± 0.29 | +0.0             |
+| Vengeful Gladiator's Gavel                         | Orb of the Soul-Eater     | 1565.8 ± 0.29 | -12.1            |
+| Vengeful Gladiator's Gavel                         | Chronicle of Dark Secrets | 1563.4 ± 0.29 | -14.5            |
+| Vengeful Gladiator's Gavel                         | Blind-Seers Icon          | 1561.1 ± 0.29 | -16.8            |
+| The Maelstrom's Fury                               | Blind-Seers Icon          | 1557.0 ± 0.29 | -20.9            |
+| Hammer of Judgement                                | Blind-Seers Icon          | 1554.7 ± 0.29 | -23.2            |
+| Merciless Gladiator's Spellblade                   | Orb of the Soul-Eater     | 1552.9 ± 0.29 | -25.0            |
+| Merciless Gladiator's Spellblade                   | Blind-Seers Icon          | 1548.2 ± 0.29 | -29.7            |
+| Vengeful Gladiator's Battle Staff                  | *empty, two-hander*       | 1541.6 ± 0.29 | -36.3            |
+| The Nexus Key                                      | *empty, two-hander*       | 1535.9 ± 0.29 | -42.0            |
+| Merciless Gladiator's War Staff                    | *empty, two-hander*       | 1528.2 ± 0.29 | -49.7            |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

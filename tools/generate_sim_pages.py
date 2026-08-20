@@ -405,7 +405,8 @@ Four specs are absent, and each for a stated reason rather than an oversight.
     path.write_text(body)
 
 
-def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
+def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict,
+                        gear: dict, name_of, speed_of) -> str:
     """A spec's weapon pair variants, as a section of one anchor page.
 
     RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the weapons analysis is
@@ -416,6 +417,14 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
     the specs and anchors that file holds and changes only when the round
     reruns. The Enhancement round is ruled in
     data/judgments/enhancement-weapon-rules.yaml.
+
+    THE WORN COMBINATION IS ALWAYS A ROW. Where the round measured it, that
+    row reads plus zero on its own; where it did not, the row is written
+    here FROM THE ANCHOR FIGURE, which is honest because the anchor figure
+    IS that combination under the same request. A table whose deltas are
+    against a set the table never shows left the reader wondering where the
+    zero row went, which the guild lead reported from the published site on
+    20 August 2026.
     """
     if not WEAPON_PAIRS.is_file():
         return ""
@@ -426,6 +435,30 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
     pairs = (block.get("anchors") or {}).get(anchor)
     if not pairs:
         return ""
+
+    worn_mh = (gear["items"][run_sims.SLOT_ORDER.index("main_hand")]
+               or {}).get("id")
+    worn_oh = (gear["items"][run_sims.SLOT_ORDER.index("off_hand")]
+               or {}).get("id")
+    measured_worn = False
+    pairs = [dict(e) for e in pairs]
+    for e in pairs:
+        if e["main_hand"]["id"] == worn_mh \
+                and (e.get("off_hand") or {}).get("id") == worn_oh:
+            e["this_set"] = True
+            measured_worn = True
+    if not measured_worn and worn_mh:
+        synthesized = {
+            "main_hand": {"id": worn_mh, "name": name_of(worn_mh)},
+            "dps": row["dps"],
+            "standard_error": row.get("standard_error"),
+            "this_set": True,
+        }
+        if worn_oh:
+            synthesized["off_hand"] = {"id": worn_oh,
+                                       "name": name_of(worn_oh)}
+        pairs.append(synthesized)
+        pairs.sort(key=lambda e: -e["dps"])
 
     # THE SPEED COLUMN APPEARS ONLY WHERE A ROW CARRIES ONE, which today is
     # Enhancement's matched-speed rule. An off hand a row does not name is a
@@ -438,16 +471,30 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
     header += ["DPS", "Against this set"]
     table_rows = []
     for entry in pairs:
+        marker = " *(this set)*" if entry.get("this_set") else ""
         cells = [
-            entry["main_hand"]["name"],
+            entry["main_hand"]["name"] + marker,
             entry["off_hand"]["name"] if entry.get("off_hand")
             else "*empty, two-hander*",
         ]
         if with_speed:
-            cells.append(f"{entry['pair_speed']:.1f}"
-                         if entry.get("pair_speed") is not None else "")
+            if entry.get("pair_speed") is not None:
+                cells.append(f"{entry['pair_speed']:.1f}")
+            elif entry.get("this_set"):
+                mh_speed = speed_of(entry["main_hand"]["id"])
+                oh_speed = speed_of((entry.get("off_hand") or {}).get("id"))
+                if mh_speed and oh_speed and mh_speed != oh_speed:
+                    cells.append(f"{mh_speed:.1f} and {oh_speed:.1f}")
+                elif mh_speed:
+                    cells.append(f"{mh_speed:.1f}")
+                else:
+                    cells.append("")
+            else:
+                cells.append("")
         cells += [
-            f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}",
+            f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}"
+            if entry.get("standard_error") is not None
+            else f"{entry['dps']:.1f}",
             f"{entry['dps'] - row['dps']:+.1f}",
         ]
         table_rows.append(cells)
@@ -460,9 +507,10 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
     best = pairs[0]
     if abs(best["dps"] - row["dps"]) < 0.05:
         reading = (
-            "This set already wears the best combination the round "
-            "measured, which is why its top row reads plus zero: that row "
-            "IS this profile.")
+            "This set already wears the best combination on the table, "
+            "which is why the top row reads plus zero: that row IS this "
+            "profile, and every other row is an alternative measuring "
+            "under it.")
     elif best["dps"] > row["dps"]:
         best_label = best["main_hand"]["name"] + (
             f" with {best['off_hand']['name']}" if best.get("off_hand")
@@ -488,7 +536,8 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
 """
 
 
-def ranged_section(spec: str, anchor: str, row: dict) -> str:
+def ranged_section(spec: str, anchor: str, row: dict,
+                   gear: dict, name_of) -> str:
     """A spec's ranged weapon variants, as a section of one anchor page.
 
     RULED BY THE GUILD LEAD ON 20 AUGUST 2026, for the hunters: the bow is
@@ -507,9 +556,28 @@ def ranged_section(spec: str, anchor: str, row: dict) -> str:
     if not rows:
         return ""
 
+    # THE WORN WEAPON IS ALWAYS A ROW, for the same reason as the pair
+    # table: the deltas are against this set, so the set's own weapon must
+    # be visible, at plus zero, rather than implied.
+    worn = (gear["items"][run_sims.SLOT_ORDER.index("ranged")] or {}).get("id")
+    rows = [dict(e) for e in rows]
+    measured_worn = False
+    for e in rows:
+        if e["ranged"]["id"] == worn:
+            e["this_set"] = True
+            measured_worn = True
+    if not measured_worn and worn:
+        rows.append({"ranged": {"id": worn, "name": name_of(worn)},
+                     "dps": row["dps"],
+                     "standard_error": row.get("standard_error"),
+                     "this_set": True})
+        rows.sort(key=lambda e: -e["dps"])
+
     table_rows = [[
-        entry["ranged"]["name"],
-        f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}",
+        entry["ranged"]["name"]
+        + (" *(this set)*" if entry.get("this_set") else ""),
+        f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}"
+        if entry.get("standard_error") is not None else f"{entry['dps']:.1f}",
         f"{entry['dps'] - row['dps']:+.1f}",
     ] for entry in rows]
 
@@ -698,8 +766,17 @@ damage lands, so a physical spec moves between them and a pure caster does not.
             body += f"- {line}\n"
         body += ":::\n"
 
-    body += weapon_pair_section(spec, anchor, row, meta)
-    body += ranged_section(spec, anchor, row)
+    def name_of(item_id: int) -> str:
+        return ((items_csv.get(item_id) or {}).get("name")
+                or (db_items.get(item_id) or {}).get("name") or str(item_id))
+
+    def speed_of(item_id: int) -> float | None:
+        raw = (items_csv.get(item_id) or {}).get("weapon_speed")
+        return float(raw) if raw else None
+
+    body += weapon_pair_section(spec, anchor, row, meta, gear, name_of,
+                                speed_of)
+    body += ranged_section(spec, anchor, row, gear, name_of)
 
     body += f"""
 ## The set

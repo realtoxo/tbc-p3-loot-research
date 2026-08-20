@@ -48,19 +48,19 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 An Affliction Warlock can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and dagger alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty. Tempest of Chaos is taken first by the Arcane Mage, and first is an ordering rather than an exclusion: the warlocks' lists rank it too, so its rows measure what this spec holds once the mage is served.
 
-| Main hand                             | Off hand                        | DPS           | Against this set |
-|---------------------------------------|---------------------------------|---------------|------------------|
-| Zhar'doom, Greatstaff of the Devourer | *empty, two-hander*             | 2071.1 ± 0.98 | +92.2            |
-| Tempest of Chaos                      | Chronicle of Dark Secrets       | 2051.7 ± 0.98 | +72.8            |
-| Tempest of Chaos                      | Blind-Seers Icon                | 2039.7 ± 0.98 | +60.8            |
-| The Maelstrom's Fury                  | Chronicle of Dark Secrets       | 2029.7 ± 0.97 | +50.8            |
-| Vengeful Gladiator's Spellblade       | Chronicle of Dark Secrets       | 2026.2 ± 0.98 | +47.3            |
-| Tempest of Chaos                      | Jewel of Infinite Possibilities | 2023.7 ± 0.97 | +44.8            |
-| Vengeful Gladiator's Battle Staff     | *empty, two-hander*             | 2008.5 ± 0.96 | +29.6            |
-| Merciless Gladiator's Spellblade      | Chronicle of Dark Secrets       | 2007.0 ± 0.97 | +28.1            |
-| The Nexus Key                         | *empty, two-hander*             | 2003.0 ± 0.95 | +24.1            |
-| Merciless Gladiator's War Staff       | *empty, two-hander*             | 1985.1 ± 0.95 | +6.2             |
-| Merciless Gladiator's Spellblade      | Jewel of Infinite Possibilities | 1978.9 ± 0.95 | +0.0             |
+| Main hand                                     | Off hand                        | DPS           | Against this set |
+|-----------------------------------------------|---------------------------------|---------------|------------------|
+| Zhar'doom, Greatstaff of the Devourer         | *empty, two-hander*             | 2071.1 ± 0.98 | +92.2            |
+| Tempest of Chaos                              | Chronicle of Dark Secrets       | 2051.7 ± 0.98 | +72.8            |
+| Tempest of Chaos                              | Blind-Seers Icon                | 2039.7 ± 0.98 | +60.8            |
+| The Maelstrom's Fury                          | Chronicle of Dark Secrets       | 2029.7 ± 0.97 | +50.8            |
+| Vengeful Gladiator's Spellblade               | Chronicle of Dark Secrets       | 2026.2 ± 0.98 | +47.3            |
+| Tempest of Chaos                              | Jewel of Infinite Possibilities | 2023.7 ± 0.97 | +44.8            |
+| Vengeful Gladiator's Battle Staff             | *empty, two-hander*             | 2008.5 ± 0.96 | +29.6            |
+| Merciless Gladiator's Spellblade              | Chronicle of Dark Secrets       | 2007.0 ± 0.97 | +28.1            |
+| The Nexus Key                                 | *empty, two-hander*             | 2003.0 ± 0.95 | +24.1            |
+| Merciless Gladiator's War Staff               | *empty, two-hander*             | 1985.1 ± 0.95 | +6.2             |
+| Merciless Gladiator's Spellblade *(this set)* | Jewel of Infinite Possibilities | 1978.9 ± 0.95 | +0.0             |
 
 The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +92.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

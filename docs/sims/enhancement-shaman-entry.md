@@ -50,7 +50,7 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 
 | Main hand                     | Off hand                      | Pair speed | DPS           | Against this set |
 |-------------------------------|-------------------------------|------------|---------------|------------------|
-| Dragonstrike                  | Rod of the Sun King           | 2.7        | 2188.7 ± 1.03 | +0.0             |
+| Dragonstrike *(this set)*     | Rod of the Sun King           | 2.7        | 2188.7 ± 1.03 | +0.0             |
 | Talon of the Phoenix          | Rod of the Sun King           | 2.7        | 2186.4 ± 0.99 | -2.3             |
 | Wicked Edge of the Planes     | Rod of the Sun King           | 2.7        | 2181.0 ± 1.00 | -7.7             |
 | Rod of the Sun King           | Rod of the Sun King           | 2.7        | 2172.4 ± 0.99 | -16.3            |
@@ -60,7 +60,7 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 | Black Planar Edge             | Rod of the Sun King           | 2.7        | 2155.9 ± 0.98 | -32.8            |
 | Drakefist Hammer              | Rod of the Sun King           | 2.7        | 2142.3 ± 0.99 | -46.4            |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

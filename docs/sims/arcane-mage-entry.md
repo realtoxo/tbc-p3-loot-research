@@ -50,12 +50,12 @@ An Arcane Mage can carry a staff or a one-hander with a held frill, and both sty
 
 | Main hand                        | Off hand             | DPS           | Against this set |
 |----------------------------------|----------------------|---------------|------------------|
-| The Nexus Key                    | *empty, two-hander*  | 2301.2 ± 1.00 | +0.0             |
+| The Nexus Key *(this set)*       | *empty, two-hander*  | 2301.2 ± 1.00 | +0.0             |
 | Fang of the Leviathan            | Talisman of Kalecgos | 2282.7 ± 0.99 | -18.5            |
 | Merciless Gladiator's War Staff  | *empty, two-hander*  | 2278.2 ± 0.97 | -23.0            |
 | Merciless Gladiator's Spellblade | Talisman of Kalecgos | 2272.8 ± 0.98 | -28.4            |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

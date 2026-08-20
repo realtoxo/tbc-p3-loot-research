@@ -48,12 +48,12 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
 
-| Main hand                | Off hand            | DPS           | Against this set |
-|--------------------------|---------------------|---------------|------------------|
-| Bloodmoon                | *empty, two-hander* | 3432.4 ± 0.99 | +90.1            |
-| Twinblade of the Phoenix | *empty, two-hander* | 3405.1 ± 0.99 | +62.8            |
-| Talon of the Phoenix     | Claw of the Phoenix | 3342.3 ± 0.95 | +0.0             |
-| Talon of the Phoenix     | Talon of Azshara    | 3338.0 ± 0.95 | -4.3             |
+| Main hand                         | Off hand            | DPS           | Against this set |
+|-----------------------------------|---------------------|---------------|------------------|
+| Bloodmoon                         | *empty, two-hander* | 3432.4 ± 0.99 | +90.1            |
+| Twinblade of the Phoenix          | *empty, two-hander* | 3405.1 ± 0.99 | +62.8            |
+| Talon of the Phoenix *(this set)* | Claw of the Phoenix | 3342.3 ± 0.95 | +0.0             |
+| Talon of the Phoenix              | Talon of Azshara    | 3338.0 ± 0.95 | -4.3             |
 
 The best combination, Bloodmoon alone, a two-hander, measures +90.1 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
@@ -61,11 +61,11 @@ The best combination, Bloodmoon alone, a two-hander, measures +90.1 against this
 
 The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
 
-| Ranged                     | DPS           | Against this set |
-|----------------------------|---------------|------------------|
-| Serpent Spine Longbow      | 3342.3 ± 0.95 | +0.0             |
-| Arcanite Steam-Pistol      | 3319.4 ± 0.91 | -22.9            |
-| Sunfury Bow of the Phoenix | 3314.3 ± 0.92 | -28.0            |
+| Ranged                             | DPS           | Against this set |
+|------------------------------------|---------------|------------------|
+| Serpent Spine Longbow *(this set)* | 3342.3 ± 0.95 | +0.0             |
+| Arcanite Steam-Pistol              | 3319.4 ± 0.91 | -22.9            |
+| Sunfury Bow of the Phoenix         | 3314.3 ± 0.92 | -28.0            |
 
 This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 

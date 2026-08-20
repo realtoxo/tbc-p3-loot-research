@@ -48,22 +48,22 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 A Combat Rogue carries two one-handers, so every row below is a main hand with an off hand and no row is a two- hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The build is Combat Swords and the rotation is built on Sinister Strike, so no dagger is a row, because a dagger main hand changes the rotation entirely rather than the weapon alone, and the fist and mace rows carry a stated caveat: the build's Sword Specialization talent procs only on sword strikes and does not benefit them. The candidates are the top of the EP Workbook's Main Hand and Off Hand ladders for this spec. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Fury Warrior's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
 
-| Main hand                         | Off hand                         | DPS           | Against this set |
-|-----------------------------------|----------------------------------|---------------|------------------|
-| Warglaive of Azzinoth             | Warglaive of Azzinoth            | 2918.2 ± 1.21 | +0.0             |
-| Vengeful Gladiator's Slicer       | Blade of Savagery                | 2708.2 ± 1.11 | -210.0           |
-| Blade of Infamy                   | Blade of Savagery                | 2697.1 ± 1.11 | -221.1           |
-| Vengeful Gladiator's Slicer       | Vengeful Gladiator's Quickblade  | 2685.8 ± 1.13 | -232.4           |
-| Blade of Infamy                   | Vengeful Gladiator's Quickblade  | 2672.9 ± 1.13 | -245.3           |
-| Talon of Azshara                  | Merciless Gladiator's Quickblade | 2651.4 ± 1.12 | -266.8           |
-| Merciless Gladiator's Slicer      | Merciless Gladiator's Quickblade | 2626.5 ± 1.10 | -291.7           |
-| Blade of Infamy                   | Swiftsteel Bludgeon              | 2602.9 ± 1.06 | -315.3           |
-| Vengeful Gladiator's Slicer       | Vengeful Gladiator's Slicer      | 2517.5 ± 1.11 | -400.7           |
-| Blade of Infamy                   | Blade of Infamy                  | 2502.3 ± 1.11 | -415.9           |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 2485.1 ± 0.99 | -433.1           |
-| Talon of Azshara                  | Merciless Gladiator's Slicer     | 2482.2 ± 1.11 | -436.0           |
+| Main hand                          | Off hand                         | DPS           | Against this set |
+|------------------------------------|----------------------------------|---------------|------------------|
+| Warglaive of Azzinoth *(this set)* | Warglaive of Azzinoth            | 2918.2 ± 1.21 | +0.0             |
+| Vengeful Gladiator's Slicer        | Blade of Savagery                | 2708.2 ± 1.11 | -210.0           |
+| Blade of Infamy                    | Blade of Savagery                | 2697.1 ± 1.11 | -221.1           |
+| Vengeful Gladiator's Slicer        | Vengeful Gladiator's Quickblade  | 2685.8 ± 1.13 | -232.4           |
+| Blade of Infamy                    | Vengeful Gladiator's Quickblade  | 2672.9 ± 1.13 | -245.3           |
+| Talon of Azshara                   | Merciless Gladiator's Quickblade | 2651.4 ± 1.12 | -266.8           |
+| Merciless Gladiator's Slicer       | Merciless Gladiator's Quickblade | 2626.5 ± 1.10 | -291.7           |
+| Blade of Infamy                    | Swiftsteel Bludgeon              | 2602.9 ± 1.06 | -315.3           |
+| Vengeful Gladiator's Slicer        | Vengeful Gladiator's Slicer      | 2517.5 ± 1.11 | -400.7           |
+| Blade of Infamy                    | Blade of Infamy                  | 2502.3 ± 1.11 | -415.9           |
+| Vengeful Gladiator's Right Ripper  | Vengeful Gladiator's Left Ripper | 2485.1 ± 0.99 | -433.1           |
+| Talon of Azshara                   | Merciless Gladiator's Slicer     | 2482.2 ± 1.11 | -436.0           |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

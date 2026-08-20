@@ -57,7 +57,7 @@ An Arcane Mage can carry a staff or a one-hander with a held frill, and both sty
 | The Maelstrom's Fury                  | Chronicle of Dark Secrets | 2336.2 ± 1.00 | +15.5            |
 | Vengeful Gladiator's Spellblade       | Chronicle of Dark Secrets | 2332.7 ± 1.00 | +12.0            |
 | Vengeful Gladiator's Battle Staff     | *empty, two-hander*       | 2326.8 ± 0.99 | +6.1             |
-| The Nexus Key                         | *empty, two-hander*       | 2320.7 ± 1.01 | +0.0             |
+| The Nexus Key *(this set)*            | *empty, two-hander*       | 2320.7 ± 1.01 | +0.0             |
 | Merciless Gladiator's Spellblade      | Chronicle of Dark Secrets | 2310.9 ± 0.99 | -9.8             |
 | Fang of the Leviathan                 | Talisman of Kalecgos      | 2302.5 ± 1.00 | -18.2            |
 | Merciless Gladiator's War Staff       | *empty, two-hander*       | 2298.9 ± 0.98 | -21.8            |

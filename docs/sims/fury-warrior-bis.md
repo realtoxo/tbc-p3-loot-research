@@ -48,22 +48,22 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 A Fury Warrior considers only one-handers and main handers, so every row below is a main hand with an off hand and no row is a two-hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The candidates are the top of the EP Workbook's Main Hand and Off Hand ladders for this spec, kept to the weapon classes a warrior dual-wields. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Combat Rogue's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
 
-| Main hand                         | Off hand                     | DPS           | Against this set |
-|-----------------------------------|------------------------------|---------------|------------------|
-| Warglaive of Azzinoth             | Warglaive of Azzinoth        | 2862.1 ± 1.23 | +0.0             |
-| Vengeful Gladiator's Slicer       | Vengeful Gladiator's Slicer  | 2731.9 ± 1.24 | -130.2           |
-| Vengeful Gladiator's Slicer       | Vengeful Gladiator's Chopper | 2727.1 ± 1.24 | -135.0           |
-| Dragonstrike                      | Talon of Azshara             | 2720.9 ± 1.30 | -141.2           |
-| Dragonstrike                      | Rod of the Sun King          | 2711.3 ± 1.30 | -150.8           |
-| Blade of Infamy                   | Blade of Infamy              | 2708.7 ± 1.24 | -153.4           |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Chopper | 2705.1 ± 1.24 | -157.0           |
-| Syphon of the Nathrezim           | Blade of Infamy              | 2688.1 ± 1.26 | -174.0           |
-| Blade of Infamy                   | Talon of Azshara             | 2684.6 ± 1.19 | -177.5           |
-| Syphon of the Nathrezim           | Syphon of the Nathrezim      | 2674.2 ± 1.26 | -187.9           |
-| Talon of the Phoenix              | Talon of Azshara             | 2667.4 ± 1.23 | -194.7           |
-| Claw of Molten Fury               | Talon of Azshara             | 2657.1 ± 1.24 | -205.0           |
+| Main hand                          | Off hand                     | DPS           | Against this set |
+|------------------------------------|------------------------------|---------------|------------------|
+| Warglaive of Azzinoth *(this set)* | Warglaive of Azzinoth        | 2862.1 ± 1.23 | +0.0             |
+| Vengeful Gladiator's Slicer        | Vengeful Gladiator's Slicer  | 2731.9 ± 1.24 | -130.2           |
+| Vengeful Gladiator's Slicer        | Vengeful Gladiator's Chopper | 2727.1 ± 1.24 | -135.0           |
+| Dragonstrike                       | Talon of Azshara             | 2720.9 ± 1.30 | -141.2           |
+| Dragonstrike                       | Rod of the Sun King          | 2711.3 ± 1.30 | -150.8           |
+| Blade of Infamy                    | Blade of Infamy              | 2708.7 ± 1.24 | -153.4           |
+| Vengeful Gladiator's Right Ripper  | Vengeful Gladiator's Chopper | 2705.1 ± 1.24 | -157.0           |
+| Syphon of the Nathrezim            | Blade of Infamy              | 2688.1 ± 1.26 | -174.0           |
+| Blade of Infamy                    | Talon of Azshara             | 2684.6 ± 1.19 | -177.5           |
+| Syphon of the Nathrezim            | Syphon of the Nathrezim      | 2674.2 ± 1.26 | -187.9           |
+| Talon of the Phoenix               | Talon of Azshara             | 2667.4 ± 1.23 | -194.7           |
+| Claw of Molten Fury                | Talon of Azshara             | 2657.1 ± 1.24 | -205.0           |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

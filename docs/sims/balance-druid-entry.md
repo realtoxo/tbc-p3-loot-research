@@ -50,11 +50,11 @@ A Balance Druid can carry a staff or a one-hander with a held frill, and both st
 
 | Main hand                        | Off hand                        | DPS           | Against this set |
 |----------------------------------|---------------------------------|---------------|------------------|
-| The Nexus Key                    | *empty, two-hander*             | 1671.3 ± 0.86 | +0.0             |
+| The Nexus Key *(this set)*       | *empty, two-hander*             | 1671.3 ± 0.86 | +0.0             |
 | Merciless Gladiator's War Staff  | *empty, two-hander*             | 1642.2 ± 0.86 | -29.1            |
 | Merciless Gladiator's Spellblade | Jewel of Infinite Possibilities | 1628.0 ± 0.87 | -43.3            |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

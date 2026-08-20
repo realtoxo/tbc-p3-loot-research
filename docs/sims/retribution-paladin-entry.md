@@ -48,13 +48,13 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 A Retribution Paladin always carries a two-hander, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The candidates are the top of the EP Workbook's Two Hand ladder for this spec, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: it goes to the Arms Warrior, and Torch of the Damned stays with this spec.
 
-| Main hand                         | Off hand            | DPS           | Against this set |
-|-----------------------------------|---------------------|---------------|------------------|
-| Lionheart Executioner             | *empty, two-hander* | 2181.3 ± 1.33 | +0.0             |
-| Twinblade of the Phoenix          | *empty, two-hander* | 2160.2 ± 1.33 | -21.1            |
-| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2142.3 ± 1.32 | -39.0            |
+| Main hand                          | Off hand            | DPS           | Against this set |
+|------------------------------------|---------------------|---------------|------------------|
+| Lionheart Executioner *(this set)* | *empty, two-hander* | 2181.3 ± 1.33 | +0.0             |
+| Twinblade of the Phoenix           | *empty, two-hander* | 2160.2 ± 1.33 | -21.1            |
+| Merciless Gladiator's Bonegrinder  | *empty, two-hander* | 2142.3 ± 1.32 | -39.0            |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

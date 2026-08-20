@@ -58,7 +58,7 @@ A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styl
 | Blade of Infamy                   | Tracker's Blade                  | 3536.0 ± 1.01 | +12.9            |
 | Blade of Infamy                   | Blade of Savagery                | 3534.6 ± 1.01 | +11.5            |
 | Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 3524.9 ± 1.01 | +1.8             |
-| Talon of the Phoenix              | Claw of the Phoenix              | 3523.1 ± 1.00 | +0.0             |
+| Talon of the Phoenix *(this set)* | Claw of the Phoenix              | 3523.1 ± 1.00 | +0.0             |
 | Talon of the Phoenix              | Talon of Azshara                 | 3517.6 ± 0.99 | -5.5             |
 | Boundless Agony                   | Blade of Infamy                  | 3504.0 ± 0.99 | -19.1            |
 
@@ -68,14 +68,14 @@ The best combination, Bloodmoon alone, a two-hander, measures +95.7 against this
 
 The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
 
-| Ranged                     | DPS           | Against this set |
-|----------------------------|---------------|------------------|
-| Bristleblitz Striker       | 3537.7 ± 1.00 | +14.6            |
-| Black Bow of the Betrayer  | 3525.0 ± 1.02 | +1.9             |
-| Serpent Spine Longbow      | 3523.1 ± 1.00 | +0.0             |
-| Legionkiller               | 3512.0 ± 0.98 | -11.1            |
-| Arcanite Steam-Pistol      | 3496.2 ± 0.98 | -26.9            |
-| Sunfury Bow of the Phoenix | 3490.5 ± 0.98 | -32.6            |
+| Ranged                             | DPS           | Against this set |
+|------------------------------------|---------------|------------------|
+| Bristleblitz Striker               | 3537.7 ± 1.00 | +14.6            |
+| Black Bow of the Betrayer          | 3525.0 ± 1.02 | +1.9             |
+| Serpent Spine Longbow *(this set)* | 3523.1 ± 1.00 | +0.0             |
+| Legionkiller                       | 3512.0 ± 0.98 | -11.1            |
+| Arcanite Steam-Pistol              | 3496.2 ± 0.98 | -26.9            |
+| Sunfury Bow of the Phoenix         | 3490.5 ± 0.98 | -32.6            |
 
 The best ranged weapon, Bristleblitz Striker, measures +14.6 against this set's own, so the upgrade path at this anchor runs through it.
 

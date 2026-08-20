@@ -48,13 +48,13 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 A Fury Warrior considers only one-handers and main handers, so every row below is a main hand with an off hand and no row is a two-hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The candidates are the top of the EP Workbook's Main Hand and Off Hand ladders for this spec, kept to the weapon classes a warrior dual-wields. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Combat Rogue's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
 
-| Main hand            | Off hand            | DPS           | Against this set |
-|----------------------|---------------------|---------------|------------------|
-| Dragonstrike         | Talon of Azshara    | 2479.3 ± 1.16 | +0.0             |
-| Dragonstrike         | Rod of the Sun King | 2473.7 ± 1.19 | -5.6             |
-| Talon of the Phoenix | Talon of Azshara    | 2431.7 ± 1.12 | -47.6            |
+| Main hand                 | Off hand            | DPS           | Against this set |
+|---------------------------|---------------------|---------------|------------------|
+| Dragonstrike *(this set)* | Talon of Azshara    | 2479.3 ± 1.16 | +0.0             |
+| Dragonstrike              | Rod of the Sun King | 2473.7 ± 1.19 | -5.6             |
+| Talon of the Phoenix      | Talon of Azshara    | 2431.7 ± 1.12 | -47.6            |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 

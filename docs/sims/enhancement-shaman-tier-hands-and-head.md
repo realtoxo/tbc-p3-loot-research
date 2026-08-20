@@ -53,7 +53,7 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 | Syphon of the Nathrezim           | Syphon of the Nathrezim       | 2.8        | 2221.1 ± 1.05 | +33.4            |
 | Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Cleaver  | 2.6        | 2203.9 ± 0.98 | +16.2            |
 | Vengeful Gladiator's Cleaver      | Vengeful Gladiator's Chopper  | 2.6        | 2203.9 ± 0.98 | +16.2            |
-| Dragonstrike                      | Rod of the Sun King           | 2.7        | 2187.7 ± 1.02 | +0.0             |
+| Dragonstrike *(this set)*         | Rod of the Sun King           | 2.7        | 2187.7 ± 1.02 | +0.0             |
 | Talon of the Phoenix              | Rod of the Sun King           | 2.7        | 2185.3 ± 0.99 | -2.4             |
 | Claw of Molten Fury               | Rod of the Sun King           | 2.7        | 2182.0 ± 1.00 | -5.7             |
 | Wicked Edge of the Planes         | Rod of the Sun King           | 2.7        | 2179.9 ± 1.00 | -7.8             |

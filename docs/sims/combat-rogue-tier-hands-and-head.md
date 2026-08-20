@@ -55,7 +55,7 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Blade of Infamy                   | Blade of Savagery                | 2585.6 ± 1.07 | +43.6            |
 | Vengeful Gladiator's Slicer       | Vengeful Gladiator's Quickblade  | 2574.0 ± 1.08 | +32.0            |
 | Blade of Infamy                   | Vengeful Gladiator's Quickblade  | 2562.1 ± 1.09 | +20.1            |
-| Talon of Azshara                  | Merciless Gladiator's Quickblade | 2542.0 ± 1.06 | +0.0             |
+| Talon of Azshara *(this set)*     | Merciless Gladiator's Quickblade | 2542.0 ± 1.06 | +0.0             |
 | Merciless Gladiator's Slicer      | Merciless Gladiator's Quickblade | 2516.8 ± 1.06 | -25.2            |
 | Blade of Infamy                   | Swiftsteel Bludgeon              | 2496.3 ± 1.02 | -45.7            |
 | Vengeful Gladiator's Slicer       | Vengeful Gladiator's Slicer      | 2412.8 ± 1.07 | -129.2           |

@@ -53,7 +53,7 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Bloodmoon                | *empty, two-hander* | 2862.8 ± 0.93 | +65.4            |
 | Twinblade of the Phoenix | *empty, two-hander* | 2840.9 ± 0.93 | +43.5            |
 | Netherbane               | Talon of Azshara    | 2799.0 ± 0.88 | +1.6             |
-| Netherbane               | Claw of the Phoenix | 2797.4 ± 0.87 | +0.0             |
+| Netherbane *(this set)*  | Claw of the Phoenix | 2797.4 ± 0.87 | +0.0             |
 
 The best combination, Bloodmoon alone, a two-hander, measures +65.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
@@ -61,11 +61,11 @@ The best combination, Bloodmoon alone, a two-hander, measures +65.4 against this
 
 The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
 
-| Ranged                     | DPS           | Against this set |
-|----------------------------|---------------|------------------|
-| Serpent Spine Longbow      | 2797.4 ± 0.87 | +0.0             |
-| Arcanite Steam-Pistol      | 2715.3 ± 0.89 | -82.1            |
-| Sunfury Bow of the Phoenix | 2710.9 ± 0.89 | -86.5            |
+| Ranged                             | DPS           | Against this set |
+|------------------------------------|---------------|------------------|
+| Serpent Spine Longbow *(this set)* | 2797.4 ± 0.87 | +0.0             |
+| Arcanite Steam-Pistol              | 2715.3 ± 0.89 | -82.1            |
+| Sunfury Bow of the Phoenix         | 2710.9 ± 0.89 | -86.5            |
 
 This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 

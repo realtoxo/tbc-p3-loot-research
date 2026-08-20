@@ -50,7 +50,7 @@ An Arms Warrior considers only two-handers, so every row below is a single weapo
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
-| Cataclysm's Edge                  | *empty, two-hander* | 2426.4 ± 1.36 | +0.0             |
+| Cataclysm's Edge *(this set)*     | *empty, two-hander* | 2426.4 ± 1.36 | +0.0             |
 | Lionheart Executioner             | *empty, two-hander* | 2349.8 ± 1.34 | -76.6            |
 | Twinblade of the Phoenix          | *empty, two-hander* | 2334.3 ± 1.32 | -92.1            |
 | Torch of the Damned               | *empty, two-hander* | 2272.4 ± 1.21 | -154.0           |
@@ -59,7 +59,7 @@ An Arms Warrior considers only two-handers, so every row below is a single weapo
 | Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2176.7 ± 1.15 | -249.7           |
 | Halberd of Desolation             | *empty, two-hander* | 2151.8 ± 1.17 | -274.6           |
 
-This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 
