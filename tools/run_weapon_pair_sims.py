@@ -169,6 +169,78 @@ ROUNDS: dict[str, dict] = {
             {"mh": 31959, "oh": None, "phase3": False},
         ],
     },
+    # FURY: one-handers and main handers only, per the 20 August 2026 ruling
+    # in data/judgments/weapon-styles.yaml, so every row is a main hand with
+    # an off hand and no row is a two-hander. The candidates are the top of
+    # the Fury workbook tab, which splits Main Hand from Off Hand unlike the
+    # Enhancement tab's combined pool, kept to the weapon classes a warrior
+    # dual-wields: swords, maces, axes and fist weapons. A Main Hand item
+    # fits only the main hand, an Off Hand item only the off hand, and a One
+    # Hand item fits either. Fury carries FOUR anchors, because the
+    # Warglaives of Azzinoth are ranked first by this spec's published list
+    # AND the Combat Rogue's, the raid holds one pair, and the guild lead
+    # has not routed it, so a with-Warglaives and a without-Warglaives
+    # best-in-slot set both exist. Each anchor's worn pair is a row on
+    # purpose: its variant must reproduce the anchor figure to the digit,
+    # the same verification the other rounds carry. No candidate in this
+    # list carries a socket, so no figure here is understated against a
+    # gemmed worn weapon.
+    "fury_warrior": {
+        "anchors": ("entry", "tier-hands-and-head", "bis",
+                    "bis-no-glaives"),
+        "why": (
+            "A Fury Warrior considers only one-handers and main handers, "
+            "per the 20 August 2026 ruling in "
+            "data/judgments/weapon-styles.yaml, so every row below is a "
+            "main hand with an off hand and no row is a two-hander. Each "
+            "row is THIS PROFILE with only the two weapon ids replaced: "
+            "each slot keeps its Mongoose, and the consumables, buffs and "
+            "seed hold still, so every figure is directly comparable with "
+            "the one at the top of this page. The candidates are the top "
+            "of the EP Workbook's Main Hand and Off Hand ladders for this "
+            "spec, kept to the weapon classes a warrior dual-wields. A "
+            "row of two copies of one item needs both copies before it is "
+            "wearable. The Warglaives of Azzinoth are ranked first by "
+            "this spec's published Phase 3 list and by the Combat "
+            "Rogue's, the raid holds one pair, and which of the two "
+            "receives it is open council business, per "
+            "data/judgments/weapon-routing.yaml, which is why this spec "
+            "carries a best-in-slot set both with and without them."),
+        "pairs": [
+            # Phase 3 raid drops and Season 3 arena. The Warglaive pair,
+            # from Illidan Stormrage, is the worn best-in-slot pair and
+            # the workbook's rank one in both hands; the Vengeful
+            # Gladiator's Slicer with the Chopper is the worn
+            # bis-no-glaives pair, per the capture in
+            # data/facts/sim-profiles/bis-capture/fury-warrior.yaml.
+            {"mh": 32837, "oh": 32838, "phase3": True},
+            {"mh": 33762, "oh": 34015, "phase3": True},
+            # Two Slicers, the doubled-arena alternative the capture
+            # measured bare at 2609.9; the Right Ripper is the Season 3
+            # fist main hand, Main Hand only, with the Chopper behind it.
+            {"mh": 33762, "oh": 33762, "phase3": True},
+            {"mh": 33737, "oh": 34015, "phase3": True},
+            # The raid-drop field: Syphon of the Nathrezim from Supremus
+            # is the workbook's rank two main hand and its rank one off
+            # hand, Blade of Infamy from Anetheron is the highest Hyjal
+            # one-hander, and neither is unique, so the doubled rows are
+            # a question of weeks rather than of possibility. Claw of
+            # Molten Fury drops from Hyjal Summit trash.
+            {"mh": 32262, "oh": 32262, "phase3": True},
+            {"mh": 32262, "oh": 30881, "phase3": True},
+            {"mh": 30881, "oh": 30881, "phase3": True},
+            {"mh": 30881, "oh": 30082, "phase3": True},
+            {"mh": 32946, "oh": 30082, "phase3": True},
+            # Reachable before Phase 3: Dragonstrike, crafted by
+            # Blacksmithing, with Talon of Azshara from Morogrim
+            # Tidewalker is the worn entry AND tier pair; Rod of the Sun
+            # King drops from Kael'thas Sunstrider and Talon of the
+            # Phoenix from Al'ar, both Tempest Keep.
+            {"mh": 28439, "oh": 30082, "phase3": False},
+            {"mh": 28439, "oh": 29996, "phase3": False},
+            {"mh": 32944, "oh": 30082, "phase3": False},
+        ],
+    },
     # ARMS: two-handers only, per the 20 August 2026 ruling. The published
     # Phase 3 page ranks only dual Warglaives, which the guild lead routed
     # away from this spec, and the workbook tab's two-hand table is headed

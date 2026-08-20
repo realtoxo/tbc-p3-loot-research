@@ -918,3 +918,529 @@ specs:
         dps: 2151.8
         standard_error: 1.17
         stdev: 116.8
+  fury_warrior:
+    why: 'A Fury Warrior considers only one-handers and main handers, per the 20
+      August 2026 ruling in data/judgments/weapon-styles.yaml, so every row below
+      is a main hand with an off hand and no row is a two-hander. Each row is THIS
+      PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose,
+      and the consumables, buffs and seed hold still, so every figure is directly
+      comparable with the one at the top of this page. The candidates are the top
+      of the EP Workbook''s Main Hand and Off Hand ladders for this spec, kept to
+      the weapon classes a warrior dual-wields. A row of two copies of one item
+      needs both copies before it is wearable. The Warglaives of Azzinoth are ranked
+      first by this spec''s published Phase 3 list and by the Combat Rogue''s, the
+      raid holds one pair, and which of the two receives it is open council business,
+      per data/judgments/weapon-routing.yaml, which is why this spec carries a best-in-slot
+      set both with and without them.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2479.3
+        standard_error: 1.16
+        stdev: 116.2
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        dps: 2473.7
+        standard_error: 1.19
+        stdev: 119.4
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2431.7
+        standard_error: 1.12
+        stdev: 112.2
+      tier-hands-and-head:
+      - main_hand:
+          id: 32837
+          name: Warglaive of Azzinoth
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32838
+          name: Warglaive of Azzinoth
+          speed: 1.4
+          source: raid_drop
+        dps: 2644.0
+        standard_error: 1.15
+        stdev: 115.1
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2516.2
+        standard_error: 1.18
+        stdev: 118.1
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 34015
+          name: Vengeful Gladiator's Chopper
+          speed: 2.6
+          source: arena
+        dps: 2511.2
+        standard_error: 1.18
+        stdev: 118.3
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2505.8
+        standard_error: 1.21
+        stdev: 120.5
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        dps: 2497.7
+        standard_error: 1.23
+        stdev: 123.3
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2494.7
+        standard_error: 1.17
+        stdev: 117.5
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 34015
+          name: Vengeful Gladiator's Chopper
+          speed: 2.6
+          source: arena
+        dps: 2490.6
+        standard_error: 1.18
+        stdev: 118.0
+      - main_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2476.1
+        standard_error: 1.19
+        stdev: 119.1
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2472.5
+        standard_error: 1.16
+        stdev: 116.3
+      - main_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        dps: 2465.6
+        standard_error: 1.19
+        stdev: 119.2
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2457.2
+        standard_error: 1.15
+        stdev: 114.6
+      - main_hand:
+          id: 32946
+          name: Claw of Molten Fury
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2448.8
+        standard_error: 1.18
+        stdev: 117.8
+      bis:
+      - main_hand:
+          id: 32837
+          name: Warglaive of Azzinoth
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32838
+          name: Warglaive of Azzinoth
+          speed: 1.4
+          source: raid_drop
+        dps: 2862.1
+        standard_error: 1.23
+        stdev: 123.4
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2731.9
+        standard_error: 1.24
+        stdev: 124.0
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 34015
+          name: Vengeful Gladiator's Chopper
+          speed: 2.6
+          source: arena
+        dps: 2727.1
+        standard_error: 1.24
+        stdev: 123.6
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2720.9
+        standard_error: 1.3
+        stdev: 130.1
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        dps: 2711.3
+        standard_error: 1.3
+        stdev: 130.4
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2708.7
+        standard_error: 1.24
+        stdev: 124.0
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 34015
+          name: Vengeful Gladiator's Chopper
+          speed: 2.6
+          source: arena
+        dps: 2705.1
+        standard_error: 1.24
+        stdev: 124.1
+      - main_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2688.1
+        standard_error: 1.26
+        stdev: 125.8
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2684.6
+        standard_error: 1.19
+        stdev: 119.2
+      - main_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        dps: 2674.2
+        standard_error: 1.26
+        stdev: 126.3
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2667.4
+        standard_error: 1.23
+        stdev: 122.5
+      - main_hand:
+          id: 32946
+          name: Claw of Molten Fury
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2657.1
+        standard_error: 1.24
+        stdev: 124.3
+      bis-no-glaives:
+      - main_hand:
+          id: 32837
+          name: Warglaive of Azzinoth
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32838
+          name: Warglaive of Azzinoth
+          speed: 1.4
+          source: raid_drop
+        dps: 2862.1
+        standard_error: 1.23
+        stdev: 123.4
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2731.9
+        standard_error: 1.24
+        stdev: 124.0
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 34015
+          name: Vengeful Gladiator's Chopper
+          speed: 2.6
+          source: arena
+        dps: 2727.1
+        standard_error: 1.24
+        stdev: 123.6
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2720.9
+        standard_error: 1.3
+        stdev: 130.1
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        dps: 2711.3
+        standard_error: 1.3
+        stdev: 130.4
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2708.7
+        standard_error: 1.24
+        stdev: 124.0
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 34015
+          name: Vengeful Gladiator's Chopper
+          speed: 2.6
+          source: arena
+        dps: 2705.1
+        standard_error: 1.24
+        stdev: 124.1
+      - main_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2688.1
+        standard_error: 1.26
+        stdev: 125.8
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2684.6
+        standard_error: 1.19
+        stdev: 119.2
+      - main_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        dps: 2674.2
+        standard_error: 1.26
+        stdev: 126.3
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2667.4
+        standard_error: 1.23
+        stdev: 122.5
+      - main_hand:
+          id: 32946
+          name: Claw of Molten Fury
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2657.1
+        standard_error: 1.24
+        stdev: 124.3

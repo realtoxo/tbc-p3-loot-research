@@ -41,6 +41,29 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2727.1 ± 1.24     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 3075.3 ± 1.38     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Fury Warrior considers only one-handers and main handers, per the 20 August 2026 ruling in data/judgments/weapon-styles.yaml, so every row below is a main hand with an off hand and no row is a two-hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The candidates are the top of the EP Workbook's Main Hand and Off Hand ladders for this spec, kept to the weapon classes a warrior dual-wields. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Combat Rogue's, the raid holds one pair, and which of the two receives it is open council business, per data/judgments/weapon-routing.yaml, which is why this spec carries a best-in-slot set both with and without them.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                         | Off hand                     | DPS           | Against this set |
+|-----------------------------------|------------------------------|---------------|------------------|
+| Warglaive of Azzinoth             | Warglaive of Azzinoth        | 2862.1 ± 1.23 | +135.0           |
+| Vengeful Gladiator's Slicer       | Vengeful Gladiator's Slicer  | 2731.9 ± 1.24 | +4.8             |
+| Vengeful Gladiator's Slicer       | Vengeful Gladiator's Chopper | 2727.1 ± 1.24 | +0.0             |
+| Dragonstrike                      | Talon of Azshara             | 2720.9 ± 1.30 | -6.2             |
+| Dragonstrike                      | Rod of the Sun King          | 2711.3 ± 1.30 | -15.8            |
+| Blade of Infamy                   | Blade of Infamy              | 2708.7 ± 1.24 | -18.4            |
+| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Chopper | 2705.1 ± 1.24 | -22.0            |
+| Syphon of the Nathrezim           | Blade of Infamy              | 2688.1 ± 1.26 | -39.0            |
+| Blade of Infamy                   | Talon of Azshara             | 2684.6 ± 1.19 | -42.5            |
+| Syphon of the Nathrezim           | Syphon of the Nathrezim      | 2674.2 ± 1.26 | -52.9            |
+| Talon of the Phoenix              | Talon of Azshara             | 2667.4 ± 1.23 | -59.7            |
+| Claw of Molten Fury               | Talon of Azshara             | 2657.1 ± 1.24 | -70.0            |
+
+The best combination, Warglaive of Azzinoth with Warglaive of Azzinoth, measures +135.0 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -196,6 +196,42 @@ what_the_arms_two_handers_measure:
     where Torch carries 51 strength, 38 crit rating and 50 haste rating at 3.8, and which
     budget the shipped Arms rotation converts better has not been read out of the engine. NOT A RANKING. Which weapon each raider carries is the
     council's call.
+the_fury_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, twelve main hand and off hand
+    pairs run as variants of all FOUR anchor profiles, entry, tier, best in slot and best in
+    slot without Warglaives, dual wield only per the 20 August 2026 style ruling in
+    data/judgments/weapon-styles.yaml. No candidate in the round carries a socket, so no
+    figure here is understated against a gemmed worn weapon.
+  the_anchors_reproduce: The worn pair's variant reads the anchor figure to the digit at all
+    four anchors, Dragonstrike with Talon of Azshara 2479.3 at entry and 2505.8 at tier, the
+    Warglaives 2862.1 at best in slot, the Vengeful Gladiator's Slicer with the Chopper 2727.1
+    at best in slot without them.
+  the_two_bis_tables_are_one_measurement: The best in slot and bis-no-glaives anchors differ
+    only in the two weapon slots, every variant replaces both, and neither worn pair carries
+    gems, so the two tables are the same requests at the same seed and read identically figure
+    for figure. That is by construction, not coincidence.
+  the_enchanted_premium_is_smaller_than_the_bare_one: what_the_warglaives_are_worth measured
+    BARE swaps and prices the pair at 141.3 over Blade of Infamy in both hands. This round
+    keeps each slot's Mongoose, and enchanted the premium reads 130.2, 2862.1 ± 1.23 for the
+    Warglaives against 2731.9 ± 1.24 for two Vengeful Gladiator's Slicers, and the best
+    alternative CHANGES, two Slicers above the doubled Blade of Infamy at 2708.7. The bare
+    block stands as recorded; the two are different measurements and are not comparable
+    row against row.
+  two_slicers_edge_the_worn_no_glaive_pair: The captured bis-no-glaives anchor wears the
+    Slicer with the Chopper per its capture, and two Slicers measure above that worn pair at
+    every anchor that runs them, 2731.9 ± 1.24 against 2727.1 ± 1.24 on the best in slot
+    sets and 2516.2 ± 1.18 against 2511.2 ± 1.18 on the tier set, a gap of about three
+    standard errors each time and consistent in direction with the capture's own bare note.
+    Two Slicers need two copies of one Season 3 arena weapon, a question of points and weeks
+    rather than of drops.
+  entry_found_no_upgrade: The worn Dragonstrike with Talon of Azshara is the best pre-Phase 3
+    combination the round measured, 2479.3 ± 1.16 against 2473.7 ± 1.19 for Dragonstrike with
+    Rod of the Sun King.
+  the_raid_drop_field_sits_below_the_arena_pairs: The best pair built only from Hyjal and
+    Black Temple one-handers, Blade of Infamy in both hands, measures 2708.7 on the best in
+    slot set, below both doubled-arena rows, and Syphon of the Nathrezim doubled measures
+    2674.2. Which pair the raider can actually reach first is a routing and points question
+    for the council, not a simulator one.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
