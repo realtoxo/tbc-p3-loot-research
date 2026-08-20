@@ -2,7 +2,7 @@
 title: Enhancement Shaman, Tier Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2215.3 ± 0.97 damage per second.
+  The whole request behind one figure: 2187.7 ± 1.02 damage per second.
 status: draft
 updated: 2026-08-15
 ---
@@ -19,9 +19,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2215.3**                                                                                                                            |
-| How precisely that average is known          | ± 0.97 DPS                                                                                                                            |
-| How much a SINGLE pull varies                | ± 96.9 DPS                                                                                                                            |
+| Damage per second, averaged over 10000 pulls | **2187.7**                                                                                                                            |
+| How precisely that average is known          | ± 1.02 DPS                                                                                                                            |
+| How much a SINGLE pull varies                | ± 102.4 DPS                                                                                                                           |
 | Anchor                                       | Tier. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note}
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2016.8 ± 0.87     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 2215.3 ± 0.97     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 2621.0 ± 1.17     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 1992.0 ± 0.92     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2187.7 ± 1.02     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2587.7 ± 1.23     | Essence of Suffering                                       |
 
 ## Weapon pairs
 
@@ -49,23 +49,23 @@ Not a ruling: which pair this anchor wears is the council's call.
 
 | Main hand                         | Off hand                      | Pair speed | DPS           | Against this set |
 |-----------------------------------|-------------------------------|------------|---------------|------------------|
-| Syphon of the Nathrezim           | Syphon of the Nathrezim       | 2.8        | 2221.1 ± 1.05 | +5.8             |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Cleaver  | 2.6        | 2203.9 ± 0.98 | -11.4            |
-| Vengeful Gladiator's Cleaver      | Vengeful Gladiator's Chopper  | 2.6        | 2203.9 ± 0.98 | -11.4            |
-| Dragonstrike                      | Rod of the Sun King           | 2.7        | 2187.7 ± 1.02 | -27.6            |
-| Talon of the Phoenix              | Rod of the Sun King           | 2.7        | 2185.3 ± 0.99 | -30.0            |
-| Claw of Molten Fury               | Rod of the Sun King           | 2.7        | 2182.0 ± 1.00 | -33.3            |
-| Wicked Edge of the Planes         | Rod of the Sun King           | 2.7        | 2179.9 ± 1.00 | -35.4            |
-| Rising Tide                       | Rising Tide                   | 2.6        | 2172.6 ± 0.97 | -42.7            |
-| Rod of the Sun King               | Rod of the Sun King           | 2.7        | 2171.4 ± 0.99 | -43.9            |
-| Rising Tide                       | Netherbane                    | 2.6        | 2166.2 ± 0.96 | -49.1            |
-| Dragonmaw                         | Rod of the Sun King           | 2.7        | 2165.1 ± 1.01 | -50.2            |
-| Merciless Gladiator's Cleaver     | Merciless Gladiator's Cleaver | 2.6        | 2158.2 ± 0.96 | -57.1            |
-| Netherbane                        | Netherbane                    | 2.6        | 2156.3 ± 0.97 | -59.0            |
-| Black Planar Edge                 | Rod of the Sun King           | 2.7        | 2154.8 ± 0.98 | -60.5            |
-| Drakefist Hammer                  | Rod of the Sun King           | 2.7        | 2141.2 ± 0.99 | -74.1            |
+| Syphon of the Nathrezim           | Syphon of the Nathrezim       | 2.8        | 2221.1 ± 1.05 | +33.4            |
+| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Cleaver  | 2.6        | 2203.9 ± 0.98 | +16.2            |
+| Vengeful Gladiator's Cleaver      | Vengeful Gladiator's Chopper  | 2.6        | 2203.9 ± 0.98 | +16.2            |
+| Dragonstrike                      | Rod of the Sun King           | 2.7        | 2187.7 ± 1.02 | +0.0             |
+| Talon of the Phoenix              | Rod of the Sun King           | 2.7        | 2185.3 ± 0.99 | -2.4             |
+| Claw of Molten Fury               | Rod of the Sun King           | 2.7        | 2182.0 ± 1.00 | -5.7             |
+| Wicked Edge of the Planes         | Rod of the Sun King           | 2.7        | 2179.9 ± 1.00 | -7.8             |
+| Rising Tide                       | Rising Tide                   | 2.6        | 2172.6 ± 0.97 | -15.1            |
+| Rod of the Sun King               | Rod of the Sun King           | 2.7        | 2171.4 ± 0.99 | -16.3            |
+| Rising Tide                       | Netherbane                    | 2.6        | 2166.2 ± 0.96 | -21.5            |
+| Dragonmaw                         | Rod of the Sun King           | 2.7        | 2165.1 ± 1.01 | -22.6            |
+| Merciless Gladiator's Cleaver     | Merciless Gladiator's Cleaver | 2.6        | 2158.2 ± 0.96 | -29.5            |
+| Netherbane                        | Netherbane                    | 2.6        | 2156.3 ± 0.97 | -31.4            |
+| Black Planar Edge                 | Rod of the Sun King           | 2.7        | 2154.8 ± 0.98 | -32.9            |
+| Drakefist Hammer                  | Rod of the Sun King           | 2.7        | 2141.2 ± 0.99 | -46.5            |
 
-The best pair, Syphon of the Nathrezim with Syphon of the Nathrezim, measures +5.8 against this set's own pair, so at this anchor the pair rule and throughput point the same way.
+The best pair, Syphon of the Nathrezim with Syphon of the Nathrezim, measures +33.4 against this set's own pair, so at this anchor the pair rule and throughput point the same way.
 
 ## The set
 
@@ -89,8 +89,8 @@ the off hand.
 | Ring 2    | `Ring of Lethality`             |                                     |                                                                    |
 | Trinket 1 | `Dragonspine Trophy`            |                                     |                                                                    |
 | Trinket 2 | `Bloodlust Brooch`              |                                     |                                                                    |
-| Main hand | `Wicked Edge of the Planes`     | `Enchant Weapon - Mongoose`         |                                                                    |
-| Off hand  | `Merciless Gladiator's Cleaver` | `Enchant Weapon - Mongoose`         |                                                                    |
+| Main hand | `Dragonstrike`                  | `Enchant Weapon - Mongoose`         |                                                                    |
+| Off hand  | `Rod of the Sun King`           | `Enchant Weapon - Mongoose`         |                                                                    |
 | Ranged    | `Totem of the Astral Winds`     |                                     |                                                                    |
 
 ## Consumables

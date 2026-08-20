@@ -112,17 +112,22 @@ what_the_matched_pairs_measure:
     it is the same request with two item ids changed, and the anchor figure IS the captured
     mismatched pair. This replaced a bare-swap round from earlier the same day; the enchanted
     variants say the same thing the bare rows said, which is itself worth recording.
-  the_headline: AT ENTRY AND AT BEST IN SLOT, the captured mismatched pair measures ABOVE every
-    matched pair. The best-in-slot anchor reads 2387.4 wearing Vengeful Gladiator's Cleaver plus
+  the_headline: THE CAPTURED MISMATCHED PAIRS MEASURED ABOVE EVERY MATCHED PAIR at entry and at
+    best in slot. The best-in-slot anchor reads 2387.4 wearing Vengeful Gladiator's Cleaver plus
     Syphon of the Nathrezim, against 2352.8 for the best matched pair, a gap of 34.6 DPS at a
-    standard error near 1; the entry anchor reads 2216.4 against 2188.7 for Dragonstrike plus
-    Rod of the Sun King, a gap of 27.7. The simulator prices the matched-speed rule as a cost
-    at both anchors, not a gain.
-  the_tier_exception: The tier anchor is the one place a matched pair WINS. It reads 2215.3
-    still wearing the entry weapons, and two Syphons of the Nathrezim read 2221.1 on the same
-    gear, plus 5.8. That is not the speed rule outperforming the mismatch; it is Black Temple
-    weapons becoming reachable while the tier set still carries what the raider walked in with,
-    so the first weapon upgrade of the phase happens to be a matched pair.
+    standard error near 1. The entry anchor's captured pair, Wicked Edge of the Planes plus
+    Merciless Gladiator's Cleaver, measured 2216.4 against 2188.7 for Dragonstrike plus Rod of
+    the Sun King, a gap of 27.7. The simulator prices the matched-speed rule as a cost at both
+    anchors, not a gain.
+  the_entry_ruling: The guild lead read those figures and ruled the entry weapons the same day,
+    "use the dragonstrike+rod as entry weapons", TAKING THE MATCHED PAIR 27.7 BELOW the captured
+    one, so the rule governs the anchor rather than the higher figure. The entry anchor now
+    reads 2188.7, which is the Dragonstrike plus Rod variant to the digit because they are the
+    same request, and the tier anchor carries the same pair by the slot-by-slot fallback.
+  the_first_upgrade_is_matched: On the tier anchor, two Syphons of the Nathrezim read 2221.1
+    against the set's 2187.7, plus 33.4 and the largest weapon movement either pre-BiS anchor
+    shows. Black Temple weapons become reachable while the tier set still carries the entry
+    pair, so the first weapon upgrade of the phase is itself a matched pair.
   what_it_does_not_settle: The rule is the guild lead's, stated on 10 August 2026 and ruled on
     20 August 2026, and docs/kb/DOMAIN.md records that no outside source this project holds
     corroborates it. This round is the simulation DOMAIN.md named as the route to settle it,

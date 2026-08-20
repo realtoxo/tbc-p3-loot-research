@@ -43,6 +43,17 @@ rulings:
     sources. The Wowhead Phase 3 list ranks Vengeful Gladiator's Cleaver, an axe,
     first, and the captured creator commentary recommends gladiator axes
     "especially for orcs". A Draenei inherits none of that privilege.
+- rule: The entry and tier anchors wear Dragonstrike in the main hand and Rod of the
+    Sun King in the off hand.
+  verbatim: use the dragonstrike+rod as entry weapons
+  ruled: '2026-08-20'
+  what_it_replaces: Wicked Edge of the Planes with Merciless Gladiator's Cleaver, the
+    pair the captured sources produced, mismatched at 2.7 against 2.6. The ruled pair
+    is the best matched pair the pre-Phase 3 pool supports by the weapon pair round's
+    own figures, and it measures 27.7 DPS below the replaced pair at the entry anchor;
+    the guild lead ruled it knowing that, so the matched-pair rule governs the anchor
+    rather than the higher figure. The tier anchor carries the same pair because tier
+    falls back to entry slot by slot.
 special_sim_round:
   what: A dedicated round of Enhancement weapon simulations, each candidate pair at a
     matched speed with everything else held constant, compared relative to one

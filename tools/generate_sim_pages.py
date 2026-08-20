@@ -436,8 +436,17 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
             f"{entry['dps'] - row['dps']:+.1f}",
         ])
 
+    # THREE READINGS, NOT TWO. A set whose worn pair is itself the best row
+    # produces a delta of zero, and the two-way version read that as "the
+    # rule is a cost, by 0.0 DPS", which is a sentence about nothing. The
+    # tolerance is one rounding step of the recorded figures, not a
+    # significance test.
     best = pairs[0]
-    if best["dps"] > row["dps"]:
+    if abs(best["dps"] - row["dps"]) < 0.05:
+        reading = (
+            "This set already wears the best pair the round measured, which "
+            "is why its top row reads plus zero: that row IS this profile.")
+    elif best["dps"] > row["dps"]:
         reading = (
             f"The best pair, {best['main_hand']['name']} with "
             f"{best['off_hand']['name']}, measures "

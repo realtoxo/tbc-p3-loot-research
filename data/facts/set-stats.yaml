@@ -262,32 +262,30 @@ specs:
     entry:
       agility: 233
       armor: 4401
-      attack_power: 668
+      attack_power: 642
       expertise: 35
       gem_sockets: 11
-      hit_stated_by_capture: 155
+      hit_stated_by_capture: 145
       intellect: 117
-      melee_crit: 165
-      melee_hit: 155
-      ranged_attack_power: 668
-      resilience: 12
+      melee_crit: 123
+      melee_hit: 145
+      ranged_attack_power: 642
       slots_counted: 17
-      stamina: 388
+      stamina: 380
       strength: 158
     tier_hands_and_head:
       agility: 233
       armor: 4401
-      attack_power: 668
+      attack_power: 642
       expertise: 35
       gem_sockets: 11
-      hit_stated_by_capture: 155
+      hit_stated_by_capture: 145
       intellect: 117
-      melee_crit: 165
-      melee_hit: 155
-      ranged_attack_power: 668
-      resilience: 12
+      melee_crit: 123
+      melee_hit: 145
+      ranged_attack_power: 642
       slots_counted: 17
-      stamina: 388
+      stamina: 380
       strength: 158
   feral_bear:
     capture: data/facts/sim-profiles/hit-capture/feral-bear.yaml

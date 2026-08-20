@@ -23447,11 +23447,11 @@ return {
           },
           entry = {
             {
-              item_id = 28433,
-              name = "Wicked Edge of the Planes",
+              item_id = 28439,
+              name = "Dragonstrike",
               location = "Blacksmithing",
               route = "crafted",
-              epv = 795.12,
+              epv = 830.15,
               phase = 2,
             },
           },
@@ -23596,11 +23596,11 @@ return {
           },
           entry = {
             {
-              item_id = 31965,
-              name = "Merciless Gladiator's Cleaver",
-              location = "Season 2",
-              route = "arena",
-              epv = 787.27,
+              item_id = 29996,
+              name = "Rod of the Sun King",
+              location = "Tempest Keep",
+              route = "drop",
+              epv = 783.86,
               phase = 2,
             },
           },

@@ -259,16 +259,16 @@ results:
 - profile: enhancement-shaman.entry
   spec: enhancement_shaman
   anchor: entry
-  dps: 2017.8
-  standard_error: 0.87
-  stdev: 87.2
+  dps: 1992.9
+  standard_error: 0.92
+  stdev: 92.2
   boss_armor: 7684
 - profile: enhancement-shaman.tier-hands-and-head
   spec: enhancement_shaman
   anchor: tier-hands-and-head
-  dps: 2016.8
-  standard_error: 0.87
-  stdev: 87.2
+  dps: 1992.0
+  standard_error: 0.92
+  stdev: 92.1
   boss_armor: 7684
 - profile: fury-warrior.bis-no-glaives
   spec: fury_warrior
@@ -567,16 +567,16 @@ results:
 - profile: enhancement-shaman.entry
   spec: enhancement_shaman
   anchor: entry
-  dps: 2216.4
-  standard_error: 0.97
-  stdev: 97.0
+  dps: 2188.7
+  standard_error: 1.03
+  stdev: 102.5
   boss_armor: 6193
 - profile: enhancement-shaman.tier-hands-and-head
   spec: enhancement_shaman
   anchor: tier-hands-and-head
-  dps: 2215.3
-  standard_error: 0.97
-  stdev: 96.9
+  dps: 2187.7
+  standard_error: 1.02
+  stdev: 102.4
   boss_armor: 6193
 - profile: fury-warrior.bis-no-glaives
   spec: fury_warrior
@@ -875,16 +875,16 @@ results:
 - profile: enhancement-shaman.entry
   spec: enhancement_shaman
   anchor: entry
-  dps: 2622.3
-  standard_error: 1.17
-  stdev: 117.0
+  dps: 2589.0
+  standard_error: 1.24
+  stdev: 123.5
   boss_armor: 0
 - profile: enhancement-shaman.tier-hands-and-head
   spec: enhancement_shaman
   anchor: tier-hands-and-head
-  dps: 2621.0
-  standard_error: 1.17
-  stdev: 116.9
+  dps: 2587.7
+  standard_error: 1.23
+  stdev: 123.4
   boss_armor: 0
 - profile: fury-warrior.bis-no-glaives
   spec: fury_warrior

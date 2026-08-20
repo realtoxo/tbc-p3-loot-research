@@ -2,7 +2,7 @@
 title: Enhancement Shaman, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2216.4 ± 0.97 damage per second.
+  The whole request behind one figure: 2188.7 ± 1.03 damage per second.
 status: draft
 updated: 2026-08-15
 ---
@@ -19,9 +19,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                          |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2216.4**                                                                     |
-| How precisely that average is known          | ± 0.97 DPS                                                                     |
-| How much a SINGLE pull varies                | ± 97.0 DPS                                                                     |
+| Damage per second, averaged over 10000 pulls | **2188.7**                                                                     |
+| How precisely that average is known          | ± 1.03 DPS                                                                     |
+| How much a SINGLE pull varies                | ± 102.5 DPS                                                                    |
 | Anchor                                       | Entry. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note}
@@ -37,9 +37,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2017.8 ± 0.87     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 2216.4 ± 0.97     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 2622.3 ± 1.17     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 1992.9 ± 0.92     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2188.7 ± 1.03     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 2589.0 ± 1.24     | Essence of Suffering                                       |
 
 ## Weapon pairs
 
@@ -49,17 +49,17 @@ Not a ruling: which pair this anchor wears is the council's call.
 
 | Main hand                     | Off hand                      | Pair speed | DPS           | Against this set |
 |-------------------------------|-------------------------------|------------|---------------|------------------|
-| Dragonstrike                  | Rod of the Sun King           | 2.7        | 2188.7 ± 1.03 | -27.7            |
-| Talon of the Phoenix          | Rod of the Sun King           | 2.7        | 2186.4 ± 0.99 | -30.0            |
-| Wicked Edge of the Planes     | Rod of the Sun King           | 2.7        | 2181.0 ± 1.00 | -35.4            |
-| Rod of the Sun King           | Rod of the Sun King           | 2.7        | 2172.4 ± 0.99 | -44.0            |
-| Dragonmaw                     | Rod of the Sun King           | 2.7        | 2166.2 ± 1.01 | -50.2            |
-| Merciless Gladiator's Cleaver | Merciless Gladiator's Cleaver | 2.6        | 2159.3 ± 0.96 | -57.1            |
-| Netherbane                    | Netherbane                    | 2.6        | 2157.4 ± 0.97 | -59.0            |
-| Black Planar Edge             | Rod of the Sun King           | 2.7        | 2155.9 ± 0.98 | -60.5            |
-| Drakefist Hammer              | Rod of the Sun King           | 2.7        | 2142.3 ± 0.99 | -74.1            |
+| Dragonstrike                  | Rod of the Sun King           | 2.7        | 2188.7 ± 1.03 | +0.0             |
+| Talon of the Phoenix          | Rod of the Sun King           | 2.7        | 2186.4 ± 0.99 | -2.3             |
+| Wicked Edge of the Planes     | Rod of the Sun King           | 2.7        | 2181.0 ± 1.00 | -7.7             |
+| Rod of the Sun King           | Rod of the Sun King           | 2.7        | 2172.4 ± 0.99 | -16.3            |
+| Dragonmaw                     | Rod of the Sun King           | 2.7        | 2166.2 ± 1.01 | -22.5            |
+| Merciless Gladiator's Cleaver | Merciless Gladiator's Cleaver | 2.6        | 2159.3 ± 0.96 | -29.4            |
+| Netherbane                    | Netherbane                    | 2.6        | 2157.4 ± 0.97 | -31.3            |
+| Black Planar Edge             | Rod of the Sun King           | 2.7        | 2155.9 ± 0.98 | -32.8            |
+| Drakefist Hammer              | Rod of the Sun King           | 2.7        | 2142.3 ± 0.99 | -46.4            |
 
-Every pair below measures UNDER this set's own pair, the best of them by 27.7 DPS, so at this anchor the simulator prices the pair rule as a cost, not a gain. What that does and does not settle is recorded in data/facts/sim-results.yaml under what_the_matched_pairs_measure, and the rule stands until the council revisits it.
+This set already wears the best pair the round measured, which is why its top row reads plus zero: that row IS this profile.
 
 ## The set
 
@@ -83,8 +83,8 @@ the off hand.
 | Ring 2    | `Ring of Lethality`             |                                     |                                                                    |
 | Trinket 1 | `Dragonspine Trophy`            |                                     |                                                                    |
 | Trinket 2 | `Bloodlust Brooch`              |                                     |                                                                    |
-| Main hand | `Wicked Edge of the Planes`     | `Enchant Weapon - Mongoose`         |                                                                    |
-| Off hand  | `Merciless Gladiator's Cleaver` | `Enchant Weapon - Mongoose`         |                                                                    |
+| Main hand | `Dragonstrike`                  | `Enchant Weapon - Mongoose`         |                                                                    |
+| Off hand  | `Rod of the Sun King`           | `Enchant Weapon - Mongoose`         |                                                                    |
 | Ranged    | `Totem of the Astral Winds`     |                                     |                                                                    |
 
 ## Consumables
