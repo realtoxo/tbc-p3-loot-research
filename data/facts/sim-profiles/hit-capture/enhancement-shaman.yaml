@@ -97,14 +97,14 @@ anchors:
         id: 27815
         hit: 0
       main_hand:
-        item: Wicked Edge of the Planes
-        id: 28433
+        item: Dragonstrike
+        id: 28439
         hit: 0
       off_hand:
-        item: Merciless Gladiator's Cleaver
-        id: 31965
-        hit: 10
-    total_item_hit: 155
+        item: Rod of the Sun King
+        id: 29996
+        hit: 0
+    total_item_hit: 145
   tier_hands_and_head:
     tier6_pieces_held: []
     tier5_pieces_held:
@@ -174,14 +174,14 @@ anchors:
         id: 27815
         hit: 0
       main_hand:
-        item: Wicked Edge of the Planes
-        id: 28433
+        item: Dragonstrike
+        id: 28439
         hit: 0
       off_hand:
-        item: Merciless Gladiator's Cleaver
-        id: 31965
-        hit: 10
-    total_item_hit: 155
+        item: Rod of the Sun King
+        id: 29996
+        hit: 0
+    total_item_hit: 145
     rebuilt: 'Entry set with the token slots the Phase 3 best-in-slot list devotes to a tier
       piece, per the rule in tools/rebuild_tier_sets.py. Source: Wowhead Phase 3 BiS, read
       2026-08-13'
@@ -214,6 +214,26 @@ notes_from_the_previous_construction:
     that the speed rule is uncorroborated by any source this project holds, and that a simulation
     is the route to settle it. So this is a disagreement between a stated rule and a captured
     set, and both sides are recorded rather than one being corrected to the other.'
+  ruled_weapons: 'RECORDED 20 August 2026, LATER THE SAME DAY AS THE RESOLUTION BELOW. The guild
+    lead ruled the entry weapons after reading the weapon pair round: "use the dragonstrike+rod
+    as entry weapons". Both anchors here now wear Dragonstrike 28439 in the main hand and Rod
+    of the Sun King 29996 in the off hand, the best matched pair the pre-Phase 3 pool supports
+    by that round''s own figures, and the tier anchor carries them because tier falls back to
+    entry slot by slot. PREVIOUSLY WORN: Wicked Edge of the Planes 28433 with Merciless
+    Gladiator''s Cleaver 31965, hit 10, so total_item_hit moved 155 to 145 at both anchors.
+    That pair came from the captured sources and measured 27.7 DPS above the ruled pair at the
+    entry anchor; the ruling takes the matched pair anyway, and the reading is in
+    data/facts/sim-results.yaml under what_the_matched_pairs_measure.'
+  weapon_speed_rule_resolution: 'RECORDED 20 August 2026. The guild lead ruled the rule that day,
+    see data/judgments/enhancement-weapon-rules.yaml, so the disagreement above is no longer
+    unresolved: the stated rule governs what the compendium SHOWS, and the Enhancement shortlist,
+    claimants and comparison baselines now exclude weapons at or under 2.3 speed. THIS CAPTURE
+    IS UNCHANGED, because it records what the published source said, per
+    data/judgments/capture-fidelity.yaml. The simulation the disagreement deferred to has run,
+    tools/run_weapon_pair_sims.py, and its figures in data/facts/enhancement-weapon-pairs.yaml
+    measure both mismatched reference pairs ABOVE every matched pair; the reading is in
+    data/facts/sim-results.yaml under what_the_matched_pairs_measure, and the rule stands until
+    the council revisits it.'
   downgraded_slots: 'Head, chest, hands and legs are held as Cataclysm Helm, Cataclysm Chestplate,
     Cataclysm Gauntlets and Cataclysm Legplates (T5) in every state, including both tier states,
     rather than any Phase 3 off-piece or either Tier 6 token, because those four pieces carry

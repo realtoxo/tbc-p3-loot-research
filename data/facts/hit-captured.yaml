@@ -412,7 +412,7 @@ specs:
       gem_sockets: 8
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 155
+      item_hit: 145
       state: full
       tier5_pieces_held:
       - head
@@ -430,7 +430,7 @@ specs:
       gem_sockets: 8
       gems_after_enchants: 0
       gems_needed: 0
-      item_hit: 155
+      item_hit: 145
       state: full
       tier5_pieces_held:
       - chest

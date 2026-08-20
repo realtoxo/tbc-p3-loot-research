@@ -1,0 +1,583 @@
+meta:
+  what: 'Weapon pair rounds, one per spec in the registry of tools/run_weapon_pair_sims.py,
+    each pair run as a VARIANT of that spec''s anchor profiles: the exported gear
+    with only the two weapon ids replaced, each slot keeping its enchant, the anchor''s
+    own consumables, buffs and seed held still. The Enhancement round is ruled in
+    data/judgments/enhancement-weapon-rules.yaml.'
+  read_this_first: Every variant is directly comparable with its anchor's figure
+    in sim-figures.yaml, because it is the same request with two item ids changed,
+    and the anchor figure IS the captured pair. The plus or minus is ONE STANDARD
+    ERROR, not a confidence interval. NOT A RULING. Which pair each anchor wears
+    is the council's call.
+  entry_scope: The entry anchor is worn before Phase 3, so its variants hold no
+    Black Temple drop and no Season 3 weapon. The tier and best-in-slot anchors
+    take the whole field, because the tier anchor is not constrained by progression,
+    per the 14 August 2026 ruling.
+  weapons_unsynced: The Enhancement runs send no syncType, per the 15 August 2026
+    ruling that its weapons run unsynced. A matched pair is where the simulator's
+    Auto mode would begin delaying the off hand, so the absence is load-bearing
+    here and is stated.
+  iterations: 10000
+  seed: 1
+  boss_armor: 6193
+  encounter_seconds: 150
+specs:
+  enhancement_shaman:
+    why: 'An Enhancement Shaman carries a Windfury imbue in each hand, pairs two
+      weapons of the same speed, and wants them slow, per the 20 August 2026 ruling
+      in the judgment store. The set above wears the pair its published source ranked,
+      so each row below is THIS PROFILE with only the two weapon ids replaced: the
+      slot keeps its Mongoose, and the consumables, buffs and seed hold still, so
+      every figure is directly comparable with the one at the top of this page.
+      The character is a Draenei, so no row inherits the Orc axe privilege the published
+      lists assume. The weapons run unsynced, per the 15 August 2026 ruling.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2188.7
+        standard_error: 1.03
+        stdev: 102.5
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2186.4
+        standard_error: 0.99
+        stdev: 98.8
+      - main_hand:
+          id: 28433
+          name: Wicked Edge of the Planes
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2181.0
+        standard_error: 1.0
+        stdev: 100.3
+      - main_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2172.4
+        standard_error: 0.99
+        stdev: 99.4
+      - main_hand:
+          id: 28438
+          name: Dragonmaw
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2166.2
+        standard_error: 1.01
+        stdev: 100.9
+      - main_hand:
+          id: 31965
+          name: Merciless Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 31965
+          name: Merciless Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        pair_speed: 2.6
+        dps: 2159.3
+        standard_error: 0.96
+        stdev: 95.8
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        pair_speed: 2.6
+        dps: 2157.4
+        standard_error: 0.97
+        stdev: 97.4
+      - main_hand:
+          id: 28432
+          name: Black Planar Edge
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2155.9
+        standard_error: 0.98
+        stdev: 98.1
+      - main_hand:
+          id: 28437
+          name: Drakefist Hammer
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2142.3
+        standard_error: 0.99
+        stdev: 99.3
+      tier-hands-and-head:
+      - main_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        pair_speed: 2.8
+        dps: 2221.1
+        standard_error: 1.05
+        stdev: 105.5
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33669
+          name: Vengeful Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        pair_speed: 2.6
+        dps: 2203.9
+        standard_error: 0.98
+        stdev: 98.3
+      - main_hand:
+          id: 33669
+          name: Vengeful Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 34015
+          name: Vengeful Gladiator's Chopper
+          speed: 2.6
+          source: arena
+        pair_speed: 2.6
+        dps: 2203.9
+        standard_error: 0.98
+        stdev: 98.3
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2187.7
+        standard_error: 1.02
+        stdev: 102.4
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2185.3
+        standard_error: 0.99
+        stdev: 98.7
+      - main_hand:
+          id: 32946
+          name: Claw of Molten Fury
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2182.0
+        standard_error: 1.0
+        stdev: 99.7
+      - main_hand:
+          id: 28433
+          name: Wicked Edge of the Planes
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2179.9
+        standard_error: 1.0
+        stdev: 100.2
+      - main_hand:
+          id: 32236
+          name: Rising Tide
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32236
+          name: Rising Tide
+          speed: 2.6
+          source: raid_drop
+        pair_speed: 2.6
+        dps: 2172.6
+        standard_error: 0.97
+        stdev: 96.9
+      - main_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2171.4
+        standard_error: 0.99
+        stdev: 99.3
+      - main_hand:
+          id: 32236
+          name: Rising Tide
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        pair_speed: 2.6
+        dps: 2166.2
+        standard_error: 0.96
+        stdev: 96.0
+      - main_hand:
+          id: 28438
+          name: Dragonmaw
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2165.1
+        standard_error: 1.01
+        stdev: 100.9
+      - main_hand:
+          id: 31965
+          name: Merciless Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 31965
+          name: Merciless Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        pair_speed: 2.6
+        dps: 2158.2
+        standard_error: 0.96
+        stdev: 95.8
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        pair_speed: 2.6
+        dps: 2156.3
+        standard_error: 0.97
+        stdev: 97.3
+      - main_hand:
+          id: 28432
+          name: Black Planar Edge
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2154.8
+        standard_error: 0.98
+        stdev: 98.1
+      - main_hand:
+          id: 28437
+          name: Drakefist Hammer
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2141.2
+        standard_error: 0.99
+        stdev: 99.2
+      bis:
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33669
+          name: Vengeful Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        pair_speed: 2.6
+        dps: 2352.8
+        standard_error: 1.03
+        stdev: 102.5
+      - main_hand:
+          id: 33669
+          name: Vengeful Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 34015
+          name: Vengeful Gladiator's Chopper
+          speed: 2.6
+          source: arena
+        pair_speed: 2.6
+        dps: 2352.8
+        standard_error: 1.03
+        stdev: 102.5
+      - main_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32262
+          name: Syphon of the Nathrezim
+          speed: 2.8
+          source: raid_drop
+        pair_speed: 2.8
+        dps: 2350.3
+        standard_error: 1.08
+        stdev: 107.7
+      - main_hand:
+          id: 28439
+          name: Dragonstrike
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2335.2
+        standard_error: 1.08
+        stdev: 107.8
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2326.0
+        standard_error: 1.03
+        stdev: 102.9
+      - main_hand:
+          id: 32946
+          name: Claw of Molten Fury
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2322.0
+        standard_error: 1.04
+        stdev: 103.7
+      - main_hand:
+          id: 28433
+          name: Wicked Edge of the Planes
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2319.9
+        standard_error: 1.04
+        stdev: 103.9
+      - main_hand:
+          id: 32236
+          name: Rising Tide
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32236
+          name: Rising Tide
+          speed: 2.6
+          source: raid_drop
+        pair_speed: 2.6
+        dps: 2315.6
+        standard_error: 1.0
+        stdev: 100.3
+      - main_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2312.3
+        standard_error: 1.04
+        stdev: 103.8
+      - main_hand:
+          id: 28438
+          name: Dragonmaw
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2311.2
+        standard_error: 1.06
+        stdev: 106.1
+      - main_hand:
+          id: 32236
+          name: Rising Tide
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        pair_speed: 2.6
+        dps: 2310.9
+        standard_error: 1.01
+        stdev: 100.6
+      - main_hand:
+          id: 31965
+          name: Merciless Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 31965
+          name: Merciless Gladiator's Cleaver
+          speed: 2.6
+          source: arena
+        pair_speed: 2.6
+        dps: 2302.7
+        standard_error: 1.0
+        stdev: 100.4
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        pair_speed: 2.6
+        dps: 2299.3
+        standard_error: 1.02
+        stdev: 102.0
+      - main_hand:
+          id: 28432
+          name: Black Planar Edge
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2292.5
+        standard_error: 1.02
+        stdev: 102.0
+      - main_hand:
+          id: 28437
+          name: Drakefist Hammer
+          speed: 2.7
+          source: crafted
+        off_hand:
+          id: 29996
+          name: Rod of the Sun King
+          speed: 2.7
+          source: raid_drop
+        pair_speed: 2.7
+        dps: 2285.8
+        standard_error: 1.04
+        stdev: 104.4
