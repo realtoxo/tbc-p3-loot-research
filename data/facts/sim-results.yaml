@@ -520,6 +520,71 @@ the_shadow_priest_trinket_round_is_enumerated:
     that rarely resists. The Card itself, measured from the other side with the Skull fixed,
     is 44.1 up on the empty slot, 1577.9 against 1533.8, all of it the simulator''s pricing of
     its stacking proc, because the Card carries no worn stats per data/facts/items.csv.'
+the_balance_druid_trinket_round_is_enumerated:
+  measured: '2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the ten-trinket
+    pool as a variant of each of the three anchor profiles, 118 runs, every row in data/facts/variant-sims.yaml.
+    The fifth caster trinket round; the pool is the Owl tab''s ladder, nine of fifteen surviving
+    the standing exclusions, plus one worn addition. The worn-trinket override fires TWICE, its
+    heaviest round yet: Quagmirran''s Eye, tab-ranked sixth but a five-man drop below Karazhan,
+    is worn by the entry and tier anchors, the same override that admitted it to both warlock
+    rounds; and the Ashtongue Talisman of Equilibrium, class-locked to druids and NOT on the tab,
+    is worn by the best-in-slot capture, the first collision between the worn override and the
+    Ashtongue precedent that kept the warlock''s and priest''s talismans out of tab-unranked pools.
+    The override wins here because a pool without it could not reproduce the worn best-in-slot
+    pair. OPEN FOR THE COUNCIL, like the talisman precedent itself.'
+  best_combination_per_anchor: 'Darkmoon Card: Crusade plus Icon of the Silver Crescent at entry,
+    1685.0, and The Skull of Gul''dan plus the Card at tier, 1755.8, and The Skull of Gul''dan
+    plus Quagmirran''s Eye at best in slot, 1957.5. NO anchor wears its table''s top row. The
+    entry anchor''s worn pair, the Icon plus Quagmirran''s Eye, is FOURTH, 13.7 behind the Card
+    pair, the Card being a Darkmoon Faire item the published entry list does not hold. The tier
+    anchor wears the entry pair, TWELFTH in its table and 40.0 behind the Skull and Card pair,
+    because the tier anchor is the entry set plus tier tokens and the Skull is not a token. The
+    best-in-slot anchor''s worn pair, the Skull plus the Ashtongue Talisman, is THIRD, 4.8 behind
+    the Skull plus Quagmirran''s Eye at a standard error near 0.9. NOT A RULING. One standard
+    error is 0.82 to 0.99 across the tables.'
+  the_skull_of_guldan_premium: 'The best pair holding The Skull of Gul''dan minus the best pair
+    without it, pure arithmetic on the table, 31.7 at tier and 20.9 at best in slot, beside
+    Destruction''s 33.1 and 41.5, Arcane''s 26.1 and 30.1, Affliction''s 32.6 and 24.8 and the
+    Shadow Priest''s 6.7 and 6.0; the entry table drops the Skull, a Black Temple drop. The fifth
+    of the six wearers'' premiums to be measured lands fourth of five at best in slot, below
+    Affliction and well clear of the priest''s collapse. The hit context is the OPPOSITE of the
+    priest''s: per the best-in-slot capture the set sits 15 rating short of the 114 spell hit
+    target WEARING the Skull, 40 short without it, so the Skull''s 25 hit converts in full, and
+    its whole measured worth beside the Card, 93.4 on the empty-slot diagnostic, sits with
+    Affliction''s 100.8 rather than the priest''s 57.1. The premium is small anyway because the
+    best pair without the Skull is strong: Darkmoon Card: Crusade plus Icon of the Silver
+    Crescent, 1936.6, the same no-Skull pair every caster round has landed on.'
+  the_armor_invariance_does_not_hold: 'The Shadow Priest round measured one figure at every armor
+    tier and recorded the tier as a label; this spec is the counterexample. data/facts/sim-figures.yaml
+    reads 1974.6, 1952.7 and 1942.0 for the best-in-slot anchor at armor 0, 6193 and 7684, and a
+    diagnostic in this round reran the worn best-in-slot pair at all three tiers and reproduced
+    all three figures to the digit, so part of what the simulator credits this profile swings
+    into the boss''s armor and the 6193 standard holds real weight here. These figures are at
+    armor 6193 like every trinket round, and are compared only with each other and with anchor
+    figures at the same armor.'
+  a_workbook_reversal: 'Three. The Owl tab ranks the Sextant of Unstable Currents third at 83.00
+    above Darkmoon Card: Crusade fourth at 80.00; measured, the Card beats the Sextant in every
+    shared pairing, 1685.0 against 1677.1 beside the Icon at entry and 1955.1 against 1947.2
+    beside the Skull at best in slot. The tab ranks Eye of Magtheridon fifth at 71.00 above the
+    Icon of the Silver Crescent seventh at 69.00; measured, the Icon beats the Eye in every
+    shared pairing, 1948.3 against 1943.0 beside the Skull at best in slot, the same Icon-over-Eye
+    reversal every caster round has recorded, and this on a set short of the hit target, where
+    the Eye''s resist proc actually fires. And Quagmirran''s Eye, ranked sixth at 69.00 and a
+    modest partner elsewhere, its Icon pairing 17.2 behind the Card''s at best in slot, tops the
+    best-in-slot table beside the Skull, 1957.5, its passive haste proc beside the Skull''s
+    on-use haste, so that reversal is pairing-specific rather than a mispriced trinket.'
+  the_binary_prices_the_procs_for_this_spec_too: 'Tested behaviorally against the vendored binary
+    rather than read from the stale source checkout, a fixed partner beside each candidate against
+    the same partner beside an EMPTY slot, same seed, on the best-in-slot anchor. The worn Skull
+    beside an empty slot read 1889.9; beside Quagmirran''s Eye, 1957.5, 67.6 up, the largest
+    partner gain in the table; beside the Card, 1955.1, 65.2 up, all of the Card''s share the
+    simulator''s pricing of its stacking proc, because the Card carries no worn stats per
+    data/facts/items.csv; beside the worn Ashtongue Talisman of Equilibrium, 1952.7, 62.8 up,
+    which IS the anchor figure, the talisman''s Starfire proc priced by the engine per the effect
+    text in data/facts/effect-text.csv. The Skull itself, measured from the other side, is 95.3
+    up on the empty slot beside the Ashtongue Talisman, 1952.7 against 1857.4, and 93.4 up beside
+    the Card, 1955.1 against 1861.7, its worn statistics, its fully converting 25 hit and its
+    175-haste on-use together.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the
