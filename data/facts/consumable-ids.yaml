@@ -88,10 +88,6 @@ catalog:
       id: 22832
       id_from: db.json consumables[], type ConsumableTypePotion
   imbue:
-    Mana Oil:
-      id: 25123
-      id_from: 'ui/core/components/inputs/consumables.ts :: ManaOil, accepted by sim/core/consumes.go::registerStaticImbue'
-      wowsims_item_id: 20748
     Brilliant Wizard Oil:
       id: 25122
       id_from: 'ui/core/components/inputs/consumables.ts :: BrilWizardOil, accepted by sim/core/consumes.go::registerStaticImbue'
@@ -833,17 +829,26 @@ picks:
           Runes and Dark Runes both grant Mana... allow more casts before needing to swap
           to Aspect of the Viper on longer encounters').
       mhImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Sharpening Stone
+        id: 29453
         from: weapon_main_hand
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: the guides named Adamantite stones
-          by weapon class, per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones
-          are also incredibly important for Hunters"). The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Weightstone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Dagger
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
         gate:
           applied: false
           why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem
@@ -854,18 +859,27 @@ picks:
           so: this id is sent and dropped. It is the right id for the weapon and it is worth
             0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
       ohImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Sharpening Stone
+        id: 29453
         from: weapon_main_hand, because the off-hand field named no imbue and the captured
           gear wears a weapon there
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: the guides named Adamantite stones
-          by weapon class, per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones
-          are also incredibly important for Hunters"). The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Weightstone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Sword
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
     entry:
       flask_id:
         name: Flask of Relentless Assault
@@ -903,17 +917,26 @@ picks:
           Runes and Dark Runes both grant Mana... allow more casts before needing to swap
           to Aspect of the Viper on longer encounters').
       mhImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Weightstone
+        id: 34340
         from: weapon_main_hand
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: the guides named Adamantite stones
-          by weapon class, per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones
-          are also incredibly important for Hunters"). The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Sharpening Stone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Fist
+          counts_as: blunt
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
         gate:
           applied: false
           why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem
@@ -924,18 +947,27 @@ picks:
           so: this id is sent and dropped. It is the right id for the weapon and it is worth
             0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
       ohImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Weightstone
+        id: 34340
         from: weapon_main_hand, because the off-hand field named no imbue and the captured
           gear wears a weapon there
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: the guides named Adamantite stones
-          by weapon class, per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones
-          are also incredibly important for Hunters"). The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Sharpening Stone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Fist
+          counts_as: blunt
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
     tier_hands_and_head:
       flask_id:
         name: Flask of Relentless Assault
@@ -973,17 +1005,26 @@ picks:
           Runes and Dark Runes both grant Mana... allow more casts before needing to swap
           to Aspect of the Viper on longer encounters').
       mhImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Weightstone
+        id: 34340
         from: weapon_main_hand
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: the guides named Adamantite stones
-          by weapon class, per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones
-          are also incredibly important for Hunters"). The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Sharpening Stone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Fist
+          counts_as: blunt
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
         gate:
           applied: false
           why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem
@@ -994,18 +1035,27 @@ picks:
           so: this id is sent and dropped. It is the right id for the weapon and it is worth
             0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
       ohImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Weightstone
+        id: 34340
         from: weapon_main_hand, because the off-hand field named no imbue and the captured
           gear wears a weapon there
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: the guides named Adamantite stones
-          by weapon class, per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones
-          are also incredibly important for Hunters"). The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Sharpening Stone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Fist
+          counts_as: blunt
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
   combat_rogue:
     bis:
       flask_id:
@@ -2424,17 +2474,24 @@ picks:
           Rune (BoE) or Demonic Rune (BoP) is used as a secondary mana-restore consumable
           on longer fights before falling back to Aspect of the Viper.
       mhImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Sharpening Stone
+        id: 29453
         from: weapon_main_hand
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: both sources named the Adamantite
-          stones as a type-dependent pick, sharpening for a bladed melee weapon and weightstone
-          for a blunt one. The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Weightstone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Sword
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
         gate:
           applied: false
           why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem
@@ -2445,20 +2502,27 @@ picks:
           so: this id is sent and dropped. It is the right id for the weapon and it is worth
             0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
       ohImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Sharpening Stone
+        id: 29453
         from: weapon_main_hand, because the off-hand field named no imbue and the captured
           gear wears a weapon there
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: both sources named the Adamantite
-          stones as a type-dependent pick, sharpening for a bladed melee weapon and weightstone
-          for a blunt one. The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Weightstone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         field_prose_overridden: Not applicable -- Survival Hunter carries one melee weapon
           plus a ranged weapon, not a dual-wield set, so no off-hand weapon consumable applies.
+        weapon_class:
+          worn:
+          - Sword
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
     entry:
       flask_id:
         name: Flask of Relentless Assault
@@ -2491,17 +2555,24 @@ picks:
           Rune (BoE) or Demonic Rune (BoP) is used as a secondary mana-restore consumable
           on longer fights before falling back to Aspect of the Viper.
       mhImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Sharpening Stone
+        id: 29453
         from: weapon_main_hand
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: both sources named the Adamantite
-          stones as a type-dependent pick, sharpening for a bladed melee weapon and weightstone
-          for a blunt one. The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Weightstone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Axe
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
         gate:
           applied: false
           why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem
@@ -2512,20 +2583,27 @@ picks:
           so: this id is sent and dropped. It is the right id for the weapon and it is worth
             0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
       ohImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Weightstone
+        id: 34340
         from: weapon_main_hand, because the off-hand field named no imbue and the captured
           gear wears a weapon there
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: both sources named the Adamantite
-          stones as a type-dependent pick, sharpening for a bladed melee weapon and weightstone
-          for a blunt one. The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Sharpening Stone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         field_prose_overridden: Not applicable -- Survival Hunter carries one melee weapon
           plus a ranged weapon, not a dual-wield set, so no off-hand weapon consumable applies.
+        weapon_class:
+          worn:
+          - Fist
+          counts_as: blunt
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
     tier_hands_and_head:
       flask_id:
         name: Flask of Relentless Assault
@@ -2558,17 +2636,24 @@ picks:
           Rune (BoE) or Demonic Rune (BoP) is used as a secondary mana-restore consumable
           on longer fights before falling back to Aspect of the Viper.
       mhImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Sharpening Stone
+        id: 29453
         from: weapon_main_hand
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: both sources named the Adamantite
-          stones as a type-dependent pick, sharpening for a bladed melee weapon and weightstone
-          for a blunt one. The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Weightstone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
+        weapon_class:
+          worn:
+          - Axe
+          counts_as: sharp
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
         gate:
           applied: false
           why: sim/core/consumes.go applies MhImbueId only where the party Windfury Totem
@@ -2579,20 +2664,27 @@ picks:
           so: this id is sent and dropped. It is the right id for the weapon and it is worth
             0.0 DPS today. An off-hand imbue is NOT gated this way and is live damage.
       ohImbue_id:
-        name: Mana Oil
-        id: 25123
+        name: Adamantite Weightstone
+        id: 34340
         from: weapon_main_hand, because the off-hand field named no imbue and the captured
           gear wears a weapon there
         position: first named in the field the captured facts allow
-        alternatives_named: []
-        prose: 'Mana Oil on both melee weapons, RULED by the guild lead on 20 August 2026,
-          "hunter will run applicable weapon oils", and no agility imbue exists in 2.4.3 or
-          in the simulator, so the mana oil is the applicable one; see data/judgments/weapon-imbues.yaml.
-          OVERRIDDEN GUIDE ADVICE, kept for the record: both sources named the Adamantite
-          stones as a type-dependent pick, sharpening for a bladed melee weapon and weightstone
-          for a blunt one. The ruling governs what this raid runs.'
+        alternatives_named:
+        - Adamantite Sharpening Stone
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         field_prose_overridden: Not applicable -- Survival Hunter carries one melee weapon
           plus a ranged weapon, not a dual-wield set, so no off-hand weapon consumable applies.
+        weapon_class:
+          worn:
+          - Fist
+          counts_as: blunt
+          from: data/sim/gear and data/facts/items.csv, split by ui/core/proto_utils/utils.ts::isBluntWeaponType
 declined:
   elixirs_instead:
     why: A flask counts as both a battle and a guardian elixir in 2.4.3, and this field names
@@ -2680,11 +2772,39 @@ unresolved:
     spec capped at every anchor
   anchor: entry
 - spec: beast_mastery_hunter
+  prose_field: weapon_main_hand
+  proto_field: mhImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']
+  anchor: entry
+- spec: beast_mastery_hunter
+  prose_field: weapon_off_hand
+  proto_field: ohImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']
+  anchor: entry
+- spec: beast_mastery_hunter
   prose_field: food
   proto_field: food_id
   name: Spicy Hot Talbuk
   why: the prose names this the short pick, and data/facts/hit-captured.yaml reports this
     spec capped at every anchor
+  anchor: tier_hands_and_head
+- spec: beast_mastery_hunter
+  prose_field: weapon_main_hand
+  proto_field: mhImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']
+  anchor: tier_hands_and_head
+- spec: beast_mastery_hunter
+  prose_field: weapon_off_hand
+  proto_field: ohImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']
   anchor: tier_hands_and_head
 - spec: enhancement_shaman
   prose_field: weapon_main_hand
@@ -2796,4 +2916,18 @@ unresolved:
   prose_field: weapon_off_hand
   proto_field: ohImbue_id
   why: the captured gear wears no weapon in this slot, so no imbue applies to it
+  anchor: tier_hands_and_head
+- spec: survival_hunter
+  prose_field: weapon_off_hand
+  proto_field: ohImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']
+  anchor: entry
+- spec: survival_hunter
+  prose_field: weapon_off_hand
+  proto_field: ohImbue_id
+  name: Adamantite Sharpening Stone
+  why: this imbue applies to a sharp weapon, and the captured gear carries ['Fist'] in this
+    slot, which the simulator counts as ['blunt']
   anchor: tier_hands_and_head

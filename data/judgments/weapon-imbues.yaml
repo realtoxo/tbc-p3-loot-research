@@ -24,15 +24,20 @@ rulings:
     slot, and the Combat Rogue's poison, which is its own class answer to the
     same question. A two-hander leaves no off hand and takes nothing further.
 - who: Both hunters
-  both_hands: Mana Oil. The guild lead asked first for an agility imbue, and
-    none exists in 2.4.3 or in the simulator's accepted set, which holds three
-    oils, three stones and the rogue poisons; the mana oil is the applicable
-    oil, "is there an agi imbue? else yeah mana oils". This OVERRIDES the
-    captured guides, which named the Adamantite stones, and the override is
-    quoted beside the pick in data/facts/consumables.yaml.
-  what_it_simplifies: The stone followed the weapon class, so a weapon round
-    candidate of a different class carried a consumable caveat. An oil applies
-    to any weapon, so the hunter weapon rounds carry no such caveat.
+  both_hands: The Adamantite stones by weapon class, exactly as the captured
+    guides name them.
+  a_ruling_was_tested_and_withdrawn_here: The guild lead first ruled oils,
+    "hunter will run applicable weapon oils", then asked for an agility imbue,
+    and none exists in 2.4.3 or in the simulator's accepted set, so the pick
+    moved to Mana Oil, "is there an agi imbue? else yeah mana oils". The change
+    was MEASURED before it was published, every anchor at armor 6193, and the
+    oil cost the Beast Mastery Hunter 18.7 to 30.6 DPS and the Survival Hunter
+    14.4 to 24.7 against the stones, because the weightstone feeds ranged base
+    damage and the sharpening stone the melee swings, and twelve mana per five
+    seconds per weapon buys less than either. Shown the figures, the guild lead
+    ruled "revert to stones" the same day, so the guides' advice stands
+    measured rather than assumed, and no published figure ever carried the
+    oil.
 - who: The Feral Cat
   ruling: KEEPS its Adamantite Weightstone. The guild lead first said he thought
     the cat runs nothing, and ruled to keep the stone when asked directly, so

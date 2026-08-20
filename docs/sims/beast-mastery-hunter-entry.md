@@ -78,8 +78,8 @@ questions.
 | `conjuredId`   | `12662`                       | 12662   |
 | `flaskId`      | `Flask of Relentless Assault` | 22854   |
 | `foodId`       | `Grilled Mudfish`             | 27664   |
-| `mhImbueId`    | `Mana Oil`                    | 25123   |
-| `ohImbueId`    | `Mana Oil`                    | 25123   |
+| `mhImbueId`    | `Adamantite Weightstone`      | 34340   |
+| `ohImbueId`    | `Adamantite Weightstone`      | 34340   |
 | `petFoodId`    | `33874`                       | 33874   |
 | `petScrollAgi` | `yes`                         |         |
 | `petScrollStr` | `yes`                         |         |
