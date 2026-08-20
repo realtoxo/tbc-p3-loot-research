@@ -364,6 +364,54 @@ the_affliction_trinket_round_is_enumerated:
     is the anchor figure, that being the worn pair. Eye of Magtheridon, whose proc fires on a
     resist, read 2185.2 beside Quagmirran''s Eye, 58.4 above the empty slot, on a set past the
     hit target that rarely resists.'
+the_destruction_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the nine-trinket
+    pool as a variant of each of the three anchor profiles, 100 runs, every row in data/facts/variant-sims.yaml.
+    The second caster trinket round; the pool is the Affliction pool plus the warlock-only Void
+    Star Talisman, which the Dest tab ranks and the Aff tab does not.
+  best_combination_per_anchor: 'Darkmoon Card: Crusade plus Icon of the Silver Crescent at entry,
+    2075.5, and The Skull of Gul''dan plus Icon of the Silver Crescent at tier, 2208.8, and The
+    Skull of Gul''dan plus Sextant of Unstable Currents at best in slot, 2506.1. No anchor wears
+    its table''s top row. The entry anchor wears the Sextant plus Quagmirran''s Eye, seventh,
+    24.1 behind, and the Card is a Darkmoon Faire turn-in, so the top pair contests no drop. The
+    tier anchor wears the same pair, SEVENTEENTH in its table and 66.0 behind the Skull pair,
+    because the tier anchor is the entry set plus tier tokens and the Skull is not a token. The
+    best-in-slot anchor wears the Skull plus Quagmirran''s Eye, fourth, 12.3 behind the
+    Skull-and-Sextant pair, about seven standard errors, and this spec already wears the Sextant
+    at entry, so its best table is two items the set has held since Phase 2 around the one Black
+    Temple drop. NOT A RULING. One standard error is 1.09 to 1.33 across the tables.'
+  the_skull_of_guldan_premium: 'The best pair holding The Skull of Gul''dan minus the best pair
+    without it, pure arithmetic on the table, 33.1 at tier and 41.5 at best in slot, beside the
+    Affliction round''s 32.6 and 24.8; the entry table drops the Skull, a Black Temple drop. The
+    best pair without it is Darkmoon Card: Crusade plus Icon of the Silver Crescent at every anchor,
+    the same hit-free pair the Affliction round measured. The second of the six wearers'' premiums
+    to be measured, and the first where the premium grows from tier to best in slot; Affliction''s
+    shrank.'
+  the_armor_tier_note: 'These figures are at armor 6193 like every trinket round, and for this
+    spec the tier is a label rather than a variable: data/facts/sim-figures.yaml reads the same
+    figure at armor 0, 6193 and 7684 at every anchor, 2493.8 at best in slot at all three, because
+    this build takes Demonic Sacrifice and destroys its demon at the pull, so no pet swings a
+    melee weapon into the boss''s armor. The Affliction round is armor-sensitive and this one
+    is not, which is the same pet arithmetic read from the other side.'
+  a_workbook_reversal: 'The Dest tab''s Trinket ladder ranks Eye of Magtheridon sixth at 83.92,
+    above Icon of the Silver Crescent seventh at 81.56. Measured, the Icon beats the Eye in every
+    shared pairing, 2505.0 against 2487.7 beside the Skull at best in slot, and the Icon is in
+    the top pair at entry and tier. Scryer''s Bloodgem, ranked ninth at 78.83, falls to the bottom
+    three pairings of every table: 32 of its rating is spell hit, and all three anchors are past
+    the 165 spell hit target per data/facts/hit-captured.yaml and the best-in-slot capture, 170,
+    194 and 185 item hit, so a third of what the ladder prices is worth nothing to these sets.
+    Starkiller''s Bauble carries 26 hit of its own, and the Bloodgem-and-Bauble pair is the bottom
+    row of all three tables, the same hit-overpricing the Affliction round measured on the same
+    ladder shape.'
+  the_binary_prices_the_procs_for_this_spec_too: 'Tested behaviorally against the vendored binary
+    rather than read from the stale source checkout, a fixed partner beside each candidate against
+    the same partner beside an EMPTY slot, same seed, on the best-in-slot anchor. Quagmirran''s
+    Eye beside an empty slot read 2358.9; beside The Skull of Gul''dan, 2493.8, 134.9 up, and
+    that IS the anchor figure, this being the worn pair. Beside Darkmoon Card: Crusade, which
+    carries no worn stats per data/facts/items.csv, 2446.9, 88.0 up, all of it the simulator''s
+    pricing of the stacking proc. Beside the Void Star Talisman, 2415.7, 56.8 up, the worn 48
+    spell damage priced and nothing else, because its on-use effect is a damage shield on a demon
+    this build sacrifices.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the

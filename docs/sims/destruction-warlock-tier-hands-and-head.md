@@ -64,6 +64,28 @@ A Destruction Warlock can carry a staff or a one-hander with a held frill, and b
 
 The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +138.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation, one max-level quest and the dungeon trinket every anchor wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers. The Void Star Talisman is the one candidate only a warlock can wear, and its on-use effect is a damage shield on the demon rather than a damage statistic, so its rows price its worn spell damage alone.
+
+The ten best of the 36 combinations measured, and the worn pair.
+
+| Trinket                                   | Trinket                      | DPS           | Against this set |
+|-------------------------------------------|------------------------------|---------------|------------------|
+| The Skull of Gul'dan                      | Icon of the Silver Crescent  | 2208.8 ± 1.23 | +66.0            |
+| The Skull of Gul'dan                      | Darkmoon Card: Crusade       | 2208.3 ± 1.23 | +65.5            |
+| The Skull of Gul'dan                      | Sextant of Unstable Currents | 2203.2 ± 1.23 | +60.4            |
+| The Skull of Gul'dan                      | Quagmirran's Eye             | 2201.1 ± 1.19 | +58.3            |
+| The Skull of Gul'dan                      | Eye of Magtheridon           | 2193.5 ± 1.20 | +50.7            |
+| The Skull of Gul'dan                      | Void Star Talisman           | 2180.1 ± 1.21 | +37.3            |
+| Darkmoon Card: Crusade                    | Icon of the Silver Crescent  | 2175.7 ± 1.21 | +32.9            |
+| Sextant of Unstable Currents              | Icon of the Silver Crescent  | 2167.2 ± 1.25 | +24.4            |
+| Eye of Magtheridon                        | Icon of the Silver Crescent  | 2159.4 ± 1.19 | +16.6            |
+| Quagmirran's Eye                          | Icon of the Silver Crescent  | 2157.8 ± 1.20 | +15.0            |
+| Sextant of Unstable Currents *(this set)* | Quagmirran's Eye             | 2142.8 ± 1.19 | +0.0             |
+
+The best combination, The Skull of Gul'dan with Icon of the Silver Crescent, measures +66.0 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -1264,6 +1264,80 @@ ROUNDS: dict[str, dict] = {
             # destruction-warlock.yaml.
             {"mh": 32053, "oh": 29270, "phase3": False},
         ],
+        # THE TRINKET POOL, the ninth enumerative trinket round and the
+        # second caster round, in the shape the Affliction round set:
+        # every max-level trinket the Dest tab's Trinket ladder ranks,
+        # with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every unordered pair
+        # itself. The ladder ranks fifteen; six are out on the standing
+        # exclusions, all availability rather than routing: Mark of the
+        # Champion, Neltharion's Tear and The Restrained Essence of
+        # Sapphiron drop in level-60 raids; Arcanist's Stone and
+        # Shiffar's Nexus-Horn drop in five-man dungeons below Karazhan;
+        # and the Dark Iron Smoking Pipe drops from a holiday boss inside
+        # Blackrock Depths, a level-60 five-man. The Dest tab differs
+        # from the Aff tab twice at the bottom: it does not rank the
+        # Terokkar Tablet of Vim, and it ranks the Void Star Talisman,
+        # rank fifteen, a warlock-only Tempest Keep drop from High
+        # Astromancer Solarian, which enters as a max-level raid
+        # trinket. Starkiller's Bauble stays in as a max-level
+        # Netherstorm quest reward, per the Retribution precedent for
+        # Core of Ar'kelos. Quagmirran's Eye drops in a five-man below
+        # Karazhan and the standing exclusion would bar it, but every
+        # anchor WEARS it, entry and tier beside the Sextant of Unstable
+        # Currents and best in slot beside The Skull of Gul'dan, so it
+        # enters as a worn trinket, per the Affliction precedent. No
+        # Ahn'Qiraj and no world-boss trinket is on the tab. The
+        # warlock's own Ashtongue Talisman of Shadows, id 32493, is NOT
+        # in the pool, because the tab does not rank it and the pool is
+        # the ladder. Darkmoon Card: Crusade carries no worn stats per
+        # items.csv, so everything its rows measure is the simulator's
+        # pricing of its stacking proc, which the Affliction round
+        # measured behaviorally against the vendored binary; the
+        # recovered source checkout is stale against that binary and is
+        # not evidence about what it implements. `phase3` marks what the
+        # entry anchor cannot reach: The Skull of Gul'dan drops from
+        # Illidan Stormrage in Black Temple.
+        "trinket_pool": [
+            {"id": 32483, "phase3": True},   # The Skull of Gul'dan
+            {"id": 30626, "phase3": False},  # Sextant of Unstable Currents
+            {"id": 27683, "phase3": False},  # Quagmirran's Eye
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 28789, "phase3": False},  # Eye of Magtheridon
+            {"id": 29370, "phase3": False},  # Icon of the Silver Crescent
+            {"id": 29132, "phase3": False},  # Scryer's Bloodgem
+            {"id": 30340, "phase3": False},  # Starkiller's Bauble
+            {"id": 30449, "phase3": False},  # Void Star Talisman
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside a steady spell damage "
+            "partner and another beside an on-use haste one, so the "
+            "two slots are measured together: every row below is THIS "
+            "PROFILE with only the two trinket ids replaced, and a "
+            "trinket carries no enchant and no gem, so the "
+            "consumables, buffs and seed hold still and every figure "
+            "is directly comparable with the one at the top of this "
+            "page. The candidates are every max-level trinket on the "
+            "EP Workbook's Trinket ladder for this spec, from "
+            "Magtheridon's Lair, the raids above it, the badge vendor, "
+            "the Darkmoon Faire, one reputation, one max-level quest "
+            "and the dungeon trinket every anchor wears, and every "
+            "pair from that pool was measured, so the table is an "
+            "enumeration rather than a selection; the ten best appear "
+            "below, with the worn pair beside them. An on-use trinket "
+            "is activated on the simulator's own schedule, which is "
+            "how The Skull of Gul'dan's haste burst meets the casting "
+            "rotation. Darkmoon Card: Crusade carries no worn "
+            "statistics, so everything its rows measure is the "
+            "simulator's pricing of its stacking proc. Eye of "
+            "Magtheridon procs when a spell is resisted, so its rows "
+            "price its worn spell damage and a proc a hit-capped set "
+            "rarely triggers. The Void Star Talisman is the one "
+            "candidate only a warlock can wear, and its on-use effect "
+            "is a damage shield on the demon rather than a damage "
+            "statistic, so its rows price its worn spell damage "
+            "alone.")),
     },
     # ARCANE MAGE: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, in the shape the
