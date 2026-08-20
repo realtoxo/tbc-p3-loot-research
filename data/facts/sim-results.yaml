@@ -144,6 +144,44 @@ the_arms_trinket_round_is_enumerated:
     53.63 below Tsunami Talisman at 69.86 and Darkmoon Card: Crusade at 54.54, is the reversal
     the Retribution round also measured: the Brooch beside Dragonspine is the best pair at every
     anchor, ahead of Tsunami beside Dragonspine by 10.3 to 11.4.'
+the_fury_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the seven-trinket
+    pool as a variant of each of the four anchor profiles, 78 runs, every row in data/facts/variant-sims.yaml.
+  the_cross_check_against_the_routing_measurement: The four pairings the 15 August 2026 routing
+    measurement recorded at the best-in-slot anchor reproduce within one standard error of a
+    difference, every absolute figure 4.3 to 6.2 above the recorded 2862.8, 2856.7, 2856.4 and
+    2819.3, because the Expose Weakness calibration of the same evening POSTDATES that measurement
+    and moved every physical spec up. Dragonspine plus Madness stays first; the recorded 0.3
+    between Tsunami Talisman and Bloodlust Brooch reads 0.1 the other way, both inside one standard
+    error. The worn pair's row reproduces each of the four CURRENT anchor figures in sim-figures.yaml
+    to the digit.
+  best_combination_per_anchor: 'Dragonspine Trophy plus Bloodlust Brooch at entry, 2484.7, and
+    Dragonspine Trophy plus Madness of the Betrayer at the other three: 2511.6 at tier, 2869.0
+    at best in slot and 2735.2 without the Warglaives. No anchor wears its best pair: the entry
+    and tier anchors wear Dragonspine plus Tsunami Talisman, 5.4 and 5.8 behind, and both best-in-slot
+    anchors wear Dragonspine plus the Brooch, per the 15 August 2026 routing, 6.9 and 8.1 behind
+    the Madness pair. NOT A RULING. One standard error is 1.12 to 1.24 across the tables.'
+  the_dragonspine_premium: 'The best pair holding Dragonspine Trophy minus the best pair without
+    it, pure arithmetic on the table: 42.0 at entry, 37.4 at tier, 45.2 at best in slot and 42.0
+    without the Warglaives. The best pair without it holds Madness of the Betrayer everywhere
+    Madness is reachable, beside Bloodlust Brooch at tier and the no-Warglaives anchor and beside
+    Tsunami Talisman at best in slot, 0.2 above the Brooch there, inside one standard error; at
+    entry it is Tsunami Talisman plus Bloodlust Brooch.'
+  the_armor_tier_caveat: Madness of the Betrayer carries armor penetration, so every figure that
+    holds it moves with the boss's armor, and these are at 6193, the tier ten of the fourteen
+    bosses sit in. At that tier Dragonspine plus Madness is the top row at every anchor that
+    can reach it.
+  a_workbook_reversal: 'The Fury tab''s Trinket ladder ranks Solarian''s Sapphire second at 155.75,
+    crediting the attack power its Battle Shout bonus hands the party. The simulator prices that
+    bonus outside the trinket slot and these runs do not engage it, so its rows price the worn
+    stats alone and understate it; so priced, its best placement is beside Dragonspine Trophy,
+    eighth of fifteen at entry and twelfth of twenty-one at the other three anchors, and every
+    other pairing that holds it lands in the bottom six of its table. Bloodlust Brooch, ranked
+    ninth at 52.51 below Tsunami Talisman at 72.67 and Darkmoon Card: Crusade at 53.40, is the
+    reversal the Retribution and Arms rounds also measured, though narrower here: the Brooch
+    beside Dragonspine reads above Tsunami beside Dragonspine at every anchor, by 5.4 at entry
+    and 2.9 at tier, and by 0.1 and 0.5 at the two best-in-slot anchors, inside one standard
+    error.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the

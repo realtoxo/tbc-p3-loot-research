@@ -289,6 +289,67 @@ ROUNDS: dict[str, dict] = {
             {"mh": 28439, "oh": 29996, "phase3": False},
             {"mh": 32944, "oh": 30082, "phase3": False},
         ],
+        # THE TRINKET POOL, the fourth enumerative trinket round after the
+        # Combat Rogue pilot, the Retribution round and the Arms round:
+        # every max-level trinket the Fury tab's Trinket ladder ranks, with
+        # anything from Karazhan and the badge vendor onward acceptable,
+        # and the runner generates every unordered pair itself. The ladder
+        # ranks fifteen; eight are out on the standing exclusions, all
+        # availability rather than routing: Mark of the Champion, Kiss of
+        # the Spider and Slayer's Crest drop in Naxxramas and Badge of the
+        # Swarmguard in Ahn'Qiraj, all level-60 raids, the Badge also
+        # standing barred by data/judgments/trinket-routing.yaml and
+        # check_sim_profiles; the Hourglass of the Unraveller, the Abacus
+        # of Violent Odds and the Icon of Unyielding Courage drop in
+        # five-man dungeons below Karazhan; and Bladefist's Breadth is a
+        # leveling quest reward, not a max-level item. Core of Ar'kelos
+        # stays in as a max-level Netherstorm quest reward, per the
+        # Retribution precedent. No world-boss trinket is on the tab.
+        # Solarian's Sapphire, the tab's rank two, stays in as a Tempest
+        # Keep drop a warrior alone may wear, WITH THE SAME CAVEAT the
+        # Arms round states: sim/warrior/items.go registers id 30446 as an
+        # empty effect and the Battle Shout bonus is applied only when the
+        # class option hasBsSolarianSapphire is sent, which
+        # run_sims.py::CLASS_OPTIONS does not send, so its rows price the
+        # trinket's worn stats alone. The entry and tier anchors wear
+        # Dragonspine Trophy with Tsunami Talisman and both best-in-slot
+        # anchors wear Dragonspine Trophy with Bloodlust Brooch, the
+        # Brooch per the 15 August 2026 routing, all three in the pool, so
+        # no worn item needed adding. `phase3` marks what the entry anchor
+        # cannot reach: Madness of the Betrayer is a Black Temple drop.
+        "trinket_pool": [
+            {"id": 28830, "phase3": False},  # Dragonspine Trophy
+            {"id": 30446, "phase3": False},  # Solarian's Sapphire
+            {"id": 32505, "phase3": True},   # Madness of the Betrayer
+            {"id": 30627, "phase3": False},  # Tsunami Talisman
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 29383, "phase3": False},  # Bloodlust Brooch
+            {"id": 29776, "phase3": False},  # Core of Ar'kelos
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside an attack power "
+            "partner and another beside an armor penetration one, so "
+            "the two slots are measured together: every row below is "
+            "THIS PROFILE with only the two trinket ids replaced, and "
+            "a trinket carries no enchant and no gem, so the "
+            "consumables, buffs and seed hold still and every figure "
+            "is directly comparable with the one at the top of this "
+            "page. The candidates are every max-level trinket on the "
+            "EP Workbook's Trinket ladder for this spec, from Gruul's "
+            "Lair, the raids above it, the badge vendor, the Darkmoon "
+            "Faire and one max-level quest, and every pair from that "
+            "pool was measured, so the table is an enumeration rather "
+            "than a selection; the ten best appear below, with the "
+            "worn pair beside them. An on-use trinket is activated on "
+            "the simulator's own schedule. Solarian's Sapphire "
+            "strengthens the wearer's Battle Shout for the whole "
+            "party, the simulator prices that effect outside the "
+            "trinket slot, and these runs do not engage it, so its "
+            "rows price the worn stats alone and understate it. "
+            "Madness of the Betrayer carries armor penetration, which "
+            "moves with the boss's armor, and these figures are at the "
+            "armor tier ten of the fourteen bosses sit in.")),
     },
     # COMBAT ROGUE: dual wield only, per the 20 August 2026 ruling in
     # data/judgments/weapon-styles.yaml. The build is Combat Swords, 20/41/0

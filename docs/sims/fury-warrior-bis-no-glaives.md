@@ -65,6 +65,27 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 
 The best combination, Warglaive of Azzinoth with Warglaive of Azzinoth, measures +135.0 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party, the simulator prices that effect outside the trinket slot, and these runs do not engage it, so its rows price the worn stats alone and understate it. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+
+The ten best of the 21 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                 | DPS           | Against this set |
+|---------------------------------|-------------------------|---------------|------------------|
+| Dragonspine Trophy              | Madness of the Betrayer | 2735.2 ± 1.24 | +8.1             |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2727.1 ± 1.24 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman        | 2726.6 ± 1.21 | -0.5             |
+| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2702.9 ± 1.23 | -24.2            |
+| Madness of the Betrayer         | Bloodlust Brooch        | 2693.2 ± 1.21 | -33.9            |
+| Madness of the Betrayer         | Tsunami Talisman        | 2689.3 ± 1.19 | -37.8            |
+| Tsunami Talisman                | Bloodlust Brooch        | 2684.1 ± 1.20 | -43.0            |
+| Madness of the Betrayer         | Darkmoon Card: Crusade  | 2668.0 ± 1.20 | -59.1            |
+| Dragonspine Trophy              | Core of Ar'kelos        | 2666.7 ± 1.22 | -60.4            |
+| Tsunami Talisman                | Darkmoon Card: Crusade  | 2659.3 ± 1.19 | -67.8            |
+
+The best combination, Dragonspine Trophy with Madness of the Betrayer, measures +8.1 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
