@@ -41,6 +41,20 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 1452.1 ± 0.26     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 1452.1 ± 0.26     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Shadow Priest can carry a staff or a one-hander with a held frill, and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Superior Wizard Oil applies to any weapon, staff and mace alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. A priest wields daggers, one-hand maces and staves and holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here: the warlocks hold it in principle and concede it to the Arcane Mage, where this spec cannot equip it at all, so its one-hand rows draw on maces and daggers instead. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, per data/judgments/weapon-routing.yaml, which is why the best-in-slot anchor wears it with the off-hand slot empty.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                        | Off hand              | DPS           | Against this set |
+|----------------------------------|-----------------------|---------------|------------------|
+| Merciless Gladiator's Spellblade | Orb of the Soul-Eater | 1452.1 ± 0.26 | +0.0             |
+| The Nexus Key                    | *empty, two-hander*   | 1436.5 ± 0.26 | -15.6            |
+| Merciless Gladiator's War Staff  | *empty, two-hander*   | 1429.3 ± 0.26 | -22.8            |
+
+This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

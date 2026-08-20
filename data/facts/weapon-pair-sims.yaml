@@ -3132,6 +3132,291 @@ specs:
         dps: 2347.6
         standard_error: 1.26
         stdev: 125.9
+  shadow_priest:
+    why: 'A Shadow Priest can carry a staff or a one-hander with a held frill, and
+      the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml
+      that both styles run in the same table, so a row below is either a single
+      staff with the off hand empty or a main hand with an off-hand frill that is
+      not a weapon. Each row is THIS PROFILE with only the weapon slots changed:
+      the main hand keeps its Soulfrost, which a staff row inherits because the
+      enchant belongs to the slot, and the consumables, buffs and seed hold still,
+      so every figure is directly comparable with the one at the top of this page.
+      The Superior Wizard Oil applies to any weapon, staff and mace alike, and a
+      frill takes no imbue, so nothing about the consumables varies across the rows.
+      The candidates are the top of the EP Workbook''s Two Hand, One Hand and Off
+      Hand ladders for this spec, and no candidate carries a socket. A priest wields
+      daggers, one-hand maces and staves and holds any frill, and cannot wield swords,
+      so Tempest of Chaos, the sword the warlock and mage rounds price, is not a
+      row here: the warlocks hold it in principle and concede it to the Arcane Mage,
+      where this spec cannot equip it at all, so its one-hand rows draw on maces
+      and daggers instead. Zhar''doom goes to the warlocks, the Balance Druid, the
+      Elemental Shaman and the Shadow Priest, and its wearers hold no off hand,
+      per data/judgments/weapon-routing.yaml, which is why the best-in-slot anchor
+      wears it with the off-hand slot empty.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 29272
+          name: Orb of the Soul-Eater
+          source: badge
+        dps: 1452.1
+        standard_error: 0.26
+        stdev: 26.4
+      - main_hand:
+          id: 29988
+          name: The Nexus Key
+          speed: 3.2
+          source: raid_drop
+        dps: 1436.5
+        standard_error: 0.26
+        stdev: 26.4
+      - main_hand:
+          id: 32055
+          name: Merciless Gladiator's War Staff
+          speed: 2.0
+          source: arena
+        dps: 1429.3
+        standard_error: 0.26
+        stdev: 26.2
+      tier-hands-and-head:
+      - main_hand:
+          id: 32374
+          name: Zhar'doom, Greatstaff of the Devourer
+          speed: 3.2
+          source: raid_drop
+        dps: 1520.0
+        standard_error: 0.29
+        stdev: 28.5
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 29272
+          name: Orb of the Soul-Eater
+          source: badge
+        dps: 1510.0
+        standard_error: 0.29
+        stdev: 29.1
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 1507.9
+        standard_error: 0.29
+        stdev: 29.2
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1505.6
+        standard_error: 0.29
+        stdev: 29.0
+      - main_hand:
+          id: 32237
+          name: The Maelstrom's Fury
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1501.8
+        standard_error: 0.29
+        stdev: 29.1
+      - main_hand:
+          id: 34009
+          name: Hammer of Judgement
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1499.5
+        standard_error: 0.29
+        stdev: 28.9
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 29272
+          name: Orb of the Soul-Eater
+          source: badge
+        dps: 1497.8
+        standard_error: 0.29
+        stdev: 28.9
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1493.3
+        standard_error: 0.29
+        stdev: 28.8
+      - main_hand:
+          id: 34540
+          name: Vengeful Gladiator's Battle Staff
+          speed: 2.0
+          source: arena
+        dps: 1487.4
+        standard_error: 0.29
+        stdev: 29.0
+      - main_hand:
+          id: 29988
+          name: The Nexus Key
+          speed: 3.2
+          source: raid_drop
+        dps: 1482.0
+        standard_error: 0.29
+        stdev: 28.9
+      - main_hand:
+          id: 32055
+          name: Merciless Gladiator's War Staff
+          speed: 2.0
+          source: arena
+        dps: 1474.6
+        standard_error: 0.29
+        stdev: 28.8
+      bis:
+      - main_hand:
+          id: 32374
+          name: Zhar'doom, Greatstaff of the Devourer
+          speed: 3.2
+          source: raid_drop
+        dps: 1577.9
+        standard_error: 0.29
+        stdev: 29.3
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 29272
+          name: Orb of the Soul-Eater
+          source: badge
+        dps: 1565.8
+        standard_error: 0.29
+        stdev: 29.0
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 1563.4
+        standard_error: 0.29
+        stdev: 29.2
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1561.1
+        standard_error: 0.29
+        stdev: 29.0
+      - main_hand:
+          id: 32237
+          name: The Maelstrom's Fury
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1557.0
+        standard_error: 0.29
+        stdev: 29.1
+      - main_hand:
+          id: 34009
+          name: Hammer of Judgement
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1554.7
+        standard_error: 0.29
+        stdev: 28.9
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 29272
+          name: Orb of the Soul-Eater
+          source: badge
+        dps: 1552.9
+        standard_error: 0.29
+        stdev: 28.8
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1548.2
+        standard_error: 0.29
+        stdev: 28.8
+      - main_hand:
+          id: 34540
+          name: Vengeful Gladiator's Battle Staff
+          speed: 2.0
+          source: arena
+        dps: 1541.6
+        standard_error: 0.29
+        stdev: 28.9
+      - main_hand:
+          id: 29988
+          name: The Nexus Key
+          speed: 3.2
+          source: raid_drop
+        dps: 1535.9
+        standard_error: 0.29
+        stdev: 28.9
+      - main_hand:
+          id: 32055
+          name: Merciless Gladiator's War Staff
+          speed: 2.0
+          source: arena
+        dps: 1528.2
+        standard_error: 0.29
+        stdev: 28.7
   arcane_mage:
     why: 'An Arcane Mage can carry a staff or a one-hander with a held frill, and
       the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml
@@ -3144,14 +3429,17 @@ specs:
       Wizard Oil applies to any weapon, staff and sword alike, and a frill takes
       no imbue, so nothing about the consumables varies across the rows. The candidates
       are the top of the EP Workbook''s Two Hand, One Hand and Off Hand ladders
-      for this spec, and no candidate carries a socket. Zhar''doom is not a row:
-      the guild lead routed it to the warlocks, the Balance Druid, the Elemental
-      Shaman and the Shadow Priest, and ruled that the Arcane Mage takes Tempest
-      of Chaos first, per data/judgments/weapon-routing.yaml, so this spec''s best-in-slot
-      set wears the one-hander with a frill rather than the staff. The staff rows
-      below price the mage''s own alternatives, which is the other half of the Tempest
-      question: the warlock rounds measure what other specs lose while the mage
-      holds it, and this table measures what the mage loses if it concedes it.'
+      for this spec, and no candidate carries a socket. Zhar''doom IS a row, and
+      it is marked: the guild lead routed it to the warlocks, the Balance Druid,
+      the Elemental Shaman and the Shadow Priest, and ruled that the Arcane Mage
+      takes Tempest of Chaos first, per data/judgments/weapon-routing.yaml, so this
+      spec''s best-in-slot set wears the one-hander with a frill rather than the
+      staff. A routing never excludes a candidate from a round, per the same-day
+      ruling in data/judgments/weapon-styles.yaml, so the staff is measured and
+      the preference stays with the council. The table therefore carries every half
+      of the Tempest question: the warlock rounds measure what other specs lose
+      while the mage holds it, and this table measures what the mage loses if it
+      concedes it, and what the routed staff would be worth here.'
     anchors:
       entry:
       - main_hand:
@@ -3207,6 +3495,14 @@ specs:
         dps: 2362.6
         standard_error: 1.01
         stdev: 100.5
+      - main_hand:
+          id: 32374
+          name: Zhar'doom, Greatstaff of the Devourer
+          speed: 3.2
+          source: raid_drop
+        dps: 2359.4
+        standard_error: 1.01
+        stdev: 101.2
       - main_hand:
           id: 30910
           name: Tempest of Chaos
@@ -3328,6 +3624,14 @@ specs:
         dps: 2534.4
         standard_error: 1.07
         stdev: 106.8
+      - main_hand:
+          id: 32374
+          name: Zhar'doom, Greatstaff of the Devourer
+          speed: 3.2
+          source: raid_drop
+        dps: 2533.0
+        standard_error: 1.07
+        stdev: 107.3
       - main_hand:
           id: 30910
           name: Tempest of Chaos

@@ -779,22 +779,29 @@ ROUNDS: dict[str, dict] = {
             "takes no imbue, so nothing about the consumables varies "
             "across the rows. The candidates are the top of the EP "
             "Workbook's Two Hand, One Hand and Off Hand ladders for "
-            "this spec, and no candidate carries a socket. Zhar'doom is "
-            "not a row: the guild lead routed it to the warlocks, the "
-            "Balance Druid, the Elemental Shaman and the Shadow Priest, "
-            "and ruled that the Arcane Mage takes Tempest of Chaos "
-            "first, per data/judgments/weapon-routing.yaml, so this "
-            "spec's best-in-slot set wears the one-hander with a frill "
-            "rather than the staff. The staff rows below price the "
-            "mage's own alternatives, which is the other half of the "
-            "Tempest question: the warlock rounds measure what other "
-            "specs lose while the mage holds it, and this table "
-            "measures what the mage loses if it concedes it."),
+            "this spec, and no candidate carries a socket. Zhar'doom IS "
+            "a row, and it is marked: the guild lead routed it to the "
+            "warlocks, the Balance Druid, the Elemental Shaman and the "
+            "Shadow Priest, and ruled that the Arcane Mage takes "
+            "Tempest of Chaos first, per "
+            "data/judgments/weapon-routing.yaml, so this spec's "
+            "best-in-slot set wears the one-hander with a frill rather "
+            "than the staff. A routing never excludes a candidate from "
+            "a round, per the same-day ruling in "
+            "data/judgments/weapon-styles.yaml, so the staff is "
+            "measured and the preference stays with the council. The "
+            "table therefore carries every half of the Tempest "
+            "question: the warlock rounds measure what other specs "
+            "lose while the mage holds it, and this table measures "
+            "what the mage loses if it concedes it, and what the "
+            "routed staff would be worth here."),
         "pairs": [
-            # TWO HAND, a staff alone, off hand EMPTY. The Vengeful
-            # Gladiator's Battle Staff is Season 3 arena and stands for
-            # both Season 3 staves; Zhar'doom, the ladder's rank one, is
-            # routed away from this spec and is not a row.
+            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom is
+            # the ladder's rank one and is ROUTED to five other specs;
+            # it is measured anyway, because a routing never excludes a
+            # candidate. The Vengeful Gladiator's Battle Staff is Season
+            # 3 arena and stands for both Season 3 staves.
+            {"mh": 32374, "oh": None, "phase3": True},
             {"mh": 34540, "oh": None, "phase3": True},
             # Reachable before Phase 3: The Nexus Key from Kael'thas
             # Sunstrider is the worn entry AND tier weapon, per the
@@ -831,6 +838,104 @@ ROUNDS: dict[str, dict] = {
             # entry anchor.
             {"mh": 30095, "oh": 29271, "phase3": False},
             {"mh": 32053, "oh": 29271, "phase3": False},
+        ],
+    },
+    # SHADOW PRIEST: both styles in the same table, per the 20 August 2026
+    # ruling in data/judgments/weapon-styles.yaml, in the shape the
+    # Affliction round set as the caster template. The candidates are the
+    # top of the Shad workbook tab, whose weapon ladders are One Hand,
+    # Off Hand, Two Hand and Ranged. A priest wields daggers, one-hand
+    # maces and staves and holds any frill, and CANNOT WIELD SWORDS, so
+    # Tempest of Chaos is not a row: its exclusion is proficiency rather
+    # than routing, and the tab agrees, its One Hand ladder holds no
+    # sword. The ladder's rank one and rank two, the Vengeful Gladiator's
+    # Gavel and Spellblade, carry identical statistics per items.csv, a
+    # mace and a dagger at the same figures, so the Gavel row stands for
+    # both. The rank-one frill for THIS spec is the Blind-Seers Icon,
+    # 61.45 to the Chronicle of Dark Secrets' 59.95, the reverse of the
+    # warlock tabs. The Vengeful Gladiator's War Staff is not a row for
+    # the same reason as in the other caster rounds: the Battle Staff
+    # carries the same statistics plus 28 spell hit, so it equals or
+    # beats the War Staff at every hit state and stands for both.
+    # SOCKETS: the only socketed weapon anywhere in the tab's ladders is
+    # Talon of the Tempest, One Hand rank seven, below the cut, so no
+    # candidate in the round carries a socket. STONES, OILS AND ENCHANT:
+    # Superior Wizard Oil on the main hand at every anchor, per the
+    # priest's picks in consumable-ids.yaml, no frill imbue, and the
+    # main-hand slot's Soulfrost inherited by every row, staff included.
+    # The worn combinations are rows on purpose: their variants must
+    # reproduce the anchor figures to the digit, the entry and tier
+    # anchors wearing the Merciless Gladiator's Spellblade with the Orb
+    # of the Soul-Eater and the best-in-slot anchor wearing Zhar'doom
+    # with its empty off hand.
+    "shadow_priest": {
+        "why": (
+            "A Shadow Priest can carry a staff or a one-hander with a "
+            "held frill, and the guild lead ruled on 20 August 2026 in "
+            "data/judgments/weapon-styles.yaml that both styles run in "
+            "the same table, so a row below is either a single staff "
+            "with the off hand empty or a main hand with an off-hand "
+            "frill that is not a weapon. Each row is THIS PROFILE with "
+            "only the weapon slots changed: the main hand keeps its "
+            "Soulfrost, which a staff row inherits because the enchant "
+            "belongs to the slot, and the consumables, buffs and seed "
+            "hold still, so every figure is directly comparable with "
+            "the one at the top of this page. The Superior Wizard Oil "
+            "applies to any weapon, staff and mace alike, and a frill "
+            "takes no imbue, so nothing about the consumables varies "
+            "across the rows. The candidates are the top of the EP "
+            "Workbook's Two Hand, One Hand and Off Hand ladders for "
+            "this spec, and no candidate carries a socket. A priest "
+            "wields daggers, one-hand maces and staves and holds any "
+            "frill, and cannot wield swords, so Tempest of Chaos, the "
+            "sword the warlock and mage rounds price, is not a row "
+            "here: the warlocks hold it in principle and concede it to "
+            "the Arcane Mage, where this spec cannot equip it at all, "
+            "so its one-hand rows draw on maces and daggers instead. "
+            "Zhar'doom goes to the warlocks, the Balance Druid, the "
+            "Elemental Shaman and the Shadow Priest, and its wearers "
+            "hold no off hand, per data/judgments/weapon-routing.yaml, "
+            "which is why the best-in-slot anchor wears it with the "
+            "off-hand slot empty."),
+        "pairs": [
+            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
+            # Greatstaff of the Devourer, from Illidan Stormrage, is the
+            # worn best-in-slot weapon and the workbook's rank one; the
+            # Vengeful Gladiator's Battle Staff is Season 3 arena and
+            # stands for both Season 3 staves.
+            {"mh": 32374, "oh": None, "phase3": True},
+            {"mh": 34540, "oh": None, "phase3": True},
+            # Reachable before Phase 3: the Merciless Gladiator's War
+            # Staff is Season 2 arena and the workbook's best reachable
+            # staff; The Nexus Key drops from Kael'thas Sunstrider.
+            {"mh": 32055, "oh": None, "phase3": False},
+            {"mh": 29988, "oh": None, "phase3": False},
+            # MAIN HAND WITH A HELD FRILL. The Vengeful Gladiator's
+            # Gavel, Season 3 arena, is the One Hand ladder's rank one
+            # and stands for the identically statted Spellblade, held
+            # with each of the top frills: Blind-Seers Icon from Shade
+            # of Akama, Chronicle of Dark Secrets from Rage Winterchill,
+            # and the worn Orb of the Soul-Eater from the badge vendor,
+            # the state where the mace arrives before a Phase 3 frill
+            # drops.
+            {"mh": 33687, "oh": 32361, "phase3": True},
+            {"mh": 33687, "oh": 30872, "phase3": True},
+            {"mh": 33687, "oh": 29272, "phase3": True},
+            # The Phase 3 raid-drop main hands, each with the rank one
+            # frill: Hammer of Judgement drops in Hyjal Summit and The
+            # Maelstrom's Fury drops from High Warlord Naj'entus.
+            {"mh": 34009, "oh": 32361, "phase3": True},
+            {"mh": 32237, "oh": 32361, "phase3": True},
+            # The worn Merciless Gladiator's Spellblade with the rank
+            # one frill, the state where a frill drops before any Phase
+            # 3 main hand does.
+            {"mh": 32053, "oh": 32361, "phase3": True},
+            # Reachable before Phase 3: the Merciless Gladiator's
+            # Spellblade, Season 2 arena, with the Orb of the Soul-Eater
+            # from G'eras is the worn entry AND tier combination, per
+            # the capture in data/facts/sim-profiles/hit-capture/
+            # shadow-priest.yaml.
+            {"mh": 32053, "oh": 29272, "phase3": False},
         ],
     },
 }

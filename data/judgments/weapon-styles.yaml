@@ -22,6 +22,16 @@ meta:
     Cataclysm's Edge, five specs wear Zhar'doom with the off hand EMPTY, the
     Arcane Mage takes Tempest of Chaos first, and no profile wears Ahn'Qiraj
     gear. See data/judgments/weapon-routing.yaml and trinket-routing.yaml.
+  a_routing_never_excludes_a_candidate: RULED by the guild lead on 20 August
+    2026, after the Arcane round omitted Zhar'doom on the strength of its
+    routing, "we shouldnt exclude it from our sims dude.. thats a preference".
+    A round measures every competitive combination the spec can LEGALLY wear
+    within its ruled styles, and a weapon the council routes elsewhere is
+    still a row, marked with its routing, exactly as the Retribution round
+    measures Cataclysm's Edge and the Arms round measures Torch of the
+    Damned. Only proficiency, availability and the style rulings bound a
+    candidate list. Preferences are applied by the council reading the table,
+    never by the table.
 styles_by_spec:
   arms_warrior: [two_hand]
   fury_warrior: [dual_wield]
