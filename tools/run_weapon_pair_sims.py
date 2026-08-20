@@ -378,6 +378,90 @@ ROUNDS: dict[str, dict] = {
             {"mh": 31959, "oh": None, "phase3": False},
         ],
     },
+    # BEAST MASTERY: both styles in the same table, per the 20 August 2026
+    # ruling in data/judgments/weapon-styles.yaml, the first spec to mix
+    # them: a dual_wield row is a main hand with an off hand, and a two_hand
+    # row runs the off hand empty. The melee slots are stat sticks, the
+    # ranged weapon does the damage and is not part of this round, so the
+    # candidates are the top of the BM workbook tab's One Hand pool, which
+    # is combined like Enhancement's rather than split like Fury's, and its
+    # Two Hand ladder, kept to the weapon classes a hunter wields: axes,
+    # swords, polearms, staves, fist weapons and daggers, never a mace. The
+    # 41/20/0 build carries no weapon specialization talent, per
+    # data/facts/talents.yaml, so no class is favored. The worn pairs are
+    # rows on purpose: their variants must reproduce the anchor figures to
+    # the digit, the same verification the other rounds carry. STONES: the
+    # hunters run the Adamantite stone chosen by the WORN weapon's class,
+    # per data/judgments/weapon-imbues.yaml, and a variant holds the
+    # anchor's consumables still, so the entry and tier anchors, worn with
+    # fist weapons, run every candidate under the Weightstone, and the bis
+    # anchor, worn with a dagger and a sword, runs the Season 3 fist pair
+    # under the Sharpening Stone. SOCKETS: Twinblade of the Phoenix is the
+    # one socketed candidate, three sockets, and no BM anchor wears it, so
+    # its row arrives ungemmed and its figure is understated by the gems a
+    # raider would add.
+    "beast_mastery_hunter": {
+        "why": (
+            "A Beast Mastery Hunter can carry a two-hander or two "
+            "one-handers, and the guild lead ruled on 20 August 2026 in "
+            "data/judgments/weapon-styles.yaml that both styles run in the "
+            "same table, so a row below is either a main hand with an off "
+            "hand or a single two-hander with the off hand empty. These "
+            "slots are stat sticks: the ranged weapon does the damage and "
+            "no row here touches it. Each row is THIS PROFILE with only "
+            "the weapon ids replaced: a filled slot keeps its enchant, and "
+            "the consumables, buffs and seed hold still, so every figure "
+            "is directly comparable with the one at the top of this page. "
+            "Holding the consumables still includes the weapon stones, "
+            "which the hunters choose by the WORN weapon's class per "
+            "data/judgments/weapon-imbues.yaml, so a candidate whose class "
+            "differs from the worn weapon runs under the capture's stone "
+            "rather than its own. The candidates are the top of the EP "
+            "Workbook's One Hand and Two Hand ladders for this spec, kept "
+            "to the weapon classes a hunter wields, and the 41/20/0 build "
+            "carries no weapon specialization talent, so no class is "
+            "favored."),
+        "pairs": [
+            # DUAL WIELD. The worn best-in-slot pair: Boundless Agony from
+            # Azgalor, the capture's Best MH, with Blade of Infamy from
+            # Anetheron, its top Best OH row.
+            {"mh": 30901, "oh": 30881, "phase3": True},
+            # The sword field: Blade of Infamy is the One Hand pool's rank
+            # one and is not unique, so its doubled row is a question of
+            # weeks; Tracker's Blade from Rage Winterchill is rank two, and
+            # Blade of Savagery drops from Mother Shahraz.
+            {"mh": 30881, "oh": 30881, "phase3": True},
+            {"mh": 30881, "oh": 30865, "phase3": True},
+            {"mh": 30881, "oh": 32369, "phase3": True},
+            # The Season 3 fist pair, the Right Ripper, Main Hand only,
+            # with the Left Ripper, Off Hand only. Fist weapons, so at the
+            # best-in-slot anchor this row runs under the worn pair's
+            # Sharpening Stone rather than the Weightstone a fist pair
+            # would carry.
+            {"mh": 33737, "oh": 33705, "phase3": True},
+            # Reachable before Phase 3: Talon of the Phoenix from Al'ar
+            # with Claw of the Phoenix, also Al'ar, is the worn entry AND
+            # tier pair, per the capture in data/facts/sim-profiles/
+            # hit-capture/beast-mastery-hunter.yaml; Talon of Azshara from
+            # Morogrim Tidewalker is the pool's rank four.
+            {"mh": 32944, "oh": 29948, "phase3": False},
+            {"mh": 32944, "oh": 30082, "phase3": False},
+            # TWO HAND. Phase 3: the Halberd of Desolation from High
+            # Warlord Naj'entus is the Two Hand ladder's rank one, and the
+            # Vengeful Gladiator's Decapitator is Season 3 arena, tied to
+            # the point with the Waraxe, so it stands for both.
+            {"mh": 32248, "oh": None, "phase3": True},
+            {"mh": 33670, "oh": None, "phase3": True},
+            # Reachable before Phase 3: Twinblade of the Phoenix from
+            # Kael'thas Sunstrider is the ladder's best reachable epic and
+            # carries three sockets, which arrive EMPTY here because no BM
+            # anchor wears it, so its figure is understated by the gems a
+            # raider would add; Bloodmoon is crafted by Blacksmithing and
+            # carries none.
+            {"mh": 29993, "oh": None, "phase3": False},
+            {"mh": 28436, "oh": None, "phase3": False},
+        ],
+    },
 }
 
 

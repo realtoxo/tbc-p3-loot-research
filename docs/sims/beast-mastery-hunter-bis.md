@@ -41,6 +41,28 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 3580.7 ± 1.01     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 4085.6 ± 1.14     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Beast Mastery Hunter can carry a two-hander or two one-handers, and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class per data/judgments/weapon-imbues.yaml, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                         | Off hand                         | DPS           | Against this set |
+|-----------------------------------|----------------------------------|---------------|------------------|
+| Bloodmoon                         | *empty, two-hander*              | 3694.5 ± 1.09 | +113.8           |
+| Vengeful Gladiator's Decapitator  | *empty, two-hander*              | 3688.3 ± 1.09 | +107.6           |
+| Halberd of Desolation             | *empty, two-hander*              | 3673.3 ± 1.08 | +92.6            |
+| Twinblade of the Phoenix          | *empty, two-hander*              | 3663.6 ± 1.08 | +82.9            |
+| Blade of Infamy                   | Blade of Infamy                  | 3624.7 ± 1.05 | +44.0            |
+| Blade of Infamy                   | Tracker's Blade                  | 3609.0 ± 1.05 | +28.3            |
+| Blade of Infamy                   | Blade of Savagery                | 3607.7 ± 1.04 | +27.0            |
+| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 3598.6 ± 1.05 | +17.9            |
+| Talon of the Phoenix              | Claw of the Phoenix              | 3594.8 ± 1.04 | +14.1            |
+| Talon of the Phoenix              | Talon of Azshara                 | 3591.4 ± 1.04 | +10.7            |
+| Boundless Agony                   | Blade of Infamy                  | 3580.7 ± 1.01 | +0.0             |
+
+The best combination, Bloodmoon alone, a two-hander, measures +113.8 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
