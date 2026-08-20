@@ -229,6 +229,41 @@ the_enhancement_trinket_round_is_enumerated:
     within one standard error of Darkmoon Card: Crusade beside Dragonspine at best in slot,
     2363.7 against 2363.3, and behind Tsunami Talisman and Bloodlust Brooch at every anchor
     that reaches it.'
+the_beast_mastery_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the seven-trinket
+    pool as a variant of each of the three anchor profiles, 57 runs, every row in data/facts/variant-sims.yaml.
+  best_combination_per_anchor: 'Dragonspine Trophy plus Bloodlust Brooch at all three anchors:
+    3342.3 at entry, 3523.1 at tier and 3591.9 at best in slot. The entry and tier anchors already
+    wear it, so each table''s top row IS its anchor figure; the best-in-slot anchor wears Dragonspine
+    plus Madness of the Betrayer, 11.2 behind the Brooch pair, and the Brooch is a Badge of Justice
+    purchase, so the gap closes without contesting any drop. NOT A RULING. One standard error
+    is 0.91 to 1.03 across the tables.'
+  the_dragonspine_premium: 'The best pair holding Dragonspine Trophy minus the best pair without
+    it, pure arithmetic on the table: 37.5 at entry, 39.1 at tier and 32.2 at best in slot. The
+    best pair without it is Madness of the Betrayer plus Bloodlust Brooch at tier and best in
+    slot, and at entry, where Madness is not yet reachable, Tsunami Talisman plus Bloodlust Brooch.'
+  the_armor_tier_caveat: Madness of the Betrayer carries armor penetration, so every figure that
+    holds it moves with the boss's armor, and these are at 6193, the tier ten of the fourteen
+    bosses sit in. At that tier Dragonspine plus Madness is SECOND at both anchors that can reach
+    it, 11.2 behind Dragonspine plus the Brooch at best in slot and 15.8 behind at tier.
+  a_workbook_reversal: 'The BM tab''s Trinket ladder ranks Bloodlust Brooch sixth at 118.00,
+    below Madness of the Betrayer second at 159.00, Tsunami Talisman fourth at 135.72 and Darkmoon
+    Card: Crusade fifth at 120.00. Measured, the Brooch beside Dragonspine Trophy is the best
+    pair at every anchor, the same reversal the Retribution, Arms, Fury and Enhancement rounds
+    measured, and here it reverses the WORN best-in-slot pair: the capture wears Dragonspine
+    plus Madness, read from two tied Best trinket rows of its published source, and the Brooch
+    pair measures 11.2 above it, about eight standard errors of a difference. Talon of Al''ar,
+    ranked tenth at 87.00 above Core of Ar''kelos twelfth at 85.00, reverses too: Core beside
+    Dragonspine reads 40.9 above the Talon beside Dragonspine at best in slot, 3566.7 against
+    3525.8, and every pairing that holds the Talon lands in the bottom half of its table, its
+    best placement ninth of fifteen at entry beside Dragonspine.'
+  the_talon_of_alar_is_priced_by_its_proc_alone: 'Talon of Al''ar carries no worn stats per
+    items.csv, so everything its rows measure is the simulator''s pricing of its proc, and the
+    vendored binary does price it, tested behaviorally per the Enhancement precedent rather than
+    read from the stale source checkout: a diagnostic run at the same settings read Dragonspine
+    Trophy beside an EMPTY trinket slot at 3501.7 on the best-in-slot anchor, 24.1 under Dragonspine
+    beside the Talon at 3525.8. So priced, the tab''s rank ten sits last among the six Dragonspine
+    pairings at every anchor.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the

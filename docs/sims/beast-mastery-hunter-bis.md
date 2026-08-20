@@ -79,6 +79,27 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a flat attack power partner and another beside a proc, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+
+The ten best of the 21 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                 | DPS           | Against this set |
+|---------------------------------|-------------------------|---------------|------------------|
+| Dragonspine Trophy              | Bloodlust Brooch        | 3591.9 ± 1.02 | +11.2            |
+| Dragonspine Trophy *(this set)* | Madness of the Betrayer | 3580.7 ± 1.01 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman        | 3577.8 ± 1.02 | -2.9             |
+| Dragonspine Trophy              | Core of Ar'kelos        | 3566.7 ± 1.01 | -14.0            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade  | 3562.4 ± 1.00 | -18.3            |
+| Madness of the Betrayer         | Bloodlust Brooch        | 3559.7 ± 1.01 | -21.0            |
+| Tsunami Talisman                | Bloodlust Brooch        | 3557.7 ± 1.03 | -23.0            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch        | 3544.6 ± 1.01 | -36.1            |
+| Madness of the Betrayer         | Tsunami Talisman        | 3543.7 ± 1.02 | -37.0            |
+| Madness of the Betrayer         | Core of Ar'kelos        | 3535.0 ± 1.00 | -45.7            |
+
+The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +11.2 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

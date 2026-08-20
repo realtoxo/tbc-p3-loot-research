@@ -765,6 +765,64 @@ ROUNDS: dict[str, dict] = {
             {"id": 29949, "phase3": False},
             {"id": 28772, "phase3": False},
         ],
+        # THE TRINKET POOL, the sixth enumerative trinket round after the
+        # Combat Rogue pilot and the Retribution, Arms, Fury and
+        # Enhancement rounds: every max-level trinket the BM tab's Trinket
+        # ladder ranks, with anything from Karazhan and the badge vendor
+        # onward acceptable, and the runner generates every unordered pair
+        # itself. The ladder ranks fifteen; eight are out on the standing
+        # exclusions, all availability rather than routing: Mark of the
+        # Champion, Slayer's Crest, Kiss of the Spider and Drake Fang
+        # Talisman drop in level-60 raids; the Hourglass of the
+        # Unraveller, the Abacus of Violent Odds and the Icon of
+        # Unyielding Courage drop in five-man dungeons below Karazhan; and
+        # Bladefist's Breadth is a leveling quest reward, not a max-level
+        # item. Core of Ar'kelos stays in as a max-level Netherstorm quest
+        # reward, per the Retribution precedent. Talon of Al'ar, the tab's
+        # rank ten and this pool's one class-locked piece, is new to the
+        # trinket rounds: it carries no worn stats per items.csv, and the
+        # vendored binary DOES price its proc, tested behaviorally on 20
+        # August 2026 per the Enhancement precedent, Dragonspine Trophy
+        # beside the Talon reading 24.1 above Dragonspine beside an empty
+        # slot on the best-in-slot anchor at the same seed. No Ahn'Qiraj
+        # and no world-boss trinket is on the tab, and no Ashtongue
+        # Talisman is either: the hunter Ashtongue piece is not ranked, so
+        # it is not a candidate. The entry and tier anchors wear
+        # Dragonspine Trophy with Bloodlust Brooch and the best-in-slot
+        # anchor wears Dragonspine Trophy with Madness of the Betrayer,
+        # all three in the pool, so no worn item needed adding. `phase3`
+        # marks what the entry anchor cannot reach: Madness of the
+        # Betrayer is a Black Temple drop.
+        "trinket_pool": [
+            {"id": 28830, "phase3": False},  # Dragonspine Trophy
+            {"id": 32505, "phase3": True},   # Madness of the Betrayer
+            {"id": 30627, "phase3": False},  # Tsunami Talisman
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 29383, "phase3": False},  # Bloodlust Brooch
+            {"id": 30448, "phase3": False},  # Talon of Al'ar
+            {"id": 29776, "phase3": False},  # Core of Ar'kelos
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside a flat attack power "
+            "partner and another beside a proc, so the two slots are "
+            "measured together: every row below is THIS PROFILE with "
+            "only the two trinket ids replaced, and a trinket carries "
+            "no enchant and no gem, so the consumables, buffs and seed "
+            "hold still and every figure is directly comparable with "
+            "the one at the top of this page. The candidates are every "
+            "max-level trinket on the EP Workbook's Trinket ladder for "
+            "this spec, from Gruul's Lair, the raids above it, the "
+            "badge vendor, the Darkmoon Faire and one max-level quest, "
+            "and every pair from that pool was measured, so the table "
+            "is an enumeration rather than a selection; the ten best "
+            "appear below, with the worn pair beside them. An on-use "
+            "trinket is activated on the simulator's own schedule. "
+            "Talon of Al'ar carries no worn stats, so its rows measure "
+            "the simulator's pricing of its proc alone. Madness of the "
+            "Betrayer carries armor penetration, which moves with the "
+            "boss's armor, and these figures are at the armor tier ten "
+            "of the fourteen bosses sit in.")),
     },
     # SURVIVAL: both styles in the same table, per the 20 August 2026 ruling
     # in data/judgments/weapon-styles.yaml, the second spec to mix them: a

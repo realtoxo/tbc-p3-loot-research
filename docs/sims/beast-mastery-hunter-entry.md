@@ -69,6 +69,27 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a flat attack power partner and another beside a proc, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+
+The ten best of the 15 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                | DPS           | Against this set |
+|---------------------------------|------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 3342.3 ± 0.95 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman       | 3328.4 ± 0.94 | -13.9            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 3318.6 ± 0.94 | -23.7            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 3314.5 ± 0.94 | -27.8            |
+| Tsunami Talisman                | Bloodlust Brooch       | 3304.8 ± 0.96 | -37.5            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 3296.2 ± 0.94 | -46.1            |
+| Tsunami Talisman                | Core of Ar'kelos       | 3281.6 ± 0.96 | -60.7            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 3280.4 ± 0.94 | -61.9            |
+| Dragonspine Trophy              | Talon of Al'ar         | 3279.1 ± 0.92 | -63.2            |
+| Tsunami Talisman                | Darkmoon Card: Crusade | 3277.8 ± 0.95 | -64.5            |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
