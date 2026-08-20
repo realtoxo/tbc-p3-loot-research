@@ -230,7 +230,7 @@ notes_from_the_previous_construction:
     claimants and comparison baselines now exclude weapons at or under 2.3 speed. THIS CAPTURE
     IS UNCHANGED, because it records what the published source said, per
     data/judgments/capture-fidelity.yaml. The simulation the disagreement deferred to has run,
-    tools/run_weapon_pair_sims.py, and its figures in data/facts/enhancement-weapon-pairs.yaml
+    tools/run_variant_sims.py, and its figures in data/facts/variant-sims.yaml
     measure both mismatched reference pairs ABOVE every matched pair; the reading is in
     data/facts/sim-results.yaml under what_the_matched_pairs_measure, and the rule stands until
     the council revisits it.'

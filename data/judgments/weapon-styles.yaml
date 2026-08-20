@@ -3,7 +3,7 @@ meta:
     guild lead. A style is the shape of what the hands carry, a two-hander alone
     or a main hand with an off hand, and it is a judgment because proficiency
     alone does not settle it, several classes can equip both.
-  why_here: The weapon pair rounds in tools/run_weapon_pair_sims.py enumerate
+  why_here: The weapon pair rounds in tools/run_variant_sims.py enumerate
     combinations per spec, and the first question for every spec is which styles
     its table holds. That is the guild lead's call, not a fact a table can
     supply, so it is recorded here with his words.

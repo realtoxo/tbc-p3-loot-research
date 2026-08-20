@@ -155,14 +155,14 @@ check: regen
 # Install the binary with tools/install_wowsimcli.sh first.
 sim ITERATIONS="10000":
     @python3 tools/run_sims.py --iterations {{ITERATIONS}} --all-tiers --out data/facts/sim-figures.yaml
-    @python3 tools/run_weapon_pair_sims.py --iterations {{ITERATIONS}}
+    @python3 tools/run_variant_sims.py --iterations {{ITERATIONS}}
     @python3 tools/generate_sim_pages.py
 
 # Rerun only the weapon pair rounds, every matched pair as a variant of each
 # anchor profile, then rewrite the sim pages that show them. `just sim` runs
 # this too; this is the cheap way to refresh the pairs alone.
 sim-weapons ITERATIONS="10000":
-    @python3 tools/run_weapon_pair_sims.py --iterations {{ITERATIONS}}
+    @python3 tools/run_variant_sims.py --iterations {{ITERATIONS}}
     @python3 tools/generate_sim_pages.py
 
 # Fail if a sim profile wears a gem or an enchant Phase 3 cannot supply.

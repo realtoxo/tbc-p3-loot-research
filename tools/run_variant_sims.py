@@ -28,19 +28,20 @@ tier anchor is not constrained by progression, per the guild lead's 14
 August 2026 ruling. The pair list is facts, not a ranking; which pair each
 anchor wears is the council's call.
 
-Writes data/facts/weapon-pair-sims.yaml and nothing else. The pages that
+Writes data/facts/variant-sims.yaml and nothing else. The pages that
 show these figures are written by tools/generate_sim_pages.py, the same
 generator that owns every other sim page. Runs the simulator, so it runs
 inside `just sim` and `just sim-weapons` and outside `just regen` and
 `just check`.
 
 Usage:
-    python3 tools/run_weapon_pair_sims.py --iterations 10000
+    python3 tools/run_variant_sims.py --iterations 10000
 """
 
 from __future__ import annotations
 
 import argparse
+import itertools
 import csv
 import json
 import math
@@ -56,7 +57,7 @@ from run_sims import (  # noqa: E402
     TALENTS, build_request, item_names, run,
 )
 
-OUT = Path("data/facts/weapon-pair-sims.yaml")
+OUT = Path("data/facts/variant-sims.yaml")
 
 # The anchors the variants run on, as the gear stems and page slugs spell
 # them. Hyphens, because that is the naming scheme of data/sim/gear and of
@@ -1194,6 +1195,22 @@ ROUNDS: dict[str, dict] = {
 }
 
 
+def with_trinkets(gear: dict, a: int, b: int) -> dict:
+    """The gear wearing one trinket combination.
+
+    RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the trinket rounds are
+    ENUMERATIVE, every unordered pair from the spec's pool, so the pairs are
+    generated from the pool rather than listed by hand and a rerun is always
+    exhaustive. A trinket carries no enchant and no socket, so the slots are
+    simply replaced, and which of the two sits in which slot does not matter
+    to the simulator.
+    """
+    out = {"items": [dict(entry) for entry in gear["items"]]}
+    for slot, item_id in (("trinket_1", a), ("trinket_2", b)):
+        out["items"][SLOT_ORDER.index(slot)] = {"id": item_id}
+    return out
+
+
 def with_ranged(gear: dict, item_id: int) -> dict:
     """The gear wearing one ranged candidate, the slot keeping its scope.
 
@@ -1335,7 +1352,7 @@ def main() -> int:
                     args.iterations, args.seed, buffs, party_of,
                     anchor.replace("-", "_"), args.seconds, args.armor))
                 if error:
-                    raise SystemExit(f"run_weapon_pair_sims.py: {spec}: "
+                    raise SystemExit(f"run_variant_sims.py: {spec}: "
                                      f"{anchor}: {label}: {error}")
                 entry = {"main_hand": weapon(pair["mh"])}
                 if oh:
@@ -1375,7 +1392,7 @@ def main() -> int:
                         anchor.replace("-", "_"), args.seconds, args.armor))
                     if error:
                         raise SystemExit(
-                            f"run_weapon_pair_sims.py: {spec}: {anchor}: "
+                            f"run_variant_sims.py: {spec}: {anchor}: "
                             f"ranged {label}: {error}")
                     results.append({
                         "ranged": weapon(cand["id"]),
@@ -1392,11 +1409,51 @@ def main() -> int:
             specs_out[spec]["ranged_why"] = round_["ranged_why"]
             specs_out[spec]["ranged_anchors"] = ranged_anchors
 
+        # THE TRINKET PASS, enumerative by ruling: every unordered pair from
+        # the pool, the entry anchor dropping what Phase 3 supplies, so the
+        # table is complete rather than curated and a rerun cannot silently
+        # narrow it. The pages show the top ten and the worn pair; the fact
+        # file keeps every row.
+        if round_.get("trinket_pool"):
+            trinket_anchors: dict[str, list[dict]] = {}
+            for anchor in round_.get("anchors", ANCHORS):
+                path = args.gear / f"{stem}.{anchor}.gear.json"
+                gear = json.loads(path.read_text())
+                pool = [c for c in round_["trinket_pool"]
+                        if not (anchor == "entry" and c["phase3"])]
+                results = []
+                for one, two in itertools.combinations(pool, 2):
+                    label = (f"{names.get(one['id'], one['id'])} + "
+                             f"{names.get(two['id'], two['id'])}")
+                    dps, stdev, error = run(args.cli, build_request(
+                        spec, with_trinkets(gear, one["id"], two["id"]),
+                        talents, args.iterations, args.seed, buffs, party_of,
+                        anchor.replace("-", "_"), args.seconds, args.armor))
+                    if error:
+                        raise SystemExit(
+                            f"run_variant_sims.py: {spec}: {anchor}: "
+                            f"trinkets {label}: {error}")
+                    results.append({
+                        "trinket_1": weapon(one["id"]),
+                        "trinket_2": weapon(two["id"]),
+                        "dps": round(dps, 1),
+                        "standard_error": round(
+                            stdev / math.sqrt(args.iterations), 2),
+                        "stdev": round(stdev, 1),
+                    })
+                    total += 1
+                    print(f"  {spec:22s} {anchor:20s} "
+                          f"{label:56s} {dps:9.1f}")
+                results.sort(key=lambda row: -row["dps"])
+                trinket_anchors[anchor] = results
+            specs_out[spec]["trinkets_why"] = round_["trinkets_why"]
+            specs_out[spec]["trinket_anchors"] = trinket_anchors
+
     document = {
         "meta": {
             "what": (
                 "Weapon rounds, one per spec in the registry of "
-                "tools/run_weapon_pair_sims.py, each combination run as a "
+                "tools/run_variant_sims.py, each combination run as a "
                 "VARIANT of that spec's anchor profiles: the exported gear "
                 "with only the weapon slots changed, a filled slot keeping "
                 "its enchant and a two-hander row running the off hand "

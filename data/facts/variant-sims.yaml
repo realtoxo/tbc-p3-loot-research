@@ -1,5 +1,5 @@
 meta:
-  what: 'Weapon rounds, one per spec in the registry of tools/run_weapon_pair_sims.py,
+  what: 'Weapon rounds, one per spec in the registry of tools/run_variant_sims.py,
     each combination run as a VARIANT of that spec''s anchor profiles: the exported
     gear with only the weapon slots changed, a filled slot keeping its enchant and
     a two-hander row running the off hand EMPTY, the anchor''s own consumables,

@@ -39,7 +39,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_sims  # noqa: E402
 
 FIGURES = Path("data/facts/sim-figures.yaml")
-WEAPON_PAIRS = Path("data/facts/weapon-pair-sims.yaml")
+WEAPON_PAIRS = Path("data/facts/variant-sims.yaml")
 GEAR = Path("data/sim/gear")
 ITEMS = Path("data/facts/items.csv")
 ROSTER = Path("data/facts/roster.yaml")
@@ -412,8 +412,8 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict,
     RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the weapons analysis is
     variants on the existing entry, tier and best-in-slot profile sims, shown
     on these detail pages, and more specs are expected to carry a round. The
-    figures are read from data/facts/weapon-pair-sims.yaml, which
-    tools/run_weapon_pair_sims.py writes, so this section appears for exactly
+    figures are read from data/facts/variant-sims.yaml, which
+    tools/run_variant_sims.py writes, so this section appears for exactly
     the specs and anchors that file holds and changes only when the round
     reruns. The Enhancement round is ruled in
     data/judgments/enhancement-weapon-rules.yaml.
@@ -544,7 +544,7 @@ def ranged_section(spec: str, anchor: str, row: dict,
     the one hunter weapon that is not a stat stick, so the ranged slot gets
     its own pass, rendered as its own table because a bow does not belong in
     a main-hand-and-off-hand table. Appears for exactly the specs and
-    anchors data/facts/weapon-pair-sims.yaml holds ranged figures for.
+    anchors data/facts/variant-sims.yaml holds ranged figures for.
     """
     if not WEAPON_PAIRS.is_file():
         return ""
@@ -604,6 +604,91 @@ def ranged_section(spec: str, anchor: str, row: dict,
 {block['ranged_why']}
 
 {rows_table(["Ranged", "DPS", "Against this set"], table_rows)}
+
+{reading}
+"""
+
+
+def trinket_section(spec: str, anchor: str, row: dict,
+                    gear: dict, name_of) -> str:
+    """A spec's trinket combinations, as a section of one anchor page.
+
+    RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the trinket rounds run every
+    unordered pair from the spec's pool, and the page shows the TOP TEN of
+    that enumeration plus the worn pair, because a complete table of a
+    hundred and more rows stops being readable. The fact file keeps every
+    row. The worn pair is always visible at plus zero, for the same reason
+    as the weapon tables: the deltas are against this set.
+    """
+    if not WEAPON_PAIRS.is_file():
+        return ""
+    doc = yaml.safe_load(WEAPON_PAIRS.read_text())
+    block = (doc.get("specs") or {}).get(spec)
+    if not block:
+        return ""
+    rows = (block.get("trinket_anchors") or {}).get(anchor)
+    if not rows:
+        return ""
+    measured = len(rows)
+
+    worn = {
+        (gear["items"][run_sims.SLOT_ORDER.index("trinket_1")] or {}).get("id"),
+        (gear["items"][run_sims.SLOT_ORDER.index("trinket_2")] or {}).get("id"),
+    } - {None}
+    rows = [dict(e) for e in rows]
+    worn_row = None
+    for e in rows:
+        if {e["trinket_1"]["id"], e["trinket_2"]["id"]} == worn:
+            e["this_set"] = True
+            worn_row = e
+    shown = rows[:10]
+    if worn_row is None and len(worn) == 2:
+        a, b = sorted(worn)
+        worn_row = {"trinket_1": {"id": a, "name": name_of(a)},
+                    "trinket_2": {"id": b, "name": name_of(b)},
+                    "dps": row["dps"],
+                    "standard_error": row.get("standard_error"),
+                    "this_set": True}
+    if worn_row is not None and worn_row not in shown:
+        shown = shown + [worn_row]
+        shown.sort(key=lambda e: -e["dps"])
+
+    table_rows = [[
+        entry["trinket_1"]["name"]
+        + (" *(this set)*" if entry.get("this_set") else ""),
+        entry["trinket_2"]["name"],
+        f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}"
+        if entry.get("standard_error") is not None else f"{entry['dps']:.1f}",
+        f"{entry['dps'] - row['dps']:+.1f}",
+    ] for entry in shown]
+
+    best = rows[0]
+    if abs(best["dps"] - row["dps"]) < 0.05:
+        reading = (
+            "This set already wears the best combination on the table, "
+            "which is why the top row reads plus zero: that row IS this "
+            "profile, and every other row is an alternative measuring "
+            "under it.")
+    elif best["dps"] > row["dps"]:
+        reading = (
+            f"The best combination, {best['trinket_1']['name']} with "
+            f"{best['trinket_2']['name']}, measures "
+            f"{best['dps'] - row['dps']:+.1f} against this set's own "
+            "trinkets, so the upgrade path at this anchor runs through it.")
+    else:
+        reading = (
+            f"Every combination below measures UNDER this set's own "
+            f"trinkets, the best of them by {row['dps'] - best['dps']:.1f} "
+            "DPS, so the round found no trinket upgrade at this anchor.")
+
+    return f"""
+## Trinket combinations
+
+{block['trinkets_why']}
+
+The ten best of the {measured} combinations measured, and the worn pair.
+
+{rows_table(["Trinket", "Trinket", "DPS", "Against this set"], table_rows)}
 
 {reading}
 """
@@ -777,6 +862,7 @@ damage lands, so a physical spec moves between them and a pure caster does not.
     body += weapon_pair_section(spec, anchor, row, meta, gear, name_of,
                                 speed_of)
     body += ranged_section(spec, anchor, row, gear, name_of)
+    body += trinket_section(spec, anchor, row, gear, name_of)
 
     body += f"""
 ## The set
