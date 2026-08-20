@@ -141,6 +141,29 @@ what_the_matched_pairs_measure:
     workbook ranking Syphon 63 EPV below the Vengeful weapons, so speed does real work the EPV
     ladder cannot see. The spread from the best matched pair to the worst at best in slot is
     67.0 DPS, which is the size of the decision the weapon rows on a card are actually making.
+what_the_retribution_two_handers_measure:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eight two-handers from the workbook's
+    Two Hand ladder run as VARIANTS of each Retribution anchor profile, only the main hand id
+    replaced, the off hand empty and the slot keeping its Mongoose, figures in
+    data/facts/weapon-pair-sims.yaml. Two-handers only, per the 20 August 2026 style ruling in
+    data/judgments/weapon-styles.yaml.
+  the_anchors_reproduce: The worn weapon's variant reads the anchor figure to the digit at all
+    three anchors, Lionheart Executioner 2181.3 at entry and 2180.3 at tier, Torch of the Damned
+    2374.4 at best in slot, because a variant is the same request as its anchor.
+  the_routing_costs_this_spec_nothing: Torch of the Damned measures FIRST at both anchors that
+    reach it, 2374.4 at best in slot against Cataclysm's Edge's 2345.4 and 2227.1 at tier against
+    2211.7. The 15 August 2026 ruling in data/judgments/weapon-routing.yaml sends Cataclysm's
+    Edge to the Arms Warrior and keeps Torch here, so the routing takes 29.0 DPS from nobody;
+    it hands Arms the weapon Retribution measures second anyway.
+  where_the_simulator_and_the_workbook_disagree: The workbook prices Halberd of Desolation at
+    330.05 EPV, above Merciless Gladiator's Bonegrinder at 315.42, and the simulator reverses
+    them at every anchor that runs both, 2230.1 against 2263.0 at best in slot. The Halberd
+    carries 30 melee hit and this set is hit-capped at every anchor per hit-captured.yaml, so
+    a third of its budget buys nothing here, a set condition a one-column EPV cannot carry.
+    Soul Cleaver and Twinblade of the Phoenix swap order between anchors for the same class of
+    reason, Twinblade ahead by 14.0 on the tier set and Soul Cleaver ahead by 10.1 on the
+    best-in-slot set, whose higher attack power raises what Soul Cleaver's 315 armor
+    penetration is worth. NOT A RANKING. Which weapon each raider carries is the council's call.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
