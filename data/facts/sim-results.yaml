@@ -557,6 +557,67 @@ the_shadow_priest_weapon_round:
     beats every staff except Zhar'doom at both anchors that reach Phase 3, so a Shadow
     Priest holding any competitive one-hander loses nothing by passing every staff below
     Zhar'doom.
+the_balance_druid_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eleven rows run as variants
+    of each Balance Druid anchor profile in the shape the Affliction round set as the
+    caster template, BOTH styles in one table per the 20 August 2026 style ruling in
+    data/judgments/weapon-styles.yaml, on the three standard anchors only, not the
+    capture's alternative tier states holding the Tier 5 four-piece. A staff row runs the
+    off hand EMPTY and a main-hand row holds an off-hand frill that is not a weapon; the
+    main-hand slot keeps its Sunfire on every row, staff included, the frill takes no
+    imbue, and the Brilliant Wizard Oil applies to any weapon, so nothing about the
+    consumables varies across the rows. Tempest of Chaos is NOT a row and could not be
+    one, a druid cannot wield swords, so the exclusion is proficiency rather than routing
+    and the Owl tab agrees, its One Hand ladder holds no sword. The ladder's rank one and
+    rank two, the Vengeful Gladiator's Gavel and Spellblade, carry identical statistics
+    per items.csv, a mace and a dagger at the same figures, so the Gavel row stands for
+    both. The tab's only socketed weapon is Talon of the Tempest, One Hand rank seven and
+    below the cut, so no candidate in the round carries a socket and no figure here is
+    understated against a gemmed worn weapon. The Owl tab's Two Hand ladder begins at
+    rank three, Zhar'doom, with no rank one or two row anywhere in the capture. Figures
+    in data/facts/weapon-pair-sims.yaml.
+  the_anchors_reproduce: The worn combination's variant reads the anchor figure to the
+    digit at all three anchors, The Nexus Key with the off hand EMPTY 1671.3 at entry and
+    1715.8 at tier, and Zhar'doom with the off hand EMPTY 1952.7 at best in slot, which
+    also verifies that the empty-off-hand construction the 15 August 2026 routing
+    requires is what the anchor actually runs.
+  what_the_zhardoom_premium_prices: Zhar'doom measures FIRST at both anchors that reach
+    it, and this round completes the measured queue arithmetic for a fourth staff wearer.
+    On the best-in-slot set the staff reads 1952.7 ± 0.94 against 1919.2 ± 0.91 for the
+    best one-hand combination measured, The Maelstrom's Fury with the Chronicle of Dark
+    Secrets, a gap of 33.5, and on the tier set 1768.4 ± 0.88 against 1734.3 ± 0.85 for
+    the same pair, a gap of 34.1. The premium is STRUCTURAL for the same reason the
+    Shadow Priest's is, because Affliction's 34.8 and Destruction's 53.9 measure the
+    fallback left once Tempest of Chaos follows the routing to the Arcane Mage, a sword
+    either warlock could hold in principle, where this spec cannot equip the sword at
+    all, so no routing decision can narrow its 33.5. Beside the other measured figures,
+    Affliction 34.8, Destruction 53.9, the mage conceding Tempest 29.5, the Shadow
+    Priest's structural 12.1, the Balance Druid's structural 33.5 sits with the warlock
+    figures rather than the priest's. NOT A RULING. The council decides.
+  the_frill_order_matches_the_workbook: The Owl tab ranks the Chronicle of Dark Secrets
+    at 80.76 above the Blind-Seers Icon at 76.88, the same order as the warlock tabs and
+    the reverse of the Shadow Priest's, and the figures agree at both anchors that run
+    the comparison, the Vengeful Gladiator's Gavel with the Chronicle 1916.9 ± 0.92
+    against 1905.8 ± 0.91 with the Blind-Seers Icon at best in slot, and 1731.6 ± 0.86
+    against 1723.3 ± 0.85 on the tier set, so unlike the priest round this round records
+    no disagreement between the frill ladder and the measurements. The hit context
+    differs from the priest's over-cap account, per the capture in
+    data/facts/sim-profiles/bis-capture/balance-druid.yaml the best-in-slot set sits 15
+    rating short of the spell hit target, so the Chronicle's 17 hit converts in full.
+  entry_prefers_the_captured_staff: The worn entry combination measures FIRST of the
+    three pre-Phase 3 rows, The Nexus Key alone 1671.3 ± 0.86 against 1642.2 ± 0.86 for
+    the Merciless Gladiator's War Staff and 1628.0 ± 0.87 for the Merciless Gladiator's
+    Spellblade with the Jewel of Infinite Possibilities, so this round records no
+    disagreement with its capture at any anchor, the same account as the mage and priest
+    entries and the opposite of the warlocks'.
+  the_styles_interleave_rather_than_separate: The two styles mix through this table at
+    every anchor, as they did in every caster round. On the best-in-slot set the order
+    runs Zhar'doom, then The Maelstrom's Fury, the Gavel and Hammer of Judgement rows,
+    then the Season 3 Battle Staff at 1900.1 ± 0.90, and the spread from the worn top row
+    to the bottom is 81.0. On the tier set the worn Nexus Key at 1715.8 ± 0.83 sits
+    SEVENTH of eleven, 18.5 below The Maelstrom's Fury with the Chronicle, so at that
+    anchor every Phase 3 main hand paired with the Chronicle is an upgrade over the worn
+    staff and only Zhar'doom beats them.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
