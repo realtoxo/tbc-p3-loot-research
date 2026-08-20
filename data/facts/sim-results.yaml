@@ -464,6 +464,62 @@ the_arcane_trinket_round_is_enumerated:
     proc. Beside the Pendant of the Violet Eye, 2482.6, 65.8 up, its worn 40 intellect and its
     on-use mana restoration priced together. The Braid itself, measured from the other side with
     the Icon fixed, is 100.7 up on the empty slot, 2504.3 against 2403.6.'
+the_shadow_priest_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the seven-trinket
+    pool as a variant of each of the three anchor profiles, 57 runs, every row in data/facts/variant-sims.yaml.
+    The fourth caster trinket round; the pool is the Shad tab's ladder, seven of fifteen surviving
+    the standing exclusions, and every worn trinket is tab-ranked, so the worn-trinket override
+    that admitted Quagmirran's Eye to both warlock rounds admits nothing here.
+  best_combination_per_anchor: 'Darkmoon Card: Crusade plus Icon of the Silver Crescent at entry,
+    1452.1, and The Skull of Gul''dan plus Darkmoon Card: Crusade at tier, 1504.5, and the same
+    Skull and Card pair at best in slot, 1577.9. The entry and best-in-slot anchors WEAR their
+    tables'' top rows, so both top rows ARE the anchor figures; the second entry pair, Eye of
+    Magtheridon plus the Icon, is 5.9 behind. The tier anchor wears the entry pair, FOURTH in
+    its table and 6.7 behind the Skull pair, because the tier anchor is the entry set plus tier
+    tokens and the Skull is not a token. NOT A RULING. One standard error is 0.26 to 0.31 across
+    the tables.'
+  the_skull_of_guldan_premium: 'The best pair holding The Skull of Gul''dan minus the best pair
+    without it, pure arithmetic on the table, 6.7 at tier and 6.0 at best in slot, beside
+    Destruction''s 33.1 and 41.5, Arcane''s 26.1 and 30.1 and Affliction''s 32.6 and 24.8; the
+    entry table drops the Skull, a Black Temple drop. The fourth of the six wearers'' premiums
+    to be measured and BY FAR the smallest, about a quarter of the next smallest at best in slot. The
+    best pair without the Skull is Darkmoon Card: Crusade plus Icon of the Silver Crescent at
+    every anchor, the pair both warlock rounds landed on, and it is also this spec''s worn entry
+    and tier pair. Two of what the Skull carries are worth little to these sets: its 25 spell
+    hit per data/facts/items.csv lands on anchors already past the 76 net target, 92, 100 and
+    138 item hit per data/facts/hit-captured.yaml and the best-in-slot capture, and beside the
+    Card its whole measured worth is 57.1, against 134.9 for Destruction, 117.6 for Arcane and
+    100.8 for Affliction on their own diagnostics.'
+  the_armor_tier_note: 'These figures are at armor 6193 like every trinket round, and for this
+    spec the tier is a label rather than a variable: data/facts/sim-figures.yaml reads the same
+    figure at armor 0, 6193 and 7684 at every anchor, 1577.9 at best in slot at all three, and
+    a diagnostic in this round reran the worn best-in-slot pair at all three armor tiers and
+    read 1577.9 with the same standard error each time, so nothing in these runs swings a melee
+    weapon into the boss''s armor and the invariance held through the rerun.'
+  a_workbook_reversal: 'The Shad tab''s Trinket ladder ranks Eye of Magtheridon fifth at 71.00,
+    above Icon of the Silver Crescent sixth at 69.00. Measured, the Icon beats the Eye in every
+    shared pairing, 1576.8 against 1571.5 beside the Skull at best in slot and 1571.9 against
+    1557.8 beside the Card, the same Icon-over-Eye reversal the Destruction and Arcane rounds
+    measured. The Sextant of Unstable Currents, ranked eighth at 66.18, and Scryer''s Bloodgem,
+    ranked eleventh at 49.61, measure as a tie: beside the Skull at best in slot the Bloodgem
+    reads 1552.9 to the Sextant''s 1552.3, beside the Card the Sextant reads 1539.3 to the
+    Bloodgem''s 1538.6, every shared gap under one point, so a 16.6-point ladder gap measures
+    as nothing. Both sit in the bottom three pairings of every table with Starkiller''s Bauble:
+    32 of the Bloodgem''s rating is spell hit and the Bauble carries 26 hit of its own, and all
+    three anchors are past the 76 net spell hit target per data/facts/hit-captured.yaml, so what
+    the ladder prices as hit is worth nothing to these sets, the same hit overpricing every
+    caster round has measured.'
+  the_binary_prices_the_procs_for_this_spec_too: 'Tested behaviorally against the vendored binary
+    rather than read from the stale source checkout, a fixed partner beside each candidate against
+    the same partner beside an EMPTY slot, same seed, on the best-in-slot anchor. The worn Darkmoon
+    Card: Crusade beside an empty slot read 1520.8; beside The Skull of Gul''dan, 1577.9, 57.1
+    up, and that IS the anchor figure, this being the worn pair, the Skull''s worn stats plus
+    its 175-haste on-use, which the simulator activates on its own schedule. Beside the Icon of
+    the Silver Crescent, 1571.9, 51.1 up, its worn 43 spell damage priced. Beside Eye of
+    Magtheridon, whose proc fires on a resist, 1557.8, 37.0 up, on a set past the hit target
+    that rarely resists. The Card itself, measured from the other side with the Skull fixed,
+    is 44.1 up on the empty slot, 1577.9 against 1533.8, all of it the simulator''s pricing of
+    its stacking proc, because the Card carries no worn stats per data/facts/items.csv.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the
