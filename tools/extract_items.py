@@ -219,6 +219,8 @@ def main() -> int:
         print(f"error: database not found: {args.db}", file=sys.stderr)
         return 2
 
+    db = json.loads(args.db.read_text())
+
     tiers: dict[int, set[str]] = {}
     sources: dict[int, set[str]] = {}
     for row in csv.DictReader(args.loot.open()):
@@ -257,7 +259,7 @@ def main() -> int:
     # Imported here rather than at the top of the file. extract_ladder reads
     # this module's stat and slot enums, so a module-level import in this
     # direction closes a cycle and neither module loads.
-    from extract_ladder import referenced_ids
+    from extract_ladder import referenced_ids, weapon_speeds
 
     # ONLY WHERE NOTHING ELSE ALREADY ANSWERS. The workbook route is a weaker
     # claim than the two above it: it is a label typed into a spreadsheet's
@@ -267,7 +269,8 @@ def main() -> int:
     # and would read as disagreement. The Deathmantle pieces are the case that
     # shows it: the workbook labels three of them `Leather Armor`, which
     # route_of buckets as `crafted`, and they are tier vendor pieces.
-    for item_id, routes in referenced_ids(args.workbook, tokens).items():
+    for item_id, routes in referenced_ids(
+            args.workbook, tokens, weapon_speeds(db)).items():
         if item_id in sources:
             continue
         tiers.setdefault(item_id, set())
@@ -292,8 +295,6 @@ def main() -> int:
                 if isinstance(item_id, int) and item_id not in sources:
                     tiers.setdefault(item_id, set())
                     sources[item_id] = {"worn"}
-
-    db = json.loads(args.db.read_text())
 
     # The fifth population: every Ashtongue Deathsworn reward.
     #

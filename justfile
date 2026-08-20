@@ -196,7 +196,7 @@ regen:
     @python3 tools/extract_constraints.py --out theme/filters/constraints.generated.lua
     @python3 tools/extract_judgments.py --out theme/filters/judgments.generated.lua
     @python3 tools/extract_trinket_pairs.py --out theme/filters/trinkets.generated.lua
-    @python3 tools/generate_item_pages.py --out docs/items
+    @python3 tools/generate_item_pages.py --db "{{wowsims}}/assets/database/db.json" --out docs/items
     @python3 tools/generate_spec_pages.py
     @python3 tools/extract_conversions.py --out theme/filters/conversions.generated.lua
     @python3 tools/extract_ladder.py --db "{{wowsims}}/assets/database/db.json" --out theme/filters/ladder.generated.lua

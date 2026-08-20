@@ -18,11 +18,6 @@ title: Swiftsteel Bludgeon
 
 ::: {.specs}
 
-#### Enhancement Shaman
-
-Delta
-:   [Swiftsteel Bludgeon]{.item}
-
 :::
 
 ::::

@@ -18,11 +18,6 @@ title: Fist of Molten Fury
 
 ::: {.specs}
 
-#### Enhancement Shaman
-
-Delta
-:   [Fist of Molten Fury]{.item}
-
 #### Survival Hunter
 
 Delta

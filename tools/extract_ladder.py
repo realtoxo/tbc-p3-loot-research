@@ -460,6 +460,8 @@ def shortlist(
     tier_ids: set[int],
     world_boss: set[int],
     level_60: frozenset[str],
+    spec: str,
+    speed_of: dict[int, float],
 ) -> list[dict]:
     """The best items in one section, best first, across every phase.
 
@@ -484,6 +486,9 @@ def shortlist(
         and row["location"] not in level_60
         and (arena_allowed or row["route"] != "arena")
     ]
+    # THE SPEED RULE IS APPLIED BEFORE THE CUT, so the vacated places backfill
+    # with the next eligible slow weapons instead of the list running short.
+    rows = enhancement_slow_only(spec, section, rows, speed_of)
     rows.sort(key=lambda row: row["epv"], reverse=True)
     out = []
     limit = WIDE_SHORTLIST if section in WIDE_SECTIONS else SHORTLIST
@@ -635,6 +640,57 @@ WEAPON_SECTION_NAMES = frozenset(
 
 # The sections that show ten rather than five.
 WIDE_SECTIONS = WEAPON_SECTION_NAMES
+
+# THE ENHANCEMENT WEAPON SPEED FLOOR, ruled by the guild lead on 20 August
+# 2026: "for sake of this discussion shaman desires weapon > 2.3 speed (slow)".
+# The ruling and its reasoning live in
+# data/judgments/enhancement-weapon-rules.yaml.
+ENHANCEMENT_SPEC = "Enhancement Shaman"
+ENHANCEMENT_SPEED_FLOOR = 2.3
+
+
+def weapon_speeds(database: dict) -> dict[int, float]:
+    """Every weapon speed the simulator database states, keyed by item id.
+
+    READ FROM db.json AND NEVER FROM items.csv, because the shortlist decides
+    which ids items.csv holds. A selection rule reading items.csv would close
+    that into a cycle, which is the invariant referenced_ids states.
+    """
+    out: dict[int, float] = {}
+    for item in database.get("items", []):
+        speed = item.get("weaponSpeed")
+        if speed:
+            out[int(item["id"])] = float(speed)
+    return out
+
+
+def enhancement_slow_only(
+    spec: str,
+    section: str,
+    rows: list[dict],
+    speed_of: dict[int, float],
+) -> list[dict]:
+    """The rows of a weapon section an Enhancement Shaman is shown.
+
+    A weapon the guild lead ruled the spec will not wear is a weapon its
+    ladder must not rank, so a row whose speed sits at or under the floor is
+    removed BEFORE the shortlist cut, and the next eligible slow weapon takes
+    the vacated place rather than the list running short. Ruled on 20 August
+    2026, recorded in data/judgments/enhancement-weapon-rules.yaml, and stated
+    as a domain fact in docs/kb/DOMAIN.md since 10 August 2026.
+
+    Every other spec, and every non-weapon section, passes through unchanged.
+    A row whose id the database does not price for speed is kept, because
+    removing it would disposition an item on absence of evidence.
+    """
+    if spec != ENHANCEMENT_SPEC or section not in WEAPON_SECTION_NAMES:
+        return rows
+
+    def slow(row: dict) -> bool:
+        speed = speed_of.get(row["item_id"])
+        return speed is None or speed > ENHANCEMENT_SPEED_FLOOR
+
+    return [row for row in rows if slow(row)]
 
 
 WORLD_BOSSES = Path("data/facts/world-bosses.yaml")
@@ -958,7 +1014,11 @@ def render(specs: dict[str, dict]) -> str:
     return "\n".join(out) + "\n"
 
 
-def referenced_ids(workbook: Path, tokens: dict) -> dict[int, set[str]]:
+def referenced_ids(
+    workbook: Path,
+    tokens: dict,
+    speed_of: dict[int, float],
+) -> dict[int, set[str]]:
     """Every item id this ladder names, by the acquisition route that names it.
 
     THE SCOPE RULE FOR items.csv, factored out here so there is one definition
@@ -969,7 +1029,10 @@ def referenced_ids(workbook: Path, tokens: dict) -> dict[int, set[str]]:
     because the workbook lists thousands of rows a council never sees.
 
     Selection here reads the workbook and tokens.yaml only, never items.csv, so
-    the extractor that WRITES items.csv can call this without a cycle.
+    the extractor that WRITES items.csv can call this without a cycle. The
+    `speed_of` map keeps that contract: it is built from db.json by
+    weapon_speeds, never from items.csv, and the caller supplies it so the
+    Enhancement speed rule shapes the scope exactly as it shapes the shortlist.
 
     One id can arrive by more than one route across twenty-one tabs, which is
     why the value is a set. The routes are route_of's four buckets, and the
@@ -993,7 +1056,8 @@ def referenced_ids(workbook: Path, tokens: dict) -> dict[int, set[str]]:
                 f"extract_ladder.py: {spec} names the tab {path}, which is absent.")
         ladder = read_tab(path)
         for section in ladder:
-            keep(shortlist(ladder, section, tier_ids, world_boss, level_60))
+            keep(shortlist(ladder, section, tier_ids, world_boss, level_60,
+                           spec, speed_of))
         sections = list(SECTION_TO_SLOT) + [
             name for names in WEAPON_SECTIONS.values() for name in names]
         for section in sections:
@@ -1014,6 +1078,8 @@ def main() -> int:
 
     if not args.db.exists():
         raise Unreadable(f"extract_ladder.py: database not found: {args.db}")
+    database = json.loads(args.db.read_text())
+    speed_of = weapon_speeds(database)
     tokens = yaml.safe_load(args.tokens.read_text())
     walked_in = entry_weapons(Path("data/facts/sim-profiles/hit-capture"))
     held, hand_of, slot_of, item_rows = {}, {}, {}, {}
@@ -1120,6 +1186,10 @@ def main() -> int:
                 and row["item_id"] not in world_boss
                 and row["location"] not in level_60
             ]
+            # THE COMPARISON BASELINES OBEY THE SPEED RULE TOO. A card
+            # measuring an Enhancement weapon against a fast one asks the
+            # council to weigh a comparison the spec will never make.
+            rows = enhancement_slow_only(spec, section, rows, speed_of)
             rows.sort(key=lambda row: row["epv"], reverse=True)
             slot_hand = "off_hand" if hand == "OffHand" else "main_hand"
             # THE CAPTURES KEY ON THE SNAKE NAME, the loop on the display
@@ -1140,7 +1210,8 @@ def main() -> int:
         # questions for a warrior and `Ring` is the workbook's own word.
         by_slot: dict[str, list[dict]] = {}
         for section in ladder:
-            best = shortlist(ladder, section, tier_ids, world_boss, level_60)
+            best = shortlist(ladder, section, tier_ids, world_boss, level_60,
+                             spec, speed_of)
             if best:
                 by_slot[section] = best
                 wanted.update(row["item_id"] for row in best)
@@ -1159,7 +1230,6 @@ def main() -> int:
     outside = {item_id for item_id in wanted if item_id not in held}
     found: dict[int, dict] = {}
     if outside:
-        database = json.loads(args.db.read_text())
         for item in database["items"]:
             if item["id"] in outside and item["id"] not in found:
                 found[item["id"]] = item

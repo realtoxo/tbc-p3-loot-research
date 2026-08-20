@@ -31,14 +31,16 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_ladder import (  # noqa: E402
-    LEVEL_60, SHORTLIST, SPECS, WEAPON_SECTION_NAMES, WIDE_SECTIONS,
-    WIDE_SHORTLIST, WORKBOOK, select,
+    ENHANCEMENT_SPEC, ENHANCEMENT_SPEED_FLOOR, LEVEL_60, SHORTLIST, SPECS,
+    WEAPON_SECTION_NAMES, WIDE_SECTIONS,
+    WIDE_SHORTLIST, WORKBOOK, enhancement_slow_only, select, weapon_speeds,
     WORLD_BOSSES, level_60_locations, read_tab, world_boss_ids,
 )
 
@@ -162,7 +164,8 @@ def relic_claimants(item_ids: set[str], items: dict[str, dict]) -> dict[str, lis
     return out
 
 
-def claimants(item_ids: set[str]) -> dict[str, list[str]]:
+def claimants(item_ids: set[str],
+              speed_of: dict[int, float]) -> dict[str, list[str]]:
     """Which specs rank each item in the top five of its slot.
 
     Read straight from the workbook tabs rather than from the generated ladder,
@@ -190,6 +193,10 @@ def claimants(item_ids: set[str]) -> dict[str, list[str]]:
                 and row["location"] not in level_60
                 and (arena_allowed or row["route"] != "arena")
             ]
+            # THE SAME SPEED RULE THE LADDER APPLIES, before the cut, so the
+            # backfilled slow weapons gain their claimant here exactly as they
+            # gain their shortlist row there.
+            eligible = enhancement_slow_only(spec, section, eligible, speed_of)
             eligible.sort(key=lambda row: row["epv"], reverse=True)
             # THE SAME SELECTION THE LADDER APPLIES, or this counts a different
             # list from the one the compendium shows.
@@ -203,7 +210,8 @@ def claimants(item_ids: set[str]) -> dict[str, list[str]]:
 
 
 def share_within_weapon_sets(contested: dict[str, list[str]],
-                             items: dict[str, dict]) -> None:
+                             items: dict[str, dict],
+                             speed_of: dict[int, float]) -> None:
     """A spec claiming one half of a paired weapon claims the other half.
 
     THE WORKBOOK PRICES AN OFF-HAND WEAPON AS A MAIN HAND, because most tabs
@@ -222,6 +230,13 @@ def share_within_weapon_sets(contested: dict[str, list[str]],
     Limited to WEAPON sets on purpose. A tier set is five pieces in five slots,
     each of which the workbook ranks in its own right, so sharing claimants
     across one would add cards the data does not support.
+
+    THE ENHANCEMENT SPEED RULE HOLDS THROUGH THE SHARE. The Fists of Fury pair
+    Claw of Molten Fury at 2.7 with Fist of Molten Fury at 1.5, so a share that
+    ignored speed would hand the fast half an Enhancement claimant the ladder
+    just removed. A shared claimant lands on a set member only where the member
+    passes the same speed rule the shortlist applied, per
+    data/judgments/enhancement-weapon-rules.yaml.
     """
     members: dict[str, list[str]] = {}
     for item_id, row in items.items():
@@ -235,7 +250,11 @@ def share_within_weapon_sets(contested: dict[str, list[str]],
                     shared.append(spec)
         for item_id in ids:
             if item_id in contested:
-                contested[item_id] = list(shared)
+                kept = list(shared)
+                speed = speed_of.get(int(item_id))
+                if speed is not None and speed <= ENHANCEMENT_SPEED_FLOOR:
+                    kept = [spec for spec in kept if spec != ENHANCEMENT_SPEC]
+                contested[item_id] = kept
 
 
 def page(row: dict, specs: list[str], ambiguous: bool) -> str:
@@ -276,8 +295,17 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--items", type=Path, default=ITEMS)
     ap.add_argument("--drops", type=Path, default=DROPS)
+    ap.add_argument("--db", type=Path, required=True, help="WoWSims db.json")
     ap.add_argument("--out", type=Path, default=Path("docs/items"))
     args = ap.parse_args()
+
+    if not args.db.exists():
+        print(f"error: database not found: {args.db}", file=sys.stderr)
+        return 2
+    # Speeds come from db.json rather than items.csv for the same reason
+    # extract_ladder reads them there: the speed rule decides which ids
+    # items.csv holds, so reading speeds back out of items.csv is a cycle.
+    speed_of = weapon_speeds(json.loads(args.db.read_text()))
 
     items = {r["item_id"]: r for r in csv.DictReader(args.items.open())}
     dropped = {
@@ -322,7 +350,7 @@ def main() -> int:
     }
     subjects = dropped | tier_pieces | reputation
 
-    contested = claimants(subjects)
+    contested = claimants(subjects, speed_of)
     # A relic is claimed by its class, not by a workbook rank. Merged after the
     # ladder pass so it can only ADD a claimant, never remove one the workbook
     # supplied.
@@ -332,7 +360,7 @@ def main() -> int:
             for spec in specs:
                 if spec not in contested.setdefault(item_id, []):
                     contested[item_id].append(spec)
-    share_within_weapon_sets(contested, items)
+    share_within_weapon_sets(contested, items, speed_of)
 
     # The directory is rebuilt rather than added to, so an item removed from the
     # drop table does not leave a page behind describing loot that is not there.

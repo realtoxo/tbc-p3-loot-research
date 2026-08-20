@@ -1,0 +1,58 @@
+meta:
+  what: Weapon selection rules the guild lead settled for the Enhancement Shaman. These
+    are SPEC-LEVEL selection rules, not allocation decisions about a single contested
+    weapon, which is why they live beside data/judgments/weapon-routing.yaml rather
+    than inside it.
+  why_here: The EP Workbook ranks Enhancement main-hand and off-hand candidates in one
+    combined One Hand pool and prices neither weapon speed nor the matched pair, so a
+    rule that selects on speed cannot be read out of any fact table. It is a judgment,
+    and it lives in data/judgments/.
+  ruled: '2026-08-20'
+  by: the guild lead
+  lineage: docs/kb/DOMAIN.md has recorded the same rule on the guild lead's word since
+    10 August 2026, flagged as uncorroborated and with a simulation named as the route
+    to settle it. The guild lead deferred that run on 10 August 2026. These rulings
+    end the deferral.
+rulings:
+- rule: A weapon an Enhancement Shaman is shown must be SLOW, meaning speed above 2.3.
+  verbatim: for sake of this discussion shaman desires weapon > 2.3 speed (slow)
+  consequence: Fast weapons leave the Enhancement cards and the Enhancement EPV
+    shortlist, and the vacated places are BACKFILLED by the next eligible slow
+    weapons rather than left empty, per the guild lead on the same day, "when we
+    remove fast weapons from our cards we should re-asses which weapons should
+    replace them and now be included in the card as well". Seven of the nineteen
+    published shortlist rows leave under this rule, including the section's rank 1,
+    Swiftsteel Bludgeon at speed 1.5.
+- rule: The two weapons are a MATCHED PAIR, carrying the same speed in both hands.
+  verbatim: shaman must pair weapon speeds together (2.6+2.6, 2.7+2.7) etc ... there
+    is no combining different weapon speeds
+  consequence: Every anchor pair this project had captured violates the rule. The
+    entry and tier anchors pair 2.7 against 2.6 and the best-in-slot capture pairs
+    2.6 against 2.8. Which matched pair each anchor should wear is settled by the
+    special simulation round below, not by re-reading the workbook.
+  sync_unaffected: The 15 August 2026 ruling that the weapons run UNSYNCED stands.
+    tools/run_sims.py sends no syncType, and it keeps sending none for matched-speed
+    pairs, where the simulator's Auto mode would otherwise begin delaying the off
+    hand.
+- rule: The default Enhancement build must NOT assume an axe is best in slot, because
+    that ranking rides on the Orc racial and this raid's shaman is a Draenei.
+  verbatim: The defualt enhance shaman specs should not assume BIS is axe due to
+    being orc.. This is misrepresentative
+  where_the_assumption_entered: Our own simulations already run Draenei, read from
+    roster.yaml::races.by_spec. The Orc assumption entered through the captured
+    sources. The Wowhead Phase 3 list ranks Vengeful Gladiator's Cleaver, an axe,
+    first, and the captured creator commentary recommends gladiator axes
+    "especially for orcs". A Draenei inherits none of that privilege.
+special_sim_round:
+  what: A dedicated round of Enhancement weapon simulations, each candidate pair at a
+    matched speed with everything else held constant, compared relative to one
+    another. It answers where the true weapon upgrades lie for this raid's Draenei,
+    and it is the simulation docs/kb/DOMAIN.md named as the route to settle the
+    speed rule.
+  verbatim: i think we should do a special round of enhancement shaman weapon sims
+    where we pair weapons by item speeds and perform a relative analysis... this
+    will inform us where the enhancement shaman weapo upgrades truly lie as there
+    is no combining different weapon speeds
+  published_where: A dedicated section on the Enhancement Shaman spec page,
+    docs/specs/enhancement-shaman.md, which is generated, so the section is
+    produced by the generator from the figures rather than written by hand.

@@ -28,11 +28,6 @@ Delta
 Delta
 :   [The Brutalizer]{.item}
 
-#### Enhancement Shaman
-
-Delta
-:   [The Brutalizer]{.item}
-
 :::
 
 ::::

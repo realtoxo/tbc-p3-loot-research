@@ -18,11 +18,6 @@ title: Claw of Molten Fury
 
 ::: {.specs}
 
-#### Enhancement Shaman
-
-Delta
-:   [Claw of Molten Fury]{.item}
-
 #### Survival Hunter
 
 Delta
@@ -39,6 +34,11 @@ Delta
 :   [Claw of Molten Fury]{.item}
 
 #### Protection Warrior
+
+Delta
+:   [Claw of Molten Fury]{.item}
+
+#### Enhancement Shaman
 
 Delta
 :   [Claw of Molten Fury]{.item}
