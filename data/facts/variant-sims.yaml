@@ -9441,6 +9441,1129 @@ specs:
         dps: 2347.6
         standard_error: 1.26
         stdev: 125.9
+    trinkets_why: 'A trinket is worth one thing beside a steady spell damage partner
+      and another beside an on-use haste one, so the two slots are measured together:
+      every row below is THIS PROFILE with only the two trinket ids replaced, and
+      a trinket carries no enchant and no gem, so the consumables, buffs and seed
+      hold still and every figure is directly comparable with the one at the top
+      of this page. The candidates are every max-level trinket on the EP Workbook''s
+      Trinket ladder for this spec, from Magtheridon''s Lair, the raids above it,
+      the badge vendor, the Darkmoon Faire, one reputation, one max-level quest
+      and the dungeon trinket every anchor wears, and every pair from that pool
+      was measured, so the table is an enumeration rather than a selection; the
+      ten best appear below, with the worn pair beside them. An on-use trinket is
+      activated on the simulator''s own schedule, which is how The Skull of Gul''dan''s
+      haste burst meets the casting rotation. Darkmoon Card: Crusade carries no
+      worn statistics, so everything its rows measure is the simulator''s pricing
+      of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so
+      its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
+      The Void Star Talisman is the one candidate only a warlock can wear, and its
+      on-use effect is a damage shield on the demon rather than a damage statistic,
+      so its rows price its worn spell damage alone.'
+    trinket_anchors:
+      entry:
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2075.5
+        standard_error: 1.18
+        stdev: 117.6
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2067.3
+        standard_error: 1.19
+        stdev: 119.4
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2066.4
+        standard_error: 1.13
+        stdev: 112.9
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2059.3
+        standard_error: 1.15
+        stdev: 114.9
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2056.5
+        standard_error: 1.18
+        stdev: 118.3
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2055.0
+        standard_error: 1.13
+        stdev: 112.6
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        dps: 2051.4
+        standard_error: 1.13
+        stdev: 112.9
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2049.2
+        standard_error: 1.14
+        stdev: 114.1
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2045.5
+        standard_error: 1.16
+        stdev: 115.6
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2041.0
+        standard_error: 1.1
+        stdev: 109.7
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2040.8
+        standard_error: 1.16
+        stdev: 115.9
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2035.8
+        standard_error: 1.15
+        stdev: 115.0
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2028.6
+        standard_error: 1.1
+        stdev: 110.2
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2028.0
+        standard_error: 1.14
+        stdev: 114.4
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2027.7
+        standard_error: 1.17
+        stdev: 116.8
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2022.8
+        standard_error: 1.14
+        stdev: 113.9
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2019.6
+        standard_error: 1.12
+        stdev: 112.4
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2013.1
+        standard_error: 1.14
+        stdev: 114.2
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2009.6
+        standard_error: 1.1
+        stdev: 109.8
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2008.3
+        standard_error: 1.14
+        stdev: 113.6
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2006.3
+        standard_error: 1.15
+        stdev: 114.9
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2004.4
+        standard_error: 1.09
+        stdev: 109.4
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2001.3
+        standard_error: 1.14
+        stdev: 114.2
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 1997.7
+        standard_error: 1.11
+        stdev: 110.8
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 1993.2
+        standard_error: 1.11
+        stdev: 110.6
+      - trinket_1:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 1985.1
+        standard_error: 1.12
+        stdev: 111.6
+      - trinket_1:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 1980.3
+        standard_error: 1.11
+        stdev: 111.5
+      - trinket_1:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 1960.8
+        standard_error: 1.11
+        stdev: 110.6
+      tier-hands-and-head:
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2208.8
+        standard_error: 1.23
+        stdev: 122.5
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2208.3
+        standard_error: 1.23
+        stdev: 122.6
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        dps: 2203.2
+        standard_error: 1.23
+        stdev: 122.8
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        dps: 2201.1
+        standard_error: 1.19
+        stdev: 119.2
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2193.5
+        standard_error: 1.2
+        stdev: 119.6
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2180.1
+        standard_error: 1.21
+        stdev: 120.7
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2175.7
+        standard_error: 1.21
+        stdev: 120.7
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2167.2
+        standard_error: 1.25
+        stdev: 124.5
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2159.4
+        standard_error: 1.19
+        stdev: 118.5
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2157.8
+        standard_error: 1.2
+        stdev: 119.6
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2157.7
+        standard_error: 1.24
+        stdev: 123.6
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2157.2
+        standard_error: 1.19
+        stdev: 119.3
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2152.3
+        standard_error: 1.19
+        stdev: 119.0
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2149.4
+        standard_error: 1.18
+        stdev: 118.0
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2147.4
+        standard_error: 1.18
+        stdev: 118.2
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2145.8
+        standard_error: 1.2
+        stdev: 119.6
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        dps: 2142.8
+        standard_error: 1.19
+        stdev: 119.5
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2140.4
+        standard_error: 1.21
+        stdev: 121.4
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2136.0
+        standard_error: 1.19
+        stdev: 118.7
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2131.2
+        standard_error: 1.16
+        stdev: 115.8
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2126.4
+        standard_error: 1.22
+        stdev: 122.1
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2125.9
+        standard_error: 1.18
+        stdev: 118.2
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2120.5
+        standard_error: 1.18
+        stdev: 118.0
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2119.3
+        standard_error: 1.16
+        stdev: 116.4
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2118.2
+        standard_error: 1.17
+        stdev: 116.6
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2112.5
+        standard_error: 1.18
+        stdev: 117.6
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2107.4
+        standard_error: 1.17
+        stdev: 117.3
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2102.2
+        standard_error: 1.21
+        stdev: 120.9
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2098.0
+        standard_error: 1.16
+        stdev: 115.5
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2096.9
+        standard_error: 1.21
+        stdev: 120.5
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2095.5
+        standard_error: 1.15
+        stdev: 115.3
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2093.2
+        standard_error: 1.15
+        stdev: 115.1
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2090.6
+        standard_error: 1.15
+        stdev: 114.9
+      - trinket_1:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2082.0
+        standard_error: 1.16
+        stdev: 116.3
+      - trinket_1:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2077.1
+        standard_error: 1.16
+        stdev: 115.9
+      - trinket_1:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2055.4
+        standard_error: 1.15
+        stdev: 115.1
+      bis:
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        dps: 2506.1
+        standard_error: 1.33
+        stdev: 132.8
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2505.0
+        standard_error: 1.31
+        stdev: 131.4
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2503.1
+        standard_error: 1.32
+        stdev: 132.3
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        dps: 2493.8
+        standard_error: 1.3
+        stdev: 130.1
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2487.7
+        standard_error: 1.29
+        stdev: 128.7
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2472.4
+        standard_error: 1.3
+        stdev: 130.0
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2464.6
+        standard_error: 1.31
+        stdev: 130.9
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2462.0
+        standard_error: 1.32
+        stdev: 132.5
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2459.0
+        standard_error: 1.3
+        stdev: 129.8
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2449.9
+        standard_error: 1.32
+        stdev: 131.6
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2449.4
+        standard_error: 1.28
+        stdev: 127.9
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2446.9
+        standard_error: 1.28
+        stdev: 128.4
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2443.8
+        standard_error: 1.3
+        stdev: 129.7
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        dps: 2442.3
+        standard_error: 1.31
+        stdev: 131.2
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2438.1
+        standard_error: 1.29
+        stdev: 129.4
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2436.8
+        standard_error: 1.27
+        stdev: 126.5
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2434.5
+        standard_error: 1.29
+        stdev: 129.1
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2433.5
+        standard_error: 1.3
+        stdev: 129.9
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2431.0
+        standard_error: 1.25
+        stdev: 125.3
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2421.7
+        standard_error: 1.29
+        stdev: 128.5
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2419.0
+        standard_error: 1.3
+        stdev: 130.4
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2415.7
+        standard_error: 1.27
+        stdev: 127.4
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2414.8
+        standard_error: 1.28
+        stdev: 128.0
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2409.3
+        standard_error: 1.28
+        stdev: 127.8
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2407.2
+        standard_error: 1.25
+        stdev: 125.5
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2402.1
+        standard_error: 1.27
+        stdev: 127.2
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2397.7
+        standard_error: 1.29
+        stdev: 129.1
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2396.8
+        standard_error: 1.27
+        stdev: 126.6
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2394.4
+        standard_error: 1.26
+        stdev: 125.7
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2391.6
+        standard_error: 1.29
+        stdev: 128.7
+      - trinket_1:
+          id: 27683
+          name: Quagmirran's Eye
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2388.3
+        standard_error: 1.26
+        stdev: 125.6
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        dps: 2386.6
+        standard_error: 1.24
+        stdev: 124.3
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2381.3
+        standard_error: 1.24
+        stdev: 124.0
+      - trinket_1:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2371.9
+        standard_error: 1.26
+        stdev: 125.6
+      - trinket_1:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        trinket_2:
+          id: 30449
+          name: Void Star Talisman
+          source: raid_drop
+        dps: 2366.4
+        standard_error: 1.25
+        stdev: 125.3
+      - trinket_1:
+          id: 29132
+          name: Scryer's Bloodgem
+          source: drop
+        trinket_2:
+          id: 30340
+          name: Starkiller's Bauble
+          source: drop
+        dps: 2347.4
+        standard_error: 1.24
+        stdev: 124.1
   arcane_mage:
     why: 'An Arcane Mage can carry a staff or a one-hander with a held frill, and
       both styles run in the same table, so a row below is either a single staff
