@@ -65,6 +65,27 @@ An Elemental Shaman can carry a staff or a one-hander with a held off hand, and 
 
 The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +45.7 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one reputation, plus The Lightning Capacitor, which the ladder does not rank and which every one of the three sets wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. What The Lightning Capacitor is worth beyond an empty slot is entirely the simulator's pricing of its charge-and-discharge proc, because it carries no worn statistics, and the same holds for Darkmoon Card: Crusade and its stacking proc. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
+
+The ten best of the 21 combinations measured, and the worn pair.
+
+| Trinket                                  | Trinket                      | DPS           | Against this set |
+|------------------------------------------|------------------------------|---------------|------------------|
+| The Skull of Gul'dan                     | The Lightning Capacitor      | 1927.9 ± 0.94 | +34.0            |
+| The Skull of Gul'dan                     | Sextant of Unstable Currents | 1917.4 ± 0.90 | +23.5            |
+| The Skull of Gul'dan                     | Darkmoon Card: Crusade       | 1908.5 ± 0.89 | +14.6            |
+| The Skull of Gul'dan                     | Eye of Magtheridon           | 1899.8 ± 0.87 | +5.9             |
+| The Skull of Gul'dan                     | Icon of the Silver Crescent  | 1899.8 ± 0.87 | +5.9             |
+| Icon of the Silver Crescent *(this set)* | The Lightning Capacitor      | 1893.9 ± 0.94 | +0.0             |
+| Sextant of Unstable Currents             | The Lightning Capacitor      | 1890.9 ± 0.93 | -3.0             |
+| Darkmoon Card: Crusade                   | The Lightning Capacitor      | 1883.3 ± 0.93 | -10.6            |
+| Sextant of Unstable Currents             | Icon of the Silver Crescent  | 1879.5 ± 0.88 | -14.4            |
+| Darkmoon Card: Crusade                   | Icon of the Silver Crescent  | 1874.5 ± 0.89 | -19.4            |
+
+The best combination, The Skull of Gul'dan with The Lightning Capacitor, measures +34.0 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -56,6 +56,27 @@ An Elemental Shaman can carry a staff or a one-hander with a held off hand, and 
 
 The best combination, The Nexus Key alone, a two-hander, measures +7.7 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one reputation, plus The Lightning Capacitor, which the ladder does not rank and which every one of the three sets wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. What The Lightning Capacitor is worth beyond an empty slot is entirely the simulator's pricing of its charge-and-discharge proc, because it carries no worn statistics, and the same holds for Darkmoon Card: Crusade and its stacking proc. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
+
+The ten best of the 15 combinations measured, and the worn pair.
+
+| Trinket                                  | Trinket                     | DPS           | Against this set |
+|------------------------------------------|-----------------------------|---------------|------------------|
+| Icon of the Silver Crescent *(this set)* | The Lightning Capacitor     | 1718.8 ± 0.89 | +0.0             |
+| Sextant of Unstable Currents             | The Lightning Capacitor     | 1715.5 ± 0.87 | -3.3             |
+| Sextant of Unstable Currents             | Icon of the Silver Crescent | 1710.1 ± 0.85 | -8.7             |
+| Darkmoon Card: Crusade                   | The Lightning Capacitor     | 1709.3 ± 0.89 | -9.5             |
+| Darkmoon Card: Crusade                   | Icon of the Silver Crescent | 1704.8 ± 0.86 | -14.0            |
+| Eye of Magtheridon                       | The Lightning Capacitor     | 1701.1 ± 0.87 | -17.7            |
+| Sextant of Unstable Currents             | Darkmoon Card: Crusade      | 1700.4 ± 0.84 | -18.4            |
+| Eye of Magtheridon                       | Icon of the Silver Crescent | 1696.5 ± 0.84 | -22.3            |
+| Xi'ri's Gift                             | The Lightning Capacitor     | 1696.2 ± 0.84 | -22.6            |
+| Sextant of Unstable Currents             | Eye of Magtheridon          | 1692.1 ± 0.82 | -26.7            |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -585,6 +585,76 @@ the_balance_druid_trinket_round_is_enumerated:
     up on the empty slot beside the Ashtongue Talisman, 1952.7 against 1857.4, and 93.4 up beside
     the Card, 1955.1 against 1861.7, its worn statistics, its fully converting 25 hit and its
     175-haste on-use together.'
+the_elemental_shaman_trinket_round_is_enumerated:
+  measured: '2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the
+    seven-trinket pool as a variant of each of the three anchor profiles, 57 runs, every row in
+    data/facts/variant-sims.yaml. The sixth caster trinket round and the LAST of the thirteen;
+    the pool is the Ele tab''s ladder, six of fifteen surviving the standing exclusions, plus
+    one worn addition. The worn-trinket override fires for The Lightning Capacitor, a Karazhan
+    drop the tab does not rank at all, and it is worn at EVERY anchor, entry and tier beside
+    the Icon of the Silver Crescent and best in slot beside The Skull of Gul''dan, so a pool
+    without it could reproduce NO worn pair, the override''s strongest firing yet. Quagmirran''s
+    Eye, which the override admitted to the warlock and Balance rounds, is tab-ranked fourth
+    here but worn by no anchor, so it stays out on the five-man exclusion; and the Ashtongue
+    Talisman of Vision, this class''s talisman, is neither tab-ranked nor worn, out per the
+    Affliction and Shadow Priest precedent.'
+  best_combination_per_anchor: 'Icon of the Silver Crescent plus The Lightning Capacitor at
+    entry, 1718.8, and The Skull of Gul''dan plus The Lightning Capacitor at tier, 1927.9, and
+    the same Skull and Capacitor pair at best in slot, 2130.0. The entry and best-in-slot
+    anchors WEAR their tables'' top rows, so both top rows ARE the anchor figures; the second
+    entry pair, the Sextant of Unstable Currents plus the Capacitor, is 3.3 behind at a
+    standard error near 0.9. The tier anchor wears the entry pair, SIXTH in its table and 34.0
+    behind the Skull and Capacitor pair, because the tier anchor is the entry set plus tier
+    tokens and the Skull is not a token. The Capacitor sits in the best pair at all three
+    anchors. NOT A RULING. One standard error is 0.79 to 0.97 across the tables.'
+  the_skull_of_guldan_premium: 'The best pair holding The Skull of Gul''dan minus the best pair
+    without it, pure arithmetic on the table, 34.0 at tier and 38.6 at best in slot; the entry
+    table drops the Skull, a Black Temple drop. The LAST of the six wearers'' premiums, so the
+    queue is COMPLETE, and at best in slot it reads: Destruction 41.5, Elemental Shaman 38.6,
+    Arcane 30.1, Affliction 24.8, Balance 20.9, Shadow Priest 6.0. The hit context is the
+    priest''s, not Balance''s: the net target is 51 per data/facts/hit-captured.yaml, the item
+    hit is 52 at entry, 103 at tier and 90 at best in slot wearing the Skull, 65 without it,
+    so every anchor is past the target and the Skull''s 25 hit converts to nothing, yet the
+    premium lands SECOND of six rather than collapsing to the priest''s 6.0. The whole of the
+    Skull''s measured worth beside the Capacitor, 115.2 on the empty-slot diagnostic, is its 55
+    spell damage and its 175-haste on-use, beside Arcane''s 117.6 and above Affliction''s
+    100.8, so hit position alone did not decide this wearer''s end of the spread; the premium
+    is nonetheless a third of the Skull''s worth because the best pair without it, the Icon
+    plus the Capacitor at 2091.4, keeps the Capacitor, where the priest''s no-Skull pair kept
+    nothing of its worn pair.'
+  the_armor_tier_note: 'These figures are at armor 6193 like every trinket round, and for this
+    spec the tier is a label rather than a variable: data/facts/sim-figures.yaml reads the same
+    figure at armor 0, 6193 and 7684 at every anchor, 2130.0 at best in slot at all three, and
+    a diagnostic in this round reran the worn best-in-slot pair at all three armor tiers and
+    read 2130.0 with the same standard error each time, so nothing in these runs swings a melee
+    weapon into the boss''s armor and the invariance held through the rerun.'
+  a_workbook_reversal: 'The loudest is the ladder''s silence: The Lightning Capacitor, which
+    the Ele tab does not rank among its fifteen, sits in the measured best pair at every
+    anchor, and its partner gain beside the Skull, 84.3 on the empty-slot diagnostic, is the
+    largest of the six candidates. The tab ranks Eye of Magtheridon sixth at 71.00 above Icon
+    of the Silver Crescent seventh at 69.00; measured, the Icon beats the Eye beside every
+    partner but one, 2091.4 against 2070.3 beside the Capacitor at best in slot, 1893.9
+    against 1874.5 at tier and 1718.8 against 1701.1 at entry, the Icon-over-Eye reversal
+    every caster round has recorded, EXCEPT beside the Skull, where the Eye reads 2103.6 to
+    the Icon''s 2096.2 at best in slot and the two tie at 1899.8 at tier, so beside the Skull
+    the tab''s order stands. And where the Balance round measured Darkmoon Card: Crusade over
+    the Sextant of Unstable Currents against the tab, this tab''s order HOLDS: the Sextant,
+    ranked second at 90.20, beats the Card, ranked fifth at 80.00, in every shared pairing,
+    2119.7 against 2112.9 beside the Skull and 2087.9 against 2079.8 beside the Capacitor at
+    best in slot.'
+  the_binary_prices_the_procs_for_this_spec_too: 'Tested behaviorally against the vendored
+    binary rather than read from the stale source checkout, a fixed partner beside each
+    candidate against the same partner beside an EMPTY slot, same seed, on the best-in-slot
+    anchor. The worn Skull beside an empty slot read 2045.7; beside The Lightning Capacitor,
+    2130.0, 84.3 up, and that IS the anchor figure, this being the worn pair, every point of
+    it the simulator''s pricing of the Capacitor''s charge-and-discharge proc, because the
+    Capacitor carries no worn stats per data/facts/items.csv; beside the Sextant, 2119.7,
+    74.0 up, its worn spell damage plus its proc; beside Darkmoon Card: Crusade, 2112.9, 67.2
+    up, all of it the Card''s stacking proc, the Card carrying no worn stats either; beside
+    Eye of Magtheridon, whose proc fires on a resist, 2103.6, 57.9 up, on a set past the hit
+    target that rarely resists. The Skull itself, measured from the other side with the worn
+    Capacitor fixed, is 115.2 up on the empty slot, 2130.0 against 2014.8, its worn 55 spell
+    damage and its 175-haste on-use, the 25 hit converting to nothing.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the

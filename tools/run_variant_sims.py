@@ -1980,6 +1980,83 @@ ROUNDS: dict[str, dict] = {
             # data/facts/sim-profiles/hit-capture/elemental-shaman.yaml.
             {"mh": 32053, "oh": 30049, "phase3": False},
         ],
+        # THE TRINKET POOL, the thirteenth and LAST enumerative trinket
+        # round and the sixth caster round, in the shape the Affliction
+        # round set: every max-level trinket the Ele tab's Trinket
+        # ladder ranks, with anything from Karazhan and the badge
+        # vendor onward acceptable, and the runner generates every
+        # unordered pair itself. The ladder ranks fifteen; nine are out
+        # on the standing exclusions, all availability rather than
+        # routing: Mark of the Champion and The Restrained Essence of
+        # Sapphiron drop in Naxxramas and Neltharion's Tear in
+        # Blackwing Lair, level-60 raids all three; Arcanist's Stone
+        # and Shiffar's Nexus-Horn drop in five-man dungeons below
+        # Karazhan; the Dark Iron Smoking Pipe drops from a holiday
+        # boss inside Blackrock Depths, a level-60 five-man; the
+        # Ancient Crystal Talisman and Vengeance of the Illidari are
+        # leveling quest rewards; and Quagmirran's Eye drops in a
+        # five-man below Karazhan and, unlike in the warlock and
+        # Balance rounds, NO anchor of this spec wears it, so the worn
+        # override does not fire for it and it stays out. The override
+        # fires instead for The Lightning Capacitor, id 28785, a
+        # Karazhan drop the tab does not rank at all: every one of the
+        # three anchors wears it, entry and tier beside the Icon of
+        # the Silver Crescent and best in slot beside The Skull of
+        # Gul'dan, so a pool without it could not reproduce ANY worn
+        # pair. The Ashtongue Talisman of Vision, this class's
+        # talisman, is NOT on the tab and NO anchor wears it, so it
+        # stays out, per the Affliction and Shadow Priest precedent.
+        # No Ahn'Qiraj and no world-boss trinket is on the tab.
+        # Darkmoon Card: Crusade carries no worn stats per items.csv,
+        # so everything its rows measure is the simulator's pricing of
+        # its stacking proc; a diagnostic on 20 August 2026 repeated
+        # the behavioral partner-versus-empty test for this spec, each
+        # candidate beside a fixed partner against the partner beside
+        # an EMPTY slot, same seed, best-in-slot anchor: the figures
+        # are in sim-results.yaml under
+        # the_elemental_shaman_trinket_round_is_enumerated. The
+        # recovered source checkout is stale against the vendored
+        # binary and is not evidence about what the binary implements;
+        # every claim above is a behavioral measurement of the binary.
+        # `phase3` marks what the entry anchor cannot reach: The Skull
+        # of Gul'dan drops from Illidan Stormrage in Black Temple.
+        "trinket_pool": [
+            {"id": 32483, "phase3": True},   # The Skull of Gul'dan
+            {"id": 30626, "phase3": False},  # Sextant of Unstable Currents
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 28789, "phase3": False},  # Eye of Magtheridon
+            {"id": 29370, "phase3": False},  # Icon of the Silver Crescent
+            {"id": 29179, "phase3": False},  # Xi'ri's Gift
+            {"id": 28785, "phase3": False},  # The Lightning Capacitor
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside a steady spell damage "
+            "partner and another beside an on-use haste one, so the "
+            "two slots are measured together: every row below is THIS "
+            "PROFILE with only the two trinket ids replaced, and a "
+            "trinket carries no enchant and no gem, so the "
+            "consumables, buffs and seed hold still and every figure "
+            "is directly comparable with the one at the top of this "
+            "page. The candidates are every max-level trinket on the "
+            "EP Workbook's Trinket ladder for this spec, from "
+            "Magtheridon's Lair, the raids above it, the badge vendor, "
+            "the Darkmoon Faire and one reputation, plus The Lightning "
+            "Capacitor, which the ladder does not rank and which "
+            "every one of the three sets wears, and every pair from "
+            "that pool was measured, so the table is an enumeration "
+            "rather than a selection; the ten best appear below, with "
+            "the worn pair beside them. What The Lightning Capacitor "
+            "is worth beyond an empty slot is entirely the "
+            "simulator's pricing of its charge-and-discharge proc, "
+            "because it carries no worn statistics, and the same "
+            "holds for Darkmoon Card: Crusade and its stacking proc. "
+            "An on-use trinket is activated on the simulator's own "
+            "schedule, which is how The Skull of Gul'dan's haste "
+            "burst meets the casting rotation. Eye of Magtheridon "
+            "procs when a spell is resisted, so what its rows price "
+            "beyond its worn spell damage moves with each anchor's "
+            "distance from the hit target.")),
     },
 }
 
