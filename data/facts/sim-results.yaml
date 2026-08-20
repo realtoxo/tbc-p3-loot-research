@@ -446,6 +446,54 @@ the_destruction_weapon_round:
     sitting 0.4 above Tempest of Chaos with the worn Flametongue Seal at 2411.2 ± 1.27,
     inside one standard error, so those two rows are not separated. The spread from the
     worn top row to the bottom is 146.2.
+the_arcane_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eleven rows run as variants
+    of each Arcane Mage anchor profile in the shape the Affliction round set as the caster
+    template, BOTH styles in one table per the 20 August 2026 style ruling in
+    data/judgments/weapon-styles.yaml. A staff row runs the off hand EMPTY and a main-hand
+    row holds an off-hand frill that is not a weapon; the main-hand slot keeps its Sunfire
+    on every row, staff included, the frill takes no imbue, and the Brilliant Wizard Oil
+    applies to any weapon, so nothing about the consumables varies across the rows. No
+    candidate in the round carries a socket, per items.csv, so no figure here is
+    understated against a gemmed worn weapon. Zhar'doom is NOT a row, the one caster round
+    where it is absent, because the 15 August 2026 routing in
+    data/judgments/weapon-routing.yaml sends it to five other specs and sends Tempest of
+    Chaos to this spec first, so the staff field here is the mage's own, Season 3, Season 2
+    and the worn Nexus Key. Figures in data/facts/weapon-pair-sims.yaml.
+  the_anchors_reproduce: The worn combination's variant reads the anchor figure to the
+    digit at all three anchors, The Nexus Key with the off hand EMPTY 2301.2 at entry and
+    2320.7 at tier, and Tempest of Chaos with the Chronicle of Dark Secrets 2534.4 at best
+    in slot, which also verifies that the routed one-hand-and-frill construction is what
+    the best-in-slot anchor actually runs.
+  what_conceding_tempest_costs: The warlock rounds priced what OTHER specs lose while the
+    mage holds Tempest of Chaos, 34.8 for Affliction and 53.9 for Destruction on their
+    best-in-slot sets, and this round completes the picture with the mage's side. On the
+    mage's best-in-slot set the worn Tempest of Chaos with the Chronicle of Dark Secrets
+    reads 2534.4 ± 1.07 and the best row WITHOUT Tempest is The Maelstrom's Fury with the
+    same Chronicle at 2504.9 ± 1.07, so conceding the sword costs the mage 29.5, with the
+    Vengeful Gladiator's Spellblade close behind at 2501.3 ± 1.06 and the best staff, the
+    Season 3 Battle Staff, at 2495.2 ± 1.06, 39.2 below the worn row. On the tier set the
+    same concession reads 2362.6 ± 1.01 against 2336.2 ± 1.00, a cost of 26.4. The mage's
+    29.5 sits below both warlock figures, and weighing those three numbers against five
+    specs' Zhar'doom queue is a routing question, not an arithmetic one. NOT A RULING. The
+    council decides.
+  the_staff_field_against_the_one_hander: With Zhar'doom routed away, no staff the mage can
+    hold beats its one-hand-and-frill rows where Tempest or a Phase 3 dagger is reachable.
+    At best in slot the Battle Staff's 2495.2 sits below all five Chronicle and Blind-Seers
+    pairings, and at tier the order is the same, 2326.8 ± 0.99 for the Battle Staff against
+    2362.6 for Tempest with the Chronicle. Before Phase 3 the direction reverses, which is
+    the opposite of what the warlock entries found against their captures. The worn Nexus
+    Key measures FIRST of the four entry rows, 2301.2 ± 1.00 against 2282.7 ± 0.99 for
+    Fang of the Leviathan with the Talisman of Kalecgos, 18.5 ahead, with the Merciless
+    Gladiator's War Staff at 2278.2 ± 0.97 and the Merciless Gladiator's Spellblade with
+    the Talisman at 2272.8 ± 0.98. The mage's entry capture already wears the staff the
+    figures prefer, so unlike the warlock rounds this round records no disagreement with
+    its capture at any anchor.
+  the_spread_is_the_finding: The whole table spans 76.3 at best in slot, 2534.4 to 2458.1,
+    and the four entry rows sit within 28.4 of one another, so every weapon argument this
+    spec can have before Tempest of Chaos drops is worth under thirty DPS, and the largest
+    single move in the table is taking Tempest with a frill over the worn tier staff, 41.9
+    on the tier set.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
