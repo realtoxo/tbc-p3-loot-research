@@ -318,6 +318,52 @@ the_survival_trinket_round_is_enumerated:
     25 worn agility explains. The same diagnostic prices Talon of Al''ar''s proc, which is its
     whole value, worn stats being zero per items.csv: Dragonspine beside the Talon reads 3023.1,
     26.3 above the empty slot, beside the Beast Mastery round''s 24.1 for the same trinket.'
+the_affliction_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the eight-trinket
+    pool as a variant of each of the three anchor profiles, 77 runs, every row in data/facts/variant-sims.yaml.
+    The first caster trinket round.
+  best_combination_per_anchor: 'Darkmoon Card: Crusade plus Icon of the Silver Crescent at entry,
+    1949.8, and The Skull of Gul''dan plus Quagmirran''s Eye at tier, 2012.7, and The Skull of
+    Gul''dan plus Darkmoon Card: Crusade at best in slot, 2233.6. No anchor wears its table''s
+    top row. The entry anchor wears Quagmirran''s Eye plus the Icon, second, 2.4 behind, about
+    two standard errors, and the Card is a Darkmoon Faire turn-in, so the gap closes without
+    contesting any drop. The tier anchor wears the same pair, SEVENTH in its table and 33.8 behind
+    the Skull pair, because the tier anchor is the entry set plus tier tokens and the Skull is
+    not a token. The best-in-slot anchor wears the Skull plus Quagmirran''s Eye, second, 6.0
+    behind the Skull-and-Card pair, about four standard errors, and the Card again contests no
+    drop. NOT A RULING. One standard error is 0.92 to 1.06 across the tables.'
+  the_skull_of_guldan_premium: 'The caster counterpart of the Dragonspine premium: the best pair
+    holding The Skull of Gul''dan minus the best pair without it, pure arithmetic on the table,
+    32.6 at tier and 24.8 at best in slot; the entry table drops the Skull, a Black Temple drop.
+    The best pair without it is Darkmoon Card: Crusade plus Icon of the Silver Crescent at every
+    anchor. Six specs wear the Skull at best in slot per no_two_bis_figures_can_be_true_at_once,
+    and this is the first of their six premiums to be measured.'
+  the_armor_tier_note: 'These figures are at armor 6193 like every trinket round. The three petless
+    casters read the same anchor figure at every armor tier in data/facts/sim-figures.yaml; this
+    spec does not, 2227.6 at 6193 against 2212.7 at 7684 at best in slot, because the felhunter
+    swings a melee weapon and its share moves with the boss''s armor. A caster round on a pet
+    spec carries armor-sensitive rows; one on a petless spec does not.'
+  a_workbook_reversal: 'The Aff tab''s Trinket ladder ranks Scryer''s Bloodgem sixth at 69.35,
+    above Eye of Magtheridon seventh at 65.18, Icon of the Silver Crescent ninth at 63.34 and
+    Starkiller''s Bauble thirteenth at 56.82. Measured, the Bloodgem falls to the bottom three
+    of every table: beside the Skull at best in slot it reads 2187.5, under the Eye at 2220.9
+    and the Icon at 2225.7, and its only wins are over Starkiller''s Bauble pairings. 32 of its
+    rating is spell hit, and all three anchors are past the 165 spell hit target per data/facts/hit-captured.yaml
+    and the best-in-slot capture, 203, 231 and 185 item hit, so a third of what the ladder prices
+    is worth nothing to these sets. Starkiller''s Bauble carries 26 hit of its own and lands
+    in the bottom row of every table. The Icon, ranked ninth, is in the best hit-free pair at
+    every anchor, the caster form of the Bloodlust Brooch reversal the melee rounds measured.'
+  the_stacking_card_is_priced_by_the_binary: 'Darkmoon Card: Crusade carries no worn stats per
+    data/facts/items.csv, so everything its rows measure is the simulator''s pricing of its stacking
+    spell damage proc, and the vendored binary does price it, tested behaviorally per the Enhancement
+    precedent rather than read from the stale source checkout: a diagnostic run at the same settings
+    read The Skull of Gul''dan beside an EMPTY trinket slot at 2160.7 on the best-in-slot anchor,
+    72.9 under the Skull beside the Card at 2233.6. The same diagnostic prices the Skull itself,
+    whose 175-haste on-use the simulator activates on its own schedule: Quagmirran''s Eye beside
+    an empty slot read 2126.8, 100.8 under Quagmirran''s Eye beside the Skull at 2227.6, which
+    is the anchor figure, that being the worn pair. Eye of Magtheridon, whose proc fires on a
+    resist, read 2185.2 beside Quagmirran''s Eye, 58.4 above the empty slot, on a set past the
+    hit target that rarely resists.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the

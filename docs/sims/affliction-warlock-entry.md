@@ -56,6 +56,27 @@ An Affliction Warlock can carry a staff or a one-hander with a held frill, and b
 
 The best combination, The Nexus Key alone, a two-hander, measures +24.1 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation, one max-level quest and the dungeon trinket every anchor wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
+
+The ten best of the 21 combinations measured, and the worn pair.
+
+| Trinket                       | Trinket                      | DPS           | Against this set |
+|-------------------------------|------------------------------|---------------|------------------|
+| Darkmoon Card: Crusade        | Icon of the Silver Crescent  | 1949.8 ± 0.96 | +2.4             |
+| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent  | 1947.4 ± 0.96 | +0.0             |
+| Quagmirran's Eye              | Darkmoon Card: Crusade       | 1939.4 ± 0.95 | -8.0             |
+| Sextant of Unstable Currents  | Icon of the Silver Crescent  | 1938.8 ± 0.97 | -8.6             |
+| Eye of Magtheridon            | Icon of the Silver Crescent  | 1938.5 ± 0.94 | -8.9             |
+| Sextant of Unstable Currents  | Darkmoon Card: Crusade       | 1932.3 ± 0.96 | -15.1            |
+| Quagmirran's Eye              | Sextant of Unstable Currents | 1931.7 ± 0.95 | -15.7            |
+| Darkmoon Card: Crusade        | Eye of Magtheridon           | 1931.4 ± 0.94 | -16.0            |
+| Quagmirran's Eye              | Eye of Magtheridon           | 1928.9 ± 0.93 | -18.5            |
+| Sextant of Unstable Currents  | Eye of Magtheridon           | 1921.6 ± 0.94 | -25.8            |
+
+The best combination, Darkmoon Card: Crusade with Icon of the Silver Crescent, measures +2.4 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
