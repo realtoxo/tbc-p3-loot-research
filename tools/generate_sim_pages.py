@@ -427,14 +427,30 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
     if not pairs:
         return ""
 
+    # THE SPEED COLUMN APPEARS ONLY WHERE A ROW CARRIES ONE, which today is
+    # Enhancement's matched-speed rule. An off hand a row does not name is a
+    # two-hander row, and its cell says so rather than sitting blank, because
+    # a blank reads as a missing value where empty is the point.
+    with_speed = any(e.get("pair_speed") is not None for e in pairs)
+    header = ["Main hand", "Off hand"]
+    if with_speed:
+        header.append("Pair speed")
+    header += ["DPS", "Against this set"]
     table_rows = []
     for entry in pairs:
-        table_rows.append([
-            entry["main_hand"]["name"], entry["off_hand"]["name"],
-            f"{entry['pair_speed']:.1f}",
+        cells = [
+            entry["main_hand"]["name"],
+            entry["off_hand"]["name"] if entry.get("off_hand")
+            else "*empty, two-hander*",
+        ]
+        if with_speed:
+            cells.append(f"{entry['pair_speed']:.1f}"
+                         if entry.get("pair_speed") is not None else "")
+        cells += [
             f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}",
             f"{entry['dps'] - row['dps']:+.1f}",
-        ])
+        ]
+        table_rows.append(cells)
 
     # THREE READINGS, NOT TWO. A set whose worn pair is itself the best row
     # produces a delta of zero, and the two-way version read that as "the
@@ -444,24 +460,25 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
     best = pairs[0]
     if abs(best["dps"] - row["dps"]) < 0.05:
         reading = (
-            "This set already wears the best pair the round measured, which "
-            "is why its top row reads plus zero: that row IS this profile.")
+            "This set already wears the best combination the round "
+            "measured, which is why its top row reads plus zero: that row "
+            "IS this profile.")
     elif best["dps"] > row["dps"]:
+        best_label = best["main_hand"]["name"] + (
+            f" with {best['off_hand']['name']}" if best.get("off_hand")
+            else " alone, a two-hander")
         reading = (
-            f"The best pair, {best['main_hand']['name']} with "
-            f"{best['off_hand']['name']}, measures "
-            f"{best['dps'] - row['dps']:+.1f} against this set's own pair, "
-            "so at this anchor the pair rule and throughput point the same "
-            "way.")
+            f"The best combination, {best_label}, measures "
+            f"{best['dps'] - row['dps']:+.1f} against this set's own "
+            "weapons, so the upgrade path at this anchor runs through it.")
     else:
         reading = (
-            f"Every pair below measures UNDER this set's own pair, the best "
-            f"of them by {row['dps'] - best['dps']:.1f} DPS, so at this "
-            "anchor the simulator prices the pair rule as a cost, not a "
-            "gain. What that does and does not settle is recorded in "
-            "data/facts/sim-results.yaml under "
-            "what_the_matched_pairs_measure, and the rule stands until the "
-            "council revisits it.")
+            f"Every combination below measures UNDER this set's own "
+            f"weapons, the best of them by {row['dps'] - best['dps']:.1f} "
+            "DPS, so the round found no weapon upgrade at this anchor. "
+            "Where a ruling holds a spec below its highest-measuring "
+            "combination, what that does and does not settle is recorded in "
+            "data/facts/sim-results.yaml.")
 
     return f"""
 ## Weapon pairs
@@ -470,8 +487,7 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
 
 Not a ruling: which pair this anchor wears is the council's call.
 
-{rows_table(["Main hand", "Off hand", "Pair speed", "DPS",
-             "Against this set"], table_rows)}
+{rows_table(header, table_rows)}
 
 {reading}
 """

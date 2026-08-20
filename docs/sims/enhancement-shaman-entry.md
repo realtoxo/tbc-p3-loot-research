@@ -59,7 +59,7 @@ Not a ruling: which pair this anchor wears is the council's call.
 | Black Planar Edge             | Rod of the Sun King           | 2.7        | 2155.9 ± 0.98 | -32.8            |
 | Drakefist Hammer              | Rod of the Sun King           | 2.7        | 2142.3 ± 0.99 | -46.4            |
 
-This set already wears the best pair the round measured, which is why its top row reads plus zero: that row IS this profile.
+This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
 
 ## The set
 

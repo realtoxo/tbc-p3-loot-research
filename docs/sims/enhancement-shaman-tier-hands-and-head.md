@@ -65,7 +65,7 @@ Not a ruling: which pair this anchor wears is the council's call.
 | Black Planar Edge                 | Rod of the Sun King           | 2.7        | 2154.8 ± 0.98 | -32.9            |
 | Drakefist Hammer                  | Rod of the Sun King           | 2.7        | 2141.2 ± 0.99 | -46.5            |
 
-The best pair, Syphon of the Nathrezim with Syphon of the Nathrezim, measures +33.4 against this set's own pair, so at this anchor the pair rule and throughput point the same way.
+The best combination, Syphon of the Nathrezim with Syphon of the Nathrezim, measures +33.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## The set
 

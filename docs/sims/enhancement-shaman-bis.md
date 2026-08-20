@@ -65,7 +65,7 @@ Not a ruling: which pair this anchor wears is the council's call.
 | Black Planar Edge                 | Rod of the Sun King           | 2.7        | 2292.5 ± 1.02 | -94.9            |
 | Drakefist Hammer                  | Rod of the Sun King           | 2.7        | 2285.8 ± 1.04 | -101.6           |
 
-Every pair below measures UNDER this set's own pair, the best of them by 34.6 DPS, so at this anchor the simulator prices the pair rule as a cost, not a gain. What that does and does not settle is recorded in data/facts/sim-results.yaml under what_the_matched_pairs_measure, and the rule stands until the council revisits it.
+Every combination below measures UNDER this set's own weapons, the best of them by 34.6 DPS, so the round found no weapon upgrade at this anchor. Where a ruling holds a spec below its highest-measuring combination, what that does and does not settle is recorded in data/facts/sim-results.yaml.
 
 ## The set
 

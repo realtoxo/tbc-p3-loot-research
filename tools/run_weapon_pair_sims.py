@@ -64,10 +64,18 @@ OUT = Path("data/facts/weapon-pair-sims.yaml")
 # to underscores inside build_request's caller.
 ANCHORS = ("entry", "tier-hands-and-head", "bis")
 
-# ONE ENTRY PER SPEC THAT RUNS A WEAPON PAIR ROUND. `pairs` is every pair
-# the round measures, `phase3` marks a pair the entry anchor cannot reach,
-# and `why` is the paragraph the anchor pages print above the table, so the
-# reasoning lives beside the pair list it explains.
+# ONE ENTRY PER SPEC THAT RUNS A WEAPON PAIR ROUND. `pairs` is every
+# combination the round measures, `phase3` marks one the entry anchor cannot
+# reach, and `why` is the paragraph the anchor pages print above the table,
+# so the reasoning lives beside the list it explains.
+#
+# A COMBINATION IS A ROW SHAPED BY ITS SPEC'S STYLES, ruled in
+# data/judgments/weapon-styles.yaml: `oh: null` is a two-hander row and the
+# off hand runs EMPTY; `mh` with `oh` is a pair. A spec whose styles allow
+# both puts both in the SAME table, per the guild lead. `pair_speed` is
+# optional and Enhancement's alone, per its matched-speed rule. A spec with
+# more profiles than the standard three, which today is the two Warglaive
+# specs and their bis_no_glaives, lists its anchors under `anchors`.
 #
 # ENHANCEMENT: every matched-speed pair the slow one-hand field supports.
 # The universe is the one-hand weapons a shaman can carry above the 2.3
@@ -120,22 +128,33 @@ ROUNDS: dict[str, dict] = {
 }
 
 
-def with_pair(gear: dict, mh: int, oh: int) -> dict:
-    """The gear wearing one candidate pair, each slot keeping its enchant.
+def with_pair(gear: dict, mh: int, oh: int | None) -> dict:
+    """The gear wearing one candidate combination, slots keeping enchants.
 
     THE GEMS GO WITH THE OLD ITEM and the enchant stays with the slot. No
     candidate here carries a socket, so dropping the gems loses nothing, and
-    the weapon slots wear the same enchant at every anchor, so keeping the
+    a weapon slot wears the same enchant at every anchor, so keeping the
     slot's enchant is what a raider would do rather than a modelling
     shortcut.
+
+    AN `oh` OF None EMPTIES THE OFF HAND, enchant and all, which is what a
+    two-hander row needs: the item it displaces cannot stay, and neither can
+    the enchant that belonged to it.
     """
     out = {"items": [dict(entry) for entry in gear["items"]]}
-    for slot, item_id in (("main_hand", mh), ("off_hand", oh)):
-        index = SLOT_ORDER.index(slot)
-        entry = dict(out["items"][index])
-        entry["id"] = item_id
+    mh_index = SLOT_ORDER.index("main_hand")
+    entry = dict(out["items"][mh_index])
+    entry["id"] = mh
+    entry.pop("gems", None)
+    out["items"][mh_index] = entry
+    oh_index = SLOT_ORDER.index("off_hand")
+    if oh is None:
+        out["items"][oh_index] = {}
+    else:
+        entry = dict(out["items"][oh_index]) or {}
+        entry["id"] = oh
         entry.pop("gems", None)
-        out["items"][index] = entry
+        out["items"][oh_index] = entry
     return out
 
 
@@ -183,7 +202,7 @@ def main() -> int:
         talents = (strings.get(spec) or {}).get("string")
         stem = spec.replace("_", "-")
         anchors: dict[str, list[dict]] = {}
-        for anchor in ANCHORS:
+        for anchor in round_.get("anchors", ANCHORS):
             path = args.gear / f"{stem}.{anchor}.gear.json"
             if not path.is_file():
                 print(f"error: no profile at {path}. Run `just regen` first.",
@@ -194,24 +213,28 @@ def main() -> int:
             for pair in round_["pairs"]:
                 if anchor == "entry" and pair["phase3"]:
                     continue
-                label = (f"{names.get(pair['mh'], pair['mh'])} + "
-                         f"{names.get(pair['oh'], pair['oh'])}")
+                oh = pair.get("oh")
+                label = names.get(pair["mh"], str(pair["mh"])) + (
+                    f" + {names.get(oh, oh)}" if oh else ", two-hander")
                 dps, stdev, error = run(args.cli, build_request(
-                    spec, with_pair(gear, pair["mh"], pair["oh"]), talents,
+                    spec, with_pair(gear, pair["mh"], oh), talents,
                     args.iterations, args.seed, buffs, party_of,
                     anchor.replace("-", "_"), args.seconds, args.armor))
                 if error:
                     raise SystemExit(f"run_weapon_pair_sims.py: {spec}: "
                                      f"{anchor}: {label}: {error}")
-                results.append({
-                    "main_hand": weapon(pair["mh"]),
-                    "off_hand": weapon(pair["oh"]),
-                    "pair_speed": pair["speed"],
+                entry = {"main_hand": weapon(pair["mh"])}
+                if oh:
+                    entry["off_hand"] = weapon(oh)
+                if pair.get("speed") is not None:
+                    entry["pair_speed"] = pair["speed"]
+                entry.update({
                     "dps": round(dps, 1),
                     "standard_error": round(
                         stdev / math.sqrt(args.iterations), 2),
                     "stdev": round(stdev, 1),
                 })
+                results.append(entry)
                 total += 1
                 print(f"  {spec:22s} {anchor:20s} {label:56s} {dps:9.1f}")
             results.sort(key=lambda row: -row["dps"])
@@ -221,12 +244,15 @@ def main() -> int:
     document = {
         "meta": {
             "what": (
-                "Weapon pair rounds, one per spec in the registry of "
-                "tools/run_weapon_pair_sims.py, each pair run as a VARIANT "
-                "of that spec's anchor profiles: the exported gear with only "
-                "the two weapon ids replaced, each slot keeping its enchant, "
-                "the anchor's own consumables, buffs and seed held still. "
-                "The Enhancement round is ruled in "
+                "Weapon rounds, one per spec in the registry of "
+                "tools/run_weapon_pair_sims.py, each combination run as a "
+                "VARIANT of that spec's anchor profiles: the exported gear "
+                "with only the weapon slots changed, a filled slot keeping "
+                "its enchant and a two-hander row running the off hand "
+                "EMPTY, the anchor's own consumables, buffs and seed held "
+                "still. Which styles each spec's table holds is ruled in "
+                "data/judgments/weapon-styles.yaml, and the Enhancement "
+                "round is further ruled in "
                 "data/judgments/enhancement-weapon-rules.yaml."),
             "read_this_first": (
                 "Every variant is directly comparable with its anchor's "

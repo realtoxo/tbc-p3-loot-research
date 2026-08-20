@@ -1,0 +1,45 @@
+meta:
+  what: Which weapon STYLES each spec's weapon pair round considers, ruled by the
+    guild lead. A style is the shape of what the hands carry, a two-hander alone
+    or a main hand with an off hand, and it is a judgment because proficiency
+    alone does not settle it, several classes can equip both.
+  why_here: The weapon pair rounds in tools/run_weapon_pair_sims.py enumerate
+    combinations per spec, and the first question for every spec is which styles
+    its table holds. That is the guild lead's call, not a fact a table can
+    supply, so it is recorded here with his words.
+  ruled: '2026-08-20'
+  by: the guild lead
+  verbatim: 'For classes that can equip both a two-hander or two one-handers, we
+    want to run sims for both and have them within the same table. This is going
+    to be our authoritative weapon sim table. Examples of these sorts of classes
+    would include Hunter, but not Warrior. Armed warriors should consider only
+    two handers, whereas fury warriors should consider only one handers and main
+    handers. Retribution Paladin should always carry a two-hander. Casters as
+    well can carry either a staff or a one hander and offhand.'
+  standing_rulings_that_shape_combinations: The style says what SHAPE a spec
+    considers; which items may fill it is still governed by the standing
+    judgments. The Arms Warrior never receives the Warglaives and takes
+    Cataclysm's Edge, five specs wear Zhar'doom with the off hand EMPTY, the
+    Arcane Mage takes Tempest of Chaos first, and no profile wears Ahn'Qiraj
+    gear. See data/judgments/weapon-routing.yaml and trinket-routing.yaml.
+styles_by_spec:
+  arms_warrior: [two_hand]
+  fury_warrior: [dual_wield]
+  retribution_paladin: [two_hand]
+  combat_rogue: [dual_wield]
+  enhancement_shaman: [dual_wield]
+  enhancement_note: Governed by its own rules in
+    data/judgments/enhancement-weapon-rules.yaml, matched speeds above 2.3, and
+    its round already runs.
+  beast_mastery_hunter: [two_hand, dual_wield]
+  survival_hunter: [two_hand, dual_wield]
+  feral_cat: [two_hand, dual_wield]
+  balance_druid: [two_hand, main_hand_off_hand]
+  elemental_shaman: [two_hand, main_hand_off_hand]
+  shadow_priest: [two_hand, main_hand_off_hand]
+  arcane_mage: [two_hand, main_hand_off_hand]
+  affliction_warlock: [two_hand, main_hand_off_hand]
+  destruction_warlock: [two_hand, main_hand_off_hand]
+  caster_note: A caster's two_hand is a staff and its off hand under
+    main_hand_off_hand is a held frill rather than a weapon. dual_wield means
+    two weapons, which only the melee and the hunters do.
