@@ -1437,6 +1437,81 @@ ROUNDS: dict[str, dict] = {
             {"mh": 30095, "oh": 29271, "phase3": False},
             {"mh": 32053, "oh": 29271, "phase3": False},
         ],
+        # THE TRINKET POOL, the tenth enumerative trinket round and the
+        # third caster round, in the shape the Affliction round set: every
+        # max-level trinket the Arc tab's Trinket ladder ranks, with
+        # anything from Karazhan and the badge vendor onward acceptable,
+        # and the runner generates every unordered pair itself. The ladder
+        # ranks fifteen; seven are out on the standing exclusions, all
+        # availability rather than routing: Mark of the Champion, The
+        # Restrained Essence of Sapphiron and Neltharion's Tear drop in
+        # level-60 raids; Shiffar's Nexus-Horn, Scarab of the Infinite
+        # Cycle and Quagmirran's Eye drop in five-man dungeons below
+        # Karazhan; and the Dark Iron Smoking Pipe drops from a holiday
+        # boss inside Blackrock Depths, a level-60 five-man. Quagmirran's
+        # Eye entered both warlock rounds as a WORN trinket over the same
+        # exclusion, but no arcane anchor wears it, so the override does
+        # not trigger here and the standing exclusion holds. The Arc tab's
+        # bottom differs from the warlock tabs': it ranks the Serpent-Coil
+        # Braid, mage-only per items.csv and worn at EVERY anchor, entry
+        # and tier beside the Icon of the Silver Crescent and best in slot
+        # beside The Skull of Gul'dan; the Pendant of the Violet Eye from
+        # Shade of Aran, in as a Karazhan drop; and Xi'ri's Gift at Sha'tar
+        # Revered, in as a max-level reputation reward; and it does not
+        # rank Scryer's Bloodgem or Starkiller's Bauble. No Ahn'Qiraj and
+        # no world-boss trinket is on the tab. Darkmoon Card: Crusade
+        # carries no worn stats per items.csv, so everything its rows
+        # measure is the simulator's pricing of its stacking proc, which
+        # both warlock rounds measured behaviorally against the vendored
+        # binary; a diagnostic on 20 August 2026 repeated the test for
+        # this spec, each candidate beside the worn Serpent-Coil Braid
+        # against the Braid beside an EMPTY slot, same seed, best-in-slot
+        # anchor: the figures are in sim-results.yaml under
+        # the_arcane_trinket_round_is_enumerated. The recovered source
+        # checkout is stale against the vendored binary and is not
+        # evidence about what the binary implements; every claim above is
+        # a behavioral measurement of the binary. `phase3` marks what the
+        # entry anchor cannot reach: The Skull of Gul'dan drops from
+        # Illidan Stormrage in Black Temple.
+        "trinket_pool": [
+            {"id": 32483, "phase3": True},   # The Skull of Gul'dan
+            {"id": 30626, "phase3": False},  # Sextant of Unstable Currents
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 28789, "phase3": False},  # Eye of Magtheridon
+            {"id": 29370, "phase3": False},  # Icon of the Silver Crescent
+            {"id": 30720, "phase3": False},  # Serpent-Coil Braid
+            {"id": 28727, "phase3": False},  # Pendant of the Violet Eye
+            {"id": 29179, "phase3": False},  # Xi'ri's Gift
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside a steady spell damage "
+            "partner and another beside an on-use haste one, so the two "
+            "slots are measured together: every row below is THIS "
+            "PROFILE with only the two trinket ids replaced, and a "
+            "trinket carries no enchant and no gem, so the consumables, "
+            "buffs and seed hold still and every figure is directly "
+            "comparable with the one at the top of this page. The "
+            "candidates are every max-level trinket on the EP "
+            "Workbook's Trinket ladder for this spec, from Karazhan, "
+            "Magtheridon's Lair, the raids above them, the badge "
+            "vendor, the Darkmoon Faire and one reputation, and every "
+            "pair from that pool was measured, so the table is an "
+            "enumeration rather than a selection; the ten best appear "
+            "below, with the worn pair beside them. Four candidates "
+            "carry an on-use effect and Arcane Power is an on-use "
+            "cooldown, and the simulator schedules every activation "
+            "itself, so how a trinket burst lines up with Arcane Power "
+            "is the engine's scheduling rather than an assumption. "
+            "Darkmoon Card: Crusade carries no worn statistics, so "
+            "everything its rows measure is the simulator's pricing of "
+            "its stacking proc. Eye of Magtheridon procs when a spell "
+            "is resisted, so its rows price its worn spell damage and "
+            "a proc a hit-capped set rarely triggers. The Serpent-Coil "
+            "Braid improves the mana gem the rotation already uses, "
+            "and the Pendant of the Violet Eye restores mana on use, "
+            "so what their rows price beyond their worn statistics is "
+            "mana, which becomes damage only when the set runs dry.")),
     },
     # SHADOW PRIEST: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, in the shape the

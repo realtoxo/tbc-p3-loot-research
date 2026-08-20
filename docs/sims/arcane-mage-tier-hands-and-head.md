@@ -65,6 +65,27 @@ An Arcane Mage can carry a staff or a one-hander with a held frill, and both sty
 
 The best combination, Tempest of Chaos with Chronicle of Dark Secrets, measures +41.9 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, Magtheridon's Lair, the raids above them, the badge vendor, the Darkmoon Faire and one reputation, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. Four candidates carry an on-use effect and Arcane Power is an on-use cooldown, and the simulator schedules every activation itself, so how a trinket burst lines up with Arcane Power is the engine's scheduling rather than an assumption. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers. The Serpent-Coil Braid improves the mana gem the rotation already uses, and the Pendant of the Violet Eye restores mana on use, so what their rows price beyond their worn statistics is mana, which becomes damage only when the set runs dry.
+
+The ten best of the 28 combinations measured, and the worn pair.
+
+| Trinket                                  | Trinket                      | DPS           | Against this set |
+|------------------------------------------|------------------------------|---------------|------------------|
+| The Skull of Gul'dan                     | Serpent-Coil Braid           | 2346.8 ± 0.99 | +26.1            |
+| The Skull of Gul'dan                     | Sextant of Unstable Currents | 2324.4 ± 1.02 | +3.7             |
+| Icon of the Silver Crescent *(this set)* | Serpent-Coil Braid           | 2320.7 ± 1.01 | +0.0             |
+| The Skull of Gul'dan                     | Pendant of the Violet Eye    | 2318.7 ± 0.98 | -2.0             |
+| The Skull of Gul'dan                     | Darkmoon Card: Crusade       | 2315.8 ± 0.99 | -4.9             |
+| The Skull of Gul'dan                     | Icon of the Silver Crescent  | 2312.5 ± 0.99 | -8.2             |
+| Sextant of Unstable Currents             | Serpent-Coil Braid           | 2309.2 ± 1.01 | -11.5            |
+| The Skull of Gul'dan                     | Eye of Magtheridon           | 2308.9 ± 0.96 | -11.8            |
+| Serpent-Coil Braid                       | Pendant of the Violet Eye    | 2302.5 ± 0.99 | -18.2            |
+| Sextant of Unstable Currents             | Icon of the Silver Crescent  | 2302.2 ± 1.03 | -18.5            |
+
+The best combination, The Skull of Gul'dan with Serpent-Coil Braid, measures +26.1 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
