@@ -447,7 +447,15 @@ the_destruction_weapon_round:
     inside one standard error, so those two rows are not separated. The spread from the
     worn top row to the bottom is 146.2.
 the_arcane_weapon_round:
-  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eleven rows run as variants
+  zhardoom_was_added_after_the_first_run: The round first omitted Zhar'doom on the strength
+    of its routing to five other specs, and the guild lead ruled the same day that a routing
+    never excludes a candidate, see data/judgments/weapon-styles.yaml. Measured, the staff
+    reads 2533.0 ± 1.07 at best in slot against the worn Tempest of Chaos with the Chronicle
+    at 2534.4 ± 1.07, inside 1.4 DPS at a standard error near 1, NOT SEPARATED. So the
+    routing that sends the staff to five other wearers takes nothing measurable from the
+    mage, which closes the Tempest question from all sides on measurement rather than on a
+    list ranking.
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, twelve rows run as variants
     of each Arcane Mage anchor profile in the shape the Affliction round set as the caster
     template, BOTH styles in one table per the 20 August 2026 style ruling in
     data/judgments/weapon-styles.yaml. A staff row runs the off hand EMPTY and a main-hand
@@ -494,6 +502,61 @@ the_arcane_weapon_round:
     spec can have before Tempest of Chaos drops is worth under thirty DPS, and the largest
     single move in the table is taking Tempest with a frill over the worn tier staff, 41.9
     on the tier set.
+the_shadow_priest_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eleven rows run as variants
+    of each Shadow Priest anchor profile in the shape the Affliction round set as the
+    caster template, BOTH styles in one table per the 20 August 2026 style ruling in
+    data/judgments/weapon-styles.yaml. A staff row runs the off hand EMPTY and a main-hand
+    row holds an off-hand frill that is not a weapon; the main-hand slot keeps its
+    Soulfrost on every row, staff included, the frill takes no imbue, and the Superior
+    Wizard Oil applies to any weapon, so nothing about the consumables varies across the
+    rows. Tempest of Chaos is NOT a row and could not be one, a priest cannot wield swords,
+    so the exclusion is proficiency rather than routing and the Shad tab agrees, its One
+    Hand ladder holds no sword. The ladder's rank one and rank two, the Vengeful
+    Gladiator's Gavel and Spellblade, carry identical statistics per items.csv, a mace and
+    a dagger at the same figures, so the Gavel row stands for both. The tab's only socketed
+    weapon is Talon of the Tempest, One Hand rank seven and below the cut, so no candidate
+    in the round carries a socket and no figure here is understated against a gemmed worn
+    weapon. Figures in data/facts/weapon-pair-sims.yaml.
+  the_anchors_reproduce: The worn combination's variant reads the anchor figure to the
+    digit at all three anchors, the Merciless Gladiator's Spellblade with the Orb of the
+    Soul-Eater 1452.1 at entry and 1497.8 at tier, and Zhar'doom with the off hand EMPTY
+    1577.9 at best in slot, which also verifies that the empty-off-hand construction the
+    15 August 2026 routing requires is what the anchor actually runs.
+  what_the_zhardoom_premium_prices: Zhar'doom measures FIRST at both anchors that reach
+    it, and this round completes the measured queue arithmetic for a third staff wearer.
+    On the best-in-slot set the staff reads 1577.9 ± 0.29 against 1565.8 ± 0.29 for the
+    best one-hand combination measured, the Vengeful Gladiator's Gavel with the Orb of the
+    Soul-Eater, a gap of 12.1, and on the tier set 1520.0 ± 0.29 against 1510.0 ± 0.29 for
+    the same pair, a gap of 10.0. The premium is STRUCTURAL where the warlocks' premiums
+    are conceded, because Affliction's 34.8 and Destruction's 53.9 measure the fallback left once
+    Tempest of Chaos follows the routing to the Arcane Mage, a sword either warlock could
+    hold in principle, where this spec cannot equip the sword at all, so no routing
+    decision can narrow its 12.1. Beside the other measured figures, Affliction 34.8,
+    Destruction 53.9, the mage conceding Tempest 29.5, the Shadow Priest's 12.1 is the
+    smallest Zhar'doom premium measured. NOT A RULING. The council decides.
+  the_frill_order_reverses_the_workbook: With the Gavel in the main hand the worn Orb of
+    the Soul-Eater, a badge frill the workbook ranks third at 51, measures ABOVE both
+    Phase 3 frills at both anchors that run the comparison, 1565.8 ± 0.29 against 1563.4 ±
+    0.29 for the Chronicle of Dark Secrets and 1561.1 ± 0.29 for the Blind-Seers Icon, the
+    workbook's rank one at 61.45, at best in slot, and 1510.0 ± 0.29 against 1507.9 ± 0.29
+    and 1505.6 ± 0.29 on the tier set. The Orb's 51 is all shadow damage, which this
+    spec's rotation converts in full, while the Blind-Seers Icon spends 24 of its budget
+    on spell hit that set-stats.yaml shows over cap at both hit-capture anchors, 92 at
+    entry and 100 at tier against a 76 target. The two Phase 3 main hands ran only with
+    the Blind-Seers Icon, so their Orb pairings are unmeasured; each sits below the Gavel
+    with the same frill, 1557.0 ± 0.29 for The Maelstrom's Fury and 1554.7 ± 0.29 for
+    Hammer of Judgement at best in slot, so no unmeasured pairing can pass the Gavel row
+    it would copy the frill from.
+  entry_prefers_the_captured_pair: Unlike the warlock entries, the worn entry combination
+    measures FIRST of the three pre-Phase 3 rows, the Merciless Gladiator's Spellblade
+    with the Orb of the Soul-Eater 1452.1 ± 0.26 against 1436.5 ± 0.26 for The Nexus Key
+    alone and 1429.3 ± 0.26 for the Merciless Gladiator's War Staff, so this round records
+    no disagreement with its capture at any anchor. The whole best-in-slot table spans
+    49.7, 1577.9 to 1528.2 for the Season 2 War Staff, and every one-hand pairing measured
+    beats every staff except Zhar'doom at both anchors that reach Phase 3, so a Shadow
+    Priest holding any competitive one-hander loses nothing by passing every staff below
+    Zhar'doom.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
