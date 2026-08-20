@@ -169,6 +169,11 @@ def main() -> int:
     ap.add_argument("--armor", type=int, default=DEFAULT_ARMOR)
     ap.add_argument("--seconds", type=int, default=ENCOUNTER_SECONDS)
     ap.add_argument("--out", type=Path, default=OUT)
+    ap.add_argument("--spec", action="append", default=None,
+                    help="Run only this spec's round, repeatable. The other "
+                         "specs' recorded figures are carried forward from "
+                         "the existing output file unchanged, so one spec "
+                         "can land without rerunning every other round.")
     args = ap.parse_args()
 
     if not args.cli.is_file():
@@ -196,9 +201,27 @@ def main() -> int:
             out["source"] = row["source"]
         return out
 
-    specs_out: dict[str, dict] = {}
+    rounds = ROUNDS
+    carried: dict[str, dict] = {}
+    if args.spec:
+        unknown = [s for s in args.spec if s not in ROUNDS]
+        if unknown:
+            print(f"error: not in the registry: {', '.join(unknown)}. "
+                  f"Registered: {', '.join(ROUNDS)}", file=sys.stderr)
+            return 1
+        rounds = {s: ROUNDS[s] for s in args.spec}
+        # THE OTHER SPECS ARE CARRIED, NOT DROPPED. A partial run that wrote
+        # only its own spec would delete every other round from the file,
+        # which is the sim-figures hand-merge trap all over again.
+        if args.out.is_file():
+            carried = (yaml.safe_load(args.out.read_text())
+                       or {}).get("specs") or {}
+            carried = {s: block for s, block in carried.items()
+                       if s not in rounds}
+
+    specs_out: dict[str, dict] = dict(carried)
     total = 0
-    for spec, round_ in ROUNDS.items():
+    for spec, round_ in rounds.items():
         talents = (strings.get(spec) or {}).get("string")
         stem = spec.replace("_", "-")
         anchors: dict[str, list[dict]] = {}
