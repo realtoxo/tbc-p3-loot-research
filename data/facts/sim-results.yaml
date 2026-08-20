@@ -264,6 +264,60 @@ the_beast_mastery_trinket_round_is_enumerated:
     Trophy beside an EMPTY trinket slot at 3501.7 on the best-in-slot anchor, 24.1 under Dragonspine
     beside the Talon at 3525.8. So priced, the tab''s rank ten sits last among the six Dragonspine
     pairings at every anchor.'
+the_survival_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the eight-trinket
+    pool as a variant of each of the three anchor profiles, 77 runs, every row in data/facts/variant-sims.yaml.
+  best_combination_per_anchor: 'Dragonspine Trophy plus Bloodlust Brooch at entry, 2797.4, and
+    at tier, 2961.0, and Madness of the Betrayer plus Bloodlust Brooch at best in slot, 3079.9.
+    The entry and tier anchors already wear their best pair, so each table''s top row IS its
+    anchor figure; the best-in-slot anchor wears Dragonspine plus Madness, THIRD in its own table,
+    5.7 behind the Madness-and-Brooch pair, about four standard errors of a difference, and the
+    Brooch is a Badge of Justice purchase, so the gap closes without contesting any drop. NOT
+    A RULING. One standard error is 0.84 to 0.97 across the tables.'
+  the_dragonspine_premium: 'The best pair holding Dragonspine Trophy minus the best pair without
+    it, pure arithmetic on the table: 1.4 at entry, 0.9 at tier and MINUS 5.7 at best in slot,
+    the first round to measure the premium negative anywhere. The best pair without it is Madness
+    of the Betrayer plus Bloodlust Brooch at tier and best in slot, and at entry, where Madness
+    is not yet reachable, Tsunami Talisman plus Bloodlust Brooch. Compare 37.5, 39.1 and 32.2
+    for the Beast Mastery Hunter in the same raid: on this table Dragonspine is within noise of
+    Tsunami Talisman beside any fixed partner, 1.4 above it beside the Brooch at entry, 2.3 at
+    tier and 4.7 UNDER it at best in slot, so a council routing Dragonspine between the two hunters
+    is measuring a premium for one and roughly none for the other.'
+  does_the_brooch_over_madness_reversal_repeat: 'No, and the Brooch reverses a different trinket
+    instead. The Beast Mastery round read Dragonspine plus the Brooch 11.2 ABOVE the worn Dragonspine
+    plus Madness at best in slot; here the same two pairs read 3072.8 against 3074.2, the Brooch
+    pair 1.4 UNDER, about one standard error, so the Beast Mastery form of the reversal does not
+    repeat. What repeats is the Brooch itself: it is in the best pair at all three anchors, and
+    at best in slot the pair that beats the worn pair is Madness plus the Brooch, which is to
+    say the Brooch displaces DRAGONSPINE rather than Madness.'
+  the_armor_tier_caveat: Madness of the Betrayer carries armor penetration, so every figure that
+    holds it moves with the boss's armor, and these are at 6193, the tier ten of the fourteen
+    bosses sit in. At that tier Dragonspine plus Madness is 5.6 behind Dragonspine plus the Brooch
+    at tier and third at best in slot.
+  the_expose_weakness_context: This spec self-applies Expose Weakness, the engine zeroes the
+    external debuff for the talent holder and derives the effect from the wearer's OWN agility,
+    per data/facts/raid-buffs.yaml, so an agility trinket on these rows moves the debuff as well
+    as the wearer, which no other spec's trinket round measures. It is why the SV tab is the one
+    melee ladder that ranks Badge of Tenacity, whose on-use is 150 agility for 20 seconds.
+  a_workbook_reversal: 'The SV tab''s Trinket ladder ranks Dragonspine Trophy first at 303.25,
+    more than double Tsunami Talisman fourth at 139.52; measured, the two are separated by one
+    to five DPS beside any fixed partner, in Dragonspine''s favor at entry and tier and in Tsunami''s
+    at best in slot. Bloodlust Brooch, ranked seventh at 118.00, is in the best pair at every
+    anchor, the reversal every trinket round has measured. Badge of Tenacity, ranked fifth at
+    130.25 above the Brooch, reverses against it: the Brooch pair beats the Badge pair beside
+    every partner at every anchor, and the Badge''s best placement is seventh, beside Madness
+    of the Betrayer at tier. Talon of Al''ar, ranked twelfth at 87.00 above Core of Ar''kelos
+    fourteenth at 85.00, reverses too: Core beside Dragonspine reads 28.5 above the Talon beside
+    Dragonspine at best in slot, 3051.6 against 3023.1, and every pairing that holds the Talon
+    lands in the bottom seven of its table.'
+  the_on_use_agility_is_priced_by_the_binary: 'Badge of Tenacity carries 25 worn agility and
+    its 150-agility on-use, and the vendored binary does price the on-use, tested behaviorally
+    per the Enhancement precedent rather than read from the stale source checkout: a diagnostic
+    run at the same settings read Dragonspine Trophy beside an EMPTY trinket slot at 2996.8 on
+    the best-in-slot anchor, 61.6 under Dragonspine beside the Badge at 3058.4, far more than
+    25 worn agility explains. The same diagnostic prices Talon of Al''ar''s proc, which is its
+    whole value, worn stats being zero per items.csv: Dragonspine beside the Talon reads 3023.1,
+    26.3 above the empty slot, beside the Beast Mastery round''s 24.1 for the same trinket.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the
