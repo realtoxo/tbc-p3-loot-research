@@ -688,6 +688,23 @@ the_elemental_shaman_weapon_round:
     ELEVENTH of twelve, above only the Merciless Gladiator's War Staff, so at that anchor every
     Phase 3 main hand paired with the Chronicle is an upgrade over the worn pair and
     only Zhar'doom beats The Maelstrom's Fury.
+the_hunter_ranged_pass:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, six ranged weapons per hunter
+    run as variants of each anchor profile, only the ranged slot changed and the slot keeping
+    its scope, figures in data/facts/weapon-pair-sims.yaml under ranged_anchors. Ruled by the
+    guild lead the same day, the bow being the one hunter weapon that is not a stat stick.
+  the_slow_bows_own_every_table: The three 3.0 speed bows, Bristleblitz Striker, the Black Bow
+    of the Betrayer and Serpent Spine Longbow, hold the top three places at every anchor for
+    BOTH hunters, and the worn Serpent Spine, a Phase 2 drop, stays within 16.0 of the Phase 3
+    bows everywhere, so the ranged upgrade a hunter is waiting on is modest.
+  the_survival_ladder_is_reversed_on_its_own_rank_one: Legionkiller is the Survival tab's
+    Ranged rank one at 789.66 EPV, thirty points clear of the field, and it MEASURES fourth at
+    every anchor, 92.7 DPS below the worn Bristleblitz Striker at best in slot and 69.4 below
+    the worn Serpent Spine at tier. Survival punishes the 2.9 speed weapons by 69 to 112 DPS
+    where Beast Mastery loses 11 to 44 on the same swaps. The mechanism is not read from the
+    engine here; what is recorded is that the EPV column and the simulator disagree about this
+    spec's ranged slot in both direction and size, and the council should weigh Legionkiller
+    rolls accordingly. NOT A RULING.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours

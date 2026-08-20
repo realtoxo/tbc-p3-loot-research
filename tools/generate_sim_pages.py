@@ -493,6 +493,61 @@ Not a ruling: which pair this anchor wears is the council's call.
 """
 
 
+def ranged_section(spec: str, anchor: str, row: dict) -> str:
+    """A spec's ranged weapon variants, as a section of one anchor page.
+
+    RULED BY THE GUILD LEAD ON 20 AUGUST 2026, for the hunters: the bow is
+    the one hunter weapon that is not a stat stick, so the ranged slot gets
+    its own pass, rendered as its own table because a bow does not belong in
+    a main-hand-and-off-hand table. Appears for exactly the specs and
+    anchors data/facts/weapon-pair-sims.yaml holds ranged figures for.
+    """
+    if not WEAPON_PAIRS.is_file():
+        return ""
+    doc = yaml.safe_load(WEAPON_PAIRS.read_text())
+    block = (doc.get("specs") or {}).get(spec)
+    if not block:
+        return ""
+    rows = (block.get("ranged_anchors") or {}).get(anchor)
+    if not rows:
+        return ""
+
+    table_rows = [[
+        entry["ranged"]["name"],
+        f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}",
+        f"{entry['dps'] - row['dps']:+.1f}",
+    ] for entry in rows]
+
+    best = rows[0]
+    if abs(best["dps"] - row["dps"]) < 0.05:
+        reading = (
+            "This set already carries the best ranged weapon the pass "
+            "measured, which is why its top row reads plus zero: that row "
+            "IS this profile.")
+    elif best["dps"] > row["dps"]:
+        reading = (
+            f"The best ranged weapon, {best['ranged']['name']}, measures "
+            f"{best['dps'] - row['dps']:+.1f} against this set's own, so "
+            "the upgrade path at this anchor runs through it.")
+    else:
+        reading = (
+            f"Every ranged weapon below measures UNDER this set's own, the "
+            f"best of them by {row['dps'] - best['dps']:.1f} DPS, so the "
+            "pass found no ranged upgrade at this anchor.")
+
+    return f"""
+## Ranged weapons
+
+{block['ranged_why']}
+
+Not a ruling: which weapon this anchor carries is the council's call.
+
+{rows_table(["Ranged", "DPS", "Against this set"], table_rows)}
+
+{reading}
+"""
+
+
 def write_detail(directory: Path, spec: str, anchor: str, label: str,
                  row: dict, meta: dict, items_csv: dict,
                  by_key: dict, tiers: list, default_armor: int, db_items: dict,
@@ -648,6 +703,7 @@ damage lands, so a physical spec moves between them and a pure caster does not.
         body += ":::\n"
 
     body += weapon_pair_section(spec, anchor, row, meta)
+    body += ranged_section(spec, anchor, row)
 
     body += f"""
 ## The set

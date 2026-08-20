@@ -56,6 +56,20 @@ Not a ruling: which pair this anchor wears is the council's call.
 
 The best combination, Bloodmoon alone, a two-hander, measures +90.1 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Ranged weapons
+
+The bow is the one hunter weapon that is not a stat stick, so it gets its own pass, ruled by the guild lead on 20 August 2026: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
+
+Not a ruling: which weapon this anchor carries is the council's call.
+
+| Ranged                     | DPS           | Against this set |
+|----------------------------|---------------|------------------|
+| Serpent Spine Longbow      | 3342.3 ± 0.95 | +0.0             |
+| Arcanite Steam-Pistol      | 3319.4 ± 0.91 | -22.9            |
+| Sunfury Bow of the Phoenix | 3314.3 ± 0.92 | -28.0            |
+
+This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

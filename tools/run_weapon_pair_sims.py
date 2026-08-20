@@ -461,6 +461,31 @@ ROUNDS: dict[str, dict] = {
             {"mh": 29993, "oh": None, "phase3": False},
             {"mh": 28436, "oh": None, "phase3": False},
         ],
+        "ranged_why": (
+            "The bow is the one hunter weapon that is not a stat stick, "
+            "so it gets its own pass, ruled by the guild lead on 20 "
+            "August 2026: each row below is THIS PROFILE with only the "
+            "ranged slot changed, the slot keeping its scope, so every "
+            "figure is directly comparable with the one at the top of "
+            "this page. The candidates are the workbook's own Ranged "
+            "ladder plus the worn weapons, none carries a socket, and "
+            "the ammunition and quiver hold still across the rows."),
+        "ranged": [
+            # The Ranged ladder's Phase 3 rows: Bristleblitz Striker
+            # from Archimonde is the worn best-in-slot weapon, the Black
+            # Bow of the Betrayer falls from Illidan, and Legionkiller
+            # from Gurtogg Bloodboil.
+            {"id": 30906, "phase3": True},
+            {"id": 32336, "phase3": True},
+            {"id": 32253, "phase3": True},
+            # Reachable before Phase 3: Serpent Spine Longbow from Lady
+            # Vashj is the worn entry AND tier weapon, the Arcanite
+            # Steam-Pistol from Kael'thas, and the Sunfury Bow of the
+            # Phoenix, also from Kael'thas.
+            {"id": 30105, "phase3": False},
+            {"id": 29949, "phase3": False},
+            {"id": 28772, "phase3": False},
+        ],
     },
     # SURVIVAL: both styles in the same table, per the 20 August 2026 ruling
     # in data/judgments/weapon-styles.yaml, the second spec to mix them: a
@@ -556,6 +581,31 @@ ROUNDS: dict[str, dict] = {
             # crafted by Blacksmithing and carries none.
             {"mh": 29993, "oh": None, "phase3": False},
             {"mh": 28436, "oh": None, "phase3": False},
+        ],
+        "ranged_why": (
+            "The bow is the one hunter weapon that is not a stat stick, "
+            "so it gets its own pass, ruled by the guild lead on 20 "
+            "August 2026: each row below is THIS PROFILE with only the "
+            "ranged slot changed, the slot keeping its scope, so every "
+            "figure is directly comparable with the one at the top of "
+            "this page. The candidates are the workbook's own Ranged "
+            "ladder plus the worn weapons, none carries a socket, and "
+            "the ammunition and quiver hold still across the rows."),
+        "ranged": [
+            # The Ranged ladder's Phase 3 rows: Bristleblitz Striker
+            # from Archimonde is the worn best-in-slot weapon, the Black
+            # Bow of the Betrayer falls from Illidan, and Legionkiller
+            # from Gurtogg Bloodboil.
+            {"id": 30906, "phase3": True},
+            {"id": 32336, "phase3": True},
+            {"id": 32253, "phase3": True},
+            # Reachable before Phase 3: Serpent Spine Longbow from Lady
+            # Vashj is the worn entry AND tier weapon, the Arcanite
+            # Steam-Pistol from Kael'thas, and the Sunfury Bow of the
+            # Phoenix, also from Kael'thas.
+            {"id": 30105, "phase3": False},
+            {"id": 29949, "phase3": False},
+            {"id": 28772, "phase3": False},
         ],
     },
     # AFFLICTION: both styles in the same table, per the 20 August 2026
@@ -1156,6 +1206,26 @@ ROUNDS: dict[str, dict] = {
 }
 
 
+def with_ranged(gear: dict, item_id: int) -> dict:
+    """The gear wearing one ranged candidate, the slot keeping its scope.
+
+    RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the hunters get a special pass
+    for the ranged slot, "they hit with their bows", because the bow is the
+    one hunter weapon that is not a stat stick. The same variant rules as
+    with_pair: the enchant, which for this slot is the scope, stays with the
+    slot, and a candidate arrives ungemmed unless it IS the worn item, whose
+    row exists to reproduce the anchor figure.
+    """
+    out = {"items": [dict(entry) for entry in gear["items"]]}
+    index = SLOT_ORDER.index("ranged")
+    entry = dict(out["items"][index])
+    if entry.get("id") != item_id:
+        entry.pop("gems", None)
+    entry["id"] = item_id
+    out["items"][index] = entry
+    return out
+
+
 def with_pair(gear: dict, mh: int, oh: int | None) -> dict:
     """The gear wearing one candidate combination, slots keeping enchants.
 
@@ -1296,6 +1366,43 @@ def main() -> int:
             results.sort(key=lambda row: -row["dps"])
             anchors[anchor] = results
         specs_out[spec] = {"why": round_["why"], "anchors": anchors}
+
+        # THE RANGED PASS, for a spec whose registry entry carries one. Same
+        # anchors, same variant rules, one slot: the worn row reproduces the
+        # anchor figure and every other candidate arrives with the slot's
+        # scope and no gems.
+        if round_.get("ranged"):
+            ranged_anchors: dict[str, list[dict]] = {}
+            for anchor in round_.get("anchors", ANCHORS):
+                path = args.gear / f"{stem}.{anchor}.gear.json"
+                gear = json.loads(path.read_text())
+                results = []
+                for cand in round_["ranged"]:
+                    if anchor == "entry" and cand["phase3"]:
+                        continue
+                    label = names.get(cand["id"], str(cand["id"]))
+                    dps, stdev, error = run(args.cli, build_request(
+                        spec, with_ranged(gear, cand["id"]), talents,
+                        args.iterations, args.seed, buffs, party_of,
+                        anchor.replace("-", "_"), args.seconds, args.armor))
+                    if error:
+                        raise SystemExit(
+                            f"run_weapon_pair_sims.py: {spec}: {anchor}: "
+                            f"ranged {label}: {error}")
+                    results.append({
+                        "ranged": weapon(cand["id"]),
+                        "dps": round(dps, 1),
+                        "standard_error": round(
+                            stdev / math.sqrt(args.iterations), 2),
+                        "stdev": round(stdev, 1),
+                    })
+                    total += 1
+                    print(f"  {spec:22s} {anchor:20s} "
+                          f"{label + ' (ranged)':56s} {dps:9.1f}")
+                results.sort(key=lambda row: -row["dps"])
+                ranged_anchors[anchor] = results
+            specs_out[spec]["ranged_why"] = round_["ranged_why"]
+            specs_out[spec]["ranged_anchors"] = ranged_anchors
 
     document = {
         "meta": {

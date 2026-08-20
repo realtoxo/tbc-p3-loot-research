@@ -1955,617 +1955,6 @@ specs:
         dps: 2482.2
         standard_error: 1.11
         stdev: 110.7
-  beast_mastery_hunter:
-    why: 'A Beast Mastery Hunter can carry a two-hander or two one-handers, and
-      the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml
-      that both styles run in the same table, so a row below is either a main hand
-      with an off hand or a single two-hander with the off hand empty. These slots
-      are stat sticks: the ranged weapon does the damage and no row here touches
-      it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot
-      keeps its enchant, and the consumables, buffs and seed hold still, so every
-      figure is directly comparable with the one at the top of this page. Holding
-      the consumables still includes the weapon stones, which the hunters choose
-      by the WORN weapon''s class per data/judgments/weapon-imbues.yaml, so a candidate
-      whose class differs from the worn weapon runs under the capture''s stone rather
-      than its own. The candidates are the top of the EP Workbook''s One Hand and
-      Two Hand ladders for this spec, kept to the weapon classes a hunter wields,
-      and the 41/20/0 build carries no weapon specialization talent, so no class
-      is favored.'
-    anchors:
-      entry:
-      - main_hand:
-          id: 28436
-          name: Bloodmoon
-          speed: 3.7
-          source: crafted
-        dps: 3432.4
-        standard_error: 0.99
-        stdev: 99.0
-      - main_hand:
-          id: 29993
-          name: Twinblade of the Phoenix
-          speed: 3.6
-          source: raid_drop
-        dps: 3405.1
-        standard_error: 0.99
-        stdev: 99.4
-      - main_hand:
-          id: 32944
-          name: Talon of the Phoenix
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29948
-          name: Claw of the Phoenix
-          speed: 1.5
-          source: raid_drop
-        dps: 3342.3
-        standard_error: 0.95
-        stdev: 94.9
-      - main_hand:
-          id: 32944
-          name: Talon of the Phoenix
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 3338.0
-        standard_error: 0.95
-        stdev: 94.6
-      tier-hands-and-head:
-      - main_hand:
-          id: 28436
-          name: Bloodmoon
-          speed: 3.7
-          source: crafted
-        dps: 3618.8
-        standard_error: 1.06
-        stdev: 105.8
-      - main_hand:
-          id: 33670
-          name: Vengeful Gladiator's Decapitator
-          speed: 3.6
-          source: arena
-        dps: 3613.6
-        standard_error: 1.06
-        stdev: 106.3
-      - main_hand:
-          id: 32248
-          name: Halberd of Desolation
-          speed: 3.5
-          source: raid_drop
-        dps: 3598.5
-        standard_error: 1.04
-        stdev: 104.3
-      - main_hand:
-          id: 29993
-          name: Twinblade of the Phoenix
-          speed: 3.6
-          source: raid_drop
-        dps: 3590.5
-        standard_error: 1.05
-        stdev: 105.4
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        dps: 3550.8
-        standard_error: 1.01
-        stdev: 101.4
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30865
-          name: Tracker's Blade
-          speed: 1.5
-          source: raid_drop
-        dps: 3536.0
-        standard_error: 1.01
-        stdev: 101.1
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32369
-          name: Blade of Savagery
-          speed: 1.4
-          source: raid_drop
-        dps: 3534.6
-        standard_error: 1.01
-        stdev: 100.9
-      - main_hand:
-          id: 33737
-          name: Vengeful Gladiator's Right Ripper
-          speed: 2.6
-          source: arena
-        off_hand:
-          id: 33705
-          name: Vengeful Gladiator's Left Ripper
-        dps: 3524.9
-        standard_error: 1.01
-        stdev: 100.7
-      - main_hand:
-          id: 32944
-          name: Talon of the Phoenix
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29948
-          name: Claw of the Phoenix
-          speed: 1.5
-          source: raid_drop
-        dps: 3523.1
-        standard_error: 1.0
-        stdev: 99.5
-      - main_hand:
-          id: 32944
-          name: Talon of the Phoenix
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 3517.6
-        standard_error: 0.99
-        stdev: 99.2
-      - main_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        dps: 3504.0
-        standard_error: 0.99
-        stdev: 98.5
-      bis:
-      - main_hand:
-          id: 28436
-          name: Bloodmoon
-          speed: 3.7
-          source: crafted
-        dps: 3694.5
-        standard_error: 1.09
-        stdev: 109.2
-      - main_hand:
-          id: 33670
-          name: Vengeful Gladiator's Decapitator
-          speed: 3.6
-          source: arena
-        dps: 3688.3
-        standard_error: 1.09
-        stdev: 109.4
-      - main_hand:
-          id: 32248
-          name: Halberd of Desolation
-          speed: 3.5
-          source: raid_drop
-        dps: 3673.3
-        standard_error: 1.08
-        stdev: 107.9
-      - main_hand:
-          id: 29993
-          name: Twinblade of the Phoenix
-          speed: 3.6
-          source: raid_drop
-        dps: 3663.6
-        standard_error: 1.08
-        stdev: 108.2
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        dps: 3624.7
-        standard_error: 1.05
-        stdev: 105.4
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30865
-          name: Tracker's Blade
-          speed: 1.5
-          source: raid_drop
-        dps: 3609.0
-        standard_error: 1.05
-        stdev: 104.5
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32369
-          name: Blade of Savagery
-          speed: 1.4
-          source: raid_drop
-        dps: 3607.7
-        standard_error: 1.04
-        stdev: 104.1
-      - main_hand:
-          id: 33737
-          name: Vengeful Gladiator's Right Ripper
-          speed: 2.6
-          source: arena
-        off_hand:
-          id: 33705
-          name: Vengeful Gladiator's Left Ripper
-        dps: 3598.6
-        standard_error: 1.05
-        stdev: 104.6
-      - main_hand:
-          id: 32944
-          name: Talon of the Phoenix
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29948
-          name: Claw of the Phoenix
-          speed: 1.5
-          source: raid_drop
-        dps: 3594.8
-        standard_error: 1.04
-        stdev: 104.0
-      - main_hand:
-          id: 32944
-          name: Talon of the Phoenix
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 3591.4
-        standard_error: 1.04
-        stdev: 103.9
-      - main_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        dps: 3580.7
-        standard_error: 1.01
-        stdev: 100.9
-  survival_hunter:
-    why: 'A Survival Hunter can carry a two-hander or two one-handers, and the guild
-      lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both
-      styles run in the same table, so a row below is either a main hand with an
-      off hand or a single two-hander with the off hand empty. These slots are stat
-      sticks: the ranged weapon does the damage and no row here touches it. One
-      stat carries more than its line for this spec: Expose Weakness is self-applied
-      and scales with this hunter''s own agility, so a candidate that moves agility
-      moves the debuff with it. Each row is THIS PROFILE with only the weapon ids
-      replaced: a filled slot keeps its enchant, and the consumables, buffs and
-      seed hold still, so every figure is directly comparable with the one at the
-      top of this page. Holding the consumables still includes the weapon stones,
-      which the hunters choose by the WORN weapon''s class per data/judgments/weapon-imbues.yaml,
-      so a candidate whose class differs from the worn weapon runs under the capture''s
-      stone rather than its own. The candidates are the top of the EP Workbook''s
-      One Hand and Two Hand ladders for this spec, kept to the weapon classes a
-      hunter wields, with the same two-hander field the Beast Mastery round ran
-      so the two hunter tables read side by side, and the 7/20/34 build carries
-      no weapon specialization talent, so no class is favored.'
-    anchors:
-      entry:
-      - main_hand:
-          id: 28436
-          name: Bloodmoon
-          speed: 3.7
-          source: crafted
-        dps: 2862.8
-        standard_error: 0.93
-        stdev: 92.6
-      - main_hand:
-          id: 29993
-          name: Twinblade of the Phoenix
-          speed: 3.6
-          source: raid_drop
-        dps: 2840.9
-        standard_error: 0.93
-        stdev: 92.7
-      - main_hand:
-          id: 29924
-          name: Netherbane
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2799.0
-        standard_error: 0.88
-        stdev: 87.7
-      - main_hand:
-          id: 29924
-          name: Netherbane
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 29948
-          name: Claw of the Phoenix
-          speed: 1.5
-          source: raid_drop
-        dps: 2797.4
-        standard_error: 0.87
-        stdev: 87.3
-      tier-hands-and-head:
-      - main_hand:
-          id: 32248
-          name: Halberd of Desolation
-          speed: 3.5
-          source: raid_drop
-        dps: 3039.2
-        standard_error: 0.98
-        stdev: 98.1
-      - main_hand:
-          id: 28436
-          name: Bloodmoon
-          speed: 3.7
-          source: crafted
-        dps: 3037.0
-        standard_error: 0.99
-        stdev: 99.1
-      - main_hand:
-          id: 33670
-          name: Vengeful Gladiator's Decapitator
-          speed: 3.6
-          source: arena
-        dps: 3033.9
-        standard_error: 1.0
-        stdev: 100.2
-      - main_hand:
-          id: 29993
-          name: Twinblade of the Phoenix
-          speed: 3.6
-          source: raid_drop
-        dps: 3011.4
-        standard_error: 1.0
-        stdev: 99.7
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        dps: 3003.2
-        standard_error: 0.95
-        stdev: 94.9
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 29924
-          name: Netherbane
-          speed: 2.6
-          source: raid_drop
-        dps: 2990.8
-        standard_error: 0.94
-        stdev: 94.2
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32269
-          name: Messenger of Fate
-          speed: 1.4
-          source: raid_drop
-        dps: 2979.7
-        standard_error: 0.95
-        stdev: 94.9
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 29948
-          name: Claw of the Phoenix
-          speed: 1.5
-          source: raid_drop
-        dps: 2976.7
-        standard_error: 0.95
-        stdev: 95.2
-      - main_hand:
-          id: 29924
-          name: Netherbane
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2963.9
-        standard_error: 0.93
-        stdev: 92.8
-      - main_hand:
-          id: 29924
-          name: Netherbane
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 29948
-          name: Claw of the Phoenix
-          speed: 1.5
-          source: raid_drop
-        dps: 2961.0
-        standard_error: 0.94
-        stdev: 94.4
-      - main_hand:
-          id: 33737
-          name: Vengeful Gladiator's Right Ripper
-          speed: 2.6
-          source: arena
-        off_hand:
-          id: 33705
-          name: Vengeful Gladiator's Left Ripper
-        dps: 2956.7
-        standard_error: 0.94
-        stdev: 94.0
-      bis:
-      - main_hand:
-          id: 32248
-          name: Halberd of Desolation
-          speed: 3.5
-          source: raid_drop
-        dps: 3107.4
-        standard_error: 1.0
-        stdev: 100.3
-      - main_hand:
-          id: 33670
-          name: Vengeful Gladiator's Decapitator
-          speed: 3.6
-          source: arena
-        dps: 3105.9
-        standard_error: 1.01
-        stdev: 100.6
-      - main_hand:
-          id: 28436
-          name: Bloodmoon
-          speed: 3.7
-          source: crafted
-        dps: 3105.6
-        standard_error: 1.0
-        stdev: 100.3
-      - main_hand:
-          id: 29993
-          name: Twinblade of the Phoenix
-          speed: 3.6
-          source: raid_drop
-        dps: 3081.2
-        standard_error: 1.0
-        stdev: 99.7
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        dps: 3074.2
-        standard_error: 0.95
-        stdev: 95.1
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 29924
-          name: Netherbane
-          speed: 2.6
-          source: raid_drop
-        dps: 3061.8
-        standard_error: 0.95
-        stdev: 94.5
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32269
-          name: Messenger of Fate
-          speed: 1.4
-          source: raid_drop
-        dps: 3050.7
-        standard_error: 0.96
-        stdev: 95.7
-      - main_hand:
-          id: 30881
-          name: Blade of Infamy
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 29948
-          name: Claw of the Phoenix
-          speed: 1.5
-          source: raid_drop
-        dps: 3047.0
-        standard_error: 0.95
-        stdev: 95.3
-      - main_hand:
-          id: 29924
-          name: Netherbane
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 3033.8
-        standard_error: 0.93
-        stdev: 93.3
-      - main_hand:
-          id: 29924
-          name: Netherbane
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 29948
-          name: Claw of the Phoenix
-          speed: 1.5
-          source: raid_drop
-        dps: 3031.3
-        standard_error: 0.95
-        stdev: 94.9
-      - main_hand:
-          id: 33737
-          name: Vengeful Gladiator's Right Ripper
-          speed: 2.6
-          source: arena
-        off_hand:
-          id: 33705
-          name: Vengeful Gladiator's Left Ripper
-        dps: 3024.3
-        standard_error: 0.95
-        stdev: 95.0
   affliction_warlock:
     why: 'An Affliction Warlock can carry a staff or a one-hander with a held frill,
       and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml
@@ -4335,3 +3724,876 @@ specs:
         dps: 2037.7
         standard_error: 0.92
         stdev: 92.0
+  beast_mastery_hunter:
+    why: 'A Beast Mastery Hunter can carry a two-hander or two one-handers, and
+      the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml
+      that both styles run in the same table, so a row below is either a main hand
+      with an off hand or a single two-hander with the off hand empty. These slots
+      are stat sticks: the ranged weapon does the damage and no row here touches
+      it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot
+      keeps its enchant, and the consumables, buffs and seed hold still, so every
+      figure is directly comparable with the one at the top of this page. Holding
+      the consumables still includes the weapon stones, which the hunters choose
+      by the WORN weapon''s class per data/judgments/weapon-imbues.yaml, so a candidate
+      whose class differs from the worn weapon runs under the capture''s stone rather
+      than its own. The candidates are the top of the EP Workbook''s One Hand and
+      Two Hand ladders for this spec, kept to the weapon classes a hunter wields,
+      and the 41/20/0 build carries no weapon specialization talent, so no class
+      is favored.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 3432.4
+        standard_error: 0.99
+        stdev: 99.0
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 3405.1
+        standard_error: 0.99
+        stdev: 99.4
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29948
+          name: Claw of the Phoenix
+          speed: 1.5
+          source: raid_drop
+        dps: 3342.3
+        standard_error: 0.95
+        stdev: 94.9
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 3338.0
+        standard_error: 0.95
+        stdev: 94.6
+      tier-hands-and-head:
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 3618.8
+        standard_error: 1.06
+        stdev: 105.8
+      - main_hand:
+          id: 33670
+          name: Vengeful Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 3613.6
+        standard_error: 1.06
+        stdev: 106.3
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 3598.5
+        standard_error: 1.04
+        stdev: 104.3
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 3590.5
+        standard_error: 1.05
+        stdev: 105.4
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 3550.8
+        standard_error: 1.01
+        stdev: 101.4
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30865
+          name: Tracker's Blade
+          speed: 1.5
+          source: raid_drop
+        dps: 3536.0
+        standard_error: 1.01
+        stdev: 101.1
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32369
+          name: Blade of Savagery
+          speed: 1.4
+          source: raid_drop
+        dps: 3534.6
+        standard_error: 1.01
+        stdev: 100.9
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33705
+          name: Vengeful Gladiator's Left Ripper
+        dps: 3524.9
+        standard_error: 1.01
+        stdev: 100.7
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29948
+          name: Claw of the Phoenix
+          speed: 1.5
+          source: raid_drop
+        dps: 3523.1
+        standard_error: 1.0
+        stdev: 99.5
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 3517.6
+        standard_error: 0.99
+        stdev: 99.2
+      - main_hand:
+          id: 30901
+          name: Boundless Agony
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 3504.0
+        standard_error: 0.99
+        stdev: 98.5
+      bis:
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 3694.5
+        standard_error: 1.09
+        stdev: 109.2
+      - main_hand:
+          id: 33670
+          name: Vengeful Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 3688.3
+        standard_error: 1.09
+        stdev: 109.4
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 3673.3
+        standard_error: 1.08
+        stdev: 107.9
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 3663.6
+        standard_error: 1.08
+        stdev: 108.2
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 3624.7
+        standard_error: 1.05
+        stdev: 105.4
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30865
+          name: Tracker's Blade
+          speed: 1.5
+          source: raid_drop
+        dps: 3609.0
+        standard_error: 1.05
+        stdev: 104.5
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32369
+          name: Blade of Savagery
+          speed: 1.4
+          source: raid_drop
+        dps: 3607.7
+        standard_error: 1.04
+        stdev: 104.1
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33705
+          name: Vengeful Gladiator's Left Ripper
+        dps: 3598.6
+        standard_error: 1.05
+        stdev: 104.6
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 29948
+          name: Claw of the Phoenix
+          speed: 1.5
+          source: raid_drop
+        dps: 3594.8
+        standard_error: 1.04
+        stdev: 104.0
+      - main_hand:
+          id: 32944
+          name: Talon of the Phoenix
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 3591.4
+        standard_error: 1.04
+        stdev: 103.9
+      - main_hand:
+          id: 30901
+          name: Boundless Agony
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 3580.7
+        standard_error: 1.01
+        stdev: 100.9
+    ranged_why: 'The bow is the one hunter weapon that is not a stat stick, so it
+      gets its own pass, ruled by the guild lead on 20 August 2026: each row below
+      is THIS PROFILE with only the ranged slot changed, the slot keeping its scope,
+      so every figure is directly comparable with the one at the top of this page.
+      The candidates are the workbook''s own Ranged ladder plus the worn weapons,
+      none carries a socket, and the ammunition and quiver hold still across the
+      rows.'
+    ranged_anchors:
+      entry:
+      - ranged:
+          id: 30105
+          name: Serpent Spine Longbow
+          speed: 3.0
+          source: raid_drop
+        dps: 3342.3
+        standard_error: 0.95
+        stdev: 94.9
+      - ranged:
+          id: 29949
+          name: Arcanite Steam-Pistol
+          speed: 2.9
+          source: raid_drop
+        dps: 3319.4
+        standard_error: 0.91
+        stdev: 91.4
+      - ranged:
+          id: 28772
+          name: Sunfury Bow of the Phoenix
+          speed: 2.9
+          source: raid_drop
+        dps: 3314.3
+        standard_error: 0.92
+        stdev: 92.3
+      tier-hands-and-head:
+      - ranged:
+          id: 30906
+          name: Bristleblitz Striker
+          speed: 3.0
+          source: raid_drop
+        dps: 3537.7
+        standard_error: 1.0
+        stdev: 100.3
+      - ranged:
+          id: 32336
+          name: Black Bow of the Betrayer
+          speed: 3.0
+          source: raid_drop
+        dps: 3525.0
+        standard_error: 1.02
+        stdev: 101.9
+      - ranged:
+          id: 30105
+          name: Serpent Spine Longbow
+          speed: 3.0
+          source: raid_drop
+        dps: 3523.1
+        standard_error: 1.0
+        stdev: 99.5
+      - ranged:
+          id: 32253
+          name: Legionkiller
+          speed: 2.9
+          source: raid_drop
+        dps: 3512.0
+        standard_error: 0.98
+        stdev: 98.5
+      - ranged:
+          id: 29949
+          name: Arcanite Steam-Pistol
+          speed: 2.9
+          source: raid_drop
+        dps: 3496.2
+        standard_error: 0.98
+        stdev: 98.3
+      - ranged:
+          id: 28772
+          name: Sunfury Bow of the Phoenix
+          speed: 2.9
+          source: raid_drop
+        dps: 3490.5
+        standard_error: 0.98
+        stdev: 97.8
+      bis:
+      - ranged:
+          id: 30906
+          name: Bristleblitz Striker
+          speed: 3.0
+          source: raid_drop
+        dps: 3580.7
+        standard_error: 1.01
+        stdev: 100.9
+      - ranged:
+          id: 32336
+          name: Black Bow of the Betrayer
+          speed: 3.0
+          source: raid_drop
+        dps: 3568.7
+        standard_error: 1.02
+        stdev: 102.1
+      - ranged:
+          id: 30105
+          name: Serpent Spine Longbow
+          speed: 3.0
+          source: raid_drop
+        dps: 3564.7
+        standard_error: 1.0
+        stdev: 100.3
+      - ranged:
+          id: 32253
+          name: Legionkiller
+          speed: 2.9
+          source: raid_drop
+        dps: 3559.7
+        standard_error: 1.0
+        stdev: 99.6
+      - ranged:
+          id: 29949
+          name: Arcanite Steam-Pistol
+          speed: 2.9
+          source: raid_drop
+        dps: 3542.9
+        standard_error: 0.99
+        stdev: 99.1
+      - ranged:
+          id: 28772
+          name: Sunfury Bow of the Phoenix
+          speed: 2.9
+          source: raid_drop
+        dps: 3536.9
+        standard_error: 0.99
+        stdev: 98.8
+  survival_hunter:
+    why: 'A Survival Hunter can carry a two-hander or two one-handers, and the guild
+      lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both
+      styles run in the same table, so a row below is either a main hand with an
+      off hand or a single two-hander with the off hand empty. These slots are stat
+      sticks: the ranged weapon does the damage and no row here touches it. One
+      stat carries more than its line for this spec: Expose Weakness is self-applied
+      and scales with this hunter''s own agility, so a candidate that moves agility
+      moves the debuff with it. Each row is THIS PROFILE with only the weapon ids
+      replaced: a filled slot keeps its enchant, and the consumables, buffs and
+      seed hold still, so every figure is directly comparable with the one at the
+      top of this page. Holding the consumables still includes the weapon stones,
+      which the hunters choose by the WORN weapon''s class per data/judgments/weapon-imbues.yaml,
+      so a candidate whose class differs from the worn weapon runs under the capture''s
+      stone rather than its own. The candidates are the top of the EP Workbook''s
+      One Hand and Two Hand ladders for this spec, kept to the weapon classes a
+      hunter wields, with the same two-hander field the Beast Mastery round ran
+      so the two hunter tables read side by side, and the 7/20/34 build carries
+      no weapon specialization talent, so no class is favored.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 2862.8
+        standard_error: 0.93
+        stdev: 92.6
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2840.9
+        standard_error: 0.93
+        stdev: 92.7
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2799.0
+        standard_error: 0.88
+        stdev: 87.7
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29948
+          name: Claw of the Phoenix
+          speed: 1.5
+          source: raid_drop
+        dps: 2797.4
+        standard_error: 0.87
+        stdev: 87.3
+      tier-hands-and-head:
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 3039.2
+        standard_error: 0.98
+        stdev: 98.1
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 3037.0
+        standard_error: 0.99
+        stdev: 99.1
+      - main_hand:
+          id: 33670
+          name: Vengeful Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 3033.9
+        standard_error: 1.0
+        stdev: 100.2
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 3011.4
+        standard_error: 1.0
+        stdev: 99.7
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 3003.2
+        standard_error: 0.95
+        stdev: 94.9
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        dps: 2990.8
+        standard_error: 0.94
+        stdev: 94.2
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32269
+          name: Messenger of Fate
+          speed: 1.4
+          source: raid_drop
+        dps: 2979.7
+        standard_error: 0.95
+        stdev: 94.9
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29948
+          name: Claw of the Phoenix
+          speed: 1.5
+          source: raid_drop
+        dps: 2976.7
+        standard_error: 0.95
+        stdev: 95.2
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 2963.9
+        standard_error: 0.93
+        stdev: 92.8
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29948
+          name: Claw of the Phoenix
+          speed: 1.5
+          source: raid_drop
+        dps: 2961.0
+        standard_error: 0.94
+        stdev: 94.4
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33705
+          name: Vengeful Gladiator's Left Ripper
+        dps: 2956.7
+        standard_error: 0.94
+        stdev: 94.0
+      bis:
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 3107.4
+        standard_error: 1.0
+        stdev: 100.3
+      - main_hand:
+          id: 33670
+          name: Vengeful Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 3105.9
+        standard_error: 1.01
+        stdev: 100.6
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 3105.6
+        standard_error: 1.0
+        stdev: 100.3
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 3081.2
+        standard_error: 1.0
+        stdev: 99.7
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 3074.2
+        standard_error: 0.95
+        stdev: 95.1
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        dps: 3061.8
+        standard_error: 0.95
+        stdev: 94.5
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32269
+          name: Messenger of Fate
+          speed: 1.4
+          source: raid_drop
+        dps: 3050.7
+        standard_error: 0.96
+        stdev: 95.7
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29948
+          name: Claw of the Phoenix
+          speed: 1.5
+          source: raid_drop
+        dps: 3047.0
+        standard_error: 0.95
+        stdev: 95.3
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        dps: 3033.8
+        standard_error: 0.93
+        stdev: 93.3
+      - main_hand:
+          id: 29924
+          name: Netherbane
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 29948
+          name: Claw of the Phoenix
+          speed: 1.5
+          source: raid_drop
+        dps: 3031.3
+        standard_error: 0.95
+        stdev: 94.9
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33705
+          name: Vengeful Gladiator's Left Ripper
+        dps: 3024.3
+        standard_error: 0.95
+        stdev: 95.0
+    ranged_why: 'The bow is the one hunter weapon that is not a stat stick, so it
+      gets its own pass, ruled by the guild lead on 20 August 2026: each row below
+      is THIS PROFILE with only the ranged slot changed, the slot keeping its scope,
+      so every figure is directly comparable with the one at the top of this page.
+      The candidates are the workbook''s own Ranged ladder plus the worn weapons,
+      none carries a socket, and the ammunition and quiver hold still across the
+      rows.'
+    ranged_anchors:
+      entry:
+      - ranged:
+          id: 30105
+          name: Serpent Spine Longbow
+          speed: 3.0
+          source: raid_drop
+        dps: 2797.4
+        standard_error: 0.87
+        stdev: 87.3
+      - ranged:
+          id: 29949
+          name: Arcanite Steam-Pistol
+          speed: 2.9
+          source: raid_drop
+        dps: 2715.3
+        standard_error: 0.89
+        stdev: 89.3
+      - ranged:
+          id: 28772
+          name: Sunfury Bow of the Phoenix
+          speed: 2.9
+          source: raid_drop
+        dps: 2710.9
+        standard_error: 0.89
+        stdev: 88.8
+      tier-hands-and-head:
+      - ranged:
+          id: 30906
+          name: Bristleblitz Striker
+          speed: 3.0
+          source: raid_drop
+        dps: 2974.5
+        standard_error: 0.95
+        stdev: 95.2
+      - ranged:
+          id: 32336
+          name: Black Bow of the Betrayer
+          speed: 3.0
+          source: raid_drop
+        dps: 2970.1
+        standard_error: 0.93
+        stdev: 93.2
+      - ranged:
+          id: 30105
+          name: Serpent Spine Longbow
+          speed: 3.0
+          source: raid_drop
+        dps: 2961.0
+        standard_error: 0.94
+        stdev: 94.4
+      - ranged:
+          id: 32253
+          name: Legionkiller
+          speed: 2.9
+          source: raid_drop
+        dps: 2891.6
+        standard_error: 0.96
+        stdev: 96.0
+      - ranged:
+          id: 29949
+          name: Arcanite Steam-Pistol
+          speed: 2.9
+          source: raid_drop
+        dps: 2877.3
+        standard_error: 0.95
+        stdev: 95.1
+      - ranged:
+          id: 28772
+          name: Sunfury Bow of the Phoenix
+          speed: 2.9
+          source: raid_drop
+        dps: 2871.5
+        standard_error: 0.96
+        stdev: 95.5
+      bis:
+      - ranged:
+          id: 30906
+          name: Bristleblitz Striker
+          speed: 3.0
+          source: raid_drop
+        dps: 3074.2
+        standard_error: 0.95
+        stdev: 95.1
+      - ranged:
+          id: 32336
+          name: Black Bow of the Betrayer
+          speed: 3.0
+          source: raid_drop
+        dps: 3067.4
+        standard_error: 0.94
+        stdev: 94.5
+      - ranged:
+          id: 30105
+          name: Serpent Spine Longbow
+          speed: 3.0
+          source: raid_drop
+        dps: 3061.4
+        standard_error: 0.94
+        stdev: 94.4
+      - ranged:
+          id: 32253
+          name: Legionkiller
+          speed: 2.9
+          source: raid_drop
+        dps: 2981.5
+        standard_error: 0.98
+        stdev: 98.3
+      - ranged:
+          id: 29949
+          name: Arcanite Steam-Pistol
+          speed: 2.9
+          source: raid_drop
+        dps: 2967.5
+        standard_error: 0.97
+        stdev: 97.5
+      - ranged:
+          id: 28772
+          name: Sunfury Bow of the Phoenix
+          speed: 2.9
+          source: raid_drop
+        dps: 2962.2
+        standard_error: 0.98
+        stdev: 97.6

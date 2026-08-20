@@ -63,6 +63,23 @@ Not a ruling: which pair this anchor wears is the council's call.
 
 The best combination, Halberd of Desolation alone, a two-hander, measures +33.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Ranged weapons
+
+The bow is the one hunter weapon that is not a stat stick, so it gets its own pass, ruled by the guild lead on 20 August 2026: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
+
+Not a ruling: which weapon this anchor carries is the council's call.
+
+| Ranged                     | DPS           | Against this set |
+|----------------------------|---------------|------------------|
+| Bristleblitz Striker       | 3074.2 ± 0.95 | +0.0             |
+| Black Bow of the Betrayer  | 3067.4 ± 0.94 | -6.8             |
+| Serpent Spine Longbow      | 3061.4 ± 0.94 | -12.8            |
+| Legionkiller               | 2981.5 ± 0.98 | -92.7            |
+| Arcanite Steam-Pistol      | 2967.5 ± 0.97 | -106.7           |
+| Sunfury Bow of the Phoenix | 2962.2 ± 0.98 | -112.0           |
+
+This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
