@@ -34,7 +34,6 @@ from generate_item_pages import TIERS, slug  # noqa: E402
 ITEMS = Path("data/facts/items.csv")
 DROPS = Path("data/facts/drops.csv")
 PROGRESSION = Path("data/facts/progression.yaml")
-WEAPON_PAIRS = Path("data/facts/enhancement-weapon-pairs.yaml")
 
 
 def encounter_order() -> tuple[list[str], dict[tuple[str, str], int]]:
@@ -65,95 +64,8 @@ BANNER = (
 )
 
 
-def weapon_pair_section() -> list[str]:
-    """The Enhancement weapon pair figures, as a section of that spec's page.
-
-    THE ONE SPEC PAGE THAT CARRIES A MEASUREMENT, because the guild lead asked
-    for it here on 20 August 2026: a special round of weapon sims, paired by
-    item speed, published on the Enhancement Shaman spec page. The figures are
-    read from data/facts/enhancement-weapon-pairs.yaml, which
-    tools/run_weapon_pair_sims.py writes, so this section changes only when
-    that round is rerun. The ruling behind the round lives in
-    data/judgments/enhancement-weapon-rules.yaml.
-    """
-    if not WEAPON_PAIRS.is_file():
-        return []
-    doc = yaml.safe_load(WEAPON_PAIRS.read_text())
-    meta = doc["meta"]
-
-    def speed_cell(row: dict) -> str:
-        if row.get("pair_speed") is not None:
-            return f"{row['pair_speed']:.1f}"
-        mh = row["main_hand"].get("speed")
-        oh = row["off_hand"].get("speed")
-        return f"{mh:.1f} and {oh:.1f}"
-
-    lines = [
-        "## Weapon pairs, simulated",
-        "",
-        "An Enhancement Shaman carries a Windfury imbue in each hand, pairs "
-        "two weapons of the same speed, and wants them slow, per the ruling "
-        "recorded in the judgment store on 20 August 2026. The workbook "
-        "ladder above prices weapons one at a time and prices neither speed "
-        "nor the pair, so the pairs are answered by the simulator instead: "
-        "every matched-speed pair the slow one-hand field supports, run on "
-        "the best-in-slot profile with only the two weapon slots replaced, "
-        "plus the two mismatched pairs the earlier captures wore, kept as "
-        "references. The character is a Draenei, so no row inherits the Orc "
-        "axe privilege the published lists assume.",
-        "",
-        f"Every pair runs BARE, with no weapon enchant and no gems, "
-        f"{meta['iterations']} iterations on seed {meta['seed']} against "
-        f"boss armor {meta['boss_armor']}, so these figures compare with "
-        "each other and never with the enchanted anchor figures on the "
-        "[throughput page](../sims.md). The plus or minus is one standard "
-        "error. The weapons run unsynced, per the 15 August 2026 ruling. "
-        "None of this is a ruling on who gets what: which pair each anchor "
-        "wears is the council's call.",
-        "",
-        "::: {.sortable default-sort=\"4\"}",
-        "| Main hand | Off hand | Pair speed | DPS |",
-        "|-----------|----------|------------|-----|",
-    ]
-    for row in doc["pairs"]:
-        label = ""
-        if not row["matched"]:
-            label = " (mismatched reference)"
-        lines.append(
-            f"| {row['main_hand']['name']} | {row['off_hand']['name']} "
-            f"| {speed_cell(row)}{label} "
-            f"| {row['dps']:.1f} ± {row['standard_error']:.1f} |")
-    lines += [":::", ""]
-    # THE SURPRISE IS STATED, NOT BURIED. This paragraph is computed from the
-    # figures rather than written, so it appears exactly while it is true and
-    # disappears the run it stops being true.
-    matched = [r for r in doc["pairs"] if r["matched"]]
-    mismatched = [r for r in doc["pairs"] if not r["matched"]]
-    if matched and mismatched:
-        best_matched = max(matched, key=lambda r: r["dps"])
-        above = [r for r in mismatched if r["dps"] > best_matched["dps"]]
-        if above:
-            top = max(above, key=lambda r: r["dps"])
-            lines += [
-                f"Read the top of that table before reading anything into "
-                f"it: {'both' if len(above) == 2 else 'one of'} the "
-                f"mismatched reference pairs measure{'s' if len(above) == 1 else ''} "
-                f"ABOVE every matched pair, and the gap from "
-                f"{top['main_hand']['name']} plus {top['off_hand']['name']} "
-                f"down to the best matched pair is "
-                f"{top['dps'] - best_matched['dps']:.1f} DPS against a "
-                f"standard error near {best_matched['standard_error']:.0f}. "
-                f"The simulator prices the matched-speed rule as a cost on "
-                f"this profile, not a gain. What that does and does not "
-                f"settle is recorded in data/facts/sim-results.yaml, and the "
-                f"rule stands until the council revisits it.",
-                "",
-            ]
-    return lines
-
-
 def spec_page(name: str) -> str:
-    lines = [
+    return "\n".join([
         "---",
         f"title: {name}",
         "---",
@@ -164,10 +76,7 @@ def spec_page(name: str) -> str:
         name,
         ":::",
         "",
-    ]
-    if name == "Enhancement Shaman":
-        lines += weapon_pair_section()
-    return "\n".join(lines)
+    ])
 
 
 def page_name(row: dict, ambiguous: bool) -> str:

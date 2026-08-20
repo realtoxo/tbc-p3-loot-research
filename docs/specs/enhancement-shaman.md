@@ -9,31 +9,3 @@ title: Enhancement Shaman
 ::: {.shortlist}
 Enhancement Shaman
 :::
-
-## Weapon pairs, simulated
-
-An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow, per the ruling recorded in the judgment store on 20 August 2026. The workbook ladder above prices weapons one at a time and prices neither speed nor the pair, so the pairs are answered by the simulator instead: every matched-speed pair the slow one-hand field supports, run on the best-in-slot profile with only the two weapon slots replaced, plus the two mismatched pairs the earlier captures wore, kept as references. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume.
-
-Every pair runs BARE, with no weapon enchant and no gems, 10000 iterations on seed 1 against boss armor 6193, so these figures compare with each other and never with the enchanted anchor figures on the [throughput page](../sims.md). The plus or minus is one standard error. The weapons run unsynced, per the 15 August 2026 ruling. None of this is a ruling on who gets what: which pair each anchor wears is the council's call.
-
-::: {.sortable default-sort="4"}
-| Main hand | Off hand | Pair speed | DPS |
-|-----------|----------|------------|-----|
-| Vengeful Gladiator's Cleaver | Syphon of the Nathrezim | 2.6 and 2.8 (mismatched reference) | 2284.6 ± 1.0 |
-| Wicked Edge of the Planes | Merciless Gladiator's Cleaver | 2.7 and 2.6 (mismatched reference) | 2261.2 ± 0.9 |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Cleaver | 2.6 | 2249.1 ± 1.0 |
-| Vengeful Gladiator's Cleaver | Vengeful Gladiator's Chopper | 2.6 | 2249.1 ± 1.0 |
-| Syphon of the Nathrezim | Syphon of the Nathrezim | 2.8 | 2247.5 ± 1.0 |
-| Talon of the Phoenix | Rod of the Sun King | 2.7 | 2228.4 ± 1.0 |
-| Dragonstrike | Rod of the Sun King | 2.7 | 2226.6 ± 1.0 |
-| Claw of Molten Fury | Rod of the Sun King | 2.7 | 2223.0 ± 1.0 |
-| Wicked Edge of the Planes | Rod of the Sun King | 2.7 | 2221.5 ± 1.0 |
-| Rising Tide | Rising Tide | 2.6 | 2215.2 ± 0.9 |
-| Rod of the Sun King | Rod of the Sun King | 2.7 | 2213.4 ± 1.0 |
-| Rising Tide | Netherbane | 2.6 | 2209.5 ± 1.0 |
-| Dragonmaw | Rod of the Sun King | 2.7 | 2204.0 ± 1.0 |
-| Merciless Gladiator's Cleaver | Merciless Gladiator's Cleaver | 2.6 | 2203.1 ± 0.9 |
-| Netherbane | Netherbane | 2.6 | 2198.9 ± 0.9 |
-:::
-
-Read the top of that table before reading anything into it: both the mismatched reference pairs measure ABOVE every matched pair, and the gap from Vengeful Gladiator's Cleaver plus Syphon of the Nathrezim down to the best matched pair is 35.5 DPS against a standard error near 1. The simulator prices the matched-speed rule as a cost on this profile, not a gain. What that does and does not settle is recorded in data/facts/sim-results.yaml, and the rule stands until the council revisits it.

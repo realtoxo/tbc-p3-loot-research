@@ -94,6 +94,7 @@ APL = {
 TALENTS = Path("data/facts/talents.yaml")
 BUFFS = Path("data/facts/raid-buffs.yaml")
 ROSTER = Path("data/facts/roster.yaml")
+BOSS_ARMOR = Path("data/facts/boss-armor.yaml")
 CONSUMABLES = Path("data/facts/consumable-ids.yaml")
 PROTO = WOWSIMS / "proto" / "common.proto"
 
@@ -1332,6 +1333,11 @@ def main() -> int:
                     help="an item id to try, or one id per slot separated by "
                          "commas, matching --slot in order. Repeatable. 0 "
                          "empties a slot, which is what a two-hander needs")
+    ap.add_argument("--all-tiers", action="store_true",
+                    help="Sweep every profile at EVERY armor tier the boss "
+                         "table derives, writing boss_armor per row. This is "
+                         "what `just sim` sends, so the figures file holds "
+                         "all three tiers rather than one run's worth.")
     ap.add_argument("--armor", type=int, default=DEFAULT_ARMOR,
                     help=f"boss armor. Default {DEFAULT_ARMOR}, the lower of the "
                          "two Phase 3 tiers, which ten of the fourteen bosses "
@@ -1388,44 +1394,70 @@ def main() -> int:
     if args.swap or args.slot or args.profile:
         return compare(args, strings, iterations)
 
+    # THE ARMOR TIERS COME FROM THE FACT FILE, derived rather than copied, so
+    # a corrected boss row moves the sweep without anyone re-deriving a list.
+    # A boss whose armor points at its parts contributes its parts, a part the
+    # DPS never attacks contributes nothing, and Veras Darkshadow's None is
+    # skipped because near-zero with the digits unestablished is not a number
+    # a request can carry.
+    if args.all_tiers:
+        by_armor: dict[int, list[str]] = {}
+        armor_doc = yaml.safe_load(BOSS_ARMOR.read_text())
+        for entry in armor_doc["bosses"]:
+            if isinstance(entry.get("armor"), int):
+                by_armor.setdefault(entry["armor"], []).append(entry["boss"])
+        for entry in armor_doc.get("parts") or []:
+            if isinstance(entry.get("armor"), int) and entry.get("dps_attacks_it"):
+                by_armor.setdefault(entry["armor"], []).append(entry["part"])
+        armors = sorted(by_armor, reverse=True)
+        armor_tiers_run = {a: sorted(by_armor[a]) for a in armors}
+    else:
+        armors = [args.armor]
+        armor_tiers_run = None
+
     rows, failures, skipped = [], [], []
-    for path in sorted(args.gear.glob("*.gear.json")):
-        stem = path.name[:-len(".gear.json")]
-        spec_slug, _, anchor = stem.partition(".")
-        spec = spec_slug.replace("-", "_")
-        if spec in NOT_SIMULATABLE:
-            skipped.append(f"{stem}: {NOT_SIMULATABLE[spec]}")
-            continue
-        if spec not in SPECS:
-            failures.append((stem, f"{spec} is not a DPS spec this tool knows"))
-            continue
-        talents = (strings.get(spec) or {}).get("string")
-        if not talents:
-            failures.append((stem, "no talent string recorded"))
-            continue
-        dps, spread, error = run(args.cli, build_request(
-            spec, json.loads(path.read_text()), talents, iterations, args.seed,
-            buffs, party_of, anchor.replace("-", "_"), args.seconds,
-            args.armor))
-        if error:
-            failures.append((stem, error))
-        else:
-            # ONE STANDARD ERROR, RULED BY THE GUILD LEAD ON 15 AUGUST 2026,
-            # shown both options. It is stdev over the square root of the
-            # iteration count, and it covers about 68 percent rather than 95.
-            # THAT LABEL MATTERS: calling this "the confidence interval" would
-            # let a reader read two barely-overlapping figures as settled when
-            # the 95 percent intervals would still overlap by a wide margin. It
-            # is printed and recorded as `standard_error` for that reason and is
-            # never to be called a 95 percent interval.
-            stderr = (spread / math.sqrt(iterations)) if spread else None
-            rows.append({"profile": stem, "spec": spec, "anchor": anchor,
-                         "dps": round(dps, 1),
-                         "standard_error": round(stderr, 2) if stderr else None,
-                         "stdev": round(spread, 1) if spread else None})
-            flag = "   <-- IMPLAUSIBLE" if dps < IMPLAUSIBLE else ""
-            pm = f" +/- {stderr:5.2f}" if stderr else " " * 11
-            print(f"  {stem:52s} {dps:9.1f}{pm}{flag}")
+    for armor in armors:
+        if len(armors) > 1:
+            print(f"\nboss armor {armor}:")
+        for path in sorted(args.gear.glob("*.gear.json")):
+            stem = path.name[:-len(".gear.json")]
+            spec_slug, _, anchor = stem.partition(".")
+            spec = spec_slug.replace("-", "_")
+            if spec in NOT_SIMULATABLE:
+                if armor == armors[0]:
+                    skipped.append(f"{stem}: {NOT_SIMULATABLE[spec]}")
+                continue
+            if spec not in SPECS:
+                failures.append((stem, f"{spec} is not a DPS spec this tool knows"))
+                continue
+            talents = (strings.get(spec) or {}).get("string")
+            if not talents:
+                failures.append((stem, "no talent string recorded"))
+                continue
+            dps, spread, error = run(args.cli, build_request(
+                spec, json.loads(path.read_text()), talents, iterations,
+                args.seed, buffs, party_of, anchor.replace("-", "_"),
+                args.seconds, armor))
+            if error:
+                failures.append((stem, error))
+            else:
+                # ONE STANDARD ERROR, RULED BY THE GUILD LEAD ON 15 AUGUST 2026,
+                # shown both options. It is stdev over the square root of the
+                # iteration count, and it covers about 68 percent rather than 95.
+                # THAT LABEL MATTERS: calling this "the confidence interval" would
+                # let a reader read two barely-overlapping figures as settled when
+                # the 95 percent intervals would still overlap by a wide margin. It
+                # is printed and recorded as `standard_error` for that reason and is
+                # never to be called a 95 percent interval.
+                stderr = (spread / math.sqrt(iterations)) if spread else None
+                rows.append({"profile": stem, "spec": spec, "anchor": anchor,
+                             "dps": round(dps, 1),
+                             "standard_error": round(stderr, 2) if stderr else None,
+                             "stdev": round(spread, 1) if spread else None,
+                             "boss_armor": armor})
+                flag = "   <-- IMPLAUSIBLE" if dps < IMPLAUSIBLE else ""
+                pm = f" +/- {stderr:5.2f}" if stderr else " " * 11
+                print(f"  {stem:52s} {dps:9.1f}{pm}{flag}")
 
     if skipped:
         print(f"\n{len(skipped)} profile(s) skipped as not simulatable:")
@@ -1433,29 +1465,64 @@ def main() -> int:
             print(f"  {line}")
     low = [(r["profile"], r["dps"]) for r in rows if r["dps"] < IMPLAUSIBLE]
     if args.out:
+        meta = {
+            "generated_by": "tools/run_sims.py",
+            "simulator": (Path("vendor/wowsims/VERSION").read_text().strip()
+                          if Path("vendor/wowsims/VERSION").is_file()
+                          else "unrecorded"),
+            "iterations": iterations,
+            "seed": args.seed,
+            "encounter_seconds": args.seconds,
+            "boss_armor_source": (
+                "data/facts/boss-armor.yaml, one row per boss with a source "
+                "each. Phase 3 spans two tiers and a figure at one is NOT "
+                "comparable with a figure at the other."),
+            "targets": 1,
+            "target_level": 73,
+            "interval": (
+                "`standard_error` is ONE standard error on the mean, stdev "
+                f"over the square root of {iterations}. It covers about 68 "
+                "percent, NOT 95. Ruled by the guild lead on 15 August "
+                "2026, shown both options. Do not relabel it as a "
+                "confidence interval."),
+        }
+        if args.all_tiers:
+            # THE CONTEXT NOTES LIVE IN THE WRITER, not hand-merged into the
+            # output, because a generated file that needs a hand edit after
+            # every run is a generated file somebody will forget to edit. The
+            # 15 August 2026 figures file was exactly that: a hand-merged
+            # union of three single-tier runs, and a bare `just sim` would
+            # have silently destroyed two of the tiers and all of the notes.
+            meta["default_tier"] = (
+                "6193, because ten of the fourteen Phase 3 bosses sit in it: "
+                "all five Mount Hyjal, Teron Gorefiend, Mother Shahraz, and "
+                "three of the four Illidari Council.")
+            meta["the_zero_tier_is_one_target"] = (
+                "Essence of Suffering alone, plus Veras Darkshadow, whose "
+                "armor is near-zero with the digits unestablished. Run "
+                "because the guild lead ruled per boss, and a target with no "
+                "armor is a real part of two encounters.")
+            meta["expose_weakness"] = (
+                "The Survival Hunter's agility is MEASURED per anchor by "
+                "bisection, 1119 entry, 1105 tier, 1152 best in slot, with "
+                "the uptime measured at 0.98. See data/facts/raid-buffs.yaml. "
+                "It was the simulator's generic 1210 for a few hours on 15 "
+                "August 2026 and that was 5 to 9 percent high for this "
+                "roster.")
+            meta["armor_tiers_run"] = armor_tiers_run
+            meta["the_no_glaive_anchor"] = (
+                "fury_warrior and combat_rogue each carry a second "
+                "best-in-slot profile, bis_no_glaives, identical in every "
+                "slot except the two weapons. Both specs' published Phase 3 "
+                "lists rank the Warglaives of Azzinoth and the raid holds "
+                "one pair, so at most one of them can be the `bis` row and "
+                "the other is this one. The replacement weapons were found "
+                "by running all 33 candidates Phase 3 can supply, not "
+                "chosen.")
+        else:
+            meta["boss_armor"] = args.armor
         args.out.write_text(yaml.safe_dump({
-            "meta": {
-                "generated_by": "tools/run_sims.py",
-                "simulator": (Path("vendor/wowsims/VERSION").read_text().strip()
-                              if Path("vendor/wowsims/VERSION").is_file()
-                              else "unrecorded"),
-                "iterations": iterations,
-                "seed": args.seed,
-                "encounter_seconds": args.seconds,
-                "boss_armor": args.armor,
-                "boss_armor_source": (
-                    "data/facts/boss-armor.yaml. Phase 3 spans two tiers, 7684 "
-                    "and 6193; a figure at one is NOT comparable with a figure "
-                    "at the other."),
-                "targets": 1,
-                "target_level": 73,
-                "interval": (
-                    "`standard_error` is ONE standard error on the mean, stdev "
-                    f"over the square root of {iterations}. It covers about 68 "
-                    "percent, NOT 95. Ruled by the guild lead on 15 August "
-                    "2026, shown both options. Do not relabel it as a "
-                    "confidence interval."),
-            },
+            "meta": meta,
             "results": rows,
         }, sort_keys=False, width=78))
         print(f"\n{len(rows)} result(s) -> {args.out}")

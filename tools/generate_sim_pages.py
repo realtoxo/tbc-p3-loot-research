@@ -39,6 +39,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_sims  # noqa: E402
 
 FIGURES = Path("data/facts/sim-figures.yaml")
+WEAPON_PAIRS = Path("data/facts/weapon-pair-sims.yaml")
 GEAR = Path("data/sim/gear")
 ITEMS = Path("data/facts/items.csv")
 ROSTER = Path("data/facts/roster.yaml")
@@ -404,6 +405,69 @@ Four specs are absent, and each for a stated reason rather than an oversight.
     path.write_text(body)
 
 
+def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
+    """A spec's weapon pair variants, as a section of one anchor page.
+
+    RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the weapons analysis is
+    variants on the existing entry, tier and best-in-slot profile sims, shown
+    on these detail pages, and more specs are expected to carry a round. The
+    figures are read from data/facts/weapon-pair-sims.yaml, which
+    tools/run_weapon_pair_sims.py writes, so this section appears for exactly
+    the specs and anchors that file holds and changes only when the round
+    reruns. The Enhancement round is ruled in
+    data/judgments/enhancement-weapon-rules.yaml.
+    """
+    if not WEAPON_PAIRS.is_file():
+        return ""
+    doc = yaml.safe_load(WEAPON_PAIRS.read_text())
+    block = (doc.get("specs") or {}).get(spec)
+    if not block:
+        return ""
+    pairs = (block.get("anchors") or {}).get(anchor)
+    if not pairs:
+        return ""
+
+    table_rows = []
+    for entry in pairs:
+        table_rows.append([
+            entry["main_hand"]["name"], entry["off_hand"]["name"],
+            f"{entry['pair_speed']:.1f}",
+            f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}",
+            f"{entry['dps'] - row['dps']:+.1f}",
+        ])
+
+    best = pairs[0]
+    if best["dps"] > row["dps"]:
+        reading = (
+            f"The best pair, {best['main_hand']['name']} with "
+            f"{best['off_hand']['name']}, measures "
+            f"{best['dps'] - row['dps']:+.1f} against this set's own pair, "
+            "so at this anchor the pair rule and throughput point the same "
+            "way.")
+    else:
+        reading = (
+            f"Every pair below measures UNDER this set's own pair, the best "
+            f"of them by {row['dps'] - best['dps']:.1f} DPS, so at this "
+            "anchor the simulator prices the pair rule as a cost, not a "
+            "gain. What that does and does not settle is recorded in "
+            "data/facts/sim-results.yaml under "
+            "what_the_matched_pairs_measure, and the rule stands until the "
+            "council revisits it.")
+
+    return f"""
+## Weapon pairs
+
+{block['why']}
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+{rows_table(["Main hand", "Off hand", "Pair speed", "DPS",
+             "Against this set"], table_rows)}
+
+{reading}
+"""
+
+
 def write_detail(directory: Path, spec: str, anchor: str, label: str,
                  row: dict, meta: dict, items_csv: dict,
                  by_key: dict, tiers: list, default_armor: int, db_items: dict,
@@ -557,6 +621,8 @@ damage lands, so a physical spec moves between them and a pure caster does not.
         for line in divergence:
             body += f"- {line}\n"
         body += ":::\n"
+
+    body += weapon_pair_section(spec, anchor, row, meta)
 
     body += f"""
 ## The set

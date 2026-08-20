@@ -41,6 +41,26 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2216.4 ± 0.97     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2622.3 ± 1.17     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow, per the 20 August 2026 ruling in the judgment store. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced, per the 15 August 2026 ruling.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                     | Off hand                      | Pair speed | DPS           | Against this set |
+|-------------------------------|-------------------------------|------------|---------------|------------------|
+| Dragonstrike                  | Rod of the Sun King           | 2.7        | 2188.7 ± 1.03 | -27.7            |
+| Talon of the Phoenix          | Rod of the Sun King           | 2.7        | 2186.4 ± 0.99 | -30.0            |
+| Wicked Edge of the Planes     | Rod of the Sun King           | 2.7        | 2181.0 ± 1.00 | -35.4            |
+| Rod of the Sun King           | Rod of the Sun King           | 2.7        | 2172.4 ± 0.99 | -44.0            |
+| Dragonmaw                     | Rod of the Sun King           | 2.7        | 2166.2 ± 1.01 | -50.2            |
+| Merciless Gladiator's Cleaver | Merciless Gladiator's Cleaver | 2.6        | 2159.3 ± 0.96 | -57.1            |
+| Netherbane                    | Netherbane                    | 2.6        | 2157.4 ± 0.97 | -59.0            |
+| Black Planar Edge             | Rod of the Sun King           | 2.7        | 2155.9 ± 0.98 | -60.5            |
+| Drakefist Hammer              | Rod of the Sun King           | 2.7        | 2142.3 ± 0.99 | -74.1            |
+
+Every pair below measures UNDER this set's own pair, the best of them by 27.7 DPS, so at this anchor the simulator prices the pair rule as a cost, not a gain. What that does and does not settle is recorded in data/facts/sim-results.yaml under what_the_matched_pairs_measure, and the rule stands until the council revisits it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
