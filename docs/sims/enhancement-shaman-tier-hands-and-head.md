@@ -68,6 +68,27 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 
 The best combination, Syphon of the Nathrezim with Syphon of the Nathrezim, measures +33.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one reputation, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. The Ashtongue Talisman of Vision carries no worn statistics, so everything its rows measure is the simulator's pricing of its procs. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+
+The ten best of the 21 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                      | DPS           | Against this set |
+|---------------------------------|------------------------------|---------------|------------------|
+| Dragonspine Trophy              | Madness of the Betrayer      | 2195.3 ± 1.02 | +7.6             |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch             | 2187.7 ± 1.02 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman             | 2186.1 ± 1.01 | -1.6             |
+| Dragonspine Trophy              | Ashtongue Talisman of Vision | 2174.9 ± 1.03 | -12.8            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade       | 2173.0 ± 1.02 | -14.7            |
+| Dragonspine Trophy              | Core of Ar'kelos             | 2168.2 ± 1.02 | -19.5            |
+| Madness of the Betrayer         | Bloodlust Brooch             | 2165.8 ± 1.02 | -21.9            |
+| Madness of the Betrayer         | Tsunami Talisman             | 2164.2 ± 0.99 | -23.5            |
+| Tsunami Talisman                | Bloodlust Brooch             | 2158.0 ± 1.03 | -29.7            |
+| Madness of the Betrayer         | Ashtongue Talisman of Vision | 2152.7 ± 1.03 | -35.0            |
+
+The best combination, Dragonspine Trophy with Madness of the Betrayer, measures +7.6 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

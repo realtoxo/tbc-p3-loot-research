@@ -126,6 +126,70 @@ ROUNDS: dict[str, dict] = {
             {"mh": 33737, "oh": 33669, "speed": 2.6, "phase3": True},
             {"mh": 33669, "oh": 34015, "speed": 2.6, "phase3": True},
         ],
+        # THE TRINKET POOL, the fifth enumerative trinket round after the
+        # Combat Rogue pilot and the Retribution, Arms and Fury rounds:
+        # every max-level trinket the Enh tab's Trinket ladder ranks, with
+        # anything from Karazhan and the badge vendor onward acceptable,
+        # and the runner generates every unordered pair itself. The ladder
+        # ranks fifteen; eight are out on the standing exclusions, all
+        # availability rather than routing: Mark of the Champion, Slayer's
+        # Crest, Drake Fang Talisman and Kiss of the Spider drop in
+        # level-60 raids; the Abacus of Violent Odds, the Hourglass of the
+        # Unraveller and the Icon of Unyielding Courage drop in five-man
+        # dungeons below Karazhan; and the Empty Mug of Direbrew drops
+        # from a holiday boss inside Blackrock Depths, a level-60
+        # five-man. Core of Ar'kelos stays in as a max-level Netherstorm
+        # quest reward, per the Retribution precedent. No Ahn'Qiraj and no
+        # world-boss trinket is on the tab, and no totem or relic strays
+        # into its Trinket section. The Ashtongue Talisman of Vision, the
+        # tab's rank five, stays in as this spec's shaman-only Ashtongue
+        # Deathsworn Exalted reward; it carries no worn stats per
+        # items.csv, so everything its rows measure is the simulator's
+        # pricing of its procs, and the VENDORED BINARY DOES price them:
+        # a diagnostic run on 20 August 2026 read Dragonspine beside it
+        # 57.6 above Dragonspine beside an EMPTY slot at best in slot.
+        # The recovered source checkout marks id 32491 an unimplemented
+        # TODO, so that checkout is stale against the binary and is not
+        # evidence about what the binary implements. The entry
+        # and tier anchors wear Dragonspine Trophy with Bloodlust Brooch
+        # and the best-in-slot anchor wears Dragonspine Trophy with
+        # Madness of the Betrayer, all three in the pool, so no worn item
+        # needed adding. `phase3` marks what the entry anchor cannot
+        # reach: Madness of the Betrayer is a Black Temple drop and the
+        # Ashtongue Talisman of Vision is Ashtongue Deathsworn Exalted, a
+        # reputation earned in Black Temple and Mount Hyjal.
+        "trinket_pool": [
+            {"id": 28830, "phase3": False},  # Dragonspine Trophy
+            {"id": 32505, "phase3": True},   # Madness of the Betrayer
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 32491, "phase3": True},   # Ashtongue Tal. of Vision
+            {"id": 30627, "phase3": False},  # Tsunami Talisman
+            {"id": 29383, "phase3": False},  # Bloodlust Brooch
+            {"id": 29776, "phase3": False},  # Core of Ar'kelos
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside an attack power "
+            "partner and another beside an armor penetration one, so "
+            "the two slots are measured together: every row below is "
+            "THIS PROFILE with only the two trinket ids replaced, and "
+            "a trinket carries no enchant and no gem, so the "
+            "consumables, buffs and seed hold still and every figure "
+            "is directly comparable with the one at the top of this "
+            "page. The candidates are every max-level trinket on the "
+            "EP Workbook's Trinket ladder for this spec, from Gruul's "
+            "Lair, the raids above it, the badge vendor, the Darkmoon "
+            "Faire, one max-level quest and one reputation, and every "
+            "pair from that pool was measured, so the table is an "
+            "enumeration rather than a selection; the ten best appear "
+            "below, with the worn pair beside them. An on-use trinket "
+            "is activated on the simulator's own schedule. The "
+            "Ashtongue Talisman of Vision carries no worn statistics, "
+            "so everything its rows measure is the simulator's pricing "
+            "of its procs. Madness of the Betrayer carries armor "
+            "penetration, which moves with the boss's armor, and these "
+            "figures are at the armor tier ten of the fourteen bosses "
+            "sit in.")),
     },
     # RETRIBUTION: two-handers only, per the 20 August 2026 ruling. The
     # candidates are the top of the workbook's Two Hand ladder for this spec,

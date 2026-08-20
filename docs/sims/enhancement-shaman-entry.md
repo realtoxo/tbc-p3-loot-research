@@ -62,6 +62,27 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one reputation, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. The Ashtongue Talisman of Vision carries no worn statistics, so everything its rows measure is the simulator's pricing of its procs. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+
+The ten best of the 10 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                | DPS           | Against this set |
+|---------------------------------|------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 2188.7 ± 1.03 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman       | 2187.2 ± 1.01 | -1.5             |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2174.1 ± 1.02 | -14.6            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 2169.3 ± 1.02 | -19.4            |
+| Tsunami Talisman                | Bloodlust Brooch       | 2159.0 ± 1.03 | -29.7            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2147.0 ± 1.01 | -41.7            |
+| Darkmoon Card: Crusade          | Tsunami Talisman       | 2144.6 ± 1.02 | -44.1            |
+| Tsunami Talisman                | Core of Ar'kelos       | 2139.9 ± 1.02 | -48.8            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 2132.5 ± 1.00 | -56.2            |
+| Darkmoon Card: Crusade          | Core of Ar'kelos       | 2128.2 ± 1.00 | -60.5            |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

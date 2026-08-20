@@ -582,6 +582,597 @@ specs:
         dps: 2285.8
         standard_error: 1.04
         stdev: 104.4
+    trinkets_why: 'A trinket is worth one thing beside an attack power partner and
+      another beside an armor penetration one, so the two slots are measured together:
+      every row below is THIS PROFILE with only the two trinket ids replaced, and
+      a trinket carries no enchant and no gem, so the consumables, buffs and seed
+      hold still and every figure is directly comparable with the one at the top
+      of this page. The candidates are every max-level trinket on the EP Workbook''s
+      Trinket ladder for this spec, from Gruul''s Lair, the raids above it, the
+      badge vendor, the Darkmoon Faire, one max-level quest and one reputation,
+      and every pair from that pool was measured, so the table is an enumeration
+      rather than a selection; the ten best appear below, with the worn pair beside
+      them. An on-use trinket is activated on the simulator''s own schedule. The
+      Ashtongue Talisman of Vision carries no worn statistics, so everything its
+      rows measure is the simulator''s pricing of its procs. Madness of the Betrayer
+      carries armor penetration, which moves with the boss''s armor, and these figures
+      are at the armor tier ten of the fourteen bosses sit in.'
+    trinket_anchors:
+      entry:
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2188.7
+        standard_error: 1.03
+        stdev: 102.5
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2187.2
+        standard_error: 1.01
+        stdev: 101.3
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2174.1
+        standard_error: 1.02
+        stdev: 102.0
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2169.3
+        standard_error: 1.02
+        stdev: 101.7
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2159.0
+        standard_error: 1.03
+        stdev: 102.9
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2147.0
+        standard_error: 1.01
+        stdev: 100.8
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2144.6
+        standard_error: 1.02
+        stdev: 102.2
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2139.9
+        standard_error: 1.02
+        stdev: 101.9
+      - trinket_1:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2132.5
+        standard_error: 1.0
+        stdev: 100.4
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2128.2
+        standard_error: 1.0
+        stdev: 100.0
+      tier-hands-and-head:
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        dps: 2195.3
+        standard_error: 1.02
+        stdev: 102.2
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2187.7
+        standard_error: 1.02
+        stdev: 102.4
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2186.1
+        standard_error: 1.01
+        stdev: 101.2
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        dps: 2174.9
+        standard_error: 1.03
+        stdev: 102.9
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2173.0
+        standard_error: 1.02
+        stdev: 102.0
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2168.2
+        standard_error: 1.02
+        stdev: 101.6
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2165.8
+        standard_error: 1.02
+        stdev: 102.4
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2164.2
+        standard_error: 0.99
+        stdev: 98.9
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2158.0
+        standard_error: 1.03
+        stdev: 102.8
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        dps: 2152.7
+        standard_error: 1.03
+        stdev: 103.0
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2151.5
+        standard_error: 1.02
+        stdev: 101.9
+      - trinket_1:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2147.5
+        standard_error: 1.04
+        stdev: 104.1
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2146.8
+        standard_error: 1.02
+        stdev: 101.5
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2145.9
+        standard_error: 1.01
+        stdev: 100.8
+      - trinket_1:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2145.7
+        standard_error: 1.02
+        stdev: 101.8
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2143.5
+        standard_error: 1.02
+        stdev: 102.2
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2138.8
+        standard_error: 1.02
+        stdev: 101.9
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        dps: 2133.4
+        standard_error: 1.04
+        stdev: 103.7
+      - trinket_1:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2131.5
+        standard_error: 1.0
+        stdev: 100.3
+      - trinket_1:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2128.7
+        standard_error: 1.03
+        stdev: 103.2
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2127.2
+        standard_error: 1.0
+        stdev: 100.0
+      bis:
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        dps: 2387.4
+        standard_error: 1.02
+        stdev: 101.7
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2378.4
+        standard_error: 1.03
+        stdev: 102.8
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2373.1
+        standard_error: 1.01
+        stdev: 100.9
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        dps: 2363.7
+        standard_error: 1.03
+        stdev: 103.2
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2363.3
+        standard_error: 1.02
+        stdev: 102.4
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2358.2
+        standard_error: 1.02
+        stdev: 101.9
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2353.2
+        standard_error: 1.01
+        stdev: 100.8
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2349.2
+        standard_error: 0.98
+        stdev: 98.4
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2342.3
+        standard_error: 0.99
+        stdev: 99.1
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        dps: 2339.9
+        standard_error: 1.03
+        stdev: 102.7
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2338.2
+        standard_error: 1.0
+        stdev: 100.2
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2333.6
+        standard_error: 0.99
+        stdev: 99.4
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2333.4
+        standard_error: 1.0
+        stdev: 99.9
+      - trinket_1:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2332.4
+        standard_error: 1.04
+        stdev: 103.8
+      - trinket_1:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2329.4
+        standard_error: 1.01
+        stdev: 101.1
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2327.5
+        standard_error: 0.99
+        stdev: 98.7
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2322.5
+        standard_error: 0.98
+        stdev: 98.3
+      - trinket_1:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2318.4
+        standard_error: 0.99
+        stdev: 98.7
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        dps: 2317.9
+        standard_error: 1.03
+        stdev: 103.4
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2314.1
+        standard_error: 0.99
+        stdev: 98.6
+      - trinket_1:
+          id: 32491
+          name: Ashtongue Talisman of Vision
+          source: reputation
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2313.0
+        standard_error: 1.03
+        stdev: 103.0
   retribution_paladin:
     why: 'A Retribution Paladin always carries a two-hander, so every row below
       is a single weapon and the off hand runs empty. Each row is THIS PROFILE with
