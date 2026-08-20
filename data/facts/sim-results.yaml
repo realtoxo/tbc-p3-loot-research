@@ -412,6 +412,58 @@ the_destruction_trinket_round_is_enumerated:
     pricing of the stacking proc. Beside the Void Star Talisman, 2415.7, 56.8 up, the worn 48
     spell damage priced and nothing else, because its on-use effect is a damage shield on a demon
     this build sacrifices.'
+the_arcane_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the eight-trinket
+    pool as a variant of each of the three anchor profiles, 77 runs, every row in data/facts/variant-sims.yaml.
+    The third caster trinket round; the pool is the Arc tab's ladder, which ranks the mage-only
+    Serpent-Coil Braid, the Pendant of the Violet Eye and Xi'ri's Gift where the warlock tabs
+    ranked Scryer's Bloodgem, Starkiller's Bauble and the Void Star Talisman, and Quagmirran's
+    Eye is excluded here because no arcane anchor wears it, so the worn-trinket override that
+    admitted it to both warlock rounds does not trigger.
+  best_combination_per_anchor: 'Icon of the Silver Crescent plus Serpent-Coil Braid at entry,
+    2301.2, and The Skull of Gul''dan plus Serpent-Coil Braid at tier, 2346.8, and the same Skull
+    and Braid pair at best in slot, 2534.4. The entry and best-in-slot anchors WEAR their tables''
+    top rows, the first caster round where any anchor does, so both top rows ARE the anchor figures;
+    the second entry pair, the Sextant plus the Braid, is 12.3 behind. The tier anchor wears the
+    entry pair, third in its table and 26.1 behind the Skull pair, because the tier anchor is
+    the entry set plus tier tokens and the Skull is not a token. NOT A RULING. One standard error
+    is 0.96 to 1.10 across the tables.'
+  the_skull_of_guldan_premium: 'The best pair holding The Skull of Gul''dan minus the best pair
+    without it, pure arithmetic on the table, 26.1 at tier and 30.1 at best in slot, beside
+    Destruction''s 33.1 and 41.5 and Affliction''s 32.6 and 24.8; the entry table drops the Skull,
+    a Black Temple drop. The best pair without it is the Icon plus the Serpent-Coil Braid at every
+    anchor, this spec''s own worn entry pair rather than the Card-and-Icon pair both warlock rounds
+    landed on. The third of the six wearers'' premiums to be measured, and the smallest tier premium
+    so far.'
+  the_armor_tier_note: 'These figures are at armor 6193 like every trinket round, and for this
+    spec the tier is a label rather than a variable: data/facts/sim-figures.yaml reads the same
+    figure at armor 0, 6193 and 7684 at every anchor, 2534.4 at best in slot at all three, because
+    the mage has no pet and nothing in the build swings a melee weapon into the boss''s armor.
+    The worn pairs in this round reproduce those figures to the digit, so the invariance held
+    through the rerun.'
+  a_workbook_reversal: 'The Arc tab''s Trinket ladder ranks the Serpent-Coil Braid TWELFTH at
+    29.95, below six trinkets this round could measure. Measured, the Braid is in the top pair
+    at every anchor, and beside the Icon of the Silver Crescent on the best-in-slot anchor it
+    is worth 100.7 over an empty slot, more than any candidate but the Skull, because its Improved
+    Mana Gems passive feeds the mana-bound arcane rotation and the ladder prices only its worn
+    12 hit and 30 crit. The Pendant of the Violet Eye, ranked fourteenth at 27.55, beats the
+    sixth-ranked Eye of Magtheridon in every shared pairing, 2482.6 against 2480.1 beside the
+    Braid at best in slot and 2302.5 against 2295.3 at tier, and beside the Skull at best in
+    slot its 2507.9 beats the Icon''s 2498.9, because its worn intellect and on-use mana restoration
+    are also worth more to this rotation than the ladder''s spell damage arithmetic allows. The
+    Icon, ranked seventh below the Eye at sixth, beats the Eye in every shared pairing, the same
+    Icon-over-Eye reversal the Destruction round measured.'
+  the_binary_prices_the_mana_and_the_procs: 'Tested behaviorally against the vendored binary rather
+    than read from the stale source checkout, a fixed partner beside each candidate against the
+    same partner beside an EMPTY slot, same seed, on the best-in-slot anchor. The worn Serpent-Coil
+    Braid beside an empty slot read 2416.8; beside The Skull of Gul''dan, 2534.4, 117.6 up, and
+    that IS the anchor figure, this being the worn pair, the Skull''s worn stats plus its 175-haste
+    on-use, which the simulator activates on its own schedule alongside Arcane Power and every
+    other on-use candidate. Beside Darkmoon Card: Crusade, which carries no worn stats per
+    data/facts/items.csv, 2487.2, 70.4 up, all of it the simulator''s pricing of the stacking
+    proc. Beside the Pendant of the Violet Eye, 2482.6, 65.8 up, its worn 40 intellect and its
+    on-use mana restoration priced together. The Braid itself, measured from the other side with
+    the Icon fixed, is 100.7 up on the empty slot, 2504.3 against 2403.6.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the
