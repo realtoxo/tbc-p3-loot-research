@@ -125,6 +125,50 @@ ROUNDS: dict[str, dict] = {
             {"mh": 33669, "oh": 34015, "speed": 2.6, "phase3": True},
         ],
     },
+    # RETRIBUTION: two-handers only, per the 20 August 2026 ruling. The
+    # candidates are the top of the workbook's Two Hand ladder for this spec,
+    # filtered to weapon classes a paladin wields: swords, maces, axes and
+    # polearms, never a staff or a fist weapon. Every row runs the off hand
+    # EMPTY. The two worn weapons are rows on purpose: their variants must
+    # reproduce the anchor figures to the digit, which is the same
+    # verification the Enhancement round carries.
+    "retribution_paladin": {
+        "why": (
+            "A Retribution Paladin always carries a two-hander, per the 20 "
+            "August 2026 ruling in data/judgments/weapon-styles.yaml, so "
+            "every row below is a single weapon and the off hand runs "
+            "empty. Each row is THIS PROFILE with only the main hand id "
+            "replaced: the slot keeps its Mongoose, and the consumables, "
+            "buffs and seed hold still, so every figure is directly "
+            "comparable with the one at the top of this page. The "
+            "candidates are the top of the EP Workbook's Two Hand ladder "
+            "for this spec, kept to the weapon classes a paladin wields. "
+            "Cataclysm's Edge appears as a measurement only: the guild "
+            "lead routed it to the Arms Warrior and kept Torch of the "
+            "Damned with this spec, per "
+            "data/judgments/weapon-routing.yaml."),
+        "pairs": [
+            # Phase 3 raid drops: Torch of the Damned from the Reliquary
+            # of Souls is the worn best-in-slot weapon and the workbook's
+            # rank one; Cataclysm's Edge from Archimonde is routed to the
+            # Arms Warrior; Soul Cleaver from Teron Gorefiend and the
+            # Halberd of Desolation from High Warlord Naj'entus are the
+            # other Black Temple two-handers on the ladder.
+            {"mh": 32332, "oh": None, "phase3": True},
+            {"mh": 30902, "oh": None, "phase3": True},
+            {"mh": 32348, "oh": None, "phase3": True},
+            {"mh": 32248, "oh": None, "phase3": True},
+            # Season 3 arena, sold for points once the season runs.
+            {"mh": 33663, "oh": None, "phase3": True},
+            # Reachable before Phase 3: Lionheart Executioner is the worn
+            # entry and tier weapon, crafted by Blacksmithing; Twinblade
+            # of the Phoenix drops from Kael'thas Sunstrider; the
+            # Merciless Gladiator's Bonegrinder is Season 2 arena.
+            {"mh": 28430, "oh": None, "phase3": False},
+            {"mh": 29993, "oh": None, "phase3": False},
+            {"mh": 31959, "oh": None, "phase3": False},
+        ],
+    },
 }
 
 

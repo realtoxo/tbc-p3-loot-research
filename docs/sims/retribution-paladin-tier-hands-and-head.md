@@ -41,6 +41,25 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2180.3 ± 1.33     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2461.7 ± 1.48     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Retribution Paladin always carries a two-hander, per the 20 August 2026 ruling in data/judgments/weapon-styles.yaml, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The candidates are the top of the EP Workbook's Two Hand ladder for this spec, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: the guild lead routed it to the Arms Warrior and kept Torch of the Damned with this spec, per data/judgments/weapon-routing.yaml.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                         | Off hand            | DPS           | Against this set |
+|-----------------------------------|---------------------|---------------|------------------|
+| Torch of the Damned               | *empty, two-hander* | 2227.1 ± 1.38 | +46.8            |
+| Cataclysm's Edge                  | *empty, two-hander* | 2211.7 ± 1.34 | +31.4            |
+| Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 2195.0 ± 1.35 | +14.7            |
+| Lionheart Executioner             | *empty, two-hander* | 2180.3 ± 1.33 | +0.0             |
+| Twinblade of the Phoenix          | *empty, two-hander* | 2159.2 ± 1.33 | -21.1            |
+| Soul Cleaver                      | *empty, two-hander* | 2145.2 ± 1.35 | -35.1            |
+| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2141.3 ± 1.32 | -39.0            |
+| Halberd of Desolation             | *empty, two-hander* | 2104.4 ± 1.32 | -75.9            |
+
+The best combination, Torch of the Damned alone, a two-hander, measures +46.8 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

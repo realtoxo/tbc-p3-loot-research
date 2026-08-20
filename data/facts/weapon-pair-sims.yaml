@@ -583,3 +583,169 @@ specs:
         dps: 2285.8
         standard_error: 1.04
         stdev: 104.4
+  retribution_paladin:
+    why: 'A Retribution Paladin always carries a two-hander, per the 20 August 2026
+      ruling in data/judgments/weapon-styles.yaml, so every row below is a single
+      weapon and the off hand runs empty. Each row is THIS PROFILE with only the
+      main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs
+      and seed hold still, so every figure is directly comparable with the one at
+      the top of this page. The candidates are the top of the EP Workbook''s Two
+      Hand ladder for this spec, kept to the weapon classes a paladin wields. Cataclysm''s
+      Edge appears as a measurement only: the guild lead routed it to the Arms Warrior
+      and kept Torch of the Damned with this spec, per data/judgments/weapon-routing.yaml.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2181.3
+        standard_error: 1.33
+        stdev: 133.4
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2160.2
+        standard_error: 1.33
+        stdev: 132.8
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2142.3
+        standard_error: 1.32
+        stdev: 131.6
+      tier-hands-and-head:
+      - main_hand:
+          id: 32332
+          name: Torch of the Damned
+          speed: 3.8
+          source: raid_drop
+        dps: 2227.1
+        standard_error: 1.38
+        stdev: 137.6
+      - main_hand:
+          id: 30902
+          name: Cataclysm's Edge
+          speed: 3.5
+          source: raid_drop
+        dps: 2211.7
+        standard_error: 1.34
+        stdev: 133.9
+      - main_hand:
+          id: 33663
+          name: Vengeful Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2195.0
+        standard_error: 1.35
+        stdev: 134.7
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2180.3
+        standard_error: 1.33
+        stdev: 133.4
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2159.2
+        standard_error: 1.33
+        stdev: 132.7
+      - main_hand:
+          id: 32348
+          name: Soul Cleaver
+          speed: 3.7
+          source: raid_drop
+        dps: 2145.2
+        standard_error: 1.35
+        stdev: 134.8
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2141.3
+        standard_error: 1.32
+        stdev: 131.6
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 2104.4
+        standard_error: 1.32
+        stdev: 131.6
+      bis:
+      - main_hand:
+          id: 32332
+          name: Torch of the Damned
+          speed: 3.8
+          source: raid_drop
+        dps: 2374.4
+        standard_error: 1.46
+        stdev: 145.7
+      - main_hand:
+          id: 30902
+          name: Cataclysm's Edge
+          speed: 3.5
+          source: raid_drop
+        dps: 2345.4
+        standard_error: 1.43
+        stdev: 142.7
+      - main_hand:
+          id: 33663
+          name: Vengeful Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2319.9
+        standard_error: 1.42
+        stdev: 141.6
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2308.3
+        standard_error: 1.44
+        stdev: 144.2
+      - main_hand:
+          id: 32348
+          name: Soul Cleaver
+          speed: 3.7
+          source: raid_drop
+        dps: 2291.4
+        standard_error: 1.45
+        stdev: 144.6
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2281.3
+        standard_error: 1.39
+        stdev: 139.5
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2263.0
+        standard_error: 1.38
+        stdev: 138.3
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 2230.1
+        standard_error: 1.4
+        stdev: 140.5
