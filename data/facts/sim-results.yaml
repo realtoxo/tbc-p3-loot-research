@@ -59,6 +59,38 @@ the_rogue_published_trinket_was_RIGHT_and_this_file_said_otherwise:
     list was right and this project was wrong.
   the_lesson: A finding that a published best-in-slot list is mistaken deserves more scepticism
     than a finding that agrees with it, not less.
+  these_absolutes_are_superseded: The four figures above predate the Expose Weakness
+    recalibration of the same evening, which moved every physical spec. The enumerated rogue
+    trinket round of 20 August 2026 reproduces the ORDER exactly and the separations within
+    0.6 DPS at the current calibration, where the four pairings read 2918.2, then 20.6, 37.8
+    and 43.6 under it; see the_rogue_trinket_round_is_enumerated. The conclusion is unchanged
+    and the old absolutes are quoted only here.
+the_rogue_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the eight-trinket
+    pool as a variant of each of the four anchor profiles, 99 runs, every row in data/facts/variant-sims.yaml.
+  the_cross_check_against_the_block_above: The four Dragonspine pairings reproduce in ORDER and
+    in SEPARATION but not in absolute value. This round reads Dragonspine Trophy plus Warp-Spring
+    Coil 2918.2, Madness of the Betrayer 20.6 behind, Tsunami Talisman 37.8 and Bloodlust Brooch
+    43.6, against the recorded 20.2, 38.0 and 43.0, each within one standard error of a difference.
+    Every absolute figure sits 5.4 to 5.9 above the block above because the Expose Weakness calibration
+    of 15 August 2026 POSTDATES that block by twenty-two minutes; it moved every physical spec
+    up 2.8 to 7.8 and the rogue best-in-slot anchor from the 2912.8 quoted there to 2918.2. The
+    worn pair's row reproduces each of the four CURRENT anchor figures in sim-figures.yaml to
+    the digit.
+  best_combination_per_anchor: 'Dragonspine Trophy plus Warp-Spring Coil at all four anchors,
+    which is the pair every anchor already wears, so each table''s top row IS its anchor figure:
+    entry 2329.8, tier 2542.0, best in slot 2918.2, and 2708.2 without the Warglaives. One standard
+    error is 0.98 to 1.21 across the four.'
+  the_dragonspine_premium: 'The best pair holding Dragonspine Trophy minus the best pair without
+    it, pure arithmetic on the table, 39.4 to 49.3 depending on the anchor: 49.3 at entry, 39.4
+    at tier, 43.9 at best in slot and 46.6 without the Warglaives. The best pair without it is
+    Warp-Spring Coil with Madness of the Betrayer at every anchor except entry, where Madness
+    is not yet reachable and Tsunami Talisman stands beside the Coil at 2280.5.'
+  a_workbook_reversal: The Rog tab's Trinket ladder ranks the Ashtongue Talisman of Lethality
+    third at 191.84, above Madness of the Betrayer at 183.80 and Tsunami Talisman at 153.10. Measured,
+    every pairing that holds it lands in the bottom half of its table at every anchor that can
+    reach it, its best placement sixteenth of twenty-eight, and Dragonspine plus the Talisman
+    reads 111.2 under Dragonspine plus the Coil at best in slot, 2807.0 against 2918.2.
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the
