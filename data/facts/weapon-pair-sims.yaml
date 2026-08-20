@@ -1,9 +1,11 @@
 meta:
-  what: 'Weapon pair rounds, one per spec in the registry of tools/run_weapon_pair_sims.py,
-    each pair run as a VARIANT of that spec''s anchor profiles: the exported gear
-    with only the two weapon ids replaced, each slot keeping its enchant, the anchor''s
-    own consumables, buffs and seed held still. The Enhancement round is ruled in
-    data/judgments/enhancement-weapon-rules.yaml.'
+  what: 'Weapon rounds, one per spec in the registry of tools/run_weapon_pair_sims.py,
+    each combination run as a VARIANT of that spec''s anchor profiles: the exported
+    gear with only the weapon slots changed, a filled slot keeping its enchant and
+    a two-hander row running the off hand EMPTY, the anchor''s own consumables,
+    buffs and seed held still. Which styles each spec''s table holds is ruled in
+    data/judgments/weapon-styles.yaml, and the Enhancement round is further ruled
+    in data/judgments/enhancement-weapon-rules.yaml.'
   read_this_first: Every variant is directly comparable with its anchor's figure
     in sim-figures.yaml, because it is the same request with two item ids changed,
     and the anchor figure IS the captured pair. The plus or minus is ONE STANDARD
