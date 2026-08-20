@@ -89,16 +89,17 @@ ANCHORS = ("entry", "tier-hands-and-head", "bis")
 ROUNDS: dict[str, dict] = {
     "enhancement_shaman": {
         "why": (
-            "An Enhancement Shaman carries a Windfury imbue in each hand, "
-            "pairs two weapons of the same speed, and wants them slow, per "
-            "the 20 August 2026 ruling in the judgment store. The set above "
-            "wears the pair its published source ranked, so each row below "
-            "is THIS PROFILE with only the two weapon ids replaced: the "
-            "slot keeps its Mongoose, and the consumables, buffs and seed "
-            "hold still, so every figure is directly comparable with the "
-            "one at the top of this page. The character is a Draenei, so no "
-            "row inherits the Orc axe privilege the published lists assume. "
-            "The weapons run unsynced, per the 15 August 2026 ruling."),
+            (
+            "An Enhancement Shaman carries a Windfury imbue in each "
+            "hand, pairs two weapons of the same speed, and wants them "
+            "slow. The set above wears the pair its published source "
+            "ranked, so each row below is THIS PROFILE with only the "
+            "two weapon ids replaced: the slot keeps its Mongoose, and "
+            "the consumables, buffs and seed hold still, so every "
+            "figure is directly comparable with the one at the top of "
+            "this page. The character is a Draenei, so no row inherits "
+            "the Orc axe privilege the published lists assume. The "
+            "weapons run unsynced.")),
         "pairs": [
             # 2.8 against 2.8. Syphon of the Nathrezim is the only slow
             # one-hander at this speed, so the only matched pair is two of
@@ -134,19 +135,18 @@ ROUNDS: dict[str, dict] = {
     # verification the Enhancement round carries.
     "retribution_paladin": {
         "why": (
-            "A Retribution Paladin always carries a two-hander, per the 20 "
-            "August 2026 ruling in data/judgments/weapon-styles.yaml, so "
+            (
+            "A Retribution Paladin always carries a two-hander, so "
             "every row below is a single weapon and the off hand runs "
             "empty. Each row is THIS PROFILE with only the main hand id "
-            "replaced: the slot keeps its Mongoose, and the consumables, "
-            "buffs and seed hold still, so every figure is directly "
-            "comparable with the one at the top of this page. The "
-            "candidates are the top of the EP Workbook's Two Hand ladder "
-            "for this spec, kept to the weapon classes a paladin wields. "
-            "Cataclysm's Edge appears as a measurement only: the guild "
-            "lead routed it to the Arms Warrior and kept Torch of the "
-            "Damned with this spec, per "
-            "data/judgments/weapon-routing.yaml."),
+            "replaced: the slot keeps its Mongoose, and the "
+            "consumables, buffs and seed hold still, so every figure is "
+            "directly comparable with the one at the top of this page. "
+            "The candidates are the top of the EP Workbook's Two Hand "
+            "ladder for this spec, kept to the weapon classes a paladin "
+            "wields. Cataclysm's Edge appears as a measurement only: it "
+            "goes to the Arms Warrior, and Torch of the Damned stays "
+            "with this spec.")),
         "pairs": [
             # Phase 3 raid drops: Torch of the Damned from the Reliquary
             # of Souls is the worn best-in-slot weapon and the workbook's
@@ -189,23 +189,23 @@ ROUNDS: dict[str, dict] = {
         "anchors": ("entry", "tier-hands-and-head", "bis",
                     "bis-no-glaives"),
         "why": (
-            "A Fury Warrior considers only one-handers and main handers, "
-            "per the 20 August 2026 ruling in "
-            "data/judgments/weapon-styles.yaml, so every row below is a "
-            "main hand with an off hand and no row is a two-hander. Each "
-            "row is THIS PROFILE with only the two weapon ids replaced: "
-            "each slot keeps its Mongoose, and the consumables, buffs and "
-            "seed hold still, so every figure is directly comparable with "
-            "the one at the top of this page. The candidates are the top "
-            "of the EP Workbook's Main Hand and Off Hand ladders for this "
-            "spec, kept to the weapon classes a warrior dual-wields. A "
-            "row of two copies of one item needs both copies before it is "
+            (
+            "A Fury Warrior considers only one-handers and main "
+            "handers, so every row below is a main hand with an off "
+            "hand and no row is a two-hander. Each row is THIS PROFILE "
+            "with only the two weapon ids replaced: each slot keeps its "
+            "Mongoose, and the consumables, buffs and seed hold still, "
+            "so every figure is directly comparable with the one at the "
+            "top of this page. The candidates are the top of the EP "
+            "Workbook's Main Hand and Off Hand ladders for this spec, "
+            "kept to the weapon classes a warrior dual-wields. A row of "
+            "two copies of one item needs both copies before it is "
             "wearable. The Warglaives of Azzinoth are ranked first by "
             "this spec's published Phase 3 list and by the Combat "
             "Rogue's, the raid holds one pair, and which of the two "
-            "receives it is open council business, per "
-            "data/judgments/weapon-routing.yaml, which is why this spec "
-            "carries a best-in-slot set both with and without them."),
+            "receives it is open council business, which is why this "
+            "spec carries a best-in-slot set both with and without "
+            "them.")),
         "pairs": [
             # Phase 3 raid drops and Season 3 arena. The Warglaive pair,
             # from Illidan Stormrage, is the worn best-in-slot pair and
@@ -263,11 +263,11 @@ ROUNDS: dict[str, dict] = {
         "anchors": ("entry", "tier-hands-and-head", "bis",
                     "bis-no-glaives"),
         "why": (
-            "A Combat Rogue carries two one-handers, per the 20 August "
-            "2026 ruling in data/judgments/weapon-styles.yaml, so every "
-            "row below is a main hand with an off hand and no row is a "
-            "two-hander. Each row is THIS PROFILE with only the two "
-            "weapon ids replaced: each slot keeps its Mongoose, and the "
+            (
+            "A Combat Rogue carries two one-handers, so every row below "
+            "is a main hand with an off hand and no row is a two- "
+            "hander. Each row is THIS PROFILE with only the two weapon "
+            "ids replaced: each slot keeps its Mongoose, and the "
             "consumables, buffs and seed hold still, so every figure is "
             "directly comparable with the one at the top of this page. "
             "The build is Combat Swords and the rotation is built on "
@@ -282,9 +282,8 @@ ROUNDS: dict[str, dict] = {
             "Azzinoth are ranked first by this spec's published Phase 3 "
             "list and by the Fury Warrior's, the raid holds one pair, "
             "and which of the two receives it is open council business, "
-            "per data/judgments/weapon-routing.yaml, which is why this "
-            "spec carries a best-in-slot set both with and without "
-            "them."),
+            "which is why this spec carries a best-in-slot set both "
+            "with and without them.")),
         "pairs": [
             # Phase 3 raid drops and Season 3 arena. The Warglaive pair,
             # from Illidan Stormrage, is the worn best-in-slot pair and
@@ -337,21 +336,20 @@ ROUNDS: dict[str, dict] = {
     # Twinblade whose gems with_pair keeps for that row alone.
     "arms_warrior": {
         "why": (
-            "An Arms Warrior considers only two-handers, per the 20 August "
-            "2026 ruling in data/judgments/weapon-styles.yaml, so every row "
-            "below is a single weapon and the off hand runs empty. Each row "
-            "is THIS PROFILE with only the main hand id replaced: the slot "
-            "keeps its Mongoose, and the consumables, buffs and seed hold "
-            "still, so every figure is directly comparable with the one at "
-            "the top of this page. The published Phase 3 page ranks only "
-            "dual Warglaives, which the guild lead routed away from this "
-            "spec, so the Phase 3 candidates are the drop table's "
-            "two-handers in the weapon classes a warrior wields, and the "
-            "earlier candidates are the top of the EP Workbook's Two Hand "
-            "ladder for this spec. The guild lead ruled that this spec "
+            (
+            "An Arms Warrior considers only two-handers, so every row "
+            "below is a single weapon and the off hand runs empty. Each "
+            "row is THIS PROFILE with only the main hand id replaced: "
+            "the slot keeps its Mongoose, and the consumables, buffs "
+            "and seed hold still, so every figure is directly "
+            "comparable with the one at the top of this page. The "
+            "published Phase 3 page ranks only dual Warglaives, which "
+            "this spec will not receive, so the Phase 3 candidates are "
+            "the drop table's two-handers in the weapon classes a "
+            "warrior wields, and the earlier candidates are the top of "
+            "the EP Workbook's Two Hand ladder for this spec. This spec "
             "takes Cataclysm's Edge. Torch of the Damned appears as a "
-            "measurement only: the guild lead kept it with the Retribution "
-            "Paladin, per data/judgments/weapon-routing.yaml."),
+            "measurement only: it stays with the Retribution Paladin.")),
         "pairs": [
             # Phase 3 raid drops: Cataclysm's Edge from Archimonde is the
             # worn best-in-slot weapon, the workbook's rank one and the
@@ -402,25 +400,24 @@ ROUNDS: dict[str, dict] = {
     # raider would add.
     "beast_mastery_hunter": {
         "why": (
-            "A Beast Mastery Hunter can carry a two-hander or two "
-            "one-handers, and the guild lead ruled on 20 August 2026 in "
-            "data/judgments/weapon-styles.yaml that both styles run in the "
-            "same table, so a row below is either a main hand with an off "
-            "hand or a single two-hander with the off hand empty. These "
-            "slots are stat sticks: the ranged weapon does the damage and "
-            "no row here touches it. Each row is THIS PROFILE with only "
-            "the weapon ids replaced: a filled slot keeps its enchant, and "
-            "the consumables, buffs and seed hold still, so every figure "
-            "is directly comparable with the one at the top of this page. "
+            (
+            "A Beast Mastery Hunter can carry a two-hander or two one- "
+            "handers, and both styles run in the same table, so a row "
+            "below is either a main hand with an off hand or a single "
+            "two-hander with the off hand empty. These slots are stat "
+            "sticks: the ranged weapon does the damage and no row here "
+            "touches it. Each row is THIS PROFILE with only the weapon "
+            "ids replaced: a filled slot keeps its enchant, and the "
+            "consumables, buffs and seed hold still, so every figure is "
+            "directly comparable with the one at the top of this page. "
             "Holding the consumables still includes the weapon stones, "
-            "which the hunters choose by the WORN weapon's class per "
-            "data/judgments/weapon-imbues.yaml, so a candidate whose class "
-            "differs from the worn weapon runs under the capture's stone "
-            "rather than its own. The candidates are the top of the EP "
-            "Workbook's One Hand and Two Hand ladders for this spec, kept "
-            "to the weapon classes a hunter wields, and the 41/20/0 build "
-            "carries no weapon specialization talent, so no class is "
-            "favored."),
+            "which the hunters choose by the WORN weapon's class, so a "
+            "candidate whose class differs from the worn weapon runs "
+            "under the capture's stone rather than its own. The "
+            "candidates are the top of the EP Workbook's One Hand and "
+            "Two Hand ladders for this spec, kept to the weapon classes "
+            "a hunter wields, and the 41/20/0 build carries no weapon "
+            "specialization talent, so no class is favored.")),
         "pairs": [
             # DUAL WIELD. The worn best-in-slot pair: Boundless Agony from
             # Azgalor, the capture's Best MH, with Blade of Infamy from
@@ -462,14 +459,15 @@ ROUNDS: dict[str, dict] = {
             {"mh": 28436, "oh": None, "phase3": False},
         ],
         "ranged_why": (
+            (
             "The bow is the one hunter weapon that is not a stat stick, "
-            "so it gets its own pass, ruled by the guild lead on 20 "
-            "August 2026: each row below is THIS PROFILE with only the "
-            "ranged slot changed, the slot keeping its scope, so every "
-            "figure is directly comparable with the one at the top of "
-            "this page. The candidates are the workbook's own Ranged "
-            "ladder plus the worn weapons, none carries a socket, and "
-            "the ammunition and quiver hold still across the rows."),
+            "so it gets its own pass: each row below is THIS PROFILE "
+            "with only the ranged slot changed, the slot keeping its "
+            "scope, so every figure is directly comparable with the one "
+            "at the top of this page. The candidates are the workbook's "
+            "own Ranged ladder plus the worn weapons, none carries a "
+            "socket, and the ammunition and quiver hold still across "
+            "the rows.")),
         "ranged": [
             # The Ranged ladder's Phase 3 rows: Bristleblitz Striker
             # from Archimonde is the worn best-in-slot weapon, the Black
@@ -515,30 +513,29 @@ ROUNDS: dict[str, dict] = {
     # its figure is understated by the gems a raider would add.
     "survival_hunter": {
         "why": (
-            "A Survival Hunter can carry a two-hander or two one-handers, "
-            "and the guild lead ruled on 20 August 2026 in "
-            "data/judgments/weapon-styles.yaml that both styles run in the "
-            "same table, so a row below is either a main hand with an off "
-            "hand or a single two-hander with the off hand empty. These "
-            "slots are stat sticks: the ranged weapon does the damage and "
-            "no row here touches it. One stat carries more than its line "
-            "for this spec: Expose Weakness is self-applied and scales "
-            "with this hunter's own agility, so a candidate that moves "
-            "agility moves the debuff with it. Each row is THIS PROFILE "
-            "with only the weapon ids replaced: a filled slot keeps its "
-            "enchant, and the consumables, buffs and seed hold still, so "
-            "every figure is directly comparable with the one at the top "
-            "of this page. Holding the consumables still includes the "
-            "weapon stones, which the hunters choose by the WORN weapon's "
-            "class per data/judgments/weapon-imbues.yaml, so a candidate "
-            "whose class differs from the worn weapon runs under the "
-            "capture's stone rather than its own. The candidates are the "
-            "top of the EP Workbook's One Hand and Two Hand ladders for "
-            "this spec, kept to the weapon classes a hunter wields, with "
-            "the same two-hander field the Beast Mastery round ran so the "
-            "two hunter tables read side by side, and the 7/20/34 build "
-            "carries no weapon specialization talent, so no class is "
-            "favored."),
+            (
+            "A Survival Hunter can carry a two-hander or two one- "
+            "handers, and both styles run in the same table, so a row "
+            "below is either a main hand with an off hand or a single "
+            "two-hander with the off hand empty. These slots are stat "
+            "sticks: the ranged weapon does the damage and no row here "
+            "touches it. One stat carries more than its line for this "
+            "spec: Expose Weakness is self-applied and scales with this "
+            "hunter's own agility, so a candidate that moves agility "
+            "moves the debuff with it. Each row is THIS PROFILE with "
+            "only the weapon ids replaced: a filled slot keeps its "
+            "enchant, and the consumables, buffs and seed hold still, "
+            "so every figure is directly comparable with the one at the "
+            "top of this page. Holding the consumables still includes "
+            "the weapon stones, which the hunters choose by the WORN "
+            "weapon's class, so a candidate whose class differs from "
+            "the worn weapon runs under the capture's stone rather than "
+            "its own. The candidates are the top of the EP Workbook's "
+            "One Hand and Two Hand ladders for this spec, kept to the "
+            "weapon classes a hunter wields, with the same two-hander "
+            "field the Beast Mastery round ran so the two hunter tables "
+            "read side by side, and the 7/20/34 build carries no weapon "
+            "specialization talent, so no class is favored.")),
         "pairs": [
             # DUAL WIELD. The worn best-in-slot pair: two copies of Blade
             # of Infamy from Anetheron, the capture's 'Best x2' row, per
@@ -583,14 +580,15 @@ ROUNDS: dict[str, dict] = {
             {"mh": 28436, "oh": None, "phase3": False},
         ],
         "ranged_why": (
+            (
             "The bow is the one hunter weapon that is not a stat stick, "
-            "so it gets its own pass, ruled by the guild lead on 20 "
-            "August 2026: each row below is THIS PROFILE with only the "
-            "ranged slot changed, the slot keeping its scope, so every "
-            "figure is directly comparable with the one at the top of "
-            "this page. The candidates are the workbook's own Ranged "
-            "ladder plus the worn weapons, none carries a socket, and "
-            "the ammunition and quiver hold still across the rows."),
+            "so it gets its own pass: each row below is THIS PROFILE "
+            "with only the ranged slot changed, the slot keeping its "
+            "scope, so every figure is directly comparable with the one "
+            "at the top of this page. The candidates are the workbook's "
+            "own Ranged ladder plus the worn weapons, none carries a "
+            "socket, and the ammunition and quiver hold still across "
+            "the rows.")),
         "ranged": [
             # The Ranged ladder's Phase 3 rows: Bristleblitz Striker
             # from Archimonde is the worn best-in-slot weapon, the Black
@@ -636,30 +634,29 @@ ROUNDS: dict[str, dict] = {
     # Zhar'doom row with its empty off hand.
     "affliction_warlock": {
         "why": (
-            "An Affliction Warlock can carry a staff or a one-hander with "
-            "a held frill, and the guild lead ruled on 20 August 2026 in "
-            "data/judgments/weapon-styles.yaml that both styles run in "
-            "the same table, so a row below is either a single staff with "
-            "the off hand empty or a main hand with an off-hand frill "
-            "that is not a weapon. Each row is THIS PROFILE with only the "
-            "weapon slots changed: the main hand keeps its Soulfrost, "
-            "which a staff row inherits because the enchant belongs to "
-            "the slot, and the consumables, buffs and seed hold still, so "
-            "every figure is directly comparable with the one at the top "
-            "of this page. The Brilliant Wizard Oil applies to any "
-            "weapon, staff and dagger alike, and a frill takes no imbue, "
-            "so nothing about the consumables varies across the rows. The "
-            "candidates are the top of the EP Workbook's Two Hand, One "
-            "Hand and Off Hand ladders for this spec, and no candidate "
-            "carries a socket. Zhar'doom goes to the warlocks, the "
-            "Balance Druid, the Elemental Shaman and the Shadow Priest, "
-            "and its wearers hold no off hand, per "
-            "data/judgments/weapon-routing.yaml, which is why the "
-            "best-in-slot anchor wears it with the off-hand slot empty. "
-            "Tempest of Chaos is taken first by the Arcane Mage, per the "
-            "same file, and first is an ordering rather than an "
-            "exclusion: the warlocks' lists rank it too, so its rows "
-            "measure what this spec holds once the mage is served."),
+            (
+            "An Affliction Warlock can carry a staff or a one-hander "
+            "with a held frill, and both styles run in the same table, "
+            "so a row below is either a single staff with the off hand "
+            "empty or a main hand with an off-hand frill that is not a "
+            "weapon. Each row is THIS PROFILE with only the weapon "
+            "slots changed: the main hand keeps its Soulfrost, which a "
+            "staff row inherits because the enchant belongs to the "
+            "slot, and the consumables, buffs and seed hold still, so "
+            "every figure is directly comparable with the one at the "
+            "top of this page. The Brilliant Wizard Oil applies to any "
+            "weapon, staff and dagger alike, and a frill takes no "
+            "imbue, so nothing about the consumables varies across the "
+            "rows. The candidates are the top of the EP Workbook's Two "
+            "Hand, One Hand and Off Hand ladders for this spec, and no "
+            "candidate carries a socket. Zhar'doom goes to the "
+            "warlocks, the Balance Druid, the Elemental Shaman and the "
+            "Shadow Priest, and its wearers hold no off hand, which is "
+            "why the best-in-slot anchor wears it with the off-hand "
+            "slot empty. Tempest of Chaos is taken first by the Arcane "
+            "Mage, and first is an ordering rather than an exclusion: "
+            "the warlocks' lists rank it too, so its rows measure what "
+            "this spec holds once the mage is served.")),
         "pairs": [
             # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
             # Greatstaff of the Devourer, from Illidan Stormrage, is the
@@ -722,30 +719,29 @@ ROUNDS: dict[str, dict] = {
     # best-in-slot Zhar'doom row with its empty off hand.
     "destruction_warlock": {
         "why": (
-            "A Destruction Warlock can carry a staff or a one-hander with "
-            "a held frill, and the guild lead ruled on 20 August 2026 in "
-            "data/judgments/weapon-styles.yaml that both styles run in "
-            "the same table, so a row below is either a single staff with "
-            "the off hand empty or a main hand with an off-hand frill "
-            "that is not a weapon. Each row is THIS PROFILE with only the "
-            "weapon slots changed: the main hand keeps its Soulfrost, "
-            "which a staff row inherits because the enchant belongs to "
-            "the slot, and the consumables, buffs and seed hold still, so "
-            "every figure is directly comparable with the one at the top "
-            "of this page. The Brilliant Wizard Oil applies to any "
-            "weapon, staff and dagger alike, and a frill takes no imbue, "
-            "so nothing about the consumables varies across the rows. The "
-            "candidates are the top of the EP Workbook's Two Hand, One "
-            "Hand and Off Hand ladders for this spec, and no candidate "
-            "carries a socket. Zhar'doom goes to the warlocks, the "
-            "Balance Druid, the Elemental Shaman and the Shadow Priest, "
-            "and its wearers hold no off hand, per "
-            "data/judgments/weapon-routing.yaml, which is why the "
-            "best-in-slot anchor wears it with the off-hand slot empty. "
-            "Tempest of Chaos is taken first by the Arcane Mage, per the "
-            "same file, and first is an ordering rather than an "
-            "exclusion: the warlocks' lists rank it too, so its rows "
-            "measure what this spec holds once the mage is served."),
+            (
+            "A Destruction Warlock can carry a staff or a one-hander "
+            "with a held frill, and both styles run in the same table, "
+            "so a row below is either a single staff with the off hand "
+            "empty or a main hand with an off-hand frill that is not a "
+            "weapon. Each row is THIS PROFILE with only the weapon "
+            "slots changed: the main hand keeps its Soulfrost, which a "
+            "staff row inherits because the enchant belongs to the "
+            "slot, and the consumables, buffs and seed hold still, so "
+            "every figure is directly comparable with the one at the "
+            "top of this page. The Brilliant Wizard Oil applies to any "
+            "weapon, staff and dagger alike, and a frill takes no "
+            "imbue, so nothing about the consumables varies across the "
+            "rows. The candidates are the top of the EP Workbook's Two "
+            "Hand, One Hand and Off Hand ladders for this spec, and no "
+            "candidate carries a socket. Zhar'doom goes to the "
+            "warlocks, the Balance Druid, the Elemental Shaman and the "
+            "Shadow Priest, and its wearers hold no off hand, which is "
+            "why the best-in-slot anchor wears it with the off-hand "
+            "slot empty. Tempest of Chaos is taken first by the Arcane "
+            "Mage, and first is an ordering rather than an exclusion: "
+            "the warlocks' lists rank it too, so its rows measure what "
+            "this spec holds once the mage is served.")),
         "pairs": [
             # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
             # Greatstaff of the Devourer, from Illidan Stormrage, is the
@@ -814,37 +810,32 @@ ROUNDS: dict[str, dict] = {
     # the Chronicle of Dark Secrets.
     "arcane_mage": {
         "why": (
+            (
             "An Arcane Mage can carry a staff or a one-hander with a "
-            "held frill, and the guild lead ruled on 20 August 2026 in "
-            "data/judgments/weapon-styles.yaml that both styles run in "
-            "the same table, so a row below is either a single staff "
-            "with the off hand empty or a main hand with an off-hand "
-            "frill that is not a weapon. Each row is THIS PROFILE with "
-            "only the weapon slots changed: the main hand keeps its "
-            "Sunfire, which a staff row inherits because the enchant "
-            "belongs to the slot, and the consumables, buffs and seed "
-            "hold still, so every figure is directly comparable with "
-            "the one at the top of this page. The Brilliant Wizard Oil "
-            "applies to any weapon, staff and sword alike, and a frill "
-            "takes no imbue, so nothing about the consumables varies "
-            "across the rows. The candidates are the top of the EP "
-            "Workbook's Two Hand, One Hand and Off Hand ladders for "
-            "this spec, and no candidate carries a socket. Zhar'doom IS "
-            "a row, and it is marked: the guild lead routed it to the "
-            "warlocks, the Balance Druid, the Elemental Shaman and the "
-            "Shadow Priest, and ruled that the Arcane Mage takes "
-            "Tempest of Chaos first, per "
-            "data/judgments/weapon-routing.yaml, so this spec's "
-            "best-in-slot set wears the one-hander with a frill rather "
-            "than the staff. A routing never excludes a candidate from "
-            "a round, per the same-day ruling in "
-            "data/judgments/weapon-styles.yaml, so the staff is "
-            "measured and the preference stays with the council. The "
-            "table therefore carries every half of the Tempest "
-            "question: the warlock rounds measure what other specs "
-            "lose while the mage holds it, and this table measures "
-            "what the mage loses if it concedes it, and what the "
-            "routed staff would be worth here."),
+            "held frill, and both styles run in the same table, so a "
+            "row below is either a single staff with the off hand empty "
+            "or a main hand with an off-hand frill that is not a "
+            "weapon. Each row is THIS PROFILE with only the weapon "
+            "slots changed: the main hand keeps its Sunfire, which a "
+            "staff row inherits because the enchant belongs to the "
+            "slot, and the consumables, buffs and seed hold still, so "
+            "every figure is directly comparable with the one at the "
+            "top of this page. The Brilliant Wizard Oil applies to any "
+            "weapon, staff and sword alike, and a frill takes no imbue, "
+            "so nothing about the consumables varies across the rows. "
+            "The candidates are the top of the EP Workbook's Two Hand, "
+            "One Hand and Off Hand ladders for this spec, and no "
+            "candidate carries a socket. Zhar'doom is a row even though "
+            "it goes to the warlocks, the Balance Druid, the Elemental "
+            "Shaman and the Shadow Priest, with the Arcane Mage taking "
+            "Tempest of Chaos first, so this spec's best-in-slot set "
+            "wears the one-hander with a frill rather than the staff. "
+            "The staff is measured anyway, and the preference stays "
+            "with the council. The table therefore carries every half "
+            "of the Tempest question: the warlock rounds measure what "
+            "other specs lose while the mage holds it, and this table "
+            "measures what the mage loses if it concedes it, and what "
+            "the routed staff would be worth here.")),
         "pairs": [
             # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom is
             # the ladder's rank one and is ROUTED to five other specs;
@@ -920,33 +911,32 @@ ROUNDS: dict[str, dict] = {
     # with its empty off hand.
     "shadow_priest": {
         "why": (
+            (
             "A Shadow Priest can carry a staff or a one-hander with a "
-            "held frill, and the guild lead ruled on 20 August 2026 in "
-            "data/judgments/weapon-styles.yaml that both styles run in "
-            "the same table, so a row below is either a single staff "
-            "with the off hand empty or a main hand with an off-hand "
-            "frill that is not a weapon. Each row is THIS PROFILE with "
-            "only the weapon slots changed: the main hand keeps its "
-            "Soulfrost, which a staff row inherits because the enchant "
-            "belongs to the slot, and the consumables, buffs and seed "
-            "hold still, so every figure is directly comparable with "
-            "the one at the top of this page. The Superior Wizard Oil "
-            "applies to any weapon, staff and mace alike, and a frill "
-            "takes no imbue, so nothing about the consumables varies "
-            "across the rows. The candidates are the top of the EP "
-            "Workbook's Two Hand, One Hand and Off Hand ladders for "
-            "this spec, and no candidate carries a socket. A priest "
-            "wields daggers, one-hand maces and staves and holds any "
-            "frill, and cannot wield swords, so Tempest of Chaos, the "
-            "sword the warlock and mage rounds price, is not a row "
-            "here: the warlocks hold it in principle and concede it to "
-            "the Arcane Mage, where this spec cannot equip it at all, "
-            "so its one-hand rows draw on maces and daggers instead. "
-            "Zhar'doom goes to the warlocks, the Balance Druid, the "
-            "Elemental Shaman and the Shadow Priest, and its wearers "
-            "hold no off hand, per data/judgments/weapon-routing.yaml, "
-            "which is why the best-in-slot anchor wears it with the "
-            "off-hand slot empty."),
+            "held frill, and both styles run in the same table, so a "
+            "row below is either a single staff with the off hand empty "
+            "or a main hand with an off-hand frill that is not a "
+            "weapon. Each row is THIS PROFILE with only the weapon "
+            "slots changed: the main hand keeps its Soulfrost, which a "
+            "staff row inherits because the enchant belongs to the "
+            "slot, and the consumables, buffs and seed hold still, so "
+            "every figure is directly comparable with the one at the "
+            "top of this page. The Superior Wizard Oil applies to any "
+            "weapon, staff and mace alike, and a frill takes no imbue, "
+            "so nothing about the consumables varies across the rows. "
+            "The candidates are the top of the EP Workbook's Two Hand, "
+            "One Hand and Off Hand ladders for this spec, and no "
+            "candidate carries a socket. A priest wields daggers, one- "
+            "hand maces and staves and holds any frill, and cannot "
+            "wield swords, so Tempest of Chaos, the sword the warlock "
+            "and mage rounds price, is not a row here: the warlocks "
+            "hold it in principle and concede it to the Arcane Mage, "
+            "where this spec cannot equip it at all, so its one-hand "
+            "rows draw on maces and daggers instead. Zhar'doom goes to "
+            "the warlocks, the Balance Druid, the Elemental Shaman and "
+            "the Shadow Priest, and its wearers hold no off hand, which "
+            "is why the best-in-slot anchor wears it with the off-hand "
+            "slot empty.")),
         "pairs": [
             # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
             # Greatstaff of the Devourer, from Illidan Stormrage, is the
@@ -1022,33 +1012,32 @@ ROUNDS: dict[str, dict] = {
     # four-piece are not anchors here.
     "balance_druid": {
         "why": (
+            (
             "A Balance Druid can carry a staff or a one-hander with a "
-            "held frill, and the guild lead ruled on 20 August 2026 in "
-            "data/judgments/weapon-styles.yaml that both styles run in "
-            "the same table, so a row below is either a single staff "
-            "with the off hand empty or a main hand with an off-hand "
-            "frill that is not a weapon. Each row is THIS PROFILE with "
-            "only the weapon slots changed: the main hand keeps its "
-            "Sunfire, which a staff row inherits because the enchant "
-            "belongs to the slot, and the consumables, buffs and seed "
-            "hold still, so every figure is directly comparable with "
-            "the one at the top of this page. The Brilliant Wizard Oil "
-            "applies to any weapon, staff and mace alike, and a frill "
-            "takes no imbue, so nothing about the consumables varies "
-            "across the rows. The candidates are the top of the EP "
-            "Workbook's Two Hand, One Hand and Off Hand ladders for "
-            "this spec, and no candidate carries a socket. A druid "
-            "wields maces, staves, daggers and fist weapons and holds "
-            "any frill, and cannot wield swords, so Tempest of Chaos, "
-            "the sword the warlock and mage rounds price, is not a row "
-            "here: the warlocks hold it in principle and concede it to "
-            "the Arcane Mage, where this spec cannot equip it at all, "
-            "so its one-hand rows draw on maces and daggers instead. "
-            "Zhar'doom goes to the warlocks, the Balance Druid, the "
-            "Elemental Shaman and the Shadow Priest, and its wearers "
-            "hold no off hand, per data/judgments/weapon-routing.yaml, "
-            "which is why the best-in-slot anchor wears it with the "
-            "off-hand slot empty."),
+            "held frill, and both styles run in the same table, so a "
+            "row below is either a single staff with the off hand empty "
+            "or a main hand with an off-hand frill that is not a "
+            "weapon. Each row is THIS PROFILE with only the weapon "
+            "slots changed: the main hand keeps its Sunfire, which a "
+            "staff row inherits because the enchant belongs to the "
+            "slot, and the consumables, buffs and seed hold still, so "
+            "every figure is directly comparable with the one at the "
+            "top of this page. The Brilliant Wizard Oil applies to any "
+            "weapon, staff and mace alike, and a frill takes no imbue, "
+            "so nothing about the consumables varies across the rows. "
+            "The candidates are the top of the EP Workbook's Two Hand, "
+            "One Hand and Off Hand ladders for this spec, and no "
+            "candidate carries a socket. A druid wields maces, staves, "
+            "daggers and fist weapons and holds any frill, and cannot "
+            "wield swords, so Tempest of Chaos, the sword the warlock "
+            "and mage rounds price, is not a row here: the warlocks "
+            "hold it in principle and concede it to the Arcane Mage, "
+            "where this spec cannot equip it at all, so its one-hand "
+            "rows draw on maces and daggers instead. Zhar'doom goes to "
+            "the warlocks, the Balance Druid, the Elemental Shaman and "
+            "the Shadow Priest, and its wearers hold no off hand, which "
+            "is why the best-in-slot anchor wears it with the off-hand "
+            "slot empty.")),
         "pairs": [
             # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
             # Greatstaff of the Devourer, from Illidan Stormrage, is the
@@ -1131,35 +1120,34 @@ ROUNDS: dict[str, dict] = {
     # empty off hand, per the routing in weapon-routing.yaml.
     "elemental_shaman": {
         "why": (
+            (
             "An Elemental Shaman can carry a staff or a one-hander with "
-            "a held off hand, and the guild lead ruled on 20 August 2026 "
-            "in data/judgments/weapon-styles.yaml that both styles run "
-            "in the same table, so a row below is either a single staff "
-            "with the off hand empty or a main hand with an off-hand "
-            "item that is not a weapon. Each row is THIS PROFILE with "
-            "only the weapon slots changed: the main hand keeps its "
-            "Major Spellpower, which a staff row inherits because the "
-            "enchant belongs to the slot, and the consumables, buffs and "
-            "seed hold still, so every figure is directly comparable "
-            "with the one at the top of this page. The Brilliant Wizard "
-            "Oil applies to any weapon, staff and mace alike, and a "
-            "frill or a shield takes no imbue, so nothing about the "
-            "consumables varies across the rows. The candidates are the "
-            "top of the EP Workbook's Two Hand, One Hand and Off Hand "
-            "ladders for this spec, and no candidate carries a socket. "
-            "A shaman wields maces, axes, staves, daggers and fist "
-            "weapons and cannot wield swords, so Tempest of Chaos, the "
-            "sword the warlock and mage rounds price, is not a row "
-            "here. A shaman can also carry a shield in the off hand, "
-            "alone among the five Zhar'doom wearers, and the workbook's "
-            "rank-two off hand for this spec, Antonidas's Aegis of Rapt "
+            "a held off hand, and both styles run in the same table, so "
+            "a row below is either a single staff with the off hand "
+            "empty or a main hand with an off-hand item that is not a "
+            "weapon. Each row is THIS PROFILE with only the weapon "
+            "slots changed: the main hand keeps its Major Spellpower, "
+            "which a staff row inherits because the enchant belongs to "
+            "the slot, and the consumables, buffs and seed hold still, "
+            "so every figure is directly comparable with the one at the "
+            "top of this page. The Brilliant Wizard Oil applies to any "
+            "weapon, staff and mace alike, and a frill or a shield "
+            "takes no imbue, so nothing about the consumables varies "
+            "across the rows. The candidates are the top of the EP "
+            "Workbook's Two Hand, One Hand and Off Hand ladders for "
+            "this spec, and no candidate carries a socket. A shaman "
+            "wields maces, axes, staves, daggers and fist weapons and "
+            "cannot wield swords, so Tempest of Chaos, the sword the "
+            "warlock and mage rounds price, is not a row here. A shaman "
+            "can also carry a shield in the off hand, alone among the "
+            "five Zhar'doom wearers, and the workbook's rank-two off "
+            "hand for this spec, Antonidas's Aegis of Rapt "
             "Concentration from Archimonde, is a shield, so one row "
             "prices it against the held frills. Zhar'doom goes to the "
             "warlocks, the Balance Druid, the Elemental Shaman and the "
-            "Shadow Priest, and its wearers hold no off hand, per "
-            "data/judgments/weapon-routing.yaml, which is why the "
-            "best-in-slot anchor wears it with the off-hand slot "
-            "empty."),
+            "Shadow Priest, and its wearers hold no off hand, which is "
+            "why the best-in-slot anchor wears it with the off-hand "
+            "slot empty.")),
         "pairs": [
             # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
             # Greatstaff of the Devourer, from Illidan Stormrage, is the

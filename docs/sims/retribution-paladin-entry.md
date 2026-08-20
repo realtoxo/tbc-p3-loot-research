@@ -46,9 +46,7 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-A Retribution Paladin always carries a two-hander, per the 20 August 2026 ruling in data/judgments/weapon-styles.yaml, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The candidates are the top of the EP Workbook's Two Hand ladder for this spec, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: the guild lead routed it to the Arms Warrior and kept Torch of the Damned with this spec, per data/judgments/weapon-routing.yaml.
-
-Not a ruling: which pair this anchor wears is the council's call.
+A Retribution Paladin always carries a two-hander, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The candidates are the top of the EP Workbook's Two Hand ladder for this spec, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: it goes to the Arms Warrior, and Torch of the Damned stays with this spec.
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|

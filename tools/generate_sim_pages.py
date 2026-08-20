@@ -475,17 +475,12 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict) -> str:
         reading = (
             f"Every combination below measures UNDER this set's own "
             f"weapons, the best of them by {row['dps'] - best['dps']:.1f} "
-            "DPS, so the round found no weapon upgrade at this anchor. "
-            "Where a ruling holds a spec below its highest-measuring "
-            "combination, what that does and does not settle is recorded in "
-            "data/facts/sim-results.yaml.")
+            "DPS, so the round found no weapon upgrade at this anchor.")
 
     return f"""
 ## Weapon pairs
 
 {block['why']}
-
-Not a ruling: which pair this anchor wears is the council's call.
 
 {rows_table(header, table_rows)}
 
@@ -539,8 +534,6 @@ def ranged_section(spec: str, anchor: str, row: dict) -> str:
 ## Ranged weapons
 
 {block['ranged_why']}
-
-Not a ruling: which weapon this anchor carries is the council's call.
 
 {rows_table(["Ranged", "DPS", "Against this set"], table_rows)}
 

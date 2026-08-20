@@ -46,9 +46,7 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow, per the 20 August 2026 ruling in the judgment store. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced, per the 15 August 2026 ruling.
-
-Not a ruling: which pair this anchor wears is the council's call.
+An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
 
 | Main hand                     | Off hand                      | Pair speed | DPS           | Against this set |
 |-------------------------------|-------------------------------|------------|---------------|------------------|

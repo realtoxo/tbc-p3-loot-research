@@ -46,9 +46,7 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-An Arms Warrior considers only two-handers, per the 20 August 2026 ruling in data/judgments/weapon-styles.yaml, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The published Phase 3 page ranks only dual Warglaives, which the guild lead routed away from this spec, so the Phase 3 candidates are the drop table's two-handers in the weapon classes a warrior wields, and the earlier candidates are the top of the EP Workbook's Two Hand ladder for this spec. The guild lead ruled that this spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: the guild lead kept it with the Retribution Paladin, per data/judgments/weapon-routing.yaml.
-
-Not a ruling: which pair this anchor wears is the council's call.
+An Arms Warrior considers only two-handers, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The published Phase 3 page ranks only dual Warglaives, which this spec will not receive, so the Phase 3 candidates are the drop table's two-handers in the weapon classes a warrior wields, and the earlier candidates are the top of the EP Workbook's Two Hand ladder for this spec. This spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: it stays with the Retribution Paladin.
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|

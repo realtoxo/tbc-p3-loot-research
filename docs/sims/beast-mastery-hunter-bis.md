@@ -46,9 +46,7 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-A Beast Mastery Hunter can carry a two-hander or two one-handers, and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class per data/judgments/weapon-imbues.yaml, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
-
-Not a ruling: which pair this anchor wears is the council's call.
+A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
 
 | Main hand                         | Off hand                         | DPS           | Against this set |
 |-----------------------------------|----------------------------------|---------------|------------------|
@@ -68,9 +66,7 @@ The best combination, Bloodmoon alone, a two-hander, measures +113.8 against thi
 
 ## Ranged weapons
 
-The bow is the one hunter weapon that is not a stat stick, so it gets its own pass, ruled by the guild lead on 20 August 2026: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
-
-Not a ruling: which weapon this anchor carries is the council's call.
+The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
 
 | Ranged                     | DPS           | Against this set |
 |----------------------------|---------------|------------------|
