@@ -269,6 +269,50 @@ the_combat_rogue_weapon_round:
     pairs and consistent in direction with the Sword Specialization caveat the round
     states. The workbook's off hand ladder ranks the Bludgeon second, and under this build
     the simulator does not agree.
+the_beast_mastery_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eleven rows run as variants of
+    each Beast Mastery anchor profile, BOTH styles in one table per the 20 August 2026 style
+    ruling in data/judgments/weapon-styles.yaml, seven dual wield pairs and four two-handers
+    with the off hand empty, figures in data/facts/weapon-pair-sims.yaml. The melee slots are
+    stat sticks and no row touches the ranged weapon.
+  the_anchors_reproduce: The worn combination's variant reads the anchor figure to the digit
+    at all three anchors, Talon of the Phoenix with Claw of the Phoenix 3342.3 at entry and
+    3523.1 at tier, Boundless Agony with Blade of Infamy 3580.7 at best in slot.
+  every_two_hander_beats_every_pair: At all three anchors the four two-hander rows sit above
+    every dual wield row, worst two-hander against best pair 3405.1 against 3342.3 at entry,
+    3590.5 against 3550.8 at tier and 3663.6 against 3624.7 at best in slot, and the tier and
+    best in slot gaps hold even though the Twinblade row runs UNGEMMED, three empty sockets,
+    because no BM anchor wears it. For a spec whose melee slots only carry stats, one
+    two-hand budget buys more than two one-hand budgets at every anchor measured.
+  the_captured_best_in_slot_pair_measures_last: Boundless Agony with Blade of Infamy, the
+    capture's Best MH and top Best OH, is the LOWEST of all eleven rows on the tier and best
+    in slot sets, 3580.7 ± 1.01 at best in slot against 3694.5 ± 1.09 for Bloodmoon, a gap of
+    113.8, and even the worn entry fists measure above it, 3594.8. The captured page prices
+    its dual wield table in isolation and lists no two-hander against it, so the capture is
+    faithful to its source and the source does not ask this question.
+  a_phase_2_crafted_axe_tops_every_anchor: Bloodmoon, crafted by Blacksmithing and reachable
+    before Phase 3, measures FIRST at all three anchors, 3432.4 at entry, 3618.8 at tier and
+    3694.5 at best in slot, above the Two Hand ladder's rank one Halberd of Desolation at
+    3673.3 and rank two Vengeful Gladiator's Decapitator at 3688.3 on the best in slot set.
+    The workbook prices the Halberd 50.75 EPV above Bloodmoon; the Halberd spends 30 of its
+    budget on melee hit, which feeds only the stat stick swings, the same one-column account
+    the Retribution round recorded. NOT A RANKING. Which weapon the hunter carries, and
+    whether a Naj'entus polearm is better routed to a spec whose swings it feeds, is the
+    council's call.
+  the_stone_caveat: The hunters run the Adamantite stone chosen by the WORN weapon's class
+    per data/judgments/weapon-imbues.yaml, and a variant holds the anchor's consumables
+    still, so the entry and tier anchors, worn with fist weapons, ran every sword, dagger,
+    axe and polearm row under the Weightstone, and the best in slot anchor, worn with a
+    dagger and a sword, ran the Season 3 fist pair under the Sharpening Stone. The
+    weightstone is the stone that feeds ranged base damage per docs/kb/DOMAIN.md, so the
+    entry and tier rows carry the ranged-fed stone a differently classed pair would not, and
+    no cross-class row here prices its own stone.
+  the_spread_is_the_finding: The whole table spans 113.8 DPS at best in slot and the seven
+    dual wield rows span 44.0, from 3580.7 to 3624.7, on a set that deals 3580.7, so a
+    hunter weapon argument between PAIRS is worth about one percent of the spec's damage and
+    the only move worth more is the style itself. The two-hander rows are where the DPS is;
+    everything else is small against the same drops contested by the melee, whose rounds
+    price the same one-handers at many times these gaps.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
