@@ -1301,6 +1301,33 @@ the_hunter_ranged_pass:
     engine here; what is recorded is that the EPV column and the simulator disagree about this
     spec's ranged slot in both direction and size, and the council should weigh Legionkiller
     rolls accordingly. NOT A RULING.
+the_bis_profiles_audited_against_their_own_tables:
+  what: Every best-in-slot profile checked against its own measured weapon, ranged and
+    trinket tables at armor 6193, the capstone the guild lead asked for when the variant
+    rounds began. A gap is the best measured row minus the anchor figure, so a profile
+    wearing its best reads zero everywhere.
+  fully_honest_at_best_in_slot: Seven profiles wear their best measured combination in
+    every table that applies to them, the Enhancement Shaman, Retribution Paladin, Arms
+    Warrior, Combat Rogue with the Warglaives, Arcane Mage, Shadow Priest and Elemental
+    Shaman.
+  gaps_explained_by_construction: The two bis_no_glaives profiles trail the Warglaives by
+    135.0 for the Fury Warrior and 210.0 for the Combat Rogue, which is not a defect, it
+    is the question those profiles exist to answer.
+  the_weapon_gaps_are_the_hunters: The Beast Mastery best in slot trails Bloodmoon alone
+    by 113.8 and the Survival best in slot trails the Halberd of Desolation alone by 33.2,
+    both because the published lists build dual-wield sets and every two-hander measured
+    above every dual pair for both hunters. Whether the hunter anchors re-anchor on a
+    two-hander is the standing council question from the weapon rounds.
+  the_trinket_gaps_are_small_and_mostly_uncontested: Six profiles trail their best trinket
+    pair by 4.8 to 12.3. Fury trails Dragonspine with Madness by 6.9 with the glaives and
+    8.1 without; Beast Mastery trails Dragonspine with the badge Brooch by 11.2; Survival
+    trails Madness with the Brooch by 5.7; Affliction trails Skull with the Darkmoon Card
+    by 6.0; Destruction trails Skull with the Sextant by 12.3; Balance trails Skull with
+    Quagmirran's Eye by 4.8. Several of the winning partners contest nothing, the Brooch
+    being a badge purchase, the Card a Darkmoon Faire turn-in and Quagmirran's Eye a
+    five-man drop, so part of this table closes without touching a raid roll. NOT A
+    RULING. The council decides what any profile re-wears.
+what_is_still_open:
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
