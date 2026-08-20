@@ -462,6 +462,102 @@ ROUNDS: dict[str, dict] = {
             {"mh": 28436, "oh": None, "phase3": False},
         ],
     },
+    # SURVIVAL: both styles in the same table, per the 20 August 2026 ruling
+    # in data/judgments/weapon-styles.yaml, the second spec to mix them: a
+    # dual_wield row is a main hand with an off hand, and a two_hand row runs
+    # the off hand empty. The melee slots are stat sticks, the ranged weapon
+    # does the damage and is not part of this round, so the candidates are
+    # the top of the SV workbook tab's One Hand pool, which is combined like
+    # the BM and Enhancement tabs rather than split like Fury's, and its Two
+    # Hand ladder, kept to the weapon classes a hunter wields. The two-hand
+    # field is the same four the BM round ran, so the two hunter tables read
+    # side by side. The 7/20/34 build carries no weapon specialization
+    # talent, per data/facts/talents.yaml, so no class is favored, but one
+    # stat is worth more than its line here: Expose Weakness is self-applied
+    # and scales with this hunter's own agility, so a candidate that moves
+    # agility moves the debuff with it. The worn pairs are rows on purpose:
+    # their variants must reproduce the anchor figures to the digit, the
+    # same verification the other rounds carry. STONES: the hunters run the
+    # Adamantite stone chosen by the WORN weapon's class, per
+    # data/judgments/weapon-imbues.yaml, and a variant holds the anchor's
+    # consumables still. The entry and tier anchors wear an axe with a fist
+    # off hand, so their off-hand slot carries the Weightstone, the one
+    # stone that feeds ranged base damage per docs/kb/DOMAIN.md, and every
+    # bladed off-hand candidate there inherits it; the bis anchor wears two
+    # swords, so the Season 3 fist pair runs under the Sharpening Stone.
+    # SOCKETS: Twinblade of the Phoenix is the one socketed candidate, three
+    # sockets, and no SV anchor wears it, so its row arrives ungemmed and
+    # its figure is understated by the gems a raider would add.
+    "survival_hunter": {
+        "why": (
+            "A Survival Hunter can carry a two-hander or two one-handers, "
+            "and the guild lead ruled on 20 August 2026 in "
+            "data/judgments/weapon-styles.yaml that both styles run in the "
+            "same table, so a row below is either a main hand with an off "
+            "hand or a single two-hander with the off hand empty. These "
+            "slots are stat sticks: the ranged weapon does the damage and "
+            "no row here touches it. One stat carries more than its line "
+            "for this spec: Expose Weakness is self-applied and scales "
+            "with this hunter's own agility, so a candidate that moves "
+            "agility moves the debuff with it. Each row is THIS PROFILE "
+            "with only the weapon ids replaced: a filled slot keeps its "
+            "enchant, and the consumables, buffs and seed hold still, so "
+            "every figure is directly comparable with the one at the top "
+            "of this page. Holding the consumables still includes the "
+            "weapon stones, which the hunters choose by the WORN weapon's "
+            "class per data/judgments/weapon-imbues.yaml, so a candidate "
+            "whose class differs from the worn weapon runs under the "
+            "capture's stone rather than its own. The candidates are the "
+            "top of the EP Workbook's One Hand and Two Hand ladders for "
+            "this spec, kept to the weapon classes a hunter wields, with "
+            "the same two-hander field the Beast Mastery round ran so the "
+            "two hunter tables read side by side, and the 7/20/34 build "
+            "carries no weapon specialization talent, so no class is "
+            "favored."),
+        "pairs": [
+            # DUAL WIELD. The worn best-in-slot pair: two copies of Blade
+            # of Infamy from Anetheron, the capture's 'Best x2' row, per
+            # data/facts/sim-profiles/bis-capture/survival-hunter.yaml.
+            # Not unique, so two copies is a question of weeks.
+            {"mh": 30881, "oh": 30881, "phase3": True},
+            # One Blade of Infamy before the second drops, held with each
+            # of the worn weapons it would displace: the entry axe
+            # Netherbane and the entry fist Claw of the Phoenix, both from
+            # Al'ar.
+            {"mh": 30881, "oh": 29924, "phase3": True},
+            {"mh": 30881, "oh": 29948, "phase3": True},
+            # Messenger of Fate from Gurtogg Bloodboil is the One Hand
+            # pool's rank three, its only Black Temple one-hander.
+            {"mh": 30881, "oh": 32269, "phase3": True},
+            # The Season 3 fist pair, the Right Ripper, Main Hand only,
+            # with the Left Ripper, Off Hand only. Fist weapons, so at the
+            # best-in-slot anchor this row runs under the worn pair's
+            # Sharpening Stone rather than the Weightstone a fist pair
+            # would carry.
+            {"mh": 33737, "oh": 33705, "phase3": True},
+            # Reachable before Phase 3: Netherbane with Claw of the
+            # Phoenix, both from Al'ar, is the worn entry AND tier pair,
+            # per the capture in data/facts/sim-profiles/hit-capture/
+            # survival-hunter.yaml; Talon of Azshara from Morogrim
+            # Tidewalker is the pool's rank five.
+            {"mh": 29924, "oh": 29948, "phase3": False},
+            {"mh": 29924, "oh": 30082, "phase3": False},
+            # TWO HAND, the same field the BM round ran. Phase 3: the
+            # Halberd of Desolation from High Warlord Naj'entus is the Two
+            # Hand ladder's rank one, and the Vengeful Gladiator's
+            # Decapitator is Season 3 arena, tied to the point with the
+            # Waraxe, so it stands for both.
+            {"mh": 32248, "oh": None, "phase3": True},
+            {"mh": 33670, "oh": None, "phase3": True},
+            # Reachable before Phase 3: Twinblade of the Phoenix from
+            # Kael'thas Sunstrider carries three sockets, which arrive
+            # EMPTY here because no SV anchor wears it, so its figure is
+            # understated by the gems a raider would add; Bloodmoon is
+            # crafted by Blacksmithing and carries none.
+            {"mh": 29993, "oh": None, "phase3": False},
+            {"mh": 28436, "oh": None, "phase3": False},
+        ],
+    },
 }
 
 

@@ -41,6 +41,21 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2797.4 ± 0.87     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 3339.0 ± 1.05     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Survival Hunter can carry a two-hander or two one-handers, and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. One stat carries more than its line for this spec: Expose Weakness is self-applied and scales with this hunter's own agility, so a candidate that moves agility moves the debuff with it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class per data/judgments/weapon-imbues.yaml, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, with the same two-hander field the Beast Mastery round ran so the two hunter tables read side by side, and the 7/20/34 build carries no weapon specialization talent, so no class is favored.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                | Off hand            | DPS           | Against this set |
+|--------------------------|---------------------|---------------|------------------|
+| Bloodmoon                | *empty, two-hander* | 2862.8 ± 0.93 | +65.4            |
+| Twinblade of the Phoenix | *empty, two-hander* | 2840.9 ± 0.93 | +43.5            |
+| Netherbane               | Talon of Azshara    | 2799.0 ± 0.88 | +1.6             |
+| Netherbane               | Claw of the Phoenix | 2797.4 ± 0.87 | +0.0             |
+
+The best combination, Bloodmoon alone, a two-hander, measures +65.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

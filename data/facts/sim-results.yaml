@@ -313,6 +313,56 @@ the_beast_mastery_weapon_round:
     the only move worth more is the style itself. The two-hander rows are where the DPS is;
     everything else is small against the same drops contested by the melee, whose rounds
     price the same one-handers at many times these gaps.
+the_survival_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eleven rows run as variants of
+    each Survival anchor profile, BOTH styles in one table per the 20 August 2026 style ruling
+    in data/judgments/weapon-styles.yaml, seven dual wield pairs and the same four two-handers
+    the Beast Mastery round ran with the off hand empty, figures in
+    data/facts/weapon-pair-sims.yaml. The melee slots are stat sticks and no row touches the
+    ranged weapon.
+  the_anchors_reproduce: The worn combination's variant reads the anchor figure to the digit
+    at all three anchors, Netherbane with Claw of the Phoenix 2797.4 at entry and 2961.0 at
+    tier, two copies of Blade of Infamy 3074.2 at best in slot.
+  the_two_hander_verdict_holds_here_too: At all three anchors every two-hander row sits above
+    every dual wield row, the same style finding the Beast Mastery round reported, worst
+    two-hander against best pair 2840.9 against 2799.0 at entry, 3011.4 against 3003.2 at
+    tier and 3081.2 against 3074.2 at best in slot, and the tier and best in slot floors are
+    the UNGEMMED Twinblade row, three empty sockets because no SV anchor wears it, so the
+    narrowest gaps understate the style gap by the gems a raider would add. The captured
+    best-in-slot pair, two Blades of Infamy, is therefore the best PAIR measured and still
+    sits 33.2 below the best two-hander on its own set; the captured page prices its dual
+    wield table in isolation and lists no two-hander against it, so the capture is faithful
+    to its source and the source does not ask this question.
+  the_top_of_the_table_differs_from_beast_mastery: Bloodmoon topped every BM anchor; here it
+    tops only entry, 2862.8, the anchor where the Halberd does not run. Where both run, the
+    Halberd of Desolation reads first, 3039.2 at tier against Bloodmoon's 3037.0 and 3107.4
+    at best in slot against the Decapitator's 3105.9 and Bloodmoon's 3105.6. Those top
+    figures sit within about two standard errors of one another at both anchors, so the
+    ORDER among the three is rank-unstable; what is not is the direction of the movement.
+    Expose Weakness is self-applied and scales with this hunter's own agility, and the
+    Halberd carries 51 agility where Bloodmoon carries none, so the axe that beat the
+    agility polearm by 21.2 on the Beast Mastery set closes to a coin flip on the Survival
+    set. NOT A RANKING. Which weapon the hunter carries, and whether a Naj'entus polearm is
+    better routed to a spec whose swings it feeds, is the council's call.
+  what_the_second_blade_is_worth: One Blade of Infamy over the entry Netherbane is most of
+    the pair upgrade and the second copy is small, 3061.8 with Blade over Netherbane against
+    3074.2 with two Blades at best in slot, 12.4 for the second drop, with the off-hand
+    Netherbane, Messenger of Fate and Claw of the Phoenix rows within 15 of one another. A
+    council weighing the second Blade against the melee specs' claims on the same drop is
+    weighing 12.4 DPS here.
+  the_stone_caveat: The hunters run the Adamantite stone chosen by the WORN weapon's class
+    per data/judgments/weapon-imbues.yaml, and a variant holds the anchor's consumables
+    still. The entry and tier anchors wear an axe with a fist off hand, so their off-hand
+    slot carries the Weightstone, the stone that feeds ranged base damage per
+    docs/kb/DOMAIN.md, and every bladed off-hand candidate there inherits it; the best in
+    slot anchor wears two swords, so the Season 3 fist pair runs under the Sharpening Stone
+    rather than the Weightstone a fist pair would carry. No cross-class row here prices its
+    own stone.
+  the_spread_is_the_finding: The whole table spans 83.1 DPS at best in slot and the seven
+    dual wield rows span 49.9, from 3024.3 to 3074.2, on a set that deals 3074.2, so a
+    Survival weapon argument between PAIRS is worth under two percent of the spec's damage
+    and the only move worth more is the style itself, the same shape the Beast Mastery
+    round found at a smaller scale.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
