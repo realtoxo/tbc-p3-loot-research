@@ -835,10 +835,15 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Weightstone
-        prose: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
-          (blunt melee weapon), from Blacksmithing — applied to the Hunter's melee weapon,
-          per Warcraft Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly
-          important for Hunters').
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Dagger
@@ -861,10 +866,15 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Weightstone
-        prose: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
-          (blunt melee weapon), from Blacksmithing — applied to the Hunter's melee weapon,
-          per Warcraft Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly
-          important for Hunters').
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Sword
@@ -913,10 +923,15 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Sharpening Stone
-        prose: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
-          (blunt melee weapon), from Blacksmithing — applied to the Hunter's melee weapon,
-          per Warcraft Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly
-          important for Hunters').
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Fist
@@ -939,10 +954,15 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Sharpening Stone
-        prose: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
-          (blunt melee weapon), from Blacksmithing — applied to the Hunter's melee weapon,
-          per Warcraft Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly
-          important for Hunters').
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Fist
@@ -991,10 +1011,15 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Sharpening Stone
-        prose: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
-          (blunt melee weapon), from Blacksmithing — applied to the Hunter's melee weapon,
-          per Warcraft Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly
-          important for Hunters').
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Fist
@@ -1017,10 +1042,15 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Sharpening Stone
-        prose: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
-          (blunt melee weapon), from Blacksmithing — applied to the Hunter's melee weapon,
-          per Warcraft Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly
-          important for Hunters').
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
+          (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee weapon,
+          per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also incredibly
+          important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day
+          it was made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon
+          oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS for
+          this spec across the anchors, so he reverted to the stones the guides name. See
+          data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Fist
@@ -2450,9 +2480,13 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Weightstone
-        prose: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
-          for a blunt one -- both sources give this as a type-dependent pick, not a single
-          named item.
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Sword
@@ -2475,9 +2509,13 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Weightstone
-        prose: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
-          for a blunt one -- both sources give this as a type-dependent pick, not a single
-          named item.
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         field_prose_overridden: Not applicable -- Survival Hunter carries one melee weapon
           plus a ranged weapon, not a dual-wield set, so no off-hand weapon consumable applies.
         weapon_class:
@@ -2523,9 +2561,13 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Weightstone
-        prose: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
-          for a blunt one -- both sources give this as a type-dependent pick, not a single
-          named item.
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Axe
@@ -2548,9 +2590,13 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Sharpening Stone
-        prose: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
-          for a blunt one -- both sources give this as a type-dependent pick, not a single
-          named item.
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         field_prose_overridden: Not applicable -- Survival Hunter carries one melee weapon
           plus a ranged weapon, not a dual-wield set, so no off-hand weapon consumable applies.
         weapon_class:
@@ -2596,9 +2642,13 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Weightstone
-        prose: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
-          for a blunt one -- both sources give this as a type-dependent pick, not a single
-          named item.
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         weapon_class:
           worn:
           - Axe
@@ -2621,9 +2671,13 @@ picks:
         position: first named in the field the captured facts allow
         alternatives_named:
         - Adamantite Sharpening Stone
-        prose: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
-          for a blunt one -- both sources give this as a type-dependent pick, not a single
-          named item.
+        - Mana Oil
+        prose: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite Weightstone
+          for a blunt one, a type-dependent pick per both sources rather than a single named
+          item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was made, 20
+          August 2026: the guild lead ruled "hunter will run applicable weapon oils", the
+          pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+          across the anchors, so he reverted to the stones the guides name. See data/judgments/weapon-imbues.yaml.'
         field_prose_overridden: Not applicable -- Survival Hunter carries one melee weapon
           plus a ranged weapon, not a dual-wield set, so no off-hand weapon consumable applies.
         weapon_class:

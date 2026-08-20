@@ -273,10 +273,14 @@ specs:
         yet hit-capped, or Grilled Mudfish (Agility) once hit-capped. Warcraft Tavern''s table
         instead lists Warp Burger with Grilled Mudfish as an alternate. Grilled Mudfish is
         the one point of agreement between the two.'
-      weapon_main_hand: Adamantite Sharpening Stone (bladed melee weapon) or Adamantite Weightstone
-        (blunt melee weapon), from Blacksmithing — applied to the Hunter's melee weapon, per
-        Warcraft Tavern and confirmed by Icy Veins ('Weapon stones are also incredibly important
-        for Hunters').
+      weapon_main_hand: 'Adamantite Sharpening Stone (bladed melee weapon) or Adamantite
+        Weightstone (blunt melee weapon), from Blacksmithing, applied to the Hunter''s melee
+        weapon, per Warcraft Tavern and confirmed by Icy Veins ("Weapon stones are also
+        incredibly important for Hunters"). A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the
+        same day it was made, 20 August 2026: the guild lead ruled "hunter will run applicable
+        weapon oils", the pick moved to Mana Oil, and the measured cost was 18.7 to 30.6 DPS
+        for this spec across the anchors, so he reverted to the stones the guides name. See
+        data/judgments/weapon-imbues.yaml.'
       scrolls: Scroll of Agility V (world drop), per Warcraft Tavern's consumables table;
         Icy Veins corroborates only in general terms ('Any Scrolls of Agility/Intellect are
         also nice buffs and worth using') without singling out the Roman-numeral tier. Warcraft
@@ -920,9 +924,13 @@ specs:
       food: Grilled Mudfish (Agility) once hit-capped; Spicy Hot Talbuk (Icy Veins) or Warp
         Burger (Warcraft Tavern) if still short of hit before the cap -- sources disagree
         on the exact not-hit-capped food name.
-      weapon_main_hand: Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite
-        Weightstone for a blunt one -- both sources give this as a type-dependent pick, not
-        a single named item.
+      weapon_main_hand: 'Adamantite Sharpening Stone for a bladed melee weapon, or Adamantite
+        Weightstone for a blunt one, a type-dependent pick per both sources rather than a
+        single named item. A RULING TO RUN OIL WAS TESTED AND WITHDRAWN the same day it was
+        made, 20 August 2026: the guild lead ruled "hunter will run applicable weapon oils",
+        the pick moved to Mana Oil, and the measured cost was 14.4 to 24.7 DPS for this spec
+        across the anchors, so he reverted to the stones the guides name. See
+        data/judgments/weapon-imbues.yaml.'
       weapon_off_hand: Not applicable -- Survival Hunter carries one melee weapon plus a ranged
         weapon, not a dual-wield set, so no off-hand weapon consumable applies.
       scrolls: Scroll of Agility V and Scroll of Strength V (world drop) used where available;
