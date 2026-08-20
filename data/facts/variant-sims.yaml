@@ -14599,3 +14599,653 @@ specs:
         dps: 2037.7
         standard_error: 0.92
         stdev: 92.0
+    trinkets_why: 'A trinket is worth one thing beside a steady spell damage partner
+      and another beside an on-use haste one, so the two slots are measured together:
+      every row below is THIS PROFILE with only the two trinket ids replaced, and
+      a trinket carries no enchant and no gem, so the consumables, buffs and seed
+      hold still and every figure is directly comparable with the one at the top
+      of this page. The candidates are every max-level trinket on the EP Workbook''s
+      Trinket ladder for this spec, from Magtheridon''s Lair, the raids above it,
+      the badge vendor, the Darkmoon Faire and one reputation, plus The Lightning
+      Capacitor, which the ladder does not rank and which every one of the three
+      sets wears, and every pair from that pool was measured, so the table is an
+      enumeration rather than a selection; the ten best appear below, with the worn
+      pair beside them. What The Lightning Capacitor is worth beyond an empty slot
+      is entirely the simulator''s pricing of its charge-and-discharge proc, because
+      it carries no worn statistics, and the same holds for Darkmoon Card: Crusade
+      and its stacking proc. An on-use trinket is activated on the simulator''s
+      own schedule, which is how The Skull of Gul''dan''s haste burst meets the
+      casting rotation. Eye of Magtheridon procs when a spell is resisted, so what
+      its rows price beyond its worn spell damage moves with each anchor''s distance
+      from the hit target.'
+    trinket_anchors:
+      entry:
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1718.8
+        standard_error: 0.89
+        stdev: 89.3
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1715.5
+        standard_error: 0.87
+        stdev: 87.2
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 1710.1
+        standard_error: 0.85
+        stdev: 84.6
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1709.3
+        standard_error: 0.89
+        stdev: 88.7
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 1704.8
+        standard_error: 0.86
+        stdev: 86.1
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1701.1
+        standard_error: 0.87
+        stdev: 87.0
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 1700.4
+        standard_error: 0.84
+        stdev: 84.0
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 1696.5
+        standard_error: 0.84
+        stdev: 84.4
+      - trinket_1:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1696.2
+        standard_error: 0.84
+        stdev: 83.8
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 1692.1
+        standard_error: 0.82
+        stdev: 82.3
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 1687.0
+        standard_error: 0.84
+        stdev: 83.7
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1684.5
+        standard_error: 0.83
+        stdev: 82.5
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1683.4
+        standard_error: 0.79
+        stdev: 79.4
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1680.3
+        standard_error: 0.81
+        stdev: 81.1
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1672.0
+        standard_error: 0.79
+        stdev: 79.3
+      tier-hands-and-head:
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1927.9
+        standard_error: 0.94
+        stdev: 94.0
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        dps: 1917.4
+        standard_error: 0.9
+        stdev: 90.1
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 1908.5
+        standard_error: 0.89
+        stdev: 89.2
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 1899.8
+        standard_error: 0.87
+        stdev: 87.4
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 1899.8
+        standard_error: 0.87
+        stdev: 87.2
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1893.9
+        standard_error: 0.94
+        stdev: 93.5
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1890.9
+        standard_error: 0.93
+        stdev: 92.5
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1883.3
+        standard_error: 0.93
+        stdev: 93.1
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 1879.5
+        standard_error: 0.88
+        stdev: 88.3
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 1874.5
+        standard_error: 0.89
+        stdev: 89.3
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1874.5
+        standard_error: 0.91
+        stdev: 91.3
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1873.9
+        standard_error: 0.86
+        stdev: 86.0
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 1868.8
+        standard_error: 0.88
+        stdev: 87.9
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 1865.7
+        standard_error: 0.87
+        stdev: 87.5
+      - trinket_1:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 1864.3
+        standard_error: 0.9
+        stdev: 90.1
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 1859.9
+        standard_error: 0.86
+        stdev: 86.1
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 1855.1
+        standard_error: 0.87
+        stdev: 87.0
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1847.3
+        standard_error: 0.86
+        stdev: 86.4
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1847.2
+        standard_error: 0.85
+        stdev: 84.9
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1843.6
+        standard_error: 0.86
+        stdev: 86.0
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 1834.7
+        standard_error: 0.84
+        stdev: 84.1
+      bis:
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 2130.0
+        standard_error: 0.97
+        stdev: 96.6
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        dps: 2119.7
+        standard_error: 0.92
+        stdev: 91.7
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2112.9
+        standard_error: 0.92
+        stdev: 92.3
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2103.6
+        standard_error: 0.9
+        stdev: 90.3
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2096.2
+        standard_error: 0.93
+        stdev: 93.1
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 2091.4
+        standard_error: 0.96
+        stdev: 95.8
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 2087.9
+        standard_error: 0.97
+        stdev: 97.0
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2082.3
+        standard_error: 0.92
+        stdev: 92.2
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 2079.8
+        standard_error: 0.95
+        stdev: 95.3
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2076.5
+        standard_error: 0.91
+        stdev: 91.3
+      - trinket_1:
+          id: 32483
+          name: The Skull of Gul'dan
+          source: raid_drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 2070.9
+        standard_error: 0.88
+        stdev: 88.4
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2070.6
+        standard_error: 0.92
+        stdev: 91.7
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 2070.3
+        standard_error: 0.93
+        stdev: 93.4
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        dps: 2067.2
+        standard_error: 0.89
+        stdev: 89.3
+      - trinket_1:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        trinket_2:
+          id: 28785
+          name: The Lightning Capacitor
+          source: raid_drop
+        dps: 2063.0
+        standard_error: 0.93
+        stdev: 93.1
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2061.0
+        standard_error: 0.9
+        stdev: 89.8
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        dps: 2055.5
+        standard_error: 0.89
+        stdev: 88.9
+      - trinket_1:
+          id: 29370
+          name: Icon of the Silver Crescent
+          source: badge
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 2054.9
+        standard_error: 0.88
+        stdev: 88.4
+      - trinket_1:
+          id: 30626
+          name: Sextant of Unstable Currents
+          source: raid_drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 2050.4
+        standard_error: 0.9
+        stdev: 89.6
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 2045.8
+        standard_error: 0.89
+        stdev: 88.9
+      - trinket_1:
+          id: 28789
+          name: Eye of Magtheridon
+          source: raid_drop
+        trinket_2:
+          id: 29179
+          name: Xi'ri's Gift
+          source: drop
+        dps: 2036.4
+        standard_error: 0.87
+        stdev: 87.0
