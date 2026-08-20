@@ -944,6 +944,74 @@ ROUNDS: dict[str, dict] = {
             {"id": 29949, "phase3": False},
             {"id": 28772, "phase3": False},
         ],
+        # THE TRINKET POOL, the seventh enumerative trinket round after the
+        # Combat Rogue pilot and the Retribution, Arms, Fury, Enhancement
+        # and Beast Mastery rounds: every max-level trinket the SV tab's
+        # Trinket ladder ranks, with anything from Karazhan and the badge
+        # vendor onward acceptable, and the runner generates every
+        # unordered pair itself. The ladder ranks fifteen; seven are out on
+        # the standing exclusions, all availability rather than routing:
+        # Mark of the Champion, Slayer's Crest, Kiss of the Spider and
+        # Drake Fang Talisman drop in level-60 raids, and the Hourglass of
+        # the Unraveller, the Abacus of Violent Odds and the Icon of
+        # Unyielding Courage drop in five-man dungeons below Karazhan.
+        # Core of Ar'kelos stays in as a max-level Netherstorm quest
+        # reward, per the Retribution precedent. Badge of Tenacity, the
+        # tab's rank five, is new to the trinket rounds: the SV tab is the
+        # one melee tab that ranks it, because its 150 on-use agility
+        # feeds Expose Weakness, which scales with this hunter's own
+        # agility. Its phase3 flag is False despite the workbook's own
+        # phase column saying 3: it is charged from Apexis Crystals in
+        # Blade's Edge, content available since Anniversary Phase 2 per
+        # enchants-gems.yaml, and the Feral Bear ENTRY capture wears it
+        # and passes check_capture_availability, so the repository already
+        # treats it as reachable before Phase 3. Talon of Al'ar carries no
+        # worn stats per items.csv and the vendored binary DOES price its
+        # proc, tested behaviorally on 20 August 2026 in the Beast Mastery
+        # round. No Ahn'Qiraj and no world-boss trinket is on the tab, and
+        # no Ashtongue Talisman is either: the hunter Ashtongue piece is
+        # not ranked, so it is not a candidate. The entry and tier anchors
+        # wear Dragonspine Trophy with Bloodlust Brooch and the
+        # best-in-slot anchor wears Dragonspine Trophy with Madness of the
+        # Betrayer, all three in the pool, so no worn item needed adding.
+        # `phase3` marks what the entry anchor cannot reach: Madness of
+        # the Betrayer is a Black Temple drop.
+        "trinket_pool": [
+            {"id": 28830, "phase3": False},  # Dragonspine Trophy
+            {"id": 32505, "phase3": True},   # Madness of the Betrayer
+            {"id": 30627, "phase3": False},  # Tsunami Talisman
+            {"id": 32658, "phase3": False},  # Badge of Tenacity
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 29383, "phase3": False},  # Bloodlust Brooch
+            {"id": 30448, "phase3": False},  # Talon of Al'ar
+            {"id": 29776, "phase3": False},  # Core of Ar'kelos
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside a flat attack power "
+            "partner and another beside a proc, so the two slots are "
+            "measured together: every row below is THIS PROFILE with "
+            "only the two trinket ids replaced, and a trinket carries "
+            "no enchant and no gem, so the consumables, buffs and seed "
+            "hold still and every figure is directly comparable with "
+            "the one at the top of this page. The candidates are every "
+            "max-level trinket on the EP Workbook's Trinket ladder for "
+            "this spec, from Gruul's Lair, the raids above it, the "
+            "badge vendor, the Darkmoon Faire, one max-level quest and "
+            "one Apexis Crystal charge, and every pair from that pool "
+            "was measured, so the table is an enumeration rather than "
+            "a selection; the ten best appear below, with the worn "
+            "pair beside them. An on-use trinket is activated on the "
+            "simulator's own schedule. One stat carries more than its "
+            "line for this spec: Expose Weakness scales with this "
+            "hunter's own agility, so the on-use agility of Badge of "
+            "Tenacity feeds the debuff as well as the wearer, which is "
+            "why this spec's ladder is the one melee ladder that ranks "
+            "it. Talon of Al'ar carries no worn stats, so its rows "
+            "measure the simulator's pricing of its proc alone. "
+            "Madness of the Betrayer carries armor penetration, which "
+            "moves with the boss's armor, and these figures are at the "
+            "armor tier ten of the fourteen bosses sit in.")),
     },
     # AFFLICTION: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, and THE FIRST CASTER

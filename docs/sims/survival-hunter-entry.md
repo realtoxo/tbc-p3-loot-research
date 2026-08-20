@@ -69,6 +69,27 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a flat attack power partner and another beside a proc, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one Apexis Crystal charge, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. One stat carries more than its line for this spec: Expose Weakness scales with this hunter's own agility, so the on-use agility of Badge of Tenacity feeds the debuff as well as the wearer, which is why this spec's ladder is the one melee ladder that ranks it. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+
+The ten best of the 21 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                | DPS           | Against this set |
+|---------------------------------|------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 2797.4 ± 0.87 | +0.0             |
+| Tsunami Talisman                | Bloodlust Brooch       | 2796.0 ± 0.85 | -1.4             |
+| Dragonspine Trophy              | Tsunami Talisman       | 2790.1 ± 0.88 | -7.3             |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2784.5 ± 0.86 | -12.9            |
+| Dragonspine Trophy              | Badge of Tenacity      | 2784.2 ± 0.86 | -13.2            |
+| Tsunami Talisman                | Badge of Tenacity      | 2783.1 ± 0.84 | -14.3            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 2777.6 ± 0.87 | -19.8            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2777.5 ± 0.87 | -19.9            |
+| Tsunami Talisman                | Darkmoon Card: Crusade | 2776.8 ± 0.85 | -20.6            |
+| Tsunami Talisman                | Core of Ar'kelos       | 2776.5 ± 0.85 | -20.9            |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
