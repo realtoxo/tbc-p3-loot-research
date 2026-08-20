@@ -41,6 +41,20 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 1671.3 ± 0.86     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 1693.2 ± 0.87     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Balance Druid can carry a staff or a one-hander with a held frill, and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Sunfire, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and mace alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. A druid wields maces, staves, daggers and fist weapons and holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here: the warlocks hold it in principle and concede it to the Arcane Mage, where this spec cannot equip it at all, so its one-hand rows draw on maces and daggers instead. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, per data/judgments/weapon-routing.yaml, which is why the best-in-slot anchor wears it with the off-hand slot empty.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                        | Off hand                        | DPS           | Against this set |
+|----------------------------------|---------------------------------|---------------|------------------|
+| The Nexus Key                    | *empty, two-hander*             | 1671.3 ± 0.86 | +0.0             |
+| Merciless Gladiator's War Staff  | *empty, two-hander*             | 1642.2 ± 0.86 | -29.1            |
+| Merciless Gladiator's Spellblade | Jewel of Infinite Possibilities | 1628.0 ± 0.87 | -43.3            |
+
+This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -41,6 +41,28 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 1715.8 ± 0.83     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 1737.7 ± 0.84     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Balance Druid can carry a staff or a one-hander with a held frill, and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Sunfire, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and mace alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. A druid wields maces, staves, daggers and fist weapons and holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here: the warlocks hold it in principle and concede it to the Arcane Mage, where this spec cannot equip it at all, so its one-hand rows draw on maces and daggers instead. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, per data/judgments/weapon-routing.yaml, which is why the best-in-slot anchor wears it with the off-hand slot empty.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                             | Off hand                        | DPS           | Against this set |
+|---------------------------------------|---------------------------------|---------------|------------------|
+| Zhar'doom, Greatstaff of the Devourer | *empty, two-hander*             | 1768.4 ± 0.88 | +52.6            |
+| The Maelstrom's Fury                  | Chronicle of Dark Secrets       | 1734.3 ± 0.85 | +18.5            |
+| Vengeful Gladiator's Gavel            | Chronicle of Dark Secrets       | 1731.6 ± 0.86 | +15.8            |
+| Hammer of Judgement                   | Chronicle of Dark Secrets       | 1724.7 ± 0.85 | +8.9             |
+| Vengeful Gladiator's Gavel            | Blind-Seers Icon                | 1723.3 ± 0.85 | +7.5             |
+| Vengeful Gladiator's Battle Staff     | *empty, two-hander*             | 1720.2 ± 0.84 | +4.4             |
+| The Nexus Key                         | *empty, two-hander*             | 1715.8 ± 0.83 | +0.0             |
+| Merciless Gladiator's Spellblade      | Chronicle of Dark Secrets       | 1711.8 ± 0.85 | -4.0             |
+| Vengeful Gladiator's Gavel            | Jewel of Infinite Possibilities | 1710.2 ± 0.84 | -5.6             |
+| Merciless Gladiator's War Staff       | *empty, two-hander*             | 1698.7 ± 0.83 | -17.1            |
+| Merciless Gladiator's Spellblade      | Jewel of Infinite Possibilities | 1691.8 ± 0.84 | -24.0            |
+
+The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +52.6 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
