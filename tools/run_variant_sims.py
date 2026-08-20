@@ -169,6 +169,54 @@ ROUNDS: dict[str, dict] = {
             {"mh": 29993, "oh": None, "phase3": False},
             {"mh": 31959, "oh": None, "phase3": False},
         ],
+        # THE TRINKET POOL, the second enumerative trinket round after the
+        # Combat Rogue pilot: every max-level trinket the Ret tab's Trinket
+        # ladder ranks, with anything from Karazhan and the badge vendor
+        # onward acceptable, and the runner generates every unordered pair
+        # itself. The ladder ranks fifteen; nine are out on the standing
+        # exclusions, all availability rather than routing: Mark of the
+        # Champion, Slayer's Crest, Kiss of the Spider and Drake Fang
+        # Talisman drop in level-60 raids; the Abacus of Violent Odds and
+        # the Hourglass of the Unraveller drop in five-man dungeons below
+        # Karazhan; the Empty Mug of Direbrew drops from a holiday boss
+        # inside Blackrock Depths, a level-60 five-man; and Bladefist's
+        # Breadth and the Ancient Draenei War Talisman are leveling quest
+        # rewards, not max-level items. Core of Ar'kelos stays in as a
+        # max-level Netherstorm quest reward. No Ahn'Qiraj and no
+        # world-boss trinket is on the tab. The entry and tier anchors
+        # wear Dragonspine Trophy with Darkmoon Card: Crusade and the
+        # best-in-slot anchor wears Dragonspine Trophy with Bloodlust
+        # Brooch, all three in the pool, so no worn item needed adding.
+        # `phase3` marks what the entry anchor cannot reach: Madness of
+        # the Betrayer is a Black Temple drop.
+        "trinket_pool": [
+            {"id": 28830, "phase3": False},  # Dragonspine Trophy
+            {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
+            {"id": 32505, "phase3": True},   # Madness of the Betrayer
+            {"id": 30627, "phase3": False},  # Tsunami Talisman
+            {"id": 29383, "phase3": False},  # Bloodlust Brooch
+            {"id": 29776, "phase3": False},  # Core of Ar'kelos
+        ],
+        "trinkets_why": (
+            (
+            "A trinket is worth one thing beside an attack power "
+            "partner and another beside an armor penetration one, so "
+            "the two slots are measured together: every row below is "
+            "THIS PROFILE with only the two trinket ids replaced, and "
+            "a trinket carries no enchant and no gem, so the "
+            "consumables, buffs and seed hold still and every figure "
+            "is directly comparable with the one at the top of this "
+            "page. The candidates are every max-level trinket on the "
+            "EP Workbook's Trinket ladder for this spec, from Karazhan, "
+            "the raids above it, the badge vendor and one max-level "
+            "quest, and every pair from that pool was measured, so the "
+            "table is an enumeration rather than a selection; the ten "
+            "best appear below, with the worn pair beside them. An "
+            "on-use trinket is activated on the simulator's own "
+            "schedule. Madness of the Betrayer carries armor "
+            "penetration, which moves with the boss's armor, and these "
+            "figures are at the armor tier ten of the fourteen bosses "
+            "sit in.")),
     },
     # FURY: one-handers and main handers only, per the 20 August 2026 ruling
     # in data/judgments/weapon-styles.yaml, so every row is a main hand with
