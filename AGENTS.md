@@ -63,6 +63,7 @@ Everything runs through `just`. Run `just` alone to list.
 | `just regen` | Rebuild the nine generated fact tables and the six generated Lua filters the compendium reads from |
 | `just check` | Regenerate, then fail on drift, on a gated gem or enchant, on a capture disagreeing with its own rows or with `items.csv`, on gear an anchor could not have reached, and on a sim profile no character could wear |
 | `just sim` | Run every gear profile through wowsimcli and rewrite the figures and the pages that read them. Needs the binary and takes minutes, so it sits outside `just regen` and `just check` |
+| `just sim-weapons` | Rerun the special Enhancement weapon round, every matched-speed pair bare on the best-in-slot profile, then rewrite the spec page that shows it. Outside `just regen` and `just check` for the same reasons as `just sim` |
 | `just gating` | Only the gem and enchant gating half of `just check` |
 | `just captures` | Only the capture checks: the token figures against the workbook, self-consistency, the item table, the progression premise, availability per anchor, and tank defense against the crit immunity threshold |
 | `just style` | Check documents against the house writing style |

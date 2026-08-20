@@ -214,6 +214,16 @@ notes_from_the_previous_construction:
     that the speed rule is uncorroborated by any source this project holds, and that a simulation
     is the route to settle it. So this is a disagreement between a stated rule and a captured
     set, and both sides are recorded rather than one being corrected to the other.'
+  weapon_speed_rule_resolution: 'RECORDED 20 August 2026. The guild lead ruled the rule that day,
+    see data/judgments/enhancement-weapon-rules.yaml, so the disagreement above is no longer
+    unresolved: the stated rule governs what the compendium SHOWS, and the Enhancement shortlist,
+    claimants and comparison baselines now exclude weapons at or under 2.3 speed. THIS CAPTURE
+    IS UNCHANGED, because it records what the published source said, per
+    data/judgments/capture-fidelity.yaml. The simulation the disagreement deferred to has run,
+    tools/run_weapon_pair_sims.py, and its figures in data/facts/enhancement-weapon-pairs.yaml
+    measure both mismatched reference pairs ABOVE every matched pair; the reading is in
+    data/facts/sim-results.yaml under what_the_matched_pairs_measure, and the rule stands until
+    the council revisits it.'
   downgraded_slots: 'Head, chest, hands and legs are held as Cataclysm Helm, Cataclysm Chestplate,
     Cataclysm Gauntlets and Cataclysm Legplates (T5) in every state, including both tier states,
     rather than any Phase 3 off-piece or either Tier 6 token, because those four pieces carry

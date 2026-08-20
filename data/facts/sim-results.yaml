@@ -104,6 +104,28 @@ the_hit_overshoot_at_the_best_in_slot_anchor: 'A published list ranks each slot 
   and it is a property of the published lists rather than of this pipeline. NOT CORRECTED, because
   correcting it would mean rebuilding the sets to our own rule and the figures would stop describing
   the lists players follow.'
+what_the_matched_pairs_measure:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, both Enhancement weapon slots varied
+    together on the best-in-slot profile, figures in data/facts/enhancement-weapon-pairs.yaml
+  note: Every pair runs BARE, the same instrument as the Warglaive round, so the rows compare with
+    each other and NOT with an enchanted profile.
+  the_headline: BOTH mismatched reference pairs measure ABOVE every matched pair. The captured
+    Vengeful Gladiator's Cleaver plus Syphon of the Nathrezim reads 2284.6 against 2249.1 for the
+    best matched pair, a gap of 35.5 DPS at a standard error near 1, and the old entry pair reads
+    2261.2, still 12.1 above the best matched pair. The simulator prices the matched-speed rule
+    as a cost on this profile, not a gain.
+  what_it_does_not_settle: The rule is the guild lead's, stated on 10 August 2026 and ruled on
+    20 August 2026, and docs/kb/DOMAIN.md records that no source this project holds corroborates
+    it. This round is the simulation DOMAIN.md named as the route to settle it, and the answer
+    it returned points the other way. Whether the engine models the reason the rule exists, the
+    interaction between two Windfury imbues and the shared internal cooldown, has not been verified
+    against the engine source, so this is evidence against the rule rather than a refutation of
+    it. THE RULE STANDS until the council revisits it, and the compendium follows the rule.
+  inside_the_matched_field: The 2.8 pair of two Syphons reads 2247.5, within 1.6 of the best
+    matched pair despite the workbook ranking Syphon 63 EPV below the Vengeful weapons, so speed
+    does real work the EPV ladder cannot see. Slower is not uniformly better across the field,
+    but the spread from the best matched pair to the worst is 50.2 DPS, which is the size of the
+    decision the weapon rows on a card are actually making.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours

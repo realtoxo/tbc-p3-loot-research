@@ -156,6 +156,13 @@ sim ITERATIONS="10000":
     @python3 tools/run_sims.py --iterations {{ITERATIONS}} --out data/facts/sim-figures.yaml
     @python3 tools/generate_sim_pages.py
 
+# Rerun the special Enhancement weapon round: every matched-speed pair, bare,
+# on the best-in-slot profile, then rewrite the spec page that shows it. Same
+# reasons as `sim` for sitting outside `just regen` and `just check`.
+sim-weapons ITERATIONS="10000":
+    @python3 tools/run_weapon_pair_sims.py --iterations {{ITERATIONS}}
+    @python3 tools/generate_spec_pages.py
+
 # Fail if a sim profile wears a gem or an enchant Phase 3 cannot supply.
 # Runs inside `just check` as well; this is the one-line way to run it alone.
 gating:
