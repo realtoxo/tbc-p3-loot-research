@@ -41,6 +41,28 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2320.7 ± 1.01     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2320.7 ± 1.01     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+An Arcane Mage can carry a staff or a one-hander with a held frill, and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml that both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Sunfire, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and sword alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. Zhar'doom is not a row: the guild lead routed it to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and ruled that the Arcane Mage takes Tempest of Chaos first, per data/judgments/weapon-routing.yaml, so this spec's best-in-slot set wears the one-hander with a frill rather than the staff. The staff rows below price the mage's own alternatives, which is the other half of the Tempest question: the warlock rounds measure what other specs lose while the mage holds it, and this table measures what the mage loses if it concedes it.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                         | Off hand                  | DPS           | Against this set |
+|-----------------------------------|---------------------------|---------------|------------------|
+| Tempest of Chaos                  | Chronicle of Dark Secrets | 2362.6 ± 1.01 | +41.9            |
+| Tempest of Chaos                  | Blind-Seers Icon          | 2350.5 ± 1.00 | +29.8            |
+| Tempest of Chaos                  | Talisman of Kalecgos      | 2345.4 ± 1.01 | +24.7            |
+| The Maelstrom's Fury              | Chronicle of Dark Secrets | 2336.2 ± 1.00 | +15.5            |
+| Vengeful Gladiator's Spellblade   | Chronicle of Dark Secrets | 2332.7 ± 1.00 | +12.0            |
+| Vengeful Gladiator's Battle Staff | *empty, two-hander*       | 2326.8 ± 0.99 | +6.1             |
+| The Nexus Key                     | *empty, two-hander*       | 2320.7 ± 1.01 | +0.0             |
+| Merciless Gladiator's Spellblade  | Chronicle of Dark Secrets | 2310.9 ± 0.99 | -9.8             |
+| Fang of the Leviathan             | Talisman of Kalecgos      | 2302.5 ± 1.00 | -18.2            |
+| Merciless Gladiator's War Staff   | *empty, two-hander*       | 2298.9 ± 0.98 | -21.8            |
+| Merciless Gladiator's Spellblade  | Talisman of Kalecgos      | 2293.0 ± 1.00 | -27.7            |
+
+The best combination, Tempest of Chaos with Chronicle of Dark Secrets, measures +41.9 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
