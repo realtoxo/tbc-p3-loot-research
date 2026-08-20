@@ -56,6 +56,27 @@ A Shadow Priest can carry a staff or a one-hander with a held frill, and both st
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
+
+The ten best of the 15 combinations measured, and the worn pair.
+
+| Trinket                             | Trinket                      | DPS           | Against this set |
+|-------------------------------------|------------------------------|---------------|------------------|
+| Darkmoon Card: Crusade *(this set)* | Icon of the Silver Crescent  | 1452.1 ± 0.26 | +0.0             |
+| Eye of Magtheridon                  | Icon of the Silver Crescent  | 1446.2 ± 0.25 | -5.9             |
+| Darkmoon Card: Crusade              | Eye of Magtheridon           | 1437.6 ± 0.25 | -14.5            |
+| Icon of the Silver Crescent         | Scryer's Bloodgem            | 1427.8 ± 0.26 | -24.3            |
+| Icon of the Silver Crescent         | Sextant of Unstable Currents | 1427.3 ± 0.29 | -24.8            |
+| Icon of the Silver Crescent         | Starkiller's Bauble          | 1424.8 ± 0.26 | -27.3            |
+| Darkmoon Card: Crusade              | Scryer's Bloodgem            | 1421.7 ± 0.26 | -30.4            |
+| Darkmoon Card: Crusade              | Starkiller's Bauble          | 1418.7 ± 0.26 | -33.4            |
+| Darkmoon Card: Crusade              | Sextant of Unstable Currents | 1418.6 ± 0.28 | -33.5            |
+| Eye of Magtheridon                  | Scryer's Bloodgem            | 1415.8 ± 0.24 | -36.3            |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
