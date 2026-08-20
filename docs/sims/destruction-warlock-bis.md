@@ -2,7 +2,10 @@
 title: Destruction Warlock, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 2493.8 ± 1.30 damage per second.
+  This simulation profile measures 2493.8 ± 1.30 damage per second. Below is
+  everything that produced that figure: the gear worn slot by slot, the
+  consumables, the buffs and debuffs, the talents, the rotation and the
+  encounter.
 status: draft
 updated: 2026-08-15
 ---

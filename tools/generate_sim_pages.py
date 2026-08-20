@@ -649,7 +649,10 @@ def write_detail(directory: Path, spec: str, anchor: str, label: str,
 title: {spec_label}, {label} Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: {figure(row)} damage per second.
+  This simulation profile measures {figure(row)} damage per second. Below is
+  everything that produced that figure: the gear worn slot by slot, the
+  consumables, the buffs and debuffs, the talents, the rotation and the
+  encounter.
 status: draft
 updated: 2026-08-15
 ---

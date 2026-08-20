@@ -2,7 +2,10 @@
 title: Beast Mastery Hunter, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  The whole request behind one figure: 3342.3 ± 0.95 damage per second.
+  This simulation profile measures 3342.3 ± 0.95 damage per second. Below is
+  everything that produced that figure: the gear worn slot by slot, the
+  consumables, the buffs and debuffs, the talents, the rotation and the
+  encounter.
 status: draft
 updated: 2026-08-15
 ---
