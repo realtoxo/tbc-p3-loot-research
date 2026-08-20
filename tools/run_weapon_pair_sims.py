@@ -1042,6 +1042,117 @@ ROUNDS: dict[str, dict] = {
             {"mh": 32053, "oh": 28734, "phase3": False},
         ],
     },
+    # ELEMENTAL SHAMAN: both styles in the same table, per the 20 August
+    # 2026 ruling in data/judgments/weapon-styles.yaml, in the caster
+    # template's shape. The candidates are the top of the Ele workbook
+    # tab, whose weapon ladders are One Hand, Off Hand and Two Hand, with
+    # no Main Hand section. A shaman wields maces, axes, staves, daggers
+    # and fist weapons and CANNOT WIELD SWORDS, so Tempest of Chaos is
+    # not a row: its exclusion is proficiency rather than routing. The
+    # tab itself lists two swords the class cannot carry, the
+    # Illidari-Bane Mageblade at One Hand rank eleven and the Eternium
+    # Runed Blade at rank twelve, both far below the cut, and neither is
+    # a row. The One Hand ladder's rank one is The Maelstrom's Fury;
+    # ranks two and three, the Vengeful Gladiator's Gavel and
+    # Spellblade, carry identical statistics per items.csv, a mace and a
+    # dagger at the same figures, so the Gavel row stands for both. The
+    # rank-one off hand for this spec is the Chronicle of Dark Secrets
+    # at 69.20, and the rank TWO is Antonidas's Aegis of Rapt
+    # Concentration at 63.40, which is a SHIELD per items.csv: a shaman
+    # is the one Zhar'doom wearer that can legally carry a shield in the
+    # off hand, so a shield row runs where every other caster round
+    # holds frills alone. The worn Fathomstone is rank three at 57.42
+    # and the Blind-Seers Icon rank four at 54.80. The Vengeful
+    # Gladiator's War Staff is not a row for the same reason as in the
+    # other caster rounds: the Battle Staff carries the same statistics
+    # plus 28 spell hit, so it equals or beats the War Staff at every
+    # hit state and stands for both. SOCKETS: no candidate carries a
+    # socket, per items.csv; the tab's one socketed weapon, Talon of the
+    # Tempest, is One Hand rank seven, below the cut. OILS AND ENCHANT:
+    # Brilliant Wizard Oil on the main hand at every anchor, per the
+    # shaman's picks in consumable-ids.yaml, no imbue on a frill or a
+    # shield, and the main-hand slot's Major Spellpower inherited by
+    # every row. The runner's class options send shieldProcrate 0 for
+    # this spec, the shipped preset's own value, so no row moves on it.
+    # The worn combinations are rows on purpose: their variants must
+    # reproduce the anchor figures to the digit, the entry AND tier
+    # anchors wearing the Merciless Gladiator's Spellblade with the
+    # Fathomstone and the best-in-slot anchor wearing Zhar'doom with its
+    # empty off hand, per the routing in weapon-routing.yaml.
+    "elemental_shaman": {
+        "why": (
+            "An Elemental Shaman can carry a staff or a one-hander with "
+            "a held off hand, and the guild lead ruled on 20 August 2026 "
+            "in data/judgments/weapon-styles.yaml that both styles run "
+            "in the same table, so a row below is either a single staff "
+            "with the off hand empty or a main hand with an off-hand "
+            "item that is not a weapon. Each row is THIS PROFILE with "
+            "only the weapon slots changed: the main hand keeps its "
+            "Major Spellpower, which a staff row inherits because the "
+            "enchant belongs to the slot, and the consumables, buffs and "
+            "seed hold still, so every figure is directly comparable "
+            "with the one at the top of this page. The Brilliant Wizard "
+            "Oil applies to any weapon, staff and mace alike, and a "
+            "frill or a shield takes no imbue, so nothing about the "
+            "consumables varies across the rows. The candidates are the "
+            "top of the EP Workbook's Two Hand, One Hand and Off Hand "
+            "ladders for this spec, and no candidate carries a socket. "
+            "A shaman wields maces, axes, staves, daggers and fist "
+            "weapons and cannot wield swords, so Tempest of Chaos, the "
+            "sword the warlock and mage rounds price, is not a row "
+            "here. A shaman can also carry a shield in the off hand, "
+            "alone among the five Zhar'doom wearers, and the workbook's "
+            "rank-two off hand for this spec, Antonidas's Aegis of Rapt "
+            "Concentration from Archimonde, is a shield, so one row "
+            "prices it against the held frills. Zhar'doom goes to the "
+            "warlocks, the Balance Druid, the Elemental Shaman and the "
+            "Shadow Priest, and its wearers hold no off hand, per "
+            "data/judgments/weapon-routing.yaml, which is why the "
+            "best-in-slot anchor wears it with the off-hand slot "
+            "empty."),
+        "pairs": [
+            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
+            # Greatstaff of the Devourer, from Illidan Stormrage, is the
+            # worn best-in-slot weapon and the workbook's rank one; the
+            # Vengeful Gladiator's Battle Staff is Season 3 arena and
+            # stands for both Season 3 staves.
+            {"mh": 32374, "oh": None, "phase3": True},
+            {"mh": 34540, "oh": None, "phase3": True},
+            # Reachable before Phase 3: the Merciless Gladiator's War
+            # Staff is Season 2 arena and the workbook's best reachable
+            # staff; The Nexus Key drops from Kael'thas Sunstrider.
+            {"mh": 32055, "oh": None, "phase3": False},
+            {"mh": 29988, "oh": None, "phase3": False},
+            # MAIN HAND WITH A HELD OFF HAND. The Vengeful Gladiator's
+            # Gavel, Season 3 arena, stands for the identically statted
+            # Spellblade, held with each of the tab's top off hands:
+            # Chronicle of Dark Secrets from Rage Winterchill,
+            # Antonidas's Aegis of Rapt Concentration from Archimonde,
+            # which is the shield row, Blind-Seers Icon from Shade of
+            # Akama, and the worn Fathomstone from Hydross the
+            # Unstable, the state where the mace arrives before a
+            # Phase 3 off hand drops.
+            {"mh": 33687, "oh": 30872, "phase3": True},
+            {"mh": 33687, "oh": 30909, "phase3": True},
+            {"mh": 33687, "oh": 32361, "phase3": True},
+            {"mh": 33687, "oh": 30049, "phase3": True},
+            # The Phase 3 raid-drop main hands, each with the rank one
+            # off hand: The Maelstrom's Fury, the One Hand ladder's
+            # rank one, drops from High Warlord Naj'entus and Hammer of
+            # Judgement drops in Hyjal Summit.
+            {"mh": 32237, "oh": 30872, "phase3": True},
+            {"mh": 34009, "oh": 30872, "phase3": True},
+            # The worn Merciless Gladiator's Spellblade with the rank
+            # one off hand, the state where a Phase 3 frill drops
+            # before any Phase 3 main hand does.
+            {"mh": 32053, "oh": 30872, "phase3": True},
+            # Reachable before Phase 3: the Merciless Gladiator's
+            # Spellblade, Season 2 arena, with the Fathomstone is the
+            # worn entry AND tier combination, per the capture in
+            # data/facts/sim-profiles/hit-capture/elemental-shaman.yaml.
+            {"mh": 32053, "oh": 30049, "phase3": False},
+        ],
+    },
 }
 
 

@@ -618,6 +618,76 @@ the_balance_druid_weapon_round:
     SEVENTH of eleven, 18.5 below The Maelstrom's Fury with the Chronicle, so at that
     anchor every Phase 3 main hand paired with the Chronicle is an upgrade over the worn
     staff and only Zhar'doom beats them.
+the_elemental_shaman_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, twelve rows run as variants
+    of each Elemental Shaman anchor profile in the caster template's shape, BOTH styles
+    in one table per the 20 August 2026 style ruling in data/judgments/weapon-styles.yaml,
+    on the three standard anchors. A staff row runs the off hand EMPTY and a main-hand
+    row holds an off-hand item that is not a weapon; the main-hand slot keeps its Major
+    Spellpower on every row, staff included, a frill or a shield takes no imbue, and the
+    Brilliant Wizard Oil applies to any weapon, so nothing about the consumables varies
+    across the rows. Tempest of Chaos is NOT a row and could not be one, a shaman cannot
+    wield swords, so the exclusion is proficiency rather than routing. The Ele tab does
+    list two swords the class cannot carry, the Illidari-Bane Mageblade at One Hand rank
+    eleven and the Eternium Runed Blade at rank twelve, both far below the cut, so the
+    proficiency screen is applied by id here rather than inherited from the tab. The One
+    Hand ladder's ranks two and three, the Vengeful Gladiator's Gavel and Spellblade,
+    carry identical statistics per items.csv, a mace and a dagger at the same figures, so
+    the Gavel row stands for both. The tab's only socketed weapon is Talon of the
+    Tempest, One Hand rank seven and below the cut, so no candidate in the round carries
+    a socket and no figure here is understated against a gemmed worn weapon. Figures in
+    data/facts/weapon-pair-sims.yaml.
+  the_anchors_reproduce: The worn combination's variant reads the anchor figure to the
+    digit at all three anchors, the Merciless Gladiator's Spellblade with the Fathomstone
+    1718.8 at entry and 1893.9 at tier, and Zhar'doom with the off hand EMPTY 2130.0 at
+    best in slot, which also verifies that the empty-off-hand construction the 15 August
+    2026 routing requires is what the anchor actually runs.
+  what_the_zhardoom_premium_prices: Zhar'doom measures FIRST at both anchors that reach
+    it, and this round completes the measured queue for the staff, the fifth and last of
+    its five wearers. On the best-in-slot set the staff reads 2130.0 ± 0.97 against
+    2083.4 ± 0.94 for the best one-hand combination measured, The Maelstrom's Fury with
+    the Chronicle of Dark Secrets, a gap of 46.6, and on the tier set 1939.6 ± 0.90
+    against 1924.1 ± 0.94 for the same pair, a gap of 15.5, so unlike the Balance Druid's
+    round the two anchors price the staff differently and the queue figure below is the
+    best-in-slot gap. The premium is STRUCTURAL for the same reason the Shadow Priest's
+    and the Balance Druid's are, no sword alternative exists for this class, so no
+    routing decision can narrow it. The five-wearer queue now reads, in measured order at
+    best in slot, Destruction 53.9, Elemental 46.6, Affliction 34.8, Balance 33.5,
+    Shadow Priest 12.1, with the Arcane Mage conceding Tempest of Chaos at 29.5 beside
+    them; the Elemental figure sits second, between the two warlocks, and is structural
+    where the warlock figures are fallback prices behind the Tempest routing. NOT A
+    RULING. The council decides.
+  the_shield_and_the_rank_one_frill_are_inseparable: A shaman is the one Zhar'doom
+    wearer that can legally carry a shield in the off hand, and the Ele tab's rank-two
+    off hand, Antonidas's Aegis of Rapt Concentration from Archimonde, is a shield per
+    items.csv, so one row prices it. The tab ranks the Chronicle of Dark Secrets at
+    69.20 above the Aegis at 63.40, and the measurements cannot separate them, the
+    Vengeful Gladiator's Gavel with the Chronicle 2076.3 ± 0.94 against 2075.5 ± 0.94
+    with the Aegis at best in slot and 1916.2 ± 0.95 against 1917.2 ± 0.94 on the tier
+    set, each side ahead once and both gaps within their combined standard error. The
+    hit context explains the tie, both anchors sit far over the 51-rating target per the
+    captures, 90 item hit at best in slot and 103 at tier, so the Chronicle's 17 hit
+    converts to nothing, the priest's over-cap account rather than the druid's. Below
+    the tied pair the ladder order holds, the worn Fathomstone third and the Blind-Seers
+    Icon fourth at both anchors. The runner's class options send shieldProcrate 0 for
+    this spec, the shipped preset's own value per the options audit in
+    docs/kb/OPEN-FINDINGS.md, so no shield row gains from a proc assumption.
+  entry_prefers_the_staff_over_the_captured_pair: The worn entry combination measures
+    SECOND of the three pre-Phase 3 rows, The Nexus Key alone 1726.5 ± 0.86 against the
+    worn Merciless Gladiator's Spellblade with the Fathomstone 1718.8 ± 0.89, a gap of
+    7.7, with the Merciless Gladiator's War Staff 1711.2 ± 0.87 third. The capture's own
+    notes record that the published Phase 2 guide builds around The Nexus Key and that
+    the one-hand pair was substituted under an earlier task premise, so this measurement
+    agrees with the published guide and disagrees with the capture as worn, the one
+    disagreement this round records.
+  the_styles_interleave_rather_than_separate: The two styles mix through this table at
+    every anchor, as they did in every caster round. On the best-in-slot set the order
+    runs Zhar'doom, then five one-hand rows, then the Season 3 Battle Staff at 2060.8 ±
+    0.92 in seventh, and the spread from the worn top row to the bottom is 92.3. On the
+    tier set the spread is 56.1 and the worn Spellblade with the Fathomstone sits
+    ELEVENTH of twelve, above only the Merciless Gladiator's War Staff, so at that anchor every
+    Phase 3 main hand paired with the Chronicle is an upgrade over the worn pair and
+    only Zhar'doom beats The Maelstrom's Fury.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours

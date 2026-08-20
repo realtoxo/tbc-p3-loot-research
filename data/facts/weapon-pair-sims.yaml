@@ -4025,3 +4025,313 @@ specs:
         dps: 1871.7
         standard_error: 0.9
         stdev: 89.8
+  elemental_shaman:
+    why: 'An Elemental Shaman can carry a staff or a one-hander with a held off
+      hand, and the guild lead ruled on 20 August 2026 in data/judgments/weapon-styles.yaml
+      that both styles run in the same table, so a row below is either a single
+      staff with the off hand empty or a main hand with an off-hand item that is
+      not a weapon. Each row is THIS PROFILE with only the weapon slots changed:
+      the main hand keeps its Major Spellpower, which a staff row inherits because
+      the enchant belongs to the slot, and the consumables, buffs and seed hold
+      still, so every figure is directly comparable with the one at the top of this
+      page. The Brilliant Wizard Oil applies to any weapon, staff and mace alike,
+      and a frill or a shield takes no imbue, so nothing about the consumables varies
+      across the rows. The candidates are the top of the EP Workbook''s Two Hand,
+      One Hand and Off Hand ladders for this spec, and no candidate carries a socket.
+      A shaman wields maces, axes, staves, daggers and fist weapons and cannot wield
+      swords, so Tempest of Chaos, the sword the warlock and mage rounds price,
+      is not a row here. A shaman can also carry a shield in the off hand, alone
+      among the five Zhar''doom wearers, and the workbook''s rank-two off hand for
+      this spec, Antonidas''s Aegis of Rapt Concentration from Archimonde, is a
+      shield, so one row prices it against the held frills. Zhar''doom goes to the
+      warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and
+      its wearers hold no off hand, per data/judgments/weapon-routing.yaml, which
+      is why the best-in-slot anchor wears it with the off-hand slot empty.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 29988
+          name: The Nexus Key
+          speed: 3.2
+          source: raid_drop
+        dps: 1726.5
+        standard_error: 0.86
+        stdev: 85.9
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30049
+          name: Fathomstone
+          source: raid_drop
+        dps: 1718.8
+        standard_error: 0.89
+        stdev: 89.3
+      - main_hand:
+          id: 32055
+          name: Merciless Gladiator's War Staff
+          speed: 2.0
+          source: arena
+        dps: 1711.2
+        standard_error: 0.87
+        stdev: 86.9
+      tier-hands-and-head:
+      - main_hand:
+          id: 32374
+          name: Zhar'doom, Greatstaff of the Devourer
+          speed: 3.2
+          source: raid_drop
+        dps: 1939.6
+        standard_error: 0.9
+        stdev: 89.8
+      - main_hand:
+          id: 32237
+          name: The Maelstrom's Fury
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 1924.1
+        standard_error: 0.94
+        stdev: 93.6
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30909
+          name: Antonidas's Aegis of Rapt Concentration
+          source: raid_drop
+        dps: 1917.2
+        standard_error: 0.94
+        stdev: 94.3
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 1916.2
+        standard_error: 0.95
+        stdev: 94.6
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30049
+          name: Fathomstone
+          source: raid_drop
+        dps: 1911.5
+        standard_error: 0.94
+        stdev: 94.4
+      - main_hand:
+          id: 34009
+          name: Hammer of Judgement
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 1908.7
+        standard_error: 0.94
+        stdev: 94.0
+      - main_hand:
+          id: 34540
+          name: Vengeful Gladiator's Battle Staff
+          speed: 2.0
+          source: arena
+        dps: 1904.8
+        standard_error: 0.92
+        stdev: 91.9
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 1901.6
+        standard_error: 0.94
+        stdev: 94.1
+      - main_hand:
+          id: 29988
+          name: The Nexus Key
+          speed: 3.2
+          source: raid_drop
+        dps: 1900.2
+        standard_error: 0.92
+        stdev: 91.6
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 1898.5
+        standard_error: 0.94
+        stdev: 93.7
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30049
+          name: Fathomstone
+          source: raid_drop
+        dps: 1893.9
+        standard_error: 0.94
+        stdev: 93.5
+      - main_hand:
+          id: 32055
+          name: Merciless Gladiator's War Staff
+          speed: 2.0
+          source: arena
+        dps: 1883.5
+        standard_error: 0.92
+        stdev: 91.6
+      bis:
+      - main_hand:
+          id: 32374
+          name: Zhar'doom, Greatstaff of the Devourer
+          speed: 3.2
+          source: raid_drop
+        dps: 2130.0
+        standard_error: 0.97
+        stdev: 96.6
+      - main_hand:
+          id: 32237
+          name: The Maelstrom's Fury
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 2083.4
+        standard_error: 0.94
+        stdev: 94.2
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 2076.3
+        standard_error: 0.94
+        stdev: 94.4
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30909
+          name: Antonidas's Aegis of Rapt Concentration
+          source: raid_drop
+        dps: 2075.5
+        standard_error: 0.94
+        stdev: 94.4
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30049
+          name: Fathomstone
+          source: raid_drop
+        dps: 2071.1
+        standard_error: 0.94
+        stdev: 94.2
+      - main_hand:
+          id: 34009
+          name: Hammer of Judgement
+          speed: 1.8
+          source: raid_drop
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 2067.2
+        standard_error: 0.94
+        stdev: 94.0
+      - main_hand:
+          id: 34540
+          name: Vengeful Gladiator's Battle Staff
+          speed: 2.0
+          source: arena
+        dps: 2060.8
+        standard_error: 0.92
+        stdev: 92.4
+      - main_hand:
+          id: 33687
+          name: Vengeful Gladiator's Gavel
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 32361
+          name: Blind-Seers Icon
+          source: raid_drop
+        dps: 2060.4
+        standard_error: 0.95
+        stdev: 94.8
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30872
+          name: Chronicle of Dark Secrets
+          source: raid_drop
+        dps: 2056.8
+        standard_error: 0.94
+        stdev: 94.0
+      - main_hand:
+          id: 29988
+          name: The Nexus Key
+          speed: 3.2
+          source: raid_drop
+        dps: 2055.8
+        standard_error: 0.93
+        stdev: 92.9
+      - main_hand:
+          id: 32053
+          name: Merciless Gladiator's Spellblade
+          speed: 1.6
+          source: arena
+        off_hand:
+          id: 30049
+          name: Fathomstone
+          source: raid_drop
+        dps: 2051.6
+        standard_error: 0.94
+        stdev: 93.8
+      - main_hand:
+          id: 32055
+          name: Merciless Gladiator's War Staff
+          speed: 2.0
+          source: arena
+        dps: 2037.7
+        standard_error: 0.92
+        stdev: 92.0
