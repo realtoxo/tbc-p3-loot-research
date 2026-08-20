@@ -232,6 +232,43 @@ the_fury_weapon_round:
     slot set, below both doubled-arena rows, and Syphon of the Nathrezim doubled measures
     2674.2. Which pair the raider can actually reach first is a routing and points question
     for the council, not a simulator one.
+the_combat_rogue_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, twelve main hand and off hand
+    pairs run as variants of all FOUR anchor profiles, entry, tier, best in slot and best in
+    slot without Warglaives, dual wield only per the 20 August 2026 style ruling in
+    data/judgments/weapon-styles.yaml. The build is Combat Swords with Sword Specialization
+    5/5 and the rotation is the simulator's Sinister Strike swords list, so no dagger is a
+    row and the fist and mace rows are measured under the stated caveat that the talent does
+    not benefit them. No candidate in the round carries a socket, so no figure here is
+    understated against a gemmed worn weapon.
+  the_anchors_reproduce: The worn pair's variant reads the anchor figure to the digit at all
+    four anchors, Talon of Azshara with the Merciless Gladiator's Quickblade 2329.8 at entry
+    and 2542.0 at tier, the Warglaives 2918.2 at best in slot, the Vengeful Gladiator's
+    Slicer with Blade of Savagery 2708.2 at best in slot without them.
+  the_two_bis_tables_are_one_measurement: The best in slot and bis-no-glaives anchors differ
+    only in the two weapon slots, every variant replaces both, and neither worn pair carries
+    gems, so the two tables are the same requests at the same seed and read identically
+    figure for figure, the same construction the Fury round records.
+  the_enchanted_premium_confirms_the_bare_arithmetic: what_the_warglaives_are_worth measured
+    BARE swaps and prices the rogue's pair at 204.1 over Blade of Infamy with Blade of
+    Savagery. This round keeps each slot's Mongoose, and enchanted the premium reads 210.0,
+    2918.2 ± 1.21 for the Warglaives against 2708.2 ± 1.11 for the best alternative, which
+    CHANGES to the Vengeful Gladiator's Slicer with Blade of Savagery, above the bare
+    round's Infamy pairing at 2697.1 ± 1.11. The bare block stands as recorded; the two are
+    different measurements and are not comparable row against row.
+  the_rogue_still_extracts_more_than_the_fury_warrior: The Fury round recorded its enchanted
+    premium at 130.2 and this round reads 210.0, so the bare council arithmetic, that the
+    rogue extracts more from the same pair, SURVIVES enchanted measurement and the gap
+    widens, 79.8 enchanted against 62.8 bare. NOT A RULING. The council decides.
+  entry_found_no_upgrade: The worn Talon of Azshara with the Merciless Gladiator's
+    Quickblade is the best pre-Phase 3 combination the round measured, 2329.8 ± 0.98
+    against 2308.4 ± 0.97 for the Merciless Gladiator's Slicer with the same off hand.
+  the_off_class_rows_sit_below_every_sword_pair: On the best in slot sets Blade of Infamy
+    with the Swiftsteel Bludgeon measures 2602.9 ± 1.06 and the Season 3 fist pair, the
+    Right Ripper with the Left Ripper, measures 2485.1 ± 0.99, below all six Phase 3 sword
+    pairs and consistent in direction with the Sword Specialization caveat the round
+    states. The workbook's off hand ladder ranks the Bludgeon second, and under this build
+    the simulator does not agree.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
