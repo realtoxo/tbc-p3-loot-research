@@ -749,3 +749,172 @@ specs:
         dps: 2230.1
         standard_error: 1.4
         stdev: 140.5
+  arms_warrior:
+    why: 'An Arms Warrior considers only two-handers, per the 20 August 2026 ruling
+      in data/judgments/weapon-styles.yaml, so every row below is a single weapon
+      and the off hand runs empty. Each row is THIS PROFILE with only the main hand
+      id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed
+      hold still, so every figure is directly comparable with the one at the top
+      of this page. The published Phase 3 page ranks only dual Warglaives, which
+      the guild lead routed away from this spec, so the Phase 3 candidates are the
+      drop table''s two-handers in the weapon classes a warrior wields, and the
+      earlier candidates are the top of the EP Workbook''s Two Hand ladder for this
+      spec. The guild lead ruled that this spec takes Cataclysm''s Edge. Torch of
+      the Damned appears as a measurement only: the guild lead kept it with the
+      Retribution Paladin, per data/judgments/weapon-routing.yaml.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2149.8
+        standard_error: 1.16
+        stdev: 115.7
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2145.3
+        standard_error: 1.17
+        stdev: 116.8
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 1977.5
+        standard_error: 1.02
+        stdev: 102.0
+      tier-hands-and-head:
+      - main_hand:
+          id: 30902
+          name: Cataclysm's Edge
+          speed: 3.5
+          source: raid_drop
+        dps: 2303.8
+        standard_error: 1.25
+        stdev: 124.9
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2239.8
+        standard_error: 1.22
+        stdev: 121.8
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2234.3
+        standard_error: 1.24
+        stdev: 124.5
+      - main_hand:
+          id: 32332
+          name: Torch of the Damned
+          speed: 3.8
+          source: raid_drop
+        dps: 2154.9
+        standard_error: 1.11
+        stdev: 111.0
+      - main_hand:
+          id: 33663
+          name: Vengeful Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2126.9
+        standard_error: 1.08
+        stdev: 108.0
+      - main_hand:
+          id: 32348
+          name: Soul Cleaver
+          speed: 3.7
+          source: raid_drop
+        dps: 2108.9
+        standard_error: 1.14
+        stdev: 113.8
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2062.4
+        standard_error: 1.07
+        stdev: 107.0
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 2041.4
+        standard_error: 1.09
+        stdev: 109.2
+      bis:
+      - main_hand:
+          id: 30902
+          name: Cataclysm's Edge
+          speed: 3.5
+          source: raid_drop
+        dps: 2426.4
+        standard_error: 1.36
+        stdev: 136.4
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2349.8
+        standard_error: 1.34
+        stdev: 134.3
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2334.3
+        standard_error: 1.32
+        stdev: 132.3
+      - main_hand:
+          id: 32332
+          name: Torch of the Damned
+          speed: 3.8
+          source: raid_drop
+        dps: 2272.4
+        standard_error: 1.21
+        stdev: 121.0
+      - main_hand:
+          id: 33663
+          name: Vengeful Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2242.3
+        standard_error: 1.19
+        stdev: 119.1
+      - main_hand:
+          id: 32348
+          name: Soul Cleaver
+          speed: 3.7
+          source: raid_drop
+        dps: 2229.6
+        standard_error: 1.22
+        stdev: 122.2
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2176.7
+        standard_error: 1.15
+        stdev: 115.1
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 2151.8
+        standard_error: 1.17
+        stdev: 116.8
