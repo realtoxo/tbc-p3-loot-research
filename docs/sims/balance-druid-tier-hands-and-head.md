@@ -64,6 +64,28 @@ A Balance Druid can carry a staff or a one-hander with a held frill, and both st
 
 The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +52.6 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, three reputations and one max-level quest, plus the dungeon trinket the entry and tier sets already wear, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. The Ashtongue Talisman of Equilibrium is in the pool because the best-in-slot set wears it: it is locked to this class, and what its rows measure beyond an empty slot is the simulator's pricing of its Starfire proc. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
+
+The ten best of the 45 combinations measured, and the worn pair.
+
+| Trinket                       | Trinket                           | DPS           | Against this set |
+|-------------------------------|-----------------------------------|---------------|------------------|
+| The Skull of Gul'dan          | Darkmoon Card: Crusade            | 1755.8 ± 0.84 | +40.0            |
+| The Skull of Gul'dan          | Ashtongue Talisman of Equilibrium | 1751.4 ± 0.85 | +35.6            |
+| The Skull of Gul'dan          | Sextant of Unstable Currents      | 1748.2 ± 0.86 | +32.4            |
+| The Skull of Gul'dan          | Icon of the Silver Crescent       | 1747.8 ± 0.84 | +32.0            |
+| The Skull of Gul'dan          | Eye of Magtheridon                | 1743.9 ± 0.82 | +28.1            |
+| The Skull of Gul'dan          | Quagmirran's Eye                  | 1741.7 ± 0.85 | +25.9            |
+| The Skull of Gul'dan          | Xi'ri's Gift                      | 1737.0 ± 0.83 | +21.2            |
+| Darkmoon Card: Crusade        | Icon of the Silver Crescent       | 1724.1 ± 0.83 | +8.3             |
+| The Skull of Gul'dan          | Scryer's Bloodgem                 | 1722.3 ± 0.82 | +6.5             |
+| The Skull of Gul'dan          | Starkiller's Bauble               | 1718.2 ± 0.82 | +2.4             |
+| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent       | 1715.8 ± 0.83 | +0.0             |
+
+The best combination, The Skull of Gul'dan with Darkmoon Card: Crusade, measures +40.0 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -56,6 +56,27 @@ A Balance Druid can carry a staff or a one-hander with a held frill, and both st
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
+## Trinket combinations
+
+A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, three reputations and one max-level quest, plus the dungeon trinket the entry and tier sets already wear, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. The Ashtongue Talisman of Equilibrium is in the pool because the best-in-slot set wears it: it is locked to this class, and what its rows measure beyond an empty slot is the simulator's pricing of its Starfire proc. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
+
+The ten best of the 28 combinations measured, and the worn pair.
+
+| Trinket                       | Trinket                     | DPS           | Against this set |
+|-------------------------------|-----------------------------|---------------|------------------|
+| Darkmoon Card: Crusade        | Icon of the Silver Crescent | 1685.0 ± 0.88 | +13.7            |
+| Sextant of Unstable Currents  | Icon of the Silver Crescent | 1677.1 ± 0.90 | +5.8             |
+| Eye of Magtheridon            | Icon of the Silver Crescent | 1674.1 ± 0.86 | +2.8             |
+| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent | 1671.3 ± 0.86 | +0.0             |
+| Sextant of Unstable Currents  | Darkmoon Card: Crusade      | 1666.1 ± 0.89 | -5.2             |
+| Darkmoon Card: Crusade        | Eye of Magtheridon          | 1663.1 ± 0.85 | -8.2             |
+| Darkmoon Card: Crusade        | Quagmirran's Eye            | 1661.4 ± 0.85 | -9.9             |
+| Icon of the Silver Crescent   | Xi'ri's Gift                | 1660.4 ± 0.86 | -10.9            |
+| Darkmoon Card: Crusade        | Xi'ri's Gift                | 1655.4 ± 0.86 | -15.9            |
+| Sextant of Unstable Currents  | Eye of Magtheridon          | 1654.9 ± 0.87 | -16.4            |
+
+The best combination, Darkmoon Card: Crusade with Icon of the Silver Crescent, measures +13.7 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
