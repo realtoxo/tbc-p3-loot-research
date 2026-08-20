@@ -169,17 +169,74 @@ ROUNDS: dict[str, dict] = {
             {"mh": 31959, "oh": None, "phase3": False},
         ],
     },
+    # ARMS: two-handers only, per the 20 August 2026 ruling. The published
+    # Phase 3 page ranks only dual Warglaives, which the guild lead routed
+    # away from this spec, and the workbook tab's two-hand table is headed
+    # PHASE 2, so the Phase 3 field is read from items.csv instead: every
+    # Mount Hyjal, Black Temple or Season 3 two-hander a warrior wields,
+    # which is swords, maces, axes and polearms, never a staff. The
+    # pre-Phase 3 rows are the top of the Arms workbook tab's Two Hand
+    # ladder. The worn weapons are rows on purpose: their variants must
+    # reproduce the anchor figures to the digit, the same verification the
+    # other rounds carry, and the entry and tier anchors wear a socketed
+    # Twinblade whose gems with_pair keeps for that row alone.
+    "arms_warrior": {
+        "why": (
+            "An Arms Warrior considers only two-handers, per the 20 August "
+            "2026 ruling in data/judgments/weapon-styles.yaml, so every row "
+            "below is a single weapon and the off hand runs empty. Each row "
+            "is THIS PROFILE with only the main hand id replaced: the slot "
+            "keeps its Mongoose, and the consumables, buffs and seed hold "
+            "still, so every figure is directly comparable with the one at "
+            "the top of this page. The published Phase 3 page ranks only "
+            "dual Warglaives, which the guild lead routed away from this "
+            "spec, so the Phase 3 candidates are the drop table's "
+            "two-handers in the weapon classes a warrior wields, and the "
+            "earlier candidates are the top of the EP Workbook's Two Hand "
+            "ladder for this spec. The guild lead ruled that this spec "
+            "takes Cataclysm's Edge. Torch of the Damned appears as a "
+            "measurement only: the guild lead kept it with the Retribution "
+            "Paladin, per data/judgments/weapon-routing.yaml."),
+        "pairs": [
+            # Phase 3 raid drops: Cataclysm's Edge from Archimonde is the
+            # worn best-in-slot weapon, the workbook's rank one and the
+            # guild lead's routing; Torch of the Damned from the Reliquary
+            # of Souls is measured as informative and routed to the
+            # Retribution Paladin; Soul Cleaver from Teron Gorefiend and
+            # the Halberd of Desolation from High Warlord Naj'entus are
+            # the other Black Temple two-handers on the ladder.
+            {"mh": 30902, "oh": None, "phase3": True},
+            {"mh": 32332, "oh": None, "phase3": True},
+            {"mh": 32348, "oh": None, "phase3": True},
+            {"mh": 32248, "oh": None, "phase3": True},
+            # Season 3 arena, sold for points once the season runs. The
+            # workbook ranks the Bonegrinder, the Greatsword and the
+            # Decapitator within five DPS of one another, so the
+            # Bonegrinder stands for all three.
+            {"mh": 33663, "oh": None, "phase3": True},
+            # Reachable before Phase 3: Twinblade of the Phoenix, from
+            # Kael'thas Sunstrider, is the worn entry and tier weapon;
+            # Lionheart Executioner is crafted by Blacksmithing; the
+            # Merciless Gladiator's Bonegrinder is Season 2 arena.
+            {"mh": 29993, "oh": None, "phase3": False},
+            {"mh": 28430, "oh": None, "phase3": False},
+            {"mh": 31959, "oh": None, "phase3": False},
+        ],
+    },
 }
 
 
 def with_pair(gear: dict, mh: int, oh: int | None) -> dict:
     """The gear wearing one candidate combination, slots keeping enchants.
 
-    THE GEMS GO WITH THE OLD ITEM and the enchant stays with the slot. No
-    candidate here carries a socket, so dropping the gems loses nothing, and
-    a weapon slot wears the same enchant at every anchor, so keeping the
-    slot's enchant is what a raider would do rather than a modelling
-    shortcut.
+    THE GEMS GO WITH THE OLD ITEM and the enchant stays with the slot. A
+    candidate arrives ungemmed, and a weapon slot wears the same enchant at
+    every anchor, so keeping the slot's enchant is what a raider would do
+    rather than a modelling shortcut. THE ONE EXCEPTION IS THE WORN ITEM
+    ITSELF: where the candidate id equals the id already in the slot, the
+    slot keeps its gems, because that row exists to reproduce the anchor
+    figure to the digit, and the Arms entry and tier anchors wear a socketed
+    Twinblade of the Phoenix whose three gems are part of the anchor.
 
     AN `oh` OF None EMPTIES THE OFF HAND, enchant and all, which is what a
     two-hander row needs: the item it displaces cannot stay, and neither can
@@ -188,16 +245,18 @@ def with_pair(gear: dict, mh: int, oh: int | None) -> dict:
     out = {"items": [dict(entry) for entry in gear["items"]]}
     mh_index = SLOT_ORDER.index("main_hand")
     entry = dict(out["items"][mh_index])
+    if entry.get("id") != mh:
+        entry.pop("gems", None)
     entry["id"] = mh
-    entry.pop("gems", None)
     out["items"][mh_index] = entry
     oh_index = SLOT_ORDER.index("off_hand")
     if oh is None:
         out["items"][oh_index] = {}
     else:
         entry = dict(out["items"][oh_index]) or {}
+        if entry.get("id") != oh:
+            entry.pop("gems", None)
         entry["id"] = oh
-        entry.pop("gems", None)
         out["items"][oh_index] = entry
     return out
 

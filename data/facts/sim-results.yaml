@@ -164,6 +164,38 @@ what_the_retribution_two_handers_measure:
     reason, Twinblade ahead by 14.0 on the tier set and Soul Cleaver ahead by 10.1 on the
     best-in-slot set, whose higher attack power raises what Soul Cleaver's 315 armor
     penetration is worth. NOT A RANKING. Which weapon each raider carries is the council's call.
+what_the_arms_two_handers_measure:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eight two-handers run as VARIANTS
+    of each Arms anchor profile, only the main hand id replaced, the off hand empty and the slot
+    keeping its Mongoose, figures in data/facts/weapon-pair-sims.yaml. Two-handers only, per the
+    20 August 2026 style ruling in data/judgments/weapon-styles.yaml, and the Phase 3 field read
+    from items.csv because the published Phase 3 page ranks only dual Warglaives, which the 15
+    August 2026 routing sends away from this spec.
+  the_anchors_reproduce: The worn weapon's variant reads the anchor figure to the digit at all
+    three anchors, Twinblade of the Phoenix 2149.8 at entry and 2239.8 at tier, Cataclysm's Edge
+    2426.4 at best in slot. The Twinblade is socketed and its variant keeps the worn gems, which
+    run_weapon_pair_sims.py does only for the row whose id matches the slot; every other
+    candidate arrives ungemmed.
+  the_routing_gives_each_spec_its_own_measured_best: Cataclysm's Edge measures FIRST for Arms at
+    both anchors that reach it, 2426.4 at best in slot against Torch of the Damned's 2272.4 and
+    2303.8 at tier against 2154.9, while Retribution measures Torch first on its own round. The
+    two rulings together hand each spec the weapon it extracts more from, and the Arms gap is
+    154.0 DPS where the Retribution gap is 29.0, so the routing is confirmed from both sides.
+  only_cataclysms_edge_improves_on_the_worn_weapon: On the tier set every other Phase 3
+    candidate measures BELOW the worn pre-Phase 3 Twinblade, Torch by 84.9, Vengeful Gladiator's
+    Bonegrinder by 112.9, Soul Cleaver by 130.9 and Halberd of Desolation by 198.4. For this
+    spec the weapon decision of the phase is Cataclysm's Edge from Archimonde or nothing, a
+    shape no other round so far has shown.
+  where_the_simulator_and_the_workbook_disagree: The workbook's Arms ladder prices Lionheart
+    Executioner tenth at 1253.89, below Vengeful Gladiator's Bonegrinder at 1324.06, Soul
+    Cleaver at 1295.62 and Torch of the Damned at 1286.56, and the simulator puts the crafted
+    sword ABOVE all three at every anchor that runs them, second only to Cataclysm's Edge at
+    best in slot, 2349.8 against Torch's 2272.4. This set is short of the melee special cap at
+    every anchor per hit-captured.yaml, so the hit-waste account that explained the Retribution
+    reversal does not apply here; Lionheart carries 52 strength and 44 agility at 3.6 speed
+    where Torch carries 51 strength, 38 crit rating and 50 haste rating at 3.8, and which
+    budget the shipped Arms rotation converts better has not been read out of the engine. NOT A RANKING. Which weapon each raider carries is the
+    council's call.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours

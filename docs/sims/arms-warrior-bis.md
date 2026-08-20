@@ -41,6 +41,25 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2426.4 ± 1.36     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2619.7 ± 1.45     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+An Arms Warrior considers only two-handers, per the 20 August 2026 ruling in data/judgments/weapon-styles.yaml, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The published Phase 3 page ranks only dual Warglaives, which the guild lead routed away from this spec, so the Phase 3 candidates are the drop table's two-handers in the weapon classes a warrior wields, and the earlier candidates are the top of the EP Workbook's Two Hand ladder for this spec. The guild lead ruled that this spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: the guild lead kept it with the Retribution Paladin, per data/judgments/weapon-routing.yaml.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                         | Off hand            | DPS           | Against this set |
+|-----------------------------------|---------------------|---------------|------------------|
+| Cataclysm's Edge                  | *empty, two-hander* | 2426.4 ± 1.36 | +0.0             |
+| Lionheart Executioner             | *empty, two-hander* | 2349.8 ± 1.34 | -76.6            |
+| Twinblade of the Phoenix          | *empty, two-hander* | 2334.3 ± 1.32 | -92.1            |
+| Torch of the Damned               | *empty, two-hander* | 2272.4 ± 1.21 | -154.0           |
+| Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 2242.3 ± 1.19 | -184.1           |
+| Soul Cleaver                      | *empty, two-hander* | 2229.6 ± 1.22 | -196.8           |
+| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2176.7 ± 1.15 | -249.7           |
+| Halberd of Desolation             | *empty, two-hander* | 2151.8 ± 1.17 | -274.6           |
+
+This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
