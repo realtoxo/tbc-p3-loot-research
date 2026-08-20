@@ -41,6 +41,20 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2329.8 ± 0.98     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2616.6 ± 1.09     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Combat Rogue carries two one-handers, per the 20 August 2026 ruling in data/judgments/weapon-styles.yaml, so every row below is a main hand with an off hand and no row is a two-hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The build is Combat Swords and the rotation is built on Sinister Strike, so no dagger is a row, because a dagger main hand changes the rotation entirely rather than the weapon alone, and the fist and mace rows carry a stated caveat: the build's Sword Specialization talent procs only on sword strikes and does not benefit them. The candidates are the top of the EP Workbook's Main Hand and Off Hand ladders for this spec. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Fury Warrior's, the raid holds one pair, and which of the two receives it is open council business, per data/judgments/weapon-routing.yaml, which is why this spec carries a best-in-slot set both with and without them.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                    | Off hand                         | DPS           | Against this set |
+|------------------------------|----------------------------------|---------------|------------------|
+| Talon of Azshara             | Merciless Gladiator's Quickblade | 2329.8 ± 0.98 | +0.0             |
+| Merciless Gladiator's Slicer | Merciless Gladiator's Quickblade | 2308.4 ± 0.97 | -21.4            |
+| Talon of Azshara             | Merciless Gladiator's Slicer     | 2190.7 ± 0.97 | -139.1           |
+
+This set already wears the best combination the round measured, which is why its top row reads plus zero: that row IS this profile.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

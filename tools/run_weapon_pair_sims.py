@@ -241,6 +241,89 @@ ROUNDS: dict[str, dict] = {
             {"mh": 32944, "oh": 30082, "phase3": False},
         ],
     },
+    # COMBAT ROGUE: dual wield only, per the 20 August 2026 ruling in
+    # data/judgments/weapon-styles.yaml. The build is Combat Swords, 20/41/0
+    # as the guide labels it and 19/42/0 as its calculator string sums, per
+    # data/facts/talents.yaml, and its combat segment decodes to Sword
+    # Specialization 5/5; the rotation is the simulator's swords APL, built
+    # on Sinister Strike. A dagger main hand changes the rotation entirely,
+    # so no dagger is a row. The fist and mace rows are measured with the
+    # caveat the why paragraph states: Sword Specialization does not benefit
+    # them. The candidates are the top of the Rogue workbook tab, which
+    # splits Main Hand from Off Hand like the Fury tab and unlike the
+    # Enhancement tab's combined pool. Combat carries FOUR anchors for the
+    # same reason Fury does: the Warglaives of Azzinoth are ranked first by
+    # both specs' published lists, the raid holds one pair, and the guild
+    # lead has not routed it. Each anchor's worn pair is a row on purpose:
+    # its variant must reproduce the anchor figure to the digit, the same
+    # verification the other rounds carry. No candidate in this list
+    # carries a socket, so no figure here is understated against a gemmed
+    # worn weapon.
+    "combat_rogue": {
+        "anchors": ("entry", "tier-hands-and-head", "bis",
+                    "bis-no-glaives"),
+        "why": (
+            "A Combat Rogue carries two one-handers, per the 20 August "
+            "2026 ruling in data/judgments/weapon-styles.yaml, so every "
+            "row below is a main hand with an off hand and no row is a "
+            "two-hander. Each row is THIS PROFILE with only the two "
+            "weapon ids replaced: each slot keeps its Mongoose, and the "
+            "consumables, buffs and seed hold still, so every figure is "
+            "directly comparable with the one at the top of this page. "
+            "The build is Combat Swords and the rotation is built on "
+            "Sinister Strike, so no dagger is a row, because a dagger "
+            "main hand changes the rotation entirely rather than the "
+            "weapon alone, and the fist and mace rows carry a stated "
+            "caveat: the build's Sword Specialization talent procs only "
+            "on sword strikes and does not benefit them. The candidates "
+            "are the top of the EP Workbook's Main Hand and Off Hand "
+            "ladders for this spec. A row of two copies of one item "
+            "needs both copies before it is wearable. The Warglaives of "
+            "Azzinoth are ranked first by this spec's published Phase 3 "
+            "list and by the Fury Warrior's, the raid holds one pair, "
+            "and which of the two receives it is open council business, "
+            "per data/judgments/weapon-routing.yaml, which is why this "
+            "spec carries a best-in-slot set both with and without "
+            "them."),
+        "pairs": [
+            # Phase 3 raid drops and Season 3 arena. The Warglaive pair,
+            # from Illidan Stormrage, is the worn best-in-slot pair and
+            # the workbook's rank one in both hands; the Vengeful
+            # Gladiator's Slicer with Blade of Savagery, from Mother
+            # Shahraz, is the worn bis-no-glaives pair, per the capture
+            # in data/facts/sim-profiles/bis-capture/combat-rogue.yaml.
+            {"mh": 32837, "oh": 32838, "phase3": True},
+            {"mh": 33762, "oh": 32369, "phase3": True},
+            # The sword field: Blade of Infamy from Anetheron is the
+            # highest Hyjal one-hander on the tab and is not unique, so
+            # its doubled row is a question of weeks; the Vengeful
+            # Gladiator's Quickblade is the Season 3 Off Hand sword and
+            # two Slicers is the doubled-arena alternative the Fury
+            # round also measures.
+            {"mh": 30881, "oh": 32369, "phase3": True},
+            {"mh": 33762, "oh": 33734, "phase3": True},
+            {"mh": 30881, "oh": 33734, "phase3": True},
+            {"mh": 33762, "oh": 33762, "phase3": True},
+            {"mh": 30881, "oh": 30881, "phase3": True},
+            # Off-class rows, measured under the stated caveat that
+            # Sword Specialization does not benefit them: Swiftsteel
+            # Bludgeon, from Black Temple trash, is the workbook's rank
+            # two off hand, and the Season 3 fist pair is the Right
+            # Ripper, Main Hand only, with the Left Ripper, Off Hand
+            # only.
+            {"mh": 30881, "oh": 32943, "phase3": True},
+            {"mh": 33737, "oh": 33705, "phase3": True},
+            # Reachable before Phase 3: Talon of Azshara from Morogrim
+            # Tidewalker with the Merciless Gladiator's Quickblade,
+            # Season 2 arena, is the worn entry AND tier pair, per the
+            # capture in data/facts/sim-profiles/hit-capture/
+            # combat-rogue.yaml; the Merciless Gladiator's Slicer is the
+            # Season 2 One Hand sword above it on the tab.
+            {"mh": 30082, "oh": 32027, "phase3": False},
+            {"mh": 32052, "oh": 32027, "phase3": False},
+            {"mh": 30082, "oh": 32052, "phase3": False},
+        ],
+    },
     # ARMS: two-handers only, per the 20 August 2026 ruling. The published
     # Phase 3 page ranks only dual Warglaives, which the guild lead routed
     # away from this spec, and the workbook tab's two-hand table is headed

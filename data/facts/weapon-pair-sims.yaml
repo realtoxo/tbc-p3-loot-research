@@ -1444,3 +1444,514 @@ specs:
         dps: 2657.1
         standard_error: 1.24
         stdev: 124.3
+  combat_rogue:
+    why: 'A Combat Rogue carries two one-handers, per the 20 August 2026 ruling
+      in data/judgments/weapon-styles.yaml, so every row below is a main hand with
+      an off hand and no row is a two-hander. Each row is THIS PROFILE with only
+      the two weapon ids replaced: each slot keeps its Mongoose, and the consumables,
+      buffs and seed hold still, so every figure is directly comparable with the
+      one at the top of this page. The build is Combat Swords and the rotation is
+      built on Sinister Strike, so no dagger is a row, because a dagger main hand
+      changes the rotation entirely rather than the weapon alone, and the fist and
+      mace rows carry a stated caveat: the build''s Sword Specialization talent
+      procs only on sword strikes and does not benefit them. The candidates are
+      the top of the EP Workbook''s Main Hand and Off Hand ladders for this spec.
+      A row of two copies of one item needs both copies before it is wearable. The
+      Warglaives of Azzinoth are ranked first by this spec''s published Phase 3
+      list and by the Fury Warrior''s, the raid holds one pair, and which of the
+      two receives it is open council business, per data/judgments/weapon-routing.yaml,
+      which is why this spec carries a best-in-slot set both with and without them.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 32027
+          name: Merciless Gladiator's Quickblade
+          speed: 1.5
+          source: worn
+        dps: 2329.8
+        standard_error: 0.98
+        stdev: 98.3
+      - main_hand:
+          id: 32052
+          name: Merciless Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 32027
+          name: Merciless Gladiator's Quickblade
+          speed: 1.5
+          source: worn
+        dps: 2308.4
+        standard_error: 0.97
+        stdev: 97.4
+      - main_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 32052
+          name: Merciless Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2190.7
+        standard_error: 0.97
+        stdev: 97.5
+      tier-hands-and-head:
+      - main_hand:
+          id: 32837
+          name: Warglaive of Azzinoth
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32838
+          name: Warglaive of Azzinoth
+          speed: 1.4
+          source: raid_drop
+        dps: 2798.1
+        standard_error: 1.16
+        stdev: 115.8
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 32369
+          name: Blade of Savagery
+          speed: 1.4
+          source: raid_drop
+        dps: 2596.1
+        standard_error: 1.06
+        stdev: 106.3
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32369
+          name: Blade of Savagery
+          speed: 1.4
+          source: raid_drop
+        dps: 2585.6
+        standard_error: 1.07
+        stdev: 106.5
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33734
+          name: Vengeful Gladiator's Quickblade
+        dps: 2574.0
+        standard_error: 1.08
+        stdev: 108.4
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 33734
+          name: Vengeful Gladiator's Quickblade
+        dps: 2562.1
+        standard_error: 1.09
+        stdev: 109.0
+      - main_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 32027
+          name: Merciless Gladiator's Quickblade
+          speed: 1.5
+          source: worn
+        dps: 2542.0
+        standard_error: 1.06
+        stdev: 106.4
+      - main_hand:
+          id: 32052
+          name: Merciless Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 32027
+          name: Merciless Gladiator's Quickblade
+          speed: 1.5
+          source: worn
+        dps: 2516.8
+        standard_error: 1.06
+        stdev: 105.5
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32943
+          name: Swiftsteel Bludgeon
+          speed: 1.5
+          source: raid_drop
+        dps: 2496.3
+        standard_error: 1.02
+        stdev: 101.9
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2412.8
+        standard_error: 1.07
+        stdev: 106.8
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2399.1
+        standard_error: 1.08
+        stdev: 108.1
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33705
+          name: Vengeful Gladiator's Left Ripper
+        dps: 2382.1
+        standard_error: 0.95
+        stdev: 95.4
+      - main_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 32052
+          name: Merciless Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2377.1
+        standard_error: 1.06
+        stdev: 106.3
+      bis:
+      - main_hand:
+          id: 32837
+          name: Warglaive of Azzinoth
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32838
+          name: Warglaive of Azzinoth
+          speed: 1.4
+          source: raid_drop
+        dps: 2918.2
+        standard_error: 1.21
+        stdev: 120.6
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 32369
+          name: Blade of Savagery
+          speed: 1.4
+          source: raid_drop
+        dps: 2708.2
+        standard_error: 1.11
+        stdev: 111.1
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32369
+          name: Blade of Savagery
+          speed: 1.4
+          source: raid_drop
+        dps: 2697.1
+        standard_error: 1.11
+        stdev: 111.4
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33734
+          name: Vengeful Gladiator's Quickblade
+        dps: 2685.8
+        standard_error: 1.13
+        stdev: 113.5
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 33734
+          name: Vengeful Gladiator's Quickblade
+        dps: 2672.9
+        standard_error: 1.13
+        stdev: 112.9
+      - main_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 32027
+          name: Merciless Gladiator's Quickblade
+          speed: 1.5
+          source: worn
+        dps: 2651.4
+        standard_error: 1.12
+        stdev: 111.7
+      - main_hand:
+          id: 32052
+          name: Merciless Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 32027
+          name: Merciless Gladiator's Quickblade
+          speed: 1.5
+          source: worn
+        dps: 2626.5
+        standard_error: 1.1
+        stdev: 110.3
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32943
+          name: Swiftsteel Bludgeon
+          speed: 1.5
+          source: raid_drop
+        dps: 2602.9
+        standard_error: 1.06
+        stdev: 106.2
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2517.5
+        standard_error: 1.11
+        stdev: 110.7
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2502.3
+        standard_error: 1.11
+        stdev: 111.0
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33705
+          name: Vengeful Gladiator's Left Ripper
+        dps: 2485.1
+        standard_error: 0.99
+        stdev: 99.0
+      - main_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 32052
+          name: Merciless Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2482.2
+        standard_error: 1.11
+        stdev: 110.7
+      bis-no-glaives:
+      - main_hand:
+          id: 32837
+          name: Warglaive of Azzinoth
+          speed: 2.8
+          source: raid_drop
+        off_hand:
+          id: 32838
+          name: Warglaive of Azzinoth
+          speed: 1.4
+          source: raid_drop
+        dps: 2918.2
+        standard_error: 1.21
+        stdev: 120.6
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 32369
+          name: Blade of Savagery
+          speed: 1.4
+          source: raid_drop
+        dps: 2708.2
+        standard_error: 1.11
+        stdev: 111.1
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32369
+          name: Blade of Savagery
+          speed: 1.4
+          source: raid_drop
+        dps: 2697.1
+        standard_error: 1.11
+        stdev: 111.4
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33734
+          name: Vengeful Gladiator's Quickblade
+        dps: 2685.8
+        standard_error: 1.13
+        stdev: 113.5
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 33734
+          name: Vengeful Gladiator's Quickblade
+        dps: 2672.9
+        standard_error: 1.13
+        stdev: 112.9
+      - main_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 32027
+          name: Merciless Gladiator's Quickblade
+          speed: 1.5
+          source: worn
+        dps: 2651.4
+        standard_error: 1.12
+        stdev: 111.7
+      - main_hand:
+          id: 32052
+          name: Merciless Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 32027
+          name: Merciless Gladiator's Quickblade
+          speed: 1.5
+          source: worn
+        dps: 2626.5
+        standard_error: 1.1
+        stdev: 110.3
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 32943
+          name: Swiftsteel Bludgeon
+          speed: 1.5
+          source: raid_drop
+        dps: 2602.9
+        standard_error: 1.06
+        stdev: 106.2
+      - main_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33762
+          name: Vengeful Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2517.5
+        standard_error: 1.11
+        stdev: 110.7
+      - main_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        off_hand:
+          id: 30881
+          name: Blade of Infamy
+          speed: 2.6
+          source: raid_drop
+        dps: 2502.3
+        standard_error: 1.11
+        stdev: 111.0
+      - main_hand:
+          id: 33737
+          name: Vengeful Gladiator's Right Ripper
+          speed: 2.6
+          source: arena
+        off_hand:
+          id: 33705
+          name: Vengeful Gladiator's Left Ripper
+        dps: 2485.1
+        standard_error: 0.99
+        stdev: 99.0
+      - main_hand:
+          id: 30082
+          name: Talon of Azshara
+          speed: 2.7
+          source: raid_drop
+        off_hand:
+          id: 32052
+          name: Merciless Gladiator's Slicer
+          speed: 2.6
+          source: arena
+        dps: 2482.2
+        standard_error: 1.11
+        stdev: 110.7

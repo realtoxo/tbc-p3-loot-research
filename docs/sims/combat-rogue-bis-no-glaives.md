@@ -41,6 +41,29 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2708.2 ± 1.11     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2917.4 ± 1.18     | Essence of Suffering                                       |
 
+## Weapon pairs
+
+A Combat Rogue carries two one-handers, per the 20 August 2026 ruling in data/judgments/weapon-styles.yaml, so every row below is a main hand with an off hand and no row is a two-hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The build is Combat Swords and the rotation is built on Sinister Strike, so no dagger is a row, because a dagger main hand changes the rotation entirely rather than the weapon alone, and the fist and mace rows carry a stated caveat: the build's Sword Specialization talent procs only on sword strikes and does not benefit them. The candidates are the top of the EP Workbook's Main Hand and Off Hand ladders for this spec. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Fury Warrior's, the raid holds one pair, and which of the two receives it is open council business, per data/judgments/weapon-routing.yaml, which is why this spec carries a best-in-slot set both with and without them.
+
+Not a ruling: which pair this anchor wears is the council's call.
+
+| Main hand                         | Off hand                         | DPS           | Against this set |
+|-----------------------------------|----------------------------------|---------------|------------------|
+| Warglaive of Azzinoth             | Warglaive of Azzinoth            | 2918.2 ± 1.21 | +210.0           |
+| Vengeful Gladiator's Slicer       | Blade of Savagery                | 2708.2 ± 1.11 | +0.0             |
+| Blade of Infamy                   | Blade of Savagery                | 2697.1 ± 1.11 | -11.1            |
+| Vengeful Gladiator's Slicer       | Vengeful Gladiator's Quickblade  | 2685.8 ± 1.13 | -22.4            |
+| Blade of Infamy                   | Vengeful Gladiator's Quickblade  | 2672.9 ± 1.13 | -35.3            |
+| Talon of Azshara                  | Merciless Gladiator's Quickblade | 2651.4 ± 1.12 | -56.8            |
+| Merciless Gladiator's Slicer      | Merciless Gladiator's Quickblade | 2626.5 ± 1.10 | -81.7            |
+| Blade of Infamy                   | Swiftsteel Bludgeon              | 2602.9 ± 1.06 | -105.3           |
+| Vengeful Gladiator's Slicer       | Vengeful Gladiator's Slicer      | 2517.5 ± 1.11 | -190.7           |
+| Blade of Infamy                   | Blade of Infamy                  | 2502.3 ± 1.11 | -205.9           |
+| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 2485.1 ± 0.99 | -223.1           |
+| Talon of Azshara                  | Merciless Gladiator's Slicer     | 2482.2 ± 1.11 | -226.0           |
+
+The best combination, Warglaive of Azzinoth with Warglaive of Azzinoth, measures +210.0 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
