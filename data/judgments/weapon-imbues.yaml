@@ -1,0 +1,44 @@
+meta:
+  what: What each hand of each spec carries as its weapon consumable, ruled by
+    the guild lead. It is a judgment because the captured guides answer it
+    differently for the hunters, and because which hand a raid buff covers is a
+    raid policy rather than a fact a guide states.
+  ruled: '2026-08-20'
+  by: the guild lead
+  verbatim: keep in mind that we run windfury totem on main hand and a
+    sharpening/weightstone on offhand if applicable... except hunter will run
+    applicable weapon oils... and i think cat doesnt run anything
+  how_the_simulator_already_agrees: data/facts/weapon-imbue-gating.yaml records
+    that the simulator applies a main-hand imbue only where the party carries no
+    Windfury Totem, and applies an off-hand imbue unconditionally. Every melee
+    and both hunters sit in g1 or g2, each of which holds an Enhancement Shaman,
+    so the totem owns the main hand mechanically and the off-hand imbue is the
+    live one. The ruling and the engine describe the same raid.
+rulings:
+- who: The melee in the Windfury parties
+  main_hand: Windfury Totem, from the party's Enhancement Shaman. The recorded
+    main-hand stone is inert under the totem and stays recorded, because the
+    pick describes what the raider carries and the gating file explains why it
+    measures nothing.
+  off_hand: The sharpening stone or the weightstone where a weapon fills the
+    slot, and the Combat Rogue's poison, which is its own class answer to the
+    same question. A two-hander leaves no off hand and takes nothing further.
+- who: Both hunters
+  both_hands: Mana Oil. The guild lead asked first for an agility imbue, and
+    none exists in 2.4.3 or in the simulator's accepted set, which holds three
+    oils, three stones and the rogue poisons; the mana oil is the applicable
+    oil, "is there an agi imbue? else yeah mana oils". This OVERRIDES the
+    captured guides, which named the Adamantite stones, and the override is
+    quoted beside the pick in data/facts/consumables.yaml.
+  what_it_simplifies: The stone followed the weapon class, so a weapon round
+    candidate of a different class carried a consumable caveat. An oil applies
+    to any weapon, so the hunter weapon rounds carry no such caveat.
+- who: The Feral Cat
+  ruling: KEEPS its Adamantite Weightstone. The guild lead first said he thought
+    the cat runs nothing, and ruled to keep the stone when asked directly, so
+    the recorded pick stands unchanged.
+- who: The Enhancement Shaman
+  ruling: UNCHANGED. It runs its own Windfury Weapon imbue on both hands, per
+    the 15 August 2026 dual Windfury ruling recorded in tools/run_sims.py, and
+    the guild lead confirmed on 20 August 2026 that this ruling does not touch
+    it.
