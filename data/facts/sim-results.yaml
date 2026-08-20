@@ -91,6 +91,25 @@ the_rogue_trinket_round_is_enumerated:
     every pairing that holds it lands in the bottom half of its table at every anchor that can
     reach it, its best placement sixteenth of twenty-eight, and Dragonspine plus the Talisman
     reads 111.2 under Dragonspine plus the Coil at best in slot, 2807.0 against 2918.2.
+the_retribution_trinket_round_is_enumerated:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, every unordered pair from the six-trinket
+    pool as a variant of each of the three anchor profiles, 40 runs, every row in data/facts/variant-sims.yaml.
+  best_combination_per_anchor: 'Dragonspine Trophy plus Bloodlust Brooch at all three anchors:
+    2204.6 at entry, 2203.6 at tier and 2374.4 at best in slot. Only the best-in-slot anchor
+    already wears it, so its top row IS the anchor figure. The entry and tier anchors wear Dragonspine
+    Trophy plus Darkmoon Card: Crusade, 23.3 behind the Brooch pair at both, and the Brooch is
+    a Badge of Justice purchase, so the gap closes without contesting any drop. NOT A RULING.
+    One standard error is 1.30 to 1.46 across the tables.'
+  the_dragonspine_premium: 'The best pair holding Dragonspine Trophy minus the best pair without
+    it, pure arithmetic on the table: 43.6 at entry, 43.6 at tier and 33.1 at best in slot. The
+    best pair without it is Tsunami Talisman plus Bloodlust Brooch at every anchor.'
+  a_workbook_reversal: 'The Ret tab''s Trinket ladder ranks Darkmoon Card: Crusade second at
+    46.17 and Bloodlust Brooch seventh at 36.03. Measured, the Brooch beside Dragonspine Trophy
+    is the best pair at every anchor, and the Card beside Dragonspine is the WORST of the five
+    Dragonspine pairings at best in slot, 2349.1 against the Brooch''s 2374.4. Core of Ar''kelos,
+    ranked eleventh at 25.95 and an uncommon quest reward, measures above the Card, Tsunami Talisman
+    and Madness of the Betrayer beside Dragonspine at best in slot, 2354.3 against 2349.1, 2349.9
+    and 2349.8, though those three sit within one standard error of each other.'
 what_the_warglaives_are_worth:
   measured: 2026-08-15, 10000 iterations, seed 1, armor 6193, both weapon slots varied together
   note: Every candidate runs BARE, because tools/run_sims.py --swap strips the enchant with the
