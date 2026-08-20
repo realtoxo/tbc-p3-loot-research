@@ -558,6 +558,98 @@ ROUNDS: dict[str, dict] = {
             {"mh": 28436, "oh": None, "phase3": False},
         ],
     },
+    # AFFLICTION: both styles in the same table, per the 20 August 2026
+    # ruling in data/judgments/weapon-styles.yaml, and THE FIRST CASTER
+    # ROUND, so this entry is the template the other five casters copy. A
+    # caster's two_hand row is a STAFF alone with the off hand EMPTY, and
+    # its main_hand_off_hand row is a one-hander with a HELD FRILL, an Off
+    # Hand item that is not a weapon, so `oh` there is the frill's id. The
+    # candidates are the top of the Aff workbook tab, which splits One Hand
+    # (main-hand casting weapons) from Off Hand (frills) from Two Hand
+    # (staves); a warlock wields daggers, one-hand swords and staves and
+    # holds any frill. The pairing is the top main hands against the top
+    # frills rather than the full cross product. The Vengeful Gladiator's
+    # War Staff is not a row: the Battle Staff carries the same statistics
+    # plus 28 spell hit, so it equals or beats the War Staff at every hit
+    # state and stands for both. STONES AND OILS: the caster runs Brilliant
+    # Wizard Oil on the main hand, an oil applies to any weapon, staff
+    # included, and a frill takes no imbue because the simulator excludes
+    # non-weapon off hands from imbues, so nothing about the consumables
+    # varies across the rows. ENCHANT: the main-hand slot carries Soulfrost
+    # per data/facts/enchants-by-spec.yaml and the off-hand slot carries
+    # none, so a staff row inherits the main-hand slot's Soulfrost, which
+    # is what a raider would do. SOCKETS: no candidate carries a socket,
+    # per items.csv, so no figure here is understated against a gemmed
+    # worn weapon. The worn combinations are rows on purpose: their
+    # variants must reproduce the anchor figures to the digit, the same
+    # verification the other rounds carry, including the best-in-slot
+    # Zhar'doom row with its empty off hand.
+    "affliction_warlock": {
+        "why": (
+            "An Affliction Warlock can carry a staff or a one-hander with "
+            "a held frill, and the guild lead ruled on 20 August 2026 in "
+            "data/judgments/weapon-styles.yaml that both styles run in "
+            "the same table, so a row below is either a single staff with "
+            "the off hand empty or a main hand with an off-hand frill "
+            "that is not a weapon. Each row is THIS PROFILE with only the "
+            "weapon slots changed: the main hand keeps its Soulfrost, "
+            "which a staff row inherits because the enchant belongs to "
+            "the slot, and the consumables, buffs and seed hold still, so "
+            "every figure is directly comparable with the one at the top "
+            "of this page. The Brilliant Wizard Oil applies to any "
+            "weapon, staff and dagger alike, and a frill takes no imbue, "
+            "so nothing about the consumables varies across the rows. The "
+            "candidates are the top of the EP Workbook's Two Hand, One "
+            "Hand and Off Hand ladders for this spec, and no candidate "
+            "carries a socket. Zhar'doom goes to the warlocks, the "
+            "Balance Druid, the Elemental Shaman and the Shadow Priest, "
+            "and its wearers hold no off hand, per "
+            "data/judgments/weapon-routing.yaml, which is why the "
+            "best-in-slot anchor wears it with the off-hand slot empty. "
+            "Tempest of Chaos is taken first by the Arcane Mage, per the "
+            "same file, and first is an ordering rather than an "
+            "exclusion: the warlocks' lists rank it too, so its rows "
+            "measure what this spec holds once the mage is served."),
+        "pairs": [
+            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
+            # Greatstaff of the Devourer, from Illidan Stormrage, is the
+            # worn best-in-slot weapon and the workbook's rank one; the
+            # Vengeful Gladiator's Battle Staff is Season 3 arena and
+            # stands for both Season 3 staves.
+            {"mh": 32374, "oh": None, "phase3": True},
+            {"mh": 34540, "oh": None, "phase3": True},
+            # Reachable before Phase 3: the Merciless Gladiator's War
+            # Staff is Season 2 arena and the workbook's best reachable
+            # staff; The Nexus Key drops from Kael'thas Sunstrider.
+            {"mh": 32055, "oh": None, "phase3": False},
+            {"mh": 29988, "oh": None, "phase3": False},
+            # MAIN HAND WITH A HELD FRILL. Tempest of Chaos from
+            # Archimonde is the One Hand ladder's rank one, held with
+            # each of the top frills: Chronicle of Dark Secrets from Rage
+            # Winterchill, Blind-Seers Icon from Shade of Akama, and the
+            # worn Jewel of Infinite Possibilities from Netherspite, the
+            # state where the sword drops before a Phase 3 frill does.
+            {"mh": 30910, "oh": 30872, "phase3": True},
+            {"mh": 30910, "oh": 32361, "phase3": True},
+            {"mh": 30910, "oh": 28734, "phase3": True},
+            # The other Phase 3 main hands, each with the rank one
+            # frill: the Vengeful Gladiator's Spellblade is Season 3
+            # arena and The Maelstrom's Fury drops from High Warlord
+            # Naj'entus.
+            {"mh": 33763, "oh": 30872, "phase3": True},
+            {"mh": 32237, "oh": 30872, "phase3": True},
+            # The worn Merciless Gladiator's Spellblade with the rank one
+            # frill, the state where a frill drops before any Phase 3
+            # main hand does.
+            {"mh": 32053, "oh": 30872, "phase3": True},
+            # Reachable before Phase 3: the Merciless Gladiator's
+            # Spellblade, Season 2 arena, with the Jewel of Infinite
+            # Possibilities from Netherspite is the worn entry AND tier
+            # combination, per the capture in data/facts/sim-profiles/
+            # hit-capture/affliction-warlock.yaml.
+            {"mh": 32053, "oh": 28734, "phase3": False},
+        ],
+    },
 }
 
 

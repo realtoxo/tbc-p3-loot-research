@@ -363,6 +363,47 @@ the_survival_weapon_round:
     Survival weapon argument between PAIRS is worth under two percent of the spec's damage
     and the only move worth more is the style itself, the same shape the Beast Mastery
     round found at a smaller scale.
+the_affliction_weapon_round:
+  measured: 2026-08-20, 10000 iterations, seed 1, armor 6193, eleven rows run as variants of
+    each Affliction anchor profile, BOTH styles in one table per the 20 August 2026 style
+    ruling in data/judgments/weapon-styles.yaml and the FIRST caster round, so its shape is
+    the template the other five casters copy. A staff row runs the off hand EMPTY and a
+    main-hand row holds an off-hand frill that is not a weapon; the main-hand slot keeps its
+    Soulfrost on every row, staff included, the frill takes no imbue because the simulator
+    excludes non-weapon off hands from imbues, and the Brilliant Wizard Oil applies to any
+    weapon, so unlike the hunter rounds nothing about the consumables varies across the
+    rows. No candidate in the round carries a socket, so no figure here is understated
+    against a gemmed worn weapon. Figures in data/facts/weapon-pair-sims.yaml.
+  the_anchors_reproduce: The worn combination's variant reads the anchor figure to the digit
+    at all three anchors, the Merciless Gladiator's Spellblade with the Jewel of Infinite
+    Possibilities 1947.4 at entry and 1978.9 at tier, and Zhar'doom with the off hand EMPTY
+    2227.6 at best in slot, which also verifies that the empty-off-hand construction the 15
+    August 2026 routing requires is what the anchor actually runs.
+  what_the_zhardoom_premium_prices: Zhar'doom measures FIRST at both anchors that reach it,
+    and the no_two_bis_figures_can_be_true_at_once block records FIVE specs wearing the one
+    staff, so this gap prices what an Affliction Warlock loses in each week it waits. On the
+    best-in-slot set the staff reads 2227.6 ± 1.04 against 2216.6 ± 1.04 for Tempest of
+    Chaos with Chronicle of Dark Secrets, a gap of 11.0, and on the tier set 2071.1 ± 0.98
+    against 2051.7 ± 0.98, a gap of 19.4. Tempest of Chaos goes to the Arcane Mage FIRST per
+    data/judgments/weapon-routing.yaml, an ordering rather than an exclusion, so while both
+    the staff and the sword are elsewhere the best combination left is The Maelstrom's Fury
+    with the Chronicle at 2192.8 ± 1.03, a gap of 34.8. Five specs wanting an 11-to-35 DPS
+    weapon is a routing question, not an arithmetic one. NOT A RULING. The council decides.
+  entry_prefers_a_staff_the_capture_did_not: The worn entry combination measures LAST of the
+    three pre-Phase 3 rows, 1947.4 ± 0.96 against 1971.5 ± 0.96 for The Nexus Key alone,
+    24.1 below, with the Merciless Gladiator's War Staff between them at 1952.8 ± 0.95. The
+    capture chose the main-hand-and-frill pair on combined EPV, 290.85 against the War
+    Staff's 280.53, and the entry set carries 203 item hit against a 165 target per
+    hit-captured.yaml, so the pair's 36 weapon hit is over-cap waste the one-column EPV
+    prices as value, the same account the Retribution and Beast Mastery rounds recorded.
+    The anchor stands as captured per data/judgments/capture-fidelity.yaml; the gap is a
+    fact about the sources, not a correction.
+  the_styles_interleave_rather_than_separate: Unlike the hunter rounds, where every
+    two-hander beat every pair, the two styles mix through this table at every anchor. On
+    the best-in-slot set the order runs Zhar'doom, then four main-hand rows, then the
+    Season 3 Battle Staff at 2169.6 ± 1.00, and the spread from the worn top row to the
+    bottom is 90.5. A caster staff is one budget against two and wins only when its budget
+    is Zhar'doom's; the arena staves sit below every Chronicle pairing measured.
 what_is_still_open:
   expose_weakness_agility: Sent at the simulator's Phase 3 figure of 1210, which is NOT our hunter's
     measured agility. wowsimcli reports neither final player stats nor target aura stacks so ours
