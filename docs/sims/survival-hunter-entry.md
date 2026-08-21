@@ -2,7 +2,7 @@
 title: Survival Hunter, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2797.4 ± 0.87 damage per second. Below is
+  This simulation profile measures 2529.1 ± 0.79 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                          |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2797.4**                                                                     |
-| How precisely that average is known          | ± 0.87 DPS                                                                     |
-| How much a SINGLE pull varies                | ± 87.3 DPS                                                                     |
+| Damage per second, averaged over 10000 pulls | **2529.1**                                                                     |
+| How precisely that average is known          | ± 0.79 DPS                                                                     |
+| How much a SINGLE pull varies                | ± 78.9 DPS                                                                     |
 | Anchor                                       | Entry. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,12 +50,11 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 
 | Main hand                | Off hand            | DPS           | Against this set |
 |--------------------------|---------------------|---------------|------------------|
-| Bloodmoon                | *empty, two-hander* | 2862.8 ± 0.93 | +65.4            |
-| Twinblade of the Phoenix | *empty, two-hander* | 2840.9 ± 0.93 | +43.5            |
-| Netherbane               | Talon of Azshara    | 2799.0 ± 0.88 | +1.6             |
-| Netherbane *(this set)*  | Claw of the Phoenix | 2797.4 ± 0.87 | +0.0             |
+| Twinblade of the Phoenix | *empty, two-hander* | 2567.5 ± 0.84 | +38.4            |
+| Netherbane               | Talon of Azshara    | 2530.4 ± 0.79 | +1.3             |
+| Netherbane *(this set)*  | Claw of the Phoenix | 2529.1 ± 0.79 | +0.0             |
 
-The best combination, Bloodmoon alone, a two-hander, measures +65.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Twinblade of the Phoenix alone, a two-hander, measures +38.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Ranged weapons
 
@@ -63,9 +62,9 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 | Ranged                             | DPS           | Against this set |
 |------------------------------------|---------------|------------------|
-| Serpent Spine Longbow *(this set)* | 2797.4 ± 0.87 | +0.0             |
-| Arcanite Steam-Pistol              | 2715.3 ± 0.89 | -82.1            |
-| Sunfury Bow of the Phoenix         | 2710.9 ± 0.89 | -86.5            |
+| Serpent Spine Longbow *(this set)* | 2529.1 ± 0.79 | +0.0             |
+| Arcanite Steam-Pistol              | 2454.7 ± 0.80 | -74.4            |
+| Sunfury Bow of the Phoenix         | 2450.9 ± 0.80 | -78.2            |
 
 This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 
@@ -77,16 +76,16 @@ The ten best of the 21 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                | DPS           | Against this set |
 |---------------------------------|------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 2797.4 ± 0.87 | +0.0             |
-| Tsunami Talisman                | Bloodlust Brooch       | 2796.0 ± 0.85 | -1.4             |
-| Dragonspine Trophy              | Tsunami Talisman       | 2790.1 ± 0.88 | -7.3             |
-| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2784.5 ± 0.86 | -12.9            |
-| Dragonspine Trophy              | Badge of Tenacity      | 2784.2 ± 0.86 | -13.2            |
-| Tsunami Talisman                | Badge of Tenacity      | 2783.1 ± 0.84 | -14.3            |
-| Dragonspine Trophy              | Core of Ar'kelos       | 2777.6 ± 0.87 | -19.8            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade | 2777.5 ± 0.87 | -19.9            |
-| Tsunami Talisman                | Darkmoon Card: Crusade | 2776.8 ± 0.85 | -20.6            |
-| Tsunami Talisman                | Core of Ar'kelos       | 2776.5 ± 0.85 | -20.9            |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 2529.1 ± 0.79 | +0.0             |
+| Tsunami Talisman                | Bloodlust Brooch       | 2528.6 ± 0.77 | -0.5             |
+| Dragonspine Trophy              | Tsunami Talisman       | 2522.6 ± 0.79 | -6.5             |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2518.2 ± 0.77 | -10.9            |
+| Dragonspine Trophy              | Badge of Tenacity      | 2517.1 ± 0.77 | -12.0            |
+| Tsunami Talisman                | Badge of Tenacity      | 2516.8 ± 0.76 | -12.3            |
+| Tsunami Talisman                | Darkmoon Card: Crusade | 2511.3 ± 0.77 | -17.8            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 2511.2 ± 0.78 | -17.9            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2511.1 ± 0.78 | -18.0            |
+| Tsunami Talisman                | Core of Ar'kelos       | 2510.9 ± 0.77 | -18.2            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

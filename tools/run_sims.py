@@ -619,7 +619,12 @@ NOT_SIMULATABLE = {
 IMPLAUSIBLE = 300.0
 
 ARMOR_INDEX = 31
-DEFAULT_ARMOR = 6193
+# THE DEFAULT IS THE HIGHEST TIER, ruled by the guild lead on 20 August
+# 2026: "our armor tiers should alway assume highest armor tiers!". Ten of
+# the fourteen bosses sit at 6193 and that fact stands in
+# data/facts/boss-armor.yaml; decisions assume the hardest target. See
+# data/judgments/sim-context.yaml.
+DEFAULT_ARMOR = 7684
 
 # proto/common.proto stat indices for the three inert fields, transcribed.
 AP_INDEX, BLOCK_VALUE_INDEX, HEALTH_INDEX = 17, 27, 33
@@ -1494,9 +1499,10 @@ def main() -> int:
             # union of three single-tier runs, and a bare `just sim` would
             # have silently destroyed two of the tiers and all of the notes.
             meta["default_tier"] = (
-                "6193, because ten of the fourteen Phase 3 bosses sit in it: "
-                "all five Mount Hyjal, Teron Gorefiend, Mother Shahraz, and "
-                "three of the four Illidari Council.")
+                "7684, the highest tier, ruled by the guild lead on 20 "
+                "August 2026: decisions assume the hardest target. Ten of "
+                "the fourteen Phase 3 bosses sit at 6193, and the per-tier "
+                "rows keep every figure.")
             meta["the_zero_tier_is_one_target"] = (
                 "Essence of Suffering alone, plus Veras Darkshadow, whose "
                 "armor is near-zero with the digits unestablished. Run "

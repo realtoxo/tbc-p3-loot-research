@@ -111,6 +111,16 @@ TEMPEST_SPECS = ("arcane_mage",)
 # swap.
 CATACLYSM_SPECS = ("arms_warrior",)
 
+# "no crafted weapons on hunter for bis" and "yes rerun the hunter sim",
+# 20 August 2026. Each hunter's best-in-slot profile wears a single two-hander
+# in place of the captured dual pair, per the weapon rounds' measurement that
+# every two-hander beats every dual pair for both hunters. A two-hander
+# empties the off hand.
+HUNTER_TWO_HANDERS = {
+    "beast_mastery_hunter": 33670,  # Vengeful Gladiator's Decapitator
+    "survival_hunter": 32248,       # Halberd of Desolation
+}
+
 # TRINKETS ARE ROUTED FROM THE JUDGMENT FILE RATHER THAN TRANSCRIBED HERE,
 # because unlike the weapon rulings each one is a plain slot and item pair with
 # an explicit spec list, and nothing has to be inferred from prose. The file is
@@ -212,7 +222,8 @@ def main() -> int:
     routing = yaml.safe_load(ROUTING.read_text())
     trinkets = yaml.safe_load(TRINKETS.read_text())
     known = routed_ids(routing)
-    transcribed = {ZHARDOOM, TEMPEST_OF_CHAOS, CATACLYSMS_EDGE, *WARGLAIVES}
+    transcribed = {ZHARDOOM, TEMPEST_OF_CHAOS, CATACLYSMS_EDGE, *WARGLAIVES,
+               *HUNTER_TWO_HANDERS.values()}
     stray = transcribed - known
     if stray:
         print(f"error: {sorted(stray)} is routed by this tool and appears in no "
@@ -306,6 +317,20 @@ def main() -> int:
             if (slots.get("off_hand") or {}).get("id"):
                 put("off_hand", None,
                     "Cataclysm's Edge is two-handed, so the off hand the "
+                    "capture lists is displaced rather than kept.")
+        if spec in HUNTER_TWO_HANDERS:
+            two_hander = HUNTER_TWO_HANDERS[spec]
+            if (slots.get("main_hand") or {}).get("id") != two_hander:
+                put("main_hand", two_hander,
+                    "Routed by the guild lead, 20 August 2026: the hunters "
+                    "re-anchor on a two-hander, every two-hander having "
+                    "measured above every dual pair, with crafted weapons "
+                    "barred from hunter consideration. This changes the BUILD "
+                    "from dual wield to a two-hander, which is not a stat "
+                    "swap.")
+            if (slots.get("off_hand") or {}).get("id"):
+                put("off_hand", None,
+                    "A two-hander occupies both hands, so the off hand the "
                     "capture lists is displaced rather than kept.")
         for ruling in trinkets.get("rulings") or []:
             if spec not in (ruling.get("specs") or []):

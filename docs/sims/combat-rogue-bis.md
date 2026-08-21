@@ -2,7 +2,7 @@
 title: Combat Rogue, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2918.2 ± 1.21 damage per second. Below is
+  This simulation profile measures 2597.6 ± 1.07 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2918.2**                                                                            |
-| How precisely that average is known          | ± 1.21 DPS                                                                            |
-| How much a SINGLE pull varies                | ± 120.6 DPS                                                                           |
+| Damage per second, averaged over 10000 pulls | **2597.6**                                                                            |
+| How precisely that average is known          | ± 1.07 DPS                                                                            |
+| How much a SINGLE pull varies                | ± 106.9 DPS                                                                           |
 | Anchor                                       | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,18 +50,18 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 
 | Main hand                          | Off hand                         | DPS           | Against this set |
 |------------------------------------|----------------------------------|---------------|------------------|
-| Warglaive of Azzinoth *(this set)* | Warglaive of Azzinoth            | 2918.2 ± 1.21 | +0.0             |
-| Vengeful Gladiator's Slicer        | Blade of Savagery                | 2708.2 ± 1.11 | -210.0           |
-| Blade of Infamy                    | Blade of Savagery                | 2697.1 ± 1.11 | -221.1           |
-| Vengeful Gladiator's Slicer        | Vengeful Gladiator's Quickblade  | 2685.8 ± 1.13 | -232.4           |
-| Blade of Infamy                    | Vengeful Gladiator's Quickblade  | 2672.9 ± 1.13 | -245.3           |
-| Talon of Azshara                   | Merciless Gladiator's Quickblade | 2651.4 ± 1.12 | -266.8           |
-| Merciless Gladiator's Slicer       | Merciless Gladiator's Quickblade | 2626.5 ± 1.10 | -291.7           |
-| Blade of Infamy                    | Swiftsteel Bludgeon              | 2602.9 ± 1.06 | -315.3           |
-| Vengeful Gladiator's Slicer        | Vengeful Gladiator's Slicer      | 2517.5 ± 1.11 | -400.7           |
-| Blade of Infamy                    | Blade of Infamy                  | 2502.3 ± 1.11 | -415.9           |
-| Vengeful Gladiator's Right Ripper  | Vengeful Gladiator's Left Ripper | 2485.1 ± 0.99 | -433.1           |
-| Talon of Azshara                   | Merciless Gladiator's Slicer     | 2482.2 ± 1.11 | -436.0           |
+| Warglaive of Azzinoth *(this set)* | Warglaive of Azzinoth            | 2597.6 ± 1.07 | +0.0             |
+| Vengeful Gladiator's Slicer        | Blade of Savagery                | 2410.6 ± 0.98 | -187.0           |
+| Blade of Infamy                    | Blade of Savagery                | 2401.9 ± 0.99 | -195.7           |
+| Vengeful Gladiator's Slicer        | Vengeful Gladiator's Quickblade  | 2389.3 ± 1.00 | -208.3           |
+| Blade of Infamy                    | Vengeful Gladiator's Quickblade  | 2379.0 ± 1.00 | -218.6           |
+| Talon of Azshara                   | Merciless Gladiator's Quickblade | 2361.1 ± 0.99 | -236.5           |
+| Merciless Gladiator's Slicer       | Merciless Gladiator's Quickblade | 2339.2 ± 0.98 | -258.4           |
+| Blade of Infamy                    | Swiftsteel Bludgeon              | 2318.1 ± 0.94 | -279.5           |
+| Vengeful Gladiator's Slicer        | Vengeful Gladiator's Slicer      | 2238.0 ± 0.98 | -359.6           |
+| Blade of Infamy                    | Blade of Infamy                  | 2226.6 ± 0.98 | -371.0           |
+| Vengeful Gladiator's Right Ripper  | Vengeful Gladiator's Left Ripper | 2211.4 ± 0.88 | -386.2           |
+| Talon of Azshara                   | Merciless Gladiator's Slicer     | 2208.8 ± 0.98 | -388.8           |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -73,16 +73,16 @@ The ten best of the 28 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                 | DPS           | Against this set |
 |---------------------------------|-------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Warp-Spring Coil        | 2918.2 ± 1.21 | +0.0             |
-| Dragonspine Trophy              | Madness of the Betrayer | 2897.6 ± 1.22 | -20.6            |
-| Dragonspine Trophy              | Tsunami Talisman        | 2880.4 ± 1.19 | -37.8            |
-| Dragonspine Trophy              | Bloodlust Brooch        | 2874.6 ± 1.19 | -43.6            |
-| Warp-Spring Coil                | Madness of the Betrayer | 2874.3 ± 1.17 | -43.9            |
-| Warp-Spring Coil                | Tsunami Talisman        | 2859.7 ± 1.17 | -58.5            |
-| Dragonspine Trophy              | Romulo's Poison Vial    | 2857.3 ± 1.15 | -60.9            |
-| Warp-Spring Coil                | Bloodlust Brooch        | 2855.1 ± 1.18 | -63.1            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2846.7 ± 1.18 | -71.5            |
-| Madness of the Betrayer         | Tsunami Talisman        | 2839.8 ± 1.18 | -78.4            |
+| Dragonspine Trophy *(this set)* | Warp-Spring Coil        | 2597.6 ± 1.07 | +0.0             |
+| Dragonspine Trophy              | Madness of the Betrayer | 2586.1 ± 1.08 | -11.5            |
+| Dragonspine Trophy              | Tsunami Talisman        | 2574.8 ± 1.06 | -22.8            |
+| Dragonspine Trophy              | Bloodlust Brooch        | 2569.7 ± 1.06 | -27.9            |
+| Warp-Spring Coil                | Madness of the Betrayer | 2557.9 ± 1.04 | -39.7            |
+| Dragonspine Trophy              | Romulo's Poison Vial    | 2556.7 ± 1.03 | -40.9            |
+| Warp-Spring Coil                | Tsunami Talisman        | 2545.5 ± 1.04 | -52.1            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2544.7 ± 1.06 | -52.9            |
+| Warp-Spring Coil                | Bloodlust Brooch        | 2541.5 ± 1.05 | -56.1            |
+| Madness of the Betrayer         | Tsunami Talisman        | 2534.5 ± 1.05 | -63.1            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

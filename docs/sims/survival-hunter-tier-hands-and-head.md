@@ -2,7 +2,7 @@
 title: Survival Hunter, Tier Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2961.0 ± 0.94 damage per second. Below is
+  This simulation profile measures 2668.7 ± 0.85 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2961.0**                                                                                                                            |
-| How precisely that average is known          | ± 0.94 DPS                                                                                                                            |
-| How much a SINGLE pull varies                | ± 94.4 DPS                                                                                                                            |
+| Damage per second, averaged over 10000 pulls | **2668.7**                                                                                                                            |
+| How precisely that average is known          | ± 0.85 DPS                                                                                                                            |
+| How much a SINGLE pull varies                | ± 84.9 DPS                                                                                                                            |
 | Anchor                                       | Tier. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,19 +50,18 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 
 | Main hand                         | Off hand                         | DPS           | Against this set |
 |-----------------------------------|----------------------------------|---------------|------------------|
-| Halberd of Desolation             | *empty, two-hander*              | 3039.2 ± 0.98 | +78.2            |
-| Bloodmoon                         | *empty, two-hander*              | 3037.0 ± 0.99 | +76.0            |
-| Vengeful Gladiator's Decapitator  | *empty, two-hander*              | 3033.9 ± 1.00 | +72.9            |
-| Twinblade of the Phoenix          | *empty, two-hander*              | 3011.4 ± 1.00 | +50.4            |
-| Blade of Infamy                   | Blade of Infamy                  | 3003.2 ± 0.95 | +42.2            |
-| Blade of Infamy                   | Netherbane                       | 2990.8 ± 0.94 | +29.8            |
-| Blade of Infamy                   | Messenger of Fate                | 2979.7 ± 0.95 | +18.7            |
-| Blade of Infamy                   | Claw of the Phoenix              | 2976.7 ± 0.95 | +15.7            |
-| Netherbane                        | Talon of Azshara                 | 2963.9 ± 0.93 | +2.9             |
-| Netherbane *(this set)*           | Claw of the Phoenix              | 2961.0 ± 0.94 | +0.0             |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 2956.7 ± 0.94 | -4.3             |
+| Halberd of Desolation             | *empty, two-hander*              | 2738.2 ± 0.88 | +69.5            |
+| Vengeful Gladiator's Decapitator  | *empty, two-hander*              | 2731.3 ± 0.90 | +62.6            |
+| Twinblade of the Phoenix          | *empty, two-hander*              | 2713.1 ± 0.90 | +44.4            |
+| Blade of Infamy                   | Blade of Infamy                  | 2706.6 ± 0.85 | +37.9            |
+| Blade of Infamy                   | Netherbane                       | 2695.5 ± 0.85 | +26.8            |
+| Blade of Infamy                   | Messenger of Fate                | 2685.6 ± 0.85 | +16.9            |
+| Blade of Infamy                   | Claw of the Phoenix              | 2682.8 ± 0.86 | +14.1            |
+| Netherbane                        | Talon of Azshara                 | 2671.2 ± 0.83 | +2.5             |
+| Netherbane *(this set)*           | Claw of the Phoenix              | 2668.7 ± 0.85 | +0.0             |
+| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 2662.9 ± 0.84 | -5.8             |
 
-The best combination, Halberd of Desolation alone, a two-hander, measures +78.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Halberd of Desolation alone, a two-hander, measures +69.5 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Ranged weapons
 
@@ -70,33 +69,33 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 | Ranged                             | DPS           | Against this set |
 |------------------------------------|---------------|------------------|
-| Bristleblitz Striker               | 2974.5 ± 0.95 | +13.5            |
-| Black Bow of the Betrayer          | 2970.1 ± 0.93 | +9.1             |
-| Serpent Spine Longbow *(this set)* | 2961.0 ± 0.94 | +0.0             |
-| Legionkiller                       | 2891.6 ± 0.96 | -69.4            |
-| Arcanite Steam-Pistol              | 2877.3 ± 0.95 | -83.7            |
-| Sunfury Bow of the Phoenix         | 2871.5 ± 0.96 | -89.5            |
+| Bristleblitz Striker               | 2680.6 ± 0.86 | +11.9            |
+| Black Bow of the Betrayer          | 2676.8 ± 0.84 | +8.1             |
+| Serpent Spine Longbow *(this set)* | 2668.7 ± 0.85 | +0.0             |
+| Legionkiller                       | 2605.8 ± 0.86 | -62.9            |
+| Arcanite Steam-Pistol              | 2593.1 ± 0.85 | -75.6            |
+| Sunfury Bow of the Phoenix         | 2588.1 ± 0.86 | -80.6            |
 
-The best ranged weapon, Bristleblitz Striker, measures +13.5 against this set's own, so the upgrade path at this anchor runs through it.
+The best ranged weapon, Bristleblitz Striker, measures +11.9 against this set's own, so the upgrade path at this anchor runs through it.
 
 ## Trinket combinations
 
 A trinket is worth one thing beside a flat attack power partner and another beside a proc, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one Apexis Crystal charge, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. One stat carries more than its line for this spec: Expose Weakness scales with this hunter's own agility, so the on-use agility of Badge of Tenacity feeds the debuff as well as the wearer, which is why this spec's ladder is the one melee ladder that ranks it. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
 
-The ten best of the 28 combinations measured, and the worn pair.
+The ten best of the 36 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                 | DPS           | Against this set |
 |---------------------------------|-------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2961.0 ± 0.94 | +0.0             |
-| Madness of the Betrayer         | Bloodlust Brooch        | 2960.1 ± 0.93 | -0.9             |
-| Tsunami Talisman                | Bloodlust Brooch        | 2958.7 ± 0.92 | -2.3             |
-| Dragonspine Trophy              | Madness of the Betrayer | 2955.4 ± 0.94 | -5.6             |
-| Madness of the Betrayer         | Tsunami Talisman        | 2954.8 ± 0.93 | -6.2             |
-| Dragonspine Trophy              | Tsunami Talisman        | 2952.8 ± 0.94 | -8.2             |
-| Madness of the Betrayer         | Badge of Tenacity       | 2948.6 ± 0.90 | -12.4            |
-| Dragonspine Trophy              | Badge of Tenacity       | 2947.4 ± 0.94 | -13.6            |
-| Darkmoon Card: Crusade          | Bloodlust Brooch        | 2946.3 ± 0.92 | -14.7            |
-| Tsunami Talisman                | Badge of Tenacity       | 2945.9 ± 0.91 | -15.1            |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2668.7 ± 0.85 | +0.0             |
+| Tsunami Talisman                | Bloodlust Brooch        | 2667.5 ± 0.83 | -1.2             |
+| Madness of the Betrayer         | Bloodlust Brooch        | 2666.0 ± 0.84 | -2.7             |
+| Dragonspine Trophy              | Tsunami Talisman        | 2661.4 ± 0.85 | -7.3             |
+| Madness of the Betrayer         | Tsunami Talisman        | 2661.3 ± 0.84 | -7.4             |
+| Dragonspine Trophy              | Madness of the Betrayer | 2660.9 ± 0.84 | -7.8             |
+| Dragonspine Trophy              | Badge of Tenacity       | 2656.4 ± 0.84 | -12.3            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch        | 2656.3 ± 0.83 | -12.4            |
+| Tsunami Talisman                | Badge of Tenacity       | 2655.9 ± 0.82 | -12.8            |
+| Madness of the Betrayer         | Badge of Tenacity       | 2655.6 ± 0.81 | -13.1            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

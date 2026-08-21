@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -69,7 +69,7 @@ The best combination, Tempest of Chaos with Chronicle of Dark Secrets, measures 
 
 A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, Magtheridon's Lair, the raids above them, the badge vendor, the Darkmoon Faire and one reputation, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. Four candidates carry an on-use effect and Arcane Power is an on-use cooldown, and the simulator schedules every activation itself, so how a trinket burst lines up with Arcane Power is the engine's scheduling rather than an assumption. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers. The Serpent-Coil Braid improves the mana gem the rotation already uses, and the Pendant of the Violet Eye restores mana on use, so what their rows price beyond their worn statistics is mana, which becomes damage only when the set runs dry.
 
-The ten best of the 28 combinations measured, and the worn pair.
+The ten best of the 36 combinations measured, and the worn pair.
 
 | Trinket                                  | Trinket                      | DPS           | Against this set |
 |------------------------------------------|------------------------------|---------------|------------------|

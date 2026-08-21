@@ -1,0 +1,30 @@
+meta:
+  what: The context every simulated figure is read in, ruled by the guild lead.
+    The sweep still runs every armor tier, so no figure is lost; this rules
+    which tier is the DEFAULT, the one the summary table shows, the variant
+    rounds run at, and a decision is read from unless it says otherwise.
+  ruled: '2026-08-20'
+  by: the guild lead
+rulings:
+- rule: The default boss armor is the HIGHEST tier the phase holds, 7684.
+  verbatim: our armor tiers should alway assume highest armor tiers!
+  what_it_replaces: The default was 6193 because ten of the fourteen Phase 3
+    bosses sit there. That fact stands and the per-tier figures remain
+    published; the guild lead ruled that decisions assume the hardest target
+    instead, so armor penetration and physical throughput are never read
+    against the softer tier by default.
+  what_it_moves: Every variant round reruns at 7684, the summary table and the
+    page-top figures read 7684, and any ruling taken from a 6193 figure is
+    re-read against 7684, the Beast Mastery trinket pick being the live case,
+    Madness of the Betrayer paying in armor penetration.
+- rule: A slot-level variant gain is confirmed at the PROFILE level before a
+    profile re-wears, because a swap that moves hit reshapes the gems and the
+    food behind it.
+  verbatim: derived from the Beast Mastery case rather than stated; recorded
+    here because the guild lead asked for the fixes as one batch
+  the_case: Removing Madness of the Betrayer cost the Beast Mastery profile 20
+    item hit, the exporter re-spent four sockets on hit gems where two had
+    sufficed, and the rebuilt profile measured 12.8 BELOW its old anchor while
+    the slot-level variant row had measured 11.2 above it. The variant table
+    holds gems and consumables still by design, so it prices the item alone; a
+    profile prices the item and everything it displaces.

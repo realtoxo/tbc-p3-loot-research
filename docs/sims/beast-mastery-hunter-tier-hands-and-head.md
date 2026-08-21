@@ -2,7 +2,7 @@
 title: Beast Mastery Hunter, Tier Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 3523.1 ± 1.00 damage per second. Below is
+  This simulation profile measures 3169.8 ± 0.89 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **3523.1**                                                                                                                            |
-| How precisely that average is known          | ± 1.00 DPS                                                                                                                            |
-| How much a SINGLE pull varies                | ± 99.5 DPS                                                                                                                            |
+| Damage per second, averaged over 10000 pulls | **3169.8**                                                                                                                            |
+| How precisely that average is known          | ± 0.89 DPS                                                                                                                            |
+| How much a SINGLE pull varies                | ± 89.1 DPS                                                                                                                            |
 | Anchor                                       | Tier. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,19 +50,18 @@ A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styl
 
 | Main hand                         | Off hand                         | DPS           | Against this set |
 |-----------------------------------|----------------------------------|---------------|------------------|
-| Bloodmoon                         | *empty, two-hander*              | 3618.8 ± 1.06 | +95.7            |
-| Vengeful Gladiator's Decapitator  | *empty, two-hander*              | 3613.6 ± 1.06 | +90.5            |
-| Halberd of Desolation             | *empty, two-hander*              | 3598.5 ± 1.04 | +75.4            |
-| Twinblade of the Phoenix          | *empty, two-hander*              | 3590.5 ± 1.05 | +67.4            |
-| Blade of Infamy                   | Blade of Infamy                  | 3550.8 ± 1.01 | +27.7            |
-| Blade of Infamy                   | Tracker's Blade                  | 3536.0 ± 1.01 | +12.9            |
-| Blade of Infamy                   | Blade of Savagery                | 3534.6 ± 1.01 | +11.5            |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 3524.9 ± 1.01 | +1.8             |
-| Talon of the Phoenix *(this set)* | Claw of the Phoenix              | 3523.1 ± 1.00 | +0.0             |
-| Talon of the Phoenix              | Talon of Azshara                 | 3517.6 ± 0.99 | -5.5             |
-| Boundless Agony                   | Blade of Infamy                  | 3504.0 ± 0.99 | -19.1            |
+| Vengeful Gladiator's Decapitator  | *empty, two-hander*              | 3248.7 ± 0.95 | +78.9            |
+| Halberd of Desolation             | *empty, two-hander*              | 3237.1 ± 0.93 | +67.3            |
+| Twinblade of the Phoenix          | *empty, two-hander*              | 3229.8 ± 0.94 | +60.0            |
+| Blade of Infamy                   | Blade of Infamy                  | 3194.8 ± 0.91 | +25.0            |
+| Blade of Infamy                   | Tracker's Blade                  | 3181.4 ± 0.90 | +11.6            |
+| Blade of Infamy                   | Blade of Savagery                | 3180.1 ± 0.90 | +10.3            |
+| Talon of the Phoenix *(this set)* | Claw of the Phoenix              | 3169.8 ± 0.89 | +0.0             |
+| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 3169.5 ± 0.90 | -0.3             |
+| Talon of the Phoenix              | Talon of Azshara                 | 3164.9 ± 0.89 | -4.9             |
+| Boundless Agony                   | Blade of Infamy                  | 3149.0 ± 0.88 | -20.8            |
 
-The best combination, Bloodmoon alone, a two-hander, measures +95.7 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Vengeful Gladiator's Decapitator alone, a two-hander, measures +78.9 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Ranged weapons
 
@@ -70,33 +69,33 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 | Ranged                             | DPS           | Against this set |
 |------------------------------------|---------------|------------------|
-| Bristleblitz Striker               | 3537.7 ± 1.00 | +14.6            |
-| Black Bow of the Betrayer          | 3525.0 ± 1.02 | +1.9             |
-| Serpent Spine Longbow *(this set)* | 3523.1 ± 1.00 | +0.0             |
-| Legionkiller                       | 3512.0 ± 0.98 | -11.1            |
-| Arcanite Steam-Pistol              | 3496.2 ± 0.98 | -26.9            |
-| Sunfury Bow of the Phoenix         | 3490.5 ± 0.98 | -32.6            |
+| Bristleblitz Striker               | 3182.8 ± 0.90 | +13.0            |
+| Black Bow of the Betrayer          | 3171.3 ± 0.91 | +1.5             |
+| Serpent Spine Longbow *(this set)* | 3169.8 ± 0.89 | +0.0             |
+| Legionkiller                       | 3159.6 ± 0.88 | -10.2            |
+| Arcanite Steam-Pistol              | 3145.5 ± 0.88 | -24.3            |
+| Sunfury Bow of the Phoenix         | 3140.5 ± 0.88 | -29.3            |
 
-The best ranged weapon, Bristleblitz Striker, measures +14.6 against this set's own, so the upgrade path at this anchor runs through it.
+The best ranged weapon, Bristleblitz Striker, measures +13.0 against this set's own, so the upgrade path at this anchor runs through it.
 
 ## Trinket combinations
 
 A trinket is worth one thing beside a flat attack power partner and another beside a proc, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
 
-The ten best of the 21 combinations measured, and the worn pair.
+The ten best of the 28 combinations measured, and the worn pair.
 
-| Trinket                         | Trinket                 | DPS           | Against this set |
-|---------------------------------|-------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 3523.1 ± 1.00 | +0.0             |
-| Dragonspine Trophy              | Tsunami Talisman        | 3508.2 ± 1.00 | -14.9            |
-| Dragonspine Trophy              | Madness of the Betrayer | 3507.3 ± 1.00 | -15.8            |
-| Dragonspine Trophy              | Core of Ar'kelos        | 3498.1 ± 0.99 | -25.0            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade  | 3493.7 ± 0.98 | -29.4            |
-| Madness of the Betrayer         | Bloodlust Brooch        | 3484.0 ± 1.02 | -39.1            |
-| Tsunami Talisman                | Bloodlust Brooch        | 3482.5 ± 1.01 | -40.6            |
-| Darkmoon Card: Crusade          | Bloodlust Brooch        | 3471.9 ± 1.00 | -51.2            |
-| Madness of the Betrayer         | Tsunami Talisman        | 3469.2 ± 1.01 | -53.9            |
-| Madness of the Betrayer         | Core of Ar'kelos        | 3459.7 ± 1.01 | -63.4            |
+| Trinket                         | Trinket                         | DPS           | Against this set |
+|---------------------------------|---------------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch                | 3169.8 ± 0.89 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman                | 3156.6 ± 0.90 | -13.2            |
+| Dragonspine Trophy              | Madness of the Betrayer         | 3152.8 ± 0.89 | -17.0            |
+| Dragonspine Trophy              | Core of Ar'kelos                | 3147.3 ± 0.88 | -22.5            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade          | 3143.5 ± 0.88 | -26.3            |
+| Dragonspine Trophy              | Ashtongue Talisman of Swiftness | 3143.4 ± 0.90 | -26.4            |
+| Tsunami Talisman                | Bloodlust Brooch                | 3134.7 ± 0.90 | -35.1            |
+| Madness of the Betrayer         | Bloodlust Brooch                | 3133.2 ± 0.91 | -36.6            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch                | 3125.2 ± 0.89 | -44.6            |
+| Bloodlust Brooch                | Ashtongue Talisman of Swiftness | 3124.8 ± 0.92 | -45.0            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

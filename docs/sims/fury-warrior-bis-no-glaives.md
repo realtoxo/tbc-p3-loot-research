@@ -2,7 +2,7 @@
 title: Fury Warrior, BiS without Warglaives Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2727.1 ± 1.24 damage per second. Below is
+  This simulation profile measures 2398.8 ± 1.10 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2727.1**                                                                                                                            |
-| How precisely that average is known          | ± 1.24 DPS                                                                                                                            |
-| How much a SINGLE pull varies                | ± 123.6 DPS                                                                                                                           |
+| Damage per second, averaged over 10000 pulls | **2398.8**                                                                                                                            |
+| How precisely that average is known          | ± 1.10 DPS                                                                                                                            |
+| How much a SINGLE pull varies                | ± 109.9 DPS                                                                                                                           |
 | Anchor                                       | BiS without Warglaives. The same best-in-slot set with the next best weapons this spec can get instead of the Warglaives of Azzinoth. |
 
 ::: {.note}
@@ -34,15 +34,15 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2397.4 ± 1.09     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 2727.1 ± 1.24     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 3075.3 ± 1.38     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2398.8 ± 1.10     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2735.2 ± 1.24     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 3038.7 ± 1.34     | Essence of Suffering                                       |
 
 ## Weapon pairs
 
@@ -50,41 +50,41 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 
 | Main hand                                | Off hand                     | DPS           | Against this set |
 |------------------------------------------|------------------------------|---------------|------------------|
-| Warglaive of Azzinoth                    | Warglaive of Azzinoth        | 2862.1 ± 1.23 | +135.0           |
-| Vengeful Gladiator's Slicer              | Vengeful Gladiator's Slicer  | 2731.9 ± 1.24 | +4.8             |
-| Vengeful Gladiator's Slicer *(this set)* | Vengeful Gladiator's Chopper | 2727.1 ± 1.24 | +0.0             |
-| Dragonstrike                             | Talon of Azshara             | 2720.9 ± 1.30 | -6.2             |
-| Dragonstrike                             | Rod of the Sun King          | 2711.3 ± 1.30 | -15.8            |
-| Blade of Infamy                          | Blade of Infamy              | 2708.7 ± 1.24 | -18.4            |
-| Vengeful Gladiator's Right Ripper        | Vengeful Gladiator's Chopper | 2705.1 ± 1.24 | -22.0            |
-| Syphon of the Nathrezim                  | Blade of Infamy              | 2688.1 ± 1.26 | -39.0            |
-| Blade of Infamy                          | Talon of Azshara             | 2684.6 ± 1.19 | -42.5            |
-| Syphon of the Nathrezim                  | Syphon of the Nathrezim      | 2674.2 ± 1.26 | -52.9            |
-| Talon of the Phoenix                     | Talon of Azshara             | 2667.4 ± 1.23 | -59.7            |
-| Claw of Molten Fury                      | Talon of Azshara             | 2657.1 ± 1.24 | -70.0            |
+| Warglaive of Azzinoth                    | Warglaive of Azzinoth        | 2519.7 ± 1.11 | +120.9           |
+| Vengeful Gladiator's Slicer              | Vengeful Gladiator's Slicer  | 2403.5 ± 1.11 | +4.7             |
+| Vengeful Gladiator's Slicer *(this set)* | Vengeful Gladiator's Chopper | 2398.8 ± 1.10 | +0.0             |
+| Dragonstrike                             | Talon of Azshara             | 2394.6 ± 1.14 | -4.2             |
+| Dragonstrike                             | Rod of the Sun King          | 2387.4 ± 1.17 | -11.4            |
+| Blade of Infamy                          | Blade of Infamy              | 2383.2 ± 1.11 | -15.6            |
+| Vengeful Gladiator's Right Ripper        | Vengeful Gladiator's Chopper | 2379.1 ± 1.10 | -19.7            |
+| Syphon of the Nathrezim                  | Blade of Infamy              | 2368.4 ± 1.13 | -30.4            |
+| Blade of Infamy                          | Talon of Azshara             | 2365.6 ± 1.09 | -33.2            |
+| Syphon of the Nathrezim                  | Syphon of the Nathrezim      | 2358.3 ± 1.13 | -40.5            |
+| Talon of the Phoenix                     | Talon of Azshara             | 2349.3 ± 1.10 | -49.5            |
+| Claw of Molten Fury                      | Talon of Azshara             | 2337.5 ± 1.11 | -61.3            |
 
-The best combination, Warglaive of Azzinoth with Warglaive of Azzinoth, measures +135.0 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Warglaive of Azzinoth with Warglaive of Azzinoth, measures +120.9 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Trinket combinations
 
 A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party, the simulator prices that effect outside the trinket slot, and these runs do not engage it, so its rows price the worn stats alone and understate it. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
 
-The ten best of the 21 combinations measured, and the worn pair.
+The ten best of the 15 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                 | DPS           | Against this set |
 |---------------------------------|-------------------------|---------------|------------------|
-| Dragonspine Trophy              | Madness of the Betrayer | 2735.2 ± 1.24 | +8.1             |
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2727.1 ± 1.24 | +0.0             |
-| Dragonspine Trophy              | Tsunami Talisman        | 2726.6 ± 1.21 | -0.5             |
-| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2702.9 ± 1.23 | -24.2            |
-| Madness of the Betrayer         | Bloodlust Brooch        | 2693.2 ± 1.21 | -33.9            |
-| Madness of the Betrayer         | Tsunami Talisman        | 2689.3 ± 1.19 | -37.8            |
-| Tsunami Talisman                | Bloodlust Brooch        | 2684.1 ± 1.20 | -43.0            |
-| Madness of the Betrayer         | Darkmoon Card: Crusade  | 2668.0 ± 1.20 | -59.1            |
-| Dragonspine Trophy              | Core of Ar'kelos        | 2666.7 ± 1.22 | -60.4            |
-| Tsunami Talisman                | Darkmoon Card: Crusade  | 2659.3 ± 1.19 | -67.8            |
+| Dragonspine Trophy *(this set)* | Madness of the Betrayer | 2398.8 ± 1.10 | +0.0             |
+| Dragonspine Trophy              | Bloodlust Brooch        | 2397.4 ± 1.09 | -1.4             |
+| Dragonspine Trophy              | Tsunami Talisman        | 2394.7 ± 1.10 | -4.1             |
+| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2374.3 ± 1.09 | -24.5            |
+| Madness of the Betrayer         | Bloodlust Brooch        | 2360.3 ± 1.09 | -38.5            |
+| Madness of the Betrayer         | Tsunami Talisman        | 2357.3 ± 1.08 | -41.5            |
+| Tsunami Talisman                | Bloodlust Brooch        | 2356.2 ± 1.07 | -42.6            |
+| Dragonspine Trophy              | Core of Ar'kelos        | 2342.4 ± 1.08 | -56.4            |
+| Madness of the Betrayer         | Darkmoon Card: Crusade  | 2338.7 ± 1.08 | -60.1            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch        | 2334.8 ± 1.09 | -64.0            |
 
-The best combination, Dragonspine Trophy with Madness of the Betrayer, measures +8.1 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 
@@ -107,7 +107,7 @@ the off hand.
 | Ring 1    | `Stormrage Signet Ring`          |                                     |                                                                  |
 | Ring 2    | `Unstoppable Aggressor's Ring`   |                                     |                                                                  |
 | Trinket 1 | `Dragonspine Trophy`             |                                     |                                                                  |
-| Trinket 2 | `Bloodlust Brooch`               |                                     |                                                                  |
+| Trinket 2 | `Madness of the Betrayer`        |                                     |                                                                  |
 | Main hand | `Vengeful Gladiator's Slicer`    | `Enchant Weapon - Mongoose`         |                                                                  |
 | Off hand  | `Vengeful Gladiator's Chopper`   | `Enchant Weapon - Mongoose`         |                                                                  |
 | Ranged    | `Barrel-Blade Longrifle`         | `Khorium Scope`                     | `Bold Living Ruby`, `Bold Living Ruby`                           |

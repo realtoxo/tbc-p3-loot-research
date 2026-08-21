@@ -13,9 +13,9 @@ meta:
     square root of 10000. It covers about 68 percent, NOT 95. Ruled by the guild
     lead on 15 August 2026, shown both options. Do not relabel it as a confidence
     interval.'
-  default_tier: '6193, because ten of the fourteen Phase 3 bosses sit in it: all
-    five Mount Hyjal, Teron Gorefiend, Mother Shahraz, and three of the four Illidari
-    Council.'
+  default_tier: '7684, the highest tier, ruled by the guild lead on 20 August 2026:
+    decisions assume the hardest target. Ten of the fourteen Phase 3 bosses sit
+    at 6193, and the per-tier rows keep every figure.'
   the_zero_tier_is_one_target: Essence of Suffering alone, plus Veras Darkshadow,
     whose armor is near-zero with the digits unestablished. Run because the guild
     lead ruled per boss, and a target with no armor is a real part of two encounters.
@@ -56,9 +56,9 @@ results:
 - profile: affliction-warlock.bis
   spec: affliction_warlock
   anchor: bis
-  dps: 2212.7
-  standard_error: 1.03
-  stdev: 103.5
+  dps: 2218.7
+  standard_error: 1.04
+  stdev: 104.5
   boss_armor: 7684
 - profile: affliction-warlock.entry
   spec: affliction_warlock
@@ -126,9 +126,9 @@ results:
 - profile: balance-druid.bis
   spec: balance_druid
   anchor: bis
-  dps: 1942.0
-  standard_error: 0.94
-  stdev: 93.9
+  dps: 1946.7
+  standard_error: 0.92
+  stdev: 92.0
   boss_armor: 7684
 - profile: balance-druid.entry
   spec: balance_druid
@@ -161,9 +161,9 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 3208.3
-  standard_error: 0.9
-  stdev: 89.6
+  dps: 3323.6
+  standard_error: 0.98
+  stdev: 98.0
   boss_armor: 7684
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
@@ -210,9 +210,9 @@ results:
 - profile: destruction-warlock.bis
   spec: destruction_warlock
   anchor: bis
-  dps: 2493.8
-  standard_error: 1.3
-  stdev: 130.1
+  dps: 2506.1
+  standard_error: 1.33
+  stdev: 132.8
   boss_armor: 7684
 - profile: destruction-warlock.entry
   spec: destruction_warlock
@@ -273,16 +273,16 @@ results:
 - profile: fury-warrior.bis-no-glaives
   spec: fury_warrior
   anchor: bis-no-glaives
-  dps: 2397.4
-  standard_error: 1.09
-  stdev: 108.7
+  dps: 2398.8
+  standard_error: 1.1
+  stdev: 109.9
   boss_armor: 7684
 - profile: fury-warrior.bis
   spec: fury_warrior
   anchor: bis
-  dps: 2516.5
-  standard_error: 1.13
-  stdev: 112.9
+  dps: 2519.7
+  standard_error: 1.11
+  stdev: 110.5
   boss_armor: 7684
 - profile: fury-warrior.entry
   spec: fury_warrior
@@ -343,9 +343,9 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 2771.3
-  standard_error: 0.85
-  stdev: 85.4
+  dps: 2814.4
+  standard_error: 0.9
+  stdev: 89.7
   boss_armor: 7684
 - profile: survival-hunter.entry
   spec: survival_hunter
@@ -364,9 +364,9 @@ results:
 - profile: affliction-warlock.bis
   spec: affliction_warlock
   anchor: bis
-  dps: 2227.6
-  standard_error: 1.04
-  stdev: 103.5
+  dps: 2233.6
+  standard_error: 1.05
+  stdev: 104.5
   boss_armor: 6193
 - profile: affliction-warlock.entry
   spec: affliction_warlock
@@ -434,9 +434,9 @@ results:
 - profile: balance-druid.bis
   spec: balance_druid
   anchor: bis
-  dps: 1952.7
-  standard_error: 0.94
-  stdev: 93.9
+  dps: 1957.5
+  standard_error: 0.92
+  stdev: 92.0
   boss_armor: 6193
 - profile: balance-druid.entry
   spec: balance_druid
@@ -469,9 +469,9 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 3580.7
-  standard_error: 1.01
-  stdev: 100.9
+  dps: 3704.1
+  standard_error: 1.1
+  stdev: 110.0
   boss_armor: 6193
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
@@ -518,9 +518,9 @@ results:
 - profile: destruction-warlock.bis
   spec: destruction_warlock
   anchor: bis
-  dps: 2493.8
-  standard_error: 1.3
-  stdev: 130.1
+  dps: 2506.1
+  standard_error: 1.33
+  stdev: 132.8
   boss_armor: 6193
 - profile: destruction-warlock.entry
   spec: destruction_warlock
@@ -581,16 +581,16 @@ results:
 - profile: fury-warrior.bis-no-glaives
   spec: fury_warrior
   anchor: bis-no-glaives
-  dps: 2727.1
+  dps: 2735.2
   standard_error: 1.24
   stdev: 123.6
   boss_armor: 6193
 - profile: fury-warrior.bis
   spec: fury_warrior
   anchor: bis
-  dps: 2862.1
+  dps: 2869.0
   standard_error: 1.23
-  stdev: 123.4
+  stdev: 123.0
   boss_armor: 6193
 - profile: fury-warrior.entry
   spec: fury_warrior
@@ -651,9 +651,9 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 3074.2
-  standard_error: 0.95
-  stdev: 95.1
+  dps: 3122.3
+  standard_error: 1.0
+  stdev: 99.8
   boss_armor: 6193
 - profile: survival-hunter.entry
   spec: survival_hunter
@@ -672,9 +672,9 @@ results:
 - profile: affliction-warlock.bis
   spec: affliction_warlock
   anchor: bis
-  dps: 2258.0
-  standard_error: 1.04
-  stdev: 103.7
+  dps: 2264.0
+  standard_error: 1.05
+  stdev: 104.7
   boss_armor: 0
 - profile: affliction-warlock.entry
   spec: affliction_warlock
@@ -742,9 +742,9 @@ results:
 - profile: balance-druid.bis
   spec: balance_druid
   anchor: bis
-  dps: 1974.6
-  standard_error: 0.94
-  stdev: 94.1
+  dps: 1979.4
+  standard_error: 0.92
+  stdev: 92.2
   boss_armor: 0
 - profile: balance-druid.entry
   spec: balance_druid
@@ -777,9 +777,9 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 4085.6
-  standard_error: 1.14
-  stdev: 113.9
+  dps: 4287.6
+  standard_error: 1.27
+  stdev: 127.1
   boss_armor: 0
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
@@ -826,9 +826,9 @@ results:
 - profile: destruction-warlock.bis
   spec: destruction_warlock
   anchor: bis
-  dps: 2493.8
-  standard_error: 1.3
-  stdev: 130.1
+  dps: 2506.1
+  standard_error: 1.33
+  stdev: 132.8
   boss_armor: 0
 - profile: destruction-warlock.entry
   spec: destruction_warlock
@@ -889,16 +889,16 @@ results:
 - profile: fury-warrior.bis-no-glaives
   spec: fury_warrior
   anchor: bis-no-glaives
-  dps: 3075.3
-  standard_error: 1.38
-  stdev: 137.8
+  dps: 3038.7
+  standard_error: 1.34
+  stdev: 134.4
   boss_armor: 0
 - profile: fury-warrior.bis
   spec: fury_warrior
   anchor: bis
-  dps: 3248.6
-  standard_error: 1.37
-  stdev: 137.4
+  dps: 3212.0
+  standard_error: 1.34
+  stdev: 133.9
   boss_armor: 0
 - profile: fury-warrior.entry
   spec: fury_warrior
@@ -959,9 +959,9 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 3581.4
-  standard_error: 1.1
-  stdev: 110.2
+  dps: 3637.8
+  standard_error: 1.16
+  stdev: 115.6
   boss_armor: 0
 - profile: survival-hunter.entry
   spec: survival_hunter

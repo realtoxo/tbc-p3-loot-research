@@ -91,4 +91,105 @@ rulings:
   dragonspine_trophy_is_still_the_anchor: 'Unchanged by the correction and now by a wider margin:
     every pairing that holds Dragonspine Trophy beats every pairing without it, on both warriors,
     at 37.2 to 43.8 DPS.'
+- slot: trinket_2
+  item: Madness of the Betrayer
+  ids:
+  - 32505
+  specs:
+  - fury_warrior
+  ruling: The Fury Warrior takes Madness of the Betrayer in the second trinket slot beside Dragonspine
+    Trophy, SUPERSEDING the Bloodlust Brooch pick above for this spec only, because the enumerated
+    trinket round measured the Madness pair 6.9 ahead with the Warglaives and 8.1 without. Ruled
+    by the guild lead on 20 August 2026, "revise each class' bis trinkets based on our sim".
+  measured:
+    when: 2026-08-20, the enumerated trinket round
+    figures: Dragonspine with Madness reads 2869.0 against the worn 2862.1 at best in slot, and
+      2735.2 against 2727.1 without the Warglaives, at 10000 iterations, seed 1, armor 6193.
+- slot: trinket_2
+  item: Bloodlust Brooch
+  ids:
+  - 29383
+  specs:
+  - beast_mastery_hunter
+  ruling: The Beast Mastery Hunter takes the Bloodlust Brooch in the second trinket slot beside
+    Dragonspine Trophy, replacing Madness of the Betrayer, because the enumerated trinket round
+    measured the Brooch pair 11.2 ahead at best in slot, with the caveat that Madness pays in
+    armor penetration and the gap moves with boss armor. Ruled by the guild lead on 20 August
+    2026, "revise each class' bis trinkets based on our sim".
+  measured:
+    when: 2026-08-20, the enumerated trinket round
+    figures: Dragonspine with the Brooch reads 3591.9 against the worn 3580.7, armor 6193.
+- slot: trinket_1
+  item: Bloodlust Brooch
+  ids:
+  - 29383
+  specs:
+  - survival_hunter
+  ruling: The Survival Hunter takes the Bloodlust Brooch in the FIRST trinket slot, replacing
+    Dragonspine Trophy and keeping Madness of the Betrayer. Ruled by the guild lead on 20 August
+    2026, "revise each class' bis trinkets based on our sim", from the enumerated round at 6193,
+    and CONFIRMED AT THE PROFILE LEVEL AT ARMOR 7684 the same day after the default-tier ruling
+    put the reading in question.
+  a_flip_was_tested_and_declined: At armor 7684 the slot-level table reads Dragonspine with the
+    Brooch 18.7 ABOVE this pair, so the pick was rebuilt that way and measured as a whole
+    profile. Losing Madness of the Betrayer costs the set 20 item hit, the exporter re-spends
+    sockets closing the gap, and the rebuilt profile reads 2804.5 against this pair's 2814.4,
+    9.9 BELOW. The slot table prices the item alone; the profile prices the item and everything
+    it displaces. The same mechanism was measured on the Beast Mastery Hunter earlier the same
+    day, and the profile-level confirmation rule in data/judgments/sim-context.yaml exists
+    because of these two cases.
+  measured:
+    when: 2026-08-20, the enumerated trinket round at 6193, re-read and profile-confirmed at 7684
+    figures: Madness with the Brooch reads 2814.4 at armor 7684 as the anchor; the Dragonspine
+      alternative reads 2833.1 as a raw slot swap and 2804.5 as a rebuilt profile.
+- slot: trinket_2
+  item: 'Darkmoon Card: Crusade'
+  ids:
+  - 31856
+  specs:
+  - affliction_warlock
+  ruling: The Affliction Warlock takes the Darkmoon Card in the second trinket slot beside The
+    Skull of Gul'dan, replacing Quagmirran's Eye, because the enumerated trinket round measured
+    the Card pair 6.0 ahead at best in slot, and the Card is a Darkmoon Faire turn-in contesting
+    nothing. Ruled by the guild lead on 20 August 2026, "revise each class' bis trinkets based
+    on our sim".
+  measured:
+    when: 2026-08-20, the enumerated trinket round
+    figures: Skull with the Card reads 2233.6 against the worn 2227.6, armor 6193.
+- slot: trinket_2
+  item: Sextant of Unstable Currents
+  ids:
+  - 30626
+  specs:
+  - destruction_warlock
+  ruling: The Destruction Warlock takes the Sextant in the second trinket slot beside The Skull
+    of Gul'dan, replacing Quagmirran's Eye, because the enumerated trinket round measured the
+    Sextant pair 12.3 ahead at best in slot. Ruled by the guild lead on 20 August 2026, "revise
+    each class' bis trinkets based on our sim".
+  measured:
+    when: 2026-08-20, the enumerated trinket round
+    figures: Skull with the Sextant reads 2506.1 against the worn 2493.8, armor 6193.
+- slot: trinket_2
+  item: Quagmirran's Eye
+  ids:
+  - 27683
+  specs:
+  - balance_druid
+  ruling: The Balance Druid takes Quagmirran's Eye in the second trinket slot beside The Skull
+    of Gul'dan, replacing the Ashtongue Talisman of Equilibrium, because the enumerated trinket
+    round measured the Eye pair 4.8 ahead at best in slot, a haste proc beside the Skull's on-use
+    haste. Ruled by the guild lead on 20 August 2026, "revise each class' bis trinkets based on
+    our sim".
+  measured:
+    when: 2026-08-20, the enumerated trinket round
+    figures: Skull with Quagmirran's Eye reads 1957.5 against the worn 1952.7, armor 6193.
+pool_exclusions:
+- item: Solarian's Sapphire
+  id: 30446
+  verbatim: nobody will sim with sapphire solarian
+  ruling: Ruled by the guild lead on 20 August 2026, no warrior simulates with
+    Solarian's Sapphire, so it leaves the Arms and Fury trinket pools. Its rows had
+    carried a measured caveat, the engine crediting its Battle Shout bonus only
+    through a class option the runs do not send, worth 30.8 DPS beside Dragonspine,
+    and rather than wiring the option the guild lead removed the trinket.
 what_still_needs_a_ruling: []

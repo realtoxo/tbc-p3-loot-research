@@ -40,7 +40,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_ladder import (  # noqa: E402
     ENHANCEMENT_SPEC, ENHANCEMENT_SPEED_FLOOR, LEVEL_60, SHORTLIST, SPECS,
     WEAPON_SECTION_NAMES, WIDE_SECTIONS,
-    WIDE_SHORTLIST, WORKBOOK, enhancement_slow_only, select, weapon_speeds,
+    WIDE_SHORTLIST, WORKBOOK, enhancement_slow_only, hunter_no_crafted,
+    select, weapon_speeds,
     WORLD_BOSSES, level_60_locations, read_tab, world_boss_ids,
 )
 
@@ -197,6 +198,7 @@ def claimants(item_ids: set[str],
             # backfilled slow weapons gain their claimant here exactly as they
             # gain their shortlist row there.
             eligible = enhancement_slow_only(spec, section, eligible, speed_of)
+            eligible = hunter_no_crafted(spec, section, eligible)
             eligible.sort(key=lambda row: row["epv"], reverse=True)
             # THE SAME SELECTION THE LADDER APPLIES, or this counts a different
             # list from the one the compendium shows.

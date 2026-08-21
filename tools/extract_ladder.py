@@ -489,6 +489,7 @@ def shortlist(
     # THE SPEED RULE IS APPLIED BEFORE THE CUT, so the vacated places backfill
     # with the next eligible slow weapons instead of the list running short.
     rows = enhancement_slow_only(spec, section, rows, speed_of)
+    rows = hunter_no_crafted(spec, section, rows)
     rows.sort(key=lambda row: row["epv"], reverse=True)
     out = []
     limit = WIDE_SHORTLIST if section in WIDE_SECTIONS else SHORTLIST
@@ -662,6 +663,26 @@ def weapon_speeds(database: dict) -> dict[int, float]:
         if speed:
             out[int(item["id"])] = float(speed)
     return out
+
+
+# NO CRAFTED WEAPON REACHES A HUNTER, ruled by the guild lead on 20 August
+# 2026: "no crafted weapons on hunter for bis and we will remove them from our
+# sims and cards". Recorded in data/judgments/weapon-styles.yaml.
+HUNTER_SPECS_NO_CRAFTED = ("Beast Mastery Hunter", "Survival Hunter")
+
+
+def hunter_no_crafted(spec: str, section: str, rows: list[dict]) -> list[dict]:
+    """The rows of a weapon section a hunter is shown.
+
+    A crafted weapon is removed BEFORE the shortlist cut, exactly as the
+    Enhancement speed rule removes a fast one, so the vacated places backfill
+    rather than the list running short. The route is the ladder row's own
+    field, so no outside table is read. Every other spec, and every
+    non-weapon section, passes through unchanged.
+    """
+    if spec not in HUNTER_SPECS_NO_CRAFTED or section not in WEAPON_SECTION_NAMES:
+        return rows
+    return [row for row in rows if row["route"] != "crafted"]
 
 
 def enhancement_slow_only(
@@ -1190,6 +1211,7 @@ def main() -> int:
             # measuring an Enhancement weapon against a fast one asks the
             # council to weigh a comparison the spec will never make.
             rows = enhancement_slow_only(spec, section, rows, speed_of)
+            rows = hunter_no_crafted(spec, section, rows)
             rows.sort(key=lambda row: row["epv"], reverse=True)
             slot_hand = "off_hand" if hand == "OffHand" else "main_hand"
             # THE CAPTURES KEY ON THE SNAKE NAME, the loop on the display

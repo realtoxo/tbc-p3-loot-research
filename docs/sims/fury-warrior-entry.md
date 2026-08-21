@@ -2,7 +2,7 @@
 title: Fury Warrior, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2479.3 ± 1.16 damage per second. Below is
+  This simulation profile measures 2199.5 ± 1.06 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                          |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2479.3**                                                                     |
-| How precisely that average is known          | ± 1.16 DPS                                                                     |
-| How much a SINGLE pull varies                | ± 116.2 DPS                                                                    |
+| Damage per second, averaged over 10000 pulls | **2199.5**                                                                     |
+| How precisely that average is known          | ± 1.06 DPS                                                                     |
+| How much a SINGLE pull varies                | ± 105.7 DPS                                                                    |
 | Anchor                                       | Entry. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,9 +50,9 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 
 | Main hand                 | Off hand            | DPS           | Against this set |
 |---------------------------|---------------------|---------------|------------------|
-| Dragonstrike *(this set)* | Talon of Azshara    | 2479.3 ± 1.16 | +0.0             |
-| Dragonstrike              | Rod of the Sun King | 2473.7 ± 1.19 | -5.6             |
-| Talon of the Phoenix      | Talon of Azshara    | 2431.7 ± 1.12 | -47.6            |
+| Dragonstrike *(this set)* | Talon of Azshara    | 2199.5 ± 1.06 | +0.0             |
+| Dragonstrike              | Rod of the Sun King | 2190.0 ± 1.06 | -9.5             |
+| Talon of the Phoenix      | Talon of Azshara    | 2156.9 ± 1.01 | -42.6            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -60,22 +60,22 @@ This set already wears the best combination on the table, which is why the top r
 
 A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party, the simulator prices that effect outside the trinket slot, and these runs do not engage it, so its rows price the worn stats alone and understate it. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
 
-The ten best of the 15 combinations measured, and the worn pair.
+The ten best of the 10 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                | DPS           | Against this set |
 |---------------------------------|------------------------|---------------|------------------|
-| Dragonspine Trophy              | Bloodlust Brooch       | 2484.7 ± 1.19 | +5.4             |
-| Dragonspine Trophy *(this set)* | Tsunami Talisman       | 2479.3 ± 1.16 | +0.0             |
-| Dragonspine Trophy              | Darkmoon Card: Crusade | 2458.0 ± 1.17 | -21.3            |
-| Tsunami Talisman                | Bloodlust Brooch       | 2442.7 ± 1.15 | -36.6            |
-| Dragonspine Trophy              | Core of Ar'kelos       | 2424.8 ± 1.17 | -54.5            |
-| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2420.5 ± 1.16 | -58.8            |
-| Tsunami Talisman                | Darkmoon Card: Crusade | 2419.8 ± 1.15 | -59.5            |
-| Dragonspine Trophy              | Solarian's Sapphire    | 2395.1 ± 1.16 | -84.2            |
-| Bloodlust Brooch                | Core of Ar'kelos       | 2388.2 ± 1.15 | -91.1            |
-| Tsunami Talisman                | Core of Ar'kelos       | 2384.0 ± 1.15 | -95.3            |
+| Dragonspine Trophy              | Bloodlust Brooch       | 2200.8 ± 1.08 | +1.3             |
+| Dragonspine Trophy *(this set)* | Tsunami Talisman       | 2199.5 ± 1.06 | +0.0             |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2177.3 ± 1.05 | -22.2            |
+| Tsunami Talisman                | Bloodlust Brooch       | 2164.3 ± 1.04 | -35.2            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 2148.2 ± 1.04 | -51.3            |
+| Tsunami Talisman                | Darkmoon Card: Crusade | 2145.2 ± 1.05 | -54.3            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2144.0 ± 1.04 | -55.5            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 2113.2 ± 1.03 | -86.3            |
+| Tsunami Talisman                | Core of Ar'kelos       | 2112.7 ± 1.02 | -86.8            |
+| Darkmoon Card: Crusade          | Core of Ar'kelos       | 2095.1 ± 1.01 | -104.4           |
 
-The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +5.4 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +1.3 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
 ## The set
 

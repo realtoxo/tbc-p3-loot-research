@@ -260,6 +260,10 @@ ROUNDS: dict[str, dict] = {
             {"id": 30627, "phase3": False},  # Tsunami Talisman
             {"id": 29383, "phase3": False},  # Bloodlust Brooch
             {"id": 29776, "phase3": False},  # Core of Ar'kelos
+            # The class talisman from the Ashtongue Deathsworn, a
+            # reputation purchase contesting nothing, in the pool by
+            # ruling even where the ladder is silent.
+            {"id": 32489, "phase3": True},   # Ashtongue Tal. of Zeal
         ],
         "trinkets_why": (
             (
@@ -383,7 +387,6 @@ ROUNDS: dict[str, dict] = {
         # cannot reach: Madness of the Betrayer is a Black Temple drop.
         "trinket_pool": [
             {"id": 28830, "phase3": False},  # Dragonspine Trophy
-            {"id": 30446, "phase3": False},  # Solarian's Sapphire
             {"id": 32505, "phase3": True},   # Madness of the Betrayer
             {"id": 30627, "phase3": False},  # Tsunami Talisman
             {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
@@ -627,7 +630,6 @@ ROUNDS: dict[str, dict] = {
             {"id": 28830, "phase3": False},  # Dragonspine Trophy
             {"id": 30627, "phase3": False},  # Tsunami Talisman
             {"id": 29383, "phase3": False},  # Bloodlust Brooch
-            {"id": 30446, "phase3": False},  # Solarian's Sapphire
             {"id": 32505, "phase3": True},   # Madness of the Betrayer
             {"id": 31856, "phase3": False},  # Darkmoon Card: Crusade
             {"id": 29776, "phase3": False},  # Core of Ar'kelos
@@ -737,7 +739,6 @@ ROUNDS: dict[str, dict] = {
             # raider would add; Bloodmoon is crafted by Blacksmithing and
             # carries none.
             {"mh": 29993, "oh": None, "phase3": False},
-            {"mh": 28436, "oh": None, "phase3": False},
         ],
         "ranged_why": (
             (
@@ -801,6 +802,10 @@ ROUNDS: dict[str, dict] = {
             {"id": 29383, "phase3": False},  # Bloodlust Brooch
             {"id": 30448, "phase3": False},  # Talon of Al'ar
             {"id": 29776, "phase3": False},  # Core of Ar'kelos
+            # The class talisman from the Ashtongue Deathsworn, a
+            # reputation purchase contesting nothing, in the pool by
+            # ruling even where the ladder is silent.
+            {"id": 32487, "phase3": True},   # Ashtongue Tal. of Swiftness
         ],
         "trinkets_why": (
             (
@@ -916,7 +921,6 @@ ROUNDS: dict[str, dict] = {
             # understated by the gems a raider would add; Bloodmoon is
             # crafted by Blacksmithing and carries none.
             {"mh": 29993, "oh": None, "phase3": False},
-            {"mh": 28436, "oh": None, "phase3": False},
         ],
         "ranged_why": (
             (
@@ -985,6 +989,10 @@ ROUNDS: dict[str, dict] = {
             {"id": 29383, "phase3": False},  # Bloodlust Brooch
             {"id": 30448, "phase3": False},  # Talon of Al'ar
             {"id": 29776, "phase3": False},  # Core of Ar'kelos
+            # The class talisman from the Ashtongue Deathsworn, a
+            # reputation purchase contesting nothing, in the pool by
+            # ruling even where the ladder is silent.
+            {"id": 32487, "phase3": True},   # Ashtongue Tal. of Swiftness
         ],
         "trinkets_why": (
             (
@@ -1153,6 +1161,10 @@ ROUNDS: dict[str, dict] = {
             {"id": 28789, "phase3": False},  # Eye of Magtheridon
             {"id": 29370, "phase3": False},  # Icon of the Silver Crescent
             {"id": 30340, "phase3": False},  # Starkiller's Bauble
+            # The class talisman from the Ashtongue Deathsworn, a
+            # reputation purchase contesting nothing, in the pool by
+            # ruling even where the ladder is silent.
+            {"id": 32493, "phase3": True},   # Ashtongue Tal. of Shadows
         ],
         "trinkets_why": (
             (
@@ -1308,6 +1320,10 @@ ROUNDS: dict[str, dict] = {
             {"id": 29132, "phase3": False},  # Scryer's Bloodgem
             {"id": 30340, "phase3": False},  # Starkiller's Bauble
             {"id": 30449, "phase3": False},  # Void Star Talisman
+            # The class talisman from the Ashtongue Deathsworn, a
+            # reputation purchase contesting nothing, in the pool by
+            # ruling even where the ladder is silent.
+            {"id": 32493, "phase3": True},   # Ashtongue Tal. of Shadows
         ],
         "trinkets_why": (
             (
@@ -1482,6 +1498,10 @@ ROUNDS: dict[str, dict] = {
             {"id": 30720, "phase3": False},  # Serpent-Coil Braid
             {"id": 28727, "phase3": False},  # Pendant of the Violet Eye
             {"id": 29179, "phase3": False},  # Xi'ri's Gift
+            # The class talisman from the Ashtongue Deathsworn, a
+            # reputation purchase contesting nothing, in the pool by
+            # ruling even where the ladder is silent.
+            {"id": 32488, "phase3": True},   # Ashtongue Tal. of Insight
         ],
         "trinkets_why": (
             (
@@ -1659,6 +1679,10 @@ ROUNDS: dict[str, dict] = {
             {"id": 30626, "phase3": False},  # Sextant of Unstable Currents
             {"id": 29132, "phase3": False},  # Scryer's Bloodgem
             {"id": 30340, "phase3": False},  # Starkiller's Bauble
+            # The class talisman from the Ashtongue Deathsworn, a
+            # reputation purchase contesting nothing, in the pool by
+            # ruling even where the ladder is silent.
+            {"id": 32490, "phase3": True},   # Ashtongue Tal. of Acumen
         ],
         "trinkets_why": (
             (
@@ -2028,6 +2052,10 @@ ROUNDS: dict[str, dict] = {
             {"id": 29370, "phase3": False},  # Icon of the Silver Crescent
             {"id": 29179, "phase3": False},  # Xi'ri's Gift
             {"id": 28785, "phase3": False},  # The Lightning Capacitor
+            # The class talisman from the Ashtongue Deathsworn, a
+            # reputation purchase contesting nothing, in the pool by
+            # ruling even where the ladder is silent.
+            {"id": 32491, "phase3": True},   # Ashtongue Tal. of Vision
         ],
         "trinkets_why": (
             (

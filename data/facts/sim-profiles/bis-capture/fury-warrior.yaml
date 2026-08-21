@@ -78,9 +78,9 @@ anchors:
         hit: 0
         capture_note: first of three tied 'Best' rows in the Trinkets table
       trinket_2:
-        item: Bloodlust Brooch
-        id: 29383
-        hit: 0
+        item: Madness of the Betrayer
+        id: 32505
+        hit: 20
       main_hand:
         item: Warglaive of Azzinoth
         id: 32837
@@ -103,7 +103,7 @@ anchors:
           the others were Twisted Blades of Zarak id 32326 and Serpent Spine Longbow
           id 30105; id 30724 is ABSENT from data/facts/items.csv, could not be cross-checked
           against the fact table
-    total_item_hit: 171
+    total_item_hit: 191
     tier6_pieces_held: &id001
     - shoulder
     - chest
@@ -115,7 +115,7 @@ anchors:
       cap: melee_special
       net_target_rating: 142
       assumed_debuff_rating: 48.0
-      item_hit: 171
+      item_hit: 191
       state: full
       gap_rating: 0
       gem_sockets: 9
@@ -187,9 +187,9 @@ anchors:
         hit: 0
         capture_note: first of three tied 'Best' rows in the Trinkets table
       trinket_2:
-        item: Bloodlust Brooch
-        id: 29383
-        hit: 0
+        item: Madness of the Betrayer
+        id: 32505
+        hit: 20
       main_hand:
         item: Vengeful Gladiator's Slicer
         id: 33762
@@ -209,7 +209,7 @@ anchors:
           the others were Twisted Blades of Zarak id 32326 and Serpent Spine Longbow
           id 30105; id 30724 is ABSENT from data/facts/items.csv, could not be cross-checked
           against the fact table
-    total_item_hit: 166
+    total_item_hit: 186
     tier6_pieces_held: *id001
     tier5_pieces_held: []
     tier4_pieces_held: []
@@ -224,7 +224,7 @@ anchors:
       cap: melee_special
       net_target_rating: 142
       assumed_debuff_rating: 48.0
-      item_hit: 166
+      item_hit: 186
       state: full
       gap_rating: 0
       gem_sockets: 9
@@ -233,5 +233,11 @@ routing_applied:
 - 'trinket_2: Bloodlust Brooch replaces Badge of the Swarmguard. Routed by the guild
   lead, 2026-08-15: Both warriors take Bloodlust Brooch in the second trinket slot,
   replacing Badge of the Swarmguard. Dragonspine Trophy stays in the first slot.'
+- 'trinket_2: Madness of the Betrayer replaces Bloodlust Brooch. Routed by the guild
+  lead, 2026-08-15: The Fury Warrior takes Madness of the Betrayer in the second
+  trinket slot beside Dragonspine Trophy, SUPERSEDING the Bloodlust Brooch pick
+  above for this spec only, because the enumerated trinket round measured the Madness
+  pair 6.9 ahead with the Warglaives and 8.1 without. Ruled by the guild lead on
+  20 August 2026, "revise each class'' bis trinkets based on our sim".'
 outside_items_csv:
 - 'ranged: 30724 Barrel-Blade Longrifle'

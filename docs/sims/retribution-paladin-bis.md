@@ -2,7 +2,7 @@
 title: Retribution Paladin, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2374.4 ± 1.46 damage per second. Below is
+  This simulation profile measures 2223.2 ± 1.38 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2374.4**                                                                            |
-| How precisely that average is known          | ± 1.46 DPS                                                                            |
-| How much a SINGLE pull varies                | ± 145.7 DPS                                                                           |
+| Damage per second, averaged over 10000 pulls | **2223.2**                                                                            |
+| How precisely that average is known          | ± 1.38 DPS                                                                            |
+| How much a SINGLE pull varies                | ± 138.3 DPS                                                                           |
 | Anchor                                       | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,14 +50,14 @@ A Retribution Paladin always carries a two-hander, so every row below is a singl
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
-| Torch of the Damned *(this set)*  | *empty, two-hander* | 2374.4 ± 1.46 | +0.0             |
-| Cataclysm's Edge                  | *empty, two-hander* | 2345.4 ± 1.43 | -29.0            |
-| Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 2319.9 ± 1.42 | -54.5            |
-| Lionheart Executioner             | *empty, two-hander* | 2308.3 ± 1.44 | -66.1            |
-| Soul Cleaver                      | *empty, two-hander* | 2291.4 ± 1.45 | -83.0            |
-| Twinblade of the Phoenix          | *empty, two-hander* | 2281.3 ± 1.39 | -93.1            |
-| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2263.0 ± 1.38 | -111.4           |
-| Halberd of Desolation             | *empty, two-hander* | 2230.1 ± 1.40 | -144.3           |
+| Torch of the Damned *(this set)*  | *empty, two-hander* | 2223.2 ± 1.38 | +0.0             |
+| Cataclysm's Edge                  | *empty, two-hander* | 2188.4 ± 1.35 | -34.8            |
+| Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 2169.0 ± 1.34 | -54.2            |
+| Lionheart Executioner             | *empty, two-hander* | 2159.8 ± 1.37 | -63.4            |
+| Soul Cleaver                      | *empty, two-hander* | 2139.4 ± 1.37 | -83.8            |
+| Twinblade of the Phoenix          | *empty, two-hander* | 2134.5 ± 1.32 | -88.7            |
+| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2117.4 ± 1.31 | -105.8           |
+| Halberd of Desolation             | *empty, two-hander* | 2085.2 ± 1.33 | -138.0           |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -65,20 +65,20 @@ This set already wears the best combination on the table, which is why the top r
 
 A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, the raids above it, the badge vendor and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
 
-The ten best of the 15 combinations measured, and the worn pair.
+The ten best of the 21 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                 | DPS           | Against this set |
 |---------------------------------|-------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2374.4 ± 1.46 | +0.0             |
-| Dragonspine Trophy              | Core of Ar'kelos        | 2354.3 ± 1.44 | -20.1            |
-| Dragonspine Trophy              | Tsunami Talisman        | 2349.9 ± 1.43 | -24.5            |
-| Dragonspine Trophy              | Madness of the Betrayer | 2349.8 ± 1.42 | -24.6            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2349.1 ± 1.44 | -25.3            |
-| Tsunami Talisman                | Bloodlust Brooch        | 2341.3 ± 1.42 | -33.1            |
-| Madness of the Betrayer         | Bloodlust Brooch        | 2338.4 ± 1.40 | -36.0            |
-| Darkmoon Card: Crusade          | Bloodlust Brooch        | 2335.6 ± 1.40 | -38.8            |
-| Bloodlust Brooch                | Core of Ar'kelos        | 2324.4 ± 1.39 | -50.0            |
-| Tsunami Talisman                | Core of Ar'kelos        | 2321.1 ± 1.41 | -53.3            |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2223.2 ± 1.38 | +0.0             |
+| Dragonspine Trophy              | Core of Ar'kelos        | 2204.4 ± 1.37 | -18.8            |
+| Dragonspine Trophy              | Tsunami Talisman        | 2200.4 ± 1.35 | -22.8            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2199.5 ± 1.37 | -23.7            |
+| Dragonspine Trophy              | Madness of the Betrayer | 2198.6 ± 1.35 | -24.6            |
+| Tsunami Talisman                | Bloodlust Brooch        | 2193.2 ± 1.35 | -30.0            |
+| Madness of the Betrayer         | Bloodlust Brooch        | 2188.8 ± 1.33 | -34.4            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch        | 2187.7 ± 1.33 | -35.5            |
+| Bloodlust Brooch                | Core of Ar'kelos        | 2177.2 ± 1.32 | -46.0            |
+| Tsunami Talisman                | Core of Ar'kelos        | 2174.3 ± 1.34 | -48.9            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

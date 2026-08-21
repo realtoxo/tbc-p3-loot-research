@@ -2,7 +2,7 @@
 title: Balance Druid, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 1952.7 ± 0.94 damage per second. Below is
+  This simulation profile measures 1946.7 ± 0.92 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **1952.7**                                                                            |
-| How precisely that average is known          | ± 0.94 DPS                                                                            |
-| How much a SINGLE pull varies                | ± 93.9 DPS                                                                            |
+| Damage per second, averaged over 10000 pulls | **1946.7**                                                                            |
+| How precisely that average is known          | ± 0.92 DPS                                                                            |
+| How much a SINGLE pull varies                | ± 92.0 DPS                                                                            |
 | Anchor                                       | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note}
@@ -34,15 +34,15 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 1942.0 ± 0.94     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 1952.7 ± 0.94     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 1974.6 ± 0.94     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 1946.7 ± 0.92     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 1957.5 ± 0.92     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 1979.4 ± 0.92     | Essence of Suffering                                       |
 
 ## Weapon pairs
 
@@ -50,17 +50,17 @@ A Balance Druid can carry a staff or a one-hander with a held frill, and both st
 
 | Main hand                                          | Off hand                        | DPS           | Against this set |
 |----------------------------------------------------|---------------------------------|---------------|------------------|
-| Zhar'doom, Greatstaff of the Devourer *(this set)* | *empty, two-hander*             | 1952.7 ± 0.94 | +0.0             |
-| The Maelstrom's Fury                               | Chronicle of Dark Secrets       | 1919.2 ± 0.91 | -33.5            |
-| Vengeful Gladiator's Gavel                         | Chronicle of Dark Secrets       | 1916.9 ± 0.92 | -35.8            |
-| Hammer of Judgement                                | Chronicle of Dark Secrets       | 1908.4 ± 0.91 | -44.3            |
-| Vengeful Gladiator's Gavel                         | Blind-Seers Icon                | 1905.8 ± 0.91 | -46.9            |
-| Vengeful Gladiator's Battle Staff                  | *empty, two-hander*             | 1900.1 ± 0.90 | -52.6            |
-| Merciless Gladiator's Spellblade                   | Chronicle of Dark Secrets       | 1897.6 ± 0.91 | -55.1            |
-| The Nexus Key                                      | *empty, two-hander*             | 1893.8 ± 0.90 | -58.9            |
-| Vengeful Gladiator's Gavel                         | Jewel of Infinite Possibilities | 1890.8 ± 0.91 | -61.9            |
-| Merciless Gladiator's War Staff                    | *empty, two-hander*             | 1877.2 ± 0.89 | -75.5            |
-| Merciless Gladiator's Spellblade                   | Jewel of Infinite Possibilities | 1871.7 ± 0.90 | -81.0            |
+| Zhar'doom, Greatstaff of the Devourer *(this set)* | *empty, two-hander*             | 1946.7 ± 0.92 | +0.0             |
+| The Maelstrom's Fury                               | Chronicle of Dark Secrets       | 1900.8 ± 0.90 | -45.9            |
+| Vengeful Gladiator's Gavel                         | Chronicle of Dark Secrets       | 1897.8 ± 0.90 | -48.9            |
+| Hammer of Judgement                                | Chronicle of Dark Secrets       | 1889.3 ± 0.90 | -57.4            |
+| Vengeful Gladiator's Gavel                         | Blind-Seers Icon                | 1886.8 ± 0.90 | -59.9            |
+| Vengeful Gladiator's Battle Staff                  | *empty, two-hander*             | 1880.8 ± 0.89 | -65.9            |
+| Merciless Gladiator's Spellblade                   | Chronicle of Dark Secrets       | 1878.2 ± 0.89 | -68.5            |
+| The Nexus Key                                      | *empty, two-hander*             | 1875.9 ± 0.88 | -70.8            |
+| Vengeful Gladiator's Gavel                         | Jewel of Infinite Possibilities | 1871.6 ± 0.89 | -75.1            |
+| Merciless Gladiator's War Staff                    | *empty, two-hander*             | 1858.0 ± 0.88 | -88.7            |
+| Merciless Gladiator's Spellblade                   | Jewel of Infinite Possibilities | 1852.3 ± 0.88 | -94.4            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -72,18 +72,18 @@ The ten best of the 45 combinations measured, and the worn pair.
 
 | Trinket                           | Trinket                           | DPS           | Against this set |
 |-----------------------------------|-----------------------------------|---------------|------------------|
-| The Skull of Gul'dan              | Quagmirran's Eye                  | 1957.5 ± 0.92 | +4.8             |
-| The Skull of Gul'dan              | Darkmoon Card: Crusade            | 1955.1 ± 0.92 | +2.4             |
-| The Skull of Gul'dan *(this set)* | Ashtongue Talisman of Equilibrium | 1952.7 ± 0.94 | +0.0             |
-| The Skull of Gul'dan              | Icon of the Silver Crescent       | 1948.3 ± 0.92 | -4.4             |
-| The Skull of Gul'dan              | Sextant of Unstable Currents      | 1947.2 ± 0.93 | -5.5             |
-| The Skull of Gul'dan              | Eye of Magtheridon                | 1943.0 ± 0.90 | -9.7             |
-| Darkmoon Card: Crusade            | Icon of the Silver Crescent       | 1936.6 ± 0.96 | -16.1            |
-| Icon of the Silver Crescent       | Ashtongue Talisman of Equilibrium | 1932.3 ± 0.97 | -20.4            |
-| The Skull of Gul'dan              | Xi'ri's Gift                      | 1931.1 ± 0.90 | -21.6            |
-| Eye of Magtheridon                | Icon of the Silver Crescent       | 1929.3 ± 0.93 | -23.4            |
+| The Skull of Gul'dan *(this set)* | Quagmirran's Eye                  | 1946.7 ± 0.92 | +0.0             |
+| The Skull of Gul'dan              | Darkmoon Card: Crusade            | 1944.3 ± 0.92 | -2.4             |
+| The Skull of Gul'dan              | Ashtongue Talisman of Equilibrium | 1942.0 ± 0.94 | -4.7             |
+| The Skull of Gul'dan              | Icon of the Silver Crescent       | 1937.6 ± 0.91 | -9.1             |
+| The Skull of Gul'dan              | Sextant of Unstable Currents      | 1936.5 ± 0.93 | -10.2            |
+| The Skull of Gul'dan              | Eye of Magtheridon                | 1932.2 ± 0.90 | -14.5            |
+| Darkmoon Card: Crusade            | Icon of the Silver Crescent       | 1925.9 ± 0.96 | -20.8            |
+| Icon of the Silver Crescent       | Ashtongue Talisman of Equilibrium | 1921.6 ± 0.97 | -25.1            |
+| The Skull of Gul'dan              | Xi'ri's Gift                      | 1920.4 ± 0.90 | -26.3            |
+| Eye of Magtheridon                | Icon of the Silver Crescent       | 1918.5 ± 0.93 | -28.2            |
 
-The best combination, The Skull of Gul'dan with Quagmirran's Eye, measures +4.8 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## The set
 
@@ -106,7 +106,7 @@ the off hand.
 | Ring 1    | `Ring of Ancient Knowledge`             |                                     |                                                                 |
 | Ring 2    | `Band of the Eternal Sage`              |                                     |                                                                 |
 | Trinket 1 | `The Skull of Gul'dan`                  |                                     |                                                                 |
-| Trinket 2 | `Ashtongue Talisman of Equilibrium`     |                                     |                                                                 |
+| Trinket 2 | `Quagmirran's Eye`                      |                                     |                                                                 |
 | Main hand | `Zhar'doom, Greatstaff of the Devourer` | `Enchant Weapon - Sunfire`          |                                                                 |
 | Off hand  | *empty*                                 |                                     |                                                                 |
 | Ranged    | `Idol of the Raven Goddess`             |                                     |                                                                 |

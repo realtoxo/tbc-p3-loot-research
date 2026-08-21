@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -69,7 +69,7 @@ The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander,
 
 A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one reputation, plus The Lightning Capacitor, which the ladder does not rank and which every one of the three sets wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. What The Lightning Capacitor is worth beyond an empty slot is entirely the simulator's pricing of its charge-and-discharge proc, because it carries no worn statistics, and the same holds for Darkmoon Card: Crusade and its stacking proc. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
 
-The ten best of the 21 combinations measured, and the worn pair.
+The ten best of the 28 combinations measured, and the worn pair.
 
 | Trinket                                  | Trinket                      | DPS           | Against this set |
 |------------------------------------------|------------------------------|---------------|------------------|

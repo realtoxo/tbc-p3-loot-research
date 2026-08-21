@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -68,7 +68,7 @@ The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander,
 
 A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
 
-The ten best of the 21 combinations measured, and the worn pair.
+The ten best of the 28 combinations measured, and the worn pair.
 
 | Trinket                             | Trinket                      | DPS           | Against this set |
 |-------------------------------------|------------------------------|---------------|------------------|
@@ -76,12 +76,12 @@ The ten best of the 21 combinations measured, and the worn pair.
 | The Skull of Gul'dan                | Icon of the Silver Crescent  | 1503.9 ± 0.28 | +6.1             |
 | The Skull of Gul'dan                | Eye of Magtheridon           | 1498.4 ± 0.26 | +0.6             |
 | Darkmoon Card: Crusade *(this set)* | Icon of the Silver Crescent  | 1497.8 ± 0.29 | +0.0             |
+| The Skull of Gul'dan                | Ashtongue Talisman of Acumen | 1496.7 ± 0.31 | -1.1             |
 | Eye of Magtheridon                  | Icon of the Silver Crescent  | 1491.8 ± 0.27 | -6.0             |
+| Icon of the Silver Crescent         | Ashtongue Talisman of Acumen | 1490.7 ± 0.31 | -7.1             |
 | Darkmoon Card: Crusade              | Eye of Magtheridon           | 1483.9 ± 0.27 | -13.9            |
+| Darkmoon Card: Crusade              | Ashtongue Talisman of Acumen | 1482.8 ± 0.31 | -15.0            |
 | The Skull of Gul'dan                | Scryer's Bloodgem            | 1479.5 ± 0.27 | -18.3            |
-| The Skull of Gul'dan                | Sextant of Unstable Currents | 1478.7 ± 0.30 | -19.1            |
-| The Skull of Gul'dan                | Starkiller's Bauble          | 1476.5 ± 0.27 | -21.3            |
-| Icon of the Silver Crescent         | Scryer's Bloodgem            | 1474.7 ± 0.29 | -23.1            |
 
 The best combination, The Skull of Gul'dan with Darkmoon Card: Crusade, measures +6.7 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 

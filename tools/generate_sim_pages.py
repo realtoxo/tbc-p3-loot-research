@@ -158,10 +158,13 @@ def main() -> int:
     doc = yaml.safe_load(args.figures.read_text())
     meta = doc["meta"]
     # KEYED ON ARMOR AS WELL, because a figure at one boss armor tier is not
-    # comparable with a figure at another. DEFAULT_ARMOR is the tier ten of the
-    # fourteen Phase 3 bosses sit in, and it is what the summary table shows.
+    # comparable with a figure at another. The default is the HIGHEST tier,
+    # ruled 20 August 2026, and it is what the summary table shows.
     tiers = sorted({r.get("boss_armor", 0) for r in doc["results"]}, reverse=True)
-    default_armor = 6193 if 6193 in tiers else tiers[0]
+    # THE DEFAULT IS THE HIGHEST TIER, ruled by the guild lead on 20 August
+    # 2026, see data/judgments/sim-context.yaml. The per-tier table on every
+    # page keeps the other figures.
+    default_armor = tiers[0]
     by_key = {(r["spec"], r["anchor"], r.get("boss_armor", 0)): r
               for r in doc["results"]}
     specs = sorted({r["spec"] for r in doc["results"]},
@@ -337,8 +340,9 @@ spec's BIS SET, exactly as the table above simulates it, re-run unchanged
 against each armor value Phase 3 contains. Nothing about the character is
 different between the three columns, so the whole spread is the boss.
 
-The table above is the 6193 column, because ten of the fourteen bosses sit in
-that tier.
+The table above is the 7684 column, the highest tier, because decisions here
+assume the hardest target; ten of the fourteen bosses sit at 6193 and their
+column is below.
 
 **The last column is simply the 7684 figure minus the 6193 figure**: how much
 damage that spec gives up when the boss is one of the armoured ones. It sorts,

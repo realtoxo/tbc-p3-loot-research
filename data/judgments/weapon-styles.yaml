@@ -44,6 +44,13 @@ styles_by_spec:
   beast_mastery_hunter: [two_hand, dual_wield]
   survival_hunter: [two_hand, dual_wield]
   feral_cat: [two_hand, dual_wield]
+  hunters_use_no_crafted_weapons: RULED by the guild lead on 20 August 2026,
+    "no crafted weapons on hunter for bis and we will remove them from our sims
+    and cards". A crafted weapon leaves both hunters' shortlists, item-card
+    claimants and sim candidate rows, and no hunter best-in-slot profile wears
+    one. The captured entry sets wear Dragonstrike and stay as captured, per
+    capture-fidelity; the rule governs what the compendium shows and what best
+    in slot wears.
   feral_cat_note: NO ROUND CAN RUN in this build. The vendored simulator's
     Feral Cat preset is a stub, no rotation and no talents, which is the same
     reason sim-figures.yaml carries no Feral Cat row. The guild lead confirmed

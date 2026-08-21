@@ -2,7 +2,7 @@
 title: Arms Warrior, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2426.4 ± 1.36 damage per second. Below is
+  This simulation profile measures 2126.7 ± 1.22 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2426.4**                                                                            |
-| How precisely that average is known          | ± 1.36 DPS                                                                            |
-| How much a SINGLE pull varies                | ± 136.4 DPS                                                                           |
+| Damage per second, averaged over 10000 pulls | **2126.7**                                                                            |
+| How precisely that average is known          | ± 1.22 DPS                                                                            |
+| How much a SINGLE pull varies                | ± 122.0 DPS                                                                           |
 | Anchor                                       | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,14 +50,14 @@ An Arms Warrior considers only two-handers, so every row below is a single weapo
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
-| Cataclysm's Edge *(this set)*     | *empty, two-hander* | 2426.4 ± 1.36 | +0.0             |
-| Lionheart Executioner             | *empty, two-hander* | 2349.8 ± 1.34 | -76.6            |
-| Twinblade of the Phoenix          | *empty, two-hander* | 2334.3 ± 1.32 | -92.1            |
-| Torch of the Damned               | *empty, two-hander* | 2272.4 ± 1.21 | -154.0           |
-| Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 2242.3 ± 1.19 | -184.1           |
-| Soul Cleaver                      | *empty, two-hander* | 2229.6 ± 1.22 | -196.8           |
-| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2176.7 ± 1.15 | -249.7           |
-| Halberd of Desolation             | *empty, two-hander* | 2151.8 ± 1.17 | -274.6           |
+| Cataclysm's Edge *(this set)*     | *empty, two-hander* | 2126.7 ± 1.22 | +0.0             |
+| Lionheart Executioner             | *empty, two-hander* | 2070.0 ± 1.20 | -56.7            |
+| Twinblade of the Phoenix          | *empty, two-hander* | 2056.9 ± 1.18 | -69.8            |
+| Torch of the Damned               | *empty, two-hander* | 2001.2 ± 1.08 | -125.5           |
+| Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 1971.3 ± 1.07 | -155.4           |
+| Soul Cleaver                      | *empty, two-hander* | 1954.0 ± 1.10 | -172.7           |
+| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 1914.9 ± 1.03 | -211.8           |
+| Halberd of Desolation             | *empty, two-hander* | 1890.4 ± 1.06 | -236.3           |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -65,20 +65,20 @@ This set already wears the best combination on the table, which is why the top r
 
 A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party, the simulator prices that effect outside the trinket slot, and these runs do not engage it, so its rows price the worn stats alone and understate it. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
 
-The ten best of the 21 combinations measured, and the worn pair.
+The ten best of the 15 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                 | DPS           | Against this set |
 |---------------------------------|-------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2426.4 ± 1.36 | +0.0             |
-| Dragonspine Trophy              | Madness of the Betrayer | 2420.0 ± 1.36 | -6.4             |
-| Dragonspine Trophy              | Tsunami Talisman        | 2415.0 ± 1.36 | -11.4            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2404.1 ± 1.35 | -22.3            |
-| Bloodlust Brooch                | Madness of the Betrayer | 2385.7 ± 1.33 | -40.7            |
-| Tsunami Talisman                | Bloodlust Brooch        | 2381.3 ± 1.32 | -45.1            |
-| Dragonspine Trophy              | Core of Ar'kelos        | 2378.9 ± 1.35 | -47.5            |
-| Tsunami Talisman                | Madness of the Betrayer | 2372.9 ± 1.32 | -53.5            |
-| Bloodlust Brooch                | Darkmoon Card: Crusade  | 2369.4 ± 1.31 | -57.0            |
-| Madness of the Betrayer         | Darkmoon Card: Crusade  | 2364.9 ± 1.33 | -61.5            |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2126.7 ± 1.22 | +0.0             |
+| Dragonspine Trophy              | Madness of the Betrayer | 2120.1 ± 1.21 | -6.6             |
+| Dragonspine Trophy              | Tsunami Talisman        | 2118.1 ± 1.23 | -8.6             |
+| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2107.8 ± 1.22 | -18.9            |
+| Bloodlust Brooch                | Madness of the Betrayer | 2089.2 ± 1.19 | -37.5            |
+| Tsunami Talisman                | Bloodlust Brooch        | 2088.9 ± 1.18 | -37.8            |
+| Dragonspine Trophy              | Core of Ar'kelos        | 2084.1 ± 1.20 | -42.6            |
+| Tsunami Talisman                | Madness of the Betrayer | 2081.7 ± 1.17 | -45.0            |
+| Bloodlust Brooch                | Darkmoon Card: Crusade  | 2081.2 ± 1.19 | -45.5            |
+| Madness of the Betrayer         | Darkmoon Card: Crusade  | 2072.1 ± 1.18 | -54.6            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

@@ -68,6 +68,28 @@ rulings:
   what_it_declines: Torch of the Damned 32332, the other candidate, stays with the Retribution
     Paladin whose own list ranks it first. Routing it to Arms would have taken it from
     a spec that has no second option.
+- weapon: Vengeful Gladiator's Decapitator
+  ids:
+  - 33670
+  ruling: The Beast Mastery Hunter's best-in-slot profile wears it alone, a two-hander, replacing
+    the captured dual pair. The weapon rounds measured every two-hander above every dual pair
+    for both hunters, the guild lead barred crafted weapons from hunter consideration, "no crafted
+    weapons on hunter for bis", which removed the measured leader Bloodmoon, and he ruled the
+    re-anchor on 20 August 2026, "yes rerun the hunter sim". The off hand runs empty.
+  consequence: 'The BUILD changes from dual wield to a two-hander, the same class of change as
+    the Arms Warrior ruling: not a stat swap. The dual one-handers the capture wore stop being
+    hunter claims.'
+- weapon: Halberd of Desolation
+  ids:
+  - 32248
+  ruling: The Survival Hunter's best-in-slot profile wears it alone, a two-hander, replacing the
+    captured dual pair of two Blades of Infamy, ruled by the guild lead on 20 August 2026 with
+    the Beast Mastery re-anchor. Its own table ranks it first, rank-unstable with two others
+    inside about two standard errors, and it is the one weapon its Expose Weakness agility favors.
+    The off hand runs empty.
+  consequence: The Naj'entus polearm becomes a Survival claim, which the melee tables also rank;
+    which spec receives it remains council business, and the Beast Mastery pick avoids the
+    collision by wearing the arena two-hander.
 what_still_needs_a_ruling: []
 warlocks_before_zhardoom: 'NOT A QUESTION FOR THE SIM, closed by the guild lead on 15
   August 2026: "dont worry about what warlocks wear before zhardoom, just sim our bis

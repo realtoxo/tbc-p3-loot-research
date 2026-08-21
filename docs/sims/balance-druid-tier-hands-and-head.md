@@ -2,7 +2,7 @@
 title: Balance Druid, Tier Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 1715.8 ± 0.83 damage per second. Below is
+  This simulation profile measures 1705.0 ± 0.83 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,7 +22,7 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **1715.8**                                                                                                                            |
+| Damage per second, averaged over 10000 pulls | **1705.0**                                                                                                                            |
 | How precisely that average is known          | ± 0.83 DPS                                                                                                                            |
 | How much a SINGLE pull varies                | ± 83.4 DPS                                                                                                                            |
 | Anchor                                       | Tier. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,19 +50,19 @@ A Balance Druid can carry a staff or a one-hander with a held frill, and both st
 
 | Main hand                             | Off hand                        | DPS           | Against this set |
 |---------------------------------------|---------------------------------|---------------|------------------|
-| Zhar'doom, Greatstaff of the Devourer | *empty, two-hander*             | 1768.4 ± 0.88 | +52.6            |
-| The Maelstrom's Fury                  | Chronicle of Dark Secrets       | 1734.3 ± 0.85 | +18.5            |
-| Vengeful Gladiator's Gavel            | Chronicle of Dark Secrets       | 1731.6 ± 0.86 | +15.8            |
-| Hammer of Judgement                   | Chronicle of Dark Secrets       | 1724.7 ± 0.85 | +8.9             |
-| Vengeful Gladiator's Gavel            | Blind-Seers Icon                | 1723.3 ± 0.85 | +7.5             |
-| Vengeful Gladiator's Battle Staff     | *empty, two-hander*             | 1720.2 ± 0.84 | +4.4             |
-| The Nexus Key *(this set)*            | *empty, two-hander*             | 1715.8 ± 0.83 | +0.0             |
-| Merciless Gladiator's Spellblade      | Chronicle of Dark Secrets       | 1711.8 ± 0.85 | -4.0             |
-| Vengeful Gladiator's Gavel            | Jewel of Infinite Possibilities | 1710.2 ± 0.84 | -5.6             |
-| Merciless Gladiator's War Staff       | *empty, two-hander*             | 1698.7 ± 0.83 | -17.1            |
-| Merciless Gladiator's Spellblade      | Jewel of Infinite Possibilities | 1691.8 ± 0.84 | -24.0            |
+| Zhar'doom, Greatstaff of the Devourer | *empty, two-hander*             | 1757.7 ± 0.88 | +52.7            |
+| The Maelstrom's Fury                  | Chronicle of Dark Secrets       | 1723.6 ± 0.85 | +18.6            |
+| Vengeful Gladiator's Gavel            | Chronicle of Dark Secrets       | 1720.8 ± 0.86 | +15.8            |
+| Hammer of Judgement                   | Chronicle of Dark Secrets       | 1713.9 ± 0.85 | +8.9             |
+| Vengeful Gladiator's Gavel            | Blind-Seers Icon                | 1712.5 ± 0.85 | +7.5             |
+| Vengeful Gladiator's Battle Staff     | *empty, two-hander*             | 1709.5 ± 0.84 | +4.5             |
+| The Nexus Key *(this set)*            | *empty, two-hander*             | 1705.0 ± 0.83 | +0.0             |
+| Merciless Gladiator's Spellblade      | Chronicle of Dark Secrets       | 1701.1 ± 0.85 | -3.9             |
+| Vengeful Gladiator's Gavel            | Jewel of Infinite Possibilities | 1699.4 ± 0.84 | -5.6             |
+| Merciless Gladiator's War Staff       | *empty, two-hander*             | 1688.0 ± 0.83 | -17.0            |
+| Merciless Gladiator's Spellblade      | Jewel of Infinite Possibilities | 1681.0 ± 0.84 | -24.0            |
 
-The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +52.6 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +52.7 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Trinket combinations
 
@@ -72,19 +72,19 @@ The ten best of the 45 combinations measured, and the worn pair.
 
 | Trinket                       | Trinket                           | DPS           | Against this set |
 |-------------------------------|-----------------------------------|---------------|------------------|
-| The Skull of Gul'dan          | Darkmoon Card: Crusade            | 1755.8 ± 0.84 | +40.0            |
-| The Skull of Gul'dan          | Ashtongue Talisman of Equilibrium | 1751.4 ± 0.85 | +35.6            |
-| The Skull of Gul'dan          | Sextant of Unstable Currents      | 1748.2 ± 0.86 | +32.4            |
-| The Skull of Gul'dan          | Icon of the Silver Crescent       | 1747.8 ± 0.84 | +32.0            |
-| The Skull of Gul'dan          | Eye of Magtheridon                | 1743.9 ± 0.82 | +28.1            |
-| The Skull of Gul'dan          | Quagmirran's Eye                  | 1741.7 ± 0.85 | +25.9            |
-| The Skull of Gul'dan          | Xi'ri's Gift                      | 1737.0 ± 0.83 | +21.2            |
-| Darkmoon Card: Crusade        | Icon of the Silver Crescent       | 1724.1 ± 0.83 | +8.3             |
-| The Skull of Gul'dan          | Scryer's Bloodgem                 | 1722.3 ± 0.82 | +6.5             |
-| The Skull of Gul'dan          | Starkiller's Bauble               | 1718.2 ± 0.82 | +2.4             |
-| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent       | 1715.8 ± 0.83 | +0.0             |
+| The Skull of Gul'dan          | Darkmoon Card: Crusade            | 1745.1 ± 0.84 | +40.1            |
+| The Skull of Gul'dan          | Ashtongue Talisman of Equilibrium | 1740.8 ± 0.85 | +35.8            |
+| The Skull of Gul'dan          | Sextant of Unstable Currents      | 1737.5 ± 0.86 | +32.5            |
+| The Skull of Gul'dan          | Icon of the Silver Crescent       | 1737.1 ± 0.84 | +32.1            |
+| The Skull of Gul'dan          | Eye of Magtheridon                | 1733.2 ± 0.82 | +28.2            |
+| The Skull of Gul'dan          | Quagmirran's Eye                  | 1731.0 ± 0.85 | +26.0            |
+| The Skull of Gul'dan          | Xi'ri's Gift                      | 1726.3 ± 0.82 | +21.3            |
+| Darkmoon Card: Crusade        | Icon of the Silver Crescent       | 1713.4 ± 0.83 | +8.4             |
+| The Skull of Gul'dan          | Scryer's Bloodgem                 | 1711.7 ± 0.82 | +6.7             |
+| The Skull of Gul'dan          | Starkiller's Bauble               | 1707.6 ± 0.82 | +2.6             |
+| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent       | 1705.0 ± 0.83 | +0.0             |
 
-The best combination, The Skull of Gul'dan with Darkmoon Card: Crusade, measures +40.0 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+The best combination, The Skull of Gul'dan with Darkmoon Card: Crusade, measures +40.1 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
 ## The set
 

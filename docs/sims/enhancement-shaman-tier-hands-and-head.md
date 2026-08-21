@@ -2,7 +2,7 @@
 title: Enhancement Shaman, Tier Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2187.7 ± 1.02 damage per second. Below is
+  This simulation profile measures 1992.0 ± 0.92 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2187.7**                                                                                                                            |
-| How precisely that average is known          | ± 1.02 DPS                                                                                                                            |
-| How much a SINGLE pull varies                | ± 102.4 DPS                                                                                                                           |
+| Damage per second, averaged over 10000 pulls | **1992.0**                                                                                                                            |
+| How precisely that average is known          | ± 0.92 DPS                                                                                                                            |
+| How much a SINGLE pull varies                | ± 92.1 DPS                                                                                                                            |
 | Anchor                                       | Tier. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,23 +50,23 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 
 | Main hand                         | Off hand                      | Pair speed | DPS           | Against this set |
 |-----------------------------------|-------------------------------|------------|---------------|------------------|
-| Syphon of the Nathrezim           | Syphon of the Nathrezim       | 2.8        | 2221.1 ± 1.05 | +33.4            |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Cleaver  | 2.6        | 2203.9 ± 0.98 | +16.2            |
-| Vengeful Gladiator's Cleaver      | Vengeful Gladiator's Chopper  | 2.6        | 2203.9 ± 0.98 | +16.2            |
-| Dragonstrike *(this set)*         | Rod of the Sun King           | 2.7        | 2187.7 ± 1.02 | +0.0             |
-| Talon of the Phoenix              | Rod of the Sun King           | 2.7        | 2185.3 ± 0.99 | -2.4             |
-| Claw of Molten Fury               | Rod of the Sun King           | 2.7        | 2182.0 ± 1.00 | -5.7             |
-| Wicked Edge of the Planes         | Rod of the Sun King           | 2.7        | 2179.9 ± 1.00 | -7.8             |
-| Rising Tide                       | Rising Tide                   | 2.6        | 2172.6 ± 0.97 | -15.1            |
-| Rod of the Sun King               | Rod of the Sun King           | 2.7        | 2171.4 ± 0.99 | -16.3            |
-| Rising Tide                       | Netherbane                    | 2.6        | 2166.2 ± 0.96 | -21.5            |
-| Dragonmaw                         | Rod of the Sun King           | 2.7        | 2165.1 ± 1.01 | -22.6            |
-| Merciless Gladiator's Cleaver     | Merciless Gladiator's Cleaver | 2.6        | 2158.2 ± 0.96 | -29.5            |
-| Netherbane                        | Netherbane                    | 2.6        | 2156.3 ± 0.97 | -31.4            |
-| Black Planar Edge                 | Rod of the Sun King           | 2.7        | 2154.8 ± 0.98 | -32.9            |
-| Drakefist Hammer                  | Rod of the Sun King           | 2.7        | 2141.2 ± 0.99 | -46.5            |
+| Syphon of the Nathrezim           | Syphon of the Nathrezim       | 2.8        | 2023.8 ± 0.95 | +31.8            |
+| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Cleaver  | 2.6        | 2005.2 ± 0.88 | +13.2            |
+| Vengeful Gladiator's Cleaver      | Vengeful Gladiator's Chopper  | 2.6        | 2005.2 ± 0.88 | +13.2            |
+| Dragonstrike *(this set)*         | Rod of the Sun King           | 2.7        | 1992.0 ± 0.92 | +0.0             |
+| Talon of the Phoenix              | Rod of the Sun King           | 2.7        | 1990.1 ± 0.89 | -1.9             |
+| Claw of Molten Fury               | Rod of the Sun King           | 2.7        | 1987.1 ± 0.90 | -4.9             |
+| Wicked Edge of the Planes         | Rod of the Sun King           | 2.7        | 1985.3 ± 0.90 | -6.7             |
+| Rising Tide                       | Rising Tide                   | 2.6        | 1978.6 ± 0.87 | -13.4            |
+| Rod of the Sun King               | Rod of the Sun King           | 2.7        | 1977.6 ± 0.89 | -14.4            |
+| Rising Tide                       | Netherbane                    | 2.6        | 1972.9 ± 0.86 | -19.1            |
+| Dragonmaw                         | Rod of the Sun King           | 2.7        | 1971.8 ± 0.91 | -20.2            |
+| Merciless Gladiator's Cleaver     | Merciless Gladiator's Cleaver | 2.6        | 1965.6 ± 0.86 | -26.4            |
+| Netherbane                        | Netherbane                    | 2.6        | 1964.1 ± 0.88 | -27.9            |
+| Black Planar Edge                 | Rod of the Sun King           | 2.7        | 1962.8 ± 0.88 | -29.2            |
+| Drakefist Hammer                  | Rod of the Sun King           | 2.7        | 1950.4 ± 0.89 | -41.6            |
 
-The best combination, Syphon of the Nathrezim with Syphon of the Nathrezim, measures +33.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Syphon of the Nathrezim with Syphon of the Nathrezim, measures +31.8 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Trinket combinations
 
@@ -76,18 +76,18 @@ The ten best of the 21 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                      | DPS           | Against this set |
 |---------------------------------|------------------------------|---------------|------------------|
-| Dragonspine Trophy              | Madness of the Betrayer      | 2195.3 ± 1.02 | +7.6             |
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch             | 2187.7 ± 1.02 | +0.0             |
-| Dragonspine Trophy              | Tsunami Talisman             | 2186.1 ± 1.01 | -1.6             |
-| Dragonspine Trophy              | Ashtongue Talisman of Vision | 2174.9 ± 1.03 | -12.8            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade       | 2173.0 ± 1.02 | -14.7            |
-| Dragonspine Trophy              | Core of Ar'kelos             | 2168.2 ± 1.02 | -19.5            |
-| Madness of the Betrayer         | Bloodlust Brooch             | 2165.8 ± 1.02 | -21.9            |
-| Madness of the Betrayer         | Tsunami Talisman             | 2164.2 ± 0.99 | -23.5            |
-| Tsunami Talisman                | Bloodlust Brooch             | 2158.0 ± 1.03 | -29.7            |
-| Madness of the Betrayer         | Ashtongue Talisman of Vision | 2152.7 ± 1.03 | -35.0            |
+| Dragonspine Trophy              | Madness of the Betrayer      | 1996.4 ± 0.92 | +4.4             |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch             | 1992.0 ± 0.92 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman             | 1990.2 ± 0.91 | -1.8             |
+| Dragonspine Trophy              | Ashtongue Talisman of Vision | 1980.4 ± 0.93 | -11.6            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade       | 1979.1 ± 0.92 | -12.9            |
+| Dragonspine Trophy              | Core of Ar'kelos             | 1974.4 ± 0.91 | -17.6            |
+| Madness of the Betrayer         | Bloodlust Brooch             | 1970.5 ± 0.92 | -21.5            |
+| Madness of the Betrayer         | Tsunami Talisman             | 1968.7 ± 0.89 | -23.3            |
+| Tsunami Talisman                | Bloodlust Brooch             | 1965.5 ± 0.93 | -26.5            |
+| Madness of the Betrayer         | Ashtongue Talisman of Vision | 1958.8 ± 0.92 | -33.2            |
 
-The best combination, Dragonspine Trophy with Madness of the Betrayer, measures +7.6 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+The best combination, Dragonspine Trophy with Madness of the Betrayer, measures +4.4 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
 ## The set
 

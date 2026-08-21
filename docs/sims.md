@@ -57,20 +57,20 @@ comparable with itself at another anchor.
 ::: {.sortable default-sort="5"}
 | Spec                        | Entry                                               | Entry to Tier | Tier                                                              | Tier to BiS | BiS                                                  | Entry to BiS |
 |-----------------------------|-----------------------------------------------------|---------------|-------------------------------------------------------------------|-------------|------------------------------------------------------|--------------|
-| Beast Mastery Hunter        | [3342.3 ± 0.95](sims/beast-mastery-hunter-entry.md) | +180.8        | [3523.1 ± 1.00](sims/beast-mastery-hunter-tier-hands-and-head.md) | +57.6       | [3580.7 ± 1.01](sims/beast-mastery-hunter-bis.md)    | +238.4       |
-| Survival Hunter             | [2797.4 ± 0.87](sims/survival-hunter-entry.md)      | +163.6        | [2961.0 ± 0.94](sims/survival-hunter-tier-hands-and-head.md)      | +113.2      | [3074.2 ± 0.95](sims/survival-hunter-bis.md)         | +276.8       |
-| Combat Rogue                | [2329.8 ± 0.98](sims/combat-rogue-entry.md)         | +212.2        | [2542.0 ± 1.06](sims/combat-rogue-tier-hands-and-head.md)         | +376.2      | [2918.2 ± 1.21](sims/combat-rogue-bis.md)            | +588.4       |
-| Fury Warrior                | [2479.3 ± 1.16](sims/fury-warrior-entry.md)         | +26.5         | [2505.8 ± 1.21](sims/fury-warrior-tier-hands-and-head.md)         | +356.3      | [2862.1 ± 1.23](sims/fury-warrior-bis.md)            | +382.8       |
-| Fury Warrior, no Warglaives | [2479.3 ± 1.16](sims/fury-warrior-entry.md)         | +26.5         | [2505.8 ± 1.21](sims/fury-warrior-tier-hands-and-head.md)         | +221.3      | [2727.1 ± 1.24](sims/fury-warrior-bis-no-glaives.md) | +247.8       |
-| Combat Rogue, no Warglaives | [2329.8 ± 0.98](sims/combat-rogue-entry.md)         | +212.2        | [2542.0 ± 1.06](sims/combat-rogue-tier-hands-and-head.md)         | +166.2      | [2708.2 ± 1.11](sims/combat-rogue-bis-no-glaives.md) | +378.4       |
+| Beast Mastery Hunter        | [3011.8 ± 0.85](sims/beast-mastery-hunter-entry.md) | +158.0        | [3169.8 ± 0.89](sims/beast-mastery-hunter-tier-hands-and-head.md) | +153.8      | [3323.6 ± 0.98](sims/beast-mastery-hunter-bis.md)    | +311.8       |
+| Survival Hunter             | [2529.1 ± 0.79](sims/survival-hunter-entry.md)      | +139.6        | [2668.7 ± 0.85](sims/survival-hunter-tier-hands-and-head.md)      | +145.7      | [2814.4 ± 0.90](sims/survival-hunter-bis.md)         | +285.3       |
+| Combat Rogue                | [2085.9 ± 0.88](sims/combat-rogue-entry.md)         | +181.0        | [2266.9 ± 0.95](sims/combat-rogue-tier-hands-and-head.md)         | +330.7      | [2597.6 ± 1.07](sims/combat-rogue-bis.md)            | +511.7       |
 | Arcane Mage                 | [2301.2 ± 1.00](sims/arcane-mage-entry.md)          | +19.5         | [2320.7 ± 1.01](sims/arcane-mage-tier-hands-and-head.md)          | +213.7      | [2534.4 ± 1.07](sims/arcane-mage-bis.md)             | +233.2       |
-| Destruction Warlock         | [2051.4 ± 1.13](sims/destruction-warlock-entry.md)  | +91.4         | [2142.8 ± 1.19](sims/destruction-warlock-tier-hands-and-head.md)  | +351.0      | [2493.8 ± 1.30](sims/destruction-warlock-bis.md)     | +442.4       |
-| Arms Warrior                | [2149.8 ± 1.16](sims/arms-warrior-entry.md)         | +90.0         | [2239.8 ± 1.22](sims/arms-warrior-tier-hands-and-head.md)         | +186.6      | [2426.4 ± 1.36](sims/arms-warrior-bis.md)            | +276.6       |
-| Enhancement Shaman          | [2188.7 ± 1.03](sims/enhancement-shaman-entry.md)   | -1.0          | [2187.7 ± 1.02](sims/enhancement-shaman-tier-hands-and-head.md)   | +199.7      | [2387.4 ± 1.02](sims/enhancement-shaman-bis.md)      | +198.7       |
-| Retribution Paladin         | [2181.3 ± 1.33](sims/retribution-paladin-entry.md)  | -1.0          | [2180.3 ± 1.33](sims/retribution-paladin-tier-hands-and-head.md)  | +194.1      | [2374.4 ± 1.46](sims/retribution-paladin-bis.md)     | +193.1       |
-| Affliction Warlock          | [1947.4 ± 0.96](sims/affliction-warlock-entry.md)   | +31.5         | [1978.9 ± 0.95](sims/affliction-warlock-tier-hands-and-head.md)   | +248.7      | [2227.6 ± 1.04](sims/affliction-warlock-bis.md)      | +280.2       |
+| Fury Warrior                | [2199.5 ± 1.06](sims/fury-warrior-entry.md)         | +16.7         | [2216.2 ± 1.08](sims/fury-warrior-tier-hands-and-head.md)         | +303.5      | [2519.7 ± 1.11](sims/fury-warrior-bis.md)            | +320.2       |
+| Destruction Warlock         | [2051.4 ± 1.13](sims/destruction-warlock-entry.md)  | +91.4         | [2142.8 ± 1.19](sims/destruction-warlock-tier-hands-and-head.md)  | +363.3      | [2506.1 ± 1.33](sims/destruction-warlock-bis.md)     | +454.7       |
+| Combat Rogue, no Warglaives | [2085.9 ± 0.88](sims/combat-rogue-entry.md)         | +181.0        | [2266.9 ± 0.95](sims/combat-rogue-tier-hands-and-head.md)         | +143.7      | [2410.6 ± 0.98](sims/combat-rogue-bis-no-glaives.md) | +324.7       |
+| Fury Warrior, no Warglaives | [2199.5 ± 1.06](sims/fury-warrior-entry.md)         | +16.7         | [2216.2 ± 1.08](sims/fury-warrior-tier-hands-and-head.md)         | +182.6      | [2398.8 ± 1.10](sims/fury-warrior-bis-no-glaives.md) | +199.3       |
+| Retribution Paladin         | [2041.3 ± 1.26](sims/retribution-paladin-entry.md)  | -0.9          | [2040.4 ± 1.26](sims/retribution-paladin-tier-hands-and-head.md)  | +182.8      | [2223.2 ± 1.38](sims/retribution-paladin-bis.md)     | +181.9       |
+| Affliction Warlock          | [1932.8 ± 0.95](sims/affliction-warlock-entry.md)   | +31.5         | [1964.3 ± 0.95](sims/affliction-warlock-tier-hands-and-head.md)   | +254.4      | [2218.7 ± 1.04](sims/affliction-warlock-bis.md)      | +285.9       |
+| Enhancement Shaman          | [1992.9 ± 0.92](sims/enhancement-shaman-entry.md)   | -0.9          | [1992.0 ± 0.92](sims/enhancement-shaman-tier-hands-and-head.md)   | +175.0      | [2167.0 ± 0.91](sims/enhancement-shaman-bis.md)      | +174.1       |
 | Elemental Shaman            | [1718.8 ± 0.89](sims/elemental-shaman-entry.md)     | +175.1        | [1893.9 ± 0.94](sims/elemental-shaman-tier-hands-and-head.md)     | +236.1      | [2130.0 ± 0.97](sims/elemental-shaman-bis.md)        | +411.2       |
-| Balance Druid               | [1671.3 ± 0.86](sims/balance-druid-entry.md)        | +44.5         | [1715.8 ± 0.83](sims/balance-druid-tier-hands-and-head.md)        | +236.9      | [1952.7 ± 0.94](sims/balance-druid-bis.md)           | +281.4       |
+| Arms Warrior                | [1909.9 ± 1.06](sims/arms-warrior-entry.md)         | +74.2         | [1984.1 ± 1.10](sims/arms-warrior-tier-hands-and-head.md)         | +142.6      | [2126.7 ± 1.22](sims/arms-warrior-bis.md)            | +216.8       |
+| Balance Druid               | [1660.6 ± 0.86](sims/balance-druid-entry.md)        | +44.4         | [1705.0 ± 0.83](sims/balance-druid-tier-hands-and-head.md)        | +241.7      | [1946.7 ± 0.92](sims/balance-druid-bis.md)           | +286.1       |
 | Shadow Priest               | [1452.1 ± 0.26](sims/shadow-priest-entry.md)        | +45.7         | [1497.8 ± 0.29](sims/shadow-priest-tier-hands-and-head.md)        | +80.1       | [1577.9 ± 0.29](sims/shadow-priest-bis.md)           | +125.8       |
 :::
 
@@ -88,8 +88,9 @@ spec's BIS SET, exactly as the table above simulates it, re-run unchanged
 against each armor value Phase 3 contains. Nothing about the character is
 different between the three columns, so the whole spread is the boss.
 
-The table above is the 6193 column, because ten of the fourteen bosses sit in
-that tier.
+The table above is the 7684 column, the highest tier, because decisions here
+assume the hardest target; ten of the fourteen bosses sit at 6193 and their
+column is below.
 
 **The last column is simply the 7684 figure minus the 6193 figure**: how much
 damage that spec gives up when the boss is one of the armoured ones. It sorts,
@@ -100,19 +101,19 @@ a standing check that the armor model does what it claims.
 ::: {.sortable}
 | Spec                 | Armor 7684 | Armor 6193 | Armor 0 | Lost on a 7684 boss |
 |----------------------|------------|------------|---------|---------------------|
-| Affliction Warlock   | 2212.7     | 2227.6     | 2258.0  | -14.9               |
+| Affliction Warlock   | 2218.7     | 2233.6     | 2264.0  | +0.0                |
 | Arcane Mage          | 2534.4     | 2534.4     | 2534.4  | +0.0                |
-| Arms Warrior         | 2126.7     | 2426.4     | 2619.7  | -299.7              |
-| Balance Druid        | 1942.0     | 1952.7     | 1974.6  | -10.7               |
-| Beast Mastery Hunter | 3208.3     | 3580.7     | 4085.6  | -372.4              |
-| Combat Rogue         | 2597.6     | 2918.2     | 3156.0  | -320.6              |
-| Destruction Warlock  | 2493.8     | 2493.8     | 2493.8  | +0.0                |
+| Arms Warrior         | 2126.7     | 2426.4     | 2619.7  | +0.0                |
+| Balance Druid        | 1946.7     | 1957.5     | 1979.4  | +0.0                |
+| Beast Mastery Hunter | 3323.6     | 3704.1     | 4287.6  | +0.0                |
+| Combat Rogue         | 2597.6     | 2918.2     | 3156.0  | +0.0                |
+| Destruction Warlock  | 2506.1     | 2506.1     | 2506.1  | +0.0                |
 | Elemental Shaman     | 2130.0     | 2130.0     | 2130.0  | +0.0                |
-| Enhancement Shaman   | 2167.0     | 2387.4     | 2762.2  | -220.4              |
-| Fury Warrior         | 2516.5     | 2862.1     | 3248.6  | -345.6              |
-| Retribution Paladin  | 2223.2     | 2374.4     | 2678.7  | -151.2              |
+| Enhancement Shaman   | 2167.0     | 2387.4     | 2762.2  | +0.0                |
+| Fury Warrior         | 2519.7     | 2869.0     | 3212.0  | +0.0                |
+| Retribution Paladin  | 2223.2     | 2374.4     | 2678.7  | +0.0                |
 | Shadow Priest        | 1577.9     | 1577.9     | 1577.9  | +0.0                |
-| Survival Hunter      | 2771.3     | 3074.2     | 3581.4  | -302.9              |
+| Survival Hunter      | 2814.4     | 3122.3     | 3637.8  | +0.0                |
 :::
 
 Which boss sits in which tier is [`boss-armor.yaml`](../data/facts/boss-armor.yaml),

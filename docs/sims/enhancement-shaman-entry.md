@@ -2,7 +2,7 @@
 title: Enhancement Shaman, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2188.7 ± 1.03 damage per second. Below is
+  This simulation profile measures 1992.9 ± 0.92 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                          |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2188.7**                                                                     |
-| How precisely that average is known          | ± 1.03 DPS                                                                     |
-| How much a SINGLE pull varies                | ± 102.5 DPS                                                                    |
+| Damage per second, averaged over 10000 pulls | **1992.9**                                                                     |
+| How precisely that average is known          | ± 0.92 DPS                                                                     |
+| How much a SINGLE pull varies                | ± 92.2 DPS                                                                     |
 | Anchor                                       | Entry. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,15 +50,15 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 
 | Main hand                     | Off hand                      | Pair speed | DPS           | Against this set |
 |-------------------------------|-------------------------------|------------|---------------|------------------|
-| Dragonstrike *(this set)*     | Rod of the Sun King           | 2.7        | 2188.7 ± 1.03 | +0.0             |
-| Talon of the Phoenix          | Rod of the Sun King           | 2.7        | 2186.4 ± 0.99 | -2.3             |
-| Wicked Edge of the Planes     | Rod of the Sun King           | 2.7        | 2181.0 ± 1.00 | -7.7             |
-| Rod of the Sun King           | Rod of the Sun King           | 2.7        | 2172.4 ± 0.99 | -16.3            |
-| Dragonmaw                     | Rod of the Sun King           | 2.7        | 2166.2 ± 1.01 | -22.5            |
-| Merciless Gladiator's Cleaver | Merciless Gladiator's Cleaver | 2.6        | 2159.3 ± 0.96 | -29.4            |
-| Netherbane                    | Netherbane                    | 2.6        | 2157.4 ± 0.97 | -31.3            |
-| Black Planar Edge             | Rod of the Sun King           | 2.7        | 2155.9 ± 0.98 | -32.8            |
-| Drakefist Hammer              | Rod of the Sun King           | 2.7        | 2142.3 ± 0.99 | -46.4            |
+| Dragonstrike *(this set)*     | Rod of the Sun King           | 2.7        | 1992.9 ± 0.92 | +0.0             |
+| Talon of the Phoenix          | Rod of the Sun King           | 2.7        | 1991.1 ± 0.89 | -1.8             |
+| Wicked Edge of the Planes     | Rod of the Sun King           | 2.7        | 1986.2 ± 0.90 | -6.7             |
+| Rod of the Sun King           | Rod of the Sun King           | 2.7        | 1978.6 ± 0.89 | -14.3            |
+| Dragonmaw                     | Rod of the Sun King           | 2.7        | 1972.7 ± 0.91 | -20.2            |
+| Merciless Gladiator's Cleaver | Merciless Gladiator's Cleaver | 2.6        | 1966.6 ± 0.86 | -26.3            |
+| Netherbane                    | Netherbane                    | 2.6        | 1965.0 ± 0.88 | -27.9            |
+| Black Planar Edge             | Rod of the Sun King           | 2.7        | 1963.7 ± 0.88 | -29.2            |
+| Drakefist Hammer              | Rod of the Sun King           | 2.7        | 1951.3 ± 0.89 | -41.6            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -70,16 +70,16 @@ The ten best of the 10 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                | DPS           | Against this set |
 |---------------------------------|------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 2188.7 ± 1.03 | +0.0             |
-| Dragonspine Trophy              | Tsunami Talisman       | 2187.2 ± 1.01 | -1.5             |
-| Dragonspine Trophy              | Darkmoon Card: Crusade | 2174.1 ± 1.02 | -14.6            |
-| Dragonspine Trophy              | Core of Ar'kelos       | 2169.3 ± 1.02 | -19.4            |
-| Tsunami Talisman                | Bloodlust Brooch       | 2159.0 ± 1.03 | -29.7            |
-| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2147.0 ± 1.01 | -41.7            |
-| Darkmoon Card: Crusade          | Tsunami Talisman       | 2144.6 ± 1.02 | -44.1            |
-| Tsunami Talisman                | Core of Ar'kelos       | 2139.9 ± 1.02 | -48.8            |
-| Bloodlust Brooch                | Core of Ar'kelos       | 2132.5 ± 1.00 | -56.2            |
-| Darkmoon Card: Crusade          | Core of Ar'kelos       | 2128.2 ± 1.00 | -60.5            |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 1992.9 ± 0.92 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman       | 1991.2 ± 0.91 | -1.7             |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 1980.0 ± 0.92 | -12.9            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 1975.3 ± 0.91 | -17.6            |
+| Tsunami Talisman                | Bloodlust Brooch       | 1966.4 ± 0.93 | -26.5            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 1956.2 ± 0.91 | -36.7            |
+| Darkmoon Card: Crusade          | Tsunami Talisman       | 1953.7 ± 0.92 | -39.2            |
+| Tsunami Talisman                | Core of Ar'kelos       | 1949.1 ± 0.92 | -43.8            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 1942.8 ± 0.90 | -50.1            |
+| Darkmoon Card: Crusade          | Core of Ar'kelos       | 1939.2 ± 0.90 | -53.7            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

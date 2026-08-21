@@ -2,7 +2,7 @@
 title: Survival Hunter, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 3074.2 ± 0.95 damage per second. Below is
+  This simulation profile measures 2814.4 ± 0.90 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **3074.2**                                                                            |
-| How precisely that average is known          | ± 0.95 DPS                                                                            |
-| How much a SINGLE pull varies                | ± 95.1 DPS                                                                            |
+| Damage per second, averaged over 10000 pulls | **2814.4**                                                                            |
+| How precisely that average is known          | ± 0.90 DPS                                                                            |
+| How much a SINGLE pull varies                | ± 89.7 DPS                                                                            |
 | Anchor                                       | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note}
@@ -34,35 +34,34 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2771.3 ± 0.85     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 3074.2 ± 0.95     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 3581.4 ± 1.10     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2814.4 ± 0.90     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 3122.3 ± 1.00     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 3637.8 ± 1.16     | Essence of Suffering                                       |
 
 ## Weapon pairs
 
 A Survival Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. One stat carries more than its line for this spec: Expose Weakness is self-applied and scales with this hunter's own agility, so a candidate that moves agility moves the debuff with it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, with the same two-hander field the Beast Mastery round ran so the two hunter tables read side by side, and the 7/20/34 build carries no weapon specialization talent, so no class is favored.
 
-| Main hand                         | Off hand                         | DPS           | Against this set |
-|-----------------------------------|----------------------------------|---------------|------------------|
-| Halberd of Desolation             | *empty, two-hander*              | 3107.4 ± 1.00 | +33.2            |
-| Vengeful Gladiator's Decapitator  | *empty, two-hander*              | 3105.9 ± 1.01 | +31.7            |
-| Bloodmoon                         | *empty, two-hander*              | 3105.6 ± 1.00 | +31.4            |
-| Twinblade of the Phoenix          | *empty, two-hander*              | 3081.2 ± 1.00 | +7.0             |
-| Blade of Infamy *(this set)*      | Blade of Infamy                  | 3074.2 ± 0.95 | +0.0             |
-| Blade of Infamy                   | Netherbane                       | 3061.8 ± 0.95 | -12.4            |
-| Blade of Infamy                   | Messenger of Fate                | 3050.7 ± 0.96 | -23.5            |
-| Blade of Infamy                   | Claw of the Phoenix              | 3047.0 ± 0.95 | -27.2            |
-| Netherbane                        | Talon of Azshara                 | 3033.8 ± 0.93 | -40.4            |
-| Netherbane                        | Claw of the Phoenix              | 3031.3 ± 0.95 | -42.9            |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 3024.3 ± 0.95 | -49.9            |
+| Main hand                          | Off hand                         | DPS           | Against this set |
+|------------------------------------|----------------------------------|---------------|------------------|
+| Halberd of Desolation *(this set)* | *empty, two-hander*              | 2814.4 ± 0.90 | +0.0             |
+| Vengeful Gladiator's Decapitator   | *empty, two-hander*              | 2813.4 ± 0.90 | -1.0             |
+| Twinblade of the Phoenix           | *empty, two-hander*              | 2793.5 ± 0.89 | -20.9            |
+| Blade of Infamy                    | Blade of Infamy                  | 2769.6 ± 0.85 | -44.8            |
+| Blade of Infamy                    | Netherbane                       | 2758.0 ± 0.85 | -56.4            |
+| Blade of Infamy                    | Messenger of Fate                | 2744.9 ± 0.85 | -69.5            |
+| Blade of Infamy                    | Claw of the Phoenix              | 2742.7 ± 0.85 | -71.7            |
+| Netherbane                         | Talon of Azshara                 | 2733.1 ± 0.84 | -81.3            |
+| Netherbane                         | Claw of the Phoenix              | 2728.9 ± 0.84 | -85.5            |
+| Vengeful Gladiator's Right Ripper  | Vengeful Gladiator's Left Ripper | 2723.1 ± 0.84 | -91.3            |
 
-The best combination, Halberd of Desolation alone, a two-hander, measures +33.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
 ## Ranged weapons
 
@@ -70,35 +69,35 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 | Ranged                            | DPS           | Against this set |
 |-----------------------------------|---------------|------------------|
-| Bristleblitz Striker *(this set)* | 3074.2 ± 0.95 | +0.0             |
-| Black Bow of the Betrayer         | 3067.4 ± 0.94 | -6.8             |
-| Serpent Spine Longbow             | 3061.4 ± 0.94 | -12.8            |
-| Legionkiller                      | 2981.5 ± 0.98 | -92.7            |
-| Arcanite Steam-Pistol             | 2967.5 ± 0.97 | -106.7           |
-| Sunfury Bow of the Phoenix        | 2962.2 ± 0.98 | -112.0           |
+| Black Bow of the Betrayer         | 2815.2 ± 0.87 | +0.8             |
+| Bristleblitz Striker *(this set)* | 2814.4 ± 0.90 | +0.0             |
+| Serpent Spine Longbow             | 2802.8 ± 0.90 | -11.6            |
+| Legionkiller                      | 2718.3 ± 0.90 | -96.1            |
+| Arcanite Steam-Pistol             | 2704.5 ± 0.90 | -109.9           |
+| Sunfury Bow of the Phoenix        | 2701.5 ± 0.90 | -112.9           |
 
-This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
+The best ranged weapon, Black Bow of the Betrayer, measures +0.8 against this set's own, so the upgrade path at this anchor runs through it.
 
 ## Trinket combinations
 
 A trinket is worth one thing beside a flat attack power partner and another beside a proc, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one Apexis Crystal charge, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. One stat carries more than its line for this spec: Expose Weakness scales with this hunter's own agility, so the on-use agility of Badge of Tenacity feeds the debuff as well as the wearer, which is why this spec's ladder is the one melee ladder that ranks it. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
 
-The ten best of the 28 combinations measured, and the worn pair.
+The ten best of the 36 combinations measured, and the worn pair.
 
-| Trinket                         | Trinket                 | DPS           | Against this set |
-|---------------------------------|-------------------------|---------------|------------------|
-| Madness of the Betrayer         | Bloodlust Brooch        | 3079.9 ± 0.95 | +5.7             |
-| Tsunami Talisman                | Bloodlust Brooch        | 3077.5 ± 0.93 | +3.3             |
-| Dragonspine Trophy *(this set)* | Madness of the Betrayer | 3074.2 ± 0.95 | +0.0             |
-| Madness of the Betrayer         | Tsunami Talisman        | 3073.3 ± 0.94 | -0.9             |
-| Dragonspine Trophy              | Bloodlust Brooch        | 3072.8 ± 0.97 | -1.4             |
-| Dragonspine Trophy              | Tsunami Talisman        | 3070.7 ± 0.95 | -3.5             |
-| Madness of the Betrayer         | Badge of Tenacity       | 3065.1 ± 0.93 | -9.1             |
-| Tsunami Talisman                | Badge of Tenacity       | 3064.8 ± 0.92 | -9.4             |
-| Darkmoon Card: Crusade          | Bloodlust Brooch        | 3061.2 ± 0.95 | -13.0            |
-| Madness of the Betrayer         | Darkmoon Card: Crusade  | 3059.2 ± 0.94 | -15.0            |
+| Trinket                              | Trinket                         | DPS           | Against this set |
+|--------------------------------------|---------------------------------|---------------|------------------|
+| Dragonspine Trophy                   | Bloodlust Brooch                | 2833.1 ± 0.90 | +18.7            |
+| Dragonspine Trophy                   | Tsunami Talisman                | 2823.5 ± 0.90 | +9.1             |
+| Dragonspine Trophy                   | Madness of the Betrayer         | 2822.0 ± 0.91 | +7.6             |
+| Dragonspine Trophy                   | Badge of Tenacity               | 2819.5 ± 0.90 | +5.1             |
+| Tsunami Talisman                     | Bloodlust Brooch                | 2818.3 ± 0.89 | +3.9             |
+| Madness of the Betrayer *(this set)* | Bloodlust Brooch                | 2814.4 ± 0.90 | +0.0             |
+| Dragonspine Trophy                   | Core of Ar'kelos                | 2813.4 ± 0.89 | -1.0             |
+| Dragonspine Trophy                   | Darkmoon Card: Crusade          | 2812.6 ± 0.89 | -1.8             |
+| Dragonspine Trophy                   | Ashtongue Talisman of Swiftness | 2806.7 ± 0.91 | -7.7             |
+| Darkmoon Card: Crusade               | Bloodlust Brooch                | 2806.5 ± 0.89 | -7.9             |
 
-The best combination, Madness of the Betrayer with Bloodlust Brooch, measures +5.7 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +18.7 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
 ## The set
 
@@ -108,9 +107,9 @@ the off hand.
 
 | Slot      | Item                            | Enchant                             | Gems                                                               |
 |-----------|---------------------------------|-------------------------------------|--------------------------------------------------------------------|
-| Head      | `Gronnstalker's Helmet`         | `Glyph of Ferocity`                 | `Rigid Dawnstone`, `Relentless Earthstorm Diamond`                 |
+| Head      | `Gronnstalker's Helmet`         | `Glyph of Ferocity`                 | `Delicate Living Ruby`, `Relentless Earthstorm Diamond`            |
 | Neck      | `Telonicus's Pendant of Mayhem` |                                     |                                                                    |
-| Shoulder  | `Gronnstalker's Spaulders`      | `Greater Inscription of Vengeance`  | `Rigid Dawnstone`, `Shifting Nightseye`                            |
+| Shoulder  | `Gronnstalker's Spaulders`      | `Greater Inscription of Vengeance`  | `Wicked Noble Topaz`, `Shifting Nightseye`                         |
 | Back      | `Thalassian Wildercloak`        | `Enchant Cloak - Greater Agility`   |                                                                    |
 | Chest     | `Gronnstalker's Chestguard`     | `Enchant Chest - Exceptional Stats` | `Delicate Living Ruby`, `Wicked Noble Topaz`, `Wicked Noble Topaz` |
 | Wrist     | `Insidious Bands`               | `Enchant Bracer - Assault`          | `Wicked Noble Topaz`                                               |
@@ -120,10 +119,10 @@ the off hand.
 | Feet      | `Shadowmaster's Boots`          | `Enchant Boots - Dexterity`         | `Delicate Living Ruby`, `Wicked Noble Topaz`                       |
 | Ring 1    | `Ring of the Recalcitrant`      |                                     |                                                                    |
 | Ring 2    | `Band of the Eternal Champion`  |                                     |                                                                    |
-| Trinket 1 | `Dragonspine Trophy`            |                                     |                                                                    |
+| Trinket 1 | `Bloodlust Brooch`              |                                     |                                                                    |
 | Trinket 2 | `Madness of the Betrayer`       |                                     |                                                                    |
-| Main hand | `Blade of Infamy`               | `Enchant Weapon - Greater Agility`  |                                                                    |
-| Off hand  | `Blade of Infamy`               | `Enchant Weapon - Greater Agility`  |                                                                    |
+| Main hand | `Halberd of Desolation`         | `Enchant Weapon - Greater Agility`  |                                                                    |
+| Off hand  | *empty*                         |                                     |                                                                    |
 | Ranged    | `Bristleblitz Striker`          | `Stabilitzed Eternium Scope`        |                                                                    |
 
 ## Consumables
@@ -138,7 +137,6 @@ questions.
 | `flaskId`      | `Flask of Relentless Assault` | 22854   |
 | `foodId`       | `Grilled Mudfish`             | 27664   |
 | `mhImbueId`    | `Adamantite Sharpening Stone` | 29453   |
-| `ohImbueId`    | `Adamantite Sharpening Stone` | 29453   |
 | `petFoodId`    | `33874`                       | 33874   |
 | `petScrollAgi` | `yes`                         |         |
 | `petScrollStr` | `yes`                         |         |

@@ -2,7 +2,7 @@
 title: Retribution Paladin, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2181.3 ± 1.33 damage per second. Below is
+  This simulation profile measures 2041.3 ± 1.26 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                          |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2181.3**                                                                     |
-| How precisely that average is known          | ± 1.33 DPS                                                                     |
-| How much a SINGLE pull varies                | ± 133.4 DPS                                                                    |
+| Damage per second, averaged over 10000 pulls | **2041.3**                                                                     |
+| How precisely that average is known          | ± 1.26 DPS                                                                     |
+| How much a SINGLE pull varies                | ± 126.4 DPS                                                                    |
 | Anchor                                       | Entry. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,9 +50,9 @@ A Retribution Paladin always carries a two-hander, so every row below is a singl
 
 | Main hand                          | Off hand            | DPS           | Against this set |
 |------------------------------------|---------------------|---------------|------------------|
-| Lionheart Executioner *(this set)* | *empty, two-hander* | 2181.3 ± 1.33 | +0.0             |
-| Twinblade of the Phoenix           | *empty, two-hander* | 2160.2 ± 1.33 | -21.1            |
-| Merciless Gladiator's Bonegrinder  | *empty, two-hander* | 2142.3 ± 1.32 | -39.0            |
+| Lionheart Executioner *(this set)* | *empty, two-hander* | 2041.3 ± 1.26 | +0.0             |
+| Twinblade of the Phoenix           | *empty, two-hander* | 2021.7 ± 1.26 | -19.6            |
+| Merciless Gladiator's Bonegrinder  | *empty, two-hander* | 2005.0 ± 1.25 | -36.3            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -64,18 +64,18 @@ The ten best of the 10 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                | DPS           | Against this set |
 |---------------------------------|------------------------|---------------|------------------|
-| Dragonspine Trophy              | Bloodlust Brooch       | 2204.6 ± 1.35 | +23.3            |
-| Dragonspine Trophy              | Tsunami Talisman       | 2187.9 ± 1.36 | +6.6             |
-| Dragonspine Trophy              | Core of Ar'kelos       | 2186.2 ± 1.34 | +4.9             |
-| Dragonspine Trophy *(this set)* | Darkmoon Card: Crusade | 2181.3 ± 1.33 | +0.0             |
-| Tsunami Talisman                | Bloodlust Brooch       | 2161.0 ± 1.32 | -20.3            |
-| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2154.7 ± 1.31 | -26.6            |
-| Bloodlust Brooch                | Core of Ar'kelos       | 2144.6 ± 1.30 | -36.7            |
-| Tsunami Talisman                | Core of Ar'kelos       | 2142.9 ± 1.31 | -38.4            |
-| Darkmoon Card: Crusade          | Tsunami Talisman       | 2137.5 ± 1.30 | -43.8            |
-| Darkmoon Card: Crusade          | Core of Ar'kelos       | 2136.8 ± 1.30 | -44.5            |
+| Dragonspine Trophy              | Bloodlust Brooch       | 2063.2 ± 1.28 | +21.9            |
+| Dragonspine Trophy              | Tsunami Talisman       | 2047.6 ± 1.29 | +6.3             |
+| Dragonspine Trophy              | Core of Ar'kelos       | 2046.0 ± 1.27 | +4.7             |
+| Dragonspine Trophy *(this set)* | Darkmoon Card: Crusade | 2041.3 ± 1.26 | +0.0             |
+| Tsunami Talisman                | Bloodlust Brooch       | 2023.2 ± 1.25 | -18.1            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2017.2 ± 1.25 | -24.1            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 2007.8 ± 1.24 | -33.5            |
+| Tsunami Talisman                | Core of Ar'kelos       | 2006.3 ± 1.24 | -35.0            |
+| Darkmoon Card: Crusade          | Tsunami Talisman       | 2001.2 ± 1.24 | -40.1            |
+| Darkmoon Card: Crusade          | Core of Ar'kelos       | 2000.5 ± 1.23 | -40.8            |
 
-The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +23.3 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +21.9 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
 ## The set
 

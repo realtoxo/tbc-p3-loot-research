@@ -2,7 +2,7 @@
 title: Balance Druid, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 1671.3 ± 0.86 damage per second. Below is
+  This simulation profile measures 1660.6 ± 0.86 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,7 +22,7 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                          |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **1671.3**                                                                     |
+| Damage per second, averaged over 10000 pulls | **1660.6**                                                                     |
 | How precisely that average is known          | ± 0.86 DPS                                                                     |
 | How much a SINGLE pull varies                | ± 86.4 DPS                                                                     |
 | Anchor                                       | Entry. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,9 +50,9 @@ A Balance Druid can carry a staff or a one-hander with a held frill, and both st
 
 | Main hand                        | Off hand                        | DPS           | Against this set |
 |----------------------------------|---------------------------------|---------------|------------------|
-| The Nexus Key *(this set)*       | *empty, two-hander*             | 1671.3 ± 0.86 | +0.0             |
-| Merciless Gladiator's War Staff  | *empty, two-hander*             | 1642.2 ± 0.86 | -29.1            |
-| Merciless Gladiator's Spellblade | Jewel of Infinite Possibilities | 1628.0 ± 0.87 | -43.3            |
+| The Nexus Key *(this set)*       | *empty, two-hander*             | 1660.6 ± 0.86 | +0.0             |
+| Merciless Gladiator's War Staff  | *empty, two-hander*             | 1631.5 ± 0.86 | -29.1            |
+| Merciless Gladiator's Spellblade | Jewel of Infinite Possibilities | 1617.3 ± 0.87 | -43.3            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -64,16 +64,16 @@ The ten best of the 28 combinations measured, and the worn pair.
 
 | Trinket                       | Trinket                     | DPS           | Against this set |
 |-------------------------------|-----------------------------|---------------|------------------|
-| Darkmoon Card: Crusade        | Icon of the Silver Crescent | 1685.0 ± 0.88 | +13.7            |
-| Sextant of Unstable Currents  | Icon of the Silver Crescent | 1677.1 ± 0.90 | +5.8             |
-| Eye of Magtheridon            | Icon of the Silver Crescent | 1674.1 ± 0.86 | +2.8             |
-| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent | 1671.3 ± 0.86 | +0.0             |
-| Sextant of Unstable Currents  | Darkmoon Card: Crusade      | 1666.1 ± 0.89 | -5.2             |
-| Darkmoon Card: Crusade        | Eye of Magtheridon          | 1663.1 ± 0.85 | -8.2             |
-| Darkmoon Card: Crusade        | Quagmirran's Eye            | 1661.4 ± 0.85 | -9.9             |
-| Icon of the Silver Crescent   | Xi'ri's Gift                | 1660.4 ± 0.86 | -10.9            |
-| Darkmoon Card: Crusade        | Xi'ri's Gift                | 1655.4 ± 0.86 | -15.9            |
-| Sextant of Unstable Currents  | Eye of Magtheridon          | 1654.9 ± 0.87 | -16.4            |
+| Darkmoon Card: Crusade        | Icon of the Silver Crescent | 1674.3 ± 0.88 | +13.7            |
+| Sextant of Unstable Currents  | Icon of the Silver Crescent | 1666.4 ± 0.90 | +5.8             |
+| Eye of Magtheridon            | Icon of the Silver Crescent | 1663.3 ± 0.86 | +2.7             |
+| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent | 1660.6 ± 0.86 | +0.0             |
+| Sextant of Unstable Currents  | Darkmoon Card: Crusade      | 1655.4 ± 0.89 | -5.2             |
+| Darkmoon Card: Crusade        | Eye of Magtheridon          | 1652.4 ± 0.85 | -8.2             |
+| Darkmoon Card: Crusade        | Quagmirran's Eye            | 1650.7 ± 0.85 | -9.9             |
+| Icon of the Silver Crescent   | Xi'ri's Gift                | 1649.6 ± 0.86 | -11.0            |
+| Darkmoon Card: Crusade        | Xi'ri's Gift                | 1644.7 ± 0.86 | -15.9            |
+| Sextant of Unstable Currents  | Eye of Magtheridon          | 1644.2 ± 0.87 | -16.4            |
 
 The best combination, Darkmoon Card: Crusade with Icon of the Silver Crescent, measures +13.7 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 

@@ -2,7 +2,7 @@
 title: Affliction Warlock, Tier Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 1978.9 ± 0.95 damage per second. Below is
+  This simulation profile measures 1964.3 ± 0.95 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **1978.9**                                                                                                                            |
+| Damage per second, averaged over 10000 pulls | **1964.3**                                                                                                                            |
 | How precisely that average is known          | ± 0.95 DPS                                                                                                                            |
-| How much a SINGLE pull varies                | ± 95.4 DPS                                                                                                                            |
+| How much a SINGLE pull varies                | ± 95.3 DPS                                                                                                                            |
 | Anchor                                       | Tier. The entry set with ONLY the five token slots reconsidered. Weapons, trinkets and the other twelve slots are identical to entry. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,38 +50,38 @@ An Affliction Warlock can carry a staff or a one-hander with a held frill, and b
 
 | Main hand                                     | Off hand                        | DPS           | Against this set |
 |-----------------------------------------------|---------------------------------|---------------|------------------|
-| Zhar'doom, Greatstaff of the Devourer         | *empty, two-hander*             | 2071.1 ± 0.98 | +92.2            |
-| Tempest of Chaos                              | Chronicle of Dark Secrets       | 2051.7 ± 0.98 | +72.8            |
-| Tempest of Chaos                              | Blind-Seers Icon                | 2039.7 ± 0.98 | +60.8            |
-| The Maelstrom's Fury                          | Chronicle of Dark Secrets       | 2029.7 ± 0.97 | +50.8            |
-| Vengeful Gladiator's Spellblade               | Chronicle of Dark Secrets       | 2026.2 ± 0.98 | +47.3            |
-| Tempest of Chaos                              | Jewel of Infinite Possibilities | 2023.7 ± 0.97 | +44.8            |
-| Vengeful Gladiator's Battle Staff             | *empty, two-hander*             | 2008.5 ± 0.96 | +29.6            |
-| Merciless Gladiator's Spellblade              | Chronicle of Dark Secrets       | 2007.0 ± 0.97 | +28.1            |
-| The Nexus Key                                 | *empty, two-hander*             | 2003.0 ± 0.95 | +24.1            |
-| Merciless Gladiator's War Staff               | *empty, two-hander*             | 1985.1 ± 0.95 | +6.2             |
-| Merciless Gladiator's Spellblade *(this set)* | Jewel of Infinite Possibilities | 1978.9 ± 0.95 | +0.0             |
+| Zhar'doom, Greatstaff of the Devourer         | *empty, two-hander*             | 2056.4 ± 0.98 | +92.1            |
+| Tempest of Chaos                              | Chronicle of Dark Secrets       | 2037.1 ± 0.98 | +72.8            |
+| Tempest of Chaos                              | Blind-Seers Icon                | 2025.1 ± 0.98 | +60.8            |
+| The Maelstrom's Fury                          | Chronicle of Dark Secrets       | 2015.1 ± 0.97 | +50.8            |
+| Vengeful Gladiator's Spellblade               | Chronicle of Dark Secrets       | 2011.6 ± 0.98 | +47.3            |
+| Tempest of Chaos                              | Jewel of Infinite Possibilities | 2009.1 ± 0.97 | +44.8            |
+| Vengeful Gladiator's Battle Staff             | *empty, two-hander*             | 1993.9 ± 0.96 | +29.6            |
+| Merciless Gladiator's Spellblade              | Chronicle of Dark Secrets       | 1992.4 ± 0.97 | +28.1            |
+| The Nexus Key                                 | *empty, two-hander*             | 1988.4 ± 0.95 | +24.1            |
+| Merciless Gladiator's War Staff               | *empty, two-hander*             | 1970.4 ± 0.94 | +6.1             |
+| Merciless Gladiator's Spellblade *(this set)* | Jewel of Infinite Possibilities | 1964.3 ± 0.95 | +0.0             |
 
-The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +92.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +92.1 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Trinket combinations
 
 A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation, one max-level quest and the dungeon trinket every anchor wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
 
-The ten best of the 28 combinations measured, and the worn pair.
+The ten best of the 36 combinations measured, and the worn pair.
 
-| Trinket                       | Trinket                      | DPS           | Against this set |
-|-------------------------------|------------------------------|---------------|------------------|
-| The Skull of Gul'dan          | Quagmirran's Eye             | 2012.7 ± 0.96 | +33.8            |
-| The Skull of Gul'dan          | Darkmoon Card: Crusade       | 2011.9 ± 0.96 | +33.0            |
-| The Skull of Gul'dan          | Sextant of Unstable Currents | 2005.6 ± 0.98 | +26.7            |
-| The Skull of Gul'dan          | Eye of Magtheridon           | 2001.5 ± 0.93 | +22.6            |
-| The Skull of Gul'dan          | Icon of the Silver Crescent  | 2000.8 ± 0.96 | +21.9            |
-| Darkmoon Card: Crusade        | Icon of the Silver Crescent  | 1980.1 ± 0.96 | +1.2             |
-| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent  | 1978.9 ± 0.95 | +0.0             |
-| The Skull of Gul'dan          | Scryer's Bloodgem            | 1975.1 ± 0.94 | -3.8             |
-| Sextant of Unstable Currents  | Icon of the Silver Crescent  | 1972.6 ± 0.98 | -6.3             |
-| Quagmirran's Eye              | Darkmoon Card: Crusade       | 1971.9 ± 0.95 | -7.0             |
+| Trinket                       | Trinket                       | DPS           | Against this set |
+|-------------------------------|-------------------------------|---------------|------------------|
+| The Skull of Gul'dan          | Quagmirran's Eye              | 1998.1 ± 0.96 | +33.8            |
+| The Skull of Gul'dan          | Darkmoon Card: Crusade        | 1997.3 ± 0.96 | +33.0            |
+| The Skull of Gul'dan          | Sextant of Unstable Currents  | 1991.0 ± 0.98 | +26.7            |
+| The Skull of Gul'dan          | Ashtongue Talisman of Shadows | 1989.9 ± 0.97 | +25.6            |
+| The Skull of Gul'dan          | Eye of Magtheridon            | 1986.9 ± 0.93 | +22.6            |
+| The Skull of Gul'dan          | Icon of the Silver Crescent   | 1986.2 ± 0.96 | +21.9            |
+| Darkmoon Card: Crusade        | Icon of the Silver Crescent   | 1965.5 ± 0.96 | +1.2             |
+| Quagmirran's Eye *(this set)* | Icon of the Silver Crescent   | 1964.3 ± 0.95 | +0.0             |
+| The Skull of Gul'dan          | Scryer's Bloodgem             | 1960.4 ± 0.94 | -3.9             |
+| Sextant of Unstable Currents  | Icon of the Silver Crescent   | 1958.0 ± 0.98 | -6.3             |
 
 The best combination, The Skull of Gul'dan with Quagmirran's Eye, measures +33.8 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 

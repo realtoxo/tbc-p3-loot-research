@@ -63,33 +63,28 @@ anchors:
         hit: 0
         capture_note: second-ranked row, listed as Best 6% and 9%
       trinket_1:
-        item: Dragonspine Trophy
-        id: 28830
+        item: Bloodlust Brooch
+        id: 29383
         hit: 0
-        capture_note: top of two tied 'Best' trinket rows
       trinket_2:
         item: Madness of the Betrayer
         id: 32505
         hit: 20
         capture_note: second of two tied 'Best' trinket rows
       main_hand:
-        item: Blade of Infamy
-        id: 30881
-        hit: 0
-        capture_note: top of the Dual-Wield Weapons table, listed as 'Best x2' meaning
-          it fills both weapon slots
+        item: Halberd of Desolation
+        id: 32248
+        hit: 30
       off_hand:
-        item: Blade of Infamy
-        id: 30881
+        item: null
+        id: null
         hit: 0
-        capture_note: same row as main hand, listed as 'Best x2' - the page recommends
-          this weapon dual-wielded
       ranged:
         item: Bristleblitz Striker
         id: 30906
         hit: 0
         capture_note: top of the Best in Slot Ranged Weapons table
-    total_item_hit: 32
+    total_item_hit: 62
     tier6_pieces_held:
     - head
     - shoulder
@@ -103,8 +98,22 @@ anchors:
       cap: ranged
       net_target_rating: 95
       assumed_debuff_rating: 48.0
-      item_hit: 32
-      state: short
-      gap_rating: 15
+      item_hit: 62
+      state: full
+      gap_rating: 0
       gem_sockets: 13
-      gems_needed: 2
+      gems_needed: 0
+routing_applied:
+- 'main_hand: Halberd of Desolation replaces Blade of Infamy. Routed by the guild
+  lead, 20 August 2026: the hunters re-anchor on a two-hander, every two-hander
+  having measured above every dual pair, with crafted weapons barred from hunter
+  consideration. This changes the BUILD from dual wield to a two-hander, which is
+  not a stat swap.'
+- 'off_hand: EMPTY replaces Blade of Infamy. A two-hander occupies both hands, so
+  the off hand the capture lists is displaced rather than kept.'
+- 'trinket_1: Bloodlust Brooch replaces Dragonspine Trophy. Routed by the guild
+  lead, 2026-08-15: The Survival Hunter takes the Bloodlust Brooch in the FIRST
+  trinket slot, replacing Dragonspine Trophy and keeping Madness of the Betrayer.
+  Ruled by the guild lead on 20 August 2026, "revise each class'' bis trinkets based
+  on our sim", from the enumerated round at 6193, and CONFIRMED AT THE PROFILE LEVEL
+  AT ARMOR 7684 the same day after the default-tier ruling put the reading in question.'

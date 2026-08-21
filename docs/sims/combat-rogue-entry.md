@@ -2,7 +2,7 @@
 title: Combat Rogue, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2329.8 ± 0.98 damage per second. Below is
+  This simulation profile measures 2085.9 ± 0.88 damage per second. Below is
   everything that produced that figure: the gear worn slot by slot, the
   consumables, the buffs and debuffs, the talents, the rotation and the
   encounter.
@@ -22,9 +22,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                          |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2329.8**                                                                     |
-| How precisely that average is known          | ± 0.98 DPS                                                                     |
-| How much a SINGLE pull varies                | ± 98.3 DPS                                                                     |
+| Damage per second, averaged over 10000 pulls | **2085.9**                                                                     |
+| How precisely that average is known          | ± 0.88 DPS                                                                     |
+| How much a SINGLE pull varies                | ± 87.7 DPS                                                                     |
 | Anchor                                       | Entry. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note}
@@ -34,7 +34,7 @@ pinned to that many DPS; a single pull swings by the figure in the row below it,
 which is far larger.
 :::
 
-The figure above is against boss armor 6193. This same set was run
+The figure above is against boss armor 7684. This same set was run
 against every Phase 3 armor tier, and armor is subtracted before any physical
 damage lands, so a physical spec moves between them and a pure caster does not.
 
@@ -50,9 +50,9 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 
 | Main hand                     | Off hand                         | DPS           | Against this set |
 |-------------------------------|----------------------------------|---------------|------------------|
-| Talon of Azshara *(this set)* | Merciless Gladiator's Quickblade | 2329.8 ± 0.98 | +0.0             |
-| Merciless Gladiator's Slicer  | Merciless Gladiator's Quickblade | 2308.4 ± 0.97 | -21.4            |
-| Talon of Azshara              | Merciless Gladiator's Slicer     | 2190.7 ± 0.97 | -139.1           |
+| Talon of Azshara *(this set)* | Merciless Gladiator's Quickblade | 2085.9 ± 0.88 | +0.0             |
+| Merciless Gladiator's Slicer  | Merciless Gladiator's Quickblade | 2066.8 ± 0.87 | -19.1            |
+| Talon of Azshara              | Merciless Gladiator's Slicer     | 1959.3 ± 0.87 | -126.6           |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
@@ -64,16 +64,16 @@ The ten best of the 15 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                | DPS           | Against this set |
 |---------------------------------|------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Warp-Spring Coil       | 2329.8 ± 0.98 | +0.0             |
-| Dragonspine Trophy              | Tsunami Talisman       | 2305.0 ± 1.00 | -24.8            |
-| Dragonspine Trophy              | Bloodlust Brooch       | 2304.5 ± 1.00 | -25.3            |
-| Dragonspine Trophy              | Romulo's Poison Vial   | 2289.7 ± 0.97 | -40.1            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade | 2280.7 ± 0.99 | -49.1            |
-| Warp-Spring Coil                | Tsunami Talisman       | 2280.5 ± 0.96 | -49.3            |
-| Warp-Spring Coil                | Bloodlust Brooch       | 2280.5 ± 0.96 | -49.3            |
-| Warp-Spring Coil                | Romulo's Poison Vial   | 2264.0 ± 0.94 | -65.8            |
-| Warp-Spring Coil                | Darkmoon Card: Crusade | 2256.8 ± 0.95 | -73.0            |
-| Tsunami Talisman                | Bloodlust Brooch       | 2256.1 ± 0.97 | -73.7            |
+| Dragonspine Trophy *(this set)* | Warp-Spring Coil       | 2085.9 ± 0.88 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman       | 2071.6 ± 0.90 | -14.3            |
+| Dragonspine Trophy              | Bloodlust Brooch       | 2071.1 ± 0.90 | -14.8            |
+| Dragonspine Trophy              | Romulo's Poison Vial   | 2060.0 ± 0.87 | -25.9            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2049.8 ± 0.89 | -36.1            |
+| Warp-Spring Coil                | Tsunami Talisman       | 2041.7 ± 0.85 | -44.2            |
+| Warp-Spring Coil                | Bloodlust Brooch       | 2041.7 ± 0.86 | -44.2            |
+| Warp-Spring Coil                | Romulo's Poison Vial   | 2029.2 ± 0.84 | -56.7            |
+| Tsunami Talisman                | Bloodlust Brooch       | 2027.6 ± 0.87 | -58.3            |
+| Warp-Spring Coil                | Darkmoon Card: Crusade | 2020.5 ± 0.85 | -65.4            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 
