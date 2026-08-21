@@ -71,10 +71,9 @@ anchors:
         hit: 25
         capture_note: listed as Ultimate Best, the top-ranked trinket
       trinket_2:
-        item: Quagmirran's Eye
-        id: 27683
+        item: 'Darkmoon Card: Crusade'
+        id: 31856
         hit: 0
-        capture_note: top of two tied 'Best' rows following the Ultimate Best trinket
       main_hand:
         item: Zhar'doom, Greatstaff of the Devourer
         id: 32374
@@ -113,3 +112,9 @@ routing_applied:
 - 'off_hand: EMPTY replaces Chronicle of Dark Secrets. Zhar''doom is a two-handed
   staff and the guild lead ruled that its users hold no off hand. The captured off
   hand is discarded, not carried.'
+- 'trinket_2: Darkmoon Card: Crusade replaces Quagmirran''s Eye. Routed by the guild
+  lead, 2026-08-15: The Affliction Warlock takes the Darkmoon Card in the second
+  trinket slot beside The Skull of Gul''dan, replacing Quagmirran''s Eye, because
+  the enumerated trinket round measured the Card pair 6.0 ahead at best in slot,
+  and the Card is a Darkmoon Faire turn-in contesting nothing. Ruled by the guild
+  lead on 20 August 2026, "revise each class'' bis trinkets based on our sim".'

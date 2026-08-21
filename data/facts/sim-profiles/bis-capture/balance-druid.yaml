@@ -71,10 +71,9 @@ anchors:
         hit: 25
         capture_note: first of two 'BiS' rows in the Trinkets table
       trinket_2:
-        item: Ashtongue Talisman of Equilibrium
-        id: 32486
+        item: Quagmirran's Eye
+        id: 27683
         hit: 0
-        capture_note: second of two 'BiS' rows in the Trinkets table
       main_hand:
         item: Zhar'doom, Greatstaff of the Devourer
         id: 32374
@@ -116,3 +115,10 @@ routing_applied:
 - 'off_hand: EMPTY replaces Chronicle of Dark Secrets. Zhar''doom is a two-handed
   staff and the guild lead ruled that its users hold no off hand. The captured off
   hand is discarded, not carried.'
+- 'trinket_2: Quagmirran''s Eye replaces Ashtongue Talisman of Equilibrium. Routed
+  by the guild lead, 2026-08-15: The Balance Druid takes Quagmirran''s Eye in the
+  second trinket slot beside The Skull of Gul''dan, replacing the Ashtongue Talisman
+  of Equilibrium, because the enumerated trinket round measured the Eye pair 4.8
+  ahead at best in slot, a haste proc beside the Skull''s on-use haste. Ruled by
+  the guild lead on 20 August 2026, "revise each class'' bis trinkets based on our
+  sim".'

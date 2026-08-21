@@ -68,26 +68,23 @@ anchors:
         hit: 0
         capture_note: top of two tied 'Best' trinket rows
       trinket_2:
-        item: Madness of the Betrayer
-        id: 32505
-        hit: 20
-        capture_note: second of two tied 'Best' trinket rows
+        item: Bloodlust Brooch
+        id: 29383
+        hit: 0
       main_hand:
-        item: Boundless Agony
-        id: 30901
-        hit: 0
-        capture_note: top of the Dual-Wield Weapons table, listed as Best MH
+        item: Vengeful Gladiator's Decapitator
+        id: 33670
+        hit: 15
       off_hand:
-        item: Blade of Infamy
-        id: 30881
+        item: null
+        id: null
         hit: 0
-        capture_note: top-ranked Best OH row in the Dual-Wield Weapons table
       ranged:
         item: Bristleblitz Striker
         id: 30906
         hit: 0
         capture_note: top of the Best in Slot Ranged Weapons table
-    total_item_hit: 83
+    total_item_hit: 78
     tier6_pieces_held:
     - shoulder
     - chest
@@ -101,8 +98,23 @@ anchors:
       cap: ranged
       net_target_rating: 142
       assumed_debuff_rating: 48.0
-      item_hit: 83
+      item_hit: 78
       state: short
-      gap_rating: 11
+      gap_rating: 16
       gem_sockets: 12
       gems_needed: 2
+routing_applied:
+- 'main_hand: Vengeful Gladiator''s Decapitator replaces Boundless Agony. Routed
+  by the guild lead, 20 August 2026: the hunters re-anchor on a two-hander, every
+  two-hander having measured above every dual pair, with crafted weapons barred
+  from hunter consideration. This changes the BUILD from dual wield to a two-hander,
+  which is not a stat swap.'
+- 'off_hand: EMPTY replaces Blade of Infamy. A two-hander occupies both hands, so
+  the off hand the capture lists is displaced rather than kept.'
+- 'trinket_2: Bloodlust Brooch replaces Madness of the Betrayer. Routed by the guild
+  lead, 2026-08-15: The Beast Mastery Hunter takes the Bloodlust Brooch in the second
+  trinket slot beside Dragonspine Trophy, replacing Madness of the Betrayer, because
+  the enumerated trinket round measured the Brooch pair 11.2 ahead at best in slot,
+  with the caveat that Madness pays in armor penetration and the gap moves with
+  boss armor. Ruled by the guild lead on 20 August 2026, "revise each class'' bis
+  trinkets based on our sim".'
