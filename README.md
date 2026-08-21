@@ -75,7 +75,9 @@ and a half minutes, at each of the boss armor tiers Phase 3 contains. The three
 tanks and the four healers are out of scope by ruling, and the Feral Cat cannot
 be modelled in this build of the simulator. A figure there is a spec wearing a
 stated set, and it is comparable with the same spec at another anchor, at the
-same boss armor, and with nothing else.
+same boss armor, and with nothing else. The tier question, at what point
+breaking an old set bonus pays, is measured by subset in
+[`docs/tier.md`](docs/tier.md) on the same baseline.
 
 Every figure in it was produced after 15 August 2026, when five independent
 audits and four arbiters found nine defects in the simulator configuration. The

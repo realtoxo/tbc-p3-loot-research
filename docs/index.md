@@ -19,6 +19,8 @@ A council asks two different questions, so the compendium is entered two ways. W
 
 A third way in answers a question neither of those asks. [Simulated Throughput](sims.md) reports what each spec measures at three gear anchors, with the spread on every figure, and every figure is a click into the exact set, consumables and buffs behind it. It ranks nothing, and a spec is comparable only with itself.
 
+The tier question gets its own page. [Tier](tier.md) measures at what point breaking an old set bonus pays: every subset of a spec's bonus-carrying slots replaced with its chase pieces, and the Tier 6 two-piece and four-piece thresholds priced on the same baseline.
+
 ## Start here
 
 ::: {.note .brass}

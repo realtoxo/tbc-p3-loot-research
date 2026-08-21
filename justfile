@@ -127,7 +127,7 @@ dev:
 check: regen
     #!/usr/bin/env bash
     set -euo pipefail
-    generated="data/facts/consumable-ids.yaml data/facts/drops.csv data/facts/items.csv data/facts/effect-text.csv data/facts/talent-conversions.yaml data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/bis.generated.lua theme/filters/unranked.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md data/facts/sim-profiles/bis-capture data/sim/gear docs/sims.md docs/sims"
+    generated="data/facts/consumable-ids.yaml data/facts/drops.csv data/facts/items.csv data/facts/effect-text.csv data/facts/talent-conversions.yaml data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/bis.generated.lua theme/filters/unranked.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md data/facts/sim-profiles/bis-capture data/sim/gear docs/sims.md docs/sims docs/tier.md"
     if ! git diff --quiet -- $generated; then
         echo "ERROR: the generated tables differ after regeneration." >&2
         echo "Either the data changed and you should commit, or a generated file was hand-edited." >&2
@@ -156,7 +156,9 @@ check: regen
 sim ITERATIONS="10000":
     @python3 tools/run_sims.py --iterations {{ITERATIONS}} --all-tiers --out data/facts/sim-figures.yaml
     @python3 tools/run_variant_sims.py --iterations {{ITERATIONS}}
+    @python3 tools/run_tier_sims.py --iterations {{ITERATIONS}}
     @python3 tools/generate_sim_pages.py
+    @python3 tools/generate_tier_page.py
 
 # Rerun only the weapon pair rounds, every matched pair as a variant of each
 # anchor profile, then rewrite the sim pages that show them. `just sim` runs
@@ -164,6 +166,14 @@ sim ITERATIONS="10000":
 sim-weapons ITERATIONS="10000":
     @python3 tools/run_variant_sims.py --iterations {{ITERATIONS}}
     @python3 tools/generate_sim_pages.py
+
+# Rerun only the tier rounds, every subset of each spec's bonus-carrying and
+# token slots as a variant of its entry profile, then rewrite the tier page.
+# `just sim` runs this too; this is the cheap way to refresh the tier figures
+# alone.
+sim-tier ITERATIONS="10000":
+    @python3 tools/run_tier_sims.py --iterations {{ITERATIONS}}
+    @python3 tools/generate_tier_page.py
 
 # Fail if a sim profile wears a gem or an enchant Phase 3 cannot supply.
 # Runs inside `just check` as well; this is the one-line way to run it alone.
@@ -222,6 +232,7 @@ regen:
     # `just regen` stays offline and reproducible; `just sim` is what produces
     # new figures.
     @python3 tools/generate_sim_pages.py
+    @python3 tools/generate_tier_page.py
 
 # Check documents against the house writing style in docs/kb/DEVELOPING.md.
 style *PATHS:
