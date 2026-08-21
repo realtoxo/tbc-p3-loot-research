@@ -45,9 +45,9 @@ A spec without a simulated best-in-slot set labels nothing BIS. The tanks, the h
 
 The standing says what an item IS to a spec. It does not say who receives a contested drop first: that ordering is the council's, and where the council has settled one it lives in the judgment store with its reasons.
 
-Set bonuses do not enter here. Whether a piece would break a set the spec is completing is a question about tier progress and it is answered in [Tier sets and set bonuses](framework.md#tier-sets-and-set-bonuses), not by lowering an item's standing. A standing says what an item is to a spec. It does not track how far through a set any particular player happens to be.
+Set bonuses do not enter here. Whether a piece would break a set the spec is completing is a question about tier progress and it is answered in [Tier sets and set bonuses](framework.md#tier-sets-and-set-bonuses), not by lowering an item's standing.
 
-**Every claim carries the size of the upgrade, in both forms.** The raw change and the change as a percentage of what that spec already produces, measured against the named alternative rather than against nothing. Both are required. Raw alone routes every contested drop to whoever already does the most damage, since a flat gain is the same number on the top parser as on the bottom. Proportional alone flatters low-throughput specs, where a large percentage of a small number is still small. The two together are what distinguishes an item that is transformative for one spec from the same item being routine for another.
+**Every claim carries the size of the upgrade, in both forms.** The raw change and the change as a percentage of what that spec already produces, measured against the named alternative rather than against nothing. Why both are required, and what each form is biased toward alone, is argued once, in [the framework's Inputs section](framework.md#inputs).
 
 ### Worked example
 
@@ -95,7 +95,7 @@ None of the four is picked by hand, so no card can quietly answer a different qu
 
 **What influencers say appears only where something is captured.** An item page carries that section when a creator or a class community has been recorded saying something about the item, and omits it entirely otherwise. Its absence means nothing has been captured, not that nothing has been said. The section used to print "Nothing captured for this item yet" so silence could not be mistaken for consensus, and with commentary recorded for a handful of items that line appeared on 173 of 177 pages, which teaches a reader to skip the section on the few where it carries something. Coverage is no longer a handful: 580 remarks are captured across 173 items, and a page shows up to five of them, widest reach first, with every stance represented so a lone objection is not crowded out.
 
-The views answer differently often enough to be worth all of them. The Combat Rogue wears `Deathmantle Helm` into the phase, holds `Slayer's Helm` after it, and only reaches `Deathblow X11 Goggles` with a profession, so its column groups are three different arguments and its fourth is the finding that nothing else in the slot competes. The two hunters share both tier sets and the same Phase 3 off-piece, so only the pre-phase off-piece and how much hit each of them still needs separate them.
+The views answer differently often enough to be worth all of them. The Combat Rogue wears `Deathmantle Helm` into the phase, holds `Slayer's Helm` after it, and only reaches `Deathblow X11 Goggles` with a profession, so its column groups are three different arguments and its fourth is the finding that nothing else in the slot competes.
 
 :::: {.subject}
 
@@ -182,7 +182,7 @@ The two warriors carry negative rows in both of their tables, and in both cases 
 
 The two hunters are the pair to read twice. They share both tier sets and the same Phase 3 off-piece, so three of their four column groups hold the same figures, and everything that separates one hunter's claim from the other sits in the pre-phase off-piece and in how much hit each of them still needs. That view is gated for both of them, on an engineering goggle for Beast Mastery and on a badge purchase for Survival, which is exactly the case the route label exists to show: the same drop reads as a different upgrade for each, and neither raider is certain to hold the item being compared against.
 
-The Rogue and the Cat sitting at the same standing is the normal case, not a failure to decide. The standing says what the item is to each; which of the two receives it is the council's judgment, and the reasons are what that judgment is made from.
+The Rogue and the Cat sitting at the same standing is the normal case, not a failure to decide: which of the two receives it is the council's judgment, and the reasons are what that judgment is made from.
 
 What is real here: every standing, every stat line, every delta table, every conversion rate, every cap figure, and all four derived baselines and their acquisition routes on every card, taken from the best-in-slot captures in `data/facts/sim-profiles/`, `data/facts/items.csv`, `data/facts/hit.yaml`, `data/facts/crit.yaml`, `data/facts/attack-power.yaml`, `data/facts/tokens.yaml` and the EP Workbook in `data/research/epv-workbook/`. Every creator remark is real and carries a link to the second it was said. Nothing on a card is illustrative, because nothing on a card is judged: who receives a contested drop first remains the council's call, and it is not printed here.
 

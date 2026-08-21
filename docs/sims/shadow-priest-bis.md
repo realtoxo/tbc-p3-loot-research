@@ -2,10 +2,8 @@
 title: Shadow Priest, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 1577.9 ± 0.29 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 1577.9 ± 0.29 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 1577.9 ± 0.29     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 1577.9 ± 0.29     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-A Shadow Priest can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Superior Wizard Oil applies to any weapon, staff and mace alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. A priest wields daggers, one- hand maces and staves and holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here: the warlocks hold it in principle and concede it to the Arcane Mage, where this spec cannot equip it at all, so its one-hand rows draw on maces and daggers instead. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
+A Shadow Priest can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot. The Superior Wizard Oil applies to any weapon, staff and mace alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. A priest wields daggers, one- hand maces and staves and holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here: the warlocks hold it in principle and concede it to the Arcane Mage, where this spec cannot equip it at all, so its one-hand rows draw on maces and daggers instead. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
 
 | Main hand                                          | Off hand                        | DPS           | Against this set |
 |----------------------------------------------------|---------------------------------|---------------|------------------|
@@ -229,11 +229,17 @@ A Shadow Priest can carry a staff or a one-hander with a held frill, and both st
 | Illidari-Bane Mageblade                            | Star-Heart Lamp                 | 1406.9 ± 0.27 | -171.0           |
 | Illidari-Bane Mageblade                            | Draenei Crystal Rod             | 1393.5 ± 0.26 | -184.4           |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
 ## Trinket combinations
 
-A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection. The Skull of Gul'dan's haste burst meets the casting rotation on that schedule. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
 
 The ten best of the 28 combinations measured, and the worn pair.
 
@@ -250,7 +256,7 @@ The ten best of the 28 combinations measured, and the worn pair.
 | Darkmoon Card: Crusade            | Ashtongue Talisman of Acumen | 1556.1 ± 0.32 | -21.8            |
 | The Skull of Gul'dan              | Scryer's Bloodgem            | 1552.9 ± 0.29 | -25.0            |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 

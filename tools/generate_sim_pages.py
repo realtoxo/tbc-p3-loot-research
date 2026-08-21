@@ -301,26 +301,20 @@ list for that spec. It is what a raider walks into Phase 3 already wearing, so
 it is the floor every Phase 3 drop is measured against. Season 2 arena gear is
 in it and Season 3 is not, because Season 3 opens five days after the phase.
 
-**Tier** is the entry set with ONLY the five tier token slots reconsidered.
-Nothing else moves: the weapons, the trinkets and the other twelve slots are the
-same items the entry set wears. It exists to answer one narrow question, what
-the tier tokens alone are worth to a raider who has just walked in, and it
-answers nothing else.
+**Tier** is the entry set with ONLY the five tier token slots reconsidered;
+the weapons, trinkets and other twelve slots are the entry items.
 
 **BiS** is the full Phase 3 best-in-slot set, every slot, captured from that
 spec's published Phase 3 list and then adjusted by the guild lead's weapon and
 trinket routing where a published list gives a spec something this raid will not
 give it. It is the ceiling for one spec rather than a description of the raid.
 
-**Entry to Tier** is therefore what the tokens are worth, and **Tier to BiS** is
+**Entry to Tier** is what the tokens are worth, and **Tier to BiS** is
 what everything else is worth once the weapons and trinkets finally move. The
 two are wildly uneven per spec, which is why they are separate columns.
 
 **Every column sorts.** Click a heading to order by it, click again to reverse.
-The page loads ordered by the best-in-slot figure, highest first. Read that
-order as what each set measured and not as a ranking of the players: these
-specs run rotations written by different authors, and a spec is only strictly
-comparable with itself at another anchor.
+The page loads ordered by the best-in-slot figure, highest first.
 
 ::: {{.sortable default-sort="5"}}
 {rows_table(header, rows)}
@@ -335,16 +329,15 @@ same gear measures materially lower on a high-armor boss and a pure caster does
 not move at all. A council weighing a physical item for Black Temple is weighing
 it in a harder world than the same item for Mount Hyjal.
 
-**The gear does not change here. Only the boss does.** Every row below is that
-spec's BIS SET, exactly as the table above simulates it, re-run unchanged
-against each armor value Phase 3 contains. Nothing about the character is
-different between the three columns, so the whole spread is the boss.
+**The gear does not change here, only the boss.** Every row is that spec's
+best-in-slot set re-run against each armor value Phase 3 contains, so the
+whole spread is the boss.
 
 The table above is the 7684 column, the highest tier, because decisions here
 assume the hardest target; ten of the fourteen bosses sit at 6193 and their
 column is below.
 
-**The last column is simply the 7684 figure minus the 6193 figure**: how much
+**The last column is the 7684 figure minus the 6193 figure**: how much
 damage that spec gives up when the boss is one of the armoured ones. It sorts,
 and sorting by it splits the roster cleanly in two. Every physical spec pays,
 and the five pure casters pay nothing at all, which is the correct behaviour and
@@ -410,7 +403,7 @@ Four specs are absent, and each for a stated reason rather than an oversight.
 
 
 def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict,
-                        gear: dict, name_of, speed_of) -> str:
+                        gear: dict, name_of, speed_of, state: dict) -> str:
     """A spec's weapon pair variants, as a section of one anchor page.
 
     RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the weapons analysis is
@@ -510,11 +503,17 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict,
     # significance test.
     best = pairs[0]
     if abs(best["dps"] - row["dps"]) < 0.05:
-        reading = (
-            "This set already wears the best combination on the table, "
-            "which is why the top row reads plus zero: that row IS this "
-            "profile, and every other row is an alternative measuring "
-            "under it.")
+        # THE FULL ZERO-DELTA READING PRINTS ONCE PER PAGE. A later
+        # section whose worn row is also the best one refers back to it
+        # instead of restating it.
+        if state.get("zero_read"):
+            reading = "The worn pair is again the best row, at plus zero."
+        else:
+            reading = (
+                "This set already wears the best combination on the table, "
+                "which is why the top row reads plus zero: that row IS this "
+                "profile.")
+            state["zero_read"] = True
     elif best["dps"] > row["dps"]:
         best_label = best["main_hand"]["name"] + (
             f" with {best['off_hand']['name']}" if best.get("off_hand")
@@ -541,7 +540,7 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict,
 
 
 def ranged_section(spec: str, anchor: str, row: dict,
-                   gear: dict, name_of) -> str:
+                   gear: dict, name_of, state: dict) -> str:
     """A spec's ranged weapon variants, as a section of one anchor page.
 
     RULED BY THE GUILD LEAD ON 20 AUGUST 2026, for the hunters: the bow is
@@ -587,10 +586,14 @@ def ranged_section(spec: str, anchor: str, row: dict,
 
     best = rows[0]
     if abs(best["dps"] - row["dps"]) < 0.05:
-        reading = (
-            "This set already carries the best ranged weapon the pass "
-            "measured, which is why its top row reads plus zero: that row "
-            "IS this profile.")
+        if state.get("zero_read"):
+            reading = "The worn weapon is again the best row, at plus zero."
+        else:
+            reading = (
+                "This set already carries the best ranged weapon the pass "
+                "measured, which is why its top row reads plus zero: that "
+                "row IS this profile.")
+            state["zero_read"] = True
     elif best["dps"] > row["dps"]:
         reading = (
             f"The best ranged weapon, {best['ranged']['name']}, measures "
@@ -614,7 +617,8 @@ def ranged_section(spec: str, anchor: str, row: dict,
 
 
 def trinket_section(spec: str, anchor: str, row: dict,
-                    gear: dict, name_of) -> str:
+                    gear: dict, name_of, state: dict,
+                    default_armor: int) -> str:
     """A spec's trinket combinations, as a section of one anchor page.
 
     RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the trinket rounds run every
@@ -668,11 +672,14 @@ def trinket_section(spec: str, anchor: str, row: dict,
 
     best = rows[0]
     if abs(best["dps"] - row["dps"]) < 0.05:
-        reading = (
-            "This set already wears the best combination on the table, "
-            "which is why the top row reads plus zero: that row IS this "
-            "profile, and every other row is an alternative measuring "
-            "under it.")
+        if state.get("zero_read"):
+            reading = "The worn pair is again the best row, at plus zero."
+        else:
+            reading = (
+                "This set already wears the best combination on the table, "
+                "which is why the top row reads plus zero: that row IS this "
+                "profile.")
+            state["zero_read"] = True
     elif best["dps"] > row["dps"]:
         reading = (
             f"The best combination, {best['trinket_1']['name']} with "
@@ -685,8 +692,36 @@ def trinket_section(spec: str, anchor: str, row: dict,
             f"trinkets, the best of them by {row['dps'] - best['dps']:.1f} "
             "DPS, so the round found no trinket upgrade at this anchor.")
 
+    # THE ARMOR PENETRATION CAVEAT PRINTS ONLY WHERE THE ROUND MEASURED an
+    # armor penetration trinket, so an entry page whose pool cannot reach
+    # one does not carry a warning about a row it does not hold. The
+    # figures are at the DEFAULT tier, the highest, per the 20 August 2026
+    # ruling; ten of the fourteen bosses sit at 6193, and the armor table
+    # above prices this set at each tier.
+    pen_ids: list[int] = []
+    for entry in rows:
+        for key in ("trinket_1", "trinket_2"):
+            item_id = entry[key]["id"]
+            if item_id in (30450, 32505) and item_id not in pen_ids:
+                pen_ids.append(item_id)
+    caveat = ""
+    if pen_ids:
+        names = [name_of(i) for i in sorted(pen_ids)]
+        carries = "carry" if len(names) > 1 else "carries"
+        caveat = (
+            f" {' and '.join(names)} {carries} armor penetration, which "
+            f"moves with the boss's armor; these figures are at boss armor "
+            f"{default_armor}, the highest Phase 3 tier, and ten of the "
+            "fourteen bosses sit at 6193.")
+
     return f"""
 ## Trinket combinations
+
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.{caveat}
 
 {block['trinkets_why']}
 
@@ -799,10 +834,8 @@ def write_detail(directory: Path, spec: str, anchor: str, label: str,
 title: {spec_label}, {label} Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures {figure(row)} damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures {figure(row)} damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -863,10 +896,25 @@ damage lands, so a physical spec moves between them and a pure caster does not.
         raw = (items_csv.get(item_id) or {}).get("weapon_speed")
         return float(raw) if raw else None
 
-    body += weapon_pair_section(spec, anchor, row, meta, gear, name_of,
-                                speed_of)
-    body += ranged_section(spec, anchor, row, gear, name_of)
-    body += trinket_section(spec, anchor, row, gear, name_of)
+    # ONE COMPARABILITY FRAMING PER PAGE. Each variant section's why
+    # paragraph used to restate that the consumables, buffs and seed hold
+    # still, two or three times per page; the sentence now prints once,
+    # before whichever variant section renders first.
+    state = {"zero_read": False}
+    sections = [
+        weapon_pair_section(spec, anchor, row, meta, gear, name_of,
+                            speed_of, state),
+        ranged_section(spec, anchor, row, gear, name_of, state),
+        trinket_section(spec, anchor, row, gear, name_of, state,
+                        default_armor),
+    ]
+    if any(sections):
+        body += (
+            "\nIn every table below, only the named slots change; the "
+            "enchants, consumables, buffs and seed hold still, so every "
+            "figure is directly comparable with the figure at the top of "
+            "this page.\n")
+    body += "".join(sections)
 
     body += f"""
 ## The set

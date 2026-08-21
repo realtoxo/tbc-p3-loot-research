@@ -115,12 +115,10 @@ Alongside the gear anchors, this is the other half of the simulator profile. Eve
 
 The composition it derives from is `data/facts/roster.yaml`.
 
-**What is assumed.**
+**What is assumed.** The racial and group buff states are the ones the [Fixed Assumptions](#fixed-assumptions) table records, and they are not restated here. Two rows are specific to this baseline:
 
 | Assumption | State | Effect |
 |---|---|---|
-| Racial buffs | **Not assumed** | No Heroic Presence and no Inspiring Presence. Every spec budgets hit from gear alone, which is roughly one percent more than a source assuming a Draenei in each party |
-| Group buffs | Assumed | Per the group assignments in the roster |
 | Improved Faerie Fire | Assumed | Supplied by the Balance Druid. A raid-wide three percent **physical** hit debuff, worth 48 hit rating |
 | Weapons at entry | Season 2 or better | The floor a weapon claim is measured against. Season 3 weapons are part of this tier and belong in the comparison set, but are not assumed owned, because the guild does not expect every player to run arena for the current season |
 
@@ -292,7 +290,7 @@ Values are comparable in one case and not in three. Stating which is which is wh
 | Comparison | Comparable | Why |
 |---|---|---|
 | Two damage specs, on the absolute figure | Yes, as raid gain | The unit is the same and the raid gains the same amount whoever holds it |
-| Two damage specs, on the proportional figure | Yes, but it answers a different question | It measures how much the item changes that spec against itself. It is **not** a proxy for raid gain: five percent of 800 and five percent of 1600 are both five percent, and are 40 and 80 damage per second. Comparable for impact and for equity. Not comparable for contribution |
+| Two damage specs, on the proportional figure | Yes, but it answers a different question | Five percent of 800 and five percent of 1600 are both five percent, and are 40 and 80 damage per second |
 | Across roles, either figure | No | Normalising does not make healing and damage the same quantity. A percentage of each is still a percentage of a different thing, and dividing two incomparable numbers by their own baselines does not make them comparable to each other |
 | Bonuses that are not throughput | No | Mana returns, cooldown reductions and utility procs do not produce a delta of the same kind, and forcing one invents precision |
 

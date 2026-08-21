@@ -2,10 +2,8 @@
 title: Destruction Warlock, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2051.4 ± 1.13 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 2051.4 ± 1.13 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2051.4 ± 1.13     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2051.4 ± 1.13     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-A Destruction Warlock can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and dagger alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty. Tempest of Chaos is taken first by the Arcane Mage, and first is an ordering rather than an exclusion: the warlocks' lists rank it too, so its rows measure what this spec holds once the mage is served.
+A Destruction Warlock can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot. The Brilliant Wizard Oil applies to any weapon, staff and dagger alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty. Tempest of Chaos is taken first by the Arcane Mage, and first is an ordering rather than an exclusion: the warlocks' lists rank it too, so its rows measure what this spec holds once the mage is served.
 
 | Main hand                                     | Off hand                        | DPS           | Against this set |
 |-----------------------------------------------|---------------------------------|---------------|------------------|
@@ -208,7 +208,13 @@ The best combination, Fang of the Leviathan with Fathomstone, measures +57.1 aga
 
 ## Trinket combinations
 
-A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation, one max-level quest and the dungeon trinket every anchor wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers. The Void Star Talisman is the one candidate only a warlock can wear, and its on-use effect is a damage shield on the demon rather than a damage statistic, so its rows price its worn spell damage alone.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one reputation, one max-level quest and the dungeon trinket every anchor wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection. The Skull of Gul'dan's haste burst meets the casting rotation on that schedule. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so its rows price its worn spell damage and a proc a hit-capped set rarely triggers. The Void Star Talisman is the one candidate only a warlock can wear, and its on-use effect is a damage shield on the demon rather than a damage statistic, so its rows price its worn spell damage alone.
 
 The ten best of the 28 combinations measured, and the worn pair.
 

@@ -1344,10 +1344,11 @@ def main() -> int:
                          "what `just sim` sends, so the figures file holds "
                          "all three tiers rather than one run's worth.")
     ap.add_argument("--armor", type=int, default=DEFAULT_ARMOR,
-                    help=f"boss armor. Default {DEFAULT_ARMOR}, the lower of the "
-                         "two Phase 3 tiers, which ten of the fourteen bosses "
-                         "sit in. data/facts/boss-armor.yaml holds one row per "
-                         "boss with a source each. --out stamps the value used")
+                    help=f"boss armor. Default {DEFAULT_ARMOR}, the highest "
+                         "Phase 3 tier, per the guild lead's ruling; ten of "
+                         "the fourteen bosses sit at 6193. "
+                         "data/facts/boss-armor.yaml holds one row per boss "
+                         "with a source each. --out stamps the value used")
     ap.add_argument("--seconds", type=int, default=ENCOUNTER_SECONDS,
                     help=f"encounter length. Default {ENCOUNTER_SECONDS}, the "
                          "ruling of 14 August 2026. A figure produced at any "

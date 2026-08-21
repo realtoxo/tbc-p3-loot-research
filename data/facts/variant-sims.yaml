@@ -29,13 +29,11 @@ specs:
     why: 'An Enhancement Shaman carries a Windfury imbue in each hand, pairs two
       weapons of the same speed, and wants them slow. The set above wears the pair
       its published source ranked, so each row below is THIS PROFILE with only the
-      two weapon ids replaced: the slot keeps its Mongoose, and the consumables,
-      buffs and seed hold still, so every figure is directly comparable with the
-      one at the top of this page. The table is an enumeration: every matched-speed
-      pairing the slow one-hand field supports, and the field is the spec''s shortlist
-      together with every weapon an anchor wears. The character is a Draenei, so
-      no row inherits the Orc axe privilege the published lists assume. The weapons
-      run unsynced.'
+      two weapon ids replaced: the slot keeps its Mongoose. The table is an enumeration:
+      every matched-speed pairing the slow one-hand field supports, and the field
+      is the spec''s shortlist together with every weapon an anchor wears. The character
+      is a Draenei, so no row inherits the Orc axe privilege the published lists
+      assume. The weapons run unsynced.'
     anchors:
       entry:
       - main_hand:
@@ -1608,21 +1606,12 @@ specs:
         dps: 2040.6
         standard_error: 0.88
         stdev: 87.8
-    trinkets_why: 'A trinket is worth one thing beside an attack power partner and
-      another beside an armor penetration one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
-      Trinket ladder for this spec, from Gruul''s Lair, the raids above it, the
-      badge vendor, the Darkmoon Faire, one max-level quest and one reputation,
-      and every pair from that pool was measured, so the table is an enumeration
-      rather than a selection; the ten best appear below, with the worn pair beside
-      them. An on-use trinket is activated on the simulator''s own schedule. The
-      Ashtongue Talisman of Vision carries no worn statistics, so everything its
-      rows measure is the simulator''s pricing of its procs. Madness of the Betrayer
-      carries armor penetration, which moves with the boss''s armor, and these figures
-      are at the armor tier ten of the fourteen bosses sit in.'
+    trinkets_why: The candidates are every max-level trinket on the EP Workbook's
+      Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge
+      vendor, the Darkmoon Faire, one max-level quest and one reputation, and every
+      pair from that pool was measured, so the table is an enumeration rather than
+      a selection. The Ashtongue Talisman of Vision carries no worn statistics,
+      so everything its rows measure is the simulator's pricing of its procs.
     trinket_anchors:
       entry:
       - trinket_1:
@@ -2202,13 +2191,11 @@ specs:
   retribution_paladin:
     why: 'A Retribution Paladin always carries a two-hander, so every row below
       is a single weapon and the off hand runs empty. Each row is THIS PROFILE with
-      only the main hand id replaced: the slot keeps its Mongoose, and the consumables,
-      buffs and seed hold still, so every figure is directly comparable with the
-      one at the top of this page. The table is an enumeration of the EP Workbook''s
-      Two Hand ladder for this spec together with every worn and routed weapon,
-      kept to the weapon classes a paladin wields. Cataclysm''s Edge appears as
-      a measurement only: it goes to the Arms Warrior, and Torch of the Damned stays
-      with this spec.'
+      only the main hand id replaced: the slot keeps its Mongoose. The table is
+      an enumeration of the EP Workbook''s Two Hand ladder for this spec together
+      with every worn and routed weapon, kept to the weapon classes a paladin wields.
+      Cataclysm''s Edge appears as a measurement only: it goes to the Arms Warrior,
+      and Torch of the Damned stays with this spec.'
     anchors:
       entry:
       - main_hand:
@@ -2733,19 +2720,10 @@ specs:
         dps: 1572.7
         standard_error: 2.71
         stdev: 271.2
-    trinkets_why: 'A trinket is worth one thing beside an attack power partner and
-      another beside an armor penetration one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
+    trinkets_why: The candidates are every max-level trinket on the EP Workbook's
       Trinket ladder for this spec, from Karazhan, the raids above it, the badge
       vendor and one max-level quest, and every pair from that pool was measured,
-      so the table is an enumeration rather than a selection; the ten best appear
-      below, with the worn pair beside them. An on-use trinket is activated on the
-      simulator''s own schedule. Madness of the Betrayer carries armor penetration,
-      which moves with the boss''s armor, and these figures are at the armor tier
-      ten of the fourteen bosses sit in.'
+      so the table is an enumeration rather than a selection.
     trinket_anchors:
       entry:
       - trinket_1:
@@ -3326,16 +3304,14 @@ specs:
     why: 'A Fury Warrior considers only one-handers and main handers, so every row
       below is a main hand with an off hand and no row is a two-hander. Each row
       is THIS PROFILE with only the two weapon ids replaced: each slot keeps its
-      Mongoose, and the consumables, buffs and seed hold still, so every figure
-      is directly comparable with the one at the top of this page. The table is
-      an enumeration of the EP Workbook''s Main Hand and Off Hand ladders for this
-      spec together with every worn and routed weapon, kept to the weapon classes
-      a warrior dual-wields, and every ordered pairing the field supports is a row.
-      A row of two copies of one item needs both copies before it is wearable. The
-      Warglaives of Azzinoth are ranked first by this spec''s published Phase 3
-      list and by the Combat Rogue''s, the raid holds one pair, and which of the
-      two receives it is open council business, which is why this spec carries a
-      best-in-slot set both with and without them.'
+      Mongoose. The table is an enumeration of the EP Workbook''s Main Hand and
+      Off Hand ladders for this spec together with every worn and routed weapon,
+      kept to the weapon classes a warrior dual-wields, and every ordered pairing
+      the field supports is a row. A row of two copies of one item needs both copies
+      before it is wearable. The Warglaives of Azzinoth are ranked first by this
+      spec''s published Phase 3 list and by the Combat Rogue''s, the raid holds
+      one pair, and which of the two receives it is open council business, which
+      is why this spec carries a best-in-slot set both with and without them.'
     anchors:
       entry:
       - main_hand:
@@ -32396,22 +32372,13 @@ specs:
         dps: 2152.8
         standard_error: 1.04
         stdev: 104.5
-    trinkets_why: 'A trinket is worth one thing beside an attack power partner and
-      another beside an armor penetration one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
-      Trinket ladder for this spec, from Gruul''s Lair, the raids above it, the
-      badge vendor, the Darkmoon Faire and one max-level quest, and every pair from
-      that pool was measured, so the table is an enumeration rather than a selection;
-      the ten best appear below, with the worn pair beside them. An on-use trinket
-      is activated on the simulator''s own schedule. Solarian''s Sapphire strengthens
-      the wearer''s Battle Shout for the whole party, the simulator prices that
-      effect outside the trinket slot, and these runs do not engage it, so its rows
-      price the worn stats alone and understate it. Madness of the Betrayer carries
-      armor penetration, which moves with the boss''s armor, and these figures are
-      at the armor tier ten of the fourteen bosses sit in.'
+    trinkets_why: The candidates are every max-level trinket on the EP Workbook's
+      Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge
+      vendor, the Darkmoon Faire and one max-level quest, and every pair from that
+      pool was measured, so the table is an enumeration rather than a selection.
+      Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party,
+      the simulator prices that effect outside the trinket slot, and these runs
+      do not engage it, so its rows price the worn stats alone and understate it.
     trinket_anchors:
       entry:
       - trinket_1:
@@ -33025,20 +32992,19 @@ specs:
   combat_rogue:
     why: 'A Combat Rogue carries two one-handers, so every row below is a main hand
       with an off hand and no row is a two- hander. Each row is THIS PROFILE with
-      only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables,
-      buffs and seed hold still, so every figure is directly comparable with the
-      one at the top of this page. The build is Combat Swords and the rotation is
-      built on Sinister Strike, and every row runs under that rotation, so a dagger
-      row measures the dagger inside the swords rotation rather than a dagger build,
-      and the dagger, fist and mace rows carry a stated caveat: the build''s Sword
-      Specialization talent procs only on sword strikes and does not benefit them.
-      The table is an enumeration of the EP Workbook''s Main Hand ladder for this
-      spec together with every worn and routed weapon, and every ordered pairing
-      the field supports is a row. A row of two copies of one item needs both copies
-      before it is wearable. The Warglaives of Azzinoth are ranked first by this
-      spec''s published Phase 3 list and by the Fury Warrior''s, the raid holds
-      one pair, and which of the two receives it is open council business, which
-      is why this spec carries a best-in-slot set both with and without them.'
+      only the two weapon ids replaced: each slot keeps its Mongoose. The build
+      is Combat Swords and the rotation is built on Sinister Strike, and every row
+      runs under that rotation, so a dagger row measures the dagger inside the swords
+      rotation rather than a dagger build, and the dagger, fist and mace rows carry
+      a stated caveat: the build''s Sword Specialization talent procs only on sword
+      strikes and does not benefit them. The table is an enumeration of the EP Workbook''s
+      Main Hand ladder for this spec together with every worn and routed weapon,
+      and every ordered pairing the field supports is a row. A row of two copies
+      of one item needs both copies before it is wearable. The Warglaives of Azzinoth
+      are ranked first by this spec''s published Phase 3 list and by the Fury Warrior''s,
+      the raid holds one pair, and which of the two receives it is open council
+      business, which is why this spec carries a best-in-slot set both with and
+      without them.'
     anchors:
       entry:
       - main_hand:
@@ -49476,19 +49442,10 @@ specs:
         dps: 1885.9
         standard_error: 0.73
         stdev: 73.2
-    trinkets_why: 'A trinket is worth one thing beside an attack power partner and
-      another beside an armor penetration one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
+    trinkets_why: The candidates are every max-level trinket on the EP Workbook's
       Trinket ladder for this spec, from Karazhan, the raids above it and the badge
       vendor, and every pair from that pool was measured, so the table is an enumeration
-      rather than a selection; the ten best appear below, with the worn pair beside
-      them. An on-use trinket is activated on the simulator''s own schedule. Warp-Spring
-      Coil and Madness of the Betrayer carry armor penetration, which moves with
-      the boss''s armor, and these figures are at the armor tier ten of the fourteen
-      bosses sit in.'
+      rather than a selection.
     trinket_anchors:
       entry:
       - trinket_1:
@@ -50586,14 +50543,12 @@ specs:
   arms_warrior:
     why: 'An Arms Warrior considers only two-handers, so every row below is a single
       weapon and the off hand runs empty. Each row is THIS PROFILE with only the
-      main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs
-      and seed hold still, so every figure is directly comparable with the one at
-      the top of this page. The published Phase 3 page ranks only dual Warglaives,
-      which this spec will not receive, so the table is an enumeration of the EP
-      Workbook''s Two Hand ladder for this spec together with every worn and routed
-      weapon, kept to the weapon classes a warrior wields. This spec takes Cataclysm''s
-      Edge. Torch of the Damned appears as a measurement only: it stays with the
-      Retribution Paladin.'
+      main hand id replaced: the slot keeps its Mongoose. The published Phase 3
+      page ranks only dual Warglaives, which this spec will not receive, so the
+      table is an enumeration of the EP Workbook''s Two Hand ladder for this spec
+      together with every worn and routed weapon, kept to the weapon classes a warrior
+      wields. This spec takes Cataclysm''s Edge. Torch of the Damned appears as
+      a measurement only: it stays with the Retribution Paladin.'
     anchors:
       entry:
       - main_hand:
@@ -51118,22 +51073,13 @@ specs:
         dps: 1598.3
         standard_error: 0.85
         stdev: 84.6
-    trinkets_why: 'A trinket is worth one thing beside an attack power partner and
-      another beside an armor penetration one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
-      Trinket ladder for this spec, from Gruul''s Lair, the raids above it, the
-      badge vendor, the Darkmoon Faire and one max-level quest, and every pair from
-      that pool was measured, so the table is an enumeration rather than a selection;
-      the ten best appear below, with the worn pair beside them. An on-use trinket
-      is activated on the simulator''s own schedule. Solarian''s Sapphire strengthens
-      the wearer''s Battle Shout for the whole party, the simulator prices that
-      effect outside the trinket slot, and these runs do not engage it, so its rows
-      price the worn stats alone and understate it. Madness of the Betrayer carries
-      armor penetration, which moves with the boss''s armor, and these figures are
-      at the armor tier ten of the fourteen bosses sit in.'
+    trinkets_why: The candidates are every max-level trinket on the EP Workbook's
+      Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge
+      vendor, the Darkmoon Faire and one max-level quest, and every pair from that
+      pool was measured, so the table is an enumeration rather than a selection.
+      Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party,
+      the simulator prices that effect outside the trinket slot, and these runs
+      do not engage it, so its rows price the worn stats alone and understate it.
     trinket_anchors:
       entry:
       - trinket_1:
@@ -51584,15 +51530,14 @@ specs:
       an off hand or a single two-hander with the off hand empty. These slots are
       stat sticks: the ranged weapon does the damage and no row here touches it.
       Each row is THIS PROFILE with only the weapon ids replaced: a filled slot
-      keeps its enchant, and the consumables, buffs and seed hold still, so every
-      figure is directly comparable with the one at the top of this page. Holding
-      the consumables still includes the weapon stones, which the hunters choose
-      by the WORN weapon''s class, so a candidate whose class differs from the worn
-      weapon runs under the capture''s stone rather than its own. The table is an
-      enumeration of the EP Workbook''s One Hand and Two Hand ladders for this spec
-      together with every worn and routed weapon, kept to the weapon classes a hunter
-      wields and holding no crafted weapon, and the 41/20/0 build carries no weapon
-      specialization talent, so no class is favored.'
+      keeps its enchant. Holding the consumables still includes the weapon stones,
+      which the hunters choose by the WORN weapon''s class, so a candidate whose
+      class differs from the worn weapon runs under the capture''s stone rather
+      than its own. The table is an enumeration of the EP Workbook''s One Hand and
+      Two Hand ladders for this spec together with every worn and routed weapon,
+      kept to the weapon classes a hunter wields and holding no crafted weapon,
+      and the 41/20/0 build carries no weapon specialization talent, so no class
+      is favored.'
     anchors:
       entry:
       - main_hand:
@@ -52803,8 +52748,7 @@ specs:
         stdev: 85.4
     ranged_why: 'The bow is the one hunter weapon that is not a stat stick, so it
       gets its own pass: each row below is THIS PROFILE with only the ranged slot
-      changed, the slot keeping its scope, so every figure is directly comparable
-      with the one at the top of this page. The candidates are the workbook''s own
+      changed, the slot keeping its scope. The candidates are the workbook''s own
       Ranged ladder plus the worn weapons, none carries a socket, and the ammunition
       and quiver hold still across the rows.'
     ranged_anchors:
@@ -52931,20 +52875,12 @@ specs:
         dps: 3273.9
         standard_error: 0.94
         stdev: 94.0
-    trinkets_why: 'A trinket is worth one thing beside a flat attack power partner
-      and another beside a proc, so the two slots are measured together: every row
-      below is THIS PROFILE with only the two trinket ids replaced, and a trinket
-      carries no enchant and no gem, so the consumables, buffs and seed hold still
-      and every figure is directly comparable with the one at the top of this page.
-      The candidates are every max-level trinket on the EP Workbook''s Trinket ladder
-      for this spec, from Gruul''s Lair, the raids above it, the badge vendor, the
-      Darkmoon Faire and one max-level quest, and every pair from that pool was
-      measured, so the table is an enumeration rather than a selection; the ten
-      best appear below, with the worn pair beside them. An on-use trinket is activated
-      on the simulator''s own schedule. Talon of Al''ar carries no worn stats, so
-      its rows measure the simulator''s pricing of its proc alone. Madness of the
-      Betrayer carries armor penetration, which moves with the boss''s armor, and
-      these figures are at the armor tier ten of the fourteen bosses sit in.'
+    trinkets_why: The candidates are every max-level trinket on the EP Workbook's
+      Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge
+      vendor, the Darkmoon Faire and one max-level quest, and every pair from that
+      pool was measured, so the table is an enumeration rather than a selection.
+      Talon of Al'ar carries no worn stats, so its rows measure the simulator's
+      pricing of its proc alone.
     trinket_anchors:
       entry:
       - trinket_1:
@@ -53738,16 +53674,14 @@ specs:
       stat carries more than its line for this spec: Expose Weakness is self-applied
       and scales with this hunter''s own agility, so a candidate that moves agility
       moves the debuff with it. Each row is THIS PROFILE with only the weapon ids
-      replaced: a filled slot keeps its enchant, and the consumables, buffs and
-      seed hold still, so every figure is directly comparable with the one at the
-      top of this page. Holding the consumables still includes the weapon stones,
-      which the hunters choose by the WORN weapon''s class, so a candidate whose
-      class differs from the worn weapon runs under the capture''s stone rather
-      than its own. The table is an enumeration of the EP Workbook''s One Hand and
-      Two Hand ladders for this spec together with every worn and routed weapon,
-      kept to the weapon classes a hunter wields and holding no crafted weapon,
-      and the 7/20/34 build carries no weapon specialization talent, so no class
-      is favored.'
+      replaced: a filled slot keeps its enchant. Holding the consumables still includes
+      the weapon stones, which the hunters choose by the WORN weapon''s class, so
+      a candidate whose class differs from the worn weapon runs under the capture''s
+      stone rather than its own. The table is an enumeration of the EP Workbook''s
+      One Hand and Two Hand ladders for this spec together with every worn and routed
+      weapon, kept to the weapon classes a hunter wields and holding no crafted
+      weapon, and the 7/20/34 build carries no weapon specialization talent, so
+      no class is favored.'
     anchors:
       entry:
       - main_hand:
@@ -57566,8 +57500,7 @@ specs:
         stdev: 76.3
     ranged_why: 'The bow is the one hunter weapon that is not a stat stick, so it
       gets its own pass: each row below is THIS PROFILE with only the ranged slot
-      changed, the slot keeping its scope, so every figure is directly comparable
-      with the one at the top of this page. The candidates are the workbook''s own
+      changed, the slot keeping its scope. The candidates are the workbook''s own
       Ranged ladder plus the worn weapons, none carries a socket, and the ammunition
       and quiver hold still across the rows.'
     ranged_anchors:
@@ -57694,24 +57627,16 @@ specs:
         dps: 2687.7
         standard_error: 0.89
         stdev: 89.2
-    trinkets_why: 'A trinket is worth one thing beside a flat attack power partner
-      and another beside a proc, so the two slots are measured together: every row
-      below is THIS PROFILE with only the two trinket ids replaced, and a trinket
-      carries no enchant and no gem, so the consumables, buffs and seed hold still
-      and every figure is directly comparable with the one at the top of this page.
-      The candidates are every max-level trinket on the EP Workbook''s Trinket ladder
-      for this spec, from Gruul''s Lair, the raids above it, the badge vendor, the
-      Darkmoon Faire, one max-level quest and one Apexis Crystal charge, and every
-      pair from that pool was measured, so the table is an enumeration rather than
-      a selection; the ten best appear below, with the worn pair beside them. An
-      on-use trinket is activated on the simulator''s own schedule. One stat carries
-      more than its line for this spec: Expose Weakness scales with this hunter''s
-      own agility, so the on-use agility of Badge of Tenacity feeds the debuff as
-      well as the wearer, which is why this spec''s ladder is the one melee ladder
-      that ranks it. Talon of Al''ar carries no worn stats, so its rows measure
-      the simulator''s pricing of its proc alone. Madness of the Betrayer carries
-      armor penetration, which moves with the boss''s armor, and these figures are
-      at the armor tier ten of the fourteen bosses sit in.'
+    trinkets_why: 'The candidates are every max-level trinket on the EP Workbook''s
+      Trinket ladder for this spec, from Gruul''s Lair, the raids above it, the
+      badge vendor, the Darkmoon Faire, one max-level quest and one Apexis Crystal
+      charge, and every pair from that pool was measured, so the table is an enumeration
+      rather than a selection. One stat carries more than its line for this spec:
+      Expose Weakness scales with this hunter''s own agility, so the on-use agility
+      of Badge of Tenacity feeds the debuff as well as the wearer, which is why
+      this spec''s ladder is the one melee ladder that ranks it. Talon of Al''ar
+      carries no worn stats, so its rows measure the simulator''s pricing of its
+      proc alone.'
     trinket_anchors:
       entry:
       - trinket_1:
@@ -58745,18 +58670,16 @@ specs:
       with the off hand empty or a main hand with an off-hand frill that is not
       a weapon. Each row is THIS PROFILE with only the weapon slots changed: the
       main hand keeps its Soulfrost, which a staff row inherits because the enchant
-      belongs to the slot, and the consumables, buffs and seed hold still, so every
-      figure is directly comparable with the one at the top of this page. The Brilliant
-      Wizard Oil applies to any weapon, staff and dagger alike, and a frill takes
-      no imbue, so nothing about the consumables varies across the rows. The table
-      is an enumeration of the EP Workbook''s Two Hand, One Hand and Off Hand ladders
-      for this spec together with every worn and routed weapon, and no candidate
-      carries a socket. Zhar''doom goes to the warlocks, the Balance Druid, the
-      Elemental Shaman and the Shadow Priest, and its wearers hold no off hand,
-      which is why the best-in-slot anchor wears it with the off-hand slot empty.
-      Tempest of Chaos is taken first by the Arcane Mage, and first is an ordering
-      rather than an exclusion: the warlocks'' lists rank it too, so its rows measure
-      what this spec holds once the mage is served.'
+      belongs to the slot. The Brilliant Wizard Oil applies to any weapon, staff
+      and dagger alike, and a frill takes no imbue, so nothing about the consumables
+      varies across the rows. The table is an enumeration of the EP Workbook''s
+      Two Hand, One Hand and Off Hand ladders for this spec together with every
+      worn and routed weapon, and no candidate carries a socket. Zhar''doom goes
+      to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest,
+      and its wearers hold no off hand, which is why the best-in-slot anchor wears
+      it with the off-hand slot empty. Tempest of Chaos is taken first by the Arcane
+      Mage, and first is an ordering rather than an exclusion: the warlocks'' lists
+      rank it too, so its rows measure what this spec holds once the mage is served.'
     anchors:
       entry:
       - main_hand:
@@ -65805,22 +65728,16 @@ specs:
         dps: 1910.1
         standard_error: 0.91
         stdev: 90.9
-    trinkets_why: 'A trinket is worth one thing beside a steady spell damage partner
-      and another beside an on-use haste one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
+    trinkets_why: 'The candidates are every max-level trinket on the EP Workbook''s
       Trinket ladder for this spec, from Magtheridon''s Lair, the raids above it,
       the badge vendor, the Darkmoon Faire, one reputation, one max-level quest
       and the dungeon trinket every anchor wears, and every pair from that pool
-      was measured, so the table is an enumeration rather than a selection; the
-      ten best appear below, with the worn pair beside them. An on-use trinket is
-      activated on the simulator''s own schedule, which is how The Skull of Gul''dan''s
-      haste burst meets the casting rotation. Darkmoon Card: Crusade carries no
-      worn statistics, so everything its rows measure is the simulator''s pricing
-      of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so
-      its rows price its worn spell damage and a proc a hit-capped set rarely triggers.'
+      was measured, so the table is an enumeration rather than a selection. The
+      Skull of Gul''dan''s haste burst meets the casting rotation on that schedule.
+      Darkmoon Card: Crusade carries no worn statistics, so everything its rows
+      measure is the simulator''s pricing of its stacking proc. Eye of Magtheridon
+      procs when a spell is resisted, so its rows price its worn spell damage and
+      a proc a hit-capped set rarely triggers.'
     trinket_anchors:
       entry:
       - trinket_1:
@@ -66854,18 +66771,16 @@ specs:
       with the off hand empty or a main hand with an off-hand frill that is not
       a weapon. Each row is THIS PROFILE with only the weapon slots changed: the
       main hand keeps its Soulfrost, which a staff row inherits because the enchant
-      belongs to the slot, and the consumables, buffs and seed hold still, so every
-      figure is directly comparable with the one at the top of this page. The Brilliant
-      Wizard Oil applies to any weapon, staff and dagger alike, and a frill takes
-      no imbue, so nothing about the consumables varies across the rows. The table
-      is an enumeration of the EP Workbook''s Two Hand, One Hand and Off Hand ladders
-      for this spec together with every worn and routed weapon, and no candidate
-      carries a socket. Zhar''doom goes to the warlocks, the Balance Druid, the
-      Elemental Shaman and the Shadow Priest, and its wearers hold no off hand,
-      which is why the best-in-slot anchor wears it with the off-hand slot empty.
-      Tempest of Chaos is taken first by the Arcane Mage, and first is an ordering
-      rather than an exclusion: the warlocks'' lists rank it too, so its rows measure
-      what this spec holds once the mage is served.'
+      belongs to the slot. The Brilliant Wizard Oil applies to any weapon, staff
+      and dagger alike, and a frill takes no imbue, so nothing about the consumables
+      varies across the rows. The table is an enumeration of the EP Workbook''s
+      Two Hand, One Hand and Off Hand ladders for this spec together with every
+      worn and routed weapon, and no candidate carries a socket. Zhar''doom goes
+      to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest,
+      and its wearers hold no off hand, which is why the best-in-slot anchor wears
+      it with the off-hand slot empty. Tempest of Chaos is taken first by the Arcane
+      Mage, and first is an ordering rather than an exclusion: the warlocks'' lists
+      rank it too, so its rows measure what this spec holds once the mage is served.'
     anchors:
       entry:
       - main_hand:
@@ -73914,25 +73829,19 @@ specs:
         dps: 2092.5
         standard_error: 1.15
         stdev: 114.6
-    trinkets_why: 'A trinket is worth one thing beside a steady spell damage partner
-      and another beside an on-use haste one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
+    trinkets_why: 'The candidates are every max-level trinket on the EP Workbook''s
       Trinket ladder for this spec, from Magtheridon''s Lair, the raids above it,
       the badge vendor, the Darkmoon Faire, one reputation, one max-level quest
       and the dungeon trinket every anchor wears, and every pair from that pool
-      was measured, so the table is an enumeration rather than a selection; the
-      ten best appear below, with the worn pair beside them. An on-use trinket is
-      activated on the simulator''s own schedule, which is how The Skull of Gul''dan''s
-      haste burst meets the casting rotation. Darkmoon Card: Crusade carries no
-      worn statistics, so everything its rows measure is the simulator''s pricing
-      of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so
-      its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
-      The Void Star Talisman is the one candidate only a warlock can wear, and its
-      on-use effect is a damage shield on the demon rather than a damage statistic,
-      so its rows price its worn spell damage alone.'
+      was measured, so the table is an enumeration rather than a selection. The
+      Skull of Gul''dan''s haste burst meets the casting rotation on that schedule.
+      Darkmoon Card: Crusade carries no worn statistics, so everything its rows
+      measure is the simulator''s pricing of its stacking proc. Eye of Magtheridon
+      procs when a spell is resisted, so its rows price its worn spell damage and
+      a proc a hit-capped set rarely triggers. The Void Star Talisman is the one
+      candidate only a warlock can wear, and its on-use effect is a damage shield
+      on the demon rather than a damage statistic, so its rows price its worn spell
+      damage alone.'
     trinket_anchors:
       entry:
       - trinket_1:
@@ -75241,20 +75150,19 @@ specs:
       with the off hand empty or a main hand with an off-hand frill that is not
       a weapon. Each row is THIS PROFILE with only the weapon slots changed: the
       main hand keeps its Sunfire, which a staff row inherits because the enchant
-      belongs to the slot, and the consumables, buffs and seed hold still, so every
-      figure is directly comparable with the one at the top of this page. The Brilliant
-      Wizard Oil applies to any weapon, staff and sword alike, and a frill takes
-      no imbue, so nothing about the consumables varies across the rows. The table
-      is an enumeration of the EP Workbook''s Two Hand, One Hand and Off Hand ladders
-      for this spec together with every worn and routed weapon, and no candidate
-      carries a socket. Zhar''doom is a row even though it goes to the warlocks,
-      the Balance Druid, the Elemental Shaman and the Shadow Priest, with the Arcane
-      Mage taking Tempest of Chaos first, so this spec''s best-in-slot set wears
-      the one-hander with a frill rather than the staff. The staff is measured anyway,
-      and the preference stays with the council. The table therefore carries every
-      half of the Tempest question: the warlock rounds measure what other specs
-      lose while the mage holds it, and this table measures what the mage loses
-      if it concedes it, and what the routed staff would be worth here.'
+      belongs to the slot. The Brilliant Wizard Oil applies to any weapon, staff
+      and sword alike, and a frill takes no imbue, so nothing about the consumables
+      varies across the rows. The table is an enumeration of the EP Workbook''s
+      Two Hand, One Hand and Off Hand ladders for this spec together with every
+      worn and routed weapon, and no candidate carries a socket. Zhar''doom is a
+      row even though it goes to the warlocks, the Balance Druid, the Elemental
+      Shaman and the Shadow Priest, with the Arcane Mage taking Tempest of Chaos
+      first, so this spec''s best-in-slot set wears the one-hander with a frill
+      rather than the staff. The staff is measured anyway, and the preference stays
+      with the council. The table therefore carries every half of the Tempest question:
+      the warlock rounds measure what other specs lose while the mage holds it,
+      and this table measures what the mage loses if it concedes it, and what the
+      routed staff would be worth here.'
     anchors:
       entry:
       - main_hand:
@@ -82327,26 +82235,20 @@ specs:
         dps: 2235.2
         standard_error: 0.97
         stdev: 97.3
-    trinkets_why: 'A trinket is worth one thing beside a steady spell damage partner
-      and another beside an on-use haste one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
+    trinkets_why: 'The candidates are every max-level trinket on the EP Workbook''s
       Trinket ladder for this spec, from Karazhan, Magtheridon''s Lair, the raids
       above them, the badge vendor, the Darkmoon Faire and one reputation, and every
       pair from that pool was measured, so the table is an enumeration rather than
-      a selection; the ten best appear below, with the worn pair beside them. Four
-      candidates carry an on-use effect and Arcane Power is an on-use cooldown,
-      and the simulator schedules every activation itself, so how a trinket burst
-      lines up with Arcane Power is the engine''s scheduling rather than an assumption.
-      Darkmoon Card: Crusade carries no worn statistics, so everything its rows
-      measure is the simulator''s pricing of its stacking proc. Eye of Magtheridon
-      procs when a spell is resisted, so its rows price its worn spell damage and
-      a proc a hit-capped set rarely triggers. The Serpent-Coil Braid improves the
-      mana gem the rotation already uses, and the Pendant of the Violet Eye restores
-      mana on use, so what their rows price beyond their worn statistics is mana,
-      which becomes damage only when the set runs dry.'
+      a selection. Four candidates carry an on-use effect and Arcane Power is an
+      on-use cooldown, so how a trinket burst lines up with Arcane Power is the
+      engine''s scheduling rather than an assumption. Darkmoon Card: Crusade carries
+      no worn statistics, so everything its rows measure is the simulator''s pricing
+      of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so
+      its rows price its worn spell damage and a proc a hit-capped set rarely triggers.
+      The Serpent-Coil Braid improves the mana gem the rotation already uses, and
+      the Pendant of the Violet Eye restores mana on use, so what their rows price
+      beyond their worn statistics is mana, which becomes damage only when the set
+      runs dry.'
     trinket_anchors:
       entry:
       - trinket_1:
@@ -83380,20 +83282,19 @@ specs:
       with the off hand empty or a main hand with an off-hand frill that is not
       a weapon. Each row is THIS PROFILE with only the weapon slots changed: the
       main hand keeps its Soulfrost, which a staff row inherits because the enchant
-      belongs to the slot, and the consumables, buffs and seed hold still, so every
-      figure is directly comparable with the one at the top of this page. The Superior
-      Wizard Oil applies to any weapon, staff and mace alike, and a frill takes
-      no imbue, so nothing about the consumables varies across the rows. The table
-      is an enumeration of the EP Workbook''s Two Hand, One Hand and Off Hand ladders
-      for this spec together with every worn and routed weapon, and no candidate
-      carries a socket. A priest wields daggers, one- hand maces and staves and
-      holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the
-      warlock and mage rounds price, is not a row here: the warlocks hold it in
-      principle and concede it to the Arcane Mage, where this spec cannot equip
-      it at all, so its one-hand rows draw on maces and daggers instead. Zhar''doom
-      goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow
-      Priest, and its wearers hold no off hand, which is why the best-in-slot anchor
-      wears it with the off-hand slot empty.'
+      belongs to the slot. The Superior Wizard Oil applies to any weapon, staff
+      and mace alike, and a frill takes no imbue, so nothing about the consumables
+      varies across the rows. The table is an enumeration of the EP Workbook''s
+      Two Hand, One Hand and Off Hand ladders for this spec together with every
+      worn and routed weapon, and no candidate carries a socket. A priest wields
+      daggers, one- hand maces and staves and holds any frill, and cannot wield
+      swords, so Tempest of Chaos, the sword the warlock and mage rounds price,
+      is not a row here: the warlocks hold it in principle and concede it to the
+      Arcane Mage, where this spec cannot equip it at all, so its one-hand rows
+      draw on maces and daggers instead. Zhar''doom goes to the warlocks, the Balance
+      Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no
+      off hand, which is why the best-in-slot anchor wears it with the off-hand
+      slot empty.'
     anchors:
       entry:
       - main_hand:
@@ -88894,22 +88795,15 @@ specs:
         dps: 1393.5
         standard_error: 0.26
         stdev: 26.4
-    trinkets_why: 'A trinket is worth one thing beside a steady spell damage partner
-      and another beside an on-use haste one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
+    trinkets_why: 'The candidates are every max-level trinket on the EP Workbook''s
       Trinket ladder for this spec, from Magtheridon''s Lair, the raids above it,
       the badge vendor, the Darkmoon Faire, one reputation and one max-level quest,
       and every pair from that pool was measured, so the table is an enumeration
-      rather than a selection; the ten best appear below, with the worn pair beside
-      them. An on-use trinket is activated on the simulator''s own schedule, which
-      is how The Skull of Gul''dan''s haste burst meets the casting rotation. Darkmoon
-      Card: Crusade carries no worn statistics, so everything its rows measure is
-      the simulator''s pricing of its stacking proc. Eye of Magtheridon procs when
-      a spell is resisted, so its rows price its worn spell damage and a proc a
-      hit-capped set rarely triggers.'
+      rather than a selection. The Skull of Gul''dan''s haste burst meets the casting
+      rotation on that schedule. Darkmoon Card: Crusade carries no worn statistics,
+      so everything its rows measure is the simulator''s pricing of its stacking
+      proc. Eye of Magtheridon procs when a spell is resisted, so its rows price
+      its worn spell damage and a proc a hit-capped set rarely triggers.'
     trinket_anchors:
       entry:
       - trinket_1:
@@ -89701,20 +89595,19 @@ specs:
       with the off hand empty or a main hand with an off-hand frill that is not
       a weapon. Each row is THIS PROFILE with only the weapon slots changed: the
       main hand keeps its Sunfire, which a staff row inherits because the enchant
-      belongs to the slot, and the consumables, buffs and seed hold still, so every
-      figure is directly comparable with the one at the top of this page. The Brilliant
-      Wizard Oil applies to any weapon, staff and mace alike, and a frill takes
-      no imbue, so nothing about the consumables varies across the rows. The table
-      is an enumeration of the EP Workbook''s Two Hand, One Hand and Off Hand ladders
-      for this spec together with every worn and routed weapon, and no candidate
-      carries a socket. A druid wields maces, staves, daggers and fist weapons and
-      holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the
-      warlock and mage rounds price, is not a row here: the warlocks hold it in
-      principle and concede it to the Arcane Mage, where this spec cannot equip
-      it at all, so its one-hand rows draw on maces and daggers instead. Zhar''doom
-      goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow
-      Priest, and its wearers hold no off hand, which is why the best-in-slot anchor
-      wears it with the off-hand slot empty.'
+      belongs to the slot. The Brilliant Wizard Oil applies to any weapon, staff
+      and mace alike, and a frill takes no imbue, so nothing about the consumables
+      varies across the rows. The table is an enumeration of the EP Workbook''s
+      Two Hand, One Hand and Off Hand ladders for this spec together with every
+      worn and routed weapon, and no candidate carries a socket. A druid wields
+      maces, staves, daggers and fist weapons and holds any frill, and cannot wield
+      swords, so Tempest of Chaos, the sword the warlock and mage rounds price,
+      is not a row here: the warlocks hold it in principle and concede it to the
+      Arcane Mage, where this spec cannot equip it at all, so its one-hand rows
+      draw on maces and daggers instead. Zhar''doom goes to the warlocks, the Balance
+      Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no
+      off hand, which is why the best-in-slot anchor wears it with the off-hand
+      slot empty.'
     anchors:
       entry:
       - main_hand:
@@ -94879,26 +94772,19 @@ specs:
         dps: 1639.2
         standard_error: 0.78
         stdev: 77.8
-    trinkets_why: 'A trinket is worth one thing beside a steady spell damage partner
-      and another beside an on-use haste one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
+    trinkets_why: 'The candidates are every max-level trinket on the EP Workbook''s
       Trinket ladder for this spec, from Magtheridon''s Lair, the raids above it,
       the badge vendor, the Darkmoon Faire, three reputations and one max-level
       quest, plus the dungeon trinket the entry and tier sets already wear, and
       every pair from that pool was measured, so the table is an enumeration rather
-      than a selection; the ten best appear below, with the worn pair beside them.
-      The Ashtongue Talisman of Equilibrium is in the pool because the best-in-slot
-      set wears it: it is locked to this class, and what its rows measure beyond
-      an empty slot is the simulator''s pricing of its Starfire proc. An on-use
-      trinket is activated on the simulator''s own schedule, which is how The Skull
-      of Gul''dan''s haste burst meets the casting rotation. Darkmoon Card: Crusade
-      carries no worn statistics, so everything its rows measure is the simulator''s
-      pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted,
-      so what its rows price beyond its worn spell damage moves with each anchor''s
-      distance from the hit target.'
+      than a selection. The Ashtongue Talisman of Equilibrium is in the pool because
+      the best-in-slot set wears it: it is locked to this class, and what its rows
+      measure beyond an empty slot is the simulator''s pricing of its Starfire proc.
+      The Skull of Gul''dan''s haste burst meets the casting rotation on that schedule.
+      Darkmoon Card: Crusade carries no worn statistics, so everything its rows
+      measure is the simulator''s pricing of its stacking proc. Eye of Magtheridon
+      procs when a spell is resisted, so what its rows price beyond its worn spell
+      damage moves with each anchor''s distance from the hit target.'
     trinket_anchors:
       entry:
       - trinket_1:
@@ -96207,21 +96093,20 @@ specs:
       staff with the off hand empty or a main hand with an off-hand item that is
       not a weapon. Each row is THIS PROFILE with only the weapon slots changed:
       the main hand keeps its Major Spellpower, which a staff row inherits because
-      the enchant belongs to the slot, and the consumables, buffs and seed hold
-      still, so every figure is directly comparable with the one at the top of this
-      page. The Brilliant Wizard Oil applies to any weapon, staff and mace alike,
-      and a frill or a shield takes no imbue, so nothing about the consumables varies
-      across the rows. The table is an enumeration of the EP Workbook''s Two Hand,
-      One Hand and Off Hand ladders for this spec together with every worn and routed
-      weapon, and no candidate carries a socket. A shaman wields maces, axes, staves,
-      daggers and fist weapons and cannot wield swords, so Tempest of Chaos, the
-      sword the warlock and mage rounds price, is not a row here. A shaman can also
-      carry a shield in the off hand, alone among the five Zhar''doom wearers, and
-      the workbook''s rank-two off hand for this spec, Antonidas''s Aegis of Rapt
-      Concentration from Archimonde, is a shield, so one row prices it against the
-      held frills. Zhar''doom goes to the warlocks, the Balance Druid, the Elemental
-      Shaman and the Shadow Priest, and its wearers hold no off hand, which is why
-      the best-in-slot anchor wears it with the off-hand slot empty.'
+      the enchant belongs to the slot. The Brilliant Wizard Oil applies to any weapon,
+      staff and mace alike, and a frill or a shield takes no imbue, so nothing about
+      the consumables varies across the rows. The table is an enumeration of the
+      EP Workbook''s Two Hand, One Hand and Off Hand ladders for this spec together
+      with every worn and routed weapon, and no candidate carries a socket. A shaman
+      wields maces, axes, staves, daggers and fist weapons and cannot wield swords,
+      so Tempest of Chaos, the sword the warlock and mage rounds price, is not a
+      row here. A shaman can also carry a shield in the off hand, alone among the
+      five Zhar''doom wearers, and the workbook''s rank-two off hand for this spec,
+      Antonidas''s Aegis of Rapt Concentration from Archimonde, is a shield, so
+      one row prices it against the held frills. Zhar''doom goes to the warlocks,
+      the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers
+      hold no off hand, which is why the best-in-slot anchor wears it with the off-hand
+      slot empty.'
     anchors:
       entry:
       - main_hand:
@@ -101194,25 +101079,18 @@ specs:
         dps: 1820.7
         standard_error: 0.85
         stdev: 84.7
-    trinkets_why: 'A trinket is worth one thing beside a steady spell damage partner
-      and another beside an on-use haste one, so the two slots are measured together:
-      every row below is THIS PROFILE with only the two trinket ids replaced, and
-      a trinket carries no enchant and no gem, so the consumables, buffs and seed
-      hold still and every figure is directly comparable with the one at the top
-      of this page. The candidates are every max-level trinket on the EP Workbook''s
+    trinkets_why: 'The candidates are every max-level trinket on the EP Workbook''s
       Trinket ladder for this spec, from Magtheridon''s Lair, the raids above it,
       the badge vendor, the Darkmoon Faire and one reputation, plus The Lightning
       Capacitor, which the ladder does not rank and which every one of the three
       sets wears, and every pair from that pool was measured, so the table is an
-      enumeration rather than a selection; the ten best appear below, with the worn
-      pair beside them. What The Lightning Capacitor is worth beyond an empty slot
-      is entirely the simulator''s pricing of its charge-and-discharge proc, because
-      it carries no worn statistics, and the same holds for Darkmoon Card: Crusade
-      and its stacking proc. An on-use trinket is activated on the simulator''s
-      own schedule, which is how The Skull of Gul''dan''s haste burst meets the
-      casting rotation. Eye of Magtheridon procs when a spell is resisted, so what
-      its rows price beyond its worn spell damage moves with each anchor''s distance
-      from the hit target.'
+      enumeration rather than a selection. What The Lightning Capacitor is worth
+      beyond an empty slot is entirely the simulator''s pricing of its charge-and-discharge
+      proc, because it carries no worn statistics, and the same holds for Darkmoon
+      Card: Crusade and its stacking proc. The Skull of Gul''dan''s haste burst
+      meets the casting rotation on that schedule. Eye of Magtheridon procs when
+      a spell is resisted, so what its rows price beyond its worn spell damage moves
+      with each anchor''s distance from the hit target.'
     trinket_anchors:
       entry:
       - trinket_1:

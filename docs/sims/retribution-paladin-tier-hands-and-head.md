@@ -2,10 +2,8 @@
 title: Retribution Paladin, Tier Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2040.4 ± 1.26 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 2040.4 ± 1.26 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2180.3 ± 1.33     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2461.7 ± 1.48     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-A Retribution Paladin always carries a two-hander, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The table is an enumeration of the EP Workbook's Two Hand ladder for this spec together with every worn and routed weapon, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: it goes to the Arms Warrior, and Torch of the Damned stays with this spec.
+A Retribution Paladin always carries a two-hander, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose. The table is an enumeration of the EP Workbook's Two Hand ladder for this spec together with every worn and routed weapon, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: it goes to the Arms Warrior, and Torch of the Damned stays with this spec.
 
 | Main hand                          | Off hand            | DPS           | Against this set |
 |------------------------------------|---------------------|---------------|------------------|
@@ -79,7 +79,13 @@ The best combination, Torch of the Damned alone, a two-hander, measures +44.8 ag
 
 ## Trinket combinations
 
-A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, the raids above it, the badge vendor and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule. Madness of the Betrayer carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, the raids above it, the badge vendor and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection.
 
 The ten best of the 21 combinations measured, and the worn pair.
 

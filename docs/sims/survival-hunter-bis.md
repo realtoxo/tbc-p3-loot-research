@@ -2,10 +2,8 @@
 title: Survival Hunter, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2799.8 ± 0.89 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 2799.8 ± 0.89 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 3105.9 ± 0.99     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 3618.5 ± 1.15     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-A Survival Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. One stat carries more than its line for this spec: Expose Weakness is self-applied and scales with this hunter's own agility, so a candidate that moves agility moves the debuff with it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 7/20/34 build carries no weapon specialization talent, so no class is favored.
+A Survival Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. One stat carries more than its line for this spec: Expose Weakness is self-applied and scales with this hunter's own agility, so a candidate that moves agility moves the debuff with it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 7/20/34 build carries no weapon specialization talent, so no class is favored.
 
 | Main hand                          | Off hand                      | DPS           | Against this set |
 |------------------------------------|-------------------------------|---------------|------------------|
@@ -171,11 +171,11 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Messenger of Fate                  | Claw of the Netherwing Flight | 2571.8 ± 0.76 | -228.0           |
 | Messenger of Fate                  | Talon of Azshara              | 2571.2 ± 0.76 | -228.6           |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
 ## Ranged weapons
 
-The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
+The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
 
 | Ranged                            | DPS           | Against this set |
 |-----------------------------------|---------------|------------------|
@@ -190,7 +190,13 @@ The best ranged weapon, Black Bow of the Betrayer, measures +0.9 against this se
 
 ## Trinket combinations
 
-A trinket is worth one thing beside a flat attack power partner and another beside a proc, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one Apexis Crystal charge, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. One stat carries more than its line for this spec: Expose Weakness scales with this hunter's own agility, so the on-use agility of Badge of Tenacity feeds the debuff as well as the wearer, which is why this spec's ladder is the one melee ladder that ranks it. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule. Madness of the Betrayer carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one Apexis Crystal charge, and every pair from that pool was measured, so the table is an enumeration rather than a selection. One stat carries more than its line for this spec: Expose Weakness scales with this hunter's own agility, so the on-use agility of Badge of Tenacity feeds the debuff as well as the wearer, which is why this spec's ladder is the one melee ladder that ranks it. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone.
 
 The ten best of the 36 combinations measured, and the worn pair.
 

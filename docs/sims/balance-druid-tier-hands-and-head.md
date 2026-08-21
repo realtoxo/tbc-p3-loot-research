@@ -2,10 +2,8 @@
 title: Balance Druid, Tier Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 1705.0 ± 0.83 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 1705.0 ± 0.83 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 1715.8 ± 0.83     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 1737.7 ± 0.84     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-A Balance Druid can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Sunfire, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and mace alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. A druid wields maces, staves, daggers and fist weapons and holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here: the warlocks hold it in principle and concede it to the Arcane Mage, where this spec cannot equip it at all, so its one-hand rows draw on maces and daggers instead. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
+A Balance Druid can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Sunfire, which a staff row inherits because the enchant belongs to the slot. The Brilliant Wizard Oil applies to any weapon, staff and mace alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. A druid wields maces, staves, daggers and fist weapons and holds any frill, and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here: the warlocks hold it in principle and concede it to the Arcane Mage, where this spec cannot equip it at all, so its one-hand rows draw on maces and daggers instead. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
 
 | Main hand                             | Off hand                        | DPS           | Against this set |
 |---------------------------------------|---------------------------------|---------------|------------------|
@@ -223,7 +223,13 @@ The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander,
 
 ## Trinket combinations
 
-A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, three reputations and one max-level quest, plus the dungeon trinket the entry and tier sets already wear, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. The Ashtongue Talisman of Equilibrium is in the pool because the best-in-slot set wears it: it is locked to this class, and what its rows measure beyond an empty slot is the simulator's pricing of its Starfire proc. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire, three reputations and one max-level quest, plus the dungeon trinket the entry and tier sets already wear, and every pair from that pool was measured, so the table is an enumeration rather than a selection. The Ashtongue Talisman of Equilibrium is in the pool because the best-in-slot set wears it: it is locked to this class, and what its rows measure beyond an empty slot is the simulator's pricing of its Starfire proc. The Skull of Gul'dan's haste burst meets the casting rotation on that schedule. Darkmoon Card: Crusade carries no worn statistics, so everything its rows measure is the simulator's pricing of its stacking proc. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
 
 The ten best of the 45 combinations measured, and the worn pair.
 

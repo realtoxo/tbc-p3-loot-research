@@ -33,26 +33,20 @@ list for that spec. It is what a raider walks into Phase 3 already wearing, so
 it is the floor every Phase 3 drop is measured against. Season 2 arena gear is
 in it and Season 3 is not, because Season 3 opens five days after the phase.
 
-**Tier** is the entry set with ONLY the five tier token slots reconsidered.
-Nothing else moves: the weapons, the trinkets and the other twelve slots are the
-same items the entry set wears. It exists to answer one narrow question, what
-the tier tokens alone are worth to a raider who has just walked in, and it
-answers nothing else.
+**Tier** is the entry set with ONLY the five tier token slots reconsidered;
+the weapons, trinkets and other twelve slots are the entry items.
 
 **BiS** is the full Phase 3 best-in-slot set, every slot, captured from that
 spec's published Phase 3 list and then adjusted by the guild lead's weapon and
 trinket routing where a published list gives a spec something this raid will not
 give it. It is the ceiling for one spec rather than a description of the raid.
 
-**Entry to Tier** is therefore what the tokens are worth, and **Tier to BiS** is
+**Entry to Tier** is what the tokens are worth, and **Tier to BiS** is
 what everything else is worth once the weapons and trinkets finally move. The
 two are wildly uneven per spec, which is why they are separate columns.
 
 **Every column sorts.** Click a heading to order by it, click again to reverse.
-The page loads ordered by the best-in-slot figure, highest first. Read that
-order as what each set measured and not as a ranking of the players: these
-specs run rotations written by different authors, and a spec is only strictly
-comparable with itself at another anchor.
+The page loads ordered by the best-in-slot figure, highest first.
 
 ::: {.sortable default-sort="5"}
 | Spec                        | Entry                                               | Entry to Tier | Tier                                                              | Tier to BiS | BiS                                                  | Entry to BiS |
@@ -83,16 +77,15 @@ same gear measures materially lower on a high-armor boss and a pure caster does
 not move at all. A council weighing a physical item for Black Temple is weighing
 it in a harder world than the same item for Mount Hyjal.
 
-**The gear does not change here. Only the boss does.** Every row below is that
-spec's BIS SET, exactly as the table above simulates it, re-run unchanged
-against each armor value Phase 3 contains. Nothing about the character is
-different between the three columns, so the whole spread is the boss.
+**The gear does not change here, only the boss.** Every row is that spec's
+best-in-slot set re-run against each armor value Phase 3 contains, so the
+whole spread is the boss.
 
 The table above is the 7684 column, the highest tier, because decisions here
 assume the hardest target; ten of the fourteen bosses sit at 6193 and their
 column is below.
 
-**The last column is simply the 7684 figure minus the 6193 figure**: how much
+**The last column is the 7684 figure minus the 6193 figure**: how much
 damage that spec gives up when the boss is one of the armoured ones. It sorts,
 and sorting by it splits the roster cleanly in two. Every physical spec pays,
 and the five pure casters pay nothing at all, which is the correct behaviour and

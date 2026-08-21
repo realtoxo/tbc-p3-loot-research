@@ -2,10 +2,8 @@
 title: Beast Mastery Hunter, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 3011.8 ± 0.85 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 3011.8 ± 0.85 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 3342.3 ± 0.95     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 4008.9 ± 1.15     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
+A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
@@ -66,7 +66,7 @@ The best combination, Twinblade of the Phoenix alone, a two-hander, measures +56
 
 ## Ranged weapons
 
-The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope, so every figure is directly comparable with the one at the top of this page. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
+The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
 
 | Ranged                             | DPS           | Against this set |
 |------------------------------------|---------------|------------------|
@@ -78,7 +78,13 @@ This set already carries the best ranged weapon the pass measured, which is why 
 
 ## Trinket combinations
 
-A trinket is worth one thing beside a flat attack power partner and another beside a proc, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone.
 
 The ten best of the 15 combinations measured, and the worn pair.
 
@@ -95,7 +101,7 @@ The ten best of the 15 combinations measured, and the worn pair.
 | Tsunami Talisman                | Darkmoon Card: Crusade | 2955.1 ± 0.85 | -56.7            |
 | Dragonspine Trophy              | Talon of Al'ar         | 2955.0 ± 0.83 | -56.8            |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 

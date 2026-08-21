@@ -2,10 +2,8 @@
 title: Fury Warrior, BiS without Warglaives Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2398.8 ± 1.10 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 2398.8 ± 1.10 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2735.2 ± 1.24     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 3038.7 ± 1.34     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-A Fury Warrior considers only one-handers and main handers, so every row below is a main hand with an off hand and no row is a two-hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The table is an enumeration of the EP Workbook's Main Hand and Off Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a warrior dual-wields, and every ordered pairing the field supports is a row. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Combat Rogue's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
+A Fury Warrior considers only one-handers and main handers, so every row below is a main hand with an off hand and no row is a two-hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose. The table is an enumeration of the EP Workbook's Main Hand and Off Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a warrior dual-wields, and every ordered pairing the field supports is a row. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Combat Rogue's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
 
 | Main hand                                | Off hand                      | DPS           | Against this set |
 |------------------------------------------|-------------------------------|---------------|------------------|
@@ -685,7 +685,13 @@ The best combination, Warglaive of Azzinoth with Warglaive of Azzinoth, measures
 
 ## Trinket combinations
 
-A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party, the simulator prices that effect outside the trinket slot, and these runs do not engage it, so its rows price the worn stats alone and understate it. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule. Madness of the Betrayer carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection. Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party, the simulator prices that effect outside the trinket slot, and these runs do not engage it, so its rows price the worn stats alone and understate it.
 
 The ten best of the 15 combinations measured, and the worn pair.
 
@@ -702,7 +708,7 @@ The ten best of the 15 combinations measured, and the worn pair.
 | Madness of the Betrayer         | Darkmoon Card: Crusade  | 2338.7 ± 1.08 | -60.1            |
 | Darkmoon Card: Crusade          | Bloodlust Brooch        | 2334.8 ± 1.09 | -64.0            |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
 ## The set
 

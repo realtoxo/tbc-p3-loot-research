@@ -188,8 +188,7 @@ def main() -> int:
                 f"the {', '.join(ob['replaceable_slots'])} slots: "
                 + ", ".join(f"{v['name']}"
                             for v in ob["replacements"].values())
-                + f". Every subset of those slots was run on the entry set, "
-                f"and the empty subset reproduces the "
+                + f". The empty subset reproduces the "
                 f"[entry figure](sims/{slug(spec, 'entry')}.md) of "
                 f"{figure(baseline)}.\n")
 
@@ -270,7 +269,7 @@ def main() -> int:
                 f"reconsiders the {', '.join(ts['slots'])} slot"
                 f"{'s' if len(ts['slots']) > 1 else ''}, taking "
                 + ", ".join(v["name"] for v in ts["pieces"].values())
-                + ". Every subset was run on the entry set, so the table "
+                + ". The table "
                 "prices each count of pieces and the thresholds where a "
                 "Tier 6 bonus turns on.\n")
 

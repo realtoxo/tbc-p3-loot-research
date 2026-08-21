@@ -2,10 +2,8 @@
 title: Combat Rogue, BiS without Warglaives Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2410.6 ± 0.98 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 2410.6 ± 0.98 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2708.2 ± 1.11     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2917.4 ± 1.18     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-A Combat Rogue carries two one-handers, so every row below is a main hand with an off hand and no row is a two- hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The build is Combat Swords and the rotation is built on Sinister Strike, and every row runs under that rotation, so a dagger row measures the dagger inside the swords rotation rather than a dagger build, and the dagger, fist and mace rows carry a stated caveat: the build's Sword Specialization talent procs only on sword strikes and does not benefit them. The table is an enumeration of the EP Workbook's Main Hand ladder for this spec together with every worn and routed weapon, and every ordered pairing the field supports is a row. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Fury Warrior's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
+A Combat Rogue carries two one-handers, so every row below is a main hand with an off hand and no row is a two- hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose. The build is Combat Swords and the rotation is built on Sinister Strike, and every row runs under that rotation, so a dagger row measures the dagger inside the swords rotation rather than a dagger build, and the dagger, fist and mace rows carry a stated caveat: the build's Sword Specialization talent procs only on sword strikes and does not benefit them. The table is an enumeration of the EP Workbook's Main Hand ladder for this spec together with every worn and routed weapon, and every ordered pairing the field supports is a row. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Fury Warrior's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
 
 | Main hand                                | Off hand                         | DPS           | Against this set |
 |------------------------------------------|----------------------------------|---------------|------------------|
@@ -439,7 +439,13 @@ The best combination, Warglaive of Azzinoth with Warglaive of Azzinoth, measures
 
 ## Trinket combinations
 
-A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, the raids above it and the badge vendor, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. Warp-Spring Coil and Madness of the Betrayer carry armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule. Warp-Spring Coil and Madness of the Betrayer carry armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, the raids above it and the badge vendor, and every pair from that pool was measured, so the table is an enumeration rather than a selection.
 
 The ten best of the 28 combinations measured, and the worn pair.
 
@@ -456,7 +462,7 @@ The ten best of the 28 combinations measured, and the worn pair.
 | Warp-Spring Coil                | Bloodlust Brooch        | 2355.7 ± 0.96 | -54.9            |
 | Madness of the Betrayer         | Tsunami Talisman        | 2347.1 ± 0.95 | -63.5            |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
 ## The set
 

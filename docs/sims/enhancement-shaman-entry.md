@@ -2,10 +2,8 @@
 title: Enhancement Shaman, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 1992.9 ± 0.92 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 1992.9 ± 0.92 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2188.7 ± 1.03     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2589.0 ± 1.24     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The table is an enumeration: every matched-speed pairing the slow one-hand field supports, and the field is the spec's shortlist together with every weapon an anchor wears. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
+An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose. The table is an enumeration: every matched-speed pairing the slow one-hand field supports, and the field is the spec's shortlist together with every weapon an anchor wears. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
 
 | Main hand                          | Off hand             | Pair speed | DPS           | Against this set |
 |------------------------------------|----------------------|------------|---------------|------------------|
@@ -71,11 +71,17 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 | The Decapitator                    | Gladiator's Pummeler | 2.6        | 1923.1 ± 0.84 | -69.8            |
 | Fool's Bane                        | Gladiator's Pummeler | 2.6        | 1918.9 ± 0.84 | -74.0            |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
 ## Trinket combinations
 
-A trinket is worth one thing beside an attack power partner and another beside an armor penetration one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one reputation, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. An on-use trinket is activated on the simulator's own schedule. The Ashtongue Talisman of Vision carries no worn statistics, so everything its rows measure is the simulator's pricing of its procs. Madness of the Betrayer carries armor penetration, which moves with the boss's armor, and these figures are at the armor tier ten of the fourteen bosses sit in.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire, one max-level quest and one reputation, and every pair from that pool was measured, so the table is an enumeration rather than a selection. The Ashtongue Talisman of Vision carries no worn statistics, so everything its rows measure is the simulator's pricing of its procs.
 
 The ten best of the 10 combinations measured, and the worn pair.
 
@@ -92,7 +98,7 @@ The ten best of the 10 combinations measured, and the worn pair.
 | Bloodlust Brooch                | Core of Ar'kelos       | 1942.8 ± 0.90 | -50.1            |
 | Darkmoon Card: Crusade          | Core of Ar'kelos       | 1939.2 ± 0.90 | -53.7            |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 

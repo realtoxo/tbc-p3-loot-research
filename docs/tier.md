@@ -53,7 +53,7 @@ Walking in, this spec holds **Voidheart Raiment** at 2 pieces, in the shoulder, 
 
 > Voidheart Raiment 2-piece (Tier 4, shoulder 28967 + hands 28968): Your shadow damage spells have a chance to grant you 135 bonus shadow damage for 15 sec, and your fire damage spells have a chance to grant you 135 bonus fire damage for 15 sec.
 
-The chase pieces are what the best-in-slot set wears in the shoulder, hands slots: Mantle of the Malefic, Gloves of the Malefic. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/affliction-warlock-entry.md) of 1932.8 ± 0.95.
+The chase pieces are what the best-in-slot set wears in the shoulder, hands slots: Mantle of the Malefic, Gloves of the Malefic. The empty subset reproduces the [entry figure](sims/affliction-warlock-entry.md) of 1932.8 ± 0.95.
 
 The Voidheart 2-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 1919.0 ± 0.94.
 
@@ -68,7 +68,7 @@ The best first chase piece is the **hands**, at 1919.0 ± 0.94, -13.8 against th
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/affliction-warlock-tier-hands-and-head.md) reconsiders the head, shoulder, hands, legs slots, taking Hood of the Malefic, Mantle of the Malefic, Gloves of the Malefic, Leggings of Channeled Elements. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/affliction-warlock-tier-hands-and-head.md) reconsiders the head, shoulder, hands, legs slots, taking Hood of the Malefic, Mantle of the Malefic, Gloves of the Malefic, Leggings of Channeled Elements. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Malefic 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 1920.1 ± 0.94, -12.7 against the entry set.
 
@@ -101,7 +101,7 @@ Walking in, this spec holds **Tirisfal Regalia** at 4 pieces, in the head, shoul
 
 > Tirisfal Regalia 4-piece: Your spell critical strikes grant you up to 70 spell damage for 6 sec.
 
-The chase pieces are what the best-in-slot set wears in the legs slots: Leggings of the Tempest. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/arcane-mage-entry.md) of 2301.2 ± 1.00.
+The chase pieces are what the best-in-slot set wears in the legs slots: Leggings of the Tempest. The empty subset reproduces the [entry figure](sims/arcane-mage-entry.md) of 2301.2 ± 1.00.
 
 The Tirisfal 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, legs, measures 2270.0 ± 0.96.
 
@@ -116,7 +116,7 @@ The best first chase piece is the **legs**, at 2270.0 ± 0.96, -31.2 against the
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/arcane-mage-tier-hands-and-head.md) reconsiders the hands, legs slots, taking Gloves of Tirisfal, Leggings of the Tempest. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/arcane-mage-tier-hands-and-head.md) reconsiders the hands, legs slots, taking Gloves of Tirisfal, Leggings of the Tempest. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 Read greedily off the table, the chase order is **hands, then legs**: at each count it is the added slot whose subset measures highest.
 
@@ -133,7 +133,7 @@ Walking in, this spec holds **Destroyer Battlegear** at 2 pieces, in the head, c
 
 > Destroyer Battlegear 2-piece: your Overpower ability grants 100 attack power for 5 sec
 
-The chase pieces are what the best-in-slot set wears in the head, chest slots: Onslaught Battle-Helm, Onslaught Breastplate. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/arms-warrior-entry.md) of 1909.9 ± 1.06.
+The chase pieces are what the best-in-slot set wears in the head, chest slots: Onslaught Battle-Helm, Onslaught Breastplate. The empty subset reproduces the [entry figure](sims/arms-warrior-entry.md) of 1909.9 ± 1.06.
 
 The Destroyer 2-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 1905.9 ± 1.06.
 
@@ -148,7 +148,7 @@ The best first chase piece is the **chest**, at 1905.9 ± 1.06, -4.0 against the
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/arms-warrior-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Onslaught Battle-Helm, Onslaught Shoulderblades, Onslaught Breastplate, Onslaught Gauntlets. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/arms-warrior-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Onslaught Battle-Helm, Onslaught Shoulderblades, Onslaught Breastplate, Onslaught Gauntlets. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Onslaught 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 1937.9 ± 1.07, +28.0 against the entry set.
 
@@ -183,7 +183,7 @@ Walking in, this spec holds **Nordrassil Regalia** at 4 pieces, in the head, sho
 
 > Nordrassil Regalia 4-piece: Increases your Starfire damage against targets afflicted with Moonfire or Insect Swarm by 10%.
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Thunderheart Headguard, Thunderheart Shoulderpads, Thunderheart Vest, Thunderheart Handguards. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/balance-druid-entry.md) of 1660.6 ± 0.86.
+The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Thunderheart Headguard, Thunderheart Shoulderpads, Thunderheart Vest, Thunderheart Handguards. The empty subset reproduces the [entry figure](sims/balance-druid-entry.md) of 1660.6 ± 0.86.
 
 The Nordrassil 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 1571.1 ± 0.79.
 
@@ -212,7 +212,7 @@ The best first chase piece is the **chest**, at 1571.1 ± 0.79, -89.5 against th
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/balance-druid-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Thunderheart Headguard, Thunderheart Shoulderpads, Thunderheart Vest, Thunderheart Handguards. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/balance-druid-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Thunderheart Headguard, Thunderheart Shoulderpads, Thunderheart Vest, Thunderheart Handguards. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Thunderheart 2-piece** is 2 tokens, and the best way there, chest, hands, measures 1601.7 ± 0.80, -58.9 against the entry set.
 
@@ -247,7 +247,7 @@ Walking in, this spec holds **Rift Stalker Armor** at 4 pieces, in the head, sho
 
 > Rift Stalker Armor 4-piece: Your Steady Shot ability has 5% increased critical strike chance.
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/beast-mastery-hunter-entry.md) of 3011.8 ± 0.85.
+The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves. The empty subset reproduces the [entry figure](sims/beast-mastery-hunter-entry.md) of 3011.8 ± 0.85.
 
 The Rift Stalker 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 3010.2 ± 0.85.
 
@@ -278,7 +278,7 @@ The highest subset in the round is shoulder, hands, at 3024.7 ± 0.86, +12.9 aga
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/beast-mastery-hunter-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves, Gronnstalker's Leggings. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/beast-mastery-hunter-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves, Gronnstalker's Leggings. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 3024.7 ± 0.86, +12.9 against the entry set.
 
@@ -329,7 +329,7 @@ Walking in, this spec holds **Deathmantle** at 4 pieces, in the head, shoulder, 
 
 > Deathmantle 4-piece: attacks have a chance to make your next finishing move cost no energy
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, hands, legs slots: Cursed Vision of Sargeras, Slayer's Shoulderpads, Slayer's Handguards, Slayer's Legguards. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/combat-rogue-entry.md) of 2085.9 ± 0.88.
+The chase pieces are what the best-in-slot set wears in the head, shoulder, hands, legs slots: Cursed Vision of Sargeras, Slayer's Shoulderpads, Slayer's Handguards, Slayer's Legguards. The empty subset reproduces the [entry figure](sims/combat-rogue-entry.md) of 2085.9 ± 0.88.
 
 The Deathmantle 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 2063.1 ± 0.89.
 
@@ -360,7 +360,7 @@ The highest subset in the round is shoulder, hands, legs, at 2147.9 ± 0.90, +62
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/combat-rogue-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Cursed Vision of Sargeras, Slayer's Shoulderpads, Slayer's Chestguard, Slayer's Handguards, Slayer's Legguards. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/combat-rogue-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Cursed Vision of Sargeras, Slayer's Shoulderpads, Slayer's Chestguard, Slayer's Handguards, Slayer's Legguards. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Slayer's 2-piece** is 2 tokens, and the best way there, hands, legs, measures 2138.7 ± 0.90, +52.8 against the entry set.
 
@@ -409,7 +409,7 @@ Walking in, this spec holds **Corruptor Raiment** at 3 pieces, in the head, shou
 
 > Corruptor Raiment 2-piece: Causes your pet to be healed for 15% of the damage you deal
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, legs slots: Hood of the Malefic, Mantle of the Malefic, Leggings of Channeled Elements. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/destruction-warlock-entry.md) of 2051.4 ± 1.13.
+The chase pieces are what the best-in-slot set wears in the head, shoulder, legs slots: Hood of the Malefic, Mantle of the Malefic, Leggings of Channeled Elements. The empty subset reproduces the [entry figure](sims/destruction-warlock-entry.md) of 2051.4 ± 1.13.
 
 The Corruptor 2-piece cannot survive 2 chase pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, legs, measures 2042.7 ± 1.13.
 
@@ -428,7 +428,7 @@ The best first chase piece is the **legs**, at 2047.9 ± 1.14, -3.5 against the 
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/destruction-warlock-tier-hands-and-head.md) reconsiders the head, shoulder, hands, legs slots, taking Hood of the Malefic, Mantle of the Malefic, Gloves of the Malefic, Leggings of Channeled Elements. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/destruction-warlock-tier-hands-and-head.md) reconsiders the head, shoulder, hands, legs slots, taking Hood of the Malefic, Mantle of the Malefic, Gloves of the Malefic, Leggings of Channeled Elements. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Malefic 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 2079.3 ± 1.18, +27.9 against the entry set.
 
@@ -461,7 +461,7 @@ Walking in, this spec holds **Cataclysm Regalia** at 2 pieces, in the chest, leg
 
 > Cyclone Regalia 2-piece: Your Wrath of Air Totem ability grants an additional 20 spell damage. (Tier 4, held on the worn head plus shoulder; recorded 2026-08-09, closing the set_bonus_bookkeeping_gap noted in the off-piece audit)
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Skyshatter Headguard, Skyshatter Mantle, Skyshatter Breastplate, Leggings of Channeled Elements. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/elemental-shaman-entry.md) of 1718.8 ± 0.89.
+The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Skyshatter Headguard, Skyshatter Mantle, Skyshatter Breastplate, Leggings of Channeled Elements. The empty subset reproduces the [entry figure](sims/elemental-shaman-entry.md) of 1718.8 ± 0.89.
 
 Breaking the Cataclysm 2-piece first pays at 1 chase piece: the best subset that breaks it, legs, measures 1713.1 ± 0.94, against 1710.1 ± 0.88 for the best that keeps it, shoulder.
 
@@ -492,7 +492,7 @@ The highest subset in the round is shoulder, chest, at 1741.4 ± 0.87, +22.6 aga
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/elemental-shaman-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Skyshatter Headguard, Skyshatter Mantle, Skyshatter Breastplate, Skyshatter Gauntlets, Leggings of Channeled Elements. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/elemental-shaman-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Skyshatter Headguard, Skyshatter Mantle, Skyshatter Breastplate, Skyshatter Gauntlets, Leggings of Channeled Elements. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Skyshatter 2-piece** is 2 tokens, and the best way there, chest, hands, measures 1752.3 ± 0.88, +33.5 against the entry set.
 
@@ -543,7 +543,7 @@ Walking in, this spec holds **Cataclysm Harness** at 4 pieces, in the head, ches
 
 > Cataclysm Harness 4-piece: You gain 5% additional haste from your Flurry ability.
 
-The chase pieces are what the best-in-slot set wears in the head, chest, hands, legs slots: Cursed Vision of Sargeras, Midnight Chestguard, Fists of Mukoa, Bow-stitched Leggings. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/enhancement-shaman-entry.md) of 1992.9 ± 0.92.
+The chase pieces are what the best-in-slot set wears in the head, chest, hands, legs slots: Cursed Vision of Sargeras, Midnight Chestguard, Fists of Mukoa, Bow-stitched Leggings. The empty subset reproduces the [entry figure](sims/enhancement-shaman-entry.md) of 1992.9 ± 0.92.
 
 The Cataclysm 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 1970.2 ± 0.90.
 
@@ -582,7 +582,7 @@ Walking in, this spec holds **Destroyer Battlegear** at 4 pieces, in the head, s
 
 > Destroyer Battlegear 4-piece: your Bloodthirst and Mortal Strike abilities cost 5 less rage
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Onslaught Shoulderblades, Onslaught Breastplate, Grips of Silent Justice. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/fury-warrior-entry.md) of 2199.5 ± 1.06.
+The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Onslaught Shoulderblades, Onslaught Breastplate, Grips of Silent Justice. The empty subset reproduces the [entry figure](sims/fury-warrior-entry.md) of 2199.5 ± 1.06.
 
 The Destroyer 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 2181.0 ± 1.06.
 
@@ -611,7 +611,7 @@ The best first chase piece is the **hands**, at 2181.0 ± 1.06, -18.5 against th
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/fury-warrior-tier-hands-and-head.md) reconsiders the shoulder, chest slots, taking Onslaught Shoulderblades, Onslaught Breastplate. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/fury-warrior-tier-hands-and-head.md) reconsiders the shoulder, chest slots, taking Onslaught Shoulderblades, Onslaught Breastplate. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Onslaught 2-piece** is 2 tokens, and the best way there, shoulder, chest, measures 2178.4 ± 1.08, -21.1 against the entry set.
 
@@ -630,7 +630,7 @@ Walking in, this spec holds **Crystalforge Battlegear** at 2 pieces, in the head
 
 > Crystalforge Battlegear 2-piece: Reduces the cost of your Judgements by 35.
 
-The chase pieces are what the best-in-slot set wears in the head, chest slots: Cursed Vision of Sargeras, Bulwark of the Ancient Kings. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/retribution-paladin-entry.md) of 2041.3 ± 1.26.
+The chase pieces are what the best-in-slot set wears in the head, chest slots: Cursed Vision of Sargeras, Bulwark of the Ancient Kings. The empty subset reproduces the [entry figure](sims/retribution-paladin-entry.md) of 2041.3 ± 1.26.
 
 The Crystalforge 2-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 2040.2 ± 1.28.
 
@@ -653,7 +653,7 @@ Walking in, this spec holds **Avatar Regalia** at 2 pieces, in the head, chest s
 
 > Avatar Regalia 2-piece held (Hood of the Avatar + Shroud of the Avatar). Exact 2.4.3 tooltip wording/values for this bonus could not be independently verified this pass (see notes.uncertain) and are not asserted here.
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, feet slots: Hood of Absolution, Shoulderpads of Absolution, Shroud of Absolution, Slippers of the Seacaller. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/shadow-priest-entry.md) of 1452.1 ± 0.26.
+The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, feet slots: Hood of Absolution, Shoulderpads of Absolution, Shroud of Absolution, Slippers of the Seacaller. The empty subset reproduces the [entry figure](sims/shadow-priest-entry.md) of 1452.1 ± 0.26.
 
 Breaking the Avatar 2-piece first pays at 2 chase pieces: the best subset that breaks it, shoulder, chest, measures 1446.1 ± 0.27, against 1436.4 ± 0.26 for the best that keeps it, shoulder, feet.
 
@@ -682,7 +682,7 @@ The best first chase piece is the **shoulder**, at 1446.2 ± 0.26, -5.9 against 
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/shadow-priest-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Hood of Absolution, Shoulderpads of Absolution, Shroud of Absolution, Handguards of Absolution. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/shadow-priest-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Hood of Absolution, Shoulderpads of Absolution, Shroud of Absolution, Handguards of Absolution. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Absolution 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 1448.2 ± 0.26, -3.9 against the entry set.
 
@@ -717,7 +717,7 @@ Walking in, this spec holds **Rift Stalker Armor** at 4 pieces, in the head, sho
 
 > Rift Stalker Armor 4-piece: Your Steady Shot ability has 5% increased critical strike chance.
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Bow-stitched Leggings. Every subset of those slots was run on the entry set, and the empty subset reproduces the [entry figure](sims/survival-hunter-entry.md) of 2529.1 ± 0.79.
+The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Bow-stitched Leggings. The empty subset reproduces the [entry figure](sims/survival-hunter-entry.md) of 2529.1 ± 0.79.
 
 The Rift Stalker 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, shoulder, measures 2514.8 ± 0.80.
 
@@ -746,7 +746,7 @@ The best first chase piece is the **shoulder**, at 2514.8 ± 0.80, -14.3 against
 
 ### The Tier 6 chase
 
-The [tier anchor](sims/survival-hunter-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves, Shady Dealer's Pantaloons. Every subset was run on the entry set, so the table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
+The [tier anchor](sims/survival-hunter-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves, Shady Dealer's Pantaloons. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
 The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 2537.6 ± 0.80, +8.5 against the entry set.
 

@@ -2,10 +2,8 @@
 title: Elemental Shaman, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 1718.8 ± 0.89 damage per second. Below is
-  everything that produced that figure: the gear worn slot by slot, the
-  consumables, the buffs and debuffs, the talents, the rotation and the
-  encounter.
+  This simulation profile measures 1718.8 ± 0.89 damage per second, and this
+  page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
 ---
@@ -44,9 +42,11 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 1718.8 ± 0.89     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 1718.8 ± 0.89     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
 ## Weapon pairs
 
-An Elemental Shaman can carry a staff or a one-hander with a held off hand, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand item that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Major Spellpower, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and mace alike, and a frill or a shield takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. A shaman wields maces, axes, staves, daggers and fist weapons and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here. A shaman can also carry a shield in the off hand, alone among the five Zhar'doom wearers, and the workbook's rank-two off hand for this spec, Antonidas's Aegis of Rapt Concentration from Archimonde, is a shield, so one row prices it against the held frills. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
+An Elemental Shaman can carry a staff or a one-hander with a held off hand, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand item that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Major Spellpower, which a staff row inherits because the enchant belongs to the slot. The Brilliant Wizard Oil applies to any weapon, staff and mace alike, and a frill or a shield takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. A shaman wields maces, axes, staves, daggers and fist weapons and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here. A shaman can also carry a shield in the off hand, alone among the five Zhar'doom wearers, and the workbook's rank-two off hand for this spec, Antonidas's Aegis of Rapt Concentration from Archimonde, is a shield, so one row prices it against the held frills. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
 
 | Main hand                                     | Off hand                   | DPS           | Against this set |
 |-----------------------------------------------|----------------------------|---------------|------------------|
@@ -146,7 +146,13 @@ The best combination, The Nexus Key alone, a two-hander, measures +7.7 against t
 
 ## Trinket combinations
 
-A trinket is worth one thing beside a steady spell damage partner and another beside an on-use haste one, so the two slots are measured together: every row below is THIS PROFILE with only the two trinket ids replaced, and a trinket carries no enchant and no gem, so the consumables, buffs and seed hold still and every figure is directly comparable with the one at the top of this page. The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one reputation, plus The Lightning Capacitor, which the ladder does not rank and which every one of the three sets wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection; the ten best appear below, with the worn pair beside them. What The Lightning Capacitor is worth beyond an empty slot is entirely the simulator's pricing of its charge-and-discharge proc, because it carries no worn statistics, and the same holds for Darkmoon Card: Crusade and its stacking proc. An on-use trinket is activated on the simulator's own schedule, which is how The Skull of Gul'dan's haste burst meets the casting rotation. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Magtheridon's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one reputation, plus The Lightning Capacitor, which the ladder does not rank and which every one of the three sets wears, and every pair from that pool was measured, so the table is an enumeration rather than a selection. What The Lightning Capacitor is worth beyond an empty slot is entirely the simulator's pricing of its charge-and-discharge proc, because it carries no worn statistics, and the same holds for Darkmoon Card: Crusade and its stacking proc. The Skull of Gul'dan's haste burst meets the casting rotation on that schedule. Eye of Magtheridon procs when a spell is resisted, so what its rows price beyond its worn spell damage moves with each anchor's distance from the hit target.
 
 The ten best of the 15 combinations measured, and the worn pair.
 
@@ -163,7 +169,7 @@ The ten best of the 15 combinations measured, and the worn pair.
 | Xi'ri's Gift                             | The Lightning Capacitor     | 1696.2 ± 0.84 | -22.6            |
 | Sextant of Unstable Currents             | Eye of Magtheridon          | 1692.1 ± 0.82 | -26.7            |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
 ## The set
 
