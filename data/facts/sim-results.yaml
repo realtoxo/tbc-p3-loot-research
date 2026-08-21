@@ -1320,6 +1320,62 @@ the_bis_profiles_audited_against_their_own_tables:
     data/judgments/trinket-routing.yaml; the second measured case behind the profile-level
     confirmation rule in data/judgments/sim-context.yaml. A slot table prices the item
     alone; only a profile prices what it displaces.
+the_tier_break_evens:
+  measured: 2026-08-21, 10000 iterations, seed 1, armor 7684, 150 seconds, 366 runs, every row
+    in data/facts/tier-sims.yaml and the page that reads them is docs/tier.md. Every row is the
+    spec's ENTRY profile with a subset of slots replaced by its chase pieces, entry consumables
+    held still, and the empty subset reproduces each spec's entry figure in sim-figures.yaml to
+    the digit. NOT A RULING.
+  the_gem_rule_shapes_every_absolute: A replacement arrives ungemmed, the variant-sims rule, so
+    every figure understates a gemmed chase piece and the honest break-even comparison is between
+    subsets of EQUAL size, which carry the same number of empty sockets. The absolute deltas
+    against entry carry the empty sockets as a cost; the fully gemmed destination is priced by
+    the anchor figures, not by these rows.
+  the_known_case_enhancement: The Cataclysm Harness 4-piece, 5 percent additional Flurry haste,
+    holds its price to the end of the chase set. Every one of the 15 replacement subsets measures
+    BELOW the unbroken entry set, the best single chase piece is the chest at 22.7 below and the
+    full four-slot swap sits 35.7 below, so inside the equal-count comparison breaking never
+    beats keeping and the bonus is only worth breaking for gemmed pieces, which the best-in-slot
+    anchor prices at 2167.0 against the entry 1992.9.
+  the_widest_bonus_moat_balance_druid: The Nordrassil 4-piece, 10 percent Starfire damage under
+    Moonfire, is the most expensive bonus in the roster to break. The FIRST chase piece costs
+    89.5 to 124.3 DPS, one standard error 0.74 to 0.86, and even the full four-token Thunderheart
+    swap, its own 4-piece live, reads 47.0 below entry. No subset in either of its rounds reaches
+    the entry figure.
+  the_cheapest_break_combat_rogue: The Deathmantle 4-piece dies to the first chase piece and the
+    round never looks back. The subset shoulder, hands, legs measures 62.0 ABOVE entry with the 2-piece also
+    gone, ungemmed, and the full five-token Slayer chase is the roster's largest tier-six gain,
+    the 4-piece at 85.5 above entry with one standard error 0.93.
+  the_break_even_that_pays_at_two_elemental_shaman: The one spec holding TWO old 2-pieces,
+    Cataclysm chest and legs and Cyclone head and shoulder. Breaking the Cyclone 2-piece pays at
+    two chase pieces, shoulder plus chest at 1741.4 against 1707.4 for the best same-size keeper,
+    34.0 apart, because the two replacements ARE the Skyshatter 2-piece; it is one of only two
+    specs whose old-bonus round beats entry at all, at plus 22.6 ungemmed.
+  breaking_never_pays_inside_the_chase_set: For ten of the thirteen specs no old-bonus subset
+    measures above the unbroken entry set, the gem rule stated above carrying part of that.
+    Enhancement, Balance, both warriors, both warlocks, the Arcane Mage, the Retribution Paladin,
+    the Survival Hunter and the Shadow Priest at its Avatar set. Only the Combat Rogue, the
+    Elemental Shaman and the Beast Mastery Hunter, at plus 12.9 with the Gronnstalker 2-piece,
+    walk out of the round ahead of entry.
+  the_shadow_priest_holds_a_second_old_set: The entry capture's bonus list names Avatar Regalia
+    alone, and the set derivation from the item database found Shadow's Embrace beside it, the
+    Frozen Shadoweave shoulder and feet, so the round measured four bonus-carrying slots rather
+    than two. Both of its 2-pieces sit at razor break-evens, 0.2 and 9.7 apart at equal counts,
+    inside or near one standard error of 0.26.
+  the_tier_six_thresholds: 'Best route to each threshold against entry, ungemmed, one standard
+    error 0.26 to 1.18: Slayer 2pc +52.8 and 4pc +85.5 for the rogue; Onslaught 2pc +28.0 for
+    Arms and MINUS 21.1 for Fury, whose list keeps only shoulder and chest; Gronnstalker 2pc
+    +12.9 and 4pc +43.1 for Beast Mastery, +8.5 and +2.7 for Survival; Malefic 2pc MINUS 12.7
+    for Affliction and PLUS 27.9 for Destruction; Skyshatter 2pc +33.5 and 4pc +49.0 for
+    Elemental; Absolution 2pc MINUS 3.9 and 4pc +4.2 for the Shadow Priest; Thunderheart 2pc
+    MINUS 58.9 and 4pc MINUS 47.0 for Balance. Arms is the standing warning case: its best
+    two-token subset reads +28.0 while the full four-token swap reads MINUS 14.3, because the
+    head token alone costs 42.0.'
+  two_specs_have_no_tier_six_round: The Enhancement Shaman and the Retribution Paladin, whose
+    tier anchors wear their entry sets unchanged in all five token slots, because their Phase 3 lists
+    keep no tier piece there, so for them the tier question is entirely the old-bonus table.
+    The Arcane Mage nearly joins them, reconsidering only hands and legs, and its tier hands
+    are a FIFTH Tirisfal piece rather than Tier 6.
 what_is_still_open:what_is_still_open:
   a_source_checkout_matching_the_binary: The vendored binary is v0.0.116 and no such tag exists
     on the upstream repository, so a matching source checkout could not be fetched when it was
