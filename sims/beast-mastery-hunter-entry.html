@@ -175,9 +175,10 @@ and seed hold still, so every figure is directly comparable with the one
 at the top of this page. Holding the consumables still includes the
 weapon stones, which the hunters choose by the WORN weapon’s class, so a
 candidate whose class differs from the worn weapon runs under the
-capture’s stone rather than its own. The candidates are the top of the
-EP Workbook’s One Hand and Two Hand ladders for this spec, kept to the
-weapon classes a hunter wields, and the 41/20/0 build carries no weapon
+capture’s stone rather than its own. The table is an enumeration of the
+EP Workbook’s One Hand and Two Hand ladders for this spec together with
+every worn and routed weapon, kept to the weapon classes a hunter wields
+and holding no crafted weapon, and the 41/20/0 build carries no weapon
 specialization talent, so no class is favored.</p>
 <div class="table-wrap">
 <table>
@@ -203,6 +204,36 @@ specialization talent, so no class is favored.</p>
 <td>+56.1</td>
 </tr>
 <tr>
+<td>Merciless Gladiator’s Decapitator</td>
+<td><em>empty, two-hander</em></td>
+<td>3058.2 ± 0.88</td>
+<td>+46.4</td>
+</tr>
+<tr>
+<td>Legacy</td>
+<td><em>empty, two-hander</em></td>
+<td>3041.9 ± 0.87</td>
+<td>+30.1</td>
+</tr>
+<tr>
+<td>Hellforged Halberd</td>
+<td><em>empty, two-hander</em></td>
+<td>3016.7 ± 0.86</td>
+<td>+4.9</td>
+</tr>
+<tr>
+<td>Blackened Spear</td>
+<td><em>empty, two-hander</em></td>
+<td>3016.7 ± 0.86</td>
+<td>+4.9</td>
+</tr>
+<tr>
+<td>Sonic Spear</td>
+<td><em>empty, two-hander</em></td>
+<td>3012.2 ± 0.86</td>
+<td>+0.4</td>
+</tr>
+<tr>
 <td>Talon of the Phoenix <em>(this set)</em></td>
 <td>Claw of the Phoenix</td>
 <td>3011.8 ± 0.85</td>
@@ -213,6 +244,24 @@ specialization talent, so no class is favored.</p>
 <td>Talon of Azshara</td>
 <td>3008.0 ± 0.85</td>
 <td>-3.8</td>
+</tr>
+<tr>
+<td>Talon of Azshara</td>
+<td>Claw of the Phoenix</td>
+<td>3006.1 ± 0.85</td>
+<td>-5.7</td>
+</tr>
+<tr>
+<td>Talon of Azshara</td>
+<td>Talon of Azshara</td>
+<td>3002.2 ± 0.85</td>
+<td>-9.6</td>
+</tr>
+<tr>
+<td>Illidari-Bane Claymore</td>
+<td><em>empty, two-hander</em></td>
+<td>2995.6 ± 0.85</td>
+<td>-16.2</td>
 </tr>
 </tbody>
 </table>
@@ -936,10 +985,10 @@ defend, and taking theirs is one we can cite.</p>
           : 'Showing ' + shown + ' of ' + total + ' spec cards.';
         if (reset) reset.disabled = shown === total;
         if (clear) clear.disabled = shown === 0;
-        // A priority checkbox reports its own members. Half a priority showing
+        // A standing checkbox reports its own members. Half a standing showing
         // is neither checked nor unchecked, and `indeterminate` is the state
         // that says so; leaving it checked would claim every claimant at that
-        // priority is on screen when one is not.
+        // standing is on screen when one is not.
         Array.prototype.forEach.call(groups, function (group) {
           var members = membersOf(group);
           var on = 0;
@@ -955,9 +1004,9 @@ defend, and taking theirs is one we can cite.</p>
       Array.prototype.forEach.call(boxes, function (box) {
         box.addEventListener('change', apply);
       });
-      // A priority checkbox sets its own members and nothing else, so the
-      // priorities are additive: turning Priority 1 on and then Priority 2 on
-      // shows both, which is the case the council actually asks for.
+      // A standing checkbox sets its own members and nothing else, so the
+      // partition is additive: turning BIS on and then Upgrade on shows both,
+      // which is the case the council actually asks for.
       Array.prototype.forEach.call(groups, function (group) {
         group.addEventListener('change', function () {
           var state = group.checked;

@@ -161,9 +161,9 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 3323.6
-  standard_error: 0.98
-  stdev: 98.0
+  dps: 3307.2
+  standard_error: 0.97
+  stdev: 97.4
   boss_armor: 7684
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
@@ -343,9 +343,9 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 2814.4
-  standard_error: 0.9
-  stdev: 89.7
+  dps: 2799.8
+  standard_error: 0.89
+  stdev: 89.1
   boss_armor: 7684
 - profile: survival-hunter.entry
   spec: survival_hunter
@@ -469,9 +469,9 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 3704.1
-  standard_error: 1.1
-  stdev: 110.0
+  dps: 3685.7
+  standard_error: 1.09
+  stdev: 109.2
   boss_armor: 6193
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
@@ -651,9 +651,9 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 3122.3
-  standard_error: 1.0
-  stdev: 99.8
+  dps: 3105.9
+  standard_error: 0.99
+  stdev: 99.2
   boss_armor: 6193
 - profile: survival-hunter.entry
   spec: survival_hunter
@@ -777,9 +777,9 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 4287.6
-  standard_error: 1.27
-  stdev: 127.1
+  dps: 4266.4
+  standard_error: 1.26
+  stdev: 126.3
   boss_armor: 0
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
@@ -959,9 +959,9 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 3637.8
-  standard_error: 1.16
-  stdev: 115.6
+  dps: 3618.5
+  standard_error: 1.15
+  stdev: 114.9
   boss_armor: 0
 - profile: survival-hunter.entry
   spec: survival_hunter

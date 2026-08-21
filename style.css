@@ -370,15 +370,16 @@ pre code { background:none; border:none; padding:0; font-size:13px; line-height:
   padding:0; font-family:var(--mono); font-size:10px; letter-spacing:.11em;
   text-transform:uppercase; color:var(--ink-3);
 }
-/* One column per priority, so the priorities read as priorities. A flat row of
-   names with a tag beside each asked the reader to group by eye, and the
-   grouping is what a council table is actually asking about. The columns wrap
-   rather than scroll, and each is wide enough for the longest spec name. */
+/* One column per standing, BIS first and Upgrade after it, so the partition
+   reads as a partition. A flat row of names with a tag beside each asked the
+   reader to group by eye, and the grouping is what a council table is actually
+   asking about. The columns wrap rather than scroll, and each is wide enough
+   for the longest spec name. */
 .spec-filter-groups {
   display:flex; flex-wrap:wrap; gap:14px 26px; margin:10px 0 0;
 }
 .spec-filter-group { min-width:0; }
-/* The priority checkbox sits above its members and indented no further, so the
+/* The standing checkbox sits above its members and indented no further, so the
    column reads as a heading over a list rather than as a fifth sibling. */
 .spec-filter-group-head {
   display:inline-flex; align-items:center; gap:7px; cursor:pointer;
@@ -515,7 +516,7 @@ pre code { background:none; border:none; padding:0; font-size:13px; line-height:
 }
 
 /* --- spec cards:  ::: {.specs} built by filters/specs.lua ------------------
-   One card is one spec's argument for one item. Priority and upgrade lead, the
+   One card is one spec's argument for one item. Standing and upgrade lead, the
    remaining fields are labeled, and For and Against share one block so they
    read as the pair they are. Every color here was measured against its own
    background at 4.5:1 or better in both themes. */
@@ -548,32 +549,24 @@ pre code { background:none; border:none; padding:0; font-size:13px; line-height:
 /* The badge says the VALUE; this says what the value is of. It is deliberately
    quieter than the badge beside it: naming the field must not compete with the
    answer, which is still the loudest thing on the card. */
-.spec-priority-pair { display:inline-flex; align-items:stretch; }
-.spec-priority-label {
+.spec-standing-pair { display:inline-flex; align-items:stretch; }
+.spec-standing-label {
   font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.11em;
   text-transform:uppercase; white-space:nowrap; color:var(--ink-2);
   background:var(--panel-2); border:1px solid var(--rule-2); border-right:0;
   padding:4px 9px; display:inline-flex; align-items:center;
 }
-/* The priority is the unit of output, so it is the loudest thing on the card. */
-.spec-priority {
+/* The standing is the unit of output, so it is the loudest thing on the card.
+   BIS takes this loud form; Upgrade takes the quiet one below, so a reader
+   scanning a page tells the wearing claim apart without reading the words. */
+.spec-standing {
   font-family:var(--mono); font-size:14px; font-weight:700; letter-spacing:.09em;
   text-transform:uppercase; white-space:nowrap;
   background:var(--brass); color:var(--panel); padding:4px 11px;
 }
-.spec-priority-none {
+.spec-standing-upgrade {
   background:var(--panel-2); color:var(--ink-2);
   border:1px dashed var(--rule-2); padding:3px 10px;
-}
-/* NOT A DECISION, AND IT MUST NOT LOOK LIKE ONE. `no priority` above IS a
-   decision and is styled as a quiet answer. This is the absence of an answer,
-   so it takes the caution tone rather than a quieter version of the same thing:
-   a reader scanning a page of claimants has to see which are still open without
-   reading the words. Measured against `--panel`, `--veto` is 4.9:1 on light and
-   5.4:1 on dark. */
-.spec-priority-undecided {
-  background:var(--veto-soft); color:var(--veto);
-  border:1px dashed var(--veto); padding:3px 10px;
 }
 /* An item no spec ranks. Set in the page's own quiet tone rather than as a
    warning: it is an ordinary answer, not a problem with the page. */
@@ -591,12 +584,6 @@ pre code { background:none; border:none; padding:0; font-size:13px; line-height:
 .delta-epv-subject { margin-left:.35em; }
 .spec-figure { font-size:1.2rem; line-height:1.3; color:var(--ink); padding:13px 20px 0; }
 .spec-figure.down { color:var(--veto); }
-/* A figure in some other unit says so directly under itself, so it is never
-   read as comparable with the damage figures beside it. */
-.spec-unit {
-  margin:10px 20px 0; padding-left:11px; border-left:2px solid var(--brass);
-  font-size:13.5px; line-height:1.5; color:var(--ink-2);
-}
 .spec-fields { padding:17px 20px 18px; display:flex; flex-direction:column; gap:13px; }
 .field { font-size:14.5px; line-height:1.5; color:var(--ink-2); }
 .field > * { max-width:none; margin:0; }
@@ -652,7 +639,7 @@ pre code { background:none; border:none; padding:0; font-size:13px; line-height:
 .delta-view { display:block; margin-bottom:4px; }
 .delta-terms { white-space:nowrap; margin-left:7px; }
 /* A baseline the raider cannot simply raid for. Brass was the wrong tone: it
-   is the emphasis color in this palette, the same one the Priority 1 badge uses, so a
+   is the emphasis color in this palette, the same one the BIS badge uses, so a
    gated label drew the eye HARDER than an obtainable one and the least
    reachable baselines read as the most important. A gated label recedes now
    instead, and the route is still named in words, which is what actually
@@ -922,25 +909,19 @@ pre code { background:none; border:none; padding:0; font-size:13px; line-height:
   font-family:var(--mono); font-size:9.5px; letter-spacing:.08em;
   text-transform:uppercase; color:var(--brass); white-space:nowrap;
 }
-.shortlist-priority {
+/* The standing, two states and no third. BIS takes the loud form because it is
+   what this spec's simulated best-in-slot set wears. */
+.shortlist-standing {
   display:inline-block; font-family:var(--mono); font-size:10.5px;
   letter-spacing:.06em; text-transform:uppercase; white-space:nowrap;
   padding:2px 8px; background:var(--brass-soft); color:var(--brass);
   border:1px solid var(--brass);
 }
-/* A decision that the answer is no. */
-.shortlist-priority-none {
+/* A claimant the best-in-slot set does not wear, including every claim of a
+   spec with no simulated set. An ordinary answer, so it takes the quiet tone. */
+.shortlist-standing-upgrade {
   background:var(--panel-2); color:var(--ink-2);
   border:1px dashed var(--rule-2);
-}
-/* This phase, and the council has not reached it. */
-.shortlist-priority-undecided {
-  background:var(--veto-soft); color:var(--veto); border:1px dashed var(--veto);
-}
-/* Not this phase, so there is no decision to wait for. Quieter than both,
-   because it is the absence of a question rather than of an answer. */
-.shortlist-priority-outside {
-  background:transparent; color:var(--ink-3); border:1px dashed var(--rule);
 }
 
 /* A claimant's name links to that spec's page. It reads as the heading it is,

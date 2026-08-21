@@ -167,11 +167,11 @@ caster does not.</p>
 is a single weapon and the off hand runs empty. Each row is THIS PROFILE
 with only the main hand id replaced: the slot keeps its Mongoose, and
 the consumables, buffs and seed hold still, so every figure is directly
-comparable with the one at the top of this page. The candidates are the
-top of the EP Workbook’s Two Hand ladder for this spec, kept to the
-weapon classes a paladin wields. Cataclysm’s Edge appears as a
-measurement only: it goes to the Arms Warrior, and Torch of the Damned
-stays with this spec.</p>
+comparable with the one at the top of this page. The table is an
+enumeration of the EP Workbook’s Two Hand ladder for this spec together
+with every worn and routed weapon, kept to the weapon classes a paladin
+wields. Cataclysm’s Edge appears as a measurement only: it goes to the
+Arms Warrior, and Torch of the Damned stays with this spec.</p>
 <div class="table-wrap">
 <table>
 <colgroup>
@@ -202,10 +202,94 @@ stays with this spec.</p>
 <td>-19.6</td>
 </tr>
 <tr>
+<td>World Breaker</td>
+<td><em>empty, two-hander</em></td>
+<td>2019.9 ± 1.28</td>
+<td>-21.4</td>
+</tr>
+<tr>
 <td>Merciless Gladiator’s Bonegrinder</td>
 <td><em>empty, two-hander</em></td>
 <td>2005.0 ± 1.25</td>
 <td>-36.3</td>
+</tr>
+<tr>
+<td>Stormherald</td>
+<td><em>empty, two-hander</em></td>
+<td>2003.4 ± 1.30</td>
+<td>-37.9</td>
+</tr>
+<tr>
+<td>Lionheart Champion</td>
+<td><em>empty, two-hander</em></td>
+<td>1999.2 ± 1.24</td>
+<td>-42.1</td>
+</tr>
+<tr>
+<td>Bloodmoon</td>
+<td><em>empty, two-hander</em></td>
+<td>1982.6 ± 1.26</td>
+<td>-58.7</td>
+</tr>
+<tr>
+<td>Merciless Gladiator’s Decapitator</td>
+<td><em>empty, two-hander</em></td>
+<td>1962.3 ± 1.25</td>
+<td>-79.0</td>
+</tr>
+<tr>
+<td>Deep Thunder</td>
+<td><em>empty, two-hander</em></td>
+<td>1956.1 ± 1.27</td>
+<td>-85.2</td>
+</tr>
+<tr>
+<td>Gladiator’s Greatsword</td>
+<td><em>empty, two-hander</em></td>
+<td>1952.4 ± 1.22</td>
+<td>-88.9</td>
+</tr>
+<tr>
+<td>Hammer of the Naaru</td>
+<td><em>empty, two-hander</em></td>
+<td>1946.1 ± 1.21</td>
+<td>-95.2</td>
+</tr>
+<tr>
+<td>Gorehowl</td>
+<td><em>empty, two-hander</em></td>
+<td>1941.4 ± 1.23</td>
+<td>-99.9</td>
+</tr>
+<tr>
+<td>Mooncleaver</td>
+<td><em>empty, two-hander</em></td>
+<td>1939.3 ± 1.23</td>
+<td>-102.0</td>
+</tr>
+<tr>
+<td>Lionheart Blade</td>
+<td><em>empty, two-hander</em></td>
+<td>1926.6 ± 1.20</td>
+<td>-114.7</td>
+</tr>
+<tr>
+<td>Gladiator’s Decapitator</td>
+<td><em>empty, two-hander</em></td>
+<td>1912.2 ± 1.22</td>
+<td>-129.1</td>
+</tr>
+<tr>
+<td>Merciless Gladiator’s Painsaw</td>
+<td><em>empty, two-hander</em></td>
+<td>1537.2 ± 2.57</td>
+<td>-504.1</td>
+</tr>
+<tr>
+<td>Gladiator’s Painsaw</td>
+<td><em>empty, two-hander</em></td>
+<td>1501.4 ± 2.52</td>
+<td>-539.9</td>
 </tr>
 </tbody>
 </table>
@@ -865,10 +949,10 @@ defend, and taking theirs is one we can cite.</p>
           : 'Showing ' + shown + ' of ' + total + ' spec cards.';
         if (reset) reset.disabled = shown === total;
         if (clear) clear.disabled = shown === 0;
-        // A priority checkbox reports its own members. Half a priority showing
+        // A standing checkbox reports its own members. Half a standing showing
         // is neither checked nor unchecked, and `indeterminate` is the state
         // that says so; leaving it checked would claim every claimant at that
-        // priority is on screen when one is not.
+        // standing is on screen when one is not.
         Array.prototype.forEach.call(groups, function (group) {
           var members = membersOf(group);
           var on = 0;
@@ -884,9 +968,9 @@ defend, and taking theirs is one we can cite.</p>
       Array.prototype.forEach.call(boxes, function (box) {
         box.addEventListener('change', apply);
       });
-      // A priority checkbox sets its own members and nothing else, so the
-      // priorities are additive: turning Priority 1 on and then Priority 2 on
-      // shows both, which is the case the council actually asks for.
+      // A standing checkbox sets its own members and nothing else, so the
+      // partition is additive: turning BIS on and then Upgrade on shows both,
+      // which is the case the council actually asks for.
       Array.prototype.forEach.call(groups, function (group) {
         group.addEventListener('change', function () {
           var state = group.checked;

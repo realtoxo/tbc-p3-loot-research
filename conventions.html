@@ -92,7 +92,7 @@ means.</p>
 <tr>
 <td><strong>Spec</strong></td>
 <td>A class and talent configuration, such as Feral Bear or Combat
-Rogue. The claiming entity. Every priority and every comparison in this
+Rogue. The claiming entity. Every standing and every comparison in this
 compendium is per spec. If the raid runs two players of one spec, which
 of them receives an item is a council judgment, not something this
 compendium models.</td>
@@ -104,9 +104,10 @@ than a match, so it excludes little; stat relevance does the
 filtering.</td>
 </tr>
 <tr>
-<td><strong>Priority</strong></td>
-<td>How strongly one spec wants one item, on the four-step scale below.
-The unit of output.</td>
+<td><strong>Standing</strong></td>
+<td>What an item is to a spec, on the two-level scale below: BIS or
+Upgrade. Derived from the simulated sets and the claimant rule, never
+judged per item.</td>
 </tr>
 <tr>
 <td><strong>Blocker</strong></td>
@@ -132,12 +133,12 @@ provisional, and it moves as the raid gears up.</td>
 </tbody>
 </table>
 </div>
-<h2 id="priorities">Priorities</h2>
-<p>A spec either has a priority on an item or it does not. There is no
-priority for warning somebody off: where a spec could equip an item and
-should not receive it, that is a fact about the item and belongs in the
-reason, not in the scale. The scale measures wanting. Everything else is
-comment.</p>
+<h2 id="standing-bis-and-upgrade">Standing: BIS and Upgrade</h2>
+<p>A spec either has a claim on an item or it does not, and every claim
+carries one of two standings. The scale replaced the earlier four-step
+priority scale on 20 August 2026, when the simulated best-in-slot sets
+became measured and ruling-complete, because a derived label the whole
+pipeline enforces beats a judged one the council had to maintain.</p>
 <div class="table-wrap">
 <table>
 <colgroup>
@@ -147,50 +148,47 @@ comment.</p>
 </colgroup>
 <thead>
 <tr>
-<th>Priority</th>
+<th>Standing</th>
 <th>Meaning</th>
-<th>What the council does with it</th>
+<th>Where it comes from</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Priority 0</strong></td>
-<td>The raid’s best use of this drop. Large gain, and it holds its value
-into later phases.</td>
-<td>Route here first. A Priority 0 that goes elsewhere needs a stated
-reason.</td>
+<td><strong>BIS</strong></td>
+<td>The spec’s best-in-slot simulated set wears this item.</td>
+<td>Derived from the spec’s best-in-slot profile, which carries every
+routing ruling and every measured revision.</td>
 </tr>
 <tr>
-<td><strong>Priority 1</strong></td>
-<td>Strong claim. A clear upgrade the spec will hold for the phase.</td>
-<td>Normal contested-loot handling.</td>
-</tr>
-<tr>
-<td><strong>Priority 2</strong></td>
-<td>Real upgrade, but not one worth contesting.</td>
-<td>Give it out once Priority 0 and Priority 1 claims are settled.</td>
-</tr>
-<tr>
-<td><strong>Priority 3</strong></td>
-<td>Small or situational gain. Fills a weak slot, or is replaced
-soon.</td>
-<td>Free to award on need or attendance.</td>
+<td><strong>Upgrade</strong></td>
+<td>The spec is a claimant on the item, and its best-in-slot set does
+not wear it.</td>
+<td>Derived from the claimant rule: the shortlist rank, a class-locked
+relic or reputation lock, or a shared weapon set.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>No priority means no claim. That covers two situations and the reason
+<p>No claim means no standing. That covers two situations and the reason
 says which: the stats do nothing for the spec, or something the spec
-already holds is better. Both end with the spec not receiving the item,
-so they do not need separate priorities, but they do need separate
-reasons, because the council will be asked why.</p>
+already holds is better. Both end with the spec not receiving the
+item.</p>
+<p>A spec without a simulated best-in-slot set labels nothing BIS. The
+tanks, the healers and the Feral Cat have no such profile, so every
+claim those specs hold renders as an Upgrade, and that is a statement
+about what this compendium has measured rather than about the item.</p>
+<p>The standing says what an item IS to a spec. It does not say who
+receives a contested drop first: that ordering is the council’s, and
+where the council has settled one it lives in the judgment store with
+its reasons.</p>
 <p>Set bonuses do not enter here. Whether a piece would break a set the
 spec is completing is a question about tier progress and it is answered
 in <a href="framework.html#tier-sets-and-set-bonuses">Tier sets and set
-bonuses</a>, not by lowering an item’s priority. A priority says what an
-item is worth to a spec. It does not track how far through a set any
+bonuses</a>, not by lowering an item’s standing. A standing says what an
+item is to a spec. It does not track how far through a set any
 particular player happens to be.</p>
-<p><strong>Every priority carries the size of the upgrade, in both
+<p><strong>Every claim carries the size of the upgrade, in both
 forms.</strong> The raw change and the change as a percentage of what
 that spec already produces, measured against the named alternative
 rather than against nothing. Both are required. Raw alone routes every
@@ -203,8 +201,8 @@ another.</p>
 <h3 id="worked-example">Worked example</h3>
 <p>The item under discussion is <span class="item-ref"><a
 href="items/cursed-vision-of-sargeras.html" class="item-link"
-aria-describedby="item-tip-32235-1" rel="noopener noreferrer"
-target="_blank"><img src="icons/inv_misc_bandana_03.jpg"
+aria-describedby="item-tip-32235-1" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
 class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
 Sargeras</a><span id="item-tip-32235-1" class="item-tip"
 role="tooltip"><span class="item-tip-name">Cursed Vision of
@@ -222,12 +220,15 @@ href="data/facts/drops.csv"><code>drops.csv</code></a>, so no figure
 about the item is written into this prose, where it would go stale.</p>
 <p>Armor type is a ceiling rather than a match, so every class above
 leather can physically equip this. That is not what decides the
-priority. What decides it is what the spec is actually choosing between,
+standing. What decides it is what the spec is actually choosing between,
 and that is derived rather than chosen by an author.</p>
-<p>One card per claimant. Each carries a <strong>Delta</strong>: what
+<p>One card per claimant. Each leads with its <strong>Standing</strong>,
+BIS or Upgrade on the scale above, derived from the simulated sets
+rather than written here. Below it sits a <strong>Delta</strong>: what
 the spec gains by taking this item, with every stat converted at that
-spec’s own rates and each rate linked to the file it came from. Those
-tables are real. Only the priorities are illustrative.</p>
+spec’s own rates and each rate linked to the file it came from.
+Everything on a card is real, because everything on a card is
+derived.</p>
 <p>A card used to carry a written <strong>For</strong> and
 <strong>Against</strong> pair as well, arguing both sides of the item
 for that spec. The pair was filled in for one item only, this one, and
@@ -439,15 +440,15 @@ much hit each of them still needs separate them.</p>
 <h4><span class="subject-icon"><img src="icons/inv_misc_bandana_03.jpg"
 class="item-icon" loading="lazy" aria-hidden="true" /></span><span
 class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-2"
-rel="noopener noreferrer" target="_blank">Cursed Vision of
-Sargeras</a><span id="item-tip-32235-2" class="item-tip"
-role="tooltip"><span class="item-tip-name">Cursed Vision of
-Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
-leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
-stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
-(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
-Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
+class="item-link" aria-describedby="item-tip-32235-2" target="_blank"
+rel="noopener noreferrer">Cursed Vision of Sargeras</a><span
+id="item-tip-32235-2" class="item-tip" role="tooltip"><span
+class="item-tip-name">Cursed Vision of Sargeras</span><span
+class="item-tip-meta">Tier 6 · head · leather</span><span
+class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
+power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
+class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
+stamina</span><span class="item-tip-effect">On use. Sense
 Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
 Black Temple</span></span></span></h4>
 <div class="subject-lines">
@@ -637,16 +638,21 @@ first in line for it.
 <legend class="spec-filter-legend">Show spec cards</legend>
 <div class="spec-filter-groups">
 <div class="spec-filter-group">
-<label class="spec-filter-group-head"><input type="checkbox" checked data-spec-group="spec-group-1"><span class="spec-filter-group-name">not yet decided</span></label>
+<label class="spec-filter-group-head"><input type="checkbox" checked data-spec-group="spec-group-1"><span class="spec-filter-group-name">BIS</span></label>
 <ul class="spec-filter-options">
 <li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-1" aria-controls="spec-card-1" data-spec-member="spec-group-1"><span class="spec-filter-name">Combat Rogue</span></label></li>
-<li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-2" aria-controls="spec-card-2" data-spec-member="spec-group-1"><span class="spec-filter-name">Feral Cat</span></label></li>
-<li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-3" aria-controls="spec-card-3" data-spec-member="spec-group-1"><span class="spec-filter-name">Feral Bear</span></label></li>
 <li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-4" aria-controls="spec-card-4" data-spec-member="spec-group-1"><span class="spec-filter-name">Fury Warrior</span></label></li>
-<li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-5" aria-controls="spec-card-5" data-spec-member="spec-group-1"><span class="spec-filter-name">Arms Warrior</span></label></li>
 <li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-6" aria-controls="spec-card-6" data-spec-member="spec-group-1"><span class="spec-filter-name">Beast Mastery Hunter</span></label></li>
-<li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-7" aria-controls="spec-card-7" data-spec-member="spec-group-1"><span class="spec-filter-name">Survival Hunter</span></label></li>
 <li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-8" aria-controls="spec-card-8" data-spec-member="spec-group-1"><span class="spec-filter-name">Enhancement Shaman</span></label></li>
+</ul>
+</div>
+<div class="spec-filter-group">
+<label class="spec-filter-group-head"><input type="checkbox" checked data-spec-group="spec-group-2"><span class="spec-filter-group-name">Upgrade</span></label>
+<ul class="spec-filter-options">
+<li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-2" aria-controls="spec-card-2" data-spec-member="spec-group-2"><span class="spec-filter-name">Feral Cat</span></label></li>
+<li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-3" aria-controls="spec-card-3" data-spec-member="spec-group-2"><span class="spec-filter-name">Feral Bear</span></label></li>
+<li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-5" aria-controls="spec-card-5" data-spec-member="spec-group-2"><span class="spec-filter-name">Arms Warrior</span></label></li>
+<li><label class="spec-filter-option"><input type="checkbox" checked data-spec-card="spec-card-7" aria-controls="spec-card-7" data-spec-member="spec-group-2"><span class="spec-filter-name">Survival Hunter</span></label></li>
 </ul>
 </div>
 </div>
@@ -662,10 +668,9 @@ first in line for it.
 <section id="combat-rogue" class="spec-head">
 <h5><a href="specs/combat-rogue.html" class="spec-link">Combat
 Rogue</a></h5>
-<span class="spec-priority-pair"><span
-class="spec-priority-label">Priority</span><span
-class="spec-priority spec-priority-undecided">not yet
-decided</span></span>
+<span class="spec-standing-pair"><span
+class="spec-standing-label">Standing</span><span
+class="spec-standing">BIS</span></span>
 </section>
 <div class="spec-fields">
 <div class="field">
@@ -730,17 +735,16 @@ Delta
 <div class="delta-block">
 <div class="delta-head">
 <span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-3"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_misc_bandana_03.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cursed Vision of Sargeras</a><span
-id="item-tip-32235-3" class="item-tip" role="tooltip"><span
-class="item-tip-name">Cursed Vision of Sargeras</span><span
-class="item-tip-meta">Tier 6 · head · leather</span><span
-class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
-power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-effect">On use. Sense
+class="item-link" aria-describedby="item-tip-32235-3" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
+Sargeras</a><span id="item-tip-32235-3" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cursed Vision of
+Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
+stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
+(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
+Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
 Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
 Black Temple</span></span></span> <span class="delta-terms">in Combat
 Rogue terms</span> <span class="delta-epv delta-epv-subject">EPV
@@ -755,32 +759,30 @@ style="text-align: left;">Stat</th>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
 <span class="item-ref"><a href="items/slayers-helm.html"
-class="item-link" aria-describedby="item-tip-31027-4"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_102.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Slayer's Helm</a><span id="item-tip-31027-4"
-class="item-tip" role="tooltip"><span class="item-tip-name">Slayer's
-Helm</span><span class="item-tip-meta">Tier 6 · head ·
-leather</span><span class="item-tip-stats">373 armor, 45 agility, 55
-stamina, 92 attack power, 15 hit rating (0.95%), 28 crit rating
-(1.27%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
-Socket bonus 4 hit rating</span><span class="item-tip-source">Tier set
-piece, Slayer's Armor. Bought with a token, never a raid
-drop</span></span></span>
+class="item-link" aria-describedby="item-tip-31027-4" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_102.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Slayer's
+Helm</a><span id="item-tip-31027-4" class="item-tip"
+role="tooltip"><span class="item-tip-name">Slayer's Helm</span><span
+class="item-tip-meta">Tier 6 · head · leather</span><span
+class="item-tip-stats">373 armor, 45 agility, 55 stamina, 92 attack
+power, 15 hit rating (0.95%), 28 crit rating (1.27%)</span><span
+class="item-tip-sockets">Sockets meta, yellow · Socket bonus 4 hit
+rating</span><span class="item-tip-source">Tier set piece, Slayer's
+Armor. Bought with a token, never a raid drop</span></span></span>
 <span class="delta-epv">EPV 385.21</span></th>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-view delta-route-crafted delta-view-gated">Over best
 pre-phase off-piece, Engineering</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32478"
-class="item-link" aria-describedby="item-tip-32478-5"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_gizmo_newgoggles.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Deathblow X11 Goggles</a><span
-id="item-tip-32478-5" class="item-tip" role="tooltip"><span
-class="item-tip-name">Deathblow X11 Goggles</span><span
-class="item-tip-meta">Tier  · head · leather</span><span
-class="item-tip-stats">326 armor, 48 agility, 28 stamina, 76 attack
-power, 11 hit rating (0.70%)</span><span
+class="item-link" aria-describedby="item-tip-32478-5" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_gizmo_newgoggles.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Deathblow X11
+Goggles</a><span id="item-tip-32478-5" class="item-tip"
+role="tooltip"><span class="item-tip-name">Deathblow X11
+Goggles</span><span class="item-tip-meta">Tier  · head ·
+leather</span><span class="item-tip-stats">326 armor, 48 agility, 28
+stamina, 76 attack power, 11 hit rating (0.70%)</span><span
 class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
 agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
 database records the effect but not what it does, so it must be read on
@@ -793,14 +795,14 @@ Engineering</span></span></span>
 class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
 Cavern</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30146"
-class="item-link" aria-describedby="item-tip-30146-6"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_58.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Deathmantle Helm</a><span id="item-tip-30146-6"
-class="item-tip" role="tooltip"><span class="item-tip-name">Deathmantle
-Helm</span><span class="item-tip-meta">Tier 5 · head ·
-leather</span><span class="item-tip-stats">341 armor, 39 agility, 48
-stamina, 78 attack power, 25 crit rating (1.13%)</span><span
+class="item-link" aria-describedby="item-tip-30146-6" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_58.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Deathmantle
+Helm</a><span id="item-tip-30146-6" class="item-tip"
+role="tooltip"><span class="item-tip-name">Deathmantle Helm</span><span
+class="item-tip-meta">Tier 5 · head · leather</span><span
+class="item-tip-stats">341 armor, 39 agility, 48 stamina, 78 attack
+power, 25 crit rating (1.13%)</span><span
 class="item-tip-sockets">Sockets meta, red · Socket bonus 8 attack
 power, 8 ranged attack power</span><span class="item-tip-source">Tier
 set piece, Deathmantle. Bought with a token, never a raid
@@ -927,614 +929,13 @@ rating per 1% melee crit</a>
 </div>
 </div>
 </div>
-<div id="spec-card-2" class="spec">
-<section id="feral-cat" class="spec-head">
-<h5><a href="specs/feral-cat.html" class="spec-link">Feral Cat</a></h5>
-<span class="spec-priority-pair"><span
-class="spec-priority-label">Priority</span><span
-class="spec-priority spec-priority-undecided">not yet
-decided</span></span>
-</section>
-<div class="spec-fields">
-<div class="field">
-<div class="field-label">
-Constraints
-</div>
-<div class="constraint-block">
-<div class="constraint-row">
-<span class="constraint-label">Special-attack hit cap</span><span
-class="constraint-value">9%</span><span class="constraint-note">special
-attacks</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Improved Faerie Fire</span><span
-class="constraint-value">-3%</span><span
-class="constraint-note">assumed</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Gear needs</span><span
-class="constraint-value">6%</span><span class="constraint-note"></span>
-</div>
-<div class="constraint-line">
-No hit talent exists for this spec.
-</div>
-<div class="constraint-break">
-
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Entry set</span><span
-class="constraint-value">10.8%</span><span class="constraint-note">clear
-by 4.9%</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Tier set, Tier 6 shoulder and
-legs</span><span class="constraint-value">10.8%</span><span
-class="constraint-note">clear by 4.8%</span>
-</div>
-<div class="constraint-line">
-The head slot is Wolfshead Helm and the hands slot is Gloves of the
-Searing Grip, and neither is a tier piece, so this set takes neither the
-head token nor the hands token; it holds two Tier 6 pieces, at the
-shoulder and the legs.
-</div>
-<div class="constraint-break">
-
-</div>
-<div class="constraint-line">
-White swings stop critting at 69.5%, measured at the special-attack hit
-cap.
-</div>
-<div class="constraint-line">
-Nothing rostered reaches it this phase, so crit stays linear all tier.
-</div>
-<div class="constraint-line">
-No haste threshold to protect.
-</div>
-</div>
-</div>
-<div class="field">
-<div class="field-label">
-Delta
-</div>
-<div class="delta-block">
-<div class="delta-head">
-<span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-7"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_misc_bandana_03.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cursed Vision of Sargeras</a><span
-id="item-tip-32235-7" class="item-tip" role="tooltip"><span
-class="item-tip-name">Cursed Vision of Sargeras</span><span
-class="item-tip-meta">Tier 6 · head · leather</span><span
-class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
-power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-effect">On use. Sense
-Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
-Black Temple</span></span></span> <span class="delta-terms">in Feral Cat
-terms</span> <span class="delta-epv delta-epv-subject">EPV 436.76</span>
-</div>
-<div class="delta-grid">
-<table>
-<thead>
-<tr>
-<th rowspan="2" class="delta-stat-head"
-style="text-align: left;">Stat</th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-crafted delta-view-gated">Over best
-pre-phase off-piece, Engineering</span>
-<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32478"
-class="item-link" aria-describedby="item-tip-32478-8"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_gizmo_newgoggles.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Deathblow X11 Goggles</a><span
-id="item-tip-32478-8" class="item-tip" role="tooltip"><span
-class="item-tip-name">Deathblow X11 Goggles</span><span
-class="item-tip-meta">Tier  · head · leather</span><span
-class="item-tip-stats">326 armor, 48 agility, 28 stamina, 76 attack
-power, 11 hit rating (0.70%)</span><span
-class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
-agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
-database records the effect but not what it does, so it must be read on
-Wowhead · Stealth Detection. The item database records the effect but
-not what it does, so it must be read on Wowhead · On use.
-Longsight</span><span class="item-tip-source">Crafted,
-Engineering</span></span></span>
-<span class="delta-epv">EPV 314.20</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
-<span class="item-ref"><a href="items/thunderheart-cover.html"
-class="item-link" aria-describedby="item-tip-31039-9"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_94.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Thunderheart Cover</a><span id="item-tip-31039-9"
-class="item-tip" role="tooltip"><span class="item-tip-name">Thunderheart
-Cover</span><span class="item-tip-meta">Tier 6 · head ·
-leather</span><span class="item-tip-stats">611 armor, 53 strength, 39
-agility, 49 stamina, 20 intellect</span><span
-class="item-tip-sockets">Sockets blue, meta · Socket bonus 4
-strength</span><span class="item-tip-source">Tier set piece,
-Thunderheart Harness. Bought with a token, never a raid
-drop</span></span></span>
-<span class="delta-epv">EPV 291.60</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
-Cavern</span>
-<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30228"
-class="item-link" aria-describedby="item-tip-30228-10"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_15.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Nordrassil Headdress</a><span
-id="item-tip-30228-10" class="item-tip" role="tooltip"><span
-class="item-tip-name">Nordrassil Headdress</span><span
-class="item-tip-meta">Tier 5 · head · leather</span><span
-class="item-tip-stats">565 armor, 46 strength, 33 agility, 43 stamina,
-17 intellect</span><span class="item-tip-sockets">Sockets red, meta ·
-Socket bonus 6 stamina</span><span class="item-tip-source">Tier set
-piece, Nordrassil Harness. Bought with a token, never a raid
-drop</span></span></span>
-<span class="delta-epv">EPV 254.74</span></th>
-</tr>
-<tr>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="delta-stat" style="text-align: left;">armor</td>
-<td class="delta-raw" style="text-align: right;">+59</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-226</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-180</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">strength</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-53</td>
-<td class="delta-converted" style="text-align: left;">-106 attack
-power</td>
-<td class="delta-raw" style="text-align: right;">-46</td>
-<td class="delta-converted" style="text-align: left;">-92 attack
-power</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">agility</td>
-<td class="delta-raw" style="text-align: right;">-9</td>
-<td class="delta-converted" style="text-align: left;">-9 attack power ·
--0.36% melee crit</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+6</td>
-<td class="delta-converted" style="text-align: left;">+6 attack power ·
-+0.24% melee crit</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">stamina</td>
-<td class="delta-raw" style="text-align: right;">+18</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-3</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+3</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">intellect</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-20</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-17</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">attack power</td>
-<td class="delta-raw" style="text-align: right;">+32</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+108</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+108</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">hit</td>
-<td class="delta-raw" style="text-align: right;">+10</td>
-<td class="delta-converted" style="text-align: left;">+0.63%</td>
-<td class="delta-raw" style="text-align: right;">+21</td>
-<td class="delta-converted" style="text-align: left;">+1.33%</td>
-<td class="delta-raw" style="text-align: right;">+21</td>
-<td class="delta-converted" style="text-align: left;">+1.33%</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">crit</td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-</tr>
-</tbody><tfoot>
-<tr class="delta-net-row">
-<td class="delta-net-label" style="text-align: left;">Stat Highlights
-(Total Change)</td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+23 attack power</span>
-<span class="delta-net-figure">+1.36% melee crit</span>
-<span class="delta-net-figure">+0.63% melee and ranged hit</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+2 attack power</span>
-<span class="delta-net-figure">+1.33% melee and ranged hit</span>
-<span class="delta-net-figure">+1.72% melee crit</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+22 attack power</span>
-<span class="delta-net-figure">+1.96% melee crit</span>
-<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
-</tr>
-</tfoot>
-
-</table>
-</div>
-<div class="delta-absent">
-No best Phase 3 off-piece is ranked for this spec in this slot, so that
-comparison is not shown. A weapon the workbook does not rank cannot be
-compared against, and a spec with no captured gear set has nothing
-recorded to carry in.
-</div>
-<div class="delta-rates">
-<div class="delta-rates-label">
-Rates
-</div>
-<div class="delta-rate-row">
-<a href="data/facts/attack-power.yaml" class="delta-rate"
-title="1 attack power per agility in Cat Form  |  conversions.melee_attack_power_per_agility_level_70.druid_cat_form">1
-attack power per agility in Cat Form</a><span
-class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
-class="delta-rate"
-title="25 agility per 1% crit for a druid  |  conversions.agility_per_percent_crit_level_70.druid">25
-agility per 1% crit</a><span class="delta-rate-sep">·</span><a
-href="data/facts/hit.yaml" class="delta-rate"
-title="15.77 rating per 1% melee and ranged hit  |  conversions.melee_ranged_hit_rating_per_percent">15.77
-rating per 1% melee and ranged hit</a><span
-class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
-class="delta-rate"
-title="22.08 rating per 1% melee crit  |  conversions.melee_crit_rating_per_percent">22.08
-rating per 1% melee crit</a><span class="delta-rate-sep">·</span><a
-href="data/facts/attack-power.yaml" class="delta-rate"
-title="2 attack power per strength for a druid  |  conversions.melee_attack_power_per_strength_level_70.druid">2
-attack power per strength</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="spec-card-3" class="spec">
-<section id="feral-bear" class="spec-head">
-<h5><a href="specs/feral-bear.html" class="spec-link">Feral
-Bear</a></h5>
-<span class="spec-priority-pair"><span
-class="spec-priority-label">Priority</span><span
-class="spec-priority spec-priority-undecided">not yet
-decided</span></span>
-</section>
-<div class="spec-fields">
-<div class="field">
-<div class="field-label">
-Constraints
-</div>
-<div class="constraint-block">
-<div class="constraint-row">
-<span class="constraint-label">Special-attack hit cap</span><span
-class="constraint-value">9%</span><span class="constraint-note">threat
-floor</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Improved Faerie Fire</span><span
-class="constraint-value">-3%</span><span
-class="constraint-note">assumed</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Gear needs</span><span
-class="constraint-value">6%</span><span class="constraint-note"></span>
-</div>
-<div class="constraint-line">
-No hit talent exists for this spec.
-</div>
-<div class="constraint-break">
-
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Entry set</span><span
-class="constraint-value">3.2%</span><span class="constraint-note">short
-by 2.8%</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Tier set, Tier 6 head and shoulder and
-chest and hands and legs</span><span
-class="constraint-value">3.7%</span><span class="constraint-note">short
-by 2.2%</span>
-</div>
-<div class="constraint-line">
-Closed by 4 hit gems against 5 sockets in the set.
-</div>
-<div class="constraint-line">
-A druid has five tier slots, so the Nordrassil four-piece and the
-Thunderheart two-piece need six between them and cannot both be worn;
-this set wears five pieces of Thunderheart Harness, which leaves it no
-Nordrassil piece.
-</div>
-<div class="constraint-break">
-
-</div>
-<div class="constraint-line">
-The constraint that decides this spec's gear is crit immunity, which it
-reaches at 415 defense skill, or 154 defense rating from gear.
-</div>
-<div class="constraint-line">
-Survival of the Fittest supplies 3% of that reduction, which is why this
-spec's figure is lower than a plate tank's.
-</div>
-<div class="constraint-line">
-This spec cannot hold all four avoidance entries, so it cannot
-sustainably push crushing blows off the attack table.
-</div>
-<div class="constraint-line">
-White swings stop critting at 69.5%, measured at the special-attack hit
-cap.
-</div>
-<div class="constraint-line">
-Nothing rostered reaches it this phase, so crit stays linear all tier.
-</div>
-<div class="constraint-line">
-No haste threshold to protect.
-</div>
-</div>
-</div>
-<div class="field">
-<div class="field-label">
-Delta
-</div>
-<div class="delta-block">
-<div class="delta-head">
-<span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-11"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_misc_bandana_03.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cursed Vision of Sargeras</a><span
-id="item-tip-32235-11" class="item-tip" role="tooltip"><span
-class="item-tip-name">Cursed Vision of Sargeras</span><span
-class="item-tip-meta">Tier 6 · head · leather</span><span
-class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
-power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-effect">On use. Sense
-Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
-Black Temple</span></span></span> <span class="delta-terms">in Feral
-Bear terms</span> <span class="delta-epv delta-epv-subject">EPV
-866.75</span>
-</div>
-<div class="delta-grid">
-<table>
-<thead>
-<tr>
-<th rowspan="2" class="delta-stat-head"
-style="text-align: left;">Stat</th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
-<span class="item-ref"><a href="items/thunderheart-cover.html"
-class="item-link" aria-describedby="item-tip-31039-12"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_94.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Thunderheart Cover</a><span id="item-tip-31039-12"
-class="item-tip" role="tooltip"><span class="item-tip-name">Thunderheart
-Cover</span><span class="item-tip-meta">Tier 6 · head ·
-leather</span><span class="item-tip-stats">611 armor, 53 strength, 39
-agility, 49 stamina, 20 intellect</span><span
-class="item-tip-sockets">Sockets blue, meta · Socket bonus 4
-strength</span><span class="item-tip-source">Tier set piece,
-Thunderheart Harness. Bought with a token, never a raid
-drop</span></span></span>
-<span class="delta-epv">EPV 870.19</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
-Cavern</span>
-<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30228"
-class="item-link" aria-describedby="item-tip-30228-13"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_15.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Nordrassil Headdress</a><span
-id="item-tip-30228-13" class="item-tip" role="tooltip"><span
-class="item-tip-name">Nordrassil Headdress</span><span
-class="item-tip-meta">Tier 5 · head · leather</span><span
-class="item-tip-stats">565 armor, 46 strength, 33 agility, 43 stamina,
-17 intellect</span><span class="item-tip-sockets">Sockets red, meta ·
-Socket bonus 6 stamina</span><span class="item-tip-source">Tier set
-piece, Nordrassil Harness. Bought with a token, never a raid
-drop</span></span></span>
-<span class="delta-epv">EPV 785.77</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-crafted delta-view-gated">Over best
-pre-phase off-piece, Engineering</span>
-<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32478"
-class="item-link" aria-describedby="item-tip-32478-14"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_gizmo_newgoggles.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Deathblow X11 Goggles</a><span
-id="item-tip-32478-14" class="item-tip" role="tooltip"><span
-class="item-tip-name">Deathblow X11 Goggles</span><span
-class="item-tip-meta">Tier  · head · leather</span><span
-class="item-tip-stats">326 armor, 48 agility, 28 stamina, 76 attack
-power, 11 hit rating (0.70%)</span><span
-class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
-agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
-database records the effect but not what it does, so it must be read on
-Wowhead · Stealth Detection. The item database records the effect but
-not what it does, so it must be read on Wowhead · On use.
-Longsight</span><span class="item-tip-source">Crafted,
-Engineering</span></span></span>
-<span class="delta-epv">EPV 688.48</span></th>
-</tr>
-<tr>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="delta-stat" style="text-align: left;">armor</td>
-<td class="delta-raw" style="text-align: right;">-226</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-180</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+59</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">strength</td>
-<td class="delta-raw" style="text-align: right;">-53</td>
-<td class="delta-converted" style="text-align: left;">-106 attack
-power</td>
-<td class="delta-raw" style="text-align: right;">-46</td>
-<td class="delta-converted" style="text-align: left;">-92 attack
-power</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">agility</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+6</td>
-<td class="delta-converted" style="text-align: left;">0 attack power ·
-+0.24% melee crit</td>
-<td class="delta-raw" style="text-align: right;">-9</td>
-<td class="delta-converted" style="text-align: left;">0 attack power ·
--0.36% melee crit</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">stamina</td>
-<td class="delta-raw" style="text-align: right;">-3</td>
-<td class="delta-converted" style="text-align: left;">-30 health</td>
-<td class="delta-raw" style="text-align: right;">+3</td>
-<td class="delta-converted" style="text-align: left;">+30 health</td>
-<td class="delta-raw" style="text-align: right;">+18</td>
-<td class="delta-converted" style="text-align: left;">+180 health</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">intellect</td>
-<td class="delta-raw" style="text-align: right;">-20</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-17</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">attack power</td>
-<td class="delta-raw" style="text-align: right;">+108</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+108</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+32</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">hit</td>
-<td class="delta-raw" style="text-align: right;">+21</td>
-<td class="delta-converted" style="text-align: left;">+1.33%</td>
-<td class="delta-raw" style="text-align: right;">+21</td>
-<td class="delta-converted" style="text-align: left;">+1.33%</td>
-<td class="delta-raw" style="text-align: right;">+10</td>
-<td class="delta-converted" style="text-align: left;">+0.63%</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">crit</td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-</tr>
-</tbody><tfoot>
-<tr class="delta-net-row">
-<td class="delta-net-label" style="text-align: left;">Stat Highlights
-(Total Change)</td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">-30 health</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+30 health</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+180 health</span></td>
-</tr>
-</tfoot>
-
-</table>
-</div>
-<div class="delta-absent">
-No best Phase 3 off-piece is ranked for this spec in this slot, so that
-comparison is not shown. A weapon the workbook does not rank cannot be
-compared against, and a spec with no captured gear set has nothing
-recorded to carry in.
-</div>
-<div class="delta-rates">
-<div class="delta-rates-label">
-Rates
-</div>
-<div class="delta-rate-row">
-<a href="data/facts/attack-power.yaml" class="delta-rate"
-title="2 attack power per strength for a druid  |  conversions.melee_attack_power_per_strength_level_70.druid">2
-attack power per strength</a><span class="delta-rate-sep">·</span><a
-href="data/facts/crit.yaml" class="delta-rate"
-title="10 health per stamina, before talents and Blessing of Kings  |  defensive_conversions.stamina_per_health">10
-health per stamina, before talents and Blessing of Kings</a><span
-class="delta-rate-sep">·</span><a href="data/facts/hit.yaml"
-class="delta-rate"
-title="15.77 rating per 1% melee and ranged hit  |  conversions.melee_ranged_hit_rating_per_percent">15.77
-rating per 1% melee and ranged hit</a><span
-class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
-class="delta-rate"
-title="22.08 rating per 1% melee crit  |  conversions.melee_crit_rating_per_percent">22.08
-rating per 1% melee crit</a><span class="delta-rate-sep">·</span><a
-href="data/facts/attack-power.yaml" class="delta-rate"
-title="no melee attack power from agility in Bear Form  |  conversions.melee_attack_power_per_agility_level_70.druid_bear_form">no
-melee attack power from agility in Bear Form</a><span
-class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
-class="delta-rate"
-title="25 agility per 1% crit for a druid  |  conversions.agility_per_percent_crit_level_70.druid">25
-agility per 1% crit</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div id="spec-card-4" class="spec">
 <section id="fury-warrior" class="spec-head">
 <h5><a href="specs/fury-warrior.html" class="spec-link">Fury
 Warrior</a></h5>
-<span class="spec-priority-pair"><span
-class="spec-priority-label">Priority</span><span
-class="spec-priority spec-priority-undecided">not yet
-decided</span></span>
+<span class="spec-standing-pair"><span
+class="spec-standing-label">Standing</span><span
+class="spec-standing">BIS</span></span>
 </section>
 <div class="spec-fields">
 <div class="field">
@@ -1599,17 +1000,16 @@ Delta
 <div class="delta-block">
 <div class="delta-head">
 <span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-15"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_misc_bandana_03.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cursed Vision of Sargeras</a><span
-id="item-tip-32235-15" class="item-tip" role="tooltip"><span
-class="item-tip-name">Cursed Vision of Sargeras</span><span
-class="item-tip-meta">Tier 6 · head · leather</span><span
-class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
-power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-effect">On use. Sense
+class="item-link" aria-describedby="item-tip-32235-15" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
+Sargeras</a><span id="item-tip-32235-15" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cursed Vision of
+Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
+stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
+(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
+Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
 Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
 Black Temple</span></span></span> <span class="delta-terms">in Fury
 Warrior terms</span> <span class="delta-epv delta-epv-subject">EPV
@@ -1626,10 +1026,10 @@ class="delta-view delta-route-drop">Over best Phase 3 off-piece, Black
 Temple</span>
 <span class="item-ref"><a
 href="items/helm-of-the-illidari-shatterer.html" class="item-link"
-aria-describedby="item-tip-32373-16" rel="noopener noreferrer"
-target="_blank"><img src="icons/inv_helmet_98.jpg" class="item-icon"
-loading="lazy" aria-hidden="true" />Helm of the Illidari
-Shatterer</a><span id="item-tip-32373-16" class="item-tip"
+aria-describedby="item-tip-32373-16" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_98.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Helm of the
+Illidari Shatterer</a><span id="item-tip-32373-16" class="item-tip"
 role="tooltip"><span class="item-tip-name">Helm of the Illidari
 Shatterer</span><span class="item-tip-meta">Tier 6 · head ·
 plate</span><span class="item-tip-stats">1434 armor, 51 strength, 29
@@ -1641,32 +1041,30 @@ Council, Black Temple</span></span></span>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
 <span class="item-ref"><a href="items/onslaught-battle-helm.html"
-class="item-link" aria-describedby="item-tip-30972-17"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_98.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Onslaught Battle-Helm</a><span
-id="item-tip-30972-17" class="item-tip" role="tooltip"><span
-class="item-tip-name">Onslaught Battle-Helm</span><span
-class="item-tip-meta">Tier 6 · head · plate</span><span
-class="item-tip-stats">1483 armor, 54 strength, 41 agility, 54 stamina,
-105 armor penetration</span><span class="item-tip-sockets">Sockets meta,
-red · Socket bonus 4 strength</span><span class="item-tip-source">Tier
-set piece, Onslaught Battlegear. Bought with a token, never a raid
-drop</span></span></span>
+class="item-link" aria-describedby="item-tip-30972-17" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_98.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Onslaught
+Battle-Helm</a><span id="item-tip-30972-17" class="item-tip"
+role="tooltip"><span class="item-tip-name">Onslaught
+Battle-Helm</span><span class="item-tip-meta">Tier 6 · head ·
+plate</span><span class="item-tip-stats">1483 armor, 54 strength, 41
+agility, 54 stamina, 105 armor penetration</span><span
+class="item-tip-sockets">Sockets meta, red · Socket bonus 4
+strength</span><span class="item-tip-source">Tier set piece, Onslaught
+Battlegear. Bought with a token, never a raid drop</span></span></span>
 <span class="delta-epv">EPV 157.96</span></th>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
 Cavern</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30120"
-class="item-link" aria-describedby="item-tip-30120-18"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_58.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Destroyer Battle-Helm</a><span
-id="item-tip-30120-18" class="item-tip" role="tooltip"><span
-class="item-tip-name">Destroyer Battle-Helm</span><span
-class="item-tip-meta">Tier 5 · head · plate</span><span
-class="item-tip-stats">1355 armor, 47 strength, 45 stamina, 21 hit
-rating (1.33%), 36 crit rating (1.63%)</span><span
+class="item-link" aria-describedby="item-tip-30120-18" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_58.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Destroyer
+Battle-Helm</a><span id="item-tip-30120-18" class="item-tip"
+role="tooltip"><span class="item-tip-name">Destroyer
+Battle-Helm</span><span class="item-tip-meta">Tier 5 · head ·
+plate</span><span class="item-tip-stats">1355 armor, 47 strength, 45
+stamina, 21 hit rating (1.33%), 36 crit rating (1.63%)</span><span
 class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
 strength</span><span class="item-tip-source">Tier set piece, Destroyer
 Battlegear. Bought with a token, never a raid drop</span></span></span>
@@ -1675,15 +1073,14 @@ Battlegear. Bought with a token, never a raid drop</span></span></span>
 class="delta-view delta-route-crafted delta-view-gated">Over best
 pre-phase off-piece, Engineering</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32461"
-class="item-link" aria-describedby="item-tip-32461-19"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_gizmo_newgoggles.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Furious Gizmatic Goggles</a><span
-id="item-tip-32461-19" class="item-tip" role="tooltip"><span
-class="item-tip-name">Furious Gizmatic Goggles</span><span
-class="item-tip-meta">Tier  · head · plate</span><span
-class="item-tip-stats">1296 armor, 48 strength, 28 stamina, 13 hit
-rating (0.82%), 38 crit rating (1.72%)</span><span
+class="item-link" aria-describedby="item-tip-32461-19" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_gizmo_newgoggles.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Furious Gizmatic
+Goggles</a><span id="item-tip-32461-19" class="item-tip"
+role="tooltip"><span class="item-tip-name">Furious Gizmatic
+Goggles</span><span class="item-tip-meta">Tier  · head ·
+plate</span><span class="item-tip-stats">1296 armor, 48 strength, 28
+stamina, 13 hit rating (0.82%), 38 crit rating (1.72%)</span><span
 class="item-tip-sockets">Sockets meta, blue · Socket bonus 4 crit
 rating</span><span class="item-tip-effect">Gas Cloud Tracking. The item
 database records the effect but not what it does, so it must be read on
@@ -1862,14 +1259,1250 @@ penetration counted as itself</a>
 </div>
 </div>
 </div>
+<div id="spec-card-6" class="spec">
+<section id="beast-mastery-hunter" class="spec-head">
+<h5><a href="specs/beast-mastery-hunter.html" class="spec-link">Beast
+Mastery Hunter</a></h5>
+<span class="spec-standing-pair"><span
+class="spec-standing-label">Standing</span><span
+class="spec-standing">BIS</span></span>
+</section>
+<div class="spec-fields">
+<div class="field">
+<div class="field-label">
+Constraints
+</div>
+<div class="constraint-block">
+<div class="constraint-row">
+<span class="constraint-label">Ranged hit cap</span><span
+class="constraint-value">9%</span><span
+class="constraint-note">shots</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Improved Faerie Fire</span><span
+class="constraint-value">-3%</span><span
+class="constraint-note">assumed</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Gear needs</span><span
+class="constraint-value">6%</span><span class="constraint-note"></span>
+</div>
+<div class="constraint-line">
+The Surefooted talent sits in the Survival tree, which this build does
+not reach.
+</div>
+<div class="constraint-break">
+
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Entry set</span><span
+class="constraint-value">7.7%</span><span class="constraint-note">clear
+by 1.7%</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Tier set, Tier 6 shoulder and chest and
+hands and legs</span><span class="constraint-value">5.8%</span><span
+class="constraint-note">short by 0.2%</span>
+</div>
+<div class="constraint-line">
+Closed by 1 hit gem against 8 sockets in the set.
+</div>
+<div class="constraint-break">
+
+</div>
+<div class="constraint-line">
+No crit cap.
+</div>
+<div class="constraint-line">
+No haste threshold to protect.
+</div>
+</div>
+</div>
+<div class="field">
+<div class="field-label">
+Delta
+</div>
+<div class="delta-block">
+<div class="delta-head">
+<span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
+class="item-link" aria-describedby="item-tip-32235-25" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
+Sargeras</a><span id="item-tip-32235-25" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cursed Vision of
+Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
+stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
+(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
+Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
+Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
+Black Temple</span></span></span> <span class="delta-terms">in Beast
+Mastery Hunter terms</span> <span
+class="delta-epv delta-epv-subject">EPV 352.73</span>
+</div>
+<div class="delta-grid">
+<table>
+<thead>
+<tr>
+<th rowspan="2" class="delta-stat-head"
+style="text-align: left;">Stat</th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over best Phase 3 off-piece, Black
+Temple</span>
+<span class="item-ref"><a href="items/forest-prowlers-helm.html"
+class="item-link" aria-describedby="item-tip-32376-26" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_95.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Forest Prowler's
+Helm</a><span id="item-tip-32376-26" class="item-tip"
+role="tooltip"><span class="item-tip-name">Forest Prowler's
+Helm</span><span class="item-tip-meta">Tier 6 · head · mail</span><span
+class="item-tip-stats">803 armor, 42 agility, 29 stamina, 28 intellect,
+100 attack power, 20 crit rating (0.91%)</span><span
+class="item-tip-sockets">Sockets red, meta</span><span
+class="item-tip-source">Drops from The Illidari Council, Black
+Temple</span></span></span>
+<span class="delta-epv">EPV 292.48</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
+<span class="item-ref"><a href="items/gronnstalkers-helmet.html"
+class="item-link" aria-describedby="item-tip-31003-27" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_95.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Gronnstalker's
+Helmet</a><span id="item-tip-31003-27" class="item-tip"
+role="tooltip"><span class="item-tip-name">Gronnstalker's
+Helmet</span><span class="item-tip-meta">Tier 6 · head ·
+mail</span><span class="item-tip-stats">830 armor, 45 agility, 45
+stamina, 29 intellect, 90 attack power</span><span
+class="item-tip-sockets">Sockets red, meta · Socket bonus 4 crit
+rating</span><span class="item-tip-source">Tier set piece,
+Gronnstalker's Armor. Bought with a token, never a raid
+drop</span></span></span>
+<span class="delta-epv">EPV 257.63</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-crafted delta-view-gated">Over best
+pre-phase off-piece, Engineering</span>
+<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32474"
+class="item-link" aria-describedby="item-tip-32474-28" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_gizmo_newgoggles.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Surestrike Goggles
+v2.0</a><span id="item-tip-32474-28" class="item-tip"
+role="tooltip"><span class="item-tip-name">Surestrike Goggles
+v2.0</span><span class="item-tip-meta">Tier  · head · mail</span><span
+class="item-tip-stats">726 armor, 28 stamina, 96 attack power, 13 hit
+rating (0.82%), 38 crit rating (1.72%)</span><span
+class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
+agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
+database records the effect but not what it does, so it must be read on
+Wowhead · Stealth Detection. The item database records the effect but
+not what it does, so it must be read on Wowhead · On use.
+Longsight</span><span class="item-tip-source">Crafted,
+Engineering</span></span></span>
+<span class="delta-epv">EPV 249.78</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
+Cavern</span>
+<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30141"
+class="item-link" aria-describedby="item-tip-30141-29" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_15.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Rift Stalker
+Helm</a><span id="item-tip-30141-29" class="item-tip"
+role="tooltip"><span class="item-tip-name">Rift Stalker Helm</span><span
+class="item-tip-meta">Tier 5 · head · mail</span><span
+class="item-tip-stats">759 armor, 40 agility, 36 stamina, 25 intellect,
+82 attack power</span><span class="item-tip-sockets">Sockets yellow,
+meta · Socket bonus 6 stamina</span><span class="item-tip-source">Tier
+set piece, Rift Stalker Armor. Bought with a token, never a raid
+drop</span></span></span>
+<span class="delta-epv">EPV 238.38</span></th>
+</tr>
+<tr>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="delta-stat" style="text-align: left;">armor</td>
+<td class="delta-raw" style="text-align: right;">-418</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-445</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-341</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-374</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">agility</td>
+<td class="delta-raw" style="text-align: right;">-3</td>
+<td class="delta-converted" style="text-align: left;">-3 attack power ·
+-3 ranged attack power · -0.07% melee crit</td>
+<td class="delta-raw" style="text-align: right;">-6</td>
+<td class="delta-converted" style="text-align: left;">-6 attack power ·
+-6 ranged attack power · -0.15% melee crit</td>
+<td class="delta-raw" style="text-align: right;">+39</td>
+<td class="delta-converted" style="text-align: left;">+39 attack power ·
++39 ranged attack power · +0.97% melee crit</td>
+<td class="delta-raw" style="text-align: right;">-1</td>
+<td class="delta-converted" style="text-align: left;">-1 attack power ·
+-1 ranged attack power · -0.03% melee crit</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">stamina</td>
+<td class="delta-raw" style="text-align: right;">+17</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+1</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+18</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+10</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">intellect</td>
+<td class="delta-raw" style="text-align: right;">-28</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-29</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-25</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">attack power</td>
+<td class="delta-raw" style="text-align: right;">+8</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+18</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+12</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+26</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">hit</td>
+<td class="delta-raw" style="text-align: right;">+21</td>
+<td class="delta-converted" style="text-align: left;">+1.33%</td>
+<td class="delta-raw" style="text-align: right;">+21</td>
+<td class="delta-converted" style="text-align: left;">+1.33%</td>
+<td class="delta-raw" style="text-align: right;">+8</td>
+<td class="delta-converted" style="text-align: left;">+0.51%</td>
+<td class="delta-raw" style="text-align: right;">+21</td>
+<td class="delta-converted" style="text-align: left;">+1.33%</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">crit</td>
+<td class="delta-raw" style="text-align: right;">+18</td>
+<td class="delta-converted" style="text-align: left;">+0.82%</td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+</tr>
+</tbody><tfoot>
+<tr class="delta-net-row">
+<td class="delta-net-label" style="text-align: left;">Stat Highlights
+(Total Change)</td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+5 attack power</span>
+<span class="delta-net-figure">-3 ranged attack power</span>
+<span class="delta-net-figure">+0.74% melee crit</span>
+<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+12 attack power</span>
+<span class="delta-net-figure">-6 ranged attack power</span>
+<span class="delta-net-figure">+1.57% melee crit</span>
+<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+51 attack power</span>
+<span class="delta-net-figure">+39 ranged attack power</span>
+<span class="delta-net-figure">+0.97% melee crit</span>
+<span class="delta-net-figure">+0.51% melee and ranged hit</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+25 attack power</span>
+<span class="delta-net-figure">-1 ranged attack power</span>
+<span class="delta-net-figure">+1.70% melee crit</span>
+<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+<div class="delta-rates">
+<div class="delta-rates-label">
+Rates
+</div>
+<div class="delta-rate-row">
+<a href="data/facts/attack-power.yaml" class="delta-rate"
+title="1 attack power per agility for a hunter  |  conversions.melee_attack_power_per_agility_level_70.hunter">1
+attack power per agility</a><span class="delta-rate-sep">·</span><a
+href="data/facts/attack-power.yaml" class="delta-rate"
+title="1 ranged attack power per agility  |  conversions.ranged_attack_power_per_agility_level_70.hunter">1
+ranged attack power per agility</a><span
+class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
+class="delta-rate"
+title="40 agility per 1% crit for a hunter  |  conversions.agility_per_percent_crit_level_70.hunter">40
+agility per 1% crit</a><span class="delta-rate-sep">·</span><a
+href="data/facts/hit.yaml" class="delta-rate"
+title="15.77 rating per 1% melee and ranged hit  |  conversions.melee_ranged_hit_rating_per_percent">15.77
+rating per 1% melee and ranged hit</a><span
+class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
+class="delta-rate"
+title="22.08 rating per 1% melee crit  |  conversions.melee_crit_rating_per_percent">22.08
+rating per 1% melee crit</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="spec-card-8" class="spec">
+<section id="enhancement-shaman" class="spec-head">
+<h5><a href="specs/enhancement-shaman.html"
+class="spec-link">Enhancement Shaman</a></h5>
+<span class="spec-standing-pair"><span
+class="spec-standing-label">Standing</span><span
+class="spec-standing">BIS</span></span>
+</section>
+<div class="spec-fields">
+<div class="field">
+<div class="field-label">
+Constraints
+</div>
+<div class="constraint-block">
+<div class="constraint-row">
+<span class="constraint-label">Special-attack hit cap</span><span
+class="constraint-value">9%</span><span class="constraint-note">special
+attacks</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Dual Wield Specialization</span><span
+class="constraint-value">-6%</span><span class="constraint-note"></span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Nature's Guidance</span><span
+class="constraint-value">-3%</span><span class="constraint-note"></span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Improved Faerie Fire</span><span
+class="constraint-value">-3%</span><span
+class="constraint-note">assumed</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Gear needs</span><span
+class="constraint-value">0%</span><span class="constraint-note"></span>
+</div>
+<div class="constraint-break">
+
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Entry set</span><span
+class="constraint-value">9.2%</span><span class="constraint-note">clear
+by 12.2%</span>
+</div>
+<div class="constraint-line">
+Talent and the assumed raid debuff cover this cap outright, so every
+point of hit on an item is surplus.
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Tier set, no Tier 6 piece
+worn</span><span class="constraint-value">9.2%</span><span
+class="constraint-note">clear by 12.2%</span>
+</div>
+<div class="constraint-line">
+The published guide states in its own words that neither Tier 6 set
+bonus is worth chasing for this spec, and this set holds no Tier 6
+piece.
+</div>
+<div class="constraint-break">
+
+</div>
+<div class="constraint-line">
+Dual-wields: white swings miss until 28%, which nothing in this patch
+reaches, so hit past the cap still buys accuracy.
+</div>
+<div class="constraint-line">
+White swings stop critting at 50.5%, measured at the special-attack hit
+cap.
+</div>
+<div class="constraint-line">
+Nothing rostered reaches it this phase, so crit stays linear all tier.
+</div>
+<div class="constraint-line">
+No haste threshold to protect.
+</div>
+</div>
+</div>
+<div class="field">
+<div class="field-label">
+Delta
+</div>
+<div class="delta-block">
+<div class="delta-head">
+<span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
+class="item-link" aria-describedby="item-tip-32235-35" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
+Sargeras</a><span id="item-tip-32235-35" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cursed Vision of
+Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
+stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
+(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
+Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
+Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
+Black Temple</span></span></span> <span class="delta-terms">in
+Enhancement Shaman terms</span> <span
+class="delta-epv delta-epv-subject">EPV 351.56</span>
+</div>
+<div class="delta-grid">
+<table>
+<thead>
+<tr>
+<th rowspan="2" class="delta-stat-head"
+style="text-align: left;">Stat</th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over best Phase 3 off-piece, Black
+Temple</span>
+<span class="item-ref"><a href="items/forest-prowlers-helm.html"
+class="item-link" aria-describedby="item-tip-32376-36" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_95.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Forest Prowler's
+Helm</a><span id="item-tip-32376-36" class="item-tip"
+role="tooltip"><span class="item-tip-name">Forest Prowler's
+Helm</span><span class="item-tip-meta">Tier 6 · head · mail</span><span
+class="item-tip-stats">803 armor, 42 agility, 29 stamina, 28 intellect,
+100 attack power, 20 crit rating (0.91%)</span><span
+class="item-tip-sockets">Sockets red, meta</span><span
+class="item-tip-source">Drops from The Illidari Council, Black
+Temple</span></span></span>
+<span class="delta-epv">EPV 291.23</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
+<span class="item-ref"><a href="items/skyshatter-cover.html"
+class="item-link" aria-describedby="item-tip-31015-37" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_97.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Skyshatter
+Cover</a><span id="item-tip-31015-37" class="item-tip"
+role="tooltip"><span class="item-tip-name">Skyshatter Cover</span><span
+class="item-tip-meta">Tier 6 · head · mail</span><span
+class="item-tip-stats">830 armor, 53 strength, 55 stamina, 27 intellect,
+20 hit rating (1.27%), 28 crit rating (1.27%)</span><span
+class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
+stamina</span><span class="item-tip-source">Tier set piece, Skyshatter
+Harness. Bought with a token, never a raid drop</span></span></span>
+<span class="delta-epv">EPV 289.76</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
+Cavern</span>
+<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30190"
+class="item-link" aria-describedby="item-tip-30190-38" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_15.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cataclysm
+Helm</a><span id="item-tip-30190-38" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cataclysm Helm</span><span
+class="item-tip-meta">Tier 5 · head · mail</span><span
+class="item-tip-stats">759 armor, 41 strength, 32 agility, 46 stamina,
+23 intellect, 21 hit rating (1.33%)</span><span
+class="item-tip-sockets">Sockets meta, yellow · Socket bonus 4
+agility</span><span class="item-tip-source">Tier set piece, Cataclysm
+Harness. Bought with a token, never a raid drop</span></span></span>
+<span class="delta-epv">EPV 269.24</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-crafted delta-view-gated">Over best
+pre-phase off-piece, Engineering</span>
+<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32474"
+class="item-link" aria-describedby="item-tip-32474-39" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_gizmo_newgoggles.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Surestrike Goggles
+v2.0</a><span id="item-tip-32474-39" class="item-tip"
+role="tooltip"><span class="item-tip-name">Surestrike Goggles
+v2.0</span><span class="item-tip-meta">Tier  · head · mail</span><span
+class="item-tip-stats">726 armor, 28 stamina, 96 attack power, 13 hit
+rating (0.82%), 38 crit rating (1.72%)</span><span
+class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
+agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
+database records the effect but not what it does, so it must be read on
+Wowhead · Stealth Detection. The item database records the effect but
+not what it does, so it must be read on Wowhead · On use.
+Longsight</span><span class="item-tip-source">Crafted,
+Engineering</span></span></span>
+<span class="delta-epv">EPV 265.93</span></th>
+</tr>
+<tr>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="delta-stat" style="text-align: left;">armor</td>
+<td class="delta-raw" style="text-align: right;">-418</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-445</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-374</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-341</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">strength</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-53</td>
+<td class="delta-converted" style="text-align: left;">-106 attack
+power</td>
+<td class="delta-raw" style="text-align: right;">-41</td>
+<td class="delta-converted" style="text-align: left;">-82 attack
+power</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">agility</td>
+<td class="delta-raw" style="text-align: right;">-3</td>
+<td class="delta-converted" style="text-align: left;">0 attack power ·
+-0.12% melee crit</td>
+<td class="delta-raw" style="text-align: right;">+39</td>
+<td class="delta-converted" style="text-align: left;">0 attack power ·
++1.56% melee crit</td>
+<td class="delta-raw" style="text-align: right;">+7</td>
+<td class="delta-converted" style="text-align: left;">0 attack power ·
++0.28% melee crit</td>
+<td class="delta-raw" style="text-align: right;">+39</td>
+<td class="delta-converted" style="text-align: left;">0 attack power ·
++1.56% melee crit</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">stamina</td>
+<td class="delta-raw" style="text-align: right;">+17</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-9</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+18</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">intellect</td>
+<td class="delta-raw" style="text-align: right;">-28</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-27</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-23</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">attack power</td>
+<td class="delta-raw" style="text-align: right;">+8</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+108</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+108</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+12</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">hit</td>
+<td class="delta-raw" style="text-align: right;">+21</td>
+<td class="delta-converted" style="text-align: left;">+1.33%</td>
+<td class="delta-raw" style="text-align: right;">+1</td>
+<td class="delta-converted" style="text-align: left;">+0.06%</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+8</td>
+<td class="delta-converted" style="text-align: left;">+0.51%</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">crit</td>
+<td class="delta-raw" style="text-align: right;">+18</td>
+<td class="delta-converted" style="text-align: left;">+0.82%</td>
+<td class="delta-raw" style="text-align: right;">+10</td>
+<td class="delta-converted" style="text-align: left;">+0.45%</td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+</tbody><tfoot>
+<tr class="delta-net-row">
+<td class="delta-net-label" style="text-align: left;">Stat Highlights
+(Total Change)</td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+8 attack power</span>
+<span class="delta-net-figure">+0.70% melee crit</span>
+<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+2 attack power</span>
+<span class="delta-net-figure">+2.01% melee crit</span>
+<span class="delta-net-figure">+0.06% melee and ranged hit</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+26 attack power</span>
+<span class="delta-net-figure">+2.00% melee crit</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+12 attack power</span>
+<span class="delta-net-figure">+1.56% melee crit</span>
+<span class="delta-net-figure">+0.51% melee and ranged hit</span></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+<div class="delta-rates">
+<div class="delta-rates-label">
+Rates
+</div>
+<div class="delta-rate-row">
+<a href="data/facts/attack-power.yaml" class="delta-rate"
+title="no melee attack power from agility for a shaman  |  conversions.melee_attack_power_per_agility_level_70.shaman">no
+melee attack power from agility</a><span
+class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
+class="delta-rate"
+title="25 agility per 1% crit for a shaman  |  conversions.agility_per_percent_crit_level_70.shaman">25
+agility per 1% crit</a><span class="delta-rate-sep">·</span><a
+href="data/facts/hit.yaml" class="delta-rate"
+title="15.77 rating per 1% melee and ranged hit  |  conversions.melee_ranged_hit_rating_per_percent">15.77
+rating per 1% melee and ranged hit</a><span
+class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
+class="delta-rate"
+title="22.08 rating per 1% melee crit  |  conversions.melee_crit_rating_per_percent">22.08
+rating per 1% melee crit</a><span class="delta-rate-sep">·</span><a
+href="data/facts/attack-power.yaml" class="delta-rate"
+title="2 attack power per strength for a shaman  |  conversions.melee_attack_power_per_strength_level_70.shaman">2
+attack power per strength</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="spec-card-2" class="spec">
+<section id="feral-cat" class="spec-head">
+<h5><a href="specs/feral-cat.html" class="spec-link">Feral Cat</a></h5>
+<span class="spec-standing-pair"><span
+class="spec-standing-label">Standing</span><span
+class="spec-standing spec-standing-upgrade">Upgrade</span></span>
+</section>
+<div class="spec-fields">
+<div class="field">
+<div class="field-label">
+Constraints
+</div>
+<div class="constraint-block">
+<div class="constraint-row">
+<span class="constraint-label">Special-attack hit cap</span><span
+class="constraint-value">9%</span><span class="constraint-note">special
+attacks</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Improved Faerie Fire</span><span
+class="constraint-value">-3%</span><span
+class="constraint-note">assumed</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Gear needs</span><span
+class="constraint-value">6%</span><span class="constraint-note"></span>
+</div>
+<div class="constraint-line">
+No hit talent exists for this spec.
+</div>
+<div class="constraint-break">
+
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Entry set</span><span
+class="constraint-value">10.8%</span><span class="constraint-note">clear
+by 4.9%</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Tier set, Tier 6 shoulder and
+legs</span><span class="constraint-value">10.8%</span><span
+class="constraint-note">clear by 4.8%</span>
+</div>
+<div class="constraint-line">
+The head slot is Wolfshead Helm and the hands slot is Gloves of the
+Searing Grip, and neither is a tier piece, so this set takes neither the
+head token nor the hands token; it holds two Tier 6 pieces, at the
+shoulder and the legs.
+</div>
+<div class="constraint-break">
+
+</div>
+<div class="constraint-line">
+White swings stop critting at 69.5%, measured at the special-attack hit
+cap.
+</div>
+<div class="constraint-line">
+Nothing rostered reaches it this phase, so crit stays linear all tier.
+</div>
+<div class="constraint-line">
+No haste threshold to protect.
+</div>
+</div>
+</div>
+<div class="field">
+<div class="field-label">
+Delta
+</div>
+<div class="delta-block">
+<div class="delta-head">
+<span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
+class="item-link" aria-describedby="item-tip-32235-7" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
+Sargeras</a><span id="item-tip-32235-7" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cursed Vision of
+Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
+stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
+(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
+Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
+Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
+Black Temple</span></span></span> <span class="delta-terms">in Feral Cat
+terms</span> <span class="delta-epv delta-epv-subject">EPV 436.76</span>
+</div>
+<div class="delta-grid">
+<table>
+<thead>
+<tr>
+<th rowspan="2" class="delta-stat-head"
+style="text-align: left;">Stat</th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-crafted delta-view-gated">Over best
+pre-phase off-piece, Engineering</span>
+<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32478"
+class="item-link" aria-describedby="item-tip-32478-8" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_gizmo_newgoggles.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Deathblow X11
+Goggles</a><span id="item-tip-32478-8" class="item-tip"
+role="tooltip"><span class="item-tip-name">Deathblow X11
+Goggles</span><span class="item-tip-meta">Tier  · head ·
+leather</span><span class="item-tip-stats">326 armor, 48 agility, 28
+stamina, 76 attack power, 11 hit rating (0.70%)</span><span
+class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
+agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
+database records the effect but not what it does, so it must be read on
+Wowhead · Stealth Detection. The item database records the effect but
+not what it does, so it must be read on Wowhead · On use.
+Longsight</span><span class="item-tip-source">Crafted,
+Engineering</span></span></span>
+<span class="delta-epv">EPV 314.20</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
+<span class="item-ref"><a href="items/thunderheart-cover.html"
+class="item-link" aria-describedby="item-tip-31039-9" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_94.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Thunderheart
+Cover</a><span id="item-tip-31039-9" class="item-tip"
+role="tooltip"><span class="item-tip-name">Thunderheart
+Cover</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">611 armor, 53 strength, 39
+agility, 49 stamina, 20 intellect</span><span
+class="item-tip-sockets">Sockets blue, meta · Socket bonus 4
+strength</span><span class="item-tip-source">Tier set piece,
+Thunderheart Harness. Bought with a token, never a raid
+drop</span></span></span>
+<span class="delta-epv">EPV 291.60</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
+Cavern</span>
+<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30228"
+class="item-link" aria-describedby="item-tip-30228-10" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_15.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Nordrassil
+Headdress</a><span id="item-tip-30228-10" class="item-tip"
+role="tooltip"><span class="item-tip-name">Nordrassil
+Headdress</span><span class="item-tip-meta">Tier 5 · head ·
+leather</span><span class="item-tip-stats">565 armor, 46 strength, 33
+agility, 43 stamina, 17 intellect</span><span
+class="item-tip-sockets">Sockets red, meta · Socket bonus 6
+stamina</span><span class="item-tip-source">Tier set piece, Nordrassil
+Harness. Bought with a token, never a raid drop</span></span></span>
+<span class="delta-epv">EPV 254.74</span></th>
+</tr>
+<tr>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="delta-stat" style="text-align: left;">armor</td>
+<td class="delta-raw" style="text-align: right;">+59</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-226</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-180</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">strength</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-53</td>
+<td class="delta-converted" style="text-align: left;">-106 attack
+power</td>
+<td class="delta-raw" style="text-align: right;">-46</td>
+<td class="delta-converted" style="text-align: left;">-92 attack
+power</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">agility</td>
+<td class="delta-raw" style="text-align: right;">-9</td>
+<td class="delta-converted" style="text-align: left;">-9 attack power ·
+-0.36% melee crit</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+6</td>
+<td class="delta-converted" style="text-align: left;">+6 attack power ·
++0.24% melee crit</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">stamina</td>
+<td class="delta-raw" style="text-align: right;">+18</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-3</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+3</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">intellect</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-20</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-17</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">attack power</td>
+<td class="delta-raw" style="text-align: right;">+32</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+108</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+108</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">hit</td>
+<td class="delta-raw" style="text-align: right;">+10</td>
+<td class="delta-converted" style="text-align: left;">+0.63%</td>
+<td class="delta-raw" style="text-align: right;">+21</td>
+<td class="delta-converted" style="text-align: left;">+1.33%</td>
+<td class="delta-raw" style="text-align: right;">+21</td>
+<td class="delta-converted" style="text-align: left;">+1.33%</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">crit</td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+</tr>
+</tbody><tfoot>
+<tr class="delta-net-row">
+<td class="delta-net-label" style="text-align: left;">Stat Highlights
+(Total Change)</td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+23 attack power</span>
+<span class="delta-net-figure">+1.36% melee crit</span>
+<span class="delta-net-figure">+0.63% melee and ranged hit</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+2 attack power</span>
+<span class="delta-net-figure">+1.33% melee and ranged hit</span>
+<span class="delta-net-figure">+1.72% melee crit</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+22 attack power</span>
+<span class="delta-net-figure">+1.96% melee crit</span>
+<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+<div class="delta-absent">
+No best Phase 3 off-piece is ranked for this spec in this slot, so that
+comparison is not shown. A weapon the workbook does not rank cannot be
+compared against, and a spec with no captured gear set has nothing
+recorded to carry in.
+</div>
+<div class="delta-rates">
+<div class="delta-rates-label">
+Rates
+</div>
+<div class="delta-rate-row">
+<a href="data/facts/attack-power.yaml" class="delta-rate"
+title="1 attack power per agility in Cat Form  |  conversions.melee_attack_power_per_agility_level_70.druid_cat_form">1
+attack power per agility in Cat Form</a><span
+class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
+class="delta-rate"
+title="25 agility per 1% crit for a druid  |  conversions.agility_per_percent_crit_level_70.druid">25
+agility per 1% crit</a><span class="delta-rate-sep">·</span><a
+href="data/facts/hit.yaml" class="delta-rate"
+title="15.77 rating per 1% melee and ranged hit  |  conversions.melee_ranged_hit_rating_per_percent">15.77
+rating per 1% melee and ranged hit</a><span
+class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
+class="delta-rate"
+title="22.08 rating per 1% melee crit  |  conversions.melee_crit_rating_per_percent">22.08
+rating per 1% melee crit</a><span class="delta-rate-sep">·</span><a
+href="data/facts/attack-power.yaml" class="delta-rate"
+title="2 attack power per strength for a druid  |  conversions.melee_attack_power_per_strength_level_70.druid">2
+attack power per strength</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="spec-card-3" class="spec">
+<section id="feral-bear" class="spec-head">
+<h5><a href="specs/feral-bear.html" class="spec-link">Feral
+Bear</a></h5>
+<span class="spec-standing-pair"><span
+class="spec-standing-label">Standing</span><span
+class="spec-standing spec-standing-upgrade">Upgrade</span></span>
+</section>
+<div class="spec-fields">
+<div class="field">
+<div class="field-label">
+Constraints
+</div>
+<div class="constraint-block">
+<div class="constraint-row">
+<span class="constraint-label">Special-attack hit cap</span><span
+class="constraint-value">9%</span><span class="constraint-note">threat
+floor</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Improved Faerie Fire</span><span
+class="constraint-value">-3%</span><span
+class="constraint-note">assumed</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Gear needs</span><span
+class="constraint-value">6%</span><span class="constraint-note"></span>
+</div>
+<div class="constraint-line">
+No hit talent exists for this spec.
+</div>
+<div class="constraint-break">
+
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Entry set</span><span
+class="constraint-value">3.2%</span><span class="constraint-note">short
+by 2.8%</span>
+</div>
+<div class="constraint-row">
+<span class="constraint-label">Tier set, Tier 6 head and shoulder and
+chest and hands and legs</span><span
+class="constraint-value">3.7%</span><span class="constraint-note">short
+by 2.2%</span>
+</div>
+<div class="constraint-line">
+Closed by 4 hit gems against 5 sockets in the set.
+</div>
+<div class="constraint-line">
+A druid has five tier slots, so the Nordrassil four-piece and the
+Thunderheart two-piece need six between them and cannot both be worn;
+this set wears five pieces of Thunderheart Harness, which leaves it no
+Nordrassil piece.
+</div>
+<div class="constraint-break">
+
+</div>
+<div class="constraint-line">
+The constraint that decides this spec's gear is crit immunity, which it
+reaches at 415 defense skill, or 154 defense rating from gear.
+</div>
+<div class="constraint-line">
+Survival of the Fittest supplies 3% of that reduction, which is why this
+spec's figure is lower than a plate tank's.
+</div>
+<div class="constraint-line">
+This spec cannot hold all four avoidance entries, so it cannot
+sustainably push crushing blows off the attack table.
+</div>
+<div class="constraint-line">
+White swings stop critting at 69.5%, measured at the special-attack hit
+cap.
+</div>
+<div class="constraint-line">
+Nothing rostered reaches it this phase, so crit stays linear all tier.
+</div>
+<div class="constraint-line">
+No haste threshold to protect.
+</div>
+</div>
+</div>
+<div class="field">
+<div class="field-label">
+Delta
+</div>
+<div class="delta-block">
+<div class="delta-head">
+<span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
+class="item-link" aria-describedby="item-tip-32235-11" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
+Sargeras</a><span id="item-tip-32235-11" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cursed Vision of
+Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
+stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
+(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
+Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
+Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
+Black Temple</span></span></span> <span class="delta-terms">in Feral
+Bear terms</span> <span class="delta-epv delta-epv-subject">EPV
+866.75</span>
+</div>
+<div class="delta-grid">
+<table>
+<thead>
+<tr>
+<th rowspan="2" class="delta-stat-head"
+style="text-align: left;">Stat</th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
+<span class="item-ref"><a href="items/thunderheart-cover.html"
+class="item-link" aria-describedby="item-tip-31039-12" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_94.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Thunderheart
+Cover</a><span id="item-tip-31039-12" class="item-tip"
+role="tooltip"><span class="item-tip-name">Thunderheart
+Cover</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">611 armor, 53 strength, 39
+agility, 49 stamina, 20 intellect</span><span
+class="item-tip-sockets">Sockets blue, meta · Socket bonus 4
+strength</span><span class="item-tip-source">Tier set piece,
+Thunderheart Harness. Bought with a token, never a raid
+drop</span></span></span>
+<span class="delta-epv">EPV 870.19</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
+Cavern</span>
+<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30228"
+class="item-link" aria-describedby="item-tip-30228-13" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_15.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Nordrassil
+Headdress</a><span id="item-tip-30228-13" class="item-tip"
+role="tooltip"><span class="item-tip-name">Nordrassil
+Headdress</span><span class="item-tip-meta">Tier 5 · head ·
+leather</span><span class="item-tip-stats">565 armor, 46 strength, 33
+agility, 43 stamina, 17 intellect</span><span
+class="item-tip-sockets">Sockets red, meta · Socket bonus 6
+stamina</span><span class="item-tip-source">Tier set piece, Nordrassil
+Harness. Bought with a token, never a raid drop</span></span></span>
+<span class="delta-epv">EPV 785.77</span></th>
+<th colspan="2" class="delta-view-head" style="text-align: left;"><span
+class="delta-view delta-route-crafted delta-view-gated">Over best
+pre-phase off-piece, Engineering</span>
+<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32478"
+class="item-link" aria-describedby="item-tip-32478-14" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_gizmo_newgoggles.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Deathblow X11
+Goggles</a><span id="item-tip-32478-14" class="item-tip"
+role="tooltip"><span class="item-tip-name">Deathblow X11
+Goggles</span><span class="item-tip-meta">Tier  · head ·
+leather</span><span class="item-tip-stats">326 armor, 48 agility, 28
+stamina, 76 attack power, 11 hit rating (0.70%)</span><span
+class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
+agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
+database records the effect but not what it does, so it must be read on
+Wowhead · Stealth Detection. The item database records the effect but
+not what it does, so it must be read on Wowhead · On use.
+Longsight</span><span class="item-tip-source">Crafted,
+Engineering</span></span></span>
+<span class="delta-epv">EPV 688.48</span></th>
+</tr>
+<tr>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+<th class="delta-unit-head" style="text-align: right;">Change</th>
+<th class="delta-unit-head" style="text-align: left;">Converted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="delta-stat" style="text-align: left;">armor</td>
+<td class="delta-raw" style="text-align: right;">-226</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-180</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+59</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">strength</td>
+<td class="delta-raw" style="text-align: right;">-53</td>
+<td class="delta-converted" style="text-align: left;">-106 attack
+power</td>
+<td class="delta-raw" style="text-align: right;">-46</td>
+<td class="delta-converted" style="text-align: left;">-92 attack
+power</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">agility</td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+6</td>
+<td class="delta-converted" style="text-align: left;">0 attack power ·
++0.24% melee crit</td>
+<td class="delta-raw" style="text-align: right;">-9</td>
+<td class="delta-converted" style="text-align: left;">0 attack power ·
+-0.36% melee crit</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">stamina</td>
+<td class="delta-raw" style="text-align: right;">-3</td>
+<td class="delta-converted" style="text-align: left;">-30 health</td>
+<td class="delta-raw" style="text-align: right;">+3</td>
+<td class="delta-converted" style="text-align: left;">+30 health</td>
+<td class="delta-raw" style="text-align: right;">+18</td>
+<td class="delta-converted" style="text-align: left;">+180 health</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">intellect</td>
+<td class="delta-raw" style="text-align: right;">-20</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">-17</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">0</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">attack power</td>
+<td class="delta-raw" style="text-align: right;">+108</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+108</td>
+<td class="delta-converted" style="text-align: left;"></td>
+<td class="delta-raw" style="text-align: right;">+32</td>
+<td class="delta-converted" style="text-align: left;"></td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">hit</td>
+<td class="delta-raw" style="text-align: right;">+21</td>
+<td class="delta-converted" style="text-align: left;">+1.33%</td>
+<td class="delta-raw" style="text-align: right;">+21</td>
+<td class="delta-converted" style="text-align: left;">+1.33%</td>
+<td class="delta-raw" style="text-align: right;">+10</td>
+<td class="delta-converted" style="text-align: left;">+0.63%</td>
+</tr>
+<tr>
+<td class="delta-stat" style="text-align: left;">crit</td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+<td class="delta-raw" style="text-align: right;">+38</td>
+<td class="delta-converted" style="text-align: left;">+1.72%</td>
+</tr>
+</tbody><tfoot>
+<tr class="delta-net-row">
+<td class="delta-net-label" style="text-align: left;">Stat Highlights
+(Total Change)</td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">-30 health</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+30 health</span></td>
+<td class="delta-raw" style="text-align: right;"></td>
+<td class="delta-net-value" style="text-align: left;"><span
+class="delta-net-figure">+180 health</span></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+<div class="delta-absent">
+No best Phase 3 off-piece is ranked for this spec in this slot, so that
+comparison is not shown. A weapon the workbook does not rank cannot be
+compared against, and a spec with no captured gear set has nothing
+recorded to carry in.
+</div>
+<div class="delta-rates">
+<div class="delta-rates-label">
+Rates
+</div>
+<div class="delta-rate-row">
+<a href="data/facts/attack-power.yaml" class="delta-rate"
+title="2 attack power per strength for a druid  |  conversions.melee_attack_power_per_strength_level_70.druid">2
+attack power per strength</a><span class="delta-rate-sep">·</span><a
+href="data/facts/crit.yaml" class="delta-rate"
+title="10 health per stamina, before talents and Blessing of Kings  |  defensive_conversions.stamina_per_health">10
+health per stamina, before talents and Blessing of Kings</a><span
+class="delta-rate-sep">·</span><a href="data/facts/hit.yaml"
+class="delta-rate"
+title="15.77 rating per 1% melee and ranged hit  |  conversions.melee_ranged_hit_rating_per_percent">15.77
+rating per 1% melee and ranged hit</a><span
+class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
+class="delta-rate"
+title="22.08 rating per 1% melee crit  |  conversions.melee_crit_rating_per_percent">22.08
+rating per 1% melee crit</a><span class="delta-rate-sep">·</span><a
+href="data/facts/attack-power.yaml" class="delta-rate"
+title="no melee attack power from agility in Bear Form  |  conversions.melee_attack_power_per_agility_level_70.druid_bear_form">no
+melee attack power from agility in Bear Form</a><span
+class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
+class="delta-rate"
+title="25 agility per 1% crit for a druid  |  conversions.agility_per_percent_crit_level_70.druid">25
+agility per 1% crit</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div id="spec-card-5" class="spec">
 <section id="arms-warrior" class="spec-head">
 <h5><a href="specs/arms-warrior.html" class="spec-link">Arms
 Warrior</a></h5>
-<span class="spec-priority-pair"><span
-class="spec-priority-label">Priority</span><span
-class="spec-priority spec-priority-undecided">not yet
-decided</span></span>
+<span class="spec-standing-pair"><span
+class="spec-standing-label">Standing</span><span
+class="spec-standing spec-standing-upgrade">Upgrade</span></span>
 </section>
 <div class="spec-fields">
 <div class="field">
@@ -1940,17 +2573,16 @@ Delta
 <div class="delta-block">
 <div class="delta-head">
 <span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-20"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_misc_bandana_03.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cursed Vision of Sargeras</a><span
-id="item-tip-32235-20" class="item-tip" role="tooltip"><span
-class="item-tip-name">Cursed Vision of Sargeras</span><span
-class="item-tip-meta">Tier 6 · head · leather</span><span
-class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
-power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-effect">On use. Sense
+class="item-link" aria-describedby="item-tip-32235-20" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
+Sargeras</a><span id="item-tip-32235-20" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cursed Vision of
+Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
+stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
+(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
+Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
 Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
 Black Temple</span></span></span> <span class="delta-terms">in Arms
 Warrior terms</span> <span class="delta-epv delta-epv-subject">EPV
@@ -1967,10 +2599,10 @@ class="delta-view delta-route-drop">Over best Phase 3 off-piece, Black
 Temple</span>
 <span class="item-ref"><a
 href="items/helm-of-the-illidari-shatterer.html" class="item-link"
-aria-describedby="item-tip-32373-21" rel="noopener noreferrer"
-target="_blank"><img src="icons/inv_helmet_98.jpg" class="item-icon"
-loading="lazy" aria-hidden="true" />Helm of the Illidari
-Shatterer</a><span id="item-tip-32373-21" class="item-tip"
+aria-describedby="item-tip-32373-21" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_98.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Helm of the
+Illidari Shatterer</a><span id="item-tip-32373-21" class="item-tip"
 role="tooltip"><span class="item-tip-name">Helm of the Illidari
 Shatterer</span><span class="item-tip-meta">Tier 6 · head ·
 plate</span><span class="item-tip-stats">1434 armor, 51 strength, 29
@@ -1982,32 +2614,30 @@ Council, Black Temple</span></span></span>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
 <span class="item-ref"><a href="items/onslaught-battle-helm.html"
-class="item-link" aria-describedby="item-tip-30972-22"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_98.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Onslaught Battle-Helm</a><span
-id="item-tip-30972-22" class="item-tip" role="tooltip"><span
-class="item-tip-name">Onslaught Battle-Helm</span><span
-class="item-tip-meta">Tier 6 · head · plate</span><span
-class="item-tip-stats">1483 armor, 54 strength, 41 agility, 54 stamina,
-105 armor penetration</span><span class="item-tip-sockets">Sockets meta,
-red · Socket bonus 4 strength</span><span class="item-tip-source">Tier
-set piece, Onslaught Battlegear. Bought with a token, never a raid
-drop</span></span></span>
+class="item-link" aria-describedby="item-tip-30972-22" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_98.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Onslaught
+Battle-Helm</a><span id="item-tip-30972-22" class="item-tip"
+role="tooltip"><span class="item-tip-name">Onslaught
+Battle-Helm</span><span class="item-tip-meta">Tier 6 · head ·
+plate</span><span class="item-tip-stats">1483 armor, 54 strength, 41
+agility, 54 stamina, 105 armor penetration</span><span
+class="item-tip-sockets">Sockets meta, red · Socket bonus 4
+strength</span><span class="item-tip-source">Tier set piece, Onslaught
+Battlegear. Bought with a token, never a raid drop</span></span></span>
 <span class="delta-epv">EPV 150.76</span></th>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
 Cavern</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30120"
-class="item-link" aria-describedby="item-tip-30120-23"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_58.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Destroyer Battle-Helm</a><span
-id="item-tip-30120-23" class="item-tip" role="tooltip"><span
-class="item-tip-name">Destroyer Battle-Helm</span><span
-class="item-tip-meta">Tier 5 · head · plate</span><span
-class="item-tip-stats">1355 armor, 47 strength, 45 stamina, 21 hit
-rating (1.33%), 36 crit rating (1.63%)</span><span
+class="item-link" aria-describedby="item-tip-30120-23" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_58.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Destroyer
+Battle-Helm</a><span id="item-tip-30120-23" class="item-tip"
+role="tooltip"><span class="item-tip-name">Destroyer
+Battle-Helm</span><span class="item-tip-meta">Tier 5 · head ·
+plate</span><span class="item-tip-stats">1355 armor, 47 strength, 45
+stamina, 21 hit rating (1.33%), 36 crit rating (1.63%)</span><span
 class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
 strength</span><span class="item-tip-source">Tier set piece, Destroyer
 Battlegear. Bought with a token, never a raid drop</span></span></span>
@@ -2016,15 +2646,14 @@ Battlegear. Bought with a token, never a raid drop</span></span></span>
 class="delta-view delta-route-crafted delta-view-gated">Over best
 pre-phase off-piece, Engineering</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32461"
-class="item-link" aria-describedby="item-tip-32461-24"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_gizmo_newgoggles.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Furious Gizmatic Goggles</a><span
-id="item-tip-32461-24" class="item-tip" role="tooltip"><span
-class="item-tip-name">Furious Gizmatic Goggles</span><span
-class="item-tip-meta">Tier  · head · plate</span><span
-class="item-tip-stats">1296 armor, 48 strength, 28 stamina, 13 hit
-rating (0.82%), 38 crit rating (1.72%)</span><span
+class="item-link" aria-describedby="item-tip-32461-24" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_gizmo_newgoggles.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Furious Gizmatic
+Goggles</a><span id="item-tip-32461-24" class="item-tip"
+role="tooltip"><span class="item-tip-name">Furious Gizmatic
+Goggles</span><span class="item-tip-meta">Tier  · head ·
+plate</span><span class="item-tip-stats">1296 armor, 48 strength, 28
+stamina, 13 hit rating (0.82%), 38 crit rating (1.72%)</span><span
 class="item-tip-sockets">Sockets meta, blue · Socket bonus 4 crit
 rating</span><span class="item-tip-effect">Gas Cloud Tracking. The item
 database records the effect but not what it does, so it must be read on
@@ -2203,328 +2832,13 @@ penetration counted as itself</a>
 </div>
 </div>
 </div>
-<div id="spec-card-6" class="spec">
-<section id="beast-mastery-hunter" class="spec-head">
-<h5><a href="specs/beast-mastery-hunter.html" class="spec-link">Beast
-Mastery Hunter</a></h5>
-<span class="spec-priority-pair"><span
-class="spec-priority-label">Priority</span><span
-class="spec-priority spec-priority-undecided">not yet
-decided</span></span>
-</section>
-<div class="spec-fields">
-<div class="field">
-<div class="field-label">
-Constraints
-</div>
-<div class="constraint-block">
-<div class="constraint-row">
-<span class="constraint-label">Ranged hit cap</span><span
-class="constraint-value">9%</span><span
-class="constraint-note">shots</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Improved Faerie Fire</span><span
-class="constraint-value">-3%</span><span
-class="constraint-note">assumed</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Gear needs</span><span
-class="constraint-value">6%</span><span class="constraint-note"></span>
-</div>
-<div class="constraint-line">
-The Surefooted talent sits in the Survival tree, which this build does
-not reach.
-</div>
-<div class="constraint-break">
-
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Entry set</span><span
-class="constraint-value">7.7%</span><span class="constraint-note">clear
-by 1.7%</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Tier set, Tier 6 shoulder and chest and
-hands and legs</span><span class="constraint-value">5.8%</span><span
-class="constraint-note">short by 0.2%</span>
-</div>
-<div class="constraint-line">
-Closed by 1 hit gem against 8 sockets in the set.
-</div>
-<div class="constraint-break">
-
-</div>
-<div class="constraint-line">
-No crit cap.
-</div>
-<div class="constraint-line">
-No haste threshold to protect.
-</div>
-</div>
-</div>
-<div class="field">
-<div class="field-label">
-Delta
-</div>
-<div class="delta-block">
-<div class="delta-head">
-<span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-25"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_misc_bandana_03.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cursed Vision of Sargeras</a><span
-id="item-tip-32235-25" class="item-tip" role="tooltip"><span
-class="item-tip-name">Cursed Vision of Sargeras</span><span
-class="item-tip-meta">Tier 6 · head · leather</span><span
-class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
-power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-effect">On use. Sense
-Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
-Black Temple</span></span></span> <span class="delta-terms">in Beast
-Mastery Hunter terms</span> <span
-class="delta-epv delta-epv-subject">EPV 352.73</span>
-</div>
-<div class="delta-grid">
-<table>
-<thead>
-<tr>
-<th rowspan="2" class="delta-stat-head"
-style="text-align: left;">Stat</th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over best Phase 3 off-piece, Black
-Temple</span>
-<span class="item-ref"><a href="items/forest-prowlers-helm.html"
-class="item-link" aria-describedby="item-tip-32376-26"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_95.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Forest Prowler's Helm</a><span
-id="item-tip-32376-26" class="item-tip" role="tooltip"><span
-class="item-tip-name">Forest Prowler's Helm</span><span
-class="item-tip-meta">Tier 6 · head · mail</span><span
-class="item-tip-stats">803 armor, 42 agility, 29 stamina, 28 intellect,
-100 attack power, 20 crit rating (0.91%)</span><span
-class="item-tip-sockets">Sockets red, meta</span><span
-class="item-tip-source">Drops from The Illidari Council, Black
-Temple</span></span></span>
-<span class="delta-epv">EPV 292.48</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
-<span class="item-ref"><a href="items/gronnstalkers-helmet.html"
-class="item-link" aria-describedby="item-tip-31003-27"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_95.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Gronnstalker's Helmet</a><span
-id="item-tip-31003-27" class="item-tip" role="tooltip"><span
-class="item-tip-name">Gronnstalker's Helmet</span><span
-class="item-tip-meta">Tier 6 · head · mail</span><span
-class="item-tip-stats">830 armor, 45 agility, 45 stamina, 29 intellect,
-90 attack power</span><span class="item-tip-sockets">Sockets red, meta ·
-Socket bonus 4 crit rating</span><span class="item-tip-source">Tier set
-piece, Gronnstalker's Armor. Bought with a token, never a raid
-drop</span></span></span>
-<span class="delta-epv">EPV 257.63</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-crafted delta-view-gated">Over best
-pre-phase off-piece, Engineering</span>
-<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32474"
-class="item-link" aria-describedby="item-tip-32474-28"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_gizmo_newgoggles.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Surestrike Goggles v2.0</a><span
-id="item-tip-32474-28" class="item-tip" role="tooltip"><span
-class="item-tip-name">Surestrike Goggles v2.0</span><span
-class="item-tip-meta">Tier  · head · mail</span><span
-class="item-tip-stats">726 armor, 28 stamina, 96 attack power, 13 hit
-rating (0.82%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
-agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
-database records the effect but not what it does, so it must be read on
-Wowhead · Stealth Detection. The item database records the effect but
-not what it does, so it must be read on Wowhead · On use.
-Longsight</span><span class="item-tip-source">Crafted,
-Engineering</span></span></span>
-<span class="delta-epv">EPV 249.78</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
-Cavern</span>
-<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30141"
-class="item-link" aria-describedby="item-tip-30141-29"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_15.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Rift Stalker Helm</a><span id="item-tip-30141-29"
-class="item-tip" role="tooltip"><span class="item-tip-name">Rift Stalker
-Helm</span><span class="item-tip-meta">Tier 5 · head · mail</span><span
-class="item-tip-stats">759 armor, 40 agility, 36 stamina, 25 intellect,
-82 attack power</span><span class="item-tip-sockets">Sockets yellow,
-meta · Socket bonus 6 stamina</span><span class="item-tip-source">Tier
-set piece, Rift Stalker Armor. Bought with a token, never a raid
-drop</span></span></span>
-<span class="delta-epv">EPV 238.38</span></th>
-</tr>
-<tr>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="delta-stat" style="text-align: left;">armor</td>
-<td class="delta-raw" style="text-align: right;">-418</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-445</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-341</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-374</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">agility</td>
-<td class="delta-raw" style="text-align: right;">-3</td>
-<td class="delta-converted" style="text-align: left;">-3 attack power ·
--3 ranged attack power · -0.07% melee crit</td>
-<td class="delta-raw" style="text-align: right;">-6</td>
-<td class="delta-converted" style="text-align: left;">-6 attack power ·
--6 ranged attack power · -0.15% melee crit</td>
-<td class="delta-raw" style="text-align: right;">+39</td>
-<td class="delta-converted" style="text-align: left;">+39 attack power ·
-+39 ranged attack power · +0.97% melee crit</td>
-<td class="delta-raw" style="text-align: right;">-1</td>
-<td class="delta-converted" style="text-align: left;">-1 attack power ·
--1 ranged attack power · -0.03% melee crit</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">stamina</td>
-<td class="delta-raw" style="text-align: right;">+17</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+1</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+18</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+10</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">intellect</td>
-<td class="delta-raw" style="text-align: right;">-28</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-29</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-25</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">attack power</td>
-<td class="delta-raw" style="text-align: right;">+8</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+18</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+12</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+26</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">hit</td>
-<td class="delta-raw" style="text-align: right;">+21</td>
-<td class="delta-converted" style="text-align: left;">+1.33%</td>
-<td class="delta-raw" style="text-align: right;">+21</td>
-<td class="delta-converted" style="text-align: left;">+1.33%</td>
-<td class="delta-raw" style="text-align: right;">+8</td>
-<td class="delta-converted" style="text-align: left;">+0.51%</td>
-<td class="delta-raw" style="text-align: right;">+21</td>
-<td class="delta-converted" style="text-align: left;">+1.33%</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">crit</td>
-<td class="delta-raw" style="text-align: right;">+18</td>
-<td class="delta-converted" style="text-align: left;">+0.82%</td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-</tr>
-</tbody><tfoot>
-<tr class="delta-net-row">
-<td class="delta-net-label" style="text-align: left;">Stat Highlights
-(Total Change)</td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+5 attack power</span>
-<span class="delta-net-figure">-3 ranged attack power</span>
-<span class="delta-net-figure">+0.74% melee crit</span>
-<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+12 attack power</span>
-<span class="delta-net-figure">-6 ranged attack power</span>
-<span class="delta-net-figure">+1.57% melee crit</span>
-<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+51 attack power</span>
-<span class="delta-net-figure">+39 ranged attack power</span>
-<span class="delta-net-figure">+0.97% melee crit</span>
-<span class="delta-net-figure">+0.51% melee and ranged hit</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+25 attack power</span>
-<span class="delta-net-figure">-1 ranged attack power</span>
-<span class="delta-net-figure">+1.70% melee crit</span>
-<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
-</tr>
-</tfoot>
-
-</table>
-</div>
-<div class="delta-rates">
-<div class="delta-rates-label">
-Rates
-</div>
-<div class="delta-rate-row">
-<a href="data/facts/attack-power.yaml" class="delta-rate"
-title="1 attack power per agility for a hunter  |  conversions.melee_attack_power_per_agility_level_70.hunter">1
-attack power per agility</a><span class="delta-rate-sep">·</span><a
-href="data/facts/attack-power.yaml" class="delta-rate"
-title="1 ranged attack power per agility  |  conversions.ranged_attack_power_per_agility_level_70.hunter">1
-ranged attack power per agility</a><span
-class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
-class="delta-rate"
-title="40 agility per 1% crit for a hunter  |  conversions.agility_per_percent_crit_level_70.hunter">40
-agility per 1% crit</a><span class="delta-rate-sep">·</span><a
-href="data/facts/hit.yaml" class="delta-rate"
-title="15.77 rating per 1% melee and ranged hit  |  conversions.melee_ranged_hit_rating_per_percent">15.77
-rating per 1% melee and ranged hit</a><span
-class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
-class="delta-rate"
-title="22.08 rating per 1% melee crit  |  conversions.melee_crit_rating_per_percent">22.08
-rating per 1% melee crit</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div id="spec-card-7" class="spec">
 <section id="survival-hunter" class="spec-head">
 <h5><a href="specs/survival-hunter.html" class="spec-link">Survival
 Hunter</a></h5>
-<span class="spec-priority-pair"><span
-class="spec-priority-label">Priority</span><span
-class="spec-priority spec-priority-undecided">not yet
-decided</span></span>
+<span class="spec-standing-pair"><span
+class="spec-standing-label">Standing</span><span
+class="spec-standing spec-standing-upgrade">Upgrade</span></span>
 </section>
 <div class="spec-fields">
 <div class="field">
@@ -2584,17 +2898,16 @@ Delta
 <div class="delta-block">
 <div class="delta-head">
 <span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-30"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_misc_bandana_03.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cursed Vision of Sargeras</a><span
-id="item-tip-32235-30" class="item-tip" role="tooltip"><span
-class="item-tip-name">Cursed Vision of Sargeras</span><span
-class="item-tip-meta">Tier 6 · head · leather</span><span
-class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
-power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-effect">On use. Sense
+class="item-link" aria-describedby="item-tip-32235-30" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_misc_bandana_03.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Cursed Vision of
+Sargeras</a><span id="item-tip-32235-30" class="item-tip"
+role="tooltip"><span class="item-tip-name">Cursed Vision of
+Sargeras</span><span class="item-tip-meta">Tier 6 · head ·
+leather</span><span class="item-tip-stats">385 armor, 39 agility, 46
+stamina, 108 attack power, 21 hit rating (1.33%), 38 crit rating
+(1.72%)</span><span class="item-tip-sockets">Sockets meta, yellow ·
+Socket bonus 6 stamina</span><span class="item-tip-effect">On use. Sense
 Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
 Black Temple</span></span></span> <span class="delta-terms">in Survival
 Hunter terms</span> <span class="delta-epv delta-epv-subject">EPV
@@ -2610,13 +2923,12 @@ style="text-align: left;">Stat</th>
 class="delta-view delta-route-drop">Over best Phase 3 off-piece, Black
 Temple</span>
 <span class="item-ref"><a href="items/forest-prowlers-helm.html"
-class="item-link" aria-describedby="item-tip-32376-31"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_95.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Forest Prowler's Helm</a><span
-id="item-tip-32376-31" class="item-tip" role="tooltip"><span
-class="item-tip-name">Forest Prowler's Helm</span><span
-class="item-tip-meta">Tier 6 · head · mail</span><span
+class="item-link" aria-describedby="item-tip-32376-31" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_95.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Forest Prowler's
+Helm</a><span id="item-tip-32376-31" class="item-tip"
+role="tooltip"><span class="item-tip-name">Forest Prowler's
+Helm</span><span class="item-tip-meta">Tier 6 · head · mail</span><span
 class="item-tip-stats">803 armor, 42 agility, 29 stamina, 28 intellect,
 100 attack power, 20 crit rating (0.91%)</span><span
 class="item-tip-sockets">Sockets red, meta</span><span
@@ -2626,29 +2938,29 @@ Temple</span></span></span>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
 <span class="item-ref"><a href="items/gronnstalkers-helmet.html"
-class="item-link" aria-describedby="item-tip-31003-32"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_95.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Gronnstalker's Helmet</a><span
-id="item-tip-31003-32" class="item-tip" role="tooltip"><span
-class="item-tip-name">Gronnstalker's Helmet</span><span
-class="item-tip-meta">Tier 6 · head · mail</span><span
-class="item-tip-stats">830 armor, 45 agility, 45 stamina, 29 intellect,
-90 attack power</span><span class="item-tip-sockets">Sockets red, meta ·
-Socket bonus 4 crit rating</span><span class="item-tip-source">Tier set
-piece, Gronnstalker's Armor. Bought with a token, never a raid
+class="item-link" aria-describedby="item-tip-31003-32" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_95.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Gronnstalker's
+Helmet</a><span id="item-tip-31003-32" class="item-tip"
+role="tooltip"><span class="item-tip-name">Gronnstalker's
+Helmet</span><span class="item-tip-meta">Tier 6 · head ·
+mail</span><span class="item-tip-stats">830 armor, 45 agility, 45
+stamina, 29 intellect, 90 attack power</span><span
+class="item-tip-sockets">Sockets red, meta · Socket bonus 4 crit
+rating</span><span class="item-tip-source">Tier set piece,
+Gronnstalker's Armor. Bought with a token, never a raid
 drop</span></span></span>
 <span class="delta-epv">EPV 449.63</span></th>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
 Cavern</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30141"
-class="item-link" aria-describedby="item-tip-30141-33"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_15.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Rift Stalker Helm</a><span id="item-tip-30141-33"
-class="item-tip" role="tooltip"><span class="item-tip-name">Rift Stalker
-Helm</span><span class="item-tip-meta">Tier 5 · head · mail</span><span
+class="item-link" aria-describedby="item-tip-30141-33" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_15.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Rift Stalker
+Helm</a><span id="item-tip-30141-33" class="item-tip"
+role="tooltip"><span class="item-tip-name">Rift Stalker Helm</span><span
+class="item-tip-meta">Tier 5 · head · mail</span><span
 class="item-tip-stats">759 armor, 40 agility, 36 stamina, 25 intellect,
 82 attack power</span><span class="item-tip-sockets">Sockets yellow,
 meta · Socket bonus 6 stamina</span><span class="item-tip-source">Tier
@@ -2659,15 +2971,14 @@ drop</span></span></span>
 class="delta-view delta-route-badge delta-view-gated">Over best
 pre-phase off-piece, Badge of Justice</span>
 <span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32087"
-class="item-link" aria-describedby="item-tip-32087-34"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_73.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Mask of the Deceiver</a><span
-id="item-tip-32087-34" class="item-tip" role="tooltip"><span
-class="item-tip-name">Mask of the Deceiver</span><span
-class="item-tip-meta">Tier  · head · leather</span><span
-class="item-tip-stats">283 armor, 32 agility, 36 stamina, 64 attack
-power, 16 hit rating (1.01%)</span><span
+class="item-link" aria-describedby="item-tip-32087-34" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_73.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Mask of the
+Deceiver</a><span id="item-tip-32087-34" class="item-tip"
+role="tooltip"><span class="item-tip-name">Mask of the
+Deceiver</span><span class="item-tip-meta">Tier  · head ·
+leather</span><span class="item-tip-stats">283 armor, 32 agility, 36
+stamina, 64 attack power, 16 hit rating (1.01%)</span><span
 class="item-tip-sockets">Sockets yellow, meta · Socket bonus 4
 agility</span></span></span>
 <span class="delta-epv">EPV 362.97</span></th>
@@ -2826,375 +3137,36 @@ rating per 1% melee crit</a>
 </div>
 </div>
 </div>
-<div id="spec-card-8" class="spec">
-<section id="enhancement-shaman" class="spec-head">
-<h5><a href="specs/enhancement-shaman.html"
-class="spec-link">Enhancement Shaman</a></h5>
-<span class="spec-priority-pair"><span
-class="spec-priority-label">Priority</span><span
-class="spec-priority spec-priority-undecided">not yet
-decided</span></span>
-</section>
-<div class="spec-fields">
-<div class="field">
-<div class="field-label">
-Constraints
-</div>
-<div class="constraint-block">
-<div class="constraint-row">
-<span class="constraint-label">Special-attack hit cap</span><span
-class="constraint-value">9%</span><span class="constraint-note">special
-attacks</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Dual Wield Specialization</span><span
-class="constraint-value">-6%</span><span class="constraint-note"></span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Nature's Guidance</span><span
-class="constraint-value">-3%</span><span class="constraint-note"></span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Improved Faerie Fire</span><span
-class="constraint-value">-3%</span><span
-class="constraint-note">assumed</span>
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Gear needs</span><span
-class="constraint-value">0%</span><span class="constraint-note"></span>
-</div>
-<div class="constraint-break">
-
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Entry set</span><span
-class="constraint-value">9.2%</span><span class="constraint-note">clear
-by 12.2%</span>
-</div>
-<div class="constraint-line">
-Talent and the assumed raid debuff cover this cap outright, so every
-point of hit on an item is surplus.
-</div>
-<div class="constraint-row">
-<span class="constraint-label">Tier set, no Tier 6 piece
-worn</span><span class="constraint-value">9.2%</span><span
-class="constraint-note">clear by 12.2%</span>
-</div>
-<div class="constraint-line">
-The published guide states in its own words that neither Tier 6 set
-bonus is worth chasing for this spec, and this set holds no Tier 6
-piece.
-</div>
-<div class="constraint-break">
-
-</div>
-<div class="constraint-line">
-Dual-wields: white swings miss until 28%, which nothing in this patch
-reaches, so hit past the cap still buys accuracy.
-</div>
-<div class="constraint-line">
-White swings stop critting at 50.5%, measured at the special-attack hit
-cap.
-</div>
-<div class="constraint-line">
-Nothing rostered reaches it this phase, so crit stays linear all tier.
-</div>
-<div class="constraint-line">
-No haste threshold to protect.
-</div>
-</div>
-</div>
-<div class="field">
-<div class="field-label">
-Delta
-</div>
-<div class="delta-block">
-<div class="delta-head">
-<span class="item-ref"><a href="items/cursed-vision-of-sargeras.html"
-class="item-link" aria-describedby="item-tip-32235-35"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_misc_bandana_03.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cursed Vision of Sargeras</a><span
-id="item-tip-32235-35" class="item-tip" role="tooltip"><span
-class="item-tip-name">Cursed Vision of Sargeras</span><span
-class="item-tip-meta">Tier 6 · head · leather</span><span
-class="item-tip-stats">385 armor, 39 agility, 46 stamina, 108 attack
-power, 21 hit rating (1.33%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-effect">On use. Sense
-Demons</span><span class="item-tip-source">Drops from Illidan Stormrage,
-Black Temple</span></span></span> <span class="delta-terms">in
-Enhancement Shaman terms</span> <span
-class="delta-epv delta-epv-subject">EPV 351.56</span>
-</div>
-<div class="delta-grid">
-<table>
-<thead>
-<tr>
-<th rowspan="2" class="delta-stat-head"
-style="text-align: left;">Stat</th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over best Phase 3 off-piece, Black
-Temple</span>
-<span class="item-ref"><a href="items/forest-prowlers-helm.html"
-class="item-link" aria-describedby="item-tip-32376-36"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_95.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Forest Prowler's Helm</a><span
-id="item-tip-32376-36" class="item-tip" role="tooltip"><span
-class="item-tip-name">Forest Prowler's Helm</span><span
-class="item-tip-meta">Tier 6 · head · mail</span><span
-class="item-tip-stats">803 armor, 42 agility, 29 stamina, 28 intellect,
-100 attack power, 20 crit rating (0.91%)</span><span
-class="item-tip-sockets">Sockets red, meta</span><span
-class="item-tip-source">Drops from The Illidari Council, Black
-Temple</span></span></span>
-<span class="delta-epv">EPV 291.23</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over Tier 6, Mount Hyjal</span>
-<span class="item-ref"><a href="items/skyshatter-cover.html"
-class="item-link" aria-describedby="item-tip-31015-37"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_97.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Skyshatter Cover</a><span id="item-tip-31015-37"
-class="item-tip" role="tooltip"><span class="item-tip-name">Skyshatter
-Cover</span><span class="item-tip-meta">Tier 6 · head · mail</span><span
-class="item-tip-stats">830 armor, 53 strength, 55 stamina, 27 intellect,
-20 hit rating (1.27%), 28 crit rating (1.27%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 6
-stamina</span><span class="item-tip-source">Tier set piece, Skyshatter
-Harness. Bought with a token, never a raid drop</span></span></span>
-<span class="delta-epv">EPV 289.76</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-drop">Over Tier 5, Serpentshrine
-Cavern</span>
-<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=30190"
-class="item-link" aria-describedby="item-tip-30190-38"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_15.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Cataclysm Helm</a><span id="item-tip-30190-38"
-class="item-tip" role="tooltip"><span class="item-tip-name">Cataclysm
-Helm</span><span class="item-tip-meta">Tier 5 · head · mail</span><span
-class="item-tip-stats">759 armor, 41 strength, 32 agility, 46 stamina,
-23 intellect, 21 hit rating (1.33%)</span><span
-class="item-tip-sockets">Sockets meta, yellow · Socket bonus 4
-agility</span><span class="item-tip-source">Tier set piece, Cataclysm
-Harness. Bought with a token, never a raid drop</span></span></span>
-<span class="delta-epv">EPV 269.24</span></th>
-<th colspan="2" class="delta-view-head" style="text-align: left;"><span
-class="delta-view delta-route-crafted delta-view-gated">Over best
-pre-phase off-piece, Engineering</span>
-<span class="item-ref"><a href="https://www.wowhead.com/tbc/item=32474"
-class="item-link" aria-describedby="item-tip-32474-39"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_gizmo_newgoggles.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Surestrike Goggles v2.0</a><span
-id="item-tip-32474-39" class="item-tip" role="tooltip"><span
-class="item-tip-name">Surestrike Goggles v2.0</span><span
-class="item-tip-meta">Tier  · head · mail</span><span
-class="item-tip-stats">726 armor, 28 stamina, 96 attack power, 13 hit
-rating (0.82%), 38 crit rating (1.72%)</span><span
-class="item-tip-sockets">Sockets meta, blue · Socket bonus 4
-agility</span><span class="item-tip-effect">Gas Cloud Tracking. The item
-database records the effect but not what it does, so it must be read on
-Wowhead · Stealth Detection. The item database records the effect but
-not what it does, so it must be read on Wowhead · On use.
-Longsight</span><span class="item-tip-source">Crafted,
-Engineering</span></span></span>
-<span class="delta-epv">EPV 265.93</span></th>
-</tr>
-<tr>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-<th class="delta-unit-head" style="text-align: right;">Change</th>
-<th class="delta-unit-head" style="text-align: left;">Converted</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="delta-stat" style="text-align: left;">armor</td>
-<td class="delta-raw" style="text-align: right;">-418</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-445</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-374</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-341</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">strength</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-53</td>
-<td class="delta-converted" style="text-align: left;">-106 attack
-power</td>
-<td class="delta-raw" style="text-align: right;">-41</td>
-<td class="delta-converted" style="text-align: left;">-82 attack
-power</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">agility</td>
-<td class="delta-raw" style="text-align: right;">-3</td>
-<td class="delta-converted" style="text-align: left;">0 attack power ·
--0.12% melee crit</td>
-<td class="delta-raw" style="text-align: right;">+39</td>
-<td class="delta-converted" style="text-align: left;">0 attack power ·
-+1.56% melee crit</td>
-<td class="delta-raw" style="text-align: right;">+7</td>
-<td class="delta-converted" style="text-align: left;">0 attack power ·
-+0.28% melee crit</td>
-<td class="delta-raw" style="text-align: right;">+39</td>
-<td class="delta-converted" style="text-align: left;">0 attack power ·
-+1.56% melee crit</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">stamina</td>
-<td class="delta-raw" style="text-align: right;">+17</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-9</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+18</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">intellect</td>
-<td class="delta-raw" style="text-align: right;">-28</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-27</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">-23</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">attack power</td>
-<td class="delta-raw" style="text-align: right;">+8</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+108</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+108</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+12</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">hit</td>
-<td class="delta-raw" style="text-align: right;">+21</td>
-<td class="delta-converted" style="text-align: left;">+1.33%</td>
-<td class="delta-raw" style="text-align: right;">+1</td>
-<td class="delta-converted" style="text-align: left;">+0.06%</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-<td class="delta-raw" style="text-align: right;">+8</td>
-<td class="delta-converted" style="text-align: left;">+0.51%</td>
-</tr>
-<tr>
-<td class="delta-stat" style="text-align: left;">crit</td>
-<td class="delta-raw" style="text-align: right;">+18</td>
-<td class="delta-converted" style="text-align: left;">+0.82%</td>
-<td class="delta-raw" style="text-align: right;">+10</td>
-<td class="delta-converted" style="text-align: left;">+0.45%</td>
-<td class="delta-raw" style="text-align: right;">+38</td>
-<td class="delta-converted" style="text-align: left;">+1.72%</td>
-<td class="delta-raw" style="text-align: right;">0</td>
-<td class="delta-converted" style="text-align: left;"></td>
-</tr>
-</tbody><tfoot>
-<tr class="delta-net-row">
-<td class="delta-net-label" style="text-align: left;">Stat Highlights
-(Total Change)</td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+8 attack power</span>
-<span class="delta-net-figure">+0.70% melee crit</span>
-<span class="delta-net-figure">+1.33% melee and ranged hit</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+2 attack power</span>
-<span class="delta-net-figure">+2.01% melee crit</span>
-<span class="delta-net-figure">+0.06% melee and ranged hit</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+26 attack power</span>
-<span class="delta-net-figure">+2.00% melee crit</span></td>
-<td class="delta-raw" style="text-align: right;"></td>
-<td class="delta-net-value" style="text-align: left;"><span
-class="delta-net-figure">+12 attack power</span>
-<span class="delta-net-figure">+1.56% melee crit</span>
-<span class="delta-net-figure">+0.51% melee and ranged hit</span></td>
-</tr>
-</tfoot>
-
-</table>
-</div>
-<div class="delta-rates">
-<div class="delta-rates-label">
-Rates
-</div>
-<div class="delta-rate-row">
-<a href="data/facts/attack-power.yaml" class="delta-rate"
-title="no melee attack power from agility for a shaman  |  conversions.melee_attack_power_per_agility_level_70.shaman">no
-melee attack power from agility</a><span
-class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
-class="delta-rate"
-title="25 agility per 1% crit for a shaman  |  conversions.agility_per_percent_crit_level_70.shaman">25
-agility per 1% crit</a><span class="delta-rate-sep">·</span><a
-href="data/facts/hit.yaml" class="delta-rate"
-title="15.77 rating per 1% melee and ranged hit  |  conversions.melee_ranged_hit_rating_per_percent">15.77
-rating per 1% melee and ranged hit</a><span
-class="delta-rate-sep">·</span><a href="data/facts/crit.yaml"
-class="delta-rate"
-title="22.08 rating per 1% melee crit  |  conversions.melee_crit_rating_per_percent">22.08
-rating per 1% melee crit</a><span class="delta-rate-sep">·</span><a
-href="data/facts/attack-power.yaml" class="delta-rate"
-title="2 attack power per strength for a shaman  |  conversions.melee_attack_power_per_strength_level_70.shaman">2
-attack power per strength</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </section>
 <p>The two warriors carry negative rows in both of their tables, and in
 both cases those negatives are most of the answer.</p>
 <p>The two hunters are the pair to read twice. They share both tier sets
 and the same Phase 3 off-piece, so three of their four column groups
-hold the same figures, and everything that separates Priority 2 from
-Priority 3 sits in the pre-phase off-piece and in how much hit each of
-them still needs. That view is gated for both of them, on an engineering
-goggle for Beast Mastery and on a badge purchase for Survival, which is
-exactly the case the route label exists to show: the same drop reads as
-a different upgrade for each, and neither raider is certain to hold the
-item being compared against.</p>
-<p>The Rogue and the Cat sitting at the same priority is the normal
-case, not a failure to decide. The priority says how much each wants it;
-which of the two receives it is the council’s judgment, and the reasons
-are what that judgment is made from.</p>
-<p>These priorities are an illustration of the shape a reason should
-take, not a ruling. No priorities have been assigned to any item
-yet.</p>
-<p>What is real here: every stat line, every delta table, every
-conversion rate, every cap figure, and all four derived baselines and
-their acquisition routes on every card, taken from
+hold the same figures, and everything that separates one hunter’s claim
+from the other sits in the pre-phase off-piece and in how much hit each
+of them still needs. That view is gated for both of them, on an
+engineering goggle for Beast Mastery and on a badge purchase for
+Survival, which is exactly the case the route label exists to show: the
+same drop reads as a different upgrade for each, and neither raider is
+certain to hold the item being compared against.</p>
+<p>The Rogue and the Cat sitting at the same standing is the normal
+case, not a failure to decide. The standing says what the item is to
+each; which of the two receives it is the council’s judgment, and the
+reasons are what that judgment is made from.</p>
+<p>What is real here: every standing, every stat line, every delta
+table, every conversion rate, every cap figure, and all four derived
+baselines and their acquisition routes on every card, taken from the
+best-in-slot captures in <code>data/facts/sim-profiles/</code>,
 <code>data/facts/items.csv</code>, <code>data/facts/hit.yaml</code>,
 <code>data/facts/crit.yaml</code>,
 <code>data/facts/attack-power.yaml</code>,
 <code>data/facts/tokens.yaml</code> and the EP Workbook in
 <code>data/research/epv-workbook/</code>. Every creator remark is real
-and carries a link to the second it was said. What is illustrative: the
-priorities themselves, which no council has settled.</p>
+and carries a link to the second it was said. Nothing on a card is
+illustrative, because nothing on a card is judged: who receives a
+contested drop first remains the council’s call, and it is not printed
+here.</p>
 <p>Throughput figures are absent from these cards by choice. A card
 previously led with a line like “plus 41 damage per second”, which had
 no source at the time. Simulated figures now exist, in <a
@@ -3225,11 +3197,11 @@ difference this is meant to show.</p>
 <div class="delta-head">
 <span class="delta-spec">Feral Cat</span>
 <span class="item-ref"><a href="items/thunderheart-cover.html"
-class="item-link" aria-describedby="item-tip-31039-40"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_94.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Thunderheart Cover</a><span id="item-tip-31039-40"
-class="item-tip" role="tooltip"><span class="item-tip-name">Thunderheart
+class="item-link" aria-describedby="item-tip-31039-40" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_94.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Thunderheart
+Cover</a><span id="item-tip-31039-40" class="item-tip"
+role="tooltip"><span class="item-tip-name">Thunderheart
 Cover</span><span class="item-tip-meta">Tier 6 · head ·
 leather</span><span class="item-tip-stats">611 armor, 53 strength, 39
 agility, 49 stamina, 20 intellect</span><span
@@ -3248,16 +3220,17 @@ style="text-align: left;">Stat</th>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-over">over</span> <span class="item-ref"><a
 href="https://www.wowhead.com/tbc/item=30228" class="item-link"
-aria-describedby="item-tip-30228-41" rel="noopener noreferrer"
-target="_blank"><img src="icons/inv_helmet_15.jpg" class="item-icon"
-loading="lazy" aria-hidden="true" />Nordrassil Headdress</a><span
-id="item-tip-30228-41" class="item-tip" role="tooltip"><span
-class="item-tip-name">Nordrassil Headdress</span><span
-class="item-tip-meta">Tier 5 · head · leather</span><span
-class="item-tip-stats">565 armor, 46 strength, 33 agility, 43 stamina,
-17 intellect</span><span class="item-tip-sockets">Sockets red, meta ·
-Socket bonus 6 stamina</span><span class="item-tip-source">Tier set
-piece, Nordrassil Harness. Bought with a token, never a raid
+aria-describedby="item-tip-30228-41" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_15.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Nordrassil
+Headdress</a><span id="item-tip-30228-41" class="item-tip"
+role="tooltip"><span class="item-tip-name">Nordrassil
+Headdress</span><span class="item-tip-meta">Tier 5 · head ·
+leather</span><span class="item-tip-stats">565 armor, 46 strength, 33
+agility, 43 stamina, 17 intellect</span><span
+class="item-tip-sockets">Sockets red, meta · Socket bonus 6
+stamina</span><span class="item-tip-source">Tier set piece, Nordrassil
+Harness. Bought with a token, never a raid
 drop</span></span></span></th>
 </tr>
 <tr>
@@ -3328,11 +3301,11 @@ agility per 1% crit</a>
 <div class="delta-head">
 <span class="delta-spec">Feral Bear</span>
 <span class="item-ref"><a href="items/thunderheart-cover.html"
-class="item-link" aria-describedby="item-tip-31039-42"
-rel="noopener noreferrer" target="_blank"><img
-src="icons/inv_helmet_94.jpg" class="item-icon" loading="lazy"
-aria-hidden="true" />Thunderheart Cover</a><span id="item-tip-31039-42"
-class="item-tip" role="tooltip"><span class="item-tip-name">Thunderheart
+class="item-link" aria-describedby="item-tip-31039-42" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_94.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Thunderheart
+Cover</a><span id="item-tip-31039-42" class="item-tip"
+role="tooltip"><span class="item-tip-name">Thunderheart
 Cover</span><span class="item-tip-meta">Tier 6 · head ·
 leather</span><span class="item-tip-stats">611 armor, 53 strength, 39
 agility, 49 stamina, 20 intellect</span><span
@@ -3351,16 +3324,17 @@ style="text-align: left;">Stat</th>
 <th colspan="2" class="delta-view-head" style="text-align: left;"><span
 class="delta-over">over</span> <span class="item-ref"><a
 href="https://www.wowhead.com/tbc/item=30228" class="item-link"
-aria-describedby="item-tip-30228-43" rel="noopener noreferrer"
-target="_blank"><img src="icons/inv_helmet_15.jpg" class="item-icon"
-loading="lazy" aria-hidden="true" />Nordrassil Headdress</a><span
-id="item-tip-30228-43" class="item-tip" role="tooltip"><span
-class="item-tip-name">Nordrassil Headdress</span><span
-class="item-tip-meta">Tier 5 · head · leather</span><span
-class="item-tip-stats">565 armor, 46 strength, 33 agility, 43 stamina,
-17 intellect</span><span class="item-tip-sockets">Sockets red, meta ·
-Socket bonus 6 stamina</span><span class="item-tip-source">Tier set
-piece, Nordrassil Harness. Bought with a token, never a raid
+aria-describedby="item-tip-30228-43" target="_blank"
+rel="noopener noreferrer"><img src="icons/inv_helmet_15.jpg"
+class="item-icon" loading="lazy" aria-hidden="true" />Nordrassil
+Headdress</a><span id="item-tip-30228-43" class="item-tip"
+role="tooltip"><span class="item-tip-name">Nordrassil
+Headdress</span><span class="item-tip-meta">Tier 5 · head ·
+leather</span><span class="item-tip-stats">565 armor, 46 strength, 33
+agility, 43 stamina, 17 intellect</span><span
+class="item-tip-sockets">Sockets red, meta · Socket bonus 6
+stamina</span><span class="item-tip-source">Tier set piece, Nordrassil
+Harness. Bought with a token, never a raid
 drop</span></span></span></th>
 </tr>
 <tr>
@@ -3586,10 +3560,10 @@ page.</p>
           : 'Showing ' + shown + ' of ' + total + ' spec cards.';
         if (reset) reset.disabled = shown === total;
         if (clear) clear.disabled = shown === 0;
-        // A priority checkbox reports its own members. Half a priority showing
+        // A standing checkbox reports its own members. Half a standing showing
         // is neither checked nor unchecked, and `indeterminate` is the state
         // that says so; leaving it checked would claim every claimant at that
-        // priority is on screen when one is not.
+        // standing is on screen when one is not.
         Array.prototype.forEach.call(groups, function (group) {
           var members = membersOf(group);
           var on = 0;
@@ -3605,9 +3579,9 @@ page.</p>
       Array.prototype.forEach.call(boxes, function (box) {
         box.addEventListener('change', apply);
       });
-      // A priority checkbox sets its own members and nothing else, so the
-      // priorities are additive: turning Priority 1 on and then Priority 2 on
-      // shows both, which is the case the council actually asks for.
+      // A standing checkbox sets its own members and nothing else, so the
+      // partition is additive: turning BIS on and then Upgrade on shows both,
+      // which is the case the council actually asks for.
       Array.prototype.forEach.call(groups, function (group) {
         group.addEventListener('change', function () {
           var state = group.checked;

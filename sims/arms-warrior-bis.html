@@ -168,11 +168,11 @@ only the main hand id replaced: the slot keeps its Mongoose, and the
 consumables, buffs and seed hold still, so every figure is directly
 comparable with the one at the top of this page. The published Phase 3
 page ranks only dual Warglaives, which this spec will not receive, so
-the Phase 3 candidates are the drop table’s two-handers in the weapon
-classes a warrior wields, and the earlier candidates are the top of the
-EP Workbook’s Two Hand ladder for this spec. This spec takes Cataclysm’s
-Edge. Torch of the Damned appears as a measurement only: it stays with
-the Retribution Paladin.</p>
+the table is an enumeration of the EP Workbook’s Two Hand ladder for
+this spec together with every worn and routed weapon, kept to the weapon
+classes a warrior wields. This spec takes Cataclysm’s Edge. Torch of the
+Damned appears as a measurement only: it stays with the Retribution
+Paladin.</p>
 <div class="table-wrap">
 <table>
 <colgroup>
@@ -209,10 +209,22 @@ the Retribution Paladin.</p>
 <td>-69.8</td>
 </tr>
 <tr>
+<td>Lionheart Champion</td>
+<td><em>empty, two-hander</em></td>
+<td>2027.6 ± 1.18</td>
+<td>-99.1</td>
+</tr>
+<tr>
 <td>Torch of the Damned</td>
 <td><em>empty, two-hander</em></td>
 <td>2001.2 ± 1.08</td>
 <td>-125.5</td>
+</tr>
+<tr>
+<td>Gladiator’s Greatsword</td>
+<td><em>empty, two-hander</em></td>
+<td>1980.5 ± 1.14</td>
+<td>-146.2</td>
 </tr>
 <tr>
 <td>Vengeful Gladiator’s Bonegrinder</td>
@@ -227,6 +239,30 @@ the Retribution Paladin.</p>
 <td>-172.7</td>
 </tr>
 <tr>
+<td>World Breaker</td>
+<td><em>empty, two-hander</em></td>
+<td>1942.1 ± 1.05</td>
+<td>-184.6</td>
+</tr>
+<tr>
+<td>Vengeful Gladiator’s Decapitator</td>
+<td><em>empty, two-hander</em></td>
+<td>1939.2 ± 1.07</td>
+<td>-187.5</td>
+</tr>
+<tr>
+<td>Stormherald</td>
+<td><em>empty, two-hander</em></td>
+<td>1934.9 ± 1.05</td>
+<td>-191.8</td>
+</tr>
+<tr>
+<td>Bloodmoon</td>
+<td><em>empty, two-hander</em></td>
+<td>1922.8 ± 1.06</td>
+<td>-203.9</td>
+</tr>
+<tr>
 <td>Merciless Gladiator’s Bonegrinder</td>
 <td><em>empty, two-hander</em></td>
 <td>1914.9 ± 1.03</td>
@@ -237,6 +273,66 @@ the Retribution Paladin.</p>
 <td><em>empty, two-hander</em></td>
 <td>1890.4 ± 1.06</td>
 <td>-236.3</td>
+</tr>
+<tr>
+<td>Deep Thunder</td>
+<td><em>empty, two-hander</em></td>
+<td>1887.3 ± 1.04</td>
+<td>-239.4</td>
+</tr>
+<tr>
+<td>Merciless Gladiator’s Decapitator</td>
+<td><em>empty, two-hander</em></td>
+<td>1885.1 ± 1.05</td>
+<td>-241.6</td>
+</tr>
+<tr>
+<td>Mooncleaver</td>
+<td><em>empty, two-hander</em></td>
+<td>1877.5 ± 1.06</td>
+<td>-249.2</td>
+</tr>
+<tr>
+<td>Gorehowl</td>
+<td><em>empty, two-hander</em></td>
+<td>1851.8 ± 1.03</td>
+<td>-274.9</td>
+</tr>
+<tr>
+<td>Hammer of the Naaru</td>
+<td><em>empty, two-hander</em></td>
+<td>1849.2 ± 1.01</td>
+<td>-277.5</td>
+</tr>
+<tr>
+<td>Gladiator’s Decapitator</td>
+<td><em>empty, two-hander</em></td>
+<td>1834.5 ± 1.03</td>
+<td>-292.2</td>
+</tr>
+<tr>
+<td>Axe of the Gronn Lords</td>
+<td><em>empty, two-hander</em></td>
+<td>1834.2 ± 1.04</td>
+<td>-292.5</td>
+</tr>
+<tr>
+<td>Vengeful Gladiator’s Painsaw</td>
+<td><em>empty, two-hander</em></td>
+<td>1674.9 ± 0.85</td>
+<td>-451.8</td>
+</tr>
+<tr>
+<td>Merciless Gladiator’s Painsaw</td>
+<td><em>empty, two-hander</em></td>
+<td>1640.5 ± 0.85</td>
+<td>-486.2</td>
+</tr>
+<tr>
+<td>Gladiator’s Painsaw</td>
+<td><em>empty, two-hander</em></td>
+<td>1598.3 ± 0.85</td>
+<td>-528.4</td>
 </tr>
 </tbody>
 </table>
@@ -899,10 +995,10 @@ defend, and taking theirs is one we can cite.</p>
           : 'Showing ' + shown + ' of ' + total + ' spec cards.';
         if (reset) reset.disabled = shown === total;
         if (clear) clear.disabled = shown === 0;
-        // A priority checkbox reports its own members. Half a priority showing
+        // A standing checkbox reports its own members. Half a standing showing
         // is neither checked nor unchecked, and `indeterminate` is the state
         // that says so; leaving it checked would claim every claimant at that
-        // priority is on screen when one is not.
+        // standing is on screen when one is not.
         Array.prototype.forEach.call(groups, function (group) {
           var members = membersOf(group);
           var on = 0;
@@ -918,9 +1014,9 @@ defend, and taking theirs is one we can cite.</p>
       Array.prototype.forEach.call(boxes, function (box) {
         box.addEventListener('change', apply);
       });
-      // A priority checkbox sets its own members and nothing else, so the
-      // priorities are additive: turning Priority 1 on and then Priority 2 on
-      // shows both, which is the case the council actually asks for.
+      // A standing checkbox sets its own members and nothing else, so the
+      // partition is additive: turning BIS on and then Upgrade on shows both,
+      // which is the case the council actually asks for.
       Array.prototype.forEach.call(groups, function (group) {
         group.addEventListener('change', function () {
           var state = group.checked;

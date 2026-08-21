@@ -82,13 +82,15 @@ decision path from them in advance. It is not consulted at the moment a
 drop happens. That is why every conclusion travels with its basis: the
 basis is what the group argues about, and the argument happens before
 the raid rather than during it.</p>
-<p>The unit of output is a <strong>priority</strong>: how strongly one
-spec wants one item, with the reasoning that produced it. It is a
-reference the council uses, and it is meant to be acted on. The
-reasoning travels with it so a priority can be checked and overturned on
-its merits, not so that every priority is provisional. The scale, and a
-worked example, are in <a
-href="conventions.html#priorities">Conventions</a>.</p>
+<p>The unit of output is a <strong>standing</strong>: what an item is to
+a spec, BIS where the spec’s simulated best-in-slot set wears it and
+Upgrade where the spec is a claimant without wearing it there, with the
+reasoning that produced the underlying sets. A standing is derived from
+the simulated profiles and the claimant rule rather than judged per
+item, so it is checked by rerunning the pipeline, and who receives a
+contested drop FIRST remains the council’s judgment, recorded in the
+judgment store with its reasons. The scale, and a worked example, are in
+<a href="conventions.html#standing-bis-and-upgrade">Conventions</a>.</p>
 <p>The design intent follows from that. Give a clear answer, and show
 enough of its basis that the council can test it. A conclusion with no
 answer is useless; an answer with no basis cannot be argued with, only
@@ -1292,10 +1294,10 @@ until the set completes.</p>
           : 'Showing ' + shown + ' of ' + total + ' spec cards.';
         if (reset) reset.disabled = shown === total;
         if (clear) clear.disabled = shown === 0;
-        // A priority checkbox reports its own members. Half a priority showing
+        // A standing checkbox reports its own members. Half a standing showing
         // is neither checked nor unchecked, and `indeterminate` is the state
         // that says so; leaving it checked would claim every claimant at that
-        // priority is on screen when one is not.
+        // standing is on screen when one is not.
         Array.prototype.forEach.call(groups, function (group) {
           var members = membersOf(group);
           var on = 0;
@@ -1311,9 +1313,9 @@ until the set completes.</p>
       Array.prototype.forEach.call(boxes, function (box) {
         box.addEventListener('change', apply);
       });
-      // A priority checkbox sets its own members and nothing else, so the
-      // priorities are additive: turning Priority 1 on and then Priority 2 on
-      // shows both, which is the case the council actually asks for.
+      // A standing checkbox sets its own members and nothing else, so the
+      // partition is additive: turning BIS on and then Upgrade on shows both,
+      // which is the case the council actually asks for.
       Array.prototype.forEach.call(groups, function (group) {
         group.addEventListener('change', function () {
           var state = group.checked;
