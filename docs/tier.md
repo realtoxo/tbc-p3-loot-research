@@ -2,9 +2,9 @@
 title: Tier
 eyebrow: Measurement
 subtitle: >-
-  At what point it makes sense to break an old set bonus: every subset of each
-  spec's bonus-carrying slots priced against its chase pieces, and the Tier 6
-  thresholds priced on the same baseline.
+  Who gains what from each token, in give-out order, and at what point it
+  makes sense to break an old set bonus: every subset of each spec's
+  bonus-carrying slots priced against its chase pieces.
 status: draft
 updated: 2026-08-21
 ---
@@ -14,8 +14,10 @@ updated: 2026-08-21
      set from data/sim/gear. To change what it says, rerun the sims. -->
 
 A tier piece is never priced alone: equipping it cuts an old set by one piece,
-and somewhere on that road an old bonus dies. This page answers the question
-the council actually faces, **at what point does breaking the bonus pay**. For
+and somewhere on that road an old bonus dies. This page answers two questions.
+FIRST, the one asked at the loot table: **a token dropped, who gains what from
+it**, one section per token with the give-out order the measurements support.
+SECOND, per spec, **at what point breaking an old bonus pays**. For
 every simulated spec, every subset of the entry set's bonus-carrying slots was
 replaced with what the best-in-slot set wears there, on the otherwise
 unchanged entry set, so the tables below hold the best way to take one chase
@@ -46,6 +48,215 @@ of the token slots with the tier anchor's pieces, pricing the two-piece and
 four-piece thresholds and the order the tokens are best taken in. Nothing
 here is a ruling: the tables are measurements, and which claimant takes which
 token first is the council's call.
+
+## The tokens, one by one
+
+Each section is one token: the specs that can redeem it, best measured gain
+first. **Along the best chase** is what the piece adds at its step of that
+spec's best order, which credits a piece that lands a bonus threshold at the
+threshold; **this piece alone** is the same piece as a first pickup on the
+entry set. Both are against the spec's own entry figure.
+
+### Helm of the Forgotten Conqueror
+
+Drops from Archimonde. Classes: Paladin, Priest, Warlock.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Shadow Priest | +14.6 | -8.3 | Hood of Absolution |
+| 2 | Affliction Warlock | -43.9 | -42.4 | Hood of the Malefic |
+| 3 | Destruction Warlock | -58.9 | -58.6 | Hood of the Malefic |
+
+Not ranked: Retribution Paladin, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
+
+### Helm of the Forgotten Protector
+
+Drops from Archimonde. Classes: Warrior, Hunter, Shaman.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Elemental Shaman | +25.8 | -52.2 | Skyshatter Headguard |
+| 2 | Survival Hunter | -0.2 | -77.7 | Gronnstalker's Helmet |
+| 3 | Arms Warrior | -38.4 | -42.0 | Onslaught Battle-Helm |
+
+Not ranked: Fury Warrior, whose chase leaves this slot as it entered; Beast Mastery Hunter, whose list keeps Cursed Vision of Sargeras in this slot; Enhancement Shaman, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
+
+### Helm of the Forgotten Vanquisher
+
+Drops from Archimonde. Classes: Rogue, Mage, Druid.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Balance Druid | +12.1 | -124.3 | Thunderheart Headguard |
+
+Not ranked: Combat Rogue, whose list keeps Cursed Vision of Sargeras in this slot; Arcane Mage, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
+
+### Pauldrons of the Forgotten Conqueror
+
+Drops from Mother Shahraz. Classes: Paladin, Priest, Warlock.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Affliction Warlock | +1.1 | -19.9 | Mantle of the Malefic |
+| 2 | Shadow Priest | +0.5 | -5.9 | Shoulderpads of Absolution |
+| 3 | Destruction Warlock | -6.9 | -6.3 | Mantle of the Malefic |
+
+Not ranked: Retribution Paladin, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
+
+### Pauldrons of the Forgotten Protector
+
+Drops from Mother Shahraz. Classes: Warrior, Hunter, Shaman.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Beast Mastery Hunter | +14.5 | -13.7 | Gronnstalker's Spaulders |
+| 2 | Survival Hunter | +10.7 | -14.3 | Gronnstalker's Spaulders |
+| 3 | Arms Warrior | +7.7 | +14.4 | Onslaught Shoulderblades |
+| 4 | Elemental Shaman | -10.1 | -8.7 | Skyshatter Mantle |
+| 5 | Fury Warrior | -20.4 | -20.4 | Onslaught Shoulderblades |
+
+Not ranked: Enhancement Shaman, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
+
+### Pauldrons of the Forgotten Vanquisher
+
+Drops from Mother Shahraz. Classes: Rogue, Mage, Druid.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Combat Rogue | +34.4 | -30.3 | Slayer's Shoulderpads |
+| 2 | Balance Druid | -0.2 | -92.0 | Thunderheart Shoulderpads |
+
+Not ranked: Arcane Mage, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
+
+### Chestguard of the Forgotten Conqueror
+
+Drops from Illidan Stormrage. Classes: Paladin, Priest, Warlock.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Shadow Priest | -6.5 | -6.1 | Shroud of Absolution |
+
+Not ranked: Retribution Paladin, whose chase leaves this slot as it entered; Affliction Warlock, whose chase leaves this slot as it entered; Destruction Warlock, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
+
+### Chestguard of the Forgotten Protector
+
+Drops from Illidan Stormrage. Classes: Warrior, Hunter, Shaman.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Elemental Shaman | +30.9 | -6.6 | Skyshatter Breastplate |
+| 2 | Fury Warrior | -0.7 | -29.0 | Onslaught Breastplate |
+| 3 | Arms Warrior | -3.9 | -4.0 | Onslaught Breastplate |
+| 4 | Survival Hunter | -4.5 | -29.4 | Gronnstalker's Chestguard |
+| 5 | Beast Mastery Hunter | -12.3 | -30.7 | Gronnstalker's Chestguard |
+
+Not ranked: Enhancement Shaman, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
+
+### Chestguard of the Forgotten Vanquisher
+
+Drops from Illidan Stormrage. Classes: Rogue, Mage, Druid.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Balance Druid | +30.6 | -89.5 | Thunderheart Vest |
+| 2 | Combat Rogue | -0.2 | -0.2 | Slayer's Chestguard |
+
+Not ranked: Arcane Mage, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
+
+### Gloves of the Forgotten Conqueror
+
+Drops from Azgalor. Classes: Paladin, Priest, Warlock.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Destruction Warlock | +34.9 | +34.9 | Gloves of the Malefic |
+| 2 | Shadow Priest | -4.4 | -4.4 | Handguards of Absolution |
+| 3 | Affliction Warlock | -13.5 | -13.8 | Gloves of the Malefic |
+
+Not ranked: Retribution Paladin, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
+
+### Gloves of the Forgotten Protector
+
+Drops from Azgalor. Classes: Warrior, Hunter, Shaman.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Survival Hunter | +21.2 | +21.2 | Gronnstalker's Gloves |
+| 2 | Arms Warrior | +20.3 | +20.3 | Onslaught Gauntlets |
+| 3 | Elemental Shaman | +2.6 | +2.6 | Skyshatter Gauntlets |
+| 4 | Beast Mastery Hunter | -1.6 | -1.6 | Gronnstalker's Gloves |
+
+Not ranked: Fury Warrior, whose chase leaves this slot as it entered; Enhancement Shaman, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
+
+### Gloves of the Forgotten Vanquisher
+
+Drops from Azgalor. Classes: Rogue, Mage, Druid.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Combat Rogue | +39.4 | -22.8 | Slayer's Handguards |
+| 2 | Balance Druid | -89.5 | -89.5 | Thunderheart Handguards |
+
+Not ranked: Arcane Mage, whose list keeps Gloves of Tirisfal in this slot.
+
+Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
+
+### Leggings of the Forgotten Conqueror
+
+Drops from The Illidari Council. Classes: Paladin, Priest, Warlock.
+
+Not ranked: Retribution Paladin, whose chase leaves this slot as it entered; Shadow Priest, whose chase leaves this slot as it entered; Affliction Warlock, whose list keeps Leggings of Channeled Elements in this slot; Destruction Warlock, whose list keeps Leggings of Channeled Elements in this slot.
+
+Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
+
+### Leggings of the Forgotten Protector
+
+Drops from The Illidari Council. Classes: Warrior, Hunter, Shaman.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Beast Mastery Hunter | +42.5 | -15.8 | Gronnstalker's Leggings |
+
+Not ranked: Arms Warrior, whose chase leaves this slot as it entered; Fury Warrior, whose chase leaves this slot as it entered; Survival Hunter, whose list keeps Shady Dealer's Pantaloons in this slot; Elemental Shaman, whose list keeps Leggings of Channeled Elements in this slot; Enhancement Shaman, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
+
+### Leggings of the Forgotten Vanquisher
+
+Drops from The Illidari Council. Classes: Rogue, Mage, Druid.
+
+| Order | Spec | Along the best chase | This piece alone | Buys |
+|---|---|---|---|---|
+| 1 | Arcane Mage | +18.6 | -31.2 | Leggings of the Tempest |
+| 2 | Combat Rogue | +11.9 | -27.7 | Slayer's Legguards |
+
+Not ranked: Balance Druid, whose chase leaves this slot as it entered.
+
+Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
+
+## The break-evens, per spec
 
 ## Affliction Warlock
 

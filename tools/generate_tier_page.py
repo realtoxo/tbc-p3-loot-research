@@ -134,6 +134,123 @@ def greedy_order(rows: list[dict]) -> list[str]:
     return taken
 
 
+def route_marginals(rows: list[dict]) -> dict[str, float]:
+    """Each slot's increment along the greedy best chase order.
+
+    The single-piece column undervalues a piece that pays at a bonus
+    threshold, so the give-out ranking uses the increment each slot adds at
+    its step of the best order, which sums to the full-route total and
+    credits a threshold piece where the threshold lands.
+    """
+    by_set = {frozenset(r["replaced"]): r for r in rows}
+    order = greedy_order(rows)
+    out: dict[str, float] = {}
+    taken: list[str] = []
+    for slot in order:
+        before = by_set[frozenset(taken)]["dps"]
+        taken.append(slot)
+        out[slot] = round(by_set[frozenset(taken)]["dps"] - before, 1)
+    return out
+
+
+TOKEN_SLOT_LABEL = {"head": "Helm", "shoulder": "Shoulders", "chest": "Chest",
+                    "hands": "Gloves", "legs": "Leggings"}
+
+
+def token_order_sections(doc: dict, tokens: dict) -> list[str]:
+    """One section per Tier 6 token: who gains what from it, best gain first.
+
+    THE QUESTION AT THE LOOT TABLE, asked by the guild lead: a token drops,
+    and the council wants the give-out order that maximizes what each item
+    does. The ranking is the measured route increment per spec; a spec whose
+    chase does not take the token in that slot is named below the table
+    rather than ranked, and the unmeasured claimants close each section.
+    Nothing here is a ruling.
+    """
+    members = tokens["line_members_by_tier"][6]
+    spec_to_set = tokens["spec_to_set"]
+    set_pieces = {b["set_name"]: b["pieces"] for b in tokens["sets"]}
+    t6_tokens = sorted((x for x in tokens["tokens"] if x.get("tier") == 6),
+                       key=lambda x: (["head", "shoulder", "chest", "hands",
+                                       "legs"].index(x["slot"]), x["name"]))
+
+    def spec_class(label: str) -> str:
+        lowered = label.lower()
+        for name in ("warrior", "paladin", "hunter", "rogue", "priest",
+                     "shaman", "mage", "warlock", "druid"):
+            if name in lowered:
+                return name.capitalize()
+        return "Druid"
+
+    # Every registry spec, measured or not, by class.
+    from extract_ladder import SPECS as LADDER_SPECS
+    by_class: dict[str, list[tuple[str, str]]] = {}
+    for label, (_tab, key) in LADDER_SPECS.items():
+        by_class.setdefault(spec_class(label), []).append((label, key))
+
+    out = []
+    for token in t6_tokens:
+        classes = members[token["line"]]
+        slot = token["slot"]
+        ranked, skips, unmeasured = [], [], []
+        for cls in classes:
+            for label, key in sorted(by_class.get(cls, [])):
+                block = (doc["specs"] or {}).get(key)
+                if block is None:
+                    unmeasured.append(label)
+                    continue
+                t6 = block.get("tier_six") or {}
+                pieces = t6.get("pieces") or {}
+                rows = t6.get("rows") or []
+                set6 = (spec_to_set.get(key) or {}).get(6)
+                token_piece = ((set_pieces.get(set6) or {}).get(slot)
+                               or {})
+                worn = pieces.get(slot) or {}
+                if not rows or slot not in (t6.get("slots") or []):
+                    skips.append(f"{label}, whose chase leaves this slot as "
+                                 "it entered")
+                    continue
+                if int(worn.get("id") or 0) != int(token_piece.get("item_id")
+                                                   or -1):
+                    keeps = worn.get("name") or "its entry piece"
+                    skips.append(f"{label}, whose list keeps {keeps} in this "
+                                 "slot")
+                    continue
+                marginals = route_marginals(rows)
+                by_set = {frozenset(r["replaced"]): r for r in rows}
+                single = None
+                if frozenset([slot]) in by_set:
+                    single = round(by_set[frozenset([slot])]["dps"]
+                                   - by_set[frozenset()]["dps"], 1)
+                ranked.append((marginals.get(slot), single, label,
+                               token_piece.get("name", "")))
+        ranked.sort(key=lambda r: (r[0] is None, -(r[0] or 0)))
+        parts = [f"### {token['name']}", "",
+                 f"Drops from {token['boss']}. Classes: "
+                 f"{', '.join(classes)}.", ""]
+        if ranked:
+            parts += ["| Order | Spec | Along the best chase | This piece "
+                      "alone | Buys |",
+                      "|---|---|---|---|---|"]
+            for i, (marg, single, label, piece) in enumerate(ranked, 1):
+                parts.append(
+                    f"| {i} | {label} "
+                    f"| {marg:+.1f} "
+                    f"| {'' if single is None else format(single, '+.1f')} "
+                    f"| {piece} |")
+            parts.append("")
+        if skips:
+            parts.append("Not ranked: " + "; ".join(skips) + ".")
+            parts.append("")
+        if unmeasured:
+            parts.append(
+                "Unmeasured claimants, see the closing section: "
+                + ", ".join(sorted(unmeasured)) + ".")
+            parts.append("")
+        out.append("\n".join(parts))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", type=Path, default=Path("docs/tier.md"))
@@ -152,6 +269,8 @@ def main() -> int:
         (WOWSIMS / "assets/database/db.json").read_text()).get("items") or []}
     verdicts = (yaml.safe_load(VERDICTS.read_text()) or {}).get(
         "verdicts") or {}
+    tokens = yaml.safe_load(Path("data/facts/tokens.yaml").read_text())
+    token_sections = token_order_sections(doc, tokens)
 
     sections = []
     for spec in sorted(doc["specs"], key=lambda s: SPEC_LABEL.get(s, s)):
@@ -340,9 +459,9 @@ def main() -> int:
 title: Tier
 eyebrow: Measurement
 subtitle: >-
-  At what point it makes sense to break an old set bonus: every subset of each
-  spec's bonus-carrying slots priced against its chase pieces, and the Tier 6
-  thresholds priced on the same baseline.
+  Who gains what from each token, in give-out order, and at what point it
+  makes sense to break an old set bonus: every subset of each spec's
+  bonus-carrying slots priced against its chase pieces.
 status: draft
 updated: 2026-08-21
 ---
@@ -350,8 +469,10 @@ updated: 2026-08-21
 {BANNER}
 
 A tier piece is never priced alone: equipping it cuts an old set by one piece,
-and somewhere on that road an old bonus dies. This page answers the question
-the council actually faces, **at what point does breaking the bonus pay**. For
+and somewhere on that road an old bonus dies. This page answers two questions.
+FIRST, the one asked at the loot table: **a token dropped, who gains what from
+it**, one section per token with the give-out order the measurements support.
+SECOND, per spec, **at what point breaking an old bonus pays**. For
 every simulated spec, every subset of the entry set's bonus-carrying slots was
 replaced with what the best-in-slot set wears there, on the otherwise
 unchanged entry set, so the tables below hold the best way to take one chase
@@ -382,6 +503,17 @@ of the token slots with the tier anchor's pieces, pricing the two-piece and
 four-piece thresholds and the order the tokens are best taken in. Nothing
 here is a ruling: the tables are measurements, and which claimant takes which
 token first is the council's call.
+
+## The tokens, one by one
+
+Each section is one token: the specs that can redeem it, best measured gain
+first. **Along the best chase** is what the piece adds at its step of that
+spec's best order, which credits a piece that lands a bonus threshold at the
+threshold; **this piece alone** is the same piece as a first pickup on the
+entry set. Both are against the spec's own entry figure.
+
+{chr(10).join(token_sections)}
+## The break-evens, per spec
 
 {chr(10).join(sections)}
 ## The specs this page cannot measure
