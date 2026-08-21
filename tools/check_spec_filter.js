@@ -34,6 +34,8 @@ if (!region) {
 const markup = region[1];
 
 const GROUPS = [...markup.matchAll(/data-spec-group="([^"]+)"/g)].map((m) => m[1]);
+const GROUP_NAMES = [...markup.matchAll(
+  /spec-filter-group-name">([^<]+)</g)].map((m) => m[1]);
 const MEMBERS = [...markup.matchAll(
   /data-spec-card="([^"]+)"[^>]*data-spec-member="([^"]+)"/g)].map((m) => [m[1], m[2]]);
 
@@ -89,6 +91,16 @@ if (!GROUPS.length || !MEMBERS.length) {
   process.exit(1);
 }
 
+// THE PARTITION IS THE TWO-LEVEL STANDING AND NOTHING ELSE. BIS first where
+// both appear, Upgrade after it, and no third label exists: a group named
+// anything else means the filter is grouping on retired vocabulary.
+is('every group is BIS or Upgrade', GROUP_NAMES.filter(
+  (n) => n === 'BIS' || n === 'Upgrade').length, GROUP_NAMES.length);
+is('no standing appears twice', new Set(GROUP_NAMES).size, GROUP_NAMES.length);
+if (GROUP_NAMES.length === 2) {
+  is('BIS comes before Upgrade', GROUP_NAMES.join(' '), 'BIS Upgrade');
+}
+
 // EVERY CARD BELONGS TO EXACTLY ONE GROUP. A card in no group can never be
 // reached by a group control, and a card in two would be toggled twice.
 is('every group covers its members', boxes.length,
@@ -103,10 +115,9 @@ is('cleared leaves every group off', state(),
 is('one group on shows only its own members', toggleGroup(0, true),
   membersOf(groups[0]).length);
 
-// THE POINT OF THE FEATURE. Priorities are additive, so every Priority 1 and
-// every Priority 2 claimant can be on screen together. Skipped where the page
-// has one group, which is the state the compendium is in while no priority is
-// settled: every card reads `not yet decided` and they all sit together.
+// THE POINT OF THE FEATURE. The partition is additive, so every BIS and every
+// Upgrade claimant can be on screen together. Skipped where the page carries
+// one group, which is an item whose claimants all share one standing.
 if (groups.length > 1) {
   toggleGroup(1, true);
   is('groups are additive', apply(),

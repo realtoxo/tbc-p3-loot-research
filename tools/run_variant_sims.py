@@ -25,8 +25,9 @@ WHICH PAIRS RUN WHERE. The entry anchor is worn before Phase 3, so a pair
 marked `phase3` is skipped there: no Black Temple drop and no Season 3
 weapon. The tier and best-in-slot anchors take the whole field, because the
 tier anchor is not constrained by progression, per the guild lead's 14
-August 2026 ruling. The pair list is facts, not a ranking; which pair each
-anchor wears is the council's call.
+August 2026 ruling. The rows are ENUMERATED from each spec's weapon field,
+ruled by the guild lead on 20 August 2026, and are facts, not a ranking;
+which pair each anchor wears is the council's call.
 
 Writes data/facts/variant-sims.yaml and nothing else. The pages that
 show these figures are written by tools/generate_sim_pages.py, the same
@@ -65,28 +66,31 @@ OUT = Path("data/facts/variant-sims.yaml")
 # to underscores inside build_request's caller.
 ANCHORS = ("entry", "tier-hands-and-head", "bis")
 
-# ONE ENTRY PER SPEC THAT RUNS A WEAPON PAIR ROUND. `pairs` is every
-# combination the round measures, `phase3` marks one the entry anchor cannot
-# reach, and `why` is the paragraph the anchor pages print above the table,
-# so the reasoning lives beside the list it explains.
+# ONE ENTRY PER SPEC THAT RUNS A WEAPON ROUND. THE ROUNDS ARE ENUMERATIVE,
+# ruled by the guild lead on 20 August 2026, "lets make our weapon rounds
+# enumerative": each spec carries a `weapon_field`, a candidate FIELD the
+# runner enumerates under the spec's ruled styles, rather than a
+# hand-curated pair list. The field is derived, and re-derivable for
+# review, by tools/derive_weapon_fields.py: the union of the spec's ladder
+# shortlist sections, every weapon its anchors wear, and every weapon a
+# standing ruling routes for it, because a routing never excludes a
+# candidate. `phase3` marks a candidate the entry anchor cannot reach, and
+# `why` is the paragraph the anchor pages print above the table.
 #
-# A COMBINATION IS A ROW SHAPED BY ITS SPEC'S STYLES, ruled in
-# data/judgments/weapon-styles.yaml: `oh: null` is a two-hander row and the
-# off hand runs EMPTY; `mh` with `oh` is a pair. A spec whose styles allow
-# both puts both in the SAME table, per the guild lead. `pair_speed` is
-# optional and Enhancement's alone, per its matched-speed rule. A spec with
-# more profiles than the standard three, which today is the two Warglaive
-# specs and their bis_no_glaives, lists its anchors under `anchors`.
-#
-# ENHANCEMENT: every matched-speed pair the slow one-hand field supports.
-# The universe is the one-hand weapons a shaman can carry above the 2.3
-# speed floor, and a pair is legal where the off-hand item is not Main Hand
-# only. Rod of the Sun King is the ONLY 2.7 weapon that fits the off hand,
-# so every 2.7 pair is a main hand plus the Rod, or two Rods. A pair of two
-# copies of one item is legal where the item is not unique, and every
-# doubled item here drops from a boss the raid kills weekly or sells for
-# arena points, so two copies is a question of weeks rather than of
-# possibility.
+# GENERATION, in enumerate_pairs below, is shaped by the spec's styles,
+# ruled in data/judgments/weapon-styles.yaml. Style two_hand runs each
+# two-hander alone with the off hand EMPTY. Styles dual_wield and
+# main_hand_off_hand run every ORDERED main-hand and off-hand pairing:
+# where both items are One Hand weapons they sit in both lists and BOTH
+# orders run, because the off-hand swing penalty makes the order a real
+# question, and a pair of two copies of one id runs ONCE and arises only
+# for a One Hand weapon, the doubled precedent. `matched_speed` is
+# Enhancement's alone, per data/judgments/enhancement-weapon-rules.yaml:
+# only pairs whose two speeds are EQUAL run, and each row carries
+# `pair_speed`. A spec with more profiles than the standard three, which
+# today is the two Warglaive specs and their bis_no_glaives, lists its
+# anchors under `anchors`. A spec entry that still carried a hand-curated
+# `pairs` list would run it unchanged, but every spec now carries a field.
 ROUNDS: dict[str, dict] = {
     "enhancement_shaman": {
         "why": (
@@ -98,34 +102,48 @@ ROUNDS: dict[str, dict] = {
             "two weapon ids replaced: the slot keeps its Mongoose, and "
             "the consumables, buffs and seed hold still, so every "
             "figure is directly comparable with the one at the top of "
-            "this page. The character is a Draenei, so no row inherits "
+            "this page. The table is an enumeration: every matched-speed "
+            "pairing the slow one-hand field supports, and the field is "
+            "the spec's shortlist together with every weapon an anchor "
+            "wears. The character is a Draenei, so no row inherits "
             "the Orc axe privilege the published lists assume. The "
             "weapons run unsynced.")),
-        "pairs": [
-            # 2.8 against 2.8. Syphon of the Nathrezim is the only slow
-            # one-hander at this speed, so the only matched pair is two of
-            # it, from Supremus.
-            {"mh": 32262, "oh": 32262, "speed": 2.8, "phase3": True},
-            # 2.7 against 2.7.
-            {"mh": 28439, "oh": 29996, "speed": 2.7, "phase3": False},
-            {"mh": 28437, "oh": 29996, "speed": 2.7, "phase3": False},
-            {"mh": 28438, "oh": 29996, "speed": 2.7, "phase3": False},
-            {"mh": 28433, "oh": 29996, "speed": 2.7, "phase3": False},
-            {"mh": 28432, "oh": 29996, "speed": 2.7, "phase3": False},
-            {"mh": 32944, "oh": 29996, "speed": 2.7, "phase3": False},
-            {"mh": 32946, "oh": 29996, "speed": 2.7, "phase3": True},
-            {"mh": 29996, "oh": 29996, "speed": 2.7, "phase3": False},
-            # 2.6 against 2.6, the widest field. Rising Tide, Netherbane and
-            # the Gladiator Cleavers are One Hand and fit either hand; the
-            # Right Ripper is Main Hand only and the Chopper is Off Hand
-            # only.
-            {"mh": 32236, "oh": 32236, "speed": 2.6, "phase3": True},
-            {"mh": 32236, "oh": 29924, "speed": 2.6, "phase3": True},
-            {"mh": 29924, "oh": 29924, "speed": 2.6, "phase3": False},
-            {"mh": 31965, "oh": 31965, "speed": 2.6, "phase3": False},
-            {"mh": 33737, "oh": 33669, "speed": 2.6, "phase3": True},
-            {"mh": 33669, "oh": 34015, "speed": 2.6, "phase3": True},
-        ],
+        # enhancement_shaman: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["dual_wield"],
+            "matched_speed": True,
+            "two_hand": [],
+            "main_hand": [
+                {"id": 28305, "phase3": False},   # Gladiator's Pummeler
+                {"id": 28313, "phase3": False},   # Gladiator's Right Ripper
+                {"id": 28431, "phase3": False},   # The Planar Edge
+                {"id": 28432, "phase3": False},   # Black Planar Edge
+                {"id": 28433, "phase3": False},   # Wicked Edge of the Planes
+                {"id": 28437, "phase3": False},   # Drakefist Hammer
+                {"id": 28438, "phase3": False},   # Dragonmaw
+                {"id": 28439, "phase3": False},   # Dragonstrike
+                {"id": 28584, "phase3": False},   # Big Bad Wolf's Paw
+                {"id": 28657, "phase3": False},   # Fool's Bane
+                {"id": 28767, "phase3": False},   # The Decapitator
+                {"id": 29924, "phase3": False},   # Netherbane
+                {"id": 29996, "phase3": False},   # Rod of the Sun King
+                {"id": 32028, "phase3": False},   # Merciless Gladiator's Right Ripper
+                {"id": 32236, "phase3": True},   # Rising Tide
+                {"id": 32262, "phase3": True},   # Syphon of the Nathrezim
+                {"id": 32944, "phase3": False},   # Talon of the Phoenix
+                {"id": 32946, "phase3": True},   # Claw of Molten Fury
+                {"id": 33669, "phase3": True},   # Vengeful Gladiator's Cleaver
+                {"id": 33737, "phase3": True},   # Vengeful Gladiator's Right Ripper
+            ],
+            "off_hand": [
+                {"id": 28305, "phase3": False},   # Gladiator's Pummeler
+                {"id": 29924, "phase3": False},   # Netherbane
+                {"id": 29996, "phase3": False},   # Rod of the Sun King
+                {"id": 32236, "phase3": True},   # Rising Tide
+                {"id": 32262, "phase3": True},   # Syphon of the Nathrezim
+                {"id": 33669, "phase3": True},   # Vengeful Gladiator's Cleaver
+            ],
+        },
         # THE TRINKET POOL, the fifth enumerative trinket round after the
         # Combat Rogue pilot and the Retribution, Arms and Fury rounds:
         # every max-level trinket the Enh tab's Trinket ladder ranks, with
@@ -192,10 +210,10 @@ ROUNDS: dict[str, dict] = {
             "sit in.")),
     },
     # RETRIBUTION: two-handers only, per the 20 August 2026 ruling. The
-    # candidates are the top of the workbook's Two Hand ladder for this spec,
-    # filtered to weapon classes a paladin wields: swords, maces, axes and
-    # polearms, never a staff or a fist weapon. Every row runs the off hand
-    # EMPTY. The two worn weapons are rows on purpose: their variants must
+    # field is the workbook's Two Hand ladder for this spec plus every worn
+    # weapon, kept to weapon classes a paladin wields: swords, maces, axes
+    # and polearms, never a staff or a fist weapon. Every row runs the off
+    # hand EMPTY. The two worn weapons are rows on purpose: their variants must
     # reproduce the anchor figures to the digit, which is the same
     # verification the Enhancement round carries.
     "retribution_paladin": {
@@ -207,32 +225,44 @@ ROUNDS: dict[str, dict] = {
             "replaced: the slot keeps its Mongoose, and the "
             "consumables, buffs and seed hold still, so every figure is "
             "directly comparable with the one at the top of this page. "
-            "The candidates are the top of the EP Workbook's Two Hand "
-            "ladder for this spec, kept to the weapon classes a paladin "
+            "The table is an enumeration of the EP Workbook's Two Hand "
+            "ladder for this spec together with every worn and routed "
+            "weapon, kept to the weapon classes a paladin "
             "wields. Cataclysm's Edge appears as a measurement only: it "
             "goes to the Arms Warrior, and Torch of the Damned stays "
             "with this spec.")),
-        "pairs": [
-            # Phase 3 raid drops: Torch of the Damned from the Reliquary
-            # of Souls is the worn best-in-slot weapon and the workbook's
-            # rank one; Cataclysm's Edge from Archimonde is routed to the
-            # Arms Warrior; Soul Cleaver from Teron Gorefiend and the
-            # Halberd of Desolation from High Warlord Naj'entus are the
-            # other Black Temple two-handers on the ladder.
-            {"mh": 32332, "oh": None, "phase3": True},
-            {"mh": 30902, "oh": None, "phase3": True},
-            {"mh": 32348, "oh": None, "phase3": True},
-            {"mh": 32248, "oh": None, "phase3": True},
-            # Season 3 arena, sold for points once the season runs.
-            {"mh": 33663, "oh": None, "phase3": True},
-            # Reachable before Phase 3: Lionheart Executioner is the worn
-            # entry and tier weapon, crafted by Blacksmithing; Twinblade
-            # of the Phoenix drops from Kael'thas Sunstrider; the
-            # Merciless Gladiator's Bonegrinder is Season 2 arena.
-            {"mh": 28430, "oh": None, "phase3": False},
-            {"mh": 29993, "oh": None, "phase3": False},
-            {"mh": 31959, "oh": None, "phase3": False},
-        ],
+        # retribution_paladin: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand"],
+            "two_hand": [
+                {"id": 24550, "phase3": False},   # Gladiator's Greatsword
+                {"id": 28298, "phase3": False},   # Gladiator's Decapitator
+                {"id": 28300, "phase3": False},   # Gladiator's Painsaw
+                {"id": 28428, "phase3": False},   # Lionheart Blade
+                {"id": 28429, "phase3": False},   # Lionheart Champion
+                {"id": 28430, "phase3": False},   # Lionheart Executioner
+                {"id": 28435, "phase3": False},   # Mooncleaver
+                {"id": 28436, "phase3": False},   # Bloodmoon
+                {"id": 28441, "phase3": False},   # Deep Thunder
+                {"id": 28442, "phase3": False},   # Stormherald
+                {"id": 28773, "phase3": False},   # Gorehowl
+                {"id": 28800, "phase3": False},   # Hammer of the Naaru
+                {"id": 29993, "phase3": False},   # Twinblade of the Phoenix
+                {"id": 30090, "phase3": False},   # World Breaker
+                {"id": 30902, "phase3": True},   # Cataclysm's Edge
+                {"id": 31959, "phase3": False},   # Merciless Gladiator's Bonegrinder
+                {"id": 31966, "phase3": False},   # Merciless Gladiator's Decapitator
+                {"id": 32025, "phase3": False},   # Merciless Gladiator's Painsaw
+                {"id": 32248, "phase3": True},   # Halberd of Desolation
+                {"id": 32332, "phase3": True},   # Torch of the Damned
+                {"id": 32348, "phase3": True},   # Soul Cleaver
+                {"id": 33663, "phase3": True},   # Vengeful Gladiator's Bonegrinder
+                {"id": 33670, "phase3": True},   # Vengeful Gladiator's Decapitator
+                {"id": 33727, "phase3": True},   # Vengeful Gladiator's Painsaw
+            ],
+            "main_hand": [],
+            "off_hand": [],
+        },
         # THE TRINKET POOL, the second enumerative trinket round after the
         # Combat Rogue pilot: every max-level trinket the Ret tab's Trinket
         # ladder ranks, with anything from Karazhan and the badge vendor
@@ -288,9 +318,10 @@ ROUNDS: dict[str, dict] = {
     },
     # FURY: one-handers and main handers only, per the 20 August 2026 ruling
     # in data/judgments/weapon-styles.yaml, so every row is a main hand with
-    # an off hand and no row is a two-hander. The candidates are the top of
-    # the Fury workbook tab, which splits Main Hand from Off Hand unlike the
-    # Enhancement tab's combined pool, kept to the weapon classes a warrior
+    # an off hand and no row is a two-hander. The field is the Fury tab's
+    # Main Hand and Off Hand ladders, which the tab splits unlike the
+    # Enhancement tab's combined pool, plus every worn and routed weapon,
+    # kept to the weapon classes a warrior
     # dual-wields: swords, maces, axes and fist weapons. A Main Hand item
     # fits only the main hand, an Off Hand item only the off hand, and a One
     # Hand item fits either. Fury carries FOUR anchors, because the
@@ -313,9 +344,11 @@ ROUNDS: dict[str, dict] = {
             "with only the two weapon ids replaced: each slot keeps its "
             "Mongoose, and the consumables, buffs and seed hold still, "
             "so every figure is directly comparable with the one at the "
-            "top of this page. The candidates are the top of the EP "
-            "Workbook's Main Hand and Off Hand ladders for this spec, "
-            "kept to the weapon classes a warrior dual-wields. A row of "
+            "top of this page. The table is an enumeration of the EP "
+            "Workbook's Main Hand and Off Hand ladders for this spec "
+            "together with every worn and routed weapon, kept to the "
+            "weapon classes a warrior dual-wields, and every ordered "
+            "pairing the field supports is a row. A row of "
             "two copies of one item needs both copies before it is "
             "wearable. The Warglaives of Azzinoth are ranked first by "
             "this spec's published Phase 3 list and by the Combat "
@@ -323,40 +356,66 @@ ROUNDS: dict[str, dict] = {
             "receives it is open council business, which is why this "
             "spec carries a best-in-slot set both with and without "
             "them.")),
-        "pairs": [
-            # Phase 3 raid drops and Season 3 arena. The Warglaive pair,
-            # from Illidan Stormrage, is the worn best-in-slot pair and
-            # the workbook's rank one in both hands; the Vengeful
-            # Gladiator's Slicer with the Chopper is the worn
-            # bis-no-glaives pair, per the capture in
-            # data/facts/sim-profiles/bis-capture/fury-warrior.yaml.
-            {"mh": 32837, "oh": 32838, "phase3": True},
-            {"mh": 33762, "oh": 34015, "phase3": True},
-            # Two Slicers, the doubled-arena alternative the capture
-            # measured bare at 2609.9; the Right Ripper is the Season 3
-            # fist main hand, Main Hand only, with the Chopper behind it.
-            {"mh": 33762, "oh": 33762, "phase3": True},
-            {"mh": 33737, "oh": 34015, "phase3": True},
-            # The raid-drop field: Syphon of the Nathrezim from Supremus
-            # is the workbook's rank two main hand and its rank one off
-            # hand, Blade of Infamy from Anetheron is the highest Hyjal
-            # one-hander, and neither is unique, so the doubled rows are
-            # a question of weeks rather than of possibility. Claw of
-            # Molten Fury drops from Hyjal Summit trash.
-            {"mh": 32262, "oh": 32262, "phase3": True},
-            {"mh": 32262, "oh": 30881, "phase3": True},
-            {"mh": 30881, "oh": 30881, "phase3": True},
-            {"mh": 30881, "oh": 30082, "phase3": True},
-            {"mh": 32946, "oh": 30082, "phase3": True},
-            # Reachable before Phase 3: Dragonstrike, crafted by
-            # Blacksmithing, with Talon of Azshara from Morogrim
-            # Tidewalker is the worn entry AND tier pair; Rod of the Sun
-            # King drops from Kael'thas Sunstrider and Talon of the
-            # Phoenix from Al'ar, both Tempest Keep.
-            {"mh": 28439, "oh": 30082, "phase3": False},
-            {"mh": 28439, "oh": 29996, "phase3": False},
-            {"mh": 32944, "oh": 30082, "phase3": False},
-        ],
+        # fury_warrior: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["dual_wield"],
+            "two_hand": [],
+            "main_hand": [
+                {"id": 23544, "phase3": False},   # Runic Hammer
+                {"id": 27872, "phase3": False},   # The Harvester of Souls
+                {"id": 28210, "phase3": False},   # Bloodskull Destroyer
+                {"id": 28267, "phase3": False},   # Edge of the Cosmos
+                {"id": 28295, "phase3": False},   # Gladiator's Slicer
+                {"id": 28313, "phase3": False},   # Gladiator's Right Ripper
+                {"id": 28432, "phase3": False},   # Black Planar Edge
+                {"id": 28433, "phase3": False},   # Wicked Edge of the Planes
+                {"id": 28438, "phase3": False},   # Dragonmaw
+                {"id": 28439, "phase3": False},   # Dragonstrike
+                {"id": 28729, "phase3": False},   # Spiteblade
+                {"id": 28767, "phase3": False},   # The Decapitator
+                {"id": 29124, "phase3": False},   # Vindicator's Brand
+                {"id": 29924, "phase3": False},   # Netherbane
+                {"id": 29996, "phase3": False},   # Rod of the Sun King
+                {"id": 30082, "phase3": False},   # Talon of Azshara
+                {"id": 30788, "phase3": False},   # Illidari-Bane Broadsword
+                {"id": 30881, "phase3": True},   # Blade of Infamy
+                {"id": 31332, "phase3": False},   # Blinkstrike
+                {"id": 31965, "phase3": False},   # Merciless Gladiator's Cleaver
+                {"id": 32028, "phase3": False},   # Merciless Gladiator's Right Ripper
+                {"id": 32052, "phase3": False},   # Merciless Gladiator's Slicer
+                {"id": 32236, "phase3": True},   # Rising Tide
+                {"id": 32262, "phase3": True},   # Syphon of the Nathrezim
+                {"id": 32837, "phase3": True},   # Warglaive of Azzinoth
+                {"id": 32944, "phase3": False},   # Talon of the Phoenix
+                {"id": 32946, "phase3": True},   # Claw of Molten Fury
+                {"id": 33737, "phase3": True},   # Vengeful Gladiator's Right Ripper
+                {"id": 33762, "phase3": True},   # Vengeful Gladiator's Slicer
+                {"id": 38175, "phase3": False},   # The Horseman's Blade
+            ],
+            "off_hand": [
+                {"id": 23544, "phase3": False},   # Runic Hammer
+                {"id": 27747, "phase3": False},   # Boggspine Knuckles
+                {"id": 27872, "phase3": False},   # The Harvester of Souls
+                {"id": 28210, "phase3": False},   # Bloodskull Destroyer
+                {"id": 28267, "phase3": False},   # Edge of the Cosmos
+                {"id": 28295, "phase3": False},   # Gladiator's Slicer
+                {"id": 28729, "phase3": False},   # Spiteblade
+                {"id": 29124, "phase3": False},   # Vindicator's Brand
+                {"id": 29924, "phase3": False},   # Netherbane
+                {"id": 29996, "phase3": False},   # Rod of the Sun King
+                {"id": 30082, "phase3": False},   # Talon of Azshara
+                {"id": 30788, "phase3": False},   # Illidari-Bane Broadsword
+                {"id": 30881, "phase3": True},   # Blade of Infamy
+                {"id": 31332, "phase3": False},   # Blinkstrike
+                {"id": 31965, "phase3": False},   # Merciless Gladiator's Cleaver
+                {"id": 32052, "phase3": False},   # Merciless Gladiator's Slicer
+                {"id": 32236, "phase3": True},   # Rising Tide
+                {"id": 32262, "phase3": True},   # Syphon of the Nathrezim
+                {"id": 32838, "phase3": True},   # Warglaive of Azzinoth
+                {"id": 33762, "phase3": True},   # Vengeful Gladiator's Slicer
+                {"id": 34015, "phase3": True},   # Vengeful Gladiator's Chopper
+            ],
+        },
         # THE TRINKET POOL, the fourth enumerative trinket round after the
         # Combat Rogue pilot, the Retribution round and the Arms round:
         # every max-level trinket the Fury tab's Trinket ladder ranks, with
@@ -423,19 +482,19 @@ ROUNDS: dict[str, dict] = {
     # as the guide labels it and 19/42/0 as its calculator string sums, per
     # data/facts/talents.yaml, and its combat segment decodes to Sword
     # Specialization 5/5; the rotation is the simulator's swords APL, built
-    # on Sinister Strike. A dagger main hand changes the rotation entirely,
-    # so no dagger is a row. The fist and mace rows are measured with the
-    # caveat the why paragraph states: Sword Specialization does not benefit
-    # them. The candidates are the top of the Rogue workbook tab, which
-    # splits Main Hand from Off Hand like the Fury tab and unlike the
-    # Enhancement tab's combined pool. Combat carries FOUR anchors for the
+    # on Sinister Strike. Every row runs under that rotation, so a dagger
+    # row measures the dagger inside the swords rotation rather than a
+    # dagger build, and the dagger, fist and mace rows are measured with
+    # the caveat the why paragraph states: Sword Specialization does not
+    # benefit them. The field is the Rogue tab's Main Hand ladder plus
+    # every worn and routed weapon. Combat carries FOUR anchors for the
     # same reason Fury does: the Warglaives of Azzinoth are ranked first by
     # both specs' published lists, the raid holds one pair, and the guild
     # lead has not routed it. Each anchor's worn pair is a row on purpose:
     # its variant must reproduce the anchor figure to the digit, the same
-    # verification the other rounds carry. No candidate in this list
-    # carries a socket, so no figure here is understated against a gemmed
-    # worn weapon.
+    # verification the other rounds carry. Fool's Bane is the one socketed
+    # candidate and no anchor wears it, so its rows arrive ungemmed and
+    # its figures are understated by the gem a raider would add.
     "combat_rogue": {
         "anchors": ("entry", "tier-hands-and-head", "bis",
                     "bis-no-glaives"),
@@ -448,57 +507,71 @@ ROUNDS: dict[str, dict] = {
             "consumables, buffs and seed hold still, so every figure is "
             "directly comparable with the one at the top of this page. "
             "The build is Combat Swords and the rotation is built on "
-            "Sinister Strike, so no dagger is a row, because a dagger "
-            "main hand changes the rotation entirely rather than the "
-            "weapon alone, and the fist and mace rows carry a stated "
+            "Sinister Strike, and every row runs under that rotation, "
+            "so a dagger row measures the dagger inside the swords "
+            "rotation rather than a dagger build, and the dagger, fist "
+            "and mace rows carry a stated "
             "caveat: the build's Sword Specialization talent procs only "
-            "on sword strikes and does not benefit them. The candidates "
-            "are the top of the EP Workbook's Main Hand and Off Hand "
-            "ladders for this spec. A row of two copies of one item "
+            "on sword strikes and does not benefit them. The table is "
+            "an enumeration of the EP Workbook's Main Hand ladder for "
+            "this spec together with every worn and routed weapon, and "
+            "every ordered pairing the field supports is a row. A row "
+            "of two copies of one item "
             "needs both copies before it is wearable. The Warglaives of "
             "Azzinoth are ranked first by this spec's published Phase 3 "
             "list and by the Fury Warrior's, the raid holds one pair, "
             "and which of the two receives it is open council business, "
             "which is why this spec carries a best-in-slot set both "
             "with and without them.")),
-        "pairs": [
-            # Phase 3 raid drops and Season 3 arena. The Warglaive pair,
-            # from Illidan Stormrage, is the worn best-in-slot pair and
-            # the workbook's rank one in both hands; the Vengeful
-            # Gladiator's Slicer with Blade of Savagery, from Mother
-            # Shahraz, is the worn bis-no-glaives pair, per the capture
-            # in data/facts/sim-profiles/bis-capture/combat-rogue.yaml.
-            {"mh": 32837, "oh": 32838, "phase3": True},
-            {"mh": 33762, "oh": 32369, "phase3": True},
-            # The sword field: Blade of Infamy from Anetheron is the
-            # highest Hyjal one-hander on the tab and is not unique, so
-            # its doubled row is a question of weeks; the Vengeful
-            # Gladiator's Quickblade is the Season 3 Off Hand sword and
-            # two Slicers is the doubled-arena alternative the Fury
-            # round also measures.
-            {"mh": 30881, "oh": 32369, "phase3": True},
-            {"mh": 33762, "oh": 33734, "phase3": True},
-            {"mh": 30881, "oh": 33734, "phase3": True},
-            {"mh": 33762, "oh": 33762, "phase3": True},
-            {"mh": 30881, "oh": 30881, "phase3": True},
-            # Off-class rows, measured under the stated caveat that
-            # Sword Specialization does not benefit them: Swiftsteel
-            # Bludgeon, from Black Temple trash, is the workbook's rank
-            # two off hand, and the Season 3 fist pair is the Right
-            # Ripper, Main Hand only, with the Left Ripper, Off Hand
-            # only.
-            {"mh": 30881, "oh": 32943, "phase3": True},
-            {"mh": 33737, "oh": 33705, "phase3": True},
-            # Reachable before Phase 3: Talon of Azshara from Morogrim
-            # Tidewalker with the Merciless Gladiator's Quickblade,
-            # Season 2 arena, is the worn entry AND tier pair, per the
-            # capture in data/facts/sim-profiles/hit-capture/
-            # combat-rogue.yaml; the Merciless Gladiator's Slicer is the
-            # Season 2 One Hand sword above it on the tab.
-            {"mh": 30082, "oh": 32027, "phase3": False},
-            {"mh": 32052, "oh": 32027, "phase3": False},
-            {"mh": 30082, "oh": 32052, "phase3": False},
-        ],
+        # combat_rogue: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["dual_wield"],
+            "two_hand": [],
+            "main_hand": [
+                {"id": 28295, "phase3": False},   # Gladiator's Slicer
+                {"id": 28313, "phase3": False},   # Gladiator's Right Ripper
+                {"id": 28437, "phase3": False},   # Drakefist Hammer
+                {"id": 28438, "phase3": False},   # Dragonmaw
+                {"id": 28439, "phase3": False},   # Dragonstrike
+                {"id": 28657, "phase3": False},   # Fool's Bane
+                {"id": 28768, "phase3": False},   # Malchazeen
+                {"id": 29996, "phase3": False},   # Rod of the Sun King
+                {"id": 30082, "phase3": False},   # Talon of Azshara
+                {"id": 30103, "phase3": False},   # Fang of Vashj
+                {"id": 30881, "phase3": True},   # Blade of Infamy
+                {"id": 30901, "phase3": True},   # Boundless Agony
+                {"id": 32028, "phase3": False},   # Merciless Gladiator's Right Ripper
+                {"id": 32044, "phase3": False},   # Merciless Gladiator's Shanker
+                {"id": 32052, "phase3": False},   # Merciless Gladiator's Slicer
+                {"id": 32262, "phase3": True},   # Syphon of the Nathrezim
+                {"id": 32369, "phase3": True},   # Blade of Savagery
+                {"id": 32471, "phase3": True},   # Shard of Azzinoth
+                {"id": 32837, "phase3": True},   # Warglaive of Azzinoth
+                {"id": 32944, "phase3": False},   # Talon of the Phoenix
+                {"id": 32946, "phase3": True},   # Claw of Molten Fury
+                {"id": 33737, "phase3": True},   # Vengeful Gladiator's Right Ripper
+                {"id": 33754, "phase3": True},   # Vengeful Gladiator's Shanker
+                {"id": 33762, "phase3": True},   # Vengeful Gladiator's Slicer
+            ],
+            "off_hand": [
+                {"id": 28295, "phase3": False},   # Gladiator's Slicer
+                {"id": 28768, "phase3": False},   # Malchazeen
+                {"id": 29996, "phase3": False},   # Rod of the Sun King
+                {"id": 30082, "phase3": False},   # Talon of Azshara
+                {"id": 30103, "phase3": False},   # Fang of Vashj
+                {"id": 30881, "phase3": True},   # Blade of Infamy
+                {"id": 30901, "phase3": True},   # Boundless Agony
+                {"id": 32027, "phase3": False},   # Merciless Gladiator's Quickblade
+                {"id": 32044, "phase3": False},   # Merciless Gladiator's Shanker
+                {"id": 32052, "phase3": False},   # Merciless Gladiator's Slicer
+                {"id": 32262, "phase3": True},   # Syphon of the Nathrezim
+                {"id": 32369, "phase3": True},   # Blade of Savagery
+                {"id": 32471, "phase3": True},   # Shard of Azzinoth
+                {"id": 32838, "phase3": True},   # Warglaive of Azzinoth
+                {"id": 33754, "phase3": True},   # Vengeful Gladiator's Shanker
+                {"id": 33762, "phase3": True},   # Vengeful Gladiator's Slicer
+            ],
+        },
         # THE TRINKET POOL, the pilot of the enumerative trinket rounds
         # ruled on 20 August 2026: every max-level trinket the Rog tab's
         # Trinket ladder ranks, with anything from Karazhan and the badge
@@ -567,37 +640,44 @@ ROUNDS: dict[str, dict] = {
             "and seed hold still, so every figure is directly "
             "comparable with the one at the top of this page. The "
             "published Phase 3 page ranks only dual Warglaives, which "
-            "this spec will not receive, so the Phase 3 candidates are "
-            "the drop table's two-handers in the weapon classes a "
-            "warrior wields, and the earlier candidates are the top of "
-            "the EP Workbook's Two Hand ladder for this spec. This spec "
+            "this spec will not receive, so the table is an enumeration "
+            "of the EP Workbook's Two Hand ladder for this spec "
+            "together with every worn and routed weapon, kept to the "
+            "weapon classes a warrior wields. This spec "
             "takes Cataclysm's Edge. Torch of the Damned appears as a "
             "measurement only: it stays with the Retribution Paladin.")),
-        "pairs": [
-            # Phase 3 raid drops: Cataclysm's Edge from Archimonde is the
-            # worn best-in-slot weapon, the workbook's rank one and the
-            # guild lead's routing; Torch of the Damned from the Reliquary
-            # of Souls is measured as informative and routed to the
-            # Retribution Paladin; Soul Cleaver from Teron Gorefiend and
-            # the Halberd of Desolation from High Warlord Naj'entus are
-            # the other Black Temple two-handers on the ladder.
-            {"mh": 30902, "oh": None, "phase3": True},
-            {"mh": 32332, "oh": None, "phase3": True},
-            {"mh": 32348, "oh": None, "phase3": True},
-            {"mh": 32248, "oh": None, "phase3": True},
-            # Season 3 arena, sold for points once the season runs. The
-            # workbook ranks the Bonegrinder, the Greatsword and the
-            # Decapitator within five DPS of one another, so the
-            # Bonegrinder stands for all three.
-            {"mh": 33663, "oh": None, "phase3": True},
-            # Reachable before Phase 3: Twinblade of the Phoenix, from
-            # Kael'thas Sunstrider, is the worn entry and tier weapon;
-            # Lionheart Executioner is crafted by Blacksmithing; the
-            # Merciless Gladiator's Bonegrinder is Season 2 arena.
-            {"mh": 29993, "oh": None, "phase3": False},
-            {"mh": 28430, "oh": None, "phase3": False},
-            {"mh": 31959, "oh": None, "phase3": False},
-        ],
+        # arms_warrior: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand"],
+            "two_hand": [
+                {"id": 24550, "phase3": False},   # Gladiator's Greatsword
+                {"id": 28298, "phase3": False},   # Gladiator's Decapitator
+                {"id": 28300, "phase3": False},   # Gladiator's Painsaw
+                {"id": 28429, "phase3": False},   # Lionheart Champion
+                {"id": 28430, "phase3": False},   # Lionheart Executioner
+                {"id": 28435, "phase3": False},   # Mooncleaver
+                {"id": 28436, "phase3": False},   # Bloodmoon
+                {"id": 28441, "phase3": False},   # Deep Thunder
+                {"id": 28442, "phase3": False},   # Stormherald
+                {"id": 28773, "phase3": False},   # Gorehowl
+                {"id": 28794, "phase3": False},   # Axe of the Gronn Lords
+                {"id": 28800, "phase3": False},   # Hammer of the Naaru
+                {"id": 29993, "phase3": False},   # Twinblade of the Phoenix
+                {"id": 30090, "phase3": False},   # World Breaker
+                {"id": 30902, "phase3": True},   # Cataclysm's Edge
+                {"id": 31959, "phase3": False},   # Merciless Gladiator's Bonegrinder
+                {"id": 31966, "phase3": False},   # Merciless Gladiator's Decapitator
+                {"id": 32025, "phase3": False},   # Merciless Gladiator's Painsaw
+                {"id": 32248, "phase3": True},   # Halberd of Desolation
+                {"id": 32332, "phase3": True},   # Torch of the Damned
+                {"id": 32348, "phase3": True},   # Soul Cleaver
+                {"id": 33663, "phase3": True},   # Vengeful Gladiator's Bonegrinder
+                {"id": 33670, "phase3": True},   # Vengeful Gladiator's Decapitator
+                {"id": 33727, "phase3": True},   # Vengeful Gladiator's Painsaw
+            ],
+            "main_hand": [],
+            "off_hand": [],
+        },
         # THE TRINKET POOL, the third enumerative trinket round after the
         # Combat Rogue pilot and the Retribution round: every max-level
         # trinket the Arms tab's Trinket ladder ranks, with anything from
@@ -664,9 +744,10 @@ ROUNDS: dict[str, dict] = {
     # them: a dual_wield row is a main hand with an off hand, and a two_hand
     # row runs the off hand empty. The melee slots are stat sticks, the
     # ranged weapon does the damage and is not part of this round, so the
-    # candidates are the top of the BM workbook tab's One Hand pool, which
-    # is combined like Enhancement's rather than split like Fury's, and its
-    # Two Hand ladder, kept to the weapon classes a hunter wields: axes,
+    # field is the BM tab's One Hand pool, which is combined like
+    # Enhancement's rather than split like Fury's, and its
+    # Two Hand ladder, plus every worn and routed weapon, kept to the
+    # weapon classes a hunter wields: axes,
     # swords, polearms, staves, fist weapons and daggers, never a mace. The
     # 41/20/0 build carries no weapon specialization talent, per
     # data/facts/talents.yaml, so no class is favored. The worn pairs are
@@ -696,50 +777,45 @@ ROUNDS: dict[str, dict] = {
             "Holding the consumables still includes the weapon stones, "
             "which the hunters choose by the WORN weapon's class, so a "
             "candidate whose class differs from the worn weapon runs "
-            "under the capture's stone rather than its own. The "
-            "candidates are the top of the EP Workbook's One Hand and "
-            "Two Hand ladders for this spec, kept to the weapon classes "
-            "a hunter wields, and the 41/20/0 build carries no weapon "
+            "under the capture's stone rather than its own. The table "
+            "is an enumeration of the EP Workbook's One Hand and "
+            "Two Hand ladders for this spec together with every worn "
+            "and routed weapon, kept to the weapon classes "
+            "a hunter wields and holding no crafted weapon, and the "
+            "41/20/0 build carries no weapon "
             "specialization talent, so no class is favored.")),
-        "pairs": [
-            # DUAL WIELD. The worn best-in-slot pair: Boundless Agony from
-            # Azgalor, the capture's Best MH, with Blade of Infamy from
-            # Anetheron, its top Best OH row.
-            {"mh": 30901, "oh": 30881, "phase3": True},
-            # The sword field: Blade of Infamy is the One Hand pool's rank
-            # one and is not unique, so its doubled row is a question of
-            # weeks; Tracker's Blade from Rage Winterchill is rank two, and
-            # Blade of Savagery drops from Mother Shahraz.
-            {"mh": 30881, "oh": 30881, "phase3": True},
-            {"mh": 30881, "oh": 30865, "phase3": True},
-            {"mh": 30881, "oh": 32369, "phase3": True},
-            # The Season 3 fist pair, the Right Ripper, Main Hand only,
-            # with the Left Ripper, Off Hand only. Fist weapons, so at the
-            # best-in-slot anchor this row runs under the worn pair's
-            # Sharpening Stone rather than the Weightstone a fist pair
-            # would carry.
-            {"mh": 33737, "oh": 33705, "phase3": True},
-            # Reachable before Phase 3: Talon of the Phoenix from Al'ar
-            # with Claw of the Phoenix, also Al'ar, is the worn entry AND
-            # tier pair, per the capture in data/facts/sim-profiles/
-            # hit-capture/beast-mastery-hunter.yaml; Talon of Azshara from
-            # Morogrim Tidewalker is the pool's rank four.
-            {"mh": 32944, "oh": 29948, "phase3": False},
-            {"mh": 32944, "oh": 30082, "phase3": False},
-            # TWO HAND. Phase 3: the Halberd of Desolation from High
-            # Warlord Naj'entus is the Two Hand ladder's rank one, and the
-            # Vengeful Gladiator's Decapitator is Season 3 arena, tied to
-            # the point with the Waraxe, so it stands for both.
-            {"mh": 32248, "oh": None, "phase3": True},
-            {"mh": 33670, "oh": None, "phase3": True},
-            # Reachable before Phase 3: Twinblade of the Phoenix from
-            # Kael'thas Sunstrider is the ladder's best reachable epic and
-            # carries three sockets, which arrive EMPTY here because no BM
-            # anchor wears it, so its figure is understated by the gems a
-            # raider would add; Bloodmoon is crafted by Blacksmithing and
-            # carries none.
-            {"mh": 29993, "oh": None, "phase3": False},
-        ],
+        # beast_mastery_hunter: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand", "dual_wield"],
+            "two_hand": [
+                {"id": 27903, "phase3": False},   # Sonic Spear
+                {"id": 28587, "phase3": False},   # Legacy
+                {"id": 29166, "phase3": False},   # Hellforged Halberd
+                {"id": 29167, "phase3": False},   # Blackened Spear
+                {"id": 29993, "phase3": False},   # Twinblade of the Phoenix
+                {"id": 30789, "phase3": False},   # Illidari-Bane Claymore
+                {"id": 31966, "phase3": False},   # Merciless Gladiator's Decapitator
+                {"id": 32248, "phase3": True},   # Halberd of Desolation
+                {"id": 33670, "phase3": True},   # Vengeful Gladiator's Decapitator
+                {"id": 33727, "phase3": True},   # Vengeful Gladiator's Painsaw
+            ],
+            "main_hand": [
+                {"id": 30082, "phase3": False},   # Talon of Azshara
+                {"id": 30865, "phase3": True},   # Tracker's Blade
+                {"id": 30881, "phase3": True},   # Blade of Infamy
+                {"id": 30901, "phase3": True},   # Boundless Agony
+                {"id": 32369, "phase3": True},   # Blade of Savagery
+                {"id": 32944, "phase3": False},   # Talon of the Phoenix
+            ],
+            "off_hand": [
+                {"id": 29948, "phase3": False},   # Claw of the Phoenix
+                {"id": 30082, "phase3": False},   # Talon of Azshara
+                {"id": 30865, "phase3": True},   # Tracker's Blade
+                {"id": 30881, "phase3": True},   # Blade of Infamy
+                {"id": 30901, "phase3": True},   # Boundless Agony
+                {"id": 32369, "phase3": True},   # Blade of Savagery
+            ],
+        },
         "ranged_why": (
             (
             "The bow is the one hunter weapon that is not a stat stick, "
@@ -837,7 +913,7 @@ ROUNDS: dict[str, dict] = {
     # the top of the SV workbook tab's One Hand pool, which is combined like
     # the BM and Enhancement tabs rather than split like Fury's, and its Two
     # Hand ladder, kept to the weapon classes a hunter wields. The two-hand
-    # field is the same four the BM round ran, so the two hunter tables read
+    # field largely overlaps the BM round's, so the two hunter tables read
     # side by side. The 7/20/34 build carries no weapon specialization
     # talent, per data/facts/talents.yaml, so no class is favored, but one
     # stat is worth more than its line here: Expose Weakness is self-applied
@@ -874,54 +950,53 @@ ROUNDS: dict[str, dict] = {
             "the weapon stones, which the hunters choose by the WORN "
             "weapon's class, so a candidate whose class differs from "
             "the worn weapon runs under the capture's stone rather than "
-            "its own. The candidates are the top of the EP Workbook's "
-            "One Hand and Two Hand ladders for this spec, kept to the "
-            "weapon classes a hunter wields, with the same two-hander "
-            "field the Beast Mastery round ran so the two hunter tables "
-            "read side by side, and the 7/20/34 build carries no weapon "
+            "its own. The table is an enumeration of the EP Workbook's "
+            "One Hand and Two Hand ladders for this spec together with "
+            "every worn and routed weapon, kept to the "
+            "weapon classes a hunter wields and holding no crafted "
+            "weapon, and the 7/20/34 build carries no weapon "
             "specialization talent, so no class is favored.")),
-        "pairs": [
-            # DUAL WIELD. The worn best-in-slot pair: two copies of Blade
-            # of Infamy from Anetheron, the capture's 'Best x2' row, per
-            # data/facts/sim-profiles/bis-capture/survival-hunter.yaml.
-            # Not unique, so two copies is a question of weeks.
-            {"mh": 30881, "oh": 30881, "phase3": True},
-            # One Blade of Infamy before the second drops, held with each
-            # of the worn weapons it would displace: the entry axe
-            # Netherbane and the entry fist Claw of the Phoenix, both from
-            # Al'ar.
-            {"mh": 30881, "oh": 29924, "phase3": True},
-            {"mh": 30881, "oh": 29948, "phase3": True},
-            # Messenger of Fate from Gurtogg Bloodboil is the One Hand
-            # pool's rank three, its only Black Temple one-hander.
-            {"mh": 30881, "oh": 32269, "phase3": True},
-            # The Season 3 fist pair, the Right Ripper, Main Hand only,
-            # with the Left Ripper, Off Hand only. Fist weapons, so at the
-            # best-in-slot anchor this row runs under the worn pair's
-            # Sharpening Stone rather than the Weightstone a fist pair
-            # would carry.
-            {"mh": 33737, "oh": 33705, "phase3": True},
-            # Reachable before Phase 3: Netherbane with Claw of the
-            # Phoenix, both from Al'ar, is the worn entry AND tier pair,
-            # per the capture in data/facts/sim-profiles/hit-capture/
-            # survival-hunter.yaml; Talon of Azshara from Morogrim
-            # Tidewalker is the pool's rank five.
-            {"mh": 29924, "oh": 29948, "phase3": False},
-            {"mh": 29924, "oh": 30082, "phase3": False},
-            # TWO HAND, the same field the BM round ran. Phase 3: the
-            # Halberd of Desolation from High Warlord Naj'entus is the Two
-            # Hand ladder's rank one, and the Vengeful Gladiator's
-            # Decapitator is Season 3 arena, tied to the point with the
-            # Waraxe, so it stands for both.
-            {"mh": 32248, "oh": None, "phase3": True},
-            {"mh": 33670, "oh": None, "phase3": True},
-            # Reachable before Phase 3: Twinblade of the Phoenix from
-            # Kael'thas Sunstrider carries three sockets, which arrive
-            # EMPTY here because no SV anchor wears it, so its figure is
-            # understated by the gems a raider would add; Bloodmoon is
-            # crafted by Blacksmithing and carries none.
-            {"mh": 29993, "oh": None, "phase3": False},
-        ],
+        # survival_hunter: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand", "dual_wield"],
+            "two_hand": [
+                {"id": 27903, "phase3": False},   # Sonic Spear
+                {"id": 28587, "phase3": False},   # Legacy
+                {"id": 28773, "phase3": False},   # Gorehowl
+                {"id": 29166, "phase3": False},   # Hellforged Halberd
+                {"id": 29167, "phase3": False},   # Blackened Spear
+                {"id": 29329, "phase3": False},   # Terokk's Quill
+                {"id": 29993, "phase3": False},   # Twinblade of the Phoenix
+                {"id": 30789, "phase3": False},   # Illidari-Bane Claymore
+                {"id": 32248, "phase3": True},   # Halberd of Desolation
+                {"id": 33670, "phase3": True},   # Vengeful Gladiator's Decapitator
+            ],
+            "main_hand": [
+                {"id": 28263, "phase3": False},   # Stellaris
+                {"id": 28524, "phase3": False},   # Emerald Ripper
+                {"id": 29121, "phase3": False},   # Guile of Khoraazi
+                {"id": 29182, "phase3": False},   # Riftmaker
+                {"id": 29924, "phase3": False},   # Netherbane
+                {"id": 30082, "phase3": False},   # Talon of Azshara
+                {"id": 30881, "phase3": True},   # Blade of Infamy
+                {"id": 31492, "phase3": False},   # Claw of the Netherwing Flight
+                {"id": 32269, "phase3": True},   # Messenger of Fate
+                {"id": 32946, "phase3": True},   # Claw of Molten Fury
+            ],
+            "off_hand": [
+                {"id": 28263, "phase3": False},   # Stellaris
+                {"id": 28524, "phase3": False},   # Emerald Ripper
+                {"id": 29121, "phase3": False},   # Guile of Khoraazi
+                {"id": 29182, "phase3": False},   # Riftmaker
+                {"id": 29924, "phase3": False},   # Netherbane
+                {"id": 29948, "phase3": False},   # Claw of the Phoenix
+                {"id": 30082, "phase3": False},   # Talon of Azshara
+                {"id": 30881, "phase3": True},   # Blade of Infamy
+                {"id": 31492, "phase3": False},   # Claw of the Netherwing Flight
+                {"id": 32269, "phase3": True},   # Messenger of Fate
+                {"id": 32945, "phase3": True},   # Fist of Molten Fury
+            ],
+        },
         "ranged_why": (
             (
             "The bow is the one hunter weapon that is not a stat stick, "
@@ -1030,11 +1105,10 @@ ROUNDS: dict[str, dict] = {
     # candidates are the top of the Aff workbook tab, which splits One Hand
     # (main-hand casting weapons) from Off Hand (frills) from Two Hand
     # (staves); a warlock wields daggers, one-hand swords and staves and
-    # holds any frill. The pairing is the top main hands against the top
-    # frills rather than the full cross product. The Vengeful Gladiator's
-    # War Staff is not a row: the Battle Staff carries the same statistics
-    # plus 28 spell hit, so it equals or beats the War Staff at every hit
-    # state and stands for both. STONES AND OILS: the caster runs Brilliant
+    # holds any frill. The pairing is the FULL cross product of the main
+    # hands against the frills. The Vengeful Gladiator's
+    # War Staff is a row beside the Battle Staff, which carries the same
+    # statistics plus 28 spell hit. STONES AND OILS: the caster runs Brilliant
     # Wizard Oil on the main hand, an oil applies to any weapon, staff
     # included, and a frill takes no imbue because the simulator excludes
     # non-weapon off hands from imbues, so nothing about the consumables
@@ -1062,8 +1136,9 @@ ROUNDS: dict[str, dict] = {
             "top of this page. The Brilliant Wizard Oil applies to any "
             "weapon, staff and dagger alike, and a frill takes no "
             "imbue, so nothing about the consumables varies across the "
-            "rows. The candidates are the top of the EP Workbook's Two "
-            "Hand, One Hand and Off Hand ladders for this spec, and no "
+            "rows. The table is an enumeration of the EP Workbook's Two "
+            "Hand, One Hand and Off Hand ladders for this spec together "
+            "with every worn and routed weapon, and no "
             "candidate carries a socket. Zhar'doom goes to the "
             "warlocks, the Balance Druid, the Elemental Shaman and the "
             "Shadow Priest, and its wearers hold no off hand, which is "
@@ -1072,45 +1147,58 @@ ROUNDS: dict[str, dict] = {
             "Mage, and first is an ordering rather than an exclusion: "
             "the warlocks' lists rank it too, so its rows measure what "
             "this spec holds once the mage is served.")),
-        "pairs": [
-            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
-            # Greatstaff of the Devourer, from Illidan Stormrage, is the
-            # worn best-in-slot weapon and the workbook's rank one; the
-            # Vengeful Gladiator's Battle Staff is Season 3 arena and
-            # stands for both Season 3 staves.
-            {"mh": 32374, "oh": None, "phase3": True},
-            {"mh": 34540, "oh": None, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's War
-            # Staff is Season 2 arena and the workbook's best reachable
-            # staff; The Nexus Key drops from Kael'thas Sunstrider.
-            {"mh": 32055, "oh": None, "phase3": False},
-            {"mh": 29988, "oh": None, "phase3": False},
-            # MAIN HAND WITH A HELD FRILL. Tempest of Chaos from
-            # Archimonde is the One Hand ladder's rank one, held with
-            # each of the top frills: Chronicle of Dark Secrets from Rage
-            # Winterchill, Blind-Seers Icon from Shade of Akama, and the
-            # worn Jewel of Infinite Possibilities from Netherspite, the
-            # state where the sword drops before a Phase 3 frill does.
-            {"mh": 30910, "oh": 30872, "phase3": True},
-            {"mh": 30910, "oh": 32361, "phase3": True},
-            {"mh": 30910, "oh": 28734, "phase3": True},
-            # The other Phase 3 main hands, each with the rank one
-            # frill: the Vengeful Gladiator's Spellblade is Season 3
-            # arena and The Maelstrom's Fury drops from High Warlord
-            # Naj'entus.
-            {"mh": 33763, "oh": 30872, "phase3": True},
-            {"mh": 32237, "oh": 30872, "phase3": True},
-            # The worn Merciless Gladiator's Spellblade with the rank one
-            # frill, the state where a frill drops before any Phase 3
-            # main hand does.
-            {"mh": 32053, "oh": 30872, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's
-            # Spellblade, Season 2 arena, with the Jewel of Infinite
-            # Possibilities from Netherspite is the worn entry AND tier
-            # combination, per the capture in data/facts/sim-profiles/
-            # hit-capture/affliction-warlock.yaml.
-            {"mh": 32053, "oh": 28734, "phase3": False},
-        ],
+        # affliction_warlock: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand", "main_hand_off_hand"],
+            "two_hand": [
+                {"id": 24557, "phase3": False},   # Gladiator's War Staff
+                {"id": 27842, "phase3": False},   # Grand Scepter of the Nexus-Kings
+                {"id": 28341, "phase3": False},   # Warpstaff of Arcanum
+                {"id": 28633, "phase3": False},   # Staff of Infinite Mysteries
+                {"id": 28935, "phase3": False},   # High Warlord's War Staff
+                {"id": 28959, "phase3": False},   # Grand Marshal's War Staff
+                {"id": 29130, "phase3": False},   # Auchenai Staff
+                {"id": 29355, "phase3": False},   # Terokk's Shadowstaff
+                {"id": 29988, "phase3": False},   # The Nexus Key
+                {"id": 32055, "phase3": False},   # Merciless Gladiator's War Staff
+                {"id": 32374, "phase3": True},   # Zhar'doom, Greatstaff of the Devourer
+                {"id": 33766, "phase3": True},   # Vengeful Gladiator's War Staff
+                {"id": 34540, "phase3": True},   # Vengeful Gladiator's Battle Staff
+            ],
+            "main_hand": [
+                {"id": 23554, "phase3": False},   # Eternium Runed Blade
+                {"id": 27905, "phase3": False},   # Greatsword of Horrid Dreams
+                {"id": 28297, "phase3": False},   # Gladiator's Spellblade
+                {"id": 28770, "phase3": False},   # Nathrezim Mindblade
+                {"id": 28802, "phase3": False},   # Bloodmaw Magus-Blade
+                {"id": 29153, "phase3": False},   # Blade of the Archmage
+                {"id": 29155, "phase3": False},   # Stormcaller
+                {"id": 30095, "phase3": False},   # Fang of the Leviathan
+                {"id": 30787, "phase3": False},   # Illidari-Bane Mageblade
+                {"id": 30910, "phase3": True},   # Tempest of Chaos
+                {"id": 31336, "phase3": False},   # Blade of Wizardry
+                {"id": 32053, "phase3": False},   # Merciless Gladiator's Spellblade
+                {"id": 32237, "phase3": True},   # The Maelstrom's Fury
+                {"id": 33763, "phase3": True},   # Vengeful Gladiator's Spellblade
+            ],
+            "off_hand": [
+                {"id": 25099, "phase3": False},   # Draenei Crystal Rod
+                {"id": 28187, "phase3": False},   # Star-Heart Lamp
+                {"id": 28260, "phase3": False},   # Manual of the Nethermancer
+                {"id": 28412, "phase3": False},   # Lamp of Peaceful Radiance
+                {"id": 28603, "phase3": False},   # Talisman of Nightbane
+                {"id": 28734, "phase3": False},   # Jewel of Infinite Possibilities
+                {"id": 28781, "phase3": False},   # Karaborian Talisman
+                {"id": 29272, "phase3": False},   # Orb of the Soul-Eater
+                {"id": 29273, "phase3": False},   # Khadgar's Knapsack
+                {"id": 30049, "phase3": False},   # Fathomstone
+                {"id": 30872, "phase3": True},   # Chronicle of Dark Secrets
+                {"id": 31978, "phase3": False},   # Merciless Gladiator's Endgame
+                {"id": 32361, "phase3": True},   # Blind-Seers Icon
+                {"id": 32533, "phase3": False},   # Karrog's Shard
+                {"id": 32651, "phase3": False},   # Crystal Orb of Enlightenment
+            ],
+        },
         # THE TRINKET POOL, the eighth enumerative trinket round and the
         # FIRST FOR A CASTER, the shape the five remaining caster rounds
         # copy: every max-level trinket the Aff tab's Trinket ladder
@@ -1200,10 +1288,9 @@ ROUNDS: dict[str, dict] = {
     # same weapons at the top of every ladder; where the specs differ is
     # the worn off hand, the Destruction captures hold the Flametongue
     # Seal where Affliction held the Jewel of Infinite Possibilities. The
-    # Vengeful Gladiator's War Staff is not a row for the same reason as
-    # in the Affliction round: the Battle Staff carries the same
-    # statistics plus 28 spell hit, so it equals or beats the War Staff
-    # at every hit state and stands for both. SOCKETS: the only socketed
+    # Vengeful Gladiator's War Staff is a row beside the Battle Staff,
+    # which carries the same
+    # statistics plus 28 spell hit. SOCKETS: the only socketed
     # weapon anywhere in the tab's ladders is Talon of the Tempest, One
     # Hand rank five, below the cut, so no candidate in the round carries
     # a socket. STONES, OILS AND ENCHANT: identical to the Affliction
@@ -1227,8 +1314,9 @@ ROUNDS: dict[str, dict] = {
             "top of this page. The Brilliant Wizard Oil applies to any "
             "weapon, staff and dagger alike, and a frill takes no "
             "imbue, so nothing about the consumables varies across the "
-            "rows. The candidates are the top of the EP Workbook's Two "
-            "Hand, One Hand and Off Hand ladders for this spec, and no "
+            "rows. The table is an enumeration of the EP Workbook's Two "
+            "Hand, One Hand and Off Hand ladders for this spec together "
+            "with every worn and routed weapon, and no "
             "candidate carries a socket. Zhar'doom goes to the "
             "warlocks, the Balance Druid, the Elemental Shaman and the "
             "Shadow Priest, and its wearers hold no off hand, which is "
@@ -1237,45 +1325,58 @@ ROUNDS: dict[str, dict] = {
             "Mage, and first is an ordering rather than an exclusion: "
             "the warlocks' lists rank it too, so its rows measure what "
             "this spec holds once the mage is served.")),
-        "pairs": [
-            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
-            # Greatstaff of the Devourer, from Illidan Stormrage, is the
-            # worn best-in-slot weapon and the workbook's rank one; the
-            # Vengeful Gladiator's Battle Staff is Season 3 arena and
-            # stands for both Season 3 staves.
-            {"mh": 32374, "oh": None, "phase3": True},
-            {"mh": 34540, "oh": None, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's War
-            # Staff is Season 2 arena and the workbook's best reachable
-            # staff; The Nexus Key drops from Kael'thas Sunstrider.
-            {"mh": 32055, "oh": None, "phase3": False},
-            {"mh": 29988, "oh": None, "phase3": False},
-            # MAIN HAND WITH A HELD FRILL. Tempest of Chaos from
-            # Archimonde is the One Hand ladder's rank one, held with
-            # each of the top frills: Chronicle of Dark Secrets from Rage
-            # Winterchill, Blind-Seers Icon from Shade of Akama, and the
-            # worn Flametongue Seal from the badge vendor, the state
-            # where the sword drops before a Phase 3 frill does.
-            {"mh": 30910, "oh": 30872, "phase3": True},
-            {"mh": 30910, "oh": 32361, "phase3": True},
-            {"mh": 30910, "oh": 29270, "phase3": True},
-            # The other Phase 3 main hands, each with the rank one
-            # frill: the Vengeful Gladiator's Spellblade is Season 3
-            # arena and The Maelstrom's Fury drops from High Warlord
-            # Naj'entus.
-            {"mh": 33763, "oh": 30872, "phase3": True},
-            {"mh": 32237, "oh": 30872, "phase3": True},
-            # The worn Merciless Gladiator's Spellblade with the rank one
-            # frill, the state where a frill drops before any Phase 3
-            # main hand does.
-            {"mh": 32053, "oh": 30872, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's
-            # Spellblade, Season 2 arena, with the Flametongue Seal from
-            # G'eras is the worn entry AND tier combination, per the
-            # capture in data/facts/sim-profiles/hit-capture/
-            # destruction-warlock.yaml.
-            {"mh": 32053, "oh": 29270, "phase3": False},
-        ],
+        # destruction_warlock: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand", "main_hand_off_hand"],
+            "two_hand": [
+                {"id": 24557, "phase3": False},   # Gladiator's War Staff
+                {"id": 27842, "phase3": False},   # Grand Scepter of the Nexus-Kings
+                {"id": 28341, "phase3": False},   # Warpstaff of Arcanum
+                {"id": 28633, "phase3": False},   # Staff of Infinite Mysteries
+                {"id": 28935, "phase3": False},   # High Warlord's War Staff
+                {"id": 28959, "phase3": False},   # Grand Marshal's War Staff
+                {"id": 29130, "phase3": False},   # Auchenai Staff
+                {"id": 29355, "phase3": False},   # Terokk's Shadowstaff
+                {"id": 29988, "phase3": False},   # The Nexus Key
+                {"id": 32055, "phase3": False},   # Merciless Gladiator's War Staff
+                {"id": 32374, "phase3": True},   # Zhar'doom, Greatstaff of the Devourer
+                {"id": 33766, "phase3": True},   # Vengeful Gladiator's War Staff
+                {"id": 34540, "phase3": True},   # Vengeful Gladiator's Battle Staff
+            ],
+            "main_hand": [
+                {"id": 23554, "phase3": False},   # Eternium Runed Blade
+                {"id": 27905, "phase3": False},   # Greatsword of Horrid Dreams
+                {"id": 28297, "phase3": False},   # Gladiator's Spellblade
+                {"id": 28770, "phase3": False},   # Nathrezim Mindblade
+                {"id": 28802, "phase3": False},   # Bloodmaw Magus-Blade
+                {"id": 29153, "phase3": False},   # Blade of the Archmage
+                {"id": 29155, "phase3": False},   # Stormcaller
+                {"id": 30095, "phase3": False},   # Fang of the Leviathan
+                {"id": 30787, "phase3": False},   # Illidari-Bane Mageblade
+                {"id": 30910, "phase3": True},   # Tempest of Chaos
+                {"id": 31336, "phase3": False},   # Blade of Wizardry
+                {"id": 32053, "phase3": False},   # Merciless Gladiator's Spellblade
+                {"id": 32237, "phase3": True},   # The Maelstrom's Fury
+                {"id": 33763, "phase3": True},   # Vengeful Gladiator's Spellblade
+            ],
+            "off_hand": [
+                {"id": 25099, "phase3": False},   # Draenei Crystal Rod
+                {"id": 28187, "phase3": False},   # Star-Heart Lamp
+                {"id": 28412, "phase3": False},   # Lamp of Peaceful Radiance
+                {"id": 28603, "phase3": False},   # Talisman of Nightbane
+                {"id": 28734, "phase3": False},   # Jewel of Infinite Possibilities
+                {"id": 28781, "phase3": False},   # Karaborian Talisman
+                {"id": 29270, "phase3": False},   # Flametongue Seal
+                {"id": 29272, "phase3": False},   # Orb of the Soul-Eater
+                {"id": 29273, "phase3": False},   # Khadgar's Knapsack
+                {"id": 30049, "phase3": False},   # Fathomstone
+                {"id": 30872, "phase3": True},   # Chronicle of Dark Secrets
+                {"id": 31978, "phase3": False},   # Merciless Gladiator's Endgame
+                {"id": 32361, "phase3": True},   # Blind-Seers Icon
+                {"id": 32533, "phase3": False},   # Karrog's Shard
+                {"id": 32651, "phase3": False},   # Crystal Orb of Enlightenment
+            ],
+        },
         # THE TRINKET POOL, the ninth enumerative trinket round and the
         # second caster round, in the shape the Affliction round set:
         # every max-level trinket the Dest tab's Trinket ladder ranks,
@@ -1357,23 +1458,24 @@ ROUNDS: dict[str, dict] = {
     },
     # ARCANE MAGE: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, in the shape the
-    # Affliction round set as the caster template. The candidates are the
-    # top of the Arc workbook tab, whose weapon ladders are One Hand,
-    # Off Hand, Two Hand and Ranged; a mage wields daggers, one-hand
-    # swords and staves and holds any frill. ZHAR'DOOM IS NOT A ROW: the
+    # Affliction round set as the caster template. The field is the Arc
+    # tab's One Hand, Off Hand and Two Hand ladders plus every worn and
+    # routed weapon; a mage wields daggers, one-hand
+    # swords and staves and holds any frill. ZHAR'DOOM IS A ROW even
+    # though the
     # guild lead routed it to the warlocks, the Balance Druid, the
-    # Elemental Shaman and the Shadow Priest, and ruled that the Arcane
-    # Mage takes Tempest of Chaos first, so this spec's best-in-slot set
+    # Elemental Shaman and the Shadow Priest, because a routing never
+    # excludes a candidate; the mage takes Tempest of Chaos first, so
+    # this spec's best-in-slot set
     # wears the one-hander with a frill and never holds the staff. The
     # rows below therefore price the mage's OWN staff field, Season 3,
     # Season 2 and the worn Nexus Key, against Tempest and the other main
     # hands with the top frills; the warlock rounds measured what other
     # specs lose while the mage holds Tempest, and this round measures
     # what the mage loses if it concedes it. The Vengeful Gladiator's War
-    # Staff is not a row for the same reason as in the warlock rounds:
-    # the Battle Staff carries the same statistics plus 28 spell hit, so
-    # it equals or beats the War Staff at every hit state and stands for
-    # both. SOCKETS: no candidate carries a socket, per items.csv.
+    # Staff is a row beside the Battle Staff, which carries the same
+    # statistics plus 28 spell hit.
+    # SOCKETS: no candidate carries a socket, per items.csv.
     # STONES, OILS AND ENCHANT: Brilliant Wizard Oil on the main hand at
     # every anchor, no frill imbue, and the main-hand slot's Sunfire
     # inherited by every row, staff included. The worn combinations are
@@ -1396,8 +1498,9 @@ ROUNDS: dict[str, dict] = {
             "top of this page. The Brilliant Wizard Oil applies to any "
             "weapon, staff and sword alike, and a frill takes no imbue, "
             "so nothing about the consumables varies across the rows. "
-            "The candidates are the top of the EP Workbook's Two Hand, "
-            "One Hand and Off Hand ladders for this spec, and no "
+            "The table is an enumeration of the EP Workbook's Two Hand, "
+            "One Hand and Off Hand ladders for this spec together with "
+            "every worn and routed weapon, and no "
             "candidate carries a socket. Zhar'doom is a row even though "
             "it goes to the warlocks, the Balance Druid, the Elemental "
             "Shaman and the Shadow Priest, with the Arcane Mage taking "
@@ -1409,50 +1512,59 @@ ROUNDS: dict[str, dict] = {
             "other specs lose while the mage holds it, and this table "
             "measures what the mage loses if it concedes it, and what "
             "the routed staff would be worth here.")),
-        "pairs": [
-            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom is
-            # the ladder's rank one and is ROUTED to five other specs;
-            # it is measured anyway, because a routing never excludes a
-            # candidate. The Vengeful Gladiator's Battle Staff is Season
-            # 3 arena and stands for both Season 3 staves.
-            {"mh": 32374, "oh": None, "phase3": True},
-            {"mh": 34540, "oh": None, "phase3": True},
-            # Reachable before Phase 3: The Nexus Key from Kael'thas
-            # Sunstrider is the worn entry AND tier weapon, per the
-            # capture in data/facts/sim-profiles/hit-capture/
-            # arcane-mage.yaml; the Merciless Gladiator's War Staff is
-            # Season 2 arena, the ladder's next reachable staff.
-            {"mh": 29988, "oh": None, "phase3": False},
-            {"mh": 32055, "oh": None, "phase3": False},
-            # MAIN HAND WITH A HELD FRILL. Tempest of Chaos from
-            # Archimonde is the One Hand ladder's rank one and the guild
-            # lead's routing, held with each of the top frills: the worn
-            # Chronicle of Dark Secrets from Rage Winterchill,
-            # Blind-Seers Icon from Shade of Akama, and the Talisman of
-            # Kalecgos from G'eras, the state where the sword drops
-            # before a Phase 3 frill does.
-            {"mh": 30910, "oh": 30872, "phase3": True},
-            {"mh": 30910, "oh": 32361, "phase3": True},
-            {"mh": 30910, "oh": 29271, "phase3": True},
-            # The other Phase 3 main hands, each with the rank one
-            # frill: the Vengeful Gladiator's Spellblade is Season 3
-            # arena and The Maelstrom's Fury drops from High Warlord
-            # Naj'entus.
-            {"mh": 33763, "oh": 30872, "phase3": True},
-            {"mh": 32237, "oh": 30872, "phase3": True},
-            # The Merciless Gladiator's Spellblade with the rank one
-            # frill, the state where a frill drops before any Phase 3
-            # main hand does.
-            {"mh": 32053, "oh": 30872, "phase3": True},
-            # Reachable before Phase 3: Fang of the Leviathan from
-            # Leotheras the Blind and the Merciless Gladiator's
-            # Spellblade, Season 2 arena, each with the Talisman of
-            # Kalecgos, the best frill reachable before Phase 3, price
-            # the one-hander style against the worn Nexus Key at the
-            # entry anchor.
-            {"mh": 30095, "oh": 29271, "phase3": False},
-            {"mh": 32053, "oh": 29271, "phase3": False},
-        ],
+        # arcane_mage: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand", "main_hand_off_hand"],
+            "two_hand": [
+                {"id": 24557, "phase3": False},   # Gladiator's War Staff
+                {"id": 28188, "phase3": False},   # Bloodfire Greatstaff
+                {"id": 28341, "phase3": False},   # Warpstaff of Arcanum
+                {"id": 28633, "phase3": False},   # Staff of Infinite Mysteries
+                {"id": 28935, "phase3": False},   # High Warlord's War Staff
+                {"id": 29130, "phase3": False},   # Auchenai Staff
+                {"id": 29355, "phase3": False},   # Terokk's Shadowstaff
+                {"id": 29988, "phase3": False},   # The Nexus Key
+                {"id": 31308, "phase3": False},   # The Bringer of Death
+                {"id": 32055, "phase3": False},   # Merciless Gladiator's War Staff
+                {"id": 32374, "phase3": True},   # Zhar'doom, Greatstaff of the Devourer
+                {"id": 32662, "phase3": False},   # Flaming Quartz Staff
+                {"id": 33766, "phase3": True},   # Vengeful Gladiator's War Staff
+                {"id": 34540, "phase3": True},   # Vengeful Gladiator's Battle Staff
+            ],
+            "main_hand": [
+                {"id": 23554, "phase3": False},   # Eternium Runed Blade
+                {"id": 27905, "phase3": False},   # Greatsword of Horrid Dreams
+                {"id": 28297, "phase3": False},   # Gladiator's Spellblade
+                {"id": 28770, "phase3": False},   # Nathrezim Mindblade
+                {"id": 28802, "phase3": False},   # Bloodmaw Magus-Blade
+                {"id": 29153, "phase3": False},   # Blade of the Archmage
+                {"id": 29155, "phase3": False},   # Stormcaller
+                {"id": 30095, "phase3": False},   # Fang of the Leviathan
+                {"id": 30787, "phase3": False},   # Illidari-Bane Mageblade
+                {"id": 30910, "phase3": True},   # Tempest of Chaos
+                {"id": 31336, "phase3": False},   # Blade of Wizardry
+                {"id": 32053, "phase3": False},   # Merciless Gladiator's Spellblade
+                {"id": 32237, "phase3": True},   # The Maelstrom's Fury
+                {"id": 33763, "phase3": True},   # Vengeful Gladiator's Spellblade
+            ],
+            "off_hand": [
+                {"id": 28187, "phase3": False},   # Star-Heart Lamp
+                {"id": 28260, "phase3": False},   # Manual of the Nethermancer
+                {"id": 28412, "phase3": False},   # Lamp of Peaceful Radiance
+                {"id": 28603, "phase3": False},   # Talisman of Nightbane
+                {"id": 28734, "phase3": False},   # Jewel of Infinite Possibilities
+                {"id": 28781, "phase3": False},   # Karaborian Talisman
+                {"id": 29271, "phase3": False},   # Talisman of Kalecgos
+                {"id": 29273, "phase3": False},   # Khadgar's Knapsack
+                {"id": 29330, "phase3": False},   # The Saga of Terokk
+                {"id": 30049, "phase3": False},   # Fathomstone
+                {"id": 30872, "phase3": True},   # Chronicle of Dark Secrets
+                {"id": 31494, "phase3": False},   # Netherwing Sorceror's Charm
+                {"id": 31978, "phase3": False},   # Merciless Gladiator's Endgame
+                {"id": 32361, "phase3": True},   # Blind-Seers Icon
+                {"id": 32651, "phase3": False},   # Crystal Orb of Enlightenment
+            ],
+        },
         # THE TRINKET POOL, the tenth enumerative trinket round and the
         # third caster round, in the shape the Affliction round set: every
         # max-level trinket the Arc tab's Trinket ladder ranks, with
@@ -1546,10 +1658,9 @@ ROUNDS: dict[str, dict] = {
     # mace and a dagger at the same figures, so the Gavel row stands for
     # both. The rank-one frill for THIS spec is the Blind-Seers Icon,
     # 61.45 to the Chronicle of Dark Secrets' 59.95, the reverse of the
-    # warlock tabs. The Vengeful Gladiator's War Staff is not a row for
-    # the same reason as in the other caster rounds: the Battle Staff
-    # carries the same statistics plus 28 spell hit, so it equals or
-    # beats the War Staff at every hit state and stands for both.
+    # warlock tabs. The Vengeful Gladiator's War Staff is a row beside
+    # the Battle Staff, which
+    # carries the same statistics plus 28 spell hit.
     # SOCKETS: the only socketed weapon anywhere in the tab's ladders is
     # Talon of the Tempest, One Hand rank seven, below the cut, so no
     # candidate in the round carries a socket. STONES, OILS AND ENCHANT:
@@ -1576,8 +1687,9 @@ ROUNDS: dict[str, dict] = {
             "top of this page. The Superior Wizard Oil applies to any "
             "weapon, staff and mace alike, and a frill takes no imbue, "
             "so nothing about the consumables varies across the rows. "
-            "The candidates are the top of the EP Workbook's Two Hand, "
-            "One Hand and Off Hand ladders for this spec, and no "
+            "The table is an enumeration of the EP Workbook's Two Hand, "
+            "One Hand and Off Hand ladders for this spec together with "
+            "every worn and routed weapon, and no "
             "candidate carries a socket. A priest wields daggers, one- "
             "hand maces and staves and holds any frill, and cannot "
             "wield swords, so Tempest of Chaos, the sword the warlock "
@@ -1589,46 +1701,55 @@ ROUNDS: dict[str, dict] = {
             "the Shadow Priest, and its wearers hold no off hand, which "
             "is why the best-in-slot anchor wears it with the off-hand "
             "slot empty.")),
-        "pairs": [
-            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
-            # Greatstaff of the Devourer, from Illidan Stormrage, is the
-            # worn best-in-slot weapon and the workbook's rank one; the
-            # Vengeful Gladiator's Battle Staff is Season 3 arena and
-            # stands for both Season 3 staves.
-            {"mh": 32374, "oh": None, "phase3": True},
-            {"mh": 34540, "oh": None, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's War
-            # Staff is Season 2 arena and the workbook's best reachable
-            # staff; The Nexus Key drops from Kael'thas Sunstrider.
-            {"mh": 32055, "oh": None, "phase3": False},
-            {"mh": 29988, "oh": None, "phase3": False},
-            # MAIN HAND WITH A HELD FRILL. The Vengeful Gladiator's
-            # Gavel, Season 3 arena, is the One Hand ladder's rank one
-            # and stands for the identically statted Spellblade, held
-            # with each of the top frills: Blind-Seers Icon from Shade
-            # of Akama, Chronicle of Dark Secrets from Rage Winterchill,
-            # and the worn Orb of the Soul-Eater from the badge vendor,
-            # the state where the mace arrives before a Phase 3 frill
-            # drops.
-            {"mh": 33687, "oh": 32361, "phase3": True},
-            {"mh": 33687, "oh": 30872, "phase3": True},
-            {"mh": 33687, "oh": 29272, "phase3": True},
-            # The Phase 3 raid-drop main hands, each with the rank one
-            # frill: Hammer of Judgement drops in Hyjal Summit and The
-            # Maelstrom's Fury drops from High Warlord Naj'entus.
-            {"mh": 34009, "oh": 32361, "phase3": True},
-            {"mh": 32237, "oh": 32361, "phase3": True},
-            # The worn Merciless Gladiator's Spellblade with the rank
-            # one frill, the state where a frill drops before any Phase
-            # 3 main hand does.
-            {"mh": 32053, "oh": 32361, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's
-            # Spellblade, Season 2 arena, with the Orb of the Soul-Eater
-            # from G'eras is the worn entry AND tier combination, per
-            # the capture in data/facts/sim-profiles/hit-capture/
-            # shadow-priest.yaml.
-            {"mh": 32053, "oh": 29272, "phase3": False},
-        ],
+        # shadow_priest: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand", "main_hand_off_hand"],
+            "two_hand": [
+                {"id": 24557, "phase3": False},   # Gladiator's War Staff
+                {"id": 27842, "phase3": False},   # Grand Scepter of the Nexus-Kings
+                {"id": 28341, "phase3": False},   # Warpstaff of Arcanum
+                {"id": 28633, "phase3": False},   # Staff of Infinite Mysteries
+                {"id": 28935, "phase3": False},   # High Warlord's War Staff
+                {"id": 28959, "phase3": False},   # Grand Marshal's War Staff
+                {"id": 29130, "phase3": False},   # Auchenai Staff
+                {"id": 29355, "phase3": False},   # Terokk's Shadowstaff
+                {"id": 29988, "phase3": False},   # The Nexus Key
+                {"id": 32055, "phase3": False},   # Merciless Gladiator's War Staff
+                {"id": 32374, "phase3": True},   # Zhar'doom, Greatstaff of the Devourer
+                {"id": 33766, "phase3": True},   # Vengeful Gladiator's War Staff
+                {"id": 34540, "phase3": True},   # Vengeful Gladiator's Battle Staff
+            ],
+            "main_hand": [
+                {"id": 23554, "phase3": False},   # Eternium Runed Blade
+                {"id": 27543, "phase3": False},   # Starlight Dagger
+                {"id": 27937, "phase3": False},   # Sky Breaker
+                {"id": 28297, "phase3": False},   # Gladiator's Spellblade
+                {"id": 28770, "phase3": False},   # Nathrezim Mindblade
+                {"id": 30787, "phase3": False},   # Illidari-Bane Mageblade
+                {"id": 30832, "phase3": False},   # Gavel of Unearthed Secrets
+                {"id": 32053, "phase3": False},   # Merciless Gladiator's Spellblade
+                {"id": 32237, "phase3": True},   # The Maelstrom's Fury
+                {"id": 33687, "phase3": True},   # Vengeful Gladiator's Gavel
+                {"id": 34009, "phase3": True},   # Hammer of Judgement
+            ],
+            "off_hand": [
+                {"id": 25099, "phase3": False},   # Draenei Crystal Rod
+                {"id": 28187, "phase3": False},   # Star-Heart Lamp
+                {"id": 28412, "phase3": False},   # Lamp of Peaceful Radiance
+                {"id": 28603, "phase3": False},   # Talisman of Nightbane
+                {"id": 28734, "phase3": False},   # Jewel of Infinite Possibilities
+                {"id": 28781, "phase3": False},   # Karaborian Talisman
+                {"id": 29272, "phase3": False},   # Orb of the Soul-Eater
+                {"id": 29273, "phase3": False},   # Khadgar's Knapsack
+                {"id": 29330, "phase3": False},   # The Saga of Terokk
+                {"id": 30049, "phase3": False},   # Fathomstone
+                {"id": 30872, "phase3": True},   # Chronicle of Dark Secrets
+                {"id": 31978, "phase3": False},   # Merciless Gladiator's Endgame
+                {"id": 32361, "phase3": True},   # Blind-Seers Icon
+                {"id": 32533, "phase3": False},   # Karrog's Shard
+                {"id": 32651, "phase3": False},   # Crystal Orb of Enlightenment
+            ],
+        },
         # THE TRINKET POOL, the eleventh enumerative trinket round and
         # the fourth caster round, in the shape the Affliction round set:
         # every max-level trinket the Shad tab's Trinket ladder ranks,
@@ -1725,10 +1846,9 @@ ROUNDS: dict[str, dict] = {
     # so the Gavel row stands for both. The rank-one frill for THIS spec
     # is the Chronicle of Dark Secrets, 80.76 to the Blind-Seers Icon's
     # 76.88, the same order as the warlock tabs and the reverse of the
-    # Shadow Priest's. The Vengeful Gladiator's War Staff is not a row
-    # for the same reason as in the other caster rounds: the Battle Staff
-    # carries the same statistics plus 28 spell hit, so it equals or
-    # beats the War Staff at every hit state and stands for both.
+    # Shadow Priest's. The Vengeful Gladiator's War Staff is a row
+    # beside the Battle Staff, which
+    # carries the same statistics plus 28 spell hit.
     # SOCKETS: no candidate carries a socket, per items.csv; the tab's
     # one socketed weapon, Talon of the Tempest, is One Hand rank seven,
     # below the cut. STONES, OILS AND ENCHANT: Brilliant Wizard Oil on
@@ -1756,8 +1876,9 @@ ROUNDS: dict[str, dict] = {
             "top of this page. The Brilliant Wizard Oil applies to any "
             "weapon, staff and mace alike, and a frill takes no imbue, "
             "so nothing about the consumables varies across the rows. "
-            "The candidates are the top of the EP Workbook's Two Hand, "
-            "One Hand and Off Hand ladders for this spec, and no "
+            "The table is an enumeration of the EP Workbook's Two Hand, "
+            "One Hand and Off Hand ladders for this spec together with "
+            "every worn and routed weapon, and no "
             "candidate carries a socket. A druid wields maces, staves, "
             "daggers and fist weapons and holds any frill, and cannot "
             "wield swords, so Tempest of Chaos, the sword the warlock "
@@ -1769,48 +1890,55 @@ ROUNDS: dict[str, dict] = {
             "the Shadow Priest, and its wearers hold no off hand, which "
             "is why the best-in-slot anchor wears it with the off-hand "
             "slot empty.")),
-        "pairs": [
-            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
-            # Greatstaff of the Devourer, from Illidan Stormrage, is the
-            # worn best-in-slot weapon and the workbook's rank one; the
-            # Vengeful Gladiator's Battle Staff is Season 3 arena and
-            # stands for both Season 3 staves.
-            {"mh": 32374, "oh": None, "phase3": True},
-            {"mh": 34540, "oh": None, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's War
-            # Staff is Season 2 arena and the workbook's best reachable
-            # staff after The Nexus Key, which drops from Kael'thas
-            # Sunstrider and is the worn entry AND tier weapon, per the
-            # capture in data/facts/sim-profiles/hit-capture/
-            # balance-druid.yaml.
-            {"mh": 32055, "oh": None, "phase3": False},
-            {"mh": 29988, "oh": None, "phase3": False},
-            # MAIN HAND WITH A HELD FRILL. The Vengeful Gladiator's
-            # Gavel, Season 3 arena, is the One Hand ladder's rank one
-            # and stands for the identically statted Spellblade, held
-            # with each of the top frills: Chronicle of Dark Secrets
-            # from Rage Winterchill, Blind-Seers Icon from Shade of
-            # Akama, and the Jewel of Infinite Possibilities from
-            # Netherspite, the state where the mace arrives before a
-            # Phase 3 frill drops.
-            {"mh": 33687, "oh": 30872, "phase3": True},
-            {"mh": 33687, "oh": 32361, "phase3": True},
-            {"mh": 33687, "oh": 28734, "phase3": True},
-            # The Phase 3 raid-drop main hands, each with the rank one
-            # frill: Hammer of Judgement drops in Hyjal Summit and The
-            # Maelstrom's Fury drops from High Warlord Naj'entus.
-            {"mh": 34009, "oh": 30872, "phase3": True},
-            {"mh": 32237, "oh": 30872, "phase3": True},
-            # The Merciless Gladiator's Spellblade with the rank one
-            # frill, the state where a frill drops before any Phase 3
-            # main hand does.
-            {"mh": 32053, "oh": 30872, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's
-            # Spellblade, Season 2 arena, with the Jewel of Infinite
-            # Possibilities from Netherspite prices the one-hander
-            # style against the worn Nexus Key at the entry anchor.
-            {"mh": 32053, "oh": 28734, "phase3": False},
-        ],
+        # balance_druid: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand", "main_hand_off_hand"],
+            "two_hand": [
+                {"id": 24557, "phase3": False},   # Gladiator's War Staff
+                {"id": 27842, "phase3": False},   # Grand Scepter of the Nexus-Kings
+                {"id": 28341, "phase3": False},   # Warpstaff of Arcanum
+                {"id": 28633, "phase3": False},   # Staff of Infinite Mysteries
+                {"id": 28935, "phase3": False},   # High Warlord's War Staff
+                {"id": 28959, "phase3": False},   # Grand Marshal's War Staff
+                {"id": 29130, "phase3": False},   # Auchenai Staff
+                {"id": 29355, "phase3": False},   # Terokk's Shadowstaff
+                {"id": 29988, "phase3": False},   # The Nexus Key
+                {"id": 32055, "phase3": False},   # Merciless Gladiator's War Staff
+                {"id": 32374, "phase3": True},   # Zhar'doom, Greatstaff of the Devourer
+                {"id": 32854, "phase3": False},   # Hammer of Righteous Might
+                {"id": 33766, "phase3": True},   # Vengeful Gladiator's War Staff
+                {"id": 34540, "phase3": True},   # Vengeful Gladiator's Battle Staff
+            ],
+            "main_hand": [
+                {"id": 23554, "phase3": False},   # Eternium Runed Blade
+                {"id": 27543, "phase3": False},   # Starlight Dagger
+                {"id": 28297, "phase3": False},   # Gladiator's Spellblade
+                {"id": 28770, "phase3": False},   # Nathrezim Mindblade
+                {"id": 28931, "phase3": False},   # High Warlord's Spellblade
+                {"id": 30787, "phase3": False},   # Illidari-Bane Mageblade
+                {"id": 30832, "phase3": False},   # Gavel of Unearthed Secrets
+                {"id": 32053, "phase3": False},   # Merciless Gladiator's Spellblade
+                {"id": 32237, "phase3": True},   # The Maelstrom's Fury
+                {"id": 33687, "phase3": True},   # Vengeful Gladiator's Gavel
+                {"id": 34009, "phase3": True},   # Hammer of Judgement
+            ],
+            "off_hand": [
+                {"id": 25099, "phase3": False},   # Draenei Crystal Rod
+                {"id": 28187, "phase3": False},   # Star-Heart Lamp
+                {"id": 28260, "phase3": False},   # Manual of the Nethermancer
+                {"id": 28412, "phase3": False},   # Lamp of Peaceful Radiance
+                {"id": 28603, "phase3": False},   # Talisman of Nightbane
+                {"id": 28734, "phase3": False},   # Jewel of Infinite Possibilities
+                {"id": 28781, "phase3": False},   # Karaborian Talisman
+                {"id": 29273, "phase3": False},   # Khadgar's Knapsack
+                {"id": 30049, "phase3": False},   # Fathomstone
+                {"id": 30872, "phase3": True},   # Chronicle of Dark Secrets
+                {"id": 31978, "phase3": False},   # Merciless Gladiator's Endgame
+                {"id": 32361, "phase3": True},   # Blind-Seers Icon
+                {"id": 32533, "phase3": False},   # Karrog's Shard
+                {"id": 32651, "phase3": False},   # Crystal Orb of Enlightenment
+            ],
+        },
         # THE TRINKET POOL, the twelfth enumerative trinket round and
         # the fifth caster round, in the shape the Affliction round set:
         # every max-level trinket the Owl tab's Trinket ladder ranks,
@@ -1897,15 +2025,14 @@ ROUNDS: dict[str, dict] = {
     },
     # ELEMENTAL SHAMAN: both styles in the same table, per the 20 August
     # 2026 ruling in data/judgments/weapon-styles.yaml, in the caster
-    # template's shape. The candidates are the top of the Ele workbook
-    # tab, whose weapon ladders are One Hand, Off Hand and Two Hand, with
+    # template's shape. The field is the Ele tab's One Hand, Off Hand
+    # and Two Hand ladders plus every worn and routed weapon; the tab has
     # no Main Hand section. A shaman wields maces, axes, staves, daggers
     # and fist weapons and CANNOT WIELD SWORDS, so Tempest of Chaos is
     # not a row: its exclusion is proficiency rather than routing. The
-    # tab itself lists two swords the class cannot carry, the
-    # Illidari-Bane Mageblade at One Hand rank eleven and the Eternium
-    # Runed Blade at rank twelve, both far below the cut, and neither is
-    # a row. The One Hand ladder's rank one is The Maelstrom's Fury;
+    # Illidari-Bane Mageblade and the Eternium Runed Blade, which the tab
+    # ranks low, are daggers per items.csv, so both are rows.
+    # The One Hand ladder's rank one is The Maelstrom's Fury;
     # ranks two and three, the Vengeful Gladiator's Gavel and
     # Spellblade, carry identical statistics per items.csv, a mace and a
     # dagger at the same figures, so the Gavel row stands for both. The
@@ -1916,10 +2043,9 @@ ROUNDS: dict[str, dict] = {
     # off hand, so a shield row runs where every other caster round
     # holds frills alone. The worn Fathomstone is rank three at 57.42
     # and the Blind-Seers Icon rank four at 54.80. The Vengeful
-    # Gladiator's War Staff is not a row for the same reason as in the
-    # other caster rounds: the Battle Staff carries the same statistics
-    # plus 28 spell hit, so it equals or beats the War Staff at every
-    # hit state and stands for both. SOCKETS: no candidate carries a
+    # Gladiator's War Staff is a row beside the Battle Staff, which
+    # carries the same statistics
+    # plus 28 spell hit. SOCKETS: no candidate carries a
     # socket, per items.csv; the tab's one socketed weapon, Talon of the
     # Tempest, is One Hand rank seven, below the cut. OILS AND ENCHANT:
     # Brilliant Wizard Oil on the main hand at every anchor, per the
@@ -1947,9 +2073,10 @@ ROUNDS: dict[str, dict] = {
             "top of this page. The Brilliant Wizard Oil applies to any "
             "weapon, staff and mace alike, and a frill or a shield "
             "takes no imbue, so nothing about the consumables varies "
-            "across the rows. The candidates are the top of the EP "
+            "across the rows. The table is an enumeration of the EP "
             "Workbook's Two Hand, One Hand and Off Hand ladders for "
-            "this spec, and no candidate carries a socket. A shaman "
+            "this spec together with every worn and routed weapon, and "
+            "no candidate carries a socket. A shaman "
             "wields maces, axes, staves, daggers and fist weapons and "
             "cannot wield swords, so Tempest of Chaos, the sword the "
             "warlock and mage rounds price, is not a row here. A shaman "
@@ -1962,48 +2089,55 @@ ROUNDS: dict[str, dict] = {
             "Shadow Priest, and its wearers hold no off hand, which is "
             "why the best-in-slot anchor wears it with the off-hand "
             "slot empty.")),
-        "pairs": [
-            # TWO HAND, a staff alone, off hand EMPTY. Zhar'doom,
-            # Greatstaff of the Devourer, from Illidan Stormrage, is the
-            # worn best-in-slot weapon and the workbook's rank one; the
-            # Vengeful Gladiator's Battle Staff is Season 3 arena and
-            # stands for both Season 3 staves.
-            {"mh": 32374, "oh": None, "phase3": True},
-            {"mh": 34540, "oh": None, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's War
-            # Staff is Season 2 arena and the workbook's best reachable
-            # staff; The Nexus Key drops from Kael'thas Sunstrider.
-            {"mh": 32055, "oh": None, "phase3": False},
-            {"mh": 29988, "oh": None, "phase3": False},
-            # MAIN HAND WITH A HELD OFF HAND. The Vengeful Gladiator's
-            # Gavel, Season 3 arena, stands for the identically statted
-            # Spellblade, held with each of the tab's top off hands:
-            # Chronicle of Dark Secrets from Rage Winterchill,
-            # Antonidas's Aegis of Rapt Concentration from Archimonde,
-            # which is the shield row, Blind-Seers Icon from Shade of
-            # Akama, and the worn Fathomstone from Hydross the
-            # Unstable, the state where the mace arrives before a
-            # Phase 3 off hand drops.
-            {"mh": 33687, "oh": 30872, "phase3": True},
-            {"mh": 33687, "oh": 30909, "phase3": True},
-            {"mh": 33687, "oh": 32361, "phase3": True},
-            {"mh": 33687, "oh": 30049, "phase3": True},
-            # The Phase 3 raid-drop main hands, each with the rank one
-            # off hand: The Maelstrom's Fury, the One Hand ladder's
-            # rank one, drops from High Warlord Naj'entus and Hammer of
-            # Judgement drops in Hyjal Summit.
-            {"mh": 32237, "oh": 30872, "phase3": True},
-            {"mh": 34009, "oh": 30872, "phase3": True},
-            # The worn Merciless Gladiator's Spellblade with the rank
-            # one off hand, the state where a Phase 3 frill drops
-            # before any Phase 3 main hand does.
-            {"mh": 32053, "oh": 30872, "phase3": True},
-            # Reachable before Phase 3: the Merciless Gladiator's
-            # Spellblade, Season 2 arena, with the Fathomstone is the
-            # worn entry AND tier combination, per the capture in
-            # data/facts/sim-profiles/hit-capture/elemental-shaman.yaml.
-            {"mh": 32053, "oh": 30049, "phase3": False},
-        ],
+        # elemental_shaman: derived by tools/derive_weapon_fields.py
+        "weapon_field": {
+            "styles": ["two_hand", "main_hand_off_hand"],
+            "two_hand": [
+                {"id": 24557, "phase3": False},   # Gladiator's War Staff
+                {"id": 28341, "phase3": False},   # Warpstaff of Arcanum
+                {"id": 28633, "phase3": False},   # Staff of Infinite Mysteries
+                {"id": 28935, "phase3": False},   # High Warlord's War Staff
+                {"id": 28959, "phase3": False},   # Grand Marshal's War Staff
+                {"id": 29130, "phase3": False},   # Auchenai Staff
+                {"id": 29355, "phase3": False},   # Terokk's Shadowstaff
+                {"id": 29988, "phase3": False},   # The Nexus Key
+                {"id": 31308, "phase3": False},   # The Bringer of Death
+                {"id": 32055, "phase3": False},   # Merciless Gladiator's War Staff
+                {"id": 32374, "phase3": True},   # Zhar'doom, Greatstaff of the Devourer
+                {"id": 32854, "phase3": False},   # Hammer of Righteous Might
+                {"id": 33766, "phase3": True},   # Vengeful Gladiator's War Staff
+                {"id": 34540, "phase3": True},   # Vengeful Gladiator's Battle Staff
+            ],
+            "main_hand": [
+                {"id": 23554, "phase3": False},   # Eternium Runed Blade
+                {"id": 27741, "phase3": False},   # Bleeding Hollow Warhammer
+                {"id": 27868, "phase3": False},   # Runesong Dagger
+                {"id": 28297, "phase3": False},   # Gladiator's Spellblade
+                {"id": 28770, "phase3": False},   # Nathrezim Mindblade
+                {"id": 30787, "phase3": False},   # Illidari-Bane Mageblade
+                {"id": 30832, "phase3": False},   # Gavel of Unearthed Secrets
+                {"id": 32053, "phase3": False},   # Merciless Gladiator's Spellblade
+                {"id": 32237, "phase3": True},   # The Maelstrom's Fury
+                {"id": 33687, "phase3": True},   # Vengeful Gladiator's Gavel
+                {"id": 34009, "phase3": True},   # Hammer of Judgement
+            ],
+            "off_hand": [
+                {"id": 25099, "phase3": False},   # Draenei Crystal Rod
+                {"id": 28260, "phase3": False},   # Manual of the Nethermancer
+                {"id": 28412, "phase3": False},   # Lamp of Peaceful Radiance
+                {"id": 28603, "phase3": False},   # Talisman of Nightbane
+                {"id": 28781, "phase3": False},   # Karaborian Talisman
+                {"id": 29268, "phase3": False},   # Mazthoril Honor Shield
+                {"id": 29273, "phase3": False},   # Khadgar's Knapsack
+                {"id": 30049, "phase3": False},   # Fathomstone
+                {"id": 30872, "phase3": True},   # Chronicle of Dark Secrets
+                {"id": 30909, "phase3": True},   # Antonidas's Aegis of Rapt Concentration
+                {"id": 31287, "phase3": False},   # Draenei Honor Guard Shield
+                {"id": 32361, "phase3": True},   # Blind-Seers Icon
+                {"id": 32533, "phase3": False},   # Karrog's Shard
+                {"id": 34011, "phase3": True},   # Illidari Runeshield
+            ],
+        },
         # THE TRINKET POOL, the thirteenth and LAST enumerative trinket
         # round and the sixth caster round, in the shape the Affliction
         # round set: every max-level trinket the Ele tab's Trinket
@@ -2160,6 +2294,49 @@ def with_pair(gear: dict, mh: int, oh: int | None) -> dict:
     return out
 
 
+def enumerate_pairs(round_: dict, anchor: str, speed_of) -> list[dict]:
+    """The combinations one anchor runs, generated from the spec's field.
+
+    RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the weapon rounds are
+    ENUMERATIVE, so the rows are generated from the spec's `weapon_field`
+    under its ruled styles rather than listed by hand, and a rerun is
+    always exhaustive. Style two_hand runs each two-hander alone with the
+    off hand EMPTY. Styles dual_wield and main_hand_off_hand run every
+    ORDERED main-hand and off-hand pairing: a One Hand weapon sits in both
+    lists, so BOTH orders run, because the off-hand swing penalty makes
+    the order a real question, and a pair of two copies of one id arises
+    ONCE, from a One Hand weapon alone. With `matched_speed`, which is
+    Enhancement's rule, only pairs whose two speeds are EQUAL run, and
+    each row carries the shared speed. The entry anchor drops every
+    candidate marked `phase3`. A spec still carrying a hand-curated
+    `pairs` list runs it unchanged.
+    """
+    field = round_.get("weapon_field")
+    if field is None:
+        return [dict(pair) for pair in round_["pairs"]
+                if not (anchor == "entry" and pair["phase3"])]
+
+    def kept(candidates: list[dict]) -> list[dict]:
+        return [c for c in candidates
+                if not (anchor == "entry" and c["phase3"])]
+
+    rows: list[dict] = []
+    if "two_hand" in field["styles"]:
+        for cand in kept(field.get("two_hand") or []):
+            rows.append({"mh": cand["id"], "oh": None})
+    if {"dual_wield", "main_hand_off_hand"} & set(field["styles"]):
+        for mh in kept(field.get("main_hand") or []):
+            for oh in kept(field.get("off_hand") or []):
+                row = {"mh": mh["id"], "oh": oh["id"]}
+                if field.get("matched_speed"):
+                    a, b = speed_of(mh["id"]), speed_of(oh["id"])
+                    if a is None or a != b:
+                        continue
+                    row["speed"] = a
+                rows.append(row)
+    return rows
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--gear", type=Path, default=GEAR)
@@ -2203,6 +2380,12 @@ def main() -> int:
             out["source"] = row["source"]
         return out
 
+    def speed_of(item_id: int) -> float | None:
+        row = rows_by_id.get(item_id) or {}
+        if row.get("weapon_speed"):
+            return float(row["weapon_speed"])
+        return None
+
     rounds = ROUNDS
     carried: dict[str, dict] = {}
     if args.spec:
@@ -2226,6 +2409,17 @@ def main() -> int:
     for spec, round_ in rounds.items():
         talents = (strings.get(spec) or {}).get("string")
         stem = spec.replace("_", "-")
+        # THE SCALE OF THE ROUND, printed before it runs, so the log says
+        # up front how many combinations the long run will take.
+        if round_.get("weapon_field"):
+            field = round_["weapon_field"]
+            sizes = ", ".join(
+                f"{key} {len(field.get(key) or [])}"
+                for key in ("two_hand", "main_hand", "off_hand"))
+            counts = ", ".join(
+                f"{anchor} {len(enumerate_pairs(round_, anchor, speed_of))}"
+                for anchor in round_.get("anchors", ANCHORS))
+            print(f"{spec}: field {sizes}; combinations {counts}")
         anchors: dict[str, list[dict]] = {}
         for anchor in round_.get("anchors", ANCHORS):
             path = args.gear / f"{stem}.{anchor}.gear.json"
@@ -2235,9 +2429,7 @@ def main() -> int:
                 return 1
             gear = json.loads(path.read_text())
             results = []
-            for pair in round_["pairs"]:
-                if anchor == "entry" and pair["phase3"]:
-                    continue
+            for pair in enumerate_pairs(round_, anchor, speed_of):
                 oh = pair.get("oh")
                 label = names.get(pair["mh"], str(pair["mh"])) + (
                     f" + {names.get(oh, oh)}" if oh else ", two-hander")
@@ -2246,6 +2438,14 @@ def main() -> int:
                     args.iterations, args.seed, buffs, party_of,
                     anchor.replace("-", "_"), args.seconds, args.armor))
                 if error:
+                    if "No item with id" in error:
+                        # THE BINARY'S DATABASE IS THE AUTHORITY, and it is
+                        # narrower than the checkout's db.json, which is how a
+                        # holiday-boss weapon crashed a four-hour run three
+                        # and a half hours in. A row the binary cannot equip
+                        # is skipped loudly, never fatal.
+                        print(f"  SKIPPED, unknown to the binary: {label}")
+                        continue
                     raise SystemExit(f"run_variant_sims.py: {spec}: "
                                      f"{anchor}: {label}: {error}")
                 entry = {"main_hand": weapon(pair["mh"])}
@@ -2285,6 +2485,9 @@ def main() -> int:
                         args.iterations, args.seed, buffs, party_of,
                         anchor.replace("-", "_"), args.seconds, args.armor))
                     if error:
+                        if "No item with id" in error:
+                            print(f"  SKIPPED, unknown to the binary: {label}")
+                            continue
                         raise SystemExit(
                             f"run_variant_sims.py: {spec}: {anchor}: "
                             f"ranged {label}: {error}")
@@ -2324,6 +2527,9 @@ def main() -> int:
                         talents, args.iterations, args.seed, buffs, party_of,
                         anchor.replace("-", "_"), args.seconds, args.armor))
                     if error:
+                        if "No item with id" in error:
+                            print(f"  SKIPPED, unknown to the binary: {label}")
+                            continue
                         raise SystemExit(
                             f"run_variant_sims.py: {spec}: {anchor}: "
                             f"trinkets {label}: {error}")
@@ -2343,11 +2549,24 @@ def main() -> int:
             specs_out[spec]["trinkets_why"] = round_["trinkets_why"]
             specs_out[spec]["trinket_anchors"] = trinket_anchors
 
+        # WRITE AFTER EVERY SPEC, not once at the end. A crash three and a
+        # half hours into a run once discarded every finished spec because
+        # the document was held in memory; a partial file that carries what
+        # ran is strictly better than a clean absence of everything.
+        _write_document(args, specs_out)
+
     # THE FILE KEEPS THE REGISTRY'S ORDER regardless of which spec a --spec
     # run reran, or every partial run reorders the file and its diff reads
     # far larger than it is.
     specs_out = {spec: specs_out[spec] for spec in ROUNDS if spec in specs_out}
 
+    _write_document(args, specs_out)
+    total_specs = len(specs_out)
+    print(f"{total} variant(s) across {total_specs} spec(s) -> {args.out}")
+    return 0
+
+
+def _write_document(args, specs_out: dict) -> None:
     document = {
         "meta": {
             "what": (
@@ -2357,7 +2576,9 @@ def main() -> int:
                 "with only the weapon slots changed, a filled slot keeping "
                 "its enchant and a two-hander row running the off hand "
                 "EMPTY, the anchor's own consumables, buffs and seed held "
-                "still. Which styles each spec's table holds is ruled in "
+                "still. The combinations are ENUMERATED from each spec's "
+                "weapon field under its ruled styles rather than curated. "
+                "Which styles each spec's table holds is ruled in "
                 "data/judgments/weapon-styles.yaml, and the Enhancement "
                 "round is further ruled in "
                 "data/judgments/enhancement-weapon-rules.yaml."),
@@ -2389,8 +2610,6 @@ def main() -> int:
     }
     args.out.write_text(yaml.safe_dump(
         document, sort_keys=False, allow_unicode=True, width=78))
-    print(f"{total} variant(s) across {len(specs_out)} spec(s) -> {args.out}")
-    return 0
 
 
 if __name__ == "__main__":

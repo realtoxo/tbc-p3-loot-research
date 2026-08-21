@@ -9,8 +9,8 @@
 
   The page names the spec and nothing else. Every row below is read at build
   time from `theme/filters/ladder.generated.lua`, which
-  `tools/extract_ladder.py` lifts out of the EP Workbook, and every priority
-  from `theme/filters/judgments.generated.lua`.
+  `tools/extract_ladder.py` lifts out of the EP Workbook, and every standing
+  from `theme/filters/bis.generated.lua`.
 
   THIS IS THE SECOND WAY IN. An item page answers "who wants this drop", which
   is the question at the moment loot falls. A spec page answers "what does this
@@ -25,12 +25,14 @@
   something it already holds, and a crafted or arena route means the item is
   gated.
 
-  THE PRIORITY COLUMN HAS THREE STATES and they are not the same absence.
-  A settled priority prints. An item this phase drops that the council has not
-  reached prints as not yet decided. An item from an earlier tier carries no
-  priority at all and says so, because this compendium prioritizes Mount Hyjal
-  and Black Temple loot and an earlier-tier item is not a decision anyone
-  declined to make.
+  THE STANDING COLUMN HAS TWO STATES AND NO THIRD. Every row of a shortlist is
+  a claimant by construction, so a row is BIS where this spec's simulated
+  best-in-slot set wears the item and Upgrade everywhere else. There is no
+  undecided state: the standing is derived from the captures rather than judged
+  per item, so nothing is waiting on a council. A spec with no simulated
+  best-in-slot set, which is the tanks, the healers and the Feral Cat, has no
+  set to wear anything, so every one of its rows reads Upgrade, and that is a
+  statement about what the compendium has measured rather than about the item.
 
   A tier set piece is marked, because a row that costs a token is a different
   proposition from a row that drops.
@@ -39,8 +41,7 @@
 local itemdb = dofile(os.getenv("ITEMDB_LUA") or "theme/filters/itemdb.lua")
 
 local LADDER = os.getenv("LADDER_LUA") or "theme/filters/ladder.generated.lua"
-local JUDGMENTS = os.getenv("JUDGMENTS_LUA")
-  or "theme/filters/judgments.generated.lua"
+local BIS = os.getenv("BIS_LUA") or "theme/filters/bis.generated.lua"
 
 local function generated(path)
   local ok, value = pcall(dofile, path)
@@ -53,7 +54,13 @@ local function generated(path)
 end
 
 local ladder = generated(LADDER)
-local judgments = generated(JUDGMENTS)
+
+-- Which item ids each spec's simulated best-in-slot set wears, keyed by the
+-- display name and indexed here by its lowercase form, because a document
+-- names the spec and this file lowercases the name everywhere else it looks
+-- one up.
+local bis = {}
+for spec, ids in pairs(generated(BIS)) do bis[spec:lower()] = ids end
 
 -- Which items have a page of their own. Written by the page generator, which
 -- owns the slug rule, so this cannot drift from where the pages actually are.
@@ -212,32 +219,23 @@ local function item_cell(entry)
   return cell(inlines, pandoc.AlignLeft, "shortlist-item")
 end
 
--- Three states, and they are not the same absence. See the note at the head.
-local function priority_cell(entry, spec_name)
-  local judgment = judgments[tostring(entry.item_id) .. "|" .. spec_name:lower()]
-  if judgment and judgment.priority and judgment.priority ~= "" then
-    local classes = { "shortlist-priority" }
-    if not judgment.priority:match("^%s*[Pp]riority%s+%d%s*$") then
-      table.insert(classes, "shortlist-priority-none")
-    end
-    return cell({ pandoc.Span(pandoc.Str(judgment.priority),
-      pandoc.Attr("", classes)) }, pandoc.AlignLeft, "shortlist-priority-cell")
+-- Two states and no third. See the note at the head.
+local function standing_cell(entry, spec_name)
+  local worn = bis[spec_name:lower()]
+  if worn and worn[tonumber(entry.item_id)] then
+    return cell({ pandoc.Span(pandoc.Str("BIS"),
+      pandoc.Attr("", { "shortlist-standing" })) },
+      pandoc.AlignLeft, "shortlist-standing-cell")
   end
-  -- An item this phase drops has a page and a decision waiting on it. Anything
-  -- else is out of the compendium's scope rather than undecided within it.
-  local row = itemdb.by_id[tostring(entry.item_id)]
-  local this_phase = row and row.tier and row.tier:find("T6")
-  local text = this_phase and "not yet decided" or "not this phase"
-  local class = this_phase and "shortlist-priority shortlist-priority-undecided"
-    or "shortlist-priority shortlist-priority-outside"
-  return cell({ pandoc.Span(pandoc.Str(text), pandoc.Attr("", { class })) },
-    pandoc.AlignLeft, "shortlist-priority-cell")
+  return cell({ pandoc.Span(pandoc.Str("Upgrade"),
+    pandoc.Attr("", { "shortlist-standing", "shortlist-standing-upgrade" })) },
+    pandoc.AlignLeft, "shortlist-standing-cell")
 end
 
 local HEADS = {
   { "Rank", pandoc.AlignRight }, { "Item", pandoc.AlignLeft },
   { "EPV", pandoc.AlignRight }, { "Phase", pandoc.AlignRight },
-  { "Where", pandoc.AlignLeft }, { "Priority", pandoc.AlignLeft },
+  { "Where", pandoc.AlignLeft }, { "Standing", pandoc.AlignLeft },
 }
 
 local function table_of(entries, spec_name)
@@ -257,7 +255,7 @@ local function table_of(entries, spec_name)
       text_cell(where_text(entry), pandoc.AlignLeft,
         (entry.route or "drop") == "drop" and "shortlist-where"
           or "shortlist-where shortlist-gated"),
-      priority_cell(entry, spec_name),
+      standing_cell(entry, spec_name),
     })
   end
   return pandoc.Table(pandoc.Caption({}), aligns,
@@ -272,7 +270,7 @@ end
 -- been decided about it.
 local UNRANKED_HEADS = {
   { "Item", pandoc.AlignLeft }, { "Where", pandoc.AlignLeft },
-  { "Priority", pandoc.AlignLeft },
+  { "Standing", pandoc.AlignLeft },
 }
 
 local function unranked_table_of(entries, spec_name)
@@ -286,7 +284,7 @@ local function unranked_table_of(entries, spec_name)
     rows[#rows + 1] = pandoc.Row({
       item_cell(entry),
       text_cell(entry.location or "", pandoc.AlignLeft, "shortlist-where"),
-      priority_cell(entry, spec_name),
+      standing_cell(entry, spec_name),
     })
   end
   return pandoc.Table(pandoc.Caption({}), aligns,

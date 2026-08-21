@@ -46,19 +46,30 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
+An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The table is an enumeration: every matched-speed pairing the slow one-hand field supports, and the field is the spec's shortlist together with every weapon an anchor wears. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
 
-| Main hand                     | Off hand                      | Pair speed | DPS           | Against this set |
-|-------------------------------|-------------------------------|------------|---------------|------------------|
-| Dragonstrike *(this set)*     | Rod of the Sun King           | 2.7        | 1992.9 ± 0.92 | +0.0             |
-| Talon of the Phoenix          | Rod of the Sun King           | 2.7        | 1991.1 ± 0.89 | -1.8             |
-| Wicked Edge of the Planes     | Rod of the Sun King           | 2.7        | 1986.2 ± 0.90 | -6.7             |
-| Rod of the Sun King           | Rod of the Sun King           | 2.7        | 1978.6 ± 0.89 | -14.3            |
-| Dragonmaw                     | Rod of the Sun King           | 2.7        | 1972.7 ± 0.91 | -20.2            |
-| Merciless Gladiator's Cleaver | Merciless Gladiator's Cleaver | 2.6        | 1966.6 ± 0.86 | -26.3            |
-| Netherbane                    | Netherbane                    | 2.6        | 1965.0 ± 0.88 | -27.9            |
-| Black Planar Edge             | Rod of the Sun King           | 2.7        | 1963.7 ± 0.88 | -29.2            |
-| Drakefist Hammer              | Rod of the Sun King           | 2.7        | 1951.3 ± 0.89 | -41.6            |
+| Main hand                          | Off hand             | Pair speed | DPS           | Against this set |
+|------------------------------------|----------------------|------------|---------------|------------------|
+| Dragonstrike *(this set)*          | Rod of the Sun King  | 2.7        | 1992.9 ± 0.92 | +0.0             |
+| Talon of the Phoenix               | Rod of the Sun King  | 2.7        | 1991.1 ± 0.89 | -1.8             |
+| Wicked Edge of the Planes          | Rod of the Sun King  | 2.7        | 1986.2 ± 0.90 | -6.7             |
+| Rod of the Sun King                | Rod of the Sun King  | 2.7        | 1978.6 ± 0.89 | -14.3            |
+| Dragonmaw                          | Rod of the Sun King  | 2.7        | 1972.7 ± 0.91 | -20.2            |
+| Merciless Gladiator's Right Ripper | Netherbane           | 2.6        | 1965.2 ± 0.86 | -27.7            |
+| Netherbane                         | Netherbane           | 2.6        | 1965.0 ± 0.88 | -27.9            |
+| Black Planar Edge                  | Rod of the Sun King  | 2.7        | 1963.7 ± 0.88 | -29.2            |
+| Merciless Gladiator's Right Ripper | Gladiator's Pummeler | 2.6        | 1953.0 ± 0.85 | -39.9            |
+| Drakefist Hammer                   | Rod of the Sun King  | 2.7        | 1951.3 ± 0.89 | -41.6            |
+| Netherbane                         | Gladiator's Pummeler | 2.6        | 1950.4 ± 0.86 | -42.5            |
+| Gladiator's Right Ripper           | Netherbane           | 2.6        | 1942.6 ± 0.85 | -50.3            |
+| Gladiator's Pummeler               | Netherbane           | 2.6        | 1942.0 ± 0.85 | -50.9            |
+| The Planar Edge                    | Rod of the Sun King  | 2.7        | 1941.3 ± 0.87 | -51.6            |
+| The Decapitator                    | Netherbane           | 2.6        | 1937.2 ± 0.86 | -55.7            |
+| Fool's Bane                        | Netherbane           | 2.6        | 1932.9 ± 0.86 | -60.0            |
+| Gladiator's Right Ripper           | Gladiator's Pummeler | 2.6        | 1928.9 ± 0.84 | -64.0            |
+| Gladiator's Pummeler               | Gladiator's Pummeler | 2.6        | 1928.3 ± 0.84 | -64.6            |
+| The Decapitator                    | Gladiator's Pummeler | 2.6        | 1923.1 ± 0.84 | -69.8            |
+| Fool's Bane                        | Gladiator's Pummeler | 2.6        | 1918.9 ± 0.84 | -74.0            |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

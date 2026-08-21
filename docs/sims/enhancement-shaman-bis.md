@@ -46,26 +46,57 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
+An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The table is an enumeration: every matched-speed pairing the slow one-hand field supports, and the field is the spec's shortlist together with every weapon an anchor wears. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
 
-| Main hand                                 | Off hand                      | Pair speed  | DPS           | Against this set |
-|-------------------------------------------|-------------------------------|-------------|---------------|------------------|
-| Vengeful Gladiator's Cleaver *(this set)* | Syphon of the Nathrezim       | 2.6 and 2.8 | 2167.0 ± 0.91 | +0.0             |
-| Syphon of the Nathrezim                   | Syphon of the Nathrezim       | 2.8         | 2135.6 ± 0.97 | -31.4            |
-| Vengeful Gladiator's Right Ripper         | Vengeful Gladiator's Cleaver  | 2.6         | 2134.3 ± 0.92 | -32.7            |
-| Vengeful Gladiator's Cleaver              | Vengeful Gladiator's Chopper  | 2.6         | 2134.3 ± 0.92 | -32.7            |
-| Dragonstrike                              | Rod of the Sun King           | 2.7         | 2120.1 ± 0.97 | -46.9            |
-| Talon of the Phoenix                      | Rod of the Sun King           | 2.7         | 2112.2 ± 0.92 | -54.8            |
-| Claw of Molten Fury                       | Rod of the Sun King           | 2.7         | 2108.5 ± 0.93 | -58.5            |
-| Wicked Edge of the Planes                 | Rod of the Sun King           | 2.7         | 2106.7 ± 0.93 | -60.3            |
-| Rising Tide                               | Rising Tide                   | 2.6         | 2102.7 ± 0.90 | -64.3            |
-| Rod of the Sun King                       | Rod of the Sun King           | 2.7         | 2099.9 ± 0.93 | -67.1            |
-| Dragonmaw                                 | Rod of the Sun King           | 2.7         | 2098.6 ± 0.95 | -68.4            |
-| Rising Tide                               | Netherbane                    | 2.6         | 2098.5 ± 0.90 | -68.5            |
-| Merciless Gladiator's Cleaver             | Merciless Gladiator's Cleaver | 2.6         | 2091.0 ± 0.90 | -76.0            |
-| Netherbane                                | Netherbane                    | 2.6         | 2088.2 ± 0.91 | -78.8            |
-| Black Planar Edge                         | Rod of the Sun King           | 2.7         | 2082.2 ± 0.91 | -84.8            |
-| Drakefist Hammer                          | Rod of the Sun King           | 2.7         | 2075.9 ± 0.94 | -91.1            |
+| Main hand                                 | Off hand                     | Pair speed  | DPS           | Against this set |
+|-------------------------------------------|------------------------------|-------------|---------------|------------------|
+| Vengeful Gladiator's Cleaver *(this set)* | Syphon of the Nathrezim      | 2.6 and 2.8 | 2167.0 ± 0.91 | +0.0             |
+| Syphon of the Nathrezim                   | Syphon of the Nathrezim      | 2.8         | 2135.6 ± 0.97 | -31.4            |
+| Vengeful Gladiator's Cleaver              | Vengeful Gladiator's Cleaver | 2.6         | 2134.3 ± 0.92 | -32.7            |
+| Vengeful Gladiator's Right Ripper         | Vengeful Gladiator's Cleaver | 2.6         | 2134.3 ± 0.92 | -32.7            |
+| Vengeful Gladiator's Cleaver              | Rising Tide                  | 2.6         | 2120.8 ± 0.92 | -46.2            |
+| Vengeful Gladiator's Right Ripper         | Rising Tide                  | 2.6         | 2120.8 ± 0.92 | -46.2            |
+| Dragonstrike                              | Rod of the Sun King          | 2.7         | 2120.1 ± 0.97 | -46.9            |
+| Rising Tide                               | Vengeful Gladiator's Cleaver | 2.6         | 2116.1 ± 0.91 | -50.9            |
+| Vengeful Gladiator's Cleaver              | Netherbane                   | 2.6         | 2114.9 ± 0.92 | -52.1            |
+| Vengeful Gladiator's Right Ripper         | Netherbane                   | 2.6         | 2114.9 ± 0.92 | -52.1            |
+| Talon of the Phoenix                      | Rod of the Sun King          | 2.7         | 2112.2 ± 0.92 | -54.8            |
+| Claw of Molten Fury                       | Rod of the Sun King          | 2.7         | 2108.5 ± 0.93 | -58.5            |
+| Merciless Gladiator's Right Ripper        | Vengeful Gladiator's Cleaver | 2.6         | 2107.2 ± 0.90 | -59.8            |
+| Wicked Edge of the Planes                 | Rod of the Sun King          | 2.7         | 2106.7 ± 0.93 | -60.3            |
+| Netherbane                                | Vengeful Gladiator's Cleaver | 2.6         | 2104.1 ± 0.91 | -62.9            |
+| Rising Tide                               | Rising Tide                  | 2.6         | 2102.7 ± 0.90 | -64.3            |
+| Vengeful Gladiator's Cleaver              | Gladiator's Pummeler         | 2.6         | 2101.9 ± 0.91 | -65.1            |
+| Vengeful Gladiator's Right Ripper         | Gladiator's Pummeler         | 2.6         | 2101.9 ± 0.91 | -65.1            |
+| Rod of the Sun King                       | Rod of the Sun King          | 2.7         | 2099.9 ± 0.93 | -67.1            |
+| Dragonmaw                                 | Rod of the Sun King          | 2.7         | 2098.6 ± 0.95 | -68.4            |
+| Rising Tide                               | Netherbane                   | 2.6         | 2098.5 ± 0.90 | -68.5            |
+| Merciless Gladiator's Right Ripper        | Rising Tide                  | 2.6         | 2095.7 ± 0.90 | -71.3            |
+| Netherbane                                | Rising Tide                  | 2.6         | 2092.5 ± 0.90 | -74.5            |
+| Merciless Gladiator's Right Ripper        | Netherbane                   | 2.6         | 2089.6 ± 0.90 | -77.4            |
+| Netherbane                                | Netherbane                   | 2.6         | 2088.2 ± 0.91 | -78.8            |
+| Rising Tide                               | Gladiator's Pummeler         | 2.6         | 2084.9 ± 0.91 | -82.1            |
+| Gladiator's Right Ripper                  | Vengeful Gladiator's Cleaver | 2.6         | 2082.8 ± 0.89 | -84.2            |
+| Gladiator's Pummeler                      | Vengeful Gladiator's Cleaver | 2.6         | 2082.2 ± 0.89 | -84.8            |
+| Black Planar Edge                         | Rod of the Sun King          | 2.7         | 2082.2 ± 0.91 | -84.8            |
+| Merciless Gladiator's Right Ripper        | Gladiator's Pummeler         | 2.6         | 2076.0 ± 0.90 | -91.0            |
+| Drakefist Hammer                          | Rod of the Sun King          | 2.7         | 2075.9 ± 0.94 | -91.1            |
+| The Decapitator                           | Vengeful Gladiator's Cleaver | 2.6         | 2075.3 ± 0.90 | -91.7            |
+| Netherbane                                | Gladiator's Pummeler         | 2.6         | 2074.1 ± 0.90 | -92.9            |
+| Gladiator's Right Ripper                  | Rising Tide                  | 2.6         | 2070.7 ± 0.89 | -96.3            |
+| Fool's Bane                               | Vengeful Gladiator's Cleaver | 2.6         | 2070.5 ± 0.89 | -96.5            |
+| Gladiator's Pummeler                      | Rising Tide                  | 2.6         | 2070.1 ± 0.89 | -96.9            |
+| Gladiator's Right Ripper                  | Netherbane                   | 2.6         | 2065.8 ± 0.89 | -101.2           |
+| Gladiator's Pummeler                      | Netherbane                   | 2.6         | 2065.2 ± 0.89 | -101.8           |
+| The Decapitator                           | Rising Tide                  | 2.6         | 2063.4 ± 0.88 | -103.6           |
+| The Decapitator                           | Netherbane                   | 2.6         | 2059.2 ± 0.90 | -107.8           |
+| Fool's Bane                               | Rising Tide                  | 2.6         | 2059.0 ± 0.87 | -108.0           |
+| The Planar Edge                           | Rod of the Sun King          | 2.7         | 2058.8 ± 0.90 | -108.2           |
+| Fool's Bane                               | Netherbane                   | 2.6         | 2054.0 ± 0.89 | -113.0           |
+| Gladiator's Right Ripper                  | Gladiator's Pummeler         | 2.6         | 2051.6 ± 0.88 | -115.4           |
+| Gladiator's Pummeler                      | Gladiator's Pummeler         | 2.6         | 2051.0 ± 0.88 | -116.0           |
+| The Decapitator                           | Gladiator's Pummeler         | 2.6         | 2044.7 ± 0.88 | -122.3           |
+| Fool's Bane                               | Gladiator's Pummeler         | 2.6         | 2040.6 ± 0.88 | -126.4           |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

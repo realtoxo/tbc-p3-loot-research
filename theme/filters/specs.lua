@@ -3,8 +3,8 @@
 
   One spec's argument for one item is a record, not a table row. Eight columns
   of prose wrap to a word a line at any page width, so the argument is rendered
-  as a card: the spec name and its priority as a header, the upgrade figure below
-  it, then each remaining field labelled.
+  as a card: the spec name and its standing as a header, the upgrade figure
+  below it, then each remaining field labelled.
 
   The source stays Markdown that a council member can edit. There is no HTML
   and no attribute syntax, and the same source reads correctly on GitHub and in
@@ -27,10 +27,10 @@
       Constraints   where the spec sits against its hit, crit and haste caps,
                     built by tools/extract_constraints.py from
                     data/facts/hit.yaml, crit.yaml and haste.yaml
-      Priority          the council's ranking, from data/judgments/priorities.yaml
-      Unit          from the same entry, where a figure is not comparable with
-                    its neighbors
-      For, Against  from the same entry
+      Standing      BIS or Upgrade, derived from the best-in-slot captures via
+                    theme/filters/bis.generated.lua, or stated on the heading
+                    by the page generator, which derives it from the same
+                    captures
 
   All of it was inline once, and both halves went wrong in the way inline text
   goes wrong. The facts drifted: the cards claimed the Beast Mastery Hunter and
@@ -44,7 +44,7 @@
   order it was written, so a document may add its own without a filter change.
 
   A block of two or more cards also carries the control that shows and hides
-  them by spec. It is built here rather than in the browser because the priority
+  them by spec. It is built here rather than in the browser because the standing
   order is decided here, and a list rebuilt from the page would either repeat
   that sort or contradict it.
 
@@ -59,19 +59,24 @@
   The state is not remembered between page loads, for the same reason.
 ]]
 
-local SPECIAL = {
-  Priority = true, Upgrade = true, Unit = true, For = true, Against = true,
-}
+local SPECIAL = { Upgrade = true }
 
 -- Terms a document may no longer write, and where each one lives instead. Every
 -- one of them was inline in a document once, and every one of them was either a
--- restatement of a fact file or a judgment kept in the only copy nobody could
--- find. The message names the file so the fix is one step.
+-- restatement of a fact file, a judgment kept in the only copy nobody could
+-- find, or a label the pipeline now derives. The message names the source so
+-- the fix is one step.
 local GENERATED_TERM = {
   Constraints = "It is built from data/facts/hit.yaml, crit.yaml and "
     .. "haste.yaml. A fact in it belongs in the fact file it came from.",
-  Priority = "It is held in data/judgments/priorities.yaml, keyed by item and spec.",
-  Unit = "It is held in data/judgments/priorities.yaml, on the same entry.",
+  Standing = "It is derived from the best-in-slot captures in "
+    .. "data/facts/sim-profiles/bis-capture and rendered by this filter; it "
+    .. "is never written by hand.",
+  Priority = "The priority scale retired from display on 20 August 2026 in "
+    .. "favour of the two-level standing. The council's allocation record is "
+    .. "held in data/judgments/priorities.yaml and no longer renders.",
+  Unit = "It qualified the retired priority scale and is held in "
+    .. "data/judgments/priorities.yaml, on the same entry.",
   For = "This field was removed on 10 August 2026. What creators said is "
     .. "captured in data/facts/creator-stances.yaml and renders above the cards.",
   Against = "This field was removed on 10 August 2026. What creators said is "
@@ -80,8 +85,7 @@ local GENERATED_TERM = {
 
 local CONSTRAINTS = os.getenv("CONSTRAINTS_LUA")
   or "theme/filters/constraints.generated.lua"
-local JUDGMENTS = os.getenv("JUDGMENTS_LUA")
-  or "theme/filters/judgments.generated.lua"
+local BIS = os.getenv("BIS_LUA") or "theme/filters/bis.generated.lua"
 
 local function generated(path)
   local ok, table_ = pcall(dofile, path)
@@ -97,8 +101,12 @@ local TRINKETS = os.getenv("TRINKETS_LUA")
   or "theme/filters/trinkets.generated.lua"
 
 local constraints = generated(CONSTRAINTS)
-local judgments = generated(JUDGMENTS)
 local trinkets = generated(TRINKETS)
+
+-- Which item ids each spec's simulated best-in-slot set wears, indexed by the
+-- lowercase spec name because the card lowers its heading before every lookup.
+local bis = {}
+for spec, ids in pairs(generated(BIS)) do bis[spec:lower()] = ids end
 
 -- Set by the template on every page, so a link from docs/items/ reaches
 -- docs/specs/ whatever depth the reader is at.
@@ -148,44 +156,37 @@ local function labelled(class, label_text, label_class, blocks)
   return pandoc.Div(content, pandoc.Attr("", { class }))
 end
 
--- Judgment text as the blocks a card renders. One paragraph, because a priority's
--- argument is one argument.
-local function judged(text)
-  return pandoc.List({ pandoc.Para({ pandoc.Str(text) }) })
-end
-
 local function card(header, list, id, item)
-  local priority, upgrade, unit
+  local upgrade
   local fields = pandoc.List({})
 
   local name = pandoc.utils.stringify(header.content)
 
-  -- THE BAND COMES FROM THE JUDGMENT STORE, keyed by item and spec together,
-  -- because the same item is prioritized differently for every claimant.
+  -- THE STANDING IS DERIVED, NEVER WRITTEN BY HAND. The page generator states
+  -- it on the claimant heading as a `standing` attribute, derived from the
+  -- best-in-slot captures; a heading without one, which is the hand-written
+  -- worked example, falls back to the same answer read from
+  -- bis.generated.lua, keyed by the item the container stamped and the spec
+  -- the heading names. Both roads start at the same captures, so they cannot
+  -- disagree.
+  --
+  -- TWO STATES AND NO THIRD. A claimant is BIS where its simulated
+  -- best-in-slot set wears the item and an Upgrade everywhere else. There is
+  -- no undecided state, because nothing here waits on a council: a spec with
+  -- no simulated set, which is the tanks, the healers and the Feral Cat, has
+  -- no set to wear anything and every claim it holds reads Upgrade.
+  --
   -- THE ARGUMENT NO LONGER LIVES HERE. A For and Against pair was written per
   -- item per spec and only ever filled in for Cursed Vision, one worked
   -- example across eight claimants. What a card now carries instead is what
   -- creators actually said, captured with a timestamp, which is 580 remarks on
   -- 173 items rather than one hand-written argument. The guild lead removed the
   -- field on 10 August 2026 as a feature the commentary had superseded.
-  -- AN UNDECIDED CLAIMANT RENDERS, LOUDLY. This used to stop the build, on the
-  -- reasoning that a claimant with no answer is not something a silent render
-  -- should imply. That reasoning holds and the remedy was wrong: the compendium
-  -- carries a page per item, the council settles them over weeks, and refusing
-  -- to render until every claimant is settled would mean no page exists until
-  -- the last one is. The card is drawn either way; what changes is that an
-  -- undecided one says so in the place the priority would have been, so it can
-  -- never be mistaken for a decision and can be counted from the page.
-  local judgment = judgments[(item or "") .. "|" .. name:lower()]
-  local undecided = not judgment or not judgment.priority
-    or judgment.priority == ""
-  if undecided then
-    priority = judged("not yet decided")
-  else
-    priority = judged(judgment.priority)
+  local standing = header.attributes and header.attributes.standing
+  if standing ~= "BIS" and standing ~= "Upgrade" then
+    local worn = bis[name:lower()]
+    standing = (worn and item and worn[tonumber(item)]) and "BIS" or "Upgrade"
   end
-  judgment = judgment or {}
-  if judgment.unit then unit = judged(judgment.unit) end
   local caps = constraints[name:lower()]
   if not caps then
     card_failures[#card_failures + 1] = string.format(
@@ -289,41 +290,30 @@ local function card(header, list, id, item)
   -- is one page away. The heading keeps its own level and identifier; only its
   -- text becomes a link.
   header = header:clone()
+  -- The attribute has done its work; leaving it on the heading would hoist it
+  -- onto the enclosing section as markup no reader needs.
+  header.attributes.standing = nil
   header.content = pandoc.List({
     pandoc.Link(header.content, spec_page(name), "",
       pandoc.Attr("", { "spec-link" })) })
 
   local head = pandoc.List({ header })
-  if priority then
-    local text = pandoc.utils.stringify(priority)
-    local classes = { "spec-priority" }
-    -- Three states, three appearances. `Priority 2` takes the badge. `no
-    -- priority` is a decision and takes the quieter one. `not yet decided` is
-    -- not a decision at all and takes its own, because a reader scanning a page
-    -- has to be able to tell an answered claimant from an unanswered one
-    -- without reading the words.
-    if undecided then
-      table.insert(classes, "spec-priority-undecided")
-    elseif not text:match("^%s*[Pp]riority%s+%d%s*$") then
-      table.insert(classes, "spec-priority-none")
-    end
-    -- THE WORD "PRIORITY" IS SAID, NOT IMPLIED. The badge carried the value
-    -- alone, so a card read "not yet decided" or "no priority" with nothing
-    -- naming what was undecided, and a reader had to already know that the
-    -- badge in that position is the priority. Reported by the guild lead on
-    -- 13 August 2026: "we just see the priority value and it's very confusing".
-    --
-    -- THE VALUE IS NORMALIZED so the label is not said twice. A judgment reads
-    -- "Priority 2" and the badge shows "2"; an absent one shows "not yet
-    -- decided"; a deliberate refusal reads "no priority" and shows "none",
-    -- because "Priority: no priority" is not a sentence anyone wants to read.
-    local value = text:gsub("^%s*[Pp]riority%s+", "")
-    if value:match("^%s*[Nn]o priority%s*$") then value = "none" end
-    head:insert(pandoc.Plain(pandoc.Span({
-      pandoc.Span(pandoc.Str("Priority"), pandoc.Attr("", { "spec-priority-label" })),
-      pandoc.Span(pandoc.Str(value), pandoc.Attr("", classes)),
-    }, pandoc.Attr("", { "spec-priority-pair" }))))
+  -- THE WORD "STANDING" IS SAID, NOT IMPLIED. The priority badge once carried
+  -- its value alone and the guild lead reported it on 13 August 2026: "we just
+  -- see the priority value and it's very confusing". The lesson outlives the
+  -- scale: the badge names its field.
+  --
+  -- Two states, two appearances. BIS takes the loud badge, because it is the
+  -- answer a council table reaches for first; Upgrade takes the quiet one, and
+  -- a reader scanning a page tells them apart without reading the words.
+  local classes = { "spec-standing" }
+  if standing ~= "BIS" then
+    table.insert(classes, "spec-standing-upgrade")
   end
+  head:insert(pandoc.Plain(pandoc.Span({
+    pandoc.Span(pandoc.Str("Standing"), pandoc.Attr("", { "spec-standing-label" })),
+    pandoc.Span(pandoc.Str(standing), pandoc.Attr("", classes)),
+  }, pandoc.Attr("", { "spec-standing-pair" }))))
   blocks:insert(pandoc.Div(head, pandoc.Attr("", { "spec-head" })))
 
   if upgrade then
@@ -334,10 +324,6 @@ local function card(header, list, id, item)
     blocks:insert(pandoc.Div({ pandoc.Plain(inlines_of(upgrade)) }, pandoc.Attr("", classes)))
   end
 
-  if unit then
-    blocks:insert(pandoc.Div({ pandoc.Plain(inlines_of(unit)) }, pandoc.Attr("", { "spec-unit" })))
-  end
-
   if #fields > 0 then
     local body = pandoc.List({})
     for _, f in ipairs(fields) do
@@ -346,19 +332,13 @@ local function card(header, list, id, item)
     blocks:insert(pandoc.Div(body, pandoc.Attr("", { "spec-fields" })))
   end
 
-  -- Undecided sorts below every decision, including `no priority`, which IS a
-  -- decision. An unanswered card sitting among ranked ones reads as a ranking.
-  local rank = undecided and 100 or 99
-  if priority and not undecided then
-    local text = pandoc.utils.stringify(priority):lower()
-    local n = text:match("^%s*priority%s+(%d)")
-    if n then rank = tonumber(n) end
-  end
-  local priority_text = priority and pandoc.utils.stringify(priority) or "no priority"
+  -- BIS above Upgrade, always, because the set that wears the item is the
+  -- claim a council table reads first.
+  local rank = standing == "BIS" and 1 or 2
   return pandoc.Div(blocks, pandoc.Attr(id, { "spec" })),
     rank,
     pandoc.utils.stringify(header.content),
-    priority_text
+    standing
 end
 
 -- ------------------------------------------------------------------- control
@@ -373,15 +353,16 @@ end
 -- region rather than a decoration: a reader must never be looking at three of
 -- eight cards and reading them as all of them.
 --
--- GROUPED BY PRIORITY, NOT LISTED FLAT. A flat row of eight names with a small
--- priority tag beside each one asks the reader to do the grouping by eye, and
--- the grouping is the thing they came for: the question at a council table is
--- "who has a Priority 1 claim on this", not "what did the Enhancement Shaman
--- get". Each group carries a checkbox of its own, so showing every Priority 1
--- and every Priority 2 claimant together is two clicks rather than five, and
--- the groups are additive so any combination is reachable.
+-- PARTITIONED BY STANDING, NOT LISTED FLAT. A flat row of eight names with a
+-- small tag beside each one asks the reader to do the grouping by eye, and the
+-- grouping is the thing they came for: the question at a council table is "who
+-- wears this in their best set", not "what did the Enhancement Shaman get".
+-- The partition is two groups at most, BIS first and Upgrade after it, each
+-- labelled and each carrying a checkbox of its own, so showing every BIS
+-- claimant alone is one click, and the groups are additive so any combination
+-- is reachable.
 --
--- The cards arrive already sorted by priority, so grouping is a run over that
+-- The cards arrive already sorted BIS first, so grouping is a run over that
 -- order and the control cannot disagree with the cards it filters.
 local function control(cards)
   local html = pandoc.List({})
@@ -395,16 +376,16 @@ local function control(cards)
     if group then html:insert("</ul>\n</div>") end
   end
   for _, c in ipairs(cards) do
-    if c.priority ~= group then
+    if c.standing ~= group then
       close_group()
-      group, index = c.priority, index + 1
+      group, index = c.standing, index + 1
       local key = "spec-group-" .. tostring(index)
       html:insert('<div class="spec-filter-group">')
       html:insert(string.format(
         '<label class="spec-filter-group-head">'
         .. '<input type="checkbox" checked data-spec-group="%s">'
         .. '<span class="spec-filter-group-name">%s</span>'
-        .. "</label>", escape(key), escape(c.priority)))
+        .. "</label>", escape(key), escape(c.standing)))
       html:insert('<ul class="spec-filter-options">')
       current_key = key
     end
@@ -454,11 +435,11 @@ function Div(div)
   local item = div.attributes.item
 
   local out = pandoc.List({})
-  -- Cards render in priority order, Priority 0 first and no priority last, never in the order
-  -- an author happened to write them. A reader comparing two items should meet
-  -- the strongest claim in the same place every time, and an unranked card
-  -- sitting above a Priority 2 reads as a ranking it is not. Ties keep written order,
-  -- which is stable and lets an author group two specs that share a priority.
+  -- Cards render in standing order, BIS first and Upgrade after it, never in
+  -- the order an author happened to write them. A reader comparing two items
+  -- should meet the wearing claim in the same place every time. Ties keep
+  -- written order, which is stable and lets an author group two specs that
+  -- share a standing.
   local cards = {}
   local seq = 0
   local pending
@@ -469,14 +450,14 @@ function Div(div)
     elseif block.t == "DefinitionList" and pending then
       card_id = card_id + 1
       local id = "spec-card-" .. card_id
-      local built, rank, name, priority = card(pending, block, id, item)
+      local built, rank, name, standing = card(pending, block, id, item)
       -- nil means the card recorded why it could not be built. The document is
       -- stopped in the Pandoc hook, so every bad card is reported and not only
       -- the first; nothing is inserted for one that failed.
       if built then
         seq = seq + 1
         cards[#cards + 1] =
-          { block = built, rank = rank, seq = seq, id = id, name = name, priority = priority }
+          { block = built, rank = rank, seq = seq, id = id, name = name, standing = standing }
       end
       pending = nil
     else

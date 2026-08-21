@@ -46,13 +46,74 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-A Survival Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. One stat carries more than its line for this spec: Expose Weakness is self-applied and scales with this hunter's own agility, so a candidate that moves agility moves the debuff with it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, with the same two-hander field the Beast Mastery round ran so the two hunter tables read side by side, and the 7/20/34 build carries no weapon specialization talent, so no class is favored.
+A Survival Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. One stat carries more than its line for this spec: Expose Weakness is self-applied and scales with this hunter's own agility, so a candidate that moves agility moves the debuff with it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 7/20/34 build carries no weapon specialization talent, so no class is favored.
 
-| Main hand                | Off hand            | DPS           | Against this set |
-|--------------------------|---------------------|---------------|------------------|
-| Twinblade of the Phoenix | *empty, two-hander* | 2567.5 ± 0.84 | +38.4            |
-| Netherbane               | Talon of Azshara    | 2530.4 ± 0.79 | +1.3             |
-| Netherbane *(this set)*  | Claw of the Phoenix | 2529.1 ± 0.79 | +0.0             |
+| Main hand                     | Off hand                      | DPS           | Against this set |
+|-------------------------------|-------------------------------|---------------|------------------|
+| Twinblade of the Phoenix      | *empty, two-hander*           | 2567.5 ± 0.84 | +38.4            |
+| Legacy                        | *empty, two-hander*           | 2558.0 ± 0.82 | +28.9            |
+| Netherbane                    | Netherbane                    | 2541.3 ± 0.79 | +12.2            |
+| Gorehowl                      | *empty, two-hander*           | 2540.8 ± 0.83 | +11.7            |
+| Netherbane                    | Talon of Azshara              | 2530.4 ± 0.79 | +1.3             |
+| Netherbane *(this set)*       | Claw of the Phoenix           | 2529.1 ± 0.79 | +0.0             |
+| Netherbane                    | Emerald Ripper                | 2525.8 ± 0.80 | -3.3             |
+| Hellforged Halberd            | *empty, two-hander*           | 2524.4 ± 0.81 | -4.7             |
+| Blackened Spear               | *empty, two-hander*           | 2524.4 ± 0.81 | -4.7             |
+| Netherbane                    | Stellaris                     | 2523.9 ± 0.79 | -5.2             |
+| Netherbane                    | Claw of the Netherwing Flight | 2523.1 ± 0.79 | -6.0             |
+| Sonic Spear                   | *empty, two-hander*           | 2522.6 ± 0.81 | -6.5             |
+| Netherbane                    | Riftmaker                     | 2522.6 ± 0.79 | -6.5             |
+| Netherbane                    | Guile of Khoraazi             | 2520.1 ± 0.80 | -9.0             |
+| Talon of Azshara              | Netherbane                    | 2511.4 ± 0.80 | -17.7            |
+| Terokk's Quill                | *empty, two-hander*           | 2509.2 ± 0.79 | -19.9            |
+| Talon of Azshara              | Claw of the Phoenix           | 2501.3 ± 0.80 | -27.8            |
+| Talon of Azshara              | Talon of Azshara              | 2501.1 ± 0.80 | -28.0            |
+| Talon of Azshara              | Emerald Ripper                | 2496.5 ± 0.80 | -32.6            |
+| Talon of Azshara              | Stellaris                     | 2495.4 ± 0.80 | -33.7            |
+| Illidari-Bane Claymore        | *empty, two-hander*           | 2494.0 ± 0.80 | -35.1            |
+| Talon of Azshara              | Riftmaker                     | 2493.6 ± 0.80 | -35.5            |
+| Talon of Azshara              | Claw of the Netherwing Flight | 2493.4 ± 0.80 | -35.7            |
+| Talon of Azshara              | Guile of Khoraazi             | 2490.1 ± 0.80 | -39.0            |
+| Emerald Ripper                | Netherbane                    | 2454.6 ± 0.74 | -74.5            |
+| Stellaris                     | Netherbane                    | 2452.4 ± 0.75 | -76.7            |
+| Emerald Ripper                | Claw of the Phoenix           | 2448.2 ± 0.74 | -80.9            |
+| Riftmaker                     | Netherbane                    | 2448.0 ± 0.74 | -81.1            |
+| Emerald Ripper                | Talon of Azshara              | 2444.0 ± 0.74 | -85.1            |
+| Stellaris                     | Claw of the Phoenix           | 2443.3 ± 0.75 | -85.8            |
+| Riftmaker                     | Claw of the Phoenix           | 2441.7 ± 0.74 | -87.4            |
+| Stellaris                     | Talon of Azshara              | 2441.6 ± 0.74 | -87.5            |
+| Emerald Ripper                | Emerald Ripper                | 2441.2 ± 0.75 | -87.9            |
+| Emerald Ripper                | Guile of Khoraazi             | 2439.7 ± 0.74 | -89.4            |
+| Claw of the Netherwing Flight | Netherbane                    | 2438.3 ± 0.73 | -90.8            |
+| Stellaris                     | Emerald Ripper                | 2438.2 ± 0.74 | -90.9            |
+| Emerald Ripper                | Riftmaker                     | 2438.1 ± 0.75 | -91.0            |
+| Emerald Ripper                | Stellaris                     | 2438.0 ± 0.75 | -91.1            |
+| Emerald Ripper                | Claw of the Netherwing Flight | 2438.0 ± 0.74 | -91.1            |
+| Riftmaker                     | Talon of Azshara              | 2437.8 ± 0.74 | -91.3            |
+| Stellaris                     | Guile of Khoraazi             | 2436.1 ± 0.75 | -93.0            |
+| Stellaris                     | Stellaris                     | 2435.9 ± 0.74 | -93.2            |
+| Stellaris                     | Riftmaker                     | 2435.9 ± 0.74 | -93.2            |
+| Stellaris                     | Claw of the Netherwing Flight | 2434.7 ± 0.74 | -94.4            |
+| Riftmaker                     | Emerald Ripper                | 2434.4 ± 0.75 | -94.7            |
+| Riftmaker                     | Guile of Khoraazi             | 2432.9 ± 0.74 | -96.2            |
+| Claw of the Netherwing Flight | Claw of the Phoenix           | 2432.2 ± 0.74 | -96.9            |
+| Riftmaker                     | Riftmaker                     | 2431.8 ± 0.74 | -97.3            |
+| Riftmaker                     | Claw of the Netherwing Flight | 2431.8 ± 0.74 | -97.3            |
+| Riftmaker                     | Stellaris                     | 2431.7 ± 0.74 | -97.4            |
+| Claw of the Netherwing Flight | Talon of Azshara              | 2428.0 ± 0.73 | -101.1           |
+| Guile of Khoraazi             | Netherbane                    | 2426.0 ± 0.73 | -103.1           |
+| Claw of the Netherwing Flight | Emerald Ripper                | 2424.9 ± 0.74 | -104.2           |
+| Claw of the Netherwing Flight | Guile of Khoraazi             | 2422.7 ± 0.74 | -106.4           |
+| Claw of the Netherwing Flight | Claw of the Netherwing Flight | 2422.6 ± 0.73 | -106.5           |
+| Claw of the Netherwing Flight | Riftmaker                     | 2422.5 ± 0.74 | -106.6           |
+| Claw of the Netherwing Flight | Stellaris                     | 2421.8 ± 0.74 | -107.3           |
+| Guile of Khoraazi             | Claw of the Phoenix           | 2415.9 ± 0.73 | -113.2           |
+| Guile of Khoraazi             | Emerald Ripper                | 2414.8 ± 0.73 | -114.3           |
+| Guile of Khoraazi             | Talon of Azshara              | 2414.7 ± 0.73 | -114.4           |
+| Guile of Khoraazi             | Guile of Khoraazi             | 2412.6 ± 0.73 | -116.5           |
+| Guile of Khoraazi             | Stellaris                     | 2412.4 ± 0.73 | -116.7           |
+| Guile of Khoraazi             | Riftmaker                     | 2412.1 ± 0.73 | -117.0           |
+| Guile of Khoraazi             | Claw of the Netherwing Flight | 2410.5 ± 0.73 | -118.6           |
 
 The best combination, Twinblade of the Phoenix alone, a two-hander, measures +38.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

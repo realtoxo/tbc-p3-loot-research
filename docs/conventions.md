@@ -23,37 +23,39 @@ Which words carry a fixed technical meaning, and what each one means.
 
 | Term | Meaning |
 |---|---|
-| **Spec** | A class and talent configuration, such as Feral Bear or Combat Rogue. The claiming entity. Every priority and every comparison in this compendium is per spec. If the raid runs two players of one spec, which of them receives an item is a council judgment, not something this compendium models. |
+| **Spec** | A class and talent configuration, such as Feral Bear or Combat Rogue. The claiming entity. Every standing and every comparison in this compendium is per spec. If the raid runs two players of one spec, which of them receives an item is a council judgment, not something this compendium models. |
 | **Claimant** | A spec with a real case for an item. Armor type is a ceiling rather than a match, so it excludes little; stat relevance does the filtering. |
-| **Priority** | How strongly one spec wants one item, on the four-step scale below. The unit of output. |
+| **Standing** | What an item is to a spec, on the two-level scale below: BIS or Upgrade. Derived from the simulated sets and the claimant rule, never judged per item. |
 | **Blocker** | A specific, named reason a tier piece cannot or should not be equipped yet, such as an active set bonus it would break. |
 | **Gear anchor** | A defined gear baseline that our own simulator runs are executed at. Three are used per spec: **Entry**, the best gear a raider can hold before this raid opens, with no Tier 6 in it; **Tier**, that same gear with only the five tier token slots reconsidered; and **BiS**, the full Phase 3 best-in-slot set. Cards spell these out rather than naming them. Which specs are run at which, and the figures, are in [Simulated Throughput](sims.md). |
 | **Rank-unstable** | An item whose standing changes between gear anchors. Its ordering is provisional, and it moves as the raid gears up. |
 
-## Priorities
+## Standing: BIS and Upgrade
 
-A spec either has a priority on an item or it does not. There is no priority for warning somebody off: where a spec could equip an item and should not receive it, that is a fact about the item and belongs in the reason, not in the scale. The scale measures wanting. Everything else is comment.
+A spec either has a claim on an item or it does not, and every claim carries one of two standings. The scale replaced the earlier four-step priority scale on 20 August 2026, when the simulated best-in-slot sets became measured and ruling-complete, because a derived label the whole pipeline enforces beats a judged one the council had to maintain.
 
-| Priority | Meaning | What the council does with it |
+| Standing | Meaning | Where it comes from |
 |---|---|---|
-| **Priority 0** | The raid's best use of this drop. Large gain, and it holds its value into later phases. | Route here first. A Priority 0 that goes elsewhere needs a stated reason. |
-| **Priority 1** | Strong claim. A clear upgrade the spec will hold for the phase. | Normal contested-loot handling. |
-| **Priority 2** | Real upgrade, but not one worth contesting. | Give it out once Priority 0 and Priority 1 claims are settled. |
-| **Priority 3** | Small or situational gain. Fills a weak slot, or is replaced soon. | Free to award on need or attendance. |
+| **BIS** | The spec's best-in-slot simulated set wears this item. | Derived from the spec's best-in-slot profile, which carries every routing ruling and every measured revision. |
+| **Upgrade** | The spec is a claimant on the item, and its best-in-slot set does not wear it. | Derived from the claimant rule: the shortlist rank, a class-locked relic or reputation lock, or a shared weapon set. |
 
-No priority means no claim. That covers two situations and the reason says which: the stats do nothing for the spec, or something the spec already holds is better. Both end with the spec not receiving the item, so they do not need separate priorities, but they do need separate reasons, because the council will be asked why.
+No claim means no standing. That covers two situations and the reason says which: the stats do nothing for the spec, or something the spec already holds is better. Both end with the spec not receiving the item.
 
-Set bonuses do not enter here. Whether a piece would break a set the spec is completing is a question about tier progress and it is answered in [Tier sets and set bonuses](framework.md#tier-sets-and-set-bonuses), not by lowering an item's priority. A priority says what an item is worth to a spec. It does not track how far through a set any particular player happens to be.
+A spec without a simulated best-in-slot set labels nothing BIS. The tanks, the healers and the Feral Cat have no such profile, so every claim those specs hold renders as an Upgrade, and that is a statement about what this compendium has measured rather than about the item.
 
-**Every priority carries the size of the upgrade, in both forms.** The raw change and the change as a percentage of what that spec already produces, measured against the named alternative rather than against nothing. Both are required. Raw alone routes every contested drop to whoever already does the most damage, since a flat gain is the same number on the top parser as on the bottom. Proportional alone flatters low-throughput specs, where a large percentage of a small number is still small. The two together are what distinguishes an item that is transformative for one spec from the same item being routine for another.
+The standing says what an item IS to a spec. It does not say who receives a contested drop first: that ordering is the council's, and where the council has settled one it lives in the judgment store with its reasons.
+
+Set bonuses do not enter here. Whether a piece would break a set the spec is completing is a question about tier progress and it is answered in [Tier sets and set bonuses](framework.md#tier-sets-and-set-bonuses), not by lowering an item's standing. A standing says what an item is to a spec. It does not track how far through a set any particular player happens to be.
+
+**Every claim carries the size of the upgrade, in both forms.** The raw change and the change as a percentage of what that spec already produces, measured against the named alternative rather than against nothing. Both are required. Raw alone routes every contested drop to whoever already does the most damage, since a flat gain is the same number on the top parser as on the bottom. Proportional alone flatters low-throughput specs, where a large percentage of a small number is still small. The two together are what distinguishes an item that is transformative for one spec from the same item being routine for another.
 
 ### Worked example
 
 The item under discussion is [Cursed Vision of Sargeras]{.item}, and it heads the container the cards sit in. Its stat line, its sockets and the boss it drops from are printed there once, read from [`items.csv`](../data/facts/items.csv) and [`drops.csv`](../data/facts/drops.csv), so no figure about the item is written into this prose, where it would go stale.
 
-Armor type is a ceiling rather than a match, so every class above leather can physically equip this. That is not what decides the priority. What decides it is what the spec is actually choosing between, and that is derived rather than chosen by an author.
+Armor type is a ceiling rather than a match, so every class above leather can physically equip this. That is not what decides the standing. What decides it is what the spec is actually choosing between, and that is derived rather than chosen by an author.
 
-One card per claimant. Each carries a **Delta**: what the spec gains by taking this item, with every stat converted at that spec's own rates and each rate linked to the file it came from. Those tables are real. Only the priorities are illustrative.
+One card per claimant. Each leads with its **Standing**, BIS or Upgrade on the scale above, derived from the simulated sets rather than written here. Below it sits a **Delta**: what the spec gains by taking this item, with every stat converted at that spec's own rates and each rate linked to the file it came from. Everything on a card is real, because everything on a card is derived.
 
 A card used to carry a written **For** and **Against** pair as well, arguing both sides of the item for that spec. The pair was filled in for one item only, this one, and the guild lead removed it on 10 August 2026. What sits above the cards instead is what creators actually said about the item, with a timestamp on each remark, which covers 173 items rather than one.
 
@@ -178,13 +180,11 @@ Delta
 
 The two warriors carry negative rows in both of their tables, and in both cases those negatives are most of the answer.
 
-The two hunters are the pair to read twice. They share both tier sets and the same Phase 3 off-piece, so three of their four column groups hold the same figures, and everything that separates Priority 2 from Priority 3 sits in the pre-phase off-piece and in how much hit each of them still needs. That view is gated for both of them, on an engineering goggle for Beast Mastery and on a badge purchase for Survival, which is exactly the case the route label exists to show: the same drop reads as a different upgrade for each, and neither raider is certain to hold the item being compared against.
+The two hunters are the pair to read twice. They share both tier sets and the same Phase 3 off-piece, so three of their four column groups hold the same figures, and everything that separates one hunter's claim from the other sits in the pre-phase off-piece and in how much hit each of them still needs. That view is gated for both of them, on an engineering goggle for Beast Mastery and on a badge purchase for Survival, which is exactly the case the route label exists to show: the same drop reads as a different upgrade for each, and neither raider is certain to hold the item being compared against.
 
-The Rogue and the Cat sitting at the same priority is the normal case, not a failure to decide. The priority says how much each wants it; which of the two receives it is the council's judgment, and the reasons are what that judgment is made from.
+The Rogue and the Cat sitting at the same standing is the normal case, not a failure to decide. The standing says what the item is to each; which of the two receives it is the council's judgment, and the reasons are what that judgment is made from.
 
-These priorities are an illustration of the shape a reason should take, not a ruling. No priorities have been assigned to any item yet.
-
-What is real here: every stat line, every delta table, every conversion rate, every cap figure, and all four derived baselines and their acquisition routes on every card, taken from `data/facts/items.csv`, `data/facts/hit.yaml`, `data/facts/crit.yaml`, `data/facts/attack-power.yaml`, `data/facts/tokens.yaml` and the EP Workbook in `data/research/epv-workbook/`. Every creator remark is real and carries a link to the second it was said. What is illustrative: the priorities themselves, which no council has settled.
+What is real here: every standing, every stat line, every delta table, every conversion rate, every cap figure, and all four derived baselines and their acquisition routes on every card, taken from the best-in-slot captures in `data/facts/sim-profiles/`, `data/facts/items.csv`, `data/facts/hit.yaml`, `data/facts/crit.yaml`, `data/facts/attack-power.yaml`, `data/facts/tokens.yaml` and the EP Workbook in `data/research/epv-workbook/`. Every creator remark is real and carries a link to the second it was said. Nothing on a card is illustrative, because nothing on a card is judged: who receives a contested drop first remains the council's call, and it is not printed here.
 
 Throughput figures are absent from these cards by choice. A card previously led with a line like "plus 41 damage per second", which had no source at the time. Simulated figures now exist, in [Simulated Throughput](sims.md), and they are not restated on a card: a card compares one item against a baseline, and a simulated figure is a whole set against an encounter.
 

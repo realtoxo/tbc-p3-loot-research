@@ -46,22 +46,178 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-An Elemental Shaman can carry a staff or a one-hander with a held off hand, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand item that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Major Spellpower, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and mace alike, and a frill or a shield takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. A shaman wields maces, axes, staves, daggers and fist weapons and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here. A shaman can also carry a shield in the off hand, alone among the five Zhar'doom wearers, and the workbook's rank-two off hand for this spec, Antonidas's Aegis of Rapt Concentration from Archimonde, is a shield, so one row prices it against the held frills. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
+An Elemental Shaman can carry a staff or a one-hander with a held off hand, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand item that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Major Spellpower, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and mace alike, and a frill or a shield takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. A shaman wields maces, axes, staves, daggers and fist weapons and cannot wield swords, so Tempest of Chaos, the sword the warlock and mage rounds price, is not a row here. A shaman can also carry a shield in the off hand, alone among the five Zhar'doom wearers, and the workbook's rank-two off hand for this spec, Antonidas's Aegis of Rapt Concentration from Archimonde, is a shield, so one row prices it against the held frills. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty.
 
 | Main hand                                          | Off hand                                | DPS           | Against this set |
 |----------------------------------------------------|-----------------------------------------|---------------|------------------|
 | Zhar'doom, Greatstaff of the Devourer *(this set)* | *empty, two-hander*                     | 2130.0 ± 0.97 | +0.0             |
 | The Maelstrom's Fury                               | Chronicle of Dark Secrets               | 2083.4 ± 0.94 | -46.6            |
+| The Maelstrom's Fury                               | Antonidas's Aegis of Rapt Concentration | 2082.2 ± 0.94 | -47.8            |
+| The Maelstrom's Fury                               | Fathomstone                             | 2077.3 ± 0.94 | -52.7            |
 | Vengeful Gladiator's Gavel                         | Chronicle of Dark Secrets               | 2076.3 ± 0.94 | -53.7            |
 | Vengeful Gladiator's Gavel                         | Antonidas's Aegis of Rapt Concentration | 2075.5 ± 0.94 | -54.5            |
 | Vengeful Gladiator's Gavel                         | Fathomstone                             | 2071.1 ± 0.94 | -58.9            |
+| The Maelstrom's Fury                               | Khadgar's Knapsack                      | 2068.0 ± 0.95 | -62.0            |
+| The Maelstrom's Fury                               | Talisman of Nightbane                   | 2067.4 ± 0.94 | -62.6            |
+| The Maelstrom's Fury                               | Blind-Seers Icon                        | 2067.2 ± 0.94 | -62.8            |
 | Hammer of Judgement                                | Chronicle of Dark Secrets               | 2067.2 ± 0.94 | -62.8            |
+| Hammer of Judgement                                | Antonidas's Aegis of Rapt Concentration | 2067.0 ± 0.94 | -63.0            |
+| The Maelstrom's Fury                               | Mazthoril Honor Shield                  | 2065.7 ± 0.94 | -64.3            |
+| The Maelstrom's Fury                               | Karrog's Shard                          | 2065.6 ± 0.94 | -64.4            |
+| The Maelstrom's Fury                               | Illidari Runeshield                     | 2062.5 ± 0.94 | -67.5            |
+| The Maelstrom's Fury                               | Karaborian Talisman                     | 2062.1 ± 0.94 | -67.9            |
+| Hammer of Judgement                                | Fathomstone                             | 2062.1 ± 0.94 | -67.9            |
+| The Maelstrom's Fury                               | Draenei Honor Guard Shield              | 2062.0 ± 0.93 | -68.0            |
+| Vengeful Gladiator's Gavel                         | Khadgar's Knapsack                      | 2062.0 ± 0.95 | -68.0            |
+| The Maelstrom's Fury                               | Manual of the Nethermancer              | 2061.9 ± 0.94 | -68.1            |
+| Vengeful Gladiator's Gavel                         | Talisman of Nightbane                   | 2061.2 ± 0.94 | -68.8            |
 | Vengeful Gladiator's Battle Staff                  | *empty, two-hander*                     | 2060.8 ± 0.92 | -69.2            |
 | Vengeful Gladiator's Gavel                         | Blind-Seers Icon                        | 2060.4 ± 0.95 | -69.6            |
+| Vengeful Gladiator's War Staff                     | *empty, two-hander*                     | 2059.9 ± 0.93 | -70.1            |
+| Vengeful Gladiator's Gavel                         | Mazthoril Honor Shield                  | 2059.6 ± 0.94 | -70.4            |
+| The Maelstrom's Fury                               | Lamp of Peaceful Radiance               | 2058.8 ± 0.94 | -71.2            |
+| Vengeful Gladiator's Gavel                         | Karrog's Shard                          | 2058.6 ± 0.95 | -71.4            |
 | Merciless Gladiator's Spellblade                   | Chronicle of Dark Secrets               | 2056.8 ± 0.94 | -73.2            |
+| Vengeful Gladiator's Gavel                         | Illidari Runeshield                     | 2056.7 ± 0.94 | -73.3            |
+| Merciless Gladiator's Spellblade                   | Antonidas's Aegis of Rapt Concentration | 2056.6 ± 0.94 | -73.4            |
+| Vengeful Gladiator's Gavel                         | Karaborian Talisman                     | 2056.3 ± 0.95 | -73.7            |
+| Vengeful Gladiator's Gavel                         | Manual of the Nethermancer              | 2055.9 ± 0.94 | -74.1            |
 | The Nexus Key                                      | *empty, two-hander*                     | 2055.8 ± 0.93 | -74.2            |
+| Vengeful Gladiator's Gavel                         | Draenei Honor Guard Shield              | 2055.8 ± 0.94 | -74.2            |
+| Nathrezim Mindblade                                | Chronicle of Dark Secrets               | 2055.0 ± 0.93 | -75.0            |
+| Nathrezim Mindblade                                | Antonidas's Aegis of Rapt Concentration | 2053.7 ± 0.93 | -76.3            |
+| Hammer of Judgement                                | Khadgar's Knapsack                      | 2053.2 ± 0.95 | -76.8            |
+| Hammer of Judgement                                | Talisman of Nightbane                   | 2052.5 ± 0.94 | -77.5            |
 | Merciless Gladiator's Spellblade                   | Fathomstone                             | 2051.6 ± 0.94 | -78.4            |
+| Hammer of Judgement                                | Blind-Seers Icon                        | 2051.5 ± 0.94 | -78.5            |
+| Vengeful Gladiator's Gavel                         | Lamp of Peaceful Radiance               | 2051.1 ± 0.94 | -78.9            |
+| Hammer of Judgement                                | Mazthoril Honor Shield                  | 2050.5 ± 0.93 | -79.5            |
+| Hammer of Judgement                                | Karrog's Shard                          | 2049.8 ± 0.94 | -80.2            |
+| Nathrezim Mindblade                                | Fathomstone                             | 2048.8 ± 0.93 | -81.2            |
+| Hammer of Judgement                                | Illidari Runeshield                     | 2047.8 ± 0.94 | -82.2            |
+| Hammer of Judgement                                | Karaborian Talisman                     | 2047.5 ± 0.94 | -82.5            |
+| Hammer of Judgement                                | Draenei Honor Guard Shield              | 2047.0 ± 0.93 | -83.0            |
+| Hammer of Judgement                                | Manual of the Nethermancer              | 2046.9 ± 0.93 | -83.1            |
+| Merciless Gladiator's Spellblade                   | Khadgar's Knapsack                      | 2042.7 ± 0.95 | -87.3            |
+| Hammer of Judgement                                | Lamp of Peaceful Radiance               | 2042.2 ± 0.93 | -87.8            |
+| Merciless Gladiator's Spellblade                   | Talisman of Nightbane                   | 2041.9 ± 0.93 | -88.1            |
+| Merciless Gladiator's Spellblade                   | Blind-Seers Icon                        | 2041.2 ± 0.94 | -88.8            |
+| Merciless Gladiator's Spellblade                   | Mazthoril Honor Shield                  | 2040.3 ± 0.93 | -89.7            |
+| Nathrezim Mindblade                                | Khadgar's Knapsack                      | 2039.5 ± 0.94 | -90.5            |
+| Merciless Gladiator's Spellblade                   | Karrog's Shard                          | 2039.3 ± 0.94 | -90.7            |
+| Nathrezim Mindblade                                | Talisman of Nightbane                   | 2039.2 ± 0.93 | -90.8            |
+| Nathrezim Mindblade                                | Blind-Seers Icon                        | 2039.0 ± 0.93 | -91.0            |
 | Merciless Gladiator's War Staff                    | *empty, two-hander*                     | 2037.7 ± 0.92 | -92.3            |
+| Nathrezim Mindblade                                | Mazthoril Honor Shield                  | 2037.4 ± 0.92 | -92.6            |
+| Merciless Gladiator's Spellblade                   | Illidari Runeshield                     | 2037.3 ± 0.94 | -92.7            |
+| Merciless Gladiator's Spellblade                   | Karaborian Talisman                     | 2037.2 ± 0.94 | -92.8            |
+| Nathrezim Mindblade                                | Karrog's Shard                          | 2036.9 ± 0.93 | -93.1            |
+| Merciless Gladiator's Spellblade                   | Manual of the Nethermancer              | 2036.8 ± 0.93 | -93.2            |
+| Merciless Gladiator's Spellblade                   | Draenei Honor Guard Shield              | 2036.8 ± 0.93 | -93.2            |
+| Gladiator's Spellblade                             | Chronicle of Dark Secrets               | 2034.5 ± 0.93 | -95.5            |
+| Nathrezim Mindblade                                | Illidari Runeshield                     | 2034.2 ± 0.92 | -95.8            |
+| Nathrezim Mindblade                                | Karaborian Talisman                     | 2033.9 ± 0.92 | -96.1            |
+| Nathrezim Mindblade                                | Manual of the Nethermancer              | 2033.7 ± 0.93 | -96.3            |
+| Nathrezim Mindblade                                | Draenei Honor Guard Shield              | 2033.7 ± 0.92 | -96.3            |
+| Gladiator's Spellblade                             | Antonidas's Aegis of Rapt Concentration | 2033.3 ± 0.93 | -96.7            |
+| Merciless Gladiator's Spellblade                   | Lamp of Peaceful Radiance               | 2032.0 ± 0.93 | -98.0            |
+| Nathrezim Mindblade                                | Lamp of Peaceful Radiance               | 2030.7 ± 0.93 | -99.3            |
+| Gladiator's Spellblade                             | Fathomstone                             | 2028.4 ± 0.93 | -101.6           |
+| The Maelstrom's Fury                               | Draenei Crystal Rod                     | 2026.1 ± 0.93 | -103.9           |
+| Eternium Runed Blade                               | Chronicle of Dark Secrets               | 2023.6 ± 0.92 | -106.4           |
+| Eternium Runed Blade                               | Antonidas's Aegis of Rapt Concentration | 2022.2 ± 0.92 | -107.8           |
+| Vengeful Gladiator's Gavel                         | Draenei Crystal Rod                     | 2020.5 ± 0.94 | -109.5           |
+| Gladiator's Spellblade                             | Khadgar's Knapsack                      | 2020.0 ± 0.94 | -110.0           |
+| Gladiator's Spellblade                             | Blind-Seers Icon                        | 2019.1 ± 0.93 | -110.9           |
+| Gladiator's Spellblade                             | Talisman of Nightbane                   | 2018.5 ± 0.92 | -111.5           |
+| Eternium Runed Blade                               | Fathomstone                             | 2017.5 ± 0.92 | -112.5           |
+| Gladiator's Spellblade                             | Mazthoril Honor Shield                  | 2017.1 ± 0.92 | -112.9           |
+| Gladiator's Spellblade                             | Karrog's Shard                          | 2016.3 ± 0.93 | -113.7           |
+| Gladiator's Spellblade                             | Karaborian Talisman                     | 2014.2 ± 0.93 | -115.8           |
+| Gladiator's Spellblade                             | Illidari Runeshield                     | 2014.2 ± 0.93 | -115.8           |
+| Gladiator's Spellblade                             | Manual of the Nethermancer              | 2013.5 ± 0.92 | -116.5           |
+| Gladiator's Spellblade                             | Draenei Honor Guard Shield              | 2013.4 ± 0.92 | -116.6           |
+| Hammer of Judgement                                | Draenei Crystal Rod                     | 2011.7 ± 0.93 | -118.3           |
+| Gavel of Unearthed Secrets                         | Chronicle of Dark Secrets               | 2011.2 ± 0.92 | -118.8           |
+| Gladiator's Spellblade                             | Lamp of Peaceful Radiance               | 2009.9 ± 0.92 | -120.1           |
+| Gladiator's War Staff                              | *empty, two-hander*                     | 2009.8 ± 0.92 | -120.2           |
+| Gavel of Unearthed Secrets                         | Antonidas's Aegis of Rapt Concentration | 2009.8 ± 0.92 | -120.2           |
+| Eternium Runed Blade                               | Khadgar's Knapsack                      | 2008.4 ± 0.93 | -121.6           |
+| Eternium Runed Blade                               | Talisman of Nightbane                   | 2008.0 ± 0.92 | -122.0           |
+| Eternium Runed Blade                               | Blind-Seers Icon                        | 2007.8 ± 0.92 | -122.2           |
+| Eternium Runed Blade                               | Mazthoril Honor Shield                  | 2005.8 ± 0.91 | -124.2           |
+| Eternium Runed Blade                               | Karrog's Shard                          | 2005.7 ± 0.92 | -124.3           |
+| Gavel of Unearthed Secrets                         | Fathomstone                             | 2005.0 ± 0.92 | -125.0           |
+| Eternium Runed Blade                               | Illidari Runeshield                     | 2002.8 ± 0.91 | -127.2           |
+| Eternium Runed Blade                               | Manual of the Nethermancer              | 2002.6 ± 0.91 | -127.4           |
+| Eternium Runed Blade                               | Karaborian Talisman                     | 2002.5 ± 0.91 | -127.5           |
+| Eternium Runed Blade                               | Draenei Honor Guard Shield              | 2002.3 ± 0.91 | -127.7           |
+| Merciless Gladiator's Spellblade                   | Draenei Crystal Rod                     | 2001.1 ± 0.93 | -128.9           |
+| Eternium Runed Blade                               | Lamp of Peaceful Radiance               | 1999.2 ± 0.91 | -130.8           |
+| Nathrezim Mindblade                                | Draenei Crystal Rod                     | 1997.6 ± 0.92 | -132.4           |
+| Gavel of Unearthed Secrets                         | Khadgar's Knapsack                      | 1995.7 ± 0.92 | -134.3           |
+| Gavel of Unearthed Secrets                         | Talisman of Nightbane                   | 1995.5 ± 0.91 | -134.5           |
+| Gavel of Unearthed Secrets                         | Blind-Seers Icon                        | 1995.0 ± 0.92 | -135.0           |
+| Gavel of Unearthed Secrets                         | Mazthoril Honor Shield                  | 1993.8 ± 0.91 | -136.2           |
+| Gavel of Unearthed Secrets                         | Karrog's Shard                          | 1992.5 ± 0.92 | -137.5           |
+| Gavel of Unearthed Secrets                         | Draenei Honor Guard Shield              | 1990.3 ± 0.91 | -139.7           |
+| Gavel of Unearthed Secrets                         | Manual of the Nethermancer              | 1990.2 ± 0.91 | -139.8           |
+| Gavel of Unearthed Secrets                         | Illidari Runeshield                     | 1989.6 ± 0.91 | -140.4           |
+| Gavel of Unearthed Secrets                         | Karaborian Talisman                     | 1989.3 ± 0.91 | -140.7           |
+| Gavel of Unearthed Secrets                         | Lamp of Peaceful Radiance               | 1986.3 ± 0.91 | -143.7           |
+| Terokk's Shadowstaff                               | *empty, two-hander*                     | 1984.2 ± 0.90 | -145.8           |
+| Runesong Dagger                                    | Chronicle of Dark Secrets               | 1980.8 ± 0.90 | -149.2           |
+| Runesong Dagger                                    | Antonidas's Aegis of Rapt Concentration | 1979.8 ± 0.91 | -150.2           |
+| Bleeding Hollow Warhammer                          | Chronicle of Dark Secrets               | 1979.5 ± 0.90 | -150.5           |
+| Gladiator's Spellblade                             | Draenei Crystal Rod                     | 1978.5 ± 0.92 | -151.5           |
+| Bleeding Hollow Warhammer                          | Antonidas's Aegis of Rapt Concentration | 1978.0 ± 0.90 | -152.0           |
+| Staff of Infinite Mysteries                        | *empty, two-hander*                     | 1976.1 ± 0.91 | -153.9           |
+| Runesong Dagger                                    | Fathomstone                             | 1974.6 ± 0.90 | -155.4           |
+| Bleeding Hollow Warhammer                          | Fathomstone                             | 1973.4 ± 0.90 | -156.6           |
+| Eternium Runed Blade                               | Draenei Crystal Rod                     | 1966.6 ± 0.91 | -163.4           |
+| Runesong Dagger                                    | Khadgar's Knapsack                      | 1965.7 ± 0.91 | -164.3           |
+| Runesong Dagger                                    | Talisman of Nightbane                   | 1965.3 ± 0.90 | -164.7           |
+| Runesong Dagger                                    | Blind-Seers Icon                        | 1964.8 ± 0.90 | -165.2           |
+| Bleeding Hollow Warhammer                          | Khadgar's Knapsack                      | 1964.3 ± 0.91 | -165.7           |
+| Bleeding Hollow Warhammer                          | Talisman of Nightbane                   | 1963.6 ± 0.90 | -166.4           |
+| Bleeding Hollow Warhammer                          | Blind-Seers Icon                        | 1963.4 ± 0.90 | -166.6           |
+| Runesong Dagger                                    | Mazthoril Honor Shield                  | 1963.2 ± 0.90 | -166.8           |
+| Runesong Dagger                                    | Karrog's Shard                          | 1962.6 ± 0.90 | -167.4           |
+| Bleeding Hollow Warhammer                          | Mazthoril Honor Shield                  | 1961.9 ± 0.90 | -168.1           |
+| Bleeding Hollow Warhammer                          | Karrog's Shard                          | 1961.2 ± 0.90 | -168.8           |
+| Runesong Dagger                                    | Illidari Runeshield                     | 1959.8 ± 0.90 | -170.2           |
+| Runesong Dagger                                    | Manual of the Nethermancer              | 1959.7 ± 0.90 | -170.3           |
+| Runesong Dagger                                    | Draenei Honor Guard Shield              | 1959.6 ± 0.90 | -170.4           |
+| Runesong Dagger                                    | Karaborian Talisman                     | 1959.5 ± 0.90 | -170.5           |
+| Bleeding Hollow Warhammer                          | Manual of the Nethermancer              | 1958.6 ± 0.90 | -171.4           |
+| Bleeding Hollow Warhammer                          | Draenei Honor Guard Shield              | 1958.3 ± 0.90 | -171.7           |
+| Bleeding Hollow Warhammer                          | Illidari Runeshield                     | 1958.2 ± 0.90 | -171.8           |
+| Bleeding Hollow Warhammer                          | Karaborian Talisman                     | 1957.6 ± 0.90 | -172.4           |
+| Hammer of Righteous Might                          | *empty, two-hander*                     | 1957.2 ± 0.91 | -172.8           |
+| Runesong Dagger                                    | Lamp of Peaceful Radiance               | 1956.3 ± 0.89 | -173.7           |
+| Bleeding Hollow Warhammer                          | Lamp of Peaceful Radiance               | 1955.1 ± 0.89 | -174.9           |
+| Gavel of Unearthed Secrets                         | Draenei Crystal Rod                     | 1953.9 ± 0.91 | -176.1           |
+| The Bringer of Death                               | *empty, two-hander*                     | 1944.8 ± 0.89 | -185.2           |
+| Auchenai Staff                                     | *empty, two-hander*                     | 1938.4 ± 0.88 | -191.6           |
+| High Warlord's War Staff                           | *empty, two-hander*                     | 1937.3 ± 0.89 | -192.7           |
+| Grand Marshal's War Staff                          | *empty, two-hander*                     | 1937.3 ± 0.89 | -192.7           |
+| Warpstaff of Arcanum                               | *empty, two-hander*                     | 1936.3 ± 0.89 | -193.7           |
+| Runesong Dagger                                    | Draenei Crystal Rod                     | 1923.9 ± 0.89 | -206.1           |
+| Bleeding Hollow Warhammer                          | Draenei Crystal Rod                     | 1922.6 ± 0.89 | -207.4           |
+| Illidari-Bane Mageblade                            | Chronicle of Dark Secrets               | 1876.6 ± 0.86 | -253.4           |
+| Illidari-Bane Mageblade                            | Antonidas's Aegis of Rapt Concentration | 1875.7 ± 0.86 | -254.3           |
+| Illidari-Bane Mageblade                            | Fathomstone                             | 1870.5 ± 0.86 | -259.5           |
+| Illidari-Bane Mageblade                            | Khadgar's Knapsack                      | 1862.5 ± 0.87 | -267.5           |
+| Illidari-Bane Mageblade                            | Blind-Seers Icon                        | 1861.5 ± 0.86 | -268.5           |
+| Illidari-Bane Mageblade                            | Talisman of Nightbane                   | 1861.3 ± 0.86 | -268.7           |
+| Illidari-Bane Mageblade                            | Mazthoril Honor Shield                  | 1859.2 ± 0.85 | -270.8           |
+| Illidari-Bane Mageblade                            | Karrog's Shard                          | 1858.9 ± 0.86 | -271.1           |
+| Illidari-Bane Mageblade                            | Illidari Runeshield                     | 1856.3 ± 0.85 | -273.7           |
+| Illidari-Bane Mageblade                            | Karaborian Talisman                     | 1856.1 ± 0.85 | -273.9           |
+| Illidari-Bane Mageblade                            | Manual of the Nethermancer              | 1855.7 ± 0.85 | -274.3           |
+| Illidari-Bane Mageblade                            | Draenei Honor Guard Shield              | 1855.6 ± 0.85 | -274.4           |
+| Illidari-Bane Mageblade                            | Lamp of Peaceful Radiance               | 1852.4 ± 0.85 | -277.6           |
+| Illidari-Bane Mageblade                            | Draenei Crystal Rod                     | 1820.7 ± 0.85 | -309.3           |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

@@ -46,20 +46,56 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
+A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
 
-| Main hand                         | Off hand                         | DPS           | Against this set |
-|-----------------------------------|----------------------------------|---------------|------------------|
-| Vengeful Gladiator's Decapitator  | *empty, two-hander*              | 3248.7 ± 0.95 | +78.9            |
-| Halberd of Desolation             | *empty, two-hander*              | 3237.1 ± 0.93 | +67.3            |
-| Twinblade of the Phoenix          | *empty, two-hander*              | 3229.8 ± 0.94 | +60.0            |
-| Blade of Infamy                   | Blade of Infamy                  | 3194.8 ± 0.91 | +25.0            |
-| Blade of Infamy                   | Tracker's Blade                  | 3181.4 ± 0.90 | +11.6            |
-| Blade of Infamy                   | Blade of Savagery                | 3180.1 ± 0.90 | +10.3            |
-| Talon of the Phoenix *(this set)* | Claw of the Phoenix              | 3169.8 ± 0.89 | +0.0             |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Left Ripper | 3169.5 ± 0.90 | -0.3             |
-| Talon of the Phoenix              | Talon of Azshara                 | 3164.9 ± 0.89 | -4.9             |
-| Boundless Agony                   | Blade of Infamy                  | 3149.0 ± 0.88 | -20.8            |
+| Main hand                         | Off hand            | DPS           | Against this set |
+|-----------------------------------|---------------------|---------------|------------------|
+| Vengeful Gladiator's Decapitator  | *empty, two-hander* | 3248.7 ± 0.95 | +78.9            |
+| Halberd of Desolation             | *empty, two-hander* | 3237.1 ± 0.93 | +67.3            |
+| Twinblade of the Phoenix          | *empty, two-hander* | 3229.8 ± 0.94 | +60.0            |
+| Merciless Gladiator's Decapitator | *empty, two-hander* | 3220.0 ± 0.94 | +50.2            |
+| Legacy                            | *empty, two-hander* | 3201.9 ± 0.92 | +32.1            |
+| Blade of Infamy                   | Blade of Infamy     | 3194.8 ± 0.91 | +25.0            |
+| Blade of Infamy                   | Boundless Agony     | 3192.3 ± 0.92 | +22.5            |
+| Talon of the Phoenix              | Blade of Infamy     | 3184.1 ± 0.90 | +14.3            |
+| Talon of the Phoenix              | Boundless Agony     | 3182.7 ± 0.90 | +12.9            |
+| Blade of Infamy                   | Tracker's Blade     | 3181.4 ± 0.90 | +11.6            |
+| Blade of Infamy                   | Blade of Savagery   | 3180.1 ± 0.90 | +10.3            |
+| Blade of Infamy                   | Claw of the Phoenix | 3178.2 ± 0.90 | +8.4             |
+| Talon of Azshara                  | Boundless Agony     | 3177.0 ± 0.90 | +7.2             |
+| Talon of Azshara                  | Blade of Infamy     | 3176.8 ± 0.89 | +7.0             |
+| Hellforged Halberd                | *empty, two-hander* | 3175.9 ± 0.90 | +6.1             |
+| Blackened Spear                   | *empty, two-hander* | 3175.9 ± 0.90 | +6.1             |
+| Blade of Infamy                   | Talon of Azshara    | 3174.7 ± 0.90 | +4.9             |
+| Vengeful Gladiator's Painsaw      | *empty, two-hander* | 3173.1 ± 0.89 | +3.3             |
+| Sonic Spear                       | *empty, two-hander* | 3171.2 ± 0.90 | +1.4             |
+| Talon of the Phoenix              | Tracker's Blade     | 3171.1 ± 0.89 | +1.3             |
+| Talon of the Phoenix              | Blade of Savagery   | 3170.8 ± 0.90 | +1.0             |
+| Talon of the Phoenix *(this set)* | Claw of the Phoenix | 3169.8 ± 0.89 | +0.0             |
+| Talon of Azshara                  | Tracker's Blade     | 3165.7 ± 0.89 | -4.1             |
+| Talon of the Phoenix              | Talon of Azshara    | 3164.9 ± 0.89 | -4.9             |
+| Talon of Azshara                  | Blade of Savagery   | 3164.1 ± 0.90 | -5.7             |
+| Talon of Azshara                  | Claw of the Phoenix | 3163.6 ± 0.89 | -6.2             |
+| Talon of Azshara                  | Talon of Azshara    | 3158.4 ± 0.88 | -11.4            |
+| Illidari-Bane Claymore            | *empty, two-hander* | 3154.5 ± 0.90 | -15.3            |
+| Boundless Agony                   | Blade of Infamy     | 3149.0 ± 0.88 | -20.8            |
+| Boundless Agony                   | Boundless Agony     | 3145.7 ± 0.87 | -24.1            |
+| Boundless Agony                   | Tracker's Blade     | 3138.3 ± 0.87 | -31.5            |
+| Boundless Agony                   | Claw of the Phoenix | 3135.5 ± 0.86 | -34.3            |
+| Boundless Agony                   | Blade of Savagery   | 3135.2 ± 0.87 | -34.6            |
+| Boundless Agony                   | Talon of Azshara    | 3130.3 ± 0.87 | -39.5            |
+| Tracker's Blade                   | Blade of Infamy     | 3103.1 ± 0.86 | -66.7            |
+| Tracker's Blade                   | Boundless Agony     | 3099.2 ± 0.86 | -70.6            |
+| Blade of Savagery                 | Blade of Infamy     | 3088.4 ± 0.84 | -81.4            |
+| Tracker's Blade                   | Tracker's Blade     | 3087.6 ± 0.86 | -82.2            |
+| Tracker's Blade                   | Blade of Savagery   | 3087.2 ± 0.86 | -82.6            |
+| Tracker's Blade                   | Claw of the Phoenix | 3085.7 ± 0.87 | -84.1            |
+| Blade of Savagery                 | Boundless Agony     | 3085.0 ± 0.84 | -84.8            |
+| Tracker's Blade                   | Talon of Azshara    | 3084.0 ± 0.85 | -85.8            |
+| Blade of Savagery                 | Tracker's Blade     | 3075.4 ± 0.83 | -94.4            |
+| Blade of Savagery                 | Claw of the Phoenix | 3073.7 ± 0.83 | -96.1            |
+| Blade of Savagery                 | Blade of Savagery   | 3070.4 ± 0.85 | -99.4            |
+| Blade of Savagery                 | Talon of Azshara    | 3068.5 ± 0.84 | -101.3           |
 
 The best combination, Vengeful Gladiator's Decapitator alone, a two-hander, measures +78.9 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

@@ -46,7 +46,7 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-A Retribution Paladin always carries a two-hander, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The candidates are the top of the EP Workbook's Two Hand ladder for this spec, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: it goes to the Arms Warrior, and Torch of the Damned stays with this spec.
+A Retribution Paladin always carries a two-hander, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The table is an enumeration of the EP Workbook's Two Hand ladder for this spec together with every worn and routed weapon, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: it goes to the Arms Warrior, and Torch of the Damned stays with this spec.
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
@@ -54,10 +54,26 @@ A Retribution Paladin always carries a two-hander, so every row below is a singl
 | Cataclysm's Edge                  | *empty, two-hander* | 2188.4 ± 1.35 | -34.8            |
 | Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 2169.0 ± 1.34 | -54.2            |
 | Lionheart Executioner             | *empty, two-hander* | 2159.8 ± 1.37 | -63.4            |
+| World Breaker                     | *empty, two-hander* | 2150.3 ± 1.34 | -72.9            |
+| Stormherald                       | *empty, two-hander* | 2144.0 ± 1.34 | -79.2            |
 | Soul Cleaver                      | *empty, two-hander* | 2139.4 ± 1.37 | -83.8            |
 | Twinblade of the Phoenix          | *empty, two-hander* | 2134.5 ± 1.32 | -88.7            |
+| Vengeful Gladiator's Decapitator  | *empty, two-hander* | 2122.8 ± 1.36 | -100.4           |
 | Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2117.4 ± 1.31 | -105.8           |
+| Lionheart Champion                | *empty, two-hander* | 2115.6 ± 1.34 | -107.6           |
+| Bloodmoon                         | *empty, two-hander* | 2114.9 ± 1.35 | -108.3           |
+| Deep Thunder                      | *empty, two-hander* | 2093.0 ± 1.31 | -130.2           |
 | Halberd of Desolation             | *empty, two-hander* | 2085.2 ± 1.33 | -138.0           |
+| Merciless Gladiator's Decapitator | *empty, two-hander* | 2072.9 ± 1.33 | -150.3           |
+| Mooncleaver                       | *empty, two-hander* | 2068.8 ± 1.32 | -154.4           |
+| Gladiator's Greatsword            | *empty, two-hander* | 2061.8 ± 1.28 | -161.4           |
+| Hammer of the Naaru               | *empty, two-hander* | 2060.8 ± 1.27 | -162.4           |
+| Gorehowl                          | *empty, two-hander* | 2051.4 ± 1.31 | -171.8           |
+| Lionheart Blade                   | *empty, two-hander* | 2034.4 ± 1.26 | -188.8           |
+| Gladiator's Decapitator           | *empty, two-hander* | 2019.8 ± 1.29 | -203.4           |
+| Vengeful Gladiator's Painsaw      | *empty, two-hander* | 1642.1 ± 2.82 | -581.1           |
+| Merciless Gladiator's Painsaw     | *empty, two-hander* | 1610.2 ± 2.77 | -613.0           |
+| Gladiator's Painsaw               | *empty, two-hander* | 1572.7 ± 2.71 | -650.5           |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

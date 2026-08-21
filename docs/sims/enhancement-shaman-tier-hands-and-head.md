@@ -46,25 +46,56 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
+An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons of the same speed, and wants them slow. The set above wears the pair its published source ranked, so each row below is THIS PROFILE with only the two weapon ids replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The table is an enumeration: every matched-speed pairing the slow one-hand field supports, and the field is the spec's shortlist together with every weapon an anchor wears. The character is a Draenei, so no row inherits the Orc axe privilege the published lists assume. The weapons run unsynced.
 
-| Main hand                         | Off hand                      | Pair speed | DPS           | Against this set |
-|-----------------------------------|-------------------------------|------------|---------------|------------------|
-| Syphon of the Nathrezim           | Syphon of the Nathrezim       | 2.8        | 2023.8 ± 0.95 | +31.8            |
-| Vengeful Gladiator's Right Ripper | Vengeful Gladiator's Cleaver  | 2.6        | 2005.2 ± 0.88 | +13.2            |
-| Vengeful Gladiator's Cleaver      | Vengeful Gladiator's Chopper  | 2.6        | 2005.2 ± 0.88 | +13.2            |
-| Dragonstrike *(this set)*         | Rod of the Sun King           | 2.7        | 1992.0 ± 0.92 | +0.0             |
-| Talon of the Phoenix              | Rod of the Sun King           | 2.7        | 1990.1 ± 0.89 | -1.9             |
-| Claw of Molten Fury               | Rod of the Sun King           | 2.7        | 1987.1 ± 0.90 | -4.9             |
-| Wicked Edge of the Planes         | Rod of the Sun King           | 2.7        | 1985.3 ± 0.90 | -6.7             |
-| Rising Tide                       | Rising Tide                   | 2.6        | 1978.6 ± 0.87 | -13.4            |
-| Rod of the Sun King               | Rod of the Sun King           | 2.7        | 1977.6 ± 0.89 | -14.4            |
-| Rising Tide                       | Netherbane                    | 2.6        | 1972.9 ± 0.86 | -19.1            |
-| Dragonmaw                         | Rod of the Sun King           | 2.7        | 1971.8 ± 0.91 | -20.2            |
-| Merciless Gladiator's Cleaver     | Merciless Gladiator's Cleaver | 2.6        | 1965.6 ± 0.86 | -26.4            |
-| Netherbane                        | Netherbane                    | 2.6        | 1964.1 ± 0.88 | -27.9            |
-| Black Planar Edge                 | Rod of the Sun King           | 2.7        | 1962.8 ± 0.88 | -29.2            |
-| Drakefist Hammer                  | Rod of the Sun King           | 2.7        | 1950.4 ± 0.89 | -41.6            |
+| Main hand                          | Off hand                     | Pair speed | DPS           | Against this set |
+|------------------------------------|------------------------------|------------|---------------|------------------|
+| Syphon of the Nathrezim            | Syphon of the Nathrezim      | 2.8        | 2023.8 ± 0.95 | +31.8            |
+| Vengeful Gladiator's Cleaver       | Vengeful Gladiator's Cleaver | 2.6        | 2005.2 ± 0.88 | +13.2            |
+| Vengeful Gladiator's Right Ripper  | Vengeful Gladiator's Cleaver | 2.6        | 2005.2 ± 0.88 | +13.2            |
+| Vengeful Gladiator's Cleaver       | Rising Tide                  | 2.6        | 1993.4 ± 0.87 | +1.4             |
+| Vengeful Gladiator's Right Ripper  | Rising Tide                  | 2.6        | 1993.4 ± 0.87 | +1.4             |
+| Dragonstrike *(this set)*          | Rod of the Sun King          | 2.7        | 1992.0 ± 0.92 | +0.0             |
+| Talon of the Phoenix               | Rod of the Sun King          | 2.7        | 1990.1 ± 0.89 | -1.9             |
+| Vengeful Gladiator's Cleaver       | Netherbane                   | 2.6        | 1989.4 ± 0.88 | -2.6             |
+| Vengeful Gladiator's Right Ripper  | Netherbane                   | 2.6        | 1989.4 ± 0.88 | -2.6             |
+| Rising Tide                        | Vengeful Gladiator's Cleaver | 2.6        | 1988.9 ± 0.87 | -3.1             |
+| Claw of Molten Fury                | Rod of the Sun King          | 2.7        | 1987.1 ± 0.90 | -4.9             |
+| Wicked Edge of the Planes          | Rod of the Sun King          | 2.7        | 1985.3 ± 0.90 | -6.7             |
+| Merciless Gladiator's Right Ripper | Vengeful Gladiator's Cleaver | 2.6        | 1981.4 ± 0.87 | -10.6            |
+| Netherbane                         | Vengeful Gladiator's Cleaver | 2.6        | 1979.2 ± 0.87 | -12.8            |
+| Rising Tide                        | Rising Tide                  | 2.6        | 1978.6 ± 0.87 | -13.4            |
+| Rod of the Sun King                | Rod of the Sun King          | 2.7        | 1977.6 ± 0.89 | -14.4            |
+| Vengeful Gladiator's Cleaver       | Gladiator's Pummeler         | 2.6        | 1975.3 ± 0.87 | -16.7            |
+| Vengeful Gladiator's Right Ripper  | Gladiator's Pummeler         | 2.6        | 1975.3 ± 0.87 | -16.7            |
+| Rising Tide                        | Netherbane                   | 2.6        | 1972.9 ± 0.86 | -19.1            |
+| Dragonmaw                          | Rod of the Sun King          | 2.7        | 1971.8 ± 0.91 | -20.2            |
+| Merciless Gladiator's Right Ripper | Rising Tide                  | 2.6        | 1968.7 ± 0.86 | -23.3            |
+| Netherbane                         | Rising Tide                  | 2.6        | 1967.2 ± 0.86 | -24.8            |
+| Merciless Gladiator's Right Ripper | Netherbane                   | 2.6        | 1964.2 ± 0.86 | -27.8            |
+| Netherbane                         | Netherbane                   | 2.6        | 1964.1 ± 0.88 | -27.9            |
+| Black Planar Edge                  | Rod of the Sun King          | 2.7        | 1962.8 ± 0.88 | -29.2            |
+| Rising Tide                        | Gladiator's Pummeler         | 2.6        | 1958.6 ± 0.86 | -33.4            |
+| Gladiator's Right Ripper           | Vengeful Gladiator's Cleaver | 2.6        | 1957.3 ± 0.85 | -34.7            |
+| Gladiator's Pummeler               | Vengeful Gladiator's Cleaver | 2.6        | 1956.7 ± 0.85 | -35.3            |
+| Merciless Gladiator's Right Ripper | Gladiator's Pummeler         | 2.6        | 1952.0 ± 0.85 | -40.0            |
+| The Decapitator                    | Vengeful Gladiator's Cleaver | 2.6        | 1951.2 ± 0.85 | -40.8            |
+| Drakefist Hammer                   | Rod of the Sun King          | 2.7        | 1950.4 ± 0.89 | -41.6            |
+| Netherbane                         | Gladiator's Pummeler         | 2.6        | 1949.5 ± 0.86 | -42.5            |
+| Fool's Bane                        | Vengeful Gladiator's Cleaver | 2.6        | 1947.6 ± 0.85 | -44.4            |
+| Gladiator's Right Ripper           | Rising Tide                  | 2.6        | 1945.1 ± 0.84 | -46.9            |
+| Gladiator's Pummeler               | Rising Tide                  | 2.6        | 1944.5 ± 0.84 | -47.5            |
+| Gladiator's Right Ripper           | Netherbane                   | 2.6        | 1941.7 ± 0.85 | -50.3            |
+| Gladiator's Pummeler               | Netherbane                   | 2.6        | 1941.1 ± 0.85 | -50.9            |
+| The Planar Edge                    | Rod of the Sun King          | 2.7        | 1940.3 ± 0.87 | -51.7            |
+| The Decapitator                    | Rising Tide                  | 2.6        | 1939.6 ± 0.84 | -52.4            |
+| The Decapitator                    | Netherbane                   | 2.6        | 1936.3 ± 0.86 | -55.7            |
+| Fool's Bane                        | Rising Tide                  | 2.6        | 1935.5 ± 0.84 | -56.5            |
+| Fool's Bane                        | Netherbane                   | 2.6        | 1931.9 ± 0.86 | -60.1            |
+| Gladiator's Right Ripper           | Gladiator's Pummeler         | 2.6        | 1927.9 ± 0.84 | -64.1            |
+| Gladiator's Pummeler               | Gladiator's Pummeler         | 2.6        | 1927.3 ± 0.84 | -64.7            |
+| The Decapitator                    | Gladiator's Pummeler         | 2.6        | 1922.2 ± 0.84 | -69.8            |
+| Fool's Bane                        | Gladiator's Pummeler         | 2.6        | 1917.9 ± 0.84 | -74.1            |
 
 The best combination, Syphon of the Nathrezim with Syphon of the Nathrezim, measures +31.8 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

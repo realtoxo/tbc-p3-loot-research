@@ -49,7 +49,10 @@ RULES = [
     ),
     Rule(
         "vague-hedge",
-        re.compile(r"\b(probably|might|maybe|perhaps|sort of|kind of)\b", re.IGNORECASE),
+        # "Righteous Might" is an item name, Hammer of Righteous Might, not a
+        # hedge, and item names reach the sim pages verbatim. The lookbehind
+        # exempts exactly that phrase and nothing else.
+        re.compile(r"\b(probably|(?<!Righteous )might|maybe|perhaps|sort of|kind of)\b", re.IGNORECASE),
         "vague hedge; name the condition the uncertainty depends on",
     ),
 ]

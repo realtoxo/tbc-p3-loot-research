@@ -46,18 +46,34 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-An Arms Warrior considers only two-handers, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The published Phase 3 page ranks only dual Warglaives, which this spec will not receive, so the Phase 3 candidates are the drop table's two-handers in the weapon classes a warrior wields, and the earlier candidates are the top of the EP Workbook's Two Hand ladder for this spec. This spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: it stays with the Retribution Paladin.
+An Arms Warrior considers only two-handers, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The published Phase 3 page ranks only dual Warglaives, which this spec will not receive, so the table is an enumeration of the EP Workbook's Two Hand ladder for this spec together with every worn and routed weapon, kept to the weapon classes a warrior wields. This spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: it stays with the Retribution Paladin.
 
 | Main hand                             | Off hand            | DPS           | Against this set |
 |---------------------------------------|---------------------|---------------|------------------|
 | Cataclysm's Edge                      | *empty, two-hander* | 2031.3 ± 1.14 | +47.2            |
 | Twinblade of the Phoenix *(this set)* | *empty, two-hander* | 1984.1 ± 1.10 | +0.0             |
 | Lionheart Executioner                 | *empty, two-hander* | 1976.6 ± 1.11 | -7.5             |
+| Lionheart Champion                    | *empty, two-hander* | 1935.2 ± 1.09 | -48.9            |
 | Torch of the Damned                   | *empty, two-hander* | 1908.3 ± 1.00 | -75.8            |
+| Gladiator's Greatsword                | *empty, two-hander* | 1887.3 ± 1.07 | -96.8            |
 | Vengeful Gladiator's Bonegrinder      | *empty, two-hander* | 1878.6 ± 0.99 | -105.5           |
 | Soul Cleaver                          | *empty, two-hander* | 1863.7 ± 1.01 | -120.4           |
+| Vengeful Gladiator's Decapitator      | *empty, two-hander* | 1849.4 ± 1.01 | -134.7           |
+| World Breaker                         | *empty, two-hander* | 1847.3 ± 0.97 | -136.8           |
+| Stormherald                           | *empty, two-hander* | 1842.3 ± 0.98 | -141.8           |
+| Bloodmoon                             | *empty, two-hander* | 1831.8 ± 1.00 | -152.3           |
 | Merciless Gladiator's Bonegrinder     | *empty, two-hander* | 1825.7 ± 0.96 | -158.4           |
 | Halberd of Desolation                 | *empty, two-hander* | 1801.3 ± 0.97 | -182.8           |
+| Deep Thunder                          | *empty, two-hander* | 1795.7 ± 0.96 | -188.4           |
+| Merciless Gladiator's Decapitator     | *empty, two-hander* | 1794.9 ± 0.98 | -189.2           |
+| Mooncleaver                           | *empty, two-hander* | 1786.0 ± 0.97 | -198.1           |
+| Gorehowl                              | *empty, two-hander* | 1761.6 ± 0.97 | -222.5           |
+| Hammer of the Naaru                   | *empty, two-hander* | 1760.2 ± 0.95 | -223.9           |
+| Axe of the Gronn Lords                | *empty, two-hander* | 1745.8 ± 0.96 | -238.3           |
+| Gladiator's Decapitator               | *empty, two-hander* | 1741.7 ± 0.96 | -242.4           |
+| Vengeful Gladiator's Painsaw          | *empty, two-hander* | 1594.8 ± 0.80 | -389.3           |
+| Merciless Gladiator's Painsaw         | *empty, two-hander* | 1558.9 ± 0.79 | -425.2           |
+| Gladiator's Painsaw                   | *empty, two-hander* | 1517.1 ± 0.79 | -467.0           |
 
 The best combination, Cataclysm's Edge alone, a two-hander, measures +47.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

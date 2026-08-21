@@ -1303,29 +1303,24 @@ the_hunter_ranged_pass:
     spec's ranged slot in both direction and size, and the council should weigh Legionkiller
     rolls accordingly. NOT A RULING.
 the_bis_profiles_audited_against_their_own_tables:
-  what: Every best-in-slot profile checked against its own measured weapon, ranged and
-    trinket tables, re-run at armor 7684 after the default-tier ruling and the 20 August
-    2026 batch, hunters re-anchored on two-handers, trinkets revised, Solarian's Sapphire
-    and the crafted hunter weapons out of the pools. A gap is the best measured row minus
-    the anchor figure.
-  the_state_after_the_batch: EVERY profile now wears its best measured combination at the
-    default tier, with three explained exceptions. The two bis_no_glaives profiles trail
-    the Warglaives by 120.9 and 187.0 at 7684, which is the question those profiles exist
-    to answer. The Survival Hunter's ranged table shows the Black Bow of the Betrayer 0.8
-    ahead of the worn Bristleblitz Striker, inside one standard error, not separated.
-  the_survival_trinket_exception_is_load_bearing: The Survival trinket table reads
-    Dragonspine with the Brooch 18.7 above the worn pair at 7684, and the profile REBUILT
-    that way measures 9.9 BELOW it, because losing Madness of the Betrayer takes 20 item
-    hit and the re-spent sockets cost more than the pair gains. The flip was tested and
-    declined the same day, recorded in data/judgments/trinket-routing.yaml, and it is the
-    second measured case behind the profile-level confirmation rule in
-    data/judgments/sim-context.yaml. A slot table prices the item alone; only a profile
-    prices what it displaces.
-  what_the_batch_was_worth: The hunter re-anchors alone moved the Beast Mastery best in
-    slot from 3580.7 to 3704.1 at armor 6193, and every revised trinket pair reproduced
-    its measured gain exactly except where the hit ripple said otherwise, which is now the
-    documented reason profiles confirm before they re-wear.
-what_is_still_open:
+  what: Every best-in-slot profile checked against its own measured tables at the default
+    armor, after the weapon rounds became ENUMERATIVE on 21 August 2026, every style-legal
+    ordered combination of the shortlist field plus the worn and routed weapons, 8344
+    variants across the thirteen specs. A gap is the best measured row minus the anchor
+    figure.
+  the_enumeration_confirmed_the_curation: The exhaustive tables surface NO weapon
+    combination the earlier curated rounds had missed. Every profile wears its best
+    measured weapons, and the only standing gaps are the two bis_no_glaives profiles
+    trailing the Warglaives by 120.9 and 187.0, which is the question those profiles
+    exist to answer, and the Survival trinket case below.
+  the_survival_trinket_exception_is_load_bearing: The Survival slot table still reads
+    Dragonspine with the Brooch 18.5 above the worn pair, and the profile REBUILT that way
+    measured 9.9 BELOW it, because losing Madness of the Betrayer takes 20 item hit and
+    the re-spent sockets cost more than the pair gains. Tested and declined, recorded in
+    data/judgments/trinket-routing.yaml; the second measured case behind the profile-level
+    confirmation rule in data/judgments/sim-context.yaml. A slot table prices the item
+    alone; only a profile prices what it displaces.
+what_is_still_open:what_is_still_open:
   a_source_checkout_matching_the_binary: The vendored binary is v0.0.116 and no such tag exists
     on the upstream repository, so a matching source checkout could not be fetched when it was
     tried on 20 August 2026. The standing rule covers it, an implementation claim is citable

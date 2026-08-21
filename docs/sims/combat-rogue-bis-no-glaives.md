@@ -46,22 +46,394 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-A Combat Rogue carries two one-handers, so every row below is a main hand with an off hand and no row is a two- hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The build is Combat Swords and the rotation is built on Sinister Strike, so no dagger is a row, because a dagger main hand changes the rotation entirely rather than the weapon alone, and the fist and mace rows carry a stated caveat: the build's Sword Specialization talent procs only on sword strikes and does not benefit them. The candidates are the top of the EP Workbook's Main Hand and Off Hand ladders for this spec. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Fury Warrior's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
+A Combat Rogue carries two one-handers, so every row below is a main hand with an off hand and no row is a two- hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The build is Combat Swords and the rotation is built on Sinister Strike, and every row runs under that rotation, so a dagger row measures the dagger inside the swords rotation rather than a dagger build, and the dagger, fist and mace rows carry a stated caveat: the build's Sword Specialization talent procs only on sword strikes and does not benefit them. The table is an enumeration of the EP Workbook's Main Hand ladder for this spec together with every worn and routed weapon, and every ordered pairing the field supports is a row. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Fury Warrior's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
 
 | Main hand                                | Off hand                         | DPS           | Against this set |
 |------------------------------------------|----------------------------------|---------------|------------------|
 | Warglaive of Azzinoth                    | Warglaive of Azzinoth            | 2597.6 ± 1.07 | +187.0           |
+| Warglaive of Azzinoth                    | Blade of Savagery                | 2476.9 ± 1.04 | +66.3            |
+| Warglaive of Azzinoth                    | Merciless Gladiator's Quickblade | 2436.3 ± 1.04 | +25.7            |
+| Vengeful Gladiator's Slicer              | Warglaive of Azzinoth            | 2429.7 ± 1.00 | +19.1            |
+| Blade of Infamy                          | Warglaive of Azzinoth            | 2420.5 ± 1.00 | +9.9             |
+| Talon of Azshara                         | Warglaive of Azzinoth            | 2418.5 ± 0.99 | +7.9             |
 | Vengeful Gladiator's Slicer *(this set)* | Blade of Savagery                | 2410.6 ± 0.98 | +0.0             |
 | Blade of Infamy                          | Blade of Savagery                | 2401.9 ± 0.99 | -8.7             |
-| Vengeful Gladiator's Slicer              | Vengeful Gladiator's Quickblade  | 2389.3 ± 1.00 | -21.3            |
-| Blade of Infamy                          | Vengeful Gladiator's Quickblade  | 2379.0 ± 1.00 | -31.6            |
+| Talon of Azshara                         | Blade of Savagery                | 2399.7 ± 0.99 | -10.9            |
+| Merciless Gladiator's Slicer             | Warglaive of Azzinoth            | 2396.8 ± 0.98 | -13.8            |
+| Dragonstrike                             | Warglaive of Azzinoth            | 2380.9 ± 1.00 | -29.7            |
+| Merciless Gladiator's Slicer             | Blade of Savagery                | 2378.2 ± 0.96 | -32.4            |
+| Vengeful Gladiator's Slicer              | Merciless Gladiator's Quickblade | 2371.7 ± 1.00 | -38.9            |
+| Gladiator's Slicer                       | Warglaive of Azzinoth            | 2364.2 ± 0.96 | -46.4            |
+| Dragonstrike                             | Blade of Savagery                | 2362.7 ± 0.99 | -47.9            |
+| Blade of Infamy                          | Merciless Gladiator's Quickblade | 2361.3 ± 0.99 | -49.3            |
 | Talon of Azshara                         | Merciless Gladiator's Quickblade | 2361.1 ± 0.99 | -49.5            |
+| Rod of the Sun King                      | Warglaive of Azzinoth            | 2355.9 ± 0.97 | -54.7            |
+| Dragonmaw                                | Warglaive of Azzinoth            | 2353.6 ± 0.99 | -57.0            |
+| Syphon of the Nathrezim                  | Warglaive of Azzinoth            | 2352.0 ± 0.98 | -58.6            |
+| Gladiator's Slicer                       | Blade of Savagery                | 2345.0 ± 0.95 | -65.6            |
 | Merciless Gladiator's Slicer             | Merciless Gladiator's Quickblade | 2339.2 ± 0.98 | -71.4            |
-| Blade of Infamy                          | Swiftsteel Bludgeon              | 2318.1 ± 0.94 | -92.5            |
+| Vengeful Gladiator's Right Ripper        | Warglaive of Azzinoth            | 2338.3 ± 0.96 | -72.3            |
+| Rod of the Sun King                      | Blade of Savagery                | 2336.9 ± 0.96 | -73.7            |
+| Dragonmaw                                | Blade of Savagery                | 2335.4 ± 0.98 | -75.2            |
+| Syphon of the Nathrezim                  | Blade of Savagery                | 2334.5 ± 0.98 | -76.1            |
+| Talon of the Phoenix                     | Warglaive of Azzinoth            | 2329.0 ± 0.95 | -81.6            |
+| Drakefist Hammer                         | Warglaive of Azzinoth            | 2324.8 ± 0.98 | -85.8            |
+| Claw of Molten Fury                      | Warglaive of Azzinoth            | 2323.7 ± 0.96 | -86.9            |
+| Dragonstrike                             | Merciless Gladiator's Quickblade | 2321.1 ± 0.98 | -89.5            |
+| Vengeful Gladiator's Right Ripper        | Blade of Savagery                | 2319.8 ± 0.94 | -90.8            |
+| Warglaive of Azzinoth                    | Boundless Agony                  | 2315.0 ± 0.99 | -95.6            |
+| Warglaive of Azzinoth                    | Vengeful Gladiator's Shanker     | 2312.8 ± 0.97 | -97.8            |
+| Talon of the Phoenix                     | Blade of Savagery                | 2310.7 ± 0.93 | -99.9            |
+| Warglaive of Azzinoth                    | Fang of Vashj                    | 2309.9 ± 0.98 | -100.7           |
+| Gladiator's Slicer                       | Merciless Gladiator's Quickblade | 2307.4 ± 0.97 | -103.2           |
+| Claw of Molten Fury                      | Blade of Savagery                | 2307.0 ± 0.95 | -103.6           |
+| Merciless Gladiator's Right Ripper       | Warglaive of Azzinoth            | 2306.6 ± 0.94 | -104.0           |
+| Drakefist Hammer                         | Blade of Savagery                | 2306.5 ± 0.96 | -104.1           |
+| Rod of the Sun King                      | Merciless Gladiator's Quickblade | 2300.0 ± 0.95 | -110.6           |
+| Warglaive of Azzinoth                    | Merciless Gladiator's Shanker    | 2295.0 ± 0.96 | -115.6           |
+| Syphon of the Nathrezim                  | Merciless Gladiator's Quickblade | 2294.7 ± 0.96 | -115.9           |
+| Dragonmaw                                | Merciless Gladiator's Quickblade | 2294.2 ± 0.96 | -116.4           |
+| Warglaive of Azzinoth                    | Vengeful Gladiator's Slicer      | 2293.7 ± 1.02 | -116.9           |
+| Warglaive of Azzinoth                    | Blade of Infamy                  | 2291.4 ± 1.03 | -119.2           |
+| Merciless Gladiator's Right Ripper       | Blade of Savagery                | 2288.3 ± 0.93 | -122.3           |
+| Warglaive of Azzinoth                    | Malchazeen                       | 2285.9 ± 0.97 | -124.7           |
+| Vengeful Gladiator's Right Ripper        | Merciless Gladiator's Quickblade | 2282.9 ± 0.94 | -127.7           |
+| Blade of Savagery                        | Warglaive of Azzinoth            | 2282.7 ± 0.80 | -127.9           |
+| Warglaive of Azzinoth                    | Shard of Azzinoth                | 2282.5 ± 0.99 | -128.1           |
+| Warglaive of Azzinoth                    | Talon of Azshara                 | 2280.0 ± 1.01 | -130.6           |
+| Gladiator's Right Ripper                 | Warglaive of Azzinoth            | 2276.7 ± 0.93 | -133.9           |
+| Warglaive of Azzinoth                    | Merciless Gladiator's Slicer     | 2276.6 ± 1.01 | -134.0           |
+| Fool's Bane                              | Warglaive of Azzinoth            | 2273.9 ± 0.92 | -136.7           |
+| Talon of the Phoenix                     | Merciless Gladiator's Quickblade | 2273.5 ± 0.94 | -137.1           |
+| Claw of Molten Fury                      | Merciless Gladiator's Quickblade | 2269.9 ± 0.95 | -140.7           |
+| Drakefist Hammer                         | Merciless Gladiator's Quickblade | 2265.8 ± 0.95 | -144.8           |
+| Blade of Savagery                        | Blade of Savagery                | 2265.2 ± 0.78 | -145.4           |
+| Warglaive of Azzinoth                    | Gladiator's Slicer               | 2260.7 ± 1.01 | -149.9           |
+| Vengeful Gladiator's Slicer              | Boundless Agony                  | 2260.1 ± 0.96 | -150.5           |
+| Gladiator's Right Ripper                 | Blade of Savagery                | 2258.2 ± 0.91 | -152.4           |
+| Vengeful Gladiator's Slicer              | Vengeful Gladiator's Shanker     | 2258.1 ± 0.96 | -152.5           |
+| Fool's Bane                              | Blade of Savagery                | 2256.5 ± 0.91 | -154.1           |
+| Vengeful Gladiator's Slicer              | Fang of Vashj                    | 2253.6 ± 0.94 | -157.0           |
+| Merciless Gladiator's Right Ripper       | Merciless Gladiator's Quickblade | 2251.1 ± 0.91 | -159.5           |
+| Blade of Infamy                          | Boundless Agony                  | 2251.0 ± 0.96 | -159.6           |
+| Blade of Infamy                          | Vengeful Gladiator's Shanker     | 2250.0 ± 0.96 | -160.6           |
+| Talon of Azshara                         | Boundless Agony                  | 2247.8 ± 0.95 | -162.8           |
+| Talon of Azshara                         | Vengeful Gladiator's Shanker     | 2247.0 ± 0.94 | -163.6           |
+| Blade of Infamy                          | Fang of Vashj                    | 2246.5 ± 0.95 | -164.1           |
+| Talon of Azshara                         | Fang of Vashj                    | 2241.0 ± 0.93 | -169.6           |
+| Vengeful Gladiator's Slicer              | Merciless Gladiator's Shanker    | 2241.0 ± 0.95 | -169.6           |
 | Vengeful Gladiator's Slicer              | Vengeful Gladiator's Slicer      | 2238.0 ± 0.98 | -172.6           |
+| Vengeful Gladiator's Slicer              | Blade of Infamy                  | 2235.7 ± 1.00 | -174.9           |
+| Blade of Infamy                          | Merciless Gladiator's Shanker    | 2232.0 ± 0.95 | -178.6           |
+| Vengeful Gladiator's Slicer              | Malchazeen                       | 2231.5 ± 0.95 | -179.1           |
+| Blade of Savagery                        | Merciless Gladiator's Quickblade | 2231.1 ± 0.78 | -179.5           |
+| Vengeful Gladiator's Slicer              | Shard of Azzinoth                | 2230.2 ± 0.95 | -180.4           |
+| Merciless Gladiator's Slicer             | Boundless Agony                  | 2229.2 ± 0.95 | -181.4           |
+| Blade of Infamy                          | Vengeful Gladiator's Slicer      | 2229.1 ± 1.00 | -181.5           |
+| Merciless Gladiator's Slicer             | Vengeful Gladiator's Shanker     | 2228.5 ± 0.94 | -182.1           |
+| Warglaive of Azzinoth                    | Rod of the Sun King              | 2228.4 ± 0.98 | -182.2           |
+| Talon of Azshara                         | Merciless Gladiator's Shanker    | 2228.3 ± 0.94 | -182.3           |
 | Blade of Infamy                          | Blade of Infamy                  | 2226.6 ± 0.98 | -184.0           |
-| Vengeful Gladiator's Right Ripper        | Vengeful Gladiator's Left Ripper | 2211.4 ± 0.88 | -199.2           |
+| Talon of Azshara                         | Vengeful Gladiator's Slicer      | 2226.2 ± 0.98 | -184.4           |
+| Talon of Azshara                         | Blade of Infamy                  | 2223.9 ± 0.98 | -186.7           |
+| Vengeful Gladiator's Slicer              | Talon of Azshara                 | 2223.3 ± 0.98 | -187.3           |
+| Merciless Gladiator's Slicer             | Fang of Vashj                    | 2223.0 ± 0.92 | -187.6           |
+| Blade of Infamy                          | Malchazeen                       | 2222.4 ± 0.95 | -188.2           |
+| Gladiator's Right Ripper                 | Merciless Gladiator's Quickblade | 2221.8 ± 0.90 | -188.8           |
+| Blade of Infamy                          | Shard of Azzinoth                | 2221.6 ± 0.95 | -189.0           |
+| Vengeful Gladiator's Slicer              | Merciless Gladiator's Slicer     | 2220.1 ± 0.97 | -190.5           |
+| Talon of Azshara                         | Malchazeen                       | 2219.9 ± 0.93 | -190.7           |
+| Fool's Bane                              | Merciless Gladiator's Quickblade | 2218.4 ± 0.89 | -192.2           |
+| Talon of Azshara                         | Shard of Azzinoth                | 2218.0 ± 0.94 | -192.6           |
+| Blade of Infamy                          | Talon of Azshara                 | 2214.9 ± 0.98 | -195.7           |
+| Talon of Azshara                         | Talon of Azshara                 | 2212.2 ± 0.96 | -198.4           |
+| Blade of Infamy                          | Merciless Gladiator's Slicer     | 2211.7 ± 0.99 | -198.9           |
+| Merciless Gladiator's Slicer             | Merciless Gladiator's Shanker    | 2211.2 ± 0.94 | -199.4           |
 | Talon of Azshara                         | Merciless Gladiator's Slicer     | 2208.8 ± 0.98 | -201.8           |
+| Merciless Gladiator's Slicer             | Vengeful Gladiator's Slicer      | 2207.8 ± 0.97 | -202.8           |
+| Merciless Gladiator's Slicer             | Blade of Infamy                  | 2206.1 ± 0.99 | -204.5           |
+| Warglaive of Azzinoth                    | Syphon of the Nathrezim          | 2206.1 ± 0.99 | -204.5           |
+| Vengeful Gladiator's Slicer              | Gladiator's Slicer               | 2204.7 ± 0.97 | -205.9           |
+| Merciless Gladiator's Slicer             | Shard of Azzinoth                | 2201.9 ± 0.93 | -208.7           |
+| Merciless Gladiator's Slicer             | Malchazeen                       | 2201.0 ± 0.92 | -209.6           |
+| Gladiator's Slicer                       | Boundless Agony                  | 2198.9 ± 0.93 | -211.7           |
+| Dragonstrike                             | Boundless Agony                  | 2198.3 ± 0.93 | -212.3           |
+| Gladiator's Slicer                       | Vengeful Gladiator's Shanker     | 2197.5 ± 0.93 | -213.1           |
+| Dragonstrike                             | Vengeful Gladiator's Shanker     | 2197.0 ± 0.94 | -213.6           |
+| Blade of Infamy                          | Gladiator's Slicer               | 2196.4 ± 0.99 | -214.2           |
+| Merciless Gladiator's Slicer             | Talon of Azshara                 | 2193.7 ± 0.97 | -216.9           |
+| Talon of Azshara                         | Gladiator's Slicer               | 2193.1 ± 0.97 | -217.5           |
+| Gladiator's Slicer                       | Fang of Vashj                    | 2192.8 ± 0.91 | -217.8           |
+| Dragonstrike                             | Fang of Vashj                    | 2191.7 ± 0.93 | -218.9           |
+| Merciless Gladiator's Slicer             | Merciless Gladiator's Slicer     | 2191.1 ± 0.96 | -219.5           |
+| Rod of the Sun King                      | Boundless Agony                  | 2182.2 ± 0.90 | -228.4           |
+| Dragonstrike                             | Vengeful Gladiator's Slicer      | 2182.0 ± 0.98 | -228.6           |
+| Gladiator's Slicer                       | Merciless Gladiator's Shanker    | 2180.7 ± 0.92 | -229.9           |
+| Rod of the Sun King                      | Vengeful Gladiator's Shanker     | 2180.7 ± 0.89 | -229.9           |
+| Dragonstrike                             | Merciless Gladiator's Shanker    | 2180.4 ± 0.92 | -230.2           |
+| Dragonstrike                             | Blade of Infamy                  | 2179.1 ± 0.99 | -231.5           |
+| Gladiator's Slicer                       | Vengeful Gladiator's Slicer      | 2177.5 ± 0.95 | -233.1           |
+| Gladiator's Slicer                       | Blade of Infamy                  | 2176.0 ± 0.97 | -234.6           |
+| Rod of the Sun King                      | Fang of Vashj                    | 2175.3 ± 0.88 | -235.3           |
+| Merciless Gladiator's Slicer             | Gladiator's Slicer               | 2175.2 ± 0.95 | -235.4           |
+| Vengeful Gladiator's Slicer              | Rod of the Sun King              | 2174.7 ± 0.96 | -235.9           |
+| Dragonmaw                                | Boundless Agony                  | 2173.0 ± 0.92 | -237.6           |
+| Dragonmaw                                | Vengeful Gladiator's Shanker     | 2172.0 ± 0.92 | -238.6           |
+| Syphon of the Nathrezim                  | Boundless Agony                  | 2171.8 ± 0.91 | -238.8           |
+| Gladiator's Slicer                       | Shard of Azzinoth                | 2171.2 ± 0.92 | -239.4           |
+| Syphon of the Nathrezim                  | Vengeful Gladiator's Shanker     | 2171.2 ± 0.91 | -239.4           |
+| Gladiator's Slicer                       | Malchazeen                       | 2170.9 ± 0.92 | -239.7           |
+| Vengeful Gladiator's Right Ripper        | Boundless Agony                  | 2170.6 ± 0.90 | -240.0           |
+| Dragonstrike                             | Malchazeen                       | 2170.5 ± 0.91 | -240.1           |
+| Dragonstrike                             | Shard of Azzinoth                | 2169.2 ± 0.94 | -241.4           |
+| Rod of the Sun King                      | Vengeful Gladiator's Slicer      | 2168.6 ± 0.93 | -242.0           |
+| Dragonstrike                             | Talon of Azshara                 | 2168.2 ± 0.97 | -242.4           |
+| Vengeful Gladiator's Right Ripper        | Vengeful Gladiator's Shanker     | 2168.1 ± 0.89 | -242.5           |
+| Dragonmaw                                | Fang of Vashj                    | 2166.8 ± 0.91 | -243.8           |
+| Blade of Infamy                          | Rod of the Sun King              | 2166.2 ± 0.97 | -244.4           |
+| Rod of the Sun King                      | Blade of Infamy                  | 2165.5 ± 0.95 | -245.1           |
+| Syphon of the Nathrezim                  | Fang of Vashj                    | 2164.9 ± 0.89 | -245.7           |
+| Dragonstrike                             | Merciless Gladiator's Slicer     | 2164.7 ± 0.98 | -245.9           |
+| Rod of the Sun King                      | Merciless Gladiator's Shanker    | 2163.9 ± 0.88 | -246.7           |
+| Vengeful Gladiator's Right Ripper        | Fang of Vashj                    | 2163.9 ± 0.88 | -246.7           |
+| Gladiator's Slicer                       | Talon of Azshara                 | 2163.7 ± 0.95 | -246.9           |
+| Talon of Azshara                         | Rod of the Sun King              | 2163.0 ± 0.96 | -247.6           |
+| Gladiator's Slicer                       | Merciless Gladiator's Slicer     | 2160.4 ± 0.94 | -250.2           |
+| Blade of Savagery                        | Boundless Agony                  | 2160.4 ± 0.79 | -250.2           |
+| Blade of Savagery                        | Vengeful Gladiator's Shanker     | 2159.7 ± 0.79 | -250.9           |
+| Dragonmaw                                | Vengeful Gladiator's Slicer      | 2157.2 ± 0.97 | -253.4           |
+| Vengeful Gladiator's Slicer              | Syphon of the Nathrezim          | 2156.1 ± 0.95 | -254.5           |
+| Talon of the Phoenix                     | Boundless Agony                  | 2156.0 ± 0.89 | -254.6           |
+| Dragonmaw                                | Merciless Gladiator's Shanker    | 2155.5 ± 0.91 | -255.1           |
+| Syphon of the Nathrezim                  | Vengeful Gladiator's Slicer      | 2155.0 ± 0.95 | -255.6           |
+| Blade of Savagery                        | Fang of Vashj                    | 2154.8 ± 0.76 | -255.8           |
+| Dragonmaw                                | Blade of Infamy                  | 2154.5 ± 0.97 | -256.1           |
+| Rod of the Sun King                      | Talon of Azshara                 | 2154.5 ± 0.94 | -256.1           |
+| Syphon of the Nathrezim                  | Merciless Gladiator's Shanker    | 2154.2 ± 0.89 | -256.4           |
+| Talon of the Phoenix                     | Vengeful Gladiator's Shanker     | 2153.9 ± 0.88 | -256.7           |
+| Rod of the Sun King                      | Malchazeen                       | 2153.8 ± 0.88 | -256.8           |
+| Rod of the Sun King                      | Shard of Azzinoth                | 2153.5 ± 0.90 | -257.1           |
+| Syphon of the Nathrezim                  | Blade of Infamy                  | 2152.4 ± 0.96 | -258.2           |
+| Claw of Molten Fury                      | Vengeful Gladiator's Shanker     | 2151.2 ± 0.88 | -259.4           |
+| Rod of the Sun King                      | Merciless Gladiator's Slicer     | 2151.1 ± 0.93 | -259.5           |
+| Claw of Molten Fury                      | Boundless Agony                  | 2150.9 ± 0.89 | -259.7           |
+| Vengeful Gladiator's Right Ripper        | Merciless Gladiator's Shanker    | 2150.6 ± 0.88 | -260.0           |
+| Vengeful Gladiator's Right Ripper        | Vengeful Gladiator's Slicer      | 2150.3 ± 0.93 | -260.3           |
+| Vengeful Gladiator's Right Ripper        | Blade of Infamy                  | 2149.5 ± 0.94 | -261.1           |
+| Dragonstrike                             | Gladiator's Slicer               | 2149.0 ± 0.97 | -261.6           |
+| Talon of the Phoenix                     | Fang of Vashj                    | 2149.0 ± 0.87 | -261.6           |
+| Blade of Infamy                          | Syphon of the Nathrezim          | 2147.3 ± 0.96 | -263.3           |
+| Claw of Molten Fury                      | Fang of Vashj                    | 2146.7 ± 0.88 | -263.9           |
+| Drakefist Hammer                         | Boundless Agony                  | 2146.3 ± 0.91 | -264.3           |
+| Dragonmaw                                | Malchazeen                       | 2145.7 ± 0.90 | -264.9           |
+| Drakefist Hammer                         | Vengeful Gladiator's Shanker     | 2145.6 ± 0.91 | -265.0           |
+| Merciless Gladiator's Slicer             | Rod of the Sun King              | 2145.6 ± 0.95 | -265.0           |
+| Gladiator's Slicer                       | Gladiator's Slicer               | 2144.9 ± 0.94 | -265.7           |
+| Dragonmaw                                | Shard of Azzinoth                | 2144.7 ± 0.92 | -265.9           |
+| Syphon of the Nathrezim                  | Malchazeen                       | 2143.7 ± 0.88 | -266.9           |
+| Dragonmaw                                | Talon of Azshara                 | 2143.6 ± 0.96 | -267.0           |
+| Syphon of the Nathrezim                  | Shard of Azzinoth                | 2143.3 ± 0.91 | -267.3           |
+| Blade of Savagery                        | Merciless Gladiator's Shanker    | 2142.8 ± 0.78 | -267.8           |
+| Vengeful Gladiator's Right Ripper        | Malchazeen                       | 2142.3 ± 0.87 | -268.3           |
+| Syphon of the Nathrezim                  | Talon of Azshara                 | 2141.5 ± 0.94 | -269.1           |
+| Talon of Azshara                         | Syphon of the Nathrezim          | 2141.3 ± 0.96 | -269.3           |
+| Merciless Gladiator's Right Ripper       | Boundless Agony                  | 2141.2 ± 0.88 | -269.4           |
+| Drakefist Hammer                         | Fang of Vashj                    | 2140.5 ± 0.90 | -270.1           |
+| Vengeful Gladiator's Right Ripper        | Shard of Azzinoth                | 2140.5 ± 0.90 | -270.1           |
+| Shard of Azzinoth                        | Warglaive of Azzinoth            | 2140.1 ± 0.80 | -270.5           |
+| Dragonmaw                                | Merciless Gladiator's Slicer     | 2140.0 ± 0.97 | -270.6           |
+| Vengeful Gladiator's Shanker             | Warglaive of Azzinoth            | 2139.8 ± 0.78 | -270.8           |
+| Talon of the Phoenix                     | Vengeful Gladiator's Slicer      | 2139.3 ± 0.92 | -271.3           |
+| Merciless Gladiator's Right Ripper       | Vengeful Gladiator's Shanker     | 2138.6 ± 0.87 | -272.0           |
+| Talon of the Phoenix                     | Blade of Infamy                  | 2138.1 ± 0.93 | -272.5           |
+| Syphon of the Nathrezim                  | Merciless Gladiator's Slicer     | 2137.1 ± 0.95 | -273.5           |
+| Claw of Molten Fury                      | Vengeful Gladiator's Slicer      | 2136.3 ± 0.94 | -274.3           |
+| Rod of the Sun King                      | Gladiator's Slicer               | 2136.1 ± 0.92 | -274.5           |
+| Talon of the Phoenix                     | Merciless Gladiator's Shanker    | 2136.0 ± 0.87 | -274.6           |
+| Vengeful Gladiator's Right Ripper        | Talon of Azshara                 | 2135.7 ± 0.92 | -274.9           |
+| Boundless Agony                          | Warglaive of Azzinoth            | 2135.2 ± 0.79 | -275.4           |
+| Merciless Gladiator's Right Ripper       | Fang of Vashj                    | 2135.2 ± 0.87 | -275.4           |
+| Claw of Molten Fury                      | Blade of Infamy                  | 2134.0 ± 0.95 | -276.6           |
+| Claw of Molten Fury                      | Merciless Gladiator's Shanker    | 2133.9 ± 0.88 | -276.7           |
+| Blade of Savagery                        | Shard of Azzinoth                | 2133.6 ± 0.79 | -277.0           |
+| Vengeful Gladiator's Right Ripper        | Merciless Gladiator's Slicer     | 2133.4 ± 0.92 | -277.2           |
+| Blade of Savagery                        | Malchazeen                       | 2133.3 ± 0.77 | -277.3           |
+| Drakefist Hammer                         | Vengeful Gladiator's Slicer      | 2131.0 ± 0.95 | -279.6           |
+| Fang of Vashj                            | Warglaive of Azzinoth            | 2130.0 ± 0.77 | -280.6           |
+| Drakefist Hammer                         | Merciless Gladiator's Shanker    | 2129.1 ± 0.90 | -281.5           |
+| Drakefist Hammer                         | Blade of Infamy                  | 2128.5 ± 0.96 | -282.1           |
+| Merciless Gladiator's Slicer             | Syphon of the Nathrezim          | 2127.2 ± 0.94 | -283.4           |
+| Talon of the Phoenix                     | Malchazeen                       | 2127.0 ± 0.87 | -283.6           |
+| Talon of the Phoenix                     | Shard of Azzinoth                | 2126.5 ± 0.87 | -284.1           |
+| Blade of Savagery                        | Vengeful Gladiator's Slicer      | 2124.7 ± 0.81 | -285.9           |
+| Talon of the Phoenix                     | Talon of Azshara                 | 2124.5 ± 0.92 | -286.1           |
+| Dragonmaw                                | Gladiator's Slicer               | 2124.4 ± 0.96 | -286.2           |
+| Claw of Molten Fury                      | Malchazeen                       | 2124.4 ± 0.88 | -286.2           |
+| Claw of Molten Fury                      | Shard of Azzinoth                | 2123.7 ± 0.89 | -286.9           |
+| Shard of Azzinoth                        | Blade of Savagery                | 2123.6 ± 0.78 | -287.0           |
+| Syphon of the Nathrezim                  | Gladiator's Slicer               | 2122.4 ± 0.94 | -288.2           |
+| Talon of the Phoenix                     | Merciless Gladiator's Slicer     | 2122.1 ± 0.91 | -288.5           |
+| Vengeful Gladiator's Shanker             | Blade of Savagery                | 2122.0 ± 0.77 | -288.6           |
+| Merciless Gladiator's Right Ripper       | Merciless Gladiator's Shanker    | 2121.6 ± 0.86 | -289.0           |
+| Merciless Gladiator's Right Ripper       | Vengeful Gladiator's Slicer      | 2121.5 ± 0.91 | -289.1           |
+| Blade of Savagery                        | Blade of Infamy                  | 2121.5 ± 0.82 | -289.1           |
+| Claw of Molten Fury                      | Talon of Azshara                 | 2121.5 ± 0.93 | -289.1           |
+| Merciless Gladiator's Right Ripper       | Blade of Infamy                  | 2120.5 ± 0.92 | -290.1           |
+| Drakefist Hammer                         | Malchazeen                       | 2119.5 ± 0.89 | -291.1           |
+| Drakefist Hammer                         | Shard of Azzinoth                | 2118.9 ± 0.91 | -291.7           |
+| Claw of Molten Fury                      | Merciless Gladiator's Slicer     | 2118.5 ± 0.93 | -292.1           |
+| Vengeful Gladiator's Right Ripper        | Gladiator's Slicer               | 2117.7 ± 0.91 | -292.9           |
+| Drakefist Hammer                         | Talon of Azshara                 | 2117.5 ± 0.94 | -293.1           |
+| Boundless Agony                          | Blade of Savagery                | 2116.8 ± 0.77 | -293.8           |
+| Gladiator's Slicer                       | Rod of the Sun King              | 2116.7 ± 0.93 | -293.9           |
+| Dragonstrike                             | Rod of the Sun King              | 2113.9 ± 0.94 | -296.7           |
+| Drakefist Hammer                         | Merciless Gladiator's Slicer     | 2113.8 ± 0.95 | -296.8           |
+| Gladiator's Right Ripper                 | Boundless Agony                  | 2112.9 ± 0.87 | -297.7           |
+| Merciless Gladiator's Right Ripper       | Malchazeen                       | 2112.8 ± 0.86 | -297.8           |
+| Fang of Vashj                            | Blade of Savagery                | 2112.7 ± 0.75 | -297.9           |
+| Merciless Gladiator's Shanker            | Warglaive of Azzinoth            | 2111.9 ± 0.77 | -298.7           |
+| Blade of Savagery                        | Talon of Azshara                 | 2111.9 ± 0.80 | -298.7           |
+| Merciless Gladiator's Right Ripper       | Shard of Azzinoth                | 2111.3 ± 0.88 | -299.3           |
+| Gladiator's Right Ripper                 | Vengeful Gladiator's Shanker     | 2110.9 ± 0.86 | -299.7           |
+| Fool's Bane                              | Boundless Agony                  | 2109.4 ± 0.86 | -301.2           |
+| Fool's Bane                              | Vengeful Gladiator's Shanker     | 2108.8 ± 0.86 | -301.8           |
+| Merciless Gladiator's Right Ripper       | Talon of Azshara                 | 2107.3 ± 0.91 | -303.3           |
+| Blade of Savagery                        | Merciless Gladiator's Slicer     | 2107.3 ± 0.80 | -303.3           |
+| Gladiator's Right Ripper                 | Fang of Vashj                    | 2107.1 ± 0.86 | -303.5           |
+| Talon of the Phoenix                     | Gladiator's Slicer               | 2106.9 ± 0.91 | -303.7           |
+| Merciless Gladiator's Right Ripper       | Merciless Gladiator's Slicer     | 2104.0 ± 0.90 | -306.6           |
+| Claw of Molten Fury                      | Gladiator's Slicer               | 2103.7 ± 0.93 | -306.9           |
+| Fool's Bane                              | Fang of Vashj                    | 2103.2 ± 0.84 | -307.4           |
+| Rod of the Sun King                      | Rod of the Sun King              | 2101.3 ± 0.91 | -309.3           |
+| Gladiator's Slicer                       | Syphon of the Nathrezim          | 2098.6 ± 0.92 | -312.0           |
+| Drakefist Hammer                         | Gladiator's Slicer               | 2098.3 ± 0.95 | -312.3           |
+| Dragonstrike                             | Syphon of the Nathrezim          | 2097.6 ± 0.95 | -313.0           |
+| Merciless Gladiator's Shanker            | Blade of Savagery                | 2094.6 ± 0.76 | -316.0           |
+| Gladiator's Right Ripper                 | Merciless Gladiator's Shanker    | 2093.9 ± 0.85 | -316.7           |
+| Gladiator's Right Ripper                 | Vengeful Gladiator's Slicer      | 2093.7 ± 0.90 | -316.9           |
+| Gladiator's Right Ripper                 | Blade of Infamy                  | 2093.1 ± 0.91 | -317.5           |
+| Blade of Savagery                        | Gladiator's Slicer               | 2092.2 ± 0.80 | -318.4           |
+| Fool's Bane                              | Merciless Gladiator's Shanker    | 2091.9 ± 0.84 | -318.7           |
+| Fool's Bane                              | Vengeful Gladiator's Slicer      | 2091.5 ± 0.89 | -319.1           |
+| Malchazeen                               | Warglaive of Azzinoth            | 2091.5 ± 0.76 | -319.1           |
+| Fool's Bane                              | Blade of Infamy                  | 2090.7 ± 0.90 | -319.9           |
+| Shard of Azzinoth                        | Merciless Gladiator's Quickblade | 2090.2 ± 0.77 | -320.4           |
+| Dragonmaw                                | Rod of the Sun King              | 2090.1 ± 0.92 | -320.5           |
+| Vengeful Gladiator's Shanker             | Merciless Gladiator's Quickblade | 2089.5 ± 0.77 | -321.1           |
+| Merciless Gladiator's Right Ripper       | Gladiator's Slicer               | 2089.3 ± 0.90 | -321.3           |
+| Vengeful Gladiator's Right Ripper        | Rod of the Sun King              | 2088.7 ± 0.90 | -321.9           |
+| Syphon of the Nathrezim                  | Rod of the Sun King              | 2087.8 ± 0.91 | -322.8           |
+| Gladiator's Right Ripper                 | Malchazeen                       | 2085.3 ± 0.85 | -325.3           |
+| Boundless Agony                          | Merciless Gladiator's Quickblade | 2085.2 ± 0.77 | -325.4           |
+| Gladiator's Right Ripper                 | Shard of Azzinoth                | 2084.4 ± 0.87 | -326.2           |
+| Rod of the Sun King                      | Syphon of the Nathrezim          | 2083.8 ± 0.92 | -326.8           |
+| Blade of Savagery                        | Rod of the Sun King              | 2083.5 ± 0.78 | -327.1           |
+| Fool's Bane                              | Shard of Azzinoth                | 2083.1 ± 0.86 | -327.5           |
+| Fool's Bane                              | Malchazeen                       | 2082.4 ± 0.84 | -328.2           |
+| Fang of Vashj                            | Merciless Gladiator's Quickblade | 2081.2 ± 0.75 | -329.4           |
+| Gladiator's Right Ripper                 | Talon of Azshara                 | 2079.6 ± 0.89 | -331.0           |
+| Fool's Bane                              | Talon of Azshara                 | 2078.5 ± 0.89 | -332.1           |
+| Gladiator's Right Ripper                 | Merciless Gladiator's Slicer     | 2077.2 ± 0.89 | -333.4           |
+| Talon of the Phoenix                     | Rod of the Sun King              | 2076.0 ± 0.90 | -334.6           |
+| Malchazeen                               | Blade of Savagery                | 2074.9 ± 0.75 | -335.7           |
+| Fool's Bane                              | Merciless Gladiator's Slicer     | 2074.6 ± 0.88 | -336.0           |
+| Dragonmaw                                | Syphon of the Nathrezim          | 2074.1 ± 0.94 | -336.5           |
+| Claw of Molten Fury                      | Rod of the Sun King              | 2071.6 ± 0.91 | -339.0           |
+| Blade of Savagery                        | Syphon of the Nathrezim          | 2068.1 ± 0.79 | -342.5           |
+| Syphon of the Nathrezim                  | Syphon of the Nathrezim          | 2066.8 ± 0.90 | -343.8           |
+| Vengeful Gladiator's Right Ripper        | Syphon of the Nathrezim          | 2066.4 ± 0.90 | -344.2           |
+| Drakefist Hammer                         | Rod of the Sun King              | 2064.9 ± 0.91 | -345.7           |
+| Merciless Gladiator's Shanker            | Merciless Gladiator's Quickblade | 2062.4 ± 0.75 | -348.2           |
+| Gladiator's Right Ripper                 | Gladiator's Slicer               | 2062.0 ± 0.89 | -348.6           |
+| Merciless Gladiator's Right Ripper       | Rod of the Sun King              | 2060.9 ± 0.88 | -349.7           |
+| Fool's Bane                              | Gladiator's Slicer               | 2059.4 ± 0.88 | -351.2           |
+| Talon of the Phoenix                     | Syphon of the Nathrezim          | 2058.6 ± 0.89 | -352.0           |
+| Claw of Molten Fury                      | Syphon of the Nathrezim          | 2053.9 ± 0.90 | -356.7           |
+| Drakefist Hammer                         | Syphon of the Nathrezim          | 2049.3 ± 0.93 | -361.3           |
+| Malchazeen                               | Merciless Gladiator's Quickblade | 2043.0 ± 0.74 | -367.6           |
+| Merciless Gladiator's Right Ripper       | Syphon of the Nathrezim          | 2038.5 ± 0.89 | -372.1           |
+| Gladiator's Right Ripper                 | Rod of the Sun King              | 2034.6 ± 0.88 | -376.0           |
+| Fool's Bane                              | Rod of the Sun King              | 2032.4 ± 0.87 | -378.2           |
+| Gladiator's Right Ripper                 | Syphon of the Nathrezim          | 2012.6 ± 0.88 | -398.0           |
+| Fool's Bane                              | Syphon of the Nathrezim          | 2011.0 ± 0.87 | -399.6           |
+| Vengeful Gladiator's Shanker             | Boundless Agony                  | 2008.1 ± 0.75 | -402.5           |
+| Vengeful Gladiator's Shanker             | Vengeful Gladiator's Shanker     | 2007.0 ± 0.73 | -403.6           |
+| Shard of Azzinoth                        | Boundless Agony                  | 2006.0 ± 0.76 | -404.6           |
+| Boundless Agony                          | Boundless Agony                  | 2004.9 ± 0.75 | -405.7           |
+| Shard of Azzinoth                        | Vengeful Gladiator's Shanker     | 2004.4 ± 0.75 | -406.2           |
+| Boundless Agony                          | Vengeful Gladiator's Shanker     | 2003.3 ± 0.74 | -407.3           |
+| Vengeful Gladiator's Shanker             | Fang of Vashj                    | 2003.0 ± 0.73 | -407.6           |
+| Shard of Azzinoth                        | Fang of Vashj                    | 2001.5 ± 0.74 | -409.1           |
+| Fang of Vashj                            | Boundless Agony                  | 1999.4 ± 0.74 | -411.2           |
+| Boundless Agony                          | Fang of Vashj                    | 1999.4 ± 0.74 | -411.2           |
+| Fang of Vashj                            | Vengeful Gladiator's Shanker     | 1998.3 ± 0.73 | -412.3           |
+| Fang of Vashj                            | Fang of Vashj                    | 1994.1 ± 0.73 | -416.5           |
+| Vengeful Gladiator's Shanker             | Merciless Gladiator's Shanker    | 1991.6 ± 0.73 | -419.0           |
+| Vengeful Gladiator's Shanker             | Vengeful Gladiator's Slicer      | 1991.2 ± 0.78 | -419.4           |
+| Shard of Azzinoth                        | Vengeful Gladiator's Slicer      | 1989.5 ± 0.79 | -421.1           |
+| Vengeful Gladiator's Shanker             | Blade of Infamy                  | 1989.5 ± 0.77 | -421.1           |
+| Shard of Azzinoth                        | Merciless Gladiator's Shanker    | 1988.4 ± 0.75 | -422.2           |
+| Boundless Agony                          | Vengeful Gladiator's Slicer      | 1987.7 ± 0.77 | -422.9           |
+| Shard of Azzinoth                        | Blade of Infamy                  | 1987.0 ± 0.80 | -423.6           |
+| Boundless Agony                          | Merciless Gladiator's Shanker    | 1986.2 ± 0.73 | -424.4           |
+| Boundless Agony                          | Blade of Infamy                  | 1985.8 ± 0.78 | -424.8           |
+| Vengeful Gladiator's Shanker             | Shard of Azzinoth                | 1985.8 ± 0.74 | -424.8           |
+| Boundless Agony                          | Shard of Azzinoth                | 1982.5 ± 0.75 | -428.1           |
+| Fang of Vashj                            | Vengeful Gladiator's Slicer      | 1982.2 ± 0.76 | -428.4           |
+| Merciless Gladiator's Shanker            | Vengeful Gladiator's Shanker     | 1982.2 ± 0.73 | -428.4           |
+| Fang of Vashj                            | Merciless Gladiator's Shanker    | 1981.9 ± 0.72 | -428.7           |
+| Vengeful Gladiator's Shanker             | Malchazeen                       | 1981.8 ± 0.73 | -428.8           |
+| Merciless Gladiator's Shanker            | Boundless Agony                  | 1981.5 ± 0.73 | -429.1           |
+| Shard of Azzinoth                        | Shard of Azzinoth                | 1980.8 ± 0.76 | -429.8           |
+| Shard of Azzinoth                        | Malchazeen                       | 1979.9 ± 0.74 | -430.7           |
+| Fang of Vashj                            | Blade of Infamy                  | 1979.4 ± 0.77 | -431.2           |
+| Vengeful Gladiator's Shanker             | Talon of Azshara                 | 1977.7 ± 0.79 | -432.9           |
+| Shard of Azzinoth                        | Talon of Azshara                 | 1977.5 ± 0.78 | -433.1           |
+| Merciless Gladiator's Shanker            | Fang of Vashj                    | 1977.2 ± 0.71 | -433.4           |
+| Boundless Agony                          | Malchazeen                       | 1977.1 ± 0.73 | -433.5           |
+| Fang of Vashj                            | Shard of Azzinoth                | 1976.1 ± 0.74 | -434.5           |
+| Vengeful Gladiator's Shanker             | Merciless Gladiator's Slicer     | 1974.6 ± 0.78 | -436.0           |
+| Shard of Azzinoth                        | Merciless Gladiator's Slicer     | 1973.8 ± 0.79 | -436.8           |
+| Boundless Agony                          | Talon of Azshara                 | 1973.7 ± 0.78 | -436.9           |
+| Fang of Vashj                            | Malchazeen                       | 1972.2 ± 0.72 | -438.4           |
+| Boundless Agony                          | Merciless Gladiator's Slicer     | 1971.1 ± 0.77 | -439.5           |
+| Fang of Vashj                            | Talon of Azshara                 | 1969.5 ± 0.75 | -441.1           |
+| Fang of Vashj                            | Merciless Gladiator's Slicer     | 1966.1 ± 0.76 | -444.5           |
+| Merciless Gladiator's Shanker            | Merciless Gladiator's Shanker    | 1966.0 ± 0.72 | -444.6           |
+| Merciless Gladiator's Shanker            | Vengeful Gladiator's Slicer      | 1965.3 ± 0.77 | -445.3           |
+| Merciless Gladiator's Shanker            | Blade of Infamy                  | 1963.9 ± 0.76 | -446.7           |
+| Malchazeen                               | Vengeful Gladiator's Shanker     | 1963.1 ± 0.72 | -447.5           |
+| Malchazeen                               | Boundless Agony                  | 1963.0 ± 0.72 | -447.6           |
+| Merciless Gladiator's Shanker            | Shard of Azzinoth                | 1960.2 ± 0.73 | -450.4           |
+| Vengeful Gladiator's Shanker             | Gladiator's Slicer               | 1960.2 ± 0.77 | -450.4           |
+| Shard of Azzinoth                        | Gladiator's Slicer               | 1958.7 ± 0.78 | -451.9           |
+| Malchazeen                               | Fang of Vashj                    | 1958.3 ± 0.71 | -452.3           |
+| Boundless Agony                          | Gladiator's Slicer               | 1956.3 ± 0.77 | -454.3           |
+| Merciless Gladiator's Shanker            | Malchazeen                       | 1955.4 ± 0.72 | -455.2           |
+| Merciless Gladiator's Shanker            | Talon of Azshara                 | 1952.3 ± 0.77 | -458.3           |
+| Fang of Vashj                            | Gladiator's Slicer               | 1951.5 ± 0.75 | -459.1           |
+| Merciless Gladiator's Shanker            | Merciless Gladiator's Slicer     | 1949.1 ± 0.76 | -461.5           |
+| Malchazeen                               | Vengeful Gladiator's Slicer      | 1946.7 ± 0.76 | -463.9           |
+| Malchazeen                               | Merciless Gladiator's Shanker    | 1946.1 ± 0.71 | -464.5           |
+| Malchazeen                               | Blade of Infamy                  | 1945.6 ± 0.76 | -465.0           |
+| Vengeful Gladiator's Shanker             | Rod of the Sun King              | 1941.9 ± 0.76 | -468.7           |
+| Malchazeen                               | Shard of Azzinoth                | 1941.6 ± 0.72 | -469.0           |
+| Boundless Agony                          | Rod of the Sun King              | 1939.0 ± 0.76 | -471.6           |
+| Malchazeen                               | Malchazeen                       | 1937.4 ± 0.70 | -473.2           |
+| Shard of Azzinoth                        | Rod of the Sun King              | 1937.1 ± 0.78 | -473.5           |
+| Malchazeen                               | Talon of Azshara                 | 1934.8 ± 0.75 | -475.8           |
+| Merciless Gladiator's Shanker            | Gladiator's Slicer               | 1934.3 ± 0.76 | -476.3           |
+| Fang of Vashj                            | Rod of the Sun King              | 1932.5 ± 0.74 | -478.1           |
+| Malchazeen                               | Merciless Gladiator's Slicer     | 1930.6 ± 0.76 | -480.0           |
+| Vengeful Gladiator's Shanker             | Syphon of the Nathrezim          | 1927.7 ± 0.76 | -482.9           |
+| Shard of Azzinoth                        | Syphon of the Nathrezim          | 1924.1 ± 0.78 | -486.5           |
+| Boundless Agony                          | Syphon of the Nathrezim          | 1923.2 ± 0.77 | -487.4           |
+| Fang of Vashj                            | Syphon of the Nathrezim          | 1918.8 ± 0.76 | -491.8           |
+| Merciless Gladiator's Shanker            | Rod of the Sun King              | 1916.7 ± 0.75 | -493.9           |
+| Malchazeen                               | Gladiator's Slicer               | 1915.6 ± 0.75 | -495.0           |
+| Merciless Gladiator's Shanker            | Syphon of the Nathrezim          | 1902.9 ± 0.75 | -507.7           |
+| Malchazeen                               | Rod of the Sun King              | 1899.3 ± 0.74 | -511.3           |
+| Malchazeen                               | Syphon of the Nathrezim          | 1885.9 ± 0.73 | -524.7           |
 
 The best combination, Warglaive of Azzinoth with Warglaive of Azzinoth, measures +187.0 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

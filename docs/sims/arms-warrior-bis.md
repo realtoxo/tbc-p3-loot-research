@@ -46,18 +46,34 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-An Arms Warrior considers only two-handers, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The published Phase 3 page ranks only dual Warglaives, which this spec will not receive, so the Phase 3 candidates are the drop table's two-handers in the weapon classes a warrior wields, and the earlier candidates are the top of the EP Workbook's Two Hand ladder for this spec. This spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: it stays with the Retribution Paladin.
+An Arms Warrior considers only two-handers, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The published Phase 3 page ranks only dual Warglaives, which this spec will not receive, so the table is an enumeration of the EP Workbook's Two Hand ladder for this spec together with every worn and routed weapon, kept to the weapon classes a warrior wields. This spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: it stays with the Retribution Paladin.
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
 | Cataclysm's Edge *(this set)*     | *empty, two-hander* | 2126.7 ± 1.22 | +0.0             |
 | Lionheart Executioner             | *empty, two-hander* | 2070.0 ± 1.20 | -56.7            |
 | Twinblade of the Phoenix          | *empty, two-hander* | 2056.9 ± 1.18 | -69.8            |
+| Lionheart Champion                | *empty, two-hander* | 2027.6 ± 1.18 | -99.1            |
 | Torch of the Damned               | *empty, two-hander* | 2001.2 ± 1.08 | -125.5           |
+| Gladiator's Greatsword            | *empty, two-hander* | 1980.5 ± 1.14 | -146.2           |
 | Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 1971.3 ± 1.07 | -155.4           |
 | Soul Cleaver                      | *empty, two-hander* | 1954.0 ± 1.10 | -172.7           |
+| World Breaker                     | *empty, two-hander* | 1942.1 ± 1.05 | -184.6           |
+| Vengeful Gladiator's Decapitator  | *empty, two-hander* | 1939.2 ± 1.07 | -187.5           |
+| Stormherald                       | *empty, two-hander* | 1934.9 ± 1.05 | -191.8           |
+| Bloodmoon                         | *empty, two-hander* | 1922.8 ± 1.06 | -203.9           |
 | Merciless Gladiator's Bonegrinder | *empty, two-hander* | 1914.9 ± 1.03 | -211.8           |
 | Halberd of Desolation             | *empty, two-hander* | 1890.4 ± 1.06 | -236.3           |
+| Deep Thunder                      | *empty, two-hander* | 1887.3 ± 1.04 | -239.4           |
+| Merciless Gladiator's Decapitator | *empty, two-hander* | 1885.1 ± 1.05 | -241.6           |
+| Mooncleaver                       | *empty, two-hander* | 1877.5 ± 1.06 | -249.2           |
+| Gorehowl                          | *empty, two-hander* | 1851.8 ± 1.03 | -274.9           |
+| Hammer of the Naaru               | *empty, two-hander* | 1849.2 ± 1.01 | -277.5           |
+| Gladiator's Decapitator           | *empty, two-hander* | 1834.5 ± 1.03 | -292.2           |
+| Axe of the Gronn Lords            | *empty, two-hander* | 1834.2 ± 1.04 | -292.5           |
+| Vengeful Gladiator's Painsaw      | *empty, two-hander* | 1674.9 ± 0.85 | -451.8           |
+| Merciless Gladiator's Painsaw     | *empty, two-hander* | 1640.5 ± 0.85 | -486.2           |
+| Gladiator's Painsaw               | *empty, two-hander* | 1598.3 ± 0.85 | -528.4           |
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile, and every other row is an alternative measuring under it.
 

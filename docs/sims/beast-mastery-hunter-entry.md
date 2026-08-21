@@ -46,13 +46,21 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The candidates are the top of the EP Workbook's One Hand and Two Hand ladders for this spec, kept to the weapon classes a hunter wields, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
+A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
 | Twinblade of the Phoenix          | *empty, two-hander* | 3067.9 ± 0.89 | +56.1            |
+| Merciless Gladiator's Decapitator | *empty, two-hander* | 3058.2 ± 0.88 | +46.4            |
+| Legacy                            | *empty, two-hander* | 3041.9 ± 0.87 | +30.1            |
+| Hellforged Halberd                | *empty, two-hander* | 3016.7 ± 0.86 | +4.9             |
+| Blackened Spear                   | *empty, two-hander* | 3016.7 ± 0.86 | +4.9             |
+| Sonic Spear                       | *empty, two-hander* | 3012.2 ± 0.86 | +0.4             |
 | Talon of the Phoenix *(this set)* | Claw of the Phoenix | 3011.8 ± 0.85 | +0.0             |
 | Talon of the Phoenix              | Talon of Azshara    | 3008.0 ± 0.85 | -3.8             |
+| Talon of Azshara                  | Claw of the Phoenix | 3006.1 ± 0.85 | -5.7             |
+| Talon of Azshara                  | Talon of Azshara    | 3002.2 ± 0.85 | -9.6             |
+| Illidari-Bane Claymore            | *empty, two-hander* | 2995.6 ± 0.85 | -16.2            |
 
 The best combination, Twinblade of the Phoenix alone, a two-hander, measures +56.1 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

@@ -46,21 +46,233 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 ## Weapon pairs
 
-A Destruction Warlock can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and dagger alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The candidates are the top of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec, and no candidate carries a socket. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty. Tempest of Chaos is taken first by the Arcane Mage, and first is an ordering rather than an exclusion: the warlocks' lists rank it too, so its rows measure what this spec holds once the mage is served.
+A Destruction Warlock can carry a staff or a one-hander with a held frill, and both styles run in the same table, so a row below is either a single staff with the off hand empty or a main hand with an off-hand frill that is not a weapon. Each row is THIS PROFILE with only the weapon slots changed: the main hand keeps its Soulfrost, which a staff row inherits because the enchant belongs to the slot, and the consumables, buffs and seed hold still, so every figure is directly comparable with the one at the top of this page. The Brilliant Wizard Oil applies to any weapon, staff and dagger alike, and a frill takes no imbue, so nothing about the consumables varies across the rows. The table is an enumeration of the EP Workbook's Two Hand, One Hand and Off Hand ladders for this spec together with every worn and routed weapon, and no candidate carries a socket. Zhar'doom goes to the warlocks, the Balance Druid, the Elemental Shaman and the Shadow Priest, and its wearers hold no off hand, which is why the best-in-slot anchor wears it with the off-hand slot empty. Tempest of Chaos is taken first by the Arcane Mage, and first is an ordering rather than an exclusion: the warlocks' lists rank it too, so its rows measure what this spec holds once the mage is served.
 
-| Main hand                                     | Off hand                  | DPS           | Against this set |
-|-----------------------------------------------|---------------------------|---------------|------------------|
-| Zhar'doom, Greatstaff of the Devourer         | *empty, two-hander*       | 2281.0 ± 1.25 | +138.2           |
-| Tempest of Chaos                              | Chronicle of Dark Secrets | 2258.6 ± 1.25 | +115.8           |
-| Tempest of Chaos                              | Blind-Seers Icon          | 2241.8 ± 1.24 | +99.0            |
-| The Maelstrom's Fury                          | Chronicle of Dark Secrets | 2230.2 ± 1.24 | +87.4            |
-| Vengeful Gladiator's Spellblade               | Chronicle of Dark Secrets | 2224.4 ± 1.24 | +81.6            |
-| Vengeful Gladiator's Battle Staff             | *empty, two-hander*       | 2202.9 ± 1.20 | +60.1            |
-| Tempest of Chaos                              | Flametongue Seal          | 2202.4 ± 1.22 | +59.6            |
-| Merciless Gladiator's Spellblade              | Chronicle of Dark Secrets | 2199.2 ± 1.22 | +56.4            |
-| The Nexus Key                                 | *empty, two-hander*       | 2199.0 ± 1.21 | +56.2            |
-| Merciless Gladiator's War Staff               | *empty, two-hander*       | 2172.2 ± 1.20 | +29.4            |
-| Merciless Gladiator's Spellblade *(this set)* | Flametongue Seal          | 2142.8 ± 1.19 | +0.0             |
+| Main hand                                     | Off hand                        | DPS           | Against this set |
+|-----------------------------------------------|---------------------------------|---------------|------------------|
+| Zhar'doom, Greatstaff of the Devourer         | *empty, two-hander*             | 2281.0 ± 1.25 | +138.2           |
+| Tempest of Chaos                              | Chronicle of Dark Secrets       | 2258.6 ± 1.25 | +115.8           |
+| Tempest of Chaos                              | Fathomstone                     | 2251.6 ± 1.25 | +108.8           |
+| Tempest of Chaos                              | Blind-Seers Icon                | 2241.8 ± 1.24 | +99.0            |
+| Tempest of Chaos                              | Talisman of Nightbane           | 2240.8 ± 1.23 | +98.0            |
+| Tempest of Chaos                              | Khadgar's Knapsack              | 2240.6 ± 1.25 | +97.8            |
+| Tempest of Chaos                              | Orb of the Soul-Eater           | 2239.3 ± 1.25 | +96.5            |
+| Tempest of Chaos                              | Karaborian Talisman             | 2237.5 ± 1.22 | +94.7            |
+| Tempest of Chaos                              | Karrog's Shard                  | 2234.6 ± 1.25 | +91.8            |
+| Tempest of Chaos                              | Merciless Gladiator's Endgame   | 2232.9 ± 1.23 | +90.1            |
+| Tempest of Chaos                              | Crystal Orb of Enlightenment    | 2231.7 ± 1.24 | +88.9            |
+| The Maelstrom's Fury                          | Chronicle of Dark Secrets       | 2230.2 ± 1.24 | +87.4            |
+| Tempest of Chaos                              | Lamp of Peaceful Radiance       | 2227.6 ± 1.24 | +84.8            |
+| Vengeful Gladiator's Spellblade               | Chronicle of Dark Secrets       | 2224.4 ± 1.24 | +81.6            |
+| The Maelstrom's Fury                          | Fathomstone                     | 2223.3 ± 1.24 | +80.5            |
+| Tempest of Chaos                              | Jewel of Infinite Possibilities | 2221.1 ± 1.23 | +78.3            |
+| Tempest of Chaos                              | Star-Heart Lamp                 | 2220.1 ± 1.23 | +77.3            |
+| Vengeful Gladiator's Spellblade               | Fathomstone                     | 2217.7 ± 1.24 | +74.9            |
+| The Maelstrom's Fury                          | Blind-Seers Icon                | 2214.0 ± 1.23 | +71.2            |
+| The Maelstrom's Fury                          | Talisman of Nightbane           | 2213.6 ± 1.22 | +70.8            |
+| Fang of the Leviathan                         | Chronicle of Dark Secrets       | 2211.4 ± 1.23 | +68.6            |
+| The Maelstrom's Fury                          | Khadgar's Knapsack              | 2211.4 ± 1.24 | +68.6            |
+| The Maelstrom's Fury                          | Karaborian Talisman             | 2210.0 ± 1.21 | +67.2            |
+| The Maelstrom's Fury                          | Orb of the Soul-Eater           | 2210.0 ± 1.24 | +67.2            |
+| Vengeful Gladiator's Spellblade               | Blind-Seers Icon                | 2208.2 ± 1.23 | +65.4            |
+| Vengeful Gladiator's Spellblade               | Talisman of Nightbane           | 2207.8 ± 1.23 | +65.0            |
+| The Maelstrom's Fury                          | Merciless Gladiator's Endgame   | 2205.7 ± 1.22 | +62.9            |
+| The Maelstrom's Fury                          | Karrog's Shard                  | 2205.7 ± 1.23 | +62.9            |
+| Vengeful Gladiator's Spellblade               | Khadgar's Knapsack              | 2205.7 ± 1.24 | +62.9            |
+| Fang of the Leviathan                         | Fathomstone                     | 2205.1 ± 1.22 | +62.3            |
+| Vengeful Gladiator's Spellblade               | Karaborian Talisman             | 2204.6 ± 1.22 | +61.8            |
+| Vengeful Gladiator's Spellblade               | Orb of the Soul-Eater           | 2203.9 ± 1.24 | +61.1            |
+| The Maelstrom's Fury                          | Crystal Orb of Enlightenment    | 2203.8 ± 1.22 | +61.0            |
+| Vengeful Gladiator's War Staff                | *empty, two-hander*             | 2202.9 ± 1.20 | +60.1            |
+| Vengeful Gladiator's Battle Staff             | *empty, two-hander*             | 2202.9 ± 1.20 | +60.1            |
+| Tempest of Chaos                              | Flametongue Seal                | 2202.4 ± 1.22 | +59.6            |
+| Vengeful Gladiator's Spellblade               | Merciless Gladiator's Endgame   | 2200.3 ± 1.22 | +57.5            |
+| Vengeful Gladiator's Spellblade               | Karrog's Shard                  | 2199.4 ± 1.24 | +56.6            |
+| Merciless Gladiator's Spellblade              | Chronicle of Dark Secrets       | 2199.2 ± 1.22 | +56.4            |
+| The Maelstrom's Fury                          | Lamp of Peaceful Radiance       | 2199.2 ± 1.23 | +56.4            |
+| The Nexus Key                                 | *empty, two-hander*             | 2199.0 ± 1.21 | +56.2            |
+| Vengeful Gladiator's Spellblade               | Crystal Orb of Enlightenment    | 2198.3 ± 1.23 | +55.5            |
+| Fang of the Leviathan                         | Blind-Seers Icon                | 2196.0 ± 1.22 | +53.2            |
+| Fang of the Leviathan                         | Talisman of Nightbane           | 2195.0 ± 1.22 | +52.2            |
+| Vengeful Gladiator's Spellblade               | Lamp of Peaceful Radiance       | 2194.0 ± 1.23 | +51.2            |
+| Fang of the Leviathan                         | Khadgar's Knapsack              | 2193.6 ± 1.23 | +50.8            |
+| The Maelstrom's Fury                          | Jewel of Infinite Possibilities | 2193.4 ± 1.22 | +50.6            |
+| Nathrezim Mindblade                           | Chronicle of Dark Secrets       | 2192.6 ± 1.21 | +49.8            |
+| The Maelstrom's Fury                          | Star-Heart Lamp                 | 2192.3 ± 1.22 | +49.5            |
+| Fang of the Leviathan                         | Orb of the Soul-Eater           | 2192.1 ± 1.23 | +49.3            |
+| Fang of the Leviathan                         | Karaborian Talisman             | 2192.0 ± 1.21 | +49.2            |
+| Merciless Gladiator's Spellblade              | Fathomstone                     | 2191.9 ± 1.22 | +49.1            |
+| Bloodmaw Magus-Blade                          | Chronicle of Dark Secrets       | 2190.8 ± 1.22 | +48.0            |
+| Vengeful Gladiator's Spellblade               | Jewel of Infinite Possibilities | 2188.2 ± 1.22 | +45.4            |
+| Fang of the Leviathan                         | Karrog's Shard                  | 2187.5 ± 1.22 | +44.7            |
+| Vengeful Gladiator's Spellblade               | Star-Heart Lamp                 | 2187.2 ± 1.22 | +44.4            |
+| Fang of the Leviathan                         | Merciless Gladiator's Endgame   | 2186.9 ± 1.21 | +44.1            |
+| Fang of the Leviathan                         | Crystal Orb of Enlightenment    | 2186.2 ± 1.22 | +43.4            |
+| Nathrezim Mindblade                           | Fathomstone                     | 2185.7 ± 1.21 | +42.9            |
+| Tempest of Chaos                              | Draenei Crystal Rod             | 2184.8 ± 1.21 | +42.0            |
+| Bloodmaw Magus-Blade                          | Fathomstone                     | 2184.3 ± 1.21 | +41.5            |
+| Merciless Gladiator's Spellblade              | Talisman of Nightbane           | 2182.4 ± 1.22 | +39.6            |
+| Merciless Gladiator's Spellblade              | Blind-Seers Icon                | 2182.3 ± 1.23 | +39.5            |
+| Fang of the Leviathan                         | Lamp of Peaceful Radiance       | 2181.1 ± 1.22 | +38.3            |
+| Merciless Gladiator's Spellblade              | Karaborian Talisman             | 2179.2 ± 1.21 | +36.4            |
+| Merciless Gladiator's Spellblade              | Khadgar's Knapsack              | 2179.2 ± 1.23 | +36.4            |
+| Merciless Gladiator's Spellblade              | Orb of the Soul-Eater           | 2177.8 ± 1.23 | +35.0            |
+| Bloodmaw Magus-Blade                          | Blind-Seers Icon                | 2176.3 ± 1.21 | +33.5            |
+| Fang of the Leviathan                         | Jewel of Infinite Possibilities | 2175.9 ± 1.21 | +33.1            |
+| Nathrezim Mindblade                           | Blind-Seers Icon                | 2175.6 ± 1.21 | +32.8            |
+| Bloodmaw Magus-Blade                          | Talisman of Nightbane           | 2174.8 ± 1.20 | +32.0            |
+| Fang of the Leviathan                         | Star-Heart Lamp                 | 2174.7 ± 1.21 | +31.9            |
+| Nathrezim Mindblade                           | Talisman of Nightbane           | 2174.6 ± 1.21 | +31.8            |
+| Merciless Gladiator's Spellblade              | Merciless Gladiator's Endgame   | 2174.6 ± 1.22 | +31.8            |
+| The Maelstrom's Fury                          | Flametongue Seal                | 2174.5 ± 1.21 | +31.7            |
+| Bloodmaw Magus-Blade                          | Khadgar's Knapsack              | 2174.0 ± 1.22 | +31.2            |
+| Nathrezim Mindblade                           | Khadgar's Knapsack              | 2173.8 ± 1.22 | +31.0            |
+| Merciless Gladiator's Spellblade              | Karrog's Shard                  | 2173.6 ± 1.21 | +30.8            |
+| Bloodmaw Magus-Blade                          | Orb of the Soul-Eater           | 2172.4 ± 1.22 | +29.6            |
+| Merciless Gladiator's War Staff               | *empty, two-hander*             | 2172.2 ± 1.20 | +29.4            |
+| Bloodmaw Magus-Blade                          | Karaborian Talisman             | 2172.2 ± 1.20 | +29.4            |
+| Nathrezim Mindblade                           | Orb of the Soul-Eater           | 2172.1 ± 1.22 | +29.3            |
+| Nathrezim Mindblade                           | Karaborian Talisman             | 2171.8 ± 1.20 | +29.0            |
+| Merciless Gladiator's Spellblade              | Crystal Orb of Enlightenment    | 2171.3 ± 1.21 | +28.5            |
+| Gladiator's Spellblade                        | Chronicle of Dark Secrets       | 2169.7 ± 1.21 | +26.9            |
+| Bloodmaw Magus-Blade                          | Karrog's Shard                  | 2168.8 ± 1.21 | +26.0            |
+| Nathrezim Mindblade                           | Karrog's Shard                  | 2168.2 ± 1.21 | +25.4            |
+| Vengeful Gladiator's Spellblade               | Flametongue Seal                | 2168.2 ± 1.20 | +25.4            |
+| Merciless Gladiator's Spellblade              | Lamp of Peaceful Radiance       | 2167.6 ± 1.21 | +24.8            |
+| Nathrezim Mindblade                           | Merciless Gladiator's Endgame   | 2167.0 ± 1.21 | +24.2            |
+| Bloodmaw Magus-Blade                          | Merciless Gladiator's Endgame   | 2166.9 ± 1.20 | +24.1            |
+| Bloodmaw Magus-Blade                          | Crystal Orb of Enlightenment    | 2166.2 ± 1.20 | +23.4            |
+| Nathrezim Mindblade                           | Crystal Orb of Enlightenment    | 2165.5 ± 1.20 | +22.7            |
+| Merciless Gladiator's Spellblade              | Jewel of Infinite Possibilities | 2162.9 ± 1.21 | +20.1            |
+| Gladiator's Spellblade                        | Fathomstone                     | 2162.8 ± 1.20 | +20.0            |
+| Merciless Gladiator's Spellblade              | Star-Heart Lamp                 | 2161.7 ± 1.21 | +18.9            |
+| Nathrezim Mindblade                           | Lamp of Peaceful Radiance       | 2161.4 ± 1.20 | +18.6            |
+| Bloodmaw Magus-Blade                          | Lamp of Peaceful Radiance       | 2160.4 ± 1.20 | +17.6            |
+| Blade of Wizardry                             | Chronicle of Dark Secrets       | 2160.4 ± 1.22 | +17.6            |
+| The Maelstrom's Fury                          | Draenei Crystal Rod             | 2157.1 ± 1.20 | +14.3            |
+| Fang of the Leviathan                         | Flametongue Seal                | 2156.8 ± 1.20 | +14.0            |
+| Bloodmaw Magus-Blade                          | Jewel of Infinite Possibilities | 2156.0 ± 1.19 | +13.2            |
+| Nathrezim Mindblade                           | Jewel of Infinite Possibilities | 2155.9 ± 1.20 | +13.1            |
+| Nathrezim Mindblade                           | Star-Heart Lamp                 | 2154.9 ± 1.20 | +12.1            |
+| Bloodmaw Magus-Blade                          | Star-Heart Lamp                 | 2154.8 ± 1.19 | +12.0            |
+| Blade of Wizardry                             | Fathomstone                     | 2153.6 ± 1.21 | +10.8            |
+| Gladiator's Spellblade                        | Talisman of Nightbane           | 2152.7 ± 1.20 | +9.9             |
+| Gladiator's Spellblade                        | Blind-Seers Icon                | 2152.4 ± 1.21 | +9.6             |
+| Gladiator's Spellblade                        | Khadgar's Knapsack              | 2151.2 ± 1.21 | +8.4             |
+| Eternium Runed Blade                          | Chronicle of Dark Secrets       | 2151.1 ± 1.19 | +8.3             |
+| Vengeful Gladiator's Spellblade               | Draenei Crystal Rod             | 2151.1 ± 1.21 | +8.3             |
+| Gladiator's Spellblade                        | Karaborian Talisman             | 2149.8 ± 1.20 | +7.0             |
+| Gladiator's Spellblade                        | Orb of the Soul-Eater           | 2149.1 ± 1.21 | +6.3             |
+| Gladiator's Spellblade                        | Karrog's Shard                  | 2145.5 ± 1.20 | +2.7             |
+| Blade of Wizardry                             | Khadgar's Knapsack              | 2145.1 ± 1.22 | +2.3             |
+| Gladiator's Spellblade                        | Merciless Gladiator's Endgame   | 2144.8 ± 1.20 | +2.0             |
+| Eternium Runed Blade                          | Fathomstone                     | 2144.7 ± 1.19 | +1.9             |
+| Blade of Wizardry                             | Blind-Seers Icon                | 2143.5 ± 1.20 | +0.7             |
+| Blade of Wizardry                             | Orb of the Soul-Eater           | 2143.3 ± 1.23 | +0.5             |
+| Merciless Gladiator's Spellblade *(this set)* | Flametongue Seal                | 2142.8 ± 1.19 | +0.0             |
+| Gladiator's Spellblade                        | Crystal Orb of Enlightenment    | 2142.3 ± 1.20 | -0.5             |
+| Blade of Wizardry                             | Talisman of Nightbane           | 2142.3 ± 1.21 | -0.5             |
+| Blade of Wizardry                             | Karrog's Shard                  | 2140.4 ± 1.22 | -2.4             |
+| Fang of the Leviathan                         | Draenei Crystal Rod             | 2139.5 ± 1.19 | -3.3             |
+| Gladiator's Spellblade                        | Lamp of Peaceful Radiance       | 2138.8 ± 1.19 | -4.0             |
+| Bloodmaw Magus-Blade                          | Flametongue Seal                | 2138.8 ± 1.19 | -4.0             |
+| Nathrezim Mindblade                           | Flametongue Seal                | 2138.3 ± 1.19 | -4.5             |
+| Stormcaller                                   | Chronicle of Dark Secrets       | 2138.1 ± 1.19 | -4.7             |
+| Blade of Wizardry                             | Karaborian Talisman             | 2137.1 ± 1.21 | -5.7             |
+| Blade of the Archmage                         | Chronicle of Dark Secrets       | 2136.8 ± 1.18 | -6.0             |
+| Eternium Runed Blade                          | Blind-Seers Icon                | 2135.7 ± 1.19 | -7.1             |
+| Eternium Runed Blade                          | Talisman of Nightbane           | 2134.9 ± 1.18 | -7.9             |
+| Blade of Wizardry                             | Merciless Gladiator's Endgame   | 2134.5 ± 1.21 | -8.3             |
+| Gladiator's War Staff                         | *empty, two-hander*             | 2134.4 ± 1.19 | -8.4             |
+| Eternium Runed Blade                          | Khadgar's Knapsack              | 2134.3 ± 1.20 | -8.5             |
+| Gladiator's Spellblade                        | Jewel of Infinite Possibilities | 2133.0 ± 1.20 | -9.8             |
+| Blade of Wizardry                             | Crystal Orb of Enlightenment    | 2133.0 ± 1.21 | -9.8             |
+| Eternium Runed Blade                          | Orb of the Soul-Eater           | 2132.4 ± 1.20 | -10.4            |
+| Gladiator's Spellblade                        | Star-Heart Lamp                 | 2131.9 ± 1.19 | -10.9            |
+| Eternium Runed Blade                          | Karaborian Talisman             | 2131.5 ± 1.19 | -11.3            |
+| Stormcaller                                   | Fathomstone                     | 2131.5 ± 1.18 | -11.3            |
+| Blade of Wizardry                             | Lamp of Peaceful Radiance       | 2130.8 ± 1.21 | -12.0            |
+| Blade of the Archmage                         | Fathomstone                     | 2130.7 ± 1.18 | -12.1            |
+| Eternium Runed Blade                          | Karrog's Shard                  | 2129.5 ± 1.19 | -13.3            |
+| Eternium Runed Blade                          | Merciless Gladiator's Endgame   | 2127.3 ± 1.18 | -15.5            |
+| Merciless Gladiator's Spellblade              | Draenei Crystal Rod             | 2125.6 ± 1.19 | -17.2            |
+| Eternium Runed Blade                          | Crystal Orb of Enlightenment    | 2125.1 ± 1.18 | -17.7            |
+| Blade of Wizardry                             | Jewel of Infinite Possibilities | 2124.5 ± 1.20 | -18.3            |
+| Blade of Wizardry                             | Star-Heart Lamp                 | 2123.3 ± 1.20 | -19.5            |
+| Stormcaller                                   | Khadgar's Knapsack              | 2122.2 ± 1.19 | -20.6            |
+| Stormcaller                                   | Blind-Seers Icon                | 2122.0 ± 1.18 | -20.8            |
+| Bloodmaw Magus-Blade                          | Draenei Crystal Rod             | 2121.7 ± 1.19 | -21.1            |
+| Blade of the Archmage                         | Blind-Seers Icon                | 2121.6 ± 1.18 | -21.2            |
+| Stormcaller                                   | Talisman of Nightbane           | 2121.6 ± 1.18 | -21.2            |
+| Blade of the Archmage                         | Talisman of Nightbane           | 2121.4 ± 1.18 | -21.4            |
+| Blade of the Archmage                         | Khadgar's Knapsack              | 2121.3 ± 1.18 | -21.5            |
+| Eternium Runed Blade                          | Lamp of Peaceful Radiance       | 2121.0 ± 1.18 | -21.8            |
+| Nathrezim Mindblade                           | Draenei Crystal Rod             | 2121.0 ± 1.19 | -21.8            |
+| Stormcaller                                   | Orb of the Soul-Eater           | 2120.6 ± 1.19 | -22.2            |
+| Blade of the Archmage                         | Orb of the Soul-Eater           | 2119.7 ± 1.19 | -23.1            |
+| Blade of the Archmage                         | Karaborian Talisman             | 2116.8 ± 1.18 | -26.0            |
+| Stormcaller                                   | Karaborian Talisman             | 2116.8 ± 1.17 | -26.0            |
+| Eternium Runed Blade                          | Jewel of Infinite Possibilities | 2115.9 ± 1.17 | -26.9            |
+| Stormcaller                                   | Karrog's Shard                  | 2115.9 ± 1.17 | -26.9            |
+| Gladiator's Spellblade                        | Flametongue Seal                | 2115.7 ± 1.18 | -27.1            |
+| Blade of the Archmage                         | Karrog's Shard                  | 2115.4 ± 1.17 | -27.4            |
+| Eternium Runed Blade                          | Star-Heart Lamp                 | 2114.9 ± 1.17 | -27.9            |
+| Stormcaller                                   | Merciless Gladiator's Endgame   | 2114.1 ± 1.18 | -28.7            |
+| Blade of the Archmage                         | Merciless Gladiator's Endgame   | 2113.5 ± 1.18 | -29.3            |
+| Stormcaller                                   | Crystal Orb of Enlightenment    | 2112.4 ± 1.17 | -30.4            |
+| Blade of the Archmage                         | Crystal Orb of Enlightenment    | 2112.2 ± 1.17 | -30.6            |
+| Blade of Wizardry                             | Flametongue Seal                | 2110.2 ± 1.20 | -32.6            |
+| Blade of the Archmage                         | Lamp of Peaceful Radiance       | 2108.5 ± 1.17 | -34.3            |
+| Stormcaller                                   | Lamp of Peaceful Radiance       | 2108.3 ± 1.17 | -34.5            |
+| Terokk's Shadowstaff                          | *empty, two-hander*             | 2104.8 ± 1.16 | -38.0            |
+| Stormcaller                                   | Jewel of Infinite Possibilities | 2102.9 ± 1.17 | -39.9            |
+| Blade of the Archmage                         | Jewel of Infinite Possibilities | 2102.1 ± 1.17 | -40.7            |
+| Stormcaller                                   | Star-Heart Lamp                 | 2101.9 ± 1.16 | -40.9            |
+| Staff of Infinite Mysteries                   | *empty, two-hander*             | 2101.4 ± 1.18 | -41.4            |
+| Blade of the Archmage                         | Star-Heart Lamp                 | 2101.2 ± 1.16 | -41.6            |
+| Eternium Runed Blade                          | Flametongue Seal                | 2099.2 ± 1.17 | -43.6            |
+| Gladiator's Spellblade                        | Draenei Crystal Rod             | 2099.1 ± 1.18 | -43.7            |
+| Blade of Wizardry                             | Draenei Crystal Rod             | 2092.8 ± 1.19 | -50.0            |
+| Greatsword of Horrid Dreams                   | Chronicle of Dark Secrets       | 2091.7 ± 1.16 | -51.1            |
+| Stormcaller                                   | Flametongue Seal                | 2087.2 ± 1.16 | -55.6            |
+| Blade of the Archmage                         | Flametongue Seal                | 2086.9 ± 1.15 | -55.9            |
+| Greatsword of Horrid Dreams                   | Fathomstone                     | 2085.5 ± 1.16 | -57.3            |
+| Eternium Runed Blade                          | Draenei Crystal Rod             | 2082.4 ± 1.17 | -60.4            |
+| Greatsword of Horrid Dreams                   | Blind-Seers Icon                | 2076.8 ± 1.15 | -66.0            |
+| Greatsword of Horrid Dreams                   | Khadgar's Knapsack              | 2075.8 ± 1.17 | -67.0            |
+| Greatsword of Horrid Dreams                   | Talisman of Nightbane           | 2075.3 ± 1.15 | -67.5            |
+| Greatsword of Horrid Dreams                   | Orb of the Soul-Eater           | 2074.1 ± 1.17 | -68.7            |
+| Greatsword of Horrid Dreams                   | Karaborian Talisman             | 2071.2 ± 1.15 | -71.6            |
+| Greatsword of Horrid Dreams                   | Karrog's Shard                  | 2070.3 ± 1.16 | -72.5            |
+| Stormcaller                                   | Draenei Crystal Rod             | 2070.2 ± 1.15 | -72.6            |
+| Blade of the Archmage                         | Draenei Crystal Rod             | 2069.7 ± 1.15 | -73.1            |
+| Greatsword of Horrid Dreams                   | Merciless Gladiator's Endgame   | 2067.8 ± 1.15 | -75.0            |
+| Greatsword of Horrid Dreams                   | Crystal Orb of Enlightenment    | 2066.5 ± 1.14 | -76.3            |
+| Greatsword of Horrid Dreams                   | Lamp of Peaceful Radiance       | 2062.4 ± 1.14 | -80.4            |
+| Greatsword of Horrid Dreams                   | Jewel of Infinite Possibilities | 2056.6 ± 1.14 | -86.2            |
+| Greatsword of Horrid Dreams                   | Star-Heart Lamp                 | 2055.6 ± 1.14 | -87.2            |
+| Auchenai Staff                                | *empty, two-hander*             | 2047.0 ± 1.13 | -95.8            |
+| High Warlord's War Staff                      | *empty, two-hander*             | 2044.6 ± 1.13 | -98.2            |
+| Grand Marshal's War Staff                     | *empty, two-hander*             | 2044.6 ± 1.13 | -98.2            |
+| Warpstaff of Arcanum                          | *empty, two-hander*             | 2043.3 ± 1.13 | -99.5            |
+| Greatsword of Horrid Dreams                   | Flametongue Seal                | 2042.4 ± 1.14 | -100.4           |
+| Grand Scepter of the Nexus-Kings              | *empty, two-hander*             | 2027.4 ± 1.13 | -115.4           |
+| Greatsword of Horrid Dreams                   | Draenei Crystal Rod             | 2025.1 ± 1.14 | -117.7           |
+| Illidari-Bane Mageblade                       | Chronicle of Dark Secrets       | 1968.2 ± 1.09 | -174.6           |
+| Illidari-Bane Mageblade                       | Fathomstone                     | 1961.1 ± 1.09 | -181.7           |
+| Illidari-Bane Mageblade                       | Khadgar's Knapsack              | 1954.0 ± 1.09 | -188.8           |
+| Illidari-Bane Mageblade                       | Orb of the Soul-Eater           | 1952.5 ± 1.09 | -190.3           |
+| Illidari-Bane Mageblade                       | Blind-Seers Icon                | 1952.4 ± 1.09 | -190.4           |
+| Illidari-Bane Mageblade                       | Talisman of Nightbane           | 1951.5 ± 1.08 | -191.3           |
+| Illidari-Bane Mageblade                       | Karaborian Talisman             | 1948.0 ± 1.07 | -194.8           |
+| Illidari-Bane Mageblade                       | Karrog's Shard                  | 1947.5 ± 1.09 | -195.3           |
+| Illidari-Bane Mageblade                       | Merciless Gladiator's Endgame   | 1944.8 ± 1.08 | -198.0           |
+| Illidari-Bane Mageblade                       | Crystal Orb of Enlightenment    | 1943.2 ± 1.09 | -199.6           |
+| Illidari-Bane Mageblade                       | Lamp of Peaceful Radiance       | 1939.6 ± 1.08 | -203.2           |
+| Illidari-Bane Mageblade                       | Jewel of Infinite Possibilities | 1933.1 ± 1.08 | -209.7           |
+| Illidari-Bane Mageblade                       | Star-Heart Lamp                 | 1932.0 ± 1.08 | -210.8           |
+| Illidari-Bane Mageblade                       | Flametongue Seal                | 1917.3 ± 1.07 | -225.5           |
+| Illidari-Bane Mageblade                       | Draenei Crystal Rod             | 1902.2 ± 1.07 | -240.6           |
 
 The best combination, Zhar'doom, Greatstaff of the Devourer alone, a two-hander, measures +138.2 against this set's own weapons, so the upgrade path at this anchor runs through it.
 

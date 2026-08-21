@@ -17,7 +17,7 @@ Produce the loot council decision system for Mount Hyjal and Black Temple in TBC
 
 **How it is used.** The council reviews this compendium as a group, discusses the conclusions it reaches, and works out a decision path from them in advance. It is not consulted at the moment a drop happens. That is why every conclusion travels with its basis: the basis is what the group argues about, and the argument happens before the raid rather than during it.
 
-The unit of output is a **priority**: how strongly one spec wants one item, with the reasoning that produced it. It is a reference the council uses, and it is meant to be acted on. The reasoning travels with it so a priority can be checked and overturned on its merits, not so that every priority is provisional. The scale, and a worked example, are in [Conventions](conventions.md#priorities).
+The unit of output is a **standing**: what an item is to a spec, BIS where the spec's simulated best-in-slot set wears it and Upgrade where the spec is a claimant without wearing it there, with the reasoning that produced the underlying sets. A standing is derived from the simulated profiles and the claimant rule rather than judged per item, so it is checked by rerunning the pipeline, and who receives a contested drop FIRST remains the council's judgment, recorded in the judgment store with its reasons. The scale, and a worked example, are in [Conventions](conventions.md#standing-bis-and-upgrade).
 
 The design intent follows from that. Give a clear answer, and show enough of its basis that the council can test it. A conclusion with no answer is useless; an answer with no basis cannot be argued with, only accepted or discarded. Both fail.
 

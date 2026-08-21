@@ -57,8 +57,8 @@ comparable with itself at another anchor.
 ::: {.sortable default-sort="5"}
 | Spec                        | Entry                                               | Entry to Tier | Tier                                                              | Tier to BiS | BiS                                                  | Entry to BiS |
 |-----------------------------|-----------------------------------------------------|---------------|-------------------------------------------------------------------|-------------|------------------------------------------------------|--------------|
-| Beast Mastery Hunter        | [3011.8 ± 0.85](sims/beast-mastery-hunter-entry.md) | +158.0        | [3169.8 ± 0.89](sims/beast-mastery-hunter-tier-hands-and-head.md) | +153.8      | [3323.6 ± 0.98](sims/beast-mastery-hunter-bis.md)    | +311.8       |
-| Survival Hunter             | [2529.1 ± 0.79](sims/survival-hunter-entry.md)      | +139.6        | [2668.7 ± 0.85](sims/survival-hunter-tier-hands-and-head.md)      | +145.7      | [2814.4 ± 0.90](sims/survival-hunter-bis.md)         | +285.3       |
+| Beast Mastery Hunter        | [3011.8 ± 0.85](sims/beast-mastery-hunter-entry.md) | +158.0        | [3169.8 ± 0.89](sims/beast-mastery-hunter-tier-hands-and-head.md) | +137.4      | [3307.2 ± 0.97](sims/beast-mastery-hunter-bis.md)    | +295.4       |
+| Survival Hunter             | [2529.1 ± 0.79](sims/survival-hunter-entry.md)      | +139.6        | [2668.7 ± 0.85](sims/survival-hunter-tier-hands-and-head.md)      | +131.1      | [2799.8 ± 0.89](sims/survival-hunter-bis.md)         | +270.7       |
 | Combat Rogue                | [2085.9 ± 0.88](sims/combat-rogue-entry.md)         | +181.0        | [2266.9 ± 0.95](sims/combat-rogue-tier-hands-and-head.md)         | +330.7      | [2597.6 ± 1.07](sims/combat-rogue-bis.md)            | +511.7       |
 | Arcane Mage                 | [2301.2 ± 1.00](sims/arcane-mage-entry.md)          | +19.5         | [2320.7 ± 1.01](sims/arcane-mage-tier-hands-and-head.md)          | +213.7      | [2534.4 ± 1.07](sims/arcane-mage-bis.md)             | +233.2       |
 | Fury Warrior                | [2199.5 ± 1.06](sims/fury-warrior-entry.md)         | +16.7         | [2216.2 ± 1.08](sims/fury-warrior-tier-hands-and-head.md)         | +303.5      | [2519.7 ± 1.11](sims/fury-warrior-bis.md)            | +320.2       |
@@ -105,7 +105,7 @@ a standing check that the armor model does what it claims.
 | Arcane Mage          | 2534.4     | 2534.4     | 2534.4  | +0.0                |
 | Arms Warrior         | 2126.7     | 2426.4     | 2619.7  | +0.0                |
 | Balance Druid        | 1946.7     | 1957.5     | 1979.4  | +0.0                |
-| Beast Mastery Hunter | 3323.6     | 3704.1     | 4287.6  | +0.0                |
+| Beast Mastery Hunter | 3307.2     | 3685.7     | 4266.4  | +0.0                |
 | Combat Rogue         | 2597.6     | 2918.2     | 3156.0  | +0.0                |
 | Destruction Warlock  | 2506.1     | 2506.1     | 2506.1  | +0.0                |
 | Elemental Shaman     | 2130.0     | 2130.0     | 2130.0  | +0.0                |
@@ -113,7 +113,7 @@ a standing check that the armor model does what it claims.
 | Fury Warrior         | 2519.7     | 2869.0     | 3212.0  | +0.0                |
 | Retribution Paladin  | 2223.2     | 2374.4     | 2678.7  | +0.0                |
 | Shadow Priest        | 1577.9     | 1577.9     | 1577.9  | +0.0                |
-| Survival Hunter      | 2814.4     | 3122.3     | 3637.8  | +0.0                |
+| Survival Hunter      | 2799.8     | 3105.9     | 3618.5  | +0.0                |
 :::
 
 Which boss sits in which tier is [`boss-armor.yaml`](../data/facts/boss-armor.yaml),
