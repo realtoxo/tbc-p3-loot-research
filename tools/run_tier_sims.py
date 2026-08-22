@@ -100,6 +100,20 @@ def held_sets(gear: dict, db_items: dict) -> dict[str, list[str]]:
             for name, n in counts.items() if n >= 2}
 
 
+def with_item(gear: dict, slot: str, item_id: int) -> dict:
+    """The gear with one slot's item replaced by id, variant-style: the slot
+    keeps its enchant and the replacement arrives ungemmed unless it IS the
+    worn item."""
+    out = {"items": [dict(e) for e in gear["items"]]}
+    index = SLOT_ORDER.index(slot)
+    entry = dict(out["items"][index]) or {}
+    if entry.get("id") != item_id:
+        entry.pop("gems", None)
+    entry["id"] = item_id
+    out["items"][index] = entry
+    return out
+
+
 def with_slots(gear: dict, other: dict, slots: list[str]) -> dict:
     """The gear wearing another profile's item ids in the named slots.
 
@@ -158,6 +172,7 @@ def main() -> int:
         return 1
 
     names = item_names()
+    tokens_doc = yaml.safe_load(Path("data/facts/tokens.yaml").read_text())
     db_items = {i["id"]: i for i in json.loads(
         (WOWSIMS / "assets/database/db.json").read_text()).get("items") or []}
     strings = yaml.safe_load(
@@ -327,6 +342,42 @@ def main() -> int:
                 "rows": rows_for(entry, tier, t6_slots, watched_t6,
                                  "tier-six"),
             }
+
+        # THE TOKEN-SINGLES ROUND, ruled by the guild lead: a spec whose
+        # list keeps a different item in a token slot is still ranked on the
+        # token page, so the TOKEN piece itself is measured alone on the
+        # entry set wherever the tier-six round does not already measure it.
+        spec_set6 = (tokens_doc["spec_to_set"].get(spec) or {}).get(6)
+        set_pieces = {b["set_name"]: b["pieces"]
+                      for b in tokens_doc["sets"]}
+        singles = {}
+        for s in TOKEN_SLOTS:
+            token_piece = (set_pieces.get(spec_set6) or {}).get(s) or {}
+            token_id = token_piece.get("item_id")
+            if not token_id:
+                continue
+            token_id = int(token_id)
+            covered = (s in t6_slots and int(
+                (tier["items"][SLOT_ORDER.index(s)] or {}).get("id") or 0)
+                == token_id)
+            if covered:
+                continue
+            result = measure(with_item(entry, s, token_id),
+                             f"{s}: {token_piece.get('name', token_id)}",
+                             "token-single")
+            if result is None:
+                continue
+            dps, stdev = result
+            singles[s] = {
+                "id": token_id,
+                "name": token_piece.get("name", str(token_id)),
+                "dps": round(dps, 1),
+                "standard_error": round(
+                    stdev / math.sqrt(args.iterations), 2),
+                "stdev": round(stdev, 1),
+            }
+        if singles:
+            block["token_singles"] = singles
 
         specs_out[spec] = block
         # WRITE AFTER EVERY SPEC, not once at the end, per the variant

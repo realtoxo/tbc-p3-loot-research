@@ -157,7 +157,8 @@ TOKEN_SLOT_LABEL = {"head": "Helm", "shoulder": "Shoulders", "chest": "Chest",
                     "hands": "Gloves", "legs": "Leggings"}
 
 
-def token_order_sections(doc: dict, tokens: dict) -> list[str]:
+def token_order_sections(doc: dict, tokens: dict,
+                         entry_dps: dict) -> list[str]:
     """One section per Tier 6 token: who gains what from it, best gain first.
 
     THE QUESTION AT THE LOOT TABLE, asked by the guild lead: a token drops,
@@ -192,7 +193,7 @@ def token_order_sections(doc: dict, tokens: dict) -> list[str]:
     for token in t6_tokens:
         classes = members[token["line"]]
         slot = token["slot"]
-        ranked, skips, unmeasured = [], [], []
+        ranked, unmeasured = [], []
         for cls in classes:
             for label, key in sorted(by_class.get(cls, [])):
                 block = (doc["specs"] or {}).get(key)
@@ -202,45 +203,44 @@ def token_order_sections(doc: dict, tokens: dict) -> list[str]:
                 t6 = block.get("tier_six") or {}
                 pieces = t6.get("pieces") or {}
                 rows = t6.get("rows") or []
+                singles = block.get("token_singles") or {}
                 set6 = (spec_to_set.get(key) or {}).get(6)
                 token_piece = ((set_pieces.get(set6) or {}).get(slot)
                                or {})
+                token_id = int(token_piece.get("item_id") or -1)
                 worn = pieces.get(slot) or {}
-                if not rows or slot not in (t6.get("slots") or []):
-                    skips.append(f"{label}, whose chase leaves this slot as "
-                                 "it entered")
-                    continue
-                if int(worn.get("id") or 0) != int(token_piece.get("item_id")
-                                                   or -1):
-                    keeps = worn.get("name") or "its entry piece"
-                    skips.append(f"{label}, whose list keeps {keeps} in this "
-                                 "slot")
-                    continue
-                marginals = route_marginals(rows)
-                by_set = {frozenset(r["replaced"]): r for r in rows}
-                single = None
-                if frozenset([slot]) in by_set:
-                    single = round(by_set[frozenset([slot])]["dps"]
-                                   - by_set[frozenset()]["dps"], 1)
-                ranked.append((marginals.get(slot), single, label,
-                               token_piece.get("name", "")))
+                gain, note = None, ""
+                if int(worn.get("id") or 0) == token_id and rows:
+                    # The tier-six round measured this token as its single
+                    # subset for the slot.
+                    by_set = {frozenset(r["replaced"]): r for r in rows}
+                    if frozenset([slot]) in by_set:
+                        gain = round(by_set[frozenset([slot])]["dps"]
+                                     - by_set[frozenset()]["dps"], 1)
+                elif slot in singles:
+                    # The token-singles round measured it; the baseline is
+                    # the spec's entry figure, which the empty subset
+                    # reproduces to the digit.
+                    base = entry_dps.get(key)
+                    if base is not None:
+                        gain = round(singles[slot]["dps"] - base, 1)
+                    keeper = worn.get("name") if slot in (
+                        t6.get("slots") or []) else None
+                    note = (f"its list keeps {keeper} here" if keeper
+                            else "its list keeps the entry piece here")
+                ranked.append((gain, label,
+                               token_piece.get("name", ""), note))
         ranked.sort(key=lambda r: (r[0] is None, -(r[0] or 0)))
         parts = [f"### {token['name']}", "",
                  f"Drops from {token['boss']}. Classes: "
                  f"{', '.join(classes)}.", ""]
         if ranked:
-            parts += ["| Order | Spec | Along the best chase | This piece "
-                      "alone | Buys |",
+            parts += ["| Order | Spec | Gain | Buys | Note |",
                       "|---|---|---|---|---|"]
-            for i, (marg, single, label, piece) in enumerate(ranked, 1):
+            for i, (gain, label, piece, note) in enumerate(ranked, 1):
+                cell = "not measured" if gain is None else f"{gain:+.1f}"
                 parts.append(
-                    f"| {i} | {label} "
-                    f"| {marg:+.1f} "
-                    f"| {'' if single is None else format(single, '+.1f')} "
-                    f"| {piece} |")
-            parts.append("")
-        if skips:
-            parts.append("Not ranked: " + "; ".join(skips) + ".")
+                    f"| {i} | {label} | {cell} | {piece} | {note} |")
             parts.append("")
         if unmeasured:
             parts.append(
@@ -270,7 +270,12 @@ def main() -> int:
     verdicts = (yaml.safe_load(VERDICTS.read_text()) or {}).get(
         "verdicts") or {}
     tokens = yaml.safe_load(Path("data/facts/tokens.yaml").read_text())
-    token_sections = token_order_sections(doc, tokens)
+    figures = yaml.safe_load(Path("data/facts/sim-figures.yaml").read_text())
+    default_tier = max({r.get("boss_armor", 0) for r in figures["results"]})
+    entry_dps = {r["spec"]: r["dps"] for r in figures["results"]
+                 if r["anchor"] == "entry"
+                 and r.get("boss_armor") == default_tier}
+    token_sections = token_order_sections(doc, tokens, entry_dps)
 
     sections = []
     for spec in sorted(doc["specs"], key=lambda s: SPEC_LABEL.get(s, s)):
@@ -507,10 +512,11 @@ token first is the council's call.
 ## The tokens, one by one
 
 Each section is one token: the specs that can redeem it, best measured gain
-first. **Along the best chase** is what the piece adds at its step of that
-spec's best order, which credits a piece that lands a bonus threshold at the
-threshold; **this piece alone** is the same piece as a first pickup on the
-entry set. Both are against the spec's own entry figure.
+first. **Gain** is the token's own piece measured alone on that spec's entry
+set, against its entry figure. A first piece often reads negative because no
+set bonus is active yet and a replacement arrives ungemmed; the break-even
+tables below say when the set pays, and the note names a spec whose Phase 3
+list keeps a different item in the slot.
 
 {chr(10).join(token_sections)}
 ## The break-evens, per spec

@@ -478,6 +478,13 @@ specs:
         stdev: 89.7
         pieces_left:
           Slayer's Armor: 4
+    token_singles:
+      head:
+        id: 31027
+        name: Slayer's Helm
+        dps: 2020.2
+        standard_error: 0.84
+        stdev: 84.0
   arms_warrior:
     old_bonus:
       held_sets:
@@ -676,6 +683,13 @@ specs:
         stdev: 107.9
         pieces_left:
           Onslaught Battlegear: 4
+    token_singles:
+      legs:
+        id: 30977
+        name: Onslaught Greaves
+        dps: 1912.2
+        standard_error: 1.06
+        stdev: 105.6
   fury_warrior:
     old_bonus:
       held_sets:
@@ -878,6 +892,25 @@ specs:
         stdev: 107.7
         pieces_left:
           Onslaught Battlegear: 2
+    token_singles:
+      head:
+        id: 30972
+        name: Onslaught Battle-Helm
+        dps: 2116.0
+        standard_error: 1.05
+        stdev: 104.6
+      hands:
+        id: 30969
+        name: Onslaught Gauntlets
+        dps: 2182.3
+        standard_error: 1.08
+        stdev: 107.7
+      legs:
+        id: 30977
+        name: Onslaught Greaves
+        dps: 2204.2
+        standard_error: 1.08
+        stdev: 107.7
   retribution_paladin:
     old_bonus:
       held_sets:
@@ -933,6 +966,37 @@ specs:
       note: The tier anchor wears the entry set unchanged in all five token slots,
         so this spec's Phase 3 list keeps no tier piece and the round has nothing
         to measure.
+    token_singles:
+      head:
+        id: 30989
+        name: Lightbringer War-Helm
+        dps: 1990.6
+        standard_error: 1.23
+        stdev: 123.4
+      shoulder:
+        id: 30997
+        name: Lightbringer Shoulderbraces
+        dps: 2013.7
+        standard_error: 1.29
+        stdev: 128.6
+      chest:
+        id: 30990
+        name: Lightbringer Breastplate
+        dps: 2025.3
+        standard_error: 1.27
+        stdev: 126.7
+      hands:
+        id: 30982
+        name: Lightbringer Gauntlets
+        dps: 2016.9
+        standard_error: 1.3
+        stdev: 130.5
+      legs:
+        id: 30993
+        name: Lightbringer Greaves
+        dps: 2041.5
+        standard_error: 1.26
+        stdev: 126.5
   enhancement_shaman:
     old_bonus:
       held_sets:
@@ -1100,6 +1164,37 @@ specs:
       note: The tier anchor wears the entry set unchanged in all five token slots,
         so this spec's Phase 3 list keeps no tier piece and the round has nothing
         to measure.
+    token_singles:
+      head:
+        id: 31015
+        name: Skyshatter Cover
+        dps: 1921.7
+        standard_error: 0.89
+        stdev: 88.7
+      shoulder:
+        id: 31024
+        name: Skyshatter Pauldrons
+        dps: 1970.6
+        standard_error: 0.92
+        stdev: 92.4
+      chest:
+        id: 31018
+        name: Skyshatter Tunic
+        dps: 1941.9
+        standard_error: 0.9
+        stdev: 90.4
+      hands:
+        id: 31011
+        name: Skyshatter Grips
+        dps: 1957.1
+        standard_error: 0.91
+        stdev: 91.0
+      legs:
+        id: 31021
+        name: Skyshatter Pants
+        dps: 1965.5
+        standard_error: 0.91
+        stdev: 91.3
   beast_mastery_hunter:
     old_bonus:
       held_sets:
@@ -1558,6 +1653,13 @@ specs:
         stdev: 84.1
         pieces_left:
           Gronnstalker's Armor: 4
+    token_singles:
+      head:
+        id: 31003
+        name: Gronnstalker's Helmet
+        dps: 2934.8
+        standard_error: 0.81
+        stdev: 81.1
   survival_hunter:
     old_bonus:
       held_sets:
@@ -2016,6 +2118,13 @@ specs:
         stdev: 79.6
         pieces_left:
           Gronnstalker's Armor: 4
+    token_singles:
+      legs:
+        id: 31005
+        name: Gronnstalker's Leggings
+        dps: 2509.9
+        standard_error: 0.8
+        stdev: 79.5
   affliction_warlock:
     old_bonus:
       held_sets:
@@ -2216,6 +2325,19 @@ specs:
         stdev: 87.2
         pieces_left:
           Malefic Raiment: 3
+    token_singles:
+      chest:
+        id: 31052
+        name: Robe of the Malefic
+        dps: 1899.7
+        standard_error: 0.94
+        stdev: 94.2
+      legs:
+        id: 31053
+        name: Leggings of the Malefic
+        dps: 1939.2
+        standard_error: 0.96
+        stdev: 96.1
   destruction_warlock:
     old_bonus:
       held_sets:
@@ -2451,6 +2573,19 @@ specs:
         stdev: 108.9
         pieces_left:
           Malefic Raiment: 3
+    token_singles:
+      chest:
+        id: 31052
+        name: Robe of the Malefic
+        dps: 2008.9
+        standard_error: 1.12
+        stdev: 112.3
+      legs:
+        id: 31053
+        name: Leggings of the Malefic
+        dps: 2059.3
+        standard_error: 1.14
+        stdev: 114.5
   arcane_mage:
     old_bonus:
       held_sets:
@@ -2522,6 +2657,31 @@ specs:
         standard_error: 1.01
         stdev: 100.6
         pieces_left: {}
+    token_singles:
+      head:
+        id: 31056
+        name: Cowl of the Tempest
+        dps: 2206.0
+        standard_error: 0.88
+        stdev: 88.4
+      shoulder:
+        id: 31059
+        name: Mantle of the Tempest
+        dps: 2244.7
+        standard_error: 0.94
+        stdev: 94.1
+      chest:
+        id: 31057
+        name: Robes of the Tempest
+        dps: 2244.9
+        standard_error: 0.93
+        stdev: 93.0
+      hands:
+        id: 31055
+        name: Gloves of the Tempest
+        dps: 2299.8
+        standard_error: 0.98
+        stdev: 98.3
   balance_druid:
     old_bonus:
       held_sets:
@@ -2832,6 +2992,13 @@ specs:
         stdev: 75.0
         pieces_left:
           Thunderheart Regalia: 4
+    token_singles:
+      legs:
+        id: 31046
+        name: Thunderheart Pants
+        dps: 1690.8
+        standard_error: 0.84
+        stdev: 84.0
   shadow_priest:
     old_bonus:
       held_sets:
@@ -3160,6 +3327,13 @@ specs:
         stdev: 26.5
         pieces_left:
           Absolution Regalia: 4
+    token_singles:
+      legs:
+        id: 31067
+        name: Leggings of Absolution
+        dps: 1448.1
+        standard_error: 0.26
+        stdev: 26.4
   elemental_shaman:
     old_bonus:
       held_sets:
@@ -3639,3 +3813,10 @@ specs:
         stdev: 85.7
         pieces_left:
           Skyshatter Regalia: 4
+    token_singles:
+      legs:
+        id: 31020
+        name: Skyshatter Legguards
+        dps: 1722.7
+        standard_error: 0.89
+        stdev: 88.9
