@@ -37,6 +37,7 @@ inside `just sim` and `just sim-weapons` and outside `just regen` and
 
 Usage:
     python3 tools/run_variant_sims.py --iterations 10000
+    python3 tools/run_variant_sims.py --rounds rings --iterations 10000
 """
 
 from __future__ import annotations
@@ -59,6 +60,21 @@ from run_sims import (  # noqa: E402
 )
 
 OUT = Path("data/facts/variant-sims.yaml")
+
+# THE FOUR PASSES a spec's round can carry, in the order the output file
+# holds them. --rounds selects among them; a pass not selected is carried
+# forward from the existing output file unchanged, per spec, which is the
+# --spec carry extended to pass level: the ring pass can land alone without
+# repeating the weapon enumeration.
+PASSES = ("weapons", "ranged", "trinkets", "rings")
+
+# Which output keys each pass owns, used by the pass-level carry.
+PASS_KEYS = {
+    "weapons": ("why", "anchors"),
+    "ranged": ("ranged_why", "ranged_anchors"),
+    "trinkets": ("trinkets_why", "trinket_anchors"),
+    "rings": ("rings_why", "ring_anchors"),
+}
 
 # The anchors the variants run on, as the gear stems and page slugs spell
 # them. Hyphens, because that is the naming scheme of data/sim/gear and of
@@ -194,6 +210,44 @@ ROUNDS: dict[str, dict] = {
             "Ashtongue Talisman of Vision carries no worn statistics, "
             "so everything its rows measure is the simulator's pricing "
             "of its procs.")),
+        # THE RING POOL, one of the thirteen enumerative ring rounds ruled
+        # by the guild lead on 21 August 2026, in the trinket rounds'
+        # shape: every max-level ring the Enh tab's Ring ladder ranks, with
+        # anything from Karazhan and the badge vendor onward acceptable,
+        # and the runner generates every wearable unordered pair itself,
+        # both ring slots being interchangeable. The ladder ranks ten; one
+        # is out on the standing exclusions: Shaffar's Band of Brutality
+        # drops in Mana-Tombs, a five-man below Karazhan. Band of the
+        # Eternal Champion and Band of Eternity carry limitCategory 497 in
+        # the binary's database, one uniqueness family, so no pair holds
+        # both and neither runs doubled; every other ring runs doubled,
+        # because the database marks it neither unique nor family-limited
+        # and the raid can hold two copies. The entry and tier anchors wear
+        # Band of the Ranger-General with Ring of Lethality and the
+        # best-in-slot anchor wears Stormrage Signet Ring with Band of the
+        # Eternal Champion, all four in the pool, so no worn item needed
+        # adding. `phase3` marks what the entry anchor cannot reach: the
+        # Black Temple drops and the Scale of the Sands rings, the
+        # reputation earned in Mount Hyjal.
+        "ring_pool": [
+            {"id": 32497, "phase3": True},   # Stormrage Signet Ring
+            {"id": 29301, "phase3": True},   # Band of the Eternal Champion
+            {"id": 29997, "phase3": False},  # Band of the Ranger-General
+            {"id": 32335, "phase3": True},   # Unstoppable Aggressor's Ring
+            {"id": 32526, "phase3": True},   # Band of Devastation
+            {"id": 32266, "phase3": True},   # Ring of Deceitful Intent
+            {"id": 30052, "phase3": False},  # Ring of Lethality
+            {"id": 28757, "phase3": False},  # Ring of a Thousand Marks
+            {"id": 29300, "phase3": True},   # Band of Eternity
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Karazhan, the raids above it "
+            "and one reputation, and every wearable pair from that pool was "
+            "measured, so the table is an enumeration rather than a "
+            "selection. The two Scale of the Sands rings share one "
+            "uniqueness family, so no row wears both of them.")),
     },
     # RETRIBUTION: two-handers only, per the 20 August 2026 ruling. The
     # field is the workbook's Two Hand ladder for this spec plus every worn
@@ -286,6 +340,44 @@ ROUNDS: dict[str, dict] = {
             "the raids above it, the badge vendor and one max-level "
             "quest, and every pair from that pool was measured, so the "
             "table is an enumeration rather than a selection.")),
+        # THE RING POOL: every max-level ring the Ret tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable. The ladder
+        # ranks ten and all ten pass the standing exclusions. Band of the
+        # Eternal Champion and Band of Eternity carry limitCategory 497 in
+        # the binary's database, one uniqueness family, so no pair holds
+        # both and neither runs doubled; every other ring runs doubled,
+        # because the database marks it neither unique nor family-limited
+        # and the raid can hold two copies. Shapeshifter's Signet is the
+        # Lower City Exalted ring. The entry and tier anchors wear
+        # Shapeshifter's Signet with Band of the Ranger-General and the
+        # best-in-slot anchor wears Band of Devastation with
+        # Shapeshifter's Signet, all three in the pool, so no worn item
+        # needed adding. `phase3` marks what the entry anchor cannot
+        # reach: the Black Temple drops and the Scale of the Sands rings,
+        # the reputation earned in Mount Hyjal.
+        "ring_pool": [
+            {"id": 32335, "phase3": True},   # Unstoppable Aggressor's Ring
+            {"id": 32526, "phase3": True},   # Band of Devastation
+            {"id": 30834, "phase3": False},  # Shapeshifter's Signet
+            {"id": 29301, "phase3": True},   # Band of the Eternal Champion
+            {"id": 29997, "phase3": False},  # Band of the Ranger-General
+            {"id": 32497, "phase3": True},   # Stormrage Signet Ring
+            {"id": 30061, "phase3": False},  # Ancestral Ring of Conquest
+            {"id": 32266, "phase3": True},   # Ring of Deceitful Intent
+            {"id": 29300, "phase3": True},   # Band of Eternity
+            {"id": 30052, "phase3": False},  # Ring of Lethality
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Tempest Keep, Serpentshrine "
+            "Cavern, Black Temple and two reputations, and every wearable "
+            "pair from that pool was measured, so the table is an "
+            "enumeration rather than a selection. The two Scale of the "
+            "Sands rings share one uniqueness family, so no row wears both "
+            "of them.")),
     },
     # FURY: one-handers and main handers only, per the 20 August 2026 ruling
     # in data/judgments/weapon-styles.yaml, so every row is a main hand with
@@ -433,6 +525,42 @@ ROUNDS: dict[str, dict] = {
             "party, the simulator prices that effect outside the "
             "trinket slot, and these runs do not engage it, so its "
             "rows price the worn stats alone and understate it.")),
+        # THE RING POOL: every max-level ring the Fury tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable, across all
+        # FOUR anchors. The ladder ranks ten; one is out on the standing
+        # exclusions: Shaffar's Band of Brutality drops in Mana-Tombs, a
+        # five-man below Karazhan. Band of the Eternal Champion carries
+        # limitCategory 497 in the binary's database and is the pool's one
+        # family-limited ring, so it alone runs no doubled row; every
+        # other ring runs doubled, because the database marks it neither
+        # unique nor family-limited and the raid can hold two copies.
+        # Shapeshifter's Signet is the Lower City Exalted ring. The entry
+        # and tier anchors wear Band of the Ranger-General with Ring of a
+        # Thousand Marks and both best-in-slot anchors wear Stormrage
+        # Signet Ring with Unstoppable Aggressor's Ring, all four in the
+        # pool, so no worn item needed adding. `phase3` marks what the
+        # entry anchor cannot reach: the Black Temple drops and the Scale
+        # of the Sands ring, the reputation earned in Mount Hyjal.
+        "ring_pool": [
+            {"id": 32497, "phase3": True},   # Stormrage Signet Ring
+            {"id": 32335, "phase3": True},   # Unstoppable Aggressor's Ring
+            {"id": 32526, "phase3": True},   # Band of Devastation
+            {"id": 29997, "phase3": False},  # Band of the Ranger-General
+            {"id": 29301, "phase3": True},   # Band of the Eternal Champion
+            {"id": 28757, "phase3": False},  # Ring of a Thousand Marks
+            {"id": 32266, "phase3": True},   # Ring of Deceitful Intent
+            {"id": 30052, "phase3": False},  # Ring of Lethality
+            {"id": 30834, "phase3": False},  # Shapeshifter's Signet
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Karazhan, the raids above it "
+            "and two reputations, and every wearable pair from that pool "
+            "was measured, so the table is an enumeration rather than a "
+            "selection.")),
     },
     # COMBAT ROGUE: dual wield only, per the 20 August 2026 ruling in
     # data/judgments/weapon-styles.yaml. The build is Combat Swords, 20/41/0
@@ -561,6 +689,43 @@ ROUNDS: dict[str, dict] = {
             "the raids above it and the badge vendor, and every pair "
             "from that pool was measured, so the table is an "
             "enumeration rather than a selection.")),
+        # THE RING POOL: every max-level ring the Rog tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable, across all
+        # FOUR anchors. The ladder ranks ten; one is out on the standing
+        # exclusions: Shaffar's Band of Brutality drops in Mana-Tombs, a
+        # five-man below Karazhan. Band of the Eternal Champion and Band
+        # of Eternity carry limitCategory 497 in the binary's database,
+        # one uniqueness family, so no pair holds both and neither runs
+        # doubled; every other ring runs doubled, because the database
+        # marks it neither unique nor family-limited and the raid can
+        # hold two copies. The entry and tier anchors wear Ring of
+        # Lethality with Band of the Ranger-General and both best-in-slot
+        # anchors wear Stormrage Signet Ring with Band of the Eternal
+        # Champion, all four in the pool, so no worn item needed adding.
+        # `phase3` marks what the entry anchor cannot reach: the Black
+        # Temple drops and the Scale of the Sands rings, the reputation
+        # earned in Mount Hyjal.
+        "ring_pool": [
+            {"id": 32497, "phase3": True},   # Stormrage Signet Ring
+            {"id": 29301, "phase3": True},   # Band of the Eternal Champion
+            {"id": 32266, "phase3": True},   # Ring of Deceitful Intent
+            {"id": 30052, "phase3": False},  # Ring of Lethality
+            {"id": 29997, "phase3": False},  # Band of the Ranger-General
+            {"id": 32526, "phase3": True},   # Band of Devastation
+            {"id": 28757, "phase3": False},  # Ring of a Thousand Marks
+            {"id": 28649, "phase3": False},  # Garona's Signet Ring
+            {"id": 29300, "phase3": True},   # Band of Eternity
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Karazhan, the raids above it "
+            "and one reputation, and every wearable pair from that pool was "
+            "measured, so the table is an enumeration rather than a "
+            "selection. The two Scale of the Sands rings share one "
+            "uniqueness family, so no row wears both of them.")),
     },
     # ARMS: two-handers only, per the 20 August 2026 ruling. The published
     # Phase 3 page ranks only dual Warglaives, which the guild lead routed
@@ -667,6 +832,46 @@ ROUNDS: dict[str, dict] = {
             "party, the simulator prices that effect outside the "
             "trinket slot, and these runs do not engage it, so its "
             "rows price the worn stats alone and understate it.")),
+        # THE RING POOL: every max-level ring the Arms tab's Ring ladder
+        # ranks, plus the one worn ring the ladder does not rank, with
+        # anything from Karazhan and the badge vendor onward acceptable,
+        # and the runner generates every wearable unordered pair itself,
+        # both ring slots being interchangeable. The ladder ranks ten; one
+        # is out on the standing exclusions: Shaffar's Band of Brutality
+        # drops in Mana-Tombs, a five-man below Karazhan. Band of the
+        # Eternal Champion and Band of Eternity carry limitCategory 497 in
+        # the binary's database, one uniqueness family, so no pair holds
+        # both and neither runs doubled; every other ring runs doubled,
+        # because the database marks it neither unique nor family-limited
+        # and the raid can hold two copies. The entry and tier anchors
+        # wear Band of the Ranger-General with Shapeshifter's Signet, the
+        # Lower City Exalted ring the ladder does not rank, so the Signet
+        # is in the pool by the worn override; the best-in-slot anchor
+        # wears Stormrage Signet Ring with Unstoppable Aggressor's Ring,
+        # both on the ladder. `phase3` marks what the entry anchor cannot
+        # reach: the Black Temple drops and the Scale of the Sands rings,
+        # the reputation earned in Mount Hyjal.
+        "ring_pool": [
+            {"id": 32497, "phase3": True},   # Stormrage Signet Ring
+            {"id": 32335, "phase3": True},   # Unstoppable Aggressor's Ring
+            {"id": 29997, "phase3": False},  # Band of the Ranger-General
+            {"id": 29301, "phase3": True},   # Band of the Eternal Champion
+            {"id": 28757, "phase3": False},  # Ring of a Thousand Marks
+            {"id": 32266, "phase3": True},   # Ring of Deceitful Intent
+            {"id": 30052, "phase3": False},  # Ring of Lethality
+            {"id": 29300, "phase3": True},   # Band of Eternity
+            {"id": 32526, "phase3": True},   # Band of Devastation
+            {"id": 30834, "phase3": False},  # Shapeshifter's Signet
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Karazhan, the raids above it "
+            "and one reputation, plus the Lower City ring the entry and "
+            "tier sets already wear, and every wearable pair from that pool "
+            "was measured, so the table is an enumeration rather than a "
+            "selection. The two Scale of the Sands rings share one "
+            "uniqueness family, so no row wears both of them.")),
     },
     # BEAST MASTERY: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, the first spec to mix
@@ -819,6 +1024,43 @@ ROUNDS: dict[str, dict] = {
             "than a selection. "
             "Talon of Al'ar carries no worn stats, so its rows measure "
             "the simulator's pricing of its proc alone.")),
+        # THE RING POOL: every max-level ring the BM tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable. The ladder
+        # ranks ten and all ten pass the standing exclusions. Band of the
+        # Eternal Champion and the two Band of Eternity ranks, three
+        # different ids two of which share a name, carry limitCategory
+        # 497 in the binary's database, one uniqueness family, so no pair
+        # holds two of them and none runs doubled; every other ring runs
+        # doubled, because the database marks it neither unique nor
+        # family-limited and the raid can hold two copies. The entry and
+        # tier anchors wear Ring of Lethality with Band of the
+        # Ranger-General and the best-in-slot anchor wears Stormrage
+        # Signet Ring with Band of the Eternal Champion, all four in the
+        # pool, so no worn item needed adding. `phase3` marks what the
+        # entry anchor cannot reach: the Black Temple drops and the Scale
+        # of the Sands rings, the reputation earned in Mount Hyjal.
+        "ring_pool": [
+            {"id": 32497, "phase3": True},   # Stormrage Signet Ring
+            {"id": 29301, "phase3": True},   # Band of the Eternal Champion
+            {"id": 32266, "phase3": True},   # Ring of Deceitful Intent
+            {"id": 30052, "phase3": False},  # Ring of Lethality
+            {"id": 29997, "phase3": False},  # Band of the Ranger-General
+            {"id": 29300, "phase3": True},   # Band of Eternity
+            {"id": 32526, "phase3": True},   # Band of Devastation
+            {"id": 29299, "phase3": True},   # Band of Eternity
+            {"id": 28757, "phase3": False},  # Ring of a Thousand Marks
+            {"id": 28649, "phase3": False},  # Garona's Signet Ring
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Karazhan, the raids above it "
+            "and one reputation, and every wearable pair from that pool was "
+            "measured, so the table is an enumeration rather than a "
+            "selection. The three Scale of the Sands rings share one "
+            "uniqueness family, so no row wears two of them.")),
     },
     # SURVIVAL: both styles in the same table, per the 20 August 2026 ruling
     # in data/judgments/weapon-styles.yaml, the second spec to mix them: a
@@ -996,6 +1238,51 @@ ROUNDS: dict[str, dict] = {
             "why this spec's ladder is the one melee ladder that ranks "
             "it. Talon of Al'ar carries no worn stats, so its rows "
             "measure the simulator's pricing of its proc alone.")),
+        # THE RING POOL: every max-level ring the SV tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable. The ladder
+        # ranks ten; one is out on the standing exclusions: Pathfinder's
+        # Band is a rare world drop obtainable while leveling, not a
+        # max-level item, and no anchor wears it. Ring of the Overseer
+        # stays in as a max-level reward of the Shartuul event in Blade's
+        # Edge Mountains; the database marks it unique, so it runs no
+        # doubled row. Band of the Eternal Champion and the three Band of
+        # Eternity ranks, four ids three of which share a name, carry
+        # limitCategory 497 in the binary's database, one uniqueness
+        # family, so no pair holds two of them and none runs doubled;
+        # every other ring runs doubled. The entry and tier anchors wear
+        # Ring of Lethality with Ring of the Recalcitrant and the
+        # best-in-slot anchor wears Band of the Eternal Champion with
+        # Ring of the Recalcitrant, all three in the pool, so no worn
+        # item needed adding. `phase3` marks what the entry anchor cannot
+        # reach: the Black Temple drop, the Scale of the Sands rings, the
+        # reputation earned in Mount Hyjal, and Ring of the Overseer,
+        # whose event the workbook's Phase column places in Phase 3. The
+        # workbook's Phase column reads 2 for the lowest Band of Eternity
+        # rank, but the reputation is earned in Mount Hyjal, so the entry
+        # anchor cannot reach any rank of it.
+        "ring_pool": [
+            {"id": 29301, "phase3": True},   # Band of the Eternal Champion
+            {"id": 29300, "phase3": True},   # Band of Eternity
+            {"id": 30052, "phase3": False},  # Ring of Lethality
+            {"id": 29299, "phase3": True},   # Band of Eternity
+            {"id": 32266, "phase3": True},   # Ring of Deceitful Intent
+            {"id": 29298, "phase3": True},   # Band of Eternity
+            {"id": 28791, "phase3": False},  # Ring of the Recalcitrant
+            {"id": 28649, "phase3": False},  # Garona's Signet Ring
+            {"id": 32942, "phase3": True},   # Ring of the Overseer
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Karazhan, the raids above it, "
+            "one reputation and one max-level event reward, and every "
+            "wearable pair from that pool was measured, so the table is an "
+            "enumeration rather than a selection. The four Scale of the "
+            "Sands rings share one uniqueness family, so no row wears two "
+            "of them, and Ring of the Overseer is unique, so no row wears "
+            "two copies of it.")),
     },
     # AFFLICTION: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, and THE FIRST CASTER
@@ -1169,6 +1456,46 @@ ROUNDS: dict[str, dict] = {
             "Magtheridon procs when a spell is resisted, so its rows "
             "price its worn spell damage and a proc a hit-capped set "
             "rarely triggers.")),
+        # THE RING POOL: every max-level ring the Aff tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable. The ladder
+        # ranks ten; one is out on the standing exclusions: Sparking
+        # Arcanite Ring drops in Old Hillsbrad Foothills, a five-man
+        # below Karazhan. Band of the Eternal Sage and the two Band of
+        # Eternity ranks, three different ids two of which share a name,
+        # carry limitCategory 497 in the binary's database, one
+        # uniqueness family, so no pair holds two of them and none runs
+        # doubled; every other ring runs doubled, because the database
+        # marks it neither unique nor family-limited and the raid can
+        # hold two copies. The entry and tier anchors wear Band of
+        # Crimson Fury with Ring of Endless Coils, and the best-in-slot
+        # anchor wears Ring of Ancient Knowledge in BOTH slots, so its
+        # worn combination is itself a doubled row. `phase3` marks what
+        # the entry anchor cannot reach: the Black Temple drops and the
+        # Scale of the Sands rings, the reputation earned in Mount
+        # Hyjal.
+        "ring_pool": [
+            {"id": 32247, "phase3": True},   # Ring of Captured Storms
+            {"id": 32527, "phase3": True},   # Ring of Ancient Knowledge
+            {"id": 29305, "phase3": True},   # Band of the Eternal Sage
+            {"id": 32528, "phase3": True},   # Blessed Band of Karabor
+            {"id": 28793, "phase3": False},  # Band of Crimson Fury
+            {"id": 29304, "phase3": True},   # Band of Eternity
+            {"id": 29172, "phase3": False},  # Ashyen's Gift
+            {"id": 29303, "phase3": True},   # Band of Eternity
+            {"id": 30109, "phase3": False},  # Ring of Endless Coils
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Magtheridon's Lair, the raids "
+            "above it and two reputations, and every wearable pair from "
+            "that pool was measured, so the table is an enumeration rather "
+            "than a selection. The three Scale of the Sands rings share one "
+            "uniqueness family, so no row wears two of them. The "
+            "best-in-slot set wears Ring of Ancient Knowledge in both "
+            "slots, so its worn row is a doubled pair.")),
     },
     # DESTRUCTION: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, in the shape the
@@ -1334,6 +1661,48 @@ ROUNDS: dict[str, dict] = {
             "is a damage shield on the demon rather than a damage "
             "statistic, so its rows price its worn spell damage "
             "alone.")),
+        # THE RING POOL: every max-level ring the Dest tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable. The ladder
+        # ranks ten and all ten pass the standing exclusions. Band of the
+        # Eternal Sage and the three Band of Eternity ranks, four ids
+        # three of which share a name, carry limitCategory 497 in the
+        # binary's database, one uniqueness family, so no pair holds two
+        # of them and none runs doubled; every other ring runs doubled,
+        # because the database marks it neither unique nor family-limited
+        # and the raid can hold two copies. The entry and tier anchors
+        # wear Band of Crimson Fury with Ring of Endless Coils, and the
+        # best-in-slot anchor wears Ring of Ancient Knowledge in BOTH
+        # slots, so its worn combination is itself a doubled row.
+        # `phase3` marks what the entry anchor cannot reach: the Black
+        # Temple drops and the Scale of the Sands rings, the reputation
+        # earned in Mount Hyjal. The workbook's Phase column reads 2 for
+        # the lowest Band of Eternity rank, but the reputation is earned
+        # in Mount Hyjal, so the entry anchor cannot reach any rank of
+        # it.
+        "ring_pool": [
+            {"id": 32247, "phase3": True},   # Ring of Captured Storms
+            {"id": 32527, "phase3": True},   # Ring of Ancient Knowledge
+            {"id": 29305, "phase3": True},   # Band of the Eternal Sage
+            {"id": 32528, "phase3": True},   # Blessed Band of Karabor
+            {"id": 29304, "phase3": True},   # Band of Eternity
+            {"id": 28793, "phase3": False},  # Band of Crimson Fury
+            {"id": 29303, "phase3": True},   # Band of Eternity
+            {"id": 30109, "phase3": False},  # Ring of Endless Coils
+            {"id": 29302, "phase3": True},   # Band of Eternity
+            {"id": 29172, "phase3": False},  # Ashyen's Gift
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Magtheridon's Lair, the raids "
+            "above it and two reputations, and every wearable pair from "
+            "that pool was measured, so the table is an enumeration rather "
+            "than a selection. The four Scale of the Sands rings share one "
+            "uniqueness family, so no row wears two of them. The "
+            "best-in-slot set wears Ring of Ancient Knowledge in both "
+            "slots, so its worn row is a doubled pair.")),
     },
     # ARCANE MAGE: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, in the shape the
@@ -1513,6 +1882,51 @@ ROUNDS: dict[str, dict] = {
             "and the Pendant of the Violet Eye restores mana on use, "
             "so what their rows price beyond their worn statistics is "
             "mana, which becomes damage only when the set runs dry.")),
+        # THE RING POOL: every max-level ring the Arc tab's Ring ladder
+        # ranks, plus the one worn ring the ladder does not rank, with
+        # anything from Karazhan and the badge vendor onward acceptable,
+        # and the runner generates every wearable unordered pair itself,
+        # both ring slots being interchangeable. The ladder ranks ten and
+        # all ten pass the standing exclusions. Band of the Eternal Sage
+        # and the three Band of Eternity ranks carry limitCategory 497 in
+        # the binary's database and the two Violet Signets, the Violet
+        # Eye reputation rings, carry limitCategory 495: two uniqueness
+        # families, so no pair holds two rings of one family and none of
+        # the six runs doubled; every other ring runs doubled. The entry
+        # and tier anchors wear Violet Signet of the Archmage with
+        # Ashyen's Gift, the Cenarion Expedition Exalted ring the ladder
+        # does not rank, so Ashyen's Gift is in the pool by the worn
+        # override; the best-in-slot anchor wears Ring of Ancient
+        # Knowledge with Band of the Eternal Sage, both on the ladder.
+        # `phase3` marks what the entry anchor cannot reach: the Black
+        # Temple drops and the Scale of the Sands rings, the reputation
+        # earned in Mount Hyjal. The workbook's Phase column reads 2 for
+        # the lowest Band of Eternity rank, but the reputation is earned
+        # in Mount Hyjal, so the entry anchor cannot reach any rank of
+        # it.
+        "ring_pool": [
+            {"id": 32527, "phase3": True},   # Ring of Ancient Knowledge
+            {"id": 32528, "phase3": True},   # Blessed Band of Karabor
+            {"id": 29305, "phase3": True},   # Band of the Eternal Sage
+            {"id": 29304, "phase3": True},   # Band of Eternity
+            {"id": 29303, "phase3": True},   # Band of Eternity
+            {"id": 32247, "phase3": True},   # Ring of Captured Storms
+            {"id": 29302, "phase3": True},   # Band of Eternity
+            {"id": 29287, "phase3": False},  # Violet Signet of the Archmage
+            {"id": 29286, "phase3": False},  # Violet Signet
+            {"id": 29922, "phase3": False},  # Band of Al'ar
+            {"id": 29172, "phase3": False},  # Ashyen's Gift
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Tempest Keep, Black Temple and "
+            "two reputations, plus the Cenarion Expedition ring the entry "
+            "and tier sets already wear, and every wearable pair from that "
+            "pool was measured, so the table is an enumeration rather than "
+            "a selection. The four Scale of the Sands rings share one "
+            "uniqueness family and the two Violet Signets share another, so "
+            "no row wears two rings of one family.")),
     },
     # SHADOW PRIEST: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, in the shape the
@@ -1687,6 +2101,45 @@ ROUNDS: dict[str, dict] = {
             "Eye of Magtheridon procs when a spell is resisted, so its "
             "rows price its worn spell damage and a proc a hit-capped "
             "set rarely triggers.")),
+        # THE RING POOL: every max-level ring the Shad tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable. The ladder
+        # ranks ten and all ten pass the standing exclusions. Band of the
+        # Eternal Sage and the two Band of Eternity ranks, three
+        # different ids two of which share a name, carry limitCategory
+        # 497 in the binary's database, one uniqueness family, so no pair
+        # holds two of them and none runs doubled; every other ring runs
+        # doubled, because the database marks it neither unique nor
+        # family-limited and the raid can hold two copies. The entry and
+        # tier anchors wear Ring of Endless Coils with Band of Al'ar, and
+        # the best-in-slot anchor wears Ring of Ancient Knowledge in BOTH
+        # slots, so its worn combination is itself a doubled row.
+        # `phase3` marks what the entry anchor cannot reach: the Black
+        # Temple drops and the Scale of the Sands rings, the reputation
+        # earned in Mount Hyjal.
+        "ring_pool": [
+            {"id": 32527, "phase3": True},   # Ring of Ancient Knowledge
+            {"id": 32247, "phase3": True},   # Ring of Captured Storms
+            {"id": 32528, "phase3": True},   # Blessed Band of Karabor
+            {"id": 29305, "phase3": True},   # Band of the Eternal Sage
+            {"id": 28793, "phase3": False},  # Band of Crimson Fury
+            {"id": 30109, "phase3": False},  # Ring of Endless Coils
+            {"id": 29304, "phase3": True},   # Band of Eternity
+            {"id": 29172, "phase3": False},  # Ashyen's Gift
+            {"id": 29922, "phase3": False},  # Band of Al'ar
+            {"id": 29303, "phase3": True},   # Band of Eternity
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Magtheridon's Lair, the raids "
+            "above it and two reputations, and every wearable pair from "
+            "that pool was measured, so the table is an enumeration rather "
+            "than a selection. The three Scale of the Sands rings share one "
+            "uniqueness family, so no row wears two of them. The "
+            "best-in-slot set wears Ring of Ancient Knowledge in both "
+            "slots, so its worn row is a doubled pair.")),
     },
     # BALANCE DRUID: both styles in the same table, per the 20 August 2026
     # ruling in data/judgments/weapon-styles.yaml, in the shape the
@@ -1869,6 +2322,53 @@ ROUNDS: dict[str, dict] = {
             "Eye of Magtheridon procs when a spell is resisted, so "
             "what its rows price beyond its worn spell damage moves "
             "with each anchor's distance from the hit target.")),
+        # THE RING POOL: every max-level ring the Owl tab's Ring ladder
+        # ranks, plus the one worn ring the ladder does not rank, with
+        # anything from Karazhan and the badge vendor onward acceptable,
+        # and the runner generates every wearable unordered pair itself,
+        # both ring slots being interchangeable. The ladder ranks ten and
+        # all ten pass the standing exclusions. Band of the Eternal Sage
+        # and the three Band of Eternity ranks, four ids three of which
+        # share a name, carry limitCategory 497 in the binary's database,
+        # one uniqueness family, so no pair holds two of them and none
+        # runs doubled; every other ring runs doubled, because the
+        # database marks it neither unique nor family-limited and the
+        # raid can hold two copies. The entry and tier anchors wear Ring
+        # of Unrelenting Storms with Ring of Recurrence, a Karazhan trash
+        # drop the ladder does not rank, so Ring of Recurrence is in the
+        # pool by the worn override; the best-in-slot anchor wears Band
+        # of the Eternal Sage with Ring of Ancient Knowledge, both on the
+        # ladder. This round runs the three standard anchors only; the
+        # capture's alternative tier states are not anchors here.
+        # `phase3` marks what the entry anchor cannot reach: the Black
+        # Temple drops and the Scale of the Sands rings, the reputation
+        # earned in Mount Hyjal. The workbook's Phase column reads 2 for
+        # the lowest Band of Eternity rank, but the reputation is earned
+        # in Mount Hyjal, so the entry anchor cannot reach any rank of
+        # it.
+        "ring_pool": [
+            {"id": 32247, "phase3": True},   # Ring of Captured Storms
+            {"id": 29305, "phase3": True},   # Band of the Eternal Sage
+            {"id": 32527, "phase3": True},   # Ring of Ancient Knowledge
+            {"id": 30667, "phase3": False},  # Ring of Unrelenting Storms
+            {"id": 32528, "phase3": True},   # Blessed Band of Karabor
+            {"id": 29304, "phase3": True},   # Band of Eternity
+            {"id": 28793, "phase3": False},  # Band of Crimson Fury
+            {"id": 29303, "phase3": True},   # Band of Eternity
+            {"id": 30109, "phase3": False},  # Ring of Endless Coils
+            {"id": 29302, "phase3": True},   # Band of Eternity
+            {"id": 28753, "phase3": False},  # Ring of Recurrence
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Karazhan, Magtheridon's Lair, "
+            "the raids above them and one reputation, plus the Karazhan "
+            "ring the entry and tier sets already wear, and every wearable "
+            "pair from that pool was measured, so the table is an "
+            "enumeration rather than a selection. The four Scale of the "
+            "Sands rings share one uniqueness family, so no row wears two "
+            "of them.")),
     },
     # ELEMENTAL SHAMAN: both styles in the same table, per the 20 August
     # 2026 ruling in data/judgments/weapon-styles.yaml, in the caster
@@ -2055,6 +2555,46 @@ ROUNDS: dict[str, dict] = {
             "procs when a spell is resisted, so what its rows price "
             "beyond its worn spell damage moves with each anchor's "
             "distance from the hit target.")),
+        # THE RING POOL: every max-level ring the Ele tab's Ring ladder
+        # ranks, with anything from Karazhan and the badge vendor onward
+        # acceptable, and the runner generates every wearable unordered
+        # pair itself, both ring slots being interchangeable. The ladder
+        # ranks ten and all ten pass the standing exclusions. Band of the
+        # Eternal Sage and the three Band of Eternity ranks, four ids
+        # three of which share a name, carry limitCategory 497 in the
+        # binary's database, one uniqueness family, so no pair holds two
+        # of them and none runs doubled; every other ring runs doubled,
+        # because the database marks it neither unique nor family-limited
+        # and the raid can hold two copies. The entry and tier anchors
+        # wear Ring of Unrelenting Storms with Ring of Endless Coils and
+        # the best-in-slot anchor wears Ring of Ancient Knowledge with
+        # Band of the Eternal Sage, all four in the pool, so no worn item
+        # needed adding. `phase3` marks what the entry anchor cannot
+        # reach: the Black Temple drops and the Scale of the Sands rings,
+        # the reputation earned in Mount Hyjal. The workbook's Phase
+        # column reads 2 for the lowest Band of Eternity rank, but the
+        # reputation is earned in Mount Hyjal, so the entry anchor cannot
+        # reach any rank of it.
+        "ring_pool": [
+            {"id": 32527, "phase3": True},   # Ring of Ancient Knowledge
+            {"id": 29305, "phase3": True},   # Band of the Eternal Sage
+            {"id": 32247, "phase3": True},   # Ring of Captured Storms
+            {"id": 32528, "phase3": True},   # Blessed Band of Karabor
+            {"id": 30667, "phase3": False},  # Ring of Unrelenting Storms
+            {"id": 29304, "phase3": True},   # Band of Eternity
+            {"id": 29303, "phase3": True},   # Band of Eternity
+            {"id": 30109, "phase3": False},  # Ring of Endless Coils
+            {"id": 29302, "phase3": True},   # Band of Eternity
+            {"id": 28753, "phase3": False},  # Ring of Recurrence
+        ],
+        "rings_why": (
+            (
+            "The candidates are every max-level ring on the EP Workbook's "
+            "Ring ladder for this spec, from Karazhan, the raids above it "
+            "and one reputation, and every wearable pair from that pool was "
+            "measured, so the table is an enumeration rather than a "
+            "selection. The four Scale of the Sands rings share one "
+            "uniqueness family, so no row wears two of them.")),
     },
 }
 
@@ -2073,6 +2613,67 @@ def with_trinkets(gear: dict, a: int, b: int) -> dict:
     for slot, item_id in (("trinket_1", a), ("trinket_2", b)):
         out["items"][SLOT_ORDER.index(slot)] = {"id": item_id}
     return out
+
+
+def with_rings(gear: dict, a: int, b: int,
+               a_gems: list[int] | None = None,
+               b_gems: list[int] | None = None) -> dict:
+    """The gear wearing one ring combination.
+
+    RULED BY THE GUILD LEAD ON 21 AUGUST 2026: the ring rounds are
+    ENUMERATIVE like the trinket rounds, every wearable unordered pair from
+    the spec's pool. The two ring slots are interchangeable to the
+    simulator, so the pair is UNORDERED, and it is aligned with the worn
+    slots before the slots are filled: a candidate that IS a worn ring
+    lands in the slot that wears it and keeps that slot's gems exactly, so
+    the plus-zero self-match stands. A candidate no slot wears arrives
+    with the gems the caller resolved for it, per the assumed-gemmed
+    ruling, and the slot keeps its enchant either way.
+    """
+    out = {"items": [dict(entry) for entry in gear["items"]]}
+    index_1 = SLOT_ORDER.index("ring_1")
+    index_2 = SLOT_ORDER.index("ring_2")
+    worn_1 = (out["items"][index_1] or {}).get("id")
+    worn_2 = (out["items"][index_2] or {}).get("id")
+    if not (a == worn_1 and b == worn_2) and (b == worn_1 or a == worn_2):
+        a, b = b, a
+        a_gems, b_gems = b_gems, a_gems
+    for index, cand, gems in ((index_1, a, a_gems), (index_2, b, b_gems)):
+        entry = dict(out["items"][index]) or {}
+        if entry.get("id") != cand:
+            entry.pop("gems", None)
+            if gems:
+                entry["gems"] = gems
+        entry["id"] = cand
+        out["items"][index] = entry
+    return out
+
+
+def enumerate_ring_pairs(pool: list[dict], anchor: str,
+                         family_of, is_limited) -> list[tuple[int, int]]:
+    """The ring combinations one anchor runs, generated from the pool.
+
+    Every UNORDERED pair from the pool, because the two ring slots are
+    interchangeable to the simulator, PLUS a doubled pair for every ring
+    the raid can hold two copies of. The binary's database is the
+    authority on uniqueness, read at run time rather than copied into the
+    registry: a ring marked `unique` cannot be worn twice, and two rings
+    sharing a `limitCategory`, which is how the Band of Eternity ranks and
+    the Violet Signets are limited, cannot be worn together, so neither
+    kind of row is generated. The entry anchor drops every candidate
+    marked `phase3`.
+    """
+    kept = [c for c in pool if not (anchor == "entry" and c["phase3"])]
+    pairs: list[tuple[int, int]] = []
+    for one, two in itertools.combinations(kept, 2):
+        family = family_of(one["id"])
+        if family is not None and family == family_of(two["id"]):
+            continue
+        pairs.append((one["id"], two["id"]))
+    for cand in kept:
+        if not is_limited(cand["id"]):
+            pairs.append((cand["id"], cand["id"]))
+    return pairs
 
 
 def standard_gems(spec: str, item_id: int, rows_by_id: dict,
@@ -2211,7 +2812,23 @@ def main() -> int:
                          "specs' recorded figures are carried forward from "
                          "the existing output file unchanged, so one spec "
                          "can land without rerunning every other round.")
+    ap.add_argument("--rounds", default=None,
+                    help="Run only these passes, a comma list from "
+                         f"{{{', '.join(PASSES)}}}. Default all. A pass "
+                         "left out is carried forward from the existing "
+                         "output file unchanged, per spec, so one new pass "
+                         "can land without rerunning the others.")
     args = ap.parse_args()
+
+    if args.rounds:
+        passes = {p.strip() for p in args.rounds.split(",") if p.strip()}
+        unknown_passes = passes - set(PASSES)
+        if unknown_passes:
+            print(f"error: not a pass: {', '.join(sorted(unknown_passes))}. "
+                  f"Passes: {', '.join(PASSES)}", file=sys.stderr)
+            return 1
+    else:
+        passes = set(PASSES)
 
     if not args.cli.is_file():
         print(f"error: no simulator at {args.cli}. Run "
@@ -2225,8 +2842,21 @@ def main() -> int:
                      Path("data/facts/enchants-by-spec.yaml").read_text()
                  ).get("specs") or {}).items()}
     from run_sims import WOWSIMS
-    gem_ids = {g["name"]: g["id"] for g in json.loads(
-        (WOWSIMS / "assets/database/db.json").read_text()).get("gems") or []}
+    db = json.loads((WOWSIMS / "assets/database/db.json").read_text())
+    gem_ids = {g["name"]: g["id"] for g in db.get("gems") or []}
+    # UNIQUENESS IS READ FROM THE DATABASE THE BINARY SHIPS, at run time,
+    # never copied into the registry, so the ring pairs cannot drift from
+    # what the simulator equips. `unique` bars two copies of one id;
+    # `limitCategory` bars two rings of one family, which is how the Band
+    # of Eternity ranks and the Violet Signets are limited.
+    db_items_by_id = {i["id"]: i for i in db.get("items") or []}
+
+    def family_of(item_id: int):
+        return (db_items_by_id.get(item_id) or {}).get("limitCategory")
+
+    def is_limited(item_id: int) -> bool:
+        row = db_items_by_id.get(item_id) or {}
+        return bool(row.get("unique")) or row.get("limitCategory") is not None
     strings = yaml.safe_load(
         TALENTS.read_text())["wowsims_talent_strings"]["strings"]
     buffs = yaml.safe_load(BUFFS.read_text())
@@ -2252,7 +2882,7 @@ def main() -> int:
         return None
 
     rounds = ROUNDS
-    carried: dict[str, dict] = {}
+    existing: dict[str, dict] = {}
     if args.spec:
         unknown = [s for s in args.spec if s not in ROUNDS]
         if unknown:
@@ -2260,23 +2890,35 @@ def main() -> int:
                   f"Registered: {', '.join(ROUNDS)}", file=sys.stderr)
             return 1
         rounds = {s: ROUNDS[s] for s in args.spec}
-        # THE OTHER SPECS ARE CARRIED, NOT DROPPED. A partial run that wrote
-        # only its own spec would delete every other round from the file,
-        # which is the sim-figures hand-merge trap all over again.
-        if args.out.is_file():
-            carried = (yaml.safe_load(args.out.read_text())
-                       or {}).get("specs") or {}
-            carried = {s: block for s, block in carried.items()
-                       if s not in rounds}
+    # THE OTHER SPECS AND THE OTHER PASSES ARE CARRIED, NOT DROPPED. A
+    # partial run that wrote only what it ran would delete every other
+    # round from the file, which is the sim-figures hand-merge trap all
+    # over again. The same rule holds at pass level: a --rounds run keeps
+    # each selected spec's existing figures for every pass it skips.
+    if (args.spec or passes != set(PASSES)) and args.out.is_file():
+        existing = (yaml.safe_load(args.out.read_text())
+                    or {}).get("specs") or {}
+    carried = {s: block for s, block in existing.items()
+               if s not in rounds}
 
     specs_out: dict[str, dict] = dict(carried)
     total = 0
     for spec, round_ in rounds.items():
         talents = (strings.get(spec) or {}).get("string")
         stem = spec.replace("_", "-")
+        # A PASS THAT IS NOT SELECTED KEEPS ITS EXISTING FIGURES. `block`
+        # is built pass by pass in the file's canonical key order, each
+        # pass either run fresh or carried from the existing output file.
+        prior = existing.get(spec) or {}
+        block: dict = {}
+
+        if "weapons" not in passes:
+            for key in PASS_KEYS["weapons"]:
+                if key in prior:
+                    block[key] = prior[key]
         # THE SCALE OF THE ROUND, printed before it runs, so the log says
         # up front how many combinations the long run will take.
-        if round_.get("weapon_field"):
+        if "weapons" in passes and round_.get("weapon_field"):
             field = round_["weapon_field"]
             sizes = ", ".join(
                 f"{key} {len(field.get(key) or [])}"
@@ -2286,7 +2928,8 @@ def main() -> int:
                 for anchor in round_.get("anchors", ANCHORS))
             print(f"{spec}: field {sizes}; combinations {counts}")
         anchors: dict[str, list[dict]] = {}
-        for anchor in round_.get("anchors", ANCHORS):
+        for anchor in (round_.get("anchors", ANCHORS)
+                       if "weapons" in passes else ()):
             path = args.gear / f"{stem}.{anchor}.gear.json"
             if not path.is_file():
                 print(f"error: no profile at {path}. Run `just regen` first.",
@@ -2334,13 +2977,19 @@ def main() -> int:
                 print(f"  {spec:22s} {anchor:20s} {label:56s} {dps:9.1f}")
             results.sort(key=lambda row: -row["dps"])
             anchors[anchor] = results
-        specs_out[spec] = {"why": round_["why"], "anchors": anchors}
+        if "weapons" in passes:
+            block["why"] = round_["why"]
+            block["anchors"] = anchors
 
         # THE RANGED PASS, for a spec whose registry entry carries one. Same
         # anchors, same variant rules, one slot: the worn row reproduces the
         # anchor figure and every other candidate arrives with the slot's
         # scope and no gems.
-        if round_.get("ranged"):
+        if "ranged" not in passes:
+            for key in PASS_KEYS["ranged"]:
+                if key in prior:
+                    block[key] = prior[key]
+        if "ranged" in passes and round_.get("ranged"):
             ranged_anchors: dict[str, list[dict]] = {}
             for anchor in round_.get("anchors", ANCHORS):
                 path = args.gear / f"{stem}.{anchor}.gear.json"
@@ -2376,15 +3025,19 @@ def main() -> int:
                           f"{label + ' (ranged)':56s} {dps:9.1f}")
                 results.sort(key=lambda row: -row["dps"])
                 ranged_anchors[anchor] = results
-            specs_out[spec]["ranged_why"] = round_["ranged_why"]
-            specs_out[spec]["ranged_anchors"] = ranged_anchors
+            block["ranged_why"] = round_["ranged_why"]
+            block["ranged_anchors"] = ranged_anchors
 
         # THE TRINKET PASS, enumerative by ruling: every unordered pair from
         # the pool, the entry anchor dropping what Phase 3 supplies, so the
         # table is complete rather than curated and a rerun cannot silently
         # narrow it. The pages show the top ten and the worn pair; the fact
         # file keeps every row.
-        if round_.get("trinket_pool"):
+        if "trinkets" not in passes:
+            for key in PASS_KEYS["trinkets"]:
+                if key in prior:
+                    block[key] = prior[key]
+        if "trinkets" in passes and round_.get("trinket_pool"):
             trinket_anchors: dict[str, list[dict]] = {}
             for anchor in round_.get("anchors", ANCHORS):
                 path = args.gear / f"{stem}.{anchor}.gear.json"
@@ -2419,8 +3072,65 @@ def main() -> int:
                           f"{label:56s} {dps:9.1f}")
                 results.sort(key=lambda row: -row["dps"])
                 trinket_anchors[anchor] = results
-            specs_out[spec]["trinkets_why"] = round_["trinkets_why"]
-            specs_out[spec]["trinket_anchors"] = trinket_anchors
+            block["trinkets_why"] = round_["trinkets_why"]
+            block["trinket_anchors"] = trinket_anchors
+
+        # THE RING PASS, enumerative by the 21 August 2026 ruling, in the
+        # trinket pass's shape with two differences the ring slot forces:
+        # a ring can be UNIQUE or family-limited, so enumerate_ring_pairs
+        # reads the binary's database and generates only wearable pairs,
+        # including a doubled pair for every ring the raid can hold two
+        # copies of, and a socketed candidate carries the spec's standard
+        # gems, per the assumed-gemmed ruling. The pages show the top ten
+        # and the worn pair; the fact file keeps every row.
+        if "rings" not in passes:
+            for key in PASS_KEYS["rings"]:
+                if key in prior:
+                    block[key] = prior[key]
+        if "rings" in passes and round_.get("ring_pool"):
+            ring_anchors: dict[str, list[dict]] = {}
+            for anchor in round_.get("anchors", ANCHORS):
+                path = args.gear / f"{stem}.{anchor}.gear.json"
+                gear = json.loads(path.read_text())
+                results = []
+                for one, two in enumerate_ring_pairs(
+                        round_["ring_pool"], anchor, family_of, is_limited):
+                    label = (f"{names.get(one, one)} + "
+                             f"{names.get(two, two)}")
+                    dps, stdev, error = run(args.cli, build_request(
+                        spec, with_rings(
+                            gear, one, two,
+                            standard_gems(spec, one, rows_by_id, gem_ids,
+                                          gem_names),
+                            standard_gems(spec, two, rows_by_id, gem_ids,
+                                          gem_names)),
+                        talents, args.iterations, args.seed, buffs, party_of,
+                        anchor.replace("-", "_"), args.seconds, args.armor))
+                    if error:
+                        if "No item with id" in error:
+                            print(f"  SKIPPED, unknown to the binary: "
+                                  f"{label}")
+                            continue
+                        raise SystemExit(
+                            f"run_variant_sims.py: {spec}: {anchor}: "
+                            f"rings {label}: {error}")
+                    results.append({
+                        "ring_1": weapon(one),
+                        "ring_2": weapon(two),
+                        "dps": round(dps, 1),
+                        "standard_error": round(
+                            stdev / math.sqrt(args.iterations), 2),
+                        "stdev": round(stdev, 1),
+                    })
+                    total += 1
+                    print(f"  {spec:22s} {anchor:20s} "
+                          f"{label:56s} {dps:9.1f}")
+                results.sort(key=lambda row: -row["dps"])
+                ring_anchors[anchor] = results
+            block["rings_why"] = round_["rings_why"]
+            block["ring_anchors"] = ring_anchors
+
+        specs_out[spec] = block
 
         # WRITE AFTER EVERY SPEC, not once at the end. A crash three and a
         # half hours into a run once discarded every finished spec because

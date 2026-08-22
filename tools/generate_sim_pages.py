@@ -754,6 +754,124 @@ The ten best of the {measured} combinations measured, and the worn pair.
 """
 
 
+def ring_section(spec: str, anchor: str, row: dict,
+                 gear: dict, name_of, state: dict,
+                 default_armor: int) -> str:
+    """A spec's ring combinations, as a section of one anchor page.
+
+    RULED BY THE GUILD LEAD ON 21 AUGUST 2026: the ring rounds run every
+    wearable unordered pair from the spec's pool, in the trinket rounds'
+    shape, and the page shows the TOP TEN of that enumeration plus the
+    worn pair. The fact file keeps every row. THE WORN PAIR IS MATCHED AS
+    AN UNORDERED MULTISET, not a set, because a best-in-slot profile can
+    wear one ring in BOTH slots, and a set of its two ids would collapse
+    to one and never match the doubled row.
+    """
+    doc = _variants()
+    if not doc:
+        return ""
+    block = (doc.get("specs") or {}).get(spec)
+    if not block:
+        return ""
+    rows = (block.get("ring_anchors") or {}).get(anchor)
+    if not rows:
+        return ""
+    measured = len(rows)
+
+    worn = sorted(
+        item_id for item_id in (
+            (gear["items"][run_sims.SLOT_ORDER.index("ring_1")]
+             or {}).get("id"),
+            (gear["items"][run_sims.SLOT_ORDER.index("ring_2")]
+             or {}).get("id"),
+        ) if item_id is not None)
+    rows = [dict(e) for e in rows]
+    worn_row = None
+    for e in rows:
+        if sorted((e["ring_1"]["id"], e["ring_2"]["id"])) == worn:
+            e["this_set"] = True
+            worn_row = e
+    shown = rows[:10]
+    if worn_row is None and len(worn) == 2:
+        a, b = worn
+        worn_row = {"ring_1": {"id": a, "name": name_of(a)},
+                    "ring_2": {"id": b, "name": name_of(b)},
+                    "dps": row["dps"],
+                    "standard_error": row.get("standard_error"),
+                    "this_set": True}
+    if worn_row is not None and worn_row not in shown:
+        shown = shown + [worn_row]
+        shown.sort(key=lambda e: -e["dps"])
+
+    table_rows = [[
+        entry["ring_1"]["name"]
+        + (" *(this set)*" if entry.get("this_set") else ""),
+        entry["ring_2"]["name"],
+        f"{entry['dps']:.1f} ± {entry['standard_error']:.2f}"
+        if entry.get("standard_error") is not None else f"{entry['dps']:.1f}",
+        f"{entry['dps'] - row['dps']:+.1f}",
+    ] for entry in shown]
+
+    best = rows[0]
+    if abs(best["dps"] - row["dps"]) < 0.05:
+        if state.get("zero_read"):
+            reading = "The worn pair is again the best row, at plus zero."
+        else:
+            reading = (
+                "This set already wears the best combination on the table, "
+                "which is why the top row reads plus zero: that row IS this "
+                "profile.")
+            state["zero_read"] = True
+    elif best["dps"] > row["dps"]:
+        reading = (
+            f"The best combination, {best['ring_1']['name']} with "
+            f"{best['ring_2']['name']}, measures "
+            f"{best['dps'] - row['dps']:+.1f} against this set's own "
+            "rings, so the upgrade path at this anchor runs through it.")
+    else:
+        reading = (
+            f"Every combination below measures UNDER this set's own "
+            f"rings, the best of them by {row['dps'] - best['dps']:.1f} "
+            "DPS, so the round found no ring upgrade at this anchor.")
+
+    # THE ARMOR PENETRATION CAVEAT PRINTS ONLY WHERE THE ROUND MEASURED an
+    # armor penetration ring, the same rule the trinket section applies:
+    # an entry page whose pool cannot reach one does not carry a warning
+    # about a row it does not hold.
+    pen_ids: list[int] = []
+    for entry in rows:
+        for key in ("ring_1", "ring_2"):
+            item_id = entry[key]["id"]
+            if item_id in (32497,) and item_id not in pen_ids:
+                pen_ids.append(item_id)
+    caveat = ""
+    if pen_ids:
+        names = [name_of(i) for i in sorted(pen_ids)]
+        carries = "carry" if len(names) > 1 else "carries"
+        caveat = (
+            f" {' and '.join(names)} {carries} armor penetration, which "
+            f"moves with the boss's armor; these figures are at boss armor "
+            f"{default_armor}, the highest Phase 3 tier, and ten of the "
+            "fourteen bosses sit at 6193.")
+
+    return f"""
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.{caveat}
+
+{block['rings_why']}
+
+The ten best of the {measured} combinations measured, and the worn pair.
+
+{rows_table(["Ring", "Ring", "DPS", "Against this set"], table_rows)}
+
+{reading}
+"""
+
+
 def write_detail(directory: Path, spec: str, anchor: str, label: str,
                  row: dict, meta: dict, items_csv: dict,
                  by_key: dict, tiers: list, default_armor: int, db_items: dict,
@@ -928,6 +1046,8 @@ damage lands, so a physical spec moves between them and a pure caster does not.
         ranged_section(spec, anchor, row, gear, name_of, state),
         trinket_section(spec, anchor, row, gear, name_of, state,
                         default_armor),
+        ring_section(spec, anchor, row, gear, name_of, state,
+                     default_armor),
     ]
     if any(sections):
         body += (
