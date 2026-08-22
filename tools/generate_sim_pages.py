@@ -193,10 +193,13 @@ def main() -> int:
 
     detail_dir = args.out / "sims"
     detail_dir.mkdir(parents=True, exist_ok=True)
-    for stale in detail_dir.glob("*.md"):
-        stale.unlink()
+    # STALE PAGES ARE REMOVED AFTER THE NEW ONES ARE WRITTEN, never before.
+    # A delete-first generator that dies mid-run leaves an empty directory,
+    # and one such death shipped a site with no set pages on 21 August 2026.
+    before = set(detail_dir.glob("*.md"))
 
     written = 0
+    fresh: set = set()
     for spec in specs:
         for anchor, label, _why in ANCHORS:
             row = by_key.get((spec, anchor, default_armor))
@@ -207,6 +210,10 @@ def main() -> int:
                 by_key, tiers, default_armor,
                 db_items, gems_by_id, enchant_by_effect, consumable_name,
                 buffs_doc, party_of, talents)
+            fresh.add(detail_dir / f"{slug(spec, anchor)}.md")
+
+    for stale in before - fresh:
+        stale.unlink()
 
     write_index(args.out / "sims.md", specs, by_key, meta, tiers,
                 default_armor)
