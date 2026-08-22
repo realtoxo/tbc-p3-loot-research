@@ -175,6 +175,11 @@ sim-tier ITERATIONS="10000":
     @python3 tools/run_tier_sims.py --iterations {{ITERATIONS}}
     @python3 tools/generate_tier_page.py
 
+# Report every anchor whose worn combination is not its measured best. The
+# detection half of the revision loop; it changes nothing.
+audit:
+    @python3 tools/audit_bis.py
+
 # Fail if a sim profile wears a gem or an enchant Phase 3 cannot supply.
 # Runs inside `just check` as well; this is the one-line way to run it alone.
 gating:
