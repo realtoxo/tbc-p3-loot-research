@@ -157,6 +157,7 @@ sim ITERATIONS="10000":
     @python3 tools/run_sims.py --iterations {{ITERATIONS}} --all-tiers --out data/facts/sim-figures.yaml
     @python3 tools/run_variant_sims.py --iterations {{ITERATIONS}}
     @python3 tools/run_tier_sims.py --iterations {{ITERATIONS}}
+    @python3 tools/run_ladder_sims.py --iterations {{ITERATIONS}}
     @python3 tools/generate_sim_pages.py
     @python3 tools/generate_tier_page.py
 
@@ -174,6 +175,12 @@ sim-weapons ITERATIONS="10000":
 sim-tier ITERATIONS="10000":
     @python3 tools/run_tier_sims.py --iterations {{ITERATIONS}}
     @python3 tools/generate_tier_page.py
+
+# Rerun only the slot ladders: each single-item slot's workbook candidates
+# as variants of the tier profile, for the item pages' measured orderings.
+# `just sim` runs this too.
+sim-ladders ITERATIONS="10000":
+    @python3 tools/run_ladder_sims.py --iterations {{ITERATIONS}}
 
 # Report every anchor whose worn combination is not its measured best. The
 # detection half of the revision loop; it changes nothing.
