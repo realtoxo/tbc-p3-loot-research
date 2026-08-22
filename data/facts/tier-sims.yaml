@@ -1230,121 +1230,121 @@ specs:
           name: Gronnstalker's Gloves
       rows:
       - replaced: []
-        dps: 3011.8
-        standard_error: 0.85
-        stdev: 85.2
+        dps: 2721.8
+        standard_error: 0.72
+        stdev: 72.3
         pieces_left:
           Rift Stalker Armor: 4
       - replaced:
         - head
-        dps: 3020.9
-        standard_error: 0.87
-        stdev: 87.1
+        dps: 2720.4
+        standard_error: 0.73
+        stdev: 73.1
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - shoulder
-        dps: 3006.6
-        standard_error: 0.86
-        stdev: 85.6
+        dps: 2708.7
+        standard_error: 0.73
+        stdev: 72.9
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - chest
-        dps: 3003.5
-        standard_error: 0.85
-        stdev: 84.6
+        dps: 2706.5
+        standard_error: 0.73
+        stdev: 72.8
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - hands
-        dps: 3020.3
-        standard_error: 0.86
-        stdev: 85.8
+        dps: 2722.0
+        standard_error: 0.73
+        stdev: 73.1
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - head
         - shoulder
-        dps: 3042.9
-        standard_error: 0.88
-        stdev: 88.1
+        dps: 2741.5
+        standard_error: 0.74
+        stdev: 73.7
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - chest
-        dps: 3040.4
-        standard_error: 0.87
-        stdev: 86.8
+        dps: 2738.9
+        standard_error: 0.74
+        stdev: 73.5
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - hands
-        dps: 3058.0
-        standard_error: 0.87
-        stdev: 87.1
+        dps: 2755.8
+        standard_error: 0.74
+        stdev: 73.6
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - shoulder
         - chest
-        dps: 3026.1
-        standard_error: 0.86
-        stdev: 85.6
+        dps: 2727.5
+        standard_error: 0.73
+        stdev: 73.3
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - shoulder
         - hands
-        dps: 3043.0
-        standard_error: 0.87
-        stdev: 86.6
+        dps: 2743.3
+        standard_error: 0.74
+        stdev: 73.7
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - chest
         - hands
-        dps: 3040.5
-        standard_error: 0.86
-        stdev: 85.8
+        dps: 2741.0
+        standard_error: 0.74
+        stdev: 73.7
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - shoulder
         - chest
-        dps: 3062.7
-        standard_error: 0.88
-        stdev: 87.8
+        dps: 2760.1
+        standard_error: 0.74
+        stdev: 74.1
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 3080.7
-        standard_error: 0.88
-        stdev: 88.4
+        dps: 2777.4
+        standard_error: 0.74
+        stdev: 74.3
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - head
         - chest
         - hands
-        dps: 3078.2
-        standard_error: 0.88
-        stdev: 88.4
+        dps: 2773.9
+        standard_error: 0.74
+        stdev: 73.5
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - shoulder
         - chest
         - hands
-        dps: 3062.5
-        standard_error: 0.87
-        stdev: 87.0
+        dps: 2761.5
+        standard_error: 0.74
+        stdev: 74.5
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
@@ -1352,9 +1352,9 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 3100.8
-        standard_error: 0.9
-        stdev: 89.6
+        dps: 2795.7
+        standard_error: 0.74
+        stdev: 74.1
         pieces_left:
           Rift Stalker Armor: 0
     tier_six:
@@ -1382,214 +1382,214 @@ specs:
           name: Gronnstalker's Leggings
       rows:
       - replaced: []
-        dps: 3011.8
-        standard_error: 0.85
-        stdev: 85.2
+        dps: 2721.8
+        standard_error: 0.72
+        stdev: 72.3
         pieces_left:
           Gronnstalker's Armor: 0
       - replaced:
         - head
-        dps: 3020.9
-        standard_error: 0.87
-        stdev: 87.1
+        dps: 2720.4
+        standard_error: 0.73
+        stdev: 73.1
         pieces_left:
           Gronnstalker's Armor: 0
       - replaced:
         - shoulder
-        dps: 3012.7
-        standard_error: 0.86
-        stdev: 85.7
+        dps: 2715.1
+        standard_error: 0.73
+        stdev: 73.2
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - chest
-        dps: 3007.9
-        standard_error: 0.85
-        stdev: 84.9
+        dps: 2710.5
+        standard_error: 0.73
+        stdev: 72.8
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - hands
-        dps: 3020.3
-        standard_error: 0.86
-        stdev: 85.8
+        dps: 2722.0
+        standard_error: 0.73
+        stdev: 73.1
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - legs
-        dps: 3006.4
-        standard_error: 0.85
-        stdev: 85.4
+        dps: 2715.4
+        standard_error: 0.73
+        stdev: 73.1
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - head
         - shoulder
-        dps: 3048.6
-        standard_error: 0.88
-        stdev: 88.2
+        dps: 2747.9
+        standard_error: 0.74
+        stdev: 73.7
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - head
         - chest
-        dps: 3043.8
-        standard_error: 0.87
-        stdev: 86.7
+        dps: 2742.3
+        standard_error: 0.74
+        stdev: 73.5
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - head
         - hands
-        dps: 3058.0
-        standard_error: 0.87
-        stdev: 87.1
+        dps: 2755.8
+        standard_error: 0.74
+        stdev: 73.6
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - head
         - legs
-        dps: 3017.0
-        standard_error: 0.86
-        stdev: 85.8
+        dps: 2714.0
+        standard_error: 0.73
+        stdev: 72.9
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - shoulder
         - chest
-        dps: 3035.6
-        standard_error: 0.86
-        stdev: 85.8
+        dps: 2736.8
+        standard_error: 0.74
+        stdev: 73.8
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - hands
-        dps: 3049.1
-        standard_error: 0.87
-        stdev: 86.7
+        dps: 2749.6
+        standard_error: 0.74
+        stdev: 74.0
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - legs
-        dps: 3006.1
-        standard_error: 0.86
-        stdev: 86.1
+        dps: 2708.1
+        standard_error: 0.74
+        stdev: 74.0
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - chest
         - hands
-        dps: 3044.5
-        standard_error: 0.86
-        stdev: 85.8
+        dps: 2744.4
+        standard_error: 0.74
+        stdev: 73.7
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - chest
         - legs
-        dps: 3000.4
-        standard_error: 0.85
-        stdev: 84.9
+        dps: 2704.5
+        standard_error: 0.73
+        stdev: 73.1
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - hands
         - legs
-        dps: 3014.2
-        standard_error: 0.86
-        stdev: 86.1
+        dps: 2715.8
+        standard_error: 0.74
+        stdev: 73.9
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - shoulder
         - chest
-        dps: 3072.8
-        standard_error: 0.88
-        stdev: 88.3
+        dps: 2770.0
+        standard_error: 0.74
+        stdev: 74.0
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 3087.1
-        standard_error: 0.88
-        stdev: 88.3
+        dps: 2784.0
+        standard_error: 0.74
+        stdev: 74.3
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - shoulder
         - legs
-        dps: 3045.5
-        standard_error: 0.87
-        stdev: 87.1
+        dps: 2740.8
+        standard_error: 0.73
+        stdev: 73.4
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - chest
         - hands
-        dps: 3082.0
-        standard_error: 0.89
-        stdev: 88.5
+        dps: 2777.1
+        standard_error: 0.74
+        stdev: 73.5
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - chest
         - legs
-        dps: 3040.3
-        standard_error: 0.86
-        stdev: 85.6
+        dps: 2735.7
+        standard_error: 0.73
+        stdev: 73.3
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - hands
         - legs
-        dps: 3053.4
-        standard_error: 0.87
-        stdev: 87.2
+        dps: 2748.3
+        standard_error: 0.74
+        stdev: 73.9
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - chest
         - hands
-        dps: 3063.0
-        standard_error: 0.88
-        stdev: 87.8
+        dps: 2761.2
+        standard_error: 0.75
+        stdev: 74.7
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
         - shoulder
         - chest
         - legs
-        dps: 3027.4
-        standard_error: 0.85
-        stdev: 85.3
+        dps: 2730.7
+        standard_error: 0.74
+        stdev: 73.7
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
         - shoulder
         - hands
         - legs
-        dps: 3042.9
-        standard_error: 0.87
-        stdev: 86.7
+        dps: 2743.3
+        standard_error: 0.75
+        stdev: 74.7
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
         - chest
         - hands
         - legs
-        dps: 3036.5
-        standard_error: 0.85
-        stdev: 85.5
+        dps: 2739.0
+        standard_error: 0.74
+        stdev: 73.7
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -1597,9 +1597,9 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 3111.7
-        standard_error: 0.9
-        stdev: 89.7
+        dps: 2804.8
+        standard_error: 0.74
+        stdev: 74.5
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -1607,9 +1607,9 @@ specs:
         - shoulder
         - chest
         - legs
-        dps: 3069.1
-        standard_error: 0.86
-        stdev: 86.5
+        dps: 2762.5
+        standard_error: 0.74
+        stdev: 74.0
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -1617,9 +1617,9 @@ specs:
         - shoulder
         - hands
         - legs
-        dps: 3083.8
-        standard_error: 0.88
-        stdev: 87.7
+        dps: 2776.2
+        standard_error: 0.75
+        stdev: 74.6
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -1627,9 +1627,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 3078.2
-        standard_error: 0.87
-        stdev: 86.5
+        dps: 2771.4
+        standard_error: 0.74
+        stdev: 74.2
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -1637,9 +1637,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 3117.1
-        standard_error: 0.88
-        stdev: 88.5
+        dps: 2829.9
+        standard_error: 0.77
+        stdev: 76.9
         pieces_left:
           Gronnstalker's Armor: 4
       - replaced:
@@ -1648,18 +1648,18 @@ specs:
         - chest
         - hands
         - legs
-        dps: 3171.7
-        standard_error: 0.89
-        stdev: 89.1
+        dps: 2874.7
+        standard_error: 0.77
+        stdev: 77.1
         pieces_left:
           Gronnstalker's Armor: 4
     token_singles:
       head:
         id: 31003
         name: Gronnstalker's Helmet
-        dps: 2997.0
-        standard_error: 0.85
-        stdev: 84.8
+        dps: 2699.8
+        standard_error: 0.73
+        stdev: 72.7
   survival_hunter:
     old_bonus:
       held_sets:
@@ -1695,121 +1695,121 @@ specs:
           name: Bow-stitched Leggings
       rows:
       - replaced: []
-        dps: 2529.1
-        standard_error: 0.79
-        stdev: 78.9
+        dps: 2214.3
+        standard_error: 0.68
+        stdev: 67.6
         pieces_left:
           Rift Stalker Armor: 4
       - replaced:
         - head
-        dps: 2520.2
-        standard_error: 0.79
-        stdev: 79.2
+        dps: 2195.4
+        standard_error: 0.68
+        stdev: 67.7
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - shoulder
-        dps: 2529.5
-        standard_error: 0.8
-        stdev: 80.1
+        dps: 2205.6
+        standard_error: 0.68
+        stdev: 68.4
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - chest
-        dps: 2527.7
-        standard_error: 0.8
-        stdev: 79.6
+        dps: 2203.5
+        standard_error: 0.68
+        stdev: 67.5
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - legs
-        dps: 2535.4
-        standard_error: 0.8
-        stdev: 80.2
+        dps: 2212.0
+        standard_error: 0.68
+        stdev: 67.7
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - head
         - shoulder
-        dps: 2545.2
-        standard_error: 0.8
-        stdev: 80.2
+        dps: 2218.6
+        standard_error: 0.68
+        stdev: 68.4
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - chest
-        dps: 2543.8
-        standard_error: 0.8
-        stdev: 80.0
+        dps: 2217.3
+        standard_error: 0.68
+        stdev: 68.1
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - legs
-        dps: 2553.3
-        standard_error: 0.81
-        stdev: 80.6
+        dps: 2226.4
+        standard_error: 0.68
+        stdev: 68.2
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - shoulder
         - chest
-        dps: 2552.2
-        standard_error: 0.8
-        stdev: 80.1
+        dps: 2226.7
+        standard_error: 0.68
+        stdev: 68.3
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - shoulder
         - legs
-        dps: 2559.9
-        standard_error: 0.82
-        stdev: 81.5
+        dps: 2236.2
+        standard_error: 0.68
+        stdev: 68.3
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - chest
         - legs
-        dps: 2559.0
-        standard_error: 0.81
-        stdev: 81.1
+        dps: 2233.3
+        standard_error: 0.67
+        stdev: 67.2
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - shoulder
         - chest
-        dps: 2568.4
-        standard_error: 0.81
-        stdev: 80.9
+        dps: 2241.1
+        standard_error: 0.69
+        stdev: 68.6
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - head
         - shoulder
         - legs
-        dps: 2577.9
-        standard_error: 0.82
-        stdev: 81.9
+        dps: 2250.5
+        standard_error: 0.68
+        stdev: 68.3
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - head
         - chest
         - legs
-        dps: 2576.4
-        standard_error: 0.81
-        stdev: 81.3
+        dps: 2248.6
+        standard_error: 0.68
+        stdev: 67.6
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - shoulder
         - chest
         - legs
-        dps: 2583.5
-        standard_error: 0.82
-        stdev: 82.0
+        dps: 2257.8
+        standard_error: 0.68
+        stdev: 67.9
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
@@ -1817,9 +1817,9 @@ specs:
         - shoulder
         - chest
         - legs
-        dps: 2600.1
-        standard_error: 0.83
-        stdev: 82.5
+        dps: 2272.4
+        standard_error: 0.68
+        stdev: 68.4
         pieces_left:
           Rift Stalker Armor: 0
     tier_six:
@@ -1847,214 +1847,214 @@ specs:
           name: Shady Dealer's Pantaloons
       rows:
       - replaced: []
-        dps: 2529.1
-        standard_error: 0.79
-        stdev: 78.9
+        dps: 2214.3
+        standard_error: 0.68
+        stdev: 67.6
         pieces_left:
           Gronnstalker's Armor: 0
       - replaced:
         - head
-        dps: 2508.9
-        standard_error: 0.79
-        stdev: 78.9
+        dps: 2184.4
+        standard_error: 0.68
+        stdev: 67.7
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - shoulder
-        dps: 2529.5
-        standard_error: 0.8
-        stdev: 80.1
+        dps: 2205.6
+        standard_error: 0.68
+        stdev: 68.4
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - chest
-        dps: 2527.7
-        standard_error: 0.8
-        stdev: 79.6
+        dps: 2203.5
+        standard_error: 0.68
+        stdev: 67.5
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - hands
-        dps: 2562.8
-        standard_error: 0.79
-        stdev: 79.4
+        dps: 2241.5
+        standard_error: 0.68
+        stdev: 68.2
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - legs
-        dps: 2520.1
-        standard_error: 0.82
-        stdev: 81.9
+        dps: 2204.6
+        standard_error: 0.69
+        stdev: 68.7
         pieces_left:
           Gronnstalker's Armor: 0
       - replaced:
         - head
         - shoulder
-        dps: 2533.5
-        standard_error: 0.8
-        stdev: 79.9
+        dps: 2207.9
+        standard_error: 0.68
+        stdev: 68.3
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - chest
-        dps: 2531.6
-        standard_error: 0.8
-        stdev: 79.7
+        dps: 2206.0
+        standard_error: 0.68
+        stdev: 67.9
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - hands
-        dps: 2542.1
-        standard_error: 0.79
-        stdev: 79.4
+        dps: 2211.7
+        standard_error: 0.68
+        stdev: 68.3
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - legs
-        dps: 2524.0
-        standard_error: 0.82
-        stdev: 81.8
+        dps: 2207.0
+        standard_error: 0.69
+        stdev: 69.0
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - shoulder
         - chest
-        dps: 2552.2
-        standard_error: 0.8
-        stdev: 80.1
+        dps: 2226.7
+        standard_error: 0.68
+        stdev: 68.3
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - hands
-        dps: 2563.1
-        standard_error: 0.81
-        stdev: 80.6
+        dps: 2232.3
+        standard_error: 0.69
+        stdev: 69.5
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - legs
-        dps: 2543.3
-        standard_error: 0.83
-        stdev: 83.4
+        dps: 2228.0
+        standard_error: 0.69
+        stdev: 69.4
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - chest
         - hands
-        dps: 2560.8
-        standard_error: 0.8
-        stdev: 80.0
+        dps: 2230.7
+        standard_error: 0.68
+        stdev: 68.4
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - chest
         - legs
-        dps: 2544.8
-        standard_error: 0.82
-        stdev: 82.0
+        dps: 2226.4
+        standard_error: 0.69
+        stdev: 68.9
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - hands
         - legs
-        dps: 2558.1
-        standard_error: 0.83
-        stdev: 82.5
+        dps: 2232.6
+        standard_error: 0.69
+        stdev: 69.3
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - head
         - shoulder
         - chest
-        dps: 2556.2
-        standard_error: 0.81
-        stdev: 80.6
+        dps: 2229.5
+        standard_error: 0.68
+        stdev: 68.5
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 2567.8
-        standard_error: 0.8
-        stdev: 80.2
+        dps: 2235.0
+        standard_error: 0.69
+        stdev: 69.0
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
         - head
         - shoulder
         - legs
-        dps: 2547.6
-        standard_error: 0.83
-        stdev: 83.3
+        dps: 2230.6
+        standard_error: 0.7
+        stdev: 69.6
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - chest
         - hands
-        dps: 2565.0
-        standard_error: 0.8
-        stdev: 80.2
+        dps: 2233.4
+        standard_error: 0.69
+        stdev: 68.6
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
         - head
         - chest
         - legs
-        dps: 2550.2
-        standard_error: 0.82
-        stdev: 81.8
+        dps: 2229.5
+        standard_error: 0.69
+        stdev: 68.9
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - hands
         - legs
-        dps: 2561.9
-        standard_error: 0.82
-        stdev: 82.3
+        dps: 2235.0
+        standard_error: 0.7
+        stdev: 69.6
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - chest
         - hands
-        dps: 2586.9
-        standard_error: 0.81
-        stdev: 81.0
+        dps: 2255.5
+        standard_error: 0.69
+        stdev: 69.0
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
         - shoulder
         - chest
         - legs
-        dps: 2568.1
-        standard_error: 0.82
-        stdev: 82.2
+        dps: 2250.3
+        standard_error: 0.7
+        stdev: 69.5
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - hands
         - legs
-        dps: 2582.3
-        standard_error: 0.83
-        stdev: 83.0
+        dps: 2256.4
+        standard_error: 0.7
+        stdev: 69.8
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - chest
         - hands
         - legs
-        dps: 2582.4
-        standard_error: 0.81
-        stdev: 81.4
+        dps: 2254.8
+        standard_error: 0.69
+        stdev: 69.4
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
@@ -2062,9 +2062,9 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 2648.1
-        standard_error: 0.83
-        stdev: 82.9
+        dps: 2329.1
+        standard_error: 0.72
+        stdev: 71.6
         pieces_left:
           Gronnstalker's Armor: 4
       - replaced:
@@ -2072,9 +2072,9 @@ specs:
         - shoulder
         - chest
         - legs
-        dps: 2572.5
-        standard_error: 0.83
-        stdev: 82.7
+        dps: 2252.2
+        standard_error: 0.7
+        stdev: 69.6
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -2082,9 +2082,9 @@ specs:
         - shoulder
         - hands
         - legs
-        dps: 2586.6
-        standard_error: 0.83
-        stdev: 83.3
+        dps: 2259.3
+        standard_error: 0.7
+        stdev: 70.3
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -2092,9 +2092,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 2585.9
-        standard_error: 0.81
-        stdev: 81.3
+        dps: 2256.7
+        standard_error: 0.7
+        stdev: 69.5
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -2102,9 +2102,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 2607.3
-        standard_error: 0.83
-        stdev: 83.2
+        dps: 2279.9
+        standard_error: 0.7
+        stdev: 70.1
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -2113,18 +2113,18 @@ specs:
         - chest
         - hands
         - legs
-        dps: 2668.7
-        standard_error: 0.85
-        stdev: 84.9
+        dps: 2354.0
+        standard_error: 0.73
+        stdev: 73.0
         pieces_left:
           Gronnstalker's Armor: 4
     token_singles:
       legs:
         id: 31005
         name: Gronnstalker's Leggings
-        dps: 2521.5
-        standard_error: 0.8
-        stdev: 79.6
+        dps: 2197.4
+        standard_error: 0.68
+        stdev: 67.8
   affliction_warlock:
     old_bonus:
       held_sets:

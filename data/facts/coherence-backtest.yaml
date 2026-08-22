@@ -71,19 +71,19 @@ results:
     gap: -13.4
     contention_cost: 14.2
 - spec: beast_mastery_hunter
-  tier_anchor: 3169.8
+  tier_anchor: 2872.9
   upgrades_taken: 10
   greedy:
-    predicted: 3199.7
-    measured: 3200.7
-    standard_error: 0.91
-    gap: 1.0
+    predicted: 2901.7
+    measured: 2901.9
+    standard_error: 0.78
+    gap: 0.2
   ceiling:
-    predicted: 3220.9
-    measured: 3222.1
-    standard_error: 0.9
-    gap: 1.2
-    contention_cost: 21.2
+    predicted: 2920.1
+    measured: 2921.0
+    standard_error: 0.78
+    gap: 0.9
+    contention_cost: 18.4
 - spec: combat_rogue
   tier_anchor: 2266.9
   upgrades_taken: 10
@@ -183,19 +183,19 @@ results:
     gap: -7.3
     contention_cost: 18.1
 - spec: survival_hunter
-  tier_anchor: 2668.7
+  tier_anchor: 2354.0
   upgrades_taken: 10
   greedy:
-    predicted: 2703.0
-    measured: 2701.3
-    standard_error: 0.85
-    gap: -1.7
+    predicted: 2379.7
+    measured: 2378.9
+    standard_error: 0.74
+    gap: -0.8
   ceiling:
-    predicted: 2726.2
-    measured: 2727.7
-    standard_error: 0.84
-    gap: 1.5
-    contention_cost: 23.2
+    predicted: 2401.6
+    measured: 2399.5
+    standard_error: 0.71
+    gap: -2.1
+    contention_cost: 21.9
 allocations:
 - item: Leggings of the Malefic
   id: 31053
@@ -275,12 +275,6 @@ allocations:
   slot: back
   gain: 23.8
   contested: true
-- item: Boneweave Girdle
-  id: 32346
-  spec: survival_hunter
-  slot: waist
-  gain: 23.2
-  contested: true
 - item: Dreadboots of the Legion
   id: 32345
   spec: fury_warrior
@@ -334,6 +328,12 @@ allocations:
   spec: fury_warrior
   slot: hands
   gain: 17.7
+  contested: true
+- item: Boneweave Girdle
+  id: 32346
+  spec: survival_hunter
+  slot: waist
+  gain: 17.3
   contested: true
 - item: Bracers of Nimble Thought
   id: 32586
@@ -389,24 +389,12 @@ allocations:
   slot: feet
   gain: 11.5
   contested: true
-- item: Bindings of Lightning Reflexes
-  id: 32574
-  spec: survival_hunter
-  slot: wrist
-  gain: 11.1
-  contested: false
 - item: Forest Prowler's Helm
   id: 32376
   spec: retribution_paladin
   slot: head
   gain: 11.1
   contested: true
-- item: Bindings of Lightning Reflexes
-  id: 32574
-  spec: beast_mastery_hunter
-  slot: wrist
-  gain: 9.1
-  contested: false
 - item: Cowl of the Illidari High Lord
   id: 32525
   spec: destruction_warlock
@@ -425,12 +413,24 @@ allocations:
   slot: back
   gain: 8.4
   contested: false
+- item: Bindings of Lightning Reflexes
+  id: 32574
+  spec: survival_hunter
+  slot: wrist
+  gain: 8.4
+  contested: false
 - item: Choker of Serrated Blades
   id: 32591
   spec: arms_warrior
   slot: neck
   gain: 8.0
   contested: true
+- item: Bindings of Lightning Reflexes
+  id: 32574
+  spec: beast_mastery_hunter
+  slot: wrist
+  gain: 8.0
+  contested: false
 - item: Velvet Boots of the Guardian
   id: 30067
   spec: affliction_warlock
