@@ -42,6 +42,68 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2374.4 ± 1.46     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2678.7 ± 1.61     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
+## Weapon pairs
+
+A Retribution Paladin always carries a two-hander, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose. The table is an enumeration of the EP Workbook's Two Hand ladder for this spec together with every worn and routed weapon, kept to the weapon classes a paladin wields. Cataclysm's Edge appears as a measurement only: it goes to the Arms Warrior, and Torch of the Damned stays with this spec.
+
+| Main hand                         | Off hand            | DPS           | Against this set |
+|-----------------------------------|---------------------|---------------|------------------|
+| Torch of the Damned *(this set)*  | *empty, two-hander* | 2223.2 ± 1.38 | +0.0             |
+| Cataclysm's Edge                  | *empty, two-hander* | 2188.4 ± 1.35 | -34.8            |
+| Vengeful Gladiator's Bonegrinder  | *empty, two-hander* | 2169.0 ± 1.34 | -54.2            |
+| Lionheart Executioner             | *empty, two-hander* | 2159.8 ± 1.37 | -63.4            |
+| Twinblade of the Phoenix          | *empty, two-hander* | 2155.7 ± 1.34 | -67.5            |
+| World Breaker                     | *empty, two-hander* | 2150.3 ± 1.34 | -72.9            |
+| Stormherald                       | *empty, two-hander* | 2144.0 ± 1.34 | -79.2            |
+| Soul Cleaver                      | *empty, two-hander* | 2139.4 ± 1.37 | -83.8            |
+| Vengeful Gladiator's Decapitator  | *empty, two-hander* | 2122.8 ± 1.36 | -100.4           |
+| Merciless Gladiator's Bonegrinder | *empty, two-hander* | 2117.4 ± 1.31 | -105.8           |
+| Lionheart Champion                | *empty, two-hander* | 2115.6 ± 1.34 | -107.6           |
+| Bloodmoon                         | *empty, two-hander* | 2114.9 ± 1.35 | -108.3           |
+| Deep Thunder                      | *empty, two-hander* | 2093.0 ± 1.31 | -130.2           |
+| Halberd of Desolation             | *empty, two-hander* | 2085.2 ± 1.33 | -138.0           |
+| Hammer of the Naaru               | *empty, two-hander* | 2079.2 ± 1.28 | -144.0           |
+| Merciless Gladiator's Decapitator | *empty, two-hander* | 2072.9 ± 1.33 | -150.3           |
+| Mooncleaver                       | *empty, two-hander* | 2068.8 ± 1.32 | -154.4           |
+| Gladiator's Greatsword            | *empty, two-hander* | 2061.8 ± 1.28 | -161.4           |
+| Gorehowl                          | *empty, two-hander* | 2051.4 ± 1.31 | -171.8           |
+| Lionheart Blade                   | *empty, two-hander* | 2034.4 ± 1.26 | -188.8           |
+| Gladiator's Decapitator           | *empty, two-hander* | 2019.8 ± 1.29 | -203.4           |
+| Vengeful Gladiator's Painsaw      | *empty, two-hander* | 1642.1 ± 2.82 | -581.1           |
+| Merciless Gladiator's Painsaw     | *empty, two-hander* | 1610.2 ± 2.77 | -613.0           |
+| Gladiator's Painsaw               | *empty, two-hander* | 1572.7 ± 2.71 | -650.5           |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
+
+## Trinket combinations
+
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule. Madness of the Betrayer carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, the raids above it, the badge vendor and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection.
+
+The ten best of the 21 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                 | DPS           | Against this set |
+|---------------------------------|-------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch        | 2223.2 ± 1.38 | +0.0             |
+| Dragonspine Trophy              | Core of Ar'kelos        | 2204.4 ± 1.37 | -18.8            |
+| Dragonspine Trophy              | Tsunami Talisman        | 2200.4 ± 1.35 | -22.8            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade  | 2199.5 ± 1.37 | -23.7            |
+| Dragonspine Trophy              | Madness of the Betrayer | 2198.6 ± 1.35 | -24.6            |
+| Tsunami Talisman                | Bloodlust Brooch        | 2193.2 ± 1.35 | -30.0            |
+| Madness of the Betrayer         | Bloodlust Brooch        | 2188.8 ± 1.33 | -34.4            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch        | 2187.7 ± 1.33 | -35.5            |
+| Bloodlust Brooch                | Core of Ar'kelos        | 2177.2 ± 1.32 | -46.0            |
+| Tsunami Talisman                | Core of Ar'kelos        | 2174.3 ± 1.34 | -48.9            |
+
+The worn pair is again the best row, at plus zero.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

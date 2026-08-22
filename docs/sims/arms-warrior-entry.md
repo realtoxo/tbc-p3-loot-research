@@ -42,6 +42,61 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2149.8 ± 1.16     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2624.7 ± 1.40     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
+## Weapon pairs
+
+An Arms Warrior considers only two-handers, so every row below is a single weapon and the off hand runs empty. Each row is THIS PROFILE with only the main hand id replaced: the slot keeps its Mongoose. The published Phase 3 page ranks only dual Warglaives, which this spec will not receive, so the table is an enumeration of the EP Workbook's Two Hand ladder for this spec together with every worn and routed weapon, kept to the weapon classes a warrior wields. This spec takes Cataclysm's Edge. Torch of the Damned appears as a measurement only: it stays with the Retribution Paladin.
+
+| Main hand                             | Off hand            | DPS           | Against this set |
+|---------------------------------------|---------------------|---------------|------------------|
+| Twinblade of the Phoenix *(this set)* | *empty, two-hander* | 1909.9 ± 1.06 | +0.0             |
+| Lionheart Executioner                 | *empty, two-hander* | 1906.0 ± 1.05 | -3.9             |
+| Lionheart Champion                    | *empty, two-hander* | 1863.1 ± 1.03 | -46.8            |
+| Gladiator's Greatsword                | *empty, two-hander* | 1818.3 ± 1.02 | -91.6            |
+| Bloodmoon                             | *empty, two-hander* | 1785.7 ± 0.92 | -124.2           |
+| World Breaker                         | *empty, two-hander* | 1778.7 ± 0.93 | -131.2           |
+| Stormherald                           | *empty, two-hander* | 1773.9 ± 0.92 | -136.0           |
+| Merciless Gladiator's Bonegrinder     | *empty, two-hander* | 1755.9 ± 0.92 | -154.0           |
+| Merciless Gladiator's Decapitator     | *empty, two-hander* | 1752.2 ± 0.91 | -157.7           |
+| Mooncleaver                           | *empty, two-hander* | 1742.2 ± 0.91 | -167.7           |
+| Deep Thunder                          | *empty, two-hander* | 1727.4 ± 0.90 | -182.5           |
+| Gorehowl                              | *empty, two-hander* | 1719.1 ± 0.90 | -190.8           |
+| Hammer of the Naaru                   | *empty, two-hander* | 1710.8 ± 0.91 | -199.1           |
+| Axe of the Gronn Lords                | *empty, two-hander* | 1703.2 ± 0.91 | -206.7           |
+| Gladiator's Decapitator               | *empty, two-hander* | 1701.1 ± 0.89 | -208.8           |
+| Merciless Gladiator's Painsaw         | *empty, two-hander* | 1506.5 ± 0.75 | -403.4           |
+| Gladiator's Painsaw                   | *empty, two-hander* | 1463.9 ± 0.74 | -446.0           |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
+
+## Trinket combinations
+
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection. Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party, the simulator prices that effect outside the trinket slot, and these runs do not engage it, so its rows price the worn stats alone and understate it.
+
+The ten best of the 10 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                | DPS           | Against this set |
+|---------------------------------|------------------------|---------------|------------------|
+| Dragonspine Trophy              | Bloodlust Brooch       | 1920.8 ± 1.05 | +10.9            |
+| Dragonspine Trophy *(this set)* | Tsunami Talisman       | 1909.9 ± 1.06 | +0.0             |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 1902.8 ± 1.03 | -7.1             |
+| Tsunami Talisman                | Bloodlust Brooch       | 1886.5 ± 1.02 | -23.4            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 1882.2 ± 1.03 | -27.7            |
+| Bloodlust Brooch                | Darkmoon Card: Crusade | 1878.8 ± 1.01 | -31.1            |
+| Tsunami Talisman                | Darkmoon Card: Crusade | 1867.5 ± 1.00 | -42.4            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 1857.7 ± 1.00 | -52.2            |
+| Tsunami Talisman                | Core of Ar'kelos       | 1846.4 ± 0.99 | -63.5            |
+| Darkmoon Card: Crusade          | Core of Ar'kelos       | 1841.1 ± 0.99 | -68.8            |
+
+The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +10.9 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

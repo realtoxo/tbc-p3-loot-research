@@ -42,6 +42,105 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 3685.7 ± 1.09     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 4266.4 ± 1.26     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
+## Weapon pairs
+
+A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
+
+| Main hand                                     | Off hand            | DPS           | Against this set |
+|-----------------------------------------------|---------------------|---------------|------------------|
+| Twinblade of the Phoenix                      | *empty, two-hander* | 3312.5 ± 0.97 | +5.3             |
+| Vengeful Gladiator's Decapitator *(this set)* | *empty, two-hander* | 3307.2 ± 0.97 | +0.0             |
+| Halberd of Desolation                         | *empty, two-hander* | 3294.0 ± 0.96 | -13.2            |
+| Merciless Gladiator's Decapitator             | *empty, two-hander* | 3277.3 ± 0.96 | -29.9            |
+| Legacy                                        | *empty, two-hander* | 3259.3 ± 0.95 | -47.9            |
+| Hellforged Halberd                            | *empty, two-hander* | 3232.1 ± 0.93 | -75.1            |
+| Blackened Spear                               | *empty, two-hander* | 3232.1 ± 0.93 | -75.1            |
+| Vengeful Gladiator's Painsaw                  | *empty, two-hander* | 3229.2 ± 0.92 | -78.0            |
+| Sonic Spear                                   | *empty, two-hander* | 3228.0 ± 0.93 | -79.2            |
+| Blade of Infamy                               | Blade of Infamy     | 3227.2 ± 0.92 | -80.0            |
+| Blade of Infamy                               | Boundless Agony     | 3226.4 ± 0.93 | -80.8            |
+| Talon of the Phoenix                          | Blade of Infamy     | 3217.0 ± 0.91 | -90.2            |
+| Talon of the Phoenix                          | Boundless Agony     | 3216.2 ± 0.92 | -91.0            |
+| Blade of Infamy                               | Tracker's Blade     | 3214.9 ± 0.92 | -92.3            |
+| Blade of Infamy                               | Blade of Savagery   | 3213.0 ± 0.92 | -94.2            |
+| Blade of Infamy                               | Claw of the Phoenix | 3211.5 ± 0.92 | -95.7            |
+| Illidari-Bane Claymore                        | *empty, two-hander* | 3211.2 ± 0.93 | -96.0            |
+| Talon of Azshara                              | Boundless Agony     | 3210.9 ± 0.91 | -96.3            |
+| Talon of Azshara                              | Blade of Infamy     | 3209.9 ± 0.90 | -97.3            |
+| Blade of Infamy                               | Talon of Azshara    | 3207.4 ± 0.91 | -99.8            |
+| Talon of the Phoenix                          | Tracker's Blade     | 3205.6 ± 0.91 | -101.6           |
+| Talon of the Phoenix                          | Blade of Savagery   | 3204.7 ± 0.92 | -102.5           |
+| Talon of the Phoenix                          | Claw of the Phoenix | 3202.5 ± 0.91 | -104.7           |
+| Talon of Azshara                              | Tracker's Blade     | 3198.8 ± 0.91 | -108.4           |
+| Talon of the Phoenix                          | Talon of Azshara    | 3198.7 ± 0.90 | -108.5           |
+| Talon of Azshara                              | Blade of Savagery   | 3198.2 ± 0.91 | -109.0           |
+| Talon of Azshara                              | Claw of the Phoenix | 3196.1 ± 0.91 | -111.1           |
+| Talon of Azshara                              | Talon of Azshara    | 3190.9 ± 0.90 | -116.3           |
+| Boundless Agony                               | Blade of Infamy     | 3183.0 ± 0.89 | -124.2           |
+| Boundless Agony                               | Boundless Agony     | 3180.4 ± 0.89 | -126.8           |
+| Boundless Agony                               | Tracker's Blade     | 3171.6 ± 0.88 | -135.6           |
+| Boundless Agony                               | Claw of the Phoenix | 3168.8 ± 0.88 | -138.4           |
+| Boundless Agony                               | Blade of Savagery   | 3168.1 ± 0.88 | -139.1           |
+| Boundless Agony                               | Talon of Azshara    | 3163.3 ± 0.89 | -143.9           |
+| Tracker's Blade                               | Blade of Infamy     | 3135.5 ± 0.86 | -171.7           |
+| Tracker's Blade                               | Boundless Agony     | 3132.9 ± 0.87 | -174.3           |
+| Blade of Savagery                             | Blade of Infamy     | 3120.1 ± 0.85 | -187.1           |
+| Tracker's Blade                               | Tracker's Blade     | 3120.0 ± 0.88 | -187.2           |
+| Tracker's Blade                               | Blade of Savagery   | 3119.1 ± 0.88 | -188.1           |
+| Blade of Savagery                             | Boundless Agony     | 3117.6 ± 0.85 | -189.6           |
+| Tracker's Blade                               | Claw of the Phoenix | 3116.9 ± 0.88 | -190.3           |
+| Tracker's Blade                               | Talon of Azshara    | 3115.8 ± 0.86 | -191.4           |
+| Blade of Savagery                             | Tracker's Blade     | 3107.5 ± 0.85 | -199.7           |
+| Blade of Savagery                             | Claw of the Phoenix | 3105.4 ± 0.85 | -201.8           |
+| Blade of Savagery                             | Blade of Savagery   | 3102.9 ± 0.86 | -204.3           |
+| Blade of Savagery                             | Talon of Azshara    | 3100.2 ± 0.85 | -207.0           |
+
+The best combination, Twinblade of the Phoenix alone, a two-hander, measures +5.3 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
+## Ranged weapons
+
+The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
+
+| Ranged                            | DPS           | Against this set |
+|-----------------------------------|---------------|------------------|
+| Bristleblitz Striker *(this set)* | 3307.2 ± 0.97 | +0.0             |
+| Black Bow of the Betrayer         | 3297.9 ± 0.96 | -9.3             |
+| Serpent Spine Longbow             | 3293.2 ± 0.97 | -14.0            |
+| Legionkiller                      | 3293.0 ± 0.95 | -14.2            |
+| Arcanite Steam-Pistol             | 3276.2 ± 0.94 | -31.0            |
+| Sunfury Bow of the Phoenix        | 3273.9 ± 0.94 | -33.3            |
+
+This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
+
+## Trinket combinations
+
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule. Madness of the Betrayer carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone.
+
+The ten best of the 28 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                         | DPS           | Against this set |
+|---------------------------------|---------------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch                | 3307.2 ± 0.97 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman                | 3292.7 ± 0.96 | -14.5            |
+| Dragonspine Trophy              | Madness of the Betrayer         | 3289.7 ± 0.97 | -17.5            |
+| Dragonspine Trophy              | Core of Ar'kelos                | 3283.9 ± 0.97 | -23.3            |
+| Dragonspine Trophy              | Ashtongue Talisman of Swiftness | 3281.8 ± 0.97 | -25.4            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade          | 3280.2 ± 0.96 | -27.0            |
+| Tsunami Talisman                | Bloodlust Brooch                | 3272.1 ± 0.95 | -35.1            |
+| Madness of the Betrayer         | Bloodlust Brooch                | 3270.6 ± 0.96 | -36.6            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch                | 3262.5 ± 0.96 | -44.7            |
+| Bloodlust Brooch                | Ashtongue Talisman of Swiftness | 3261.1 ± 0.97 | -46.1            |
+
+The worn pair is again the best row, at plus zero.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

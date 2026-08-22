@@ -42,6 +42,67 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 3342.3 ± 0.95     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 4008.9 ± 1.15     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
+## Weapon pairs
+
+A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styles run in the same table, so a row below is either a main hand with an off hand or a single two-hander with the off hand empty. These slots are stat sticks: the ranged weapon does the damage and no row here touches it. Each row is THIS PROFILE with only the weapon ids replaced: a filled slot keeps its enchant. Holding the consumables still includes the weapon stones, which the hunters choose by the WORN weapon's class, so a candidate whose class differs from the worn weapon runs under the capture's stone rather than its own. The table is an enumeration of the EP Workbook's One Hand and Two Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a hunter wields and holding no crafted weapon, and the 41/20/0 build carries no weapon specialization talent, so no class is favored.
+
+| Main hand                         | Off hand            | DPS           | Against this set |
+|-----------------------------------|---------------------|---------------|------------------|
+| Twinblade of the Phoenix          | *empty, two-hander* | 3091.2 ± 0.90 | +79.4            |
+| Merciless Gladiator's Decapitator | *empty, two-hander* | 3058.2 ± 0.88 | +46.4            |
+| Legacy                            | *empty, two-hander* | 3041.9 ± 0.87 | +30.1            |
+| Hellforged Halberd                | *empty, two-hander* | 3016.7 ± 0.86 | +4.9             |
+| Blackened Spear                   | *empty, two-hander* | 3016.7 ± 0.86 | +4.9             |
+| Sonic Spear                       | *empty, two-hander* | 3012.2 ± 0.86 | +0.4             |
+| Talon of the Phoenix *(this set)* | Claw of the Phoenix | 3011.8 ± 0.85 | +0.0             |
+| Talon of the Phoenix              | Talon of Azshara    | 3008.0 ± 0.85 | -3.8             |
+| Talon of Azshara                  | Claw of the Phoenix | 3006.1 ± 0.85 | -5.7             |
+| Talon of Azshara                  | Talon of Azshara    | 3002.2 ± 0.85 | -9.6             |
+| Illidari-Bane Claymore            | *empty, two-hander* | 2995.6 ± 0.85 | -16.2            |
+
+The best combination, Twinblade of the Phoenix alone, a two-hander, measures +79.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
+
+## Ranged weapons
+
+The bow is the one hunter weapon that is not a stat stick, so it gets its own pass: each row below is THIS PROFILE with only the ranged slot changed, the slot keeping its scope. The candidates are the workbook's own Ranged ladder plus the worn weapons, none carries a socket, and the ammunition and quiver hold still across the rows.
+
+| Ranged                             | DPS           | Against this set |
+|------------------------------------|---------------|------------------|
+| Serpent Spine Longbow *(this set)* | 3011.8 ± 0.85 | +0.0             |
+| Arcanite Steam-Pistol              | 2991.0 ± 0.82 | -20.8            |
+| Sunfury Bow of the Phoenix         | 2986.6 ± 0.83 | -25.2            |
+
+This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
+
+## Trinket combinations
+
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection. Talon of Al'ar carries no worn stats, so its rows measure the simulator's pricing of its proc alone.
+
+The ten best of the 15 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                | DPS           | Against this set |
+|---------------------------------|------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 3011.8 ± 0.85 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman       | 2999.4 ± 0.84 | -12.4            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 2990.4 ± 0.84 | -21.4            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2986.9 ± 0.84 | -24.9            |
+| Tsunami Talisman                | Bloodlust Brooch       | 2979.3 ± 0.86 | -32.5            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2971.5 ± 0.84 | -40.3            |
+| Tsunami Talisman                | Core of Ar'kelos       | 2958.4 ± 0.86 | -53.4            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 2957.3 ± 0.84 | -54.5            |
+| Tsunami Talisman                | Darkmoon Card: Crusade | 2955.1 ± 0.85 | -56.7            |
+| Dragonspine Trophy              | Talon of Al'ar         | 2955.0 ± 0.83 | -56.8            |
+
+The worn pair is again the best row, at plus zero.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

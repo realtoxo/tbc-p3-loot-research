@@ -42,6 +42,389 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2479.3 ± 1.16     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 3043.4 ± 1.39     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
+## Weapon pairs
+
+A Fury Warrior considers only one-handers and main handers, so every row below is a main hand with an off hand and no row is a two-hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose. The table is an enumeration of the EP Workbook's Main Hand and Off Hand ladders for this spec together with every worn and routed weapon, kept to the weapon classes a warrior dual-wields, and every ordered pairing the field supports is a row. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Combat Rogue's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
+
+| Main hand                          | Off hand                      | DPS           | Against this set |
+|------------------------------------|-------------------------------|---------------|------------------|
+| Dragonstrike *(this set)*          | Talon of Azshara              | 2199.5 ± 1.06 | +0.0             |
+| Dragonstrike                       | Rod of the Sun King           | 2190.0 ± 1.06 | -9.5             |
+| Dragonstrike                       | Merciless Gladiator's Slicer  | 2189.5 ± 1.06 | -10.0            |
+| Dragonstrike                       | Merciless Gladiator's Cleaver | 2185.4 ± 1.06 | -14.1            |
+| Dragonstrike                       | Netherbane                    | 2182.8 ± 1.05 | -16.7            |
+| Dragonmaw                          | Talon of Azshara              | 2179.3 ± 1.05 | -20.2            |
+| Dragonstrike                       | Spiteblade                    | 2175.1 ± 1.05 | -24.4            |
+| Dragonstrike                       | Gladiator's Slicer            | 2174.6 ± 1.05 | -24.9            |
+| Dragonmaw                          | Rod of the Sun King           | 2172.9 ± 1.07 | -26.6            |
+| Dragonstrike                       | Blinkstrike                   | 2171.5 ± 1.08 | -28.0            |
+| Dragonmaw                          | Merciless Gladiator's Slicer  | 2171.4 ± 1.05 | -28.1            |
+| Dragonmaw                          | Merciless Gladiator's Cleaver | 2166.3 ± 1.05 | -33.2            |
+| Dragonmaw                          | Netherbane                    | 2164.5 ± 1.06 | -35.0            |
+| Rod of the Sun King                | Talon of Azshara              | 2163.0 ± 1.01 | -36.5            |
+| Talon of Azshara                   | Talon of Azshara              | 2161.7 ± 1.01 | -37.8            |
+| Merciless Gladiator's Slicer       | Merciless Gladiator's Slicer  | 2159.6 ± 0.99 | -39.9            |
+| Rod of the Sun King                | Rod of the Sun King           | 2157.5 ± 1.03 | -42.0            |
+| Talon of Azshara                   | Rod of the Sun King           | 2157.3 ± 1.03 | -42.2            |
+| Talon of the Phoenix               | Talon of Azshara              | 2156.9 ± 1.01 | -42.6            |
+| Merciless Gladiator's Slicer       | Merciless Gladiator's Cleaver | 2156.3 ± 0.99 | -43.2            |
+| Dragonmaw                          | Spiteblade                    | 2156.0 ± 1.05 | -43.5            |
+| Rod of the Sun King                | Merciless Gladiator's Slicer  | 2155.8 ± 1.01 | -43.7            |
+| Dragonstrike                       | Runic Hammer                  | 2155.5 ± 1.04 | -44.0            |
+| Talon of Azshara                   | Merciless Gladiator's Slicer  | 2154.6 ± 1.00 | -44.9            |
+| Dragonmaw                          | Gladiator's Slicer            | 2154.5 ± 1.03 | -45.0            |
+| Merciless Gladiator's Slicer       | Talon of Azshara              | 2154.3 ± 0.99 | -45.2            |
+| Merciless Gladiator's Slicer       | Netherbane                    | 2153.9 ± 1.00 | -45.6            |
+| Dragonmaw                          | Blinkstrike                   | 2152.9 ± 1.07 | -46.6            |
+| Dragonstrike                       | Vindicator's Brand            | 2152.4 ± 1.04 | -47.1            |
+| Blinkstrike                        | Merciless Gladiator's Slicer  | 2152.3 ± 1.05 | -47.2            |
+| Wicked Edge of the Planes          | Talon of Azshara              | 2151.3 ± 1.02 | -48.2            |
+| Talon of Azshara                   | Merciless Gladiator's Cleaver | 2150.9 ± 1.00 | -48.6            |
+| Rod of the Sun King                | Merciless Gladiator's Cleaver | 2150.6 ± 1.00 | -48.9            |
+| Talon of the Phoenix               | Rod of the Sun King           | 2150.3 ± 1.02 | -49.2            |
+| Rod of the Sun King                | Netherbane                    | 2149.2 ± 1.03 | -50.3            |
+| Wicked Edge of the Planes          | Rod of the Sun King           | 2148.9 ± 1.03 | -50.6            |
+| Merciless Gladiator's Slicer       | Rod of the Sun King           | 2148.0 ± 1.01 | -51.5            |
+| Talon of the Phoenix               | Merciless Gladiator's Slicer  | 2147.1 ± 1.00 | -52.4            |
+| Talon of Azshara                   | Netherbane                    | 2146.7 ± 1.01 | -52.8            |
+| Blinkstrike                        | Merciless Gladiator's Cleaver | 2146.1 ± 1.04 | -53.4            |
+| Blinkstrike                        | Talon of Azshara              | 2145.4 ± 1.04 | -54.1            |
+| Wicked Edge of the Planes          | Merciless Gladiator's Slicer  | 2145.3 ± 1.02 | -54.2            |
+| Blinkstrike                        | Netherbane                    | 2144.4 ± 1.05 | -55.1            |
+| Merciless Gladiator's Slicer       | Gladiator's Slicer            | 2143.2 ± 1.00 | -56.3            |
+| Talon of the Phoenix               | Merciless Gladiator's Cleaver | 2143.2 ± 1.01 | -56.3            |
+| Talon of the Phoenix               | Netherbane                    | 2142.2 ± 1.01 | -57.3            |
+| Merciless Gladiator's Cleaver      | Merciless Gladiator's Slicer  | 2142.0 ± 1.00 | -57.5            |
+| Merciless Gladiator's Right Ripper | Merciless Gladiator's Slicer  | 2142.0 ± 1.00 | -57.5            |
+| Rod of the Sun King                | Spiteblade                    | 2141.9 ± 1.02 | -57.6            |
+| Wicked Edge of the Planes          | Netherbane                    | 2141.5 ± 1.02 | -58.0            |
+| Dragonstrike                       | Bloodskull Destroyer          | 2141.5 ± 1.04 | -58.0            |
+| Wicked Edge of the Planes          | Merciless Gladiator's Cleaver | 2141.2 ± 1.02 | -58.3            |
+| Talon of Azshara                   | Spiteblade                    | 2141.2 ± 1.01 | -58.3            |
+| Dragonstrike                       | Edge of the Cosmos            | 2140.2 ± 1.04 | -59.3            |
+| Merciless Gladiator's Slicer       | Blinkstrike                   | 2139.6 ± 1.01 | -59.9            |
+| Rod of the Sun King                | Gladiator's Slicer            | 2139.3 ± 1.02 | -60.2            |
+| Dragonstrike                       | The Harvester of Souls        | 2137.8 ± 1.05 | -61.7            |
+| Blinkstrike                        | Rod of the Sun King           | 2137.8 ± 1.05 | -61.7            |
+| Talon of Azshara                   | Gladiator's Slicer            | 2137.6 ± 1.01 | -61.9            |
+| Merciless Gladiator's Cleaver      | Merciless Gladiator's Cleaver | 2137.4 ± 1.00 | -62.1            |
+| Merciless Gladiator's Right Ripper | Merciless Gladiator's Cleaver | 2137.4 ± 1.00 | -62.1            |
+| Netherbane                         | Merciless Gladiator's Slicer  | 2137.3 ± 1.01 | -62.2            |
+| Blinkstrike                        | Gladiator's Slicer            | 2136.8 ± 1.05 | -62.7            |
+| Merciless Gladiator's Cleaver      | Netherbane                    | 2136.5 ± 1.00 | -63.0            |
+| Merciless Gladiator's Right Ripper | Netherbane                    | 2136.5 ± 1.00 | -63.0            |
+| Merciless Gladiator's Cleaver      | Talon of Azshara              | 2136.1 ± 1.00 | -63.4            |
+| Merciless Gladiator's Right Ripper | Talon of Azshara              | 2136.1 ± 1.00 | -63.4            |
+| Talon of the Phoenix               | Spiteblade                    | 2135.8 ± 1.02 | -63.7            |
+| Rod of the Sun King                | Blinkstrike                   | 2135.7 ± 1.03 | -63.8            |
+| Talon of Azshara                   | Blinkstrike                   | 2135.5 ± 1.03 | -64.0            |
+| Gladiator's Slicer                 | Merciless Gladiator's Slicer  | 2135.4 ± 0.98 | -64.1            |
+| Dragonmaw                          | Vindicator's Brand            | 2135.4 ± 1.03 | -64.1            |
+| Netherbane                         | Merciless Gladiator's Cleaver | 2135.3 ± 1.00 | -64.2            |
+| Dragonmaw                          | Runic Hammer                  | 2134.6 ± 1.04 | -64.9            |
+| Wicked Edge of the Planes          | Spiteblade                    | 2132.0 ± 1.03 | -67.5            |
+| Merciless Gladiator's Cleaver      | Rod of the Sun King           | 2131.9 ± 1.01 | -67.6            |
+| Merciless Gladiator's Right Ripper | Rod of the Sun King           | 2131.9 ± 1.01 | -67.6            |
+| Merciless Gladiator's Slicer       | Spiteblade                    | 2131.3 ± 0.99 | -68.2            |
+| Black Planar Edge                  | Talon of Azshara              | 2131.2 ± 1.00 | -68.3            |
+| Netherbane                         | Talon of Azshara              | 2131.2 ± 1.00 | -68.3            |
+| Gladiator's Slicer                 | Merciless Gladiator's Cleaver | 2130.6 ± 0.99 | -68.9            |
+| Netherbane                         | Netherbane                    | 2130.3 ± 1.01 | -69.2            |
+| Talon of the Phoenix               | Blinkstrike                   | 2130.3 ± 1.03 | -69.2            |
+| Talon of the Phoenix               | Gladiator's Slicer            | 2130.1 ± 1.00 | -69.4            |
+| Gladiator's Slicer                 | Talon of Azshara              | 2129.8 ± 1.00 | -69.7            |
+| Wicked Edge of the Planes          | Gladiator's Slicer            | 2129.8 ± 1.00 | -69.7            |
+| Blinkstrike                        | Blinkstrike                   | 2129.7 ± 1.06 | -69.8            |
+| Dragonstrike                       | Boggspine Knuckles            | 2129.4 ± 1.05 | -70.1            |
+| Spiteblade                         | Talon of Azshara              | 2129.0 ± 1.00 | -70.5            |
+| The Horseman's Blade               | Talon of Azshara              | 2129.0 ± 1.00 | -70.5            |
+| Gladiator's Slicer                 | Netherbane                    | 2128.8 ± 1.00 | -70.7            |
+| Merciless Gladiator's Cleaver      | Gladiator's Slicer            | 2126.5 ± 0.99 | -73.0            |
+| Merciless Gladiator's Right Ripper | Gladiator's Slicer            | 2126.5 ± 0.99 | -73.0            |
+| Black Planar Edge                  | Rod of the Sun King           | 2126.3 ± 1.02 | -73.2            |
+| Netherbane                         | Rod of the Sun King           | 2125.8 ± 1.01 | -73.7            |
+| Wicked Edge of the Planes          | Blinkstrike                   | 2124.0 ± 1.05 | -75.5            |
+| Blinkstrike                        | Spiteblade                    | 2123.9 ± 1.04 | -75.6            |
+| Merciless Gladiator's Slicer       | Vindicator's Brand            | 2123.5 ± 0.97 | -76.0            |
+| Spiteblade                         | Rod of the Sun King           | 2123.4 ± 1.02 | -76.1            |
+| The Horseman's Blade               | Rod of the Sun King           | 2123.4 ± 1.02 | -76.1            |
+| Netherbane                         | Gladiator's Slicer            | 2123.3 ± 1.00 | -76.2            |
+| Merciless Gladiator's Cleaver      | Blinkstrike                   | 2123.2 ± 1.02 | -76.3            |
+| Merciless Gladiator's Right Ripper | Blinkstrike                   | 2123.2 ± 1.02 | -76.3            |
+| Black Planar Edge                  | Merciless Gladiator's Slicer  | 2123.1 ± 1.00 | -76.4            |
+| Gladiator's Slicer                 | Rod of the Sun King           | 2122.4 ± 0.99 | -77.1            |
+| Dragonmaw                          | Bloodskull Destroyer          | 2121.7 ± 1.04 | -77.8            |
+| Talon of Azshara                   | Runic Hammer                  | 2121.4 ± 1.00 | -78.1            |
+| Dragonmaw                          | Edge of the Cosmos            | 2120.5 ± 1.05 | -79.0            |
+| Gladiator's Slicer                 | Gladiator's Slicer            | 2120.2 ± 0.98 | -79.3            |
+| Rod of the Sun King                | Vindicator's Brand            | 2119.9 ± 1.00 | -79.6            |
+| Netherbane                         | Blinkstrike                   | 2119.8 ± 1.03 | -79.7            |
+| Dragonmaw                          | The Harvester of Souls        | 2119.3 ± 1.05 | -80.2            |
+| Rod of the Sun King                | Runic Hammer                  | 2119.3 ± 1.01 | -80.2            |
+| Talon of Azshara                   | Vindicator's Brand            | 2119.1 ± 0.99 | -80.4            |
+| Black Planar Edge                  | Merciless Gladiator's Cleaver | 2119.0 ± 1.02 | -80.5            |
+| Spiteblade                         | Merciless Gladiator's Slicer  | 2119.0 ± 0.99 | -80.5            |
+| The Horseman's Blade               | Merciless Gladiator's Slicer  | 2119.0 ± 0.99 | -80.5            |
+| Gladiator's Right Ripper           | Merciless Gladiator's Slicer  | 2118.7 ± 0.98 | -80.8            |
+| Blinkstrike                        | Vindicator's Brand            | 2118.4 ± 1.04 | -81.1            |
+| Merciless Gladiator's Slicer       | Runic Hammer                  | 2118.2 ± 0.99 | -81.3            |
+| Dragonstrike                       | Illidari-Bane Broadsword      | 2118.1 ± 1.05 | -81.4            |
+| Black Planar Edge                  | Netherbane                    | 2116.2 ± 1.03 | -83.3            |
+| Gladiator's Slicer                 | Blinkstrike                   | 2115.3 ± 1.01 | -84.2            |
+| Gladiator's Right Ripper           | Talon of Azshara              | 2114.7 ± 0.98 | -84.8            |
+| Merciless Gladiator's Cleaver      | Spiteblade                    | 2114.7 ± 1.00 | -84.8            |
+| Merciless Gladiator's Right Ripper | Spiteblade                    | 2114.7 ± 1.00 | -84.8            |
+| Talon of the Phoenix               | Runic Hammer                  | 2114.5 ± 1.00 | -85.0            |
+| Spiteblade                         | Merciless Gladiator's Cleaver | 2114.4 ± 1.01 | -85.1            |
+| The Horseman's Blade               | Merciless Gladiator's Cleaver | 2114.4 ± 1.01 | -85.1            |
+| The Decapitator                    | Merciless Gladiator's Slicer  | 2113.2 ± 0.99 | -86.3            |
+| Spiteblade                         | Netherbane                    | 2113.1 ± 1.00 | -86.4            |
+| The Horseman's Blade               | Netherbane                    | 2113.1 ± 1.00 | -86.4            |
+| Talon of the Phoenix               | Vindicator's Brand            | 2112.2 ± 0.99 | -87.3            |
+| Merciless Gladiator's Slicer       | Bloodskull Destroyer          | 2112.1 ± 0.99 | -87.4            |
+| Gladiator's Right Ripper           | Merciless Gladiator's Cleaver | 2111.9 ± 0.99 | -87.6            |
+| Gladiator's Right Ripper           | Netherbane                    | 2111.3 ± 0.99 | -88.2            |
+| Wicked Edge of the Planes          | Runic Hammer                  | 2111.1 ± 1.01 | -88.4            |
+| Merciless Gladiator's Slicer       | Edge of the Cosmos            | 2111.0 ± 0.98 | -88.5            |
+| Wicked Edge of the Planes          | Vindicator's Brand            | 2110.3 ± 1.00 | -89.2            |
+| Dragonmaw                          | Boggspine Knuckles            | 2109.8 ± 1.03 | -89.7            |
+| The Decapitator                    | Merciless Gladiator's Cleaver | 2109.7 ± 0.99 | -89.8            |
+| Netherbane                         | Spiteblade                    | 2109.4 ± 1.00 | -90.1            |
+| Black Planar Edge                  | Spiteblade                    | 2109.3 ± 1.01 | -90.2            |
+| Merciless Gladiator's Slicer       | The Harvester of Souls        | 2109.2 ± 0.99 | -90.3            |
+| Black Planar Edge                  | Gladiator's Slicer            | 2108.8 ± 1.00 | -90.7            |
+| Spiteblade                         | Spiteblade                    | 2108.4 ± 1.02 | -91.1            |
+| Rod of the Sun King                | Bloodskull Destroyer          | 2108.4 ± 1.01 | -91.1            |
+| The Horseman's Blade               | Spiteblade                    | 2108.4 ± 1.02 | -91.1            |
+| The Decapitator                    | Talon of Azshara              | 2107.9 ± 0.98 | -91.6            |
+| Talon of Azshara                   | Bloodskull Destroyer          | 2107.8 ± 0.99 | -91.7            |
+| Blinkstrike                        | Runic Hammer                  | 2107.8 ± 1.04 | -91.7            |
+| The Decapitator                    | Netherbane                    | 2107.6 ± 0.99 | -91.9            |
+| Gladiator's Right Ripper           | Rod of the Sun King           | 2107.5 ± 0.99 | -92.0            |
+| Rod of the Sun King                | Edge of the Cosmos            | 2107.4 ± 1.01 | -92.1            |
+| Talon of Azshara                   | Edge of the Cosmos            | 2107.3 ± 1.00 | -92.2            |
+| Gladiator's Slicer                 | Spiteblade                    | 2107.1 ± 1.00 | -92.4            |
+| Merciless Gladiator's Cleaver      | Vindicator's Brand            | 2106.9 ± 1.00 | -92.6            |
+| Merciless Gladiator's Right Ripper | Vindicator's Brand            | 2106.9 ± 1.00 | -92.6            |
+| Talon of Azshara                   | The Harvester of Souls        | 2106.0 ± 1.00 | -93.5            |
+| Gladiator's Right Ripper           | Gladiator's Slicer            | 2104.9 ± 0.99 | -94.6            |
+| Spiteblade                         | Gladiator's Slicer            | 2104.9 ± 0.99 | -94.6            |
+| The Horseman's Blade               | Gladiator's Slicer            | 2104.9 ± 0.99 | -94.6            |
+| Rod of the Sun King                | The Harvester of Souls        | 2104.8 ± 1.01 | -94.7            |
+| Netherbane                         | Vindicator's Brand            | 2103.2 ± 0.99 | -96.3            |
+| The Decapitator                    | Rod of the Sun King           | 2103.1 ± 1.01 | -96.4            |
+| Vindicator's Brand                 | Merciless Gladiator's Slicer  | 2102.9 ± 0.98 | -96.6            |
+| Blinkstrike                        | Bloodskull Destroyer          | 2102.8 ± 1.04 | -96.7            |
+| Blinkstrike                        | Edge of the Cosmos            | 2102.8 ± 1.04 | -96.7            |
+| Black Planar Edge                  | Blinkstrike                   | 2102.0 ± 1.02 | -97.5            |
+| Blinkstrike                        | The Harvester of Souls        | 2101.4 ± 1.04 | -98.1            |
+| Talon of the Phoenix               | Bloodskull Destroyer          | 2101.1 ± 0.99 | -98.4            |
+| The Decapitator                    | Gladiator's Slicer            | 2100.8 ± 0.98 | -98.7            |
+| Merciless Gladiator's Cleaver      | Runic Hammer                  | 2100.6 ± 0.98 | -98.9            |
+| Merciless Gladiator's Right Ripper | Runic Hammer                  | 2100.6 ± 0.98 | -98.9            |
+| Spiteblade                         | Blinkstrike                   | 2100.0 ± 1.01 | -99.5            |
+| The Horseman's Blade               | Blinkstrike                   | 2100.0 ± 1.01 | -99.5            |
+| Gladiator's Slicer                 | Vindicator's Brand            | 2099.7 ± 0.99 | -99.8            |
+| Talon of the Phoenix               | Edge of the Cosmos            | 2099.7 ± 1.00 | -99.8            |
+| Gladiator's Right Ripper           | Blinkstrike                   | 2099.5 ± 1.02 | -100.0           |
+| Merciless Gladiator's Slicer       | Boggspine Knuckles            | 2099.1 ± 0.99 | -100.4           |
+| Vindicator's Brand                 | Merciless Gladiator's Cleaver | 2099.0 ± 0.98 | -100.5           |
+| Wicked Edge of the Planes          | Bloodskull Destroyer          | 2098.2 ± 1.00 | -101.3           |
+| Dragonmaw                          | Illidari-Bane Broadsword      | 2097.9 ± 1.04 | -101.6           |
+| Vindicator's Brand                 | Talon of Azshara              | 2097.8 ± 0.98 | -101.7           |
+| Vindicator's Brand                 | Netherbane                    | 2097.7 ± 0.97 | -101.8           |
+| Talon of the Phoenix               | The Harvester of Souls        | 2097.3 ± 1.01 | -102.2           |
+| Wicked Edge of the Planes          | Edge of the Cosmos            | 2096.9 ± 1.01 | -102.6           |
+| Rod of the Sun King                | Boggspine Knuckles            | 2096.7 ± 0.99 | -102.8           |
+| Wicked Edge of the Planes          | The Harvester of Souls        | 2095.9 ± 1.01 | -103.6           |
+| Netherbane                         | Runic Hammer                  | 2095.3 ± 0.98 | -104.2           |
+| Runic Hammer                       | Talon of Azshara              | 2094.7 ± 0.96 | -104.8           |
+| Merciless Gladiator's Cleaver      | Bloodskull Destroyer          | 2094.5 ± 1.00 | -105.0           |
+| Merciless Gladiator's Right Ripper | Bloodskull Destroyer          | 2094.5 ± 1.00 | -105.0           |
+| Gladiator's Slicer                 | Runic Hammer                  | 2094.3 ± 0.98 | -105.2           |
+| Merciless Gladiator's Cleaver      | Edge of the Cosmos            | 2094.1 ± 1.00 | -105.4           |
+| Merciless Gladiator's Right Ripper | Edge of the Cosmos            | 2094.1 ± 1.00 | -105.4           |
+| Runic Hammer                       | Merciless Gladiator's Slicer  | 2093.6 ± 0.96 | -105.9           |
+| Talon of Azshara                   | Boggspine Knuckles            | 2093.5 ± 0.99 | -106.0           |
+| Merciless Gladiator's Cleaver      | The Harvester of Souls        | 2093.3 ± 1.00 | -106.2           |
+| Merciless Gladiator's Right Ripper | The Harvester of Souls        | 2093.3 ± 1.00 | -106.2           |
+| The Decapitator                    | Blinkstrike                   | 2093.2 ± 1.01 | -106.3           |
+| Gladiator's Right Ripper           | Spiteblade                    | 2091.9 ± 0.99 | -107.6           |
+| Netherbane                         | Bloodskull Destroyer          | 2091.8 ± 0.99 | -107.7           |
+| Vindicator's Brand                 | Rod of the Sun King           | 2091.3 ± 0.99 | -108.2           |
+| Netherbane                         | Edge of the Cosmos            | 2091.0 ± 0.98 | -108.5           |
+| Black Planar Edge                  | Runic Hammer                  | 2089.8 ± 1.00 | -109.7           |
+| Blinkstrike                        | Boggspine Knuckles            | 2089.8 ± 1.04 | -109.7           |
+| Runic Hammer                       | Merciless Gladiator's Cleaver | 2089.2 ± 0.96 | -110.3           |
+| Runic Hammer                       | Rod of the Sun King           | 2088.8 ± 0.97 | -110.7           |
+| Netherbane                         | The Harvester of Souls        | 2088.8 ± 1.00 | -110.7           |
+| Gladiator's Slicer                 | Bloodskull Destroyer          | 2088.2 ± 0.98 | -111.3           |
+| Vindicator's Brand                 | Gladiator's Slicer            | 2088.2 ± 0.97 | -111.3           |
+| Talon of the Phoenix               | Boggspine Knuckles            | 2088.1 ± 0.99 | -111.4           |
+| Black Planar Edge                  | Vindicator's Brand            | 2087.8 ± 1.00 | -111.7           |
+| Gladiator's Slicer                 | Edge of the Cosmos            | 2086.5 ± 0.98 | -113.0           |
+| Spiteblade                         | Runic Hammer                  | 2086.1 ± 1.00 | -113.4           |
+| The Horseman's Blade               | Runic Hammer                  | 2086.1 ± 1.00 | -113.4           |
+| Runic Hammer                       | Netherbane                    | 2085.8 ± 0.98 | -113.7           |
+| Gladiator's Slicer                 | The Harvester of Souls        | 2085.3 ± 0.98 | -114.2           |
+| The Decapitator                    | Spiteblade                    | 2085.3 ± 1.00 | -114.2           |
+| Wicked Edge of the Planes          | Boggspine Knuckles            | 2085.0 ± 1.01 | -114.5           |
+| Gladiator's Right Ripper           | Vindicator's Brand            | 2084.6 ± 0.99 | -114.9           |
+| Spiteblade                         | Vindicator's Brand            | 2084.0 ± 0.98 | -115.5           |
+| Rod of the Sun King                | Illidari-Bane Broadsword      | 2084.0 ± 1.00 | -115.5           |
+| The Horseman's Blade               | Vindicator's Brand            | 2084.0 ± 0.98 | -115.5           |
+| Talon of Azshara                   | Illidari-Bane Broadsword      | 2083.5 ± 1.00 | -116.0           |
+| Merciless Gladiator's Cleaver      | Boggspine Knuckles            | 2083.2 ± 1.00 | -116.3           |
+| Merciless Gladiator's Right Ripper | Boggspine Knuckles            | 2083.2 ± 1.00 | -116.3           |
+| Vindicator's Brand                 | Blinkstrike                   | 2081.6 ± 0.99 | -117.9           |
+| The Decapitator                    | Vindicator's Brand            | 2079.7 ± 0.98 | -119.8           |
+| Netherbane                         | Boggspine Knuckles            | 2078.1 ± 0.99 | -121.4           |
+| Bloodskull Destroyer               | Merciless Gladiator's Slicer  | 2077.9 ± 0.95 | -121.6           |
+| Runic Hammer                       | Gladiator's Slicer            | 2077.7 ± 0.95 | -121.8           |
+| Edge of the Cosmos                 | Merciless Gladiator's Slicer  | 2077.6 ± 0.96 | -121.9           |
+| Talon of the Phoenix               | Illidari-Bane Broadsword      | 2077.4 ± 1.01 | -122.1           |
+| Gladiator's Right Ripper           | Runic Hammer                  | 2077.1 ± 0.97 | -122.4           |
+| Gladiator's Slicer                 | Boggspine Knuckles            | 2076.6 ± 0.97 | -122.9           |
+| Vindicator's Brand                 | Spiteblade                    | 2075.7 ± 0.98 | -123.8           |
+| Black Planar Edge                  | Bloodskull Destroyer          | 2075.0 ± 1.00 | -124.5           |
+| Merciless Gladiator's Slicer       | Illidari-Bane Broadsword      | 2074.7 ± 0.98 | -124.8           |
+| Black Planar Edge                  | Edge of the Cosmos            | 2074.6 ± 1.00 | -124.9           |
+| Wicked Edge of the Planes          | Illidari-Bane Broadsword      | 2074.4 ± 1.01 | -125.1           |
+| Spiteblade                         | Bloodskull Destroyer          | 2074.2 ± 0.98 | -125.3           |
+| The Horseman's Blade               | Bloodskull Destroyer          | 2074.2 ± 0.98 | -125.3           |
+| Spiteblade                         | Edge of the Cosmos            | 2073.4 ± 0.99 | -126.1           |
+| The Horseman's Blade               | Edge of the Cosmos            | 2073.4 ± 0.99 | -126.1           |
+| Black Planar Edge                  | The Harvester of Souls        | 2073.3 ± 1.01 | -126.2           |
+| Bloodskull Destroyer               | Merciless Gladiator's Cleaver | 2073.2 ± 0.96 | -126.3           |
+| Edge of the Cosmos                 | Merciless Gladiator's Cleaver | 2073.1 ± 0.96 | -126.4           |
+| The Decapitator                    | Runic Hammer                  | 2073.0 ± 0.98 | -126.5           |
+| Runic Hammer                       | Spiteblade                    | 2072.3 ± 0.97 | -127.2           |
+| Gladiator's Right Ripper           | Bloodskull Destroyer          | 2071.4 ± 1.00 | -128.1           |
+| Bloodskull Destroyer               | Netherbane                    | 2071.2 ± 0.98 | -128.3           |
+| Bloodskull Destroyer               | Talon of Azshara              | 2071.2 ± 0.95 | -128.3           |
+| Runic Hammer                       | Blinkstrike                   | 2070.9 ± 0.99 | -128.6           |
+| Edge of the Cosmos                 | Talon of Azshara              | 2070.8 ± 0.96 | -128.7           |
+| Edge of the Cosmos                 | Netherbane                    | 2070.6 ± 0.98 | -128.9           |
+| Spiteblade                         | The Harvester of Souls        | 2070.4 ± 0.99 | -129.1           |
+| The Horseman's Blade               | The Harvester of Souls        | 2070.4 ± 0.99 | -129.1           |
+| Gladiator's Right Ripper           | Edge of the Cosmos            | 2070.1 ± 1.00 | -129.4           |
+| Gladiator's Right Ripper           | The Harvester of Souls        | 2069.1 ± 0.99 | -130.4           |
+| Vindicator's Brand                 | Vindicator's Brand            | 2068.4 ± 0.96 | -131.1           |
+| The Decapitator                    | Bloodskull Destroyer          | 2067.1 ± 0.99 | -132.4           |
+| The Decapitator                    | Edge of the Cosmos            | 2066.1 ± 0.99 | -133.4           |
+| Blinkstrike                        | Illidari-Bane Broadsword      | 2065.8 ± 1.03 | -133.7           |
+| Bloodskull Destroyer               | Rod of the Sun King           | 2064.7 ± 0.97 | -134.8           |
+| Edge of the Cosmos                 | Rod of the Sun King           | 2064.3 ± 0.98 | -135.2           |
+| Bloodskull Destroyer               | Gladiator's Slicer            | 2064.1 ± 0.95 | -135.4           |
+| The Decapitator                    | The Harvester of Souls        | 2063.9 ± 1.00 | -135.6           |
+| Black Planar Edge                  | Boggspine Knuckles            | 2063.0 ± 0.99 | -136.5           |
+| The Harvester of Souls             | Merciless Gladiator's Slicer  | 2062.7 ± 0.97 | -136.8           |
+| Vindicator's Brand                 | Runic Hammer                  | 2062.7 ± 0.96 | -136.8           |
+| Edge of the Cosmos                 | Gladiator's Slicer            | 2062.3 ± 0.95 | -137.2           |
+| Spiteblade                         | Boggspine Knuckles            | 2061.3 ± 0.98 | -138.2           |
+| The Horseman's Blade               | Boggspine Knuckles            | 2061.3 ± 0.98 | -138.2           |
+| Runic Hammer                       | Runic Hammer                  | 2061.0 ± 0.96 | -138.5           |
+| Gladiator's Right Ripper           | Boggspine Knuckles            | 2060.2 ± 0.98 | -139.3           |
+| The Harvester of Souls             | Merciless Gladiator's Cleaver | 2058.5 ± 0.97 | -141.0           |
+| Runic Hammer                       | Vindicator's Brand            | 2057.4 ± 0.96 | -142.1           |
+| The Harvester of Souls             | Talon of Azshara              | 2057.4 ± 0.97 | -142.1           |
+| Merciless Gladiator's Cleaver      | Illidari-Bane Broadsword      | 2057.1 ± 0.98 | -142.4           |
+| Merciless Gladiator's Right Ripper | Illidari-Bane Broadsword      | 2057.1 ± 0.98 | -142.4           |
+| Bloodskull Destroyer               | Blinkstrike                   | 2056.6 ± 1.00 | -142.9           |
+| Edge of the Cosmos                 | Blinkstrike                   | 2056.1 ± 0.99 | -143.4           |
+| Vindicator's Brand                 | Edge of the Cosmos            | 2056.1 ± 0.96 | -143.4           |
+| The Harvester of Souls             | Netherbane                    | 2055.9 ± 0.98 | -143.6           |
+| Vindicator's Brand                 | Bloodskull Destroyer          | 2055.9 ± 0.97 | -143.6           |
+| Vindicator's Brand                 | The Harvester of Souls        | 2054.7 ± 0.95 | -144.8           |
+| Netherbane                         | Illidari-Bane Broadsword      | 2053.8 ± 0.98 | -145.7           |
+| The Decapitator                    | Boggspine Knuckles            | 2053.5 ± 0.97 | -146.0           |
+| Illidari-Bane Broadsword           | Talon of Azshara              | 2052.8 ± 0.98 | -146.7           |
+| Black Planar Edge                  | Illidari-Bane Broadsword      | 2051.1 ± 1.00 | -148.4           |
+| Gladiator's Slicer                 | Illidari-Bane Broadsword      | 2050.6 ± 0.97 | -148.9           |
+| The Harvester of Souls             | Rod of the Sun King           | 2050.3 ± 0.98 | -149.2           |
+| Bloodskull Destroyer               | Spiteblade                    | 2050.0 ± 0.97 | -149.5           |
+| Spiteblade                         | Illidari-Bane Broadsword      | 2050.0 ± 0.99 | -149.5           |
+| The Horseman's Blade               | Illidari-Bane Broadsword      | 2050.0 ± 0.99 | -149.5           |
+| The Harvester of Souls             | Gladiator's Slicer            | 2048.6 ± 0.98 | -150.9           |
+| Edge of the Cosmos                 | Spiteblade                    | 2048.1 ± 0.97 | -151.4           |
+| Illidari-Bane Broadsword           | Rod of the Sun King           | 2046.8 ± 0.98 | -152.7           |
+| Runic Hammer                       | Bloodskull Destroyer          | 2046.4 ± 0.95 | -153.1           |
+| Runic Hammer                       | Edge of the Cosmos            | 2044.9 ± 0.95 | -154.6           |
+| Bloodskull Destroyer               | Vindicator's Brand            | 2044.3 ± 0.96 | -155.2           |
+| Edge of the Cosmos                 | Vindicator's Brand            | 2044.3 ± 0.96 | -155.2           |
+| Illidari-Bane Broadsword           | Merciless Gladiator's Slicer  | 2043.4 ± 0.96 | -156.1           |
+| Vindicator's Brand                 | Boggspine Knuckles            | 2043.3 ± 0.96 | -156.2           |
+| Runic Hammer                       | The Harvester of Souls        | 2042.9 ± 0.96 | -156.6           |
+| The Harvester of Souls             | Blinkstrike                   | 2041.8 ± 1.00 | -157.7           |
+| Illidari-Bane Broadsword           | Merciless Gladiator's Cleaver | 2037.6 ± 0.97 | -161.9           |
+| Bloodskull Destroyer               | Runic Hammer                  | 2036.7 ± 0.96 | -162.8           |
+| Illidari-Bane Broadsword           | Netherbane                    | 2036.1 ± 0.97 | -163.4           |
+| Edge of the Cosmos                 | Runic Hammer                  | 2035.1 ± 0.97 | -164.4           |
+| Gladiator's Right Ripper           | Illidari-Bane Broadsword      | 2034.6 ± 0.97 | -164.9           |
+| The Harvester of Souls             | Spiteblade                    | 2033.7 ± 0.96 | -165.8           |
+| Runic Hammer                       | Boggspine Knuckles            | 2033.2 ± 0.94 | -166.3           |
+| Illidari-Bane Broadsword           | Spiteblade                    | 2031.1 ± 0.98 | -168.4           |
+| The Decapitator                    | Illidari-Bane Broadsword      | 2031.0 ± 0.98 | -168.5           |
+| Bloodskull Destroyer               | Bloodskull Destroyer          | 2030.7 ± 0.95 | -168.8           |
+| Bloodskull Destroyer               | Edge of the Cosmos            | 2029.1 ± 0.96 | -170.4           |
+| Edge of the Cosmos                 | Bloodskull Destroyer          | 2029.1 ± 0.96 | -170.4           |
+| Edge of the Cosmos                 | Edge of the Cosmos            | 2028.7 ± 0.96 | -170.8           |
+| Illidari-Bane Broadsword           | Gladiator's Slicer            | 2027.6 ± 0.95 | -171.9           |
+| Bloodskull Destroyer               | The Harvester of Souls        | 2027.5 ± 0.96 | -172.0           |
+| The Harvester of Souls             | Vindicator's Brand            | 2027.4 ± 0.97 | -172.1           |
+| Edge of the Cosmos                 | The Harvester of Souls        | 2027.3 ± 0.96 | -172.2           |
+| Illidari-Bane Broadsword           | Blinkstrike                   | 2023.9 ± 0.99 | -175.6           |
+| The Harvester of Souls             | Runic Hammer                  | 2019.9 ± 0.97 | -179.6           |
+| Vindicator's Brand                 | Illidari-Bane Broadsword      | 2019.3 ± 0.96 | -180.2           |
+| Bloodskull Destroyer               | Boggspine Knuckles            | 2017.4 ± 0.95 | -182.1           |
+| Runic Hammer                       | Illidari-Bane Broadsword      | 2017.2 ± 0.94 | -182.3           |
+| Edge of the Cosmos                 | Boggspine Knuckles            | 2016.3 ± 0.96 | -183.2           |
+| The Harvester of Souls             | Bloodskull Destroyer          | 2015.1 ± 0.97 | -184.4           |
+| The Harvester of Souls             | Edge of the Cosmos            | 2013.5 ± 0.97 | -186.0           |
+| The Harvester of Souls             | The Harvester of Souls        | 2011.4 ± 0.98 | -188.1           |
+| Illidari-Bane Broadsword           | Runic Hammer                  | 2009.7 ± 0.96 | -189.8           |
+| Illidari-Bane Broadsword           | Vindicator's Brand            | 2007.3 ± 0.95 | -192.2           |
+| The Harvester of Souls             | Boggspine Knuckles            | 2003.8 ± 0.96 | -195.7           |
+| Illidari-Bane Broadsword           | Bloodskull Destroyer          | 1995.1 ± 0.97 | -204.4           |
+| Illidari-Bane Broadsword           | Edge of the Cosmos            | 1995.1 ± 0.97 | -204.4           |
+| Bloodskull Destroyer               | Illidari-Bane Broadsword      | 1994.3 ± 0.95 | -205.2           |
+| Edge of the Cosmos                 | Illidari-Bane Broadsword      | 1994.1 ± 0.96 | -205.4           |
+| Illidari-Bane Broadsword           | The Harvester of Souls        | 1993.3 ± 0.96 | -206.2           |
+| Illidari-Bane Broadsword           | Boggspine Knuckles            | 1984.1 ± 0.96 | -215.4           |
+| The Harvester of Souls             | Illidari-Bane Broadsword      | 1980.0 ± 0.96 | -219.5           |
+| Illidari-Bane Broadsword           | Illidari-Bane Broadsword      | 1973.1 ± 0.95 | -226.4           |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
+
+## Trinket combinations
+
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Gruul's Lair, the raids above it, the badge vendor, the Darkmoon Faire and one max-level quest, and every pair from that pool was measured, so the table is an enumeration rather than a selection. Solarian's Sapphire strengthens the wearer's Battle Shout for the whole party, the simulator prices that effect outside the trinket slot, and these runs do not engage it, so its rows price the worn stats alone and understate it.
+
+The ten best of the 10 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                | DPS           | Against this set |
+|---------------------------------|------------------------|---------------|------------------|
+| Dragonspine Trophy              | Bloodlust Brooch       | 2200.8 ± 1.08 | +1.3             |
+| Dragonspine Trophy *(this set)* | Tsunami Talisman       | 2199.5 ± 1.06 | +0.0             |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2177.3 ± 1.05 | -22.2            |
+| Tsunami Talisman                | Bloodlust Brooch       | 2164.3 ± 1.04 | -35.2            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 2148.2 ± 1.04 | -51.3            |
+| Tsunami Talisman                | Darkmoon Card: Crusade | 2145.2 ± 1.05 | -54.3            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2144.0 ± 1.04 | -55.5            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 2113.2 ± 1.03 | -86.3            |
+| Tsunami Talisman                | Core of Ar'kelos       | 2112.7 ± 1.02 | -86.8            |
+| Darkmoon Card: Crusade          | Core of Ar'kelos       | 2095.1 ± 1.01 | -104.4           |
+
+The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +1.3 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

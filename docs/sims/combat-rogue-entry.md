@@ -42,6 +42,156 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 | 6193       | 36.97%     | 2329.8 ± 0.98     | Anetheron, Archimonde, Azgalor ...                         |
 | 0          | 0.00%      | 2616.6 ± 1.09     | Essence of Suffering                                       |
 
+In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
+
+## Weapon pairs
+
+A Combat Rogue carries two one-handers, so every row below is a main hand with an off hand and no row is a two- hander. Each row is THIS PROFILE with only the two weapon ids replaced: each slot keeps its Mongoose. The build is Combat Swords and the rotation is built on Sinister Strike, and every row runs under that rotation, so a dagger row measures the dagger inside the swords rotation rather than a dagger build, and the dagger, fist and mace rows carry a stated caveat: the build's Sword Specialization talent procs only on sword strikes and does not benefit them. The table is an enumeration of the EP Workbook's Main Hand ladder for this spec together with every worn and routed weapon, and every ordered pairing the field supports is a row. A row of two copies of one item needs both copies before it is wearable. The Warglaives of Azzinoth are ranked first by this spec's published Phase 3 list and by the Fury Warrior's, the raid holds one pair, and which of the two receives it is open council business, which is why this spec carries a best-in-slot set both with and without them.
+
+| Main hand                          | Off hand                         | DPS           | Against this set |
+|------------------------------------|----------------------------------|---------------|------------------|
+| Talon of Azshara *(this set)*      | Merciless Gladiator's Quickblade | 2085.9 ± 0.88 | +0.0             |
+| Merciless Gladiator's Slicer       | Merciless Gladiator's Quickblade | 2066.8 ± 0.87 | -19.1            |
+| Dragonstrike                       | Merciless Gladiator's Quickblade | 2046.9 ± 0.90 | -39.0            |
+| Gladiator's Slicer                 | Merciless Gladiator's Quickblade | 2036.9 ± 0.86 | -49.0            |
+| Rod of the Sun King                | Merciless Gladiator's Quickblade | 2027.3 ± 0.87 | -58.6            |
+| Dragonmaw                          | Merciless Gladiator's Quickblade | 2022.3 ± 0.88 | -63.6            |
+| Talon of the Phoenix               | Merciless Gladiator's Quickblade | 2005.0 ± 0.85 | -80.9            |
+| Drakefist Hammer                   | Merciless Gladiator's Quickblade | 1996.2 ± 0.87 | -89.7            |
+| Merciless Gladiator's Right Ripper | Merciless Gladiator's Quickblade | 1984.9 ± 0.84 | -101.0           |
+| Talon of Azshara                   | Fang of Vashj                    | 1983.0 ± 0.84 | -102.9           |
+| Talon of Azshara                   | Merciless Gladiator's Shanker    | 1970.1 ± 0.84 | -115.8           |
+| Merciless Gladiator's Slicer       | Fang of Vashj                    | 1967.9 ± 0.84 | -118.0           |
+| Fool's Bane                        | Merciless Gladiator's Quickblade | 1962.7 ± 0.82 | -123.2           |
+| Talon of Azshara                   | Malchazeen                       | 1962.6 ± 0.84 | -123.3           |
+| Talon of Azshara                   | Talon of Azshara                 | 1960.8 ± 0.88 | -125.1           |
+| Talon of Azshara                   | Merciless Gladiator's Slicer     | 1959.3 ± 0.87 | -126.6           |
+| Gladiator's Right Ripper           | Merciless Gladiator's Quickblade | 1957.9 ± 0.83 | -128.0           |
+| Merciless Gladiator's Slicer       | Merciless Gladiator's Shanker    | 1953.8 ± 0.83 | -132.1           |
+| Merciless Gladiator's Slicer       | Malchazeen                       | 1945.9 ± 0.83 | -140.0           |
+| Merciless Gladiator's Slicer       | Talon of Azshara                 | 1945.1 ± 0.88 | -140.8           |
+| Talon of Azshara                   | Gladiator's Slicer               | 1944.8 ± 0.87 | -141.1           |
+| Merciless Gladiator's Slicer       | Merciless Gladiator's Slicer     | 1940.0 ± 0.88 | -145.9           |
+| Gladiator's Slicer                 | Fang of Vashj                    | 1939.4 ± 0.83 | -146.5           |
+| Dragonstrike                       | Fang of Vashj                    | 1936.9 ± 0.83 | -149.0           |
+| Gladiator's Slicer                 | Merciless Gladiator's Shanker    | 1926.3 ± 0.82 | -159.6           |
+| Merciless Gladiator's Slicer       | Gladiator's Slicer               | 1925.9 ± 0.87 | -160.0           |
+| Dragonstrike                       | Merciless Gladiator's Shanker    | 1924.2 ± 0.83 | -161.7           |
+| Rod of the Sun King                | Fang of Vashj                    | 1922.5 ± 0.81 | -163.4           |
+| Dragonstrike                       | Talon of Azshara                 | 1920.8 ± 0.87 | -165.1           |
+| Gladiator's Slicer                 | Malchazeen                       | 1918.3 ± 0.82 | -167.6           |
+| Dragonstrike                       | Merciless Gladiator's Slicer     | 1917.5 ± 0.87 | -168.4           |
+| Gladiator's Slicer                 | Talon of Azshara                 | 1917.3 ± 0.86 | -168.6           |
+| Dragonstrike                       | Malchazeen                       | 1915.4 ± 0.83 | -170.5           |
+| Talon of Azshara                   | Rod of the Sun King              | 1914.5 ± 0.86 | -171.4           |
+| Dragonmaw                          | Fang of Vashj                    | 1914.0 ± 0.82 | -171.9           |
+| Gladiator's Slicer                 | Merciless Gladiator's Slicer     | 1912.0 ± 0.86 | -173.9           |
+| Rod of the Sun King                | Merciless Gladiator's Shanker    | 1910.6 ± 0.81 | -175.3           |
+| Rod of the Sun King                | Talon of Azshara                 | 1905.9 ± 0.85 | -180.0           |
+| Rod of the Sun King                | Merciless Gladiator's Slicer     | 1904.2 ± 0.85 | -181.7           |
+| Dragonstrike                       | Gladiator's Slicer               | 1903.4 ± 0.86 | -182.5           |
+| Rod of the Sun King                | Malchazeen                       | 1902.0 ± 0.81 | -183.9           |
+| Dragonmaw                          | Merciless Gladiator's Shanker    | 1901.3 ± 0.82 | -184.6           |
+| Merciless Gladiator's Slicer       | Rod of the Sun King              | 1899.7 ± 0.86 | -186.2           |
+| Talon of the Phoenix               | Fang of Vashj                    | 1899.2 ± 0.79 | -186.7           |
+| Gladiator's Slicer                 | Gladiator's Slicer               | 1898.2 ± 0.86 | -187.7           |
+| Dragonmaw                          | Talon of Azshara                 | 1898.0 ± 0.86 | -187.9           |
+| Dragonmaw                          | Merciless Gladiator's Slicer     | 1894.6 ± 0.86 | -191.3           |
+| Dragonmaw                          | Malchazeen                       | 1892.6 ± 0.82 | -193.3           |
+| Rod of the Sun King                | Gladiator's Slicer               | 1890.1 ± 0.84 | -195.8           |
+| Drakefist Hammer                   | Fang of Vashj                    | 1889.8 ± 0.81 | -196.1           |
+| Talon of the Phoenix               | Merciless Gladiator's Shanker    | 1887.3 ± 0.80 | -198.6           |
+| Merciless Gladiator's Right Ripper | Fang of Vashj                    | 1885.6 ± 0.78 | -200.3           |
+| Talon of the Phoenix               | Talon of Azshara                 | 1881.2 ± 0.82 | -204.7           |
+| Dragonmaw                          | Gladiator's Slicer               | 1880.6 ± 0.85 | -205.3           |
+| Talon of the Phoenix               | Merciless Gladiator's Slicer     | 1878.3 ± 0.83 | -207.6           |
+| Talon of the Phoenix               | Malchazeen                       | 1878.2 ± 0.79 | -207.7           |
+| Drakefist Hammer                   | Merciless Gladiator's Shanker    | 1877.1 ± 0.81 | -208.8           |
+| Drakefist Hammer                   | Talon of Azshara                 | 1873.9 ± 0.85 | -212.0           |
+| Gladiator's Slicer                 | Rod of the Sun King              | 1872.9 ± 0.85 | -213.0           |
+| Merciless Gladiator's Right Ripper | Merciless Gladiator's Shanker    | 1872.3 ± 0.79 | -213.6           |
+| Drakefist Hammer                   | Merciless Gladiator's Slicer     | 1870.4 ± 0.85 | -215.5           |
+| Dragonstrike                       | Rod of the Sun King              | 1869.6 ± 0.85 | -216.3           |
+| Drakefist Hammer                   | Malchazeen                       | 1868.5 ± 0.81 | -217.4           |
+| Merciless Gladiator's Right Ripper | Talon of Azshara                 | 1864.9 ± 0.83 | -221.0           |
+| Merciless Gladiator's Right Ripper | Malchazeen                       | 1864.7 ± 0.79 | -221.2           |
+| Talon of the Phoenix               | Gladiator's Slicer               | 1864.6 ± 0.83 | -221.3           |
+| Fool's Bane                        | Fang of Vashj                    | 1864.0 ± 0.76 | -221.9           |
+| Merciless Gladiator's Right Ripper | Merciless Gladiator's Slicer     | 1863.9 ± 0.82 | -222.0           |
+| Gladiator's Right Ripper           | Fang of Vashj                    | 1860.5 ± 0.77 | -225.4           |
+| Rod of the Sun King                | Rod of the Sun King              | 1858.4 ± 0.83 | -227.5           |
+| Drakefist Hammer                   | Gladiator's Slicer               | 1856.5 ± 0.84 | -229.4           |
+| Fool's Bane                        | Merciless Gladiator's Shanker    | 1851.9 ± 0.77 | -234.0           |
+| Merciless Gladiator's Right Ripper | Gladiator's Slicer               | 1850.6 ± 0.82 | -235.3           |
+| Dragonmaw                          | Rod of the Sun King              | 1847.6 ± 0.84 | -238.3           |
+| Gladiator's Right Ripper           | Merciless Gladiator's Shanker    | 1847.4 ± 0.78 | -238.5           |
+| Fool's Bane                        | Talon of Azshara                 | 1844.6 ± 0.80 | -241.3           |
+| Fool's Bane                        | Malchazeen                       | 1843.5 ± 0.76 | -242.4           |
+| Fool's Bane                        | Merciless Gladiator's Slicer     | 1841.6 ± 0.81 | -244.3           |
+| Gladiator's Right Ripper           | Talon of Azshara                 | 1839.8 ± 0.82 | -246.1           |
+| Gladiator's Right Ripper           | Malchazeen                       | 1839.7 ± 0.78 | -246.2           |
+| Gladiator's Right Ripper           | Merciless Gladiator's Slicer     | 1839.2 ± 0.81 | -246.7           |
+| Talon of the Phoenix               | Rod of the Sun King              | 1835.9 ± 0.81 | -250.0           |
+| Fang of Vashj                      | Merciless Gladiator's Quickblade | 1833.9 ± 0.68 | -252.0           |
+| Fool's Bane                        | Gladiator's Slicer               | 1828.2 ± 0.81 | -257.7           |
+| Gladiator's Right Ripper           | Gladiator's Slicer               | 1826.0 ± 0.81 | -259.9           |
+| Drakefist Hammer                   | Rod of the Sun King              | 1824.4 ± 0.82 | -261.5           |
+| Merciless Gladiator's Right Ripper | Rod of the Sun King              | 1820.2 ± 0.81 | -265.7           |
+| Merciless Gladiator's Shanker      | Merciless Gladiator's Quickblade | 1816.8 ± 0.68 | -269.1           |
+| Fool's Bane                        | Rod of the Sun King              | 1800.8 ± 0.79 | -285.1           |
+| Malchazeen                         | Merciless Gladiator's Quickblade | 1798.8 ± 0.67 | -287.1           |
+| Gladiator's Right Ripper           | Rod of the Sun King              | 1795.8 ± 0.80 | -290.1           |
+| Fang of Vashj                      | Fang of Vashj                    | 1758.0 ± 0.65 | -327.9           |
+| Fang of Vashj                      | Merciless Gladiator's Shanker    | 1747.4 ± 0.65 | -338.5           |
+| Merciless Gladiator's Shanker      | Fang of Vashj                    | 1743.1 ± 0.65 | -342.8           |
+| Fang of Vashj                      | Talon of Azshara                 | 1740.5 ± 0.68 | -345.4           |
+| Fang of Vashj                      | Malchazeen                       | 1739.6 ± 0.64 | -346.3           |
+| Fang of Vashj                      | Merciless Gladiator's Slicer     | 1735.3 ± 0.69 | -350.6           |
+| Merciless Gladiator's Shanker      | Merciless Gladiator's Shanker    | 1732.4 ± 0.65 | -353.5           |
+| Malchazeen                         | Fang of Vashj                    | 1726.7 ± 0.64 | -359.2           |
+| Merciless Gladiator's Shanker      | Talon of Azshara                 | 1724.2 ± 0.67 | -361.7           |
+| Merciless Gladiator's Shanker      | Malchazeen                       | 1723.6 ± 0.65 | -362.3           |
+| Fang of Vashj                      | Gladiator's Slicer               | 1722.0 ± 0.69 | -363.9           |
+| Merciless Gladiator's Shanker      | Merciless Gladiator's Slicer     | 1720.3 ± 0.69 | -365.6           |
+| Malchazeen                         | Merciless Gladiator's Shanker    | 1715.0 ± 0.64 | -370.9           |
+| Malchazeen                         | Malchazeen                       | 1707.4 ± 0.64 | -378.5           |
+| Malchazeen                         | Talon of Azshara                 | 1707.1 ± 0.68 | -378.8           |
+| Merciless Gladiator's Shanker      | Gladiator's Slicer               | 1707.0 ± 0.69 | -378.9           |
+| Fang of Vashj                      | Rod of the Sun King              | 1706.3 ± 0.67 | -379.6           |
+| Malchazeen                         | Merciless Gladiator's Slicer     | 1703.9 ± 0.68 | -382.0           |
+| Malchazeen                         | Gladiator's Slicer               | 1690.5 ± 0.68 | -395.4           |
+| Merciless Gladiator's Shanker      | Rod of the Sun King              | 1689.8 ± 0.68 | -396.1           |
+| Malchazeen                         | Rod of the Sun King              | 1674.5 ± 0.66 | -411.4           |
+
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
+
+## Trinket combinations
+
+A trinket is worth one thing beside one partner and another beside a
+different one, so the two slots are measured together: every row below is
+THIS PROFILE with only the two trinket ids replaced, and a trinket carries
+no enchant and no gem. An on-use trinket is activated on the simulator's own
+schedule. Warp-Spring Coil carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level trinket on the EP Workbook's Trinket ladder for this spec, from Karazhan, the raids above it and the badge vendor, and every pair from that pool was measured, so the table is an enumeration rather than a selection.
+
+The ten best of the 15 combinations measured, and the worn pair.
+
+| Trinket                         | Trinket                | DPS           | Against this set |
+|---------------------------------|------------------------|---------------|------------------|
+| Dragonspine Trophy *(this set)* | Warp-Spring Coil       | 2085.9 ± 0.88 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman       | 2071.6 ± 0.90 | -14.3            |
+| Dragonspine Trophy              | Bloodlust Brooch       | 2071.1 ± 0.90 | -14.8            |
+| Dragonspine Trophy              | Romulo's Poison Vial   | 2060.0 ± 0.87 | -25.9            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2049.8 ± 0.89 | -36.1            |
+| Warp-Spring Coil                | Tsunami Talisman       | 2041.7 ± 0.85 | -44.2            |
+| Warp-Spring Coil                | Bloodlust Brooch       | 2041.7 ± 0.86 | -44.2            |
+| Warp-Spring Coil                | Romulo's Poison Vial   | 2029.2 ± 0.84 | -56.7            |
+| Tsunami Talisman                | Bloodlust Brooch       | 2027.6 ± 0.87 | -58.3            |
+| Warp-Spring Coil                | Darkmoon Card: Crusade | 2020.5 ± 0.85 | -65.4            |
+
+The worn pair is again the best row, at plus zero.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
