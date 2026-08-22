@@ -473,11 +473,10 @@ drop twice, and no row pairs two rings the game will not equip together. Stormra
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
 
-The ten best of the 42 combinations measured, and the worn pair.
+The ten best of the 36 combinations measured, and the worn pair.
 
 | Ring                               | Ring                         | DPS           | Against this set |
 |------------------------------------|------------------------------|---------------|------------------|
-| Stormrage Signet Ring              | Stormrage Signet Ring        | 2614.2 ± 1.05 | +16.6            |
 | Stormrage Signet Ring *(this set)* | Band of the Eternal Champion | 2597.6 ± 1.07 | +0.0             |
 | Stormrage Signet Ring              | Ring of Deceitful Intent     | 2593.8 ± 1.06 | -3.8             |
 | Stormrage Signet Ring              | Ring of Lethality            | 2593.1 ± 1.06 | -4.5             |
@@ -487,8 +486,9 @@ The ten best of the 42 combinations measured, and the worn pair.
 | Stormrage Signet Ring              | Garona's Signet Ring         | 2582.0 ± 1.04 | -15.6            |
 | Stormrage Signet Ring              | Band of Eternity             | 2579.3 ± 1.06 | -18.3            |
 | Band of the Eternal Champion       | Ring of Deceitful Intent     | 2578.4 ± 1.07 | -19.2            |
+| Band of the Eternal Champion       | Ring of Lethality            | 2577.9 ± 1.07 | -19.7            |
 
-The best combination, Stormrage Signet Ring with Stormrage Signet Ring, measures +16.6 against this set's own rings, so the upgrade path at this anchor runs through it.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 

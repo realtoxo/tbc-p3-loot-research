@@ -201,22 +201,18 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
 
-The ten best of the 10 combinations measured, and the worn pair.
+The ten best of the 6 combinations measured, and the worn pair.
 
 | Ring                           | Ring                       | DPS           | Against this set |
 |--------------------------------|----------------------------|---------------|------------------|
-| Band of the Ranger-General     | Band of the Ranger-General | 2086.5 ± 0.88 | +0.6             |
-| Ring of Lethality              | Ring of Lethality          | 2086.1 ± 0.87 | +0.2             |
 | Ring of Lethality *(this set)* | Band of the Ranger-General | 2085.9 ± 0.88 | +0.0             |
 | Ring of Lethality              | Ring of a Thousand Marks   | 2078.5 ± 0.87 | -7.4             |
 | Band of the Ranger-General     | Ring of a Thousand Marks   | 2078.2 ± 0.88 | -7.7             |
 | Band of the Ranger-General     | Garona's Signet Ring       | 2077.7 ± 0.88 | -8.2             |
 | Ring of Lethality              | Garona's Signet Ring       | 2077.0 ± 0.87 | -8.9             |
-| Ring of a Thousand Marks       | Ring of a Thousand Marks   | 2070.9 ± 0.87 | -15.0            |
 | Ring of a Thousand Marks       | Garona's Signet Ring       | 2069.4 ± 0.87 | -16.5            |
-| Garona's Signet Ring           | Garona's Signet Ring       | 2068.8 ± 0.87 | -17.1            |
 
-The best combination, Band of the Ranger-General with Band of the Ranger-General, measures +0.6 against this set's own rings, so the upgrade path at this anchor runs through it.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 

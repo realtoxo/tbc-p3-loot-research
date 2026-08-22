@@ -2200,17 +2200,6 @@ specs:
           name: Band of the Ranger-General
           source: raid_drop
         ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 1998.0
-        standard_error: 0.92
-        stdev: 92.4
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
@@ -2233,46 +2222,13 @@ specs:
           name: Ring of Lethality
           source: raid_drop
         ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 1988.3
-        standard_error: 0.92
-        stdev: 92.2
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
           id: 28757
           name: Ring of a Thousand Marks
           source: raid_drop
         dps: 1985.8
         standard_error: 0.92
         stdev: 92.1
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 1982.7
-        standard_error: 0.92
-        stdev: 91.9
       tier-hands-and-head:
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2010.0
-        standard_error: 0.94
-        stdev: 94.0
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -2339,17 +2295,6 @@ specs:
         dps: 1999.1
         standard_error: 0.94
         stdev: 94.2
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 1997.0
-        standard_error: 0.92
-        stdev: 92.3
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -2450,17 +2395,6 @@ specs:
         standard_error: 0.92
         stdev: 92.1
       - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        dps: 1991.7
-        standard_error: 0.95
-        stdev: 95.5
-      - ring_1:
           id: 29301
           name: Band of the Eternal Champion
           source: drop
@@ -2482,17 +2416,6 @@ specs:
         dps: 1990.8
         standard_error: 0.93
         stdev: 93.1
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 1989.9
-        standard_error: 0.93
-        stdev: 92.7
       - ring_1:
           id: 32335
           name: Unstoppable Aggressor's Ring
@@ -2548,17 +2471,6 @@ specs:
         dps: 1987.5
         standard_error: 0.93
         stdev: 92.7
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 1987.4
-        standard_error: 0.92
-        stdev: 92.2
       - ring_1:
           id: 32335
           name: Unstoppable Aggressor's Ring
@@ -2659,17 +2571,6 @@ specs:
         standard_error: 0.93
         stdev: 92.7
       - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 1981.8
-        standard_error: 0.92
-        stdev: 91.9
-      - ring_1:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
@@ -2725,17 +2626,6 @@ specs:
         standard_error: 0.94
         stdev: 94.3
       bis:
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2172.8
-        standard_error: 0.91
-        stdev: 90.5
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -2880,17 +2770,6 @@ specs:
         standard_error: 0.91
         stdev: 90.6
       - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2152.8
-        standard_error: 0.9
-        stdev: 89.8
-      - ring_1:
           id: 29301
           name: Band of the Eternal Champion
           source: drop
@@ -2901,17 +2780,6 @@ specs:
         dps: 2150.2
         standard_error: 0.91
         stdev: 90.8
-      - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        dps: 2149.6
-        standard_error: 0.92
-        stdev: 92.3
       - ring_1:
           id: 29997
           name: Band of the Ranger-General
@@ -2968,17 +2836,6 @@ specs:
         standard_error: 0.91
         stdev: 91.4
       - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2145.8
-        standard_error: 0.89
-        stdev: 89.0
-      - ring_1:
           id: 29997
           name: Band of the Ranger-General
           source: raid_drop
@@ -3033,17 +2890,6 @@ specs:
         dps: 2144.0
         standard_error: 0.89
         stdev: 89.0
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2142.8
-        standard_error: 0.89
-        stdev: 88.7
       - ring_1:
           id: 32335
           name: Unstoppable Aggressor's Ring
@@ -3132,17 +2978,6 @@ specs:
         dps: 2138.8
         standard_error: 0.9
         stdev: 90.3
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2137.1
-        standard_error: 0.89
-        stdev: 88.7
       - ring_1:
           id: 32526
           name: Band of Devastation
@@ -4333,34 +4168,12 @@ specs:
           name: Shapeshifter's Signet
           source: drop
         ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 2039.4
-        standard_error: 1.23
-        stdev: 123.3
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
         dps: 2036.4
         standard_error: 1.26
         stdev: 126.1
-      - ring_1:
-          id: 30061
-          name: Ancestral Ring of Conquest
-          source: raid_drop
-        ring_2:
-          id: 30061
-          name: Ancestral Ring of Conquest
-          source: raid_drop
-        dps: 2033.0
-        standard_error: 1.32
-        stdev: 131.5
       - ring_1:
           id: 29997
           name: Band of the Ranger-General
@@ -4372,17 +4185,6 @@ specs:
         dps: 2030.5
         standard_error: 1.31
         stdev: 131.2
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2028.4
-        standard_error: 1.31
-        stdev: 131.0
       - ring_1:
           id: 30061
           name: Ancestral Ring of Conquest
@@ -4405,17 +4207,6 @@ specs:
         dps: 2022.9
         standard_error: 1.31
         stdev: 130.7
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2018.0
-        standard_error: 1.3
-        stdev: 130.4
       tier-hands-and-head:
       - ring_1:
           id: 32526
@@ -4446,17 +4237,6 @@ specs:
         ring_2:
           id: 32526
           name: Band of Devastation
-          source: raid_drop
-        dps: 2052.4
-        standard_error: 1.33
-        stdev: 132.6
-      - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
           source: raid_drop
         dps: 2052.4
         standard_error: 1.33
@@ -4616,17 +4396,6 @@ specs:
         standard_error: 1.32
         stdev: 131.7
       - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 2038.4
-        standard_error: 1.23
-        stdev: 123.3
-      - ring_1:
           id: 29301
           name: Band of the Eternal Champion
           source: drop
@@ -4774,17 +4543,6 @@ specs:
           name: Ancestral Ring of Conquest
           source: raid_drop
         ring_2:
-          id: 30061
-          name: Ancestral Ring of Conquest
-          source: raid_drop
-        dps: 2032.0
-        standard_error: 1.31
-        stdev: 131.5
-      - ring_1:
-          id: 30061
-          name: Ancestral Ring of Conquest
-          source: raid_drop
-        ring_2:
           id: 29300
           name: Band of Eternity
           source: drop
@@ -4813,17 +4571,6 @@ specs:
         dps: 2029.1
         standard_error: 1.31
         stdev: 131.0
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2027.5
-        standard_error: 1.31
-        stdev: 130.9
       - ring_1:
           id: 30061
           name: Ancestral Ring of Conquest
@@ -4924,17 +4671,6 @@ specs:
         standard_error: 1.31
         stdev: 130.7
       - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2018.5
-        standard_error: 1.31
-        stdev: 130.6
-      - ring_1:
           id: 32497
           name: Stormrage Signet Ring
           source: raid_drop
@@ -4954,28 +4690,6 @@ specs:
           name: Ring of Lethality
           source: raid_drop
         dps: 2017.5
-        standard_error: 1.3
-        stdev: 130.4
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2017.5
-        standard_error: 1.31
-        stdev: 130.7
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2017.0
         standard_error: 1.3
         stdev: 130.4
       - ring_1:
@@ -5034,17 +4748,6 @@ specs:
         dps: 2219.7
         standard_error: 1.36
         stdev: 136.3
-      - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        dps: 2218.6
-        standard_error: 1.41
-        stdev: 140.8
       - ring_1:
           id: 32526
           name: Band of Devastation
@@ -5193,17 +4896,6 @@ specs:
           name: Shapeshifter's Signet
           source: drop
         ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 2204.5
-        standard_error: 1.34
-        stdev: 134.2
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
           id: 32497
           name: Stormrage Signet Ring
           source: raid_drop
@@ -5332,17 +5024,6 @@ specs:
         standard_error: 1.4
         stdev: 139.7
       - ring_1:
-          id: 30061
-          name: Ancestral Ring of Conquest
-          source: raid_drop
-        ring_2:
-          id: 30061
-          name: Ancestral Ring of Conquest
-          source: raid_drop
-        dps: 2197.7
-        standard_error: 1.4
-        stdev: 139.6
-      - ring_1:
           id: 29301
           name: Band of the Eternal Champion
           source: drop
@@ -5386,17 +5067,6 @@ specs:
         dps: 2193.3
         standard_error: 1.39
         stdev: 139.3
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2191.6
-        standard_error: 1.39
-        stdev: 139.2
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -5501,34 +5171,12 @@ specs:
           name: Stormrage Signet Ring
           source: raid_drop
         ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2182.5
-        standard_error: 1.39
-        stdev: 138.9
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
           id: 32266
           name: Ring of Deceitful Intent
           source: raid_drop
         dps: 2182.3
         standard_error: 1.39
         stdev: 138.8
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2182.3
-        standard_error: 1.39
-        stdev: 138.6
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -5551,17 +5199,6 @@ specs:
         dps: 2181.6
         standard_error: 1.39
         stdev: 138.6
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2180.4
-        standard_error: 1.39
-        stdev: 138.5
   fury_warrior:
     why: 'A Fury Warrior considers only one-handers and main handers, so every row
       below is a main hand with an off hand and no row is a two-hander. Each row
@@ -35262,17 +34899,6 @@ specs:
           name: Band of the Ranger-General
           source: raid_drop
         ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2208.4
-        standard_error: 1.07
-        stdev: 106.6
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
           id: 28757
           name: Ring of a Thousand Marks
           source: raid_drop
@@ -35290,17 +34916,6 @@ specs:
         dps: 2195.8
         standard_error: 1.06
         stdev: 105.7
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2187.7
-        standard_error: 1.05
-        stdev: 105.0
       - ring_1:
           id: 28757
           name: Ring of a Thousand Marks
@@ -35324,17 +34939,6 @@ specs:
         standard_error: 1.04
         stdev: 104.4
       - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2183.0
-        standard_error: 1.05
-        stdev: 105.0
-      - ring_1:
           id: 28757
           name: Ring of a Thousand Marks
           source: raid_drop
@@ -35356,40 +34960,7 @@ specs:
         dps: 2169.0
         standard_error: 1.04
         stdev: 103.9
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 2146.0
-        standard_error: 1.04
-        stdev: 103.8
       tier-hands-and-head:
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2236.7
-        standard_error: 1.1
-        stdev: 109.8
-      - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        dps: 2235.8
-        standard_error: 1.11
-        stdev: 111.5
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -35478,17 +35049,6 @@ specs:
         dps: 2224.0
         standard_error: 1.11
         stdev: 111.2
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2223.9
-        standard_error: 1.09
-        stdev: 109.5
       - ring_1:
           id: 32526
           name: Band of Devastation
@@ -35692,17 +35252,6 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2204.0
-        standard_error: 1.06
-        stdev: 106.4
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 32266
           name: Ring of Deceitful Intent
           source: raid_drop
@@ -35732,17 +35281,6 @@ specs:
         standard_error: 1.07
         stdev: 107.3
       - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2202.3
-        standard_error: 1.09
-        stdev: 108.7
-      - ring_1:
           id: 32497
           name: Stormrage Signet Ring
           source: raid_drop
@@ -35764,17 +35302,6 @@ specs:
         dps: 2200.3
         standard_error: 1.08
         stdev: 108.2
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2200.3
-        standard_error: 1.08
-        stdev: 108.1
       - ring_1:
           id: 29997
           name: Band of the Ranger-General
@@ -35841,29 +35368,7 @@ specs:
         dps: 2185.9
         standard_error: 1.09
         stdev: 108.9
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 2156.9
-        standard_error: 1.08
-        stdev: 107.7
       bis:
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2521.1
-        standard_error: 1.09
-        stdev: 108.9
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -35875,17 +35380,6 @@ specs:
         dps: 2519.7
         standard_error: 1.11
         stdev: 110.5
-      - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        dps: 2519.5
-        standard_error: 1.12
-        stdev: 111.5
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -35941,17 +35435,6 @@ specs:
         dps: 2512.5
         standard_error: 1.09
         stdev: 108.9
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2511.1
-        standard_error: 1.08
-        stdev: 107.9
       - ring_1:
           id: 32335
           name: Unstoppable Aggressor's Ring
@@ -36177,34 +35660,12 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2486.7
-        standard_error: 1.07
-        stdev: 107.5
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 32266
           name: Ring of Deceitful Intent
           source: raid_drop
         dps: 2486.5
         standard_error: 1.08
         stdev: 107.9
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2484.9
-        standard_error: 1.08
-        stdev: 107.5
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -36249,17 +35710,6 @@ specs:
         dps: 2482.4
         standard_error: 1.08
         stdev: 108.3
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2480.5
-        standard_error: 1.09
-        stdev: 109.0
       - ring_1:
           id: 29997
           name: Band of the Ranger-General
@@ -36326,29 +35776,7 @@ specs:
         dps: 2465.6
         standard_error: 1.07
         stdev: 107.0
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 2437.4
-        standard_error: 1.06
-        stdev: 106.4
       bis-no-glaives:
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2402.1
-        standard_error: 1.09
-        stdev: 109.1
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -36360,17 +35788,6 @@ specs:
         dps: 2398.8
         standard_error: 1.1
         stdev: 109.9
-      - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        dps: 2397.7
-        standard_error: 1.1
-        stdev: 110.4
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -36415,17 +35832,6 @@ specs:
         dps: 2390.8
         standard_error: 1.1
         stdev: 109.9
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2389.9
-        standard_error: 1.09
-        stdev: 108.6
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -36669,17 +36075,6 @@ specs:
         standard_error: 1.08
         stdev: 108.5
       - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2368.0
-        standard_error: 1.08
-        stdev: 108.0
-      - ring_1:
           id: 32335
           name: Unstoppable Aggressor's Ring
           source: raid_drop
@@ -36717,17 +36112,6 @@ specs:
           name: Ring of Deceitful Intent
           source: raid_drop
         ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2364.7
-        standard_error: 1.07
-        stdev: 107.3
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
@@ -36756,17 +36140,6 @@ specs:
         dps: 2360.8
         standard_error: 1.09
         stdev: 108.9
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2360.8
-        standard_error: 1.08
-        stdev: 107.6
       - ring_1:
           id: 32526
           name: Band of Devastation
@@ -36811,17 +36184,6 @@ specs:
         dps: 2346.3
         standard_error: 1.07
         stdev: 106.7
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 2323.1
-        standard_error: 1.09
-        stdev: 108.7
   combat_rogue:
     why: 'A Combat Rogue carries two one-handers, so every row below is a main hand
       with an off hand and no row is a two- hander. Each row is THIS PROFILE with
@@ -54381,28 +53743,6 @@ specs:
     ring_anchors:
       entry:
       - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2086.5
-        standard_error: 0.88
-        stdev: 88.1
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2086.1
-        standard_error: 0.87
-        stdev: 87.3
-      - ring_1:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
@@ -54462,46 +53802,13 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2070.9
-        standard_error: 0.87
-        stdev: 86.7
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 28649
           name: Garona's Signet Ring
           source: raid_drop
         dps: 2069.4
         standard_error: 0.87
         stdev: 87.1
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 2068.8
-        standard_error: 0.87
-        stdev: 87.2
       tier-hands-and-head:
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2301.1
-        standard_error: 0.94
-        stdev: 94.2
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -54628,17 +53935,6 @@ specs:
           name: Ring of Deceitful Intent
           source: raid_drop
         ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2267.9
-        standard_error: 0.94
-        stdev: 94.0
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
           id: 29997
           name: Band of the Ranger-General
           source: raid_drop
@@ -54667,28 +53963,6 @@ specs:
         dps: 2266.9
         standard_error: 0.95
         stdev: 94.5
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2266.9
-        standard_error: 0.94
-        stdev: 94.3
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2266.8
-        standard_error: 0.94
-        stdev: 94.0
       - ring_1:
           id: 29301
           name: Band of the Eternal Champion
@@ -54877,17 +54151,6 @@ specs:
         standard_error: 0.95
         stdev: 94.9
       - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2250.6
-        standard_error: 0.93
-        stdev: 93.3
-      - ring_1:
           id: 32526
           name: Band of Devastation
           source: raid_drop
@@ -54909,17 +54172,6 @@ specs:
         dps: 2249.1
         standard_error: 0.94
         stdev: 93.9
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 2247.9
-        standard_error: 0.94
-        stdev: 93.8
       - ring_1:
           id: 32526
           name: Band of Devastation
@@ -54954,17 +54206,6 @@ specs:
         standard_error: 0.94
         stdev: 94.4
       bis:
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2614.2
-        standard_error: 1.05
-        stdev: 105.0
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -55098,28 +54339,6 @@ specs:
         standard_error: 1.05
         stdev: 105.3
       - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2573.5
-        standard_error: 1.05
-        stdev: 105.2
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2573.1
-        standard_error: 1.05
-        stdev: 105.5
-      - ring_1:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
@@ -55139,17 +54358,6 @@ specs:
           name: Ring of Lethality
           source: raid_drop
         dps: 2572.5
-        standard_error: 1.05
-        stdev: 105.4
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2572.1
         standard_error: 1.05
         stdev: 105.4
       - ring_1:
@@ -55340,17 +54548,6 @@ specs:
         standard_error: 1.07
         stdev: 107.0
       - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2555.4
-        standard_error: 1.05
-        stdev: 104.8
-      - ring_1:
           id: 32526
           name: Band of Devastation
           source: raid_drop
@@ -55372,17 +54569,6 @@ specs:
         dps: 2553.5
         standard_error: 1.04
         stdev: 104.4
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 2552.0
-        standard_error: 1.05
-        stdev: 104.5
       - ring_1:
           id: 28757
           name: Ring of a Thousand Marks
@@ -55417,17 +54603,6 @@ specs:
         standard_error: 1.06
         stdev: 105.6
       bis-no-glaives:
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2428.0
-        standard_error: 0.98
-        stdev: 98.0
       - ring_1:
           id: 32497
           name: Stormrage Signet Ring
@@ -55554,17 +54729,6 @@ specs:
           name: Ring of Deceitful Intent
           source: raid_drop
         ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2389.5
-        standard_error: 0.98
-        stdev: 97.8
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
@@ -55587,34 +54751,12 @@ specs:
           name: Ring of Lethality
           source: raid_drop
         ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2388.6
-        standard_error: 0.98
-        stdev: 97.8
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
           id: 29997
           name: Band of the Ranger-General
           source: raid_drop
         dps: 2388.5
         standard_error: 0.98
         stdev: 97.8
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2388.3
-        standard_error: 0.98
-        stdev: 97.7
       - ring_1:
           id: 29301
           name: Band of the Eternal Champion
@@ -55818,34 +54960,12 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2371.7
-        standard_error: 0.97
-        stdev: 97.1
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 28649
           name: Garona's Signet Ring
           source: raid_drop
         dps: 2370.5
         standard_error: 0.97
         stdev: 97.1
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 2368.7
-        standard_error: 0.97
-        stdev: 96.9
       - ring_1:
           id: 28757
           name: Ring of a Thousand Marks
@@ -56876,17 +55996,6 @@ specs:
           name: Band of the Ranger-General
           source: raid_drop
         ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 1938.5
-        standard_error: 1.06
-        stdev: 105.9
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
           id: 28757
           name: Ring of a Thousand Marks
           source: raid_drop
@@ -56909,34 +56018,12 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 1923.1
-        standard_error: 1.06
-        stdev: 106.0
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
         dps: 1921.1
         standard_error: 1.06
         stdev: 105.7
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 1918.6
-        standard_error: 1.06
-        stdev: 106.4
       - ring_1:
           id: 29997
           name: Band of the Ranger-General
@@ -56970,29 +56057,7 @@ specs:
         dps: 1901.2
         standard_error: 1.06
         stdev: 106.2
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 1882.7
-        standard_error: 1.06
-        stdev: 105.8
       tier-hands-and-head:
-      - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        dps: 1997.0
-        standard_error: 1.14
-        stdev: 114.1
       - ring_1:
           id: 32335
           name: Unstoppable Aggressor's Ring
@@ -57159,17 +56224,6 @@ specs:
         standard_error: 1.1
         stdev: 109.6
       - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 1983.9
-        standard_error: 1.14
-        stdev: 113.7
-      - ring_1:
           id: 32335
           name: Unstoppable Aggressor's Ring
           source: raid_drop
@@ -57202,17 +56256,6 @@ specs:
         dps: 1982.8
         standard_error: 1.14
         stdev: 114.0
-      - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 1981.9
-        standard_error: 1.13
-        stdev: 112.6
       - ring_1:
           id: 28757
           name: Ring of a Thousand Marks
@@ -57482,34 +56525,12 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 1965.7
-        standard_error: 1.13
-        stdev: 112.7
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 32266
           name: Ring of Deceitful Intent
           source: raid_drop
         dps: 1964.2
         standard_error: 1.13
         stdev: 113.0
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 1963.9
-        standard_error: 1.13
-        stdev: 112.7
       - ring_1:
           id: 28757
           name: Ring of a Thousand Marks
@@ -57532,28 +56553,6 @@ specs:
         dps: 1962.5
         standard_error: 1.12
         stdev: 112.3
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 1960.5
-        standard_error: 1.13
-        stdev: 112.9
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 1959.4
-        standard_error: 1.08
-        stdev: 108.5
       bis:
       - ring_1:
           id: 32497
@@ -57610,17 +56609,6 @@ specs:
         dps: 2120.7
         standard_error: 1.22
         stdev: 122.2
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 2118.9
-        standard_error: 1.22
-        stdev: 122.1
       - ring_1:
           id: 29997
           name: Band of the Ranger-General
@@ -57688,17 +56676,6 @@ specs:
         standard_error: 1.22
         stdev: 122.0
       - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 2114.6
-        standard_error: 1.22
-        stdev: 121.8
-      - ring_1:
           id: 32335
           name: Unstoppable Aggressor's Ring
           source: raid_drop
@@ -57742,17 +56719,6 @@ specs:
         dps: 2110.6
         standard_error: 1.22
         stdev: 122.1
-      - ring_1:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        ring_2:
-          id: 32335
-          name: Unstoppable Aggressor's Ring
-          source: raid_drop
-        dps: 2110.3
-        standard_error: 1.21
-        stdev: 121.5
       - ring_1:
           id: 29301
           name: Band of the Eternal Champion
@@ -57985,17 +56951,6 @@ specs:
         standard_error: 1.21
         stdev: 121.3
       - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2097.3
-        standard_error: 1.2
-        stdev: 119.8
-      - ring_1:
           id: 29301
           name: Band of the Eternal Champion
           source: drop
@@ -58066,34 +57021,12 @@ specs:
           name: Ring of Deceitful Intent
           source: raid_drop
         ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2092.6
-        standard_error: 1.21
-        stdev: 121.3
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
         dps: 2091.1
         standard_error: 1.21
         stdev: 121.1
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2090.4
-        standard_error: 1.21
-        stdev: 120.6
       - ring_1:
           id: 29300
           name: Band of Eternity
@@ -58116,17 +57049,6 @@ specs:
         dps: 2085.1
         standard_error: 1.18
         stdev: 118.3
-      - ring_1:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        ring_2:
-          id: 30834
-          name: Shapeshifter's Signet
-          source: drop
-        dps: 2070.2
-        standard_error: 1.17
-        stdev: 117.3
   beast_mastery_hunter:
     why: 'A Beast Mastery Hunter can carry a two-hander or two one- handers, and
       both styles run in the same table, so a row below is either a main hand with
@@ -60277,17 +59199,6 @@ specs:
     ring_anchors:
       entry:
       - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 3014.6
-        standard_error: 0.85
-        stdev: 84.6
-      - ring_1:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
@@ -60298,17 +59209,6 @@ specs:
         dps: 3011.8
         standard_error: 0.85
         stdev: 85.2
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 3010.2
-        standard_error: 0.86
-        stdev: 85.6
       - ring_1:
           id: 29997
           name: Band of the Ranger-General
@@ -60358,34 +59258,12 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 2995.2
-        standard_error: 0.85
-        stdev: 84.6
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 28649
           name: Garona's Signet Ring
           source: raid_drop
         dps: 2994.1
         standard_error: 0.85
         stdev: 84.5
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 2992.5
-        standard_error: 0.85
-        stdev: 84.7
       tier-hands-and-head:
       - ring_1:
           id: 29301
@@ -60509,17 +59387,6 @@ specs:
         standard_error: 0.89
         stdev: 89.2
       - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 3172.3
-        standard_error: 0.89
-        stdev: 89.3
-      - ring_1:
           id: 32497
           name: Stormrage Signet Ring
           source: raid_drop
@@ -60590,17 +59457,6 @@ specs:
           name: Stormrage Signet Ring
           source: raid_drop
         ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 3169.6
-        standard_error: 0.9
-        stdev: 90.0
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
           id: 32266
           name: Ring of Deceitful Intent
           source: raid_drop
@@ -60618,28 +59474,6 @@ specs:
         dps: 3168.2
         standard_error: 0.9
         stdev: 89.9
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 3168.1
-        standard_error: 0.89
-        stdev: 89.5
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 3167.6
-        standard_error: 0.89
-        stdev: 89.2
       - ring_1:
           id: 32266
           name: Ring of Deceitful Intent
@@ -60865,17 +59699,6 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 3152.1
-        standard_error: 0.89
-        stdev: 88.8
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 28649
           name: Garona's Signet Ring
           source: raid_drop
@@ -60893,17 +59716,6 @@ specs:
         dps: 3149.4
         standard_error: 0.9
         stdev: 90.5
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 3148.9
-        standard_error: 0.89
-        stdev: 88.8
       - ring_1:
           id: 32526
           name: Band of Devastation
@@ -61115,17 +59927,6 @@ specs:
         standard_error: 0.96
         stdev: 96.5
       - ring_1:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        ring_2:
-          id: 29997
-          name: Band of the Ranger-General
-          source: raid_drop
-        dps: 3285.6
-        standard_error: 0.96
-        stdev: 95.8
-      - ring_1:
           id: 30052
           name: Ring of Lethality
           source: raid_drop
@@ -61207,17 +60008,6 @@ specs:
           name: Stormrage Signet Ring
           source: raid_drop
         ring_2:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        dps: 3281.5
-        standard_error: 0.97
-        stdev: 96.9
-      - ring_1:
-          id: 32497
-          name: Stormrage Signet Ring
-          source: raid_drop
-        ring_2:
           id: 32266
           name: Ring of Deceitful Intent
           source: raid_drop
@@ -61246,28 +60036,6 @@ specs:
         dps: 3280.7
         standard_error: 0.96
         stdev: 96.4
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 3280.7
-        standard_error: 0.96
-        stdev: 96.4
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 3279.8
-        standard_error: 0.96
-        stdev: 96.3
       - ring_1:
           id: 29299
           name: Band of Eternity
@@ -61438,34 +60206,12 @@ specs:
           name: Ring of a Thousand Marks
           source: raid_drop
         ring_2:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        dps: 3263.9
-        standard_error: 0.95
-        stdev: 95.4
-      - ring_1:
-          id: 28757
-          name: Ring of a Thousand Marks
-          source: raid_drop
-        ring_2:
           id: 28649
           name: Garona's Signet Ring
           source: raid_drop
         dps: 3262.6
         standard_error: 0.96
         stdev: 95.6
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 3261.0
-        standard_error: 0.96
-        stdev: 95.7
   survival_hunter:
     why: 'A Survival Hunter can carry a two-hander or two one- handers, and both
       styles run in the same table, so a row below is either a main hand with an
@@ -66477,34 +65223,12 @@ specs:
           name: Ring of Lethality
           source: raid_drop
         ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2530.2
-        standard_error: 0.79
-        stdev: 78.6
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
           id: 28791
           name: Ring of the Recalcitrant
           source: drop
         dps: 2529.1
         standard_error: 0.79
         stdev: 78.9
-      - ring_1:
-          id: 28791
-          name: Ring of the Recalcitrant
-          source: drop
-        ring_2:
-          id: 28791
-          name: Ring of the Recalcitrant
-          source: drop
-        dps: 2528.0
-        standard_error: 0.79
-        stdev: 79.1
       - ring_1:
           id: 30052
           name: Ring of Lethality
@@ -66527,17 +65251,6 @@ specs:
         dps: 2520.1
         standard_error: 0.78
         stdev: 78.5
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 2512.1
-        standard_error: 0.78
-        stdev: 78.0
       tier-hands-and-head:
       - ring_1:
           id: 29301
@@ -66665,17 +65378,6 @@ specs:
           name: Ring of Lethality
           source: raid_drop
         ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2669.6
-        standard_error: 0.84
-        stdev: 84.3
-      - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
           id: 29298
           name: Band of Eternity
           source: drop
@@ -66704,17 +65406,6 @@ specs:
         dps: 2669.3
         standard_error: 0.85
         stdev: 85.2
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2669.1
-        standard_error: 0.84
-        stdev: 84.2
       - ring_1:
           id: 32266
           name: Ring of Deceitful Intent
@@ -66815,17 +65506,6 @@ specs:
         standard_error: 0.84
         stdev: 84.4
       - ring_1:
-          id: 28791
-          name: Ring of the Recalcitrant
-          source: drop
-        ring_2:
-          id: 28791
-          name: Ring of the Recalcitrant
-          source: drop
-        dps: 2660.7
-        standard_error: 0.86
-        stdev: 85.5
-      - ring_1:
           id: 32266
           name: Ring of Deceitful Intent
           source: raid_drop
@@ -66902,17 +65582,6 @@ specs:
         dps: 2651.7
         standard_error: 0.84
         stdev: 84.1
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 2651.0
-        standard_error: 0.84
-        stdev: 83.6
       bis:
       - ring_1:
           id: 29301
@@ -67036,17 +65705,6 @@ specs:
         standard_error: 0.89
         stdev: 88.9
       - ring_1:
-          id: 28791
-          name: Ring of the Recalcitrant
-          source: drop
-        ring_2:
-          id: 28791
-          name: Ring of the Recalcitrant
-          source: drop
-        dps: 2777.6
-        standard_error: 0.89
-        stdev: 88.8
-      - ring_1:
           id: 29298
           name: Band of Eternity
           source: drop
@@ -67113,17 +65771,6 @@ specs:
         standard_error: 0.89
         stdev: 88.9
       - ring_1:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        ring_2:
-          id: 30052
-          name: Ring of Lethality
-          source: raid_drop
-        dps: 2774.1
-        standard_error: 0.89
-        stdev: 88.7
-      - ring_1:
           id: 32266
           name: Ring of Deceitful Intent
           source: raid_drop
@@ -67154,17 +65801,6 @@ specs:
           name: Ring of the Overseer
           source: drop
         dps: 2772.8
-        standard_error: 0.89
-        stdev: 88.8
-      - ring_1:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        ring_2:
-          id: 32266
-          name: Ring of Deceitful Intent
-          source: raid_drop
-        dps: 2772.5
         standard_error: 0.89
         stdev: 88.8
       - ring_1:
@@ -67277,17 +65913,6 @@ specs:
         dps: 2756.5
         standard_error: 0.88
         stdev: 87.9
-      - ring_1:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        ring_2:
-          id: 28649
-          name: Garona's Signet Ring
-          source: raid_drop
-        dps: 2754.7
-        standard_error: 0.88
-        stdev: 88.2
   affliction_warlock:
     why: 'An Affliction Warlock can carry a staff or a one-hander with a held frill,
       and both styles run in the same table, so a row below is either a single staff
@@ -75399,17 +74024,6 @@ specs:
     ring_anchors:
       entry:
       - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1948.7
-        standard_error: 0.96
-        stdev: 96.2
-      - ring_1:
           id: 28793
           name: Band of Crimson Fury
           source: drop
@@ -75436,34 +74050,12 @@ specs:
           name: Band of Crimson Fury
           source: drop
         ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 1920.5
-        standard_error: 0.96
-        stdev: 95.8
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
           id: 29172
           name: Ashyen's Gift
           source: reputation
         dps: 1908.8
         standard_error: 0.95
         stdev: 95.0
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 1901.5
-        standard_error: 0.94
-        stdev: 93.9
       tier-hands-and-head:
       - ring_1:
           id: 32527
@@ -75609,17 +74201,6 @@ specs:
         standard_error: 0.97
         stdev: 96.5
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 1996.5
-        standard_error: 0.97
-        stdev: 97.2
-      - ring_1:
           id: 32528
           name: Blessed Band of Karabor
           source: raid_drop
@@ -75741,17 +74322,6 @@ specs:
         standard_error: 0.96
         stdev: 95.7
       - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1979.4
-        standard_error: 0.97
-        stdev: 96.6
-      - ring_1:
           id: 32247
           name: Ring of Captured Storms
           source: raid_drop
@@ -75866,34 +74436,12 @@ specs:
           name: Band of Crimson Fury
           source: drop
         ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 1951.1
-        standard_error: 0.95
-        stdev: 94.8
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
           id: 29172
           name: Ashyen's Gift
           source: reputation
         dps: 1939.8
         standard_error: 0.95
         stdev: 94.7
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 1930.5
-        standard_error: 0.95
-        stdev: 95.3
       bis:
       - ring_1:
           id: 32527
@@ -76039,17 +74587,6 @@ specs:
         standard_error: 1.03
         stdev: 103.2
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 2187.8
-        standard_error: 1.04
-        stdev: 103.6
-      - ring_1:
           id: 32528
           name: Blessed Band of Karabor
           source: raid_drop
@@ -76159,17 +74696,6 @@ specs:
         dps: 2170.0
         standard_error: 1.02
         stdev: 102.4
-      - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 2169.9
-        standard_error: 1.03
-        stdev: 103.2
       - ring_1:
           id: 32528
           name: Blessed Band of Karabor
@@ -76296,34 +74822,12 @@ specs:
           name: Band of Crimson Fury
           source: drop
         ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 2138.9
-        standard_error: 1.01
-        stdev: 101.3
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
           id: 29172
           name: Ashyen's Gift
           source: reputation
         dps: 2127.1
         standard_error: 1.03
         stdev: 103.4
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 2115.7
-        standard_error: 1.02
-        stdev: 101.8
   destruction_warlock:
     why: 'A Destruction Warlock can carry a staff or a one-hander with a held frill,
       and both styles run in the same table, so a row below is either a single staff
@@ -84713,17 +83217,6 @@ specs:
     ring_anchors:
       entry:
       - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 2071.3
-        standard_error: 1.16
-        stdev: 115.6
-      - ring_1:
           id: 28793
           name: Band of Crimson Fury
           source: drop
@@ -84750,34 +83243,12 @@ specs:
           name: Band of Crimson Fury
           source: drop
         ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 2034.3
-        standard_error: 1.14
-        stdev: 113.9
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
           id: 29172
           name: Ashyen's Gift
           source: reputation
         dps: 2020.4
         standard_error: 1.12
         stdev: 111.9
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 2008.3
-        standard_error: 1.14
-        stdev: 114.0
       tier-hands-and-head:
       - ring_1:
           id: 32527
@@ -84993,17 +83464,6 @@ specs:
           name: Ring of Captured Storms
           source: raid_drop
         ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 2180.0
-        standard_error: 1.19
-        stdev: 119.5
-      - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
           id: 29303
           name: Band of Eternity
           source: drop
@@ -85098,17 +83558,6 @@ specs:
         dps: 2160.7
         standard_error: 1.2
         stdev: 120.5
-      - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 2158.6
-        standard_error: 1.19
-        stdev: 119.4
       - ring_1:
           id: 32528
           name: Blessed Band of Karabor
@@ -85231,17 +83680,6 @@ specs:
         standard_error: 1.19
         stdev: 118.8
       - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 2128.5
-        standard_error: 1.19
-        stdev: 119.0
-      - ring_1:
           id: 30109
           name: Ring of Endless Coils
           source: raid_drop
@@ -85263,17 +83701,6 @@ specs:
         dps: 2111.1
         standard_error: 1.18
         stdev: 118.1
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 2095.8
-        standard_error: 1.17
-        stdev: 117.0
       bis:
       - ring_1:
           id: 32527
@@ -85463,17 +83890,6 @@ specs:
         standard_error: 1.3
         stdev: 130.2
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 2446.2
-        standard_error: 1.31
-        stdev: 131.0
-      - ring_1:
           id: 29305
           name: Band of the Eternal Sage
           source: drop
@@ -85594,17 +84010,6 @@ specs:
         dps: 2422.8
         standard_error: 1.29
         stdev: 128.7
-      - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 2422.6
-        standard_error: 1.31
-        stdev: 130.7
       - ring_1:
           id: 32247
           name: Ring of Captured Storms
@@ -85742,34 +84147,12 @@ specs:
           name: Band of Crimson Fury
           source: drop
         ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 2380.4
-        standard_error: 1.28
-        stdev: 128.0
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
           id: 29172
           name: Ashyen's Gift
           source: reputation
         dps: 2368.1
         standard_error: 1.28
         stdev: 127.8
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 2350.8
-        standard_error: 1.28
-        stdev: 128.2
   arcane_mage:
     why: 'An Arcane Mage can carry a staff or a one-hander with a held frill, and
       both styles run in the same table, so a row below is either a single staff
@@ -93934,17 +92317,6 @@ specs:
         standard_error: 1.02
         stdev: 102.1
       - ring_1:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        ring_2:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        dps: 2332.2
-        standard_error: 1.02
-        stdev: 102.1
-      - ring_1:
           id: 29287
           name: Violet Signet of the Archmage
           source: drop
@@ -93977,17 +92349,6 @@ specs:
         dps: 2296.3
         standard_error: 0.99
         stdev: 99.5
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 2261.9
-        standard_error: 0.97
-        stdev: 96.9
       tier-hands-and-head:
       - ring_1:
           id: 32527
@@ -94324,17 +92685,6 @@ specs:
           name: Ring of Captured Storms
           source: raid_drop
         ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 2358.0
-        standard_error: 1.01
-        stdev: 100.8
-      - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
           id: 29286
           name: Violet Signet
           source: drop
@@ -94429,17 +92779,6 @@ specs:
         dps: 2351.6
         standard_error: 1.02
         stdev: 101.7
-      - ring_1:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        ring_2:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        dps: 2350.5
-        standard_error: 1.04
-        stdev: 103.5
       - ring_1:
           id: 32528
           name: Blessed Band of Karabor
@@ -94561,17 +92900,6 @@ specs:
         dps: 2315.7
         standard_error: 1.01
         stdev: 100.8
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 2282.7
-        standard_error: 0.98
-        stdev: 98.0
       bis:
       - ring_1:
           id: 32527
@@ -94992,17 +93320,6 @@ specs:
         standard_error: 1.03
         stdev: 103.3
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 2490.1
-        standard_error: 1.04
-        stdev: 103.7
-      - ring_1:
           id: 32528
           name: Blessed Band of Karabor
           source: raid_drop
@@ -95024,17 +93341,6 @@ specs:
         dps: 2489.6
         standard_error: 1.04
         stdev: 103.7
-      - ring_1:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        ring_2:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        dps: 2489.6
-        standard_error: 1.05
-        stdev: 105.2
       - ring_1:
           id: 29305
           name: Band of the Eternal Sage
@@ -95145,17 +93451,6 @@ specs:
         dps: 2449.7
         standard_error: 1.02
         stdev: 102.3
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 2410.7
-        standard_error: 1.01
-        stdev: 101.4
   shadow_priest:
     why: 'A Shadow Priest can carry a staff or a one-hander with a held frill, and
       both styles run in the same table, so a row below is either a single staff
@@ -101483,34 +99778,12 @@ specs:
           name: Ring of Endless Coils
           source: raid_drop
         ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1453.6
-        standard_error: 0.26
-        stdev: 26.5
-      - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
           id: 29922
           name: Band of Al'ar
           source: raid_drop
         dps: 1452.1
         standard_error: 0.26
         stdev: 26.4
-      - ring_1:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        ring_2:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        dps: 1450.7
-        standard_error: 0.26
-        stdev: 26.3
       - ring_1:
           id: 28793
           name: Band of Crimson Fury
@@ -101560,34 +99833,12 @@ specs:
           name: Band of Crimson Fury
           source: drop
         ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 1440.9
-        standard_error: 0.26
-        stdev: 26.1
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
           id: 29172
           name: Ashyen's Gift
           source: reputation
         dps: 1437.5
         standard_error: 0.26
         stdev: 26.0
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 1434.1
-        standard_error: 0.26
-        stdev: 25.9
       tier-hands-and-head:
       - ring_1:
           id: 32527
@@ -101788,17 +100039,6 @@ specs:
         standard_error: 0.29
         stdev: 29.1
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 1506.3
-        standard_error: 0.29
-        stdev: 29.2
-      - ring_1:
           id: 29305
           name: Band of the Eternal Sage
           source: drop
@@ -101887,17 +100127,6 @@ specs:
         standard_error: 0.29
         stdev: 28.8
       - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1499.3
-        standard_error: 0.29
-        stdev: 28.9
-      - ring_1:
           id: 29305
           name: Band of the Eternal Sage
           source: drop
@@ -101963,17 +100192,6 @@ specs:
         dps: 1496.3
         standard_error: 0.29
         stdev: 28.9
-      - ring_1:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        ring_2:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        dps: 1496.3
-        standard_error: 0.29
-        stdev: 28.8
       - ring_1:
           id: 29922
           name: Band of Al'ar
@@ -102100,34 +100318,12 @@ specs:
           name: Band of Crimson Fury
           source: drop
         ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 1486.3
-        standard_error: 0.29
-        stdev: 28.6
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
           id: 29172
           name: Ashyen's Gift
           source: reputation
         dps: 1482.8
         standard_error: 0.28
         stdev: 28.5
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 1479.3
-        standard_error: 0.28
-        stdev: 28.4
       bis:
       - ring_1:
           id: 32527
@@ -102273,17 +100469,6 @@ specs:
         standard_error: 0.29
         stdev: 29.5
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 1553.7
-        standard_error: 0.29
-        stdev: 29.5
-      - ring_1:
           id: 29305
           name: Band of the Eternal Sage
           source: drop
@@ -102405,17 +100590,6 @@ specs:
         standard_error: 0.29
         stdev: 29.4
       - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1546.4
-        standard_error: 0.29
-        stdev: 29.2
-      - ring_1:
           id: 29305
           name: Band of the Eternal Sage
           source: drop
@@ -102481,17 +100655,6 @@ specs:
         dps: 1544.1
         standard_error: 0.29
         stdev: 29.2
-      - ring_1:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        ring_2:
-          id: 29922
-          name: Band of Al'ar
-          source: raid_drop
-        dps: 1543.3
-        standard_error: 0.29
-        stdev: 29.1
       - ring_1:
           id: 32247
           name: Ring of Captured Storms
@@ -102640,34 +100803,12 @@ specs:
           name: Band of Crimson Fury
           source: drop
         ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 1532.7
-        standard_error: 0.29
-        stdev: 28.9
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
           id: 29172
           name: Ashyen's Gift
           source: reputation
         dps: 1529.1
         standard_error: 0.29
         stdev: 28.8
-      - ring_1:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        ring_2:
-          id: 29172
-          name: Ashyen's Gift
-          source: reputation
-        dps: 1525.4
-        standard_error: 0.29
-        stdev: 28.7
   balance_druid:
     why: 'A Balance Druid can carry a staff or a one-hander with a held frill, and
       both styles run in the same table, so a row below is either a single staff
@@ -109175,17 +107316,6 @@ specs:
     ring_anchors:
       entry:
       - ring_1:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        ring_2:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        dps: 1685.3
-        standard_error: 0.88
-        stdev: 87.7
-      - ring_1:
           id: 28793
           name: Band of Crimson Fury
           source: drop
@@ -109196,17 +107326,6 @@ specs:
         dps: 1683.0
         standard_error: 0.87
         stdev: 86.6
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 1680.1
-        standard_error: 0.86
-        stdev: 85.6
       - ring_1:
           id: 28793
           name: Band of Crimson Fury
@@ -109252,17 +107371,6 @@ specs:
         standard_error: 0.85
         stdev: 85.2
       - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1639.6
-        standard_error: 0.89
-        stdev: 89.2
-      - ring_1:
           id: 30667
           name: Ring of Unrelenting Storms
           source: raid_drop
@@ -109273,17 +107381,6 @@ specs:
         dps: 1638.4
         standard_error: 0.87
         stdev: 87.5
-      - ring_1:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        ring_2:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        dps: 1635.9
-        standard_error: 0.85
-        stdev: 85.0
       tier-hands-and-head:
       - ring_1:
           id: 32527
@@ -109627,17 +107724,6 @@ specs:
         standard_error: 0.85
         stdev: 84.9
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 1731.8
-        standard_error: 0.87
-        stdev: 87.2
-      - ring_1:
           id: 29302
           name: Band of Eternity
           source: drop
@@ -109648,17 +107734,6 @@ specs:
         dps: 1731.3
         standard_error: 0.85
         stdev: 84.6
-      - ring_1:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        ring_2:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        dps: 1729.9
-        standard_error: 0.85
-        stdev: 84.7
       - ring_1:
           id: 30109
           name: Ring of Endless Coils
@@ -109792,17 +107867,6 @@ specs:
         standard_error: 0.84
         stdev: 83.8
       - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1715.5
-        standard_error: 0.87
-        stdev: 86.6
-      - ring_1:
           id: 30667
           name: Ring of Unrelenting Storms
           source: raid_drop
@@ -109813,17 +107877,6 @@ specs:
         dps: 1713.2
         standard_error: 0.84
         stdev: 83.5
-      - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 1711.8
-        standard_error: 0.84
-        stdev: 84.0
       - ring_1:
           id: 32247
           name: Ring of Captured Storms
@@ -109890,17 +107943,6 @@ specs:
         dps: 1695.9
         standard_error: 0.83
         stdev: 82.8
-      - ring_1:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        ring_2:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        dps: 1680.2
-        standard_error: 0.82
-        stdev: 82.0
       bis:
       - ring_1:
           id: 29305
@@ -110266,17 +108308,6 @@ specs:
         standard_error: 0.9
         stdev: 89.5
       - ring_1:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        ring_2:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        dps: 1895.6
-        standard_error: 0.9
-        stdev: 90.3
-      - ring_1:
           id: 32527
           name: Ring of Ancient Knowledge
           source: raid_drop
@@ -110298,17 +108329,6 @@ specs:
         dps: 1894.2
         standard_error: 0.91
         stdev: 90.6
-      - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 1892.8
-        standard_error: 0.92
-        stdev: 92.2
       - ring_1:
           id: 32247
           name: Ring of Captured Storms
@@ -110420,17 +108440,6 @@ specs:
         standard_error: 0.89
         stdev: 88.7
       - ring_1:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        ring_2:
-          id: 28793
-          name: Band of Crimson Fury
-          source: drop
-        dps: 1876.8
-        standard_error: 0.88
-        stdev: 88.4
-      - ring_1:
           id: 30667
           name: Ring of Unrelenting Storms
           source: raid_drop
@@ -110441,17 +108450,6 @@ specs:
         dps: 1874.0
         standard_error: 0.89
         stdev: 88.6
-      - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1873.9
-        standard_error: 0.92
-        stdev: 92.1
       - ring_1:
           id: 32247
           name: Ring of Captured Storms
@@ -110507,17 +108505,6 @@ specs:
         dps: 1858.8
         standard_error: 0.88
         stdev: 87.8
-      - ring_1:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        ring_2:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        dps: 1840.5
-        standard_error: 0.87
-        stdev: 87.4
   elemental_shaman:
     why: 'An Elemental Shaman can carry a staff or a one-hander with a held off
       hand, and both styles run in the same table, so a row below is either a single
@@ -116319,17 +114306,6 @@ specs:
           name: Ring of Unrelenting Storms
           source: raid_drop
         ring_2:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        dps: 1727.2
-        standard_error: 0.88
-        stdev: 88.2
-      - ring_1:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        ring_2:
           id: 28753
           name: Ring of Recurrence
           source: raid_drop
@@ -116348,17 +114324,6 @@ specs:
         standard_error: 0.89
         stdev: 89.3
       - ring_1:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        ring_2:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        dps: 1711.0
-        standard_error: 0.87
-        stdev: 87.4
-      - ring_1:
           id: 30109
           name: Ring of Endless Coils
           source: raid_drop
@@ -116369,17 +114334,6 @@ specs:
         dps: 1710.8
         standard_error: 0.89
         stdev: 88.9
-      - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1709.5
-        standard_error: 0.94
-        stdev: 93.5
       tier-hands-and-head:
       - ring_1:
           id: 32527
@@ -116470,17 +114424,6 @@ specs:
         standard_error: 0.93
         stdev: 92.6
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 1904.2
-        standard_error: 0.94
-        stdev: 93.8
-      - ring_1:
           id: 29305
           name: Band of the Eternal Sage
           source: drop
@@ -116535,17 +114478,6 @@ specs:
         dps: 1901.7
         standard_error: 0.92
         stdev: 92.2
-      - ring_1:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        ring_2:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        dps: 1901.7
-        standard_error: 0.93
-        stdev: 93.2
       - ring_1:
           id: 32527
           name: Ring of Ancient Knowledge
@@ -116811,17 +114743,6 @@ specs:
         standard_error: 0.93
         stdev: 92.7
       - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 1886.4
-        standard_error: 0.94
-        stdev: 93.9
-      - ring_1:
           id: 32528
           name: Blessed Band of Karabor
           source: raid_drop
@@ -116854,17 +114775,6 @@ specs:
         dps: 1885.3
         standard_error: 0.93
         stdev: 93.1
-      - ring_1:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        ring_2:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        dps: 1884.6
-        standard_error: 0.92
-        stdev: 92.4
       - ring_1:
           id: 32528
           name: Blessed Band of Karabor
@@ -117043,17 +114953,6 @@ specs:
         standard_error: 0.95
         stdev: 95.3
       - ring_1:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        ring_2:
-          id: 32247
-          name: Ring of Captured Storms
-          source: raid_drop
-        dps: 2097.4
-        standard_error: 0.95
-        stdev: 95.4
-      - ring_1:
           id: 29305
           name: Band of the Eternal Sage
           source: drop
@@ -117108,17 +115007,6 @@ specs:
         dps: 2092.2
         standard_error: 0.95
         stdev: 94.7
-      - ring_1:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        ring_2:
-          id: 30667
-          name: Ring of Unrelenting Storms
-          source: raid_drop
-        dps: 2092.2
-        standard_error: 0.94
-        stdev: 94.5
       - ring_1:
           id: 30667
           name: Ring of Unrelenting Storms
@@ -117322,17 +115210,6 @@ specs:
           name: Ring of Endless Coils
           source: raid_drop
         ring_2:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        dps: 2077.5
-        standard_error: 0.95
-        stdev: 95.0
-      - ring_1:
-          id: 30109
-          name: Ring of Endless Coils
-          source: raid_drop
-        ring_2:
           id: 29302
           name: Band of Eternity
           source: drop
@@ -117361,14 +115238,3 @@ specs:
         dps: 2074.2
         standard_error: 0.94
         stdev: 93.7
-      - ring_1:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        ring_2:
-          id: 28753
-          name: Ring of Recurrence
-          source: raid_drop
-        dps: 2073.0
-        standard_error: 0.94
-        stdev: 93.6

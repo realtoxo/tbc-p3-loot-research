@@ -220,9 +220,9 @@ ROUNDS: dict[str, dict] = {
         # drops in Mana-Tombs, a five-man below Karazhan. Band of the
         # Eternal Champion and Band of Eternity carry limitCategory 497 in
         # the binary's database, one uniqueness family, so no pair holds
-        # both and neither runs doubled; every other ring runs doubled,
-        # because the database marks it neither unique nor family-limited
-        # and the raid can hold two copies. The entry and tier anchors wear
+        # both and neither runs doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. The entry and tier anchors wear
         # Band of the Ranger-General with Ring of Lethality and the
         # best-in-slot anchor wears Stormrage Signet Ring with Band of the
         # Eternal Champion, all four in the pool, so no worn item needed
@@ -347,9 +347,9 @@ ROUNDS: dict[str, dict] = {
         # ranks ten and all ten pass the standing exclusions. Band of the
         # Eternal Champion and Band of Eternity carry limitCategory 497 in
         # the binary's database, one uniqueness family, so no pair holds
-        # both and neither runs doubled; every other ring runs doubled,
-        # because the database marks it neither unique nor family-limited
-        # and the raid can hold two copies. Shapeshifter's Signet is the
+        # both and neither runs doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. Shapeshifter's Signet is the
         # Lower City Exalted ring. The entry and tier anchors wear
         # Shapeshifter's Signet with Band of the Ranger-General and the
         # best-in-slot anchor wears Band of Devastation with
@@ -533,9 +533,9 @@ ROUNDS: dict[str, dict] = {
         # exclusions: Shaffar's Band of Brutality drops in Mana-Tombs, a
         # five-man below Karazhan. Band of the Eternal Champion carries
         # limitCategory 497 in the binary's database and is the pool's one
-        # family-limited ring, so it alone runs no doubled row; every
-        # other ring runs doubled, because the database marks it neither
-        # unique nor family-limited and the raid can hold two copies.
+        # family-limited ring, so it alone runs no doubled row; a ring runs
+        # doubled only where data/facts/ring-uniqueness.yaml, the Wowhead
+        # tooltip record, allows two copies.
         # Shapeshifter's Signet is the Lower City Exalted ring. The entry
         # and tier anchors wear Band of the Ranger-General with Ring of a
         # Thousand Marks and both best-in-slot anchors wear Stormrage
@@ -698,9 +698,9 @@ ROUNDS: dict[str, dict] = {
         # five-man below Karazhan. Band of the Eternal Champion and Band
         # of Eternity carry limitCategory 497 in the binary's database,
         # one uniqueness family, so no pair holds both and neither runs
-        # doubled; every other ring runs doubled, because the database
-        # marks it neither unique nor family-limited and the raid can
-        # hold two copies. The entry and tier anchors wear Ring of
+        # doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. The entry and tier anchors wear Ring of
         # Lethality with Band of the Ranger-General and both best-in-slot
         # anchors wear Stormrage Signet Ring with Band of the Eternal
         # Champion, all four in the pool, so no worn item needed adding.
@@ -841,9 +841,9 @@ ROUNDS: dict[str, dict] = {
         # drops in Mana-Tombs, a five-man below Karazhan. Band of the
         # Eternal Champion and Band of Eternity carry limitCategory 497 in
         # the binary's database, one uniqueness family, so no pair holds
-        # both and neither runs doubled; every other ring runs doubled,
-        # because the database marks it neither unique nor family-limited
-        # and the raid can hold two copies. The entry and tier anchors
+        # both and neither runs doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. The entry and tier anchors
         # wear Band of the Ranger-General with Shapeshifter's Signet, the
         # Lower City Exalted ring the ladder does not rank, so the Signet
         # is in the pool by the worn override; the best-in-slot anchor
@@ -1032,9 +1032,9 @@ ROUNDS: dict[str, dict] = {
         # Eternal Champion and the two Band of Eternity ranks, three
         # different ids two of which share a name, carry limitCategory
         # 497 in the binary's database, one uniqueness family, so no pair
-        # holds two of them and none runs doubled; every other ring runs
-        # doubled, because the database marks it neither unique nor
-        # family-limited and the raid can hold two copies. The entry and
+        # holds two of them and none runs doubled; a ring runs doubled only
+        # where data/facts/ring-uniqueness.yaml, the Wowhead tooltip record,
+        # allows two copies. The entry and
         # tier anchors wear Ring of Lethality with Band of the
         # Ranger-General and the best-in-slot anchor wears Stormrage
         # Signet Ring with Band of the Eternal Champion, all four in the
@@ -1246,12 +1246,14 @@ ROUNDS: dict[str, dict] = {
         # Band is a rare world drop obtainable while leveling, not a
         # max-level item, and no anchor wears it. Ring of the Overseer
         # stays in as a max-level reward of the Shartuul event in Blade's
-        # Edge Mountains; the database marks it unique, so it runs no
+        # Edge Mountains; its tooltip says Unique-Equipped, so it runs no
         # doubled row. Band of the Eternal Champion and the three Band of
         # Eternity ranks, four ids three of which share a name, carry
         # limitCategory 497 in the binary's database, one uniqueness
         # family, so no pair holds two of them and none runs doubled;
-        # every other ring runs doubled. The entry and tier anchors wear
+        # a ring runs doubled only where data/facts/ring-uniqueness.yaml, the
+        # Wowhead tooltip record, allows two copies. The entry and tier anchors
+        # wear
         # Ring of Lethality with Ring of the Recalcitrant and the
         # best-in-slot anchor wears Band of the Eternal Champion with
         # Ring of the Recalcitrant, all three in the pool, so no worn
@@ -1466,9 +1468,9 @@ ROUNDS: dict[str, dict] = {
         # Eternity ranks, three different ids two of which share a name,
         # carry limitCategory 497 in the binary's database, one
         # uniqueness family, so no pair holds two of them and none runs
-        # doubled; every other ring runs doubled, because the database
-        # marks it neither unique nor family-limited and the raid can
-        # hold two copies. The entry and tier anchors wear Band of
+        # doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. The entry and tier anchors wear Band of
         # Crimson Fury with Ring of Endless Coils, and the best-in-slot
         # anchor wears Ring of Ancient Knowledge in BOTH slots, so its
         # worn combination is itself a doubled row. `phase3` marks what
@@ -1669,9 +1671,9 @@ ROUNDS: dict[str, dict] = {
         # Eternal Sage and the three Band of Eternity ranks, four ids
         # three of which share a name, carry limitCategory 497 in the
         # binary's database, one uniqueness family, so no pair holds two
-        # of them and none runs doubled; every other ring runs doubled,
-        # because the database marks it neither unique nor family-limited
-        # and the raid can hold two copies. The entry and tier anchors
+        # of them and none runs doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. The entry and tier anchors
         # wear Band of Crimson Fury with Ring of Endless Coils, and the
         # best-in-slot anchor wears Ring of Ancient Knowledge in BOTH
         # slots, so its worn combination is itself a doubled row.
@@ -1892,7 +1894,9 @@ ROUNDS: dict[str, dict] = {
         # the binary's database and the two Violet Signets, the Violet
         # Eye reputation rings, carry limitCategory 495: two uniqueness
         # families, so no pair holds two rings of one family and none of
-        # the six runs doubled; every other ring runs doubled. The entry
+        # the six runs doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. The entry
         # and tier anchors wear Violet Signet of the Archmage with
         # Ashyen's Gift, the Cenarion Expedition Exalted ring the ladder
         # does not rank, so Ashyen's Gift is in the pool by the worn
@@ -2109,9 +2113,9 @@ ROUNDS: dict[str, dict] = {
         # Eternal Sage and the two Band of Eternity ranks, three
         # different ids two of which share a name, carry limitCategory
         # 497 in the binary's database, one uniqueness family, so no pair
-        # holds two of them and none runs doubled; every other ring runs
-        # doubled, because the database marks it neither unique nor
-        # family-limited and the raid can hold two copies. The entry and
+        # holds two of them and none runs doubled; a ring runs doubled only
+        # where data/facts/ring-uniqueness.yaml, the Wowhead tooltip record,
+        # allows two copies. The entry and
         # tier anchors wear Ring of Endless Coils with Band of Al'ar, and
         # the best-in-slot anchor wears Ring of Ancient Knowledge in BOTH
         # slots, so its worn combination is itself a doubled row.
@@ -2331,9 +2335,9 @@ ROUNDS: dict[str, dict] = {
         # and the three Band of Eternity ranks, four ids three of which
         # share a name, carry limitCategory 497 in the binary's database,
         # one uniqueness family, so no pair holds two of them and none
-        # runs doubled; every other ring runs doubled, because the
-        # database marks it neither unique nor family-limited and the
-        # raid can hold two copies. The entry and tier anchors wear Ring
+        # runs doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. The entry and tier anchors wear Ring
         # of Unrelenting Storms with Ring of Recurrence, a Karazhan trash
         # drop the ladder does not rank, so Ring of Recurrence is in the
         # pool by the worn override; the best-in-slot anchor wears Band
@@ -2563,9 +2567,9 @@ ROUNDS: dict[str, dict] = {
         # Eternal Sage and the three Band of Eternity ranks, four ids
         # three of which share a name, carry limitCategory 497 in the
         # binary's database, one uniqueness family, so no pair holds two
-        # of them and none runs doubled; every other ring runs doubled,
-        # because the database marks it neither unique nor family-limited
-        # and the raid can hold two copies. The entry and tier anchors
+        # of them and none runs doubled; a ring runs doubled only where
+        # data/facts/ring-uniqueness.yaml, the Wowhead tooltip record, allows
+        # two copies. The entry and tier anchors
         # wear Ring of Unrelenting Storms with Ring of Endless Coils and
         # the best-in-slot anchor wears Ring of Ancient Knowledge with
         # Band of the Eternal Sage, all four in the pool, so no worn item
@@ -2655,13 +2659,14 @@ def enumerate_ring_pairs(pool: list[dict], anchor: str,
 
     Every UNORDERED pair from the pool, because the two ring slots are
     interchangeable to the simulator, PLUS a doubled pair for every ring
-    the raid can hold two copies of. The binary's database is the
-    authority on uniqueness, read at run time rather than copied into the
-    registry: a ring marked `unique` cannot be worn twice, and two rings
-    sharing a `limitCategory`, which is how the Band of Eternity ranks and
-    the Violet Signets are limited, cannot be worn together, so neither
-    kind of row is generated. The entry anchor drops every candidate
-    marked `phase3`.
+    the raid can hold two copies of. data/facts/ring-uniqueness.yaml,
+    which records the Wowhead tooltip per ring, is the authority on
+    whether a ring can be doubled, because the binary's database misses
+    the unique flag on most of these rings and the simulator equips an
+    illegal double without complaint. Two rings sharing a `limitCategory`,
+    which the database does carry, cannot be worn together, so that kind
+    of row is not generated either. The entry anchor drops every
+    candidate marked `phase3`.
     """
     kept = [c for c in pool if not (anchor == "entry" and c["phase3"])]
     pairs: list[tuple[int, int]] = []
@@ -2844,18 +2849,34 @@ def main() -> int:
     from run_sims import WOWSIMS
     db = json.loads((WOWSIMS / "assets/database/db.json").read_text())
     gem_ids = {g["name"]: g["id"] for g in db.get("gems") or []}
-    # UNIQUENESS IS READ FROM THE DATABASE THE BINARY SHIPS, at run time,
-    # never copied into the registry, so the ring pairs cannot drift from
-    # what the simulator equips. `unique` bars two copies of one id;
-    # `limitCategory` bars two rings of one family, which is how the Band
-    # of Eternity ranks and the Violet Signets are limited.
+    # UNIQUENESS IS READ FROM data/facts/ring-uniqueness.yaml, which
+    # records the Wowhead tooltip per ring, NOT from the database the
+    # binary ships: that database carries no unique flag on 27 of the 31
+    # pool rings, the simulator equips a doubled unique ring without
+    # complaint, and the first run doubled the Stormrage Signet Ring and
+    # published four gains the game does not allow. `limitCategory`, which
+    # the database does carry, still bars two rings of one family, which
+    # is how the Band of Eternity ranks and the Violet Signets are
+    # limited. A pool ring the fact file does not list stops the run.
     db_items_by_id = {i["id"]: i for i in db.get("items") or []}
+    ring_unique = {r["id"]: r["unique"] for r in yaml.safe_load(
+        Path("data/facts/ring-uniqueness.yaml").read_text())["rings"]}
+    for spec_key, spec_round in ROUNDS.items():
+        for cand in spec_round.get("ring_pool") or []:
+            if cand["id"] not in ring_unique:
+                sys.exit(
+                    f"run_variant_sims.py: {spec_key}: ring {cand['id']} is "
+                    "in no row of data/facts/ring-uniqueness.yaml. Check its "
+                    "Wowhead tooltip and add it before it can run.")
 
     def family_of(item_id: int):
         return (db_items_by_id.get(item_id) or {}).get("limitCategory")
 
     def is_limited(item_id: int) -> bool:
         row = db_items_by_id.get(item_id) or {}
+        if item_id in ring_unique:
+            return ring_unique[item_id] \
+                or row.get("limitCategory") is not None
         return bool(row.get("unique")) or row.get("limitCategory") is not None
     strings = yaml.safe_load(
         TALENTS.read_text())["wowsims_talent_strings"]["strings"]

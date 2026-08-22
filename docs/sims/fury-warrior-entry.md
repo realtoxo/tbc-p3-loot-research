@@ -434,22 +434,18 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection.
 
-The ten best of the 10 combinations measured, and the worn pair.
+The ten best of the 6 combinations measured, and the worn pair.
 
-| Ring                                    | Ring                       | DPS           | Against this set |
-|-----------------------------------------|----------------------------|---------------|------------------|
-| Band of the Ranger-General              | Band of the Ranger-General | 2208.4 ± 1.07 | +8.9             |
-| Band of the Ranger-General *(this set)* | Ring of a Thousand Marks   | 2199.5 ± 1.06 | +0.0             |
-| Band of the Ranger-General              | Ring of Lethality          | 2195.8 ± 1.06 | -3.7             |
-| Ring of a Thousand Marks                | Ring of a Thousand Marks   | 2187.7 ± 1.05 | -11.8            |
-| Ring of a Thousand Marks                | Ring of Lethality          | 2185.0 ± 1.05 | -14.5            |
-| Band of the Ranger-General              | Shapeshifter's Signet      | 2183.6 ± 1.04 | -15.9            |
-| Ring of Lethality                       | Ring of Lethality          | 2183.0 ± 1.05 | -16.5            |
-| Ring of a Thousand Marks                | Shapeshifter's Signet      | 2171.7 ± 1.04 | -27.8            |
-| Ring of Lethality                       | Shapeshifter's Signet      | 2169.0 ± 1.04 | -30.5            |
-| Shapeshifter's Signet                   | Shapeshifter's Signet      | 2146.0 ± 1.04 | -53.5            |
+| Ring                                    | Ring                     | DPS           | Against this set |
+|-----------------------------------------|--------------------------|---------------|------------------|
+| Band of the Ranger-General *(this set)* | Ring of a Thousand Marks | 2199.5 ± 1.06 | +0.0             |
+| Band of the Ranger-General              | Ring of Lethality        | 2195.8 ± 1.06 | -3.7             |
+| Ring of a Thousand Marks                | Ring of Lethality        | 2185.0 ± 1.05 | -14.5            |
+| Band of the Ranger-General              | Shapeshifter's Signet    | 2183.6 ± 1.04 | -15.9            |
+| Ring of a Thousand Marks                | Shapeshifter's Signet    | 2171.7 ± 1.04 | -27.8            |
+| Ring of Lethality                       | Shapeshifter's Signet    | 2169.0 ± 1.04 | -30.5            |
 
-The best combination, Band of the Ranger-General with Band of the Ranger-General, measures +8.9 against this set's own rings, so the upgrade path at this anchor runs through it.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 

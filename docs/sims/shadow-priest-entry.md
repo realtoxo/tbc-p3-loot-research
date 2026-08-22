@@ -203,22 +203,18 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Magtheridon's Lair, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The three Scale of the Sands rings share one uniqueness family, so no row wears two of them. The best-in-slot set wears Ring of Ancient Knowledge in both slots, so its worn row is a doubled pair.
 
-The ten best of the 10 combinations measured, and the worn pair.
+The ten best of the 6 combinations measured, and the worn pair.
 
 | Ring                               | Ring                  | DPS           | Against this set |
 |------------------------------------|-----------------------|---------------|------------------|
-| Ring of Endless Coils              | Ring of Endless Coils | 1453.6 ± 0.26 | +1.5             |
 | Ring of Endless Coils *(this set)* | Band of Al'ar         | 1452.1 ± 0.26 | +0.0             |
-| Band of Al'ar                      | Band of Al'ar         | 1450.7 ± 0.26 | -1.4             |
 | Band of Crimson Fury               | Ring of Endless Coils | 1447.2 ± 0.26 | -4.9             |
 | Band of Crimson Fury               | Band of Al'ar         | 1445.8 ± 0.26 | -6.3             |
 | Ring of Endless Coils              | Ashyen's Gift         | 1443.8 ± 0.26 | -8.3             |
 | Ashyen's Gift                      | Band of Al'ar         | 1442.4 ± 0.26 | -9.7             |
-| Band of Crimson Fury               | Band of Crimson Fury  | 1440.9 ± 0.26 | -11.2            |
 | Band of Crimson Fury               | Ashyen's Gift         | 1437.5 ± 0.26 | -14.6            |
-| Ashyen's Gift                      | Ashyen's Gift         | 1434.1 ± 0.26 | -18.0            |
 
-The best combination, Ring of Endless Coils with Ring of Endless Coils, measures +1.5 against this set's own rings, so the upgrade path at this anchor runs through it.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 

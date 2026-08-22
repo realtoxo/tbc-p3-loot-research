@@ -150,7 +150,7 @@ drop twice, and no row pairs two rings the game will not equip together. Stormra
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The three Scale of the Sands rings share one uniqueness family, so no row wears two of them.
 
-The ten best of the 49 combinations measured, and the worn pair.
+The ten best of the 43 combinations measured, and the worn pair.
 
 | Ring                               | Ring                         | DPS           | Against this set |
 |------------------------------------|------------------------------|---------------|------------------|

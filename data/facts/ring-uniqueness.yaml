@@ -1,0 +1,53 @@
+meta:
+  what: Whether each ring in the variant rounds' pools can be worn in both
+    slots at once. A ring marked unique cannot, and a doubled row for it is
+    a measurement of a state the game does not allow.
+  source: Wowhead TBC tooltips, nether.wowhead.com/tbc/tooltip/item/<id>,
+    observed 2026-08-22. Unique or Unique-Equipped in the tooltip is the
+    claim, and the two are one constraint here, since neither allows a
+    second copy worn. Ring of the Overseer says Unique-Equipped where the
+    rest say Unique.
+  why_this_file_exists: The ring rounds read uniqueness from the wowsims
+    database, which carries no unique flag on 27 of the 28 unique rings
+    here, so the enumerator generated a doubled row for nearly every ring
+    and four of those rows led their profiles' audits. The guild lead
+    caught it on the first one, the doubled Stormrage Signet Ring. Wowhead
+    marks every ring in the pools Unique except three Ashtongue
+    Deathsworn vendor rings. This file is the authority the enumerator
+    reads; the database's limitCategory families, which it does carry,
+    remain read from it.
+  maintenance: Hand-maintained, not regenerated. A ring added to any
+    ring_pool must be added here first with its tooltip checked, and the
+    runner refuses a pool ring this file does not list.
+rings:
+- {id: 28649, name: Garona's Signet Ring, unique: true}
+- {id: 28753, name: Ring of Recurrence, unique: true}
+- {id: 28757, name: Ring of a Thousand Marks, unique: true}
+- {id: 28791, name: Ring of the Recalcitrant, unique: true}
+- {id: 28793, name: Band of Crimson Fury, unique: true}
+- {id: 29172, name: Ashyen's Gift, unique: true}
+- {id: 29286, name: Violet Signet, unique: true}
+- {id: 29287, name: Violet Signet of the Archmage, unique: true}
+- {id: 29298, name: Band of Eternity, unique: true}
+- {id: 29299, name: Band of Eternity, unique: true}
+- {id: 29300, name: Band of Eternity, unique: true}
+- {id: 29301, name: Band of the Eternal Champion, unique: true}
+- {id: 29302, name: Band of Eternity, unique: true}
+- {id: 29303, name: Band of Eternity, unique: true}
+- {id: 29304, name: Band of Eternity, unique: true}
+- {id: 29305, name: Band of the Eternal Sage, unique: true}
+- {id: 29922, name: Band of Al'ar, unique: true}
+- {id: 29997, name: Band of the Ranger-General, unique: true}
+- {id: 30052, name: Ring of Lethality, unique: true}
+- {id: 30061, name: Ancestral Ring of Conquest, unique: true}
+- {id: 30109, name: Ring of Endless Coils, unique: true}
+- {id: 30667, name: Ring of Unrelenting Storms, unique: true}
+- {id: 30834, name: Shapeshifter's Signet, unique: true}
+- {id: 32247, name: Ring of Captured Storms, unique: true}
+- {id: 32266, name: Ring of Deceitful Intent, unique: true}
+- {id: 32335, name: Unstoppable Aggressor's Ring, unique: true}
+- {id: 32497, name: Stormrage Signet Ring, unique: true}
+- {id: 32526, name: Band of Devastation, unique: false}
+- {id: 32527, name: Ring of Ancient Knowledge, unique: false}
+- {id: 32528, name: Blessed Band of Karabor, unique: false}
+- {id: 32942, name: Ring of the Overseer, unique: true}

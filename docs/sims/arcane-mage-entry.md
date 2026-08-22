@@ -243,17 +243,15 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Tempest Keep, Black Temple and two reputations, plus the Cenarion Expedition ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family and the two Violet Signets share another, so no row wears two rings of one family.
 
-The ten best of the 7 combinations measured, and the worn pair.
+The ten best of the 5 combinations measured, and the worn pair.
 
 | Ring                                       | Ring          | DPS           | Against this set |
 |--------------------------------------------|---------------|---------------|------------------|
 | Violet Signet of the Archmage              | Band of Al'ar | 2337.3 ± 1.02 | +36.1            |
 | Violet Signet                              | Band of Al'ar | 2335.4 ± 1.02 | +34.2            |
-| Band of Al'ar                              | Band of Al'ar | 2332.2 ± 1.02 | +31.0            |
 | Violet Signet of the Archmage *(this set)* | Ashyen's Gift | 2301.2 ± 1.00 | +0.0             |
 | Violet Signet                              | Ashyen's Gift | 2297.9 ± 0.99 | -3.3             |
 | Band of Al'ar                              | Ashyen's Gift | 2296.3 ± 0.99 | -4.9             |
-| Ashyen's Gift                              | Ashyen's Gift | 2261.9 ± 0.97 | -39.3            |
 
 The best combination, Violet Signet of the Archmage with Band of Al'ar, measures +36.1 against this set's own rings, so the upgrade path at this anchor runs through it.
 

@@ -106,20 +106,16 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Tempest Keep, Serpentshrine Cavern, Black Temple and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
 
-The ten best of the 10 combinations measured, and the worn pair.
+The ten best of the 6 combinations measured, and the worn pair.
 
 | Ring                               | Ring                       | DPS           | Against this set |
 |------------------------------------|----------------------------|---------------|------------------|
 | Shapeshifter's Signet              | Ancestral Ring of Conquest | 2043.5 ± 1.26 | +2.2             |
 | Shapeshifter's Signet *(this set)* | Band of the Ranger-General | 2041.3 ± 1.26 | +0.0             |
-| Shapeshifter's Signet              | Shapeshifter's Signet      | 2039.4 ± 1.23 | -1.9             |
 | Shapeshifter's Signet              | Ring of Lethality          | 2036.4 ± 1.26 | -4.9             |
-| Ancestral Ring of Conquest         | Ancestral Ring of Conquest | 2033.0 ± 1.32 | -8.3             |
 | Band of the Ranger-General         | Ancestral Ring of Conquest | 2030.5 ± 1.31 | -10.8            |
-| Band of the Ranger-General         | Band of the Ranger-General | 2028.4 ± 1.31 | -12.9            |
 | Ancestral Ring of Conquest         | Ring of Lethality          | 2024.8 ± 1.31 | -16.5            |
 | Band of the Ranger-General         | Ring of Lethality          | 2022.9 ± 1.31 | -18.4            |
-| Ring of Lethality                  | Ring of Lethality          | 2018.0 ± 1.30 | -23.3            |
 
 The best combination, Shapeshifter's Signet with Ancestral Ring of Conquest, measures +2.2 against this set's own rings, so the upgrade path at this anchor runs through it.
 

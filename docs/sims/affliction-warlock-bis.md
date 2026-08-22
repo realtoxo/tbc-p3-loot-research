@@ -312,7 +312,7 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Magtheridon's Lair, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The three Scale of the Sands rings share one uniqueness family, so no row wears two of them. The best-in-slot set wears Ring of Ancient Knowledge in both slots, so its worn row is a doubled pair.
 
-The ten best of the 39 combinations measured, and the worn pair.
+The ten best of the 35 combinations measured, and the worn pair.
 
 | Ring                                   | Ring                      | DPS           | Against this set |
 |----------------------------------------|---------------------------|---------------|------------------|

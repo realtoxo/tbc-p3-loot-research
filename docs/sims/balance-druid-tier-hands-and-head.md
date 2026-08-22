@@ -258,7 +258,7 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, Magtheridon's Lair, the raids above them and one reputation, plus the Karazhan ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them.
 
-The ten best of the 56 combinations measured, and the worn pair.
+The ten best of the 51 combinations measured, and the worn pair.
 
 | Ring                                    | Ring                      | DPS           | Against this set |
 |-----------------------------------------|---------------------------|---------------|------------------|

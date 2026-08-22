@@ -113,11 +113,10 @@ drop twice, and no row pairs two rings the game will not equip together. Stormra
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, plus the Lower City ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
 
-The ten best of the 52 combinations measured, and the worn pair.
+The ten best of the 45 combinations measured, and the worn pair.
 
 | Ring                                    | Ring                         | DPS           | Against this set |
 |-----------------------------------------|------------------------------|---------------|------------------|
-| Unstoppable Aggressor's Ring            | Unstoppable Aggressor's Ring | 1997.0 ± 1.14 | +12.9            |
 | Unstoppable Aggressor's Ring            | Band of Devastation          | 1993.4 ± 1.14 | +9.3             |
 | Unstoppable Aggressor's Ring            | Band of the Eternal Champion | 1992.9 ± 1.14 | +8.8             |
 | Unstoppable Aggressor's Ring            | Band of the Ranger-General   | 1991.9 ± 1.14 | +7.8             |
@@ -127,9 +126,10 @@ The ten best of the 52 combinations measured, and the worn pair.
 | Band of the Eternal Champion            | Band of Devastation          | 1990.0 ± 1.16 | +5.9             |
 | Stormrage Signet Ring                   | Band of the Eternal Champion | 1988.4 ± 1.14 | +4.3             |
 | Unstoppable Aggressor's Ring            | Shapeshifter's Signet        | 1988.2 ± 1.11 | +4.1             |
+| Band of the Ranger-General              | Band of the Eternal Champion | 1988.0 ± 1.13 | +3.9             |
 | Band of the Ranger-General *(this set)* | Shapeshifter's Signet        | 1984.1 ± 1.10 | +0.0             |
 
-The best combination, Unstoppable Aggressor's Ring with Unstoppable Aggressor's Ring, measures +12.9 against this set's own rings, so the upgrade path at this anchor runs through it.
+The best combination, Unstoppable Aggressor's Ring with Band of Devastation, measures +9.3 against this set's own rings, so the upgrade path at this anchor runs through it.
 
 ## The set
 

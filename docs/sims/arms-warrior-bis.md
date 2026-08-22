@@ -113,7 +113,7 @@ drop twice, and no row pairs two rings the game will not equip together. Stormra
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, plus the Lower City ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
 
-The ten best of the 52 combinations measured, and the worn pair.
+The ten best of the 45 combinations measured, and the worn pair.
 
 | Ring                               | Ring                         | DPS           | Against this set |
 |------------------------------------|------------------------------|---------------|------------------|
@@ -122,11 +122,11 @@ The ten best of the 52 combinations measured, and the worn pair.
 | Stormrage Signet Ring              | Band of the Eternal Champion | 2121.6 ± 1.22 | -5.1             |
 | Band of the Ranger-General         | Band of the Eternal Champion | 2121.2 ± 1.22 | -5.5             |
 | Stormrage Signet Ring              | Band of Devastation          | 2120.7 ± 1.22 | -6.0             |
-| Stormrage Signet Ring              | Stormrage Signet Ring        | 2118.9 ± 1.22 | -7.8             |
 | Band of the Ranger-General         | Band of Devastation          | 2118.8 ± 1.22 | -7.9             |
 | Stormrage Signet Ring              | Shapeshifter's Signet        | 2116.9 ± 1.18 | -9.8             |
 | Stormrage Signet Ring              | Band of the Ranger-General   | 2116.3 ± 1.22 | -10.4            |
 | Unstoppable Aggressor's Ring       | Ring of a Thousand Marks     | 2116.1 ± 1.22 | -10.6            |
+| Band of the Ranger-General         | Shapeshifter's Signet        | 2115.9 ± 1.17 | -10.8            |
 
 The worn pair is again the best row, at plus zero.
 

@@ -719,12 +719,10 @@ drop twice, and no row pairs two rings the game will not equip together. Stormra
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection.
 
-The ten best of the 44 combinations measured, and the worn pair.
+The ten best of the 37 combinations measured, and the worn pair.
 
 | Ring                                    | Ring                         | DPS           | Against this set |
 |-----------------------------------------|------------------------------|---------------|------------------|
-| Stormrage Signet Ring                   | Stormrage Signet Ring        | 2236.7 ± 1.10 | +20.5            |
-| Unstoppable Aggressor's Ring            | Unstoppable Aggressor's Ring | 2235.8 ± 1.11 | +19.6            |
 | Stormrage Signet Ring                   | Unstoppable Aggressor's Ring | 2232.9 ± 1.10 | +16.7            |
 | Unstoppable Aggressor's Ring            | Band of the Ranger-General   | 2231.2 ± 1.10 | +15.0            |
 | Stormrage Signet Ring                   | Band of the Ranger-General   | 2230.0 ± 1.09 | +13.8            |
@@ -733,9 +731,11 @@ The ten best of the 44 combinations measured, and the worn pair.
 | Stormrage Signet Ring                   | Band of Devastation          | 2225.7 ± 1.11 | +9.5             |
 | Band of the Ranger-General              | Band of the Eternal Champion | 2225.4 ± 1.12 | +9.2             |
 | Unstoppable Aggressor's Ring            | Band of Devastation          | 2224.0 ± 1.11 | +7.8             |
+| Band of Devastation                     | Band of the Ranger-General   | 2221.3 ± 1.11 | +5.1             |
+| Band of Devastation                     | Band of the Eternal Champion | 2220.4 ± 1.12 | +4.2             |
 | Band of the Ranger-General *(this set)* | Ring of a Thousand Marks     | 2216.2 ± 1.08 | +0.0             |
 
-The best combination, Stormrage Signet Ring with Stormrage Signet Ring, measures +20.5 against this set's own rings, so the upgrade path at this anchor runs through it.
+The best combination, Stormrage Signet Ring with Unstoppable Aggressor's Ring, measures +16.7 against this set's own rings, so the upgrade path at this anchor runs through it.
 
 ## The set
 

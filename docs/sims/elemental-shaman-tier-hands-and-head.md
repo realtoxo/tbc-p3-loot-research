@@ -257,7 +257,7 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them.
 
-The ten best of the 45 combinations measured, and the worn pair.
+The ten best of the 41 combinations measured, and the worn pair.
 
 | Ring                                    | Ring                       | DPS           | Against this set |
 |-----------------------------------------|----------------------------|---------------|------------------|
@@ -269,8 +269,8 @@ The ten best of the 45 combinations measured, and the worn pair.
 | Band of the Eternal Sage                | Blessed Band of Karabor    | 1905.0 ± 0.93 | +11.1            |
 | Ring of Ancient Knowledge               | Ring of Ancient Knowledge  | 1904.8 ± 0.89 | +10.9            |
 | Ring of Ancient Knowledge               | Band of Eternity           | 1904.5 ± 0.93 | +10.6            |
-| Ring of Captured Storms                 | Ring of Captured Storms    | 1904.2 ± 0.94 | +10.3            |
 | Band of the Eternal Sage                | Ring of Endless Coils      | 1903.6 ± 0.92 | +9.7             |
+| Band of the Eternal Sage                | Ring of Recurrence         | 1903.2 ± 0.91 | +9.3             |
 | Ring of Unrelenting Storms *(this set)* | Ring of Endless Coils      | 1893.9 ± 0.94 | +0.0             |
 
 The best combination, Ring of Ancient Knowledge with Band of the Eternal Sage, measures +20.6 against this set's own rings, so the upgrade path at this anchor runs through it.

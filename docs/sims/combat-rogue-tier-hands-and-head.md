@@ -473,11 +473,10 @@ drop twice, and no row pairs two rings the game will not equip together. Stormra
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
 
-The ten best of the 42 combinations measured, and the worn pair.
+The ten best of the 36 combinations measured, and the worn pair.
 
 | Ring                           | Ring                         | DPS           | Against this set |
 |--------------------------------|------------------------------|---------------|------------------|
-| Stormrage Signet Ring          | Stormrage Signet Ring        | 2301.1 ± 0.94 | +34.2            |
 | Stormrage Signet Ring          | Band of the Eternal Champion | 2286.6 ± 0.97 | +19.7            |
 | Stormrage Signet Ring          | Ring of Deceitful Intent     | 2285.1 ± 0.94 | +18.2            |
 | Stormrage Signet Ring          | Ring of Lethality            | 2284.4 ± 0.94 | +17.5            |
@@ -487,9 +486,10 @@ The ten best of the 42 combinations measured, and the worn pair.
 | Stormrage Signet Ring          | Garona's Signet Ring         | 2274.5 ± 0.94 | +7.6             |
 | Band of the Eternal Champion   | Ring of Deceitful Intent     | 2271.2 ± 0.95 | +4.3             |
 | Band of the Eternal Champion   | Band of the Ranger-General   | 2271.0 ± 0.95 | +4.1             |
+| Band of the Eternal Champion   | Ring of Lethality            | 2270.9 ± 0.95 | +4.0             |
 | Ring of Lethality *(this set)* | Band of the Ranger-General   | 2266.9 ± 0.95 | +0.0             |
 
-The best combination, Stormrage Signet Ring with Stormrage Signet Ring, measures +34.2 against this set's own rings, so the upgrade path at this anchor runs through it.
+The best combination, Stormrage Signet Ring with Band of the Eternal Champion, measures +19.7 against this set's own rings, so the upgrade path at this anchor runs through it.
 
 ## The set
 

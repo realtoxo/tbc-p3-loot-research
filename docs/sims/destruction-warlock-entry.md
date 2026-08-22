@@ -242,18 +242,15 @@ drop twice, and no row pairs two rings the game will not equip together.
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Magtheridon's Lair, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them. The best-in-slot set wears Ring of Ancient Knowledge in both slots, so its worn row is a doubled pair.
 
-The ten best of the 6 combinations measured, and the worn pair.
+The ten best of the 3 combinations measured, and the worn pair.
 
 | Ring                              | Ring                  | DPS           | Against this set |
 |-----------------------------------|-----------------------|---------------|------------------|
-| Ring of Endless Coils             | Ring of Endless Coils | 2071.3 ± 1.16 | +19.9            |
 | Band of Crimson Fury *(this set)* | Ring of Endless Coils | 2051.4 ± 1.13 | +0.0             |
 | Ring of Endless Coils             | Ashyen's Gift         | 2039.9 ± 1.15 | -11.5            |
-| Band of Crimson Fury              | Band of Crimson Fury  | 2034.3 ± 1.14 | -17.1            |
 | Band of Crimson Fury              | Ashyen's Gift         | 2020.4 ± 1.12 | -31.0            |
-| Ashyen's Gift                     | Ashyen's Gift         | 2008.3 ± 1.14 | -43.1            |
 
-The best combination, Ring of Endless Coils with Ring of Endless Coils, measures +19.9 against this set's own rings, so the upgrade path at this anchor runs through it.
+This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
 ## The set
 

@@ -719,22 +719,22 @@ drop twice, and no row pairs two rings the game will not equip together. Stormra
 
 The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection.
 
-The ten best of the 44 combinations measured, and the worn pair.
+The ten best of the 37 combinations measured, and the worn pair.
 
 | Ring                               | Ring                         | DPS           | Against this set |
 |------------------------------------|------------------------------|---------------|------------------|
-| Stormrage Signet Ring              | Stormrage Signet Ring        | 2402.1 ± 1.09 | +3.3             |
 | Stormrage Signet Ring *(this set)* | Unstoppable Aggressor's Ring | 2398.8 ± 1.10 | +0.0             |
-| Unstoppable Aggressor's Ring       | Unstoppable Aggressor's Ring | 2397.7 ± 1.10 | -1.1             |
 | Stormrage Signet Ring              | Band of the Ranger-General   | 2394.6 ± 1.09 | -4.2             |
 | Stormrage Signet Ring              | Band of the Eternal Champion | 2393.4 ± 1.10 | -5.4             |
 | Unstoppable Aggressor's Ring       | Band of the Ranger-General   | 2391.9 ± 1.10 | -6.9             |
 | Unstoppable Aggressor's Ring       | Band of the Eternal Champion | 2390.8 ± 1.10 | -8.0             |
-| Band of the Ranger-General         | Band of the Ranger-General   | 2389.9 ± 1.09 | -8.9             |
 | Stormrage Signet Ring              | Band of Devastation          | 2389.0 ± 1.09 | -9.8             |
 | Band of the Ranger-General         | Band of the Eternal Champion | 2388.1 ± 1.10 | -10.7            |
+| Unstoppable Aggressor's Ring       | Band of Devastation          | 2386.8 ± 1.12 | -12.0            |
+| Band of Devastation                | Band of the Ranger-General   | 2385.4 ± 1.11 | -13.4            |
+| Band of Devastation                | Band of the Eternal Champion | 2383.5 ± 1.12 | -15.3            |
 
-The best combination, Stormrage Signet Ring with Stormrage Signet Ring, measures +3.3 against this set's own rings, so the upgrade path at this anchor runs through it.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 
