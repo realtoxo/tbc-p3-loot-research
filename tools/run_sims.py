@@ -82,8 +82,17 @@ APL = {
     "feral_cat":            "druid/feralcat/apls/default.apl.json",
     "retribution_paladin":  "paladin/retribution/apls/default.apl.json",
     "enhancement_shaman":   "shaman/enhancement/apls/default.apl.json",
-    "beast_mastery_hunter": "hunter/dps/apls/default.apl.json",
-    "survival_hunter":      "hunter/dps/apls/default.apl.json",
+    # THE HUNTERS RUN A REPO-LOCAL VARIANT, ruled by the guild lead on
+    # 22 August 2026: "ah yes we should assume no weaving". The shipped
+    # hunter preset hard-codes melee weaving as an APL constant, and every
+    # hunter figure published before this ruling assumed it. The variant is
+    # the preset with exactly two edits: the Melee weave constant set false,
+    # and the weave-gated prepull move replaced with an unconditional move
+    # to 25 yards, because without it the hunter stands at spawn in melee
+    # range where ranged shots cannot fire and the figure collapses to a
+    # plausible-looking melee-only number. See data/judgments/sim-context.yaml.
+    "beast_mastery_hunter": "data/sim/apls/hunter-no-weave.apl.json",
+    "survival_hunter":      "data/sim/apls/hunter-no-weave.apl.json",
     "affliction_warlock":   "warlock/dps/apls/affliction.apl.json",
     "destruction_warlock":  "warlock/dps/apls/destruction.apl.json",
     "arcane_mage":          "mage/dps/apls/arcane.apl.json",
@@ -727,7 +736,13 @@ def rotation_for(spec: str) -> dict:
     default.apl.json. Auto does not error; it just produces a smaller number,
     which is indistinguishable from a spec being weak.
     """
-    path = WOWSIMS / "ui" / APL[spec]
+    # A rotation may live in the simulator checkout or in this repository:
+    # a map entry starting with data/ is a repo-local variant of a preset,
+    # with its derivation documented beside the map.
+    if APL[spec].startswith("data/"):
+        path = Path(APL[spec])
+    else:
+        path = WOWSIMS / "ui" / APL[spec]
     if not path.is_file():
         raise SystemExit(
             f"run_sims.py: {spec} names the rotation {APL[spec]}, which is not "

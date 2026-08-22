@@ -40,3 +40,24 @@ rulings:
     the slot-level variant row had measured 11.2 above it. The variant table
     holds gems and consumables still by design, so it prices the item alone; a
     profile prices the item and everything it displaces.
+- rule: HUNTERS DO NOT MELEE WEAVE in any simulated figure.
+  verbatim: ah yes we should assume no weaving
+  ruled: '2026-08-22'
+  what_it_replaces: Every hunter figure published before this ruling assumed
+    weaving without anyone deciding it. The simulator's own hunter preset,
+    which this project runs deliberately so the rotation is citable, carries
+    Melee weave as an APL constant set true, and under weaving every
+    two-hander measured above every dual pair, which drove the 20 August
+    hunter re-anchors. The guild lead asked why the community lists rank a
+    dual pair first, and the answer was that they price a hunter that does
+    not weave.
+  what_was_measured: At best in slot, boss armor 7684, the Beast Mastery
+    anchor measured 3307.2 weaving and 2927.5 not weaving, so the technique
+    is worth about 380 damage per second. Under weaving the arena
+    two-hander led the best dual pair by 82.1; without it the two are
+    10.1 apart, a stat-stick difference.
+  how_it_is_applied: Both hunters run data/sim/apls/hunter-no-weave.apl.json,
+    the shipped preset with exactly two edits, the weave constant set false
+    and an unconditional prepull move to 25 yards. Every hunter round is
+    rerun under it, and the 20 August weapon re-anchors are re-read against
+    the no-weave weapon round.
