@@ -6,7 +6,7 @@ subtitle: >-
   in which they win when they disagree. This is the governing document. Every
   other document must trace its method back to a section here.
 status: review
-updated: 2026-08-08
+updated: 2026-08-22
 ---
 
 Every policy document in this compendium builds on the method below.
@@ -74,6 +74,8 @@ Our own runs model a raider who is fully prepared, because that is the state an 
 ## Analytical Approach By Area
 
 No scoring formula is fixed here, deliberately. The inputs are both quantitative (simulator output, stat weights, cap arithmetic) and qualitative (longevity, contention, set-bonus timing, what the field does). The output is a judgment the council reaches from those facts together. A formula that turned them into one number would hide the judgment rather than remove it, and would be argued with on its arithmetic instead of its reasoning. Collect the facts first; decide how to weigh them when the council can see what there is to weigh.
+
+One class of recommendation is allowed through, ruled on 22 August 2026: an ordering that is a pure function of measurement. A slot's candidates sorted best to worst by simulated delta, or a denial cost read as this item minus the next best a spec can actually get, is derived the same way a standing is, so rerunning the pipeline recomputes it and the council argues with the measurement rather than with a method. The line holds exactly where the formula objection begins: nothing here weighs a quantitative input against a qualitative one, and who receives a contested drop remains a judgment.
 
 ### Inputs
 
