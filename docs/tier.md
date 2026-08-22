@@ -262,81 +262,81 @@ Walking in, this spec holds **Rift Stalker Armor** at 4 pieces, in the head, sho
 
 > Rift Stalker Armor 4-piece: Your Steady Shot ability has 5% increased critical strike chance.
 
-The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves. The empty subset reproduces the [entry figure](sims/beast-mastery-hunter-entry.md) of 3011.8 ± 0.85.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves. The empty subset reproduces the [entry figure](sims/beast-mastery-hunter-entry.md) of 2721.8 ± 0.72.
 
-The Rift Stalker 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, head, measures 3020.9 ± 0.87.
+The Rift Stalker 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 2722.0 ± 0.73.
 
-The Rift Stalker 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, shoulder, hands, measures 3080.7 ± 0.88.
+The Rift Stalker 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, shoulder, hands, measures 2777.4 ± 0.74.
 
-The best first pickup is the **head**, at 3020.9 ± 0.87, +9.1 against the entry set.
+The best first pickup is the **hands**, at 2722.0 ± 0.73, +0.2 against the entry set.
 
-The highest subset in the round is head, shoulder, chest, hands, at 3100.8 ± 0.90, +89.0 against the entry set, before the gems those pieces would carry.
+The highest subset in the round is head, shoulder, chest, hands, at 2795.7 ± 0.74, +73.9 against the entry set, before the gems those pieces would carry.
 
 | Replacement pieces | Slots replaced               | Rift Stalker pieces | Old bonus                | DPS           | Against entry |
 |--------------------|------------------------------|---------------------|--------------------------|---------------|---------------|
-| 0                  | *none, the entry set*        | 4                   | Rift Stalker 2pc and 4pc | 3011.8 ± 0.85 | +0.0          |
-| 1                  | head                         | 3                   | Rift Stalker 2pc         | 3020.9 ± 0.87 | +9.1          |
-| 1                  | hands                        | 3                   | Rift Stalker 2pc         | 3020.3 ± 0.86 | +8.5          |
-| 1                  | shoulder                     | 3                   | Rift Stalker 2pc         | 3006.6 ± 0.86 | -5.2          |
-| 1                  | chest                        | 3                   | Rift Stalker 2pc         | 3003.5 ± 0.85 | -8.3          |
-| 2                  | head, hands                  | 2                   | Rift Stalker 2pc         | 3058.0 ± 0.87 | +46.2         |
-| 2                  | shoulder, hands              | 2                   | Rift Stalker 2pc         | 3043.0 ± 0.87 | +31.2         |
-| 2                  | head, shoulder               | 2                   | Rift Stalker 2pc         | 3042.9 ± 0.88 | +31.1         |
-| 2                  | chest, hands                 | 2                   | Rift Stalker 2pc         | 3040.5 ± 0.86 | +28.7         |
-| 2                  | head, chest                  | 2                   | Rift Stalker 2pc         | 3040.4 ± 0.87 | +28.6         |
-| 2                  | shoulder, chest              | 2                   | Rift Stalker 2pc         | 3026.1 ± 0.86 | +14.3         |
-| 3                  | head, shoulder, hands        | 1                   | none                     | 3080.7 ± 0.88 | +68.9         |
-| 3                  | head, chest, hands           | 1                   | none                     | 3078.2 ± 0.88 | +66.4         |
-| 3                  | head, shoulder, chest        | 1                   | none                     | 3062.7 ± 0.88 | +50.9         |
-| 3                  | shoulder, chest, hands       | 1                   | none                     | 3062.5 ± 0.87 | +50.7         |
-| 4                  | head, shoulder, chest, hands | 0                   | none                     | 3100.8 ± 0.90 | +89.0         |
+| 0                  | *none, the entry set*        | 4                   | Rift Stalker 2pc and 4pc | 2721.8 ± 0.72 | +0.0          |
+| 1                  | hands                        | 3                   | Rift Stalker 2pc         | 2722.0 ± 0.73 | +0.2          |
+| 1                  | head                         | 3                   | Rift Stalker 2pc         | 2720.4 ± 0.73 | -1.4          |
+| 1                  | shoulder                     | 3                   | Rift Stalker 2pc         | 2708.7 ± 0.73 | -13.1         |
+| 1                  | chest                        | 3                   | Rift Stalker 2pc         | 2706.5 ± 0.73 | -15.3         |
+| 2                  | head, hands                  | 2                   | Rift Stalker 2pc         | 2755.8 ± 0.74 | +34.0         |
+| 2                  | shoulder, hands              | 2                   | Rift Stalker 2pc         | 2743.3 ± 0.74 | +21.5         |
+| 2                  | head, shoulder               | 2                   | Rift Stalker 2pc         | 2741.5 ± 0.74 | +19.7         |
+| 2                  | chest, hands                 | 2                   | Rift Stalker 2pc         | 2741.0 ± 0.74 | +19.2         |
+| 2                  | head, chest                  | 2                   | Rift Stalker 2pc         | 2738.9 ± 0.74 | +17.1         |
+| 2                  | shoulder, chest              | 2                   | Rift Stalker 2pc         | 2727.5 ± 0.73 | +5.7          |
+| 3                  | head, shoulder, hands        | 1                   | none                     | 2777.4 ± 0.74 | +55.6         |
+| 3                  | head, chest, hands           | 1                   | none                     | 2773.9 ± 0.74 | +52.1         |
+| 3                  | shoulder, chest, hands       | 1                   | none                     | 2761.5 ± 0.74 | +39.7         |
+| 3                  | head, shoulder, chest        | 1                   | none                     | 2760.1 ± 0.74 | +38.3         |
+| 4                  | head, shoulder, chest, hands | 0                   | none                     | 2795.7 ± 0.74 | +73.9         |
 
 ### The Tier 6 set
 
 The [tier anchor](sims/beast-mastery-hunter-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves, Gronnstalker's Leggings. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 3049.1 ± 0.87, +37.3 against the entry set.
+The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 2749.6 ± 0.74, +27.8 against the entry set.
 
-The cheapest **Gronnstalker's 4-piece** is 4 tokens, and the best way there, shoulder, chest, hands, legs, measures 3117.1 ± 0.88, +105.3 against the entry set.
+The cheapest **Gronnstalker's 4-piece** is 4 tokens, and the best way there, shoulder, chest, hands, legs, measures 2829.9 ± 0.77, +108.1 against the entry set.
 
-Read greedily off the table, the pickup order is **head, then hands, then shoulder, then chest, then legs**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **hands, then head, then shoulder, then chest, then legs**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                              | Gronnstalker's pieces | Tier 6 bonus               | DPS           | Against entry |
 |--------------|------------------------------------|-----------------------|----------------------------|---------------|---------------|
-| 0            | *none, the entry set*              | 0                     | none                       | 3011.8 ± 0.85 | +0.0          |
-| 1            | head                               | 0                     | none                       | 3020.9 ± 0.87 | +9.1          |
-| 1            | hands                              | 1                     | none                       | 3020.3 ± 0.86 | +8.5          |
-| 1            | shoulder                           | 1                     | none                       | 3012.7 ± 0.86 | +0.9          |
-| 1            | chest                              | 1                     | none                       | 3007.9 ± 0.85 | -3.9          |
-| 1            | legs                               | 1                     | none                       | 3006.4 ± 0.85 | -5.4          |
-| 2            | head, hands                        | 1                     | none                       | 3058.0 ± 0.87 | +46.2         |
-| 2            | shoulder, hands                    | 2                     | Gronnstalker's 2pc         | 3049.1 ± 0.87 | +37.3         |
-| 2            | head, shoulder                     | 1                     | none                       | 3048.6 ± 0.88 | +36.8         |
-| 2            | chest, hands                       | 2                     | Gronnstalker's 2pc         | 3044.5 ± 0.86 | +32.7         |
-| 2            | head, chest                        | 1                     | none                       | 3043.8 ± 0.87 | +32.0         |
-| 2            | shoulder, chest                    | 2                     | Gronnstalker's 2pc         | 3035.6 ± 0.86 | +23.8         |
-| 2            | head, legs                         | 1                     | none                       | 3017.0 ± 0.86 | +5.2          |
-| 2            | hands, legs                        | 2                     | Gronnstalker's 2pc         | 3014.2 ± 0.86 | +2.4          |
-| 2            | shoulder, legs                     | 2                     | Gronnstalker's 2pc         | 3006.1 ± 0.86 | -5.7          |
-| 2            | chest, legs                        | 2                     | Gronnstalker's 2pc         | 3000.4 ± 0.85 | -11.4         |
-| 3            | head, shoulder, hands              | 2                     | Gronnstalker's 2pc         | 3087.1 ± 0.88 | +75.3         |
-| 3            | head, chest, hands                 | 2                     | Gronnstalker's 2pc         | 3082.0 ± 0.89 | +70.2         |
-| 3            | head, shoulder, chest              | 2                     | Gronnstalker's 2pc         | 3072.8 ± 0.88 | +61.0         |
-| 3            | shoulder, chest, hands             | 3                     | Gronnstalker's 2pc         | 3063.0 ± 0.88 | +51.2         |
-| 3            | head, hands, legs                  | 2                     | Gronnstalker's 2pc         | 3053.4 ± 0.87 | +41.6         |
-| 3            | head, shoulder, legs               | 2                     | Gronnstalker's 2pc         | 3045.5 ± 0.87 | +33.7         |
-| 3            | shoulder, hands, legs              | 3                     | Gronnstalker's 2pc         | 3042.9 ± 0.87 | +31.1         |
-| 3            | head, chest, legs                  | 2                     | Gronnstalker's 2pc         | 3040.3 ± 0.86 | +28.5         |
-| 3            | chest, hands, legs                 | 3                     | Gronnstalker's 2pc         | 3036.5 ± 0.85 | +24.7         |
-| 3            | shoulder, chest, legs              | 3                     | Gronnstalker's 2pc         | 3027.4 ± 0.85 | +15.6         |
-| 4            | shoulder, chest, hands, legs       | 4                     | Gronnstalker's 2pc and 4pc | 3117.1 ± 0.88 | +105.3        |
-| 4            | head, shoulder, chest, hands       | 3                     | Gronnstalker's 2pc         | 3111.7 ± 0.90 | +99.9         |
-| 4            | head, shoulder, hands, legs        | 3                     | Gronnstalker's 2pc         | 3083.8 ± 0.88 | +72.0         |
-| 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 3078.2 ± 0.87 | +66.4         |
-| 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 3069.1 ± 0.86 | +57.3         |
-| 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 3171.7 ± 0.89 | +159.9        |
+| 0            | *none, the entry set*              | 0                     | none                       | 2721.8 ± 0.72 | +0.0          |
+| 1            | hands                              | 1                     | none                       | 2722.0 ± 0.73 | +0.2          |
+| 1            | head                               | 0                     | none                       | 2720.4 ± 0.73 | -1.4          |
+| 1            | legs                               | 1                     | none                       | 2715.4 ± 0.73 | -6.4          |
+| 1            | shoulder                           | 1                     | none                       | 2715.1 ± 0.73 | -6.7          |
+| 1            | chest                              | 1                     | none                       | 2710.5 ± 0.73 | -11.3         |
+| 2            | head, hands                        | 1                     | none                       | 2755.8 ± 0.74 | +34.0         |
+| 2            | shoulder, hands                    | 2                     | Gronnstalker's 2pc         | 2749.6 ± 0.74 | +27.8         |
+| 2            | head, shoulder                     | 1                     | none                       | 2747.9 ± 0.74 | +26.1         |
+| 2            | chest, hands                       | 2                     | Gronnstalker's 2pc         | 2744.4 ± 0.74 | +22.6         |
+| 2            | head, chest                        | 1                     | none                       | 2742.3 ± 0.74 | +20.5         |
+| 2            | shoulder, chest                    | 2                     | Gronnstalker's 2pc         | 2736.8 ± 0.74 | +15.0         |
+| 2            | hands, legs                        | 2                     | Gronnstalker's 2pc         | 2715.8 ± 0.74 | -6.0          |
+| 2            | head, legs                         | 1                     | none                       | 2714.0 ± 0.73 | -7.8          |
+| 2            | shoulder, legs                     | 2                     | Gronnstalker's 2pc         | 2708.1 ± 0.74 | -13.7         |
+| 2            | chest, legs                        | 2                     | Gronnstalker's 2pc         | 2704.5 ± 0.73 | -17.3         |
+| 3            | head, shoulder, hands              | 2                     | Gronnstalker's 2pc         | 2784.0 ± 0.74 | +62.2         |
+| 3            | head, chest, hands                 | 2                     | Gronnstalker's 2pc         | 2777.1 ± 0.74 | +55.3         |
+| 3            | head, shoulder, chest              | 2                     | Gronnstalker's 2pc         | 2770.0 ± 0.74 | +48.2         |
+| 3            | shoulder, chest, hands             | 3                     | Gronnstalker's 2pc         | 2761.2 ± 0.75 | +39.4         |
+| 3            | head, hands, legs                  | 2                     | Gronnstalker's 2pc         | 2748.3 ± 0.74 | +26.5         |
+| 3            | shoulder, hands, legs              | 3                     | Gronnstalker's 2pc         | 2743.3 ± 0.75 | +21.5         |
+| 3            | head, shoulder, legs               | 2                     | Gronnstalker's 2pc         | 2740.8 ± 0.73 | +19.0         |
+| 3            | chest, hands, legs                 | 3                     | Gronnstalker's 2pc         | 2739.0 ± 0.74 | +17.2         |
+| 3            | head, chest, legs                  | 2                     | Gronnstalker's 2pc         | 2735.7 ± 0.73 | +13.9         |
+| 3            | shoulder, chest, legs              | 3                     | Gronnstalker's 2pc         | 2730.7 ± 0.74 | +8.9          |
+| 4            | shoulder, chest, hands, legs       | 4                     | Gronnstalker's 2pc and 4pc | 2829.9 ± 0.77 | +108.1        |
+| 4            | head, shoulder, chest, hands       | 3                     | Gronnstalker's 2pc         | 2804.8 ± 0.74 | +83.0         |
+| 4            | head, shoulder, hands, legs        | 3                     | Gronnstalker's 2pc         | 2776.2 ± 0.75 | +54.4         |
+| 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 2771.4 ± 0.74 | +49.6         |
+| 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 2762.5 ± 0.74 | +40.7         |
+| 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 2874.7 ± 0.77 | +152.9        |
 
-The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables on [Tokens](tokens.md) under the same figures: Gronnstalker's Helmet (head) at -14.8. None is in this spec's best-in-slot set.
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables on [Tokens](tokens.md) under the same figures: Gronnstalker's Helmet (head) at -22.0. None is in this spec's best-in-slot set.
 
 ## Combat Rogue
 
@@ -758,81 +758,81 @@ Walking in, this spec holds **Rift Stalker Armor** at 4 pieces, in the head, sho
 
 > Rift Stalker Armor 4-piece: Your Steady Shot ability has 5% increased critical strike chance.
 
-The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Bow-stitched Leggings. The empty subset reproduces the [entry figure](sims/survival-hunter-entry.md) of 2529.1 ± 0.79.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Bow-stitched Leggings. The empty subset reproduces the [entry figure](sims/survival-hunter-entry.md) of 2214.3 ± 0.68.
 
-The Rift Stalker 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, legs, measures 2535.4 ± 0.80.
+The Rift Stalker 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, legs, measures 2212.0 ± 0.68.
 
-The Rift Stalker 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, chest, legs, measures 2583.5 ± 0.82.
+The Rift Stalker 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, chest, legs, measures 2257.8 ± 0.68.
 
-The best first pickup is the **legs**, at 2535.4 ± 0.80, +6.3 against the entry set.
+The best first pickup is the **legs**, at 2212.0 ± 0.68, -2.3 against the entry set.
 
-The highest subset in the round is head, shoulder, chest, legs, at 2600.1 ± 0.83, +71.0 against the entry set, before the gems those pieces would carry.
+The highest subset in the round is head, shoulder, chest, legs, at 2272.4 ± 0.68, +58.1 against the entry set, before the gems those pieces would carry.
 
 | Replacement pieces | Slots replaced              | Rift Stalker pieces | Old bonus                | DPS           | Against entry |
 |--------------------|-----------------------------|---------------------|--------------------------|---------------|---------------|
-| 0                  | *none, the entry set*       | 4                   | Rift Stalker 2pc and 4pc | 2529.1 ± 0.79 | +0.0          |
-| 1                  | legs                        | 3                   | Rift Stalker 2pc         | 2535.4 ± 0.80 | +6.3          |
-| 1                  | shoulder                    | 3                   | Rift Stalker 2pc         | 2529.5 ± 0.80 | +0.4          |
-| 1                  | chest                       | 3                   | Rift Stalker 2pc         | 2527.7 ± 0.80 | -1.4          |
-| 1                  | head                        | 3                   | Rift Stalker 2pc         | 2520.2 ± 0.79 | -8.9          |
-| 2                  | shoulder, legs              | 2                   | Rift Stalker 2pc         | 2559.9 ± 0.82 | +30.8         |
-| 2                  | chest, legs                 | 2                   | Rift Stalker 2pc         | 2559.0 ± 0.81 | +29.9         |
-| 2                  | head, legs                  | 2                   | Rift Stalker 2pc         | 2553.3 ± 0.81 | +24.2         |
-| 2                  | shoulder, chest             | 2                   | Rift Stalker 2pc         | 2552.2 ± 0.80 | +23.1         |
-| 2                  | head, shoulder              | 2                   | Rift Stalker 2pc         | 2545.2 ± 0.80 | +16.1         |
-| 2                  | head, chest                 | 2                   | Rift Stalker 2pc         | 2543.8 ± 0.80 | +14.7         |
-| 3                  | shoulder, chest, legs       | 1                   | none                     | 2583.5 ± 0.82 | +54.4         |
-| 3                  | head, shoulder, legs        | 1                   | none                     | 2577.9 ± 0.82 | +48.8         |
-| 3                  | head, chest, legs           | 1                   | none                     | 2576.4 ± 0.81 | +47.3         |
-| 3                  | head, shoulder, chest       | 1                   | none                     | 2568.4 ± 0.81 | +39.3         |
-| 4                  | head, shoulder, chest, legs | 0                   | none                     | 2600.1 ± 0.83 | +71.0         |
+| 0                  | *none, the entry set*       | 4                   | Rift Stalker 2pc and 4pc | 2214.3 ± 0.68 | +0.0          |
+| 1                  | legs                        | 3                   | Rift Stalker 2pc         | 2212.0 ± 0.68 | -2.3          |
+| 1                  | shoulder                    | 3                   | Rift Stalker 2pc         | 2205.6 ± 0.68 | -8.7          |
+| 1                  | chest                       | 3                   | Rift Stalker 2pc         | 2203.5 ± 0.68 | -10.8         |
+| 1                  | head                        | 3                   | Rift Stalker 2pc         | 2195.4 ± 0.68 | -18.9         |
+| 2                  | shoulder, legs              | 2                   | Rift Stalker 2pc         | 2236.2 ± 0.68 | +21.9         |
+| 2                  | chest, legs                 | 2                   | Rift Stalker 2pc         | 2233.3 ± 0.67 | +19.0         |
+| 2                  | shoulder, chest             | 2                   | Rift Stalker 2pc         | 2226.7 ± 0.68 | +12.4         |
+| 2                  | head, legs                  | 2                   | Rift Stalker 2pc         | 2226.4 ± 0.68 | +12.1         |
+| 2                  | head, shoulder              | 2                   | Rift Stalker 2pc         | 2218.6 ± 0.68 | +4.3          |
+| 2                  | head, chest                 | 2                   | Rift Stalker 2pc         | 2217.3 ± 0.68 | +3.0          |
+| 3                  | shoulder, chest, legs       | 1                   | none                     | 2257.8 ± 0.68 | +43.5         |
+| 3                  | head, shoulder, legs        | 1                   | none                     | 2250.5 ± 0.68 | +36.2         |
+| 3                  | head, chest, legs           | 1                   | none                     | 2248.6 ± 0.68 | +34.3         |
+| 3                  | head, shoulder, chest       | 1                   | none                     | 2241.1 ± 0.69 | +26.8         |
+| 4                  | head, shoulder, chest, legs | 0                   | none                     | 2272.4 ± 0.68 | +58.1         |
 
 ### The Tier 6 set
 
 The [tier anchor](sims/survival-hunter-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves, Shady Dealer's Pantaloons. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 2563.1 ± 0.81, +34.0 against the entry set.
+The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 2232.3 ± 0.69, +18.0 against the entry set.
 
-The cheapest **Gronnstalker's 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 2648.1 ± 0.83, +119.0 against the entry set.
+The cheapest **Gronnstalker's 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 2329.1 ± 0.72, +114.8 against the entry set.
 
-Read greedily off the table, the pickup order is **hands, then shoulder, then chest, then head, then legs**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **hands, then legs, then shoulder, then chest, then head**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                              | Gronnstalker's pieces | Tier 6 bonus               | DPS           | Against entry |
 |--------------|------------------------------------|-----------------------|----------------------------|---------------|---------------|
-| 0            | *none, the entry set*              | 0                     | none                       | 2529.1 ± 0.79 | +0.0          |
-| 1            | hands                              | 1                     | none                       | 2562.8 ± 0.79 | +33.7         |
-| 1            | shoulder                           | 1                     | none                       | 2529.5 ± 0.80 | +0.4          |
-| 1            | chest                              | 1                     | none                       | 2527.7 ± 0.80 | -1.4          |
-| 1            | legs                               | 0                     | none                       | 2520.1 ± 0.82 | -9.0          |
-| 1            | head                               | 1                     | none                       | 2508.9 ± 0.79 | -20.2         |
-| 2            | shoulder, hands                    | 2                     | Gronnstalker's 2pc         | 2563.1 ± 0.81 | +34.0         |
-| 2            | chest, hands                       | 2                     | Gronnstalker's 2pc         | 2560.8 ± 0.80 | +31.7         |
-| 2            | hands, legs                        | 1                     | none                       | 2558.1 ± 0.83 | +29.0         |
-| 2            | shoulder, chest                    | 2                     | Gronnstalker's 2pc         | 2552.2 ± 0.80 | +23.1         |
-| 2            | chest, legs                        | 1                     | none                       | 2544.8 ± 0.82 | +15.7         |
-| 2            | shoulder, legs                     | 1                     | none                       | 2543.3 ± 0.83 | +14.2         |
-| 2            | head, hands                        | 2                     | Gronnstalker's 2pc         | 2542.1 ± 0.79 | +13.0         |
-| 2            | head, shoulder                     | 2                     | Gronnstalker's 2pc         | 2533.5 ± 0.80 | +4.4          |
-| 2            | head, chest                        | 2                     | Gronnstalker's 2pc         | 2531.6 ± 0.80 | +2.5          |
-| 2            | head, legs                         | 1                     | none                       | 2524.0 ± 0.82 | -5.1          |
-| 3            | shoulder, chest, hands             | 3                     | Gronnstalker's 2pc         | 2586.9 ± 0.81 | +57.8         |
-| 3            | chest, hands, legs                 | 2                     | Gronnstalker's 2pc         | 2582.4 ± 0.81 | +53.3         |
-| 3            | shoulder, hands, legs              | 2                     | Gronnstalker's 2pc         | 2582.3 ± 0.83 | +53.2         |
-| 3            | shoulder, chest, legs              | 2                     | Gronnstalker's 2pc         | 2568.1 ± 0.82 | +39.0         |
-| 3            | head, shoulder, hands              | 3                     | Gronnstalker's 2pc         | 2567.8 ± 0.80 | +38.7         |
-| 3            | head, chest, hands                 | 3                     | Gronnstalker's 2pc         | 2565.0 ± 0.80 | +35.9         |
-| 3            | head, hands, legs                  | 2                     | Gronnstalker's 2pc         | 2561.9 ± 0.82 | +32.8         |
-| 3            | head, shoulder, chest              | 3                     | Gronnstalker's 2pc         | 2556.2 ± 0.81 | +27.1         |
-| 3            | head, chest, legs                  | 2                     | Gronnstalker's 2pc         | 2550.2 ± 0.82 | +21.1         |
-| 3            | head, shoulder, legs               | 2                     | Gronnstalker's 2pc         | 2547.6 ± 0.83 | +18.5         |
-| 4            | head, shoulder, chest, hands       | 4                     | Gronnstalker's 2pc and 4pc | 2648.1 ± 0.83 | +119.0        |
-| 4            | shoulder, chest, hands, legs       | 3                     | Gronnstalker's 2pc         | 2607.3 ± 0.83 | +78.2         |
-| 4            | head, shoulder, hands, legs        | 3                     | Gronnstalker's 2pc         | 2586.6 ± 0.83 | +57.5         |
-| 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 2585.9 ± 0.81 | +56.8         |
-| 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 2572.5 ± 0.83 | +43.4         |
-| 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 2668.7 ± 0.85 | +139.6        |
+| 0            | *none, the entry set*              | 0                     | none                       | 2214.3 ± 0.68 | +0.0          |
+| 1            | hands                              | 1                     | none                       | 2241.5 ± 0.68 | +27.2         |
+| 1            | shoulder                           | 1                     | none                       | 2205.6 ± 0.68 | -8.7          |
+| 1            | legs                               | 0                     | none                       | 2204.6 ± 0.69 | -9.7          |
+| 1            | chest                              | 1                     | none                       | 2203.5 ± 0.68 | -10.8         |
+| 1            | head                               | 1                     | none                       | 2184.4 ± 0.68 | -29.9         |
+| 2            | hands, legs                        | 1                     | none                       | 2232.6 ± 0.69 | +18.3         |
+| 2            | shoulder, hands                    | 2                     | Gronnstalker's 2pc         | 2232.3 ± 0.69 | +18.0         |
+| 2            | chest, hands                       | 2                     | Gronnstalker's 2pc         | 2230.7 ± 0.68 | +16.4         |
+| 2            | shoulder, legs                     | 1                     | none                       | 2228.0 ± 0.69 | +13.7         |
+| 2            | shoulder, chest                    | 2                     | Gronnstalker's 2pc         | 2226.7 ± 0.68 | +12.4         |
+| 2            | chest, legs                        | 1                     | none                       | 2226.4 ± 0.69 | +12.1         |
+| 2            | head, hands                        | 2                     | Gronnstalker's 2pc         | 2211.7 ± 0.68 | -2.6          |
+| 2            | head, shoulder                     | 2                     | Gronnstalker's 2pc         | 2207.9 ± 0.68 | -6.4          |
+| 2            | head, legs                         | 1                     | none                       | 2207.0 ± 0.69 | -7.3          |
+| 2            | head, chest                        | 2                     | Gronnstalker's 2pc         | 2206.0 ± 0.68 | -8.3          |
+| 3            | shoulder, hands, legs              | 2                     | Gronnstalker's 2pc         | 2256.4 ± 0.70 | +42.1         |
+| 3            | shoulder, chest, hands             | 3                     | Gronnstalker's 2pc         | 2255.5 ± 0.69 | +41.2         |
+| 3            | chest, hands, legs                 | 2                     | Gronnstalker's 2pc         | 2254.8 ± 0.69 | +40.5         |
+| 3            | shoulder, chest, legs              | 2                     | Gronnstalker's 2pc         | 2250.3 ± 0.70 | +36.0         |
+| 3            | head, shoulder, hands              | 3                     | Gronnstalker's 2pc         | 2235.0 ± 0.69 | +20.7         |
+| 3            | head, hands, legs                  | 2                     | Gronnstalker's 2pc         | 2235.0 ± 0.70 | +20.7         |
+| 3            | head, chest, hands                 | 3                     | Gronnstalker's 2pc         | 2233.4 ± 0.69 | +19.1         |
+| 3            | head, shoulder, legs               | 2                     | Gronnstalker's 2pc         | 2230.6 ± 0.70 | +16.3         |
+| 3            | head, shoulder, chest              | 3                     | Gronnstalker's 2pc         | 2229.5 ± 0.68 | +15.2         |
+| 3            | head, chest, legs                  | 2                     | Gronnstalker's 2pc         | 2229.5 ± 0.69 | +15.2         |
+| 4            | head, shoulder, chest, hands       | 4                     | Gronnstalker's 2pc and 4pc | 2329.1 ± 0.72 | +114.8        |
+| 4            | shoulder, chest, hands, legs       | 3                     | Gronnstalker's 2pc         | 2279.9 ± 0.70 | +65.6         |
+| 4            | head, shoulder, hands, legs        | 3                     | Gronnstalker's 2pc         | 2259.3 ± 0.70 | +45.0         |
+| 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 2256.7 ± 0.70 | +42.4         |
+| 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 2252.2 ± 0.70 | +37.9         |
+| 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 2354.0 ± 0.73 | +139.7        |
 
-The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables on [Tokens](tokens.md) under the same figures: Gronnstalker's Leggings (legs) at -7.6. None is in this spec's best-in-slot set.
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables on [Tokens](tokens.md) under the same figures: Gronnstalker's Leggings (legs) at -16.9. None is in this spec's best-in-slot set.
 
 ## The specs this page cannot measure
 

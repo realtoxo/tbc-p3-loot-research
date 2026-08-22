@@ -2,7 +2,7 @@
 title: Beast Mastery Hunter, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 3307.2 ± 0.97 damage per second, and this
+  This simulation profile measures 2927.5 ± 0.79 damage per second, and this
   page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **3307.2**                                                                            |
-| How precisely that average is known          | ± 0.97 DPS                                                                            |
-| How much a SINGLE pull varies                | ± 97.4 DPS                                                                            |
+| Damage per second, averaged over 10000 pulls | **2927.5**                                                                            |
+| How precisely that average is known          | ± 0.79 DPS                                                                            |
+| How much a SINGLE pull varies                | ± 79.2 DPS                                                                            |
 | Anchor                                       | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note}
@@ -38,9 +38,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 3307.2 ± 0.97     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 3685.7 ± 1.09     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 4266.4 ± 1.26     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2927.5 ± 0.79     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 3272.4 ± 0.89     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 3807.2 ± 1.03     | Essence of Suffering                                       |
 
 In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
 
@@ -50,51 +50,51 @@ A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styl
 
 | Main hand                                     | Off hand            | DPS           | Against this set |
 |-----------------------------------------------|---------------------|---------------|------------------|
-| Twinblade of the Phoenix                      | *empty, two-hander* | 3312.5 ± 0.97 | +5.3             |
-| Vengeful Gladiator's Decapitator *(this set)* | *empty, two-hander* | 3307.2 ± 0.97 | +0.0             |
-| Halberd of Desolation                         | *empty, two-hander* | 3294.0 ± 0.96 | -13.2            |
-| Merciless Gladiator's Decapitator             | *empty, two-hander* | 3277.3 ± 0.96 | -29.9            |
-| Legacy                                        | *empty, two-hander* | 3259.3 ± 0.95 | -47.9            |
-| Hellforged Halberd                            | *empty, two-hander* | 3232.1 ± 0.93 | -75.1            |
-| Blackened Spear                               | *empty, two-hander* | 3232.1 ± 0.93 | -75.1            |
-| Vengeful Gladiator's Painsaw                  | *empty, two-hander* | 3229.2 ± 0.92 | -78.0            |
-| Sonic Spear                                   | *empty, two-hander* | 3228.0 ± 0.93 | -79.2            |
-| Blade of Infamy                               | Blade of Infamy     | 3227.2 ± 0.92 | -80.0            |
-| Blade of Infamy                               | Boundless Agony     | 3226.4 ± 0.93 | -80.8            |
-| Talon of the Phoenix                          | Blade of Infamy     | 3217.0 ± 0.91 | -90.2            |
-| Talon of the Phoenix                          | Boundless Agony     | 3216.2 ± 0.92 | -91.0            |
-| Blade of Infamy                               | Tracker's Blade     | 3214.9 ± 0.92 | -92.3            |
-| Blade of Infamy                               | Blade of Savagery   | 3213.0 ± 0.92 | -94.2            |
-| Blade of Infamy                               | Claw of the Phoenix | 3211.5 ± 0.92 | -95.7            |
-| Illidari-Bane Claymore                        | *empty, two-hander* | 3211.2 ± 0.93 | -96.0            |
-| Talon of Azshara                              | Boundless Agony     | 3210.9 ± 0.91 | -96.3            |
-| Talon of Azshara                              | Blade of Infamy     | 3209.9 ± 0.90 | -97.3            |
-| Blade of Infamy                               | Talon of Azshara    | 3207.4 ± 0.91 | -99.8            |
-| Talon of the Phoenix                          | Tracker's Blade     | 3205.6 ± 0.91 | -101.6           |
-| Talon of the Phoenix                          | Blade of Savagery   | 3204.7 ± 0.92 | -102.5           |
-| Talon of the Phoenix                          | Claw of the Phoenix | 3202.5 ± 0.91 | -104.7           |
-| Talon of Azshara                              | Tracker's Blade     | 3198.8 ± 0.91 | -108.4           |
-| Talon of the Phoenix                          | Talon of Azshara    | 3198.7 ± 0.90 | -108.5           |
-| Talon of Azshara                              | Blade of Savagery   | 3198.2 ± 0.91 | -109.0           |
-| Talon of Azshara                              | Claw of the Phoenix | 3196.1 ± 0.91 | -111.1           |
-| Boundless Agony                               | Blade of Infamy     | 3183.0 ± 0.89 | -124.2           |
-| Boundless Agony                               | Tracker's Blade     | 3171.6 ± 0.88 | -135.6           |
-| Boundless Agony                               | Claw of the Phoenix | 3168.8 ± 0.88 | -138.4           |
-| Boundless Agony                               | Blade of Savagery   | 3168.1 ± 0.88 | -139.1           |
-| Boundless Agony                               | Talon of Azshara    | 3163.3 ± 0.89 | -143.9           |
-| Tracker's Blade                               | Blade of Infamy     | 3135.5 ± 0.86 | -171.7           |
-| Tracker's Blade                               | Boundless Agony     | 3132.9 ± 0.87 | -174.3           |
-| Blade of Savagery                             | Blade of Infamy     | 3120.1 ± 0.85 | -187.1           |
-| Tracker's Blade                               | Blade of Savagery   | 3119.1 ± 0.88 | -188.1           |
-| Blade of Savagery                             | Boundless Agony     | 3117.6 ± 0.85 | -189.6           |
-| Tracker's Blade                               | Claw of the Phoenix | 3116.9 ± 0.88 | -190.3           |
-| Tracker's Blade                               | Talon of Azshara    | 3115.8 ± 0.86 | -191.4           |
-| Blade of Savagery                             | Tracker's Blade     | 3107.5 ± 0.85 | -199.7           |
-| Blade of Savagery                             | Claw of the Phoenix | 3105.4 ± 0.85 | -201.8           |
-| Blade of Savagery                             | Blade of Savagery   | 3102.9 ± 0.86 | -204.3           |
-| Blade of Savagery                             | Talon of Azshara    | 3100.2 ± 0.85 | -207.0           |
+| Blade of Infamy                               | Blade of Infamy     | 2938.2 ± 0.79 | +10.7            |
+| Blade of Infamy                               | Boundless Agony     | 2937.3 ± 0.80 | +9.8             |
+| Boundless Agony                               | Blade of Infamy     | 2937.3 ± 0.80 | +9.8             |
+| Twinblade of the Phoenix                      | *empty, two-hander* | 2934.7 ± 0.79 | +7.2             |
+| Halberd of Desolation                         | *empty, two-hander* | 2927.7 ± 0.79 | +0.2             |
+| Vengeful Gladiator's Decapitator *(this set)* | *empty, two-hander* | 2927.5 ± 0.79 | +0.0             |
+| Tracker's Blade                               | Blade of Infamy     | 2925.0 ± 0.79 | -2.5             |
+| Blade of Infamy                               | Tracker's Blade     | 2925.0 ± 0.79 | -2.5             |
+| Talon of the Phoenix                          | Blade of Infamy     | 2924.9 ± 0.79 | -2.6             |
+| Blade of Infamy                               | Claw of the Phoenix | 2924.2 ± 0.79 | -3.3             |
+| Blade of Infamy                               | Blade of Savagery   | 2924.2 ± 0.79 | -3.3             |
+| Blade of Savagery                             | Blade of Infamy     | 2924.2 ± 0.79 | -3.3             |
+| Tracker's Blade                               | Boundless Agony     | 2923.9 ± 0.79 | -3.6             |
+| Boundless Agony                               | Tracker's Blade     | 2923.9 ± 0.79 | -3.6             |
+| Talon of the Phoenix                          | Boundless Agony     | 2923.7 ± 0.79 | -3.8             |
+| Boundless Agony                               | Claw of the Phoenix | 2923.1 ± 0.79 | -4.4             |
+| Boundless Agony                               | Blade of Savagery   | 2923.0 ± 0.79 | -4.5             |
+| Blade of Savagery                             | Boundless Agony     | 2923.0 ± 0.79 | -4.5             |
+| Talon of Azshara                              | Blade of Infamy     | 2917.9 ± 0.79 | -9.6             |
+| Blade of Infamy                               | Talon of Azshara    | 2917.9 ± 0.79 | -9.6             |
+| Talon of Azshara                              | Boundless Agony     | 2917.7 ± 0.79 | -9.8             |
+| Boundless Agony                               | Talon of Azshara    | 2917.7 ± 0.79 | -9.8             |
+| Vengeful Gladiator's Painsaw                  | *empty, two-hander* | 2914.3 ± 0.79 | -13.2            |
+| Talon of the Phoenix                          | Tracker's Blade     | 2911.6 ± 0.79 | -15.9            |
+| Tracker's Blade                               | Blade of Savagery   | 2911.0 ± 0.79 | -16.5            |
+| Blade of Savagery                             | Tracker's Blade     | 2911.0 ± 0.79 | -16.5            |
+| Talon of the Phoenix                          | Claw of the Phoenix | 2911.0 ± 0.79 | -16.5            |
+| Tracker's Blade                               | Claw of the Phoenix | 2910.9 ± 0.79 | -16.6            |
+| Talon of the Phoenix                          | Blade of Savagery   | 2910.9 ± 0.79 | -16.6            |
+| Blade of Savagery                             | Claw of the Phoenix | 2910.1 ± 0.79 | -17.4            |
+| Blade of Savagery                             | Blade of Savagery   | 2910.0 ± 0.79 | -17.5            |
+| Legacy                                        | *empty, two-hander* | 2909.1 ± 0.79 | -18.4            |
+| Merciless Gladiator's Decapitator             | *empty, two-hander* | 2906.5 ± 0.79 | -21.0            |
+| Talon of Azshara                              | Tracker's Blade     | 2905.7 ± 0.79 | -21.8            |
+| Tracker's Blade                               | Talon of Azshara    | 2905.7 ± 0.79 | -21.8            |
+| Talon of the Phoenix                          | Talon of Azshara    | 2905.6 ± 0.79 | -21.9            |
+| Talon of Azshara                              | Claw of the Phoenix | 2905.0 ± 0.79 | -22.5            |
+| Talon of Azshara                              | Blade of Savagery   | 2904.7 ± 0.79 | -22.8            |
+| Blade of Savagery                             | Talon of Azshara    | 2904.7 ± 0.79 | -22.8            |
+| Hellforged Halberd                            | *empty, two-hander* | 2900.7 ± 0.79 | -26.8            |
+| Blackened Spear                               | *empty, two-hander* | 2900.7 ± 0.79 | -26.8            |
+| Sonic Spear                                   | *empty, two-hander* | 2896.5 ± 0.78 | -31.0            |
+| Illidari-Bane Claymore                        | *empty, two-hander* | 2866.8 ± 0.78 | -60.7            |
 
-The best combination, Twinblade of the Phoenix alone, a two-hander, measures +5.3 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Blade of Infamy with Blade of Infamy, measures +10.7 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Ranged weapons
 
@@ -102,12 +102,12 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 | Ranged                            | DPS           | Against this set |
 |-----------------------------------|---------------|------------------|
-| Bristleblitz Striker *(this set)* | 3307.2 ± 0.97 | +0.0             |
-| Black Bow of the Betrayer         | 3297.9 ± 0.96 | -9.3             |
-| Serpent Spine Longbow             | 3293.2 ± 0.97 | -14.0            |
-| Legionkiller                      | 3293.0 ± 0.95 | -14.2            |
-| Arcanite Steam-Pistol             | 3276.2 ± 0.94 | -31.0            |
-| Sunfury Bow of the Phoenix        | 3273.9 ± 0.94 | -33.3            |
+| Bristleblitz Striker *(this set)* | 2927.5 ± 0.79 | +0.0             |
+| Black Bow of the Betrayer         | 2917.5 ± 0.79 | -10.0            |
+| Serpent Spine Longbow             | 2910.8 ± 0.79 | -16.7            |
+| Legionkiller                      | 2901.7 ± 0.78 | -25.8            |
+| Arcanite Steam-Pistol             | 2884.1 ± 0.77 | -43.4            |
+| Sunfury Bow of the Phoenix        | 2878.5 ± 0.77 | -49.0            |
 
 This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 
@@ -125,16 +125,16 @@ The ten best of the 28 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                         | DPS           | Against this set |
 |---------------------------------|---------------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch                | 3307.2 ± 0.97 | +0.0             |
-| Dragonspine Trophy              | Tsunami Talisman                | 3292.7 ± 0.96 | -14.5            |
-| Dragonspine Trophy              | Madness of the Betrayer         | 3289.7 ± 0.97 | -17.5            |
-| Dragonspine Trophy              | Core of Ar'kelos                | 3283.9 ± 0.97 | -23.3            |
-| Dragonspine Trophy              | Ashtongue Talisman of Swiftness | 3281.8 ± 0.97 | -25.4            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade          | 3280.2 ± 0.96 | -27.0            |
-| Tsunami Talisman                | Bloodlust Brooch                | 3272.1 ± 0.95 | -35.1            |
-| Madness of the Betrayer         | Bloodlust Brooch                | 3270.6 ± 0.96 | -36.6            |
-| Darkmoon Card: Crusade          | Bloodlust Brooch                | 3262.5 ± 0.96 | -44.7            |
-| Bloodlust Brooch                | Ashtongue Talisman of Swiftness | 3261.1 ± 0.97 | -46.1            |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch                | 2927.5 ± 0.79 | +0.0             |
+| Dragonspine Trophy              | Tsunami Talisman                | 2914.0 ± 0.79 | -13.5            |
+| Tsunami Talisman                | Bloodlust Brooch                | 2914.0 ± 0.78 | -13.5            |
+| Dragonspine Trophy              | Madness of the Betrayer         | 2913.0 ± 0.79 | -14.5            |
+| Dragonspine Trophy              | Ashtongue Talisman of Swiftness | 2912.7 ± 0.80 | -14.8            |
+| Madness of the Betrayer         | Bloodlust Brooch                | 2911.4 ± 0.78 | -16.1            |
+| Bloodlust Brooch                | Ashtongue Talisman of Swiftness | 2910.5 ± 0.78 | -17.0            |
+| Dragonspine Trophy              | Core of Ar'kelos                | 2907.5 ± 0.79 | -20.0            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade          | 2904.3 ± 0.78 | -23.2            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch                | 2904.1 ± 0.78 | -23.4            |
 
 The worn pair is again the best row, at plus zero.
 
@@ -151,18 +151,18 @@ The ten best of the 43 combinations measured, and the worn pair.
 
 | Ring                               | Ring                         | DPS           | Against this set |
 |------------------------------------|------------------------------|---------------|------------------|
-| Band of the Eternal Champion       | Band of the Ranger-General   | 3309.1 ± 0.97 | +1.9             |
-| Stormrage Signet Ring *(this set)* | Band of the Eternal Champion | 3307.2 ± 0.97 | +0.0             |
-| Band of the Eternal Champion       | Ring of Deceitful Intent     | 3306.4 ± 0.97 | -0.8             |
-| Band of the Eternal Champion       | Ring of Lethality            | 3305.7 ± 0.97 | -1.5             |
-| Band of the Eternal Champion       | Ring of a Thousand Marks     | 3298.6 ± 0.96 | -8.6             |
-| Band of the Eternal Champion       | Garona's Signet Ring         | 3296.5 ± 0.97 | -10.7            |
-| Band of the Ranger-General         | Band of Eternity             | 3293.4 ± 0.96 | -13.8            |
-| Stormrage Signet Ring              | Band of Eternity             | 3291.5 ± 0.97 | -15.7            |
-| Ring of Deceitful Intent           | Band of Eternity             | 3290.8 ± 0.97 | -16.4            |
-| Ring of Lethality                  | Band of Eternity             | 3290.1 ± 0.96 | -17.1            |
+| Band of the Eternal Champion       | Band of the Ranger-General   | 2928.5 ± 0.78 | +1.0             |
+| Stormrage Signet Ring *(this set)* | Band of the Eternal Champion | 2927.5 ± 0.79 | +0.0             |
+| Band of the Eternal Champion       | Ring of Deceitful Intent     | 2926.7 ± 0.79 | -0.8             |
+| Band of the Eternal Champion       | Ring of Lethality            | 2926.1 ± 0.79 | -1.4             |
+| Band of the Eternal Champion       | Ring of a Thousand Marks     | 2919.4 ± 0.78 | -8.1             |
+| Band of the Eternal Champion       | Garona's Signet Ring         | 2918.1 ± 0.79 | -9.4             |
+| Band of the Ranger-General         | Band of Eternity             | 2914.7 ± 0.78 | -12.8            |
+| Stormrage Signet Ring              | Band of Eternity             | 2913.7 ± 0.79 | -13.8            |
+| Ring of Deceitful Intent           | Band of Eternity             | 2912.9 ± 0.78 | -14.6            |
+| Ring of Lethality                  | Band of Eternity             | 2912.3 ± 0.78 | -15.2            |
 
-The best combination, Band of the Eternal Champion with Band of the Ranger-General, measures +1.9 against this set's own rings, so the upgrade path at this anchor runs through it.
+The best combination, Band of the Eternal Champion with Band of the Ranger-General, measures +1.0 against this set's own rings, so the upgrade path at this anchor runs through it.
 
 ## The set
 
@@ -272,11 +272,11 @@ The rotation is the action priority list the simulator itself ships for this
 spec. Writing our own would be a modelling choice we could not defend, and
 taking theirs is one we can cite.
 
-| Setting       | Value                                 |
-|---------------|---------------------------------------|
-| Talent string | `522002005150122431051-0505201205`    |
-| Rotation      | `ui/hunter/dps/apls/default.apl.json` |
-| Simulator     | v0.0.116                              |
-| Iterations    | 10000                                 |
-| Random seed   | 1                                     |
-| Encounter     | 150 seconds, 1 target at level 73     |
+| Setting       | Value                                       |
+|---------------|---------------------------------------------|
+| Talent string | `522002005150122431051-0505201205`          |
+| Rotation      | `ui/data/sim/apls/hunter-no-weave.apl.json` |
+| Simulator     | v0.0.116                                    |
+| Iterations    | 10000                                       |
+| Random seed   | 1                                           |
+| Encounter     | 150 seconds, 1 target at level 73           |

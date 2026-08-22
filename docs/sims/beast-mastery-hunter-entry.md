@@ -2,7 +2,7 @@
 title: Beast Mastery Hunter, Entry Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 3011.8 ± 0.85 damage per second, and this
+  This simulation profile measures 2721.8 ± 0.72 damage per second, and this
   page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                          |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **3011.8**                                                                     |
-| How precisely that average is known          | ± 0.85 DPS                                                                     |
-| How much a SINGLE pull varies                | ± 85.2 DPS                                                                     |
+| Damage per second, averaged over 10000 pulls | **2721.8**                                                                     |
+| How precisely that average is known          | ± 0.72 DPS                                                                     |
+| How much a SINGLE pull varies                | ± 72.3 DPS                                                                     |
 | Anchor                                       | Entry. The Phase 2 best-in-slot set. What a raider walks into Phase 3 wearing. |
 
 ::: {.note}
@@ -38,9 +38,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 3011.8 ± 0.85     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 3342.3 ± 0.95     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 4008.9 ± 1.15     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2721.8 ± 0.72     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 3030.5 ± 0.81     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 3653.1 ± 0.98     | Essence of Suffering                                       |
 
 In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
 
@@ -50,18 +50,18 @@ A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styl
 
 | Main hand                         | Off hand            | DPS           | Against this set |
 |-----------------------------------|---------------------|---------------|------------------|
-| Twinblade of the Phoenix          | *empty, two-hander* | 3091.2 ± 0.90 | +79.4            |
-| Merciless Gladiator's Decapitator | *empty, two-hander* | 3058.2 ± 0.88 | +46.4            |
-| Legacy                            | *empty, two-hander* | 3041.9 ± 0.87 | +30.1            |
-| Hellforged Halberd                | *empty, two-hander* | 3016.7 ± 0.86 | +4.9             |
-| Blackened Spear                   | *empty, two-hander* | 3016.7 ± 0.86 | +4.9             |
-| Sonic Spear                       | *empty, two-hander* | 3012.2 ± 0.86 | +0.4             |
-| Talon of the Phoenix *(this set)* | Claw of the Phoenix | 3011.8 ± 0.85 | +0.0             |
-| Talon of the Phoenix              | Talon of Azshara    | 3008.0 ± 0.85 | -3.8             |
-| Talon of Azshara                  | Claw of the Phoenix | 3006.1 ± 0.85 | -5.7             |
-| Illidari-Bane Claymore            | *empty, two-hander* | 2995.6 ± 0.85 | -16.2            |
+| Twinblade of the Phoenix          | *empty, two-hander* | 2725.1 ± 0.72 | +3.3             |
+| Talon of the Phoenix *(this set)* | Claw of the Phoenix | 2721.8 ± 0.72 | +0.0             |
+| Talon of the Phoenix              | Talon of Azshara    | 2717.0 ± 0.72 | -4.8             |
+| Talon of Azshara                  | Claw of the Phoenix | 2716.2 ± 0.72 | -5.6             |
+| Legacy                            | *empty, two-hander* | 2701.4 ± 0.73 | -20.4            |
+| Merciless Gladiator's Decapitator | *empty, two-hander* | 2699.4 ± 0.72 | -22.4            |
+| Hellforged Halberd                | *empty, two-hander* | 2693.8 ± 0.72 | -28.0            |
+| Blackened Spear                   | *empty, two-hander* | 2693.8 ± 0.72 | -28.0            |
+| Sonic Spear                       | *empty, two-hander* | 2690.3 ± 0.72 | -31.5            |
+| Illidari-Bane Claymore            | *empty, two-hander* | 2662.3 ± 0.71 | -59.5            |
 
-The best combination, Twinblade of the Phoenix alone, a two-hander, measures +79.4 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Twinblade of the Phoenix alone, a two-hander, measures +3.3 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Ranged weapons
 
@@ -69,9 +69,9 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 | Ranged                             | DPS           | Against this set |
 |------------------------------------|---------------|------------------|
-| Serpent Spine Longbow *(this set)* | 3011.8 ± 0.85 | +0.0             |
-| Arcanite Steam-Pistol              | 2991.0 ± 0.82 | -20.8            |
-| Sunfury Bow of the Phoenix         | 2986.6 ± 0.83 | -25.2            |
+| Serpent Spine Longbow *(this set)* | 2721.8 ± 0.72 | +0.0             |
+| Arcanite Steam-Pistol              | 2697.4 ± 0.73 | -24.4            |
+| Sunfury Bow of the Phoenix         | 2692.4 ± 0.73 | -29.4            |
 
 This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 
@@ -89,16 +89,16 @@ The ten best of the 15 combinations measured, and the worn pair.
 
 | Trinket                         | Trinket                | DPS           | Against this set |
 |---------------------------------|------------------------|---------------|------------------|
-| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 3011.8 ± 0.85 | +0.0             |
-| Dragonspine Trophy              | Tsunami Talisman       | 2999.4 ± 0.84 | -12.4            |
-| Dragonspine Trophy              | Core of Ar'kelos       | 2990.4 ± 0.84 | -21.4            |
-| Dragonspine Trophy              | Darkmoon Card: Crusade | 2986.9 ± 0.84 | -24.9            |
-| Tsunami Talisman                | Bloodlust Brooch       | 2979.3 ± 0.86 | -32.5            |
-| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2971.5 ± 0.84 | -40.3            |
-| Tsunami Talisman                | Core of Ar'kelos       | 2958.4 ± 0.86 | -53.4            |
-| Bloodlust Brooch                | Core of Ar'kelos       | 2957.3 ± 0.84 | -54.5            |
-| Tsunami Talisman                | Darkmoon Card: Crusade | 2955.1 ± 0.85 | -56.7            |
-| Dragonspine Trophy              | Talon of Al'ar         | 2955.0 ± 0.83 | -56.8            |
+| Dragonspine Trophy *(this set)* | Bloodlust Brooch       | 2721.8 ± 0.72 | +0.0             |
+| Tsunami Talisman                | Bloodlust Brooch       | 2709.9 ± 0.72 | -11.9            |
+| Dragonspine Trophy              | Tsunami Talisman       | 2707.6 ± 0.71 | -14.2            |
+| Dragonspine Trophy              | Core of Ar'kelos       | 2703.3 ± 0.72 | -18.5            |
+| Darkmoon Card: Crusade          | Bloodlust Brooch       | 2700.5 ± 0.71 | -21.3            |
+| Dragonspine Trophy              | Darkmoon Card: Crusade | 2700.3 ± 0.72 | -21.5            |
+| Tsunami Talisman                | Core of Ar'kelos       | 2691.5 ± 0.71 | -30.3            |
+| Tsunami Talisman                | Darkmoon Card: Crusade | 2688.4 ± 0.71 | -33.4            |
+| Bloodlust Brooch                | Core of Ar'kelos       | 2687.9 ± 0.71 | -33.9            |
+| Darkmoon Card: Crusade          | Core of Ar'kelos       | 2682.4 ± 0.70 | -39.4            |
 
 The worn pair is again the best row, at plus zero.
 
@@ -115,12 +115,12 @@ The ten best of the 6 combinations measured, and the worn pair.
 
 | Ring                           | Ring                       | DPS           | Against this set |
 |--------------------------------|----------------------------|---------------|------------------|
-| Ring of Lethality *(this set)* | Band of the Ranger-General | 3011.8 ± 0.85 | +0.0             |
-| Band of the Ranger-General     | Ring of a Thousand Marks   | 3004.8 ± 0.85 | -7.0             |
-| Band of the Ranger-General     | Garona's Signet Ring       | 3003.5 ± 0.85 | -8.3             |
-| Ring of Lethality              | Ring of a Thousand Marks   | 3002.3 ± 0.85 | -9.5             |
-| Ring of Lethality              | Garona's Signet Ring       | 3000.9 ± 0.85 | -10.9            |
-| Ring of a Thousand Marks       | Garona's Signet Ring       | 2994.1 ± 0.85 | -17.7            |
+| Ring of Lethality *(this set)* | Band of the Ranger-General | 2721.8 ± 0.72 | +0.0             |
+| Band of the Ranger-General     | Ring of a Thousand Marks   | 2715.6 ± 0.72 | -6.2             |
+| Band of the Ranger-General     | Garona's Signet Ring       | 2714.6 ± 0.72 | -7.2             |
+| Ring of Lethality              | Ring of a Thousand Marks   | 2713.1 ± 0.72 | -8.7             |
+| Ring of Lethality              | Garona's Signet Ring       | 2711.7 ± 0.72 | -10.1            |
+| Ring of a Thousand Marks       | Garona's Signet Ring       | 2706.0 ± 0.72 | -15.8            |
 
 The worn pair is again the best row, at plus zero.
 
@@ -233,11 +233,11 @@ The rotation is the action priority list the simulator itself ships for this
 spec. Writing our own would be a modelling choice we could not defend, and
 taking theirs is one we can cite.
 
-| Setting       | Value                                 |
-|---------------|---------------------------------------|
-| Talent string | `522002005150122431051-0505201205`    |
-| Rotation      | `ui/hunter/dps/apls/default.apl.json` |
-| Simulator     | v0.0.116                              |
-| Iterations    | 10000                                 |
-| Random seed   | 1                                     |
-| Encounter     | 150 seconds, 1 target at level 73     |
+| Setting       | Value                                       |
+|---------------|---------------------------------------------|
+| Talent string | `522002005150122431051-0505201205`          |
+| Rotation      | `ui/data/sim/apls/hunter-no-weave.apl.json` |
+| Simulator     | v0.0.116                                    |
+| Iterations    | 10000                                       |
+| Random seed   | 1                                           |
+| Encounter     | 150 seconds, 1 target at level 73           |

@@ -2,7 +2,7 @@
 title: Survival Hunter, BiS Set
 eyebrow: Simulated Set
 subtitle: >-
-  This simulation profile measures 2799.8 ± 0.89 damage per second, and this
+  This simulation profile measures 2399.9 ± 0.73 damage per second, and this
   page is everything that produced that figure.
 status: draft
 updated: 2026-08-15
@@ -20,9 +20,9 @@ Back to [Simulated Throughput](../sims.md).
 
 | Figure                                       | Value                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------|
-| Damage per second, averaged over 10000 pulls | **2799.8**                                                                            |
-| How precisely that average is known          | ± 0.89 DPS                                                                            |
-| How much a SINGLE pull varies                | ± 89.1 DPS                                                                            |
+| Damage per second, averaged over 10000 pulls | **2399.9**                                                                            |
+| How precisely that average is known          | ± 0.73 DPS                                                                            |
+| How much a SINGLE pull varies                | ± 72.5 DPS                                                                            |
 | Anchor                                       | BiS. The full Phase 3 best-in-slot set, with the guild lead's weapon routing applied. |
 
 ::: {.note}
@@ -38,9 +38,9 @@ damage lands, so a physical spec moves between them and a pure caster does not.
 
 | Boss armor | Mitigation | This set measures | Targets at that armor                                      |
 |------------|------------|-------------------|------------------------------------------------------------|
-| 7684       | 42.12%     | 2799.8 ± 0.89     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
-| 6193       | 36.97%     | 3105.9 ± 0.99     | Anetheron, Archimonde, Azgalor ...                         |
-| 0          | 0.00%      | 3618.5 ± 1.15     | Essence of Suffering                                       |
+| 7684       | 42.12%     | 2399.9 ± 0.73     | Essence of Anger, Essence of Desire, Flame of Azzinoth ... |
+| 6193       | 36.97%     | 2669.7 ± 0.81     | Anetheron, Archimonde, Azgalor ...                         |
+| 0          | 0.00%      | 3125.8 ± 0.95     | Essence of Suffering                                       |
 
 In every table below, only the named slots change; the enchants, consumables, buffs and seed hold still, so every figure is directly comparable with the figure at the top of this page.
 
@@ -50,123 +50,123 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 
 | Main hand                          | Off hand                      | DPS           | Against this set |
 |------------------------------------|-------------------------------|---------------|------------------|
-| Twinblade of the Phoenix           | *empty, two-hander*           | 2805.5 ± 0.89 | +5.7             |
-| Halberd of Desolation *(this set)* | *empty, two-hander*           | 2799.8 ± 0.89 | +0.0             |
-| Vengeful Gladiator's Decapitator   | *empty, two-hander*           | 2798.6 ± 0.89 | -1.2             |
-| Legacy                             | *empty, two-hander*           | 2764.0 ± 0.88 | -35.8            |
-| Blade of Infamy                    | Blade of Infamy               | 2754.2 ± 0.85 | -45.6            |
-| Gorehowl                           | *empty, two-hander*           | 2749.6 ± 0.87 | -50.2            |
-| Blade of Infamy                    | Netherbane                    | 2742.8 ± 0.84 | -57.0            |
-| Netherbane                         | Blade of Infamy               | 2739.6 ± 0.84 | -60.2            |
-| Blade of Infamy                    | Talon of Azshara              | 2732.0 ± 0.84 | -67.8            |
-| Blade of Infamy                    | Messenger of Fate             | 2729.7 ± 0.84 | -70.1            |
-| Netherbane                         | Netherbane                    | 2728.4 ± 0.84 | -71.4            |
-| Hellforged Halberd                 | *empty, two-hander*           | 2727.9 ± 0.86 | -71.9            |
-| Blackened Spear                    | *empty, two-hander*           | 2727.9 ± 0.86 | -71.9            |
-| Blade of Infamy                    | Claw of the Phoenix           | 2727.5 ± 0.84 | -72.3            |
-| Sonic Spear                        | *empty, two-hander*           | 2726.6 ± 0.86 | -73.2            |
-| Blade of Infamy                    | Fist of Molten Fury           | 2724.8 ± 0.84 | -75.0            |
-| Blade of Infamy                    | Emerald Ripper                | 2724.2 ± 0.84 | -75.6            |
-| Blade of Infamy                    | Guile of Khoraazi             | 2723.3 ± 0.84 | -76.5            |
-| Blade of Infamy                    | Claw of the Netherwing Flight | 2722.0 ± 0.84 | -77.8            |
-| Blade of Infamy                    | Stellaris                     | 2721.9 ± 0.83 | -77.9            |
-| Blade of Infamy                    | Riftmaker                     | 2721.2 ± 0.84 | -78.6            |
-| Netherbane                         | Talon of Azshara              | 2717.8 ± 0.84 | -82.0            |
-| Netherbane                         | Messenger of Fate             | 2715.7 ± 0.84 | -84.1            |
-| Netherbane                         | Claw of the Phoenix           | 2713.8 ± 0.84 | -86.0            |
-| Netherbane                         | Fist of Molten Fury           | 2712.1 ± 0.84 | -87.7            |
-| Netherbane                         | Emerald Ripper                | 2709.9 ± 0.84 | -89.9            |
-| Netherbane                         | Guile of Khoraazi             | 2709.1 ± 0.84 | -90.7            |
-| Terokk's Quill                     | *empty, two-hander*           | 2708.3 ± 0.85 | -91.5            |
-| Netherbane                         | Stellaris                     | 2708.0 ± 0.83 | -91.8            |
-| Netherbane                         | Claw of the Netherwing Flight | 2707.9 ± 0.83 | -91.9            |
-| Netherbane                         | Riftmaker                     | 2707.2 ± 0.83 | -92.6            |
-| Illidari-Bane Claymore             | *empty, two-hander*           | 2698.4 ± 0.85 | -101.4           |
-| Claw of Molten Fury                | Blade of Infamy               | 2692.9 ± 0.84 | -106.9           |
-| Talon of Azshara                   | Blade of Infamy               | 2686.7 ± 0.83 | -113.1           |
-| Claw of Molten Fury                | Netherbane                    | 2683.5 ± 0.83 | -116.3           |
-| Talon of Azshara                   | Netherbane                    | 2676.0 ± 0.83 | -123.8           |
-| Claw of Molten Fury                | Messenger of Fate             | 2673.9 ± 0.83 | -125.9           |
-| Claw of Molten Fury                | Talon of Azshara              | 2671.9 ± 0.83 | -127.9           |
-| Claw of Molten Fury                | Claw of the Phoenix           | 2671.0 ± 0.83 | -128.8           |
-| Claw of Molten Fury                | Fist of Molten Fury           | 2668.3 ± 0.83 | -131.5           |
-| Talon of Azshara                   | Messenger of Fate             | 2667.5 ± 0.83 | -132.3           |
-| Claw of Molten Fury                | Guile of Khoraazi             | 2667.1 ± 0.84 | -132.7           |
-| Claw of Molten Fury                | Emerald Ripper                | 2666.4 ± 0.83 | -133.4           |
-| Claw of Molten Fury                | Stellaris                     | 2665.5 ± 0.83 | -134.3           |
-| Talon of Azshara                   | Claw of the Phoenix           | 2664.3 ± 0.83 | -135.5           |
-| Claw of Molten Fury                | Riftmaker                     | 2663.3 ± 0.83 | -136.5           |
-| Talon of Azshara                   | Fist of Molten Fury           | 2662.1 ± 0.83 | -137.7           |
-| Claw of Molten Fury                | Claw of the Netherwing Flight | 2661.7 ± 0.84 | -138.1           |
-| Talon of Azshara                   | Guile of Khoraazi             | 2660.2 ± 0.84 | -139.6           |
-| Talon of Azshara                   | Emerald Ripper                | 2659.6 ± 0.83 | -140.2           |
-| Talon of Azshara                   | Stellaris                     | 2657.9 ± 0.83 | -141.9           |
-| Talon of Azshara                   | Riftmaker                     | 2656.0 ± 0.83 | -143.8           |
-| Talon of Azshara                   | Claw of the Netherwing Flight | 2655.5 ± 0.83 | -144.3           |
-| Emerald Ripper                     | Blade of Infamy               | 2639.5 ± 0.78 | -160.3           |
-| Stellaris                          | Blade of Infamy               | 2637.3 ± 0.79 | -162.5           |
-| Riftmaker                          | Blade of Infamy               | 2632.6 ± 0.78 | -167.2           |
-| Emerald Ripper                     | Netherbane                    | 2628.8 ± 0.78 | -171.0           |
-| Stellaris                          | Netherbane                    | 2626.4 ± 0.78 | -173.4           |
-| Claw of the Netherwing Flight      | Blade of Infamy               | 2622.4 ± 0.78 | -177.4           |
-| Riftmaker                          | Netherbane                    | 2622.1 ± 0.78 | -177.7           |
-| Emerald Ripper                     | Messenger of Fate             | 2620.0 ± 0.78 | -179.8           |
-| Emerald Ripper                     | Talon of Azshara              | 2619.1 ± 0.78 | -180.7           |
-| Stellaris                          | Messenger of Fate             | 2618.7 ± 0.78 | -181.1           |
-| Emerald Ripper                     | Claw of the Phoenix           | 2616.9 ± 0.78 | -182.9           |
-| Emerald Ripper                     | Guile of Khoraazi             | 2615.9 ± 0.78 | -183.9           |
-| Stellaris                          | Talon of Azshara              | 2615.5 ± 0.78 | -184.3           |
-| Emerald Ripper                     | Fist of Molten Fury           | 2615.3 ± 0.78 | -184.5           |
-| Stellaris                          | Claw of the Phoenix           | 2615.2 ± 0.79 | -184.6           |
-| Stellaris                          | Fist of Molten Fury           | 2613.1 ± 0.78 | -186.7           |
-| Riftmaker                          | Messenger of Fate             | 2612.5 ± 0.78 | -187.3           |
-| Claw of the Netherwing Flight      | Netherbane                    | 2611.9 ± 0.77 | -187.9           |
-| Riftmaker                          | Talon of Azshara              | 2611.5 ± 0.77 | -188.3           |
-| Emerald Ripper                     | Claw of the Netherwing Flight | 2611.2 ± 0.77 | -188.6           |
-| Stellaris                          | Guile of Khoraazi             | 2610.9 ± 0.78 | -188.9           |
-| Emerald Ripper                     | Riftmaker                     | 2610.8 ± 0.78 | -189.0           |
-| Stellaris                          | Emerald Ripper                | 2610.6 ± 0.78 | -189.2           |
-| Emerald Ripper                     | Stellaris                     | 2610.0 ± 0.78 | -189.8           |
-| Riftmaker                          | Claw of the Phoenix           | 2609.9 ± 0.78 | -189.9           |
-| Riftmaker                          | Guile of Khoraazi             | 2608.1 ± 0.78 | -191.7           |
-| Stellaris                          | Riftmaker                     | 2608.0 ± 0.78 | -191.8           |
-| Riftmaker                          | Fist of Molten Fury           | 2608.0 ± 0.78 | -191.8           |
-| Stellaris                          | Claw of the Netherwing Flight | 2607.6 ± 0.77 | -192.2           |
-| Stellaris                          | Stellaris                     | 2606.9 ± 0.78 | -192.9           |
-| Riftmaker                          | Emerald Ripper                | 2606.6 ± 0.78 | -193.2           |
-| Guile of Khoraazi                  | Blade of Infamy               | 2606.3 ± 0.77 | -193.5           |
-| Riftmaker                          | Claw of the Netherwing Flight | 2603.4 ± 0.77 | -196.4           |
-| Riftmaker                          | Stellaris                     | 2603.0 ± 0.77 | -196.8           |
-| Claw of the Netherwing Flight      | Messenger of Fate             | 2602.9 ± 0.77 | -196.9           |
-| Claw of the Netherwing Flight      | Talon of Azshara              | 2601.9 ± 0.77 | -197.9           |
-| Claw of the Netherwing Flight      | Claw of the Phoenix           | 2599.7 ± 0.77 | -200.1           |
-| Claw of the Netherwing Flight      | Guile of Khoraazi             | 2598.2 ± 0.77 | -201.6           |
-| Claw of the Netherwing Flight      | Fist of Molten Fury           | 2597.4 ± 0.77 | -202.4           |
-| Claw of the Netherwing Flight      | Emerald Ripper                | 2596.8 ± 0.77 | -203.0           |
-| Guile of Khoraazi                  | Netherbane                    | 2595.7 ± 0.77 | -204.1           |
-| Claw of the Netherwing Flight      | Riftmaker                     | 2593.2 ± 0.77 | -206.6           |
-| Claw of the Netherwing Flight      | Stellaris                     | 2592.8 ± 0.77 | -207.0           |
-| Messenger of Fate                  | Blade of Infamy               | 2591.3 ± 0.77 | -208.5           |
-| Guile of Khoraazi                  | Messenger of Fate             | 2588.3 ± 0.77 | -211.5           |
-| Guile of Khoraazi                  | Claw of the Phoenix           | 2585.8 ± 0.77 | -214.0           |
-| Guile of Khoraazi                  | Talon of Azshara              | 2584.9 ± 0.77 | -214.9           |
-| Guile of Khoraazi                  | Emerald Ripper                | 2584.6 ± 0.77 | -215.2           |
-| Guile of Khoraazi                  | Fist of Molten Fury           | 2584.1 ± 0.77 | -215.7           |
-| Guile of Khoraazi                  | Stellaris                     | 2581.4 ± 0.77 | -218.4           |
-| Guile of Khoraazi                  | Riftmaker                     | 2581.3 ± 0.77 | -218.5           |
-| Messenger of Fate                  | Netherbane                    | 2580.9 ± 0.76 | -218.9           |
-| Messenger of Fate                  | Messenger of Fate             | 2580.6 ± 0.76 | -219.2           |
-| Guile of Khoraazi                  | Claw of the Netherwing Flight | 2580.1 ± 0.76 | -219.7           |
-| Messenger of Fate                  | Claw of the Phoenix           | 2578.9 ± 0.76 | -220.9           |
-| Messenger of Fate                  | Fist of Molten Fury           | 2577.2 ± 0.76 | -222.6           |
-| Messenger of Fate                  | Guile of Khoraazi             | 2575.8 ± 0.76 | -224.0           |
-| Messenger of Fate                  | Emerald Ripper                | 2575.1 ± 0.76 | -224.7           |
-| Messenger of Fate                  | Stellaris                     | 2572.2 ± 0.76 | -227.6           |
-| Messenger of Fate                  | Riftmaker                     | 2571.8 ± 0.76 | -228.0           |
-| Messenger of Fate                  | Claw of the Netherwing Flight | 2571.8 ± 0.76 | -228.0           |
-| Messenger of Fate                  | Talon of Azshara              | 2571.2 ± 0.76 | -228.6           |
+| Blade of Infamy                    | Blade of Infamy               | 2410.6 ± 0.73 | +10.7            |
+| Netherbane                         | Blade of Infamy               | 2401.5 ± 0.72 | +1.6             |
+| Blade of Infamy                    | Netherbane                    | 2401.5 ± 0.72 | +1.6             |
+| Halberd of Desolation *(this set)* | *empty, two-hander*           | 2399.9 ± 0.73 | +0.0             |
+| Blade of Infamy                    | Messenger of Fate             | 2399.1 ± 0.72 | -0.8             |
+| Messenger of Fate                  | Blade of Infamy               | 2399.1 ± 0.72 | -0.8             |
+| Blade of Infamy                    | Claw of the Phoenix           | 2396.9 ± 0.72 | -3.0             |
+| Twinblade of the Phoenix           | *empty, two-hander*           | 2395.4 ± 0.72 | -4.5             |
+| Blade of Infamy                    | Fist of Molten Fury           | 2394.1 ± 0.72 | -5.8             |
+| Claw of Molten Fury                | Blade of Infamy               | 2394.1 ± 0.72 | -5.8             |
+| Guile of Khoraazi                  | Blade of Infamy               | 2393.3 ± 0.72 | -6.6             |
+| Blade of Infamy                    | Guile of Khoraazi             | 2393.3 ± 0.72 | -6.6             |
+| Emerald Ripper                     | Blade of Infamy               | 2392.6 ± 0.72 | -7.3             |
+| Blade of Infamy                    | Emerald Ripper                | 2392.6 ± 0.72 | -7.3             |
+| Netherbane                         | Netherbane                    | 2391.7 ± 0.72 | -8.2             |
+| Stellaris                          | Blade of Infamy               | 2390.3 ± 0.72 | -9.6             |
+| Riftmaker                          | Blade of Infamy               | 2390.3 ± 0.72 | -9.6             |
+| Blade of Infamy                    | Stellaris                     | 2390.3 ± 0.72 | -9.6             |
+| Blade of Infamy                    | Riftmaker                     | 2390.3 ± 0.72 | -9.6             |
+| Netherbane                         | Messenger of Fate             | 2389.7 ± 0.72 | -10.2            |
+| Messenger of Fate                  | Netherbane                    | 2389.7 ± 0.72 | -10.2            |
+| Talon of Azshara                   | Blade of Infamy               | 2389.6 ± 0.73 | -10.3            |
+| Blade of Infamy                    | Talon of Azshara              | 2389.6 ± 0.73 | -10.3            |
+| Messenger of Fate                  | Messenger of Fate             | 2387.6 ± 0.72 | -12.3            |
+| Netherbane                         | Claw of the Phoenix           | 2387.5 ± 0.72 | -12.4            |
+| Vengeful Gladiator's Decapitator   | *empty, two-hander*           | 2386.9 ± 0.72 | -13.0            |
+| Netherbane                         | Fist of Molten Fury           | 2386.0 ± 0.72 | -13.9            |
+| Blade of Infamy                    | Claw of the Netherwing Flight | 2386.0 ± 0.73 | -13.9            |
+| Claw of the Netherwing Flight      | Blade of Infamy               | 2386.0 ± 0.73 | -13.9            |
+| Claw of Molten Fury                | Netherbane                    | 2386.0 ± 0.72 | -13.9            |
+| Messenger of Fate                  | Claw of the Phoenix           | 2385.2 ± 0.73 | -14.7            |
+| Guile of Khoraazi                  | Netherbane                    | 2383.9 ± 0.72 | -16.0            |
+| Netherbane                         | Guile of Khoraazi             | 2383.9 ± 0.72 | -16.0            |
+| Messenger of Fate                  | Fist of Molten Fury           | 2383.9 ± 0.72 | -16.0            |
+| Claw of Molten Fury                | Messenger of Fate             | 2383.9 ± 0.72 | -16.0            |
+| Emerald Ripper                     | Netherbane                    | 2383.2 ± 0.72 | -16.7            |
+| Netherbane                         | Emerald Ripper                | 2383.2 ± 0.72 | -16.7            |
+| Guile of Khoraazi                  | Messenger of Fate             | 2382.7 ± 0.72 | -17.2            |
+| Messenger of Fate                  | Guile of Khoraazi             | 2382.7 ± 0.72 | -17.2            |
+| Emerald Ripper                     | Messenger of Fate             | 2382.0 ± 0.72 | -17.9            |
+| Messenger of Fate                  | Emerald Ripper                | 2382.0 ± 0.72 | -17.9            |
+| Claw of Molten Fury                | Claw of the Phoenix           | 2381.3 ± 0.72 | -18.6            |
+| Stellaris                          | Netherbane                    | 2380.9 ± 0.72 | -19.0            |
+| Riftmaker                          | Netherbane                    | 2380.9 ± 0.72 | -19.0            |
+| Netherbane                         | Stellaris                     | 2380.9 ± 0.72 | -19.0            |
+| Netherbane                         | Riftmaker                     | 2380.9 ± 0.72 | -19.0            |
+| Legacy                             | *empty, two-hander*           | 2380.4 ± 0.72 | -19.5            |
+| Netherbane                         | Talon of Azshara              | 2380.3 ± 0.72 | -19.6            |
+| Talon of Azshara                   | Netherbane                    | 2380.3 ± 0.72 | -19.6            |
+| Guile of Khoraazi                  | Claw of the Phoenix           | 2379.6 ± 0.72 | -20.3            |
+| Talon of Azshara                   | Messenger of Fate             | 2379.0 ± 0.72 | -20.9            |
+| Messenger of Fate                  | Talon of Azshara              | 2379.0 ± 0.72 | -20.9            |
+| Emerald Ripper                     | Claw of the Phoenix           | 2378.9 ± 0.72 | -21.0            |
+| Claw of Molten Fury                | Fist of Molten Fury           | 2378.9 ± 0.72 | -21.0            |
+| Stellaris                          | Messenger of Fate             | 2378.6 ± 0.72 | -21.3            |
+| Riftmaker                          | Messenger of Fate             | 2378.6 ± 0.72 | -21.3            |
+| Messenger of Fate                  | Stellaris                     | 2378.6 ± 0.72 | -21.3            |
+| Messenger of Fate                  | Riftmaker                     | 2378.6 ± 0.72 | -21.3            |
+| Guile of Khoraazi                  | Fist of Molten Fury           | 2377.9 ± 0.72 | -22.0            |
+| Claw of Molten Fury                | Guile of Khoraazi             | 2377.9 ± 0.72 | -22.0            |
+| Emerald Ripper                     | Fist of Molten Fury           | 2377.2 ± 0.72 | -22.7            |
+| Claw of Molten Fury                | Emerald Ripper                | 2377.2 ± 0.72 | -22.7            |
+| Netherbane                         | Claw of the Netherwing Flight | 2376.7 ± 0.72 | -23.2            |
+| Claw of the Netherwing Flight      | Netherbane                    | 2376.7 ± 0.72 | -23.2            |
+| Stellaris                          | Claw of the Phoenix           | 2376.5 ± 0.72 | -23.4            |
+| Riftmaker                          | Claw of the Phoenix           | 2376.5 ± 0.72 | -23.4            |
+| Emerald Ripper                     | Guile of Khoraazi             | 2376.1 ± 0.72 | -23.8            |
+| Guile of Khoraazi                  | Emerald Ripper                | 2376.1 ± 0.72 | -23.8            |
+| Talon of Azshara                   | Claw of the Phoenix           | 2375.9 ± 0.72 | -24.0            |
+| Claw of the Netherwing Flight      | Messenger of Fate             | 2375.4 ± 0.72 | -24.5            |
+| Messenger of Fate                  | Claw of the Netherwing Flight | 2375.4 ± 0.72 | -24.5            |
+| Stellaris                          | Fist of Molten Fury           | 2374.7 ± 0.72 | -25.2            |
+| Riftmaker                          | Fist of Molten Fury           | 2374.7 ± 0.72 | -25.2            |
+| Claw of Molten Fury                | Stellaris                     | 2374.7 ± 0.72 | -25.2            |
+| Claw of Molten Fury                | Riftmaker                     | 2374.7 ± 0.72 | -25.2            |
+| Talon of Azshara                   | Fist of Molten Fury           | 2373.7 ± 0.72 | -26.2            |
+| Claw of Molten Fury                | Talon of Azshara              | 2373.7 ± 0.72 | -26.2            |
+| Stellaris                          | Guile of Khoraazi             | 2373.0 ± 0.72 | -26.9            |
+| Guile of Khoraazi                  | Stellaris                     | 2373.0 ± 0.72 | -26.9            |
+| Guile of Khoraazi                  | Riftmaker                     | 2373.0 ± 0.72 | -26.9            |
+| Guile of Khoraazi                  | Talon of Azshara              | 2373.0 ± 0.72 | -26.9            |
+| Riftmaker                          | Guile of Khoraazi             | 2373.0 ± 0.72 | -26.9            |
+| Talon of Azshara                   | Guile of Khoraazi             | 2373.0 ± 0.72 | -26.9            |
+| Stellaris                          | Emerald Ripper                | 2372.3 ± 0.72 | -27.6            |
+| Emerald Ripper                     | Stellaris                     | 2372.3 ± 0.72 | -27.6            |
+| Emerald Ripper                     | Riftmaker                     | 2372.3 ± 0.72 | -27.6            |
+| Emerald Ripper                     | Talon of Azshara              | 2372.3 ± 0.72 | -27.6            |
+| Riftmaker                          | Emerald Ripper                | 2372.3 ± 0.72 | -27.6            |
+| Talon of Azshara                   | Emerald Ripper                | 2372.3 ± 0.72 | -27.6            |
+| Claw of the Netherwing Flight      | Claw of the Phoenix           | 2372.3 ± 0.72 | -27.6            |
+| Claw of the Netherwing Flight      | Fist of Molten Fury           | 2370.1 ± 0.72 | -29.8            |
+| Claw of Molten Fury                | Claw of the Netherwing Flight | 2370.1 ± 0.72 | -29.8            |
+| Stellaris                          | Stellaris                     | 2369.9 ± 0.72 | -30.0            |
+| Stellaris                          | Riftmaker                     | 2369.9 ± 0.72 | -30.0            |
+| Riftmaker                          | Stellaris                     | 2369.9 ± 0.72 | -30.0            |
+| Hellforged Halberd                 | *empty, two-hander*           | 2369.3 ± 0.72 | -30.6            |
+| Blackened Spear                    | *empty, two-hander*           | 2369.3 ± 0.72 | -30.6            |
+| Stellaris                          | Talon of Azshara              | 2369.3 ± 0.72 | -30.6            |
+| Guile of Khoraazi                  | Claw of the Netherwing Flight | 2369.3 ± 0.72 | -30.6            |
+| Riftmaker                          | Talon of Azshara              | 2369.3 ± 0.72 | -30.6            |
+| Talon of Azshara                   | Stellaris                     | 2369.3 ± 0.72 | -30.6            |
+| Talon of Azshara                   | Riftmaker                     | 2369.3 ± 0.72 | -30.6            |
+| Claw of the Netherwing Flight      | Guile of Khoraazi             | 2369.3 ± 0.72 | -30.6            |
+| Emerald Ripper                     | Claw of the Netherwing Flight | 2368.6 ± 0.72 | -31.3            |
+| Claw of the Netherwing Flight      | Emerald Ripper                | 2368.6 ± 0.72 | -31.3            |
+| Sonic Spear                        | *empty, two-hander*           | 2367.9 ± 0.72 | -32.0            |
+| Terokk's Quill                     | *empty, two-hander*           | 2366.9 ± 0.71 | -33.0            |
+| Stellaris                          | Claw of the Netherwing Flight | 2365.7 ± 0.72 | -34.2            |
+| Riftmaker                          | Claw of the Netherwing Flight | 2365.7 ± 0.72 | -34.2            |
+| Claw of the Netherwing Flight      | Stellaris                     | 2365.7 ± 0.72 | -34.2            |
+| Claw of the Netherwing Flight      | Riftmaker                     | 2365.7 ± 0.72 | -34.2            |
+| Talon of Azshara                   | Claw of the Netherwing Flight | 2365.5 ± 0.72 | -34.4            |
+| Claw of the Netherwing Flight      | Talon of Azshara              | 2365.5 ± 0.72 | -34.4            |
+| Gorehowl                           | *empty, two-hander*           | 2354.5 ± 0.72 | -45.4            |
+| Illidari-Bane Claymore             | *empty, two-hander*           | 2334.2 ± 0.70 | -65.7            |
 
-The best combination, Twinblade of the Phoenix alone, a two-hander, measures +5.7 against this set's own weapons, so the upgrade path at this anchor runs through it.
+The best combination, Blade of Infamy with Blade of Infamy, measures +10.7 against this set's own weapons, so the upgrade path at this anchor runs through it.
 
 ## Ranged weapons
 
@@ -174,14 +174,14 @@ The bow is the one hunter weapon that is not a stat stick, so it gets its own pa
 
 | Ranged                            | DPS           | Against this set |
 |-----------------------------------|---------------|------------------|
-| Black Bow of the Betrayer         | 2800.7 ± 0.87 | +0.9             |
-| Bristleblitz Striker *(this set)* | 2799.8 ± 0.89 | +0.0             |
-| Serpent Spine Longbow             | 2788.1 ± 0.89 | -11.7            |
-| Legionkiller                      | 2704.5 ± 0.90 | -95.3            |
-| Arcanite Steam-Pistol             | 2690.6 ± 0.89 | -109.2           |
-| Sunfury Bow of the Phoenix        | 2687.7 ± 0.89 | -112.1           |
+| Bristleblitz Striker *(this set)* | 2399.9 ± 0.73 | +0.0             |
+| Black Bow of the Betrayer         | 2390.8 ± 0.73 | -9.1             |
+| Serpent Spine Longbow             | 2385.4 ± 0.72 | -14.5            |
+| Legionkiller                      | 2374.9 ± 0.72 | -25.0            |
+| Arcanite Steam-Pistol             | 2359.7 ± 0.72 | -40.2            |
+| Sunfury Bow of the Phoenix        | 2353.8 ± 0.72 | -46.1            |
 
-The best ranged weapon, Black Bow of the Betrayer, measures +0.9 against this set's own, so the upgrade path at this anchor runs through it.
+This set already carries the best ranged weapon the pass measured, which is why its top row reads plus zero: that row IS this profile.
 
 ## Trinket combinations
 
@@ -197,18 +197,18 @@ The ten best of the 36 combinations measured, and the worn pair.
 
 | Trinket                              | Trinket                         | DPS           | Against this set |
 |--------------------------------------|---------------------------------|---------------|------------------|
-| Dragonspine Trophy                   | Bloodlust Brooch                | 2818.3 ± 0.89 | +18.5            |
-| Dragonspine Trophy                   | Tsunami Talisman                | 2808.6 ± 0.89 | +8.8             |
-| Dragonspine Trophy                   | Madness of the Betrayer         | 2806.9 ± 0.90 | +7.1             |
-| Dragonspine Trophy                   | Badge of Tenacity               | 2804.6 ± 0.89 | +4.8             |
-| Tsunami Talisman                     | Bloodlust Brooch                | 2803.6 ± 0.88 | +3.8             |
-| Madness of the Betrayer *(this set)* | Bloodlust Brooch                | 2799.8 ± 0.89 | +0.0             |
-| Dragonspine Trophy                   | Core of Ar'kelos                | 2798.6 ± 0.89 | -1.2             |
-| Dragonspine Trophy                   | Darkmoon Card: Crusade          | 2797.9 ± 0.89 | -1.9             |
-| Darkmoon Card: Crusade               | Bloodlust Brooch                | 2792.1 ± 0.89 | -7.7             |
-| Dragonspine Trophy                   | Ashtongue Talisman of Swiftness | 2792.0 ± 0.91 | -7.8             |
+| Dragonspine Trophy                   | Bloodlust Brooch                | 2418.7 ± 0.72 | +18.8            |
+| Dragonspine Trophy                   | Tsunami Talisman                | 2410.4 ± 0.73 | +10.5            |
+| Dragonspine Trophy                   | Badge of Tenacity               | 2407.2 ± 0.72 | +7.3             |
+| Dragonspine Trophy                   | Madness of the Betrayer         | 2406.8 ± 0.74 | +6.9             |
+| Dragonspine Trophy                   | Ashtongue Talisman of Swiftness | 2404.7 ± 0.74 | +4.8             |
+| Dragonspine Trophy                   | Core of Ar'kelos                | 2402.2 ± 0.72 | +2.3             |
+| Tsunami Talisman                     | Bloodlust Brooch                | 2402.0 ± 0.72 | +2.1             |
+| Dragonspine Trophy                   | Darkmoon Card: Crusade          | 2401.6 ± 0.72 | +1.7             |
+| Madness of the Betrayer *(this set)* | Bloodlust Brooch                | 2399.9 ± 0.73 | +0.0             |
+| Bloodlust Brooch                     | Ashtongue Talisman of Swiftness | 2395.3 ± 0.72 | -4.6             |
 
-The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +18.5 against this set's own trinkets, so the upgrade path at this anchor runs through it.
+The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +18.8 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
 ## Ring combinations
 
@@ -223,18 +223,18 @@ The ten best of the 30 combinations measured, and the worn pair.
 
 | Ring                                      | Ring                     | DPS           | Against this set |
 |-------------------------------------------|--------------------------|---------------|------------------|
-| Band of the Eternal Champion *(this set)* | Ring of the Recalcitrant | 2799.8 ± 0.89 | +0.0             |
-| Band of the Eternal Champion              | Ring of Lethality        | 2798.0 ± 0.89 | -1.8             |
-| Band of the Eternal Champion              | Ring of Deceitful Intent | 2797.0 ± 0.89 | -2.8             |
-| Band of the Eternal Champion              | Ring of the Overseer     | 2789.6 ± 0.89 | -10.2            |
-| Band of the Eternal Champion              | Garona's Signet Ring     | 2788.2 ± 0.89 | -11.6            |
-| Band of Eternity                          | Ring of the Recalcitrant | 2786.7 ± 0.89 | -13.1            |
-| Band of Eternity                          | Ring of Lethality        | 2785.0 ± 0.89 | -14.8            |
-| Band of Eternity                          | Ring of Deceitful Intent | 2783.9 ± 0.89 | -15.9            |
-| Band of Eternity                          | Ring of the Recalcitrant | 2782.9 ± 0.89 | -16.9            |
-| Ring of Lethality                         | Band of Eternity         | 2781.1 ± 0.88 | -18.7            |
+| Band of the Eternal Champion *(this set)* | Ring of the Recalcitrant | 2399.9 ± 0.73 | +0.0             |
+| Band of the Eternal Champion              | Ring of Lethality        | 2398.4 ± 0.72 | -1.5             |
+| Band of the Eternal Champion              | Ring of Deceitful Intent | 2397.8 ± 0.73 | -2.1             |
+| Band of the Eternal Champion              | Ring of the Overseer     | 2391.8 ± 0.73 | -8.1             |
+| Band of the Eternal Champion              | Garona's Signet Ring     | 2390.4 ± 0.72 | -9.5             |
+| Band of Eternity                          | Ring of the Recalcitrant | 2388.2 ± 0.72 | -11.7            |
+| Band of Eternity                          | Ring of Lethality        | 2386.7 ± 0.72 | -13.2            |
+| Band of Eternity                          | Ring of Deceitful Intent | 2386.1 ± 0.72 | -13.8            |
+| Band of Eternity                          | Ring of the Recalcitrant | 2385.2 ± 0.72 | -14.7            |
+| Ring of Lethality                         | Band of Eternity         | 2383.8 ± 0.72 | -16.1            |
 
-This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
+The worn pair is again the best row, at plus zero.
 
 ## The set
 
@@ -344,11 +344,11 @@ The rotation is the action priority list the simulator itself ships for this
 spec. Writing our own would be a modelling choice we could not defend, and
 taking theirs is one we can cite.
 
-| Setting       | Value                                  |
-|---------------|----------------------------------------|
-| Talent string | `502-0550201205-333200022003223005103` |
-| Rotation      | `ui/hunter/dps/apls/default.apl.json`  |
-| Simulator     | v0.0.116                               |
-| Iterations    | 10000                                  |
-| Random seed   | 1                                      |
-| Encounter     | 150 seconds, 1 target at level 73      |
+| Setting       | Value                                       |
+|---------------|---------------------------------------------|
+| Talent string | `502-0550201205-333200022003223005103`      |
+| Rotation      | `ui/data/sim/apls/hunter-no-weave.apl.json` |
+| Simulator     | v0.0.116                                    |
+| Iterations    | 10000                                       |
+| Random seed   | 1                                           |
+| Encounter     | 150 seconds, 1 target at level 73           |

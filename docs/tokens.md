@@ -80,9 +80,9 @@ Drops from Archimonde. Classes: Warrior, Hunter, Shaman.
 | 1 | Arms Warrior | +14.8 | Onslaught Battle-Helm | BIS |
 | 2 | Elemental Shaman | +9.1 | Skyshatter Headguard | BIS |
 | 3 | Fury Warrior | -7.7 | Onslaught Battle-Helm | Not BIS |
-| 4 | Beast Mastery Hunter | -14.8 | Gronnstalker's Helmet | Not BIS |
-| 5 | Survival Hunter | -20.2 | Gronnstalker's Helmet | BIS |
-| 6 | Enhancement Shaman | -24.3 | Skyshatter Cover | Not BIS |
+| 4 | Beast Mastery Hunter | -22.0 | Gronnstalker's Helmet | Not BIS |
+| 5 | Enhancement Shaman | -24.3 | Skyshatter Cover | Not BIS |
+| 6 | Survival Hunter | -29.9 | Gronnstalker's Helmet | BIS |
 
 The order, state by state:
 
@@ -97,15 +97,15 @@ The order, state by state:
     - After the legs, chest, shoulder and hands, this token pays +94.4 ± 1.3 and turns the 4-piece on.
 - Next **Fury Warrior**, -7.7 ± 1.5.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
-- Next **Beast Mastery Hunter**, -14.8 ± 1.2.
+- Next **Beast Mastery Hunter**, -22.0 ± 1.0.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
-- Next **Survival Hunter**, -20.2 ± 1.1.
-    - After the hands, this token pays -20.7 ± 1.1 and turns the 2-piece on.
-    - After the hands and shoulder, this token pays +4.7 ± 1.1.
-    - After the hands, shoulder and chest, this token pays +61.2 ± 1.2 and turns the 4-piece on.
-    - After the hands, shoulder, chest and legs, this token pays +61.4 ± 1.2 and turns the 4-piece on.
-- Next **Enhancement Shaman**, -24.3 ± 1.3.
+- Next **Enhancement Shaman**, -24.3 ± 1.3, tied with Beast Mastery Hunter.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
+- Next **Survival Hunter**, -29.9 ± 1.0.
+    - After the hands, this token pays -29.8 ± 1.0 and turns the 2-piece on.
+    - After the hands and legs, this token pays +2.4 ± 1.0 and turns the 2-piece on.
+    - After the hands, legs and shoulder, this token pays +2.9 ± 1.0.
+    - After the hands, legs, shoulder and chest, this token pays +74.1 ± 1.0 and turns the 4-piece on.
 
 Unmeasured claimants, see [the specs the tier page cannot measure](tier.md#the-specs-this-page-cannot-measure): Protection Warrior, Restoration Shaman.
 
@@ -170,10 +170,10 @@ Drops from Mother Shahraz. Classes: Warrior, Hunter, Shaman.
 |---|---|---|---|---|
 | 1 | Arms Warrior | +14.4 | Onslaught Shoulderblades | BIS |
 | 2 | Elemental Shaman | +4.7 | Skyshatter Mantle | BIS |
-| 3 | Beast Mastery Hunter | +0.9 | Gronnstalker's Spaulders | BIS |
-| 4 | Survival Hunter | +0.4 | Gronnstalker's Spaulders | BIS |
-| 5 | Fury Warrior | -6.1 | Onslaught Shoulderblades | BIS |
-| 6 | Enhancement Shaman | -6.6 | Skyshatter Pauldrons | Not BIS |
+| 3 | Fury Warrior | -6.1 | Onslaught Shoulderblades | BIS |
+| 4 | Enhancement Shaman | -6.6 | Skyshatter Pauldrons | Not BIS |
+| 5 | Beast Mastery Hunter | -6.7 | Gronnstalker's Spaulders | BIS |
+| 6 | Survival Hunter | -8.7 | Gronnstalker's Spaulders | BIS |
 
 The order, state by state:
 
@@ -186,20 +186,20 @@ The order, state by state:
     - After the legs and chest, this token pays +42.5 ± 1.3 and turns the 2-piece on.
     - After the legs, chest and head, this token pays +17.2 ± 1.3.
     - After the legs, chest, head and hands, this token pays +87.6 ± 1.3 and turns the 4-piece on.
-- Next **Beast Mastery Hunter**, +0.9 ± 1.2.
-    - After the head, this token pays +27.7 ± 1.2.
-    - After the head and hands, this token pays +29.1 ± 1.2 and turns the 2-piece on.
-    - After the head, hands and chest, this token pays +29.7 ± 1.3.
-    - After the head, hands, chest and legs, this token pays +93.5 ± 1.2 and turns the 4-piece on.
-- Next **Survival Hunter**, +0.4 ± 1.1, tied with Beast Mastery Hunter.
-    - After the hands, this token pays +0.3 ± 1.1 and turns the 2-piece on.
-    - After the hands and chest, this token pays +26.1 ± 1.1.
-    - After the hands, chest and head, this token pays +83.1 ± 1.2 and turns the 4-piece on.
-    - After the hands, chest, head and legs, this token pays +82.8 ± 1.2 and turns the 4-piece on.
 - Next **Fury Warrior**, -6.1 ± 1.5.
     - After the chest, this token pays +23.7 ± 1.5 and turns the 2-piece on.
 - Next **Enhancement Shaman**, -6.6 ± 1.3, tied with Fury Warrior.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
+- Next **Beast Mastery Hunter**, -6.7 ± 1.0, tied with Enhancement Shaman.
+    - After the hands, this token pays +27.6 ± 1.0 and turns the 2-piece on.
+    - After the hands and head, this token pays +28.2 ± 1.0 and turns the 2-piece on.
+    - After the hands, head and chest, this token pays +27.7 ± 1.0.
+    - After the hands, head, chest and legs, this token pays +103.3 ± 1.1 and turns the 4-piece on.
+- Next **Survival Hunter**, -8.7 ± 1.0, tied with Beast Mastery Hunter.
+    - After the hands, this token pays -9.2 ± 1.0 and turns the 2-piece on.
+    - After the hands and legs, this token pays +23.8 ± 1.0 and turns the 2-piece on.
+    - After the hands, legs and chest, this token pays +25.1 ± 1.0.
+    - After the hands, legs, chest and head, this token pays +97.3 ± 1.0 and turns the 4-piece on.
 
 Unmeasured claimants, see [the specs the tier page cannot measure](tier.md#the-specs-this-page-cannot-measure): Protection Warrior, Restoration Shaman.
 
@@ -263,9 +263,9 @@ Drops from Illidan Stormrage. Classes: Warrior, Hunter, Shaman.
 |---|---|---|---|---|
 | 1 | Elemental Shaman | +13.3 | Skyshatter Breastplate | BIS |
 | 2 | Arms Warrior | +12.6 | Onslaught Breastplate | BIS |
-| 3 | Survival Hunter | -1.4 | Gronnstalker's Chestguard | BIS |
-| 4 | Beast Mastery Hunter | -3.9 | Gronnstalker's Chestguard | BIS |
-| 5 | Fury Warrior | -8.0 | Onslaught Breastplate | BIS |
+| 3 | Fury Warrior | -8.0 | Onslaught Breastplate | BIS |
+| 4 | Survival Hunter | -10.8 | Gronnstalker's Chestguard | BIS |
+| 5 | Beast Mastery Hunter | -11.3 | Gronnstalker's Chestguard | BIS |
 | 6 | Enhancement Shaman | -30.7 | Skyshatter Tunic | Not BIS |
 
 The order, state by state:
@@ -279,18 +279,18 @@ The order, state by state:
     - After the hands, this token pays +15.9 ± 1.5 and turns the 2-piece on.
     - After the hands and head, this token pays +12.1 ± 1.5.
     - After the hands, head and shoulder, this token pays +28.9 ± 1.6 and turns the 4-piece on.
-- Next **Survival Hunter**, -1.4 ± 1.1.
-    - After the hands, this token pays -2.0 ± 1.1 and turns the 2-piece on.
-    - After the hands and shoulder, this token pays +23.8 ± 1.1.
-    - After the hands, shoulder and head, this token pays +80.3 ± 1.2 and turns the 4-piece on.
-    - After the hands, shoulder, head and legs, this token pays +82.1 ± 1.2 and turns the 4-piece on.
-- Next **Beast Mastery Hunter**, -3.9 ± 1.2, tied with Survival Hunter.
-    - After the head, this token pays +22.9 ± 1.2.
-    - After the head and hands, this token pays +24.0 ± 1.2 and turns the 2-piece on.
-    - After the head, hands and shoulder, this token pays +24.6 ± 1.3.
-    - After the head, hands, shoulder and legs, this token pays +87.9 ± 1.3 and turns the 4-piece on.
 - Next **Fury Warrior**, -8.0 ± 1.5.
     - After the shoulder, this token pays +21.8 ± 1.5 and turns the 2-piece on.
+- Next **Survival Hunter**, -10.8 ± 1.0, tied with Fury Warrior.
+    - After the hands, this token pays -10.8 ± 1.0 and turns the 2-piece on.
+    - After the hands and legs, this token pays +22.2 ± 1.0 and turns the 2-piece on.
+    - After the hands, legs and shoulder, this token pays +23.5 ± 1.0.
+    - After the hands, legs, shoulder and head, this token pays +94.7 ± 1.0 and turns the 4-piece on.
+- Next **Beast Mastery Hunter**, -11.3 ± 1.0, tied with Survival Hunter.
+    - After the hands, this token pays +22.4 ± 1.0 and turns the 2-piece on.
+    - After the hands and head, this token pays +21.3 ± 1.0 and turns the 2-piece on.
+    - After the hands, head and shoulder, this token pays +20.8 ± 1.0.
+    - After the hands, head, shoulder and legs, this token pays +98.5 ± 1.1 and turns the 4-piece on.
 - Next **Enhancement Shaman**, -30.7 ± 1.3.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
 
@@ -358,34 +358,34 @@ Drops from Azgalor. Classes: Warrior, Hunter, Shaman.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Survival Hunter | +33.7 | Gronnstalker's Gloves | BIS |
-| 2 | Arms Warrior | +28.6 | Onslaught Gauntlets | BIS |
+| 1 | Arms Warrior | +28.6 | Onslaught Gauntlets | BIS |
+| 2 | Survival Hunter | +27.2 | Gronnstalker's Gloves | BIS |
 | 3 | Elemental Shaman | +10.2 | Skyshatter Gauntlets | BIS |
-| 4 | Beast Mastery Hunter | +8.5 | Gronnstalker's Gloves | BIS |
+| 4 | Beast Mastery Hunter | +0.2 | Gronnstalker's Gloves | BIS |
 | 5 | Fury Warrior | -5.6 | Onslaught Gauntlets | Not BIS |
 | 6 | Enhancement Shaman | -27.3 | Skyshatter Grips | Not BIS |
 
 The order, state by state:
 
-- The first of these tokens gains most at **Survival Hunter**, +33.7 ± 1.1.
-    - After the shoulder, this token pays +33.6 ± 1.1 and turns the 2-piece on.
-    - After the shoulder and chest, this token pays +34.7 ± 1.1.
-    - After the shoulder, chest and head, this token pays +91.9 ± 1.2 and turns the 4-piece on.
-    - After the shoulder, chest, head and legs, this token pays +96.2 ± 1.2 and turns the 4-piece on.
-- Next **Arms Warrior**, +28.6 ± 1.5.
+- The first of these tokens gains most at **Arms Warrior**, +28.6 ± 1.5.
     - After the head, this token pays +35.0 ± 1.5 and turns the 2-piece on.
     - After the head and chest, this token pays +27.9 ± 1.5.
     - After the head, chest and shoulder, this token pays +35.9 ± 1.5 and turns the 4-piece on.
+- Next **Survival Hunter**, +27.2 ± 1.0, tied with Arms Warrior.
+    - After the legs, this token pays +28.0 ± 1.0.
+    - After the legs and shoulder, this token pays +28.4 ± 1.0 and turns the 2-piece on.
+    - After the legs, shoulder and chest, this token pays +29.6 ± 1.0.
+    - After the legs, shoulder, chest and head, this token pays +101.8 ± 1.0 and turns the 4-piece on.
 - Next **Elemental Shaman**, +10.2 ± 1.3.
     - After the legs, this token pays +11.4 ± 1.3.
     - After the legs and chest, this token pays +48.5 ± 1.3 and turns the 2-piece on.
     - After the legs, chest and head, this token pays +9.1 ± 1.3.
     - After the legs, chest, head and shoulder, this token pays +79.5 ± 1.3 and turns the 4-piece on.
-- Next **Beast Mastery Hunter**, +8.5 ± 1.2, tied with Elemental Shaman.
-    - After the head, this token pays +37.1 ± 1.2.
-    - After the head and shoulder, this token pays +38.5 ± 1.2 and turns the 2-piece on.
-    - After the head, shoulder and chest, this token pays +38.9 ± 1.3.
-    - After the head, shoulder, chest and legs, this token pays +102.6 ± 1.2 and turns the 4-piece on.
+- Next **Beast Mastery Hunter**, +0.2 ± 1.0.
+    - After the head, this token pays +35.4 ± 1.0.
+    - After the head and shoulder, this token pays +36.1 ± 1.0 and turns the 2-piece on.
+    - After the head, shoulder and chest, this token pays +34.8 ± 1.0.
+    - After the head, shoulder, chest and legs, this token pays +112.2 ± 1.1 and turns the 4-piece on.
 - Next **Fury Warrior**, -5.6 ± 1.5.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
 - Next **Enhancement Shaman**, -27.3 ± 1.3.
@@ -452,8 +452,8 @@ Drops from The Illidari Council. Classes: Warrior, Hunter, Shaman.
 | 1 | Fury Warrior | +12.1 | Onslaught Greaves | Not BIS |
 | 2 | Elemental Shaman | +11.8 | Skyshatter Legguards | Not BIS |
 | 3 | Arms Warrior | +7.5 | Onslaught Greaves | Not BIS |
-| 4 | Beast Mastery Hunter | -5.4 | Gronnstalker's Leggings | BIS |
-| 5 | Survival Hunter | -7.6 | Gronnstalker's Leggings | Not BIS |
+| 4 | Beast Mastery Hunter | -6.4 | Gronnstalker's Leggings | BIS |
+| 5 | Survival Hunter | -16.9 | Gronnstalker's Leggings | Not BIS |
 | 6 | Enhancement Shaman | -21.7 | Skyshatter Pants | Not BIS |
 
 The order, state by state:
@@ -464,12 +464,12 @@ The order, state by state:
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
 - Next **Arms Warrior**, +7.5 ± 1.5.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
-- Next **Beast Mastery Hunter**, -5.4 ± 1.2.
-    - After the head, this token pays -3.9 ± 1.2.
-    - After the head and hands, this token pays -4.6 ± 1.2 and turns the 2-piece on.
-    - After the head, hands and shoulder, this token pays -3.3 ± 1.2.
-    - After the head, hands, shoulder and chest, this token pays +60.0 ± 1.3 and turns the 4-piece on.
-- Next **Survival Hunter**, -7.6 ± 1.1, tied with Beast Mastery Hunter.
+- Next **Beast Mastery Hunter**, -6.4 ± 1.0.
+    - After the hands, this token pays -6.2 ± 1.0 and turns the 2-piece on.
+    - After the hands and head, this token pays -7.5 ± 1.0 and turns the 2-piece on.
+    - After the hands, head and shoulder, this token pays -7.8 ± 1.1.
+    - After the hands, head, shoulder and chest, this token pays +69.9 ± 1.1 and turns the 4-piece on.
+- Next **Survival Hunter**, -16.9 ± 1.0.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.
 - Next **Enhancement Shaman**, -21.7 ± 1.3.
     - Measured alone on the entry set only: this spec's list does not keep the piece, so the deeper states are not in the lattice.

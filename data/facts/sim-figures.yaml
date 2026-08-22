@@ -161,23 +161,23 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 3307.2
-  standard_error: 0.97
-  stdev: 97.4
+  dps: 2927.5
+  standard_error: 0.79
+  stdev: 79.2
   boss_armor: 7684
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
   anchor: entry
-  dps: 3011.8
-  standard_error: 0.85
-  stdev: 85.2
+  dps: 2721.8
+  standard_error: 0.72
+  stdev: 72.3
   boss_armor: 7684
 - profile: beast-mastery-hunter.tier-hands-and-head
   spec: beast_mastery_hunter
   anchor: tier-hands-and-head
-  dps: 3169.8
-  standard_error: 0.89
-  stdev: 89.1
+  dps: 2872.9
+  standard_error: 0.77
+  stdev: 77.1
   boss_armor: 7684
 - profile: combat-rogue.bis-no-glaives
   spec: combat_rogue
@@ -343,23 +343,23 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 2799.8
-  standard_error: 0.89
-  stdev: 89.1
+  dps: 2399.9
+  standard_error: 0.73
+  stdev: 72.5
   boss_armor: 7684
 - profile: survival-hunter.entry
   spec: survival_hunter
   anchor: entry
-  dps: 2529.1
-  standard_error: 0.79
-  stdev: 78.9
+  dps: 2214.3
+  standard_error: 0.68
+  stdev: 67.6
   boss_armor: 7684
 - profile: survival-hunter.tier-hands-and-head
   spec: survival_hunter
   anchor: tier-hands-and-head
-  dps: 2668.7
-  standard_error: 0.85
-  stdev: 84.9
+  dps: 2354.0
+  standard_error: 0.73
+  stdev: 73.0
   boss_armor: 7684
 - profile: affliction-warlock.bis
   spec: affliction_warlock
@@ -469,23 +469,23 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 3685.7
-  standard_error: 1.09
-  stdev: 109.2
+  dps: 3272.4
+  standard_error: 0.89
+  stdev: 88.8
   boss_armor: 6193
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
   anchor: entry
-  dps: 3342.3
-  standard_error: 0.95
-  stdev: 94.9
+  dps: 3030.5
+  standard_error: 0.81
+  stdev: 80.6
   boss_armor: 6193
 - profile: beast-mastery-hunter.tier-hands-and-head
   spec: beast_mastery_hunter
   anchor: tier-hands-and-head
-  dps: 3523.1
-  standard_error: 1.0
-  stdev: 99.5
+  dps: 3203.6
+  standard_error: 0.86
+  stdev: 86.1
   boss_armor: 6193
 - profile: combat-rogue.bis-no-glaives
   spec: combat_rogue
@@ -651,23 +651,23 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 3105.9
-  standard_error: 0.99
-  stdev: 99.2
+  dps: 2669.7
+  standard_error: 0.81
+  stdev: 81.0
   boss_armor: 6193
 - profile: survival-hunter.entry
   spec: survival_hunter
   anchor: entry
-  dps: 2797.4
-  standard_error: 0.87
-  stdev: 87.3
+  dps: 2457.9
+  standard_error: 0.75
+  stdev: 75.2
   boss_armor: 6193
 - profile: survival-hunter.tier-hands-and-head
   spec: survival_hunter
   anchor: tier-hands-and-head
-  dps: 2961.0
-  standard_error: 0.94
-  stdev: 94.4
+  dps: 2620.9
+  standard_error: 0.82
+  stdev: 81.5
   boss_armor: 6193
 - profile: affliction-warlock.bis
   spec: affliction_warlock
@@ -777,23 +777,23 @@ results:
 - profile: beast-mastery-hunter.bis
   spec: beast_mastery_hunter
   anchor: bis
-  dps: 4266.4
-  standard_error: 1.26
-  stdev: 126.3
+  dps: 3807.2
+  standard_error: 1.03
+  stdev: 103.1
   boss_armor: 0
 - profile: beast-mastery-hunter.entry
   spec: beast_mastery_hunter
   anchor: entry
-  dps: 4008.9
-  standard_error: 1.15
-  stdev: 114.6
+  dps: 3653.1
+  standard_error: 0.98
+  stdev: 97.5
   boss_armor: 0
 - profile: beast-mastery-hunter.tier-hands-and-head
   spec: beast_mastery_hunter
   anchor: tier-hands-and-head
-  dps: 4167.4
-  standard_error: 1.18
-  stdev: 118.3
+  dps: 3808.4
+  standard_error: 1.03
+  stdev: 102.6
   boss_armor: 0
 - profile: combat-rogue.bis-no-glaives
   spec: combat_rogue
@@ -959,21 +959,21 @@ results:
 - profile: survival-hunter.bis
   spec: survival_hunter
   anchor: bis
-  dps: 3618.5
-  standard_error: 1.15
-  stdev: 114.9
+  dps: 3125.8
+  standard_error: 0.95
+  stdev: 94.5
   boss_armor: 0
 - profile: survival-hunter.entry
   spec: survival_hunter
   anchor: entry
-  dps: 3339.0
-  standard_error: 1.05
-  stdev: 104.5
+  dps: 2948.7
+  standard_error: 0.91
+  stdev: 90.7
   boss_armor: 0
 - profile: survival-hunter.tier-hands-and-head
   spec: survival_hunter
   anchor: tier-hands-and-head
-  dps: 3443.2
-  standard_error: 1.1
-  stdev: 109.6
+  dps: 3062.1
+  standard_error: 0.95
+  stdev: 95.4
   boss_armor: 0
