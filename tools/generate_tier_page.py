@@ -212,11 +212,13 @@ def token_order_sections(doc: dict, tokens: dict,
                 gain, note = None, ""
                 if int(worn.get("id") or 0) == token_id and rows:
                     # The tier-six round measured this token as its single
-                    # subset for the slot.
+                    # subset for the slot: the token is what the spec
+                    # chases there.
                     by_set = {frozenset(r["replaced"]): r for r in rows}
                     if frozenset([slot]) in by_set:
                         gain = round(by_set[frozenset([slot])]["dps"]
                                      - by_set[frozenset()]["dps"], 1)
+                    note = "BIS"
                 elif slot in singles:
                     # The token-singles round measured it; the baseline is
                     # the spec's entry figure, which the empty subset
@@ -224,10 +226,7 @@ def token_order_sections(doc: dict, tokens: dict,
                     base = entry_dps.get(key)
                     if base is not None:
                         gain = round(singles[slot]["dps"] - base, 1)
-                    keeper = worn.get("name") if slot in (
-                        t6.get("slots") or []) else None
-                    note = (f"its list keeps {keeper} here" if keeper
-                            else "its list keeps the entry piece here")
+                    note = "Not BIS"
                 ranked.append((gain, label,
                                token_piece.get("name", ""), note))
         ranked.sort(key=lambda r: (r[0] is None, -(r[0] or 0)))
@@ -235,7 +234,7 @@ def token_order_sections(doc: dict, tokens: dict,
                  f"Drops from {token['boss']}. Classes: "
                  f"{', '.join(classes)}.", ""]
         if ranked:
-            parts += ["| Order | Spec | Gain | Buys | Note |",
+            parts += ["| Order | Spec | Gain | Buys | Standing |",
                       "|---|---|---|---|---|"]
             for i, (gain, label, piece, note) in enumerate(ranked, 1):
                 cell = "not measured" if gain is None else f"{gain:+.1f}"
@@ -515,8 +514,8 @@ Each section is one token: the specs that can redeem it, best measured gain
 first. **Gain** is the token's own piece measured alone on that spec's entry
 set, against its entry figure. A first piece often reads negative because no
 set bonus is active yet and a replacement arrives ungemmed; the break-even
-tables below say when the set pays, and the note names a spec whose Phase 3
-list keeps a different item in the slot.
+tables below say when the set pays. The standing says whether the token piece
+is in that spec's best-in-slot set.
 
 {chr(10).join(token_sections)}
 ## The break-evens, per spec

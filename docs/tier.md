@@ -55,19 +55,19 @@ Each section is one token: the specs that can redeem it, best measured gain
 first. **Gain** is the token's own piece measured alone on that spec's entry
 set, against its entry figure. A first piece often reads negative because no
 set bonus is active yet and a replacement arrives ungemmed; the break-even
-tables below say when the set pays, and the note names a spec whose Phase 3
-list keeps a different item in the slot.
+tables below say when the set pays. The standing says whether the token piece
+is in that spec's best-in-slot set.
 
 ### Helm of the Forgotten Conqueror
 
 Drops from Archimonde. Classes: Paladin, Priest, Warlock.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Shadow Priest | -8.3 | Hood of Absolution |  |
-| 2 | Affliction Warlock | -42.4 | Hood of the Malefic |  |
-| 3 | Retribution Paladin | -50.7 | Lightbringer War-Helm | its list keeps the entry piece here |
-| 4 | Destruction Warlock | -58.6 | Hood of the Malefic |  |
+| 1 | Shadow Priest | -8.3 | Hood of Absolution | BIS |
+| 2 | Affliction Warlock | -42.4 | Hood of the Malefic | BIS |
+| 3 | Retribution Paladin | -50.7 | Lightbringer War-Helm | Not BIS |
+| 4 | Destruction Warlock | -58.6 | Hood of the Malefic | BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -75,14 +75,14 @@ Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Prot
 
 Drops from Archimonde. Classes: Warrior, Hunter, Shaman.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Arms Warrior | -42.0 | Onslaught Battle-Helm |  |
-| 2 | Elemental Shaman | -52.2 | Skyshatter Headguard |  |
-| 3 | Enhancement Shaman | -71.2 | Skyshatter Cover | its list keeps the entry piece here |
-| 4 | Beast Mastery Hunter | -77.0 | Gronnstalker's Helmet | its list keeps Cursed Vision of Sargeras here |
-| 5 | Survival Hunter | -77.7 | Gronnstalker's Helmet |  |
-| 6 | Fury Warrior | -83.5 | Onslaught Battle-Helm | its list keeps the entry piece here |
+| 1 | Arms Warrior | -42.0 | Onslaught Battle-Helm | BIS |
+| 2 | Elemental Shaman | -52.2 | Skyshatter Headguard | BIS |
+| 3 | Enhancement Shaman | -71.2 | Skyshatter Cover | Not BIS |
+| 4 | Beast Mastery Hunter | -77.0 | Gronnstalker's Helmet | Not BIS |
+| 5 | Survival Hunter | -77.7 | Gronnstalker's Helmet | BIS |
+| 6 | Fury Warrior | -83.5 | Onslaught Battle-Helm | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -90,11 +90,11 @@ Unmeasured claimants, see the closing section: Protection Warrior, Restoration S
 
 Drops from Archimonde. Classes: Rogue, Mage, Druid.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Combat Rogue | -65.7 | Slayer's Helm | its list keeps Cursed Vision of Sargeras here |
-| 2 | Arcane Mage | -95.2 | Cowl of the Tempest | its list keeps the entry piece here |
-| 3 | Balance Druid | -124.3 | Thunderheart Headguard |  |
+| 1 | Combat Rogue | -65.7 | Slayer's Helm | Not BIS |
+| 2 | Arcane Mage | -95.2 | Cowl of the Tempest | Not BIS |
+| 3 | Balance Druid | -124.3 | Thunderheart Headguard | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -102,12 +102,12 @@ Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoratio
 
 Drops from Mother Shahraz. Classes: Paladin, Priest, Warlock.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Shadow Priest | -5.9 | Shoulderpads of Absolution |  |
-| 2 | Destruction Warlock | -6.3 | Mantle of the Malefic |  |
-| 3 | Affliction Warlock | -19.9 | Mantle of the Malefic |  |
-| 4 | Retribution Paladin | -27.6 | Lightbringer Shoulderbraces | its list keeps the entry piece here |
+| 1 | Shadow Priest | -5.9 | Shoulderpads of Absolution | BIS |
+| 2 | Destruction Warlock | -6.3 | Mantle of the Malefic | BIS |
+| 3 | Affliction Warlock | -19.9 | Mantle of the Malefic | BIS |
+| 4 | Retribution Paladin | -27.6 | Lightbringer Shoulderbraces | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -115,14 +115,14 @@ Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Prot
 
 Drops from Mother Shahraz. Classes: Warrior, Hunter, Shaman.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Arms Warrior | +14.4 | Onslaught Shoulderblades |  |
-| 2 | Elemental Shaman | -8.7 | Skyshatter Mantle |  |
-| 3 | Beast Mastery Hunter | -13.7 | Gronnstalker's Spaulders |  |
-| 4 | Survival Hunter | -14.3 | Gronnstalker's Spaulders |  |
-| 5 | Fury Warrior | -20.4 | Onslaught Shoulderblades |  |
-| 6 | Enhancement Shaman | -22.3 | Skyshatter Pauldrons | its list keeps the entry piece here |
+| 1 | Arms Warrior | +14.4 | Onslaught Shoulderblades | BIS |
+| 2 | Elemental Shaman | -8.7 | Skyshatter Mantle | BIS |
+| 3 | Beast Mastery Hunter | -13.7 | Gronnstalker's Spaulders | BIS |
+| 4 | Survival Hunter | -14.3 | Gronnstalker's Spaulders | BIS |
+| 5 | Fury Warrior | -20.4 | Onslaught Shoulderblades | BIS |
+| 6 | Enhancement Shaman | -22.3 | Skyshatter Pauldrons | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -130,11 +130,11 @@ Unmeasured claimants, see the closing section: Protection Warrior, Restoration S
 
 Drops from Mother Shahraz. Classes: Rogue, Mage, Druid.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Combat Rogue | -30.3 | Slayer's Shoulderpads |  |
-| 2 | Arcane Mage | -56.5 | Mantle of the Tempest | its list keeps the entry piece here |
-| 3 | Balance Druid | -92.0 | Thunderheart Shoulderpads |  |
+| 1 | Combat Rogue | -30.3 | Slayer's Shoulderpads | BIS |
+| 2 | Arcane Mage | -56.5 | Mantle of the Tempest | Not BIS |
+| 3 | Balance Druid | -92.0 | Thunderheart Shoulderpads | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -142,12 +142,12 @@ Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoratio
 
 Drops from Illidan Stormrage. Classes: Paladin, Priest, Warlock.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Shadow Priest | -6.1 | Shroud of Absolution |  |
-| 2 | Retribution Paladin | -16.0 | Lightbringer Breastplate | its list keeps the entry piece here |
-| 3 | Affliction Warlock | -33.1 | Robe of the Malefic | its list keeps the entry piece here |
-| 4 | Destruction Warlock | -42.5 | Robe of the Malefic | its list keeps the entry piece here |
+| 1 | Shadow Priest | -6.1 | Shroud of Absolution | BIS |
+| 2 | Retribution Paladin | -16.0 | Lightbringer Breastplate | Not BIS |
+| 3 | Affliction Warlock | -33.1 | Robe of the Malefic | Not BIS |
+| 4 | Destruction Warlock | -42.5 | Robe of the Malefic | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -155,14 +155,14 @@ Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Prot
 
 Drops from Illidan Stormrage. Classes: Warrior, Hunter, Shaman.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Arms Warrior | -4.0 | Onslaught Breastplate |  |
-| 2 | Elemental Shaman | -6.6 | Skyshatter Breastplate |  |
-| 3 | Fury Warrior | -29.0 | Onslaught Breastplate |  |
-| 4 | Survival Hunter | -29.4 | Gronnstalker's Chestguard |  |
-| 5 | Beast Mastery Hunter | -30.7 | Gronnstalker's Chestguard |  |
-| 6 | Enhancement Shaman | -51.0 | Skyshatter Tunic | its list keeps the entry piece here |
+| 1 | Arms Warrior | -4.0 | Onslaught Breastplate | BIS |
+| 2 | Elemental Shaman | -6.6 | Skyshatter Breastplate | BIS |
+| 3 | Fury Warrior | -29.0 | Onslaught Breastplate | BIS |
+| 4 | Survival Hunter | -29.4 | Gronnstalker's Chestguard | BIS |
+| 5 | Beast Mastery Hunter | -30.7 | Gronnstalker's Chestguard | BIS |
+| 6 | Enhancement Shaman | -51.0 | Skyshatter Tunic | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -170,11 +170,11 @@ Unmeasured claimants, see the closing section: Protection Warrior, Restoration S
 
 Drops from Illidan Stormrage. Classes: Rogue, Mage, Druid.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Combat Rogue | -0.2 | Slayer's Chestguard |  |
-| 2 | Arcane Mage | -56.3 | Robes of the Tempest | its list keeps the entry piece here |
-| 3 | Balance Druid | -89.5 | Thunderheart Vest |  |
+| 1 | Combat Rogue | -0.2 | Slayer's Chestguard | BIS |
+| 2 | Arcane Mage | -56.3 | Robes of the Tempest | Not BIS |
+| 3 | Balance Druid | -89.5 | Thunderheart Vest | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -182,12 +182,12 @@ Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoratio
 
 Drops from Azgalor. Classes: Paladin, Priest, Warlock.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Destruction Warlock | +34.9 | Gloves of the Malefic |  |
-| 2 | Shadow Priest | -4.4 | Handguards of Absolution |  |
-| 3 | Affliction Warlock | -13.8 | Gloves of the Malefic |  |
-| 4 | Retribution Paladin | -24.4 | Lightbringer Gauntlets | its list keeps the entry piece here |
+| 1 | Destruction Warlock | +34.9 | Gloves of the Malefic | BIS |
+| 2 | Shadow Priest | -4.4 | Handguards of Absolution | BIS |
+| 3 | Affliction Warlock | -13.8 | Gloves of the Malefic | BIS |
+| 4 | Retribution Paladin | -24.4 | Lightbringer Gauntlets | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -195,14 +195,14 @@ Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Prot
 
 Drops from Azgalor. Classes: Warrior, Hunter, Shaman.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Survival Hunter | +21.2 | Gronnstalker's Gloves |  |
-| 2 | Arms Warrior | +20.3 | Onslaught Gauntlets |  |
-| 3 | Elemental Shaman | +2.6 | Skyshatter Gauntlets |  |
-| 4 | Beast Mastery Hunter | -1.6 | Gronnstalker's Gloves |  |
-| 5 | Fury Warrior | -17.2 | Onslaught Gauntlets | its list keeps the entry piece here |
-| 6 | Enhancement Shaman | -35.8 | Skyshatter Grips | its list keeps the entry piece here |
+| 1 | Survival Hunter | +21.2 | Gronnstalker's Gloves | BIS |
+| 2 | Arms Warrior | +20.3 | Onslaught Gauntlets | BIS |
+| 3 | Elemental Shaman | +2.6 | Skyshatter Gauntlets | BIS |
+| 4 | Beast Mastery Hunter | -1.6 | Gronnstalker's Gloves | BIS |
+| 5 | Fury Warrior | -17.2 | Onslaught Gauntlets | Not BIS |
+| 6 | Enhancement Shaman | -35.8 | Skyshatter Grips | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -210,11 +210,11 @@ Unmeasured claimants, see the closing section: Protection Warrior, Restoration S
 
 Drops from Azgalor. Classes: Rogue, Mage, Druid.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Arcane Mage | -1.4 | Gloves of the Tempest | its list keeps Gloves of Tirisfal here |
-| 2 | Combat Rogue | -22.8 | Slayer's Handguards |  |
-| 3 | Balance Druid | -89.5 | Thunderheart Handguards |  |
+| 1 | Arcane Mage | -1.4 | Gloves of the Tempest | Not BIS |
+| 2 | Combat Rogue | -22.8 | Slayer's Handguards | BIS |
+| 3 | Balance Druid | -89.5 | Thunderheart Handguards | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -222,12 +222,12 @@ Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoratio
 
 Drops from The Illidari Council. Classes: Paladin, Priest, Warlock.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Destruction Warlock | +7.9 | Leggings of the Malefic | its list keeps Leggings of Channeled Elements here |
-| 2 | Affliction Warlock | +6.4 | Leggings of the Malefic | its list keeps Leggings of Channeled Elements here |
-| 3 | Retribution Paladin | +0.2 | Lightbringer Greaves | its list keeps the entry piece here |
-| 4 | Shadow Priest | -4.0 | Leggings of Absolution | its list keeps the entry piece here |
+| 1 | Destruction Warlock | +7.9 | Leggings of the Malefic | Not BIS |
+| 2 | Affliction Warlock | +6.4 | Leggings of the Malefic | Not BIS |
+| 3 | Retribution Paladin | +0.2 | Lightbringer Greaves | Not BIS |
+| 4 | Shadow Priest | -4.0 | Leggings of Absolution | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -235,14 +235,14 @@ Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Prot
 
 Drops from The Illidari Council. Classes: Warrior, Hunter, Shaman.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Fury Warrior | +4.7 | Onslaught Greaves | its list keeps the entry piece here |
-| 2 | Elemental Shaman | +3.9 | Skyshatter Legguards | its list keeps Leggings of Channeled Elements here |
-| 3 | Arms Warrior | +2.3 | Onslaught Greaves | its list keeps the entry piece here |
-| 4 | Beast Mastery Hunter | -15.8 | Gronnstalker's Leggings |  |
-| 5 | Survival Hunter | -19.2 | Gronnstalker's Leggings | its list keeps Shady Dealer's Pantaloons here |
-| 6 | Enhancement Shaman | -27.4 | Skyshatter Pants | its list keeps the entry piece here |
+| 1 | Fury Warrior | +4.7 | Onslaught Greaves | Not BIS |
+| 2 | Elemental Shaman | +3.9 | Skyshatter Legguards | Not BIS |
+| 3 | Arms Warrior | +2.3 | Onslaught Greaves | Not BIS |
+| 4 | Beast Mastery Hunter | -15.8 | Gronnstalker's Leggings | BIS |
+| 5 | Survival Hunter | -19.2 | Gronnstalker's Leggings | Not BIS |
+| 6 | Enhancement Shaman | -27.4 | Skyshatter Pants | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -250,11 +250,11 @@ Unmeasured claimants, see the closing section: Protection Warrior, Restoration S
 
 Drops from The Illidari Council. Classes: Rogue, Mage, Druid.
 
-| Order | Spec | Gain | Buys | Note |
+| Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Balance Druid | +30.2 | Thunderheart Pants | its list keeps the entry piece here |
-| 2 | Combat Rogue | -27.7 | Slayer's Legguards |  |
-| 3 | Arcane Mage | -31.2 | Leggings of the Tempest |  |
+| 1 | Balance Druid | +30.2 | Thunderheart Pants | Not BIS |
+| 2 | Combat Rogue | -27.7 | Slayer's Legguards | BIS |
+| 3 | Arcane Mage | -31.2 | Leggings of the Tempest | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
