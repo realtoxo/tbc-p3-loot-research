@@ -1,0 +1,517 @@
+meta:
+  what: 'The coherence backtest: whether the slot ladders COMPOSE. Each spec starts
+    at its tier profile; a full clear supplies one copy of every Tier 6 raid drop
+    in any measured ladder, candidates from outside the raids uncontended; drops
+    allocate greedily by largest remaining ladder gain. `predicted` is the tier
+    anchor plus the banked one-slot deltas, which is what a reader adding card figures
+    expects; `measured` is the built, dressed end state simmed once. `gap` is measured
+    minus predicted, the additivity error; `ceiling` repeats it with contention
+    ignored, every slot at its best row, and `contention_cost` is what single copies
+    cost the greedy raid in predicted DPS.'
+  boss_armor: 7684
+  iterations: 10000
+  seed: 1
+  GENERATED: BY tools/run_coherence_backtest.py, which runs the simulator. Rebuilt
+    by `just backtest`, not by `just regen`. DO NOT EDIT.
+results:
+- spec: affliction_warlock
+  tier_anchor: 1964.3
+  upgrades_taken: 10
+  greedy:
+    predicted: 2164.1
+    measured: 2089.9
+    standard_error: 1.04
+    gap: -74.2
+  ceiling:
+    predicted: 2203.9
+    measured: 2044.3
+    standard_error: 0.99
+    gap: -159.6
+    contention_cost: 39.8
+- spec: arcane_mage
+  tier_anchor: 2320.7
+  upgrades_taken: 10
+  greedy:
+    predicted: 2358.5
+    measured: 2365.7
+    standard_error: 1.02
+    gap: 7.2
+  ceiling:
+    predicted: 2380.4
+    measured: 2380.5
+    standard_error: 1.04
+    gap: 0.1
+    contention_cost: 21.9
+- spec: arms_warrior
+  tier_anchor: 1984.1
+  upgrades_taken: 10
+  greedy:
+    predicted: 2006.9
+    measured: 2010.9
+    standard_error: 1.12
+    gap: 4.0
+  ceiling:
+    predicted: 2050.4
+    measured: 2056.4
+    standard_error: 1.14
+    gap: 6.0
+    contention_cost: 43.5
+- spec: balance_druid
+  tier_anchor: 1705.0
+  upgrades_taken: 10
+  greedy:
+    predicted: 1763.3
+    measured: 1745.7
+    standard_error: 0.92
+    gap: -17.6
+  ceiling:
+    predicted: 1777.5
+    measured: 1764.1
+    standard_error: 0.91
+    gap: -13.4
+    contention_cost: 14.2
+- spec: beast_mastery_hunter
+  tier_anchor: 3169.8
+  upgrades_taken: 10
+  greedy:
+    predicted: 3199.7
+    measured: 3200.7
+    standard_error: 0.91
+    gap: 1.0
+  ceiling:
+    predicted: 3220.9
+    measured: 3222.1
+    standard_error: 0.9
+    gap: 1.2
+    contention_cost: 21.2
+- spec: combat_rogue
+  tier_anchor: 2266.9
+  upgrades_taken: 10
+  greedy:
+    predicted: 2311.5
+    measured: 2311.9
+    standard_error: 0.94
+    gap: 0.4
+  ceiling:
+    predicted: 2336.4
+    measured: 2335.5
+    standard_error: 0.96
+    gap: -0.9
+    contention_cost: 24.9
+- spec: destruction_warlock
+  tier_anchor: 2142.8
+  upgrades_taken: 10
+  greedy:
+    predicted: 2506.3
+    measured: 2195.6
+    standard_error: 1.29
+    gap: -310.7
+  ceiling:
+    predicted: 2506.3
+    measured: 2195.6
+    standard_error: 1.29
+    gap: -310.7
+    contention_cost: 0.0
+- spec: elemental_shaman
+  tier_anchor: 1893.9
+  upgrades_taken: 10
+  greedy:
+    predicted: 1909.9
+    measured: 1909.2
+    standard_error: 0.93
+    gap: -0.7
+  ceiling:
+    predicted: 1925.5
+    measured: 1925.2
+    standard_error: 0.93
+    gap: -0.3
+    contention_cost: 15.6
+- spec: enhancement_shaman
+  tier_anchor: 1992.0
+  upgrades_taken: 10
+  greedy:
+    predicted: 2034.5
+    measured: 2033.5
+    standard_error: 0.92
+    gap: -1.0
+  ceiling:
+    predicted: 2057.9
+    measured: 2058.4
+    standard_error: 0.92
+    gap: 0.5
+    contention_cost: 23.4
+- spec: fury_warrior
+  tier_anchor: 2216.2
+  upgrades_taken: 10
+  greedy:
+    predicted: 2319.5
+    measured: 2329.7
+    standard_error: 1.11
+    gap: 10.2
+  ceiling:
+    predicted: 2346.8
+    measured: 2360.5
+    standard_error: 1.11
+    gap: 13.7
+    contention_cost: 27.3
+- spec: retribution_paladin
+  tier_anchor: 2040.4
+  upgrades_taken: 10
+  greedy:
+    predicted: 2105.1
+    measured: 2078.3
+    standard_error: 1.3
+    gap: -26.8
+  ceiling:
+    predicted: 2116.9
+    measured: 2110.8
+    standard_error: 1.33
+    gap: -6.1
+    contention_cost: 11.8
+- spec: shadow_priest
+  tier_anchor: 1497.8
+  upgrades_taken: 10
+  greedy:
+    predicted: 1506.5
+    measured: 1506.6
+    standard_error: 0.29
+    gap: 0.1
+  ceiling:
+    predicted: 1524.6
+    measured: 1517.3
+    standard_error: 0.29
+    gap: -7.3
+    contention_cost: 18.1
+- spec: survival_hunter
+  tier_anchor: 2668.7
+  upgrades_taken: 10
+  greedy:
+    predicted: 2703.0
+    measured: 2701.3
+    standard_error: 0.85
+    gap: -1.7
+  ceiling:
+    predicted: 2726.2
+    measured: 2727.7
+    standard_error: 0.84
+    gap: 1.5
+    contention_cost: 23.2
+allocations:
+- item: Leggings of the Malefic
+  id: 31053
+  spec: destruction_warlock
+  slot: legs
+  gain: 110.4
+  contested: false
+- item: Robe of the Malefic
+  id: 31052
+  spec: destruction_warlock
+  slot: chest
+  gain: 97.0
+  contested: false
+- item: Leggings of the Malefic
+  id: 31053
+  spec: affliction_warlock
+  slot: legs
+  gain: 64.7
+  contested: false
+- item: Robe of the Malefic
+  id: 31052
+  spec: affliction_warlock
+  slot: chest
+  gain: 57.5
+  contested: false
+- item: Shroud of the Highborne
+  id: 32524
+  spec: destruction_warlock
+  slot: back
+  gain: 44.1
+  contested: true
+- item: Leggings of Divine Retribution
+  id: 32341
+  spec: fury_warrior
+  slot: legs
+  gain: 34.6
+  contested: true
+- item: Cursed Vision of Sargeras
+  id: 32235
+  spec: fury_warrior
+  slot: head
+  gain: 29.2
+  contested: true
+- item: Bracers of Nimble Thought
+  id: 32586
+  spec: destruction_warlock
+  slot: wrist
+  gain: 27.8
+  contested: false
+- item: Slippers of the Seacaller
+  id: 32239
+  spec: destruction_warlock
+  slot: feet
+  gain: 27.8
+  contested: true
+- item: Insidious Bands
+  id: 32324
+  spec: combat_rogue
+  slot: wrist
+  gain: 26.0
+  contested: true
+- item: Mantle of Nimble Thought
+  id: 32587
+  spec: destruction_warlock
+  slot: shoulder
+  gain: 26.0
+  contested: false
+- item: Leggings of Channeled Elements
+  id: 30916
+  spec: balance_druid
+  slot: legs
+  gain: 25.2
+  contested: true
+- item: Cloak of the Illidari Council
+  id: 32331
+  spec: affliction_warlock
+  slot: back
+  gain: 23.8
+  contested: true
+- item: Boneweave Girdle
+  id: 32346
+  spec: survival_hunter
+  slot: waist
+  gain: 23.2
+  contested: true
+- item: Dreadboots of the Legion
+  id: 32345
+  spec: fury_warrior
+  slot: feet
+  gain: 21.7
+  contested: true
+- item: Waistwrap of Infinity
+  id: 32256
+  spec: destruction_warlock
+  slot: waist
+  gain: 21.7
+  contested: true
+- item: Mantle of Nimble Thought
+  id: 32587
+  spec: affliction_warlock
+  slot: shoulder
+  gain: 20.8
+  contested: false
+- item: Don Alejandro's Money Belt
+  id: 30879
+  spec: beast_mastery_hunter
+  slot: waist
+  gain: 20.8
+  contested: true
+- item: Shadowmaster's Boots
+  id: 32366
+  spec: retribution_paladin
+  slot: feet
+  gain: 19.0
+  contested: true
+- item: Choker of Endless Nightmares
+  id: 32260
+  spec: combat_rogue
+  slot: neck
+  gain: 18.6
+  contested: true
+- item: Cuffs of Devastation
+  id: 30870
+  spec: arcane_mage
+  slot: wrist
+  gain: 18.5
+  contested: true
+- item: Bindings of Lightning Reflexes
+  id: 32574
+  spec: retribution_paladin
+  slot: wrist
+  gain: 18.3
+  contested: false
+- item: Grips of Silent Justice
+  id: 32278
+  spec: fury_warrior
+  slot: hands
+  gain: 17.7
+  contested: true
+- item: Bracers of Nimble Thought
+  id: 32586
+  spec: affliction_warlock
+  slot: wrist
+  gain: 17.3
+  contested: false
+- item: Anetheron's Noose
+  id: 30888
+  spec: arcane_mage
+  slot: waist
+  gain: 16.5
+  contested: true
+- item: Deadly Cuffs
+  id: 30863
+  spec: enhancement_shaman
+  slot: wrist
+  gain: 15.1
+  contested: true
+- item: Naturewarden's Treads
+  id: 32352
+  spec: balance_druid
+  slot: feet
+  gain: 14.6
+  contested: true
+- item: Bracers of Nimble Thought
+  id: 32586
+  spec: balance_druid
+  slot: wrist
+  gain: 14.3
+  contested: false
+- item: Softstep Boots of Tracking
+  id: 32510
+  spec: enhancement_shaman
+  slot: feet
+  gain: 13.9
+  contested: true
+- item: Shadowmoon Destroyer's Drape
+  id: 32323
+  spec: enhancement_shaman
+  slot: back
+  gain: 12.6
+  contested: true
+- item: Bow-stitched Leggings
+  id: 30900
+  spec: retribution_paladin
+  slot: legs
+  gain: 12.3
+  contested: true
+- item: Boots of Oceanic Fury
+  id: 32242
+  spec: elemental_shaman
+  slot: feet
+  gain: 11.5
+  contested: true
+- item: Bindings of Lightning Reflexes
+  id: 32574
+  spec: survival_hunter
+  slot: wrist
+  gain: 11.1
+  contested: false
+- item: Forest Prowler's Helm
+  id: 32376
+  spec: retribution_paladin
+  slot: head
+  gain: 11.1
+  contested: true
+- item: Bindings of Lightning Reflexes
+  id: 32574
+  spec: beast_mastery_hunter
+  slot: wrist
+  gain: 9.1
+  contested: false
+- item: Cowl of the Illidari High Lord
+  id: 32525
+  spec: destruction_warlock
+  slot: head
+  gain: 8.7
+  contested: true
+- item: The Sun King's Talisman
+  id: 30015
+  spec: affliction_warlock
+  slot: neck
+  gain: 8.5
+  contested: false
+- item: Black-Iron Battlecloak
+  id: 30729
+  spec: arms_warrior
+  slot: back
+  gain: 8.4
+  contested: false
+- item: Choker of Serrated Blades
+  id: 32591
+  spec: arms_warrior
+  slot: neck
+  gain: 8.0
+  contested: true
+- item: Velvet Boots of the Guardian
+  id: 30067
+  spec: affliction_warlock
+  slot: feet
+  gain: 7.2
+  contested: false
+- item: Onslaught Greaves
+  id: 30977
+  spec: arms_warrior
+  slot: legs
+  gain: 5.1
+  contested: false
+- item: Nethervoid Cloak
+  id: 32590
+  spec: shadow_priest
+  slot: back
+  gain: 4.8
+  contested: true
+- item: Mail of Fevered Pursuit
+  id: 30907
+  spec: retribution_paladin
+  slot: chest
+  gain: 4.0
+  contested: true
+- item: Leggings of Devastation
+  id: 32367
+  spec: shadow_priest
+  slot: legs
+  gain: 3.9
+  contested: true
+- item: Blue Suede Shoes
+  id: 30894
+  spec: arcane_mage
+  slot: feet
+  gain: 2.6
+  contested: true
+- item: Bands of the Coming Storm
+  id: 32259
+  spec: elemental_shaman
+  slot: wrist
+  gain: 2.5
+  contested: true
+- item: Belt of the Crescent Moon
+  id: 30914
+  spec: balance_druid
+  slot: waist
+  gain: 2.2
+  contested: true
+- item: Royal Cloak of the Sunstriders
+  id: 29992
+  spec: balance_druid
+  slot: back
+  gain: 2.0
+  contested: false
+- item: Ancient Spellcloak of the Highborne
+  id: 30735
+  spec: elemental_shaman
+  slot: back
+  gain: 2.0
+  contested: false
+- item: Furious Shackles
+  id: 30861
+  spec: arms_warrior
+  slot: wrist
+  gain: 1.3
+  contested: true
+- item: Mantle of Darkness
+  id: 32377
+  spec: enhancement_shaman
+  slot: shoulder
+  gain: 0.9
+  contested: true
+- item: Chain of the Twilight Owl
+  id: 24121
+  spec: arcane_mage
+  slot: neck
+  gain: 0.2
+  contested: false
+- item: Bindings of Lightning Reflexes
+  id: 32574
+  spec: fury_warrior
+  slot: wrist
+  gain: 0.1
+  contested: false

@@ -187,6 +187,11 @@ sim-ladders ITERATIONS="10000":
 audit:
     @python3 tools/audit_bis.py
 
+# Rerun the coherence backtest: whether the slot ladders compose when many
+# swaps stack. Runs the simulator; the reading lives in sim-results.yaml.
+backtest ITERATIONS="10000":
+    @python3 tools/run_coherence_backtest.py --iterations {{ITERATIONS}}
+
 # Fail if a sim profile wears a gem or an enchant Phase 3 cannot supply.
 # Runs inside `just check` as well; this is the one-line way to run it alone.
 gating:
