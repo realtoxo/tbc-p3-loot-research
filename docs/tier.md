@@ -4,7 +4,7 @@ eyebrow: Measurement
 subtitle: >-
   Who gains what from each token, in give-out order, and at what point it
   makes sense to break an old set bonus: every subset of each spec's
-  bonus-carrying slots priced against its chase pieces.
+  bonus-carrying slots priced against its best-in-slot pieces.
 status: draft
 updated: 2026-08-21
 ---
@@ -20,7 +20,7 @@ it**, one section per token with the give-out order the measurements support.
 SECOND, per spec, **at what point breaking an old bonus pays**. For
 every simulated spec, every subset of the entry set's bonus-carrying slots was
 replaced with what the best-in-slot set wears there, on the otherwise
-unchanged entry set, so the tables below hold the best way to take one chase
+unchanged entry set, so the tables below hold the best way to take one
 piece, two, three, and so on, and whether the old bonus survives each.
 
 ## How to read every table
@@ -31,19 +31,16 @@ comparable with that spec's entry figure on
 [Simulated Throughput](sims.md), and the empty row reproduces it. The plus or
 minus is one standard error, not a confidence interval.
 
-**A replaced slot keeps its enchant and a replacement arrives ungemmed.**
-Which gems a chase piece takes is a separate question from what the piece is
-worth, so the figures understate a gemmed replacement, and a row with more
-replacements carries more empty sockets. The break-even readings therefore
-compare subsets **of the same size**: two subsets of equal size carry the
-same number of empty sockets, so the gap between the best that breaks a bonus
-and the best that keeps it is the bonus question and not the gems. The fully
-gemmed destination is priced by the anchor figures on the set pages, not
-here.
+**Every replacement arrives dressed**: the piece carries the gems and the
+enchant the exported profile wears on it, and a token measured outside any
+profile carries the spec's standard gem in each socket. A figure here is what
+the raider measures actually wearing the pieces, so a four-piece row that
+reads below entry is a real statement about the set against the entry gear,
+not an artifact of empty sockets.
 
 Each spec carries two rounds. **The old-bonus round** replaces subsets of the
-slots holding the entry set's live bonuses with the spec's chase pieces, the
-items its best-in-slot set wears there. **The Tier 6 chase** replaces subsets
+slots holding the entry set's live bonuses with the spec's best-in-slot pieces, the
+items its best-in-slot set wears there. **The Tier 6 round** replaces subsets
 of the token slots with the tier anchor's pieces, pricing the two-piece and
 four-piece thresholds and the order the tokens are best taken in. Nothing
 here is a ruling: the tables are measurements, and which claimant takes which
@@ -64,10 +61,10 @@ Drops from Archimonde. Classes: Paladin, Priest, Warlock.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Shadow Priest | -8.3 | Hood of Absolution | BIS |
-| 2 | Affliction Warlock | -42.4 | Hood of the Malefic | BIS |
-| 3 | Retribution Paladin | -50.7 | Lightbringer War-Helm | Not BIS |
-| 4 | Destruction Warlock | -58.6 | Hood of the Malefic | BIS |
+| 1 | Destruction Warlock | +13.6 | Hood of the Malefic | BIS |
+| 2 | Shadow Priest | +8.3 | Hood of Absolution | BIS |
+| 3 | Affliction Warlock | +7.0 | Hood of the Malefic | BIS |
+| 4 | Retribution Paladin | +1.9 | Lightbringer War-Helm | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -77,12 +74,12 @@ Drops from Archimonde. Classes: Warrior, Hunter, Shaman.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Arms Warrior | -42.0 | Onslaught Battle-Helm | BIS |
-| 2 | Elemental Shaman | -52.2 | Skyshatter Headguard | BIS |
-| 3 | Enhancement Shaman | -71.2 | Skyshatter Cover | Not BIS |
-| 4 | Beast Mastery Hunter | -77.0 | Gronnstalker's Helmet | Not BIS |
-| 5 | Survival Hunter | -77.7 | Gronnstalker's Helmet | BIS |
-| 6 | Fury Warrior | -83.5 | Onslaught Battle-Helm | Not BIS |
+| 1 | Arms Warrior | +14.8 | Onslaught Battle-Helm | BIS |
+| 2 | Elemental Shaman | +9.1 | Skyshatter Headguard | BIS |
+| 3 | Fury Warrior | -7.7 | Onslaught Battle-Helm | Not BIS |
+| 4 | Beast Mastery Hunter | -14.8 | Gronnstalker's Helmet | Not BIS |
+| 5 | Survival Hunter | -20.2 | Gronnstalker's Helmet | BIS |
+| 6 | Enhancement Shaman | -24.3 | Skyshatter Cover | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -92,9 +89,9 @@ Drops from Archimonde. Classes: Rogue, Mage, Druid.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Combat Rogue | -65.7 | Slayer's Helm | Not BIS |
-| 2 | Arcane Mage | -95.2 | Cowl of the Tempest | Not BIS |
-| 3 | Balance Druid | -124.3 | Thunderheart Headguard | BIS |
+| 1 | Combat Rogue | -8.3 | Slayer's Helm | Not BIS |
+| 2 | Arcane Mage | -31.7 | Cowl of the Tempest | Not BIS |
+| 3 | Balance Druid | -76.4 | Thunderheart Headguard | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -104,10 +101,10 @@ Drops from Mother Shahraz. Classes: Paladin, Priest, Warlock.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Shadow Priest | -5.9 | Shoulderpads of Absolution | BIS |
-| 2 | Destruction Warlock | -6.3 | Mantle of the Malefic | BIS |
-| 3 | Affliction Warlock | -19.9 | Mantle of the Malefic | BIS |
-| 4 | Retribution Paladin | -27.6 | Lightbringer Shoulderbraces | Not BIS |
+| 1 | Destruction Warlock | +11.6 | Mantle of the Malefic | BIS |
+| 2 | Shadow Priest | -0.5 | Shoulderpads of Absolution | BIS |
+| 3 | Affliction Warlock | -6.1 | Mantle of the Malefic | BIS |
+| 4 | Retribution Paladin | -14.3 | Lightbringer Shoulderbraces | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -118,11 +115,11 @@ Drops from Mother Shahraz. Classes: Warrior, Hunter, Shaman.
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
 | 1 | Arms Warrior | +14.4 | Onslaught Shoulderblades | BIS |
-| 2 | Elemental Shaman | -8.7 | Skyshatter Mantle | BIS |
-| 3 | Beast Mastery Hunter | -13.7 | Gronnstalker's Spaulders | BIS |
-| 4 | Survival Hunter | -14.3 | Gronnstalker's Spaulders | BIS |
-| 5 | Fury Warrior | -20.4 | Onslaught Shoulderblades | BIS |
-| 6 | Enhancement Shaman | -22.3 | Skyshatter Pauldrons | Not BIS |
+| 2 | Elemental Shaman | +4.7 | Skyshatter Mantle | BIS |
+| 3 | Beast Mastery Hunter | +0.9 | Gronnstalker's Spaulders | BIS |
+| 4 | Survival Hunter | +0.4 | Gronnstalker's Spaulders | BIS |
+| 5 | Fury Warrior | -6.1 | Onslaught Shoulderblades | BIS |
+| 6 | Enhancement Shaman | -6.6 | Skyshatter Pauldrons | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -132,9 +129,9 @@ Drops from Mother Shahraz. Classes: Rogue, Mage, Druid.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Combat Rogue | -30.3 | Slayer's Shoulderpads | BIS |
-| 2 | Arcane Mage | -56.5 | Mantle of the Tempest | Not BIS |
-| 3 | Balance Druid | -92.0 | Thunderheart Shoulderpads | BIS |
+| 1 | Combat Rogue | -16.0 | Slayer's Shoulderpads | BIS |
+| 2 | Arcane Mage | -38.9 | Mantle of the Tempest | Not BIS |
+| 3 | Balance Druid | -79.9 | Thunderheart Shoulderpads | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -144,10 +141,10 @@ Drops from Illidan Stormrage. Classes: Paladin, Priest, Warlock.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Shadow Priest | -6.1 | Shroud of Absolution | BIS |
-| 2 | Retribution Paladin | -16.0 | Lightbringer Breastplate | Not BIS |
-| 3 | Affliction Warlock | -33.1 | Robe of the Malefic | Not BIS |
-| 4 | Destruction Warlock | -42.5 | Robe of the Malefic | Not BIS |
+| 1 | Shadow Priest | +5.5 | Shroud of Absolution | BIS |
+| 2 | Retribution Paladin | +1.9 | Lightbringer Breastplate | Not BIS |
+| 3 | Affliction Warlock | -12.3 | Robe of the Malefic | Not BIS |
+| 4 | Destruction Warlock | -16.7 | Robe of the Malefic | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -157,12 +154,12 @@ Drops from Illidan Stormrage. Classes: Warrior, Hunter, Shaman.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Arms Warrior | -4.0 | Onslaught Breastplate | BIS |
-| 2 | Elemental Shaman | -6.6 | Skyshatter Breastplate | BIS |
-| 3 | Fury Warrior | -29.0 | Onslaught Breastplate | BIS |
-| 4 | Survival Hunter | -29.4 | Gronnstalker's Chestguard | BIS |
-| 5 | Beast Mastery Hunter | -30.7 | Gronnstalker's Chestguard | BIS |
-| 6 | Enhancement Shaman | -51.0 | Skyshatter Tunic | Not BIS |
+| 1 | Elemental Shaman | +13.3 | Skyshatter Breastplate | BIS |
+| 2 | Arms Warrior | +12.6 | Onslaught Breastplate | BIS |
+| 3 | Survival Hunter | -1.4 | Gronnstalker's Chestguard | BIS |
+| 4 | Beast Mastery Hunter | -3.9 | Gronnstalker's Chestguard | BIS |
+| 5 | Fury Warrior | -8.0 | Onslaught Breastplate | BIS |
+| 6 | Enhancement Shaman | -30.7 | Skyshatter Tunic | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -172,9 +169,9 @@ Drops from Illidan Stormrage. Classes: Rogue, Mage, Druid.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Combat Rogue | -0.2 | Slayer's Chestguard | BIS |
-| 2 | Arcane Mage | -56.3 | Robes of the Tempest | Not BIS |
-| 3 | Balance Druid | -89.5 | Thunderheart Vest | BIS |
+| 1 | Combat Rogue | +23.5 | Slayer's Chestguard | BIS |
+| 2 | Arcane Mage | -29.0 | Robes of the Tempest | Not BIS |
+| 3 | Balance Druid | -72.9 | Thunderheart Vest | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -184,10 +181,10 @@ Drops from Azgalor. Classes: Paladin, Priest, Warlock.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Destruction Warlock | +34.9 | Gloves of the Malefic | BIS |
-| 2 | Shadow Priest | -4.4 | Handguards of Absolution | BIS |
-| 3 | Affliction Warlock | -13.8 | Gloves of the Malefic | BIS |
-| 4 | Retribution Paladin | -24.4 | Lightbringer Gauntlets | Not BIS |
+| 1 | Destruction Warlock | +43.0 | Gloves of the Malefic | BIS |
+| 2 | Shadow Priest | -0.2 | Handguards of Absolution | BIS |
+| 3 | Affliction Warlock | -7.6 | Gloves of the Malefic | BIS |
+| 4 | Retribution Paladin | -18.0 | Lightbringer Gauntlets | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -197,12 +194,12 @@ Drops from Azgalor. Classes: Warrior, Hunter, Shaman.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Survival Hunter | +21.2 | Gronnstalker's Gloves | BIS |
-| 2 | Arms Warrior | +20.3 | Onslaught Gauntlets | BIS |
-| 3 | Elemental Shaman | +2.6 | Skyshatter Gauntlets | BIS |
-| 4 | Beast Mastery Hunter | -1.6 | Gronnstalker's Gloves | BIS |
-| 5 | Fury Warrior | -17.2 | Onslaught Gauntlets | Not BIS |
-| 6 | Enhancement Shaman | -35.8 | Skyshatter Grips | Not BIS |
+| 1 | Survival Hunter | +33.7 | Gronnstalker's Gloves | BIS |
+| 2 | Arms Warrior | +28.6 | Onslaught Gauntlets | BIS |
+| 3 | Elemental Shaman | +10.2 | Skyshatter Gauntlets | BIS |
+| 4 | Beast Mastery Hunter | +8.5 | Gronnstalker's Gloves | BIS |
+| 5 | Fury Warrior | -5.6 | Onslaught Gauntlets | Not BIS |
+| 6 | Enhancement Shaman | -27.3 | Skyshatter Grips | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -212,9 +209,9 @@ Drops from Azgalor. Classes: Rogue, Mage, Druid.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Arcane Mage | -1.4 | Gloves of the Tempest | Not BIS |
-| 2 | Combat Rogue | -22.8 | Slayer's Handguards | BIS |
-| 3 | Balance Druid | -89.5 | Thunderheart Handguards | BIS |
+| 1 | Arcane Mage | +10.1 | Gloves of the Tempest | Not BIS |
+| 2 | Combat Rogue | -17.2 | Slayer's Handguards | BIS |
+| 3 | Balance Druid | -82.6 | Thunderheart Handguards | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -224,10 +221,10 @@ Drops from The Illidari Council. Classes: Paladin, Priest, Warlock.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Destruction Warlock | +7.9 | Leggings of the Malefic | Not BIS |
-| 2 | Affliction Warlock | +6.4 | Leggings of the Malefic | Not BIS |
-| 3 | Retribution Paladin | +0.2 | Lightbringer Greaves | Not BIS |
-| 4 | Shadow Priest | -4.0 | Leggings of Absolution | Not BIS |
+| 1 | Destruction Warlock | +15.8 | Leggings of the Malefic | Not BIS |
+| 2 | Affliction Warlock | +13.0 | Leggings of the Malefic | Not BIS |
+| 3 | Retribution Paladin | +7.5 | Lightbringer Greaves | Not BIS |
+| 4 | Shadow Priest | +0.2 | Leggings of Absolution | Not BIS |
 
 Unmeasured claimants, see the closing section: Holy Paladin, Priest Healer, Protection Paladin.
 
@@ -237,12 +234,12 @@ Drops from The Illidari Council. Classes: Warrior, Hunter, Shaman.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Fury Warrior | +4.7 | Onslaught Greaves | Not BIS |
-| 2 | Elemental Shaman | +3.9 | Skyshatter Legguards | Not BIS |
-| 3 | Arms Warrior | +2.3 | Onslaught Greaves | Not BIS |
-| 4 | Beast Mastery Hunter | -15.8 | Gronnstalker's Leggings | BIS |
-| 5 | Survival Hunter | -19.2 | Gronnstalker's Leggings | Not BIS |
-| 6 | Enhancement Shaman | -27.4 | Skyshatter Pants | Not BIS |
+| 1 | Fury Warrior | +12.1 | Onslaught Greaves | Not BIS |
+| 2 | Elemental Shaman | +11.8 | Skyshatter Legguards | Not BIS |
+| 3 | Arms Warrior | +7.5 | Onslaught Greaves | Not BIS |
+| 4 | Beast Mastery Hunter | -5.4 | Gronnstalker's Leggings | BIS |
+| 5 | Survival Hunter | -7.6 | Gronnstalker's Leggings | Not BIS |
+| 6 | Enhancement Shaman | -21.7 | Skyshatter Pants | Not BIS |
 
 Unmeasured claimants, see the closing section: Protection Warrior, Restoration Shaman.
 
@@ -252,9 +249,9 @@ Drops from The Illidari Council. Classes: Rogue, Mage, Druid.
 
 | Order | Spec | Gain | Buys | Standing |
 |---|---|---|---|---|
-| 1 | Balance Druid | +30.2 | Thunderheart Pants | Not BIS |
-| 2 | Combat Rogue | -27.7 | Slayer's Legguards | BIS |
-| 3 | Arcane Mage | -31.2 | Leggings of the Tempest | BIS |
+| 1 | Balance Druid | +35.8 | Thunderheart Pants | Not BIS |
+| 2 | Combat Rogue | -22.4 | Slayer's Legguards | BIS |
+| 3 | Arcane Mage | -24.8 | Leggings of the Tempest | BIS |
 
 Unmeasured claimants, see the closing section: Feral Bear, Feral Cat, Restoration Druid.
 
@@ -266,45 +263,47 @@ Walking in, this spec holds **Voidheart Raiment** at 2 pieces, in the shoulder, 
 
 > Voidheart Raiment 2-piece (Tier 4, shoulder 28967 + hands 28968): Your shadow damage spells have a chance to grant you 135 bonus shadow damage for 15 sec, and your fire damage spells have a chance to grant you 135 bonus fire damage for 15 sec.
 
-The chase pieces are what the best-in-slot set wears in the shoulder, hands slots: Mantle of the Malefic, Gloves of the Malefic. The empty subset reproduces the [entry figure](sims/affliction-warlock-entry.md) of 1932.8 ± 0.95.
+The replacement pieces are what the best-in-slot set wears in the shoulder, hands slots: Mantle of the Malefic, Gloves of the Malefic. The empty subset reproduces the [entry figure](sims/affliction-warlock-entry.md) of 1932.8 ± 0.95.
 
-The Voidheart 2-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 1919.0 ± 0.94.
+The Voidheart 2-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, shoulder, measures 1926.7 ± 0.94.
 
-The best first chase piece is the **hands**, at 1919.0 ± 0.94, -13.8 against the entry set.
+The best first pickup is the **shoulder**, at 1926.7 ± 0.94, -6.1 against the entry set.
 
-| Chase pieces | Slots replaced        | Voidheart pieces | Old bonus     | DPS           | Against entry |
-|--------------|-----------------------|------------------|---------------|---------------|---------------|
-| 0            | *none, the entry set* | 2                | Voidheart 2pc | 1932.8 ± 0.95 | +0.0          |
-| 1            | hands                 | 1                | none          | 1919.0 ± 0.94 | -13.8         |
-| 1            | shoulder              | 1                | none          | 1912.9 ± 0.94 | -19.9         |
-| 2            | shoulder, hands       | 0                | none          | 1920.1 ± 0.94 | -12.7         |
+The highest subset in the round is shoulder, hands, at 1940.8 ± 0.95, +8.0 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced        | Voidheart pieces | Old bonus     | DPS           | Against entry |
+|--------------------|-----------------------|------------------|---------------|---------------|---------------|
+| 0                  | *none, the entry set* | 2                | Voidheart 2pc | 1932.8 ± 0.95 | +0.0          |
+| 1                  | shoulder              | 1                | none          | 1926.7 ± 0.94 | -6.1          |
+| 1                  | hands                 | 1                | none          | 1925.2 ± 0.95 | -7.6          |
+| 2                  | shoulder, hands       | 0                | none          | 1940.8 ± 0.95 | +8.0          |
+
+### The Tier 6 set
 
 The [tier anchor](sims/affliction-warlock-tier-hands-and-head.md) reconsiders the head, shoulder, hands, legs slots, taking Hood of the Malefic, Mantle of the Malefic, Gloves of the Malefic, Leggings of Channeled Elements. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Malefic 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 1920.1 ± 0.94, -12.7 against the entry set.
+The cheapest **Malefic 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 1940.8 ± 0.95, +8.0 against the entry set.
 
-Read greedily off the table, the chase order is **legs, then hands, then shoulder, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **legs, then head, then shoulder, then hands**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                       | Malefic pieces | Tier 6 bonus | DPS           | Against entry |
 |--------------|-----------------------------|----------------|--------------|---------------|---------------|
 | 0            | *none, the entry set*       | 0              | none         | 1932.8 ± 0.95 | +0.0          |
-| 1            | legs                        | 0              | none         | 1930.0 ± 0.95 | -2.8          |
-| 1            | hands                       | 1              | none         | 1919.0 ± 0.94 | -13.8         |
-| 1            | shoulder                    | 1              | none         | 1912.9 ± 0.94 | -19.9         |
-| 1            | head                        | 1              | none         | 1890.4 ± 0.89 | -42.4         |
-| 2            | shoulder, hands             | 2              | Malefic 2pc  | 1920.1 ± 0.94 | -12.7         |
-| 2            | hands, legs                 | 1              | none         | 1916.5 ± 0.95 | -16.3         |
-| 2            | shoulder, legs              | 1              | none         | 1910.8 ± 0.94 | -22.0         |
-| 2            | head, legs                  | 1              | none         | 1887.2 ± 0.89 | -45.6         |
-| 2            | head, hands                 | 2              | Malefic 2pc  | 1876.3 ± 0.87 | -56.5         |
-| 2            | head, shoulder              | 2              | Malefic 2pc  | 1869.8 ± 0.87 | -63.0         |
-| 3            | shoulder, hands, legs       | 2              | Malefic 2pc  | 1917.6 ± 0.95 | -15.2         |
-| 3            | head, shoulder, hands       | 3              | Malefic 2pc  | 1876.9 ± 0.87 | -55.9         |
-| 3            | head, hands, legs           | 2              | Malefic 2pc  | 1873.2 ± 0.87 | -59.6         |
-| 3            | head, shoulder, legs        | 2              | Malefic 2pc  | 1867.1 ± 0.86 | -65.7         |
-| 4            | head, shoulder, hands, legs | 3              | Malefic 2pc  | 1873.7 ± 0.87 | -59.1         |
+| 1            | legs                        | 0              | none         | 1950.8 ± 0.96 | +18.0         |
+| 1            | head                        | 1              | none         | 1939.8 ± 0.96 | +7.0          |
+| 1            | shoulder                    | 1              | none         | 1926.7 ± 0.94 | -6.1          |
+| 1            | hands                       | 1              | none         | 1925.2 ± 0.95 | -7.6          |
+| 2            | head, legs                  | 1              | none         | 1957.8 ± 0.97 | +25.0         |
+| 2            | shoulder, legs              | 1              | none         | 1945.0 ± 0.96 | +12.2         |
+| 2            | hands, legs                 | 1              | none         | 1943.6 ± 0.96 | +10.8         |
+| 2            | shoulder, hands             | 2              | Malefic 2pc  | 1940.8 ± 0.95 | +8.0          |
+| 2            | head, shoulder              | 2              | Malefic 2pc  | 1933.0 ± 0.94 | +0.2          |
+| 2            | head, hands                 | 2              | Malefic 2pc  | 1931.7 ± 0.94 | -1.1          |
+| 3            | shoulder, hands, legs       | 2              | Malefic 2pc  | 1958.4 ± 0.96 | +25.6         |
+| 3            | head, shoulder, legs        | 2              | Malefic 2pc  | 1951.4 ± 0.95 | +18.6         |
+| 3            | head, hands, legs           | 2              | Malefic 2pc  | 1949.5 ± 0.95 | +16.7         |
+| 3            | head, shoulder, hands       | 3              | Malefic 2pc  | 1946.4 ± 0.94 | +13.6         |
+| 4            | head, shoulder, hands, legs | 3              | Malefic 2pc  | 1964.4 ± 0.95 | +31.6         |
 
 ## Arcane Mage
 
@@ -314,31 +313,31 @@ Walking in, this spec holds **Tirisfal Regalia** at 4 pieces, in the head, shoul
 
 > Tirisfal Regalia 4-piece: Your spell critical strikes grant you up to 70 spell damage for 6 sec.
 
-The chase pieces are what the best-in-slot set wears in the legs slots: Leggings of the Tempest. The empty subset reproduces the [entry figure](sims/arcane-mage-entry.md) of 2301.2 ± 1.00.
+The replacement pieces are what the best-in-slot set wears in the legs slots: Leggings of the Tempest. The empty subset reproduces the [entry figure](sims/arcane-mage-entry.md) of 2301.2 ± 1.00.
 
-The Tirisfal 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, legs, measures 2270.0 ± 0.96.
+The Tirisfal 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, legs, measures 2276.4 ± 0.96.
 
-No subset of these slots can break the Tirisfal 2-piece: the set keeps enough pieces outside them, so the chase never poses that question.
+No subset of these slots can break the Tirisfal 2-piece: the set keeps enough pieces outside them, so the replacements never poses that question.
 
-The best first chase piece is the **legs**, at 2270.0 ± 0.96, -31.2 against the entry set.
+The best first pickup is the **legs**, at 2276.4 ± 0.96, -24.8 against the entry set.
 
-| Chase pieces | Slots replaced        | Tirisfal pieces | Old bonus            | DPS           | Against entry |
-|--------------|-----------------------|-----------------|----------------------|---------------|---------------|
-| 0            | *none, the entry set* | 4               | Tirisfal 2pc and 4pc | 2301.2 ± 1.00 | +0.0          |
-| 1            | legs                  | 3               | Tirisfal 2pc         | 2270.0 ± 0.96 | -31.2         |
+| Replacement pieces | Slots replaced        | Tirisfal pieces | Old bonus            | DPS           | Against entry |
+|--------------------|-----------------------|-----------------|----------------------|---------------|---------------|
+| 0                  | *none, the entry set* | 4               | Tirisfal 2pc and 4pc | 2301.2 ± 1.00 | +0.0          |
+| 1                  | legs                  | 3               | Tirisfal 2pc         | 2276.4 ± 0.96 | -24.8         |
 
-### The Tier 6 chase
+### The Tier 6 set
 
 The [tier anchor](sims/arcane-mage-tier-hands-and-head.md) reconsiders the hands, legs slots, taking Gloves of Tirisfal, Leggings of the Tempest. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-Read greedily off the table, the chase order is **hands, then legs**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **hands, then legs**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                 | Tier 6 bonus | DPS           | Against entry |
 |--------------|-----------------------|--------------|---------------|---------------|
 | 0            | *none, the entry set* | none         | 2301.2 ± 1.00 | +0.0          |
 | 1            | hands                 | none         | 2295.8 ± 0.99 | -5.4          |
-| 1            | legs                  | none         | 2270.0 ± 0.96 | -31.2         |
-| 2            | hands, legs           | none         | 2314.4 ± 1.01 | +13.2         |
+| 1            | legs                  | none         | 2276.4 ± 0.96 | -24.8         |
+| 2            | hands, legs           | none         | 2320.7 ± 1.01 | +19.5         |
 
 ## Arms Warrior
 
@@ -346,47 +345,49 @@ Walking in, this spec holds **Destroyer Battlegear** at 2 pieces, in the head, c
 
 > Destroyer Battlegear 2-piece: your Overpower ability grants 100 attack power for 5 sec
 
-The chase pieces are what the best-in-slot set wears in the head, chest slots: Onslaught Battle-Helm, Onslaught Breastplate. The empty subset reproduces the [entry figure](sims/arms-warrior-entry.md) of 1909.9 ± 1.06.
+The replacement pieces are what the best-in-slot set wears in the head, chest slots: Onslaught Battle-Helm, Onslaught Breastplate. The empty subset reproduces the [entry figure](sims/arms-warrior-entry.md) of 1909.9 ± 1.06.
 
-The Destroyer 2-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 1905.9 ± 1.06.
+The Destroyer 2-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, head, measures 1924.7 ± 1.06.
 
-The best first chase piece is the **chest**, at 1905.9 ± 1.06, -4.0 against the entry set.
+The best first pickup is the **head**, at 1924.7 ± 1.06, +14.8 against the entry set.
 
-| Chase pieces | Slots replaced        | Destroyer pieces | Old bonus     | DPS           | Against entry |
-|--------------|-----------------------|------------------|---------------|---------------|---------------|
-| 0            | *none, the entry set* | 2                | Destroyer 2pc | 1909.9 ± 1.06 | +0.0          |
-| 1            | chest                 | 1                | none          | 1905.9 ± 1.06 | -4.0          |
-| 1            | head                  | 1                | none          | 1867.9 ± 1.03 | -42.0         |
-| 2            | head, chest           | 0                | none          | 1868.0 ± 1.03 | -41.9         |
+The highest subset in the round is head, chest, at 1943.9 ± 1.07, +34.0 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced        | Destroyer pieces | Old bonus     | DPS           | Against entry |
+|--------------------|-----------------------|------------------|---------------|---------------|---------------|
+| 0                  | *none, the entry set* | 2                | Destroyer 2pc | 1909.9 ± 1.06 | +0.0          |
+| 1                  | head                  | 1                | none          | 1924.7 ± 1.06 | +14.8         |
+| 1                  | chest                 | 1                | none          | 1922.5 ± 1.06 | +12.6         |
+| 2                  | head, chest           | 0                | none          | 1943.9 ± 1.07 | +34.0         |
+
+### The Tier 6 set
 
 The [tier anchor](sims/arms-warrior-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Onslaught Battle-Helm, Onslaught Shoulderblades, Onslaught Breastplate, Onslaught Gauntlets. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Onslaught 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 1937.9 ± 1.07, +28.0 against the entry set.
+The cheapest **Onslaught 2-piece** is 2 tokens, and the best way there, head, hands, measures 1959.7 ± 1.08, +49.8 against the entry set.
 
-The cheapest **Onslaught 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 1895.6 ± 1.08, -14.3 against the entry set.
+The cheapest **Onslaught 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 1991.9 ± 1.10, +82.0 against the entry set.
 
-Read greedily off the table, the chase order is **hands, then shoulder, then chest, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **hands, then head, then chest, then shoulder**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                        | Onslaught pieces | Tier 6 bonus          | DPS           | Against entry |
 |--------------|------------------------------|------------------|-----------------------|---------------|---------------|
 | 0            | *none, the entry set*        | 0                | none                  | 1909.9 ± 1.06 | +0.0          |
-| 1            | hands                        | 1                | none                  | 1930.2 ± 1.06 | +20.3         |
+| 1            | hands                        | 1                | none                  | 1938.5 ± 1.07 | +28.6         |
+| 1            | head                         | 1                | none                  | 1924.7 ± 1.06 | +14.8         |
 | 1            | shoulder                     | 1                | none                  | 1924.3 ± 1.07 | +14.4         |
-| 1            | chest                        | 1                | none                  | 1905.9 ± 1.06 | -4.0          |
-| 1            | head                         | 1                | none                  | 1867.9 ± 1.03 | -42.0         |
-| 2            | shoulder, hands              | 2                | Onslaught 2pc         | 1937.9 ± 1.07 | +28.0         |
-| 2            | chest, hands                 | 2                | Onslaught 2pc         | 1929.5 ± 1.07 | +19.6         |
-| 2            | shoulder, chest              | 2                | Onslaught 2pc         | 1923.1 ± 1.06 | +13.2         |
-| 2            | head, hands                  | 2                | Onslaught 2pc         | 1892.7 ± 1.04 | -17.2         |
-| 2            | head, shoulder               | 2                | Onslaught 2pc         | 1876.1 ± 1.04 | -33.8         |
-| 2            | head, chest                  | 2                | Onslaught 2pc         | 1868.0 ± 1.03 | -41.9         |
-| 3            | shoulder, chest, hands       | 3                | Onslaught 2pc         | 1934.0 ± 1.07 | +24.1         |
-| 3            | head, chest, hands           | 3                | Onslaught 2pc         | 1889.9 ± 1.03 | -20.0         |
-| 3            | head, shoulder, hands        | 3                | Onslaught 2pc         | 1884.2 ± 1.07 | -25.7         |
-| 3            | head, shoulder, chest        | 3                | Onslaught 2pc         | 1872.5 ± 1.04 | -37.4         |
-| 4            | head, shoulder, chest, hands | 4                | Onslaught 2pc and 4pc | 1895.6 ± 1.08 | -14.3         |
+| 1            | chest                        | 1                | none                  | 1922.5 ± 1.06 | +12.6         |
+| 2            | head, hands                  | 2                | Onslaught 2pc         | 1959.7 ± 1.08 | +49.8         |
+| 2            | chest, hands                 | 2                | Onslaught 2pc         | 1954.4 ± 1.08 | +44.5         |
+| 2            | shoulder, hands              | 2                | Onslaught 2pc         | 1946.0 ± 1.07 | +36.1         |
+| 2            | head, shoulder               | 2                | Onslaught 2pc         | 1945.5 ± 1.07 | +35.6         |
+| 2            | head, chest                  | 2                | Onslaught 2pc         | 1943.9 ± 1.07 | +34.0         |
+| 2            | shoulder, chest              | 2                | Onslaught 2pc         | 1940.4 ± 1.07 | +30.5         |
+| 3            | head, chest, hands           | 3                | Onslaught 2pc         | 1971.8 ± 1.09 | +61.9         |
+| 3            | head, shoulder, hands        | 3                | Onslaught 2pc         | 1963.0 ± 1.10 | +53.1         |
+| 3            | shoulder, chest, hands       | 3                | Onslaught 2pc         | 1958.3 ± 1.10 | +48.4         |
+| 3            | head, shoulder, chest        | 3                | Onslaught 2pc         | 1956.0 ± 1.08 | +46.1         |
+| 4            | head, shoulder, chest, hands | 4                | Onslaught 2pc and 4pc | 1991.9 ± 1.10 | +82.0         |
 
 ## Balance Druid
 
@@ -396,61 +397,63 @@ Walking in, this spec holds **Nordrassil Regalia** at 4 pieces, in the head, sho
 
 > Nordrassil Regalia 4-piece: Increases your Starfire damage against targets afflicted with Moonfire or Insect Swarm by 10%.
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Thunderheart Headguard, Thunderheart Shoulderpads, Thunderheart Vest, Thunderheart Handguards. The empty subset reproduces the [entry figure](sims/balance-druid-entry.md) of 1660.6 ± 0.86.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Thunderheart Headguard, Thunderheart Shoulderpads, Thunderheart Vest, Thunderheart Handguards. The empty subset reproduces the [entry figure](sims/balance-druid-entry.md) of 1660.6 ± 0.86.
 
-The Nordrassil 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 1571.1 ± 0.79.
+The Nordrassil 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 1587.7 ± 0.80.
 
-The Nordrassil 2-piece cannot survive 3 chase pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, chest, hands, measures 1601.5 ± 0.79.
+The Nordrassil 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, chest, hands, measures 1636.3 ± 0.81.
 
-The best first chase piece is the **chest**, at 1571.1 ± 0.79, -89.5 against the entry set.
+The best first pickup is the **chest**, at 1587.7 ± 0.80, -72.9 against the entry set.
 
-| Chase pieces | Slots replaced               | Nordrassil pieces | Old bonus              | DPS           | Against entry |
-|--------------|------------------------------|-------------------|------------------------|---------------|---------------|
-| 0            | *none, the entry set*        | 4                 | Nordrassil 2pc and 4pc | 1660.6 ± 0.86 | +0.0          |
-| 1            | chest                        | 3                 | Nordrassil 2pc         | 1571.1 ± 0.79 | -89.5         |
-| 1            | hands                        | 3                 | Nordrassil 2pc         | 1571.1 ± 0.80 | -89.5         |
-| 1            | shoulder                     | 3                 | Nordrassil 2pc         | 1568.6 ± 0.80 | -92.0         |
-| 1            | head                         | 3                 | Nordrassil 2pc         | 1536.3 ± 0.74 | -124.3        |
-| 2            | chest, hands                 | 2                 | Nordrassil 2pc         | 1601.7 ± 0.80 | -58.9         |
-| 2            | shoulder, hands              | 2                 | Nordrassil 2pc         | 1601.5 ± 0.80 | -59.1         |
-| 2            | shoulder, chest              | 2                 | Nordrassil 2pc         | 1597.2 ± 0.79 | -63.4         |
-| 2            | head, hands                  | 2                 | Nordrassil 2pc         | 1568.7 ± 0.74 | -91.9         |
-| 2            | head, shoulder               | 2                 | Nordrassil 2pc         | 1565.0 ± 0.74 | -95.6         |
-| 2            | head, chest                  | 2                 | Nordrassil 2pc         | 1564.1 ± 0.74 | -96.5         |
-| 3            | shoulder, chest, hands       | 1                 | none                   | 1601.5 ± 0.79 | -59.1         |
-| 3            | head, shoulder, hands        | 1                 | none                   | 1569.2 ± 0.74 | -91.4         |
-| 3            | head, chest, hands           | 1                 | none                   | 1568.4 ± 0.74 | -92.2         |
-| 3            | head, shoulder, chest        | 1                 | none                   | 1563.6 ± 0.73 | -97.0         |
-| 4            | head, shoulder, chest, hands | 0                 | none                   | 1613.6 ± 0.75 | -47.0         |
+The highest subset in the round is head, shoulder, chest, hands, at 1692.9 ± 0.83, +32.3 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced               | Nordrassil pieces | Old bonus              | DPS           | Against entry |
+|--------------------|------------------------------|-------------------|------------------------|---------------|---------------|
+| 0                  | *none, the entry set*        | 4                 | Nordrassil 2pc and 4pc | 1660.6 ± 0.86 | +0.0          |
+| 1                  | chest                        | 3                 | Nordrassil 2pc         | 1587.7 ± 0.80 | -72.9         |
+| 1                  | head                         | 3                 | Nordrassil 2pc         | 1579.4 ± 0.80 | -81.2         |
+| 1                  | hands                        | 3                 | Nordrassil 2pc         | 1578.0 ± 0.81 | -82.6         |
+| 1                  | shoulder                     | 3                 | Nordrassil 2pc         | 1574.5 ± 0.80 | -86.1         |
+| 2                  | chest, hands                 | 2                 | Nordrassil 2pc         | 1625.8 ± 0.81 | -34.8         |
+| 2                  | head, chest                  | 2                 | Nordrassil 2pc         | 1624.8 ± 0.81 | -35.8         |
+| 2                  | shoulder, chest              | 2                 | Nordrassil 2pc         | 1620.2 ± 0.80 | -40.4         |
+| 2                  | head, hands                  | 2                 | Nordrassil 2pc         | 1619.5 ± 0.81 | -41.1         |
+| 2                  | head, shoulder               | 2                 | Nordrassil 2pc         | 1614.9 ± 0.80 | -45.7         |
+| 2                  | shoulder, hands              | 2                 | Nordrassil 2pc         | 1614.6 ± 0.80 | -46.0         |
+| 3                  | head, chest, hands           | 1                 | none                   | 1636.3 ± 0.81 | -24.3         |
+| 3                  | shoulder, chest, hands       | 1                 | none                   | 1632.0 ± 0.81 | -28.6         |
+| 3                  | head, shoulder, chest        | 1                 | none                   | 1630.6 ± 0.81 | -30.0         |
+| 3                  | head, shoulder, hands        | 1                 | none                   | 1626.4 ± 0.80 | -34.2         |
+| 4                  | head, shoulder, chest, hands | 0                 | none                   | 1692.9 ± 0.83 | +32.3         |
+
+### The Tier 6 set
 
 The [tier anchor](sims/balance-druid-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Thunderheart Headguard, Thunderheart Shoulderpads, Thunderheart Vest, Thunderheart Handguards. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Thunderheart 2-piece** is 2 tokens, and the best way there, chest, hands, measures 1601.7 ± 0.80, -58.9 against the entry set.
+The cheapest **Thunderheart 2-piece** is 2 tokens, and the best way there, head, chest, measures 1630.1 ± 0.81, -30.5 against the entry set.
 
-The cheapest **Thunderheart 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 1613.6 ± 0.75, -47.0 against the entry set.
+The cheapest **Thunderheart 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 1705.1 ± 0.83, +44.5 against the entry set.
 
-Read greedily off the table, the chase order is **hands, then chest, then shoulder, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **chest, then head, then shoulder, then hands**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                        | Thunderheart pieces | Tier 6 bonus             | DPS           | Against entry |
 |--------------|------------------------------|---------------------|--------------------------|---------------|---------------|
 | 0            | *none, the entry set*        | 0                   | none                     | 1660.6 ± 0.86 | +0.0          |
-| 1            | chest                        | 1                   | none                     | 1571.1 ± 0.79 | -89.5         |
-| 1            | hands                        | 1                   | none                     | 1571.1 ± 0.80 | -89.5         |
-| 1            | shoulder                     | 1                   | none                     | 1568.6 ± 0.80 | -92.0         |
-| 1            | head                         | 1                   | none                     | 1536.3 ± 0.74 | -124.3        |
-| 2            | chest, hands                 | 2                   | Thunderheart 2pc         | 1601.7 ± 0.80 | -58.9         |
-| 2            | shoulder, hands              | 2                   | Thunderheart 2pc         | 1601.5 ± 0.80 | -59.1         |
-| 2            | shoulder, chest              | 2                   | Thunderheart 2pc         | 1597.2 ± 0.79 | -63.4         |
-| 2            | head, hands                  | 2                   | Thunderheart 2pc         | 1568.7 ± 0.74 | -91.9         |
-| 2            | head, shoulder               | 2                   | Thunderheart 2pc         | 1565.0 ± 0.74 | -95.6         |
-| 2            | head, chest                  | 2                   | Thunderheart 2pc         | 1564.1 ± 0.74 | -96.5         |
-| 3            | shoulder, chest, hands       | 3                   | Thunderheart 2pc         | 1601.5 ± 0.79 | -59.1         |
-| 3            | head, shoulder, hands        | 3                   | Thunderheart 2pc         | 1569.2 ± 0.74 | -91.4         |
-| 3            | head, chest, hands           | 3                   | Thunderheart 2pc         | 1568.4 ± 0.74 | -92.2         |
-| 3            | head, shoulder, chest        | 3                   | Thunderheart 2pc         | 1563.6 ± 0.73 | -97.0         |
-| 4            | head, shoulder, chest, hands | 4                   | Thunderheart 2pc and 4pc | 1613.6 ± 0.75 | -47.0         |
+| 1            | chest                        | 1                   | none                     | 1587.7 ± 0.80 | -72.9         |
+| 1            | head                         | 1                   | none                     | 1584.2 ± 0.80 | -76.4         |
+| 1            | shoulder                     | 1                   | none                     | 1580.7 ± 0.80 | -79.9         |
+| 1            | hands                        | 1                   | none                     | 1578.0 ± 0.81 | -82.6         |
+| 2            | head, chest                  | 2                   | Thunderheart 2pc         | 1630.1 ± 0.81 | -30.5         |
+| 2            | head, shoulder               | 2                   | Thunderheart 2pc         | 1626.7 ± 0.81 | -33.9         |
+| 2            | shoulder, chest              | 2                   | Thunderheart 2pc         | 1626.7 ± 0.81 | -33.9         |
+| 2            | chest, hands                 | 2                   | Thunderheart 2pc         | 1625.8 ± 0.81 | -34.8         |
+| 2            | head, hands                  | 2                   | Thunderheart 2pc         | 1624.7 ± 0.81 | -35.9         |
+| 2            | shoulder, hands              | 2                   | Thunderheart 2pc         | 1621.1 ± 0.81 | -39.5         |
+| 3            | head, shoulder, chest        | 3                   | Thunderheart 2pc         | 1642.3 ± 0.81 | -18.3         |
+| 3            | head, chest, hands           | 3                   | Thunderheart 2pc         | 1641.6 ± 0.81 | -19.0         |
+| 3            | head, shoulder, hands        | 3                   | Thunderheart 2pc         | 1638.2 ± 0.81 | -22.4         |
+| 3            | shoulder, chest, hands       | 3                   | Thunderheart 2pc         | 1638.2 ± 0.81 | -22.4         |
+| 4            | head, shoulder, chest, hands | 4                   | Thunderheart 2pc and 4pc | 1705.1 ± 0.83 | +44.5         |
 
 ## Beast Mastery Hunter
 
@@ -460,79 +463,79 @@ Walking in, this spec holds **Rift Stalker Armor** at 4 pieces, in the head, sho
 
 > Rift Stalker Armor 4-piece: Your Steady Shot ability has 5% increased critical strike chance.
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves. The empty subset reproduces the [entry figure](sims/beast-mastery-hunter-entry.md) of 3011.8 ± 0.85.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves. The empty subset reproduces the [entry figure](sims/beast-mastery-hunter-entry.md) of 3011.8 ± 0.85.
 
-The Rift Stalker 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 3010.2 ± 0.85.
+The Rift Stalker 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, head, measures 3020.9 ± 0.87.
 
-The Rift Stalker 2-piece cannot survive 3 chase pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, chest, hands, measures 3012.4 ± 0.87.
+The Rift Stalker 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, shoulder, hands, measures 3080.7 ± 0.88.
 
-The best first chase piece is the **hands**, at 3010.2 ± 0.85, -1.6 against the entry set.
+The best first pickup is the **head**, at 3020.9 ± 0.87, +9.1 against the entry set.
 
-The highest subset in the round is shoulder, hands, at 3024.7 ± 0.86, +12.9 against the entry set, before the gems those pieces would carry.
+The highest subset in the round is head, shoulder, chest, hands, at 3100.8 ± 0.90, +89.0 against the entry set, before the gems those pieces would carry.
 
-| Chase pieces | Slots replaced               | Rift Stalker pieces | Old bonus                | DPS           | Against entry |
-|--------------|------------------------------|---------------------|--------------------------|---------------|---------------|
-| 0            | *none, the entry set*        | 4                   | Rift Stalker 2pc and 4pc | 3011.8 ± 0.85 | +0.0          |
-| 1            | hands                        | 3                   | Rift Stalker 2pc         | 3010.2 ± 0.85 | -1.6          |
-| 1            | shoulder                     | 3                   | Rift Stalker 2pc         | 2998.1 ± 0.85 | -13.7         |
-| 1            | chest                        | 3                   | Rift Stalker 2pc         | 2981.1 ± 0.84 | -30.7         |
-| 1            | head                         | 3                   | Rift Stalker 2pc         | 2966.8 ± 0.83 | -45.0         |
-| 2            | shoulder, hands              | 2                   | Rift Stalker 2pc         | 3024.7 ± 0.86 | +12.9         |
-| 2            | chest, hands                 | 2                   | Rift Stalker 2pc         | 3007.6 ± 0.85 | -4.2          |
-| 2            | shoulder, chest              | 2                   | Rift Stalker 2pc         | 2996.1 ± 0.84 | -15.7         |
-| 2            | head, hands                  | 2                   | Rift Stalker 2pc         | 2993.2 ± 0.84 | -18.6         |
-| 2            | head, shoulder               | 2                   | Rift Stalker 2pc         | 2979.8 ± 0.84 | -32.0         |
-| 2            | head, chest                  | 2                   | Rift Stalker 2pc         | 2964.0 ± 0.84 | -47.8         |
-| 3            | shoulder, chest, hands       | 1                   | none                     | 3012.4 ± 0.87 | +0.6          |
-| 3            | head, shoulder, hands        | 1                   | none                     | 3007.2 ± 0.85 | -4.6          |
-| 3            | head, chest, hands           | 1                   | none                     | 2991.1 ± 0.84 | -20.7         |
-| 3            | head, shoulder, chest        | 1                   | none                     | 2977.7 ± 0.85 | -34.1         |
-| 4            | head, shoulder, chest, hands | 0                   | none                     | 3004.6 ± 0.85 | -7.2          |
+| Replacement pieces | Slots replaced               | Rift Stalker pieces | Old bonus                | DPS           | Against entry |
+|--------------------|------------------------------|---------------------|--------------------------|---------------|---------------|
+| 0                  | *none, the entry set*        | 4                   | Rift Stalker 2pc and 4pc | 3011.8 ± 0.85 | +0.0          |
+| 1                  | head                         | 3                   | Rift Stalker 2pc         | 3020.9 ± 0.87 | +9.1          |
+| 1                  | hands                        | 3                   | Rift Stalker 2pc         | 3020.3 ± 0.86 | +8.5          |
+| 1                  | shoulder                     | 3                   | Rift Stalker 2pc         | 3006.6 ± 0.86 | -5.2          |
+| 1                  | chest                        | 3                   | Rift Stalker 2pc         | 3003.5 ± 0.85 | -8.3          |
+| 2                  | head, hands                  | 2                   | Rift Stalker 2pc         | 3058.0 ± 0.87 | +46.2         |
+| 2                  | shoulder, hands              | 2                   | Rift Stalker 2pc         | 3043.0 ± 0.87 | +31.2         |
+| 2                  | head, shoulder               | 2                   | Rift Stalker 2pc         | 3042.9 ± 0.88 | +31.1         |
+| 2                  | chest, hands                 | 2                   | Rift Stalker 2pc         | 3040.5 ± 0.86 | +28.7         |
+| 2                  | head, chest                  | 2                   | Rift Stalker 2pc         | 3040.4 ± 0.87 | +28.6         |
+| 2                  | shoulder, chest              | 2                   | Rift Stalker 2pc         | 3026.1 ± 0.86 | +14.3         |
+| 3                  | head, shoulder, hands        | 1                   | none                     | 3080.7 ± 0.88 | +68.9         |
+| 3                  | head, chest, hands           | 1                   | none                     | 3078.2 ± 0.88 | +66.4         |
+| 3                  | head, shoulder, chest        | 1                   | none                     | 3062.7 ± 0.88 | +50.9         |
+| 3                  | shoulder, chest, hands       | 1                   | none                     | 3062.5 ± 0.87 | +50.7         |
+| 4                  | head, shoulder, chest, hands | 0                   | none                     | 3100.8 ± 0.90 | +89.0         |
 
-### The Tier 6 chase
+### The Tier 6 set
 
 The [tier anchor](sims/beast-mastery-hunter-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Cursed Vision of Sargeras, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves, Gronnstalker's Leggings. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 3024.7 ± 0.86, +12.9 against the entry set.
+The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 3049.1 ± 0.87, +37.3 against the entry set.
 
-The cheapest **Gronnstalker's 4-piece** is 4 tokens, and the best way there, shoulder, chest, hands, legs, measures 3054.9 ± 0.87, +43.1 against the entry set.
+The cheapest **Gronnstalker's 4-piece** is 4 tokens, and the best way there, shoulder, chest, hands, legs, measures 3117.1 ± 0.88, +105.3 against the entry set.
 
-Read greedily off the table, the chase order is **hands, then shoulder, then chest, then legs, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **head, then hands, then shoulder, then chest, then legs**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                              | Gronnstalker's pieces | Tier 6 bonus               | DPS           | Against entry |
 |--------------|------------------------------------|-----------------------|----------------------------|---------------|---------------|
 | 0            | *none, the entry set*              | 0                     | none                       | 3011.8 ± 0.85 | +0.0          |
-| 1            | hands                              | 1                     | none                       | 3010.2 ± 0.85 | -1.6          |
-| 1            | shoulder                           | 1                     | none                       | 2998.1 ± 0.85 | -13.7         |
-| 1            | legs                               | 1                     | none                       | 2996.0 ± 0.85 | -15.8         |
-| 1            | chest                              | 1                     | none                       | 2981.1 ± 0.84 | -30.7         |
-| 1            | head                               | 0                     | none                       | 2966.8 ± 0.83 | -45.0         |
-| 2            | shoulder, hands                    | 2                     | Gronnstalker's 2pc         | 3024.7 ± 0.86 | +12.9         |
-| 2            | chest, hands                       | 2                     | Gronnstalker's 2pc         | 3007.6 ± 0.85 | -4.2          |
-| 2            | shoulder, chest                    | 2                     | Gronnstalker's 2pc         | 2996.1 ± 0.84 | -15.7         |
-| 2            | hands, legs                        | 2                     | Gronnstalker's 2pc         | 2993.6 ± 0.85 | -18.2         |
-| 2            | head, hands                        | 1                     | none                       | 2993.2 ± 0.84 | -18.6         |
-| 2            | shoulder, legs                     | 2                     | Gronnstalker's 2pc         | 2982.3 ± 0.85 | -29.5         |
-| 2            | head, shoulder                     | 1                     | none                       | 2979.8 ± 0.84 | -32.0         |
-| 2            | head, chest                        | 1                     | none                       | 2964.0 ± 0.84 | -47.8         |
-| 2            | chest, legs                        | 2                     | Gronnstalker's 2pc         | 2963.7 ± 0.84 | -48.1         |
-| 2            | head, legs                         | 1                     | none                       | 2954.6 ± 0.82 | -57.2         |
-| 3            | shoulder, chest, hands             | 3                     | Gronnstalker's 2pc         | 3012.4 ± 0.87 | +0.6          |
-| 3            | shoulder, hands, legs              | 3                     | Gronnstalker's 2pc         | 3009.1 ± 0.86 | -2.7          |
-| 3            | head, shoulder, hands              | 2                     | Gronnstalker's 2pc         | 3007.2 ± 0.85 | -4.6          |
-| 3            | head, chest, hands                 | 2                     | Gronnstalker's 2pc         | 2991.1 ± 0.84 | -20.7         |
-| 3            | chest, hands, legs                 | 3                     | Gronnstalker's 2pc         | 2989.8 ± 0.84 | -22.0         |
-| 3            | head, hands, legs                  | 2                     | Gronnstalker's 2pc         | 2979.3 ± 0.83 | -32.5         |
-| 3            | head, shoulder, chest              | 2                     | Gronnstalker's 2pc         | 2977.7 ± 0.85 | -34.1         |
-| 3            | shoulder, chest, legs              | 3                     | Gronnstalker's 2pc         | 2977.5 ± 0.84 | -34.3         |
-| 3            | head, shoulder, legs               | 2                     | Gronnstalker's 2pc         | 2968.4 ± 0.82 | -43.4         |
-| 3            | head, chest, legs                  | 2                     | Gronnstalker's 2pc         | 2950.5 ± 0.81 | -61.3         |
-| 4            | shoulder, chest, hands, legs       | 4                     | Gronnstalker's 2pc and 4pc | 3054.9 ± 0.87 | +43.1         |
-| 4            | head, shoulder, chest, hands       | 3                     | Gronnstalker's 2pc         | 3004.6 ± 0.85 | -7.2          |
-| 4            | head, shoulder, hands, legs        | 3                     | Gronnstalker's 2pc         | 2994.5 ± 0.83 | -17.3         |
-| 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 2976.6 ± 0.82 | -35.2         |
-| 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 2965.1 ± 0.82 | -46.7         |
-| 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 3052.3 ± 0.84 | +40.5         |
+| 1            | head                               | 0                     | none                       | 3020.9 ± 0.87 | +9.1          |
+| 1            | hands                              | 1                     | none                       | 3020.3 ± 0.86 | +8.5          |
+| 1            | shoulder                           | 1                     | none                       | 3012.7 ± 0.86 | +0.9          |
+| 1            | chest                              | 1                     | none                       | 3007.9 ± 0.85 | -3.9          |
+| 1            | legs                               | 1                     | none                       | 3006.4 ± 0.85 | -5.4          |
+| 2            | head, hands                        | 1                     | none                       | 3058.0 ± 0.87 | +46.2         |
+| 2            | shoulder, hands                    | 2                     | Gronnstalker's 2pc         | 3049.1 ± 0.87 | +37.3         |
+| 2            | head, shoulder                     | 1                     | none                       | 3048.6 ± 0.88 | +36.8         |
+| 2            | chest, hands                       | 2                     | Gronnstalker's 2pc         | 3044.5 ± 0.86 | +32.7         |
+| 2            | head, chest                        | 1                     | none                       | 3043.8 ± 0.87 | +32.0         |
+| 2            | shoulder, chest                    | 2                     | Gronnstalker's 2pc         | 3035.6 ± 0.86 | +23.8         |
+| 2            | head, legs                         | 1                     | none                       | 3017.0 ± 0.86 | +5.2          |
+| 2            | hands, legs                        | 2                     | Gronnstalker's 2pc         | 3014.2 ± 0.86 | +2.4          |
+| 2            | shoulder, legs                     | 2                     | Gronnstalker's 2pc         | 3006.1 ± 0.86 | -5.7          |
+| 2            | chest, legs                        | 2                     | Gronnstalker's 2pc         | 3000.4 ± 0.85 | -11.4         |
+| 3            | head, shoulder, hands              | 2                     | Gronnstalker's 2pc         | 3087.1 ± 0.88 | +75.3         |
+| 3            | head, chest, hands                 | 2                     | Gronnstalker's 2pc         | 3082.0 ± 0.89 | +70.2         |
+| 3            | head, shoulder, chest              | 2                     | Gronnstalker's 2pc         | 3072.8 ± 0.88 | +61.0         |
+| 3            | shoulder, chest, hands             | 3                     | Gronnstalker's 2pc         | 3063.0 ± 0.88 | +51.2         |
+| 3            | head, hands, legs                  | 2                     | Gronnstalker's 2pc         | 3053.4 ± 0.87 | +41.6         |
+| 3            | head, shoulder, legs               | 2                     | Gronnstalker's 2pc         | 3045.5 ± 0.87 | +33.7         |
+| 3            | shoulder, hands, legs              | 3                     | Gronnstalker's 2pc         | 3042.9 ± 0.87 | +31.1         |
+| 3            | head, chest, legs                  | 2                     | Gronnstalker's 2pc         | 3040.3 ± 0.86 | +28.5         |
+| 3            | chest, hands, legs                 | 3                     | Gronnstalker's 2pc         | 3036.5 ± 0.85 | +24.7         |
+| 3            | shoulder, chest, legs              | 3                     | Gronnstalker's 2pc         | 3027.4 ± 0.85 | +15.6         |
+| 4            | shoulder, chest, hands, legs       | 4                     | Gronnstalker's 2pc and 4pc | 3117.1 ± 0.88 | +105.3        |
+| 4            | head, shoulder, chest, hands       | 3                     | Gronnstalker's 2pc         | 3111.7 ± 0.90 | +99.9         |
+| 4            | head, shoulder, hands, legs        | 3                     | Gronnstalker's 2pc         | 3083.8 ± 0.88 | +72.0         |
+| 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 3078.2 ± 0.87 | +66.4         |
+| 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 3069.1 ± 0.86 | +57.3         |
+| 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 3171.7 ± 0.89 | +159.9        |
 
 ## Combat Rogue
 
@@ -542,79 +545,79 @@ Walking in, this spec holds **Deathmantle** at 4 pieces, in the head, shoulder, 
 
 > Deathmantle 4-piece: attacks have a chance to make your next finishing move cost no energy
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, hands, legs slots: Cursed Vision of Sargeras, Slayer's Shoulderpads, Slayer's Handguards, Slayer's Legguards. The empty subset reproduces the [entry figure](sims/combat-rogue-entry.md) of 2085.9 ± 0.88.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, hands, legs slots: Cursed Vision of Sargeras, Slayer's Shoulderpads, Slayer's Handguards, Slayer's Legguards. The empty subset reproduces the [entry figure](sims/combat-rogue-entry.md) of 2085.9 ± 0.88.
 
-The Deathmantle 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 2063.1 ± 0.89.
+The Deathmantle 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, head, measures 2088.2 ± 0.87.
 
-The Deathmantle 2-piece cannot survive 3 chase pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, hands, legs, measures 2147.9 ± 0.90.
+The Deathmantle 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, shoulder, hands, measures 2201.1 ± 0.91.
 
-The best first chase piece is the **hands**, at 2063.1 ± 0.89, -22.8 against the entry set.
+The best first pickup is the **head**, at 2088.2 ± 0.87, +2.3 against the entry set.
 
-The highest subset in the round is shoulder, hands, legs, at 2147.9 ± 0.90, +62.0 against the entry set, before the gems those pieces would carry.
+The highest subset in the round is head, shoulder, hands, legs, at 2218.1 ± 0.91, +132.2 against the entry set, before the gems those pieces would carry.
 
-| Chase pieces | Slots replaced              | Deathmantle pieces | Old bonus               | DPS           | Against entry |
-|--------------|-----------------------------|--------------------|-------------------------|---------------|---------------|
-| 0            | *none, the entry set*       | 4                  | Deathmantle 2pc and 4pc | 2085.9 ± 0.88 | +0.0          |
-| 1            | hands                       | 3                  | Deathmantle 2pc         | 2063.1 ± 0.89 | -22.8         |
-| 1            | legs                        | 3                  | Deathmantle 2pc         | 2058.2 ± 0.88 | -27.7         |
-| 1            | shoulder                    | 3                  | Deathmantle 2pc         | 2055.6 ± 0.88 | -30.3         |
-| 1            | head                        | 3                  | Deathmantle 2pc         | 2033.4 ± 0.83 | -52.5         |
-| 2            | hands, legs                 | 2                  | Deathmantle 2pc         | 2138.7 ± 0.90 | +52.8         |
-| 2            | shoulder, hands             | 2                  | Deathmantle 2pc         | 2136.6 ± 0.90 | +50.7         |
-| 2            | shoulder, legs              | 2                  | Deathmantle 2pc         | 2129.7 ± 0.90 | +43.8         |
-| 2            | head, hands                 | 2                  | Deathmantle 2pc         | 2050.7 ± 0.85 | -35.2         |
-| 2            | head, legs                  | 2                  | Deathmantle 2pc         | 2043.6 ± 0.84 | -42.3         |
-| 2            | head, shoulder              | 2                  | Deathmantle 2pc         | 2042.2 ± 0.84 | -43.7         |
-| 3            | shoulder, hands, legs       | 1                  | none                    | 2147.9 ± 0.90 | +62.0         |
-| 3            | head, hands, legs           | 1                  | none                    | 2124.6 ± 0.87 | +38.7         |
-| 3            | head, shoulder, hands       | 1                  | none                    | 2123.7 ± 0.87 | +37.8         |
-| 3            | head, shoulder, legs        | 1                  | none                    | 2117.4 ± 0.87 | +31.5         |
-| 4            | head, shoulder, hands, legs | 0                  | none                    | 2134.6 ± 0.87 | +48.7         |
+| Replacement pieces | Slots replaced              | Deathmantle pieces | Old bonus               | DPS           | Against entry |
+|--------------------|-----------------------------|--------------------|-------------------------|---------------|---------------|
+| 0                  | *none, the entry set*       | 4                  | Deathmantle 2pc and 4pc | 2085.9 ± 0.88 | +0.0          |
+| 1                  | head                        | 3                  | Deathmantle 2pc         | 2088.2 ± 0.87 | +2.3          |
+| 1                  | shoulder                    | 3                  | Deathmantle 2pc         | 2069.9 ± 0.87 | -16.0         |
+| 1                  | hands                       | 3                  | Deathmantle 2pc         | 2068.7 ± 0.89 | -17.2         |
+| 1                  | legs                        | 3                  | Deathmantle 2pc         | 2063.5 ± 0.88 | -22.4         |
+| 2                  | shoulder, hands             | 2                  | Deathmantle 2pc         | 2155.6 ± 0.91 | +69.7         |
+| 2                  | hands, legs                 | 2                  | Deathmantle 2pc         | 2149.7 ± 0.90 | +63.8         |
+| 2                  | shoulder, legs              | 2                  | Deathmantle 2pc         | 2149.5 ± 0.91 | +63.6         |
+| 2                  | head, shoulder              | 2                  | Deathmantle 2pc         | 2111.2 ± 0.89 | +25.3         |
+| 2                  | head, hands                 | 2                  | Deathmantle 2pc         | 2110.6 ± 0.88 | +24.7         |
+| 2                  | head, legs                  | 2                  | Deathmantle 2pc         | 2104.4 ± 0.88 | +18.5         |
+| 3                  | head, shoulder, hands       | 1                  | none                    | 2201.1 ± 0.91 | +115.2        |
+| 3                  | head, shoulder, legs        | 1                  | none                    | 2195.5 ± 0.89 | +109.6        |
+| 3                  | head, hands, legs           | 1                  | none                    | 2192.8 ± 0.90 | +106.9        |
+| 3                  | shoulder, hands, legs       | 1                  | none                    | 2172.7 ± 0.92 | +86.8         |
+| 4                  | head, shoulder, hands, legs | 0                  | none                    | 2218.1 ± 0.91 | +132.2        |
 
-### The Tier 6 chase
+### The Tier 6 set
 
 The [tier anchor](sims/combat-rogue-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Cursed Vision of Sargeras, Slayer's Shoulderpads, Slayer's Chestguard, Slayer's Handguards, Slayer's Legguards. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Slayer's 2-piece** is 2 tokens, and the best way there, hands, legs, measures 2138.7 ± 0.90, +52.8 against the entry set.
+The cheapest **Slayer's 2-piece** is 2 tokens, and the best way there, shoulder, chest, measures 2156.4 ± 0.91, +70.5 against the entry set.
 
-The cheapest **Slayer's 4-piece** is 4 tokens, and the best way there, shoulder, chest, hands, legs, measures 2171.4 ± 0.93, +85.5 against the entry set.
+The cheapest **Slayer's 4-piece** is 4 tokens, and the best way there, shoulder, chest, hands, legs, measures 2221.8 ± 0.94, +135.9 against the entry set.
 
-Read greedily off the table, the chase order is **chest, then hands, then legs, then shoulder, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **chest, then shoulder, then head, then hands, then legs**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                              | Slayer's pieces | Tier 6 bonus         | DPS           | Against entry |
 |--------------|------------------------------------|-----------------|----------------------|---------------|---------------|
 | 0            | *none, the entry set*              | 0               | none                 | 2085.9 ± 0.88 | +0.0          |
-| 1            | chest                              | 1               | none                 | 2085.7 ± 0.89 | -0.2          |
-| 1            | hands                              | 1               | none                 | 2063.1 ± 0.89 | -22.8         |
-| 1            | legs                               | 1               | none                 | 2058.2 ± 0.88 | -27.7         |
-| 1            | shoulder                           | 1               | none                 | 2055.6 ± 0.88 | -30.3         |
-| 1            | head                               | 0               | none                 | 2033.4 ± 0.83 | -52.5         |
-| 2            | hands, legs                        | 2               | Slayer's 2pc         | 2138.7 ± 0.90 | +52.8         |
-| 2            | shoulder, hands                    | 2               | Slayer's 2pc         | 2136.6 ± 0.90 | +50.7         |
-| 2            | shoulder, legs                     | 2               | Slayer's 2pc         | 2129.7 ± 0.90 | +43.8         |
-| 2            | chest, hands                       | 2               | Slayer's 2pc         | 2125.1 ± 0.91 | +39.2         |
-| 2            | chest, legs                        | 2               | Slayer's 2pc         | 2120.5 ± 0.89 | +34.6         |
-| 2            | shoulder, chest                    | 2               | Slayer's 2pc         | 2117.8 ± 0.90 | +31.9         |
-| 2            | head, hands                        | 1               | none                 | 2050.7 ± 0.85 | -35.2         |
-| 2            | head, legs                         | 1               | none                 | 2043.6 ± 0.84 | -42.3         |
-| 2            | head, shoulder                     | 1               | none                 | 2042.2 ± 0.84 | -43.7         |
-| 2            | head, chest                        | 1               | none                 | 2033.1 ± 0.85 | -52.8         |
-| 3            | shoulder, hands, legs              | 3               | Slayer's 2pc         | 2147.9 ± 0.90 | +62.0         |
-| 3            | chest, hands, legs                 | 3               | Slayer's 2pc         | 2137.0 ± 0.91 | +51.1         |
-| 3            | shoulder, chest, hands             | 3               | Slayer's 2pc         | 2133.9 ± 0.91 | +48.0         |
-| 3            | shoulder, chest, legs              | 3               | Slayer's 2pc         | 2129.1 ± 0.90 | +43.2         |
-| 3            | head, hands, legs                  | 2               | Slayer's 2pc         | 2124.6 ± 0.87 | +38.7         |
-| 3            | head, shoulder, hands              | 2               | Slayer's 2pc         | 2123.7 ± 0.87 | +37.8         |
-| 3            | head, shoulder, legs               | 2               | Slayer's 2pc         | 2117.4 ± 0.87 | +31.5         |
-| 3            | head, chest, hands                 | 2               | Slayer's 2pc         | 2113.3 ± 0.88 | +27.4         |
-| 3            | head, chest, legs                  | 2               | Slayer's 2pc         | 2105.9 ± 0.87 | +20.0         |
-| 3            | head, shoulder, chest              | 2               | Slayer's 2pc         | 2104.5 ± 0.87 | +18.6         |
-| 4            | shoulder, chest, hands, legs       | 4               | Slayer's 2pc and 4pc | 2171.4 ± 0.93 | +85.5         |
-| 4            | head, shoulder, hands, legs        | 3               | Slayer's 2pc         | 2134.6 ± 0.87 | +48.7         |
-| 4            | head, chest, hands, legs           | 3               | Slayer's 2pc         | 2123.9 ± 0.88 | +38.0         |
-| 4            | head, shoulder, chest, hands       | 3               | Slayer's 2pc         | 2123.1 ± 0.88 | +37.2         |
-| 4            | head, shoulder, chest, legs        | 3               | Slayer's 2pc         | 2115.2 ± 0.87 | +29.3         |
-| 5            | head, shoulder, chest, hands, legs | 4               | Slayer's 2pc and 4pc | 2159.4 ± 0.90 | +73.5         |
+| 1            | chest                              | 1               | none                 | 2109.4 ± 0.90 | +23.5         |
+| 1            | head                               | 0               | none                 | 2088.2 ± 0.87 | +2.3          |
+| 1            | shoulder                           | 1               | none                 | 2069.9 ± 0.87 | -16.0         |
+| 1            | hands                              | 1               | none                 | 2068.7 ± 0.89 | -17.2         |
+| 1            | legs                               | 1               | none                 | 2063.5 ± 0.88 | -22.4         |
+| 2            | shoulder, chest                    | 2               | Slayer's 2pc         | 2156.4 ± 0.91 | +70.5         |
+| 2            | shoulder, hands                    | 2               | Slayer's 2pc         | 2155.6 ± 0.91 | +69.7         |
+| 2            | chest, hands                       | 2               | Slayer's 2pc         | 2155.4 ± 0.90 | +69.5         |
+| 2            | hands, legs                        | 2               | Slayer's 2pc         | 2149.7 ± 0.90 | +63.8         |
+| 2            | shoulder, legs                     | 2               | Slayer's 2pc         | 2149.5 ± 0.91 | +63.6         |
+| 2            | chest, legs                        | 2               | Slayer's 2pc         | 2149.1 ± 0.90 | +63.2         |
+| 2            | head, shoulder                     | 1               | none                 | 2111.2 ± 0.89 | +25.3         |
+| 2            | head, chest                        | 1               | none                 | 2111.2 ± 0.89 | +25.3         |
+| 2            | head, hands                        | 1               | none                 | 2110.6 ± 0.88 | +24.7         |
+| 2            | head, legs                         | 1               | none                 | 2104.4 ± 0.88 | +18.5         |
+| 3            | head, shoulder, hands              | 2               | Slayer's 2pc         | 2201.1 ± 0.91 | +115.2        |
+| 3            | head, shoulder, chest              | 2               | Slayer's 2pc         | 2200.8 ± 0.91 | +114.9        |
+| 3            | head, chest, hands                 | 2               | Slayer's 2pc         | 2198.6 ± 0.92 | +112.7        |
+| 3            | head, shoulder, legs               | 2               | Slayer's 2pc         | 2195.5 ± 0.89 | +109.6        |
+| 3            | head, chest, legs                  | 2               | Slayer's 2pc         | 2193.4 ± 0.90 | +107.5        |
+| 3            | head, hands, legs                  | 2               | Slayer's 2pc         | 2192.8 ± 0.90 | +106.9        |
+| 3            | shoulder, chest, hands             | 3               | Slayer's 2pc         | 2178.5 ± 0.92 | +92.6         |
+| 3            | shoulder, chest, legs              | 3               | Slayer's 2pc         | 2173.7 ± 0.91 | +87.8         |
+| 3            | shoulder, hands, legs              | 3               | Slayer's 2pc         | 2172.7 ± 0.92 | +86.8         |
+| 3            | chest, hands, legs                 | 3               | Slayer's 2pc         | 2172.6 ± 0.91 | +86.7         |
+| 4            | head, shoulder, chest, hands       | 3               | Slayer's 2pc         | 2223.9 ± 0.93 | +138.0        |
+| 4            | shoulder, chest, hands, legs       | 4               | Slayer's 2pc and 4pc | 2221.8 ± 0.94 | +135.9        |
+| 4            | head, shoulder, hands, legs        | 3               | Slayer's 2pc         | 2218.1 ± 0.91 | +132.2        |
+| 4            | head, shoulder, chest, legs        | 3               | Slayer's 2pc         | 2217.8 ± 0.92 | +131.9        |
+| 4            | head, chest, hands, legs           | 3               | Slayer's 2pc         | 2215.5 ± 0.93 | +129.6        |
+| 5            | head, shoulder, chest, hands, legs | 4               | Slayer's 2pc and 4pc | 2268.1 ± 0.95 | +182.2        |
 
 ## Destruction Warlock
 
@@ -622,49 +625,51 @@ Walking in, this spec holds **Corruptor Raiment** at 3 pieces, in the head, shou
 
 > Corruptor Raiment 2-piece: Causes your pet to be healed for 15% of the damage you deal
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, legs slots: Hood of the Malefic, Mantle of the Malefic, Leggings of Channeled Elements. The empty subset reproduces the [entry figure](sims/destruction-warlock-entry.md) of 2051.4 ± 1.13.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, legs slots: Hood of the Malefic, Mantle of the Malefic, Leggings of Channeled Elements. The empty subset reproduces the [entry figure](sims/destruction-warlock-entry.md) of 2051.4 ± 1.13.
 
-The Corruptor 2-piece cannot survive 2 chase pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, legs, measures 2042.7 ± 1.13.
+The Corruptor 2-piece cannot survive 2 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, legs, measures 2087.5 ± 1.15.
 
-The best first chase piece is the **legs**, at 2047.9 ± 1.14, -3.5 against the entry set.
+The best first pickup is the **legs**, at 2073.9 ± 1.15, +22.5 against the entry set.
 
-| Chase pieces | Slots replaced        | Corruptor pieces | Old bonus     | DPS           | Against entry |
-|--------------|-----------------------|------------------|---------------|---------------|---------------|
-| 0            | *none, the entry set* | 3                | Corruptor 2pc | 2051.4 ± 1.13 | +0.0          |
-| 1            | legs                  | 2                | Corruptor 2pc | 2047.9 ± 1.14 | -3.5          |
-| 1            | shoulder              | 2                | Corruptor 2pc | 2045.1 ± 1.13 | -6.3          |
-| 1            | head                  | 2                | Corruptor 2pc | 1992.8 ± 1.05 | -58.6         |
-| 2            | shoulder, legs        | 1                | none          | 2042.7 ± 1.13 | -8.7          |
-| 2            | head, legs            | 1                | none          | 1988.6 ± 1.05 | -62.8         |
-| 2            | head, shoulder        | 1                | none          | 1986.9 ± 1.04 | -64.5         |
-| 3            | head, shoulder, legs  | 0                | none          | 1983.0 ± 1.05 | -68.4         |
+The highest subset in the round is head, shoulder, legs, at 2098.6 ± 1.16, +47.2 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced        | Corruptor pieces | Old bonus     | DPS           | Against entry |
+|--------------------|-----------------------|------------------|---------------|---------------|---------------|
+| 0                  | *none, the entry set* | 3                | Corruptor 2pc | 2051.4 ± 1.13 | +0.0          |
+| 1                  | legs                  | 2                | Corruptor 2pc | 2073.9 ± 1.15 | +22.5         |
+| 1                  | head                  | 2                | Corruptor 2pc | 2065.0 ± 1.14 | +13.6         |
+| 1                  | shoulder              | 2                | Corruptor 2pc | 2063.0 ± 1.14 | +11.6         |
+| 2                  | head, legs            | 1                | none          | 2087.5 ± 1.15 | +36.1         |
+| 2                  | shoulder, legs        | 1                | none          | 2085.5 ± 1.16 | +34.1         |
+| 2                  | head, shoulder        | 1                | none          | 2076.0 ± 1.15 | +24.6         |
+| 3                  | head, shoulder, legs  | 0                | none          | 2098.6 ± 1.16 | +47.2         |
+
+### The Tier 6 set
 
 The [tier anchor](sims/destruction-warlock-tier-hands-and-head.md) reconsiders the head, shoulder, hands, legs slots, taking Hood of the Malefic, Mantle of the Malefic, Gloves of the Malefic, Leggings of Channeled Elements. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Malefic 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 2079.3 ± 1.18, +27.9 against the entry set.
+The cheapest **Malefic 2-piece** is 2 tokens, and the best way there, head, hands, measures 2109.6 ± 1.17, +58.2 against the entry set.
 
-Read greedily off the table, the chase order is **hands, then legs, then shoulder, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **hands, then legs, then head, then shoulder**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                       | Malefic pieces | Tier 6 bonus | DPS           | Against entry |
 |--------------|-----------------------------|----------------|--------------|---------------|---------------|
 | 0            | *none, the entry set*       | 0              | none         | 2051.4 ± 1.13 | +0.0          |
-| 1            | hands                       | 1              | none         | 2086.3 ± 1.17 | +34.9         |
-| 1            | legs                        | 0              | none         | 2047.9 ± 1.14 | -3.5          |
-| 1            | shoulder                    | 1              | none         | 2045.1 ± 1.13 | -6.3          |
-| 1            | head                        | 1              | none         | 1992.8 ± 1.05 | -58.6         |
-| 2            | hands, legs                 | 1              | none         | 2082.1 ± 1.17 | +30.7         |
-| 2            | shoulder, hands             | 2              | Malefic 2pc  | 2079.3 ± 1.18 | +27.9         |
-| 2            | shoulder, legs              | 1              | none         | 2042.7 ± 1.13 | -8.7          |
-| 2            | head, hands                 | 2              | Malefic 2pc  | 2027.1 ± 1.09 | -24.3         |
-| 2            | head, legs                  | 1              | none         | 1988.6 ± 1.05 | -62.8         |
-| 2            | head, shoulder              | 2              | Malefic 2pc  | 1986.9 ± 1.04 | -64.5         |
-| 3            | shoulder, hands, legs       | 2              | Malefic 2pc  | 2075.2 ± 1.16 | +23.8         |
-| 3            | head, hands, legs           | 2              | Malefic 2pc  | 2022.4 ± 1.10 | -29.0         |
-| 3            | head, shoulder, hands       | 3              | Malefic 2pc  | 2019.7 ± 1.09 | -31.7         |
-| 3            | head, shoulder, legs        | 2              | Malefic 2pc  | 1983.0 ± 1.05 | -68.4         |
-| 4            | head, shoulder, hands, legs | 3              | Malefic 2pc  | 2016.3 ± 1.09 | -35.1         |
+| 1            | hands                       | 1              | none         | 2094.4 ± 1.17 | +43.0         |
+| 1            | legs                        | 0              | none         | 2073.9 ± 1.15 | +22.5         |
+| 1            | head                        | 1              | none         | 2065.0 ± 1.14 | +13.6         |
+| 1            | shoulder                    | 1              | none         | 2063.0 ± 1.14 | +11.6         |
+| 2            | hands, legs                 | 1              | none         | 2118.5 ± 1.18 | +67.1         |
+| 2            | head, hands                 | 2              | Malefic 2pc  | 2109.6 ± 1.17 | +58.2         |
+| 2            | shoulder, hands             | 2              | Malefic 2pc  | 2107.0 ± 1.18 | +55.6         |
+| 2            | head, legs                  | 1              | none         | 2087.5 ± 1.15 | +36.1         |
+| 2            | shoulder, legs              | 1              | none         | 2085.5 ± 1.16 | +34.1         |
+| 2            | head, shoulder              | 2              | Malefic 2pc  | 2076.0 ± 1.15 | +24.6         |
+| 3            | head, hands, legs           | 2              | Malefic 2pc  | 2132.1 ± 1.19 | +80.7         |
+| 3            | shoulder, hands, legs       | 2              | Malefic 2pc  | 2130.2 ± 1.19 | +78.8         |
+| 3            | head, shoulder, hands       | 3              | Malefic 2pc  | 2120.2 ± 1.18 | +68.8         |
+| 3            | head, shoulder, legs        | 2              | Malefic 2pc  | 2098.6 ± 1.16 | +47.2         |
+| 4            | head, shoulder, hands, legs | 3              | Malefic 2pc  | 2142.8 ± 1.19 | +91.4         |
 
 ## Elemental Shaman
 
@@ -674,79 +679,79 @@ Walking in, this spec holds **Cataclysm Regalia** at 2 pieces, in the chest, leg
 
 > Cyclone Regalia 2-piece: Your Wrath of Air Totem ability grants an additional 20 spell damage. (Tier 4, held on the worn head plus shoulder; recorded 2026-08-09, closing the set_bonus_bookkeeping_gap noted in the off-piece audit)
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Skyshatter Headguard, Skyshatter Mantle, Skyshatter Breastplate, Leggings of Channeled Elements. The empty subset reproduces the [entry figure](sims/elemental-shaman-entry.md) of 1718.8 ± 0.89.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Skyshatter Headguard, Skyshatter Mantle, Skyshatter Breastplate, Leggings of Channeled Elements. The empty subset reproduces the [entry figure](sims/elemental-shaman-entry.md) of 1718.8 ± 0.89.
 
-Breaking the Cataclysm 2-piece first pays at 1 chase piece: the best subset that breaks it, legs, measures 1713.1 ± 0.94, against 1710.1 ± 0.88 for the best that keeps it, shoulder.
+Breaking the Cataclysm 2-piece first pays at 1 replacement piece: the best subset that breaks it, legs, measures 1733.3 ± 0.95, against 1727.9 ± 0.90 for the best that keeps it, head.
 
-Breaking the Cyclone 2-piece first pays at 2 chase pieces: the best subset that breaks it, shoulder, chest, measures 1741.4 ± 0.87, against 1707.4 ± 0.91 for the best that keeps it, chest, legs.
+Breaking the Cyclone 2-piece first pays at 2 replacement pieces: the best subset that breaks it, head, shoulder, measures 1785.4 ± 0.89, against 1748.2 ± 0.92 for the best that keeps it, chest, legs.
 
-The best first chase piece is the **legs**, at 1713.1 ± 0.94, -5.7 against the entry set.
+The best first pickup is the **legs**, at 1733.3 ± 0.95, +14.5 against the entry set.
 
-The highest subset in the round is shoulder, chest, at 1741.4 ± 0.87, +22.6 against the entry set, before the gems those pieces would carry.
+The highest subset in the round is head, shoulder, chest, legs, at 1814.4 ± 0.91, +95.6 against the entry set, before the gems those pieces would carry.
 
-| Chase pieces | Slots replaced              | Cataclysm pieces | Cyclone pieces | Old bonus                  | DPS           | Against entry |
-|--------------|-----------------------------|------------------|----------------|----------------------------|---------------|---------------|
-| 0            | *none, the entry set*       | 2                | 2              | Cataclysm 2pc, Cyclone 2pc | 1718.8 ± 0.89 | +0.0          |
-| 1            | legs                        | 1                | 2              | Cyclone 2pc                | 1713.1 ± 0.94 | -5.7          |
-| 1            | chest                       | 1                | 2              | Cyclone 2pc                | 1712.2 ± 0.89 | -6.6          |
-| 1            | shoulder                    | 2                | 1              | Cataclysm 2pc              | 1710.1 ± 0.88 | -8.7          |
-| 1            | head                        | 2                | 1              | Cataclysm 2pc              | 1666.6 ± 0.84 | -52.2         |
-| 2            | shoulder, chest             | 1                | 1              | none                       | 1741.4 ± 0.87 | +22.6         |
-| 2            | head, shoulder              | 2                | 0              | Cataclysm 2pc              | 1709.7 ± 0.83 | -9.1          |
-| 2            | chest, legs                 | 0                | 2              | Cyclone 2pc                | 1707.4 ± 0.91 | -11.4         |
-| 2            | shoulder, legs              | 1                | 1              | none                       | 1705.9 ± 0.90 | -12.9         |
-| 2            | head, chest                 | 1                | 1              | none                       | 1697.4 ± 0.83 | -21.4         |
-| 2            | head, legs                  | 1                | 1              | none                       | 1662.1 ± 0.87 | -56.7         |
-| 3            | shoulder, chest, legs       | 0                | 1              | none                       | 1737.9 ± 0.88 | +19.1         |
-| 3            | head, shoulder, legs        | 1                | 0              | none                       | 1706.3 ± 0.83 | -12.5         |
-| 3            | head, shoulder, chest       | 1                | 0              | none                       | 1701.7 ± 0.82 | -17.1         |
-| 3            | head, chest, legs           | 0                | 1              | none                       | 1693.6 ± 0.84 | -25.2         |
-| 4            | head, shoulder, chest, legs | 0                | 0              | none                       | 1698.4 ± 0.83 | -20.4         |
+| Replacement pieces | Slots replaced              | Cataclysm pieces | Cyclone pieces | Old bonus                  | DPS           | Against entry |
+|--------------------|-----------------------------|------------------|----------------|----------------------------|---------------|---------------|
+| 0                  | *none, the entry set*       | 2                | 2              | Cataclysm 2pc, Cyclone 2pc | 1718.8 ± 0.89 | +0.0          |
+| 1                  | legs                        | 1                | 2              | Cyclone 2pc                | 1733.3 ± 0.95 | +14.5         |
+| 1                  | chest                       | 1                | 2              | Cyclone 2pc                | 1732.1 ± 0.90 | +13.3         |
+| 1                  | head                        | 2                | 1              | Cataclysm 2pc              | 1727.9 ± 0.90 | +9.1          |
+| 1                  | shoulder                    | 2                | 1              | Cataclysm 2pc              | 1723.5 ± 0.88 | +4.7          |
+| 2                  | head, shoulder              | 2                | 0              | Cataclysm 2pc              | 1785.4 ± 0.89 | +66.6         |
+| 2                  | head, chest                 | 1                | 1              | none                       | 1779.9 ± 0.89 | +61.1         |
+| 2                  | shoulder, chest             | 1                | 1              | none                       | 1774.0 ± 0.88 | +55.2         |
+| 2                  | chest, legs                 | 0                | 2              | Cyclone 2pc                | 1748.2 ± 0.92 | +29.4         |
+| 2                  | head, legs                  | 1                | 1              | none                       | 1744.4 ± 0.92 | +25.6         |
+| 2                  | shoulder, legs              | 1                | 1              | none                       | 1739.7 ± 0.90 | +20.9         |
+| 3                  | head, shoulder, legs        | 1                | 0              | none                       | 1802.7 ± 0.90 | +83.9         |
+| 3                  | head, shoulder, chest       | 1                | 0              | none                       | 1797.6 ± 0.89 | +78.8         |
+| 3                  | head, chest, legs           | 0                | 1              | none                       | 1797.2 ± 0.90 | +78.4         |
+| 3                  | shoulder, chest, legs       | 0                | 1              | none                       | 1790.7 ± 0.90 | +71.9         |
+| 4                  | head, shoulder, chest, legs | 0                | 0              | none                       | 1814.4 ± 0.91 | +95.6         |
 
-### The Tier 6 chase
+### The Tier 6 set
 
 The [tier anchor](sims/elemental-shaman-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Skyshatter Headguard, Skyshatter Mantle, Skyshatter Breastplate, Skyshatter Gauntlets, Leggings of Channeled Elements. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Skyshatter 2-piece** is 2 tokens, and the best way there, chest, hands, measures 1752.3 ± 0.88, +33.5 against the entry set.
+The cheapest **Skyshatter 2-piece** is 2 tokens, and the best way there, head, shoulder, measures 1785.4 ± 0.89, +66.6 against the entry set.
 
-The cheapest **Skyshatter 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 1767.8 ± 0.85, +49.0 against the entry set.
+The cheapest **Skyshatter 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 1876.0 ± 0.92, +157.2 against the entry set.
 
-Read greedily off the table, the chase order is **hands, then chest, then legs, then shoulder, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **legs, then chest, then head, then shoulder, then hands**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                              | Skyshatter pieces | Tier 6 bonus           | DPS           | Against entry |
 |--------------|------------------------------------|-------------------|------------------------|---------------|---------------|
 | 0            | *none, the entry set*              | 0                 | none                   | 1718.8 ± 0.89 | +0.0          |
-| 1            | hands                              | 1                 | none                   | 1721.4 ± 0.89 | +2.6          |
-| 1            | legs                               | 0                 | none                   | 1713.1 ± 0.94 | -5.7          |
-| 1            | chest                              | 1                 | none                   | 1712.2 ± 0.89 | -6.6          |
-| 1            | shoulder                           | 1                 | none                   | 1710.1 ± 0.88 | -8.7          |
-| 1            | head                               | 1                 | none                   | 1666.6 ± 0.84 | -52.2         |
-| 2            | chest, hands                       | 2                 | Skyshatter 2pc         | 1752.3 ± 0.88 | +33.5         |
-| 2            | shoulder, hands                    | 2                 | Skyshatter 2pc         | 1750.2 ± 0.88 | +31.4         |
-| 2            | shoulder, chest                    | 2                 | Skyshatter 2pc         | 1741.4 ± 0.87 | +22.6         |
-| 2            | hands, legs                        | 1                 | none                   | 1716.5 ± 0.92 | -2.3          |
-| 2            | head, shoulder                     | 2                 | Skyshatter 2pc         | 1709.7 ± 0.83 | -9.1          |
-| 2            | chest, legs                        | 1                 | none                   | 1707.4 ± 0.91 | -11.4         |
-| 2            | head, hands                        | 2                 | Skyshatter 2pc         | 1706.1 ± 0.83 | -12.7         |
-| 2            | shoulder, legs                     | 1                 | none                   | 1705.9 ± 0.90 | -12.9         |
-| 2            | head, chest                        | 2                 | Skyshatter 2pc         | 1697.4 ± 0.83 | -21.4         |
-| 2            | head, legs                         | 1                 | none                   | 1662.1 ± 0.87 | -56.7         |
-| 3            | chest, hands, legs                 | 2                 | Skyshatter 2pc         | 1748.9 ± 0.89 | +30.1         |
-| 3            | shoulder, hands, legs              | 2                 | Skyshatter 2pc         | 1746.8 ± 0.89 | +28.0         |
-| 3            | shoulder, chest, hands             | 3                 | Skyshatter 2pc         | 1742.3 ± 0.87 | +23.5         |
-| 3            | shoulder, chest, legs              | 2                 | Skyshatter 2pc         | 1737.9 ± 0.88 | +19.1         |
-| 3            | head, shoulder, hands              | 3                 | Skyshatter 2pc         | 1710.2 ± 0.83 | -8.6          |
-| 3            | head, shoulder, legs               | 2                 | Skyshatter 2pc         | 1706.3 ± 0.83 | -12.5         |
-| 3            | head, hands, legs                  | 2                 | Skyshatter 2pc         | 1702.2 ± 0.84 | -16.6         |
-| 3            | head, shoulder, chest              | 3                 | Skyshatter 2pc         | 1701.7 ± 0.82 | -17.1         |
-| 3            | head, chest, hands                 | 3                 | Skyshatter 2pc         | 1698.2 ± 0.83 | -20.6         |
-| 3            | head, chest, legs                  | 2                 | Skyshatter 2pc         | 1693.6 ± 0.84 | -25.2         |
-| 4            | head, shoulder, chest, hands       | 4                 | Skyshatter 2pc and 4pc | 1767.8 ± 0.85 | +49.0         |
-| 4            | shoulder, chest, hands, legs       | 3                 | Skyshatter 2pc         | 1738.8 ± 0.88 | +20.0         |
-| 4            | head, shoulder, hands, legs        | 3                 | Skyshatter 2pc         | 1707.2 ± 0.83 | -11.6         |
-| 4            | head, shoulder, chest, legs        | 3                 | Skyshatter 2pc         | 1698.4 ± 0.83 | -20.4         |
-| 4            | head, chest, hands, legs           | 3                 | Skyshatter 2pc         | 1694.9 ± 0.84 | -23.9         |
-| 5            | head, shoulder, chest, hands, legs | 4                 | Skyshatter 2pc and 4pc | 1764.6 ± 0.86 | +45.8         |
+| 1            | legs                               | 0                 | none                   | 1733.3 ± 0.95 | +14.5         |
+| 1            | chest                              | 1                 | none                   | 1732.1 ± 0.90 | +13.3         |
+| 1            | hands                              | 1                 | none                   | 1729.0 ± 0.89 | +10.2         |
+| 1            | head                               | 1                 | none                   | 1727.9 ± 0.90 | +9.1          |
+| 1            | shoulder                           | 1                 | none                   | 1723.5 ± 0.88 | +4.7          |
+| 2            | head, shoulder                     | 2                 | Skyshatter 2pc         | 1785.4 ± 0.89 | +66.6         |
+| 2            | head, chest                        | 2                 | Skyshatter 2pc         | 1779.9 ± 0.89 | +61.1         |
+| 2            | chest, hands                       | 2                 | Skyshatter 2pc         | 1779.9 ± 0.89 | +61.1         |
+| 2            | head, hands                        | 2                 | Skyshatter 2pc         | 1776.6 ± 0.89 | +57.8         |
+| 2            | shoulder, chest                    | 2                 | Skyshatter 2pc         | 1774.0 ± 0.88 | +55.2         |
+| 2            | shoulder, hands                    | 2                 | Skyshatter 2pc         | 1770.7 ± 0.89 | +51.9         |
+| 2            | chest, legs                        | 1                 | none                   | 1748.2 ± 0.92 | +29.4         |
+| 2            | hands, legs                        | 1                 | none                   | 1744.7 ± 0.92 | +25.9         |
+| 2            | head, legs                         | 1                 | none                   | 1744.4 ± 0.92 | +25.6         |
+| 2            | shoulder, legs                     | 1                 | none                   | 1739.7 ± 0.90 | +20.9         |
+| 3            | head, shoulder, legs               | 2                 | Skyshatter 2pc         | 1802.7 ± 0.90 | +83.9         |
+| 3            | head, shoulder, chest              | 3                 | Skyshatter 2pc         | 1797.6 ± 0.89 | +78.8         |
+| 3            | head, chest, legs                  | 2                 | Skyshatter 2pc         | 1797.2 ± 0.90 | +78.4         |
+| 3            | chest, hands, legs                 | 2                 | Skyshatter 2pc         | 1796.7 ± 0.91 | +77.9         |
+| 3            | head, shoulder, hands              | 3                 | Skyshatter 2pc         | 1794.4 ± 0.89 | +75.6         |
+| 3            | head, hands, legs                  | 2                 | Skyshatter 2pc         | 1793.7 ± 0.90 | +74.9         |
+| 3            | shoulder, chest, legs              | 2                 | Skyshatter 2pc         | 1790.7 ± 0.90 | +71.9         |
+| 3            | head, chest, hands                 | 3                 | Skyshatter 2pc         | 1788.8 ± 0.89 | +70.0         |
+| 3            | shoulder, hands, legs              | 2                 | Skyshatter 2pc         | 1787.8 ± 0.90 | +69.0         |
+| 3            | shoulder, chest, hands             | 3                 | Skyshatter 2pc         | 1782.8 ± 0.89 | +64.0         |
+| 4            | head, shoulder, chest, hands       | 4                 | Skyshatter 2pc and 4pc | 1876.0 ± 0.92 | +157.2        |
+| 4            | head, shoulder, chest, legs        | 3                 | Skyshatter 2pc         | 1814.4 ± 0.91 | +95.6         |
+| 4            | head, shoulder, hands, legs        | 3                 | Skyshatter 2pc         | 1811.8 ± 0.91 | +93.0         |
+| 4            | head, chest, hands, legs           | 3                 | Skyshatter 2pc         | 1806.3 ± 0.90 | +87.5         |
+| 4            | shoulder, chest, hands, legs       | 3                 | Skyshatter 2pc         | 1799.5 ± 0.90 | +80.7         |
+| 5            | head, shoulder, chest, hands, legs | 4                 | Skyshatter 2pc and 4pc | 1893.9 ± 0.94 | +175.1        |
 
 ## Enhancement Shaman
 
@@ -756,34 +761,36 @@ Walking in, this spec holds **Cataclysm Harness** at 4 pieces, in the head, ches
 
 > Cataclysm Harness 4-piece: You gain 5% additional haste from your Flurry ability.
 
-The chase pieces are what the best-in-slot set wears in the head, chest, hands, legs slots: Cursed Vision of Sargeras, Midnight Chestguard, Fists of Mukoa, Bow-stitched Leggings. The empty subset reproduces the [entry figure](sims/enhancement-shaman-entry.md) of 1992.9 ± 0.92.
+The replacement pieces are what the best-in-slot set wears in the head, chest, hands, legs slots: Cursed Vision of Sargeras, Midnight Chestguard, Fists of Mukoa, Bow-stitched Leggings. The empty subset reproduces the [entry figure](sims/enhancement-shaman-entry.md) of 1992.9 ± 0.92.
 
-The Cataclysm 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 1970.2 ± 0.90.
+The Cataclysm 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, head, measures 1999.1 ± 0.92.
 
-The Cataclysm 2-piece cannot survive 3 chase pieces in these slots: every subset of that size breaks it, and the best of them, chest, hands, legs, measures 1969.7 ± 0.92.
+The Cataclysm 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, chest, legs, measures 2045.4 ± 0.95.
 
-The best first chase piece is the **chest**, at 1970.2 ± 0.90, -22.7 against the entry set.
+The best first pickup is the **head**, at 1999.1 ± 0.92, +6.2 against the entry set.
 
-| Chase pieces | Slots replaced           | Cataclysm pieces | Old bonus             | DPS           | Against entry |
-|--------------|--------------------------|------------------|-----------------------|---------------|---------------|
-| 0            | *none, the entry set*    | 4                | Cataclysm 2pc and 4pc | 1992.9 ± 0.92 | +0.0          |
-| 1            | chest                    | 3                | Cataclysm 2pc         | 1970.2 ± 0.90 | -22.7         |
-| 1            | legs                     | 3                | Cataclysm 2pc         | 1965.8 ± 0.91 | -27.1         |
-| 1            | hands                    | 3                | Cataclysm 2pc         | 1963.3 ± 0.91 | -29.6         |
-| 1            | head                     | 3                | Cataclysm 2pc         | 1953.7 ± 0.89 | -39.2         |
-| 2            | chest, legs              | 2                | Cataclysm 2pc         | 1968.8 ± 0.92 | -24.1         |
-| 2            | chest, hands             | 2                | Cataclysm 2pc         | 1968.0 ± 0.91 | -24.9         |
-| 2            | hands, legs              | 2                | Cataclysm 2pc         | 1963.6 ± 0.92 | -29.3         |
-| 2            | head, chest              | 2                | Cataclysm 2pc         | 1957.1 ± 0.87 | -35.8         |
-| 2            | head, hands              | 2                | Cataclysm 2pc         | 1954.2 ± 0.89 | -38.7         |
-| 2            | head, legs               | 2                | Cataclysm 2pc         | 1953.0 ± 0.90 | -39.9         |
-| 3            | chest, hands, legs       | 1                | none                  | 1969.7 ± 0.92 | -23.2         |
-| 3            | head, chest, legs        | 1                | none                  | 1956.6 ± 0.90 | -36.3         |
-| 3            | head, chest, hands       | 1                | none                  | 1955.1 ± 0.90 | -37.8         |
-| 3            | head, hands, legs        | 1                | none                  | 1953.1 ± 0.91 | -39.8         |
-| 4            | head, chest, hands, legs | 0                | none                  | 1957.2 ± 0.90 | -35.7         |
+The highest subset in the round is head, chest, hands, legs, at 2045.8 ± 0.94, +52.9 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced           | Cataclysm pieces | Old bonus             | DPS           | Against entry |
+|--------------------|--------------------------|------------------|-----------------------|---------------|---------------|
+| 0                  | *none, the entry set*    | 4                | Cataclysm 2pc and 4pc | 1992.9 ± 0.92 | +0.0          |
+| 1                  | head                     | 3                | Cataclysm 2pc         | 1999.1 ± 0.92 | +6.2          |
+| 1                  | chest                    | 3                | Cataclysm 2pc         | 1989.2 ± 0.92 | -3.7          |
+| 1                  | legs                     | 3                | Cataclysm 2pc         | 1985.0 ± 0.92 | -7.9          |
+| 1                  | hands                    | 3                | Cataclysm 2pc         | 1963.3 ± 0.91 | -29.6         |
+| 2                  | head, chest              | 2                | Cataclysm 2pc         | 2024.2 ± 0.92 | +31.3         |
+| 2                  | head, legs               | 2                | Cataclysm 2pc         | 2022.1 ± 0.93 | +29.2         |
+| 2                  | chest, legs              | 2                | Cataclysm 2pc         | 2008.3 ± 0.93 | +15.4         |
+| 2                  | head, hands              | 2                | Cataclysm 2pc         | 1999.6 ± 0.92 | +6.7          |
+| 2                  | chest, hands             | 2                | Cataclysm 2pc         | 1989.0 ± 0.92 | -3.9          |
+| 2                  | hands, legs              | 2                | Cataclysm 2pc         | 1983.9 ± 0.93 | -9.0          |
+| 3                  | head, chest, legs        | 1                | none                  | 2045.4 ± 0.95 | +52.5         |
+| 3                  | head, chest, hands       | 1                | none                  | 2024.0 ± 0.94 | +31.1         |
+| 3                  | head, hands, legs        | 1                | none                  | 2020.8 ± 0.95 | +27.9         |
+| 3                  | chest, hands, legs       | 1                | none                  | 2010.0 ± 0.92 | +17.1         |
+| 4                  | head, chest, hands, legs | 0                | none                  | 2045.8 ± 0.94 | +52.9         |
+
+### The Tier 6 set
 
 The tier anchor wears the entry set unchanged in all five token slots: this spec's Phase 3 list keeps no tier piece there, so the tier question for it is entirely the old-bonus table above and the [best-in-slot set](sims/enhancement-shaman-bis.md).
 
@@ -795,47 +802,49 @@ Walking in, this spec holds **Destroyer Battlegear** at 4 pieces, in the head, s
 
 > Destroyer Battlegear 4-piece: your Bloodthirst and Mortal Strike abilities cost 5 less rage
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Onslaught Shoulderblades, Onslaught Breastplate, Grips of Silent Justice. The empty subset reproduces the [entry figure](sims/fury-warrior-entry.md) of 2199.5 ± 1.06.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, hands slots: Cursed Vision of Sargeras, Onslaught Shoulderblades, Onslaught Breastplate, Grips of Silent Justice. The empty subset reproduces the [entry figure](sims/fury-warrior-entry.md) of 2199.5 ± 1.06.
 
-The Destroyer 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, hands, measures 2181.0 ± 1.06.
+The Destroyer 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, head, measures 2207.8 ± 1.08.
 
-The Destroyer 2-piece cannot survive 3 chase pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, chest, hands, measures 2177.5 ± 1.07.
+The Destroyer 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, shoulder, hands, measures 2247.1 ± 1.10.
 
-The best first chase piece is the **hands**, at 2181.0 ± 1.06, -18.5 against the entry set.
+The best first pickup is the **head**, at 2207.8 ± 1.08, +8.3 against the entry set.
 
-| Chase pieces | Slots replaced               | Destroyer pieces | Old bonus             | DPS           | Against entry |
-|--------------|------------------------------|------------------|-----------------------|---------------|---------------|
-| 0            | *none, the entry set*        | 4                | Destroyer 2pc and 4pc | 2199.5 ± 1.06 | +0.0          |
-| 1            | hands                        | 3                | Destroyer 2pc         | 2181.0 ± 1.06 | -18.5         |
-| 1            | shoulder                     | 3                | Destroyer 2pc         | 2179.1 ± 1.08 | -20.4         |
-| 1            | chest                        | 3                | Destroyer 2pc         | 2170.5 ± 1.07 | -29.0         |
-| 1            | head                         | 3                | Destroyer 2pc         | 2142.3 ± 1.03 | -57.2         |
-| 2            | shoulder, hands              | 2                | Destroyer 2pc         | 2181.0 ± 1.08 | -18.5         |
-| 2            | shoulder, chest              | 2                | Destroyer 2pc         | 2178.4 ± 1.08 | -21.1         |
-| 2            | chest, hands                 | 2                | Destroyer 2pc         | 2171.3 ± 1.06 | -28.2         |
-| 2            | head, hands                  | 2                | Destroyer 2pc         | 2144.0 ± 1.04 | -55.5         |
-| 2            | head, shoulder               | 2                | Destroyer 2pc         | 2142.3 ± 1.03 | -57.2         |
-| 2            | head, chest                  | 2                | Destroyer 2pc         | 2132.6 ± 1.04 | -66.9         |
-| 3            | shoulder, chest, hands       | 1                | none                  | 2177.5 ± 1.07 | -22.0         |
-| 3            | head, shoulder, hands        | 1                | none                  | 2145.5 ± 1.05 | -54.0         |
-| 3            | head, shoulder, chest        | 1                | none                  | 2140.1 ± 1.03 | -59.4         |
-| 3            | head, chest, hands           | 1                | none                  | 2134.1 ± 1.02 | -65.4         |
-| 4            | head, shoulder, chest, hands | 0                | none                  | 2146.5 ± 1.04 | -53.0         |
+The highest subset in the round is head, shoulder, chest, hands, at 2268.5 ± 1.11, +69.0 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced               | Destroyer pieces | Old bonus             | DPS           | Against entry |
+|--------------------|------------------------------|------------------|-----------------------|---------------|---------------|
+| 0                  | *none, the entry set*        | 4                | Destroyer 2pc and 4pc | 2199.5 ± 1.06 | +0.0          |
+| 1                  | head                         | 3                | Destroyer 2pc         | 2207.8 ± 1.08 | +8.3          |
+| 1                  | hands                        | 3                | Destroyer 2pc         | 2197.1 ± 1.08 | -2.4          |
+| 1                  | shoulder                     | 3                | Destroyer 2pc         | 2193.4 ± 1.07 | -6.1          |
+| 1                  | chest                        | 3                | Destroyer 2pc         | 2191.5 ± 1.08 | -8.0          |
+| 2                  | head, hands                  | 2                | Destroyer 2pc         | 2232.1 ± 1.07 | +32.6         |
+| 2                  | head, shoulder               | 2                | Destroyer 2pc         | 2228.1 ± 1.09 | +28.6         |
+| 2                  | head, chest                  | 2                | Destroyer 2pc         | 2222.8 ± 1.08 | +23.3         |
+| 2                  | shoulder, hands              | 2                | Destroyer 2pc         | 2216.1 ± 1.07 | +16.6         |
+| 2                  | shoulder, chest              | 2                | Destroyer 2pc         | 2215.2 ± 1.08 | +15.7         |
+| 2                  | chest, hands                 | 2                | Destroyer 2pc         | 2209.9 ± 1.09 | +10.4         |
+| 3                  | head, shoulder, hands        | 1                | none                  | 2247.1 ± 1.10 | +47.6         |
+| 3                  | head, shoulder, chest        | 1                | none                  | 2246.8 ± 1.09 | +47.3         |
+| 3                  | head, chest, hands           | 1                | none                  | 2243.7 ± 1.08 | +44.2         |
+| 3                  | shoulder, chest, hands       | 1                | none                  | 2234.3 ± 1.10 | +34.8         |
+| 4                  | head, shoulder, chest, hands | 0                | none                  | 2268.5 ± 1.11 | +69.0         |
+
+### The Tier 6 set
 
 The [tier anchor](sims/fury-warrior-tier-hands-and-head.md) reconsiders the shoulder, chest slots, taking Onslaught Shoulderblades, Onslaught Breastplate. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Onslaught 2-piece** is 2 tokens, and the best way there, shoulder, chest, measures 2178.4 ± 1.08, -21.1 against the entry set.
+The cheapest **Onslaught 2-piece** is 2 tokens, and the best way there, shoulder, chest, measures 2215.2 ± 1.08, +15.7 against the entry set.
 
-Read greedily off the table, the chase order is **shoulder, then chest**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **shoulder, then chest**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                 | Onslaught pieces | Tier 6 bonus  | DPS           | Against entry |
 |--------------|-----------------------|------------------|---------------|---------------|---------------|
 | 0            | *none, the entry set* | 0                | none          | 2199.5 ± 1.06 | +0.0          |
-| 1            | shoulder              | 1                | none          | 2179.1 ± 1.08 | -20.4         |
-| 1            | chest                 | 1                | none          | 2170.5 ± 1.07 | -29.0         |
-| 2            | shoulder, chest       | 2                | Onslaught 2pc | 2178.4 ± 1.08 | -21.1         |
+| 1            | shoulder              | 1                | none          | 2193.4 ± 1.07 | -6.1          |
+| 1            | chest                 | 1                | none          | 2191.5 ± 1.08 | -8.0          |
+| 2            | shoulder, chest       | 2                | Onslaught 2pc | 2215.2 ± 1.08 | +15.7         |
 
 ## Retribution Paladin
 
@@ -843,20 +852,22 @@ Walking in, this spec holds **Crystalforge Battlegear** at 2 pieces, in the head
 
 > Crystalforge Battlegear 2-piece: Reduces the cost of your Judgements by 35.
 
-The chase pieces are what the best-in-slot set wears in the head, chest slots: Cursed Vision of Sargeras, Bulwark of the Ancient Kings. The empty subset reproduces the [entry figure](sims/retribution-paladin-entry.md) of 2041.3 ± 1.26.
+The replacement pieces are what the best-in-slot set wears in the head, chest slots: Cursed Vision of Sargeras, Bulwark of the Ancient Kings. The empty subset reproduces the [entry figure](sims/retribution-paladin-entry.md) of 2041.3 ± 1.26.
 
-The Crystalforge 2-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, chest, measures 2040.2 ± 1.28.
+The Crystalforge 2-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, head, measures 2062.2 ± 1.29.
 
-The best first chase piece is the **chest**, at 2040.2 ± 1.28, -1.1 against the entry set.
+The best first pickup is the **head**, at 2062.2 ± 1.29, +20.9 against the entry set.
 
-| Chase pieces | Slots replaced        | Crystalforge pieces | Old bonus        | DPS           | Against entry |
-|--------------|-----------------------|---------------------|------------------|---------------|---------------|
-| 0            | *none, the entry set* | 2                   | Crystalforge 2pc | 2041.3 ± 1.26 | +0.0          |
-| 1            | chest                 | 1                   | none             | 2040.2 ± 1.28 | -1.1          |
-| 1            | head                  | 1                   | none             | 2008.4 ± 1.25 | -32.9         |
-| 2            | head, chest           | 0                   | none             | 2003.5 ± 1.27 | -37.8         |
+The highest subset in the round is head, chest, at 2075.8 ± 1.32, +34.5 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced        | Crystalforge pieces | Old bonus        | DPS           | Against entry |
+|--------------------|-----------------------|---------------------|------------------|---------------|---------------|
+| 0                  | *none, the entry set* | 2                   | Crystalforge 2pc | 2041.3 ± 1.26 | +0.0          |
+| 1                  | head                  | 1                   | none             | 2062.2 ± 1.29 | +20.9         |
+| 1                  | chest                 | 1                   | none             | 2058.7 ± 1.30 | +17.4         |
+| 2                  | head, chest           | 0                   | none             | 2075.8 ± 1.32 | +34.5         |
+
+### The Tier 6 set
 
 The tier anchor wears the entry set unchanged in all five token slots: this spec's Phase 3 list keeps no tier piece there, so the tier question for it is entirely the old-bonus table above and the [best-in-slot set](sims/retribution-paladin-bis.md).
 
@@ -866,61 +877,63 @@ Walking in, this spec holds **Avatar Regalia** at 2 pieces, in the head, chest s
 
 > Avatar Regalia 2-piece held (Hood of the Avatar + Shroud of the Avatar). Exact 2.4.3 tooltip wording/values for this bonus could not be independently verified this pass (see notes.uncertain) and are not asserted here.
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, feet slots: Hood of Absolution, Shoulderpads of Absolution, Shroud of Absolution, Slippers of the Seacaller. The empty subset reproduces the [entry figure](sims/shadow-priest-entry.md) of 1452.1 ± 0.26.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, feet slots: Hood of Absolution, Shoulderpads of Absolution, Shroud of Absolution, Slippers of the Seacaller. The empty subset reproduces the [entry figure](sims/shadow-priest-entry.md) of 1452.1 ± 0.26.
 
-Breaking the Avatar 2-piece first pays at 2 chase pieces: the best subset that breaks it, shoulder, chest, measures 1446.1 ± 0.27, against 1436.4 ± 0.26 for the best that keeps it, shoulder, feet.
+Breaking the Avatar 2-piece first pays at 1 replacement piece: the best subset that breaks it, head, measures 1460.4 ± 0.27, against 1451.6 ± 0.26 for the best that keeps it, shoulder.
 
-Breaking the Shadow's Embrace 2-piece first pays at 1 chase piece: the best subset that breaks it, shoulder, measures 1446.2 ± 0.26, against 1446.0 ± 0.27 for the best that keeps it, chest.
+The Shadow's Embrace 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, head, shoulder, chest, measures 1468.4 ± 0.28.
 
-The best first chase piece is the **shoulder**, at 1446.2 ± 0.26, -5.9 against the entry set.
+The best first pickup is the **head**, at 1460.4 ± 0.27, +8.3 against the entry set.
 
-| Chase pieces | Slots replaced              | Avatar pieces | Shadow's Embrace pieces | Old bonus                        | DPS           | Against entry |
-|--------------|-----------------------------|---------------|-------------------------|----------------------------------|---------------|---------------|
-| 0            | *none, the entry set*       | 2             | 2                       | Avatar 2pc, Shadow's Embrace 2pc | 1452.1 ± 0.26 | +0.0          |
-| 1            | shoulder                    | 2             | 1                       | Avatar 2pc                       | 1446.2 ± 0.26 | -5.9          |
-| 1            | chest                       | 1             | 2                       | Shadow's Embrace 2pc             | 1446.0 ± 0.27 | -6.1          |
-| 1            | head                        | 1             | 2                       | Shadow's Embrace 2pc             | 1443.8 ± 0.26 | -8.3          |
-| 1            | feet                        | 2             | 1                       | Avatar 2pc                       | 1442.4 ± 0.26 | -9.7          |
-| 2            | shoulder, chest             | 1             | 1                       | none                             | 1446.1 ± 0.27 | -6.0          |
-| 2            | head, shoulder              | 1             | 1                       | none                             | 1440.9 ± 0.26 | -11.2         |
-| 2            | head, chest                 | 0             | 2                       | Shadow's Embrace 2pc             | 1440.6 ± 0.26 | -11.5         |
-| 2            | shoulder, feet              | 2             | 0                       | Avatar 2pc                       | 1436.4 ± 0.26 | -15.7         |
-| 2            | chest, feet                 | 1             | 1                       | none                             | 1436.3 ± 0.27 | -15.8         |
-| 2            | head, feet                  | 1             | 1                       | none                             | 1434.1 ± 0.26 | -18.0         |
-| 3            | shoulder, chest, feet       | 1             | 0                       | none                             | 1436.2 ± 0.27 | -15.9         |
-| 3            | head, shoulder, chest       | 0             | 1                       | none                             | 1434.6 ± 0.26 | -17.5         |
-| 3            | head, shoulder, feet        | 1             | 0                       | none                             | 1431.1 ± 0.26 | -21.0         |
-| 3            | head, chest, feet           | 0             | 1                       | none                             | 1430.9 ± 0.26 | -21.2         |
-| 4            | head, shoulder, chest, feet | 0             | 0                       | none                             | 1424.9 ± 0.26 | -27.2         |
+The highest subset in the round is head, chest, at 1468.9 ± 0.28, +16.8 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced              | Avatar pieces | Shadow's Embrace pieces | Old bonus                        | DPS           | Against entry |
+|--------------------|-----------------------------|---------------|-------------------------|----------------------------------|---------------|---------------|
+| 0                  | *none, the entry set*       | 2             | 2                       | Avatar 2pc, Shadow's Embrace 2pc | 1452.1 ± 0.26 | +0.0          |
+| 1                  | head                        | 1             | 2                       | Shadow's Embrace 2pc             | 1460.4 ± 0.27 | +8.3          |
+| 1                  | chest                       | 1             | 2                       | Shadow's Embrace 2pc             | 1454.5 ± 0.27 | +2.4          |
+| 1                  | shoulder                    | 2             | 1                       | Avatar 2pc                       | 1451.6 ± 0.26 | -0.5          |
+| 1                  | feet                        | 2             | 1                       | Avatar 2pc                       | 1450.4 ± 0.27 | -1.7          |
+| 2                  | head, chest                 | 0             | 2                       | Shadow's Embrace 2pc             | 1468.9 ± 0.28 | +16.8         |
+| 2                  | head, shoulder              | 1             | 1                       | none                             | 1466.0 ± 0.28 | +13.9         |
+| 2                  | shoulder, chest             | 1             | 1                       | none                             | 1460.1 ± 0.27 | +8.0          |
+| 2                  | head, feet                  | 1             | 1                       | none                             | 1458.8 ± 0.27 | +6.7          |
+| 2                  | chest, feet                 | 1             | 1                       | none                             | 1452.8 ± 0.27 | +0.7          |
+| 2                  | shoulder, feet              | 2             | 0                       | Avatar 2pc                       | 1449.8 ± 0.27 | -2.3          |
+| 3                  | head, shoulder, chest       | 0             | 1                       | none                             | 1468.4 ± 0.28 | +16.3         |
+| 3                  | head, chest, feet           | 0             | 1                       | none                             | 1467.2 ± 0.28 | +15.1         |
+| 3                  | head, shoulder, feet        | 1             | 0                       | none                             | 1464.3 ± 0.28 | +12.2         |
+| 3                  | shoulder, chest, feet       | 1             | 0                       | none                             | 1458.3 ± 0.28 | +6.2          |
+| 4                  | head, shoulder, chest, feet | 0             | 0                       | none                             | 1466.6 ± 0.28 | +14.5         |
+
+### The Tier 6 set
 
 The [tier anchor](sims/shadow-priest-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands slots, taking Hood of Absolution, Shoulderpads of Absolution, Shroud of Absolution, Handguards of Absolution. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Absolution 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 1448.2 ± 0.26, -3.9 against the entry set.
+The cheapest **Absolution 2-piece** is 2 tokens, and the best way there, head, chest, measures 1472.0 ± 0.28, +19.9 against the entry set.
 
-The cheapest **Absolution 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 1456.3 ± 0.26, +4.2 against the entry set.
+The cheapest **Absolution 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 1497.8 ± 0.29, +45.7 against the entry set.
 
-Read greedily off the table, the chase order is **hands, then shoulder, then chest, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **head, then chest, then hands, then shoulder**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                        | Absolution pieces | Tier 6 bonus           | DPS           | Against entry |
 |--------------|------------------------------|-------------------|------------------------|---------------|---------------|
 | 0            | *none, the entry set*        | 0                 | none                   | 1452.1 ± 0.26 | +0.0          |
-| 1            | hands                        | 1                 | none                   | 1447.7 ± 0.26 | -4.4          |
-| 1            | shoulder                     | 1                 | none                   | 1446.2 ± 0.26 | -5.9          |
-| 1            | chest                        | 1                 | none                   | 1446.0 ± 0.27 | -6.1          |
-| 1            | head                         | 1                 | none                   | 1443.8 ± 0.26 | -8.3          |
-| 2            | shoulder, hands              | 2                 | Absolution 2pc         | 1448.2 ± 0.26 | -3.9          |
-| 2            | chest, hands                 | 2                 | Absolution 2pc         | 1447.7 ± 0.27 | -4.4          |
-| 2            | shoulder, chest              | 2                 | Absolution 2pc         | 1446.1 ± 0.27 | -6.0          |
-| 2            | head, hands                  | 2                 | Absolution 2pc         | 1442.4 ± 0.25 | -9.7          |
-| 2            | head, shoulder               | 2                 | Absolution 2pc         | 1440.9 ± 0.26 | -11.2         |
-| 2            | head, chest                  | 2                 | Absolution 2pc         | 1440.6 ± 0.26 | -11.5         |
-| 3            | shoulder, chest, hands       | 3                 | Absolution 2pc         | 1441.7 ± 0.27 | -10.4         |
-| 3            | head, shoulder, hands        | 3                 | Absolution 2pc         | 1436.4 ± 0.25 | -15.7         |
-| 3            | head, chest, hands           | 3                 | Absolution 2pc         | 1436.2 ± 0.25 | -15.9         |
-| 3            | head, shoulder, chest        | 3                 | Absolution 2pc         | 1434.6 ± 0.26 | -17.5         |
-| 4            | head, shoulder, chest, hands | 4                 | Absolution 2pc and 4pc | 1456.3 ± 0.26 | +4.2          |
+| 1            | head                         | 1                 | none                   | 1460.4 ± 0.27 | +8.3          |
+| 1            | chest                        | 1                 | none                   | 1457.6 ± 0.27 | +5.5          |
+| 1            | hands                        | 1                 | none                   | 1451.9 ± 0.26 | -0.2          |
+| 1            | shoulder                     | 1                 | none                   | 1451.6 ± 0.26 | -0.5          |
+| 2            | head, chest                  | 2                 | Absolution 2pc         | 1472.0 ± 0.28 | +19.9         |
+| 2            | head, hands                  | 2                 | Absolution 2pc         | 1466.4 ± 0.27 | +14.3         |
+| 2            | head, shoulder               | 2                 | Absolution 2pc         | 1466.0 ± 0.28 | +13.9         |
+| 2            | chest, hands                 | 2                 | Absolution 2pc         | 1463.6 ± 0.27 | +11.5         |
+| 2            | shoulder, chest              | 2                 | Absolution 2pc         | 1463.2 ± 0.28 | +11.1         |
+| 2            | shoulder, hands              | 2                 | Absolution 2pc         | 1457.8 ± 0.27 | +5.7          |
+| 3            | head, chest, hands           | 3                 | Absolution 2pc         | 1471.8 ± 0.28 | +19.7         |
+| 3            | head, shoulder, chest        | 3                 | Absolution 2pc         | 1471.5 ± 0.28 | +19.4         |
+| 3            | head, shoulder, hands        | 3                 | Absolution 2pc         | 1465.9 ± 0.27 | +13.8         |
+| 3            | shoulder, chest, hands       | 3                 | Absolution 2pc         | 1463.0 ± 0.27 | +10.9         |
+| 4            | head, shoulder, chest, hands | 4                 | Absolution 2pc and 4pc | 1497.8 ± 0.29 | +45.7         |
 
 ## Survival Hunter
 
@@ -930,77 +943,79 @@ Walking in, this spec holds **Rift Stalker Armor** at 4 pieces, in the head, sho
 
 > Rift Stalker Armor 4-piece: Your Steady Shot ability has 5% increased critical strike chance.
 
-The chase pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Bow-stitched Leggings. The empty subset reproduces the [entry figure](sims/survival-hunter-entry.md) of 2529.1 ± 0.79.
+The replacement pieces are what the best-in-slot set wears in the head, shoulder, chest, legs slots: Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Bow-stitched Leggings. The empty subset reproduces the [entry figure](sims/survival-hunter-entry.md) of 2529.1 ± 0.79.
 
-The Rift Stalker 4-piece cannot survive 1 chase piece in these slots: every subset of that size breaks it, and the best of them, shoulder, measures 2514.8 ± 0.80.
+The Rift Stalker 4-piece cannot survive 1 replacement piece in these slots: every subset of that size breaks it, and the best of them, legs, measures 2535.4 ± 0.80.
 
-The Rift Stalker 2-piece cannot survive 3 chase pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, chest, legs, measures 2516.2 ± 0.80.
+The Rift Stalker 2-piece cannot survive 3 replacement pieces in these slots: every subset of that size breaks it, and the best of them, shoulder, chest, legs, measures 2583.5 ± 0.82.
 
-The best first chase piece is the **shoulder**, at 2514.8 ± 0.80, -14.3 against the entry set.
+The best first pickup is the **legs**, at 2535.4 ± 0.80, +6.3 against the entry set.
 
-| Chase pieces | Slots replaced              | Rift Stalker pieces | Old bonus                | DPS           | Against entry |
-|--------------|-----------------------------|---------------------|--------------------------|---------------|---------------|
-| 0            | *none, the entry set*       | 4                   | Rift Stalker 2pc and 4pc | 2529.1 ± 0.79 | +0.0          |
-| 1            | shoulder                    | 3                   | Rift Stalker 2pc         | 2514.8 ± 0.80 | -14.3         |
-| 1            | legs                        | 3                   | Rift Stalker 2pc         | 2510.9 ± 0.80 | -18.2         |
-| 1            | chest                       | 3                   | Rift Stalker 2pc         | 2499.7 ± 0.79 | -29.4         |
-| 1            | head                        | 3                   | Rift Stalker 2pc         | 2451.4 ± 0.75 | -77.7         |
-| 2            | shoulder, legs              | 2                   | Rift Stalker 2pc         | 2521.2 ± 0.81 | -7.9          |
-| 2            | shoulder, chest             | 2                   | Rift Stalker 2pc         | 2510.2 ± 0.79 | -18.9         |
-| 2            | chest, legs                 | 2                   | Rift Stalker 2pc         | 2507.2 ± 0.79 | -21.9         |
-| 2            | head, shoulder              | 2                   | Rift Stalker 2pc         | 2461.9 ± 0.76 | -67.2         |
-| 2            | head, legs                  | 2                   | Rift Stalker 2pc         | 2457.1 ± 0.77 | -72.0         |
-| 2            | head, chest                 | 2                   | Rift Stalker 2pc         | 2446.3 ± 0.75 | -82.8         |
-| 3            | shoulder, chest, legs       | 1                   | none                     | 2516.2 ± 0.80 | -12.9         |
-| 3            | head, shoulder, legs        | 1                   | none                     | 2467.4 ± 0.77 | -61.7         |
-| 3            | head, shoulder, chest       | 1                   | none                     | 2456.6 ± 0.76 | -72.5         |
-| 3            | head, chest, legs           | 1                   | none                     | 2452.2 ± 0.76 | -76.9         |
-| 4            | head, shoulder, chest, legs | 0                   | none                     | 2462.2 ± 0.77 | -66.9         |
+The highest subset in the round is head, shoulder, chest, legs, at 2600.1 ± 0.83, +71.0 against the entry set, before the gems those pieces would carry.
 
-### The Tier 6 chase
+| Replacement pieces | Slots replaced              | Rift Stalker pieces | Old bonus                | DPS           | Against entry |
+|--------------------|-----------------------------|---------------------|--------------------------|---------------|---------------|
+| 0                  | *none, the entry set*       | 4                   | Rift Stalker 2pc and 4pc | 2529.1 ± 0.79 | +0.0          |
+| 1                  | legs                        | 3                   | Rift Stalker 2pc         | 2535.4 ± 0.80 | +6.3          |
+| 1                  | shoulder                    | 3                   | Rift Stalker 2pc         | 2529.5 ± 0.80 | +0.4          |
+| 1                  | chest                       | 3                   | Rift Stalker 2pc         | 2527.7 ± 0.80 | -1.4          |
+| 1                  | head                        | 3                   | Rift Stalker 2pc         | 2520.2 ± 0.79 | -8.9          |
+| 2                  | shoulder, legs              | 2                   | Rift Stalker 2pc         | 2559.9 ± 0.82 | +30.8         |
+| 2                  | chest, legs                 | 2                   | Rift Stalker 2pc         | 2559.0 ± 0.81 | +29.9         |
+| 2                  | head, legs                  | 2                   | Rift Stalker 2pc         | 2553.3 ± 0.81 | +24.2         |
+| 2                  | shoulder, chest             | 2                   | Rift Stalker 2pc         | 2552.2 ± 0.80 | +23.1         |
+| 2                  | head, shoulder              | 2                   | Rift Stalker 2pc         | 2545.2 ± 0.80 | +16.1         |
+| 2                  | head, chest                 | 2                   | Rift Stalker 2pc         | 2543.8 ± 0.80 | +14.7         |
+| 3                  | shoulder, chest, legs       | 1                   | none                     | 2583.5 ± 0.82 | +54.4         |
+| 3                  | head, shoulder, legs        | 1                   | none                     | 2577.9 ± 0.82 | +48.8         |
+| 3                  | head, chest, legs           | 1                   | none                     | 2576.4 ± 0.81 | +47.3         |
+| 3                  | head, shoulder, chest       | 1                   | none                     | 2568.4 ± 0.81 | +39.3         |
+| 4                  | head, shoulder, chest, legs | 0                   | none                     | 2600.1 ± 0.83 | +71.0         |
+
+### The Tier 6 set
 
 The [tier anchor](sims/survival-hunter-tier-hands-and-head.md) reconsiders the head, shoulder, chest, hands, legs slots, taking Gronnstalker's Helmet, Gronnstalker's Spaulders, Gronnstalker's Chestguard, Gronnstalker's Gloves, Shady Dealer's Pantaloons. The table prices each count of pieces and the thresholds where a Tier 6 bonus turns on.
 
-The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 2537.6 ± 0.80, +8.5 against the entry set.
+The cheapest **Gronnstalker's 2-piece** is 2 tokens, and the best way there, shoulder, hands, measures 2563.1 ± 0.81, +34.0 against the entry set.
 
-The cheapest **Gronnstalker's 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 2531.8 ± 0.77, +2.7 against the entry set.
+The cheapest **Gronnstalker's 4-piece** is 4 tokens, and the best way there, head, shoulder, chest, hands, measures 2648.1 ± 0.83, +119.0 against the entry set.
 
-Read greedily off the table, the chase order is **hands, then legs, then shoulder, then chest, then head**: at each count it is the added slot whose subset measures highest.
+Read greedily off the table, the pickup order is **hands, then shoulder, then chest, then head, then legs**: at each count it is the added slot whose subset measures highest.
 
 | Pieces taken | Slots                              | Gronnstalker's pieces | Tier 6 bonus               | DPS           | Against entry |
 |--------------|------------------------------------|-----------------------|----------------------------|---------------|---------------|
 | 0            | *none, the entry set*              | 0                     | none                       | 2529.1 ± 0.79 | +0.0          |
-| 1            | hands                              | 1                     | none                       | 2550.3 ± 0.79 | +21.2         |
+| 1            | hands                              | 1                     | none                       | 2562.8 ± 0.79 | +33.7         |
+| 1            | shoulder                           | 1                     | none                       | 2529.5 ± 0.80 | +0.4          |
+| 1            | chest                              | 1                     | none                       | 2527.7 ± 0.80 | -1.4          |
 | 1            | legs                               | 0                     | none                       | 2520.1 ± 0.82 | -9.0          |
-| 1            | shoulder                           | 1                     | none                       | 2514.8 ± 0.80 | -14.3         |
-| 1            | chest                              | 1                     | none                       | 2499.7 ± 0.79 | -29.4         |
-| 1            | head                               | 1                     | none                       | 2451.4 ± 0.75 | -77.7         |
-| 2            | hands, legs                        | 1                     | none                       | 2546.6 ± 0.82 | +17.5         |
-| 2            | shoulder, hands                    | 2                     | Gronnstalker's 2pc         | 2537.6 ± 0.80 | +8.5          |
-| 2            | shoulder, legs                     | 1                     | none                       | 2529.2 ± 0.82 | +0.1          |
-| 2            | chest, hands                       | 2                     | Gronnstalker's 2pc         | 2520.9 ± 0.80 | -8.2          |
-| 2            | chest, legs                        | 1                     | none                       | 2516.6 ± 0.82 | -12.5         |
-| 2            | shoulder, chest                    | 2                     | Gronnstalker's 2pc         | 2510.2 ± 0.79 | -18.9         |
-| 2            | head, hands                        | 2                     | Gronnstalker's 2pc         | 2472.7 ± 0.75 | -56.4         |
-| 2            | head, legs                         | 1                     | none                       | 2465.9 ± 0.78 | -63.2         |
-| 2            | head, shoulder                     | 2                     | Gronnstalker's 2pc         | 2461.9 ± 0.76 | -67.2         |
-| 2            | head, chest                        | 2                     | Gronnstalker's 2pc         | 2446.3 ± 0.75 | -82.8         |
-| 3            | shoulder, hands, legs              | 2                     | Gronnstalker's 2pc         | 2557.3 ± 0.82 | +28.2         |
-| 3            | chest, hands, legs                 | 2                     | Gronnstalker's 2pc         | 2542.4 ± 0.81 | +13.3         |
-| 3            | shoulder, chest, hands             | 3                     | Gronnstalker's 2pc         | 2532.3 ± 0.80 | +3.2          |
-| 3            | shoulder, chest, legs              | 2                     | Gronnstalker's 2pc         | 2526.3 ± 0.82 | -2.8          |
-| 3            | head, hands, legs                  | 2                     | Gronnstalker's 2pc         | 2491.7 ± 0.78 | -37.4         |
-| 3            | head, shoulder, hands              | 3                     | Gronnstalker's 2pc         | 2483.5 ± 0.76 | -45.6         |
-| 3            | head, shoulder, legs               | 2                     | Gronnstalker's 2pc         | 2475.1 ± 0.78 | -54.0         |
-| 3            | head, chest, hands                 | 3                     | Gronnstalker's 2pc         | 2466.3 ± 0.76 | -62.8         |
-| 3            | head, chest, legs                  | 2                     | Gronnstalker's 2pc         | 2462.9 ± 0.77 | -66.2         |
-| 3            | head, shoulder, chest              | 3                     | Gronnstalker's 2pc         | 2456.6 ± 0.76 | -72.5         |
-| 4            | shoulder, chest, hands, legs       | 3                     | Gronnstalker's 2pc         | 2552.8 ± 0.82 | +23.7         |
-| 4            | head, shoulder, chest, hands       | 4                     | Gronnstalker's 2pc and 4pc | 2531.8 ± 0.77 | +2.7          |
-| 4            | head, shoulder, hands, legs        | 3                     | Gronnstalker's 2pc         | 2501.4 ± 0.78 | -27.7         |
-| 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 2486.9 ± 0.77 | -42.2         |
-| 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 2472.1 ± 0.78 | -57.0         |
-| 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 2552.6 ± 0.80 | +23.5         |
+| 1            | head                               | 1                     | none                       | 2508.9 ± 0.79 | -20.2         |
+| 2            | shoulder, hands                    | 2                     | Gronnstalker's 2pc         | 2563.1 ± 0.81 | +34.0         |
+| 2            | chest, hands                       | 2                     | Gronnstalker's 2pc         | 2560.8 ± 0.80 | +31.7         |
+| 2            | hands, legs                        | 1                     | none                       | 2558.1 ± 0.83 | +29.0         |
+| 2            | shoulder, chest                    | 2                     | Gronnstalker's 2pc         | 2552.2 ± 0.80 | +23.1         |
+| 2            | chest, legs                        | 1                     | none                       | 2544.8 ± 0.82 | +15.7         |
+| 2            | shoulder, legs                     | 1                     | none                       | 2543.3 ± 0.83 | +14.2         |
+| 2            | head, hands                        | 2                     | Gronnstalker's 2pc         | 2542.1 ± 0.79 | +13.0         |
+| 2            | head, shoulder                     | 2                     | Gronnstalker's 2pc         | 2533.5 ± 0.80 | +4.4          |
+| 2            | head, chest                        | 2                     | Gronnstalker's 2pc         | 2531.6 ± 0.80 | +2.5          |
+| 2            | head, legs                         | 1                     | none                       | 2524.0 ± 0.82 | -5.1          |
+| 3            | shoulder, chest, hands             | 3                     | Gronnstalker's 2pc         | 2586.9 ± 0.81 | +57.8         |
+| 3            | chest, hands, legs                 | 2                     | Gronnstalker's 2pc         | 2582.4 ± 0.81 | +53.3         |
+| 3            | shoulder, hands, legs              | 2                     | Gronnstalker's 2pc         | 2582.3 ± 0.83 | +53.2         |
+| 3            | shoulder, chest, legs              | 2                     | Gronnstalker's 2pc         | 2568.1 ± 0.82 | +39.0         |
+| 3            | head, shoulder, hands              | 3                     | Gronnstalker's 2pc         | 2567.8 ± 0.80 | +38.7         |
+| 3            | head, chest, hands                 | 3                     | Gronnstalker's 2pc         | 2565.0 ± 0.80 | +35.9         |
+| 3            | head, hands, legs                  | 2                     | Gronnstalker's 2pc         | 2561.9 ± 0.82 | +32.8         |
+| 3            | head, shoulder, chest              | 3                     | Gronnstalker's 2pc         | 2556.2 ± 0.81 | +27.1         |
+| 3            | head, chest, legs                  | 2                     | Gronnstalker's 2pc         | 2550.2 ± 0.82 | +21.1         |
+| 3            | head, shoulder, legs               | 2                     | Gronnstalker's 2pc         | 2547.6 ± 0.83 | +18.5         |
+| 4            | head, shoulder, chest, hands       | 4                     | Gronnstalker's 2pc and 4pc | 2648.1 ± 0.83 | +119.0        |
+| 4            | shoulder, chest, hands, legs       | 3                     | Gronnstalker's 2pc         | 2607.3 ± 0.83 | +78.2         |
+| 4            | head, shoulder, hands, legs        | 3                     | Gronnstalker's 2pc         | 2586.6 ± 0.83 | +57.5         |
+| 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 2585.9 ± 0.81 | +56.8         |
+| 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 2572.5 ± 0.83 | +43.4         |
+| 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 2668.7 ± 0.85 | +139.6        |
 
 ## The specs this page cannot measure
 

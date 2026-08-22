@@ -17,6 +17,18 @@ rulings:
     page-top figures read 7684, and any ruling taken from a 6193 figure is
     re-read against 7684, the Beast Mastery trinket pick being the live case,
     Madness of the Betrayer paying in armor penetration.
+- rule: An equipped piece is ASSUMED GEMMED AND ENCHANTED in every simulation.
+  verbatim: when we equip pieces we should ASSUME they are gemmed and enchanted!
+  what_it_replaces: The variant rounds ran a candidate bare of gems, pricing the
+    item alone with a stated understatement caveat on every socketed candidate,
+    and the first tier round did the same, which made a four-piece tier row
+    read as an absolute downgrade when the empty sockets were the cost. The
+    guild lead read that row the way any reader would and ruled the assumption.
+  how_it_is_applied: A replacement drawn from an exported profile arrives with
+    that profile's gems and enchant. A candidate no profile wears carries the
+    spec's standard gem in each socket, named in enchants-by-spec.yaml, and the
+    slot's enchant. A worn item keeps its own gems exactly, so the plus-zero
+    self-match stands.
 - rule: A slot-level variant gain is confirmed at the PROFILE level before a
     profile re-wears, because a swap that moves hit reshapes the gems and the
     food behind it.

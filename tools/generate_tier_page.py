@@ -76,7 +76,7 @@ def bonus_word(count: int) -> str:
 
 def break_even_reading(set_name: str, threshold: int, entry_pieces: int,
                        rows: list[dict], counts: dict) -> str:
-    """The break-even for one bonus: the smallest chase count at which the
+    """The break-even for one bonus: the smallest replacement count at which the
     best subset that breaks it beats the best subset that keeps it.
 
     THE COMPARISON IS AT EQUAL COUNTS ON PURPOSE. Every replacement arrives
@@ -89,7 +89,7 @@ def break_even_reading(set_name: str, threshold: int, entry_pieces: int,
     n = max((len(r["replaced"]) for r in rows), default=0)
     if not any(counts[id(r)].get(set_name, 0) < threshold for r in rows):
         return (f"No subset of these slots can break the {label}: the set "
-                f"keeps enough pieces outside them, so the chase never "
+                f"keeps enough pieces outside them, so the replacements never "
                 f"poses that question.")
     for k in range(1, n + 1):
         at_k = [r for r in rows if len(r["replaced"]) == k]
@@ -99,27 +99,27 @@ def break_even_reading(set_name: str, threshold: int, entry_pieces: int,
             continue
         best_b = max(brk, key=lambda r: r["dps"])
         if not keep:
-            return (f"The {label} cannot survive {k} chase piece"
+            return (f"The {label} cannot survive {k} replacement piece"
                     f"{'s' if k > 1 else ''} in these slots: every subset of "
                     f"that size breaks it, and the best of them, "
                     f"{', '.join(best_b['replaced'])}, measures "
                     f"{figure(best_b)}.")
         best_k = max(keep, key=lambda r: r["dps"])
         if best_b["dps"] > best_k["dps"]:
-            return (f"Breaking the {label} first pays at {k} chase piece"
+            return (f"Breaking the {label} first pays at {k} replacement piece"
                     f"{'s' if k > 1 else ''}: the best subset that breaks "
                     f"it, {', '.join(best_b['replaced'])}, measures "
                     f"{figure(best_b)}, against {figure(best_k)} for the "
                     f"best that keeps it, "
                     f"{', '.join(best_k['replaced'])}.")
-    return (f"At no count inside this chase set does the best subset that "
+    return (f"At no count inside this replacement set does the best subset that "
             f"breaks the {label} beat the best subset of the same size "
             f"that keeps it, so the bonus holds its price all the way to "
             f"the last of these slots.")
 
 
 def greedy_order(rows: list[dict]) -> list[str]:
-    """The best chase order, read greedily off the subsets: at each step the
+    """The best pickup order, read greedily off the subsets: at each step the
     added slot whose superset measures highest."""
     by_set = {frozenset(r["replaced"]): r for r in rows}
     slots = max((r["replaced"] for r in rows), key=len, default=[])
@@ -135,7 +135,7 @@ def greedy_order(rows: list[dict]) -> list[str]:
 
 
 def route_marginals(rows: list[dict]) -> dict[str, float]:
-    """Each slot's increment along the greedy best chase order.
+    """Each slot's increment along the greedy best pickup order.
 
     The single-piece column undervalues a piece that pays at a bonus
     threshold, so the give-out ranking uses the increment each slot adds at
@@ -164,7 +164,7 @@ def token_order_sections(doc: dict, tokens: dict,
     THE QUESTION AT THE LOOT TABLE, asked by the guild lead: a token drops,
     and the council wants the give-out order that maximizes what each item
     does. The ranking is the measured route increment per spec; a spec whose
-    chase does not take the token in that slot is named below the table
+    list does not take the token in that slot is named below the table
     rather than ranked, and the unmeasured claimants close each section.
     Nothing here is a ruling.
     """
@@ -213,7 +213,7 @@ def token_order_sections(doc: dict, tokens: dict,
                 if int(worn.get("id") or 0) == token_id and rows:
                     # The tier-six round measured this token as its single
                     # subset for the slot: the token is what the spec
-                    # chases there.
+                    # takes there.
                     by_set = {frozenset(r["replaced"]): r for r in rows}
                     if frozenset([slot]) in by_set:
                         gain = round(by_set[frozenset([slot])]["dps"]
@@ -307,7 +307,7 @@ def main() -> int:
             for text in ob.get("bonuses_held") or []:
                 parts.append(f"> {text}\n")
             parts.append(
-                f"The chase pieces are what the best-in-slot set wears in "
+                f"The replacement pieces are what the best-in-slot set wears in "
                 f"the {', '.join(ob['replaceable_slots'])} slots: "
                 + ", ".join(f"{v['name']}"
                             for v in ob["replacements"].values())
@@ -334,7 +334,7 @@ def main() -> int:
             if singles:
                 first = max(singles, key=lambda r: r["dps"])
                 parts.append(
-                    f"The best first chase piece is the "
+                    f"The best first pickup is the "
                     f"**{first['replaced'][0]}**, at {figure(first)}, "
                     f"{first['dps'] - baseline['dps']:+.1f} against the "
                     f"entry set.\n")
@@ -343,8 +343,8 @@ def main() -> int:
                     "No subset in this round measures above the unbroken "
                     "entry set. Read that with the gem rule in mind: every "
                     "replacement arrives ungemmed, so these figures "
-                    "understate a gemmed chase piece, and the full gemmed "
-                    "chase is priced by the anchor figures instead.\n")
+                    "understate a gemmed replacement, and the fully gemmed "
+                    "destination is priced by the anchor figures instead.\n")
             elif best["replaced"]:
                 parts.append(
                     f"The highest subset in the round is "
@@ -353,7 +353,7 @@ def main() -> int:
                     f"entry set, before the gems those pieces would "
                     f"carry.\n")
 
-            header = ["Chase pieces", "Slots replaced"]
+            header = ["Replacement pieces", "Slots replaced"]
             header += [f"{short_set(n)} pieces" for n in watched]
             header += ["Old bonus", "DPS", "Against entry"]
             table = []
@@ -372,7 +372,7 @@ def main() -> int:
 
         ts = block.get("tier_six") or {}
         t_rows = ts.get("rows") or []
-        parts.append("### The Tier 6 chase\n")
+        parts.append("### The Tier 6 set\n")
         if not t_rows:
             parts.append(
                 "The tier anchor wears the entry set unchanged in all five "
@@ -418,7 +418,7 @@ def main() -> int:
             order = greedy_order(t_rows)
             if len(order) > 1:
                 parts.append(
-                    f"Read greedily off the table, the chase order is "
+                    f"Read greedily off the table, the pickup order is "
                     f"**{', then '.join(order)}**: at each count it is the "
                     f"added slot whose subset measures highest.\n")
 
@@ -465,7 +465,7 @@ eyebrow: Measurement
 subtitle: >-
   Who gains what from each token, in give-out order, and at what point it
   makes sense to break an old set bonus: every subset of each spec's
-  bonus-carrying slots priced against its chase pieces.
+  bonus-carrying slots priced against its best-in-slot pieces.
 status: draft
 updated: 2026-08-21
 ---
@@ -479,7 +479,7 @@ it**, one section per token with the give-out order the measurements support.
 SECOND, per spec, **at what point breaking an old bonus pays**. For
 every simulated spec, every subset of the entry set's bonus-carrying slots was
 replaced with what the best-in-slot set wears there, on the otherwise
-unchanged entry set, so the tables below hold the best way to take one chase
+unchanged entry set, so the tables below hold the best way to take one
 piece, two, three, and so on, and whether the old bonus survives each.
 
 ## How to read every table
@@ -490,19 +490,16 @@ comparable with that spec's entry figure on
 [Simulated Throughput](sims.md), and the empty row reproduces it. The plus or
 minus is one standard error, not a confidence interval.
 
-**A replaced slot keeps its enchant and a replacement arrives ungemmed.**
-Which gems a chase piece takes is a separate question from what the piece is
-worth, so the figures understate a gemmed replacement, and a row with more
-replacements carries more empty sockets. The break-even readings therefore
-compare subsets **of the same size**: two subsets of equal size carry the
-same number of empty sockets, so the gap between the best that breaks a bonus
-and the best that keeps it is the bonus question and not the gems. The fully
-gemmed destination is priced by the anchor figures on the set pages, not
-here.
+**Every replacement arrives dressed**: the piece carries the gems and the
+enchant the exported profile wears on it, and a token measured outside any
+profile carries the spec's standard gem in each socket. A figure here is what
+the raider measures actually wearing the pieces, so a four-piece row that
+reads below entry is a real statement about the set against the entry gear,
+not an artifact of empty sockets.
 
 Each spec carries two rounds. **The old-bonus round** replaces subsets of the
-slots holding the entry set's live bonuses with the spec's chase pieces, the
-items its best-in-slot set wears there. **The Tier 6 chase** replaces subsets
+slots holding the entry set's live bonuses with the spec's best-in-slot pieces, the
+items its best-in-slot set wears there. **The Tier 6 round** replaces subsets
 of the token slots with the tier anchor's pieces, pricing the two-piece and
 four-piece thresholds and the order the tokens are best taken in. Nothing
 here is a ruling: the tables are measurements, and which claimant takes which

@@ -62,114 +62,114 @@ specs:
           Deathmantle: 4
       - replaced:
         - head
-        dps: 2033.4
-        standard_error: 0.83
-        stdev: 83.4
+        dps: 2088.2
+        standard_error: 0.87
+        stdev: 86.9
         pieces_left:
           Deathmantle: 3
       - replaced:
         - shoulder
-        dps: 2055.6
+        dps: 2069.9
+        standard_error: 0.87
+        stdev: 87.4
+        pieces_left:
+          Deathmantle: 3
+      - replaced:
+        - hands
+        dps: 2068.7
+        standard_error: 0.89
+        stdev: 88.9
+        pieces_left:
+          Deathmantle: 3
+      - replaced:
+        - legs
+        dps: 2063.5
         standard_error: 0.88
         stdev: 88.0
         pieces_left:
           Deathmantle: 3
       - replaced:
-        - hands
-        dps: 2063.1
+        - head
+        - shoulder
+        dps: 2111.2
         standard_error: 0.89
-        stdev: 88.6
+        stdev: 88.8
         pieces_left:
-          Deathmantle: 3
+          Deathmantle: 2
       - replaced:
-        - legs
-        dps: 2058.2
+        - head
+        - hands
+        dps: 2110.6
         standard_error: 0.88
-        stdev: 87.8
-        pieces_left:
-          Deathmantle: 3
-      - replaced:
-        - head
-        - shoulder
-        dps: 2042.2
-        standard_error: 0.84
-        stdev: 83.9
-        pieces_left:
-          Deathmantle: 2
-      - replaced:
-        - head
-        - hands
-        dps: 2050.7
-        standard_error: 0.85
-        stdev: 85.2
+        stdev: 88.5
         pieces_left:
           Deathmantle: 2
       - replaced:
         - head
         - legs
-        dps: 2043.6
-        standard_error: 0.84
-        stdev: 83.8
+        dps: 2104.4
+        standard_error: 0.88
+        stdev: 87.5
         pieces_left:
           Deathmantle: 2
       - replaced:
         - shoulder
         - hands
-        dps: 2136.6
-        standard_error: 0.9
-        stdev: 90.1
+        dps: 2155.6
+        standard_error: 0.91
+        stdev: 90.9
         pieces_left:
           Deathmantle: 2
       - replaced:
         - shoulder
         - legs
-        dps: 2129.7
-        standard_error: 0.9
-        stdev: 89.7
+        dps: 2149.5
+        standard_error: 0.91
+        stdev: 91.1
         pieces_left:
           Deathmantle: 2
       - replaced:
         - hands
         - legs
-        dps: 2138.7
+        dps: 2149.7
         standard_error: 0.9
-        stdev: 89.8
+        stdev: 90.2
         pieces_left:
           Deathmantle: 2
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 2123.7
-        standard_error: 0.87
-        stdev: 87.0
+        dps: 2201.1
+        standard_error: 0.91
+        stdev: 90.6
         pieces_left:
           Deathmantle: 1
       - replaced:
         - head
         - shoulder
         - legs
-        dps: 2117.4
-        standard_error: 0.87
-        stdev: 86.6
+        dps: 2195.5
+        standard_error: 0.89
+        stdev: 89.2
         pieces_left:
           Deathmantle: 1
       - replaced:
         - head
         - hands
         - legs
-        dps: 2124.6
-        standard_error: 0.87
-        stdev: 86.9
+        dps: 2192.8
+        standard_error: 0.9
+        stdev: 90.2
         pieces_left:
           Deathmantle: 1
       - replaced:
         - shoulder
         - hands
         - legs
-        dps: 2147.9
-        standard_error: 0.9
-        stdev: 90.5
+        dps: 2172.7
+        standard_error: 0.92
+        stdev: 91.5
         pieces_left:
           Deathmantle: 1
       - replaced:
@@ -177,9 +177,9 @@ specs:
         - shoulder
         - hands
         - legs
-        dps: 2134.6
-        standard_error: 0.87
-        stdev: 87.4
+        dps: 2218.1
+        standard_error: 0.91
+        stdev: 91.1
         pieces_left:
           Deathmantle: 0
     tier_six:
@@ -214,257 +214,257 @@ specs:
           Slayer's Armor: 0
       - replaced:
         - head
-        dps: 2033.4
-        standard_error: 0.83
-        stdev: 83.4
+        dps: 2088.2
+        standard_error: 0.87
+        stdev: 86.9
         pieces_left:
           Slayer's Armor: 0
       - replaced:
         - shoulder
-        dps: 2055.6
+        dps: 2069.9
+        standard_error: 0.87
+        stdev: 87.4
+        pieces_left:
+          Slayer's Armor: 1
+      - replaced:
+        - chest
+        dps: 2109.4
+        standard_error: 0.9
+        stdev: 89.8
+        pieces_left:
+          Slayer's Armor: 1
+      - replaced:
+        - hands
+        dps: 2068.7
+        standard_error: 0.89
+        stdev: 88.9
+        pieces_left:
+          Slayer's Armor: 1
+      - replaced:
+        - legs
+        dps: 2063.5
         standard_error: 0.88
         stdev: 88.0
         pieces_left:
           Slayer's Armor: 1
       - replaced:
+        - head
+        - shoulder
+        dps: 2111.2
+        standard_error: 0.89
+        stdev: 88.8
+        pieces_left:
+          Slayer's Armor: 1
+      - replaced:
+        - head
         - chest
-        dps: 2085.7
+        dps: 2111.2
         standard_error: 0.89
-        stdev: 89.3
+        stdev: 88.9
         pieces_left:
           Slayer's Armor: 1
       - replaced:
+        - head
         - hands
-        dps: 2063.1
-        standard_error: 0.89
-        stdev: 88.6
-        pieces_left:
-          Slayer's Armor: 1
-      - replaced:
-        - legs
-        dps: 2058.2
+        dps: 2110.6
         standard_error: 0.88
-        stdev: 87.8
-        pieces_left:
-          Slayer's Armor: 1
-      - replaced:
-        - head
-        - shoulder
-        dps: 2042.2
-        standard_error: 0.84
-        stdev: 83.9
-        pieces_left:
-          Slayer's Armor: 1
-      - replaced:
-        - head
-        - chest
-        dps: 2033.1
-        standard_error: 0.85
-        stdev: 85.3
-        pieces_left:
-          Slayer's Armor: 1
-      - replaced:
-        - head
-        - hands
-        dps: 2050.7
-        standard_error: 0.85
-        stdev: 85.2
+        stdev: 88.5
         pieces_left:
           Slayer's Armor: 1
       - replaced:
         - head
         - legs
-        dps: 2043.6
-        standard_error: 0.84
-        stdev: 83.8
+        dps: 2104.4
+        standard_error: 0.88
+        stdev: 87.5
         pieces_left:
           Slayer's Armor: 1
       - replaced:
         - shoulder
         - chest
-        dps: 2117.8
-        standard_error: 0.9
-        stdev: 89.8
+        dps: 2156.4
+        standard_error: 0.91
+        stdev: 90.7
         pieces_left:
           Slayer's Armor: 2
       - replaced:
         - shoulder
         - hands
-        dps: 2136.6
+        dps: 2155.6
+        standard_error: 0.91
+        stdev: 90.9
+        pieces_left:
+          Slayer's Armor: 2
+      - replaced:
+        - shoulder
+        - legs
+        dps: 2149.5
+        standard_error: 0.91
+        stdev: 91.1
+        pieces_left:
+          Slayer's Armor: 2
+      - replaced:
+        - chest
+        - hands
+        dps: 2155.4
+        standard_error: 0.9
+        stdev: 90.2
+        pieces_left:
+          Slayer's Armor: 2
+      - replaced:
+        - chest
+        - legs
+        dps: 2149.1
         standard_error: 0.9
         stdev: 90.1
         pieces_left:
           Slayer's Armor: 2
       - replaced:
+        - hands
+        - legs
+        dps: 2149.7
+        standard_error: 0.9
+        stdev: 90.2
+        pieces_left:
+          Slayer's Armor: 2
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        dps: 2200.8
+        standard_error: 0.91
+        stdev: 91.0
+        pieces_left:
+          Slayer's Armor: 2
+      - replaced:
+        - head
+        - shoulder
+        - hands
+        dps: 2201.1
+        standard_error: 0.91
+        stdev: 90.6
+        pieces_left:
+          Slayer's Armor: 2
+      - replaced:
+        - head
         - shoulder
         - legs
-        dps: 2129.7
-        standard_error: 0.9
-        stdev: 89.7
-        pieces_left:
-          Slayer's Armor: 2
-      - replaced:
-        - chest
-        - hands
-        dps: 2125.1
-        standard_error: 0.91
-        stdev: 90.8
-        pieces_left:
-          Slayer's Armor: 2
-      - replaced:
-        - chest
-        - legs
-        dps: 2120.5
+        dps: 2195.5
         standard_error: 0.89
-        stdev: 89.4
+        stdev: 89.2
         pieces_left:
           Slayer's Armor: 2
       - replaced:
+        - head
+        - chest
         - hands
+        dps: 2198.6
+        standard_error: 0.92
+        stdev: 92.3
+        pieces_left:
+          Slayer's Armor: 2
+      - replaced:
+        - head
+        - chest
         - legs
-        dps: 2138.7
+        dps: 2193.4
         standard_error: 0.9
-        stdev: 89.8
-        pieces_left:
-          Slayer's Armor: 2
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        dps: 2104.5
-        standard_error: 0.87
-        stdev: 87.0
-        pieces_left:
-          Slayer's Armor: 2
-      - replaced:
-        - head
-        - shoulder
-        - hands
-        dps: 2123.7
-        standard_error: 0.87
-        stdev: 87.0
-        pieces_left:
-          Slayer's Armor: 2
-      - replaced:
-        - head
-        - shoulder
-        - legs
-        dps: 2117.4
-        standard_error: 0.87
-        stdev: 86.6
-        pieces_left:
-          Slayer's Armor: 2
-      - replaced:
-        - head
-        - chest
-        - hands
-        dps: 2113.3
-        standard_error: 0.88
-        stdev: 87.7
-        pieces_left:
-          Slayer's Armor: 2
-      - replaced:
-        - head
-        - chest
-        - legs
-        dps: 2105.9
-        standard_error: 0.87
-        stdev: 87.0
+        stdev: 90.3
         pieces_left:
           Slayer's Armor: 2
       - replaced:
         - head
         - hands
         - legs
-        dps: 2124.6
-        standard_error: 0.87
-        stdev: 86.9
+        dps: 2192.8
+        standard_error: 0.9
+        stdev: 90.2
         pieces_left:
           Slayer's Armor: 2
       - replaced:
         - shoulder
         - chest
         - hands
-        dps: 2133.9
+        dps: 2178.5
+        standard_error: 0.92
+        stdev: 92.2
+        pieces_left:
+          Slayer's Armor: 3
+      - replaced:
+        - shoulder
+        - chest
+        - legs
+        dps: 2173.7
         standard_error: 0.91
-        stdev: 91.4
-        pieces_left:
-          Slayer's Armor: 3
-      - replaced:
-        - shoulder
-        - chest
-        - legs
-        dps: 2129.1
-        standard_error: 0.9
-        stdev: 90.1
+        stdev: 91.3
         pieces_left:
           Slayer's Armor: 3
       - replaced:
         - shoulder
         - hands
         - legs
-        dps: 2147.9
-        standard_error: 0.9
-        stdev: 90.5
+        dps: 2172.7
+        standard_error: 0.92
+        stdev: 91.5
         pieces_left:
           Slayer's Armor: 3
       - replaced:
         - chest
         - hands
         - legs
-        dps: 2137.0
+        dps: 2172.6
+        standard_error: 0.91
+        stdev: 90.7
+        pieces_left:
+          Slayer's Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        - hands
+        dps: 2223.9
+        standard_error: 0.93
+        stdev: 92.8
+        pieces_left:
+          Slayer's Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        - legs
+        dps: 2217.8
+        standard_error: 0.92
+        stdev: 91.6
+        pieces_left:
+          Slayer's Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        - hands
+        - legs
+        dps: 2218.1
         standard_error: 0.91
         stdev: 91.1
         pieces_left:
           Slayer's Armor: 3
       - replaced:
         - head
-        - shoulder
-        - chest
-        - hands
-        dps: 2123.1
-        standard_error: 0.88
-        stdev: 88.3
-        pieces_left:
-          Slayer's Armor: 3
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        - legs
-        dps: 2115.2
-        standard_error: 0.87
-        stdev: 87.4
-        pieces_left:
-          Slayer's Armor: 3
-      - replaced:
-        - head
-        - shoulder
-        - hands
-        - legs
-        dps: 2134.6
-        standard_error: 0.87
-        stdev: 87.4
-        pieces_left:
-          Slayer's Armor: 3
-      - replaced:
-        - head
         - chest
         - hands
         - legs
-        dps: 2123.9
-        standard_error: 0.88
-        stdev: 88.1
-        pieces_left:
-          Slayer's Armor: 3
-      - replaced:
-        - shoulder
-        - chest
-        - hands
-        - legs
-        dps: 2171.4
+        dps: 2215.5
         standard_error: 0.93
-        stdev: 93.0
+        stdev: 92.9
+        pieces_left:
+          Slayer's Armor: 3
+      - replaced:
+        - shoulder
+        - chest
+        - hands
+        - legs
+        dps: 2221.8
+        standard_error: 0.94
+        stdev: 94.1
         pieces_left:
           Slayer's Armor: 4
       - replaced:
@@ -473,18 +473,18 @@ specs:
         - chest
         - hands
         - legs
-        dps: 2159.4
-        standard_error: 0.9
-        stdev: 89.7
+        dps: 2268.1
+        standard_error: 0.95
+        stdev: 94.5
         pieces_left:
           Slayer's Armor: 4
     token_singles:
       head:
         id: 31027
         name: Slayer's Helm
-        dps: 2020.2
-        standard_error: 0.84
-        stdev: 84.0
+        dps: 2077.6
+        standard_error: 0.86
+        stdev: 85.8
   arms_warrior:
     old_bonus:
       held_sets:
@@ -515,24 +515,24 @@ specs:
           Destroyer Battlegear: 2
       - replaced:
         - head
-        dps: 1867.9
-        standard_error: 1.03
-        stdev: 102.7
+        dps: 1924.7
+        standard_error: 1.06
+        stdev: 106.1
         pieces_left:
           Destroyer Battlegear: 1
       - replaced:
         - chest
-        dps: 1905.9
+        dps: 1922.5
         standard_error: 1.06
-        stdev: 106.3
+        stdev: 106.1
         pieces_left:
           Destroyer Battlegear: 1
       - replaced:
         - head
         - chest
-        dps: 1868.0
-        standard_error: 1.03
-        stdev: 102.8
+        dps: 1943.9
+        standard_error: 1.07
+        stdev: 106.5
         pieces_left:
           Destroyer Battlegear: 0
     tier_six:
@@ -563,9 +563,9 @@ specs:
           Onslaught Battlegear: 0
       - replaced:
         - head
-        dps: 1867.9
-        standard_error: 1.03
-        stdev: 102.7
+        dps: 1924.7
+        standard_error: 1.06
+        stdev: 106.1
         pieces_left:
           Onslaught Battlegear: 1
       - replaced:
@@ -577,119 +577,119 @@ specs:
           Onslaught Battlegear: 1
       - replaced:
         - chest
-        dps: 1905.9
-        standard_error: 1.06
-        stdev: 106.3
-        pieces_left:
-          Onslaught Battlegear: 1
-      - replaced:
-        - hands
-        dps: 1930.2
-        standard_error: 1.06
-        stdev: 106.0
-        pieces_left:
-          Onslaught Battlegear: 1
-      - replaced:
-        - head
-        - shoulder
-        dps: 1876.1
-        standard_error: 1.04
-        stdev: 103.8
-        pieces_left:
-          Onslaught Battlegear: 2
-      - replaced:
-        - head
-        - chest
-        dps: 1868.0
-        standard_error: 1.03
-        stdev: 102.8
-        pieces_left:
-          Onslaught Battlegear: 2
-      - replaced:
-        - head
-        - hands
-        dps: 1892.7
-        standard_error: 1.04
-        stdev: 103.9
-        pieces_left:
-          Onslaught Battlegear: 2
-      - replaced:
-        - shoulder
-        - chest
-        dps: 1923.1
+        dps: 1922.5
         standard_error: 1.06
         stdev: 106.1
         pieces_left:
+          Onslaught Battlegear: 1
+      - replaced:
+        - hands
+        dps: 1938.5
+        standard_error: 1.07
+        stdev: 106.9
+        pieces_left:
+          Onslaught Battlegear: 1
+      - replaced:
+        - head
+        - shoulder
+        dps: 1945.5
+        standard_error: 1.07
+        stdev: 106.9
+        pieces_left:
+          Onslaught Battlegear: 2
+      - replaced:
+        - head
+        - chest
+        dps: 1943.9
+        standard_error: 1.07
+        stdev: 106.5
+        pieces_left:
+          Onslaught Battlegear: 2
+      - replaced:
+        - head
+        - hands
+        dps: 1959.7
+        standard_error: 1.08
+        stdev: 107.6
+        pieces_left:
+          Onslaught Battlegear: 2
+      - replaced:
+        - shoulder
+        - chest
+        dps: 1940.4
+        standard_error: 1.07
+        stdev: 106.5
+        pieces_left:
           Onslaught Battlegear: 2
       - replaced:
         - shoulder
         - hands
-        dps: 1937.9
+        dps: 1946.0
         standard_error: 1.07
-        stdev: 107.1
+        stdev: 107.3
         pieces_left:
           Onslaught Battlegear: 2
       - replaced:
         - chest
         - hands
-        dps: 1929.5
-        standard_error: 1.07
-        stdev: 107.2
-        pieces_left:
-          Onslaught Battlegear: 2
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        dps: 1872.5
-        standard_error: 1.04
-        stdev: 103.9
-        pieces_left:
-          Onslaught Battlegear: 3
-      - replaced:
-        - head
-        - shoulder
-        - hands
-        dps: 1884.2
-        standard_error: 1.07
-        stdev: 106.6
-        pieces_left:
-          Onslaught Battlegear: 3
-      - replaced:
-        - head
-        - chest
-        - hands
-        dps: 1889.9
-        standard_error: 1.03
-        stdev: 102.6
-        pieces_left:
-          Onslaught Battlegear: 3
-      - replaced:
-        - shoulder
-        - chest
-        - hands
-        dps: 1934.0
-        standard_error: 1.07
-        stdev: 107.5
-        pieces_left:
-          Onslaught Battlegear: 3
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        - hands
-        dps: 1895.6
+        dps: 1954.4
         standard_error: 1.08
         stdev: 107.9
+        pieces_left:
+          Onslaught Battlegear: 2
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        dps: 1956.0
+        standard_error: 1.08
+        stdev: 108.1
+        pieces_left:
+          Onslaught Battlegear: 3
+      - replaced:
+        - head
+        - shoulder
+        - hands
+        dps: 1963.0
+        standard_error: 1.1
+        stdev: 109.6
+        pieces_left:
+          Onslaught Battlegear: 3
+      - replaced:
+        - head
+        - chest
+        - hands
+        dps: 1971.8
+        standard_error: 1.09
+        stdev: 108.6
+        pieces_left:
+          Onslaught Battlegear: 3
+      - replaced:
+        - shoulder
+        - chest
+        - hands
+        dps: 1958.3
+        standard_error: 1.1
+        stdev: 110.1
+        pieces_left:
+          Onslaught Battlegear: 3
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        - hands
+        dps: 1991.9
+        standard_error: 1.1
+        stdev: 110.1
         pieces_left:
           Onslaught Battlegear: 4
     token_singles:
       legs:
         id: 30977
         name: Onslaught Greaves
-        dps: 1912.2
+        dps: 1917.4
         standard_error: 1.06
-        stdev: 105.6
+        stdev: 105.7
   fury_warrior:
     old_bonus:
       held_sets:
@@ -732,114 +732,114 @@ specs:
           Destroyer Battlegear: 4
       - replaced:
         - head
-        dps: 2142.3
-        standard_error: 1.03
-        stdev: 103.1
+        dps: 2207.8
+        standard_error: 1.08
+        stdev: 107.8
         pieces_left:
           Destroyer Battlegear: 3
       - replaced:
         - shoulder
-        dps: 2179.1
+        dps: 2193.4
+        standard_error: 1.07
+        stdev: 107.5
+        pieces_left:
+          Destroyer Battlegear: 3
+      - replaced:
+        - chest
+        dps: 2191.5
         standard_error: 1.08
         stdev: 108.0
         pieces_left:
           Destroyer Battlegear: 3
       - replaced:
-        - chest
-        dps: 2170.5
-        standard_error: 1.07
-        stdev: 107.0
-        pieces_left:
-          Destroyer Battlegear: 3
-      - replaced:
         - hands
-        dps: 2181.0
-        standard_error: 1.06
-        stdev: 106.4
-        pieces_left:
-          Destroyer Battlegear: 3
-      - replaced:
-        - head
-        - shoulder
-        dps: 2142.3
-        standard_error: 1.03
-        stdev: 102.5
-        pieces_left:
-          Destroyer Battlegear: 2
-      - replaced:
-        - head
-        - chest
-        dps: 2132.6
-        standard_error: 1.04
-        stdev: 104.1
-        pieces_left:
-          Destroyer Battlegear: 2
-      - replaced:
-        - head
-        - hands
-        dps: 2144.0
-        standard_error: 1.04
-        stdev: 104.1
-        pieces_left:
-          Destroyer Battlegear: 2
-      - replaced:
-        - shoulder
-        - chest
-        dps: 2178.4
+        dps: 2197.1
         standard_error: 1.08
         stdev: 107.7
         pieces_left:
+          Destroyer Battlegear: 3
+      - replaced:
+        - head
+        - shoulder
+        dps: 2228.1
+        standard_error: 1.09
+        stdev: 108.7
+        pieces_left:
           Destroyer Battlegear: 2
       - replaced:
-        - shoulder
-        - hands
-        dps: 2181.0
+        - head
+        - chest
+        dps: 2222.8
         standard_error: 1.08
-        stdev: 107.6
-        pieces_left:
-          Destroyer Battlegear: 2
-      - replaced:
-        - chest
-        - hands
-        dps: 2171.3
-        standard_error: 1.06
-        stdev: 106.3
+        stdev: 108.0
         pieces_left:
           Destroyer Battlegear: 2
       - replaced:
         - head
-        - shoulder
-        - chest
-        dps: 2140.1
-        standard_error: 1.03
-        stdev: 102.6
-        pieces_left:
-          Destroyer Battlegear: 1
-      - replaced:
-        - head
-        - shoulder
         - hands
-        dps: 2145.5
-        standard_error: 1.05
-        stdev: 104.8
-        pieces_left:
-          Destroyer Battlegear: 1
-      - replaced:
-        - head
-        - chest
-        - hands
-        dps: 2134.1
-        standard_error: 1.02
-        stdev: 102.4
-        pieces_left:
-          Destroyer Battlegear: 1
-      - replaced:
-        - shoulder
-        - chest
-        - hands
-        dps: 2177.5
+        dps: 2232.1
         standard_error: 1.07
-        stdev: 107.4
+        stdev: 107.2
+        pieces_left:
+          Destroyer Battlegear: 2
+      - replaced:
+        - shoulder
+        - chest
+        dps: 2215.2
+        standard_error: 1.08
+        stdev: 108.3
+        pieces_left:
+          Destroyer Battlegear: 2
+      - replaced:
+        - shoulder
+        - hands
+        dps: 2216.1
+        standard_error: 1.07
+        stdev: 107.3
+        pieces_left:
+          Destroyer Battlegear: 2
+      - replaced:
+        - chest
+        - hands
+        dps: 2209.9
+        standard_error: 1.09
+        stdev: 108.5
+        pieces_left:
+          Destroyer Battlegear: 2
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        dps: 2246.8
+        standard_error: 1.09
+        stdev: 108.7
+        pieces_left:
+          Destroyer Battlegear: 1
+      - replaced:
+        - head
+        - shoulder
+        - hands
+        dps: 2247.1
+        standard_error: 1.1
+        stdev: 110.4
+        pieces_left:
+          Destroyer Battlegear: 1
+      - replaced:
+        - head
+        - chest
+        - hands
+        dps: 2243.7
+        standard_error: 1.08
+        stdev: 108.4
+        pieces_left:
+          Destroyer Battlegear: 1
+      - replaced:
+        - shoulder
+        - chest
+        - hands
+        dps: 2234.3
+        standard_error: 1.1
+        stdev: 109.9
         pieces_left:
           Destroyer Battlegear: 1
       - replaced:
@@ -847,9 +847,9 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 2146.5
-        standard_error: 1.04
-        stdev: 104.3
+        dps: 2268.5
+        standard_error: 1.11
+        stdev: 111.0
         pieces_left:
           Destroyer Battlegear: 0
     tier_six:
@@ -872,45 +872,45 @@ specs:
           Onslaught Battlegear: 0
       - replaced:
         - shoulder
-        dps: 2179.1
+        dps: 2193.4
+        standard_error: 1.07
+        stdev: 107.5
+        pieces_left:
+          Onslaught Battlegear: 1
+      - replaced:
+        - chest
+        dps: 2191.5
         standard_error: 1.08
         stdev: 108.0
         pieces_left:
           Onslaught Battlegear: 1
       - replaced:
-        - chest
-        dps: 2170.5
-        standard_error: 1.07
-        stdev: 107.0
-        pieces_left:
-          Onslaught Battlegear: 1
-      - replaced:
         - shoulder
         - chest
-        dps: 2178.4
+        dps: 2215.2
         standard_error: 1.08
-        stdev: 107.7
+        stdev: 108.3
         pieces_left:
           Onslaught Battlegear: 2
     token_singles:
       head:
         id: 30972
         name: Onslaught Battle-Helm
-        dps: 2116.0
-        standard_error: 1.05
-        stdev: 104.6
+        dps: 2191.8
+        standard_error: 1.1
+        stdev: 110.2
       hands:
         id: 30969
         name: Onslaught Gauntlets
-        dps: 2182.3
+        dps: 2193.9
         standard_error: 1.08
         stdev: 107.7
       legs:
         id: 30977
         name: Onslaught Greaves
-        dps: 2204.2
-        standard_error: 1.08
-        stdev: 107.7
+        dps: 2211.6
+        standard_error: 1.07
+        stdev: 107.1
   retribution_paladin:
     old_bonus:
       held_sets:
@@ -941,24 +941,24 @@ specs:
           Crystalforge Battlegear: 2
       - replaced:
         - head
-        dps: 2008.4
-        standard_error: 1.25
-        stdev: 125.1
+        dps: 2062.2
+        standard_error: 1.29
+        stdev: 129.4
         pieces_left:
           Crystalforge Battlegear: 1
       - replaced:
         - chest
-        dps: 2040.2
-        standard_error: 1.28
-        stdev: 128.4
+        dps: 2058.7
+        standard_error: 1.3
+        stdev: 129.5
         pieces_left:
           Crystalforge Battlegear: 1
       - replaced:
         - head
         - chest
-        dps: 2003.5
-        standard_error: 1.27
-        stdev: 126.6
+        dps: 2075.8
+        standard_error: 1.32
+        stdev: 132.0
         pieces_left:
           Crystalforge Battlegear: 0
     tier_six:
@@ -970,33 +970,33 @@ specs:
       head:
         id: 30989
         name: Lightbringer War-Helm
-        dps: 1990.6
-        standard_error: 1.23
-        stdev: 123.4
+        dps: 2043.2
+        standard_error: 1.28
+        stdev: 127.9
       shoulder:
         id: 30997
         name: Lightbringer Shoulderbraces
-        dps: 2013.7
+        dps: 2027.0
         standard_error: 1.29
-        stdev: 128.6
+        stdev: 129.4
       chest:
         id: 30990
         name: Lightbringer Breastplate
-        dps: 2025.3
-        standard_error: 1.27
-        stdev: 126.7
+        dps: 2043.2
+        standard_error: 1.28
+        stdev: 127.7
       hands:
         id: 30982
         name: Lightbringer Gauntlets
-        dps: 2016.9
-        standard_error: 1.3
-        stdev: 130.5
+        dps: 2023.3
+        standard_error: 1.31
+        stdev: 130.8
       legs:
         id: 30993
         name: Lightbringer Greaves
-        dps: 2041.5
-        standard_error: 1.26
-        stdev: 126.5
+        dps: 2048.8
+        standard_error: 1.27
+        stdev: 126.9
   enhancement_shaman:
     old_bonus:
       held_sets:
@@ -1039,16 +1039,16 @@ specs:
           Cataclysm Harness: 4
       - replaced:
         - head
-        dps: 1953.7
-        standard_error: 0.89
-        stdev: 88.7
+        dps: 1999.1
+        standard_error: 0.92
+        stdev: 92.0
         pieces_left:
           Cataclysm Harness: 3
       - replaced:
         - chest
-        dps: 1970.2
-        standard_error: 0.9
-        stdev: 90.4
+        dps: 1989.2
+        standard_error: 0.92
+        stdev: 91.5
         pieces_left:
           Cataclysm Harness: 3
       - replaced:
@@ -1060,93 +1060,93 @@ specs:
           Cataclysm Harness: 3
       - replaced:
         - legs
-        dps: 1965.8
-        standard_error: 0.91
-        stdev: 91.2
+        dps: 1985.0
+        standard_error: 0.92
+        stdev: 92.2
         pieces_left:
           Cataclysm Harness: 3
       - replaced:
         - head
         - chest
-        dps: 1957.1
-        standard_error: 0.87
-        stdev: 87.4
-        pieces_left:
-          Cataclysm Harness: 2
-      - replaced:
-        - head
-        - hands
-        dps: 1954.2
-        standard_error: 0.89
-        stdev: 89.4
-        pieces_left:
-          Cataclysm Harness: 2
-      - replaced:
-        - head
-        - legs
-        dps: 1953.0
-        standard_error: 0.9
-        stdev: 89.7
-        pieces_left:
-          Cataclysm Harness: 2
-      - replaced:
-        - chest
-        - hands
-        dps: 1968.0
-        standard_error: 0.91
-        stdev: 91.3
-        pieces_left:
-          Cataclysm Harness: 2
-      - replaced:
-        - chest
-        - legs
-        dps: 1968.8
+        dps: 2024.2
         standard_error: 0.92
-        stdev: 91.7
+        stdev: 92.1
         pieces_left:
           Cataclysm Harness: 2
       - replaced:
+        - head
         - hands
-        - legs
-        dps: 1963.6
+        dps: 1999.6
         standard_error: 0.92
         stdev: 92.0
         pieces_left:
           Cataclysm Harness: 2
       - replaced:
         - head
-        - chest
-        - hands
-        dps: 1955.1
-        standard_error: 0.9
-        stdev: 89.8
-        pieces_left:
-          Cataclysm Harness: 1
-      - replaced:
-        - head
-        - chest
         - legs
-        dps: 1956.6
-        standard_error: 0.9
-        stdev: 90.1
+        dps: 2022.1
+        standard_error: 0.93
+        stdev: 92.9
         pieces_left:
-          Cataclysm Harness: 1
-      - replaced:
-        - head
-        - hands
-        - legs
-        dps: 1953.1
-        standard_error: 0.91
-        stdev: 90.6
-        pieces_left:
-          Cataclysm Harness: 1
+          Cataclysm Harness: 2
       - replaced:
         - chest
         - hands
-        - legs
-        dps: 1969.7
+        dps: 1989.0
         standard_error: 0.92
-        stdev: 91.6
+        stdev: 91.7
+        pieces_left:
+          Cataclysm Harness: 2
+      - replaced:
+        - chest
+        - legs
+        dps: 2008.3
+        standard_error: 0.93
+        stdev: 93.2
+        pieces_left:
+          Cataclysm Harness: 2
+      - replaced:
+        - hands
+        - legs
+        dps: 1983.9
+        standard_error: 0.93
+        stdev: 92.6
+        pieces_left:
+          Cataclysm Harness: 2
+      - replaced:
+        - head
+        - chest
+        - hands
+        dps: 2024.0
+        standard_error: 0.94
+        stdev: 94.5
+        pieces_left:
+          Cataclysm Harness: 1
+      - replaced:
+        - head
+        - chest
+        - legs
+        dps: 2045.4
+        standard_error: 0.95
+        stdev: 95.1
+        pieces_left:
+          Cataclysm Harness: 1
+      - replaced:
+        - head
+        - hands
+        - legs
+        dps: 2020.8
+        standard_error: 0.95
+        stdev: 94.7
+        pieces_left:
+          Cataclysm Harness: 1
+      - replaced:
+        - chest
+        - hands
+        - legs
+        dps: 2010.0
+        standard_error: 0.92
+        stdev: 92.4
         pieces_left:
           Cataclysm Harness: 1
       - replaced:
@@ -1154,9 +1154,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 1957.2
-        standard_error: 0.9
-        stdev: 89.7
+        dps: 2045.8
+        standard_error: 0.94
+        stdev: 94.3
         pieces_left:
           Cataclysm Harness: 0
     tier_six:
@@ -1168,33 +1168,33 @@ specs:
       head:
         id: 31015
         name: Skyshatter Cover
-        dps: 1921.7
-        standard_error: 0.89
-        stdev: 88.7
+        dps: 1968.6
+        standard_error: 0.92
+        stdev: 91.8
       shoulder:
         id: 31024
         name: Skyshatter Pauldrons
-        dps: 1970.6
-        standard_error: 0.92
-        stdev: 92.4
+        dps: 1986.3
+        standard_error: 0.94
+        stdev: 93.6
       chest:
         id: 31018
         name: Skyshatter Tunic
-        dps: 1941.9
-        standard_error: 0.9
-        stdev: 90.4
+        dps: 1962.2
+        standard_error: 0.91
+        stdev: 90.9
       hands:
         id: 31011
         name: Skyshatter Grips
-        dps: 1957.1
+        dps: 1965.6
         standard_error: 0.91
         stdev: 91.0
       legs:
         id: 31021
         name: Skyshatter Pants
-        dps: 1965.5
-        standard_error: 0.91
-        stdev: 91.3
+        dps: 1971.2
+        standard_error: 0.92
+        stdev: 91.6
   beast_mastery_hunter:
     old_bonus:
       held_sets:
@@ -1237,112 +1237,112 @@ specs:
           Rift Stalker Armor: 4
       - replaced:
         - head
-        dps: 2966.8
-        standard_error: 0.83
-        stdev: 83.4
+        dps: 3020.9
+        standard_error: 0.87
+        stdev: 87.1
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - shoulder
-        dps: 2998.1
+        dps: 3006.6
+        standard_error: 0.86
+        stdev: 85.6
+        pieces_left:
+          Rift Stalker Armor: 3
+      - replaced:
+        - chest
+        dps: 3003.5
         standard_error: 0.85
-        stdev: 85.2
-        pieces_left:
-          Rift Stalker Armor: 3
-      - replaced:
-        - chest
-        dps: 2981.1
-        standard_error: 0.84
-        stdev: 83.8
+        stdev: 84.6
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - hands
-        dps: 3010.2
-        standard_error: 0.85
-        stdev: 85.4
+        dps: 3020.3
+        standard_error: 0.86
+        stdev: 85.8
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - head
         - shoulder
-        dps: 2979.8
-        standard_error: 0.84
-        stdev: 84.4
+        dps: 3042.9
+        standard_error: 0.88
+        stdev: 88.1
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - chest
-        dps: 2964.0
-        standard_error: 0.84
-        stdev: 83.6
+        dps: 3040.4
+        standard_error: 0.87
+        stdev: 86.8
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - hands
-        dps: 2993.2
-        standard_error: 0.84
-        stdev: 84.1
+        dps: 3058.0
+        standard_error: 0.87
+        stdev: 87.1
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - shoulder
         - chest
-        dps: 2996.1
-        standard_error: 0.84
-        stdev: 84.2
-        pieces_left:
-          Rift Stalker Armor: 2
-      - replaced:
-        - shoulder
-        - hands
-        dps: 3024.7
+        dps: 3026.1
         standard_error: 0.86
         stdev: 85.6
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
+        - shoulder
+        - hands
+        dps: 3043.0
+        standard_error: 0.87
+        stdev: 86.6
+        pieces_left:
+          Rift Stalker Armor: 2
+      - replaced:
         - chest
         - hands
-        dps: 3007.6
-        standard_error: 0.85
-        stdev: 84.6
+        dps: 3040.5
+        standard_error: 0.86
+        stdev: 85.8
         pieces_left:
           Rift Stalker Armor: 2
       - replaced:
         - head
         - shoulder
         - chest
-        dps: 2977.7
-        standard_error: 0.85
-        stdev: 84.7
+        dps: 3062.7
+        standard_error: 0.88
+        stdev: 87.8
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 3007.2
-        standard_error: 0.85
-        stdev: 85.2
+        dps: 3080.7
+        standard_error: 0.88
+        stdev: 88.4
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - head
         - chest
         - hands
-        dps: 2991.1
-        standard_error: 0.84
-        stdev: 83.8
+        dps: 3078.2
+        standard_error: 0.88
+        stdev: 88.4
         pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - shoulder
         - chest
         - hands
-        dps: 3012.4
+        dps: 3062.5
         standard_error: 0.87
         stdev: 87.0
         pieces_left:
@@ -1352,9 +1352,9 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 3004.6
-        standard_error: 0.85
-        stdev: 85.1
+        dps: 3100.8
+        standard_error: 0.9
+        stdev: 89.6
         pieces_left:
           Rift Stalker Armor: 0
     tier_six:
@@ -1389,257 +1389,257 @@ specs:
           Gronnstalker's Armor: 0
       - replaced:
         - head
-        dps: 2966.8
-        standard_error: 0.83
-        stdev: 83.4
+        dps: 3020.9
+        standard_error: 0.87
+        stdev: 87.1
         pieces_left:
           Gronnstalker's Armor: 0
       - replaced:
         - shoulder
-        dps: 2998.1
-        standard_error: 0.85
-        stdev: 85.2
+        dps: 3012.7
+        standard_error: 0.86
+        stdev: 85.7
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - chest
-        dps: 2981.1
-        standard_error: 0.84
-        stdev: 83.8
+        dps: 3007.9
+        standard_error: 0.85
+        stdev: 84.9
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - hands
-        dps: 3010.2
+        dps: 3020.3
+        standard_error: 0.86
+        stdev: 85.8
+        pieces_left:
+          Gronnstalker's Armor: 1
+      - replaced:
+        - legs
+        dps: 3006.4
         standard_error: 0.85
         stdev: 85.4
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
-        - legs
-        dps: 2996.0
-        standard_error: 0.85
-        stdev: 85.0
-        pieces_left:
-          Gronnstalker's Armor: 1
-      - replaced:
         - head
         - shoulder
-        dps: 2979.8
-        standard_error: 0.84
-        stdev: 84.4
+        dps: 3048.6
+        standard_error: 0.88
+        stdev: 88.2
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - head
         - chest
-        dps: 2964.0
-        standard_error: 0.84
-        stdev: 83.6
+        dps: 3043.8
+        standard_error: 0.87
+        stdev: 86.7
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - head
         - hands
-        dps: 2993.2
-        standard_error: 0.84
-        stdev: 84.1
+        dps: 3058.0
+        standard_error: 0.87
+        stdev: 87.1
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - head
         - legs
-        dps: 2954.6
-        standard_error: 0.82
-        stdev: 82.0
+        dps: 3017.0
+        standard_error: 0.86
+        stdev: 85.8
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - shoulder
         - chest
-        dps: 2996.1
-        standard_error: 0.84
-        stdev: 84.2
+        dps: 3035.6
+        standard_error: 0.86
+        stdev: 85.8
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - hands
-        dps: 3024.7
+        dps: 3049.1
+        standard_error: 0.87
+        stdev: 86.7
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - shoulder
+        - legs
+        dps: 3006.1
+        standard_error: 0.86
+        stdev: 86.1
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - chest
+        - hands
+        dps: 3044.5
+        standard_error: 0.86
+        stdev: 85.8
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - chest
+        - legs
+        dps: 3000.4
+        standard_error: 0.85
+        stdev: 84.9
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - hands
+        - legs
+        dps: 3014.2
+        standard_error: 0.86
+        stdev: 86.1
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        dps: 3072.8
+        standard_error: 0.88
+        stdev: 88.3
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - head
+        - shoulder
+        - hands
+        dps: 3087.1
+        standard_error: 0.88
+        stdev: 88.3
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - head
+        - shoulder
+        - legs
+        dps: 3045.5
+        standard_error: 0.87
+        stdev: 87.1
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - head
+        - chest
+        - hands
+        dps: 3082.0
+        standard_error: 0.89
+        stdev: 88.5
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - head
+        - chest
+        - legs
+        dps: 3040.3
         standard_error: 0.86
         stdev: 85.6
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
-        - shoulder
-        - legs
-        dps: 2982.3
-        standard_error: 0.85
-        stdev: 85.2
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - chest
-        - hands
-        dps: 3007.6
-        standard_error: 0.85
-        stdev: 84.6
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - chest
-        - legs
-        dps: 2963.7
-        standard_error: 0.84
-        stdev: 84.0
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - hands
-        - legs
-        dps: 2993.6
-        standard_error: 0.85
-        stdev: 85.4
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        dps: 2977.7
-        standard_error: 0.85
-        stdev: 84.7
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - head
-        - shoulder
-        - hands
-        dps: 3007.2
-        standard_error: 0.85
-        stdev: 85.2
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - head
-        - shoulder
-        - legs
-        dps: 2968.4
-        standard_error: 0.82
-        stdev: 82.4
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - head
-        - chest
-        - hands
-        dps: 2991.1
-        standard_error: 0.84
-        stdev: 83.8
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - head
-        - chest
-        - legs
-        dps: 2950.5
-        standard_error: 0.81
-        stdev: 80.9
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
         - head
         - hands
         - legs
-        dps: 2979.3
-        standard_error: 0.83
-        stdev: 82.9
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - shoulder
-        - chest
-        - hands
-        dps: 3012.4
-        standard_error: 0.87
-        stdev: 87.0
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - shoulder
-        - chest
-        - legs
-        dps: 2977.5
-        standard_error: 0.84
-        stdev: 84.3
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - shoulder
-        - hands
-        - legs
-        dps: 3009.1
-        standard_error: 0.86
-        stdev: 86.1
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - chest
-        - hands
-        - legs
-        dps: 2989.8
-        standard_error: 0.84
-        stdev: 84.5
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        - hands
-        dps: 3004.6
-        standard_error: 0.85
-        stdev: 85.1
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        - legs
-        dps: 2965.1
-        standard_error: 0.82
-        stdev: 81.6
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - head
-        - shoulder
-        - hands
-        - legs
-        dps: 2994.5
-        standard_error: 0.83
-        stdev: 83.1
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - head
-        - chest
-        - hands
-        - legs
-        dps: 2976.6
-        standard_error: 0.82
-        stdev: 82.1
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - shoulder
-        - chest
-        - hands
-        - legs
-        dps: 3054.9
+        dps: 3053.4
         standard_error: 0.87
         stdev: 87.2
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - shoulder
+        - chest
+        - hands
+        dps: 3063.0
+        standard_error: 0.88
+        stdev: 87.8
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - shoulder
+        - chest
+        - legs
+        dps: 3027.4
+        standard_error: 0.85
+        stdev: 85.3
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - shoulder
+        - hands
+        - legs
+        dps: 3042.9
+        standard_error: 0.87
+        stdev: 86.7
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - chest
+        - hands
+        - legs
+        dps: 3036.5
+        standard_error: 0.85
+        stdev: 85.5
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        - hands
+        dps: 3111.7
+        standard_error: 0.9
+        stdev: 89.7
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        - legs
+        dps: 3069.1
+        standard_error: 0.86
+        stdev: 86.5
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        - hands
+        - legs
+        dps: 3083.8
+        standard_error: 0.88
+        stdev: 87.7
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - head
+        - chest
+        - hands
+        - legs
+        dps: 3078.2
+        standard_error: 0.87
+        stdev: 86.5
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - shoulder
+        - chest
+        - hands
+        - legs
+        dps: 3117.1
+        standard_error: 0.88
+        stdev: 88.5
         pieces_left:
           Gronnstalker's Armor: 4
       - replaced:
@@ -1648,18 +1648,18 @@ specs:
         - chest
         - hands
         - legs
-        dps: 3052.3
-        standard_error: 0.84
-        stdev: 84.1
+        dps: 3171.7
+        standard_error: 0.89
+        stdev: 89.1
         pieces_left:
           Gronnstalker's Armor: 4
     token_singles:
       head:
         id: 31003
         name: Gronnstalker's Helmet
-        dps: 2934.8
-        standard_error: 0.81
-        stdev: 81.1
+        dps: 2997.0
+        standard_error: 0.85
+        stdev: 84.8
   survival_hunter:
     old_bonus:
       held_sets:
@@ -1702,124 +1702,124 @@ specs:
           Rift Stalker Armor: 4
       - replaced:
         - head
-        dps: 2451.4
-        standard_error: 0.75
-        stdev: 75.2
+        dps: 2520.2
+        standard_error: 0.79
+        stdev: 79.2
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - shoulder
-        dps: 2514.8
+        dps: 2529.5
         standard_error: 0.8
-        stdev: 79.8
+        stdev: 80.1
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
         - chest
-        dps: 2499.7
-        standard_error: 0.79
-        stdev: 79.3
-        pieces_left:
-          Rift Stalker Armor: 3
-      - replaced:
-        - legs
-        dps: 2510.9
+        dps: 2527.7
         standard_error: 0.8
-        stdev: 79.5
+        stdev: 79.6
         pieces_left:
           Rift Stalker Armor: 3
       - replaced:
-        - head
-        - shoulder
-        dps: 2461.9
-        standard_error: 0.76
-        stdev: 75.5
-        pieces_left:
-          Rift Stalker Armor: 2
-      - replaced:
-        - head
-        - chest
-        dps: 2446.3
-        standard_error: 0.75
-        stdev: 75.3
-        pieces_left:
-          Rift Stalker Armor: 2
-      - replaced:
-        - head
         - legs
-        dps: 2457.1
-        standard_error: 0.77
-        stdev: 76.6
-        pieces_left:
-          Rift Stalker Armor: 2
-      - replaced:
-        - shoulder
-        - chest
-        dps: 2510.2
-        standard_error: 0.79
-        stdev: 79.4
-        pieces_left:
-          Rift Stalker Armor: 2
-      - replaced:
-        - shoulder
-        - legs
-        dps: 2521.2
-        standard_error: 0.81
-        stdev: 80.9
-        pieces_left:
-          Rift Stalker Armor: 2
-      - replaced:
-        - chest
-        - legs
-        dps: 2507.2
-        standard_error: 0.79
-        stdev: 78.9
-        pieces_left:
-          Rift Stalker Armor: 2
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        dps: 2456.6
-        standard_error: 0.76
-        stdev: 75.6
-        pieces_left:
-          Rift Stalker Armor: 1
-      - replaced:
-        - head
-        - shoulder
-        - legs
-        dps: 2467.4
-        standard_error: 0.77
-        stdev: 77.0
-        pieces_left:
-          Rift Stalker Armor: 1
-      - replaced:
-        - head
-        - chest
-        - legs
-        dps: 2452.2
-        standard_error: 0.76
-        stdev: 76.3
-        pieces_left:
-          Rift Stalker Armor: 1
-      - replaced:
-        - shoulder
-        - chest
-        - legs
-        dps: 2516.2
+        dps: 2535.4
         standard_error: 0.8
         stdev: 80.2
         pieces_left:
+          Rift Stalker Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        dps: 2545.2
+        standard_error: 0.8
+        stdev: 80.2
+        pieces_left:
+          Rift Stalker Armor: 2
+      - replaced:
+        - head
+        - chest
+        dps: 2543.8
+        standard_error: 0.8
+        stdev: 80.0
+        pieces_left:
+          Rift Stalker Armor: 2
+      - replaced:
+        - head
+        - legs
+        dps: 2553.3
+        standard_error: 0.81
+        stdev: 80.6
+        pieces_left:
+          Rift Stalker Armor: 2
+      - replaced:
+        - shoulder
+        - chest
+        dps: 2552.2
+        standard_error: 0.8
+        stdev: 80.1
+        pieces_left:
+          Rift Stalker Armor: 2
+      - replaced:
+        - shoulder
+        - legs
+        dps: 2559.9
+        standard_error: 0.82
+        stdev: 81.5
+        pieces_left:
+          Rift Stalker Armor: 2
+      - replaced:
+        - chest
+        - legs
+        dps: 2559.0
+        standard_error: 0.81
+        stdev: 81.1
+        pieces_left:
+          Rift Stalker Armor: 2
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        dps: 2568.4
+        standard_error: 0.81
+        stdev: 80.9
+        pieces_left:
+          Rift Stalker Armor: 1
+      - replaced:
+        - head
+        - shoulder
+        - legs
+        dps: 2577.9
+        standard_error: 0.82
+        stdev: 81.9
+        pieces_left:
+          Rift Stalker Armor: 1
+      - replaced:
+        - head
+        - chest
+        - legs
+        dps: 2576.4
+        standard_error: 0.81
+        stdev: 81.3
+        pieces_left:
+          Rift Stalker Armor: 1
+      - replaced:
+        - shoulder
+        - chest
+        - legs
+        dps: 2583.5
+        standard_error: 0.82
+        stdev: 82.0
+        pieces_left:
           Rift Stalker Armor: 1
       - replaced:
         - head
         - shoulder
         - chest
         - legs
-        dps: 2462.2
-        standard_error: 0.77
-        stdev: 76.8
+        dps: 2600.1
+        standard_error: 0.83
+        stdev: 82.5
         pieces_left:
           Rift Stalker Armor: 0
     tier_six:
@@ -1854,30 +1854,30 @@ specs:
           Gronnstalker's Armor: 0
       - replaced:
         - head
-        dps: 2451.4
-        standard_error: 0.75
-        stdev: 75.2
+        dps: 2508.9
+        standard_error: 0.79
+        stdev: 78.9
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - shoulder
-        dps: 2514.8
+        dps: 2529.5
         standard_error: 0.8
-        stdev: 79.8
+        stdev: 80.1
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - chest
-        dps: 2499.7
-        standard_error: 0.79
-        stdev: 79.3
+        dps: 2527.7
+        standard_error: 0.8
+        stdev: 79.6
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
         - hands
-        dps: 2550.3
+        dps: 2562.8
         standard_error: 0.79
-        stdev: 79.1
+        stdev: 79.4
         pieces_left:
           Gronnstalker's Armor: 1
       - replaced:
@@ -1890,169 +1890,169 @@ specs:
       - replaced:
         - head
         - shoulder
-        dps: 2461.9
-        standard_error: 0.76
-        stdev: 75.5
+        dps: 2533.5
+        standard_error: 0.8
+        stdev: 79.9
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - chest
-        dps: 2446.3
-        standard_error: 0.75
-        stdev: 75.3
+        dps: 2531.6
+        standard_error: 0.8
+        stdev: 79.7
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - head
         - hands
-        dps: 2472.7
-        standard_error: 0.75
-        stdev: 75.5
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - head
-        - legs
-        dps: 2465.9
-        standard_error: 0.78
-        stdev: 78.2
-        pieces_left:
-          Gronnstalker's Armor: 1
-      - replaced:
-        - shoulder
-        - chest
-        dps: 2510.2
+        dps: 2542.1
         standard_error: 0.79
         stdev: 79.4
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
+        - head
+        - legs
+        dps: 2524.0
+        standard_error: 0.82
+        stdev: 81.8
+        pieces_left:
+          Gronnstalker's Armor: 1
+      - replaced:
+        - shoulder
+        - chest
+        dps: 2552.2
+        standard_error: 0.8
+        stdev: 80.1
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
         - shoulder
         - hands
-        dps: 2537.6
-        standard_error: 0.8
-        stdev: 79.7
+        dps: 2563.1
+        standard_error: 0.81
+        stdev: 80.6
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - legs
-        dps: 2529.2
+        dps: 2543.3
+        standard_error: 0.83
+        stdev: 83.4
+        pieces_left:
+          Gronnstalker's Armor: 1
+      - replaced:
+        - chest
+        - hands
+        dps: 2560.8
+        standard_error: 0.8
+        stdev: 80.0
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - chest
+        - legs
+        dps: 2544.8
+        standard_error: 0.82
+        stdev: 82.0
+        pieces_left:
+          Gronnstalker's Armor: 1
+      - replaced:
+        - hands
+        - legs
+        dps: 2558.1
+        standard_error: 0.83
+        stdev: 82.5
+        pieces_left:
+          Gronnstalker's Armor: 1
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        dps: 2556.2
+        standard_error: 0.81
+        stdev: 80.6
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        - hands
+        dps: 2567.8
+        standard_error: 0.8
+        stdev: 80.2
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - head
+        - shoulder
+        - legs
+        dps: 2547.6
+        standard_error: 0.83
+        stdev: 83.3
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - head
+        - chest
+        - hands
+        dps: 2565.0
+        standard_error: 0.8
+        stdev: 80.2
+        pieces_left:
+          Gronnstalker's Armor: 3
+      - replaced:
+        - head
+        - chest
+        - legs
+        dps: 2550.2
+        standard_error: 0.82
+        stdev: 81.8
+        pieces_left:
+          Gronnstalker's Armor: 2
+      - replaced:
+        - head
+        - hands
+        - legs
+        dps: 2561.9
         standard_error: 0.82
         stdev: 82.3
         pieces_left:
-          Gronnstalker's Armor: 1
-      - replaced:
-        - chest
-        - hands
-        dps: 2520.9
-        standard_error: 0.8
-        stdev: 79.5
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - chest
-        - legs
-        dps: 2516.6
-        standard_error: 0.82
-        stdev: 81.7
-        pieces_left:
-          Gronnstalker's Armor: 1
-      - replaced:
-        - hands
-        - legs
-        dps: 2546.6
-        standard_error: 0.82
-        stdev: 81.7
-        pieces_left:
-          Gronnstalker's Armor: 1
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        dps: 2456.6
-        standard_error: 0.76
-        stdev: 75.6
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - head
-        - shoulder
-        - hands
-        dps: 2483.5
-        standard_error: 0.76
-        stdev: 75.5
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - head
-        - shoulder
-        - legs
-        dps: 2475.1
-        standard_error: 0.78
-        stdev: 78.4
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - head
-        - chest
-        - hands
-        dps: 2466.3
-        standard_error: 0.76
-        stdev: 76.0
-        pieces_left:
-          Gronnstalker's Armor: 3
-      - replaced:
-        - head
-        - chest
-        - legs
-        dps: 2462.9
-        standard_error: 0.77
-        stdev: 77.4
-        pieces_left:
-          Gronnstalker's Armor: 2
-      - replaced:
-        - head
-        - hands
-        - legs
-        dps: 2491.7
-        standard_error: 0.78
-        stdev: 77.7
-        pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - chest
         - hands
-        dps: 2532.3
-        standard_error: 0.8
-        stdev: 79.7
+        dps: 2586.9
+        standard_error: 0.81
+        stdev: 81.0
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
         - shoulder
         - chest
         - legs
-        dps: 2526.3
+        dps: 2568.1
         standard_error: 0.82
-        stdev: 81.7
+        stdev: 82.2
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - shoulder
         - hands
         - legs
-        dps: 2557.3
-        standard_error: 0.82
-        stdev: 81.9
+        dps: 2582.3
+        standard_error: 0.83
+        stdev: 83.0
         pieces_left:
           Gronnstalker's Armor: 2
       - replaced:
         - chest
         - hands
         - legs
-        dps: 2542.4
+        dps: 2582.4
         standard_error: 0.81
         stdev: 81.4
         pieces_left:
@@ -2062,9 +2062,9 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 2531.8
-        standard_error: 0.77
-        stdev: 77.4
+        dps: 2648.1
+        standard_error: 0.83
+        stdev: 82.9
         pieces_left:
           Gronnstalker's Armor: 4
       - replaced:
@@ -2072,9 +2072,9 @@ specs:
         - shoulder
         - chest
         - legs
-        dps: 2472.1
-        standard_error: 0.78
-        stdev: 78.4
+        dps: 2572.5
+        standard_error: 0.83
+        stdev: 82.7
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -2082,9 +2082,9 @@ specs:
         - shoulder
         - hands
         - legs
-        dps: 2501.4
-        standard_error: 0.78
-        stdev: 78.0
+        dps: 2586.6
+        standard_error: 0.83
+        stdev: 83.3
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -2092,9 +2092,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 2486.9
-        standard_error: 0.77
-        stdev: 77.0
+        dps: 2585.9
+        standard_error: 0.81
+        stdev: 81.3
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -2102,9 +2102,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 2552.8
-        standard_error: 0.82
-        stdev: 81.8
+        dps: 2607.3
+        standard_error: 0.83
+        stdev: 83.2
         pieces_left:
           Gronnstalker's Armor: 3
       - replaced:
@@ -2113,18 +2113,18 @@ specs:
         - chest
         - hands
         - legs
-        dps: 2552.6
-        standard_error: 0.8
-        stdev: 79.6
+        dps: 2668.7
+        standard_error: 0.85
+        stdev: 84.9
         pieces_left:
           Gronnstalker's Armor: 4
     token_singles:
       legs:
         id: 31005
         name: Gronnstalker's Leggings
-        dps: 2509.9
+        dps: 2521.5
         standard_error: 0.8
-        stdev: 79.5
+        stdev: 79.6
   affliction_warlock:
     old_bonus:
       held_sets:
@@ -2157,24 +2157,24 @@ specs:
           Voidheart Raiment: 2
       - replaced:
         - shoulder
-        dps: 1912.9
-        standard_error: 0.94
-        stdev: 93.8
-        pieces_left:
-          Voidheart Raiment: 1
-      - replaced:
-        - hands
-        dps: 1919.0
+        dps: 1926.7
         standard_error: 0.94
         stdev: 94.5
         pieces_left:
           Voidheart Raiment: 1
       - replaced:
+        - hands
+        dps: 1925.2
+        standard_error: 0.95
+        stdev: 94.8
+        pieces_left:
+          Voidheart Raiment: 1
+      - replaced:
         - shoulder
         - hands
-        dps: 1920.1
-        standard_error: 0.94
-        stdev: 94.4
+        dps: 1940.8
+        standard_error: 0.95
+        stdev: 95.3
         pieces_left:
           Voidheart Raiment: 0
     tier_six:
@@ -2205,114 +2205,114 @@ specs:
           Malefic Raiment: 0
       - replaced:
         - head
-        dps: 1890.4
-        standard_error: 0.89
-        stdev: 89.4
+        dps: 1939.8
+        standard_error: 0.96
+        stdev: 96.1
         pieces_left:
           Malefic Raiment: 1
       - replaced:
         - shoulder
-        dps: 1912.9
-        standard_error: 0.94
-        stdev: 93.8
-        pieces_left:
-          Malefic Raiment: 1
-      - replaced:
-        - hands
-        dps: 1919.0
+        dps: 1926.7
         standard_error: 0.94
         stdev: 94.5
         pieces_left:
           Malefic Raiment: 1
       - replaced:
-        - legs
-        dps: 1930.0
+        - hands
+        dps: 1925.2
         standard_error: 0.95
         stdev: 94.8
+        pieces_left:
+          Malefic Raiment: 1
+      - replaced:
+        - legs
+        dps: 1950.8
+        standard_error: 0.96
+        stdev: 95.9
         pieces_left:
           Malefic Raiment: 0
       - replaced:
         - head
         - shoulder
-        dps: 1869.8
-        standard_error: 0.87
-        stdev: 86.9
+        dps: 1933.0
+        standard_error: 0.94
+        stdev: 93.9
         pieces_left:
           Malefic Raiment: 2
       - replaced:
         - head
         - hands
-        dps: 1876.3
-        standard_error: 0.87
-        stdev: 87.4
+        dps: 1931.7
+        standard_error: 0.94
+        stdev: 94.2
         pieces_left:
           Malefic Raiment: 2
       - replaced:
         - head
         - legs
-        dps: 1887.2
-        standard_error: 0.89
-        stdev: 88.9
+        dps: 1957.8
+        standard_error: 0.97
+        stdev: 96.8
         pieces_left:
           Malefic Raiment: 1
       - replaced:
         - shoulder
         - hands
-        dps: 1920.1
-        standard_error: 0.94
-        stdev: 94.4
-        pieces_left:
-          Malefic Raiment: 2
-      - replaced:
-        - shoulder
-        - legs
-        dps: 1910.8
-        standard_error: 0.94
-        stdev: 93.8
-        pieces_left:
-          Malefic Raiment: 1
-      - replaced:
-        - hands
-        - legs
-        dps: 1916.5
+        dps: 1940.8
         standard_error: 0.95
-        stdev: 94.8
+        stdev: 95.3
+        pieces_left:
+          Malefic Raiment: 2
+      - replaced:
+        - shoulder
+        - legs
+        dps: 1945.0
+        standard_error: 0.96
+        stdev: 95.6
+        pieces_left:
+          Malefic Raiment: 1
+      - replaced:
+        - hands
+        - legs
+        dps: 1943.6
+        standard_error: 0.96
+        stdev: 95.8
         pieces_left:
           Malefic Raiment: 1
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 1876.9
-        standard_error: 0.87
-        stdev: 86.9
+        dps: 1946.4
+        standard_error: 0.94
+        stdev: 94.1
         pieces_left:
           Malefic Raiment: 3
       - replaced:
         - head
         - shoulder
         - legs
-        dps: 1867.1
-        standard_error: 0.86
-        stdev: 86.4
-        pieces_left:
-          Malefic Raiment: 2
-      - replaced:
-        - head
-        - hands
-        - legs
-        dps: 1873.2
-        standard_error: 0.87
-        stdev: 87.2
-        pieces_left:
-          Malefic Raiment: 2
-      - replaced:
-        - shoulder
-        - hands
-        - legs
-        dps: 1917.6
+        dps: 1951.4
         standard_error: 0.95
-        stdev: 94.6
+        stdev: 94.8
+        pieces_left:
+          Malefic Raiment: 2
+      - replaced:
+        - head
+        - hands
+        - legs
+        dps: 1949.5
+        standard_error: 0.95
+        stdev: 94.9
+        pieces_left:
+          Malefic Raiment: 2
+      - replaced:
+        - shoulder
+        - hands
+        - legs
+        dps: 1958.4
+        standard_error: 0.96
+        stdev: 96.5
         pieces_left:
           Malefic Raiment: 2
       - replaced:
@@ -2320,24 +2320,24 @@ specs:
         - shoulder
         - hands
         - legs
-        dps: 1873.7
-        standard_error: 0.87
-        stdev: 87.2
+        dps: 1964.4
+        standard_error: 0.95
+        stdev: 95.3
         pieces_left:
           Malefic Raiment: 3
     token_singles:
       chest:
         id: 31052
         name: Robe of the Malefic
-        dps: 1899.7
-        standard_error: 0.94
-        stdev: 94.2
+        dps: 1920.5
+        standard_error: 0.95
+        stdev: 94.9
       legs:
         id: 31053
         name: Leggings of the Malefic
-        dps: 1939.2
+        dps: 1945.8
         standard_error: 0.96
-        stdev: 96.1
+        stdev: 96.2
   destruction_warlock:
     old_bonus:
       held_sets:
@@ -2373,56 +2373,56 @@ specs:
           Corruptor Raiment: 3
       - replaced:
         - head
-        dps: 1992.8
-        standard_error: 1.05
-        stdev: 105.5
-        pieces_left:
-          Corruptor Raiment: 2
-      - replaced:
-        - shoulder
-        dps: 2045.1
-        standard_error: 1.13
-        stdev: 112.5
-        pieces_left:
-          Corruptor Raiment: 2
-      - replaced:
-        - legs
-        dps: 2047.9
+        dps: 2065.0
         standard_error: 1.14
         stdev: 113.5
         pieces_left:
           Corruptor Raiment: 2
       - replaced:
+        - shoulder
+        dps: 2063.0
+        standard_error: 1.14
+        stdev: 113.9
+        pieces_left:
+          Corruptor Raiment: 2
+      - replaced:
+        - legs
+        dps: 2073.9
+        standard_error: 1.15
+        stdev: 114.9
+        pieces_left:
+          Corruptor Raiment: 2
+      - replaced:
         - head
         - shoulder
-        dps: 1986.9
-        standard_error: 1.04
-        stdev: 104.5
+        dps: 2076.0
+        standard_error: 1.15
+        stdev: 114.7
         pieces_left:
           Corruptor Raiment: 1
       - replaced:
         - head
         - legs
-        dps: 1988.6
-        standard_error: 1.05
-        stdev: 105.4
+        dps: 2087.5
+        standard_error: 1.15
+        stdev: 115.5
         pieces_left:
           Corruptor Raiment: 1
       - replaced:
         - shoulder
         - legs
-        dps: 2042.7
-        standard_error: 1.13
-        stdev: 113.1
+        dps: 2085.5
+        standard_error: 1.16
+        stdev: 115.8
         pieces_left:
           Corruptor Raiment: 1
       - replaced:
         - head
         - shoulder
         - legs
-        dps: 1983.0
-        standard_error: 1.05
-        stdev: 104.9
+        dps: 2098.6
+        standard_error: 1.16
+        stdev: 115.8
         pieces_left:
           Corruptor Raiment: 0
     tier_six:
@@ -2453,114 +2453,114 @@ specs:
           Malefic Raiment: 0
       - replaced:
         - head
-        dps: 1992.8
-        standard_error: 1.05
-        stdev: 105.5
+        dps: 2065.0
+        standard_error: 1.14
+        stdev: 113.5
         pieces_left:
           Malefic Raiment: 1
       - replaced:
         - shoulder
-        dps: 2045.1
-        standard_error: 1.13
-        stdev: 112.5
+        dps: 2063.0
+        standard_error: 1.14
+        stdev: 113.9
         pieces_left:
           Malefic Raiment: 1
       - replaced:
         - hands
-        dps: 2086.3
+        dps: 2094.4
         standard_error: 1.17
-        stdev: 117.0
+        stdev: 116.9
         pieces_left:
           Malefic Raiment: 1
       - replaced:
         - legs
-        dps: 2047.9
-        standard_error: 1.14
-        stdev: 113.5
+        dps: 2073.9
+        standard_error: 1.15
+        stdev: 114.9
         pieces_left:
           Malefic Raiment: 0
       - replaced:
         - head
         - shoulder
-        dps: 1986.9
-        standard_error: 1.04
-        stdev: 104.5
+        dps: 2076.0
+        standard_error: 1.15
+        stdev: 114.7
         pieces_left:
           Malefic Raiment: 2
       - replaced:
         - head
         - hands
-        dps: 2027.1
-        standard_error: 1.09
-        stdev: 109.1
-        pieces_left:
-          Malefic Raiment: 2
-      - replaced:
-        - head
-        - legs
-        dps: 1988.6
-        standard_error: 1.05
-        stdev: 105.4
-        pieces_left:
-          Malefic Raiment: 1
-      - replaced:
-        - shoulder
-        - hands
-        dps: 2079.3
-        standard_error: 1.18
-        stdev: 117.6
-        pieces_left:
-          Malefic Raiment: 2
-      - replaced:
-        - shoulder
-        - legs
-        dps: 2042.7
-        standard_error: 1.13
-        stdev: 113.1
-        pieces_left:
-          Malefic Raiment: 1
-      - replaced:
-        - hands
-        - legs
-        dps: 2082.1
+        dps: 2109.6
         standard_error: 1.17
         stdev: 117.4
         pieces_left:
+          Malefic Raiment: 2
+      - replaced:
+        - head
+        - legs
+        dps: 2087.5
+        standard_error: 1.15
+        stdev: 115.5
+        pieces_left:
+          Malefic Raiment: 1
+      - replaced:
+        - shoulder
+        - hands
+        dps: 2107.0
+        standard_error: 1.18
+        stdev: 118.2
+        pieces_left:
+          Malefic Raiment: 2
+      - replaced:
+        - shoulder
+        - legs
+        dps: 2085.5
+        standard_error: 1.16
+        stdev: 115.8
+        pieces_left:
+          Malefic Raiment: 1
+      - replaced:
+        - hands
+        - legs
+        dps: 2118.5
+        standard_error: 1.18
+        stdev: 118.5
+        pieces_left:
           Malefic Raiment: 1
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 2019.7
-        standard_error: 1.09
-        stdev: 108.7
+        dps: 2120.2
+        standard_error: 1.18
+        stdev: 117.9
         pieces_left:
           Malefic Raiment: 3
       - replaced:
         - head
         - shoulder
         - legs
-        dps: 1983.0
-        standard_error: 1.05
-        stdev: 104.9
-        pieces_left:
-          Malefic Raiment: 2
-      - replaced:
-        - head
-        - hands
-        - legs
-        dps: 2022.4
-        standard_error: 1.1
-        stdev: 109.7
-        pieces_left:
-          Malefic Raiment: 2
-      - replaced:
-        - shoulder
-        - hands
-        - legs
-        dps: 2075.2
+        dps: 2098.6
         standard_error: 1.16
-        stdev: 116.5
+        stdev: 115.8
+        pieces_left:
+          Malefic Raiment: 2
+      - replaced:
+        - head
+        - hands
+        - legs
+        dps: 2132.1
+        standard_error: 1.19
+        stdev: 119.3
+        pieces_left:
+          Malefic Raiment: 2
+      - replaced:
+        - shoulder
+        - hands
+        - legs
+        dps: 2130.2
+        standard_error: 1.19
+        stdev: 119.4
         pieces_left:
           Malefic Raiment: 2
       - replaced:
@@ -2568,24 +2568,24 @@ specs:
         - shoulder
         - hands
         - legs
-        dps: 2016.3
-        standard_error: 1.09
-        stdev: 108.9
+        dps: 2142.8
+        standard_error: 1.19
+        stdev: 119.5
         pieces_left:
           Malefic Raiment: 3
     token_singles:
       chest:
         id: 31052
         name: Robe of the Malefic
-        dps: 2008.9
-        standard_error: 1.12
-        stdev: 112.3
+        dps: 2034.7
+        standard_error: 1.14
+        stdev: 113.6
       legs:
         id: 31053
         name: Leggings of the Malefic
-        dps: 2059.3
-        standard_error: 1.14
-        stdev: 114.5
+        dps: 2067.2
+        standard_error: 1.15
+        stdev: 114.6
   arcane_mage:
     old_bonus:
       held_sets:
@@ -2616,9 +2616,9 @@ specs:
           Tirisfal Regalia: 4
       - replaced:
         - legs
-        dps: 2270.0
+        dps: 2276.4
         standard_error: 0.96
-        stdev: 95.5
+        stdev: 95.8
         pieces_left:
           Tirisfal Regalia: 3
     tier_six:
@@ -2646,42 +2646,42 @@ specs:
         pieces_left: {}
       - replaced:
         - legs
-        dps: 2270.0
+        dps: 2276.4
         standard_error: 0.96
-        stdev: 95.5
+        stdev: 95.8
         pieces_left: {}
       - replaced:
         - hands
         - legs
-        dps: 2314.4
+        dps: 2320.7
         standard_error: 1.01
-        stdev: 100.6
+        stdev: 100.9
         pieces_left: {}
     token_singles:
       head:
         id: 31056
         name: Cowl of the Tempest
-        dps: 2206.0
-        standard_error: 0.88
-        stdev: 88.4
+        dps: 2269.5
+        standard_error: 0.95
+        stdev: 94.5
       shoulder:
         id: 31059
         name: Mantle of the Tempest
-        dps: 2244.7
-        standard_error: 0.94
-        stdev: 94.1
+        dps: 2262.3
+        standard_error: 0.96
+        stdev: 95.6
       chest:
         id: 31057
         name: Robes of the Tempest
-        dps: 2244.9
-        standard_error: 0.93
-        stdev: 93.0
+        dps: 2272.2
+        standard_error: 0.95
+        stdev: 94.8
       hands:
         id: 31055
         name: Gloves of the Tempest
-        dps: 2299.8
-        standard_error: 0.98
-        stdev: 98.3
+        dps: 2311.3
+        standard_error: 0.99
+        stdev: 98.8
   balance_druid:
     old_bonus:
       held_sets:
@@ -2724,114 +2724,114 @@ specs:
           Nordrassil Regalia: 4
       - replaced:
         - head
-        dps: 1536.3
-        standard_error: 0.74
-        stdev: 74.0
-        pieces_left:
-          Nordrassil Regalia: 3
-      - replaced:
-        - shoulder
-        dps: 1568.6
-        standard_error: 0.8
-        stdev: 79.5
-        pieces_left:
-          Nordrassil Regalia: 3
-      - replaced:
-        - chest
-        dps: 1571.1
-        standard_error: 0.79
-        stdev: 78.8
-        pieces_left:
-          Nordrassil Regalia: 3
-      - replaced:
-        - hands
-        dps: 1571.1
+        dps: 1579.4
         standard_error: 0.8
         stdev: 80.1
         pieces_left:
           Nordrassil Regalia: 3
       - replaced:
-        - head
         - shoulder
-        dps: 1565.0
-        standard_error: 0.74
-        stdev: 73.8
+        dps: 1574.5
+        standard_error: 0.8
+        stdev: 79.8
         pieces_left:
-          Nordrassil Regalia: 2
+          Nordrassil Regalia: 3
       - replaced:
-        - head
         - chest
-        dps: 1564.1
-        standard_error: 0.74
-        stdev: 73.7
+        dps: 1587.7
+        standard_error: 0.8
+        stdev: 79.7
         pieces_left:
-          Nordrassil Regalia: 2
+          Nordrassil Regalia: 3
+      - replaced:
+        - hands
+        dps: 1578.0
+        standard_error: 0.81
+        stdev: 80.5
+        pieces_left:
+          Nordrassil Regalia: 3
       - replaced:
         - head
-        - hands
-        dps: 1568.7
-        standard_error: 0.74
-        stdev: 74.4
-        pieces_left:
-          Nordrassil Regalia: 2
-      - replaced:
         - shoulder
-        - chest
-        dps: 1597.2
-        standard_error: 0.79
-        stdev: 79.0
-        pieces_left:
-          Nordrassil Regalia: 2
-      - replaced:
-        - shoulder
-        - hands
-        dps: 1601.5
+        dps: 1614.9
         standard_error: 0.8
         stdev: 80.1
         pieces_left:
           Nordrassil Regalia: 2
       - replaced:
+        - head
+        - chest
+        dps: 1624.8
+        standard_error: 0.81
+        stdev: 80.5
+        pieces_left:
+          Nordrassil Regalia: 2
+      - replaced:
+        - head
+        - hands
+        dps: 1619.5
+        standard_error: 0.81
+        stdev: 80.9
+        pieces_left:
+          Nordrassil Regalia: 2
+      - replaced:
+        - shoulder
+        - chest
+        dps: 1620.2
+        standard_error: 0.8
+        stdev: 80.1
+        pieces_left:
+          Nordrassil Regalia: 2
+      - replaced:
+        - shoulder
+        - hands
+        dps: 1614.6
+        standard_error: 0.8
+        stdev: 80.4
+        pieces_left:
+          Nordrassil Regalia: 2
+      - replaced:
         - chest
         - hands
-        dps: 1601.7
-        standard_error: 0.8
-        stdev: 79.6
+        dps: 1625.8
+        standard_error: 0.81
+        stdev: 80.9
         pieces_left:
           Nordrassil Regalia: 2
       - replaced:
         - head
         - shoulder
         - chest
-        dps: 1563.6
-        standard_error: 0.73
-        stdev: 73.4
+        dps: 1630.6
+        standard_error: 0.81
+        stdev: 80.6
         pieces_left:
           Nordrassil Regalia: 1
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 1569.2
-        standard_error: 0.74
-        stdev: 73.8
+        dps: 1626.4
+        standard_error: 0.8
+        stdev: 80.4
         pieces_left:
           Nordrassil Regalia: 1
       - replaced:
         - head
         - chest
         - hands
-        dps: 1568.4
-        standard_error: 0.74
-        stdev: 73.8
+        dps: 1636.3
+        standard_error: 0.81
+        stdev: 81.0
         pieces_left:
           Nordrassil Regalia: 1
       - replaced:
         - shoulder
         - chest
         - hands
-        dps: 1601.5
-        standard_error: 0.79
-        stdev: 79.3
+        dps: 1632.0
+        standard_error: 0.81
+        stdev: 80.7
         pieces_left:
           Nordrassil Regalia: 1
       - replaced:
@@ -2839,9 +2839,9 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 1613.6
-        standard_error: 0.75
-        stdev: 75.0
+        dps: 1692.9
+        standard_error: 0.83
+        stdev: 82.6
         pieces_left:
           Nordrassil Regalia: 0
     tier_six:
@@ -2872,114 +2872,114 @@ specs:
           Thunderheart Regalia: 0
       - replaced:
         - head
-        dps: 1536.3
-        standard_error: 0.74
-        stdev: 74.0
+        dps: 1584.2
+        standard_error: 0.8
+        stdev: 80.2
         pieces_left:
           Thunderheart Regalia: 1
       - replaced:
         - shoulder
-        dps: 1568.6
-        standard_error: 0.8
-        stdev: 79.5
-        pieces_left:
-          Thunderheart Regalia: 1
-      - replaced:
-        - chest
-        dps: 1571.1
-        standard_error: 0.79
-        stdev: 78.8
-        pieces_left:
-          Thunderheart Regalia: 1
-      - replaced:
-        - hands
-        dps: 1571.1
+        dps: 1580.7
         standard_error: 0.8
         stdev: 80.1
         pieces_left:
           Thunderheart Regalia: 1
       - replaced:
-        - head
-        - shoulder
-        dps: 1565.0
-        standard_error: 0.74
-        stdev: 73.8
-        pieces_left:
-          Thunderheart Regalia: 2
-      - replaced:
-        - head
         - chest
-        dps: 1564.1
-        standard_error: 0.74
-        stdev: 73.7
-        pieces_left:
-          Thunderheart Regalia: 2
-      - replaced:
-        - head
-        - hands
-        dps: 1568.7
-        standard_error: 0.74
-        stdev: 74.4
-        pieces_left:
-          Thunderheart Regalia: 2
-      - replaced:
-        - shoulder
-        - chest
-        dps: 1597.2
-        standard_error: 0.79
-        stdev: 79.0
-        pieces_left:
-          Thunderheart Regalia: 2
-      - replaced:
-        - shoulder
-        - hands
-        dps: 1601.5
+        dps: 1587.7
         standard_error: 0.8
-        stdev: 80.1
+        stdev: 79.7
+        pieces_left:
+          Thunderheart Regalia: 1
+      - replaced:
+        - hands
+        dps: 1578.0
+        standard_error: 0.81
+        stdev: 80.5
+        pieces_left:
+          Thunderheart Regalia: 1
+      - replaced:
+        - head
+        - shoulder
+        dps: 1626.7
+        standard_error: 0.81
+        stdev: 80.7
+        pieces_left:
+          Thunderheart Regalia: 2
+      - replaced:
+        - head
+        - chest
+        dps: 1630.1
+        standard_error: 0.81
+        stdev: 80.7
+        pieces_left:
+          Thunderheart Regalia: 2
+      - replaced:
+        - head
+        - hands
+        dps: 1624.7
+        standard_error: 0.81
+        stdev: 81.1
+        pieces_left:
+          Thunderheart Regalia: 2
+      - replaced:
+        - shoulder
+        - chest
+        dps: 1626.7
+        standard_error: 0.81
+        stdev: 80.5
+        pieces_left:
+          Thunderheart Regalia: 2
+      - replaced:
+        - shoulder
+        - hands
+        dps: 1621.1
+        standard_error: 0.81
+        stdev: 80.9
         pieces_left:
           Thunderheart Regalia: 2
       - replaced:
         - chest
         - hands
-        dps: 1601.7
-        standard_error: 0.8
-        stdev: 79.6
+        dps: 1625.8
+        standard_error: 0.81
+        stdev: 80.9
         pieces_left:
           Thunderheart Regalia: 2
       - replaced:
         - head
         - shoulder
         - chest
-        dps: 1563.6
-        standard_error: 0.73
-        stdev: 73.4
+        dps: 1642.3
+        standard_error: 0.81
+        stdev: 81.3
         pieces_left:
           Thunderheart Regalia: 3
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 1569.2
-        standard_error: 0.74
-        stdev: 73.8
+        dps: 1638.2
+        standard_error: 0.81
+        stdev: 81.2
         pieces_left:
           Thunderheart Regalia: 3
       - replaced:
         - head
         - chest
         - hands
-        dps: 1568.4
-        standard_error: 0.74
-        stdev: 73.8
+        dps: 1641.6
+        standard_error: 0.81
+        stdev: 81.3
         pieces_left:
           Thunderheart Regalia: 3
       - replaced:
         - shoulder
         - chest
         - hands
-        dps: 1601.5
-        standard_error: 0.79
-        stdev: 79.3
+        dps: 1638.2
+        standard_error: 0.81
+        stdev: 81.1
         pieces_left:
           Thunderheart Regalia: 3
       - replaced:
@@ -2987,18 +2987,18 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 1613.6
-        standard_error: 0.75
-        stdev: 75.0
+        dps: 1705.1
+        standard_error: 0.83
+        stdev: 83.4
         pieces_left:
           Thunderheart Regalia: 4
     token_singles:
       legs:
         id: 31046
         name: Thunderheart Pants
-        dps: 1690.8
+        dps: 1696.4
         standard_error: 0.84
-        stdev: 84.0
+        stdev: 84.3
   shadow_priest:
     old_bonus:
       held_sets:
@@ -3044,67 +3044,58 @@ specs:
           Shadow's Embrace: 2
       - replaced:
         - head
-        dps: 1443.8
-        standard_error: 0.26
-        stdev: 25.7
+        dps: 1460.4
+        standard_error: 0.27
+        stdev: 27.1
         pieces_left:
           Avatar Regalia: 1
           Shadow's Embrace: 2
       - replaced:
         - shoulder
-        dps: 1446.2
+        dps: 1451.6
         standard_error: 0.26
-        stdev: 26.4
+        stdev: 26.5
         pieces_left:
           Avatar Regalia: 2
           Shadow's Embrace: 1
       - replaced:
         - chest
-        dps: 1446.0
+        dps: 1454.5
         standard_error: 0.27
-        stdev: 26.8
+        stdev: 27.0
         pieces_left:
           Avatar Regalia: 1
           Shadow's Embrace: 2
       - replaced:
         - feet
-        dps: 1442.4
-        standard_error: 0.26
-        stdev: 26.4
+        dps: 1450.4
+        standard_error: 0.27
+        stdev: 26.5
         pieces_left:
           Avatar Regalia: 2
           Shadow's Embrace: 1
       - replaced:
         - head
         - shoulder
-        dps: 1440.9
-        standard_error: 0.26
-        stdev: 25.6
+        dps: 1466.0
+        standard_error: 0.28
+        stdev: 27.5
         pieces_left:
           Avatar Regalia: 1
           Shadow's Embrace: 1
       - replaced:
         - head
         - chest
-        dps: 1440.6
-        standard_error: 0.26
-        stdev: 25.6
+        dps: 1468.9
+        standard_error: 0.28
+        stdev: 27.6
         pieces_left:
           Avatar Regalia: 0
           Shadow's Embrace: 2
       - replaced:
         - head
         - feet
-        dps: 1434.1
-        standard_error: 0.26
-        stdev: 25.7
-        pieces_left:
-          Avatar Regalia: 1
-          Shadow's Embrace: 1
-      - replaced:
-        - shoulder
-        - chest
-        dps: 1446.1
+        dps: 1458.8
         standard_error: 0.27
         stdev: 27.2
         pieces_left:
@@ -3112,70 +3103,79 @@ specs:
           Shadow's Embrace: 1
       - replaced:
         - shoulder
+        - chest
+        dps: 1460.1
+        standard_error: 0.27
+        stdev: 27.4
+        pieces_left:
+          Avatar Regalia: 1
+          Shadow's Embrace: 1
+      - replaced:
+        - shoulder
         - feet
-        dps: 1436.4
-        standard_error: 0.26
-        stdev: 26.3
+        dps: 1449.8
+        standard_error: 0.27
+        stdev: 26.5
         pieces_left:
           Avatar Regalia: 2
           Shadow's Embrace: 0
       - replaced:
         - chest
         - feet
-        dps: 1436.3
-        standard_error: 0.27
-        stdev: 26.8
-        pieces_left:
-          Avatar Regalia: 1
-          Shadow's Embrace: 1
-      - replaced:
-        - head
-        - shoulder
-        - chest
-        dps: 1434.6
-        standard_error: 0.26
-        stdev: 25.6
-        pieces_left:
-          Avatar Regalia: 0
-          Shadow's Embrace: 1
-      - replaced:
-        - head
-        - shoulder
-        - feet
-        dps: 1431.1
-        standard_error: 0.26
-        stdev: 25.6
-        pieces_left:
-          Avatar Regalia: 1
-          Shadow's Embrace: 0
-      - replaced:
-        - head
-        - chest
-        - feet
-        dps: 1430.9
-        standard_error: 0.26
-        stdev: 25.6
-        pieces_left:
-          Avatar Regalia: 0
-          Shadow's Embrace: 1
-      - replaced:
-        - shoulder
-        - chest
-        - feet
-        dps: 1436.2
+        dps: 1452.8
         standard_error: 0.27
         stdev: 27.1
         pieces_left:
           Avatar Regalia: 1
+          Shadow's Embrace: 1
+      - replaced:
+        - head
+        - shoulder
+        - chest
+        dps: 1468.4
+        standard_error: 0.28
+        stdev: 27.6
+        pieces_left:
+          Avatar Regalia: 0
+          Shadow's Embrace: 1
+      - replaced:
+        - head
+        - shoulder
+        - feet
+        dps: 1464.3
+        standard_error: 0.28
+        stdev: 27.7
+        pieces_left:
+          Avatar Regalia: 1
+          Shadow's Embrace: 0
+      - replaced:
+        - head
+        - chest
+        - feet
+        dps: 1467.2
+        standard_error: 0.28
+        stdev: 27.7
+        pieces_left:
+          Avatar Regalia: 0
+          Shadow's Embrace: 1
+      - replaced:
+        - shoulder
+        - chest
+        - feet
+        dps: 1458.3
+        standard_error: 0.28
+        stdev: 27.6
+        pieces_left:
+          Avatar Regalia: 1
           Shadow's Embrace: 0
       - replaced:
         - head
         - shoulder
         - chest
         - feet
-        dps: 1424.9
-        standard_error: 0.26
-        stdev: 25.5
+        dps: 1466.6
+        standard_error: 0.28
+        stdev: 27.8
         pieces_left:
           Avatar Regalia: 0
           Shadow's Embrace: 0
@@ -3207,114 +3207,114 @@ specs:
           Absolution Regalia: 0
       - replaced:
         - head
-        dps: 1443.8
-        standard_error: 0.26
-        stdev: 25.7
-        pieces_left:
-          Absolution Regalia: 1
-      - replaced:
-        - shoulder
-        dps: 1446.2
-        standard_error: 0.26
-        stdev: 26.4
-        pieces_left:
-          Absolution Regalia: 1
-      - replaced:
-        - chest
-        dps: 1446.0
+        dps: 1460.4
         standard_error: 0.27
-        stdev: 26.8
+        stdev: 27.1
         pieces_left:
           Absolution Regalia: 1
       - replaced:
-        - hands
-        dps: 1447.7
-        standard_error: 0.26
-        stdev: 26.2
-        pieces_left:
-          Absolution Regalia: 1
-      - replaced:
-        - head
         - shoulder
-        dps: 1440.9
-        standard_error: 0.26
-        stdev: 25.6
-        pieces_left:
-          Absolution Regalia: 2
-      - replaced:
-        - head
-        - chest
-        dps: 1440.6
-        standard_error: 0.26
-        stdev: 25.6
-        pieces_left:
-          Absolution Regalia: 2
-      - replaced:
-        - head
-        - hands
-        dps: 1442.4
-        standard_error: 0.25
-        stdev: 25.3
-        pieces_left:
-          Absolution Regalia: 2
-      - replaced:
-        - shoulder
-        - chest
-        dps: 1446.1
-        standard_error: 0.27
-        stdev: 27.2
-        pieces_left:
-          Absolution Regalia: 2
-      - replaced:
-        - shoulder
-        - hands
-        dps: 1448.2
+        dps: 1451.6
         standard_error: 0.26
         stdev: 26.5
         pieces_left:
+          Absolution Regalia: 1
+      - replaced:
+        - chest
+        dps: 1457.6
+        standard_error: 0.27
+        stdev: 27.0
+        pieces_left:
+          Absolution Regalia: 1
+      - replaced:
+        - hands
+        dps: 1451.9
+        standard_error: 0.26
+        stdev: 26.3
+        pieces_left:
+          Absolution Regalia: 1
+      - replaced:
+        - head
+        - shoulder
+        dps: 1466.0
+        standard_error: 0.28
+        stdev: 27.5
+        pieces_left:
+          Absolution Regalia: 2
+      - replaced:
+        - head
+        - chest
+        dps: 1472.0
+        standard_error: 0.28
+        stdev: 27.7
+        pieces_left:
+          Absolution Regalia: 2
+      - replaced:
+        - head
+        - hands
+        dps: 1466.4
+        standard_error: 0.27
+        stdev: 27.4
+        pieces_left:
+          Absolution Regalia: 2
+      - replaced:
+        - shoulder
+        - chest
+        dps: 1463.2
+        standard_error: 0.28
+        stdev: 27.5
+        pieces_left:
+          Absolution Regalia: 2
+      - replaced:
+        - shoulder
+        - hands
+        dps: 1457.8
+        standard_error: 0.27
+        stdev: 26.7
+        pieces_left:
           Absolution Regalia: 2
       - replaced:
         - chest
         - hands
-        dps: 1447.7
+        dps: 1463.6
         standard_error: 0.27
-        stdev: 27.0
+        stdev: 27.3
         pieces_left:
           Absolution Regalia: 2
       - replaced:
         - head
         - shoulder
         - chest
-        dps: 1434.6
-        standard_error: 0.26
-        stdev: 25.6
+        dps: 1471.5
+        standard_error: 0.28
+        stdev: 27.7
         pieces_left:
           Absolution Regalia: 3
       - replaced:
         - head
         - shoulder
         - hands
-        dps: 1436.4
-        standard_error: 0.25
-        stdev: 25.3
-        pieces_left:
-          Absolution Regalia: 3
-      - replaced:
-        - head
-        - chest
-        - hands
-        dps: 1436.2
-        standard_error: 0.25
-        stdev: 25.3
-        pieces_left:
-          Absolution Regalia: 3
-      - replaced:
-        - shoulder
-        - chest
-        - hands
-        dps: 1441.7
+        dps: 1465.9
         standard_error: 0.27
-        stdev: 27.0
+        stdev: 27.4
+        pieces_left:
+          Absolution Regalia: 3
+      - replaced:
+        - head
+        - chest
+        - hands
+        dps: 1471.8
+        standard_error: 0.28
+        stdev: 27.6
+        pieces_left:
+          Absolution Regalia: 3
+      - replaced:
+        - shoulder
+        - chest
+        - hands
+        dps: 1463.0
+        standard_error: 0.27
+        stdev: 27.4
         pieces_left:
           Absolution Regalia: 3
       - replaced:
@@ -3322,18 +3322,18 @@ specs:
         - shoulder
         - chest
         - hands
-        dps: 1456.3
-        standard_error: 0.26
-        stdev: 26.5
+        dps: 1497.8
+        standard_error: 0.29
+        stdev: 28.9
         pieces_left:
           Absolution Regalia: 4
     token_singles:
       legs:
         id: 31067
         name: Leggings of Absolution
-        dps: 1448.1
-        standard_error: 0.26
-        stdev: 26.4
+        dps: 1452.3
+        standard_error: 0.27
+        stdev: 26.5
   elemental_shaman:
     old_bonus:
       held_sets:
@@ -3382,15 +3382,15 @@ specs:
           Cyclone Regalia: 2
       - replaced:
         - head
-        dps: 1666.6
-        standard_error: 0.84
-        stdev: 83.7
+        dps: 1727.9
+        standard_error: 0.9
+        stdev: 89.5
         pieces_left:
           Cataclysm Regalia: 2
           Cyclone Regalia: 1
       - replaced:
         - shoulder
-        dps: 1710.1
+        dps: 1723.5
         standard_error: 0.88
         stdev: 88.3
         pieces_left:
@@ -3398,71 +3398,71 @@ specs:
           Cyclone Regalia: 1
       - replaced:
         - chest
-        dps: 1712.2
-        standard_error: 0.89
-        stdev: 88.6
+        dps: 1732.1
+        standard_error: 0.9
+        stdev: 89.7
         pieces_left:
           Cataclysm Regalia: 1
           Cyclone Regalia: 2
       - replaced:
         - legs
-        dps: 1713.1
-        standard_error: 0.94
-        stdev: 94.3
+        dps: 1733.3
+        standard_error: 0.95
+        stdev: 94.7
         pieces_left:
           Cataclysm Regalia: 1
           Cyclone Regalia: 2
       - replaced:
         - head
         - shoulder
-        dps: 1709.7
-        standard_error: 0.83
-        stdev: 82.6
+        dps: 1785.4
+        standard_error: 0.89
+        stdev: 88.9
         pieces_left:
           Cataclysm Regalia: 2
           Cyclone Regalia: 0
       - replaced:
         - head
         - chest
-        dps: 1697.4
-        standard_error: 0.83
-        stdev: 82.6
+        dps: 1779.9
+        standard_error: 0.89
+        stdev: 88.8
         pieces_left:
           Cataclysm Regalia: 1
           Cyclone Regalia: 1
       - replaced:
         - head
         - legs
-        dps: 1662.1
-        standard_error: 0.87
-        stdev: 87.1
+        dps: 1744.4
+        standard_error: 0.92
+        stdev: 91.9
         pieces_left:
           Cataclysm Regalia: 1
           Cyclone Regalia: 1
       - replaced:
         - shoulder
         - chest
-        dps: 1741.4
-        standard_error: 0.87
-        stdev: 87.3
+        dps: 1774.0
+        standard_error: 0.88
+        stdev: 88.4
         pieces_left:
           Cataclysm Regalia: 1
           Cyclone Regalia: 1
       - replaced:
         - shoulder
         - legs
-        dps: 1705.9
+        dps: 1739.7
         standard_error: 0.9
-        stdev: 90.4
+        stdev: 90.1
         pieces_left:
           Cataclysm Regalia: 1
           Cyclone Regalia: 1
       - replaced:
         - chest
         - legs
-        dps: 1707.4
-        standard_error: 0.91
-        stdev: 91.2
+        dps: 1748.2
+        standard_error: 0.92
+        stdev: 92.2
         pieces_left:
           Cataclysm Regalia: 0
           Cyclone Regalia: 2
@@ -3470,9 +3470,9 @@ specs:
         - head
         - shoulder
         - chest
-        dps: 1701.7
-        standard_error: 0.82
-        stdev: 82.2
+        dps: 1797.6
+        standard_error: 0.89
+        stdev: 89.3
         pieces_left:
           Cataclysm Regalia: 1
           Cyclone Regalia: 0
@@ -3480,9 +3480,9 @@ specs:
         - head
         - shoulder
         - legs
-        dps: 1706.3
-        standard_error: 0.83
-        stdev: 83.5
+        dps: 1802.7
+        standard_error: 0.9
+        stdev: 89.8
         pieces_left:
           Cataclysm Regalia: 1
           Cyclone Regalia: 0
@@ -3490,9 +3490,9 @@ specs:
         - head
         - chest
         - legs
-        dps: 1693.6
-        standard_error: 0.84
-        stdev: 83.7
+        dps: 1797.2
+        standard_error: 0.9
+        stdev: 89.9
         pieces_left:
           Cataclysm Regalia: 0
           Cyclone Regalia: 1
@@ -3500,9 +3500,9 @@ specs:
         - shoulder
         - chest
         - legs
-        dps: 1737.9
-        standard_error: 0.88
-        stdev: 88.1
+        dps: 1790.7
+        standard_error: 0.9
+        stdev: 89.5
         pieces_left:
           Cataclysm Regalia: 0
           Cyclone Regalia: 1
@@ -3511,9 +3511,9 @@ specs:
         - shoulder
         - chest
         - legs
-        dps: 1698.4
-        standard_error: 0.83
-        stdev: 82.8
+        dps: 1814.4
+        standard_error: 0.91
+        stdev: 90.7
         pieces_left:
           Cataclysm Regalia: 0
           Cyclone Regalia: 0
@@ -3549,115 +3549,115 @@ specs:
           Skyshatter Regalia: 0
       - replaced:
         - head
-        dps: 1666.6
-        standard_error: 0.84
-        stdev: 83.7
+        dps: 1727.9
+        standard_error: 0.9
+        stdev: 89.5
         pieces_left:
           Skyshatter Regalia: 1
       - replaced:
         - shoulder
-        dps: 1710.1
+        dps: 1723.5
         standard_error: 0.88
         stdev: 88.3
         pieces_left:
           Skyshatter Regalia: 1
       - replaced:
         - chest
-        dps: 1712.2
-        standard_error: 0.89
-        stdev: 88.6
+        dps: 1732.1
+        standard_error: 0.9
+        stdev: 89.7
         pieces_left:
           Skyshatter Regalia: 1
       - replaced:
         - hands
-        dps: 1721.4
+        dps: 1729.0
         standard_error: 0.89
-        stdev: 89.1
+        stdev: 89.5
         pieces_left:
           Skyshatter Regalia: 1
       - replaced:
         - legs
-        dps: 1713.1
-        standard_error: 0.94
-        stdev: 94.3
+        dps: 1733.3
+        standard_error: 0.95
+        stdev: 94.7
         pieces_left:
           Skyshatter Regalia: 0
       - replaced:
         - head
         - shoulder
-        dps: 1709.7
-        standard_error: 0.83
-        stdev: 82.6
+        dps: 1785.4
+        standard_error: 0.89
+        stdev: 88.9
         pieces_left:
           Skyshatter Regalia: 2
       - replaced:
         - head
         - chest
-        dps: 1697.4
-        standard_error: 0.83
-        stdev: 82.6
+        dps: 1779.9
+        standard_error: 0.89
+        stdev: 88.8
         pieces_left:
           Skyshatter Regalia: 2
       - replaced:
         - head
         - hands
-        dps: 1706.1
-        standard_error: 0.83
-        stdev: 82.8
+        dps: 1776.6
+        standard_error: 0.89
+        stdev: 88.8
         pieces_left:
           Skyshatter Regalia: 2
       - replaced:
         - head
         - legs
-        dps: 1662.1
-        standard_error: 0.87
-        stdev: 87.1
+        dps: 1744.4
+        standard_error: 0.92
+        stdev: 91.9
         pieces_left:
           Skyshatter Regalia: 1
       - replaced:
         - shoulder
         - chest
-        dps: 1741.4
-        standard_error: 0.87
-        stdev: 87.3
+        dps: 1774.0
+        standard_error: 0.88
+        stdev: 88.4
         pieces_left:
           Skyshatter Regalia: 2
       - replaced:
         - shoulder
         - hands
-        dps: 1750.2
-        standard_error: 0.88
-        stdev: 87.8
+        dps: 1770.7
+        standard_error: 0.89
+        stdev: 88.6
         pieces_left:
           Skyshatter Regalia: 2
       - replaced:
         - shoulder
         - legs
-        dps: 1705.9
+        dps: 1739.7
         standard_error: 0.9
-        stdev: 90.4
+        stdev: 90.1
         pieces_left:
           Skyshatter Regalia: 1
       - replaced:
         - chest
         - hands
-        dps: 1752.3
-        standard_error: 0.88
-        stdev: 88.5
+        dps: 1779.9
+        standard_error: 0.89
+        stdev: 89.2
         pieces_left:
           Skyshatter Regalia: 2
       - replaced:
         - chest
         - legs
-        dps: 1707.4
-        standard_error: 0.91
-        stdev: 91.2
+        dps: 1748.2
+        standard_error: 0.92
+        stdev: 92.2
         pieces_left:
           Skyshatter Regalia: 1
       - replaced:
         - hands
         - legs
-        dps: 1716.5
+        dps: 1744.7
         standard_error: 0.92
         stdev: 92.0
         pieces_left:
@@ -3666,100 +3666,100 @@ specs:
         - head
         - shoulder
         - chest
-        dps: 1701.7
-        standard_error: 0.82
-        stdev: 82.2
-        pieces_left:
-          Skyshatter Regalia: 3
-      - replaced:
-        - head
-        - shoulder
-        - hands
-        dps: 1710.2
-        standard_error: 0.83
-        stdev: 82.7
-        pieces_left:
-          Skyshatter Regalia: 3
-      - replaced:
-        - head
-        - shoulder
-        - legs
-        dps: 1706.3
-        standard_error: 0.83
-        stdev: 83.5
-        pieces_left:
-          Skyshatter Regalia: 2
-      - replaced:
-        - head
-        - chest
-        - hands
-        dps: 1698.2
-        standard_error: 0.83
-        stdev: 82.6
-        pieces_left:
-          Skyshatter Regalia: 3
-      - replaced:
-        - head
-        - chest
-        - legs
-        dps: 1693.6
-        standard_error: 0.84
-        stdev: 83.7
-        pieces_left:
-          Skyshatter Regalia: 2
-      - replaced:
-        - head
-        - hands
-        - legs
-        dps: 1702.2
-        standard_error: 0.84
-        stdev: 83.8
-        pieces_left:
-          Skyshatter Regalia: 2
-      - replaced:
-        - shoulder
-        - chest
-        - hands
-        dps: 1742.3
-        standard_error: 0.87
-        stdev: 87.2
-        pieces_left:
-          Skyshatter Regalia: 3
-      - replaced:
-        - shoulder
-        - chest
-        - legs
-        dps: 1737.9
-        standard_error: 0.88
-        stdev: 88.1
-        pieces_left:
-          Skyshatter Regalia: 2
-      - replaced:
-        - shoulder
-        - hands
-        - legs
-        dps: 1746.8
-        standard_error: 0.89
-        stdev: 88.6
-        pieces_left:
-          Skyshatter Regalia: 2
-      - replaced:
-        - chest
-        - hands
-        - legs
-        dps: 1748.9
+        dps: 1797.6
         standard_error: 0.89
         stdev: 89.3
         pieces_left:
+          Skyshatter Regalia: 3
+      - replaced:
+        - head
+        - shoulder
+        - hands
+        dps: 1794.4
+        standard_error: 0.89
+        stdev: 89.1
+        pieces_left:
+          Skyshatter Regalia: 3
+      - replaced:
+        - head
+        - shoulder
+        - legs
+        dps: 1802.7
+        standard_error: 0.9
+        stdev: 89.8
+        pieces_left:
+          Skyshatter Regalia: 2
+      - replaced:
+        - head
+        - chest
+        - hands
+        dps: 1788.8
+        standard_error: 0.89
+        stdev: 89.2
+        pieces_left:
+          Skyshatter Regalia: 3
+      - replaced:
+        - head
+        - chest
+        - legs
+        dps: 1797.2
+        standard_error: 0.9
+        stdev: 89.9
+        pieces_left:
+          Skyshatter Regalia: 2
+      - replaced:
+        - head
+        - hands
+        - legs
+        dps: 1793.7
+        standard_error: 0.9
+        stdev: 90.3
+        pieces_left:
+          Skyshatter Regalia: 2
+      - replaced:
+        - shoulder
+        - chest
+        - hands
+        dps: 1782.8
+        standard_error: 0.89
+        stdev: 88.8
+        pieces_left:
+          Skyshatter Regalia: 3
+      - replaced:
+        - shoulder
+        - chest
+        - legs
+        dps: 1790.7
+        standard_error: 0.9
+        stdev: 89.5
+        pieces_left:
+          Skyshatter Regalia: 2
+      - replaced:
+        - shoulder
+        - hands
+        - legs
+        dps: 1787.8
+        standard_error: 0.9
+        stdev: 89.7
+        pieces_left:
+          Skyshatter Regalia: 2
+      - replaced:
+        - chest
+        - hands
+        - legs
+        dps: 1796.7
+        standard_error: 0.91
+        stdev: 90.9
+        pieces_left:
           Skyshatter Regalia: 2
       - replaced:
         - head
         - shoulder
         - chest
         - hands
-        dps: 1767.8
-        standard_error: 0.85
-        stdev: 85.0
+        dps: 1876.0
+        standard_error: 0.92
+        stdev: 92.3
         pieces_left:
           Skyshatter Regalia: 4
       - replaced:
@@ -3767,9 +3767,9 @@ specs:
         - shoulder
         - chest
         - legs
-        dps: 1698.4
-        standard_error: 0.83
-        stdev: 82.8
+        dps: 1814.4
+        standard_error: 0.91
+        stdev: 90.7
         pieces_left:
           Skyshatter Regalia: 3
       - replaced:
@@ -3777,9 +3777,9 @@ specs:
         - shoulder
         - hands
         - legs
-        dps: 1707.2
-        standard_error: 0.83
-        stdev: 83.4
+        dps: 1811.8
+        standard_error: 0.91
+        stdev: 90.8
         pieces_left:
           Skyshatter Regalia: 3
       - replaced:
@@ -3787,9 +3787,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 1694.9
-        standard_error: 0.84
-        stdev: 83.6
+        dps: 1806.3
+        standard_error: 0.9
+        stdev: 90.4
         pieces_left:
           Skyshatter Regalia: 3
       - replaced:
@@ -3797,9 +3797,9 @@ specs:
         - chest
         - hands
         - legs
-        dps: 1738.8
-        standard_error: 0.88
-        stdev: 88.1
+        dps: 1799.5
+        standard_error: 0.9
+        stdev: 90.3
         pieces_left:
           Skyshatter Regalia: 3
       - replaced:
@@ -3808,15 +3808,15 @@ specs:
         - chest
         - hands
         - legs
-        dps: 1764.6
-        standard_error: 0.86
-        stdev: 85.7
+        dps: 1893.9
+        standard_error: 0.94
+        stdev: 93.5
         pieces_left:
           Skyshatter Regalia: 4
     token_singles:
       legs:
         id: 31020
         name: Skyshatter Legguards
-        dps: 1722.7
-        standard_error: 0.89
-        stdev: 88.9
+        dps: 1730.6
+        standard_error: 0.9
+        stdev: 89.6

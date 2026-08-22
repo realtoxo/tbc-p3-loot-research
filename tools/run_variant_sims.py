@@ -302,8 +302,8 @@ ROUNDS: dict[str, dict] = {
     # best-in-slot set both exist. Each anchor's worn pair is a row on
     # purpose: its variant must reproduce the anchor figure to the digit,
     # the same verification the other rounds carry. No candidate in this
-    # list carries a socket, so no figure here is understated against a
-    # gemmed worn weapon.
+    # list carries a socket, and a socketed one would carry the spec's
+    # standard gems, per the assumed-gemmed ruling.
     "fury_warrior": {
         "anchors": ("entry", "tier-hands-and-head", "bis",
                     "bis-no-glaives"),
@@ -450,8 +450,8 @@ ROUNDS: dict[str, dict] = {
     # lead has not routed it. Each anchor's worn pair is a row on purpose:
     # its variant must reproduce the anchor figure to the digit, the same
     # verification the other rounds carry. Fool's Bane is the one socketed
-    # candidate and no anchor wears it, so its rows arrive ungemmed and
-    # its figures are understated by the gem a raider would add.
+    # candidate and no anchor wears it, so its rows carry the spec's
+    # standard gems, per the assumed-gemmed ruling.
     "combat_rogue": {
         "anchors": ("entry", "tier-hands-and-head", "bis",
                     "bis-no-glaives"),
@@ -689,8 +689,8 @@ ROUNDS: dict[str, dict] = {
     # anchor, worn with a dagger and a sword, runs the Season 3 fist pair
     # under the Sharpening Stone. SOCKETS: Twinblade of the Phoenix is the
     # one socketed candidate, three sockets, and no BM anchor wears it, so
-    # its row arrives ungemmed and its figure is understated by the gems a
-    # raider would add.
+    # its row carries the spec's standard gems, per the assumed-gemmed
+    # ruling.
     "beast_mastery_hunter": {
         "why": (
             (
@@ -844,8 +844,8 @@ ROUNDS: dict[str, dict] = {
     # bladed off-hand candidate there inherits it; the bis anchor wears two
     # swords, so the Season 3 fist pair runs under the Sharpening Stone.
     # SOCKETS: Twinblade of the Phoenix is the one socketed candidate, three
-    # sockets, and no SV anchor wears it, so its row arrives ungemmed and
-    # its figure is understated by the gems a raider would add.
+    # sockets, and no SV anchor wears it, so its row carries the spec's
+    # standard gems, per the assumed-gemmed ruling.
     "survival_hunter": {
         "why": (
             (
@@ -1017,8 +1017,8 @@ ROUNDS: dict[str, dict] = {
     # per data/facts/enchants-by-spec.yaml and the off-hand slot carries
     # none, so a staff row inherits the main-hand slot's Soulfrost, which
     # is what a raider would do. SOCKETS: no candidate carries a socket,
-    # per items.csv, so no figure here is understated against a gemmed
-    # worn weapon. The worn combinations are rows on purpose: their
+    # per items.csv, and a socketed one would carry the spec's standard
+    # gems. The worn combinations are rows on purpose: their
     # variants must reproduce the anchor figures to the digit, the same
     # verification the other rounds carry, including the best-in-slot
     # Zhar'doom row with its empty off hand.
@@ -2075,37 +2075,55 @@ def with_trinkets(gear: dict, a: int, b: int) -> dict:
     return out
 
 
-def with_ranged(gear: dict, item_id: int) -> dict:
+def standard_gems(spec: str, item_id: int, rows_by_id: dict,
+                  gem_ids: dict, gem_names: dict) -> list[int]:
+    """The spec's standard gem in each of the item's sockets, per the guild
+    lead's ruling that an equipped piece is assumed gemmed and enchanted.
+    Colors from items.csv, names from enchants-by-spec.yaml, ids from the
+    database. A color with no named standard leaves its socket empty."""
+    row = rows_by_id.get(item_id) or {}
+    sockets = [s for s in (row.get("sockets") or "").split("|") if s]
+    named = gem_names.get(spec) or {}
+    out = []
+    for color in sockets:
+        gem = gem_ids.get(named.get(color.lower()))
+        if gem:
+            out.append(gem)
+    return out
+
+
+def with_ranged(gear: dict, item_id: int,
+                gems: list[int] | None = None) -> dict:
     """The gear wearing one ranged candidate, the slot keeping its scope.
 
     RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the hunters get a special pass
     for the ranged slot, "they hit with their bows", because the bow is the
     one hunter weapon that is not a stat stick. The same variant rules as
     with_pair: the enchant, which for this slot is the scope, stays with the
-    slot, and a candidate arrives ungemmed unless it IS the worn item, whose
-    row exists to reproduce the anchor figure.
+    slot, a socketed candidate carries the spec's standard gems, and the
+    worn item keeps its own, so its row reproduces the anchor figure.
     """
     out = {"items": [dict(entry) for entry in gear["items"]]}
     index = SLOT_ORDER.index("ranged")
     entry = dict(out["items"][index])
     if entry.get("id") != item_id:
         entry.pop("gems", None)
+        if gems:
+            entry["gems"] = gems
     entry["id"] = item_id
     out["items"][index] = entry
     return out
 
 
-def with_pair(gear: dict, mh: int, oh: int | None) -> dict:
+def with_pair(gear: dict, mh: int, oh: int | None,
+              mh_gems: list[int] | None = None,
+              oh_gems: list[int] | None = None) -> dict:
     """The gear wearing one candidate combination, slots keeping enchants.
 
-    THE GEMS GO WITH THE OLD ITEM and the enchant stays with the slot. A
-    candidate arrives ungemmed, and a weapon slot wears the same enchant at
-    every anchor, so keeping the slot's enchant is what a raider would do
-    rather than a modelling shortcut. THE ONE EXCEPTION IS THE WORN ITEM
-    ITSELF: where the candidate id equals the id already in the slot, the
-    slot keeps its gems, because that row exists to reproduce the anchor
-    figure to the digit, and the Arms entry and tier anchors wear a socketed
-    Twinblade of the Phoenix whose three gems are part of the anchor.
+    AN EQUIPPED PIECE IS ASSUMED GEMMED AND ENCHANTED, ruled by the guild
+    lead: the slot keeps its enchant, a socketed candidate carries the gems
+    the caller resolved for it, and the worn item keeps its own gems
+    exactly, so the plus-zero self-match stands.
 
     AN `oh` OF None EMPTIES THE OFF HAND, enchant and all, which is what a
     two-hander row needs: the item it displaces cannot stay, and neither can
@@ -2116,6 +2134,8 @@ def with_pair(gear: dict, mh: int, oh: int | None) -> dict:
     entry = dict(out["items"][mh_index])
     if entry.get("id") != mh:
         entry.pop("gems", None)
+        if mh_gems:
+            entry["gems"] = mh_gems
     entry["id"] = mh
     out["items"][mh_index] = entry
     oh_index = SLOT_ORDER.index("off_hand")
@@ -2125,6 +2145,8 @@ def with_pair(gear: dict, mh: int, oh: int | None) -> dict:
         entry = dict(out["items"][oh_index]) or {}
         if entry.get("id") != oh:
             entry.pop("gems", None)
+            if oh_gems:
+                entry["gems"] = oh_gems
         entry["id"] = oh
         out["items"][oh_index] = entry
     return out
@@ -2198,6 +2220,13 @@ def main() -> int:
 
     names = item_names()
     rows_by_id = {int(r["item_id"]): r for r in csv.DictReader(ITEMS.open())}
+    gem_names = {s: (b.get("gems") or {})
+                 for s, b in (yaml.safe_load(
+                     Path("data/facts/enchants-by-spec.yaml").read_text()
+                 ).get("specs") or {}).items()}
+    from run_sims import WOWSIMS
+    gem_ids = {g["name"]: g["id"] for g in json.loads(
+        (WOWSIMS / "assets/database/db.json").read_text()).get("gems") or []}
     strings = yaml.safe_load(
         TALENTS.read_text())["wowsims_talent_strings"]["strings"]
     buffs = yaml.safe_load(BUFFS.read_text())
@@ -2270,7 +2299,12 @@ def main() -> int:
                 label = names.get(pair["mh"], str(pair["mh"])) + (
                     f" + {names.get(oh, oh)}" if oh else ", two-hander")
                 dps, stdev, error = run(args.cli, build_request(
-                    spec, with_pair(gear, pair["mh"], oh), talents,
+                    spec, with_pair(
+                        gear, pair["mh"], oh,
+                        standard_gems(spec, pair["mh"], rows_by_id,
+                                      gem_ids, gem_names),
+                        standard_gems(spec, oh, rows_by_id, gem_ids,
+                                      gem_names) if oh else None), talents,
                     args.iterations, args.seed, buffs, party_of,
                     anchor.replace("-", "_"), args.seconds, args.armor))
                 if error:
@@ -2317,7 +2351,10 @@ def main() -> int:
                         continue
                     label = names.get(cand["id"], str(cand["id"]))
                     dps, stdev, error = run(args.cli, build_request(
-                        spec, with_ranged(gear, cand["id"]), talents,
+                        spec, with_ranged(
+                            gear, cand["id"],
+                            standard_gems(spec, cand["id"], rows_by_id,
+                                          gem_ids, gem_names)), talents,
                         args.iterations, args.seed, buffs, party_of,
                         anchor.replace("-", "_"), args.seconds, args.armor))
                     if error:

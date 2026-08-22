@@ -402,6 +402,20 @@ Four specs are absent, and each for a stated reason rather than an oversight.
     path.write_text(body)
 
 
+_VARIANTS_CACHE: dict | None = None
+
+
+def _variants() -> dict:
+    """The variants file, parsed once per process. It holds thousands of
+    rows now, and parsing it once per section of every page made a page
+    build take minutes."""
+    global _VARIANTS_CACHE
+    if _VARIANTS_CACHE is None:
+        _VARIANTS_CACHE = (yaml.safe_load(WEAPON_PAIRS.read_text())
+                           if WEAPON_PAIRS.is_file() else {})
+    return _VARIANTS_CACHE
+
+
 def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict,
                         gear: dict, name_of, speed_of, state: dict) -> str:
     """A spec's weapon pair variants, as a section of one anchor page.
@@ -423,9 +437,9 @@ def weapon_pair_section(spec: str, anchor: str, row: dict, meta: dict,
     zero row went, which the guild lead reported from the published site on
     20 August 2026.
     """
-    if not WEAPON_PAIRS.is_file():
+    doc = _variants()
+    if not doc:
         return ""
-    doc = yaml.safe_load(WEAPON_PAIRS.read_text())
     block = (doc.get("specs") or {}).get(spec)
     if not block:
         return ""
@@ -549,9 +563,9 @@ def ranged_section(spec: str, anchor: str, row: dict,
     a main-hand-and-off-hand table. Appears for exactly the specs and
     anchors data/facts/variant-sims.yaml holds ranged figures for.
     """
-    if not WEAPON_PAIRS.is_file():
+    doc = _variants()
+    if not doc:
         return ""
-    doc = yaml.safe_load(WEAPON_PAIRS.read_text())
     block = (doc.get("specs") or {}).get(spec)
     if not block:
         return ""
@@ -628,9 +642,9 @@ def trinket_section(spec: str, anchor: str, row: dict,
     row. The worn pair is always visible at plus zero, for the same reason
     as the weapon tables: the deltas are against this set.
     """
-    if not WEAPON_PAIRS.is_file():
+    doc = _variants()
+    if not doc:
         return ""
-    doc = yaml.safe_load(WEAPON_PAIRS.read_text())
     block = (doc.get("specs") or {}).get(spec)
     if not block:
         return ""

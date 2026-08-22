@@ -100,40 +100,60 @@ def held_sets(gear: dict, db_items: dict) -> dict[str, list[str]]:
             for name, n in counts.items() if n >= 2}
 
 
-def with_item(gear: dict, slot: str, item_id: int) -> dict:
-    """The gear with one slot's item replaced by id, variant-style: the slot
-    keeps its enchant and the replacement arrives ungemmed unless it IS the
-    worn item."""
+def with_item(gear: dict, slot: str, item_id: int,
+              gems: list[int] | None = None) -> dict:
+    """The gear with one slot's item replaced by id. The slot keeps its
+    enchant, and the replacement carries the gems the caller resolved for
+    it, so a token single is dressed the way a raider would wear it rather
+    than arriving with empty sockets."""
     out = {"items": [dict(e) for e in gear["items"]]}
     index = SLOT_ORDER.index(slot)
     entry = dict(out["items"][index]) or {}
     if entry.get("id") != item_id:
         entry.pop("gems", None)
+        if gems:
+            entry["gems"] = gems
     entry["id"] = item_id
     out["items"][index] = entry
     return out
 
 
-def with_slots(gear: dict, other: dict, slots: list[str]) -> dict:
-    """The gear wearing another profile's item ids in the named slots.
+def standard_gems(spec: str, item_id: int, items_csv: dict,
+                  gem_ids: dict, gem_names: dict) -> list[int]:
+    """The spec's standard gem in each of the item's sockets.
 
-    THE SLOT KEEPS ITS ENCHANT AND THE GEMS GO WITH THE OLD ITEM, the same
-    rule as tools/run_variant_sims.py::with_pair and for the same reason: a
-    raider enchants whatever the slot holds, so keeping the enchant makes
-    every row comparable with the anchor, while the gems a replacement takes
-    are a separate question and it arrives ungemmed. Where the replacement id
-    equals the worn id the slot is untouched, gems and all, though the
-    callers never ask for such a slot.
+    Colors from items.csv, names from enchants-by-spec.yaml, ids from the
+    database, the same three sources the exporter reads. A socket whose
+    color has no named standard stays empty and the run says nothing false.
+    """
+    row = items_csv.get(item_id) or {}
+    sockets = [s for s in (row.get("sockets") or "").split("|") if s]
+    named = gem_names.get(spec) or {}
+    out = []
+    for color in sockets:
+        name = named.get(color.lower())
+        gem = gem_ids.get(name)
+        if gem:
+            out.append(gem)
+    return out
+
+
+def with_slots(gear: dict, other: dict, slots: list[str]) -> dict:
+    """The gear wearing another profile's slots, gems and enchant included.
+
+    THE REPLACEMENT ARRIVES DRESSED, the run_sims.py::dress_from rule rather
+    than the bare-swap one, because this page answers what a raider measures
+    WEARING the set, and the exported profiles carry each piece's real gems.
+    The first tier round ran replacements ungemmed for slot-to-slot
+    comparability, and the guild lead read the four-piece rows as absolute
+    downgrades, which the empty sockets made them; the absolute reading is
+    the one this page invites, so the pieces come dressed and the figures
+    mean what they look like.
     """
     out = {"items": [dict(entry) for entry in gear["items"]]}
     for slot in slots:
         index = SLOT_ORDER.index(slot)
-        entry = dict(out["items"][index])
-        new_id = (other["items"][index] or {}).get("id")
-        if entry.get("id") != new_id:
-            entry.pop("gems", None)
-            entry["id"] = new_id
-            out["items"][index] = entry
+        out["items"][index] = dict(other["items"][index] or {})
     return out
 
 
@@ -173,6 +193,15 @@ def main() -> int:
 
     names = item_names()
     tokens_doc = yaml.safe_load(Path("data/facts/tokens.yaml").read_text())
+    gem_names = {s: (b.get("gems") or {})
+                 for s, b in (yaml.safe_load(
+                     Path("data/facts/enchants-by-spec.yaml").read_text()
+                 ).get("specs") or {}).items()}
+    db_gems = json.loads((WOWSIMS / "assets/database/db.json").read_text()
+                         ).get("gems") or []
+    gem_ids = {g["name"]: g["id"] for g in db_gems}
+    items_csv_rows = {int(r["item_id"]): r for r in __import__("csv").DictReader(
+        Path("data/facts/items.csv").open())}
     db_items = {i["id"]: i for i in json.loads(
         (WOWSIMS / "assets/database/db.json").read_text()).get("items") or []}
     strings = yaml.safe_load(
@@ -362,7 +391,9 @@ def main() -> int:
                 == token_id)
             if covered:
                 continue
-            result = measure(with_item(entry, s, token_id),
+            dressed = standard_gems(spec, token_id, items_csv_rows,
+                                    gem_ids, gem_names)
+            result = measure(with_item(entry, s, token_id, dressed),
                              f"{s}: {token_piece.get('name', token_id)}",
                              "token-single")
             if result is None:
