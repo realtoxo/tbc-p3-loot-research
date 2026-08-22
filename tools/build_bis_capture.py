@@ -47,6 +47,7 @@ ROUTING = Path("data/judgments/weapon-routing.yaml")
 # one settles who receives a contested weapon, the other settles that an item is
 # not obtainable at all. Both are decisions about how this guild raids.
 TRINKETS = Path("data/judgments/trinket-routing.yaml")
+RINGS = Path("data/judgments/ring-routing.yaml")
 ENTRY_CAPTURES = Path("data/facts/sim-profiles/hit-capture")
 ITEMS = Path("data/facts/items.csv")
 HIT = Path("data/facts/hit.yaml")
@@ -221,6 +222,7 @@ def main() -> int:
 
     routing = yaml.safe_load(ROUTING.read_text())
     trinkets = yaml.safe_load(TRINKETS.read_text())
+    rings = yaml.safe_load(RINGS.read_text())
     known = routed_ids(routing)
     transcribed = {ZHARDOOM, TEMPEST_OF_CHAOS, CATACLYSMS_EDGE, *WARGLAIVES,
                *HUNTER_TWO_HANDERS.values()}
@@ -340,6 +342,15 @@ def main() -> int:
                 continue
             put(ruling["slot"], item_id,
                 f"Routed by the guild lead, {trinkets['meta']['ruled']}: "
+                + ruling["ruling"])
+        for ruling in rings.get("rulings") or []:
+            if spec not in (ruling.get("specs") or []):
+                continue
+            item_id = int((ruling.get("ids") or [None])[0])
+            if (slots.get(ruling["slot"]) or {}).get("id") == item_id:
+                continue
+            put(ruling["slot"], item_id,
+                f"Routed by the guild lead, {rings['meta']['ruled']}: "
                 + ruling["ruling"])
 
         for slot in CARRY_FORWARD_FROM_ENTRY.get(spec, []):

@@ -91,6 +91,15 @@ rulings:
     which spec receives it remains council business, and the Beast Mastery pick avoids the
     collision by wearing the arena two-hander.
 what_still_needs_a_ruling: []
+twinblade_of_the_phoenix: 'CLOSED BY MEASUREMENT, 22 August 2026. The gemmed Twinblade,
+  29993, led both hunters'' worn two-handers in the weapon variant tables by 5.3 and
+  5.7 damage per second, so it was tested as a rebuilt profile before coming to the
+  guild lead. Losing the worn weapon''s hit reshaped the gems, and the rebuilt profiles
+  measured 15.1 BELOW the Beast Mastery anchor and 15.3 below the Survival anchor at
+  boss armor 7684. The re-anchors above stand, and this is the second time a slot-level
+  gain died at the profile level, after the Beast Mastery trinket case in
+  data/judgments/sim-context.yaml.'
+
 warlocks_before_zhardoom: 'NOT A QUESTION FOR THE SIM, closed by the guild lead on 15
   August 2026: "dont worry about what warlocks wear before zhardoom, just sim our bis
   warlocks with zhardoom". A best-in-slot profile is the finished set, so what a spec
