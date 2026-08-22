@@ -439,6 +439,25 @@ def main() -> int:
                 table.append(cells)
             parts.append(rows_table(header, table) + "\n")
 
+        singles = block.get("token_singles") or {}
+        if singles:
+            entry_base = entry_dps.get(spec)
+            lines = []
+            for s in ("head", "shoulder", "chest", "hands", "legs"):
+                if s not in singles:
+                    continue
+                one = singles[s]
+                gain = (f"{one['dps'] - entry_base:+.1f}"
+                        if entry_base is not None else "measured")
+                lines.append(f"{one['name']} ({s}) at {gain}")
+            if lines:
+                parts.append(
+                    "The token pieces this list does not take were still "
+                    "measured alone on the entry set, and they appear in "
+                    "the token tables above under the same figures: "
+                    + "; ".join(lines) + ". None is in this spec's "
+                    "best-in-slot set.\n")
+
         sections.append("\n".join(parts))
 
     unmeasured = []

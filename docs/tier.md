@@ -305,6 +305,8 @@ Read greedily off the table, the pickup order is **legs, then head, then shoulde
 | 3            | head, shoulder, hands       | 3              | Malefic 2pc  | 1946.4 ± 0.94 | +13.6         |
 | 4            | head, shoulder, hands, legs | 3              | Malefic 2pc  | 1964.4 ± 0.95 | +31.6         |
 
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Robe of the Malefic (chest) at -12.3; Leggings of the Malefic (legs) at +13.0. None is in this spec's best-in-slot set.
+
 ## Arcane Mage
 
 Walking in, this spec holds **Tirisfal Regalia** at 4 pieces, in the head, shoulder, chest, legs slots. The bonuses that gear keeps live:
@@ -338,6 +340,8 @@ Read greedily off the table, the pickup order is **hands, then legs**: at each c
 | 1            | hands                 | none         | 2295.8 ± 0.99 | -5.4          |
 | 1            | legs                  | none         | 2276.4 ± 0.96 | -24.8         |
 | 2            | hands, legs           | none         | 2320.7 ± 1.01 | +19.5         |
+
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Cowl of the Tempest (head) at -31.7; Mantle of the Tempest (shoulder) at -38.9; Robes of the Tempest (chest) at -29.0; Gloves of the Tempest (hands) at +10.1. None is in this spec's best-in-slot set.
 
 ## Arms Warrior
 
@@ -388,6 +392,8 @@ Read greedily off the table, the pickup order is **hands, then head, then chest,
 | 3            | shoulder, chest, hands       | 3                | Onslaught 2pc         | 1958.3 ± 1.10 | +48.4         |
 | 3            | head, shoulder, chest        | 3                | Onslaught 2pc         | 1956.0 ± 1.08 | +46.1         |
 | 4            | head, shoulder, chest, hands | 4                | Onslaught 2pc and 4pc | 1991.9 ± 1.10 | +82.0         |
+
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Onslaught Greaves (legs) at +7.5. None is in this spec's best-in-slot set.
 
 ## Balance Druid
 
@@ -454,6 +460,8 @@ Read greedily off the table, the pickup order is **chest, then head, then should
 | 3            | head, shoulder, hands        | 3                   | Thunderheart 2pc         | 1638.2 ± 0.81 | -22.4         |
 | 3            | shoulder, chest, hands       | 3                   | Thunderheart 2pc         | 1638.2 ± 0.81 | -22.4         |
 | 4            | head, shoulder, chest, hands | 4                   | Thunderheart 2pc and 4pc | 1705.1 ± 0.83 | +44.5         |
+
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Thunderheart Pants (legs) at +35.8. None is in this spec's best-in-slot set.
 
 ## Beast Mastery Hunter
 
@@ -537,6 +545,8 @@ Read greedily off the table, the pickup order is **head, then hands, then should
 | 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 3069.1 ± 0.86 | +57.3         |
 | 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 3171.7 ± 0.89 | +159.9        |
 
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Gronnstalker's Helmet (head) at -14.8. None is in this spec's best-in-slot set.
+
 ## Combat Rogue
 
 Walking in, this spec holds **Deathmantle** at 4 pieces, in the head, shoulder, hands, legs slots. The bonuses that gear keeps live:
@@ -619,6 +629,8 @@ Read greedily off the table, the pickup order is **chest, then shoulder, then he
 | 4            | head, chest, hands, legs           | 3               | Slayer's 2pc         | 2215.5 ± 0.93 | +129.6        |
 | 5            | head, shoulder, chest, hands, legs | 4               | Slayer's 2pc and 4pc | 2268.1 ± 0.95 | +182.2        |
 
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Slayer's Helm (head) at -8.3. None is in this spec's best-in-slot set.
+
 ## Destruction Warlock
 
 Walking in, this spec holds **Corruptor Raiment** at 3 pieces, in the head, shoulder, legs slots. The bonuses that gear keeps live:
@@ -670,6 +682,8 @@ Read greedily off the table, the pickup order is **hands, then legs, then head, 
 | 3            | head, shoulder, hands       | 3              | Malefic 2pc  | 2120.2 ± 1.18 | +68.8         |
 | 3            | head, shoulder, legs        | 2              | Malefic 2pc  | 2098.6 ± 1.16 | +47.2         |
 | 4            | head, shoulder, hands, legs | 3              | Malefic 2pc  | 2142.8 ± 1.19 | +91.4         |
+
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Robe of the Malefic (chest) at -16.7; Leggings of the Malefic (legs) at +15.8. None is in this spec's best-in-slot set.
 
 ## Elemental Shaman
 
@@ -753,6 +767,8 @@ Read greedily off the table, the pickup order is **legs, then chest, then head, 
 | 4            | shoulder, chest, hands, legs       | 3                 | Skyshatter 2pc         | 1799.5 ± 0.90 | +80.7         |
 | 5            | head, shoulder, chest, hands, legs | 4                 | Skyshatter 2pc and 4pc | 1893.9 ± 0.94 | +175.1        |
 
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Skyshatter Legguards (legs) at +11.8. None is in this spec's best-in-slot set.
+
 ## Enhancement Shaman
 
 Walking in, this spec holds **Cataclysm Harness** at 4 pieces, in the head, chest, hands, legs slots. The bonuses that gear keeps live:
@@ -793,6 +809,8 @@ The highest subset in the round is head, chest, hands, legs, at 2045.8 ± 0.94, 
 ### The Tier 6 set
 
 The tier anchor wears the entry set unchanged in all five token slots: this spec's Phase 3 list keeps no tier piece there, so the tier question for it is entirely the old-bonus table above and the [best-in-slot set](sims/enhancement-shaman-bis.md).
+
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Skyshatter Cover (head) at -24.3; Skyshatter Pauldrons (shoulder) at -6.6; Skyshatter Tunic (chest) at -30.7; Skyshatter Grips (hands) at -27.3; Skyshatter Pants (legs) at -21.7. None is in this spec's best-in-slot set.
 
 ## Fury Warrior
 
@@ -846,6 +864,8 @@ Read greedily off the table, the pickup order is **shoulder, then chest**: at ea
 | 1            | chest                 | 1                | none          | 2191.5 ± 1.08 | -8.0          |
 | 2            | shoulder, chest       | 2                | Onslaught 2pc | 2215.2 ± 1.08 | +15.7         |
 
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Onslaught Battle-Helm (head) at -7.7; Onslaught Gauntlets (hands) at -5.6; Onslaught Greaves (legs) at +12.1. None is in this spec's best-in-slot set.
+
 ## Retribution Paladin
 
 Walking in, this spec holds **Crystalforge Battlegear** at 2 pieces, in the head, chest slots. The bonuses that gear keeps live:
@@ -870,6 +890,8 @@ The highest subset in the round is head, chest, at 2075.8 ± 1.32, +34.5 against
 ### The Tier 6 set
 
 The tier anchor wears the entry set unchanged in all five token slots: this spec's Phase 3 list keeps no tier piece there, so the tier question for it is entirely the old-bonus table above and the [best-in-slot set](sims/retribution-paladin-bis.md).
+
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Lightbringer War-Helm (head) at +1.9; Lightbringer Shoulderbraces (shoulder) at -14.3; Lightbringer Breastplate (chest) at +1.9; Lightbringer Gauntlets (hands) at -18.0; Lightbringer Greaves (legs) at +7.5. None is in this spec's best-in-slot set.
 
 ## Shadow Priest
 
@@ -934,6 +956,8 @@ Read greedily off the table, the pickup order is **head, then chest, then hands,
 | 3            | head, shoulder, hands        | 3                 | Absolution 2pc         | 1465.9 ± 0.27 | +13.8         |
 | 3            | shoulder, chest, hands       | 3                 | Absolution 2pc         | 1463.0 ± 0.27 | +10.9         |
 | 4            | head, shoulder, chest, hands | 4                 | Absolution 2pc and 4pc | 1497.8 ± 0.29 | +45.7         |
+
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Leggings of Absolution (legs) at +0.2. None is in this spec's best-in-slot set.
 
 ## Survival Hunter
 
@@ -1016,6 +1040,8 @@ Read greedily off the table, the pickup order is **hands, then shoulder, then ch
 | 4            | head, chest, hands, legs           | 3                     | Gronnstalker's 2pc         | 2585.9 ± 0.81 | +56.8         |
 | 4            | head, shoulder, chest, legs        | 3                     | Gronnstalker's 2pc         | 2572.5 ± 0.83 | +43.4         |
 | 5            | head, shoulder, chest, hands, legs | 4                     | Gronnstalker's 2pc and 4pc | 2668.7 ± 0.85 | +139.6        |
+
+The token pieces this list does not take were still measured alone on the entry set, and they appear in the token tables above under the same figures: Gronnstalker's Leggings (legs) at -7.6. None is in this spec's best-in-slot set.
 
 ## The specs this page cannot measure
 

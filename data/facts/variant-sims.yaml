@@ -2188,3 +2188,1115 @@ specs:
         dps: 2103.4
         standard_error: 0.93
         stdev: 92.6
+  retribution_paladin:
+    why: 'A Retribution Paladin always carries a two-hander, so every row below
+      is a single weapon and the off hand runs empty. Each row is THIS PROFILE with
+      only the main hand id replaced: the slot keeps its Mongoose. The table is
+      an enumeration of the EP Workbook''s Two Hand ladder for this spec together
+      with every worn and routed weapon, kept to the weapon classes a paladin wields.
+      Cataclysm''s Edge appears as a measurement only: it goes to the Arms Warrior,
+      and Torch of the Damned stays with this spec.'
+    anchors:
+      entry:
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2041.3
+        standard_error: 1.26
+        stdev: 126.4
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2041.1
+        standard_error: 1.27
+        stdev: 127.0
+      - main_hand:
+          id: 30090
+          name: World Breaker
+          speed: 3.7
+          source: raid_drop
+        dps: 2019.9
+        standard_error: 1.28
+        stdev: 128.4
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2005.0
+        standard_error: 1.25
+        stdev: 124.8
+      - main_hand:
+          id: 28442
+          name: Stormherald
+          speed: 3.8
+          source: crafted
+        dps: 2003.4
+        standard_error: 1.3
+        stdev: 130.0
+      - main_hand:
+          id: 28429
+          name: Lionheart Champion
+          speed: 3.6
+          source: crafted
+        dps: 1999.2
+        standard_error: 1.24
+        stdev: 123.8
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 1982.6
+        standard_error: 1.26
+        stdev: 126.1
+      - main_hand:
+          id: 28800
+          name: Hammer of the Naaru
+          speed: 3.6
+          source: raid_drop
+        dps: 1963.3
+        standard_error: 1.22
+        stdev: 122.2
+      - main_hand:
+          id: 31966
+          name: Merciless Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 1962.3
+        standard_error: 1.25
+        stdev: 124.6
+      - main_hand:
+          id: 28441
+          name: Deep Thunder
+          speed: 3.8
+          source: crafted
+        dps: 1956.1
+        standard_error: 1.27
+        stdev: 126.9
+      - main_hand:
+          id: 24550
+          name: Gladiator's Greatsword
+          speed: 3.6
+          source: arena
+        dps: 1952.4
+        standard_error: 1.22
+        stdev: 121.6
+      - main_hand:
+          id: 28773
+          name: Gorehowl
+          speed: 3.6
+          source: raid_drop
+        dps: 1941.4
+        standard_error: 1.23
+        stdev: 123.3
+      - main_hand:
+          id: 28435
+          name: Mooncleaver
+          speed: 3.7
+          source: crafted
+        dps: 1939.3
+        standard_error: 1.23
+        stdev: 123.4
+      - main_hand:
+          id: 28428
+          name: Lionheart Blade
+          speed: 3.6
+          source: crafted
+        dps: 1926.6
+        standard_error: 1.2
+        stdev: 119.9
+      - main_hand:
+          id: 28298
+          name: Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 1912.2
+        standard_error: 1.22
+        stdev: 121.5
+      - main_hand:
+          id: 32025
+          name: Merciless Gladiator's Painsaw
+          speed: 2.2
+          source: arena
+        dps: 1537.2
+        standard_error: 2.57
+        stdev: 257.3
+      - main_hand:
+          id: 28300
+          name: Gladiator's Painsaw
+          speed: 2.2
+          source: arena
+        dps: 1501.4
+        standard_error: 2.52
+        stdev: 251.9
+      tier-hands-and-head:
+      - main_hand:
+          id: 32332
+          name: Torch of the Damned
+          speed: 3.8
+          source: raid_drop
+        dps: 2085.2
+        standard_error: 1.3
+        stdev: 130.5
+      - main_hand:
+          id: 30902
+          name: Cataclysm's Edge
+          speed: 3.5
+          source: raid_drop
+        dps: 2063.7
+        standard_error: 1.27
+        stdev: 126.6
+      - main_hand:
+          id: 33663
+          name: Vengeful Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2052.7
+        standard_error: 1.28
+        stdev: 127.6
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2040.4
+        standard_error: 1.26
+        stdev: 126.3
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2040.2
+        standard_error: 1.27
+        stdev: 127.0
+      - main_hand:
+          id: 30090
+          name: World Breaker
+          speed: 3.7
+          source: raid_drop
+        dps: 2018.9
+        standard_error: 1.28
+        stdev: 128.3
+      - main_hand:
+          id: 33670
+          name: Vengeful Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 2008.5
+        standard_error: 1.27
+        stdev: 127.4
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2004.0
+        standard_error: 1.25
+        stdev: 124.7
+      - main_hand:
+          id: 32348
+          name: Soul Cleaver
+          speed: 3.7
+          source: raid_drop
+        dps: 2002.6
+        standard_error: 1.27
+        stdev: 127.3
+      - main_hand:
+          id: 28442
+          name: Stormherald
+          speed: 3.8
+          source: crafted
+        dps: 2002.4
+        standard_error: 1.3
+        stdev: 129.9
+      - main_hand:
+          id: 28429
+          name: Lionheart Champion
+          speed: 3.6
+          source: crafted
+        dps: 1998.2
+        standard_error: 1.24
+        stdev: 123.8
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 1981.6
+        standard_error: 1.26
+        stdev: 126.0
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 1967.6
+        standard_error: 1.25
+        stdev: 124.6
+      - main_hand:
+          id: 28800
+          name: Hammer of the Naaru
+          speed: 3.6
+          source: raid_drop
+        dps: 1962.4
+        standard_error: 1.22
+        stdev: 122.1
+      - main_hand:
+          id: 31966
+          name: Merciless Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 1961.4
+        standard_error: 1.25
+        stdev: 124.6
+      - main_hand:
+          id: 28441
+          name: Deep Thunder
+          speed: 3.8
+          source: crafted
+        dps: 1955.1
+        standard_error: 1.27
+        stdev: 126.9
+      - main_hand:
+          id: 24550
+          name: Gladiator's Greatsword
+          speed: 3.6
+          source: arena
+        dps: 1951.5
+        standard_error: 1.22
+        stdev: 121.6
+      - main_hand:
+          id: 28773
+          name: Gorehowl
+          speed: 3.6
+          source: raid_drop
+        dps: 1940.4
+        standard_error: 1.23
+        stdev: 123.2
+      - main_hand:
+          id: 28435
+          name: Mooncleaver
+          speed: 3.7
+          source: crafted
+        dps: 1938.4
+        standard_error: 1.23
+        stdev: 123.3
+      - main_hand:
+          id: 28428
+          name: Lionheart Blade
+          speed: 3.6
+          source: crafted
+        dps: 1925.7
+        standard_error: 1.2
+        stdev: 119.9
+      - main_hand:
+          id: 28298
+          name: Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 1911.2
+        standard_error: 1.21
+        stdev: 121.5
+      - main_hand:
+          id: 33727
+          name: Vengeful Gladiator's Painsaw
+          speed: 2.2
+          source: arena
+        dps: 1566.8
+        standard_error: 2.62
+        stdev: 261.8
+      - main_hand:
+          id: 32025
+          name: Merciless Gladiator's Painsaw
+          speed: 2.2
+          source: arena
+        dps: 1536.4
+        standard_error: 2.57
+        stdev: 257.2
+      - main_hand:
+          id: 28300
+          name: Gladiator's Painsaw
+          speed: 2.2
+          source: arena
+        dps: 1500.6
+        standard_error: 2.52
+        stdev: 251.7
+      bis:
+      - main_hand:
+          id: 32332
+          name: Torch of the Damned
+          speed: 3.8
+          source: raid_drop
+        dps: 2223.2
+        standard_error: 1.38
+        stdev: 138.3
+      - main_hand:
+          id: 30902
+          name: Cataclysm's Edge
+          speed: 3.5
+          source: raid_drop
+        dps: 2188.4
+        standard_error: 1.35
+        stdev: 135.0
+      - main_hand:
+          id: 33663
+          name: Vengeful Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2169.0
+        standard_error: 1.34
+        stdev: 134.2
+      - main_hand:
+          id: 28430
+          name: Lionheart Executioner
+          speed: 3.6
+          source: crafted
+        dps: 2159.8
+        standard_error: 1.37
+        stdev: 136.7
+      - main_hand:
+          id: 29993
+          name: Twinblade of the Phoenix
+          speed: 3.6
+          source: raid_drop
+        dps: 2155.7
+        standard_error: 1.34
+        stdev: 133.6
+      - main_hand:
+          id: 30090
+          name: World Breaker
+          speed: 3.7
+          source: raid_drop
+        dps: 2150.3
+        standard_error: 1.34
+        stdev: 134.5
+      - main_hand:
+          id: 28442
+          name: Stormherald
+          speed: 3.8
+          source: crafted
+        dps: 2144.0
+        standard_error: 1.34
+        stdev: 133.6
+      - main_hand:
+          id: 32348
+          name: Soul Cleaver
+          speed: 3.7
+          source: raid_drop
+        dps: 2139.4
+        standard_error: 1.37
+        stdev: 136.8
+      - main_hand:
+          id: 33670
+          name: Vengeful Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 2122.8
+        standard_error: 1.36
+        stdev: 135.6
+      - main_hand:
+          id: 31959
+          name: Merciless Gladiator's Bonegrinder
+          speed: 3.6
+          source: arena
+        dps: 2117.4
+        standard_error: 1.31
+        stdev: 131.3
+      - main_hand:
+          id: 28429
+          name: Lionheart Champion
+          speed: 3.6
+          source: crafted
+        dps: 2115.6
+        standard_error: 1.34
+        stdev: 134.0
+      - main_hand:
+          id: 28436
+          name: Bloodmoon
+          speed: 3.7
+          source: crafted
+        dps: 2114.9
+        standard_error: 1.35
+        stdev: 135.1
+      - main_hand:
+          id: 28441
+          name: Deep Thunder
+          speed: 3.8
+          source: crafted
+        dps: 2093.0
+        standard_error: 1.31
+        stdev: 130.5
+      - main_hand:
+          id: 32248
+          name: Halberd of Desolation
+          speed: 3.5
+          source: raid_drop
+        dps: 2085.2
+        standard_error: 1.33
+        stdev: 133.1
+      - main_hand:
+          id: 28800
+          name: Hammer of the Naaru
+          speed: 3.6
+          source: raid_drop
+        dps: 2079.2
+        standard_error: 1.28
+        stdev: 127.7
+      - main_hand:
+          id: 31966
+          name: Merciless Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 2072.9
+        standard_error: 1.33
+        stdev: 132.5
+      - main_hand:
+          id: 28435
+          name: Mooncleaver
+          speed: 3.7
+          source: crafted
+        dps: 2068.8
+        standard_error: 1.32
+        stdev: 132.2
+      - main_hand:
+          id: 24550
+          name: Gladiator's Greatsword
+          speed: 3.6
+          source: arena
+        dps: 2061.8
+        standard_error: 1.28
+        stdev: 127.9
+      - main_hand:
+          id: 28773
+          name: Gorehowl
+          speed: 3.6
+          source: raid_drop
+        dps: 2051.4
+        standard_error: 1.31
+        stdev: 131.1
+      - main_hand:
+          id: 28428
+          name: Lionheart Blade
+          speed: 3.6
+          source: crafted
+        dps: 2034.4
+        standard_error: 1.26
+        stdev: 126.1
+      - main_hand:
+          id: 28298
+          name: Gladiator's Decapitator
+          speed: 3.6
+          source: arena
+        dps: 2019.8
+        standard_error: 1.29
+        stdev: 129.3
+      - main_hand:
+          id: 33727
+          name: Vengeful Gladiator's Painsaw
+          speed: 2.2
+          source: arena
+        dps: 1642.1
+        standard_error: 2.82
+        stdev: 282.1
+      - main_hand:
+          id: 32025
+          name: Merciless Gladiator's Painsaw
+          speed: 2.2
+          source: arena
+        dps: 1610.2
+        standard_error: 2.77
+        stdev: 277.1
+      - main_hand:
+          id: 28300
+          name: Gladiator's Painsaw
+          speed: 2.2
+          source: arena
+        dps: 1572.7
+        standard_error: 2.71
+        stdev: 271.2
+    trinkets_why: The candidates are every max-level trinket on the EP Workbook's
+      Trinket ladder for this spec, from Karazhan, the raids above it, the badge
+      vendor and one max-level quest, and every pair from that pool was measured,
+      so the table is an enumeration rather than a selection.
+    trinket_anchors:
+      entry:
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2063.2
+        standard_error: 1.28
+        stdev: 127.9
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2047.6
+        standard_error: 1.29
+        stdev: 128.9
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2046.0
+        standard_error: 1.27
+        stdev: 126.7
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2041.3
+        standard_error: 1.26
+        stdev: 126.4
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2023.2
+        standard_error: 1.25
+        stdev: 125.1
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2017.2
+        standard_error: 1.25
+        stdev: 124.6
+      - trinket_1:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2007.8
+        standard_error: 1.24
+        stdev: 123.8
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2006.3
+        standard_error: 1.24
+        stdev: 124.0
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2001.2
+        standard_error: 1.24
+        stdev: 123.6
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2000.5
+        standard_error: 1.23
+        stdev: 123.5
+      tier-hands-and-head:
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2062.2
+        standard_error: 1.28
+        stdev: 127.8
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2046.6
+        standard_error: 1.29
+        stdev: 128.9
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2045.0
+        standard_error: 1.27
+        stdev: 126.7
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        dps: 2042.0
+        standard_error: 1.29
+        stdev: 128.9
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2040.4
+        standard_error: 1.26
+        stdev: 126.3
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2022.2
+        standard_error: 1.25
+        stdev: 125.1
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2017.3
+        standard_error: 1.25
+        stdev: 125.4
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2016.2
+        standard_error: 1.25
+        stdev: 124.5
+      - trinket_1:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2006.9
+        standard_error: 1.24
+        stdev: 123.8
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2005.3
+        standard_error: 1.24
+        stdev: 123.9
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 2000.7
+        standard_error: 1.24
+        stdev: 123.7
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2000.5
+        standard_error: 1.24
+        stdev: 124.3
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2000.2
+        standard_error: 1.24
+        stdev: 123.5
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 1999.6
+        standard_error: 1.23
+        stdev: 123.4
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 1998.4
+        standard_error: 1.23
+        stdev: 122.8
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        dps: 1995.5
+        standard_error: 1.24
+        stdev: 123.8
+      - trinket_1:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 1978.2
+        standard_error: 1.22
+        stdev: 122.0
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 1961.6
+        standard_error: 1.21
+        stdev: 121.0
+      - trinket_1:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 1961.5
+        standard_error: 1.21
+        stdev: 120.9
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 1957.2
+        standard_error: 1.21
+        stdev: 121.3
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 1956.5
+        standard_error: 1.21
+        stdev: 120.5
+      bis:
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2223.2
+        standard_error: 1.38
+        stdev: 138.3
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2204.4
+        standard_error: 1.37
+        stdev: 137.0
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2200.4
+        standard_error: 1.35
+        stdev: 135.4
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        dps: 2199.5
+        standard_error: 1.37
+        stdev: 136.5
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        dps: 2198.6
+        standard_error: 1.35
+        stdev: 134.7
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2193.2
+        standard_error: 1.35
+        stdev: 135.0
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2188.8
+        standard_error: 1.33
+        stdev: 132.9
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        dps: 2187.7
+        standard_error: 1.33
+        stdev: 133.0
+      - trinket_1:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2177.2
+        standard_error: 1.32
+        stdev: 132.1
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2174.3
+        standard_error: 1.34
+        stdev: 133.7
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2170.0
+        standard_error: 1.32
+        stdev: 131.7
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        dps: 2169.0
+        standard_error: 1.32
+        stdev: 131.7
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2168.4
+        standard_error: 1.33
+        stdev: 133.2
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        dps: 2167.1
+        standard_error: 1.32
+        stdev: 132.0
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        dps: 2164.1
+        standard_error: 1.31
+        stdev: 131.1
+      - trinket_1:
+          id: 28830
+          name: Dragonspine Trophy
+          source: raid_drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 2155.9
+        standard_error: 1.34
+        stdev: 133.6
+      - trinket_1:
+          id: 29383
+          name: Bloodlust Brooch
+          source: badge
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 2145.5
+        standard_error: 1.3
+        stdev: 130.3
+      - trinket_1:
+          id: 29776
+          name: Core of Ar'kelos
+          source: drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 2126.8
+        standard_error: 1.29
+        stdev: 129.0
+      - trinket_1:
+          id: 30627
+          name: Tsunami Talisman
+          source: raid_drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 2125.6
+        standard_error: 1.3
+        stdev: 130.4
+      - trinket_1:
+          id: 32505
+          name: Madness of the Betrayer
+          source: raid_drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 2121.7
+        standard_error: 1.28
+        stdev: 128.3
+      - trinket_1:
+          id: 31856
+          name: 'Darkmoon Card: Crusade'
+          source: drop
+        trinket_2:
+          id: 32489
+          name: Ashtongue Talisman of Zeal
+          source: reputation
+        dps: 2120.9
+        standard_error: 1.28
+        stdev: 128.5
