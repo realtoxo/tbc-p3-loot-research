@@ -33,6 +33,7 @@
       <a href="specs.html">By Spec</a>
       <a href="sims.html">Throughput</a>
       <a href="tier.html">Tier</a>
+      <a href="tokens.html">Tokens</a>
       <a href="framework.html">Framework</a>
       <a href="conventions.html">Conventions</a>
     </nav>
@@ -49,8 +50,6 @@
     <ul>
     <li><a href="#how-to-read-every-table"
     id="toc-how-to-read-every-table">How to read every table</a></li>
-    <li><a href="#the-tokens-one-by-one"
-    id="toc-the-tokens-one-by-one">The tokens, one by one</a></li>
     <li><a href="#the-break-evens-per-spec"
     id="toc-the-break-evens-per-spec">The break-evens, per spec</a></li>
     <li><a href="#affliction-warlock"
@@ -88,11 +87,11 @@
     <div class="doc-head">
       <p class="eyebrow">Measurement</p>
       <h1>Tier</h1>
-      <p class="standfirst">Who gains what from each token, in give-out
-order, and at what point it makes sense to break an old set bonus: every
-subset of each spec’s bonus-carrying slots priced against its
-best-in-slot pieces.</p>
-      <p class="doc-meta"><span class="pill pill-draft">draft</span> <span class="doc-updated">updated 2026-08-21</span></p>
+      <p class="standfirst">At what point it makes sense to break an old
+set bonus: every subset of each spec’s bonus-carrying slots priced
+against its best-in-slot pieces. The per-token give-out order lives on
+Tokens.</p>
+      <p class="doc-meta"><span class="pill pill-draft">draft</span> <span class="doc-updated">updated 2026-08-22</span></p>
     </div>
 
 
@@ -101,15 +100,15 @@ best-in-slot pieces.</p>
      set from data/sim/gear. To change what it says, rerun the sims. -->
 <p>A tier piece is never priced alone: equipping it cuts an old set by
 one piece, and somewhere on that road an old bonus dies. This page
-answers two questions. FIRST, the one asked at the loot table: <strong>a
-token dropped, who gains what from it</strong>, one section per token
-with the give-out order the measurements support. SECOND, per spec,
-<strong>at what point breaking an old bonus pays</strong>. For every
-simulated spec, every subset of the entry set’s bonus-carrying slots was
-replaced with what the best-in-slot set wears there, on the otherwise
-unchanged entry set, so the tables below hold the best way to take one
-piece, two, three, and so on, and whether the old bonus survives
-each.</p>
+answers, per spec, <strong>at what point breaking an old bonus
+pays</strong>. For every simulated spec, every subset of the entry set’s
+bonus-carrying slots was replaced with what the best-in-slot set wears
+there, on the otherwise unchanged entry set, so the tables below hold
+the best way to take one piece, two, three, and so on, and whether the
+old bonus survives each. The question asked at the loot table, <strong>a
+token dropped, who gains what from it</strong>, lives on <a
+href="tokens.html">Tokens</a>, one section per token with the give-out
+order and the decision tree.</p>
 <h2 id="how-to-read-every-table">How to read every table</h2>
 <p>Every row is the spec’s entry set with only the named slots changed,
 the entry consumables, buffs and seed held still, so every figure is
@@ -132,778 +131,6 @@ slots with the tier anchor’s pieces, pricing the two-piece and
 four-piece thresholds and the order the tokens are best taken in.
 Nothing here is a ruling: the tables are measurements, and which
 claimant takes which token first is the council’s call.</p>
-<h2 id="the-tokens-one-by-one">The tokens, one by one</h2>
-<p>Each section is one token: the specs that can redeem it, best
-measured gain first. <strong>Gain</strong> is the token’s own piece
-measured alone on that spec’s entry set, against its entry figure. A
-first piece often reads negative because no set bonus is active yet and
-a replacement arrives ungemmed; the break-even tables below say when the
-set pays. The standing says whether the token piece is in that spec’s
-best-in-slot set.</p>
-<h3 id="helm-of-the-forgotten-conqueror">Helm of the Forgotten
-Conqueror</h3>
-<p>Drops from Archimonde. Classes: Paladin, Priest, Warlock.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Destruction Warlock</td>
-<td>+13.6</td>
-<td>Hood of the Malefic</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Shadow Priest</td>
-<td>+8.3</td>
-<td>Hood of Absolution</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Affliction Warlock</td>
-<td>+7.0</td>
-<td>Hood of the Malefic</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Retribution Paladin</td>
-<td>+1.9</td>
-<td>Lightbringer War-Helm</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Holy Paladin, Priest
-Healer, Protection Paladin.</p>
-<h3 id="helm-of-the-forgotten-protector">Helm of the Forgotten
-Protector</h3>
-<p>Drops from Archimonde. Classes: Warrior, Hunter, Shaman.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Arms Warrior</td>
-<td>+14.8</td>
-<td>Onslaught Battle-Helm</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Elemental Shaman</td>
-<td>+9.1</td>
-<td>Skyshatter Headguard</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Fury Warrior</td>
-<td>-7.7</td>
-<td>Onslaught Battle-Helm</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Beast Mastery Hunter</td>
-<td>-14.8</td>
-<td>Gronnstalker’s Helmet</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Survival Hunter</td>
-<td>-20.2</td>
-<td>Gronnstalker’s Helmet</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Enhancement Shaman</td>
-<td>-24.3</td>
-<td>Skyshatter Cover</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Protection Warrior,
-Restoration Shaman.</p>
-<h3 id="helm-of-the-forgotten-vanquisher">Helm of the Forgotten
-Vanquisher</h3>
-<p>Drops from Archimonde. Classes: Rogue, Mage, Druid.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Combat Rogue</td>
-<td>-8.3</td>
-<td>Slayer’s Helm</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Arcane Mage</td>
-<td>-31.7</td>
-<td>Cowl of the Tempest</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Balance Druid</td>
-<td>-76.4</td>
-<td>Thunderheart Headguard</td>
-<td>BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Feral Bear, Feral Cat,
-Restoration Druid.</p>
-<h3 id="pauldrons-of-the-forgotten-conqueror">Pauldrons of the Forgotten
-Conqueror</h3>
-<p>Drops from Mother Shahraz. Classes: Paladin, Priest, Warlock.</p>
-<div class="table-wrap">
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Destruction Warlock</td>
-<td>+11.6</td>
-<td>Mantle of the Malefic</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Shadow Priest</td>
-<td>-0.5</td>
-<td>Shoulderpads of Absolution</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Affliction Warlock</td>
-<td>-6.1</td>
-<td>Mantle of the Malefic</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Retribution Paladin</td>
-<td>-14.3</td>
-<td>Lightbringer Shoulderbraces</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Holy Paladin, Priest
-Healer, Protection Paladin.</p>
-<h3 id="pauldrons-of-the-forgotten-protector">Pauldrons of the Forgotten
-Protector</h3>
-<p>Drops from Mother Shahraz. Classes: Warrior, Hunter, Shaman.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Arms Warrior</td>
-<td>+14.4</td>
-<td>Onslaught Shoulderblades</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Elemental Shaman</td>
-<td>+4.7</td>
-<td>Skyshatter Mantle</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Beast Mastery Hunter</td>
-<td>+0.9</td>
-<td>Gronnstalker’s Spaulders</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Survival Hunter</td>
-<td>+0.4</td>
-<td>Gronnstalker’s Spaulders</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Fury Warrior</td>
-<td>-6.1</td>
-<td>Onslaught Shoulderblades</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Enhancement Shaman</td>
-<td>-6.6</td>
-<td>Skyshatter Pauldrons</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Protection Warrior,
-Restoration Shaman.</p>
-<h3 id="pauldrons-of-the-forgotten-vanquisher">Pauldrons of the
-Forgotten Vanquisher</h3>
-<p>Drops from Mother Shahraz. Classes: Rogue, Mage, Druid.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Combat Rogue</td>
-<td>-16.0</td>
-<td>Slayer’s Shoulderpads</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Arcane Mage</td>
-<td>-38.9</td>
-<td>Mantle of the Tempest</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Balance Druid</td>
-<td>-79.9</td>
-<td>Thunderheart Shoulderpads</td>
-<td>BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Feral Bear, Feral Cat,
-Restoration Druid.</p>
-<h3 id="chestguard-of-the-forgotten-conqueror">Chestguard of the
-Forgotten Conqueror</h3>
-<p>Drops from Illidan Stormrage. Classes: Paladin, Priest, Warlock.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Shadow Priest</td>
-<td>+5.5</td>
-<td>Shroud of Absolution</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Retribution Paladin</td>
-<td>+1.9</td>
-<td>Lightbringer Breastplate</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Affliction Warlock</td>
-<td>-12.3</td>
-<td>Robe of the Malefic</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Destruction Warlock</td>
-<td>-16.7</td>
-<td>Robe of the Malefic</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Holy Paladin, Priest
-Healer, Protection Paladin.</p>
-<h3 id="chestguard-of-the-forgotten-protector">Chestguard of the
-Forgotten Protector</h3>
-<p>Drops from Illidan Stormrage. Classes: Warrior, Hunter, Shaman.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Elemental Shaman</td>
-<td>+13.3</td>
-<td>Skyshatter Breastplate</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Arms Warrior</td>
-<td>+12.6</td>
-<td>Onslaught Breastplate</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Survival Hunter</td>
-<td>-1.4</td>
-<td>Gronnstalker’s Chestguard</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Beast Mastery Hunter</td>
-<td>-3.9</td>
-<td>Gronnstalker’s Chestguard</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Fury Warrior</td>
-<td>-8.0</td>
-<td>Onslaught Breastplate</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Enhancement Shaman</td>
-<td>-30.7</td>
-<td>Skyshatter Tunic</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Protection Warrior,
-Restoration Shaman.</p>
-<h3 id="chestguard-of-the-forgotten-vanquisher">Chestguard of the
-Forgotten Vanquisher</h3>
-<p>Drops from Illidan Stormrage. Classes: Rogue, Mage, Druid.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Combat Rogue</td>
-<td>+23.5</td>
-<td>Slayer’s Chestguard</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Arcane Mage</td>
-<td>-29.0</td>
-<td>Robes of the Tempest</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Balance Druid</td>
-<td>-72.9</td>
-<td>Thunderheart Vest</td>
-<td>BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Feral Bear, Feral Cat,
-Restoration Druid.</p>
-<h3 id="gloves-of-the-forgotten-conqueror">Gloves of the Forgotten
-Conqueror</h3>
-<p>Drops from Azgalor. Classes: Paladin, Priest, Warlock.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Destruction Warlock</td>
-<td>+43.0</td>
-<td>Gloves of the Malefic</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Shadow Priest</td>
-<td>-0.2</td>
-<td>Handguards of Absolution</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Affliction Warlock</td>
-<td>-7.6</td>
-<td>Gloves of the Malefic</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Retribution Paladin</td>
-<td>-18.0</td>
-<td>Lightbringer Gauntlets</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Holy Paladin, Priest
-Healer, Protection Paladin.</p>
-<h3 id="gloves-of-the-forgotten-protector">Gloves of the Forgotten
-Protector</h3>
-<p>Drops from Azgalor. Classes: Warrior, Hunter, Shaman.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Survival Hunter</td>
-<td>+33.7</td>
-<td>Gronnstalker’s Gloves</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Arms Warrior</td>
-<td>+28.6</td>
-<td>Onslaught Gauntlets</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Elemental Shaman</td>
-<td>+10.2</td>
-<td>Skyshatter Gauntlets</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Beast Mastery Hunter</td>
-<td>+8.5</td>
-<td>Gronnstalker’s Gloves</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Fury Warrior</td>
-<td>-5.6</td>
-<td>Onslaught Gauntlets</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Enhancement Shaman</td>
-<td>-27.3</td>
-<td>Skyshatter Grips</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Protection Warrior,
-Restoration Shaman.</p>
-<h3 id="gloves-of-the-forgotten-vanquisher">Gloves of the Forgotten
-Vanquisher</h3>
-<p>Drops from Azgalor. Classes: Rogue, Mage, Druid.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Arcane Mage</td>
-<td>+10.1</td>
-<td>Gloves of the Tempest</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Combat Rogue</td>
-<td>-17.2</td>
-<td>Slayer’s Handguards</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Balance Druid</td>
-<td>-82.6</td>
-<td>Thunderheart Handguards</td>
-<td>BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Feral Bear, Feral Cat,
-Restoration Druid.</p>
-<h3 id="leggings-of-the-forgotten-conqueror">Leggings of the Forgotten
-Conqueror</h3>
-<p>Drops from The Illidari Council. Classes: Paladin, Priest,
-Warlock.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Destruction Warlock</td>
-<td>+15.8</td>
-<td>Leggings of the Malefic</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Affliction Warlock</td>
-<td>+13.0</td>
-<td>Leggings of the Malefic</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Retribution Paladin</td>
-<td>+7.5</td>
-<td>Lightbringer Greaves</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Shadow Priest</td>
-<td>+0.2</td>
-<td>Leggings of Absolution</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Holy Paladin, Priest
-Healer, Protection Paladin.</p>
-<h3 id="leggings-of-the-forgotten-protector">Leggings of the Forgotten
-Protector</h3>
-<p>Drops from The Illidari Council. Classes: Warrior, Hunter,
-Shaman.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Fury Warrior</td>
-<td>+12.1</td>
-<td>Onslaught Greaves</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Elemental Shaman</td>
-<td>+11.8</td>
-<td>Skyshatter Legguards</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Arms Warrior</td>
-<td>+7.5</td>
-<td>Onslaught Greaves</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Beast Mastery Hunter</td>
-<td>-5.4</td>
-<td>Gronnstalker’s Leggings</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Survival Hunter</td>
-<td>-7.6</td>
-<td>Gronnstalker’s Leggings</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Enhancement Shaman</td>
-<td>-21.7</td>
-<td>Skyshatter Pants</td>
-<td>Not BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Protection Warrior,
-Restoration Shaman.</p>
-<h3 id="leggings-of-the-forgotten-vanquisher">Leggings of the Forgotten
-Vanquisher</h3>
-<p>Drops from The Illidari Council. Classes: Rogue, Mage, Druid.</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Spec</th>
-<th>Gain</th>
-<th>Buys</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Balance Druid</td>
-<td>+35.8</td>
-<td>Thunderheart Pants</td>
-<td>Not BIS</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Combat Rogue</td>
-<td>-22.4</td>
-<td>Slayer’s Legguards</td>
-<td>BIS</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Arcane Mage</td>
-<td>-24.8</td>
-<td>Leggings of the Tempest</td>
-<td>BIS</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Unmeasured claimants, see the closing section: Feral Bear, Feral Cat,
-Restoration Druid.</p>
 <h2 id="the-break-evens-per-spec">The break-evens, per spec</h2>
 <h2 id="affliction-warlock">Affliction Warlock</h2>
 <p>Walking in, this spec holds <strong>Voidheart Raiment</strong> at 2
@@ -1149,9 +376,10 @@ slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Robe of the Malefic (chest) at -12.3; Leggings of the Malefic
-(legs) at +13.0. None is in this spec’s best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Robe of the
+Malefic (chest) at -12.3; Leggings of the Malefic (legs) at +13.0. None
+is in this spec’s best-in-slot set.</p>
 <h2 id="arcane-mage">Arcane Mage</h2>
 <p>Walking in, this spec holds <strong>Tirisfal Regalia</strong> at 4
 pieces, in the head, shoulder, chest, legs slots. The bonuses that gear
@@ -1275,11 +503,11 @@ highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Cowl of the Tempest (head) at -31.7; Mantle of the Tempest
-(shoulder) at -38.9; Robes of the Tempest (chest) at -29.0; Gloves of
-the Tempest (hands) at +10.1. None is in this spec’s best-in-slot
-set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Cowl of the
+Tempest (head) at -31.7; Mantle of the Tempest (shoulder) at -38.9;
+Robes of the Tempest (chest) at -29.0; Gloves of the Tempest (hands) at
++10.1. None is in this spec’s best-in-slot set.</p>
 <h2 id="arms-warrior">Arms Warrior</h2>
 <p>Walking in, this spec holds <strong>Destroyer Battlegear</strong> at
 2 pieces, in the head, chest slots. The bonuses that gear keeps
@@ -1524,9 +752,9 @@ slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Onslaught Greaves (legs) at +7.5. None is in this spec’s
-best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Onslaught Greaves
+(legs) at +7.5. None is in this spec’s best-in-slot set.</p>
 <h2 id="balance-druid">Balance Druid</h2>
 <p>Walking in, this spec holds <strong>Nordrassil Regalia</strong> at 4
 pieces, in the head, shoulder, chest, hands slots. The bonuses that gear
@@ -1875,9 +1103,9 @@ slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Thunderheart Pants (legs) at +35.8. None is in this spec’s
-best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Thunderheart Pants
+(legs) at +35.8. None is in this spec’s best-in-slot set.</p>
 <h2 id="beast-mastery-hunter">Beast Mastery Hunter</h2>
 <p>Walking in, this spec holds <strong>Rift Stalker Armor</strong> at 4
 pieces, in the head, shoulder, chest, hands slots. The bonuses that gear
@@ -2356,9 +1584,9 @@ is the added slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Gronnstalker’s Helmet (head) at -14.8. None is in this spec’s
-best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Gronnstalker’s
+Helmet (head) at -14.8. None is in this spec’s best-in-slot set.</p>
 <h2 id="combat-rogue">Combat Rogue</h2>
 <p>Walking in, this spec holds <strong>Deathmantle</strong> at 4 pieces,
 in the head, shoulder, hands, legs slots. The bonuses that gear keeps
@@ -2836,9 +2064,9 @@ the added slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Slayer’s Helm (head) at -8.3. None is in this spec’s
-best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Slayer’s Helm
+(head) at -8.3. None is in this spec’s best-in-slot set.</p>
 <h2 id="destruction-warlock">Destruction Warlock</h2>
 <p>Walking in, this spec holds <strong>Corruptor Raiment</strong> at 3
 pieces, in the head, shoulder, legs slots. The bonuses that gear keeps
@@ -3113,9 +2341,10 @@ slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Robe of the Malefic (chest) at -16.7; Leggings of the Malefic
-(legs) at +15.8. None is in this spec’s best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Robe of the
+Malefic (chest) at -16.7; Leggings of the Malefic (legs) at +15.8. None
+is in this spec’s best-in-slot set.</p>
 <h2 id="elemental-shaman">Elemental Shaman</h2>
 <p>Walking in, this spec holds <strong>Cataclysm Regalia</strong> at 2
 pieces, in the chest, legs slots; <strong>Cyclone Regalia</strong> at 2
@@ -3616,9 +2845,9 @@ is the added slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Skyshatter Legguards (legs) at +11.8. None is in this spec’s
-best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Skyshatter
+Legguards (legs) at +11.8. None is in this spec’s best-in-slot set.</p>
 <h2 id="enhancement-shaman">Enhancement Shaman</h2>
 <p>Walking in, this spec holds <strong>Cataclysm Harness</strong> at 4
 pieces, in the head, chest, hands, legs slots. The bonuses that gear
@@ -3805,11 +3034,11 @@ slots: this spec’s Phase 3 list keeps no tier piece there, so the tier
 question for it is entirely the old-bonus table above and the <a
 href="sims/enhancement-shaman-bis.html">best-in-slot set</a>.</p>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Skyshatter Cover (head) at -24.3; Skyshatter Pauldrons
-(shoulder) at -6.6; Skyshatter Tunic (chest) at -30.7; Skyshatter Grips
-(hands) at -27.3; Skyshatter Pants (legs) at -21.7. None is in this
-spec’s best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Skyshatter Cover
+(head) at -24.3; Skyshatter Pauldrons (shoulder) at -6.6; Skyshatter
+Tunic (chest) at -30.7; Skyshatter Grips (hands) at -27.3; Skyshatter
+Pants (legs) at -21.7. None is in this spec’s best-in-slot set.</p>
 <h2 id="fury-warrior">Fury Warrior</h2>
 <p>Walking in, this spec holds <strong>Destroyer Battlegear</strong> at
 4 pieces, in the head, shoulder, chest, hands slots. The bonuses that
@@ -4058,10 +3287,11 @@ measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Onslaught Battle-Helm (head) at -7.7; Onslaught Gauntlets
-(hands) at -5.6; Onslaught Greaves (legs) at +12.1. None is in this
-spec’s best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Onslaught
+Battle-Helm (head) at -7.7; Onslaught Gauntlets (hands) at -5.6;
+Onslaught Greaves (legs) at +12.1. None is in this spec’s best-in-slot
+set.</p>
 <h2 id="retribution-paladin">Retribution Paladin</h2>
 <p>Walking in, this spec holds <strong>Crystalforge Battlegear</strong>
 at 2 pieces, in the head, chest slots. The bonuses that gear keeps
@@ -4145,11 +3375,12 @@ slots: this spec’s Phase 3 list keeps no tier piece there, so the tier
 question for it is entirely the old-bonus table above and the <a
 href="sims/retribution-paladin-bis.html">best-in-slot set</a>.</p>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Lightbringer War-Helm (head) at +1.9; Lightbringer
-Shoulderbraces (shoulder) at -14.3; Lightbringer Breastplate (chest) at
-+1.9; Lightbringer Gauntlets (hands) at -18.0; Lightbringer Greaves
-(legs) at +7.5. None is in this spec’s best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Lightbringer
+War-Helm (head) at +1.9; Lightbringer Shoulderbraces (shoulder) at
+-14.3; Lightbringer Breastplate (chest) at +1.9; Lightbringer Gauntlets
+(hands) at -18.0; Lightbringer Greaves (legs) at +7.5. None is in this
+spec’s best-in-slot set.</p>
 <h2 id="shadow-priest">Shadow Priest</h2>
 <p>Walking in, this spec holds <strong>Avatar Regalia</strong> at 2
 pieces, in the head, chest slots; <strong>Shadow’s Embrace</strong> at 2
@@ -4515,9 +3746,9 @@ slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Leggings of Absolution (legs) at +0.2. None is in this spec’s
-best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Leggings of
+Absolution (legs) at +0.2. None is in this spec’s best-in-slot set.</p>
 <h2 id="survival-hunter">Survival Hunter</h2>
 <p>Walking in, this spec holds <strong>Rift Stalker Armor</strong> at 4
 pieces, in the head, shoulder, chest, legs slots. The bonuses that gear
@@ -4995,9 +4226,9 @@ the added slot whose subset measures highest.</p>
 </table>
 </div>
 <p>The token pieces this list does not take were still measured alone on
-the entry set, and they appear in the token tables above under the same
-figures: Gronnstalker’s Leggings (legs) at -7.6. None is in this spec’s
-best-in-slot set.</p>
+the entry set, and they appear in the token tables on <a
+href="tokens.html">Tokens</a> under the same figures: Gronnstalker’s
+Leggings (legs) at -7.6. None is in this spec’s best-in-slot set.</p>
 <h2 id="the-specs-this-page-cannot-measure">The specs this page cannot
 measure</h2>
 <p>No simulator run backs this list. The three tanks are out of
