@@ -153,103 +153,6 @@ def route_marginals(rows: list[dict]) -> dict[str, float]:
     return out
 
 
-TOKEN_SLOT_LABEL = {"head": "Helm", "shoulder": "Shoulders", "chest": "Chest",
-                    "hands": "Gloves", "legs": "Leggings"}
-
-
-def token_order_sections(doc: dict, tokens: dict,
-                         entry_dps: dict) -> list[str]:
-    """One section per Tier 6 token: who gains what from it, best gain first.
-
-    THE QUESTION AT THE LOOT TABLE, asked by the guild lead: a token drops,
-    and the council wants the give-out order that maximizes what each item
-    does. The ranking is the measured route increment per spec; a spec whose
-    list does not take the token in that slot is named below the table
-    rather than ranked, and the unmeasured claimants close each section.
-    Nothing here is a ruling.
-    """
-    members = tokens["line_members_by_tier"][6]
-    spec_to_set = tokens["spec_to_set"]
-    set_pieces = {b["set_name"]: b["pieces"] for b in tokens["sets"]}
-    t6_tokens = sorted((x for x in tokens["tokens"] if x.get("tier") == 6),
-                       key=lambda x: (["head", "shoulder", "chest", "hands",
-                                       "legs"].index(x["slot"]), x["name"]))
-
-    def spec_class(label: str) -> str:
-        lowered = label.lower()
-        for name in ("warrior", "paladin", "hunter", "rogue", "priest",
-                     "shaman", "mage", "warlock", "druid"):
-            if name in lowered:
-                return name.capitalize()
-        return "Druid"
-
-    # Every registry spec, measured or not, by class.
-    from extract_ladder import SPECS as LADDER_SPECS
-    by_class: dict[str, list[tuple[str, str]]] = {}
-    for label, (_tab, key) in LADDER_SPECS.items():
-        by_class.setdefault(spec_class(label), []).append((label, key))
-
-    out = []
-    for token in t6_tokens:
-        classes = members[token["line"]]
-        slot = token["slot"]
-        ranked, unmeasured = [], []
-        for cls in classes:
-            for label, key in sorted(by_class.get(cls, [])):
-                block = (doc["specs"] or {}).get(key)
-                if block is None:
-                    unmeasured.append(label)
-                    continue
-                t6 = block.get("tier_six") or {}
-                pieces = t6.get("pieces") or {}
-                rows = t6.get("rows") or []
-                singles = block.get("token_singles") or {}
-                set6 = (spec_to_set.get(key) or {}).get(6)
-                token_piece = ((set_pieces.get(set6) or {}).get(slot)
-                               or {})
-                token_id = int(token_piece.get("item_id") or -1)
-                worn = pieces.get(slot) or {}
-                gain, note = None, ""
-                if int(worn.get("id") or 0) == token_id and rows:
-                    # The tier-six round measured this token as its single
-                    # subset for the slot: the token is what the spec
-                    # takes there.
-                    by_set = {frozenset(r["replaced"]): r for r in rows}
-                    if frozenset([slot]) in by_set:
-                        gain = round(by_set[frozenset([slot])]["dps"]
-                                     - by_set[frozenset()]["dps"], 1)
-                    note = "BIS"
-                elif slot in singles:
-                    # The token-singles round measured it; the baseline is
-                    # the spec's entry figure, which the empty subset
-                    # reproduces to the digit.
-                    base = entry_dps.get(key)
-                    if base is not None:
-                        gain = round(singles[slot]["dps"] - base, 1)
-                    note = "Not BIS"
-                ranked.append((gain, label,
-                               token_piece.get("name", ""), note))
-        ranked.sort(key=lambda r: (r[0] is None, -(r[0] or 0)))
-        parts = [f"### {token['name']}", "",
-                 f"Drops from {token['boss']}. Classes: "
-                 f"{', '.join(classes)}.", ""]
-        if ranked:
-            parts += ["| Order | Spec | Gain | Buys | Standing |",
-                      "|---|---|---|---|---|"]
-            for i, (gain, label, piece, note) in enumerate(ranked, 1):
-                cell = "not measured" if gain is None else f"{gain:+.1f}"
-                parts.append(
-                    f"| {i} | {label} | {cell} | {piece} | {note} |")
-            parts.append("")
-        if unmeasured:
-            parts.append(
-                "Unmeasured claimants, see the closing section: "
-                + ", ".join(sorted(unmeasured)) + ".")
-            parts.append("")
-        out.append("\n".join(parts))
-    return out
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", type=Path, default=Path("docs/tier.md"))
@@ -268,13 +171,11 @@ def main() -> int:
         (WOWSIMS / "assets/database/db.json").read_text()).get("items") or []}
     verdicts = (yaml.safe_load(VERDICTS.read_text()) or {}).get(
         "verdicts") or {}
-    tokens = yaml.safe_load(Path("data/facts/tokens.yaml").read_text())
     figures = yaml.safe_load(Path("data/facts/sim-figures.yaml").read_text())
     default_tier = max({r.get("boss_armor", 0) for r in figures["results"]})
     entry_dps = {r["spec"]: r["dps"] for r in figures["results"]
                  if r["anchor"] == "entry"
                  and r.get("boss_armor") == default_tier}
-    token_sections = token_order_sections(doc, tokens, entry_dps)
 
     sections = []
     for spec in sorted(doc["specs"], key=lambda s: SPEC_LABEL.get(s, s)):
@@ -454,7 +355,8 @@ def main() -> int:
                 parts.append(
                     "The token pieces this list does not take were still "
                     "measured alone on the entry set, and they appear in "
-                    "the token tables above under the same figures: "
+                    "the token tables on [Tokens](tokens.md) under the "
+                    "same figures: "
                     + "; ".join(lines) + ". None is in this spec's "
                     "best-in-slot set.\n")
 
@@ -482,24 +384,24 @@ def main() -> int:
 title: Tier
 eyebrow: Measurement
 subtitle: >-
-  Who gains what from each token, in give-out order, and at what point it
-  makes sense to break an old set bonus: every subset of each spec's
-  bonus-carrying slots priced against its best-in-slot pieces.
+  At what point it makes sense to break an old set bonus: every subset of
+  each spec's bonus-carrying slots priced against its best-in-slot pieces.
+  The per-token give-out order lives on Tokens.
 status: draft
-updated: 2026-08-21
+updated: 2026-08-22
 ---
 
 {BANNER}
 
 A tier piece is never priced alone: equipping it cuts an old set by one piece,
-and somewhere on that road an old bonus dies. This page answers two questions.
-FIRST, the one asked at the loot table: **a token dropped, who gains what from
-it**, one section per token with the give-out order the measurements support.
-SECOND, per spec, **at what point breaking an old bonus pays**. For
-every simulated spec, every subset of the entry set's bonus-carrying slots was
-replaced with what the best-in-slot set wears there, on the otherwise
-unchanged entry set, so the tables below hold the best way to take one
-piece, two, three, and so on, and whether the old bonus survives each.
+and somewhere on that road an old bonus dies. This page answers, per spec,
+**at what point breaking an old bonus pays**. For every simulated spec, every
+subset of the entry set's bonus-carrying slots was replaced with what the
+best-in-slot set wears there, on the otherwise unchanged entry set, so the
+tables below hold the best way to take one piece, two, three, and so on, and
+whether the old bonus survives each. The question asked at the loot table,
+**a token dropped, who gains what from it**, lives on [Tokens](tokens.md),
+one section per token with the give-out order and the decision tree.
 
 ## How to read every table
 
@@ -524,16 +426,6 @@ four-piece thresholds and the order the tokens are best taken in. Nothing
 here is a ruling: the tables are measurements, and which claimant takes which
 token first is the council's call.
 
-## The tokens, one by one
-
-Each section is one token: the specs that can redeem it, best measured gain
-first. **Gain** is the token's own piece measured alone on that spec's entry
-set, against its entry figure. A first piece often reads negative because no
-set bonus is active yet and a replacement arrives ungemmed; the break-even
-tables below say when the set pays. The standing says whether the token piece
-is in that spec's best-in-slot set.
-
-{chr(10).join(token_sections)}
 ## The break-evens, per spec
 
 {chr(10).join(sections)}
