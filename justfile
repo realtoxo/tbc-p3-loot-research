@@ -8,7 +8,7 @@ src      := "docs"
 out      := "site"
 assets   := "theme"
 template := "theme/template.html"
-filters  := "--lua-filter=theme/filters/tables.lua --lua-filter=theme/filters/links.lua --lua-filter=theme/filters/delta.lua --lua-filter=theme/filters/commentary.lua --lua-filter=theme/filters/shortlist.lua --lua-filter=theme/filters/items.lua --lua-filter=theme/filters/specs.lua --lua-filter=theme/filters/toc.lua --lua-filter=theme/filters/datalinks.lua"
+filters  := "--lua-filter=theme/filters/tables.lua --lua-filter=theme/filters/links.lua --lua-filter=theme/filters/delta.lua --lua-filter=theme/filters/measured.lua --lua-filter=theme/filters/commentary.lua --lua-filter=theme/filters/shortlist.lua --lua-filter=theme/filters/items.lua --lua-filter=theme/filters/specs.lua --lua-filter=theme/filters/toc.lua --lua-filter=theme/filters/datalinks.lua"
 port     := "4000"
 
 # List available commands.
@@ -127,7 +127,7 @@ dev:
 check: regen
     #!/usr/bin/env bash
     set -euo pipefail
-    generated="data/facts/consumable-ids.yaml data/facts/drops.csv data/facts/items.csv data/facts/effect-text.csv data/facts/talent-conversions.yaml data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/bis.generated.lua theme/filters/unranked.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md data/facts/sim-profiles/bis-capture data/sim/gear docs/sims.md docs/sims docs/tier.md"
+    generated="data/facts/consumable-ids.yaml data/facts/drops.csv data/facts/items.csv data/facts/effect-text.csv data/facts/talent-conversions.yaml data/facts/transcript-mentions.csv data/facts/item-effects.csv data/facts/hit-captured.yaml data/facts/set-stats.yaml theme/filters/commentary.generated.lua theme/filters/constraints.generated.lua theme/filters/conversions.generated.lua theme/filters/judgments.generated.lua theme/filters/ladder.generated.lua theme/filters/trinkets.generated.lua theme/filters/bis.generated.lua theme/filters/measured.generated.lua theme/filters/unranked.generated.lua theme/filters/pages.generated.lua docs/items docs/specs docs/bosses.md docs/specs.md data/facts/sim-profiles/bis-capture data/sim/gear docs/sims.md docs/sims docs/tier.md"
     if ! git diff --quiet -- $generated; then
         echo "ERROR: the generated tables differ after regeneration." >&2
         echo "Either the data changed and you should commit, or a generated file was hand-edited." >&2
@@ -228,6 +228,7 @@ regen:
     @python3 tools/extract_judgments.py --out theme/filters/judgments.generated.lua
     @python3 tools/extract_trinket_pairs.py --out theme/filters/trinkets.generated.lua
     @python3 tools/extract_bis_sets.py --out theme/filters/bis.generated.lua
+    @python3 tools/extract_measured_ladders.py
     @python3 tools/generate_item_pages.py --db "{{wowsims}}/assets/database/db.json" --out docs/items
     @python3 tools/generate_spec_pages.py
     @python3 tools/extract_conversions.py --out theme/filters/conversions.generated.lua
