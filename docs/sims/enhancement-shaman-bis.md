@@ -65,10 +65,8 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 | Merciless Gladiator's Right Ripper        | Vengeful Gladiator's Cleaver | 2.6         | 2107.2 ± 0.90 | -59.8            |
 | Wicked Edge of the Planes                 | Rod of the Sun King          | 2.7         | 2106.7 ± 0.93 | -60.3            |
 | Netherbane                                | Vengeful Gladiator's Cleaver | 2.6         | 2104.1 ± 0.91 | -62.9            |
-| Rising Tide                               | Rising Tide                  | 2.6         | 2102.7 ± 0.90 | -64.3            |
 | Vengeful Gladiator's Cleaver              | Gladiator's Pummeler         | 2.6         | 2101.9 ± 0.91 | -65.1            |
 | Vengeful Gladiator's Right Ripper         | Gladiator's Pummeler         | 2.6         | 2101.9 ± 0.91 | -65.1            |
-| Rod of the Sun King                       | Rod of the Sun King          | 2.7         | 2099.9 ± 0.93 | -67.1            |
 | Dragonmaw                                 | Rod of the Sun King          | 2.7         | 2098.6 ± 0.95 | -68.4            |
 | Rising Tide                               | Netherbane                   | 2.6         | 2098.5 ± 0.90 | -68.5            |
 | Merciless Gladiator's Right Ripper        | Rising Tide                  | 2.6         | 2095.7 ± 0.90 | -71.3            |

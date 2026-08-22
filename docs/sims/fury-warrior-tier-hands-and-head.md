@@ -143,7 +143,6 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 | Warglaive of Azzinoth              | Vindicator's Brand            | 2181.4 ± 1.05 | -34.8            |
 | Dragonmaw                          | Rising Tide                   | 2181.0 ± 1.07 | -35.2            |
 | Dragonmaw                          | Netherbane                    | 2180.9 ± 1.06 | -35.3            |
-| Talon of Azshara                   | Talon of Azshara              | 2180.9 ± 1.03 | -35.3            |
 | Syphon of the Nathrezim            | Syphon of the Nathrezim       | 2180.9 ± 1.08 | -35.3            |
 | Vengeful Gladiator's Right Ripper  | Merciless Gladiator's Cleaver | 2180.4 ± 1.05 | -35.8            |
 | Blinkstrike                        | Blade of Infamy               | 2180.1 ± 1.07 | -36.1            |
@@ -186,7 +185,6 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 | Black Planar Edge                  | Warglaive of Azzinoth         | 2171.6 ± 1.01 | -44.6            |
 | Dragonmaw                          | Spiteblade                    | 2171.4 ± 1.08 | -44.8            |
 | Rod of the Sun King                | Merciless Gladiator's Slicer  | 2171.4 ± 1.03 | -44.8            |
-| Rod of the Sun King                | Rod of the Sun King           | 2170.9 ± 1.06 | -45.3            |
 | Gladiator's Slicer                 | Vengeful Gladiator's Slicer   | 2170.8 ± 1.02 | -45.4            |
 | Claw of Molten Fury                | Vengeful Gladiator's Chopper  | 2170.8 ± 1.06 | -45.4            |
 | Merciless Gladiator's Slicer       | Merciless Gladiator's Cleaver | 2170.6 ± 1.03 | -45.6            |
@@ -260,7 +258,6 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 | Warglaive of Azzinoth              | Boggspine Knuckles            | 2156.7 ± 1.04 | -59.5            |
 | Talon of Azshara                   | Spiteblade                    | 2156.5 ± 1.04 | -59.7            |
 | Vengeful Gladiator's Right Ripper  | Spiteblade                    | 2156.0 ± 1.06 | -60.2            |
-| Rising Tide                        | Rising Tide                   | 2155.8 ± 1.03 | -60.4            |
 | Spiteblade                         | Vengeful Gladiator's Slicer   | 2155.5 ± 1.02 | -60.7            |
 | Blade of Infamy                    | Vindicator's Brand            | 2155.5 ± 1.03 | -60.7            |
 | The Horseman's Blade               | Vengeful Gladiator's Slicer   | 2155.5 ± 1.02 | -60.7            |
@@ -589,7 +586,6 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 | Gladiator's Right Ripper           | The Harvester of Souls        | 2083.9 ± 1.01 | -132.3           |
 | Runic Hammer                       | Blinkstrike                   | 2083.8 ± 0.99 | -132.4           |
 | Bloodskull Destroyer               | Rod of the Sun King           | 2082.8 ± 0.99 | -133.4           |
-| Vindicator's Brand                 | Vindicator's Brand            | 2081.7 ± 1.00 | -134.5           |
 | Edge of the Cosmos                 | Rod of the Sun King           | 2081.2 ± 0.99 | -135.0           |
 | The Decapitator                    | Bloodskull Destroyer          | 2080.1 ± 1.01 | -136.1           |
 | Blinkstrike                        | Illidari-Bane Broadsword      | 2079.7 ± 1.05 | -136.5           |

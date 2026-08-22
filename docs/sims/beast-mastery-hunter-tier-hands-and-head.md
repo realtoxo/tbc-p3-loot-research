@@ -76,10 +76,8 @@ A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styl
 | Talon of the Phoenix              | Talon of Azshara    | 3164.9 ± 0.89 | -4.9             |
 | Talon of Azshara                  | Blade of Savagery   | 3164.1 ± 0.90 | -5.7             |
 | Talon of Azshara                  | Claw of the Phoenix | 3163.6 ± 0.89 | -6.2             |
-| Talon of Azshara                  | Talon of Azshara    | 3158.4 ± 0.88 | -11.4            |
 | Illidari-Bane Claymore            | *empty, two-hander* | 3154.5 ± 0.90 | -15.3            |
 | Boundless Agony                   | Blade of Infamy     | 3149.0 ± 0.88 | -20.8            |
-| Boundless Agony                   | Boundless Agony     | 3145.7 ± 0.87 | -24.1            |
 | Boundless Agony                   | Tracker's Blade     | 3138.3 ± 0.87 | -31.5            |
 | Boundless Agony                   | Claw of the Phoenix | 3135.5 ± 0.86 | -34.3            |
 | Boundless Agony                   | Blade of Savagery   | 3135.2 ± 0.87 | -34.6            |
@@ -87,7 +85,6 @@ A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styl
 | Tracker's Blade                   | Blade of Infamy     | 3103.1 ± 0.86 | -66.7            |
 | Tracker's Blade                   | Boundless Agony     | 3099.2 ± 0.86 | -70.6            |
 | Blade of Savagery                 | Blade of Infamy     | 3088.4 ± 0.84 | -81.4            |
-| Tracker's Blade                   | Tracker's Blade     | 3087.6 ± 0.86 | -82.2            |
 | Tracker's Blade                   | Blade of Savagery   | 3087.2 ± 0.86 | -82.6            |
 | Tracker's Blade                   | Claw of the Phoenix | 3085.7 ± 0.87 | -84.1            |
 | Blade of Savagery                 | Boundless Agony     | 3085.0 ± 0.84 | -84.8            |

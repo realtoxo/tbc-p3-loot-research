@@ -64,9 +64,7 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 | Dragonmaw                          | Merciless Gladiator's Cleaver | 2166.3 ± 1.05 | -33.2            |
 | Dragonmaw                          | Netherbane                    | 2164.5 ± 1.06 | -35.0            |
 | Rod of the Sun King                | Talon of Azshara              | 2163.0 ± 1.01 | -36.5            |
-| Talon of Azshara                   | Talon of Azshara              | 2161.7 ± 1.01 | -37.8            |
 | Merciless Gladiator's Slicer       | Merciless Gladiator's Slicer  | 2159.6 ± 0.99 | -39.9            |
-| Rod of the Sun King                | Rod of the Sun King           | 2157.5 ± 1.03 | -42.0            |
 | Talon of Azshara                   | Rod of the Sun King           | 2157.3 ± 1.03 | -42.2            |
 | Talon of the Phoenix               | Talon of Azshara              | 2156.9 ± 1.01 | -42.6            |
 | Merciless Gladiator's Slicer       | Merciless Gladiator's Cleaver | 2156.3 ± 0.99 | -43.2            |
@@ -311,7 +309,6 @@ A Fury Warrior considers only one-handers and main handers, so every row below i
 | The Horseman's Blade               | The Harvester of Souls        | 2070.4 ± 0.99 | -129.1           |
 | Gladiator's Right Ripper           | Edge of the Cosmos            | 2070.1 ± 1.00 | -129.4           |
 | Gladiator's Right Ripper           | The Harvester of Souls        | 2069.1 ± 0.99 | -130.4           |
-| Vindicator's Brand                 | Vindicator's Brand            | 2068.4 ± 0.96 | -131.1           |
 | The Decapitator                    | Bloodskull Destroyer          | 2067.1 ± 0.99 | -132.4           |
 | The Decapitator                    | Edge of the Cosmos            | 2066.1 ± 0.99 | -133.4           |
 | Blinkstrike                        | Illidari-Bane Broadsword      | 2065.8 ± 1.03 | -133.7           |

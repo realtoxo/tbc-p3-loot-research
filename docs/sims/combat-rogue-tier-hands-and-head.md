@@ -146,7 +146,6 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Talon of Azshara                   | Malchazeen                       | 2130.3 ± 0.89 | -136.6           |
 | Talon of Azshara                   | Shard of Azzinoth                | 2128.8 ± 0.90 | -138.1           |
 | Blade of Infamy                    | Talon of Azshara                 | 2125.6 ± 0.94 | -141.3           |
-| Talon of Azshara                   | Talon of Azshara                 | 2123.3 ± 0.92 | -143.6           |
 | Blade of Infamy                    | Merciless Gladiator's Slicer     | 2122.6 ± 0.94 | -144.3           |
 | Merciless Gladiator's Slicer       | Merciless Gladiator's Shanker    | 2121.3 ± 0.90 | -145.6           |
 | Warglaive of Azzinoth              | Syphon of the Nathrezim          | 2119.0 ± 0.94 | -147.9           |
@@ -304,7 +303,6 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Talon of the Phoenix               | Gladiator's Slicer               | 2020.8 ± 0.87 | -246.1           |
 | Merciless Gladiator's Right Ripper | Merciless Gladiator's Slicer     | 2018.5 ± 0.86 | -248.4           |
 | Claw of Molten Fury                | Gladiator's Slicer               | 2017.8 ± 0.88 | -249.1           |
-| Rod of the Sun King                | Rod of the Sun King              | 2016.1 ± 0.88 | -250.8           |
 | Fool's Bane                        | Merciless Gladiator's Shanker    | 2012.9 ± 0.80 | -254.0           |
 | Dragonstrike                       | Syphon of the Nathrezim          | 2012.7 ± 0.91 | -254.2           |
 | Fool's Bane                        | Vengeful Gladiator's Slicer      | 2012.7 ± 0.85 | -254.2           |
@@ -362,12 +360,10 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Shard of Azzinoth                  | Boundless Agony                  | 1925.3 ± 0.72 | -341.6           |
 | Vengeful Gladiator's Shanker       | Fang of Vashj                    | 1923.5 ± 0.70 | -343.4           |
 | Shard of Azzinoth                  | Fang of Vashj                    | 1923.1 ± 0.71 | -343.8           |
-| Boundless Agony                    | Boundless Agony                  | 1923.0 ± 0.72 | -343.9           |
 | Boundless Agony                    | Vengeful Gladiator's Shanker     | 1922.8 ± 0.71 | -344.1           |
 | Fang of Vashj                      | Boundless Agony                  | 1918.9 ± 0.71 | -348.0           |
 | Fang of Vashj                      | Vengeful Gladiator's Shanker     | 1918.9 ± 0.69 | -348.0           |
 | Boundless Agony                    | Fang of Vashj                    | 1918.9 ± 0.71 | -348.0           |
-| Fang of Vashj                      | Fang of Vashj                    | 1914.3 ± 0.69 | -352.6           |
 | Vengeful Gladiator's Shanker       | Merciless Gladiator's Shanker    | 1911.9 ± 0.70 | -355.0           |
 | Vengeful Gladiator's Shanker       | Vengeful Gladiator's Slicer      | 1911.3 ± 0.75 | -355.6           |
 | Shard of Azzinoth                  | Merciless Gladiator's Shanker    | 1910.6 ± 0.72 | -356.3           |
@@ -379,7 +375,6 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Boundless Agony                    | Merciless Gladiator's Shanker    | 1906.5 ± 0.70 | -360.4           |
 | Boundless Agony                    | Blade of Infamy                  | 1905.2 ± 0.75 | -361.7           |
 | Fang of Vashj                      | Vengeful Gladiator's Slicer      | 1903.1 ± 0.73 | -363.8           |
-| Shard of Azzinoth                  | Shard of Azzinoth                | 1902.8 ± 0.72 | -364.1           |
 | Merciless Gladiator's Shanker      | Vengeful Gladiator's Shanker     | 1902.7 ± 0.70 | -364.2           |
 | Fang of Vashj                      | Merciless Gladiator's Shanker    | 1902.6 ± 0.70 | -364.3           |
 | Vengeful Gladiator's Shanker       | Malchazeen                       | 1902.5 ± 0.70 | -364.4           |
@@ -420,7 +415,6 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Malchazeen                         | Shard of Azzinoth                | 1863.6 ± 0.70 | -403.3           |
 | Shard of Azzinoth                  | Rod of the Sun King              | 1860.1 ± 0.74 | -406.8           |
 | Boundless Agony                    | Rod of the Sun King              | 1860.0 ± 0.73 | -406.9           |
-| Malchazeen                         | Malchazeen                       | 1859.1 ± 0.68 | -407.8           |
 | Malchazeen                         | Talon of Azshara                 | 1856.6 ± 0.72 | -410.3           |
 | Merciless Gladiator's Shanker      | Gladiator's Slicer               | 1855.6 ± 0.73 | -411.3           |
 | Fang of Vashj                      | Rod of the Sun King              | 1854.6 ± 0.71 | -412.3           |

@@ -79,20 +79,6 @@ specs:
         standard_error: 0.9
         stdev: 90.2
       - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        pair_speed: 2.7
-        dps: 1978.6
-        standard_error: 0.89
-        stdev: 89.4
-      - main_hand:
           id: 28438
           name: Dragonmaw
           speed: 2.7
@@ -513,34 +499,6 @@ specs:
         dps: 1979.2
         standard_error: 0.87
         stdev: 87.0
-      - main_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        pair_speed: 2.6
-        dps: 1978.6
-        standard_error: 0.87
-        stdev: 87.2
-      - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        pair_speed: 2.7
-        dps: 1977.6
-        standard_error: 0.89
-        stdev: 89.3
       - main_hand:
           id: 33669
           name: Vengeful Gladiator's Cleaver
@@ -1159,20 +1117,6 @@ specs:
         standard_error: 0.91
         stdev: 90.8
       - main_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        pair_speed: 2.6
-        dps: 2102.7
-        standard_error: 0.9
-        stdev: 90.0
-      - main_hand:
           id: 33669
           name: Vengeful Gladiator's Cleaver
           speed: 2.6
@@ -1200,20 +1144,6 @@ specs:
         dps: 2101.9
         standard_error: 0.91
         stdev: 90.9
-      - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        pair_speed: 2.7
-        dps: 2099.9
-        standard_error: 0.93
-        stdev: 93.1
       - main_hand:
           id: 28438
           name: Dragonmaw
@@ -5396,19 +5326,6 @@ specs:
         standard_error: 1.01
         stdev: 101.3
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2161.7
-        standard_error: 1.01
-        stdev: 101.3
-      - main_hand:
           id: 32052
           name: Merciless Gladiator's Slicer
           speed: 2.6
@@ -5421,19 +5338,6 @@ specs:
         dps: 2159.6
         standard_error: 0.99
         stdev: 98.9
-      - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        dps: 2157.5
-        standard_error: 1.03
-        stdev: 103.2
       - main_hand:
           id: 30082
           name: Talon of Azshara
@@ -8607,19 +8511,6 @@ specs:
         standard_error: 0.99
         stdev: 99.3
       - main_hand:
-          id: 29124
-          name: Vindicator's Brand
-          speed: 2.6
-          source: drop
-        off_hand:
-          id: 29124
-          name: Vindicator's Brand
-          speed: 2.6
-          source: drop
-        dps: 2068.4
-        standard_error: 0.96
-        stdev: 96.3
-      - main_hand:
           id: 28767
           name: The Decapitator
           speed: 2.6
@@ -10909,19 +10800,6 @@ specs:
         standard_error: 1.06
         stdev: 106.1
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2180.9
-        standard_error: 1.03
-        stdev: 103.0
-      - main_hand:
           id: 32262
           name: Syphon of the Nathrezim
           speed: 2.8
@@ -11467,19 +11345,6 @@ specs:
         dps: 2171.4
         standard_error: 1.03
         stdev: 103.5
-      - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        dps: 2170.9
-        standard_error: 1.06
-        stdev: 105.7
       - main_hand:
           id: 28295
           name: Gladiator's Slicer
@@ -12429,19 +12294,6 @@ specs:
         dps: 2156.0
         standard_error: 1.06
         stdev: 105.6
-      - main_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        dps: 2155.8
-        standard_error: 1.03
-        stdev: 102.5
       - main_hand:
           id: 28729
           name: Spiteblade
@@ -16707,19 +16559,6 @@ specs:
         standard_error: 0.99
         stdev: 99.5
       - main_hand:
-          id: 29124
-          name: Vindicator's Brand
-          speed: 2.6
-          source: drop
-        off_hand:
-          id: 29124
-          name: Vindicator's Brand
-          speed: 2.6
-          source: drop
-        dps: 2081.7
-        standard_error: 1.0
-        stdev: 99.7
-      - main_hand:
           id: 28267
           name: Edge of the Cosmos
           speed: 2.6
@@ -19256,19 +19095,6 @@ specs:
         standard_error: 1.05
         stdev: 104.6
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2354.6
-        standard_error: 1.08
-        stdev: 107.8
-      - main_hand:
           id: 31965
           name: Merciless Gladiator's Cleaver
           speed: 2.6
@@ -19801,19 +19627,6 @@ specs:
         dps: 2346.0
         standard_error: 1.13
         stdev: 113.0
-      - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        dps: 2345.9
-        standard_error: 1.12
-        stdev: 111.5
       - main_hand:
           id: 31965
           name: Merciless Gladiator's Cleaver
@@ -21075,19 +20888,6 @@ specs:
         dps: 2326.8
         standard_error: 1.08
         stdev: 108.3
-      - main_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        dps: 2326.8
-        standard_error: 1.07
-        stdev: 107.5
       - main_hand:
           id: 28729
           name: Spiteblade
@@ -24936,19 +24736,6 @@ specs:
         dps: 2252.8
         standard_error: 1.08
         stdev: 107.5
-      - main_hand:
-          id: 29124
-          name: Vindicator's Brand
-          speed: 2.6
-          source: drop
-        off_hand:
-          id: 29124
-          name: Vindicator's Brand
-          speed: 2.6
-          source: drop
-        dps: 2252.2
-        standard_error: 1.05
-        stdev: 105.0
       - main_hand:
           id: 28767
           name: The Decapitator
@@ -27447,19 +27234,6 @@ specs:
         standard_error: 1.05
         stdev: 104.6
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2354.6
-        standard_error: 1.08
-        stdev: 107.8
-      - main_hand:
           id: 31965
           name: Merciless Gladiator's Cleaver
           speed: 2.6
@@ -27992,19 +27766,6 @@ specs:
         dps: 2346.0
         standard_error: 1.13
         stdev: 113.0
-      - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        dps: 2345.9
-        standard_error: 1.12
-        stdev: 111.5
       - main_hand:
           id: 31965
           name: Merciless Gladiator's Cleaver
@@ -29266,19 +29027,6 @@ specs:
         dps: 2326.8
         standard_error: 1.08
         stdev: 108.3
-      - main_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        off_hand:
-          id: 32236
-          name: Rising Tide
-          speed: 2.6
-          source: raid_drop
-        dps: 2326.8
-        standard_error: 1.07
-        stdev: 107.5
       - main_hand:
           id: 28729
           name: Spiteblade
@@ -33127,19 +32875,6 @@ specs:
         dps: 2252.8
         standard_error: 1.08
         stdev: 107.5
-      - main_hand:
-          id: 29124
-          name: Vindicator's Brand
-          speed: 2.6
-          source: drop
-        off_hand:
-          id: 29124
-          name: Vindicator's Brand
-          speed: 2.6
-          source: drop
-        dps: 2252.2
-        standard_error: 1.05
-        stdev: 105.0
       - main_hand:
           id: 28767
           name: The Decapitator
@@ -36390,19 +36125,6 @@ specs:
           speed: 2.7
           source: raid_drop
         off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 1960.8
-        standard_error: 0.88
-        stdev: 87.7
-      - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
           id: 32052
           name: Merciless Gladiator's Slicer
           speed: 2.6
@@ -37100,19 +36822,6 @@ specs:
         standard_error: 0.77
         stdev: 77.2
       - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        dps: 1858.4
-        standard_error: 0.83
-        stdev: 82.8
-      - main_hand:
           id: 28437
           name: Drakefist Hammer
           speed: 2.7
@@ -37391,19 +37100,6 @@ specs:
           speed: 1.8
           source: raid_drop
         off_hand:
-          id: 30103
-          name: Fang of Vashj
-          speed: 1.8
-          source: raid_drop
-        dps: 1758.0
-        standard_error: 0.65
-        stdev: 64.6
-      - main_hand:
-          id: 30103
-          name: Fang of Vashj
-          speed: 1.8
-          source: raid_drop
-        off_hand:
           id: 32044
           name: Merciless Gladiator's Shanker
           speed: 1.8
@@ -37554,19 +37250,6 @@ specs:
         dps: 1715.0
         standard_error: 0.64
         stdev: 64.3
-      - main_hand:
-          id: 28768
-          name: Malchazeen
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 28768
-          name: Malchazeen
-          speed: 1.8
-          source: raid_drop
-        dps: 1707.4
-        standard_error: 0.64
-        stdev: 63.6
       - main_hand:
           id: 28768
           name: Malchazeen
@@ -38907,19 +38590,6 @@ specs:
         dps: 2125.6
         standard_error: 0.94
         stdev: 94.0
-      - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2123.3
-        standard_error: 0.92
-        stdev: 91.7
       - main_hand:
           id: 30881
           name: Blade of Infamy
@@ -40962,19 +40632,6 @@ specs:
         standard_error: 0.88
         stdev: 88.4
       - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        dps: 2016.1
-        standard_error: 0.88
-        stdev: 87.5
-      - main_hand:
           id: 28657
           name: Fool's Bane
           speed: 2.6
@@ -41721,19 +41378,6 @@ specs:
           speed: 1.8
           source: raid_drop
         off_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        dps: 1923.0
-        standard_error: 0.72
-        stdev: 72.3
-      - main_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        off_hand:
           id: 33754
           name: Vengeful Gladiator's Shanker
           speed: 1.8
@@ -41780,19 +41424,6 @@ specs:
         dps: 1918.9
         standard_error: 0.71
         stdev: 70.6
-      - main_hand:
-          id: 30103
-          name: Fang of Vashj
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30103
-          name: Fang of Vashj
-          speed: 1.8
-          source: raid_drop
-        dps: 1914.3
-        standard_error: 0.69
-        stdev: 69.2
       - main_hand:
           id: 33754
           name: Vengeful Gladiator's Shanker
@@ -41936,19 +41567,6 @@ specs:
         dps: 1903.1
         standard_error: 0.73
         stdev: 73.3
-      - main_hand:
-          id: 32471
-          name: Shard of Azzinoth
-          speed: 1.9
-          source: raid_drop
-        off_hand:
-          id: 32471
-          name: Shard of Azzinoth
-          speed: 1.9
-          source: raid_drop
-        dps: 1902.8
-        standard_error: 0.72
-        stdev: 72.0
       - main_hand:
           id: 32044
           name: Merciless Gladiator's Shanker
@@ -42469,19 +42087,6 @@ specs:
         dps: 1860.0
         standard_error: 0.73
         stdev: 72.9
-      - main_hand:
-          id: 28768
-          name: Malchazeen
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 28768
-          name: Malchazeen
-          speed: 1.8
-          source: raid_drop
-        dps: 1859.1
-        standard_error: 0.68
-        stdev: 68.1
       - main_hand:
           id: 28768
           name: Malchazeen
@@ -43900,19 +43505,6 @@ specs:
         dps: 2214.9
         standard_error: 0.98
         stdev: 98.3
-      - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2212.2
-        standard_error: 0.96
-        stdev: 96.4
       - main_hand:
           id: 30881
           name: Blade of Infamy
@@ -45955,19 +45547,6 @@ specs:
         standard_error: 0.93
         stdev: 92.6
       - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        dps: 2101.3
-        standard_error: 0.91
-        stdev: 90.9
-      - main_hand:
           id: 28657
           name: Fool's Bane
           speed: 2.6
@@ -46670,19 +46249,6 @@ specs:
         standard_error: 0.76
         stdev: 76.0
       - main_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        dps: 2004.9
-        standard_error: 0.75
-        stdev: 75.1
-      - main_hand:
           id: 32471
           name: Shard of Azzinoth
           speed: 1.9
@@ -46771,19 +46337,6 @@ specs:
           speed: 1.8
           source: arena
         dps: 1998.3
-        standard_error: 0.73
-        stdev: 72.6
-      - main_hand:
-          id: 30103
-          name: Fang of Vashj
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30103
-          name: Fang of Vashj
-          speed: 1.8
-          source: raid_drop
-        dps: 1994.1
         standard_error: 0.73
         stdev: 72.6
       - main_hand:
@@ -46994,19 +46547,6 @@ specs:
         dps: 1981.5
         standard_error: 0.73
         stdev: 73.2
-      - main_hand:
-          id: 32471
-          name: Shard of Azzinoth
-          speed: 1.9
-          source: raid_drop
-        off_hand:
-          id: 32471
-          name: Shard of Azzinoth
-          speed: 1.9
-          source: raid_drop
-        dps: 1980.8
-        standard_error: 0.76
-        stdev: 75.6
       - main_hand:
           id: 32471
           name: Shard of Azzinoth
@@ -47449,19 +46989,6 @@ specs:
         dps: 1939.0
         standard_error: 0.76
         stdev: 75.9
-      - main_hand:
-          id: 28768
-          name: Malchazeen
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 28768
-          name: Malchazeen
-          speed: 1.8
-          source: raid_drop
-        dps: 1937.4
-        standard_error: 0.7
-        stdev: 70.3
       - main_hand:
           id: 32471
           name: Shard of Azzinoth
@@ -48894,19 +48421,6 @@ specs:
         standard_error: 0.98
         stdev: 98.3
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2212.2
-        standard_error: 0.96
-        stdev: 96.4
-      - main_hand:
           id: 30881
           name: Blade of Infamy
           speed: 2.6
@@ -50948,19 +50462,6 @@ specs:
         standard_error: 0.93
         stdev: 92.6
       - main_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 29996
-          name: Rod of the Sun King
-          speed: 2.7
-          source: raid_drop
-        dps: 2101.3
-        standard_error: 0.91
-        stdev: 90.9
-      - main_hand:
           id: 28657
           name: Fool's Bane
           speed: 2.6
@@ -51663,19 +51164,6 @@ specs:
         standard_error: 0.76
         stdev: 76.0
       - main_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        dps: 2004.9
-        standard_error: 0.75
-        stdev: 75.1
-      - main_hand:
           id: 32471
           name: Shard of Azzinoth
           speed: 1.9
@@ -51764,19 +51252,6 @@ specs:
           speed: 1.8
           source: arena
         dps: 1998.3
-        standard_error: 0.73
-        stdev: 72.6
-      - main_hand:
-          id: 30103
-          name: Fang of Vashj
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30103
-          name: Fang of Vashj
-          speed: 1.8
-          source: raid_drop
-        dps: 1994.1
         standard_error: 0.73
         stdev: 72.6
       - main_hand:
@@ -51987,19 +51462,6 @@ specs:
         dps: 1981.5
         standard_error: 0.73
         stdev: 73.2
-      - main_hand:
-          id: 32471
-          name: Shard of Azzinoth
-          speed: 1.9
-          source: raid_drop
-        off_hand:
-          id: 32471
-          name: Shard of Azzinoth
-          speed: 1.9
-          source: raid_drop
-        dps: 1980.8
-        standard_error: 0.76
-        stdev: 75.6
       - main_hand:
           id: 32471
           name: Shard of Azzinoth
@@ -52442,19 +51904,6 @@ specs:
         dps: 1939.0
         standard_error: 0.76
         stdev: 75.9
-      - main_hand:
-          id: 28768
-          name: Malchazeen
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 28768
-          name: Malchazeen
-          speed: 1.8
-          source: raid_drop
-        dps: 1937.4
-        standard_error: 0.7
-        stdev: 70.3
       - main_hand:
           id: 32471
           name: Shard of Azzinoth
@@ -57153,19 +56602,6 @@ specs:
         standard_error: 0.85
         stdev: 85.3
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 3002.2
-        standard_error: 0.85
-        stdev: 85.3
-      - main_hand:
           id: 30789
           name: Illidari-Bane Claymore
           speed: 3.7
@@ -57468,19 +56904,6 @@ specs:
         standard_error: 0.89
         stdev: 89.2
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 3158.4
-        standard_error: 0.88
-        stdev: 88.5
-      - main_hand:
           id: 30789
           name: Illidari-Bane Claymore
           speed: 3.7
@@ -57501,19 +56924,6 @@ specs:
         dps: 3149.0
         standard_error: 0.88
         stdev: 87.9
-      - main_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        dps: 3145.7
-        standard_error: 0.87
-        stdev: 87.1
       - main_hand:
           id: 30901
           name: Boundless Agony
@@ -57605,19 +57015,6 @@ specs:
         dps: 3088.4
         standard_error: 0.84
         stdev: 84.0
-      - main_hand:
-          id: 30865
-          name: Tracker's Blade
-          speed: 1.5
-          source: raid_drop
-        off_hand:
-          id: 30865
-          name: Tracker's Blade
-          speed: 1.5
-          source: raid_drop
-        dps: 3087.6
-        standard_error: 0.86
-        stdev: 86.2
       - main_hand:
           id: 30865
           name: Tracker's Blade
@@ -58025,19 +57422,6 @@ specs:
         standard_error: 0.91
         stdev: 91.3
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 3190.9
-        standard_error: 0.9
-        stdev: 90.0
-      - main_hand:
           id: 30901
           name: Boundless Agony
           speed: 1.8
@@ -58050,19 +57434,6 @@ specs:
         dps: 3183.0
         standard_error: 0.89
         stdev: 89.2
-      - main_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 30901
-          name: Boundless Agony
-          speed: 1.8
-          source: raid_drop
-        dps: 3180.4
-        standard_error: 0.89
-        stdev: 88.8
       - main_hand:
           id: 30901
           name: Boundless Agony
@@ -58154,19 +57525,6 @@ specs:
         dps: 3120.1
         standard_error: 0.85
         stdev: 85.1
-      - main_hand:
-          id: 30865
-          name: Tracker's Blade
-          speed: 1.5
-          source: raid_drop
-        off_hand:
-          id: 30865
-          name: Tracker's Blade
-          speed: 1.5
-          source: raid_drop
-        dps: 3120.0
-        standard_error: 0.88
-        stdev: 87.7
       - main_hand:
           id: 30865
           name: Tracker's Blade
@@ -60422,19 +59780,6 @@ specs:
           speed: 2.7
           source: raid_drop
         off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2501.1
-        standard_error: 0.8
-        stdev: 79.8
-      - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
           id: 28524
           name: Emerald Ripper
           speed: 1.8
@@ -60606,19 +59951,6 @@ specs:
         dps: 2441.6
         standard_error: 0.74
         stdev: 74.4
-      - main_hand:
-          id: 28524
-          name: Emerald Ripper
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 28524
-          name: Emerald Ripper
-          speed: 1.8
-          source: raid_drop
-        dps: 2441.2
-        standard_error: 0.75
-        stdev: 74.7
       - main_hand:
           id: 28524
           name: Emerald Ripper
@@ -60807,19 +60139,6 @@ specs:
           speed: 1.8
           source: drop
         off_hand:
-          id: 29182
-          name: Riftmaker
-          speed: 1.8
-          source: drop
-        dps: 2431.8
-        standard_error: 0.74
-        stdev: 74.3
-      - main_hand:
-          id: 29182
-          name: Riftmaker
-          speed: 1.8
-          source: drop
-        off_hand:
           id: 31492
           name: Claw of the Netherwing Flight
           speed: 1.8
@@ -60898,19 +60217,6 @@ specs:
           speed: 1.8
           source: drop
         off_hand:
-          id: 31492
-          name: Claw of the Netherwing Flight
-          speed: 1.8
-          source: drop
-        dps: 2422.6
-        standard_error: 0.73
-        stdev: 73.2
-      - main_hand:
-          id: 31492
-          name: Claw of the Netherwing Flight
-          speed: 1.8
-          source: drop
-        off_hand:
           id: 29182
           name: Riftmaker
           speed: 1.8
@@ -60970,19 +60276,6 @@ specs:
         dps: 2414.7
         standard_error: 0.73
         stdev: 72.7
-      - main_hand:
-          id: 29121
-          name: Guile of Khoraazi
-          speed: 1.6
-          source: reputation
-        off_hand:
-          id: 29121
-          name: Guile of Khoraazi
-          speed: 1.6
-          source: reputation
-        dps: 2412.6
-        standard_error: 0.73
-        stdev: 72.9
       - main_hand:
           id: 29121
           name: Guile of Khoraazi
@@ -61538,19 +60831,6 @@ specs:
         standard_error: 0.84
         stdev: 84.4
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2640.1
-        standard_error: 0.84
-        stdev: 84.2
-      - main_hand:
           id: 32946
           name: Claw of Molten Fury
           speed: 2.7
@@ -61831,19 +61111,6 @@ specs:
         dps: 2581.7
         standard_error: 0.8
         stdev: 79.6
-      - main_hand:
-          id: 28524
-          name: Emerald Ripper
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 28524
-          name: Emerald Ripper
-          speed: 1.8
-          source: raid_drop
-        dps: 2579.7
-        standard_error: 0.79
-        stdev: 79.2
       - main_hand:
           id: 28263
           name: Stellaris
@@ -62131,19 +61398,6 @@ specs:
         standard_error: 0.79
         stdev: 78.7
       - main_hand:
-          id: 29182
-          name: Riftmaker
-          speed: 1.8
-          source: drop
-        off_hand:
-          id: 29182
-          name: Riftmaker
-          speed: 1.8
-          source: drop
-        dps: 2568.6
-        standard_error: 0.79
-        stdev: 78.7
-      - main_hand:
           id: 31492
           name: Claw of the Netherwing Flight
           speed: 1.8
@@ -62261,19 +61515,6 @@ specs:
         standard_error: 0.79
         stdev: 79.0
       - main_hand:
-          id: 31492
-          name: Claw of the Netherwing Flight
-          speed: 1.8
-          source: drop
-        off_hand:
-          id: 31492
-          name: Claw of the Netherwing Flight
-          speed: 1.8
-          source: drop
-        dps: 2558.5
-        standard_error: 0.79
-        stdev: 79.0
-      - main_hand:
           id: 32269
           name: Messenger of Fate
           speed: 1.4
@@ -62377,19 +61618,6 @@ specs:
         dps: 2548.0
         standard_error: 0.78
         stdev: 78.0
-      - main_hand:
-          id: 29121
-          name: Guile of Khoraazi
-          speed: 1.6
-          source: reputation
-        off_hand:
-          id: 29121
-          name: Guile of Khoraazi
-          speed: 1.6
-          source: reputation
-        dps: 2547.6
-        standard_error: 0.78
-        stdev: 77.6
       - main_hand:
           id: 29121
           name: Guile of Khoraazi
@@ -63044,19 +62272,6 @@ specs:
         standard_error: 0.83
         stdev: 82.9
       - main_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        off_hand:
-          id: 30082
-          name: Talon of Azshara
-          speed: 2.7
-          source: raid_drop
-        dps: 2665.8
-        standard_error: 0.83
-        stdev: 82.9
-      - main_hand:
           id: 32946
           name: Claw of Molten Fury
           speed: 2.7
@@ -63382,19 +62597,6 @@ specs:
         standard_error: 0.79
         stdev: 78.6
       - main_hand:
-          id: 28524
-          name: Emerald Ripper
-          speed: 1.8
-          source: raid_drop
-        off_hand:
-          id: 28524
-          name: Emerald Ripper
-          speed: 1.8
-          source: raid_drop
-        dps: 2614.6
-        standard_error: 0.78
-        stdev: 77.9
-      - main_hand:
           id: 28263
           name: Stellaris
           speed: 1.9
@@ -63621,19 +62823,6 @@ specs:
           speed: 1.8
           source: drop
         off_hand:
-          id: 29182
-          name: Riftmaker
-          speed: 1.8
-          source: drop
-        dps: 2603.7
-        standard_error: 0.77
-        stdev: 77.3
-      - main_hand:
-          id: 29182
-          name: Riftmaker
-          speed: 1.8
-          source: drop
-        off_hand:
           id: 31492
           name: Claw of the Netherwing Flight
           speed: 1.8
@@ -63751,19 +62940,6 @@ specs:
           speed: 1.8
           source: drop
         off_hand:
-          id: 31492
-          name: Claw of the Netherwing Flight
-          speed: 1.8
-          source: drop
-        dps: 2594.4
-        standard_error: 0.77
-        stdev: 77.2
-      - main_hand:
-          id: 31492
-          name: Claw of the Netherwing Flight
-          speed: 1.8
-          source: drop
-        off_hand:
           id: 29182
           name: Riftmaker
           speed: 1.8
@@ -63823,19 +62999,6 @@ specs:
         dps: 2585.8
         standard_error: 0.77
         stdev: 77.0
-      - main_hand:
-          id: 29121
-          name: Guile of Khoraazi
-          speed: 1.6
-          source: reputation
-        off_hand:
-          id: 29121
-          name: Guile of Khoraazi
-          speed: 1.6
-          source: reputation
-        dps: 2585.6
-        standard_error: 0.77
-        stdev: 76.7
       - main_hand:
           id: 29121
           name: Guile of Khoraazi

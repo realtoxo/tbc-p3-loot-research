@@ -2758,7 +2758,8 @@ def with_pair(gear: dict, mh: int, oh: int | None,
     return out
 
 
-def enumerate_pairs(round_: dict, anchor: str, speed_of) -> list[dict]:
+def enumerate_pairs(round_: dict, anchor: str, speed_of,
+                    weapon_unique) -> list[dict]:
     """The combinations one anchor runs, generated from the spec's field.
 
     RULED BY THE GUILD LEAD ON 20 AUGUST 2026: the weapon rounds are
@@ -2791,6 +2792,9 @@ def enumerate_pairs(round_: dict, anchor: str, speed_of) -> list[dict]:
     if {"dual_wield", "main_hand_off_hand"} & set(field["styles"]):
         for mh in kept(field.get("main_hand") or []):
             for oh in kept(field.get("off_hand") or []):
+                if mh["id"] == oh["id"] and weapon_unique.get(
+                        mh["id"], True):
+                    continue
                 row = {"mh": mh["id"], "oh": oh["id"]}
                 if field.get("matched_speed"):
                     a, b = speed_of(mh["id"]), speed_of(oh["id"])
@@ -2861,6 +2865,21 @@ def main() -> int:
     db_items_by_id = {i["id"]: i for i in db.get("items") or []}
     ring_unique = {r["id"]: r["unique"] for r in yaml.safe_load(
         Path("data/facts/ring-uniqueness.yaml").read_text())["rings"]}
+    weapon_unique = {w["id"]: w["unique"] for w in yaml.safe_load(
+        Path("data/facts/weapon-uniqueness.yaml").read_text())["weapons"]}
+    for spec_key, spec_round in ROUNDS.items():
+        wf = spec_round.get("weapon_field") or {}
+        if not ({"dual_wield", "main_hand_off_hand", "matched_speed"}
+                & set(wf.get("styles") or [])):
+            continue
+        for key in ("one_hand", "main_hand", "off_hand"):
+            for cand in wf.get(key) or []:
+                if cand["id"] not in weapon_unique:
+                    sys.exit(
+                        f"run_variant_sims.py: {spec_key}: one-hander "
+                        f"{cand['id']} is in no row of "
+                        "data/facts/weapon-uniqueness.yaml. Check its "
+                        "Wowhead tooltip and add it before it can run.")
     for spec_key, spec_round in ROUNDS.items():
         for cand in spec_round.get("ring_pool") or []:
             if cand["id"] not in ring_unique:
@@ -2945,7 +2964,8 @@ def main() -> int:
                 f"{key} {len(field.get(key) or [])}"
                 for key in ("two_hand", "main_hand", "off_hand"))
             counts = ", ".join(
-                f"{anchor} {len(enumerate_pairs(round_, anchor, speed_of))}"
+                f"{anchor} "
+                f"{len(enumerate_pairs(round_, anchor, speed_of, weapon_unique))}"
                 for anchor in round_.get("anchors", ANCHORS))
             print(f"{spec}: field {sizes}; combinations {counts}")
         anchors: dict[str, list[dict]] = {}
@@ -2958,7 +2978,8 @@ def main() -> int:
                 return 1
             gear = json.loads(path.read_text())
             results = []
-            for pair in enumerate_pairs(round_, anchor, speed_of):
+            for pair in enumerate_pairs(round_, anchor, speed_of,
+                                        weapon_unique):
                 oh = pair.get("oh")
                 label = names.get(pair["mh"], str(pair["mh"])) + (
                     f" + {names.get(oh, oh)}" if oh else ", two-hander")

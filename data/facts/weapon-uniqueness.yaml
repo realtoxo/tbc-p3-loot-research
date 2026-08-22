@@ -1,0 +1,122 @@
+meta:
+  what: Whether each one-hand weapon in the variant rounds' dual-wield
+    fields can be worn in both hands at once. A weapon marked unique
+    cannot, and a doubled row for it is a measurement of a state the
+    game does not allow. Two-handers and ranged never double, and the
+    trinket rounds never generate a doubled pair, so this file covers
+    exactly the one-hand candidates of the dual-capable specs.
+  source: Wowhead TBC tooltips, nether.wowhead.com/tbc/tooltip/item/<id>,
+    observed 2026-08-22. Unique or Unique-Equipped in the tooltip is the
+    claim, and the two are one constraint here, since neither allows a
+    second copy worn.
+  why_this_file_exists: The same defect as data/facts/ring-uniqueness.yaml,
+    found by extending the guild lead's ruling that an illegal double may
+    not appear in a sim result, 22 August 2026, to every slot that can
+    double. The wowsims database misses the unique flag on most of these
+    weapons and the engine equips two copies without complaint, so the
+    weapon rounds ran 13 unique one-handers doubled before the sweep.
+  maintenance: Hand-maintained, not regenerated. A one-hander added to a
+    dual-capable weapon_field must be added here first with its tooltip
+    checked, and the runner refuses one this file does not list.
+weapons:
+- {id: 23544, name: 'Runic Hammer', unique: false}
+- {id: 23554, name: 'Eternium Runed Blade', unique: false}
+- {id: 25099, name: 'Draenei Crystal Rod', unique: false}
+- {id: 27543, name: 'Starlight Dagger', unique: true}
+- {id: 27741, name: 'Bleeding Hollow Warhammer', unique: false}
+- {id: 27747, name: 'Boggspine Knuckles', unique: false}
+- {id: 27868, name: 'Runesong Dagger', unique: true}
+- {id: 27872, name: 'The Harvester of Souls', unique: false}
+- {id: 27905, name: 'Greatsword of Horrid Dreams', unique: true}
+- {id: 27937, name: 'Sky Breaker', unique: false}
+- {id: 28187, name: 'Star-Heart Lamp', unique: false}
+- {id: 28210, name: 'Bloodskull Destroyer', unique: false}
+- {id: 28260, name: 'Manual of the Nethermancer', unique: false}
+- {id: 28263, name: 'Stellaris', unique: false}
+- {id: 28267, name: 'Edge of the Cosmos', unique: false}
+- {id: 28295, name: 'Gladiator''s Slicer', unique: false}
+- {id: 28297, name: 'Gladiator''s Spellblade', unique: false}
+- {id: 28305, name: 'Gladiator''s Pummeler', unique: false}
+- {id: 28313, name: 'Gladiator''s Right Ripper', unique: false}
+- {id: 28412, name: 'Lamp of Peaceful Radiance', unique: false}
+- {id: 28431, name: 'The Planar Edge', unique: false}
+- {id: 28432, name: 'Black Planar Edge', unique: false}
+- {id: 28433, name: 'Wicked Edge of the Planes', unique: false}
+- {id: 28437, name: 'Drakefist Hammer', unique: false}
+- {id: 28438, name: 'Dragonmaw', unique: false}
+- {id: 28439, name: 'Dragonstrike', unique: false}
+- {id: 28524, name: 'Emerald Ripper', unique: true}
+- {id: 28584, name: 'Big Bad Wolf''s Paw', unique: true}
+- {id: 28603, name: 'Talisman of Nightbane', unique: false}
+- {id: 28657, name: 'Fool''s Bane', unique: false}
+- {id: 28729, name: 'Spiteblade', unique: false}
+- {id: 28734, name: 'Jewel of Infinite Possibilities', unique: false}
+- {id: 28767, name: 'The Decapitator', unique: false}
+- {id: 28768, name: 'Malchazeen', unique: true}
+- {id: 28770, name: 'Nathrezim Mindblade', unique: true}
+- {id: 28781, name: 'Karaborian Talisman', unique: false}
+- {id: 28802, name: 'Bloodmaw Magus-Blade', unique: true}
+- {id: 28931, name: 'High Warlord''s Spellblade', unique: false}
+- {id: 29121, name: 'Guile of Khoraazi', unique: true}
+- {id: 29124, name: 'Vindicator''s Brand', unique: true}
+- {id: 29153, name: 'Blade of the Archmage', unique: true}
+- {id: 29155, name: 'Stormcaller', unique: true}
+- {id: 29182, name: 'Riftmaker', unique: true}
+- {id: 29268, name: 'Mazthoril Honor Shield', unique: false}
+- {id: 29270, name: 'Flametongue Seal', unique: false}
+- {id: 29271, name: 'Talisman of Kalecgos', unique: false}
+- {id: 29272, name: 'Orb of the Soul-Eater', unique: false}
+- {id: 29273, name: 'Khadgar''s Knapsack', unique: false}
+- {id: 29330, name: 'The Saga of Terokk', unique: false}
+- {id: 29924, name: 'Netherbane', unique: false}
+- {id: 29948, name: 'Claw of the Phoenix', unique: false}
+- {id: 29996, name: 'Rod of the Sun King', unique: true}
+- {id: 30049, name: 'Fathomstone', unique: false}
+- {id: 30082, name: 'Talon of Azshara', unique: true}
+- {id: 30095, name: 'Fang of the Leviathan', unique: true}
+- {id: 30103, name: 'Fang of Vashj', unique: true}
+- {id: 30787, name: 'Illidari-Bane Mageblade', unique: false}
+- {id: 30788, name: 'Illidari-Bane Broadsword', unique: false}
+- {id: 30832, name: 'Gavel of Unearthed Secrets', unique: false}
+- {id: 30865, name: 'Tracker''s Blade', unique: true}
+- {id: 30872, name: 'Chronicle of Dark Secrets', unique: false}
+- {id: 30881, name: 'Blade of Infamy', unique: false}
+- {id: 30901, name: 'Boundless Agony', unique: true}
+- {id: 30909, name: 'Antonidas''s Aegis of Rapt Concentration', unique: false}
+- {id: 30910, name: 'Tempest of Chaos', unique: true}
+- {id: 31287, name: 'Draenei Honor Guard Shield', unique: false}
+- {id: 31332, name: 'Blinkstrike', unique: false}
+- {id: 31336, name: 'Blade of Wizardry', unique: false}
+- {id: 31492, name: 'Claw of the Netherwing Flight', unique: true}
+- {id: 31494, name: 'Netherwing Sorceror''s Charm', unique: false}
+- {id: 31965, name: 'Merciless Gladiator''s Cleaver', unique: false}
+- {id: 31978, name: 'Merciless Gladiator''s Endgame', unique: false}
+- {id: 32027, name: 'Merciless Gladiator''s Quickblade', unique: false}
+- {id: 32028, name: 'Merciless Gladiator''s Right Ripper', unique: false}
+- {id: 32044, name: 'Merciless Gladiator''s Shanker', unique: false}
+- {id: 32052, name: 'Merciless Gladiator''s Slicer', unique: false}
+- {id: 32053, name: 'Merciless Gladiator''s Spellblade', unique: false}
+- {id: 32236, name: 'Rising Tide', unique: true}
+- {id: 32237, name: 'The Maelstrom''s Fury', unique: false}
+- {id: 32262, name: 'Syphon of the Nathrezim', unique: false}
+- {id: 32269, name: 'Messenger of Fate', unique: false}
+- {id: 32361, name: 'Blind-Seers Icon', unique: false}
+- {id: 32369, name: 'Blade of Savagery', unique: false}
+- {id: 32471, name: 'Shard of Azzinoth', unique: true}
+- {id: 32533, name: 'Karrog''s Shard', unique: false}
+- {id: 32651, name: 'Crystal Orb of Enlightenment', unique: true}
+- {id: 32837, name: 'Warglaive of Azzinoth', unique: true}
+- {id: 32838, name: 'Warglaive of Azzinoth', unique: true}
+- {id: 32944, name: 'Talon of the Phoenix', unique: false}
+- {id: 32945, name: 'Fist of Molten Fury', unique: false}
+- {id: 32946, name: 'Claw of Molten Fury', unique: false}
+- {id: 33669, name: 'Vengeful Gladiator''s Cleaver', unique: false}
+- {id: 33687, name: 'Vengeful Gladiator''s Gavel', unique: false}
+- {id: 33737, name: 'Vengeful Gladiator''s Right Ripper', unique: false}
+- {id: 33754, name: 'Vengeful Gladiator''s Shanker', unique: false}
+- {id: 33762, name: 'Vengeful Gladiator''s Slicer', unique: false}
+- {id: 33763, name: 'Vengeful Gladiator''s Spellblade', unique: false}
+- {id: 34009, name: 'Hammer of Judgement', unique: false}
+- {id: 34011, name: 'Illidari Runeshield', unique: false}
+- {id: 34015, name: 'Vengeful Gladiator''s Chopper', unique: false}
+- {id: 38175, name: 'The Horseman''s Blade', unique: true}

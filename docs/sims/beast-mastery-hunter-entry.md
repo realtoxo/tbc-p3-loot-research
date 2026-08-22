@@ -59,7 +59,6 @@ A Beast Mastery Hunter can carry a two-hander or two one- handers, and both styl
 | Talon of the Phoenix *(this set)* | Claw of the Phoenix | 3011.8 ± 0.85 | +0.0             |
 | Talon of the Phoenix              | Talon of Azshara    | 3008.0 ± 0.85 | -3.8             |
 | Talon of Azshara                  | Claw of the Phoenix | 3006.1 ± 0.85 | -5.7             |
-| Talon of Azshara                  | Talon of Azshara    | 3002.2 ± 0.85 | -9.6             |
 | Illidari-Bane Claymore            | *empty, two-hander* | 2995.6 ± 0.85 | -16.2            |
 
 The best combination, Twinblade of the Phoenix alone, a two-hander, measures +79.4 against this set's own weapons, so the upgrade path at this anchor runs through it.

@@ -93,7 +93,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Talon of Azshara                   | Messenger of Fate             | 2667.5 ± 0.83 | -132.3           |
 | Claw of Molten Fury                | Guile of Khoraazi             | 2667.1 ± 0.84 | -132.7           |
 | Claw of Molten Fury                | Emerald Ripper                | 2666.4 ± 0.83 | -133.4           |
-| Talon of Azshara                   | Talon of Azshara              | 2665.8 ± 0.83 | -134.0           |
 | Claw of Molten Fury                | Stellaris                     | 2665.5 ± 0.83 | -134.3           |
 | Talon of Azshara                   | Claw of the Phoenix           | 2664.3 ± 0.83 | -135.5           |
 | Claw of Molten Fury                | Riftmaker                     | 2663.3 ± 0.83 | -136.5           |
@@ -119,7 +118,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Stellaris                          | Talon of Azshara              | 2615.5 ± 0.78 | -184.3           |
 | Emerald Ripper                     | Fist of Molten Fury           | 2615.3 ± 0.78 | -184.5           |
 | Stellaris                          | Claw of the Phoenix           | 2615.2 ± 0.79 | -184.6           |
-| Emerald Ripper                     | Emerald Ripper                | 2614.6 ± 0.78 | -185.2           |
 | Stellaris                          | Fist of Molten Fury           | 2613.1 ± 0.78 | -186.7           |
 | Riftmaker                          | Messenger of Fate             | 2612.5 ± 0.78 | -187.3           |
 | Claw of the Netherwing Flight      | Netherbane                    | 2611.9 ± 0.77 | -187.9           |
@@ -137,7 +135,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Stellaris                          | Stellaris                     | 2606.9 ± 0.78 | -192.9           |
 | Riftmaker                          | Emerald Ripper                | 2606.6 ± 0.78 | -193.2           |
 | Guile of Khoraazi                  | Blade of Infamy               | 2606.3 ± 0.77 | -193.5           |
-| Riftmaker                          | Riftmaker                     | 2603.7 ± 0.77 | -196.1           |
 | Riftmaker                          | Claw of the Netherwing Flight | 2603.4 ± 0.77 | -196.4           |
 | Riftmaker                          | Stellaris                     | 2603.0 ± 0.77 | -196.8           |
 | Claw of the Netherwing Flight      | Messenger of Fate             | 2602.9 ± 0.77 | -196.9           |
@@ -147,13 +144,11 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Claw of the Netherwing Flight      | Fist of Molten Fury           | 2597.4 ± 0.77 | -202.4           |
 | Claw of the Netherwing Flight      | Emerald Ripper                | 2596.8 ± 0.77 | -203.0           |
 | Guile of Khoraazi                  | Netherbane                    | 2595.7 ± 0.77 | -204.1           |
-| Claw of the Netherwing Flight      | Claw of the Netherwing Flight | 2594.4 ± 0.77 | -205.4           |
 | Claw of the Netherwing Flight      | Riftmaker                     | 2593.2 ± 0.77 | -206.6           |
 | Claw of the Netherwing Flight      | Stellaris                     | 2592.8 ± 0.77 | -207.0           |
 | Messenger of Fate                  | Blade of Infamy               | 2591.3 ± 0.77 | -208.5           |
 | Guile of Khoraazi                  | Messenger of Fate             | 2588.3 ± 0.77 | -211.5           |
 | Guile of Khoraazi                  | Claw of the Phoenix           | 2585.8 ± 0.77 | -214.0           |
-| Guile of Khoraazi                  | Guile of Khoraazi             | 2585.6 ± 0.77 | -214.2           |
 | Guile of Khoraazi                  | Talon of Azshara              | 2584.9 ± 0.77 | -214.9           |
 | Guile of Khoraazi                  | Emerald Ripper                | 2584.6 ± 0.77 | -215.2           |
 | Guile of Khoraazi                  | Fist of Molten Fury           | 2584.1 ± 0.77 | -215.7           |

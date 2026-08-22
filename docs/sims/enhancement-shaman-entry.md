@@ -53,7 +53,6 @@ An Enhancement Shaman carries a Windfury imbue in each hand, pairs two weapons o
 | Dragonstrike *(this set)*          | Rod of the Sun King  | 2.7        | 1992.9 ± 0.92 | +0.0             |
 | Talon of the Phoenix               | Rod of the Sun King  | 2.7        | 1991.1 ± 0.89 | -1.8             |
 | Wicked Edge of the Planes          | Rod of the Sun King  | 2.7        | 1986.2 ± 0.90 | -6.7             |
-| Rod of the Sun King                | Rod of the Sun King  | 2.7        | 1978.6 ± 0.89 | -14.3            |
 | Dragonmaw                          | Rod of the Sun King  | 2.7        | 1972.7 ± 0.91 | -20.2            |
 | Merciless Gladiator's Right Ripper | Netherbane           | 2.6        | 1965.2 ± 0.86 | -27.7            |
 | Netherbane                         | Netherbane           | 2.6        | 1965.0 ± 0.88 | -27.9            |

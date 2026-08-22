@@ -64,7 +64,6 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Merciless Gladiator's Slicer       | Fang of Vashj                    | 1967.9 ± 0.84 | -118.0           |
 | Fool's Bane                        | Merciless Gladiator's Quickblade | 1962.7 ± 0.82 | -123.2           |
 | Talon of Azshara                   | Malchazeen                       | 1962.6 ± 0.84 | -123.3           |
-| Talon of Azshara                   | Talon of Azshara                 | 1960.8 ± 0.88 | -125.1           |
 | Talon of Azshara                   | Merciless Gladiator's Slicer     | 1959.3 ± 0.87 | -126.6           |
 | Gladiator's Right Ripper           | Merciless Gladiator's Quickblade | 1957.9 ± 0.83 | -128.0           |
 | Merciless Gladiator's Slicer       | Merciless Gladiator's Shanker    | 1953.8 ± 0.83 | -132.1           |
@@ -119,7 +118,6 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Fool's Bane                        | Fang of Vashj                    | 1864.0 ± 0.76 | -221.9           |
 | Merciless Gladiator's Right Ripper | Merciless Gladiator's Slicer     | 1863.9 ± 0.82 | -222.0           |
 | Gladiator's Right Ripper           | Fang of Vashj                    | 1860.5 ± 0.77 | -225.4           |
-| Rod of the Sun King                | Rod of the Sun King              | 1858.4 ± 0.83 | -227.5           |
 | Drakefist Hammer                   | Gladiator's Slicer               | 1856.5 ± 0.84 | -229.4           |
 | Fool's Bane                        | Merciless Gladiator's Shanker    | 1851.9 ± 0.77 | -234.0           |
 | Merciless Gladiator's Right Ripper | Gladiator's Slicer               | 1850.6 ± 0.82 | -235.3           |
@@ -141,7 +139,6 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Fool's Bane                        | Rod of the Sun King              | 1800.8 ± 0.79 | -285.1           |
 | Malchazeen                         | Merciless Gladiator's Quickblade | 1798.8 ± 0.67 | -287.1           |
 | Gladiator's Right Ripper           | Rod of the Sun King              | 1795.8 ± 0.80 | -290.1           |
-| Fang of Vashj                      | Fang of Vashj                    | 1758.0 ± 0.65 | -327.9           |
 | Fang of Vashj                      | Merciless Gladiator's Shanker    | 1747.4 ± 0.65 | -338.5           |
 | Merciless Gladiator's Shanker      | Fang of Vashj                    | 1743.1 ± 0.65 | -342.8           |
 | Fang of Vashj                      | Talon of Azshara                 | 1740.5 ± 0.68 | -345.4           |
@@ -154,7 +151,6 @@ A Combat Rogue carries two one-handers, so every row below is a main hand with a
 | Fang of Vashj                      | Gladiator's Slicer               | 1722.0 ± 0.69 | -363.9           |
 | Merciless Gladiator's Shanker      | Merciless Gladiator's Slicer     | 1720.3 ± 0.69 | -365.6           |
 | Malchazeen                         | Merciless Gladiator's Shanker    | 1715.0 ± 0.64 | -370.9           |
-| Malchazeen                         | Malchazeen                       | 1707.4 ± 0.64 | -378.5           |
 | Malchazeen                         | Talon of Azshara                 | 1707.1 ± 0.68 | -378.8           |
 | Merciless Gladiator's Shanker      | Gladiator's Slicer               | 1707.0 ± 0.69 | -378.9           |
 | Fang of Vashj                      | Rod of the Sun King              | 1706.3 ± 0.67 | -379.6           |

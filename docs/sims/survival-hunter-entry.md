@@ -67,7 +67,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Talon of Azshara              | Netherbane                    | 2511.4 ± 0.80 | -17.7            |
 | Terokk's Quill                | *empty, two-hander*           | 2509.2 ± 0.79 | -19.9            |
 | Talon of Azshara              | Claw of the Phoenix           | 2501.3 ± 0.80 | -27.8            |
-| Talon of Azshara              | Talon of Azshara              | 2501.1 ± 0.80 | -28.0            |
 | Talon of Azshara              | Emerald Ripper                | 2496.5 ± 0.80 | -32.6            |
 | Talon of Azshara              | Stellaris                     | 2495.4 ± 0.80 | -33.7            |
 | Illidari-Bane Claymore        | *empty, two-hander*           | 2494.0 ± 0.80 | -35.1            |
@@ -82,7 +81,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Stellaris                     | Claw of the Phoenix           | 2443.3 ± 0.75 | -85.8            |
 | Riftmaker                     | Claw of the Phoenix           | 2441.7 ± 0.74 | -87.4            |
 | Stellaris                     | Talon of Azshara              | 2441.6 ± 0.74 | -87.5            |
-| Emerald Ripper                | Emerald Ripper                | 2441.2 ± 0.75 | -87.9            |
 | Emerald Ripper                | Guile of Khoraazi             | 2439.7 ± 0.74 | -89.4            |
 | Claw of the Netherwing Flight | Netherbane                    | 2438.3 ± 0.73 | -90.8            |
 | Stellaris                     | Emerald Ripper                | 2438.2 ± 0.74 | -90.9            |
@@ -97,20 +95,17 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Riftmaker                     | Emerald Ripper                | 2434.4 ± 0.75 | -94.7            |
 | Riftmaker                     | Guile of Khoraazi             | 2432.9 ± 0.74 | -96.2            |
 | Claw of the Netherwing Flight | Claw of the Phoenix           | 2432.2 ± 0.74 | -96.9            |
-| Riftmaker                     | Riftmaker                     | 2431.8 ± 0.74 | -97.3            |
 | Riftmaker                     | Claw of the Netherwing Flight | 2431.8 ± 0.74 | -97.3            |
 | Riftmaker                     | Stellaris                     | 2431.7 ± 0.74 | -97.4            |
 | Claw of the Netherwing Flight | Talon of Azshara              | 2428.0 ± 0.73 | -101.1           |
 | Guile of Khoraazi             | Netherbane                    | 2426.0 ± 0.73 | -103.1           |
 | Claw of the Netherwing Flight | Emerald Ripper                | 2424.9 ± 0.74 | -104.2           |
 | Claw of the Netherwing Flight | Guile of Khoraazi             | 2422.7 ± 0.74 | -106.4           |
-| Claw of the Netherwing Flight | Claw of the Netherwing Flight | 2422.6 ± 0.73 | -106.5           |
 | Claw of the Netherwing Flight | Riftmaker                     | 2422.5 ± 0.74 | -106.6           |
 | Claw of the Netherwing Flight | Stellaris                     | 2421.8 ± 0.74 | -107.3           |
 | Guile of Khoraazi             | Claw of the Phoenix           | 2415.9 ± 0.73 | -113.2           |
 | Guile of Khoraazi             | Emerald Ripper                | 2414.8 ± 0.73 | -114.3           |
 | Guile of Khoraazi             | Talon of Azshara              | 2414.7 ± 0.73 | -114.4           |
-| Guile of Khoraazi             | Guile of Khoraazi             | 2412.6 ± 0.73 | -116.5           |
 | Guile of Khoraazi             | Stellaris                     | 2412.4 ± 0.73 | -116.7           |
 | Guile of Khoraazi             | Riftmaker                     | 2412.1 ± 0.73 | -117.0           |
 | Guile of Khoraazi             | Claw of the Netherwing Flight | 2410.5 ± 0.73 | -118.6           |

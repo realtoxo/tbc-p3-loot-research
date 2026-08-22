@@ -93,7 +93,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Talon of Azshara                 | Messenger of Fate             | 2642.1 ± 0.85 | -26.6            |
 | Claw of Molten Fury              | Stellaris                     | 2640.9 ± 0.85 | -27.8            |
 | Talon of Azshara                 | Claw of the Phoenix           | 2640.4 ± 0.84 | -28.3            |
-| Talon of Azshara                 | Talon of Azshara              | 2640.1 ± 0.84 | -28.6            |
 | Claw of Molten Fury              | Claw of the Netherwing Flight | 2638.8 ± 0.86 | -29.9            |
 | Claw of Molten Fury              | Riftmaker                     | 2638.7 ± 0.85 | -30.0            |
 | Talon of Azshara                 | Fist of Molten Fury           | 2637.9 ± 0.84 | -30.8            |
@@ -116,7 +115,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Stellaris                        | Messenger of Fate             | 2583.4 ± 0.80 | -85.3            |
 | Emerald Ripper                   | Fist of Molten Fury           | 2583.2 ± 0.79 | -85.5            |
 | Emerald Ripper                   | Talon of Azshara              | 2581.7 ± 0.80 | -87.0            |
-| Emerald Ripper                   | Emerald Ripper                | 2579.7 ± 0.79 | -89.0            |
 | Stellaris                        | Claw of the Phoenix           | 2578.4 ± 0.80 | -90.3            |
 | Stellaris                        | Talon of Azshara              | 2578.1 ± 0.79 | -90.6            |
 | Riftmaker                        | Messenger of Fate             | 2577.5 ± 0.80 | -91.2            |
@@ -139,7 +137,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Riftmaker                        | Claw of the Netherwing Flight | 2569.3 ± 0.79 | -99.4            |
 | Riftmaker                        | Guile of Khoraazi             | 2569.1 ± 0.79 | -99.6            |
 | Riftmaker                        | Stellaris                     | 2568.7 ± 0.79 | -100.0           |
-| Riftmaker                        | Riftmaker                     | 2568.6 ± 0.79 | -100.1           |
 | Claw of the Netherwing Flight    | Claw of the Phoenix           | 2568.4 ± 0.79 | -100.3           |
 | Claw of the Netherwing Flight    | Messenger of Fate             | 2567.8 ± 0.79 | -100.9           |
 | Claw of the Netherwing Flight    | Fist of Molten Fury           | 2565.6 ± 0.79 | -103.1           |
@@ -149,7 +146,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Claw of the Netherwing Flight    | Riftmaker                     | 2559.7 ± 0.79 | -109.0           |
 | Claw of the Netherwing Flight    | Stellaris                     | 2559.6 ± 0.79 | -109.1           |
 | Claw of the Netherwing Flight    | Guile of Khoraazi             | 2558.8 ± 0.79 | -109.9           |
-| Claw of the Netherwing Flight    | Claw of the Netherwing Flight | 2558.5 ± 0.79 | -110.2           |
 | Messenger of Fate                | Blade of Infamy               | 2557.8 ± 0.78 | -110.9           |
 | Guile of Khoraazi                | Messenger of Fate             | 2552.4 ± 0.79 | -116.3           |
 | Guile of Khoraazi                | Talon of Azshara              | 2550.7 ± 0.78 | -118.0           |
@@ -158,7 +154,6 @@ A Survival Hunter can carry a two-hander or two one- handers, and both styles ru
 | Messenger of Fate                | Netherbane                    | 2549.0 ± 0.78 | -119.7           |
 | Guile of Khoraazi                | Fist of Molten Fury           | 2548.5 ± 0.78 | -120.2           |
 | Messenger of Fate                | Claw of the Phoenix           | 2548.0 ± 0.78 | -120.7           |
-| Guile of Khoraazi                | Guile of Khoraazi             | 2547.6 ± 0.78 | -121.1           |
 | Guile of Khoraazi                | Stellaris                     | 2547.1 ± 0.78 | -121.6           |
 | Guile of Khoraazi                | Riftmaker                     | 2546.6 ± 0.78 | -122.1           |
 | Guile of Khoraazi                | Claw of the Netherwing Flight | 2545.9 ± 0.78 | -122.8           |
