@@ -126,6 +126,33 @@ The ten best of the 21 combinations measured, and the worn pair.
 
 The best combination, Dragonspine Trophy with Madness of the Betrayer, measures +4.4 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together. Stormrage Signet Ring carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
+
+The ten best of the 42 combinations measured, and the worn pair.
+
+| Ring                                    | Ring                         | DPS           | Against this set |
+|-----------------------------------------|------------------------------|---------------|------------------|
+| Stormrage Signet Ring                   | Stormrage Signet Ring        | 2010.0 ± 0.94 | +18.0            |
+| Stormrage Signet Ring                   | Band of the Eternal Champion | 2005.8 ± 0.95 | +13.8            |
+| Stormrage Signet Ring                   | Band of the Ranger-General   | 2003.9 ± 0.93 | +11.9            |
+| Stormrage Signet Ring                   | Unstoppable Aggressor's Ring | 2001.4 ± 0.94 | +9.4             |
+| Stormrage Signet Ring                   | Ring of Deceitful Intent     | 2000.3 ± 0.93 | +8.3             |
+| Stormrage Signet Ring                   | Ring of Lethality            | 1999.1 ± 0.93 | +7.1             |
+| Band of the Eternal Champion            | Band of the Ranger-General   | 1999.1 ± 0.94 | +7.1             |
+| Band of the Ranger-General              | Band of the Ranger-General   | 1997.0 ± 0.92 | +5.0             |
+| Stormrage Signet Ring                   | Ring of a Thousand Marks     | 1996.0 ± 0.93 | +4.0             |
+| Band of the Eternal Champion            | Unstoppable Aggressor's Ring | 1995.7 ± 0.96 | +3.7             |
+| Band of the Ranger-General *(this set)* | Ring of Lethality            | 1992.0 ± 0.92 | +0.0             |
+
+The best combination, Stormrage Signet Ring with Stormrage Signet Ring, measures +18.0 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -710,6 +710,32 @@ The ten best of the 15 combinations measured, and the worn pair.
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together. Stormrage Signet Ring carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection.
+
+The ten best of the 44 combinations measured, and the worn pair.
+
+| Ring                               | Ring                         | DPS           | Against this set |
+|------------------------------------|------------------------------|---------------|------------------|
+| Stormrage Signet Ring              | Stormrage Signet Ring        | 2402.1 ± 1.09 | +3.3             |
+| Stormrage Signet Ring *(this set)* | Unstoppable Aggressor's Ring | 2398.8 ± 1.10 | +0.0             |
+| Unstoppable Aggressor's Ring       | Unstoppable Aggressor's Ring | 2397.7 ± 1.10 | -1.1             |
+| Stormrage Signet Ring              | Band of the Ranger-General   | 2394.6 ± 1.09 | -4.2             |
+| Stormrage Signet Ring              | Band of the Eternal Champion | 2393.4 ± 1.10 | -5.4             |
+| Unstoppable Aggressor's Ring       | Band of the Ranger-General   | 2391.9 ± 1.10 | -6.9             |
+| Unstoppable Aggressor's Ring       | Band of the Eternal Champion | 2390.8 ± 1.10 | -8.0             |
+| Band of the Ranger-General         | Band of the Ranger-General   | 2389.9 ± 1.09 | -8.9             |
+| Stormrage Signet Ring              | Band of Devastation          | 2389.0 ± 1.09 | -9.8             |
+| Band of the Ranger-General         | Band of the Eternal Champion | 2388.1 ± 1.10 | -10.7            |
+
+The best combination, Stormrage Signet Ring with Stormrage Signet Ring, measures +3.3 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

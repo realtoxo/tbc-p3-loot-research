@@ -141,6 +141,32 @@ The ten best of the 28 combinations measured, and the worn pair.
 
 The worn pair is again the best row, at plus zero.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together. Stormrage Signet Ring carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The three Scale of the Sands rings share one uniqueness family, so no row wears two of them.
+
+The ten best of the 49 combinations measured, and the worn pair.
+
+| Ring                               | Ring                         | DPS           | Against this set |
+|------------------------------------|------------------------------|---------------|------------------|
+| Band of the Eternal Champion       | Band of the Ranger-General   | 3309.1 ± 0.97 | +1.9             |
+| Stormrage Signet Ring *(this set)* | Band of the Eternal Champion | 3307.2 ± 0.97 | +0.0             |
+| Band of the Eternal Champion       | Ring of Deceitful Intent     | 3306.4 ± 0.97 | -0.8             |
+| Band of the Eternal Champion       | Ring of Lethality            | 3305.7 ± 0.97 | -1.5             |
+| Band of the Eternal Champion       | Ring of a Thousand Marks     | 3298.6 ± 0.96 | -8.6             |
+| Band of the Eternal Champion       | Garona's Signet Ring         | 3296.5 ± 0.97 | -10.7            |
+| Band of the Ranger-General         | Band of Eternity             | 3293.4 ± 0.96 | -13.8            |
+| Stormrage Signet Ring              | Band of Eternity             | 3291.5 ± 0.97 | -15.7            |
+| Ring of Deceitful Intent           | Band of Eternity             | 3290.8 ± 0.97 | -16.4            |
+| Ring of Lethality                  | Band of Eternity             | 3290.1 ± 0.96 | -17.1            |
+
+The best combination, Band of the Eternal Champion with Band of the Ranger-General, measures +1.9 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

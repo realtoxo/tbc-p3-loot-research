@@ -710,6 +710,33 @@ The ten best of the 15 combinations measured, and the worn pair.
 
 The best combination, Dragonspine Trophy with Madness of the Betrayer, measures +1.2 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together. Stormrage Signet Ring carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection.
+
+The ten best of the 44 combinations measured, and the worn pair.
+
+| Ring                                    | Ring                         | DPS           | Against this set |
+|-----------------------------------------|------------------------------|---------------|------------------|
+| Stormrage Signet Ring                   | Stormrage Signet Ring        | 2236.7 ± 1.10 | +20.5            |
+| Unstoppable Aggressor's Ring            | Unstoppable Aggressor's Ring | 2235.8 ± 1.11 | +19.6            |
+| Stormrage Signet Ring                   | Unstoppable Aggressor's Ring | 2232.9 ± 1.10 | +16.7            |
+| Unstoppable Aggressor's Ring            | Band of the Ranger-General   | 2231.2 ± 1.10 | +15.0            |
+| Stormrage Signet Ring                   | Band of the Ranger-General   | 2230.0 ± 1.09 | +13.8            |
+| Stormrage Signet Ring                   | Band of the Eternal Champion | 2230.0 ± 1.11 | +13.8            |
+| Unstoppable Aggressor's Ring            | Band of the Eternal Champion | 2228.5 ± 1.12 | +12.3            |
+| Stormrage Signet Ring                   | Band of Devastation          | 2225.7 ± 1.11 | +9.5             |
+| Band of the Ranger-General              | Band of the Eternal Champion | 2225.4 ± 1.12 | +9.2             |
+| Unstoppable Aggressor's Ring            | Band of Devastation          | 2224.0 ± 1.11 | +7.8             |
+| Band of the Ranger-General *(this set)* | Ring of a Thousand Marks     | 2216.2 ± 1.08 | +0.0             |
+
+The best combination, Stormrage Signet Ring with Stormrage Signet Ring, measures +20.5 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -187,6 +187,32 @@ The ten best of the 28 combinations measured, and the worn pair.
 
 The best combination, Darkmoon Card: Crusade with Icon of the Silver Crescent, measures +13.7 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, Magtheridon's Lair, the raids above them and one reputation, plus the Karazhan ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them.
+
+The ten best of the 10 combinations measured, and the worn pair.
+
+| Ring                                    | Ring                       | DPS           | Against this set |
+|-----------------------------------------|----------------------------|---------------|------------------|
+| Ring of Recurrence                      | Ring of Recurrence         | 1685.3 ± 0.88 | +24.7            |
+| Band of Crimson Fury                    | Ring of Recurrence         | 1683.0 ± 0.87 | +22.4            |
+| Band of Crimson Fury                    | Band of Crimson Fury       | 1680.1 ± 0.86 | +19.5            |
+| Band of Crimson Fury                    | Ring of Endless Coils      | 1665.0 ± 0.88 | +4.4             |
+| Ring of Endless Coils                   | Ring of Recurrence         | 1662.8 ± 0.89 | +2.2             |
+| Ring of Unrelenting Storms *(this set)* | Ring of Recurrence         | 1660.6 ± 0.86 | +0.0             |
+| Ring of Unrelenting Storms              | Band of Crimson Fury       | 1658.3 ± 0.85 | -2.3             |
+| Ring of Endless Coils                   | Ring of Endless Coils      | 1639.6 ± 0.89 | -21.0            |
+| Ring of Unrelenting Storms              | Ring of Endless Coils      | 1638.4 ± 0.87 | -22.2            |
+| Ring of Unrelenting Storms              | Ring of Unrelenting Storms | 1635.9 ± 0.85 | -24.7            |
+
+The best combination, Ring of Recurrence with Ring of Recurrence, measures +24.7 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

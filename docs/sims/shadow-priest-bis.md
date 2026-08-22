@@ -258,6 +258,32 @@ The ten best of the 28 combinations measured, and the worn pair.
 
 The worn pair is again the best row, at plus zero.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Magtheridon's Lair, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The three Scale of the Sands rings share one uniqueness family, so no row wears two of them. The best-in-slot set wears Ring of Ancient Knowledge in both slots, so its worn row is a doubled pair.
+
+The ten best of the 49 combinations measured, and the worn pair.
+
+| Ring                                   | Ring                      | DPS           | Against this set |
+|----------------------------------------|---------------------------|---------------|------------------|
+| Ring of Ancient Knowledge *(this set)* | Ring of Ancient Knowledge | 1577.9 ± 0.29 | +0.0             |
+| Ring of Ancient Knowledge              | Blessed Band of Karabor   | 1568.9 ± 0.29 | -9.0             |
+| Ring of Ancient Knowledge              | Band of the Eternal Sage  | 1566.9 ± 0.29 | -11.0            |
+| Ring of Ancient Knowledge              | Ring of Captured Storms   | 1564.3 ± 0.30 | -13.6            |
+| Ring of Ancient Knowledge              | Ring of Endless Coils     | 1560.6 ± 0.30 | -17.3            |
+| Ring of Ancient Knowledge              | Band of Eternity          | 1559.9 ± 0.30 | -18.0            |
+| Blessed Band of Karabor                | Blessed Band of Karabor   | 1559.8 ± 0.29 | -18.1            |
+| Ring of Ancient Knowledge              | Band of Al'ar             | 1559.1 ± 0.30 | -18.8            |
+| Ring of Ancient Knowledge              | Band of Eternity          | 1558.4 ± 0.30 | -19.5            |
+| Blessed Band of Karabor                | Band of the Eternal Sage  | 1558.2 ± 0.29 | -19.7            |
+
+The worn pair is again the best row, at plus zero.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

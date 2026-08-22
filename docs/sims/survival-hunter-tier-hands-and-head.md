@@ -215,6 +215,33 @@ The ten best of the 36 combinations measured, and the worn pair.
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it, one reputation and one max-level event reward, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them, and Ring of the Overseer is unique, so no row wears two copies of it.
+
+The ten best of the 34 combinations measured, and the worn pair.
+
+| Ring                           | Ring                     | DPS           | Against this set |
+|--------------------------------|--------------------------|---------------|------------------|
+| Band of the Eternal Champion   | Ring of Lethality        | 2691.7 ± 0.86 | +23.0            |
+| Band of the Eternal Champion   | Ring of Deceitful Intent | 2690.9 ± 0.86 | +22.2            |
+| Band of the Eternal Champion   | Ring of the Recalcitrant | 2683.4 ± 0.86 | +14.7            |
+| Band of the Eternal Champion   | Ring of the Overseer     | 2682.4 ± 0.85 | +13.7            |
+| Band of the Eternal Champion   | Garona's Signet Ring     | 2682.3 ± 0.86 | +13.6            |
+| Band of Eternity               | Ring of Lethality        | 2678.7 ± 0.85 | +10.0            |
+| Band of Eternity               | Ring of Deceitful Intent | 2678.0 ± 0.85 | +9.3             |
+| Ring of Lethality              | Band of Eternity         | 2673.9 ± 0.85 | +5.2             |
+| Band of Eternity               | Ring of Deceitful Intent | 2673.0 ± 0.85 | +4.3             |
+| Band of Eternity               | Ring of the Recalcitrant | 2670.4 ± 0.86 | +1.7             |
+| Ring of Lethality *(this set)* | Ring of the Recalcitrant | 2668.7 ± 0.85 | +0.0             |
+
+The best combination, Band of the Eternal Champion with Ring of Lethality, measures +23.0 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -248,6 +248,32 @@ The ten best of the 28 combinations measured, and the worn pair.
 
 The worn pair is again the best row, at plus zero.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them.
+
+The ten best of the 45 combinations measured, and the worn pair.
+
+| Ring                                   | Ring                       | DPS           | Against this set |
+|----------------------------------------|----------------------------|---------------|------------------|
+| Ring of Ancient Knowledge *(this set)* | Band of the Eternal Sage   | 2130.0 ± 0.97 | +0.0             |
+| Ring of Ancient Knowledge              | Ring of Ancient Knowledge  | 2127.2 ± 0.95 | -2.8             |
+| Ring of Ancient Knowledge              | Ring of Captured Storms    | 2120.1 ± 0.98 | -9.9             |
+| Ring of Ancient Knowledge              | Ring of Unrelenting Storms | 2117.9 ± 0.96 | -12.1            |
+| Ring of Ancient Knowledge              | Band of Eternity           | 2116.5 ± 0.96 | -13.5            |
+| Ring of Ancient Knowledge              | Blessed Band of Karabor    | 2114.7 ± 0.95 | -15.3            |
+| Ring of Ancient Knowledge              | Band of Eternity           | 2112.5 ± 0.96 | -17.5            |
+| Ring of Ancient Knowledge              | Ring of Endless Coils      | 2109.7 ± 0.98 | -20.3            |
+| Ring of Ancient Knowledge              | Band of Eternity           | 2109.0 ± 0.95 | -21.0            |
+| Ring of Ancient Knowledge              | Ring of Recurrence         | 2108.1 ± 0.96 | -21.9            |
+
+The worn pair is again the best row, at plus zero.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -104,6 +104,32 @@ The ten best of the 21 combinations measured, and the worn pair.
 
 The worn pair is again the best row, at plus zero.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together. Stormrage Signet Ring carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Tempest Keep, Serpentshrine Cavern, Black Temple and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
+
+The ten best of the 52 combinations measured, and the worn pair.
+
+| Ring                             | Ring                         | DPS           | Against this set |
+|----------------------------------|------------------------------|---------------|------------------|
+| Band of Devastation *(this set)* | Shapeshifter's Signet        | 2223.2 ± 1.38 | +0.0             |
+| Unstoppable Aggressor's Ring     | Shapeshifter's Signet        | 2222.2 ± 1.36 | -1.0             |
+| Unstoppable Aggressor's Ring     | Band of Devastation          | 2220.5 ± 1.41 | -2.7             |
+| Shapeshifter's Signet            | Band of the Eternal Champion | 2219.7 ± 1.36 | -3.5             |
+| Unstoppable Aggressor's Ring     | Unstoppable Aggressor's Ring | 2218.6 ± 1.41 | -4.6             |
+| Band of Devastation              | Band of the Eternal Champion | 2217.7 ± 1.41 | -5.5             |
+| Unstoppable Aggressor's Ring     | Band of the Eternal Champion | 2216.7 ± 1.41 | -6.5             |
+| Band of Devastation              | Band of Devastation          | 2214.1 ± 1.42 | -9.1             |
+| Shapeshifter's Signet            | Ancestral Ring of Conquest   | 2211.3 ± 1.36 | -11.9            |
+| Shapeshifter's Signet            | Band of Eternity             | 2210.0 ± 1.36 | -13.2            |
+
+The worn pair is again the best row, at plus zero.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

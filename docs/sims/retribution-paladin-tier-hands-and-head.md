@@ -104,6 +104,33 @@ The ten best of the 21 combinations measured, and the worn pair.
 
 The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +21.8 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together. Stormrage Signet Ring carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Tempest Keep, Serpentshrine Cavern, Black Temple and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
+
+The ten best of the 52 combinations measured, and the worn pair.
+
+| Ring                               | Ring                         | DPS           | Against this set |
+|------------------------------------|------------------------------|---------------|------------------|
+| Band of Devastation                | Shapeshifter's Signet        | 2054.9 ± 1.27 | +14.5            |
+| Unstoppable Aggressor's Ring       | Shapeshifter's Signet        | 2052.7 ± 1.27 | +12.3            |
+| Unstoppable Aggressor's Ring       | Band of Devastation          | 2052.4 ± 1.33 | +12.0            |
+| Unstoppable Aggressor's Ring       | Unstoppable Aggressor's Ring | 2052.4 ± 1.33 | +12.0            |
+| Shapeshifter's Signet              | Band of the Eternal Champion | 2050.8 ± 1.27 | +10.4            |
+| Band of Devastation                | Band of the Eternal Champion | 2050.4 ± 1.32 | +10.0            |
+| Unstoppable Aggressor's Ring       | Band of the Eternal Champion | 2049.8 ± 1.32 | +9.4             |
+| Band of Devastation                | Band of Devastation          | 2048.7 ± 1.32 | +8.3             |
+| Shapeshifter's Signet              | Ancestral Ring of Conquest   | 2042.5 ± 1.26 | +2.1             |
+| Unstoppable Aggressor's Ring       | Ancestral Ring of Conquest   | 2042.3 ± 1.32 | +1.9             |
+| Shapeshifter's Signet *(this set)* | Band of the Ranger-General   | 2040.4 ± 1.26 | +0.0             |
+
+The best combination, Band of Devastation with Shapeshifter's Signet, measures +14.5 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

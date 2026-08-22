@@ -249,6 +249,33 @@ The ten best of the 45 combinations measured, and the worn pair.
 
 The best combination, The Skull of Gul'dan with Darkmoon Card: Crusade, measures +40.1 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, Magtheridon's Lair, the raids above them and one reputation, plus the Karazhan ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them.
+
+The ten best of the 56 combinations measured, and the worn pair.
+
+| Ring                                    | Ring                      | DPS           | Against this set |
+|-----------------------------------------|---------------------------|---------------|------------------|
+| Ring of Ancient Knowledge               | Ring of Ancient Knowledge | 1784.7 ± 0.88 | +79.7            |
+| Ring of Ancient Knowledge               | Blessed Band of Karabor   | 1774.6 ± 0.87 | +69.6            |
+| Band of the Eternal Sage                | Ring of Ancient Knowledge | 1773.5 ± 0.87 | +68.5            |
+| Ring of Ancient Knowledge               | Band of Eternity          | 1762.4 ± 0.86 | +57.4            |
+| Band of the Eternal Sage                | Blessed Band of Karabor   | 1761.6 ± 0.86 | +56.6            |
+| Blessed Band of Karabor                 | Blessed Band of Karabor   | 1760.7 ± 0.86 | +55.7            |
+| Ring of Ancient Knowledge               | Band of Eternity          | 1759.0 ± 0.86 | +54.0            |
+| Ring of Captured Storms                 | Band of the Eternal Sage  | 1756.8 ± 0.86 | +51.8            |
+| Ring of Captured Storms                 | Ring of Ancient Knowledge | 1756.5 ± 0.87 | +51.5            |
+| Ring of Ancient Knowledge               | Band of Eternity          | 1755.6 ± 0.86 | +50.6            |
+| Ring of Unrelenting Storms *(this set)* | Ring of Recurrence        | 1705.0 ± 0.83 | +0.0             |
+
+The best combination, Ring of Ancient Knowledge with Ring of Ancient Knowledge, measures +79.7 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -304,6 +304,32 @@ The ten best of the 36 combinations measured, and the worn pair.
 
 The worn pair is again the best row, at plus zero.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Tempest Keep, Black Temple and two reputations, plus the Cenarion Expedition ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family and the two Violet Signets share another, so no row wears two rings of one family.
+
+The ten best of the 53 combinations measured, and the worn pair.
+
+| Ring                                   | Ring                          | DPS           | Against this set |
+|----------------------------------------|-------------------------------|---------------|------------------|
+| Ring of Ancient Knowledge *(this set)* | Band of the Eternal Sage      | 2534.4 ± 1.07 | +0.0             |
+| Band of the Eternal Sage               | Violet Signet of the Archmage | 2527.0 ± 1.05 | -7.4             |
+| Band of the Eternal Sage               | Violet Signet                 | 2525.3 ± 1.05 | -9.1             |
+| Band of the Eternal Sage               | Ring of Captured Storms       | 2523.7 ± 1.05 | -10.7            |
+| Blessed Band of Karabor                | Band of the Eternal Sage      | 2523.1 ± 1.06 | -11.3            |
+| Band of the Eternal Sage               | Band of Al'ar                 | 2521.8 ± 1.05 | -12.6            |
+| Ring of Ancient Knowledge              | Ring of Ancient Knowledge     | 2520.0 ± 1.05 | -14.4            |
+| Ring of Ancient Knowledge              | Band of Eternity              | 2519.3 ± 1.05 | -15.1            |
+| Band of Eternity                       | Violet Signet of the Archmage | 2513.6 ± 1.05 | -20.8            |
+| Ring of Ancient Knowledge              | Band of Eternity              | 2512.5 ± 1.06 | -21.9            |
+
+The worn pair is again the best row, at plus zero.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

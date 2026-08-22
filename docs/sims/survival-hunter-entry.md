@@ -156,6 +156,28 @@ The ten best of the 21 combinations measured, and the worn pair.
 
 The worn pair is again the best row, at plus zero.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it, one reputation and one max-level event reward, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them, and Ring of the Overseer is unique, so no row wears two copies of it.
+
+The ten best of the 6 combinations measured, and the worn pair.
+
+| Ring                           | Ring                     | DPS           | Against this set |
+|--------------------------------|--------------------------|---------------|------------------|
+| Ring of Lethality              | Ring of Lethality        | 2530.2 ± 0.79 | +1.1             |
+| Ring of Lethality *(this set)* | Ring of the Recalcitrant | 2529.1 ± 0.79 | +0.0             |
+| Ring of the Recalcitrant       | Ring of the Recalcitrant | 2528.0 ± 0.79 | -1.1             |
+| Ring of Lethality              | Garona's Signet Ring     | 2521.2 ± 0.78 | -7.9             |
+| Ring of the Recalcitrant       | Garona's Signet Ring     | 2520.1 ± 0.78 | -9.0             |
+| Garona's Signet Ring           | Garona's Signet Ring     | 2512.1 ± 0.78 | -17.0            |
+
+The best combination, Ring of Lethality with Ring of Lethality, measures +1.1 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

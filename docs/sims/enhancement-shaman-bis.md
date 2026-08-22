@@ -127,6 +127,32 @@ The ten best of the 21 combinations measured, and the worn pair.
 
 The worn pair is again the best row, at plus zero.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together. Stormrage Signet Ring carries armor penetration, which moves with the boss's armor; these figures are at boss armor 7684, the highest Phase 3 tier, and ten of the fourteen bosses sit at 6193.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
+
+The ten best of the 42 combinations measured, and the worn pair.
+
+| Ring                               | Ring                         | DPS           | Against this set |
+|------------------------------------|------------------------------|---------------|------------------|
+| Stormrage Signet Ring              | Stormrage Signet Ring        | 2172.8 ± 0.91 | +5.8             |
+| Stormrage Signet Ring *(this set)* | Band of the Eternal Champion | 2167.0 ± 0.91 | +0.0             |
+| Stormrage Signet Ring              | Band of the Ranger-General   | 2163.7 ± 0.91 | -3.3             |
+| Stormrage Signet Ring              | Unstoppable Aggressor's Ring | 2162.2 ± 0.91 | -4.8             |
+| Stormrage Signet Ring              | Ring of Deceitful Intent     | 2160.0 ± 0.90 | -7.0             |
+| Stormrage Signet Ring              | Ring of Lethality            | 2158.5 ± 0.90 | -8.5             |
+| Band of the Eternal Champion       | Band of the Ranger-General   | 2158.2 ± 0.91 | -8.8             |
+| Stormrage Signet Ring              | Ring of a Thousand Marks     | 2155.8 ± 0.90 | -11.2            |
+| Stormrage Signet Ring              | Band of Devastation          | 2154.6 ± 0.91 | -12.4            |
+| Band of the Eternal Champion       | Ring of Deceitful Intent     | 2154.5 ± 0.91 | -12.5            |
+
+The best combination, Stormrage Signet Ring with Stormrage Signet Ring, measures +5.8 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

@@ -171,6 +171,28 @@ The ten best of the 15 combinations measured, and the worn pair.
 
 This set already wears the best combination on the table, which is why the top row reads plus zero: that row IS this profile.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them.
+
+The ten best of the 6 combinations measured, and the worn pair.
+
+| Ring                                    | Ring                       | DPS           | Against this set |
+|-----------------------------------------|----------------------------|---------------|------------------|
+| Ring of Unrelenting Storms              | Ring of Unrelenting Storms | 1727.2 ± 0.88 | +8.4             |
+| Ring of Unrelenting Storms              | Ring of Recurrence         | 1719.1 ± 0.88 | +0.3             |
+| Ring of Unrelenting Storms *(this set)* | Ring of Endless Coils      | 1718.8 ± 0.89 | +0.0             |
+| Ring of Recurrence                      | Ring of Recurrence         | 1711.0 ± 0.87 | -7.8             |
+| Ring of Endless Coils                   | Ring of Recurrence         | 1710.8 ± 0.89 | -8.0             |
+| Ring of Endless Coils                   | Ring of Endless Coils      | 1709.5 ± 0.94 | -9.3             |
+
+The best combination, Ring of Unrelenting Storms with Ring of Unrelenting Storms, measures +8.4 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

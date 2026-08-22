@@ -304,6 +304,33 @@ The ten best of the 45 combinations measured, and the worn pair.
 
 The best combination, The Skull of Gul'dan with Icon of the Silver Crescent, measures +66.0 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Magtheridon's Lair, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family, so no row wears two of them. The best-in-slot set wears Ring of Ancient Knowledge in both slots, so its worn row is a doubled pair.
+
+The ten best of the 45 combinations measured, and the worn pair.
+
+| Ring                              | Ring                      | DPS           | Against this set |
+|-----------------------------------|---------------------------|---------------|------------------|
+| Ring of Ancient Knowledge         | Ring of Ancient Knowledge | 2234.3 ± 1.25 | +91.5            |
+| Ring of Ancient Knowledge         | Band of the Eternal Sage  | 2224.3 ± 1.23 | +81.5            |
+| Ring of Ancient Knowledge         | Blessed Band of Karabor   | 2217.5 ± 1.24 | +74.7            |
+| Ring of Captured Storms           | Ring of Ancient Knowledge | 2213.8 ± 1.21 | +71.0            |
+| Band of the Eternal Sage          | Blessed Band of Karabor   | 2210.6 ± 1.22 | +67.8            |
+| Ring of Ancient Knowledge         | Band of Eternity          | 2210.5 ± 1.22 | +67.7            |
+| Ring of Ancient Knowledge         | Band of Eternity          | 2205.9 ± 1.22 | +63.1            |
+| Ring of Ancient Knowledge         | Ring of Endless Coils     | 2202.6 ± 1.21 | +59.8            |
+| Blessed Band of Karabor           | Blessed Band of Karabor   | 2201.7 ± 1.23 | +58.9            |
+| Ring of Ancient Knowledge         | Band of Eternity          | 2201.0 ± 1.23 | +58.2            |
+| Band of Crimson Fury *(this set)* | Ring of Endless Coils     | 2142.8 ± 1.19 | +0.0             |
+
+The best combination, Ring of Ancient Knowledge with Ring of Ancient Knowledge, measures +91.5 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

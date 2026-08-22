@@ -97,6 +97,32 @@ The ten best of the 10 combinations measured, and the worn pair.
 
 The best combination, Dragonspine Trophy with Bloodlust Brooch, measures +10.9 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, plus the Lower City ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
+
+The ten best of the 10 combinations measured, and the worn pair.
+
+| Ring                                    | Ring                       | DPS           | Against this set |
+|-----------------------------------------|----------------------------|---------------|------------------|
+| Band of the Ranger-General              | Band of the Ranger-General | 1938.5 ± 1.06 | +28.6            |
+| Band of the Ranger-General              | Ring of a Thousand Marks   | 1930.7 ± 1.06 | +20.8            |
+| Band of the Ranger-General              | Ring of Lethality          | 1927.8 ± 1.06 | +17.9            |
+| Ring of a Thousand Marks                | Ring of a Thousand Marks   | 1923.1 ± 1.06 | +13.2            |
+| Ring of a Thousand Marks                | Ring of Lethality          | 1921.1 ± 1.06 | +11.2            |
+| Ring of Lethality                       | Ring of Lethality          | 1918.6 ± 1.06 | +8.7             |
+| Band of the Ranger-General *(this set)* | Shapeshifter's Signet      | 1909.9 ± 1.06 | +0.0             |
+| Ring of a Thousand Marks                | Shapeshifter's Signet      | 1903.3 ± 1.05 | -6.6             |
+| Ring of Lethality                       | Shapeshifter's Signet      | 1901.2 ± 1.06 | -8.7             |
+| Shapeshifter's Signet                   | Shapeshifter's Signet      | 1882.7 ± 1.06 | -27.2            |
+
+The best combination, Band of the Ranger-General with Band of the Ranger-General, measures +28.6 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

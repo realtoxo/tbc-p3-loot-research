@@ -233,6 +233,28 @@ The ten best of the 21 combinations measured, and the worn pair.
 
 The best combination, Darkmoon Card: Crusade with Icon of the Silver Crescent, measures +2.3 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Magtheridon's Lair, the raids above it and two reputations, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The three Scale of the Sands rings share one uniqueness family, so no row wears two of them. The best-in-slot set wears Ring of Ancient Knowledge in both slots, so its worn row is a doubled pair.
+
+The ten best of the 6 combinations measured, and the worn pair.
+
+| Ring                              | Ring                  | DPS           | Against this set |
+|-----------------------------------|-----------------------|---------------|------------------|
+| Ring of Endless Coils             | Ring of Endless Coils | 1948.7 ± 0.96 | +15.9            |
+| Band of Crimson Fury *(this set)* | Ring of Endless Coils | 1932.8 ± 0.95 | +0.0             |
+| Ashyen's Gift                     | Ring of Endless Coils | 1925.3 ± 0.95 | -7.5             |
+| Band of Crimson Fury              | Band of Crimson Fury  | 1920.5 ± 0.96 | -12.3            |
+| Band of Crimson Fury              | Ashyen's Gift         | 1908.8 ± 0.95 | -24.0            |
+| Ashyen's Gift                     | Ashyen's Gift         | 1901.5 ± 0.94 | -31.3            |
+
+The best combination, Ring of Endless Coils with Ring of Endless Coils, measures +15.9 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

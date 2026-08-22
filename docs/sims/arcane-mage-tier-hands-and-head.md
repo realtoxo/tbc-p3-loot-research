@@ -304,6 +304,33 @@ The ten best of the 36 combinations measured, and the worn pair.
 
 The best combination, The Skull of Gul'dan with Serpent-Coil Braid, measures +26.1 against this set's own trinkets, so the upgrade path at this anchor runs through it.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Tempest Keep, Black Temple and two reputations, plus the Cenarion Expedition ring the entry and tier sets already wear, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The four Scale of the Sands rings share one uniqueness family and the two Violet Signets share another, so no row wears two rings of one family.
+
+The ten best of the 53 combinations measured, and the worn pair.
+
+| Ring                                       | Ring                          | DPS           | Against this set |
+|--------------------------------------------|-------------------------------|---------------|------------------|
+| Ring of Ancient Knowledge                  | Band of the Eternal Sage      | 2390.9 ± 1.04 | +70.2            |
+| Band of the Eternal Sage                   | Ring of Captured Storms       | 2386.8 ± 1.03 | +66.1            |
+| Ring of Ancient Knowledge                  | Ring of Ancient Knowledge     | 2386.8 ± 1.03 | +66.1            |
+| Band of the Eternal Sage                   | Violet Signet of the Archmage | 2386.2 ± 1.05 | +65.5            |
+| Band of the Eternal Sage                   | Violet Signet                 | 2384.3 ± 1.05 | +63.6            |
+| Band of the Eternal Sage                   | Band of Al'ar                 | 2381.3 ± 1.04 | +60.6            |
+| Blessed Band of Karabor                    | Band of the Eternal Sage      | 2379.0 ± 1.02 | +58.3            |
+| Ring of Ancient Knowledge                  | Band of Eternity              | 2377.5 ± 1.02 | +56.8            |
+| Ring of Ancient Knowledge                  | Blessed Band of Karabor       | 2375.9 ± 1.02 | +55.2            |
+| Ring of Ancient Knowledge                  | Band of Eternity              | 2373.0 ± 1.03 | +52.3            |
+| Violet Signet of the Archmage *(this set)* | Ashyen's Gift                 | 2320.7 ± 1.01 | +0.0             |
+
+The best combination, Ring of Ancient Knowledge with Band of the Eternal Sage, measures +70.2 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a

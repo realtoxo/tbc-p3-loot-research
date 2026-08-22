@@ -100,6 +100,28 @@ The ten best of the 10 combinations measured, and the worn pair.
 
 The worn pair is again the best row, at plus zero.
 
+## Ring combinations
+
+The two ring slots are interchangeable, so every pair is unordered: each
+row below is THIS PROFILE with only the two ring ids replaced, the slot
+keeping its enchant. A row pairing a ring with itself needs that ring to
+drop twice, and no row pairs two rings the game will not equip together.
+
+The candidates are every max-level ring on the EP Workbook's Ring ladder for this spec, from Karazhan, the raids above it and one reputation, and every wearable pair from that pool was measured, so the table is an enumeration rather than a selection. The two Scale of the Sands rings share one uniqueness family, so no row wears both of them.
+
+The ten best of the 6 combinations measured, and the worn pair.
+
+| Ring                                    | Ring                       | DPS           | Against this set |
+|-----------------------------------------|----------------------------|---------------|------------------|
+| Band of the Ranger-General              | Band of the Ranger-General | 1998.0 ± 0.92 | +5.1             |
+| Band of the Ranger-General *(this set)* | Ring of Lethality          | 1992.9 ± 0.92 | +0.0             |
+| Band of the Ranger-General              | Ring of a Thousand Marks   | 1990.2 ± 0.92 | -2.7             |
+| Ring of Lethality                       | Ring of Lethality          | 1988.3 ± 0.92 | -4.6             |
+| Ring of Lethality                       | Ring of a Thousand Marks   | 1985.8 ± 0.92 | -7.1             |
+| Ring of a Thousand Marks                | Ring of a Thousand Marks   | 1982.7 ± 0.92 | -10.2            |
+
+The best combination, Band of the Ranger-General with Band of the Ranger-General, measures +5.1 against this set's own rings, so the upgrade path at this anchor runs through it.
+
 ## The set
 
 Seventeen slots, with the enchant and the gems each carries. An empty row is a
